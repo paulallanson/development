@@ -1,0 +1,292 @@
+object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
+  Left = 459
+  Top = 111
+  BorderStyle = bsDialog
+  Caption = 'Customer Worktop Contract Prices'
+  ClientHeight = 350
+  ClientWidth = 525
+  Color = clBtnFace
+  Constraints.MinWidth = 425
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgDetails: TDBGrid
+    Left = 0
+    Top = 41
+    Width = 525
+    Height = 239
+    Align = alClient
+    DataSource = srclkpCustWTGroupPrices
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = dbgDetailsDblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Group_Description'
+        Title.Caption = 'Group'
+        Width = 169
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Thickness_mm'
+        Title.Caption = 'Thickness'
+        Width = 75
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unit_Cost'
+        Title.Caption = 'Cost Price'
+        Width = 72
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Unit_Price'
+        Title.Caption = 'Sell Price'
+        Width = 72
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Markup_Percentage'
+        Title.Caption = 'Markup %'
+        Width = 71
+        Visible = True
+      end>
+  end
+  object stsbrDetails: TStatusBar
+    Left = 0
+    Top = 331
+    Width = 525
+    Height = 19
+    Panels = <
+      item
+        Width = 250
+      end
+      item
+        Width = 50
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 280
+    Width = 525
+    Height = 51
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 2
+    DesignSize = (
+      525
+      51)
+    object BitBtn1: TBitBtn
+      Left = 8
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = '&Add'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object btnEdit: TBitBtn
+      Left = 90
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = '&Edit'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnEditClick
+    end
+    object btnDelete: TBitBtn
+      Left = 172
+      Top = 17
+      Width = 75
+      Height = 25
+      Caption = '&Delete'
+      Enabled = False
+      TabOrder = 2
+      OnClick = btnDeleteClick
+    end
+    object BitBtn4: TBitBtn
+      Left = 429
+      Top = 17
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = '&Close'
+      ModalResult = 2
+      TabOrder = 3
+      NumGlyphs = 2
+    end
+    object btnExcel: TBitBtn
+      Left = 347
+      Top = 17
+      Width = 75
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = '&Excel'
+      Enabled = False
+      TabOrder = 4
+      OnClick = btnExcelClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 525
+    Height = 41
+    Align = alTop
+    TabOrder = 3
+    object Label3: TLabel
+      Left = 8
+      Top = 16
+      Width = 39
+      Height = 13
+      Caption = 'Group:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblGroupName: TLabel
+      Left = 52
+      Top = 16
+      Width = 80
+      Height = 13
+      Caption = 'lblGroupName'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 240
+      Top = 16
+      Width = 50
+      Height = 13
+      Caption = 'Material:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblMaterialType: TLabel
+      Left = 292
+      Top = 16
+      Width = 87
+      Height = 13
+      Caption = 'lblMaterialType'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+  end
+  object qryDelCustWTGroupPrices: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'Delete from Customer_Worktop_Group_Thick'
+      'where price_pointer = :price_pointer')
+    Left = 272
+    Top = 208
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'price_pointer'
+        ParamType = ptUnknown
+      end>
+  end
+  object srclkpCustWTGroupPrices: TDataSource
+    DataSet = lkpCustWTGroupPrices
+    OnDataChange = srclkpCustWTGroupPricesDataChange
+    Left = 192
+    Top = 112
+  end
+  object lkpCustWTGroupPrices: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT'
+      '    Customer_Worktop_Group_Thick.*,'
+      '    Thickness.Thickness_mm,'
+      '    Customer_Worktop_Group.Group_Description,'
+      '    (select top 1 Unit_price'
+      '    from Prices'
+      
+        '    where Prices.Price_pointer =  Customer_Worktop_Group_Thick.p' +
+        'rice_pointer and'
+      '    Prices.effective_date <= now()'
+      
+        '    order by Prices.effective_date desc) AS Unit_Price, (select ' +
+        'top 1 Unit_cost'
+      '    from Prices'
+      
+        '    where Prices.Price_pointer =  Customer_Worktop_Group_Thick.p' +
+        'rice_pointer and'
+      '    Prices.effective_date <= now()'
+      
+        '    order by Prices.effective_date desc) AS Unit_Cost, (select t' +
+        'op 1 Price_Unit_Description'
+      '    from Prices, Price_unit'
+      
+        '    where Prices.Price_pointer =  Customer_Worktop_Group_Thick.p' +
+        'rice_pointer and'
+      '    Prices.Price_unit = Price_Unit.Price_Unit and'
+      '    Prices.effective_date <= now()'
+      
+        '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
+        'on'
+      'FROM Customer_Worktop_Group'
+      '      INNER JOIN (Thickness'
+      '      INNER JOIN Customer_Worktop_Group_Thick'
+      
+        '        ON Thickness.Thickness = Customer_Worktop_Group_Thick.Th' +
+        'ickness)'
+      
+        '        ON (Customer_Worktop_Group.Group_Number = Customer_Workt' +
+        'op_Group_Thick.Group_Number)'
+      
+        '          AND (Customer_Worktop_Group.Customer = Customer_Workto' +
+        'p_Group_Thick.Customer)'
+      'WHERE Customer_Worktop_Group.Customer = :Customer AND'
+      '      Customer_Worktop_Group.Group_Number = :Group_Number'
+      'ORDER BY Thickness.Thickness_mm'
+      ''
+      '')
+    Left = 112
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Group_Number'
+        ParamType = ptUnknown
+      end>
+  end
+end

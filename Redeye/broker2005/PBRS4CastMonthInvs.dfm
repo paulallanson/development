@@ -1,0 +1,266 @@
+object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
+  Left = 374
+  Top = 158
+  Width = 530
+  Height = 270
+  Caption = 'Current Period Anticipated Invoicing Report'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 63
+    Top = 19
+    Width = 86
+    Height = 13
+    Caption = 'Delivery due after:'
+  end
+  object DateFromButton: TSpeedButton
+    Left = 176
+    Top = 30
+    Width = 25
+    Height = 25
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+      F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+      F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+      F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+      F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+      F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+      F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+      333337FFFFFFFF77333330000000000333333777777777733333}
+    NumGlyphs = 2
+    OnClick = DateFromButtonClick
+  end
+  object Label2: TLabel
+    Left = 63
+    Top = 64
+    Width = 95
+    Height = 13
+    Caption = 'Delivery due before:'
+  end
+  object DateToButton: TSpeedButton
+    Left = 176
+    Top = 75
+    Width = 25
+    Height = 25
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      003337777777777777F330FFFFFFFFFFF03337F3333FFF3337F330FFFF000FFF
+      F03337F33377733337F330FFFFF0FFFFF03337F33337F33337F330FFFF00FFFF
+      F03337F33377F33337F330FFFFF0FFFFF03337F33337333337F330FFFFFFFFFF
+      F03337FFF3F3F3F3F7F33000F0F0F0F0F0333777F7F7F7F7F7F330F0F000F070
+      F03337F7F777F777F7F330F0F0F0F070F03337F7F7373777F7F330F0FF0FF0F0
+      F03337F733733737F7F330FFFFFFFF00003337F33333337777F330FFFFFFFF0F
+      F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
+      333337FFFFFFFF77333330000000000333333777777777733333}
+    NumGlyphs = 2
+    OnClick = DateToButtonClick
+  end
+  object lblProcessing: TLabel
+    Left = 64
+    Top = 152
+    Width = 52
+    Height = 13
+    Caption = 'Processing'
+  end
+  object TotByRadioGroup: TRadioGroup
+    Left = 225
+    Top = 12
+    Width = 136
+    Height = 104
+    Caption = 'Report Totals'
+    ItemIndex = 0
+    Items.Strings = (
+      'By Product Category'
+      'By Customer'
+      'By Rep'
+      'By Account Manager')
+    TabOrder = 0
+  end
+  object DateFromEdit: TEdit
+    Left = 63
+    Top = 32
+    Width = 98
+    Height = 21
+    MaxLength = 10
+    TabOrder = 1
+    OnChange = DateFromEditChange
+    OnExit = DateFromEditExit
+  end
+  object DateToEdit: TEdit
+    Left = 63
+    Top = 77
+    Width = 98
+    Height = 21
+    MaxLength = 10
+    TabOrder = 2
+    OnChange = DateToEditChange
+    OnExit = DateToEditExit
+  end
+  object rdgrpReportType: TRadioGroup
+    Left = 369
+    Top = 12
+    Width = 113
+    Height = 61
+    Caption = 'Report type'
+    ItemIndex = 0
+    Items.Strings = (
+      'Summary'
+      'Detailed')
+    TabOrder = 3
+  end
+  object PreviewBitBtn: TBitBtn
+    Left = 68
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Preview'
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33033333333333333F7F3333333333333000333333333333F777333333333333
+      000333333333333F777333333333333000333333333333F77733333333333300
+      033333333FFF3F777333333700073B703333333F7773F77733333307777700B3
+      33333377333777733333307F8F8F7033333337F333F337F3333377F8F9F8F773
+      3333373337F3373F3333078F898F870333337F33F7FFF37F333307F99999F703
+      33337F377777337F3333078F898F8703333373F337F33373333377F8F9F8F773
+      333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
+      333333773FF77333333333370007333333333333777333333333}
+    NumGlyphs = 2
+  end
+  object PrintBitBtn: TBitBtn
+    Left = 161
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Print'
+    TabOrder = 5
+    OnClick = PrintBitBtnClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      0003377777777777777308888888888888807F33333333333337088888888888
+      88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+      8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+      8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+      33333337FFFF7733333333300000033333333337777773333333}
+    NumGlyphs = 2
+  end
+  object CancelBitBtn: TBitBtn
+    Left = 310
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = '&Close'
+    TabOrder = 6
+    OnClick = CancelBitBtnClick
+    NumGlyphs = 2
+  end
+  object prgrsbrPeriodEnd: TProgressBar
+    Left = 64
+    Top = 168
+    Width = 265
+    Height = 18
+    TabOrder = 7
+  end
+  object ExcOnHoldCheckBox: TCheckBox
+    Left = 369
+    Top = 79
+    Width = 128
+    Height = 17
+    Caption = 'Exclude on hold items'
+    TabOrder = 8
+    OnClick = chkbxincludezeroClick
+  end
+  object chkbxincludezero: TCheckBox
+    Left = 369
+    Top = 100
+    Width = 144
+    Height = 17
+    Hint = 'Show zero sales values for confirmed deliveries'
+    Caption = 'Include zero sales values'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    OnClick = chkbxincludezeroClick
+  end
+  object chkbxExcludeInvoices: TCheckBox
+    Left = 369
+    Top = 120
+    Width = 144
+    Height = 17
+    Hint = 'Show zero sales values for confirmed deliveries'
+    Caption = 'Exclude Current Invoices'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+    OnClick = chkbxincludezeroClick
+  end
+  object qryGetPeriod: TQuery
+    DatabaseName = 'pb'
+    SQL.Strings = (
+      'select *'
+      'from Period'
+      'where Period = :Period')
+    Left = 408
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Period'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrySalesProfit: TQuery
+    DatabaseName = 'PB'
+    Left = 472
+    Top = 184
+  end
+  object qryDeleteAnalysis: TQuery
+    DatabaseName = 'pb'
+    SQL.Strings = (
+      'Delete from Analysis'
+      'where Operator = :Operator')
+    Left = 408
+    Top = 184
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Operator'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetIntSel: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Max(Operator)+1 as Operator'
+      'from Analysis')
+    Left = 472
+    Top = 128
+  end
+end

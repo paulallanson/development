@@ -1,0 +1,261 @@
+object frmWTRSJobSheet: TfrmWTRSJobSheet
+  Left = 531
+  Top = 172
+  BorderStyle = bsDialog
+  Caption = 'Print Job Sheet'
+  ClientHeight = 336
+  ClientWidth = 536
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 247
+    Width = 536
+    Height = 89
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    DesignSize = (
+      536
+      89)
+    object btnPrint: TButton
+      Left = 8
+      Top = 56
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Print'
+      Enabled = False
+      TabOrder = 0
+      OnClick = btnPrintClick
+    end
+    object btnPreview: TButton
+      Left = 101
+      Top = 56
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'P&review'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnPreviewClick
+    end
+    object btnEmail: TButton
+      Left = 194
+      Top = 56
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Email'
+      Enabled = False
+      TabOrder = 2
+      OnClick = btnEmailClick
+    end
+    object Button4: TButton
+      Left = 440
+      Top = 56
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'Close'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
+    object chkbxAccounts: TCheckBox
+      Left = 8
+      Top = 24
+      Width = 97
+      Height = 17
+      Caption = 'Client copy'
+      TabOrder = 4
+    end
+    object chkbxMerge: TCheckBox
+      Left = 8
+      Top = 2
+      Width = 345
+      Height = 17
+      Caption = 'Merge all selected documents to create single PDF in email'
+      TabOrder = 5
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 536
+    Height = 49
+    Align = alTop
+    TabOrder = 1
+    DesignSize = (
+      536
+      49)
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 37
+      Height = 13
+      Caption = 'Job No.'
+    end
+    object Label2: TLabel
+      Left = 384
+      Top = 8
+      Width = 75
+      Height = 13
+      Anchors = [akTop, akRight]
+      Caption = 'Sales Order No.'
+    end
+    object memSelection: TMemo
+      Left = 8
+      Top = 24
+      Width = 130
+      Height = 21
+      ReadOnly = True
+      TabOrder = 0
+      OnChange = EnableRun
+    end
+    object memSOrderNumber: TMemo
+      Left = 384
+      Top = 24
+      Width = 130
+      Height = 21
+      Anchors = [akTop, akRight]
+      ReadOnly = True
+      TabOrder = 1
+      OnChange = EnableRun
+    end
+  end
+  object pnlDocuments: TPanel
+    Left = 0
+    Top = 49
+    Width = 536
+    Height = 48
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 2
+    object Label3: TLabel
+      Left = 8
+      Top = 5
+      Width = 188
+      Height = 13
+      Caption = 'Include documents from selected folder:'
+    end
+    object cmbDocuments: TComboBox
+      Left = 8
+      Top = 26
+      Width = 273
+      Height = 22
+      Style = csOwnerDrawFixed
+      ItemHeight = 16
+      ItemIndex = 0
+      TabOrder = 0
+      Text = '<All>'
+      OnChange = cmbDocumentsChange
+      Items.Strings = (
+        '<All>')
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 97
+    Width = 536
+    Height = 150
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 3
+    object lstbxDocuments: TListBox
+      Left = 8
+      Top = 14
+      Width = 273
+      Height = 129
+      ItemHeight = 13
+      MultiSelect = True
+      TabOrder = 0
+      OnDblClick = lstbxDocumentsDblClick
+    end
+    object chkbxIncludeVoucher: TCheckBox
+      Left = 314
+      Top = 38
+      Width = 97
+      Height = 17
+      Caption = 'Include Voucher'
+      TabOrder = 1
+      Visible = False
+    end
+    object chkbxAllDocuments: TCheckBox
+      Left = 314
+      Top = 15
+      Width = 201
+      Height = 17
+      Caption = 'Select ALL additional order documents'
+      TabOrder = 2
+      OnClick = chkbxAllDocumentsClick
+    end
+    object chkbxPrint: TCheckBox
+      Left = 314
+      Top = 64
+      Width = 209
+      Height = 17
+      Caption = 'Print/Email Remedial Sheet'
+      TabOrder = 3
+      Visible = False
+    end
+  end
+  object qryDocumentStructure: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT Folder_Name'
+      'FROM Document_Structure'
+      'WHERE Module_Id = 50'
+      'ORDER BY Folder_Name')
+    Left = 352
+    Top = 32
+  end
+  object qryReport: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Job.Job,'
+      '        Job.Job_Status,'
+      '        Sales_Order.Customer,'
+      '        Sales_Order.Customer_Name,'
+      '        Sales_Order.Contact_name,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Address,'
+      '        Sales_Order.Install_Name,'
+      '        Sales_Order.Install_Phone,'
+      '        Sales_Order.Install_Address,'
+      '        Sales_Order.Sales_Order,'
+      '        0 as "Job_Remedial.Remedial_Number"'
+      'FROM Sales_Order'
+      '        INNER JOIN (Job'
+      '        INNER JOIN Sales_Order_Line'
+      '          ON Job.Job = Sales_Order_Line.Job)'
+      
+        '          ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Or' +
+        'der'
+      'WHERE Job.Job = :Job AND :Remedial_Number = 0')
+    Left = 344
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Job'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Remedial_Number'
+        ParamType = ptUnknown
+      end>
+  end
+end

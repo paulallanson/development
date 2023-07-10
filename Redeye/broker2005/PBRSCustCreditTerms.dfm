@@ -1,0 +1,194 @@
+object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
+  Left = 520
+  Top = 147
+  Width = 400
+  Height = 223
+  Caption = 'Credit Terms Letter'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignSize = (
+    392
+    196)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblCustomerName: TLabel
+    Left = 8
+    Top = 24
+    Width = 47
+    Height = 13
+    Caption = 'Customer:'
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 56
+    Width = 37
+    Height = 13
+    Caption = 'Sender:'
+  end
+  object CancelBitBtn: TBitBtn
+    Left = 14
+    Top = 133
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = '&Cancel'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Kind = bkCancel
+  end
+  object EmailBitBtn: TBitBtn
+    Left = 288
+    Top = 133
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = '&Email'
+    TabOrder = 1
+    OnClick = EmailBitBtnClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333333333333FFFFFFFFFFFFFFF000000000000
+      000077777777777777770FFFFFFFFFFFFFF07F3333FFF33333370FFFF777FFFF
+      FFF07F333777333333370FFFFFFFFFFFFFF07F3333FFFFFF33370FFFF777777F
+      FFF07F33377777733FF70FFFFFFFFFFF99907F3FFF33333377770F777FFFFFFF
+      9CA07F77733333337F370FFFFFFFFFFF9A907FFFFFFFFFFF7FF7000000000000
+      0000777777777777777733333333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333}
+    NumGlyphs = 2
+  end
+  object Previewbitbtn: TBitBtn
+    Left = 105
+    Top = 133
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'Pre&view'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PreviewbitbtnClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33033333333333333F7F3333333333333000333333333333F777333333333333
+      000333333333333F777333333333333000333333333333F77733333333333300
+      033333333FFF3F777333333700073B703333333F7773F77733333307777700B3
+      33333377333777733333307F8F8F7033333337F333F337F3333377F8F9F8F773
+      3333373337F3373F3333078F898F870333337F33F7FFF37F333307F99999F703
+      33337F377777337F3333078F898F8703333373F337F33373333377F8F9F8F773
+      333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
+      333333773FF77333333333370007333333333333777333333333}
+    NumGlyphs = 2
+  end
+  object PrintBitBtn: TBitBtn
+    Left = 196
+    Top = 133
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = '&Print'
+    Default = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PrintBitBtnClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      00033FFFFFFFFFFFFFFF0888888888888880777777777777777F088888888888
+      8880777777777777777F0000000000000000FFFFFFFFFFFFFFFF0F8F8F8F8F8F
+      8F80777777777777777F08F8F8F8F8F8F9F0777777777777777F0F8F8F8F8F8F
+      8F807777777777777F7F0000000000000000777777777777777F3330FFFFFFFF
+      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
+      33333337FFFF7733333333300000033333333337777773333333}
+    NumGlyphs = 2
+  end
+  object edtCustomerName: TEdit
+    Left = 72
+    Top = 20
+    Width = 289
+    Height = 21
+    ReadOnly = True
+    TabOrder = 4
+    Text = 'edtCustomerName'
+  end
+  object chkbxPrintLogo: TCheckBox
+    Left = 8
+    Top = 91
+    Width = 129
+    Height = 17
+    Caption = 'Print Company Logo'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+  end
+  object dblkpOperator: TDBLookupComboBox
+    Left = 72
+    Top = 52
+    Width = 193
+    Height = 21
+    KeyField = 'Operator'
+    ListField = 'Name'
+    ListSource = dtsOperators
+    TabOrder = 6
+  end
+  object qryOperators: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Operator'
+      
+        'WHERE (Operator_Can_Login = '#39'Y'#39') OR (Operator.Operator = :Operat' +
+        'or)'
+      'ORDER BY Operator.Name')
+    Left = 256
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Operator'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsOperators: TDataSource
+    DataSet = qryOperators
+    Left = 320
+    Top = 8
+  end
+end

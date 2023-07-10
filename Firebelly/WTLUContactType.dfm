@@ -1,0 +1,146 @@
+object frmWTLUContactType: TfrmWTLUContactType
+  Left = 406
+  Top = 170
+  BorderStyle = bsDialog
+  Caption = 'Maintain Contact Types'
+  ClientHeight = 337
+  ClientWidth = 480
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgDetails: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 480
+    Height = 268
+    Align = alClient
+    DataSource = srcContactType
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDrawColumnCell = dbgDetailsDrawColumnCell
+    OnDblClick = dbgDetailsDblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Contact_Type_Description'
+        Title.Caption = 'Contact Type'
+        Width = 219
+        Visible = True
+      end>
+  end
+  object stsbrDetails: TStatusBar
+    Left = 0
+    Top = 318
+    Width = 480
+    Height = 19
+    Panels = <
+      item
+        Width = 250
+      end
+      item
+        Width = 50
+      end>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 268
+    Width = 480
+    Height = 50
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 2
+    DesignSize = (
+      480
+      50)
+    object btnAdd: TBitBtn
+      Left = 16
+      Top = 15
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Add'
+      TabOrder = 0
+      OnClick = btnAddClick
+    end
+    object btnEdit: TBitBtn
+      Left = 106
+      Top = 15
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Edit'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnEditClick
+    end
+    object btnDelete: TBitBtn
+      Left = 196
+      Top = 15
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Delete'
+      Enabled = False
+      TabOrder = 2
+      OnClick = btnDeleteClick
+    end
+    object BitBtn4: TBitBtn
+      Left = 376
+      Top = 15
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Close'
+      ModalResult = 2
+      TabOrder = 3
+      OnClick = BitBtn4Click
+      NumGlyphs = 2
+    end
+    object btnExcel: TBitBtn
+      Left = 286
+      Top = 15
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Excel'
+      Enabled = False
+      TabOrder = 4
+      OnClick = btnExcelClick
+    end
+  end
+  object srcContactType: TDataSource
+    DataSet = qryContactType
+    OnDataChange = srcContactTypeDataChange
+    Left = 152
+    Top = 120
+  end
+  object qryContactType: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Contact_Type'
+      'ORDER BY Contact_Type_Description'
+      '')
+    Left = 72
+    Top = 120
+  end
+  object qryDelete: TQuery
+    DatabaseName = 'WT'
+    Left = 232
+    Top = 120
+  end
+end

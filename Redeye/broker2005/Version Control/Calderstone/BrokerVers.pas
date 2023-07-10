@@ -1,0 +1,244 @@
+unit BrokerVers;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, FileCtrl, ShellAPI, ComCtrls, CCSCommon;
+
+type
+  TBrokerVersFrm = class(TForm)
+    StatusLabel: TLabel;
+    Edit1: TEdit;
+    ProgressBar1: TProgressBar;
+    procedure FormActivate(Sender: TObject);
+    procedure StatusNarr(Narr: String);
+    procedure BackupIfNewer(FName, FDesc: String);
+    procedure CopyIfNewer(FName, FDesc: String);
+    procedure filecopy(const sourcefilename,targetfilename :string);
+    procedure CreateBrokerDir(DirName: String);
+  private
+    { Private declarations }
+    BackupDir, ServDir, LocalDir, LocalDrive, WindowsDir: String;
+    procedure AppendtoINIfile(FName, FNewName: String);
+    procedure CreateINIfile(FName: String);
+  public
+    { Public declarations }
+  end;
+
+var
+  BrokerVersFrm: TBrokerVersFrm;
+
+implementation
+
+{$R *.DFM}
+
+procedure TBrokerVersFrm.FormActivate(Sender: TObject);
+Var
+FiName, DiName: Array [0..255] of char ;
+begin
+	{Setup the directories}
+	ServDir := '\\CALDER1\Redeye' ;
+
+  LocalDrive := copy(GetWinSysDir,1,2);
+	LocalDir := LocalDrive + '\Program Files\Quaystone\Redeye' ;
+	BackupDir := LocalDrive + '\MISBackup\' ;
+
+  WindowsDir := GetWinDir;
+
+  {Test that the Directory exists, if not then contruct}
+  if not DirectoryExists(LocalDir) then
+  	begin
+     	CreateBrokerDir(LocalDir);
+  	end;
+
+  {Test that the Portako Directory exists, if not then contruct}
+  if not DirectoryExists(LocalDir+'\Redeye_Portako') then
+  	begin
+     	CreateBrokerDir(LocalDir+'\Redeye_Portako\');
+  	end;
+
+	{Test the bitmaps} ;
+	StatusNarr('Checking Logos') ;
+	CopyIfNewer('PBRepLogo.Bmp', 'Report Logo') ;
+
+	{Test the bitmaps} ;
+	StatusNarr('Checking Logos') ;
+	CopyIfNewer('PBRepLogo_Invoice.Bmp', 'Invoice Logo') ;
+
+	{Test the Portako bitmaps} ;
+	StatusNarr('Checking Logos') ;
+	CopyIfNewer('Redeye_Portako\PBRepLogo.Bmp', 'Report Logo') ;
+
+	{Test the Portako bitmaps} ;
+	StatusNarr('Checking Logos') ;
+	CopyIfNewer('Redeye_Portako\PBRepLogo_Invoice.Bmp', 'Invoice Logo') ;
+
+	StatusNarr('Checking Fax Viewer') ;
+	CopyIfNewer('csFax.exe', 'Fax Viewer') ;
+
+	StatusNarr('Checking Email Viewer') ;
+	CopyIfNewer('EmailManager.exe', 'Email Viewer') ;
+
+	StatusNarr('Checking Page Designer') ;
+	CopyIfNewer('pagedesigner.exe', 'Page Designer') ;
+
+	{Do the actual program} ;
+	StatusNarr('Checking Redeye Program') ;
+	CopyIfNewer('Redeye.exe', 'Redeye Program') ;
+
+(*  {Create the INI file}
+  CreateINIfile('Redeye.ini');
+
+  {Do the Broker ini file} ;
+	StatusNarr('Checking Redeye INI File') ;
+  AppendtoINIfile('Broker.ini','Redeye.ini');
+
+  {Do the Broker stock ini file} ;
+  try
+	  StatusNarr('Checking Redeye Stock INI File') ;
+    AppendtoINIfile('Brokerst.ini','Redeye.ini');
+  except
+  end;
+
+  {Do the Broker Print Man ini file} ;
+  try
+	  StatusNarr('Checking myPrintMan INI File') ;
+    AppendtoINIfile('myPrintMan.ini','Redeye.ini');
+  except
+  end;
+
+*)
+	StrPCopy(FiName, LocalDir + '\Redeye.exe') ;
+	StrPCopy(DiName ,LocalDir) ;
+	ShellExecute(0,nil,FiName,'', DiName, sw_Restore) ;
+	Application.Terminate ;
+end;
+
+procedure TBrokerVersFrm.StatusNarr(Narr: String);
+begin
+StatusLabel.Caption := Narr + '...' ;
+StatusLabel.Refresh ;
+end;
+
+procedure TBrokerVersFrm.CreateBrokerDir(DirName: String);
+var
+	CheckName:string;
+  ipos: integer;
+begin
+	ipos := 0;
+	CheckName := DirName;
+	{Find the First element of the Directory}
+  while ipos <= length(DirName) do
+  	begin
+			iPos := pos('\',DirName);
+      if ipos = 0
+        then break;
+      if ipos=3 then
+        begin
+          delete(DirName,3,1);
+          insert('~',Dirname,3);
+        end
+      else
+        begin
+  			  if not DirectoryExists(copy(CheckName,1,ipos)) then
+            CreateDir(copy(CheckName,1,ipos));
+          delete(DirName,ipos,1);
+        	insert('~',DirName,ipos);
+        end;
+     end;
+end;
+
+procedure TBrokerVersFrm.CopyIfNewer(FName, FDesc: String);
+begin
+  {Check if server version of file is older or same. If it is don't copy it} ;
+  if FileAge(ServDir + '\' + FName) <= FileAge(LocalDir + '\' + FName) then exit ;
+  {If the local directory does not exist, create it} ;
+  If DirectoryExists(LocalDir) = False then
+          CreateDir(LocalDir) ;
+  StatusNarr('Upgrading ' + FDesc + ' - Please wait...') ;
+  FileCopy(ServDir + '\' + FName, LocalDir + '\' + FName) ;
+end;
+
+procedure TBrokerVersFrm.BackupIfNewer(FName, FDesc: String);
+begin
+  {Check if server version of file is older or same. If it is don't copy it} ;
+  if FileAge(LocalDir + '\' + FName) <= FileAge(BackupDir + '\' + FName) then exit ;
+  {If the local directory does not exist, create it} ;
+  If DirectoryExists(BackupDir) = False then
+          CreateDir(BackupDir) ;
+  StatusNarr('Backing up ' + FDesc + ' - Please wait...') ;
+  FileCopy(LocalDir + '\' + FName, BackupDir + '\' + FName) ;
+end;
+
+procedure TBrokerVersFrm.CreateINIfile(FName: String);
+var
+  tempfilename: string;
+  NewIniFile: textFile;
+begin
+  if DirectoryExists(WindowsDir) = False then
+    CreateDir(WindowsDir);
+  tempFileName := WindowsDir + '\' + FName;
+  assignFile(NewIniFile, tempfileName);
+  rewrite(NewIniFile);
+  CloseFile(NewIniFile);
+end;
+
+procedure TBrokerVersFrm.AppendtoINIfile(FName, FNewName: String);
+var
+  tempfilename: string;
+  NewIniFile, OldIniFile: textFile;
+  IniLine: String;
+begin
+  tempFileName := WindowsDir + '\' + FNewName;
+  assignFile(NewIniFile, tempfileName);
+  Reset(NewIniFile);
+
+  tempFileName := WindowsDir + '\' + FName;
+  assignFile(OldIniFile, tempfileName);
+  Reset(OldIniFile);
+
+  Append(NewIniFile);
+  While Not EOF(OldIniFile) do
+    begin
+      ReadLn(oldIniFile, IniLine);
+      writeln(NewIniFile, IniLine);
+      Flush(NewIniFile);  { ensures that the text was actually written to file }
+    end;
+  CloseFile(NewIniFile);
+end;
+
+procedure TBrokerVersFrm.filecopy(const sourcefilename,targetfilename :string);
+var
+s,t:tfilestream;
+BytesToCopy: Integer ;
+begin
+progressbar1.position := 0 ;
+progressbar1.visible := True ;
+     if fileexists(targetfilename) = true then
+        if deletefile(targetfilename) = false then
+           messagedlg('Problem Deleting Local Copy',mterror,[mbok],0) ;
+     s:=tfilestream.create(sourcefilename,fmOpenread);
+     progressbar1.max := Trunc(s.size / 10000) ;
+     try
+        t:=tfilestream.create(targetfilename,fmcreate);
+        try
+           While s.position < s.size do
+                 begin
+                 progressbar1.position := Trunc(s.position / 10000);
+                 BrokerVersFrm.refresh ;
+                 If (s.size - s.position) < 10000 then
+                    BytesToCopy := s.size - s.position
+                 else
+                    BytesToCopy := 10000 ;
+                 t.copyfrom(s,BytesToCopy);
+                 end;
+        finally
+               t.free;
+        end;
+     finally
+            s.free;
+     end;
+end;
+
+end.

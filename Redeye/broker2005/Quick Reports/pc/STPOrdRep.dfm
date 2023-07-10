@@ -1,0 +1,1880 @@
+object STPOrdRepFrm: TSTPOrdRepFrm
+  Left = 213
+  Top = 74
+  Width = 935
+  Height = 657
+  Caption = 'Purchase Order Print'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Scaled = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PurchOrdQuickReport: TQuickRep
+    Left = 8
+    Top = 0
+    Width = 794
+    Height = 1123
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
+    BeforePrint = PurchOrdQuickReportBeforePrint
+    DataSet = GetOrdHedQuery
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsItalic]
+    Functions.Strings = (
+      'PAGENUMBER'
+      'COLUMNNUMBER'
+      'REPORTTITLE')
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Options = [FirstPageHeader, LastPageFooter]
+    Page.Columns = 1
+    Page.Orientation = poPortrait
+    Page.PaperSize = A4
+    Page.Values = (
+      150.000000000000000000
+      2970.000000000000000000
+      0.000000000000000000
+      2100.000000000000000000
+      0.000000000000000000
+      0.000000000000000000
+      0.000000000000000000)
+    PrinterSettings.Copies = 1
+    PrinterSettings.OutputBin = Auto
+    PrinterSettings.Duplex = False
+    PrinterSettings.FirstPage = 0
+    PrinterSettings.LastPage = 0
+    PrinterSettings.ExtendedDuplex = 0
+    PrinterSettings.UseStandardprinter = False
+    PrinterSettings.UseCustomBinCode = False
+    PrinterSettings.CustomBinCode = 0
+    PrinterSettings.UseCustomPaperCode = False
+    PrinterSettings.CustomPaperCode = 0
+    PrinterSettings.PrintMetaFile = False
+    PrintIfEmpty = True
+    SnapToGrid = True
+    Units = MM
+    Zoom = 100
+    PrevFormStyle = fsNormal
+    PreviewInitialState = wsMaximized
+    object PageHeaderQRBand: TQRBand
+      Left = 0
+      Top = 0
+      Width = 794
+      Height = 505
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      BeforePrint = PageHeaderQRBandBeforePrint
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      LinkBand = pogroupheader
+      Size.Values = (
+        1336.145833333333000000
+        2100.791666666667000000)
+      BandType = rbPageHeader
+      object ReprintQRLabel: TQRLabel
+        Left = 603
+        Top = 160
+        Width = 61
+        Height = 23
+        Enabled = False
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.854166666666680000
+          1595.437500000000000000
+          423.333333333333300000
+          161.395833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Reprint'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 14
+      end
+      object QRLabel14: TQRLabel
+        Left = 480
+        Top = 330
+        Width = 76
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          1270.000000000000000000
+          873.124999999999900000
+          201.083333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Delivery Date'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLblAcc: TQRLabel
+        Left = 574
+        Top = 302
+        Width = 100
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1518.708333333333000000
+          799.041666666666800000
+          264.583333333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Account No.'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel11: TQRLabel
+        Left = 480
+        Top = 302
+        Width = 55
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666660000
+          1270.000000000000000000
+          799.041666666666800000
+          145.520833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'A/C Code'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel10: TQRLabel
+        Left = 480
+        Top = 356
+        Width = 65
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666660000
+          1270.000000000000000000
+          941.916666666666800000
+          171.979166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Description'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel6: TQRLabel
+        Left = 480
+        Top = 274
+        Width = 62
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666660000
+          1270.000000000000000000
+          724.958333333333400000
+          164.041666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Order Date'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel5: TQRLabel
+        Left = 480
+        Top = 248
+        Width = 80
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666660000
+          1270.000000000000000000
+          656.166666666666800000
+          211.666666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Order Number'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object OrdNumQRLabel: TQRLabel
+        Left = 574
+        Top = 248
+        Width = 83
+        Height = 30
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          79.375000000000000000
+          1518.708333333333000000
+          656.166666666666800000
+          219.604166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Order Number:'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PurchOrdDateQRLabel: TQRLabel
+        Left = 574
+        Top = 274
+        Width = 89
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1518.708333333333000000
+          724.958333333333400000
+          235.479166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Order Date:'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PurchOrdDescrQRLabel: TQRLabel
+        Left = 574
+        Top = 356
+        Width = 187
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1518.708333333333000000
+          941.916666666666800000
+          494.770833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Purchase Order'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel9: TQRLabel
+        Left = 600
+        Top = 192
+        Width = 115
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          1587.500000000000000000
+          508.000000000000000000
+          304.270833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Purchase Order'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 13
+      end
+      object QRlblDelDt: TQRLabel
+        Left = 574
+        Top = 330
+        Width = 89
+        Height = 23
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          60.854166666666680000
+          1518.708333333333000000
+          873.124999999999900000
+          235.479166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Del Date'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel12: TQRLabel
+        Left = 718
+        Top = 486
+        Width = 34
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1899.708333333333000000
+          1285.875000000000000000
+          89.958333333333340000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Value'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel7: TQRLabel
+        Left = 650
+        Top = 486
+        Width = 30
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1719.791666666667000000
+          1285.875000000000000000
+          79.375000000000000000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Price'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel8: TQRLabel
+        Left = 552
+        Top = 486
+        Width = 65
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1460.500000000000000000
+          1285.875000000000000000
+          171.979166666666700000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Pack Size'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object DescQRLabel: TQRLabel
+        Left = 272
+        Top = 486
+        Width = 65
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          719.666666666666800000
+          1285.875000000000000000
+          171.979166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Description'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PartQRLabel: TQRLabel
+        Left = 98
+        Top = 486
+        Width = 45
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          259.291666666666700000
+          1285.875000000000000000
+          119.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Product'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object OrdQtyQRLabel: TQRLabel
+        Left = 20
+        Top = 486
+        Width = 65
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          52.916666666666660000
+          1285.875000000000000000
+          171.979166666666700000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Ordered'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel3: TQRLabel
+        Left = 20
+        Top = 470
+        Width = 65
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          52.916666666666660000
+          1243.541666666667000000
+          171.979166666666700000)
+        Alignment = taCenter
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Qty Ordered'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PreviewQRLabel: TQRLabel
+        Left = 451
+        Top = 120
+        Width = 51
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1193.270833333333000000
+          317.500000000000000000
+          134.937500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Preview'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 11
+      end
+      object qrmCompany: TQRMemo
+        Left = 529
+        Top = 24
+        Width = 208
+        Height = 121
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          320.145833333333000000
+          1399.645833333330000000
+          63.500000000000000000
+          550.333333333333000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Garamond'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 9
+      end
+      object ReportImage: TQRImage
+        Left = 26
+        Top = 15
+        Width = 399
+        Height = 133
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          351.895833333333400000
+          68.791666666666680000
+          39.687500000000000000
+          1055.687500000000000000)
+        Center = True
+        Stretch = True
+      end
+      object SupplierAddmemo: TQRMemo
+        Left = 120
+        Top = 181
+        Width = 313
+        Height = 119
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          314.854166666666700000
+          317.500000000000000000
+          478.895833333333400000
+          828.145833333333200000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = False
+        FontSize = 10
+      end
+      object DellAddmemo: TQRMemo
+        Left = 120
+        Top = 333
+        Width = 313
+        Height = 118
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          312.208333333333400000
+          317.500000000000000000
+          881.062500000000000000
+          828.145833333333200000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = False
+        FontSize = 10
+      end
+      object QRLabel1: TQRLabel
+        Left = 120
+        Top = 313
+        Width = 69
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          317.500000000000000000
+          828.145833333333200000
+          182.562500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Delivery To:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel2: TQRLabel
+        Left = 120
+        Top = 164
+        Width = 127
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          317.500000000000000000
+          433.916666666666800000
+          336.020833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Private & Confidential'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+    end
+    object FooterQRBand: TQRBand
+      Left = 0
+      Top = 575
+      Width = 794
+      Height = 152
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AfterPrint = FooterQRBandAfterPrint
+      AlignToBottom = True
+      BeforePrint = FooterQRBandBeforePrint
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Times New Roman'
+      Font.Style = [fsItalic]
+      ForceNewColumn = False
+      ForceNewPage = False
+      ParentFont = False
+      Size.Values = (
+        402.166666666666600000
+        2100.791666666667000000)
+      BandType = rbGroupFooter
+      object TotalQRLabel: TQRLabel
+        Left = 598
+        Top = 96
+        Width = 66
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1582.208333333333000000
+          254.000000000000000000
+          174.625000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Order Total'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object OrderValQRLabel: TQRLabel
+        Left = 676
+        Top = 96
+        Width = 76
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1788.583333333333000000
+          254.000000000000000000
+          201.083333333333300000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'OrderValQRLabel'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object SpecialNotesMemo: TgtQRMemo
+        Left = 25
+        Top = 44
+        Width = 400
+        Height = 76
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          201.083333333333300000
+          66.145833333333340000
+          116.416666666666700000
+          1058.333333333333000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        Lines.Strings = (
+          'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+          'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+          'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+          'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+          'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+          '')
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object lblSpecialNotes: TgtQRLabel
+        Left = 25
+        Top = 22
+        Width = 76
+        Height = 24
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          63.500000000000000000
+          66.145833333333340000
+          58.208333333333340000
+          201.083333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Special Notes'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel4: TQRLabel
+        Left = 25
+        Top = 131
+        Width = 227
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          66.145833333333340000
+          346.604166666666700000
+          600.604166666666800000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Terms & Conditions available on request'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsBold, fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+    end
+    object pogroupheader: TQRGroup
+      Left = 0
+      Top = 505
+      Width = 794
+      Height = 5
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      BeforePrint = pogroupheaderBeforePrint
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = True
+      Size.Values = (
+        13.229166666666670000
+        2100.791666666667000000)
+      Expression = 'GetOrdHedQuery.Sel1'
+      FooterBand = FooterQRBand
+      Master = PurchOrdQuickReport
+      ReprintOnNewPage = True
+    end
+    object qrPolDetails: TQRSubDetail
+      Left = 0
+      Top = 510
+      Width = 794
+      Height = 42
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AfterPrint = qrPolDetailsAfterPrint
+      AlignToBottom = False
+      BeforePrint = qrPolDetailsBeforePrint
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = []
+      ForceNewColumn = False
+      ForceNewPage = False
+      LinkBand = FooterQRBand
+      ParentFont = False
+      Size.Values = (
+        111.125000000000000000
+        2100.791666666667000000)
+      Master = PurchOrdQuickReport
+      DataSet = GetDetsQuery
+      PrintBefore = False
+      PrintIfEmpty = True
+      object PackqtyQRLabel: TQRLabel
+        Left = 12
+        Top = 2
+        Width = 65
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          31.750000000000000000
+          5.291666666666667000
+          171.979166666666700000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'PackqtyQRLabel'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PartCodeQRLabel: TQRLabel
+        Left = 98
+        Top = 2
+        Width = 167
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          259.291666666666700000
+          5.291666666666667000
+          441.854166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Product'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PartDescrQRLabel: TQRLabel
+        Left = 272
+        Top = 2
+        Width = 273
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          719.666666666666800000
+          5.291666666666667000
+          722.312500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Description'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PurchPriceQRLabel: TQRLabel
+        Left = 624
+        Top = 2
+        Width = 57
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          1651.000000000000000000
+          5.291666666666667000
+          150.812500000000000000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Purch Price'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object PackSizeQRLabel: TQRLabel
+        Left = 556
+        Top = 2
+        Width = 65
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          1471.083333333333000000
+          5.291666666666667000
+          171.979166666666700000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Pack'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLblValue: TQRLabel
+        Left = 698
+        Top = 2
+        Width = 55
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          1846.791666666667000000
+          5.291666666666667000
+          145.520833333333300000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'QRLblValue'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblNotes: TQRLabel
+        Left = 98
+        Top = 22
+        Width = 447
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          259.291666666666700000
+          58.208333333333340000
+          1182.687500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = True
+        Caption = 'Notes'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+    end
+    object QRSubDetail2: TQRSubDetail
+      Left = 0
+      Top = 552
+      Width = 794
+      Height = 23
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AfterPrint = QRSubDetail2AfterPrint
+      AlignToBottom = False
+      BeforePrint = QRSubDetail2BeforePrint
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        60.854166666666680000
+        2100.791666666667000000)
+      Master = PurchOrdQuickReport
+      DataSet = qryExtraCharges
+      PrintBefore = False
+      PrintIfEmpty = True
+      object qrlblDetails: TQRLabel
+        Left = 96
+        Top = 3
+        Width = 67
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          254.000000000000000000
+          7.937500000000000000
+          177.270833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'qrlblDetails'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblExChrgAmount: TQRLabel
+        Left = 710
+        Top = 3
+        Width = 43
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1878.541666666667000000
+          7.937500000000000000
+          113.770833333333300000)
+        Alignment = taRightJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'ExChrg'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Times New Roman'
+        Font.Style = [fsItalic]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+    end
+  end
+  object GetDetsDataSource: TDataSource
+    DataSet = GetOrdHedQuery
+    Left = 312
+    Top = 19
+  end
+  object GetOrdDetQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      
+        'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_Ord.Purch_Ord_No as' +
+        ' OrdNum,'
+      
+        '       Purch_Ord_Line.Purch_Ord_Line_No,Purch_Ord.Purch_Ord_Date' +
+        ','
+      
+        '       Purch_Ord_Line.Date_Deliv_Expected,Purch_Ord.Purch_Ord_St' +
+        'atus,'
+      '       Purch_Ord_Line.Purchase_Price,'
+      '       Purch_Ord_Line.Quantity_Ordered,'
+      '       Purch_Ord_Line.Cost_Price,'
+      '       Purch_Ord.Purch_Ord_Descr,'
+      '       Purch_Ord_line.Line_Notes,'
+      
+        '       Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
+        'y,'
+      '       Supplier_Branch.Account_Code,'
+      '       Part_Store.Part_Store_Name as DelNam,'
+      '       Part_Store.Internal_Number_and_Stret as DelAdd1,'
+      '       Part_Store.Internal_District as DelAdd2,'
+      '       Part_Store.Internal_Town as DelAdd3,'
+      '       Part_Store.Internal_PostCode as DelAdd4,'
+      '       Part_Store.Internal_Phone as DelAdd5,'
+      '       Part_Store.Internal_Fax as DelAdd6,'
+      '       '#39#39' as DelAdd7,'
+      '       Purch_Ord.Sales_order,'
+      '       Purch_Ord.Supplier,'
+      '       Purch_Ord.Branch_no,'
+      '       Purch_Ord.Narrative'
+      
+        'FROM Purch_Ord_Line, Purch_Ord, Part, Part_Store, Supplier_Branc' +
+        'h'
+      'WHERE ((Purch_Ord.Purch_Ord_No = :Sel1) or (:Sel1 = 0)) AND'
+      '      (Purch_Ord.Purch_Ord = Purch_Ord_Line.Purch_Ord) AND'
+      '      (Part.Part = Purch_Ord_Line.Part) and'
+      '      (Part_Store.Part_Store = Purch_Ord.Part_store)  and'
+      '      ((Purch_Ord.Supplier = Supplier_Branch.Supplier) and'
+      '      (Purch_Ord.Branch_No = Supplier_Branch.Branch_No))'
+      'Order By Purch_Ord.Purch_Ord_No,'
+      '         Purch_Ord_Line.Purch_Ord_Line_No'
+      ''
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 441
+    Top = 122
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetRecOrdQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      
+        'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_ord.Purch_Ord_Rec_r' +
+        'ef as OrdNum,'
+      
+        '       Purch_Ord_Line.Purch_Ord_Line_No,Purch_Ord.Purch_Ord_Date' +
+        ','
+      
+        '       Purch_Ord_Line.Date_Deliv_Expected,Purch_Ord.Purch_Ord_St' +
+        'atus,'
+      '       Purch_Ord_Line.Purchase_Price,'
+      '       Purch_Ord_Line.Quantity_Ordered,'
+      '       Purch_Ord.Purch_Ord_Descr,'
+      '       Purch_ord_line.Line_Notes,'
+      
+        '       Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
+        'y,'
+      '       Part_Store.Part_Store_Name as DelNam,'
+      '       Part_Store.Internal_Number_and_Stret as DelAdd1,'
+      '       Part_Store.Internal_District as DelAdd2,'
+      '       Part_Store.Internal_Town as DelAdd3,'
+      '       Part_Store.Internal_PostCode as DelAdd4,'
+      '       Part_Store.Internal_Phone as DelAdd5,'
+      '       Part_Store.Internal_Fax as DelAdd6,'
+      '       '#39#39' as DelAdd7'
+      'FROM  Purch_Ord_Line, Purch_Ord, Part, Part_Store'
+      'WHERE ((Purch_Ord.Purch_Ord_No = :Sel1) or (:Sel1 = 0)) AND'
+      '      (Purch_Ord.Purch_Ord = Purch_Ord_Line.Purch_Ord) AND'
+      '      (Part.Part = Purch_Ord_Line.Part) and'
+      '      (Part_store.Part_Store = Purch_ord.Part_Store)'
+      'Order By Purch_Ord_Rec_Ref,'
+      '         Purch_Ord_Line.Purch_Ord_Line_No'
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 402
+    Top = 102
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetDelFromSuppQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT Supplier.Name as SuppNam,'
+      '       Supplier_Branch.Name,'
+      '       Supplier_Branch.Building_No_Name,'
+      '       Supplier_Branch.Street,'
+      '       Supplier_Branch.Locale,'
+      '       Supplier_Branch.Town,'
+      '       Supplier_Branch.PostCode,'
+      '       Supplier_Branch.Phone as Suppadd5,'
+      '       Supplier_Branch.Fax_Number as Suppadd6,'
+      '       Supplier_Branch.email as Suppadd7'
+      'FROM Supplier, Supplier_Branch, Purch_Ord'
+      'WHERE (Supplier.Supplier = Purch_Ord.Supplier) AND'
+      '      (Supplier_Branch.Supplier = Purch_Ord.Supplier) AND'
+      '      (Supplier_Branch.Branch_No = Purch_Ord.Branch_No) AND'
+      '      (Purch_Ord.Purch_Ord_No = :Sel1)'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 331
+    Top = 185
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end>
+    object GetDelFromSuppQuerySuppNam: TStringField
+      FieldName = 'SuppNam'
+      Size = 40
+    end
+    object GetDelFromSuppQueryName: TStringField
+      FieldName = 'Name'
+      Size = 40
+    end
+    object GetDelFromSuppQueryBuilding_No_Name: TStringField
+      FieldName = 'Building_No_Name'
+      Size = 40
+    end
+    object GetDelFromSuppQueryStreet: TStringField
+      FieldName = 'Street'
+      Size = 40
+    end
+    object GetDelFromSuppQueryLocale: TStringField
+      FieldName = 'Locale'
+      Size = 40
+    end
+    object GetDelFromSuppQueryTown: TStringField
+      FieldName = 'Town'
+      Size = 40
+    end
+    object GetDelFromSuppQueryPostCode: TStringField
+      FieldName = 'PostCode'
+      Size = 10
+    end
+    object GetDelFromSuppQueryPhone: TStringField
+      FieldName = 'Phone'
+    end
+    object GetDelFromSuppQueryFax_Number: TStringField
+      FieldName = 'Fax_Number'
+    end
+    object GetDelFromSuppQueryemail: TStringField
+      FieldName = 'email'
+      Size = 40
+    end
+  end
+  object UpdStatusQuery: TQuery
+    DatabaseName = 'PB'
+    DataSource = GetDetsDataSource
+    SQL.Strings = (
+      'Update Purch_Ord'
+      'Set Purch_Ord_Status = '#39'G'#39
+      'Where Purch_Ord_Status = '#39'C'#39' '
+      ' ')
+    Left = 30
+    Top = 14
+  end
+  object GetDetsQuery: TQuery
+    DatabaseName = 'PB'
+    Left = 96
+    Top = 269
+  end
+  object GetOrdHedQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Sel1, text100'
+      'from'
+      '  Int_Sel'
+      'where'
+      '  (Int_Sel_Code = :Int_Sel_Code) and'
+      '  (Sel1 <> 0)'
+      'order by'
+      '  Sel1'
+      ' '
+      ' '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 374
+    Top = 48
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Int_Sel_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetDelFromStoreQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT Part_Store.Part_Store_Name as SuppNam,'
+      '       Part_Store.Internal_Number_and_Stret as SuppAdd1,'
+      '       Part_Store.Internal_District as SuppAdd2,'
+      '       Part_Store.Internal_Town as SuppAdd3,'
+      '       Part_Store.Internal_PostCode as SuppAdd4,'
+      '       Part_Store.Internal_Phone as SuppAdd5,'
+      '       Part_Store.Internal_Fax as SuppAdd6,'
+      '       '#39#39' as Suppadd7'
+      'FROM Part_Store,Purch_Ord'
+      'WHERE (Part_Store.Part_Store = Purch_Ord.Part_Store_From) AND'
+      '      (Purch_Ord_No.Purch_Ord = :Sel1)'
+      ' '
+      ' '
+      ' ')
+    Left = 174
+    Top = 203
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Sel1'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetPFJQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'Select Purch_Ord_Line_Alloc.Parts_For_Job,Parts_For_Job.Job'
+      'From Purch_Ord_Line_Alloc, Parts_For_Job, Purch_Ord'
+      
+        'Where (Purch_ord_Line_Alloc.Parts_For_Job = Parts_For_Job.Parts_' +
+        'For_Job) and'
+      '  Purch_Ord_Line_Alloc.Purch_Ord_Line_No = :PordLineNo and'
+      '  Purch_Ord.Purch_Ord = Purch_Ord_Line_Alloc.Purch_Ord and'
+      '  Purch_Ord.Purch_Ord_No = :PurchOrd'
+      '  '
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 302
+    Top = 102
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'PordLineNo'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'PurchOrd'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetDelivAddQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      '')
+    Left = 182
+    Top = 31
+  end
+  object GetSODelAddQuery: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Customer.Name as DelNam,'
+      '          Customer_Branch.Building_no_Name as DelAdd1,'
+      '          Customer_Branch.Street as DelAdd2,'
+      '          Customer_Branch.Locale as DelAdd3,'
+      '          Customer_Branch.Town as DelAdd4,'
+      '          Customer_Branch.Postcode as DelAdd5,'
+      '          Customer_Branch.Phone as DelAdd6,'
+      '          Customer_Branch.Fax_number as DelAdd7'
+      'from Sales_order, Customer, Customer_Branch'
+      'where Sales_Order.SAles_Order = :Sales_order and'
+      '('
+      '(Sales_order.Delivery_Customer = Customer_branch.Customer) and'
+      '(Sales_order.Delivery_Branch = Customer_branch.Branch_no)'
+      ') and'
+      '(Customer_branch.Customer = Customer.Customer)'
+      ' ')
+    Left = 534
+    Top = 233
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Sales_order'
+        ParamType = ptUnknown
+      end>
+  end
+  object CompSRC: TDataSource
+    DataSet = GetCompSQL
+    Left = 96
+    Top = 79
+  end
+  object GetCompSQL: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'Select * from Company'
+      'Where Company = 1')
+    Left = 184
+    Top = 78
+  end
+  object qryExtraCharges: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Purch_Ord_Add_Charge.*,'
+      
+        '          (Purch_Ord_Add_Charge.Amount + (Purch_Ord_Add_Charge.A' +
+        'mount * (Vat_Code.Vat_Rate/100))) as TotalVal'
+      'from Purch_Ord_Add_Charge, '
+      '        Purch_Ord,'
+      '        Vat_Code'
+      'Where ((Purch_Ord_Add_Charge.Vat_Code = Vat_Code.Vat_Code) and'
+      
+        '       (purch_ord.Purch_ord = purch_ord_add_charge.Purch_ord) an' +
+        'd'
+      '       (Purch_ord.purch_ord_no = :purch_ord_no));'
+      '')
+    Left = 46
+    Top = 178
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'purch_ord_no'
+        ParamType = ptUnknown
+      end>
+  end
+  object GetNarrSQL: TQuery
+    DatabaseName = 'pb'
+    SQL.Strings = (
+      'select Narrative_Text'
+      'From Narrative_Line'
+      'Where (Narrative = :Narrative)'
+      'Order By Narrative_Line'
+      '')
+    Left = 526
+    Top = 82
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Narrative'
+        ParamType = ptUnknown
+      end>
+  end
+  object SuppSQL: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Supplier.Name as Supplier_Name,'
+      #9#9#9'Building_no_name,'
+      '        Street,'
+      '        Locale,'
+      '        Town,'
+      '        Postcode,'
+      '        Phone,'
+      '        Fax_Number,'
+      '        Email'
+      'from Supplier_Branch, Supplier'
+      'where ((Supplier_Branch.Supplier = :Supplier) and'
+      #9#9#9'(Branch_no = :Branch_no)) and'
+      '        Supplier_Branch.Supplier = Supplier.Supplier'
+      ' ')
+    Left = 438
+    Top = 241
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end>
+  end
+  object AddressSRC: TDataSource
+    Left = 432
+    Top = 292
+  end
+end

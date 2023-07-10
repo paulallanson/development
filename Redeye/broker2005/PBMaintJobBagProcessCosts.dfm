@@ -1,0 +1,526 @@
+object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
+  Left = 175
+  Top = 106
+  Width = 1250
+  Height = 478
+  Caption = 'Maintain Production Costs'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlBottom: TPanel
+    Left = 0
+    Top = 403
+    Width = 1242
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    object OKBitBtn: TBitBtn
+      Left = 536
+      Top = 7
+      Width = 75
+      Height = 25
+      Caption = 'OK'
+      TabOrder = 0
+      OnClick = OKBitBtnClick
+      Glyph.Data = {
+        CE070000424DCE07000000000000360000002800000024000000120000000100
+        1800000000009807000000000000000000000000000000000000007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F7F00007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F7F0000007F00007F007F0000007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F7F0000007F00007F00007F0000
+        7F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F000000
+        7F00007F00007F00007F00007F00007F007F0000007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F7F0000007F00007F00007F0000FF00007F00007F00007F00007F00
+        7F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFF
+        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7FFFFFFF007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F00007F00007F0000FF00007F7F
+        00FF00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F7F7F7FFFFFFF007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F00
+        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00
+        007F0000FF00007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F00
+        7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F00FF
+        00007F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F
+        7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF0000
+        7F00007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F
+        7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F00FF00007F00007F00007F007F0000007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00
+        007F00007F007F0000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFF
+        FFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F00FF00007F00007F007F0000007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F
+        7F7FFFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00FF00007F00007F
+        00007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F00FF00007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F}
+      NumGlyphs = 2
+    end
+    object CancelBitBtn: TBitBtn
+      Left = 632
+      Top = 7
+      Width = 75
+      Height = 25
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
+      Glyph.Data = {
+        CE070000424DCE07000000000000360000002800000024000000120000000100
+        1800000000009807000000000000000000000000000000000000007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+        7F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F0000FF7F7F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7FFFFFFF007F7F
+        007F7F007F7F007F7F007F7F007F7FFFFFFF007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F00
+        00FF00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+        FFFFFF007F7F7F7F7FFFFFFF007F7F007F7F007F7FFFFFFF7F7F7F7F7F7FFFFF
+        FF007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00
+        007F7F7F7F007F7F0000FF00007F00007F00007F00007F7F7F7F007F7F007F7F
+        007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7FFFFF
+        FF7F7F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F00
+        7F7F0000FF00007F00007F00007F00007F7F7F7F00007F00007F00007F00007F
+        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F
+        7F007F7F7F7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F00007F
+        00007F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F00
+        7F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        0000FF00007F00007F00007F00007F00007F00007F7F7F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F00
+        7F7F007F7F007F7F007F7FFFFFFF7F7F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F00007F00007F00007F00007F00007F7F7F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF0000
+        7F00007F00007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F
+        7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F0000FF00007F00007F00007F00007F00007F7F7F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F
+        007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F0000FF00007F00007F00007F7F7F7F00007F00
+        007F00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F7F7F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F00007F00
+        007F7F7F7F007F7F0000FF00007F00007F00007F7F7F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F7F7F7F007F7F007F7F007F7F7F7F7FFFFF
+        FF007F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F0000FF00007F00007F7F7F7F007F7F007F7F007F7F0000FF00007F00007F
+        00007F7F7F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7FFFFFFF007F
+        7F007F7F7F7F7F007F7F7F7F7FFFFFFF007F7F007F7F7F7F7FFFFFFF007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F007F7F007F7F007F7F
+        007F7F007F7F0000FF00007F00007F00007F007F7F007F7F007F7F007F7F007F
+        7F007F7F7F7F7FFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F7F7F7FFFFFFF00
+        7F7F007F7F7F7F7FFFFFFF007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F0000FF00007F0000FF007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F007F7F007F7F00
+        7F7F007F7F007F7F7F7F7FFFFFFFFFFFFFFFFFFF7F7F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F7F7F7F7F7F7F7F7F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F
+        7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
+        7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+        007F7F007F7F007F7F007F7F007F7F007F7F}
+      NumGlyphs = 2
+    end
+  end
+  object sgDetails: TStringGrid
+    Left = 0
+    Top = 41
+    Width = 1242
+    Height = 362
+    Align = alClient
+    ColCount = 11
+    DefaultColWidth = 20
+    DefaultRowHeight = 20
+    RowCount = 101
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goEditing]
+    TabOrder = 1
+    OnClick = sgDetailsClick
+    OnDrawCell = sgDetailsDrawCell
+    OnKeyPress = sgDetailsKeyPress
+    OnKeyUp = sgDetailsKeyUp
+    OnSelectCell = sgDetailsSelectCell
+    ColWidths = (
+      20
+      139
+      134
+      107
+      107
+      281
+      75
+      70
+      71
+      83
+      115)
+  end
+  object dblkpPriceUnit: TDBLookupComboBox
+    Left = 488
+    Top = 184
+    Width = 129
+    Height = 21
+    KeyField = 'Price_Unit'
+    ListField = 'Description'
+    ListSource = dtsPriceUnit
+    TabOrder = 2
+    Visible = False
+    OnClick = dblkpPriceUnitClick
+    OnExit = dblkpPriceUnitExit
+    OnKeyPress = dblkpPriceUnitKeyPress
+  end
+  object dblkpProcess: TDBLookupComboBox
+    Left = 256
+    Top = 64
+    Width = 201
+    Height = 21
+    KeyField = 'Process'
+    ListField = 'Process_Description'
+    ListSource = dtsProcess
+    TabOrder = 3
+    Visible = False
+    OnClick = dblkpProcessClick
+    OnExit = dblkpProcessExit
+    OnKeyPress = dblkpProcessKeyPress
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1242
+    Height = 41
+    Align = alTop
+    TabOrder = 4
+  end
+  object dblkpVAT: TDBLookupComboBox
+    Left = 488
+    Top = 224
+    Width = 129
+    Height = 21
+    KeyField = 'VAT_Code'
+    ListField = 'Description'
+    ListSource = dtsVAT
+    TabOrder = 5
+    Visible = False
+    OnClick = dblkpVATClick
+    OnExit = dblkpVATExit
+    OnKeyPress = dblkpVATKeyPress
+  end
+  object dblkpOperation: TDBLookupComboBox
+    Left = 488
+    Top = 64
+    Width = 201
+    Height = 21
+    KeyField = 'Cost_Number'
+    ListField = 'Cost_Description'
+    ListSource = dtsOperation
+    TabOrder = 6
+    Visible = False
+    OnClick = dblkpOperationClick
+    OnExit = dblkpOperationExit
+    OnKeyPress = dblkpOperationKeyPress
+  end
+  object dblkpCategory: TDBLookupComboBox
+    Left = 488
+    Top = 104
+    Width = 201
+    Height = 21
+    KeyField = 'Category_Number'
+    ListField = 'Cost_Description'
+    ListSource = dtsCategory
+    TabOrder = 7
+    Visible = False
+    OnClick = dblkpCategoryClick
+    OnExit = dblkpCategoryExit
+    OnKeyPress = dblkpCategoryKeyPress
+  end
+  object dblkpSubCategory: TDBLookupComboBox
+    Left = 488
+    Top = 144
+    Width = 201
+    Height = 21
+    KeyField = 'Sub_Category'
+    ListField = 'Cost_Description'
+    ListSource = dtsSubCategory
+    TabOrder = 8
+    Visible = False
+    OnClick = dblkpSubCategoryClick
+    OnExit = dblkpSubCategoryExit
+    OnKeyPress = dblkpSubCategoryKeyPress
+  end
+  object qryDel: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'delete from Part_Quantity_Price'
+      'where Part = :Part')
+    Left = 360
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAdd: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into Part_Quantity_Price'
+      '  (Part,'
+      '  Quantity,'
+      '  Sell_Price,'
+      '  Cost_Price,'
+      '  Sell_Pack_Quantity,'
+      '  Purch_Pack_Quantity,'
+      '  Supplier,'
+      '  Sell_Unit,'
+      '  Cost_Unit)'
+      'values'
+      '  (:Part,'
+      '  :Quantity,'
+      '  :Sell_Price,'
+      '  :Cost_Price,'
+      '  :Sell_Pack_Quantity,'
+      '  :Purch_Pack_Quantity,'
+      '  :Supplier,'
+      '  :Sell_Unit,'
+      '  :Cost_Unit)')
+    Left = 440
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Sell_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cost_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Sell_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Purch_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Sell_Unit'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cost_Unit'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryCostUnit: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from price_unit'
+      
+        'where ((price_unit_inactive = '#39'N'#39') or (price_unit_inactive is NU' +
+        'LL))'
+      'order by Description')
+    Left = 312
+    Top = 304
+  end
+  object dtsPriceUnit: TDataSource
+    DataSet = qryCostUnit
+    Left = 376
+    Top = 304
+  end
+  object qryProcess: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from Process'
+      'ORDER BY Process_Description')
+    Left = 72
+    Top = 88
+  end
+  object dtsProcess: TDataSource
+    DataSet = qryProcess
+    Left = 160
+    Top = 88
+  end
+  object qryVAT: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from VAT_Code'
+      'Order by Vat_Code')
+    Left = 320
+    Top = 360
+  end
+  object dtsVAT: TDataSource
+    DataSet = qryVAT
+    Left = 376
+    Top = 360
+  end
+  object qryOperation: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from Process_Cost'
+      'where Customer = :Customer and Process = :Process'
+      'ORDER BY Cost_Description')
+    Left = 72
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Process'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsOperation: TDataSource
+    DataSet = qryOperation
+    Left = 160
+    Top = 152
+  end
+  object qryCategory: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from Process_Cost_Category'
+      
+        'where Customer = :Customer and Process = :Process and Cost_Numbe' +
+        'r = :Cost_Number'
+      'ORDER BY Cost_Description')
+    Left = 72
+    Top = 216
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Process'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cost_Number'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsCategory: TDataSource
+    DataSet = qryCategory
+    Left = 160
+    Top = 216
+  end
+  object qrySubCategory: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from Process_Cost_Category_Sub'
+      'where Customer = :Customer and'
+      '      Process = :Process and'
+      '      Cost_Number = :Cost_Number and'
+      '      Category_Number = :Category_Number'
+      'ORDER BY Cost_Description')
+    Left = 72
+    Top = 280
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Process'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Cost_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Category_Number'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsSubCategory: TDataSource
+    DataSet = qrySubCategory
+    Left = 160
+    Top = 280
+  end
+end

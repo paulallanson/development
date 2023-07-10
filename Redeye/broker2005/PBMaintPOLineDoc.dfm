@@ -1,0 +1,89 @@
+object PBMaintPOLineDocFrm: TPBMaintPOLineDocFrm
+  Left = 206
+  Top = 206
+  BorderStyle = bsDialog
+  Caption = 'Maintain Purchase Order Document'
+  ClientHeight = 120
+  ClientWidth = 493
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 12
+    Top = 16
+    Width = 20
+    Height = 13
+    Caption = 'Title'
+  end
+  object Label2: TLabel
+    Left = 12
+    Top = 48
+    Width = 41
+    Height = 13
+    Caption = 'Location'
+  end
+  object lblDelete: TLabel
+    Left = 156
+    Top = 89
+    Width = 165
+    Height = 15
+    Caption = 'Delete the document details?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Visible = False
+  end
+  object edtTitle: TEdit
+    Left = 64
+    Top = 12
+    Width = 241
+    Height = 21
+    TabOrder = 0
+  end
+  object edtLocation: TEdit
+    Left = 64
+    Top = 44
+    Width = 337
+    Height = 21
+    TabOrder = 1
+  end
+  object btnBrowse: TButton
+    Left = 416
+    Top = 42
+    Width = 75
+    Height = 25
+    Caption = 'Browse'
+    TabOrder = 2
+    OnClick = btnBrowseClick
+  end
+  object btbtnOK: TBitBtn
+    Left = 336
+    Top = 84
+    Width = 75
+    Height = 25
+    TabOrder = 3
+    Kind = bkOK
+  end
+  object btbtnCancel: TBitBtn
+    Left = 416
+    Top = 84
+    Width = 75
+    Height = 25
+    TabOrder = 4
+    Kind = bkCancel
+  end
+  object DocOpenDialog: TOpenDialog
+    Left = 288
+    Top = 8
+  end
+end

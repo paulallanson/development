@@ -1,0 +1,172 @@
+unit wtLUOperators;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DBTables, DB, StdCtrls, Buttons, Grids, DBGrids, gtQrCtrls,
+  ExtCtrls, ComCtrls;
+
+type
+  TfrmWTLUOperators = class(TForm)
+    dbgDetails: TDBGrid;
+    srcOperators: TDataSource;
+    stsbrDetails: TStatusBar;
+    Panel1: TPanel;
+    chkbxShowInactive: TCheckBox;
+    btnAdd: TBitBtn;
+    btnEdit: TBitBtn;
+    btnDelete: TBitBtn;
+    BitBtn4: TBitBtn;
+    btnExcel: TBitBtn;
+    qryOperators: TQuery;
+    qryDelete: TQuery;
+    procedure BitBtn4Click(Sender: TObject);
+    procedure btnDeleteClick(Sender: TObject);
+    procedure dbgDetailsDblClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
+    procedure srcOperatorsDataChange(Sender: TObject; Field: TField);
+    procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure chkbxShowInactiveClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure btnExcelClick(Sender: TObject);
+  private
+    procedure CallMaintScreen(FuncMode: string);
+    procedure Refresh;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmWTLUOperators: TfrmWTLUOperators;
+
+implementation
+
+uses WTMaintOperators, wtMain;
+
+{$R *.dfm}
+
+procedure TfrmWTLUOperators.Refresh;
+begin
+  qryOperators.close;
+  if not chkbxShowInactive.Checked then
+    begin
+      qryOperators.parambyname('Operator_Can_Login').asstring := 'Y';
+    end
+  else
+    begin
+      qryOperators.parambyname('Operator_Can_Login').asstring := 'N';
+    end;
+
+  qryOperators.open;
+  stsbrDetails.panels[0].text := inttostr(qryOperators.recordcount) + ' records displayed';
+end;
+
+procedure TfrmWTLUOperators.CallMaintScreen(FuncMode: string);
+var
+  OldCursor : TCursor;
+  iCode: integer;
+begin
+  OldCursor := Screen.Cursor;
+  Screen.Cursor := crHourglass;
+  iCode := dbgDetails.datasource.dataset.fieldbyname('Operator').asinteger;
+  try
+    frmWTMaintOperators := TfrmWTMaintOperators.create(Application);
+    frmWTMaintOperators.FunctionMode := FuncMode;
+    frmWTMaintOperators.showmodal;
+    iCode := frmWTMaintOperators.iCode;
+    refresh;
+    qryOperators.Locate('Operator',Variant(inttostr(iCode)),[]);
+  finally
+    Screen.Cursor := OldCursor;
+    frmWTMaintOperators.free;
+  end;
+end;
+
+procedure TfrmWTLUOperators.BitBtn4Click(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmWTLUOperators.btnDeleteClick(Sender: TObject);
+begin
+  if messagedlg('Delete the selected record?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+    begin
+      try
+        with qryDelete do
+          begin
+            close;
+            SQL.Text := 'DELETE FROM Operator WHERE Operator = ' + inttostr(dbgDetails.DataSource.dataset.fieldbyname('Operator').asinteger);
+            execsql;
+          end;
+        refresh;
+      except
+        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Operator_Name').asstring
+                    + ' has related data, therefore cannot be deleted', mtInformation,
+        [mbOk], 0);
+      end;
+    end;
+end;
+
+procedure TfrmWTLUOperators.dbgDetailsDblClick(Sender: TObject);
+begin
+  btnEditClick(self);
+end;
+
+procedure TfrmWTLUOperators.btnAddClick(Sender: TObject);
+begin
+  CallMaintScreen('A');
+
+end;
+
+procedure TfrmWTLUOperators.btnEditClick(Sender: TObject);
+begin
+  CallMaintScreen('C');
+
+end;
+
+procedure TfrmWTLUOperators.srcOperatorsDataChange(Sender: TObject;
+  Field: TField);
+begin
+  btnEdit.enabled := (srcOperators.DataSet.RecordCount > 0);
+  btnDelete.enabled := (srcOperators.DataSet.RecordCount > 0);
+  btnExcel.enabled := (srcOperators.DataSet.RecordCount > 0);
+end;
+
+procedure TfrmWTLUOperators.dbgDetailsDrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn;
+  State: TGridDrawState);
+var
+  Txt: array [0..255] of Char;
+begin
+  if(dbgDetails.datasource.dataset.fieldByName('Operator_Can_Login').AsString = 'N') then
+    begin
+      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+    end;
+  StrPCopy(txt, Column.field.text);
+  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
+    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
+      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
+  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
+    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+end;
+
+procedure TfrmWTLUOperators.chkbxShowInactiveClick(Sender: TObject);
+begin
+  Refresh;
+end;
+
+procedure TfrmWTLUOperators.FormActivate(Sender: TObject);
+begin
+  Refresh;
+end;
+
+procedure TfrmWTLUOperators.btnExcelClick(Sender: TObject);
+begin
+  frmWTMain.ExportToExcel(frmWTLUOperators);
+end;
+
+end.

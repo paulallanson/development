@@ -1,0 +1,373 @@
+unit STRPDeliv;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
+  gtQrCtrls, ccsCommon, qrprntr, printers;
+
+type
+  TSTRPDelivfrm = class(TForm)
+    PickSOListQuickReport: TQuickRep;
+    PageHeadQRBand: TQRBand;
+    GroupHeadQRGroup: TQRGroup;
+    AllocDataSource: TDataSource;
+    GetAllocDetQuery: TQuery;
+    oldGetAllocMasterQuery: TQuery;
+    QRSubDetail1: TQRSubDetail;
+    PartQRDBText: TgtQRDBText;
+    DescQRDBText: TgtQRDBText;
+    PreviewQRLabel: TgtQRLabel;
+    UpdAllocDetQuery: TQuery;
+    GetAllAllocDetQuery: TQuery;
+    UpdRefQuery: TQuery;
+    NotesQRMemo: TgtQRMemo;
+    GetCustSQL: TQuery;
+    AccNoQRLabel: TgtQRLabel;
+    CustRefQRLabel: TgtQRLabel;
+    SONOQRLabel: TgtQRLabel;
+    CustRefQRDBText: TgtQRDBText;
+    SoNumQRDBText: TgtQRDBText;
+    UpdSOHeadSQL: TQuery;
+    GetDelivNarrSQL: TQuery;
+    AddDelivDetSQL: TQuery;
+    GetDelivCountSQL: TQuery;
+    GetNextSODelivSQL: TQuery;
+    QRLabel1: TgtQRLabel;
+    QRLabel5: TgtQRLabel;
+    GetAllocMasterQuery: TQuery;
+    QRLabel7: TgtQRLabel;
+    QRDBText4: TgtQRDBText;
+    QRLabel8: TgtQRLabel;
+    DummySQL: TQuery;
+    TciketQRLabel: TgtQRLabel;
+    DelNoQRLabel: TgtQRLabel;
+    DespDtQRLbl: TgtQRLabel;
+    DelInstructMemo: TgtQRMemo;
+    QRLabel6: TgtQRLabel;
+    QRLabel9: TgtQRLabel;
+    QRLabelQty: TgtQRLabel;
+    QRLabelDlvrd: TgtQRLabel;
+    QRLblAccnt: TgtQRLabel;
+    QRLabel10: TgtQRLabel;
+    AdhocSQL: TQuery;
+    AddressSRC: TDataSource;
+    GetAccountSQL: TQuery;
+    GetAllocSerialNoSQL: TQuery;
+    qrdetailSerialNos: TQRSubDetail;
+    lblSerialCaption: TgtQRLabel;
+    lblSerialRange: TgtQRLabel;
+    chldbndFSCClaim: TQRChildBand;
+    gtlblFSCClaim: TgtQRLabel;
+    qryGetFSCClaim: TQuery;
+    function GetDetails(Sender: TObject): Integer;
+    procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+    procedure PickSOListQuickReportBeforePrint(Sender: TCustomQuickRep;
+      var PrintReport: Boolean);
+    procedure GroupHeadQRGroupBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+    procedure FormCreate(Sender: TObject);
+    procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+    procedure PageHeadQRBandAfterPrint(Sender: TQRCustomBand;
+      BandPrinted: Boolean);
+    procedure qrdetailSerialNosBeforePrint(Sender: TQRCustomBand;
+      var PrintBand: Boolean);
+  private
+    { Private declarations }
+    NoOfSerialNoBands: integer;
+    procedure BuildDeliveryNotes(aQuery : TQuery; const iNarrative : integer);
+    function BuildQueryString : string;
+  public
+    Reprint: byteBool;
+    Preview: ByteBool;
+    PrintLogo: boolean;
+    RepType: Integer;
+    PickListRef: String [10];
+    sDespDt: String;
+    DateReq: TDate;
+    DelNo: String;
+    Store_Record, iIntSelCode, SalesOrder: Integer;
+    PrinterSettings : TPrinterSettings;
+    { Public declarations }
+  end;
+
+var
+  STRPDelivfrm: TSTRPDelivfrm;
+
+implementation
+
+uses pbDatabase;
+
+{$R *.DFM}
+
+var
+ rTotalValue: real;
+
+{ TClPickListRepForm }
+
+function TSTRPDelivfrm.GetDetails(Sender: TObject): Integer;
+begin
+  with GetAllocMasterQuery do
+  begin
+    Close;
+    sql.Clear;
+    sql.Text := BuildQueryString;
+    ParamByName('Int_Sel_Code').AsInteger := iIntSelCode;
+    ParamByName('Status_from').AsInteger := shdespconfirmed;
+    ParamByName('Sales_Order').AsInteger := SalesOrder;
+    Open;
+    Result := RecordCount;
+  end;
+end;
+
+procedure TSTRPDelivfrm.PageHeadQRBandBeforePrint(
+  Sender: TQRCustomBand; var PrintBand: Boolean);
+var
+irow : integer;
+UseBrnchNm: ByteBool;
+begin
+  NotesQRMemo.Lines.Clear;
+  UseBrnchNm := False;
+  GetCustSQL.Close;
+  GetCustSQL.ParamByName('Customer').AsInteger :=
+    getAllocDetQuery.FieldByName('Customer').AsInteger;
+  GetCustSql.ParamByName('Branch_No').AsInteger :=
+    getAllocDetQuery.FieldByName('Branch_No').AsInteger;
+  GetCustSQL.Open;
+  if ((GetCustSQL.FieldByName('Inv_To_Customer').AsInteger = getAllocDetQuery.FieldByName('Customer').AsInteger) and
+       (GetCustSQL.FieldByName('Inv_To_Branch').AsInteger = getAllocDetQuery.FieldByName('Branch_No').AsInteger)) then
+          QRLblAccnt.Caption := GetCustsql.fieldbyname('Account_code').AsString
+  else
+    begin
+      GetAccountSQL.Close;
+      GetAccountSQL.ParamByName('Customer').AsInteger := GetCustSQL.FieldByName('Inv_To_Customer').AsInteger;
+      GetAccountSQL.ParamByName('Branch_No').AsInteger := GetCustSQL.FieldByName('Inv_To_Branch').AsInteger;
+      GetAccountSQL.Open;
+      QRLblAccnt.Caption := GetAccountsql.fieldbyname('Account_code').AsString;
+    end;
+   if getAllocDetQuery.FieldByName('Ad_Hoc_Address').AsString <> '' then
+    begin
+      with AdhocSQl do
+      begin
+        Close;
+        ParamByName('Ad_hoc_Address').AsInteger :=
+          getAllocDetQuery.FieldByName('Ad_Hoc_Address').AsInteger;
+        Open;
+        BuildDeliveryNotes(AdHocSQL,
+          FieldByName('Delivery_Narrative').AsInteger);
+      end;
+      AddressSRC.Dataset := AdhocSQL;
+    end
+  else
+    if getAllocDetQuery.FieldByName('Delivery_Customer').AsString <> '' then
+    begin
+    with GetCustSQl do
+    begin
+      Close;
+      ParamByName('Customer').AsInteger :=
+        getAllocDetQuery.FieldByName('Delivery_Customer').AsInteger;
+      ParamByName('Branch_no').AsInteger :=
+        getAllocDetQuery.FieldByName('Delivery_Branch').AsInteger;
+      Open;
+      UseBrnchNm := FieldByName('Use_Branch_Name').AsString = 'Y';
+      BuildDeliveryNotes(GetCustSQL, FieldByName('Delivery_Narrative').AsInteger);
+    end;
+    AddressSRC.Dataset := GetCustSQL;
+  end;
+      {Build the Address Memo field}
+  if Not UseBrnchNm then
+  begin
+    for irow := 0 to 5 do
+    begin
+      if AddressSRC.dataset.Fields[irow].AsString = '' then Continue;
+      NotesQRMemo.Lines.Add(Trim(AddressSRC.dataset.Fields[irow].AsString));
+    end;
+  end
+  else
+  begin
+  if AddressSRC.Dataset.FieldByName('Branch_Name').AsString <> '' then
+    NotesQRMemo.Lines.Add(Trim(AddressSRC.Dataset.FieldByName('Branch_Name').AsString));
+  for irow := 1 to 5 do
+    begin
+      if AddressSRC.dataset.Fields[irow].AsString = '' then Continue;
+      NotesQRMemo.Lines.Add(Trim(AddressSRC.dataset.Fields[irow].AsString));
+    end;
+  end;
+
+end;
+
+procedure TSTRPDelivfrm.PickSOListQuickReportBeforePrint(
+  Sender: TCustomQuickRep; var PrintReport: Boolean);
+var
+  TopMar, BottomMar, LeftMar, RightMar: Double;
+  Copies: Integer;
+  Bin: TQRBin;
+  Size: TQRPaperSize;
+  Duplex: Boolean;
+begin
+  If Preview = False then
+    PreviewQRLabel.Caption := '';
+  DespDTQrLbl.Caption := sDespDt;
+
+(*  with PickSOListQuickReport.PrinterSettings do
+  begin
+    PrinterIndex := PrinterSettings.PrinterIndex;
+    Copies := PrinterSettings.Copies;
+    if PrinterSettings.FromPage <> 0 then
+    begin
+      FirstPage := PrinterSettings.FromPage;
+      LastPage := PrinterSettings.ToPage;
+    end;
+    OutputBin := PrinterSettings.OutputBin;
+  end;
+*)
+
+  {set the printer to what the user selected}
+  PickSOListQuickReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
+  GetPrinterValues(Copies, Bin, Size, Duplex);
+  PickSOListQuickReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }
+  PickSOListQuickReport.PrinterSettings.copies := Copies;   {set the number of copies }
+  PickSOListQuickReport.PrinterSettings.PaperSize := Size;   {set the number of copies }
+end;
+
+procedure TSTRPDelivfrm.GroupHeadQRGroupBeforePrint(
+  Sender: TQRCustomBand; var PrintBand: Boolean);
+begin
+  rTotalValue := 0.00;
+  Reprint := GetAllocMasterQuery.FieldByName('Sales_order_Head_Status').AsInteger = shdespnoteprinted;
+  if reprint = True then
+    PreviewQRLabel.Caption := 'Reprint';
+  with GetAllocDetQuery do
+  begin
+    Close;
+    ParamByName('Sel1').AsInteger :=  getAllocMasterQuery.FieldByName('Sales_Order').AsInteger;
+    Open;
+    DelNoQRLabel.Caption := getAllocMasterQuery.FieldByName('Sales_Order').Asstring + '01';
+  end;
+end;
+
+procedure TSTRPDelivfrm.FormCreate(Sender: TObject);
+begin
+GetAllocDetQuery.Active := True;
+end;
+
+function TSTRPDelivfrm.BuildQueryString: string;
+{ Local function }
+  { Remember, SQL likes American date formats with hyphens in quotes }
+  { But Access doesn't so we have to know what we're connected to }
+  function qDate(const aDate : TDateTime) : string;
+  begin
+    if dmBroker.IsSQL then
+      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
+    else
+      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
+  end;
+{ Local function }
+begin
+  Result := DummySQL.SQL.Text;
+  if DateReq <> 0 then
+    Result := Result + ' AND Sales_Order.Date_Required <= ' + qDate(DateReq);
+  Result := Result+'Order by Sales_Order.Sales_Order'
+end;
+
+procedure TSTRPDelivfrm.QRSubDetail1BeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+var
+  sFSCClaim: string;
+begin
+  QrLabelQty.Caption := GetAllocDetQuery.FieldbyName('Quantity_Delivered').Asstring;
+  QRLabeldlvrd.Caption := ShowinPacks(GetAllocDetQuery.FieldbyName('Quantity_Delivered').AsInteger,GetAllocDetQuery.fieldByname('Sell_Pack_Quantity').AsInteger);
+
+  gtlblFSCClaim.Caption := '';
+  {Display the FSC Claim details}
+  if GetAllocDetQuery.fieldbyname('FSC_Material_Claim').asinteger <> 0 then
+    begin
+      with qryGetFSCClaim do
+        begin
+          close;
+          parambyname('FSC_Material_Claim').asinteger := GetAllocDetQuery.fieldbyname('FSC_Material_Claim').asinteger;
+          open;
+          if recordcount > 0 then
+            begin
+              if fieldbyname('Mixed_Claim').asstring = 'Y' then
+                sFSCClaim := stringreplace(fieldbyname('Short_Description').asstring,'X',formatfloat('0',GetAllocDetQuery.fieldbyname('FSC_Mixed_Percentage').asfloat),[])
+              else
+                sFSCClaim := fieldbyname('Short_Description').asstring;
+
+              if trim(fieldbyname('Claim_Type').asstring) = 'FSC' then
+                gtlblFSCClaim.Caption := 'FSC Claim: ' + sFSCClaim
+              else
+                gtlblFSCClaim.Caption := 'PEFC Declaration: ' + sFSCClaim
+            end
+          else
+            begin
+              gtlblFSCClaim.Caption := '';
+            end;
+        end;
+    end;
+
+  chldbndFSCClaim.Enabled := (gtlblFSCClaim.caption <> '');
+  GetAllocSerialNoSQL.active := false;
+  GetAllocSerialNoSQL.ParamByName('sales_order').asInteger := GetAllocDetQuery.FieldByName('sales_order').asInteger;
+  GetAllocSerialNoSQL.ParamByName('sales_order_line_no').asInteger := GetAllocDetQuery.FieldByName('sales_order_line_no').asInteger;
+  GetAllocSerialNoSQL.active := true;
+  if GetAllocSerialNoSQL.RecordCount > 0 then
+    qrdetailSerialNos.Enabled := true
+  else
+    qrdetailSerialNos.enabled := false;
+
+  self.NoOfSerialNoBands := 0;
+end;
+
+procedure TSTRPDelivfrm.PageHeadQRBandAfterPrint(Sender: TQRCustomBand;
+  BandPrinted: Boolean);
+begin
+DelInstructMemo.Lines.Clear;
+end;
+
+procedure TSTRPDelivfrm.BuildDeliveryNotes(aQuery: TQuery;
+  const iNarrative: integer);
+var
+  aStr : string;
+begin
+  with aQuery do
+  begin  {If any notes then get then}
+    if iNarrative > 0 then
+    begin
+      GetDelivNarrSQL.ParamByName('Narrative').AsInteger := iNarrative;
+      GetDelivNarrSQL.Open;
+      aStr := '';
+      while (not GetDelivNarrSQL.EOF) do
+      begin
+        aStr := aStr + GetDelivNarrSQL.FieldByName('Narrative_Text').AsString;
+        if Length(GetDelivNarrSQL.FieldByName('Narrative_Text').AsString) < 100 then
+          aStr := aStr + ' ';
+        GetDelivNarrSQL.Next;
+      end;
+      GetDelivNarrSQL.Close;
+    end;
+    DelInstructMemo.Lines.Clear;
+    DelInstructMemo.Lines.Text := aStr;
+  end;
+end;
+
+procedure TSTRPDelivfrm.qrdetailSerialNosBeforePrint(Sender: TQRCustomBand;
+  var PrintBand: Boolean);
+begin
+  self.NoOfSerialNoBands := self.NoOfSerialNoBands + 1;
+  
+  if self.NoOfSerialNoBands > 1 then
+    lblSerialCaption.enabled := false
+  else
+    lblSerialCaption.enabled := true;
+    
+  lblSerialRange.caption := GetAllocSerialNoSQL.fieldbyname('Serial_Item_from').asstring + ' to ' +
+                            GetAllocSerialNoSQL.fieldbyname('Serial_Item_to').asstring;
+
+end;
+
+end.

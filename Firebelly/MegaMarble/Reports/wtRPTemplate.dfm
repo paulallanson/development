@@ -1,0 +1,4271 @@
+object frmwtRPTemplate: TfrmwtRPTemplate
+  Left = 2
+  Top = 32
+  Width = 1231
+  Height = 738
+  Caption = 'Template Check List'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Scaled = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object qrpDetails: TQuickRep
+    Left = 224
+    Top = -462
+    Width = 794
+    Height = 1123
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
+    BeforePrint = qrpDetailsBeforePrint
+    DataSet = qryReport
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    Functions.Strings = (
+      'PAGENUMBER'
+      'COLUMNNUMBER'
+      'REPORTTITLE'
+      'QRLOOPBAND1')
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39
+      '0')
+    Options = [FirstPageHeader, LastPageFooter]
+    Page.Columns = 1
+    Page.Orientation = poPortrait
+    Page.PaperSize = A4
+    Page.Values = (
+      100.000000000000000000
+      2970.000000000000000000
+      100.000000000000000000
+      2100.000000000000000000
+      100.000000000000000000
+      100.000000000000000000
+      0.000000000000000000)
+    PrinterSettings.Copies = 1
+    PrinterSettings.OutputBin = Auto
+    PrinterSettings.Duplex = False
+    PrinterSettings.FirstPage = 0
+    PrinterSettings.LastPage = 0
+    PrinterSettings.ExtendedDuplex = 0
+    PrinterSettings.UseStandardprinter = False
+    PrinterSettings.UseCustomBinCode = False
+    PrinterSettings.CustomBinCode = 0
+    PrinterSettings.UseCustomPaperCode = False
+    PrinterSettings.CustomPaperCode = 0
+    PrinterSettings.PrintMetaFile = False
+    PrintIfEmpty = True
+    ReportTitle = 'Template Check List'
+    SnapToGrid = True
+    Units = MM
+    Zoom = 100
+    PrevFormStyle = fsNormal
+    PreviewInitialState = wsMaximized
+    object qrgQuote: TQRGroup
+      Left = 38
+      Top = 1081
+      Width = 718
+      Height = 2
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      BeforePrint = qrgQuoteBeforePrint
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = True
+      Size.Values = (
+        5.291666666666667000
+        1899.708333333333000000)
+      Expression = 'quote'
+      Master = qrpDetails
+      ReprintOnNewPage = False
+    end
+    object qrbPageHeader: TQRBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 1043
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      BeforePrint = qrbPageHeaderBeforePrint
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        2759.604166666667000000
+        1899.708333333333000000)
+      BandType = rbPageHeader
+      object gtQRShape14: TgtQRShape
+        Left = 320
+        Top = 83
+        Width = 397
+        Height = 39
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          103.187500000000000000
+          846.666666666666600000
+          219.604166666666700000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape45: TgtQRShape
+        Left = 0
+        Top = 725
+        Width = 717
+        Height = 317
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          838.729166666666700000
+          0.000000000000000000
+          1918.229166666667000000
+          1897.062500000000000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object QRShape1: TgtQRShape
+        Left = 0
+        Top = 121
+        Width = 717
+        Height = 291
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          769.937500000000000000
+          0.000000000000000000
+          320.145833333333400000
+          1897.062500000000000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object qrlblTemplate: TgtQRLabel
+        Left = 368
+        Top = -5
+        Width = 335
+        Height = 43
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          113.770833333333300000
+          973.666666666666700000
+          -13.229166666666670000
+          886.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Template Check List'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -37
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 28
+      end
+      object QRLabel14: TgtQRLabel
+        Left = 248
+        Top = 780
+        Width = 64
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          656.166666666666700000
+          2063.750000000000000000
+          169.333333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Right / Left'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel15: TgtQRLabel
+        Left = 248
+        Top = 876
+        Width = 61
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          656.166666666666700000
+          2317.750000000000000000
+          161.395833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sink Style'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel4: TgtQRLabel
+        Left = 327
+        Top = 216
+        Width = 128
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          571.500000000000000000
+          338.666666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Installation address:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrmSiteAddress: TgtQRMemo
+        Left = 328
+        Top = 235
+        Width = 377
+        Height = 98
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          259.291666666666700000
+          867.833333333333300000
+          621.770833333333300000
+          997.479166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel16: TgtQRLabel
+        Left = 16
+        Top = 756
+        Width = 99
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2000.250000000000000000
+          261.937500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Hob/Drop In Sink'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape1: TgtQRShape
+        Left = 152
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object QRLabel17: TgtQRLabel
+        Left = 16
+        Top = 780
+        Width = 93
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2063.750000000000000000
+          246.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Polished Cutout'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape2: TgtQRShape
+        Left = 152
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel6: TgtQRLabel
+        Left = 327
+        Top = 344
+        Width = 53
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          910.166666666666700000
+          140.229166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Contact:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRDBText2: TgtQRDBText
+        Left = 406
+        Top = 344
+        Width = 76
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1074.208333333333000000
+          910.166666666666700000
+          201.083333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Install_Name'
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel7: TgtQRLabel
+        Left = 327
+        Top = 370
+        Width = 73
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          978.958333333333300000
+          193.145833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Telephone:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRDBText3: TgtQRDBText
+        Left = 406
+        Top = 370
+        Width = 79
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1074.208333333333000000
+          978.958333333333300000
+          209.020833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Install_Phone'
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape3: TgtQRShape
+        Left = 0
+        Top = 264
+        Width = 321
+        Height = 63
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          166.687500000000000000
+          0.000000000000000000
+          698.500000000000000000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object qrlblSalesOrder: TgtQRLabel
+        Left = 15
+        Top = 130
+        Width = 122
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          39.687500000000000000
+          343.958333333333300000
+          322.791666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sales Order No:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblSalesOrderNo: TgtQRDBText
+        Left = 156
+        Top = 130
+        Width = 95
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          412.750000000000000000
+          343.958333333333300000
+          251.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Sales_Order'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object gtQRShape4: TgtQRShape
+        Left = 320
+        Top = 121
+        Width = 397
+        Height = 40
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          105.833333333333300000
+          846.666666666666600000
+          320.145833333333400000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape5: TgtQRShape
+        Left = 0
+        Top = 160
+        Width = 717
+        Height = 51
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          134.937500000000000000
+          0.000000000000000000
+          423.333333333333300000
+          1897.062500000000000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape6: TgtQRShape
+        Left = 0
+        Top = 210
+        Width = 321
+        Height = 55
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          145.520833333333300000
+          0.000000000000000000
+          555.625000000000000000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel1: TgtQRLabel
+        Left = 15
+        Top = 171
+        Width = 70
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          452.437500000000000000
+          185.208333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Description:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRDBText5: TgtQRDBText
+        Left = 96
+        Top = 171
+        Width = 617
+        Height = 36
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          95.250000000000000000
+          254.000000000000000000
+          452.437500000000000000
+          1632.479166666667000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Description'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel3: TgtQRLabel
+        Left = 15
+        Top = 219
+        Width = 72
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          579.437500000000000000
+          190.500000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Edge Detail:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel8: TgtQRLabel
+        Left = 15
+        Top = 276
+        Width = 64
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          730.250000000000000000
+          169.333333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Thickness:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape7: TgtQRShape
+        Left = 0
+        Top = 326
+        Width = 321
+        Height = 67
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          177.270833333333300000
+          0.000000000000000000
+          862.541666666666900000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel9: TgtQRLabel
+        Left = 15
+        Top = 339
+        Width = 60
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          896.937500000000000000
+          158.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Upstands:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel10: TgtQRLabel
+        Left = 15
+        Top = 364
+        Width = 42
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          963.083333333333300000
+          111.125000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Height:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRShape7: TgtQRShape
+        Left = 102
+        Top = 371
+        Width = 153
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          269.875000000000000000
+          981.604166666666800000
+          404.812500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel11: TgtQRLabel
+        Left = 263
+        Top = 364
+        Width = 23
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          695.854166666666700000
+          963.083333333333300000
+          60.854166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'mm'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel12: TgtQRLabel
+        Left = 15
+        Top = 301
+        Width = 42
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          796.395833333333300000
+          111.125000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Height:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape8: TgtQRShape
+        Left = 102
+        Top = 308
+        Width = 153
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          269.875000000000000000
+          814.916666666666800000
+          404.812500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel13: TgtQRLabel
+        Left = 263
+        Top = 301
+        Width = 23
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          695.854166666666700000
+          796.395833333333300000
+          60.854166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'mm'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape9: TgtQRShape
+        Left = 320
+        Top = 45
+        Width = 397
+        Height = 39
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          103.187500000000000000
+          846.666666666666600000
+          119.062500000000000000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel2: TgtQRLabel
+        Left = 329
+        Top = 58
+        Width = 61
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          870.479166666666700000
+          153.458333333333300000
+          161.395833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Customer:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel5: TgtQRLabel
+        Left = 329
+        Top = 94
+        Width = 63
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          870.479166666666700000
+          248.708333333333300000
+          166.687500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Reference:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRDBText4: TgtQRDBText
+        Left = 408
+        Top = 94
+        Width = 297
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1079.500000000000000000
+          248.708333333333300000
+          785.812500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Reference'
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape10: TgtQRShape
+        Left = 0
+        Top = 392
+        Width = 321
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          0.000000000000000000
+          1037.166666666667000000
+          849.312499999999900000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape11: TgtQRShape
+        Left = 320
+        Top = 392
+        Width = 397
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          846.666666666666600000
+          1037.166666666667000000
+          1050.395833333333000000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel14: TgtQRLabel
+        Left = 15
+        Top = 395
+        Width = 230
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          1045.104166666667000000
+          608.541666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Access to site/Special Requirements'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel15: TgtQRLabel
+        Left = 327
+        Top = 395
+        Width = 207
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          1045.104166666667000000
+          547.687500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Additional Template Information'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape13: TgtQRShape
+        Left = 320
+        Top = 412
+        Width = 397
+        Height = 89
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          235.479166666666700000
+          846.666666666666600000
+          1090.083333333333000000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape18: TgtQRShape
+        Left = 320
+        Top = 500
+        Width = 397
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          846.666666666666600000
+          1322.916666666667000000
+          1050.395833333333000000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel20: TgtQRLabel
+        Left = 327
+        Top = 503
+        Width = 187
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          1330.854166666667000000
+          494.770833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Additional Fitting Information'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape19: TgtQRShape
+        Left = 320
+        Top = 520
+        Width = 397
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          171.979166666666700000
+          846.666666666666600000
+          1375.833333333333000000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape20: TgtQRShape
+        Left = 0
+        Top = 500
+        Width = 321
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          0.000000000000000000
+          1322.916666666667000000
+          849.312499999999900000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape21: TgtQRShape
+        Left = 0
+        Top = 520
+        Width = 321
+        Height = 161
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          425.979166666666700000
+          0.000000000000000000
+          1375.833333333333000000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel21: TgtQRLabel
+        Left = 15
+        Top = 503
+        Width = 231
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          39.687500000000000000
+          1330.854166666667000000
+          611.187500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Items taken from site, to be returned'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape22: TgtQRShape
+        Left = 0
+        Top = 412
+        Width = 321
+        Height = 89
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          235.479166666666700000
+          0.000000000000000000
+          1090.083333333333000000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape23: TgtQRShape
+        Left = 16
+        Top = 424
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1121.833333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape24: TgtQRShape
+        Left = 16
+        Top = 448
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1185.333333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape25: TgtQRShape
+        Left = 16
+        Top = 472
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1248.833333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape26: TgtQRShape
+        Left = 152
+        Top = 424
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          1121.833333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel22: TgtQRLabel
+        Left = 48
+        Top = 424
+        Width = 35
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          127.000000000000000000
+          1121.833333333333000000
+          92.604166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Stairs'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel23: TgtQRLabel
+        Left = 48
+        Top = 448
+        Width = 192
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          127.000000000000000000
+          1185.333333333333000000
+          508.000000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Building Site (see Addn Site Info)'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel24: TgtQRLabel
+        Left = 48
+        Top = 472
+        Width = 60
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          127.000000000000000000
+          1248.833333333333000000
+          158.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Obstacles'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel25: TgtQRLabel
+        Left = 176
+        Top = 424
+        Width = 45
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          465.666666666666700000
+          1121.833333333333000000
+          119.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Parking'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape27: TgtQRShape
+        Left = 16
+        Top = 528
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1397.000000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel26: TgtQRLabel
+        Left = 43
+        Top = 528
+        Width = 58
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          113.770833333333300000
+          1397.000000000000000000
+          153.458333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sink Only'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape28: TgtQRShape
+        Left = 152
+        Top = 528
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          1397.000000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel27: TgtQRLabel
+        Left = 176
+        Top = 528
+        Width = 129
+        Height = 49
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          129.645833333333300000
+          465.666666666666800000
+          1397.000000000000000000
+          341.312500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Sink in unopened box (inc plumbing kit)'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel28: TgtQRLabel
+        Left = 43
+        Top = 592
+        Width = 24
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          113.770833333333300000
+          1566.333333333333000000
+          63.500000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Hob'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape29: TgtQRShape
+        Left = 16
+        Top = 592
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1566.333333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape30: TgtQRShape
+        Left = 16
+        Top = 624
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          42.333333333333340000
+          1651.000000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel29: TgtQRLabel
+        Left = 43
+        Top = 624
+        Width = 114
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          113.770833333333300000
+          1651.000000000000000000
+          301.625000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Other. Please state'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel30: TgtQRLabel
+        Left = 43
+        Top = 547
+        Width = 97
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          113.770833333333300000
+          1447.270833333333000000
+          256.645833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = '(no plumbing kit)'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape31: TgtQRShape
+        Left = 152
+        Top = 592
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          1566.333333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel31: TgtQRLabel
+        Left = 176
+        Top = 592
+        Width = 85
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          465.666666666666700000
+          1566.333333333333000000
+          224.895833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Pop up socket'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape32: TgtQRShape
+        Left = 40
+        Top = 667
+        Width = 265
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          105.833333333333300000
+          1764.770833333333000000
+          701.145833333333400000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape33: TgtQRShape
+        Left = 320
+        Top = 599
+        Width = 397
+        Height = 82
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          216.958333333333400000
+          846.666666666666600000
+          1584.854166666667000000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape34: TgtQRShape
+        Left = 336
+        Top = 614
+        Width = 15
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          889.000000000000000000
+          1624.541666666667000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel32: TgtQRLabel
+        Left = 363
+        Top = 614
+        Width = 27
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          960.437500000000000000
+          1624.541666666667000000
+          71.437500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sink'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel34: TgtQRLabel
+        Left = 507
+        Top = 614
+        Width = 24
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1341.437500000000000000
+          1624.541666666667000000
+          63.500000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Hob'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape36: TgtQRShape
+        Left = 480
+        Top = 614
+        Width = 15
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          1270.000000000000000000
+          1624.541666666667000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape37: TgtQRShape
+        Left = 336
+        Top = 646
+        Width = 15
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          889.000000000000000000
+          1709.208333333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel35: TgtQRLabel
+        Left = 363
+        Top = 646
+        Width = 37
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          960.437500000000000000
+          1709.208333333333000000
+          97.895833333333330000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Other.'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape38: TgtQRShape
+        Left = 600
+        Top = 614
+        Width = 15
+        Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          42.333333333333340000
+          1587.500000000000000000
+          1624.541666666667000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel37: TgtQRLabel
+        Left = 624
+        Top = 614
+        Width = 49
+        Height = 18
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          47.625000000000000000
+          1651.000000000000000000
+          1624.541666666667000000
+          129.645833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Drainers'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape39: TgtQRShape
+        Left = 416
+        Top = 657
+        Width = 265
+        Height = 9
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          23.812500000000000000
+          1100.666666666667000000
+          1738.312500000000000000
+          701.145833333333400000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape35: TgtQRShape
+        Left = 0
+        Top = 680
+        Width = 321
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          0.000000000000000000
+          1799.166666666667000000
+          849.312499999999900000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape40: TgtQRShape
+        Left = 320
+        Top = 680
+        Width = 185
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          846.666666666666600000
+          1799.166666666667000000
+          489.479166666666600000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape41: TgtQRShape
+        Left = 504
+        Top = 680
+        Width = 213
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          1333.500000000000000000
+          1799.166666666667000000
+          563.562500000000000000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel36: TgtQRLabel
+        Left = 7
+        Top = 683
+        Width = 84
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          18.520833333333330000
+          1807.104166666667000000
+          222.250000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sales Person'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel38: TgtQRLabel
+        Left = 327
+        Top = 683
+        Width = 152
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          1807.104166666667000000
+          402.166666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'No of pieces to Drawing'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel33: TgtQRLabel
+        Left = 511
+        Top = 683
+        Width = 155
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1352.020833333333000000
+          1807.104166666667000000
+          410.104166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'No of pieces to template'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape42: TgtQRShape
+        Left = 0
+        Top = 700
+        Width = 321
+        Height = 25
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333340000
+          0.000000000000000000
+          1852.083333333333000000
+          849.312499999999900000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape43: TgtQRShape
+        Left = 320
+        Top = 700
+        Width = 185
+        Height = 25
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333340000
+          846.666666666666600000
+          1852.083333333333000000
+          489.479166666666600000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape44: TgtQRShape
+        Left = 504
+        Top = 700
+        Width = 213
+        Height = 25
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.145833333333340000
+          1333.500000000000000000
+          1852.083333333333000000
+          563.562500000000000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel39: TgtQRLabel
+        Left = 16
+        Top = 804
+        Width = 97
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2127.250000000000000000
+          256.645833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Collect Payment'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape46: TgtQRShape
+        Left = 152
+        Top = 804
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2127.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel40: TgtQRLabel
+        Left = 16
+        Top = 828
+        Width = 69
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2190.750000000000000000
+          182.562500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Splashback'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape47: TgtQRShape
+        Left = 152
+        Top = 828
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2190.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel41: TgtQRLabel
+        Left = 16
+        Top = 852
+        Width = 56
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2254.250000000000000000
+          148.166666666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Upstands'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape48: TgtQRShape
+        Left = 152
+        Top = 852
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2254.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel42: TgtQRLabel
+        Left = 16
+        Top = 876
+        Width = 85
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2317.750000000000000000
+          224.895833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sink Overhang'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape49: TgtQRShape
+        Left = 152
+        Top = 876
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          402.166666666666600000
+          2317.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape50: TgtQRShape
+        Left = 192
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape51: TgtQRShape
+        Left = 192
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape53: TgtQRShape
+        Left = 192
+        Top = 804
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2127.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape54: TgtQRShape
+        Left = 192
+        Top = 828
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2190.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape55: TgtQRShape
+        Left = 192
+        Top = 852
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2254.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape56: TgtQRShape
+        Left = 192
+        Top = 876
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          508.000000000000000000
+          2317.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel43: TgtQRLabel
+        Left = 150
+        Top = 732
+        Width = 60
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          396.875000000000000000
+          1936.750000000000000000
+          158.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Yes     No'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel44: TgtQRLabel
+        Left = 16
+        Top = 904
+        Width = 141
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2391.833333333333000000
+          373.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Overhang Amount - front'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape52: TgtQRShape
+        Left = 176
+        Top = 913
+        Width = 87
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          465.666666666666700000
+          2415.645833333333000000
+          230.187500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel45: TgtQRLabel
+        Left = 271
+        Top = 904
+        Width = 23
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          717.020833333333300000
+          2391.833333333333000000
+          60.854166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'mm'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel46: TgtQRLabel
+        Left = 382
+        Top = 732
+        Width = 60
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1010.708333333333000000
+          1936.750000000000000000
+          158.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Yes     No'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape57: TgtQRShape
+        Left = 424
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1121.833333333333000000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape58: TgtQRShape
+        Left = 384
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1016.000000000000000000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel47: TgtQRLabel
+        Left = 248
+        Top = 756
+        Width = 49
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          656.166666666666700000
+          2000.250000000000000000
+          129.645833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Drainers'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape59: TgtQRShape
+        Left = 384
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1016.000000000000000000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape60: TgtQRShape
+        Left = 424
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1121.833333333333000000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel49: TgtQRLabel
+        Left = 248
+        Top = 804
+        Width = 58
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          656.166666666666700000
+          2127.250000000000000000
+          153.458333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Hob Style'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel50: TgtQRLabel
+        Left = 248
+        Top = 852
+        Width = 45
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          656.166666666666700000
+          2254.250000000000000000
+          119.062500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Recess'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape63: TgtQRShape
+        Left = 384
+        Top = 852
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1016.000000000000000000
+          2254.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape64: TgtQRShape
+        Left = 424
+        Top = 852
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1121.833333333333000000
+          2254.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel51: TgtQRLabel
+        Left = 622
+        Top = 732
+        Width = 60
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1645.708333333333000000
+          1936.750000000000000000
+          158.750000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Yes     No'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape65: TgtQRShape
+        Left = 664
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1756.833333333333000000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape66: TgtQRShape
+        Left = 624
+        Top = 756
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1651.000000000000000000
+          2000.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel52: TgtQRLabel
+        Left = 488
+        Top = 756
+        Width = 65
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2000.250000000000000000
+          171.979166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Plug Tower'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel53: TgtQRLabel
+        Left = 488
+        Top = 780
+        Width = 69
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2063.750000000000000000
+          182.562500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Pan Stands'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape67: TgtQRShape
+        Left = 624
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1651.000000000000000000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape68: TgtQRShape
+        Left = 664
+        Top = 780
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1756.833333333333000000
+          2063.750000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape69: TgtQRShape
+        Left = 664
+        Top = 804
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1756.833333333333000000
+          2127.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRShape70: TgtQRShape
+        Left = 624
+        Top = 804
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          1651.000000000000000000
+          2127.250000000000000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel54: TgtQRLabel
+        Left = 488
+        Top = 804
+        Width = 76
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2127.250000000000000000
+          201.083333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Window Cills'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel55: TgtQRLabel
+        Left = 488
+        Top = 828
+        Width = 82
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2190.750000000000000000
+          216.958333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Cill Thickness'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape61: TgtQRShape
+        Left = 312
+        Top = 815
+        Width = 129
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          825.500000000000000000
+          2156.354166666667000000
+          341.312500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape62: TgtQRShape
+        Left = 312
+        Top = 887
+        Width = 129
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          825.500000000000000000
+          2346.854166666667000000
+          341.312500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape71: TgtQRShape
+        Left = 616
+        Top = 839
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1629.833333333333000000
+          2219.854166666667000000
+          171.979166666666700000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel48: TgtQRLabel
+        Left = 687
+        Top = 832
+        Width = 23
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1817.687500000000000000
+          2201.333333333333000000
+          60.854166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'mm'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel56: TgtQRLabel
+        Left = 488
+        Top = 876
+        Width = 79
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2317.750000000000000000
+          209.020833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Tap Pos/Size'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrmAddress: TgtQRMemo
+        Left = 408
+        Top = 57
+        Width = 297
+        Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          50.270833333333330000
+          1079.500000000000000000
+          150.812500000000000000
+          785.812500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape72: TgtQRShape
+        Left = 576
+        Top = 887
+        Width = 132
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1524.000000000000000000
+          2346.854166666667000000
+          349.250000000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object QRLabel4: TgtQRLabel
+        Left = 488
+        Top = 930
+        Width = 83
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2460.625000000000000000
+          219.604166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Templated by:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape73: TgtQRShape
+        Left = 0
+        Top = 952
+        Width = 717
+        Height = 89
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          235.479166666666700000
+          0.000000000000000000
+          2518.833333333333000000
+          1897.062500000000000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel5: TgtQRLabel
+        Left = 16
+        Top = 960
+        Width = 289
+        Height = 41
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          108.479166666666700000
+          42.333333333333330000
+          2540.000000000000000000
+          764.645833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'Appliances we are providing and which need to go back to site:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsUnderline]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel57: TgtQRLabel
+        Left = 16
+        Top = 930
+        Width = 117
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          42.333333333333330000
+          2460.625000000000000000
+          309.562500000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Under mounted sink'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape74: TgtQRShape
+        Left = 576
+        Top = 938
+        Width = 132
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1524.000000000000000000
+          2481.791666666667000000
+          349.250000000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape12: TgtQRShape
+        Left = 320
+        Top = 580
+        Width = 397
+        Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          55.562500000000000000
+          846.666666666666600000
+          1534.583333333333000000
+          1050.395833333333000000)
+        Brush.Color = clBtnFace
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel16: TgtQRLabel
+        Left = 327
+        Top = 583
+        Width = 139
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          1542.520833333333000000
+          367.770833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Items to be confirmed'
+        Color = clBtnFace
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblQuoteLabel: TgtQRLabel
+        Left = 329
+        Top = 131
+        Width = 79
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          870.479166666666700000
+          346.604166666666700000
+          209.020833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Quote No:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblQuote: TgtQRDBText
+        Left = 424
+        Top = 131
+        Width = 47
+        Height = 20
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          52.916666666666670000
+          1121.833333333333000000
+          346.604166666666700000
+          124.354166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Color = clWhite
+        DataSet = qryReport
+        DataField = 'Quote'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 12
+      end
+      object qrlblEdgeDetail: TgtQRLabel
+        Left = 102
+        Top = 219
+        Width = 211
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          269.875000000000000000
+          579.437500000000000000
+          558.270833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = True
+        Caption = 'qrlblEdgeDetail'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblThickness: TgtQRLabel
+        Left = 102
+        Top = 276
+        Width = 211
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          269.875000000000000000
+          730.250000000000000000
+          558.270833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblThickness'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblUpstand: TgtQRLabel
+        Left = 102
+        Top = 339
+        Width = 211
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          269.875000000000000000
+          896.937500000000000000
+          558.270833333333400000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblUpstand'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object qrlblOfficeContact: TgtQRLabel
+        Left = 8
+        Top = 704
+        Width = 305
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          21.166666666666670000
+          1862.666666666667000000
+          806.979166666666800000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = False
+        AutoStretch = False
+        Caption = 'qrlblOfficeContact'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel17: TgtQRLabel
+        Left = 152
+        Top = 931
+        Width = 70
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          402.166666666666700000
+          2463.270833333333000000
+          185.208333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Landscape'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape15: TgtQRShape
+        Left = 232
+        Top = 931
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          613.833333333333400000
+          2463.270833333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel18: TgtQRLabel
+        Left = 264
+        Top = 931
+        Width = 48
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          698.500000000000000000
+          2463.270833333333000000
+          127.000000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Portrait'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape16: TgtQRShape
+        Left = 328
+        Top = 931
+        Width = 15
+        Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          39.687500000000000000
+          867.833333333333500000
+          2463.270833333333000000
+          39.687500000000000000)
+        Pen.Width = 2
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object qrrchTextNotes: TgtQRRichText
+        Left = 328
+        Top = 418
+        Width = 381
+        Height = 79
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          209.020833333333300000
+          867.833333333333500000
+          1105.958333333333000000
+          1008.062500000000000000)
+        Alignment = taLeftJustify
+        AutoStretch = False
+        Color = clWindow
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+      end
+      object gtQRLabel19: TgtQRLabel
+        Left = 328
+        Top = 528
+        Width = 160
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          867.833333333333300000
+          1397.000000000000000000
+          423.333333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'No. of people required to fit:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel58: TgtQRLabel
+        Left = 328
+        Top = 556
+        Width = 136
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          867.833333333333300000
+          1471.083333333333000000
+          359.833333333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Approximate time to fit:'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape17: TgtQRShape
+        Left = 518
+        Top = 539
+        Width = 123
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1370.541666666667000000
+          1426.104166666667000000
+          325.437500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape75: TgtQRShape
+        Left = 518
+        Top = 567
+        Width = 123
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1370.541666666667000000
+          1500.187500000000000000
+          325.437500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel59: TgtQRLabel
+        Left = 315
+        Top = 904
+        Width = 34
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          833.437500000000000000
+          2391.833333333333000000
+          89.958333333333330000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Sides'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape76: TgtQRShape
+        Left = 355
+        Top = 913
+        Width = 87
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          939.270833333333300000
+          2415.645833333333000000
+          230.187500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRLabel60: TgtQRLabel
+        Left = 445
+        Top = 904
+        Width = 23
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1177.395833333333000000
+          2391.833333333333000000
+          60.854166666666670000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'mm'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel61: TgtQRLabel
+        Left = 488
+        Top = 852
+        Width = 73
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          1291.166666666667000000
+          2254.250000000000000000
+          193.145833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'No. Sockets'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape77: TgtQRShape
+        Left = 616
+        Top = 863
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1629.833333333333000000
+          2283.354166666667000000
+          171.979166666666700000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape78: TgtQRShape
+        Left = 320
+        Top = 952
+        Width = 397
+        Height = 89
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          235.479166666666700000
+          846.666666666666700000
+          2518.833333333333000000
+          1050.395833333333000000)
+        Shape = qrsRectangle
+        VertAdjust = 0
+      end
+      object gtQRLabel62: TgtQRLabel
+        Left = 327
+        Top = 955
+        Width = 192
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          2526.770833333333000000
+          508.000000000000000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Templating Client Agreement:'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel63: TgtQRLabel
+        Left = 327
+        Top = 973
+        Width = 380
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          2574.395833333333000000
+          1005.416666666667000000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 
+          'I agree with the above specification & instruct production to be' +
+          'gin.'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel64: TgtQRLabel
+        Left = 327
+        Top = 996
+        Width = 121
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          865.187500000000000000
+          2635.250000000000000000
+          320.145833333333300000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Client Name (PRINT)'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRLabel65: TgtQRLabel
+        Left = 365
+        Top = 1022
+        Width = 83
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.979166666666670000
+          965.729166666666700000
+          2704.041666666667000000
+          219.604166666666700000)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = '(SIGNATURE)'
+        Color = clWhite
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object gtQRShape79: TgtQRShape
+        Left = 464
+        Top = 1005
+        Width = 249
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1227.666666666667000000
+          2659.062500000000000000
+          658.812500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape80: TgtQRShape
+        Left = 576
+        Top = 938
+        Width = 132
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1524.000000000000000000
+          2481.791666666667000000
+          349.250000000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+      object gtQRShape81: TgtQRShape
+        Left = 464
+        Top = 1031
+        Width = 249
+        Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          21.166666666666670000
+          1227.666666666667000000
+          2727.854166666667000000
+          658.812500000000000000)
+        Shape = qrsHorLine
+        VertAdjust = 0
+      end
+    end
+    object gtQRSysData1: TgtQRSysData
+      Left = 647
+      Top = 1088
+      Width = 108
+      Height = 16
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        42.333333333333330000
+        1711.854166666667000000
+        2878.666666666667000000
+        285.750000000000000000)
+      Alignment = taRightJustify
+      AlignToBand = False
+      AutoSize = True
+      Color = clWhite
+      Data = qrsDateTime
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Lucida Sans'
+      Font.Style = []
+      ParentFont = False
+      Text = 'Printed: '
+      Transparent = False
+      FontSize = 8
+    end
+    object qriHeadLogo: TgtQRImage
+      Left = 39
+      Top = 24
+      Width = 245
+      Height = 133
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        351.895833333333300000
+        103.187500000000000000
+        63.500000000000000000
+        648.229166666666700000)
+      Stretch = True
+    end
+  end
+  object qryReport: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  sales_order_line.quote,'
+      '        sales_order_line.description,'
+      '        Sales_Order.customer_name,'
+      '        Sales_Order.reference,'
+      '        Sales_Order.address,'
+      '        Sales_Order.customer,'
+      '        Sales_Order.contact_name,'
+      '        Sales_order_line.Sales_order,'
+      '        Sales_Order.Install_address,'
+      '        Sales_Order.Install_Name,'
+      '        Sales_order.Install_Phone,'
+      '        Sales_Order.Account_Manager,'
+      '        Sales_Order.Extra_Notes,'
+      '        Operator.Operator_Name as Account_Manager_Name,'
+      '        Operator.Telephone_number'
+      'FROM Operator'
+      '      RIGHT JOIN ((Sales_Order'
+      '      INNER JOIN Sales_Order_Line'
+      
+        '        ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Orde' +
+        'r)'
+      '      LEFT JOIN Quote'
+      '        ON Sales_Order_Line.Quote = Quote.Quote)'
+      '        ON Operator.Operator = Sales_Order.Account_Manager'
+      
+        'WHERE sales_order_line.sales_order = :sales_order AND Sales_Orde' +
+        'r_Line.quote <> 0'
+      'ORDER BY sales_order_line.quote')
+    Left = 1091
+    Top = 118
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'sales_order'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsReport: TDataSource
+    DataSet = qryReport
+    Left = 1024
+    Top = 64
+  end
+  object qryAddress: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'select *'
+      'from Address'
+      'where Address = :Address')
+    Left = 1030
+    Top = 299
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Address'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryCustomer: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'select Customer, Customer_name,'
+      'Street,'
+      'Locale,'
+      'Town_City,'
+      'postcode,'
+      'County_State,'
+      'Vat_Rate,'
+      'Credit_Status,'
+      'Telephone_number'
+      'from Customer, VAT'
+      'where Customer = :Customer and'
+      'Customer.VAT = Vat.Vat')
+    Left = 1030
+    Top = 366
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsAddress: TDataSource
+    Left = 1030
+    Top = 235
+  end
+  object qryCompany: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select * from company'
+      'where company = 1')
+    Left = 1030
+    Top = 159
+  end
+  object qrygetNotes: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select *'
+      'from Notes'
+      'where notes_code = :Notes_Code'
+      'order by notes_code, notes_line')
+    Left = 1102
+    Top = 53
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Notes_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryEndUser: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'select End_User, End_User_name,'
+      'Street,'
+      'Locale,'
+      'Town_City,'
+      'postcode,'
+      'County_State,'
+      'Vat_Rate'
+      'from End_User, VAT'
+      'where End_User = :End_User and'
+      'End_User.VAT = Vat.Vat')
+    Left = 1030
+    Top = 438
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'End_User'
+        ParamType = ptUnknown
+      end>
+  end
+  object gtQRFilters1: TgtQRFilters
+    HTML.Author = 'Pragnaan'
+    HTML.Keywords = 'gtQrFilters'
+    HTML.ImageDir = 'Images'
+    PDF.Author = 'Pragnaan'
+    PDF.Keywords = 'QuickReport, Export, Filters'
+    RTF.Author = 'Pragnaan'
+    RTF.Keywords = 'QuickReport, Export, Filters'
+    RTF.ExportImageFormat = ifBMP
+    Text.XScaleFactor = 1.000000000000000000
+    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkGIF, fkJPEG, fkBMP]
+    Left = 1030
+    Top = 48
+  end
+  object qryQuote: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Quote.Quote,'
+      '        Quote.description,'
+      '        quote.customer_name,'
+      '        quote.reference,'
+      '        quote.address,'
+      '        quote.customer,'
+      '        quote.contact_name,'
+      '        0 as Sales_order,'
+      '        Quote.Install_address,'
+      '        Quote,Install_Name,'
+      '        Quote.Install_Phone,'
+      '        Quote.Account_Manager,'
+      '        Quote.Extra_Notes,'
+      '        Operator.Operator_Name as Account_Manager_Name,'
+      '        Operator.Telephone_number'
+      'FROM Operator'
+      '      RIGHT JOIN Quote'
+      '        ON Operator.Operator = Quote.Account_Manager'
+      'WHERE Quote.Quote = :Quote'
+      'ORDER BY Quote.Quote')
+    Left = 1107
+    Top = 238
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryQuoteEdge: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Quote_Edge.Quote,'
+      '        Quote_Edge.Edge_number,'
+      '        Quote_Edge.Edge_profile,'
+      '        Edge_profile.Description'
+      'FROM Edge_profile'
+      '      INNER JOIN Quote_Edge'
+      '      ON Edge_profile.Edge_profile = Quote_Edge.Edge_profile'
+      'WHERE Quote = :Quote'
+      'ORDER BY Quote, Edge_Number')
+    Left = 1107
+    Top = 302
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryQuoteThickness: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Quote_Element.Quote,'
+      '        Quote_Element.Element_Number,'
+      '        Quote_Element.Thickness,'
+      '        Thickness.Thickness_mm'
+      'FROM Quote_Element'
+      '      INNER JOIN Thickness'
+      '        ON Quote_Element.Thickness = Thickness.Thickness'
+      'WHERE Quote = :Quote'
+      'ORDER BY Quote, Element_Number')
+    Left = 1107
+    Top = 366
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryQuoteUpstand: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Quote_Element.Quote,'
+      '        Quote_Element.Element_Number,'
+      '        Quote_Element.Thickness,'
+      '        Thickness.Thickness_mm'
+      'FROM Quote_Element'
+      '    INNER JOIN Thickness'
+      '        ON Quote_Element.Thickness = Thickness.Thickness'
+      'WHERE Element_number > 1000 AND Quote = :Quote'
+      'ORDER BY Quote, Element_Number')
+    Left = 1107
+    Top = 438
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Quote'
+        ParamType = ptUnknown
+      end>
+  end
+end

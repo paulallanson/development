@@ -1,0 +1,680 @@
+object frmWTRSFittingSheet: TfrmWTRSFittingSheet
+  Left = 591
+  Top = 139
+  BorderStyle = bsDialog
+  Caption = 'Fitting Sheet Print'
+  ClientHeight = 453
+  ClientWidth = 530
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SelectLst: TListBox
+    Left = 176
+    Top = 24
+    Width = 25
+    Height = 105
+    ItemHeight = 13
+    Sorted = True
+    TabOrder = 0
+    Visible = False
+  end
+  object pnlFooter: TPanel
+    Left = 0
+    Top = 373
+    Width = 530
+    Height = 80
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      530
+      80)
+    object btnPrint: TButton
+      Left = 8
+      Top = 39
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Print'
+      Enabled = False
+      TabOrder = 0
+      OnClick = btnPrintClick
+    end
+    object btnPreview: TButton
+      Left = 96
+      Top = 39
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'P&review'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnPreviewClick
+    end
+    object btnEmail: TButton
+      Left = 184
+      Top = 39
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = '&Email'
+      Enabled = False
+      TabOrder = 2
+      OnClick = btnEmailClick
+    end
+    object Button4: TButton
+      Left = 432
+      Top = 39
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'Close'
+      TabOrder = 3
+      OnClick = Button4Click
+    end
+    object chkbxMerge: TCheckBox
+      Left = 8
+      Top = 13
+      Width = 345
+      Height = 17
+      Caption = 'Merge all selected documents to create single PDF in email'
+      TabOrder = 4
+    end
+  end
+  object pnlDocuments: TPanel
+    Left = 0
+    Top = 138
+    Width = 530
+    Height = 63
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 2
+    object Label2: TLabel
+      Left = 8
+      Top = 5
+      Width = 188
+      Height = 13
+      Caption = 'Include documents from selected folder:'
+    end
+    object cmbDocuments: TComboBox
+      Left = 8
+      Top = 26
+      Width = 273
+      Height = 22
+      Style = csOwnerDrawFixed
+      ItemHeight = 16
+      ItemIndex = 0
+      TabOrder = 0
+      Text = '<All>'
+      OnChange = cmbDocumentsChange
+      Items.Strings = (
+        '<All>')
+    end
+  end
+  object pnlSelection: TPanel
+    Left = 0
+    Top = 0
+    Width = 530
+    Height = 138
+    Align = alTop
+    TabOrder = 3
+    object selectionGrp: TGroupBox
+      Left = 8
+      Top = 7
+      Width = 273
+      Height = 121
+      Caption = 'Sales Order Selection'
+      TabOrder = 0
+      object Label3: TLabel
+        Left = 8
+        Top = 80
+        Width = 255
+        Height = 26
+        Caption = 
+          'Enter order numbers and/or invoice ranges separated by commas. F' +
+          'or example, 1234, 1236, 1240-1245'
+        WordWrap = True
+      end
+      object memSelection: TMemo
+        Left = 8
+        Top = 20
+        Width = 257
+        Height = 53
+        TabOrder = 0
+        OnChange = memSelectionChange
+        OnKeyPress = memSelectionKeyPress
+      end
+    end
+    object chkbxPrint: TCheckBox
+      Left = 300
+      Top = 16
+      Width = 209
+      Height = 17
+      Caption = 'Print/Email Remedial Sheet'
+      TabOrder = 1
+    end
+    object chkbxIncludeVoucher: TCheckBox
+      Left = 300
+      Top = 38
+      Width = 97
+      Height = 17
+      Caption = 'Include Voucher'
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object pnlDocumentDetails: TPanel
+    Left = 0
+    Top = 201
+    Width = 530
+    Height = 172
+    Align = alClient
+    TabOrder = 4
+    object pcDocumentDetails: TPageControl
+      Left = 1
+      Top = 1
+      Width = 528
+      Height = 170
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = 'Order Documents'
+        object lstbxDocuments: TListBox
+          Left = 0
+          Top = 7
+          Width = 273
+          Height = 129
+          ItemHeight = 13
+          MultiSelect = True
+          TabOrder = 0
+          OnDblClick = lstbxDocumentsDblClick
+        end
+        object chkbxAllDocuments: TCheckBox
+          Left = 288
+          Top = 7
+          Width = 201
+          Height = 17
+          Caption = 'Select ALL order documents'
+          TabOrder = 1
+          OnClick = chkbxAllDocumentsClick
+        end
+        object chkbxAllSiteDocuments: TCheckBox
+          Left = 288
+          Top = 31
+          Width = 201
+          Height = 17
+          Caption = 'Select ALL Site Documents'
+          TabOrder = 2
+          OnClick = chkbxAllSiteDocumentsClick
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Site Documents'
+        ImageIndex = 1
+        object lstbxSiteDocuments: TListBox
+          Left = 0
+          Top = 7
+          Width = 273
+          Height = 129
+          ItemHeight = 13
+          MultiSelect = True
+          TabOrder = 0
+          OnDblClick = lstbxDocumentsDblClick
+        end
+      end
+    end
+  end
+  object qryGetSORemedials: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Line.Job,'
+      '        Int_Sel.Int_Sel_Code'
+      'FROM Sales_Order_Line'
+      '        INNER JOIN Int_Sel'
+      '          ON Sales_Order_Line.Sales_Order = Int_Sel.Sel1'
+      'WHERE Int_Sel.Int_Sel_Code = :Int_Sel')
+    Left = 408
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_Sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrderEmailsOld: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Date_Required as Order_Date_Required,'
+      '      Sales_Order.Contact_Name as Order_Contact_Name,'
+      '      Sales_Order.Fitter as Order_Fitter,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Fitter.Fitter_Name,'
+      '      Fitter.Email_Address as Email,'
+      '      Fitter.Email_Address as Contact_Email,'
+      '      '#39'Adobe Acrobat Document (*.pdf)'#39' as export_filter_desc,'
+      #9'    '#39'PDF'#39' as ExportFilter,'
+      '      '#39' '#39' as CC_Email'
+      'FROM Fitter'
+      '      RIGHT JOIN ((Operator'
+      '      INNER JOIN (Int_Sel'
+      '      INNER JOIN Sales_Order'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Operator.Operator = Sales_Order.Operator)'
+      '      INNER JOIN (Job'
+      '      RIGHT JOIN Sales_Order_Line'
+      '        ON Job.Job = Sales_Order_Line.Job)'
+      
+        '        ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Orde' +
+        'r)'
+      '        ON Fitter.Fitter = Sales_Order.Fitter'
+      'WHERE'
+      '  (Int_sel.Int_sel_Code = :Int_sel)'
+      'ORDER BY'
+      '    Fitter.Fitter_Name,'
+      '    sales_order.Sales_Order'
+      '')
+    Left = 176
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSORemedialsEmails: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Sales_Order_Line.Job'
+      'FROM Sales_Order_Line'
+      'WHERE Sales_Order_Line.Sales_Order = :Sales_Order AND'
+      'Sales_Order_Line.Job <> 0')
+    Left = 296
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Sales_Order'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrder: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Sales_Order.Sales_Order,'
+      '        Sales_Order.Location_Plan_Document,'
+      '        Sales_Order.Customer_Name,'
+      '        Customer_Branch.Branch_Name'
+      'FROM Customer_Branch'
+      '        RIGHT JOIN (Customer'
+      '        INNER JOIN Sales_Order'
+      '            ON Customer.Customer = Sales_Order.Customer)'
+      
+        '            ON (Customer_Branch.Branch_No = Sales_Order.Branch_n' +
+        'o) AND (Customer_Branch.Customer = Sales_Order.Customer)'
+      'WHERE Sales_Order = :Sales_Order')
+    Left = 432
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Sales_Order'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDocumentStructure: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT Folder_Name'
+      'FROM Document_Structure'
+      'WHERE Module_Id = 40'
+      'ORDER BY Folder_Name')
+    Left = 336
+    Top = 304
+  end
+  object qryReport: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Job.Job,'
+      '        Job.Job_Status,'
+      '        Sales_Order.Customer,'
+      '        Sales_Order.Customer_Name,'
+      '        Sales_Order.Contact_name,'
+      '        Sales_Order.Order_ref_no,'
+      '        Sales_Order.Reference,'
+      '        Sales_Order.Address,'
+      '        Sales_Order.Install_Name,'
+      '        Sales_Order.Install_Phone,'
+      '        Sales_Order.Install_Address,'
+      '        Sales_Order.Sales_Order,'
+      '        Sales_Order.Revenue_Centre,'
+      '        0 as "Job_Remedial.Remedial_Number"'
+      'FROM Sales_Order'
+      '        INNER JOIN (Job'
+      '        INNER JOIN Sales_Order_Line'
+      '          ON Job.Job = Sales_Order_Line.Job)'
+      
+        '          ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Or' +
+        'der'
+      'WHERE Job.Job = :Job AND :Remedial_Number = 0')
+    Left = 304
+    Top = 80
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Job'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Remedial_Number'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrdersOlder: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Sales_Order.Date_Required as Order_Date_Required'
+      'FROM Int_Sel'
+      '        INNER JOIN ((Operator'
+      '        INNER JOIN Sales_Order'
+      '          ON Operator.Operator = Sales_Order.Operator)'
+      '        INNER JOIN (Job'
+      '        INNER JOIN Sales_Order_Line'
+      '          ON Job.Job = Sales_Order_Line.Job)'
+      
+        '          ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Or' +
+        'der)'
+      '          ON Int_Sel.Sel1 = Sales_Order.Sales_Order'
+      'WHERE'
+      
+        '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
+        '<> 0)')
+    Left = 296
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrderEmailsOlder: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Date_Required as Order_Date_Required,'
+      '      Sales_Order.Fitter as Order_Fitter,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Fitter.Fitter_Name,'
+      '      Fitter.Email_Address as Email,'
+      '      Fitter.Email_Address as Contact_Email,'
+      '      '#39'Adobe Acrobat Document (*.pdf)'#39' as export_filter_desc,'
+      #9'    '#39'PDF'#39' as ExportFilter,'
+      '      '#39' '#39' as CC_Email'
+      'FROM Fitter'
+      '      RIGHT JOIN (Int_Sel'
+      '      INNER JOIN ((Operator'
+      '      INNER JOIN Sales_Order'
+      '        ON Operator.Operator = Sales_Order.Operator)'
+      '      INNER JOIN (Job'
+      '      INNER JOIN Sales_Order_Line'
+      '        ON Job.Job = Sales_Order_Line.Job)'
+      
+        '        ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Orde' +
+        'r)'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Fitter.Fitter = Sales_Order.Fitter'
+      'WHERE'
+      
+        '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
+        '<> 0)'
+      'ORDER BY'
+      '    Fitter.Fitter_Name,'
+      '    sales_order.Sales_Order'
+      '')
+    Left = 296
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrySalesOrdersOld: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Sales_Order.Date_Required as Order_Date_Required,'
+      '      Sales_Order.Contact_Name as Order_Contact_Name,'
+      '      (SELECT Customer_Branch.Special_Instructions'
+      '      FROM Customer_Branch'
+      '            INNER JOIN Sales_Order AS SO'
+      
+        '              ON (Customer_Branch.Branch_No = SO.Branch_no) AND ' +
+        '(Customer_Branch.Customer = SO.Customer)'
+      
+        '      WHERE SO.Sales_Order = Sales_Order.Sales_Order) as Site_In' +
+        'structions'
+      'FROM (Operator'
+      '      INNER JOIN (Int_Sel'
+      '      INNER JOIN Sales_Order'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Operator.Operator = Sales_Order.Operator)'
+      '      INNER JOIN (Job'
+      '      RIGHT JOIN Sales_Order_Line'
+      '        ON Job.Job = Sales_Order_Line.Job)'
+      
+        '        ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Orde' +
+        'r'
+      'WHERE'
+      
+        '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
+        '<> 0)')
+    Left = 176
+    Top = 16
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrders: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Sales_Order.Date_Required as Order_Date_Required,'
+      '      Sales_Order.Contact_Name as Order_Contact_Name,'
+      '      (SELECT Customer_Branch.Special_Instructions'
+      '      FROM Customer_Branch'
+      '            INNER JOIN Sales_Order AS SO'
+      
+        '              ON (Customer_Branch.Branch_No = SO.Branch_no) AND ' +
+        '(Customer_Branch.Customer = SO.Customer)'
+      
+        '      WHERE SO.Sales_Order = Sales_Order.Sales_Order) as Site_In' +
+        'structions'
+      'FROM Int_Sel'
+      '        INNER JOIN ((Operator'
+      '        INNER JOIN Sales_Order'
+      '          ON Operator.Operator = Sales_Order.Operator)'
+      '        INNER JOIN (Job'
+      '        INNER JOIN Sales_Order_Line'
+      '          ON Job.Job = Sales_Order_Line.Job)'
+      
+        '          ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Or' +
+        'der)'
+      '          ON Int_Sel.Sel1 = Sales_Order.Sales_Order'
+      'WHERE'
+      
+        '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
+        '<> 0)')
+    Left = 64
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSalesOrderEmails: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT DISTINCT'
+      '      Job.*,'
+      '      Operator.Operator_Name,'
+      '      Sales_Order.Sales_Order,'
+      '      Sales_Order.Order_ref_no,'
+      '      Sales_Order.Appliance_Details,'
+      '      Sales_Order.Extra_Notes as SO_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Order_Extra_Notes,'
+      '      Sales_Order.Extra_Notes as Sales_Order_Extra_Notes,'
+      '      Sales_Order.Install_Address as Order_Install_Address,'
+      '      Sales_Order.Install_Name as Order_Install_Name,'
+      '      Sales_Order.Install_Phone as Order_Install_Phone,'
+      
+        '      Sales_Order.Installation_Address as Order_Installation_Add' +
+        'ress,'
+      '      Sales_Order.Email_Address as Order_Email_Address,'
+      '      Sales_Order.Reference as Order_Reference,'
+      '      Sales_Order.Date_Required as Order_Date_Required,'
+      '      Sales_Order.Contact_Name as Order_Contact_Name,'
+      '      Sales_Order.Fitter as Order_Fitter,'
+      '      Sales_Order.Revenue_Centre,'
+      '      Fitter.Fitter_Name,'
+      '      Fitter.Email_Address as Email,'
+      '      Fitter.Email_Address as Contact_Email,'
+      '      '#39'Adobe Acrobat Document (*.pdf)'#39' as export_filter_desc,'
+      #9'    '#39'PDF'#39' as ExportFilter,'
+      '      '#39' '#39' as CC_Email'
+      'FROM Fitter'
+      '      RIGHT JOIN (Int_Sel'
+      '      INNER JOIN ((Operator'
+      '      INNER JOIN Sales_Order'
+      '        ON Operator.Operator = Sales_Order.Operator)'
+      '      INNER JOIN (Job'
+      '      INNER JOIN Sales_Order_Line'
+      '        ON Job.Job = Sales_Order_Line.Job)'
+      
+        '        ON Sales_Order.Sales_Order = Sales_Order_Line.Sales_Orde' +
+        'r)'
+      '        ON Int_Sel.Sel1 = Sales_Order.Sales_Order)'
+      '        ON Fitter.Fitter = Sales_Order.Fitter'
+      'WHERE'
+      
+        '  (Int_sel.Int_sel_Code = :Int_sel) AND (Sales_Order_Line.quote ' +
+        '<> 0)'
+      'ORDER BY'
+      '    Fitter.Fitter_Name,'
+      '    sales_order.Sales_Order'
+      '')
+    Left = 56
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Int_sel'
+        ParamType = ptUnknown
+      end>
+  end
+end

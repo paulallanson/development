@@ -1,0 +1,516 @@
+object frmWTMaintPromotions: TfrmWTMaintPromotions
+  Left = 344
+  Top = 48
+  Width = 595
+  Height = 511
+  Caption = 'Promotions'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 587
+    Height = 73
+    Align = alTop
+    TabOrder = 0
+    object Label3: TLabel
+      Left = 8
+      Top = 16
+      Width = 56
+      Height = 13
+      Caption = 'Description:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Top = 45
+      Width = 79
+      Height = 13
+      Caption = 'Maximum Entires'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+    end
+    object spnMaxEntries: TSpinEdit
+      Left = 96
+      Top = 40
+      Width = 57
+      Height = 22
+      MaxValue = 20
+      MinValue = 0
+      TabOrder = 0
+      Value = 6
+    end
+    object edtPromotionDescription: TEdit
+      Left = 96
+      Top = 12
+      Width = 409
+      Height = 21
+      TabOrder = 1
+      Text = 'edtPromotionDescription'
+      OnChange = EnableOK
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 73
+    Width = 587
+    Height = 366
+    Align = alClient
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 124
+      Height = 13
+      Caption = 'Currently Selected Colours'
+    end
+    object Label4: TLabel
+      Left = 344
+      Top = 8
+      Width = 97
+      Height = 13
+      Caption = 'Un-Selected Colours'
+    end
+    object Label5: TLabel
+      Left = 344
+      Top = 36
+      Width = 67
+      Height = 13
+      Caption = 'Material Type:'
+    end
+    object Label6: TLabel
+      Left = 344
+      Top = 340
+      Width = 34
+      Height = 13
+      Caption = 'Search'
+    end
+    object lstbxMembers: TListBox
+      Left = 8
+      Top = 64
+      Width = 233
+      Height = 177
+      ItemHeight = 13
+      MultiSelect = True
+      TabOrder = 0
+      OnClick = lstbxMembersClick
+      OnDblClick = lstbxMembersDblClick
+    end
+    object lstbxMembersCodes: TListBox
+      Left = 128
+      Top = 68
+      Width = 41
+      Height = 140
+      ItemHeight = 13
+      TabOrder = 1
+      Visible = False
+    end
+    object btnAdd: TBitBtn
+      Left = 253
+      Top = 72
+      Width = 81
+      Height = 25
+      Caption = '&Add'
+      Enabled = False
+      TabOrder = 2
+      OnClick = btnAddClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333333333333333333333333333333333333333333333
+        3333333333333FF3333333333333003333333333333F77F33333333333009033
+        333333333F7737F333333333009990333333333F773337FFFFFF330099999000
+        00003F773333377777770099999999999990773FF33333FFFFF7330099999000
+        000033773FF33777777733330099903333333333773FF7F33333333333009033
+        33333333337737F3333333333333003333333333333377333333333333333333
+        3333333333333333333333333333333333333333333333333333333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+    end
+    object btnRemove: TBitBtn
+      Left = 253
+      Top = 112
+      Width = 81
+      Height = 25
+      Caption = '&Remove'
+      Enabled = False
+      TabOrder = 3
+      OnClick = btnRemoveClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333333333333333333333333333333333333333333333
+        3333333333333333333333333333333333333333333FF3333333333333003333
+        3333333333773FF3333333333309003333333333337F773FF333333333099900
+        33333FFFFF7F33773FF30000000999990033777777733333773F099999999999
+        99007FFFFFFF33333F7700000009999900337777777F333F7733333333099900
+        33333333337F3F77333333333309003333333333337F77333333333333003333
+        3333333333773333333333333333333333333333333333333333333333333333
+        3333333333333333333333333333333333333333333333333333}
+      NumGlyphs = 2
+    end
+    object lstbxNonMembers: TListBox
+      Left = 344
+      Top = 64
+      Width = 233
+      Height = 265
+      ItemHeight = 13
+      MultiSelect = True
+      TabOrder = 4
+      OnClick = lstbxNonMembersClick
+      OnDblClick = lstbxNonMembersDblClick
+    end
+    object lstbxNonMembersCodes: TListBox
+      Left = 472
+      Top = 68
+      Width = 41
+      Height = 140
+      ItemHeight = 13
+      TabOrder = 5
+      Visible = False
+    end
+    object dblkpMaterialType: TDBLookupComboBox
+      Left = 416
+      Top = 32
+      Width = 161
+      Height = 21
+      KeyField = 'Material_Type'
+      ListField = 'Description'
+      ListSource = dtsMaterialType
+      TabOrder = 6
+      OnClick = dblkpMaterialTypeClick
+    end
+    object edtSearch: TEdit
+      Left = 384
+      Top = 336
+      Width = 193
+      Height = 21
+      TabOrder = 7
+      Text = 'edtSearch'
+      OnChange = edtSearchChange
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 439
+    Width = 587
+    Height = 41
+    Align = alBottom
+    TabOrder = 2
+    object btnOK: TBitBtn
+      Left = 212
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = 'OK'
+      Default = True
+      TabOrder = 0
+      OnClick = btnOKClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object btnCancel: TBitBtn
+      Left = 300
+      Top = 8
+      Width = 75
+      Height = 25
+      TabOrder = 1
+      Kind = bkCancel
+    end
+    object chkbxInactive: TCheckBox
+      Left = 13
+      Top = 12
+      Width = 97
+      Height = 17
+      Caption = 'Inactive'
+      TabOrder = 2
+    end
+  end
+  object qryDeleteWT: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'delete from Promotion_Worktops'
+      'where Promotion_Code = :Promotion_Code')
+    Left = 216
+    Top = 56
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAddWT: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'Insert into Promotion_Worktops'
+      '(Promotion_Code,'
+      'Entry_Number,'
+      'Worktop'
+      ')'
+      'values'
+      '(  :Promotion_Code,'
+      '  :Entry_Number,'
+      '  :Worktop'
+      ')'
+      '')
+    Left = 136
+    Top = 56
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Code'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Entry_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Worktop'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryMembers: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Promotion_Worktops.Promotion_Code,'
+      '        Promotion_Worktops.Entry_Number,'
+      '        Promotion_Worktops.Worktop,'
+      '        Worktop.Description AS Worktop_Description,'
+      '        Material_Type.Description AS Material_Type_Description'
+      'FROM Material_Type'
+      '      RIGHT JOIN (Worktop'
+      '      INNER JOIN Promotion_Worktops'
+      '        ON Worktop.Worktop = Promotion_Worktops.Worktop)'
+      '        ON Material_Type.Material_Type = Worktop.Material_Type'
+      'WHERE Promotion_Worktops.Promotion_Code = :Promotion_Code'
+      'Order By Worktop.Description'
+      '')
+    Left = 88
+    Top = 336
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryNonMembers: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Worktop.Worktop,'
+      '        Worktop.Description as Worktop_Description,'
+      '        Worktop.Material_Type,'
+      '        Worktop.Not_used_for_quoting,'
+      '        Worktop.Worktop_Group,'
+      '        Worktop.inactive,'
+      '        Worktop_Group.Worktop_Group_Description'
+      'FROM Worktop_Group'
+      '      INNER JOIN Worktop'
+      '        ON Worktop_Group.Worktop_Group = Worktop.Worktop_Group'
+      'WHERE Worktop.Material_Type = :Material_Type')
+    Left = 304
+    Top = 232
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Material_Type'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsNonMembers: TDataSource
+    DataSet = qryNonMembers
+    Left = 304
+    Top = 344
+  end
+  object qryDummy: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT  Worktop.Worktop,'
+      '        Worktop.Description AS Worktop_Description,'
+      '        Worktop.Material_Type,'
+      '        Worktop.Not_used_for_quoting,'
+      '        Worktop.Worktop_Group,'
+      '        Worktop.inactive,'
+      '        Material_Type.Description as Material_Type_Description'
+      'FROM Material_Type'
+      
+        '      RIGHT JOIN Worktop ON Material_Type.Material_Type = Workto' +
+        'p.Material_Type'
+      'WHERE Worktop.Show_Online = '#39'Y'#39' AND'
+      '      Worktop.Inactive = '#39'N'#39' AND'
+      '      Worktop.Material_Type = :Material_Type AND'
+      '      Worktop.Description LIKE :Description'
+      '')
+    Left = 304
+    Top = 288
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Material_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Description'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsMaterialType: TDataSource
+    DataSet = qryMaterialType
+    Left = 528
+    Top = 40
+  end
+  object qryMaterialType: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Material_Type'
+      'WHERE (Show_Online = '#39'Y'#39') AND'
+      
+        '      ((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null)' +
+        ')'
+      'ORDER BY Material_Type.Description')
+    Left = 456
+    Top = 40
+  end
+  object tmrRefresh: TTimer
+    Interval = 250
+    OnTimer = tmrRefreshTimer
+    Left = 160
+    Top = 336
+  end
+  object qryUpdActive: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'UPDATE Promotion'
+      'SET inactive = '#39'Y'#39
+      'WHERE Promotion_Code <> :Promotion_Code')
+    Left = 96
+    Top = 393
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdate: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'UPDATE Promotion'
+      'SET'
+      '      Promotion_Description = :Promotion_Description,'
+      '      Maximum_Entries = :Maximum_Entries,'
+      '      inActive = :inactive'
+      'WHERE'
+      '  Promotion_Code = :Promotion_Code')
+    Left = 80
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Description'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Maximum_Entries'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'inactive'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAdd: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'Insert Into Promotion'
+      '('
+      '        Promotion_Description,'
+      '        Maximum_Entries,'
+      '        inactive'
+      ')'
+      'Values'
+      '('
+      '        :Promotion_Description,'
+      '        :Maximum_Entries,'
+      '        :inactive'
+      ')'
+      ' ')
+    Left = 136
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Promotion_Description'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Maximum_Entries'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'inactive'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetLast: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'Select max(Promotion_Code) as Promotion_Code'
+      'From Promotion')
+    Left = 200
+    Top = 112
+  end
+end

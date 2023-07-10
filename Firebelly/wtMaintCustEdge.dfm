@@ -1,0 +1,198 @@
+object frmWTMaintCustEdge: TfrmWTMaintCustEdge
+  Left = 447
+  Top = 168
+  BorderStyle = bsDialog
+  Caption = 'Maintain Customer Edge Profile'
+  ClientHeight = 175
+  ClientWidth = 399
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 20
+    Width = 65
+    Height = 13
+    Caption = 'Description'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 52
+    Width = 59
+    Height = 13
+    Caption = 'Cost Price'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 84
+    Width = 72
+    Height = 13
+    Caption = 'Selling Price'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object dblkpDescription: TDBLookupComboBox
+    Left = 88
+    Top = 16
+    Width = 249
+    Height = 21
+    KeyField = 'Edge_Profile'
+    ListField = 'Description'
+    ListSource = srclkpEdges
+    TabOrder = 0
+    OnClick = EnableOK
+  end
+  object btnCutOuts: TBitBtn
+    Left = 343
+    Top = 14
+    Width = 25
+    Height = 25
+    Hint = 'Select Customer'
+    Caption = '...'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    OnClick = btnCutOutsClick
+  end
+  object edtmnyCost: TCREditMoney
+    Left = 88
+    Top = 48
+    Width = 105
+    Height = 21
+    TabOrder = 2
+    Text = '0.00'
+    OnChange = EnableOK
+  end
+  object edtmnySell: TCREditMoney
+    Left = 88
+    Top = 80
+    Width = 105
+    Height = 21
+    TabOrder = 3
+    Text = '0.00'
+    OnChange = EnableOK
+  end
+  object btnOK: TBitBtn
+    Left = 200
+    Top = 120
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    Default = True
+    Enabled = False
+    ModalResult = 1
+    TabOrder = 4
+    OnClick = btnOKClick
+    NumGlyphs = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 288
+    Top = 120
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 5
+    NumGlyphs = 2
+  end
+  object lkpEdges: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'select * from Edge_Profile'
+      'where Edge_Profile not in'
+      '(select Edge_Profile from Customer_Edge'
+      ' where Group_Id = :Group_Id AND Edge_Type = :Edge_Type) and'
+      '((inactive = '#39'N'#39') or (inactive = '#39#39') or (inactive is null))'
+      'order by Description')
+    Left = 304
+    Top = 48
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Group_Id'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Edge_Type'
+        ParamType = ptUnknown
+      end>
+  end
+  object srclkpEdges: TDataSource
+    DataSet = lkpEdges
+    Left = 352
+    Top = 48
+  end
+  object qryAdd: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'INSERT INTO Customer_Edge'
+      '('
+      'Group_Id,'
+      'Edge_Profile,'
+      'Edge_type,'
+      'Price_Pointer'
+      ')'
+      'VALUES'
+      '('
+      ':Group_Id,'
+      ':Edge_Profile,'
+      ':Edge_type,'
+      ':Price_Pointer'
+      ')')
+    Left = 8
+    Top = 112
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Group_Id'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Edge_Profile'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Edge_type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Price_Pointer'
+        ParamType = ptUnknown
+      end>
+  end
+end

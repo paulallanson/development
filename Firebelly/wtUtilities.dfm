@@ -1,0 +1,99 @@
+object frmWTUtilities: TfrmWTUtilities
+  Left = 223
+  Top = 107
+  BorderStyle = bsDialog
+  Caption = 'Database Utilities'
+  ClientHeight = 148
+  ClientWidth = 252
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnOK: TBitBtn
+    Left = 40
+    Top = 115
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    Default = True
+    TabOrder = 0
+    OnClick = btnOKClick
+    NumGlyphs = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 128
+    Top = 115
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+    NumGlyphs = 2
+  end
+  object rdgUtilities: TRadioGroup
+    Left = 8
+    Top = 8
+    Width = 233
+    Height = 97
+    Caption = 'Action'
+    ItemIndex = 0
+    Items.Strings = (
+      'Check price record integrity'
+      'Check order integrity'
+      'Delete historical data'
+      'Delete Unattached Contract Quotes')
+    TabOrder = 2
+  end
+  object qryCheckPrices: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'delete from price_pointer'
+      
+        'where price_pointer not in (select distinct price_pointer from p' +
+        'rices)')
+    Left = 200
+    Top = 16
+  end
+  object qryCheckOrder: TQuery
+    DatabaseName = 'Wt'
+    SQL.Strings = (
+      'UPDATE Sales_Order'
+      'set sales_order_status = 100'
+      'WHERE '
+      '(Select count(sales_order_line.sales_order) '
+      'FROM  sales_order_line, sales_invoice_line'
+      'WHERE'
+      'sales_order_line.sales_order = sales_order.sales_order and'
+      '('
+      
+        '(sales_order_line.sales_order = sales_invoice_line.sales_order) ' +
+        'and'
+      
+        '(sales_order_line.sales_order_line_no = sales_invoice_line.sales' +
+        '_order_line_no)'
+      ')) > 0')
+    Left = 160
+    Top = 16
+  end
+  object qryCheckOrders: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'Update Sales_Order'
+      'set sales_order_Status = 100'
+      'where (sales_order.sales_order in'
+      
+        '(select Sales_invoice_line.Sales_Order from sales_invoice_line w' +
+        'here Sales_invoice_Line.sales_order = Sales_Order.Sales_order)) ' +
+        'and'
+      'Sales_Order_Status <= 90')
+    Left = 160
+    Top = 64
+  end
+end

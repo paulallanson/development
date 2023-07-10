@@ -1,0 +1,208 @@
+object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
+  Left = 572
+  Top = 135
+  BorderStyle = bsDialog
+  Caption = 'Maintain Last Numbers'
+  ClientHeight = 336
+  ClientWidth = 304
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label4: TLabel
+    Left = 32
+    Top = 28
+    Width = 92
+    Height = 13
+    Caption = 'Last Quote Number'
+  end
+  object Label5: TLabel
+    Left = 32
+    Top = 92
+    Width = 80
+    Height = 13
+    Caption = 'Last Job Number'
+  end
+  object Label19: TLabel
+    Left = 32
+    Top = 124
+    Width = 89
+    Height = 13
+    Caption = 'Last Sales Number'
+  end
+  object Label21: TLabel
+    Left = 32
+    Top = 188
+    Width = 98
+    Height = 13
+    Caption = 'Last Invoice Number'
+  end
+  object Label50: TLabel
+    Left = 32
+    Top = 220
+    Width = 90
+    Height = 13
+    Caption = 'Last Credit Number'
+  end
+  object Label51: TLabel
+    Left = 32
+    Top = 60
+    Width = 103
+    Height = 13
+    Caption = 'Last Contract Number'
+  end
+  object Label65: TLabel
+    Left = 32
+    Top = 156
+    Width = 78
+    Height = 13
+    Caption = 'Last PO Number'
+  end
+  object edtLastQuoteNumber: TCREditInt
+    Left = 141
+    Top = 24
+    Width = 100
+    Height = 21
+    TabOrder = 0
+    Text = 'edtLastQuoteNumber'
+  end
+  object edtLastContractQuoteNumber: TCREditInt
+    Left = 141
+    Top = 56
+    Width = 100
+    Height = 21
+    TabOrder = 1
+    Text = 'edtLastContractQuoteNumber'
+  end
+  object edtLastJobNumber: TCREditInt
+    Left = 141
+    Top = 88
+    Width = 100
+    Height = 21
+    TabOrder = 2
+    Text = 'edtLastJobNumber'
+  end
+  object edtLastSalesOrderNumber: TCREditInt
+    Left = 141
+    Top = 120
+    Width = 100
+    Height = 21
+    TabOrder = 3
+    Text = 'edtLastSalesOrderNumber'
+  end
+  object edtLastPurchaseOrderNumber: TCREditInt
+    Left = 141
+    Top = 152
+    Width = 100
+    Height = 21
+    TabOrder = 4
+    Text = 'edtLastPurchaseOrderNumber'
+  end
+  object edtLastInvoiceNumber: TCREditInt
+    Left = 141
+    Top = 184
+    Width = 100
+    Height = 21
+    TabOrder = 5
+    Text = 'edtLastInvoiceNumber'
+  end
+  object edtLastCreditNoteNumber: TCREditInt
+    Left = 141
+    Top = 216
+    Width = 100
+    Height = 21
+    TabOrder = 6
+    Text = 'edtLastCreditNoteNumber'
+  end
+  object btnOK: TBitBtn
+    Left = 59
+    Top = 268
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 7
+    OnClick = btnOKClick
+    NumGlyphs = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 147
+    Top = 268
+    Width = 75
+    Height = 25
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 8
+    NumGlyphs = 2
+  end
+  object qryUpCompany: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'UPDATE Company'
+      'SET'
+      '  Last_Quote_Number = :Last_Quote_Number,'
+      '  Last_Contract_Quote_Number = :Last_Contract_Quote_Number,'
+      '  Last_Job_Number = :Last_Job_Number,'
+      '  Last_Sales_Order_Number = :Last_Sales_Order_Number,'
+      '  Last_Purchase_Order_Number = :Last_Purchase_Order_Number,'
+      '  Last_Invoice_Number = :Last_Invoice_Number,'
+      '  Last_Credit_Note_Number = :Last_Credit_Note_Number'
+      'WHERE Company = 1')
+    Left = 228
+    Top = 224
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Last_Quote_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Contract_Quote_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Job_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Sales_Order_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Purchase_Order_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Invoice_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Last_Credit_Note_Number'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryCompany: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT * FROM Company'
+      'WHERE Company = 1')
+    Left = 24
+    Top = 232
+  end
+end

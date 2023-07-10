@@ -1,0 +1,89 @@
+object frmPBLUProspectRpts: TfrmPBLUProspectRpts
+  Left = 201
+  Top = 107
+  Width = 421
+  Height = 310
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Prospect Reports'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 413
+    Height = 242
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    object lstvwReports: TListView
+      Left = 0
+      Top = 0
+      Width = 413
+      Height = 242
+      Align = alClient
+      Columns = <
+        item
+          Caption = 'Description'
+          Width = 200
+        end
+        item
+          Caption = 'File Name'
+          Width = 100
+        end
+        item
+          Caption = 'Item No'
+          Width = 0
+        end>
+      Items.Data = {
+        850000000200000000000000FFFFFFFFFFFFFFFF01000000000000001650726F
+        73706563742F4272616E6368205265706F72740E504252534355535444455446
+        524D00000000FFFFFFFFFFFFFFFF01000000000000001750726F737065637420
+        436F6E74616374205265706F7274125042525343555354434F4E544445544652
+        4DFFFFFFFF}
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDblClick = lstvwReportsDblClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 242
+    Width = 413
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      413
+      41)
+    object btnRun: TButton
+      Left = 16
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = '&Run'
+      TabOrder = 0
+      OnClick = btnRunClick
+    end
+    object Button2: TButton
+      Left = 328
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = '&Close'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+end

@@ -1,0 +1,1201 @@
+object STPartSDM: TSTPartSDM
+  OldCreateOrder = False
+  Left = 3
+  Top = 34
+  Height = 636
+  Width = 941
+  object PartSuppSQL: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      
+        'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
+        'y,'
+      
+        '       (supplier.Name + '#39', '#39' + supplier_branch.Name) as Supplier' +
+        '_Name'
+      'from  Part, part_supplier,'
+      '      supplier, supplier_branch'
+      'where ('
+      '           (Part.Part >= :Part_From) and'
+      '           (Part.Part <= :Part_To)'
+      '           ) and '
+      '      (Part.Part = part_supplier.part) and'
+      '      (Part.Not_In_Use <> '#39'Y'#39') and'
+      '      (Part_Supplier.Supplier = Supplier.Supplier) and'
+      '      (Supplier_Branch.Supplier = Part_Supplier.Supplier) and'
+      '      (Supplier_Branch.Branch_No = Part_Supplier.Branch_No) and'
+      '      ('
+      '      (Supplier_Preference_Order >= :Preference_From) and'
+      '      (Supplier_Preference_Order <= :Preference_To)'
+      '      )'
+      'order by Part.Part'
+      ' '
+      ' '
+      ' '
+      ' ')
+    Left = 24
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Part_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Part_To'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Preference_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Preference_To'
+        ParamType = ptUnknown
+      end>
+  end
+  object PartNoSuppSQL: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      
+        'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
+        'y,'
+      '       '#39#39' as Supplier_Name'
+      'from  Part'
+      'where ((Part.Part >= :Part_From) and'
+      '           (Part.Part <= :Part_To)) and'
+      '      (Part.Not_In_Use <> '#39'Y'#39') and'
+      '      (Part.Part not in (select Part from Part_Supplier)) '
+      'order by Part.Part'
+      ''
+      ' '
+      ' ')
+    Left = 112
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Part_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Part_To'
+        ParamType = ptUnknown
+      end>
+  end
+  object PartWithSuppSQL: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      
+        'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
+        'y,'
+      
+        '       (supplier.Name + '#39', '#39' + supplier_branch.Name) as Supplier' +
+        '_Name'
+      'from  Part, part_supplier,'
+      '      supplier, supplier_branch'
+      'where ('
+      '           (Part.Part >= :Part_From) and'
+      '           (Part.Part <= :Part_To)'
+      '           ) and'
+      '      (Part.Part = part_supplier.part) and'
+      '      (Part.Not_In_Use <> '#39'Y'#39') and'
+      '      (Part_Supplier.Supplier = Supplier.Supplier) and'
+      '      (Supplier_Branch.Supplier = Part_Supplier.Supplier) and'
+      '      (Supplier_Branch.Branch_No = Part_Supplier.Branch_No) and'
+      '      ('
+      '      (Supplier_Preference_Order >= :Preference_From) and'
+      '      (Supplier_Preference_Order <= :Preference_To)'
+      '      )'
+      'order by Part.Part'
+      ' ')
+    Left = 112
+    Top = 80
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_To'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Preference_From'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Preference_To'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryInsertPart: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into'
+      'Part(Part, Part_Description, Part_Updated, Part_Cost_List,'
+      
+        '        Part_Cost_Cat, Vat_Code, Part_Group, Purch_Pack_Quantity' +
+        ','
+      
+        '        Sell_Pack_Quantity, Part_Purchase_Price, Part_Mark_Up_Li' +
+        'st,'
+      '        Part_Mark_Up_Cat, Part_Last_Move_Date, Last_Store_Lot,'
+      '        Not_In_Use, Track_Serial_No, Auto_Update, Product_Class,'
+      
+        '        Customer, Branch_no, Unit_of_Measure, price_unit, Produc' +
+        't_ID)'
+      
+        'values (:Part, :Part_Description, :Part_Updated, :Part_Cost_List' +
+        ','
+      
+        '        :Part_Cost_Cat, :Vat_Code, :Part_Group, :Purch_Pack_Quan' +
+        'tity,'
+      
+        '        :Sell_Pack_Quantity, :Part_Purchase_Price, :Part_Mark_Up' +
+        '_List,'
+      
+        '        :Part_Mark_Up_Cat, :Part_Last_Move_Date, :Last_Store_Lot' +
+        ','
+      
+        '        :Not_In_Use, :Track_Serial_No, :Auto_Update, :Product_Cl' +
+        'ass,'
+      
+        '        :Customer, :Branch_no, :Unit_of_Measure, :Price_unit, :P' +
+        'roduct_ID)'
+      ' ')
+    Left = 112
+    Top = 200
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Part_Description'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Part_Updated'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Cost_List'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Cost_Cat'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Vat_Code'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Part_Group'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Purch_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sell_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Purchase_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Mark_Up_List'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Mark_Up_Cat'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftDateTime
+        Name = 'Part_Last_Move_Date'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Last_Store_Lot'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Not_In_Use'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Track_Serial_No'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Auto_Update'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Product_Class'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Unit_of_Measure'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Price_unit'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Product_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryInsertPartSupp: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'Insert into '
+      'Part_Supplier(Supplier, Branch_No, Part,'
+      
+        '        Supplier_Preference_Order, Supplier_Part_Code, Discount_' +
+        'this_Part)'
+      'Values (:Supplier, :Branch_No, :Part,'
+      
+        '        :Supplier_Preference_Order, :Supplier_Part_Code, :Discou' +
+        'nt_this_Part)')
+    Left = 112
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_No'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier_Preference_Order'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier_Part_Code'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Discount_this_Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryPartDtls: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT *'
+      'FROM Part'
+      'WHERE part = :Part')
+    Left = 24
+    Top = 192
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsrcImportQueries: TDataSource
+    Left = 224
+    Top = 192
+  end
+  object qryGetImpFieldDefs: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT * '
+      'FROM Supplier_Prod_Imp'
+      'WHERE Supplier = :Supplier')
+    Left = 24
+    Top = 240
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdatePart: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'UPDATE part'
+      'SET Part_description = :Part_Description,'
+      '    Part_Cost_List = :Part_Cost_List,'
+      '    Part_Cost_Cat = :Part_Cost_Cat,'
+      '    Vat_Code = :Vat_Code,'
+      '    Part_Group = :Part_Group,'
+      '    Purch_Pack_Quantity = :Purch_Pack_Quantity,'
+      '    Part_Purchase_Price = :Part_Purchase_Price,'
+      '    Not_In_Use = :Not_In_Use,'
+      '    Sell_Pack_Quantity = :Sell_Pack_Quantity,'
+      '    Customer = :Customer,'
+      '    Branch_no = :Branch_no,'
+      '    Unit_of_Measure = :unit_of_Measure'
+      'WHERE Part = :Part'
+      ' ')
+    Left = 24
+    Top = 288
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'Part_Description'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Cost_List'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Cost_Cat'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Vat_Code'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Part_Group'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Purch_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftCurrency
+        Name = 'Part_Purchase_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Not_In_Use'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Sell_Pack_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'unit_of_Measure'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftString
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDeletePart: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'DELETE FROM Part'
+      'WHERE Part = :Part')
+    Left = 224
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDeletePartSupplier: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'DELETE FROM part_Supplier'
+      
+        'WHERE (Supplier = :Supplier) and (Branch_No = 0) and (Part = :Pa' +
+        'rt)')
+    Left = 304
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'SUpplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSuppDtls: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT * '
+      'FROM Supplier'
+      'WHERE Supplier = :Supplier;')
+    Left = 24
+    Top = 336
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdatePartPurchPrice: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'UPDATE part'
+      'SET Part_Purchase_Price = :Part_Purchase_Price'
+      'WHERE Part = :Part')
+    Left = 112
+    Top = 320
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part_Purchase_Price'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDoesPartExist: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT Part, Sell_Pack_Quantity, Product_Class'
+      'FROM Part '
+      'WHERE Part = :Part')
+    Left = 24
+    Top = 136
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdPartSuppDisc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'UPDATE Part_Supplier '
+      'SET Discount_this_Part = :Discount_this_Part '
+      'WHERE Supplier = :Supplier AND'
+      '  Branch_No = :Branch_No AND  '
+      '  Part = :Part;')
+    Left = 112
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Discount_this_Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_No'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryFindPartGroup: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from part_group '
+      'where part_group_descr_short = :part_group_descr_short;')
+    Left = 216
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'part_group_descr_short'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryNewPartGroup: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'INSERT into part_group '
+      'Values(:part_group, :part_group_descr_short, :part_group_descr);')
+    Left = 216
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'part_group'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'part_group_descr_short'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'part_group_descr'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetHighestPartGroup: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select max(part_group) as max_part_group'
+      'from part_group;')
+    Left = 304
+    Top = 24
+  end
+  object qrySelNoOfKFieldProdGrps: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select count(*) as NoOfGroups'
+      'from part_group  '
+      'where Part_Group_Descr_Short like '#39'KFIELDCAT%'#39';')
+    Left = 224
+    Top = 264
+  end
+  object qryInsertFormRef: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into Form_Reference'
+      '(Form_reference,'
+      'Form_Reference_id,'
+      'Customer,'
+      'Branch_no,'
+      'Form_Reference_Descr,'
+      'Stocked_item,'
+      'Reorder_level,'
+      'Customer_Reference,'
+      'Stock_reference)'
+      'values'
+      '(:Form_Reference,'
+      ':Form_Reference_id,'
+      ':Customer,'
+      ':Branch_no,'
+      ':Form_Reference_Descr,'
+      ':Stocked_item,'
+      ':Reorder_level,'
+      ':Customer_Reference,'
+      ':Stock_reference)')
+    Left = 408
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Form_Reference'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Form_Reference_id'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Form_Reference_Descr'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Stocked_item'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Reorder_level'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer_Reference'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Stock_reference'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetUOM: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Unit_of_measure'
+      'from Unit_of_Measure'
+      'where UOM_Description = :UOM_Description')
+    Left = 384
+    Top = 80
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'UOM_Description'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAddUOM: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into Unit_of_Measure'
+      'values (:Unit_of_Measure,:UOM_Description)')
+    Left = 384
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Unit_of_Measure'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'UOM_Description'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryLastUOM: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Max(unit_of_measure) as Last_UOM'
+      'from unit_of_measure')
+    Left = 384
+    Top = 176
+  end
+  object qryLastFormRef: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Max(Form_Reference) as Last_Form_Ref'
+      'from Form_Reference')
+    Left = 384
+    Top = 224
+  end
+  object qryUpdateFormRef: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'Update Form_Reference'
+      'set Form_Reference_Descr = :Form_Reference_Descr,'
+      'Reorder_Level = :Reorder_Level'
+      'WHERE Form_Reference_ID = :Form_Reference_id AND'
+      'Customer = :Customer AND Branch_no = :Branch_no AND'
+      'Stock_Reference = :Stock_reference')
+    Left = 488
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Form_Reference_Descr'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Reorder_level'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Form_Reference_id'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Stock_reference'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryInsertStkLevels: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into Part_Store_Levels'
+      '(Part,'
+      'Part_Store_Type,'
+      'Minimum_Stock,'
+      'Maximum_Stock,'
+      'Reorder_Level,'
+      'Purchase_or_Store,'
+      'Replenish_Store'
+      ')'
+      'values'
+      '(:Part,'
+      ':Part_Store_Type,'
+      ':Minimum_Stock,'
+      ':Maximum_Stock,'
+      ':Reorder_Level,'
+      ':Purchase_or_Store,'
+      ':Replenish_Store'
+      ')'
+      ' ')
+    Left = 384
+    Top = 280
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Store_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Minimum_Stock'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Maximum_Stock'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Reorder_Level'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Purchase_or_Store'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftInteger
+        Name = 'Replenish_Store'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetPartStore: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Part_Store'
+      'where Part_Store = :Part_Store')
+    Left = 384
+    Top = 336
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part_Store'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryLastStoreStock: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select max(Store_Stock) as Last_Store_Stock'
+      'from Store_stock')
+    Left = 384
+    Top = 384
+  end
+  object qryUpdateStkLevels: TQuery
+    SQL.Strings = (
+      'update part_store_levels'
+      'set Minimum_Stock = :Minimum_Stock,'
+      'Maximum_Stock = :Maximum_Stock,'
+      'Reorder_Level = :Reorder_Level,'
+      'Purchase_or_Store = :Purchase_or_Store,'
+      'Replenish_Store = :Replenish_Store'
+      'where Part = :Part and'
+      'Part_store_type = :Part_Store_Type')
+    Left = 488
+    Top = 280
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Minimum_Stock'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Maximum_Stock'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Reorder_Level'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Purchase_or_Store'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Replenish_Store'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Store_Type'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetCustWithAccCode: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Customer.Customer, Customer.Product_Code_Prefix'
+      'from Customer_Branch, Customer'
+      'WHERE Account_Code = :Account_Code AND'
+      'Customer_Branch.Customer = Customer.Customer')
+    Left = 488
+    Top = 344
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Account_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetContract: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select Customer.Customer'
+      'from Customer'
+      'where contract_code = :Contract_Code')
+    Left = 576
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Contract_Code'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAddCustDisc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'Insert into Customer_Discount'
+      'select ISNULL(max(Customer_Discount),0)+1,'
+      ':Part,'
+      ':Customer,'
+      'NULL,'
+      ':Discount_Type,'
+      ':Discount_Value,'
+      ':Date_Effective,'
+      ':Date_Ineffective,'
+      ':Supplier,'
+      ':Part_Purchase_Price from Customer_Discount')
+    Left = 656
+    Top = 24
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Discount_Type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Discount_Value'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Date_Effective'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Date_Ineffective'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Purchase_Price'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDelCustDisc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'delete from Customer_Discount'
+      'where supplier = :Supplier and '
+      'Customer = :Customer')
+    Left = 624
+    Top = 88
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAddPartAlloc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'insert into Part_Store_Allocation'
+      '(Part_Store_Allocation, Store_Stock, Quantity_Allocated, Part)'
+      
+        'Select Max(Part_Store_Allocation)+1, :Store_Stock, :Quantity_All' +
+        'ocated, :Part From Part_Store_Allocation')
+    Left = 624
+    Top = 152
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Store_Stock'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Quantity_Allocated'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetStoreStock: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select top 1 *'
+      'from Store_Stock'
+      'Where Part = :Part and'
+      '      Part_Store = :Part_Store and'
+      '      Part_Bin = :Part_Bin and'
+      '      Part_Store_Lot = :Part_Store_Lot and'
+      '      Store_Quantity = :Store_Quantity and'
+      '      Date_Received = :Date_Received'
+      'ORDER BY Store_Stock.Store_Stock DESC')
+    Left = 632
+    Top = 216
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Store'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Bin'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part_Store_Lot'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Store_Quantity'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Date_Received'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetPartGroup: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select * from'
+      'Part_Group'
+      'Where Part_Group_Descr_Short = :Part_Group_Descr_Short ')
+    Left = 640
+    Top = 272
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Part_Group_Descr_Short'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryDelCustStockDisc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'delete from Customer_Discount'
+      'where supplier = 0 and '
+      'Customer = :Customer')
+    Left = 720
+    Top = 88
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryCheckPartSuppDisc: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'select *'
+      'from Part_Supplier'
+      'where Supplier = :Supplier and'
+      'Branch_no = :Branch_no and'
+      'Part = :Part')
+    Left = 112
+    Top = 384
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Branch_no'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Part'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetPriceUnit: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT Price_Unit'
+      'FROM Price_Unit'
+      'Where Price_Unit_Factor = :Price_Unit_Factor')
+    Left = 640
+    Top = 344
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Price_Unit_Factor'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetVatCode: TQuery
+    DatabaseName = 'PB'
+    SQL.Strings = (
+      'SELECT Vat_Code '
+      'FROM Vat_Code'
+      'WHERE Vat_Ref = :Vat_Ref'
+      '')
+    Left = 640
+    Top = 392
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Vat_Ref'
+        ParamType = ptUnknown
+      end>
+  end
+end

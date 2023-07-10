@@ -1,0 +1,109 @@
+object frmPBLUOrderRpts: TfrmPBLUOrderRpts
+  Left = 201
+  Top = 107
+  AutoScroll = False
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Order Reports'
+  ClientHeight = 283
+  ClientWidth = 413
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 413
+    Height = 242
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    object lstvwReports: TListView
+      Left = 0
+      Top = 0
+      Width = 413
+      Height = 242
+      Align = alClient
+      Columns = <
+        item
+          Caption = 'Description'
+          Width = 200
+        end
+        item
+          Caption = 'File Name'
+          Width = 100
+        end
+        item
+          Caption = 'Item No'
+          Width = 0
+        end>
+      Items.Data = {
+        F60200000C00000000000000FFFFFFFFFFFFFFFF01000000000000001D437573
+        746F6D65722043617465676F727920506572666F726D616E6365115042525343
+        5553544341544B504946524D00000000FFFFFFFFFFFFFFFF0100000000000000
+        1A5075726368617365204F726465727320417574686F72697365640D50425253
+        504F4155544846524D00000000FFFFFFFFFFFFFFFF0100000000000000155075
+        726368617365204F72646572205265706F72740C50425253504F52455046524D
+        00000000FFFFFFFFFFFFFFFF01000000000000001C5075726368617365204F72
+        646572204D617267696E205265706F72740D50425253504F5245504D46524D00
+        000000FFFFFFFFFFFFFFFF010000000000000017576F726B20696E2050726F67
+        72657373207265706F72740D50425253574F524B495046524D00000000FFFFFF
+        FFFFFFFFFF0100000000000000174F72646572732064756520666F722064656C
+        69766572790C50425253504F44554546524D00000000FFFFFFFFFFFFFFFF0100
+        00000000000017466F7265636173742053756D6D617279207265706F72741050
+        425253344341535453554D4D46524D00000000FFFFFFFFFFFFFFFF0100000000
+        0000001A416E74696369706174656420696E766F696365207265706F72741050
+        4252533443415354494E565346524D00000000FFFFFFFFFFFFFFFF0100000000
+        0000001745787065637465642072656F72646572207265706F72740E50425253
+        5250544F52445346524D00000000FFFFFFFFFFFFFFFF01000000000000001046
+        534320436C61696D205265706F72740F50425253465343434C41494D46524D00
+        000000FFFFFFFFFFFFFFFF01000000000000001350726F6F6620737461747573
+        207265706F7274125042525350524F4F4653544154555346524D00000000FFFF
+        FFFFFFFFFFFF0100000000000000235072696E742F466178204F726465727320
+        262041636B6E6F776C656467656D656E74730B50425253504F524446524DFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      ReadOnly = True
+      RowSelect = True
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDblClick = lstvwReportsDblClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 242
+    Width = 413
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      413
+      41)
+    object btnRun: TButton
+      Left = 16
+      Top = 8
+      Width = 75
+      Height = 25
+      Caption = '&Run'
+      TabOrder = 0
+      OnClick = btnRunClick
+    end
+    object Button2: TButton
+      Left = 328
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = '&Close'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+  end
+end

@@ -1,0 +1,985 @@
+object frmWTMaintQSlab: TfrmWTMaintQSlab
+  Left = 312
+  Top = 102
+  BorderStyle = bsDialog
+  Caption = 'Maintain Slab'
+  ClientHeight = 433
+  ClientWidth = 742
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlDetails: TPanel
+    Left = 0
+    Top = 0
+    Width = 742
+    Height = 387
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Top = 14
+      Width = 37
+      Height = 13
+      Caption = 'Material'
+    end
+    object Label2: TLabel
+      Left = 16
+      Top = 76
+      Width = 41
+      Height = 13
+      Caption = 'Worktop'
+    end
+    object Label3: TLabel
+      Left = 16
+      Top = 106
+      Width = 49
+      Height = 13
+      Caption = 'Thickness'
+    end
+    object Label6: TLabel
+      Left = 16
+      Top = 166
+      Width = 58
+      Height = 13
+      Caption = 'Length (mm)'
+    end
+    object Label5: TLabel
+      Left = 16
+      Top = 196
+      Width = 54
+      Height = 13
+      Caption = 'Depth (mm)'
+    end
+    object Label4: TLabel
+      Left = 208
+      Top = 224
+      Width = 70
+      Height = 13
+      Caption = 'Unit Cost/sq m'
+    end
+    object Label7: TLabel
+      Left = 563
+      Top = 224
+      Width = 72
+      Height = 13
+      Caption = 'Total Slab Cost'
+    end
+    object Label8: TLabel
+      Left = 16
+      Top = 45
+      Width = 38
+      Height = 13
+      Caption = 'Supplier'
+    end
+    object Label9: TLabel
+      Left = 16
+      Top = 136
+      Width = 44
+      Height = 13
+      Caption = 'Slab Size'
+    end
+    object Label10: TLabel
+      Left = 16
+      Top = 252
+      Width = 42
+      Height = 13
+      Caption = 'Waste %'
+    end
+    object Label11: TLabel
+      Left = 208
+      Top = 252
+      Width = 75
+      Height = 13
+      Caption = 'Waste Multiplier'
+    end
+    object Label12: TLabel
+      Left = 392
+      Top = 252
+      Width = 55
+      Height = 13
+      Caption = 'Waste Cost'
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 290
+      Top = 11
+      Width = 23
+      Height = 22
+      Caption = '...'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = SpeedButton1Click
+    end
+    object Label13: TLabel
+      Left = 16
+      Top = 224
+      Width = 39
+      Height = 13
+      Caption = 'Quantity'
+    end
+    object Label14: TLabel
+      Left = 400
+      Top = 224
+      Width = 45
+      Height = 13
+      Caption = 'Slab Cost'
+    end
+    object Label26: TLabel
+      Left = 588
+      Top = 252
+      Width = 47
+      Height = 13
+      Caption = 'Area m2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtDepth: TCREditInt
+      Left = 96
+      Top = 192
+      Width = 89
+      Height = 21
+      TabOrder = 6
+      OnChange = edtDepthChange
+      OnEnter = edtDepthEnter
+      OnExit = edtDepthExit
+    end
+    object edtLength: TCREditInt
+      Left = 96
+      Top = 162
+      Width = 89
+      Height = 21
+      TabOrder = 5
+      OnChange = edtDepthChange
+      OnEnter = edtLengthEnter
+      OnExit = edtLengthExit
+    end
+    object dblkpWTThickness: TDBLookupComboBox
+      Left = 96
+      Top = 102
+      Width = 89
+      Height = 21
+      KeyField = 'Thickness'
+      ListField = 'Thickness_mm'
+      ListSource = dtsWTThickness
+      TabOrder = 3
+      OnClick = dblkpWTThicknessClick
+    end
+    object dblkpWorktop: TDBLookupComboBox
+      Left = 96
+      Top = 72
+      Width = 249
+      Height = 21
+      KeyField = 'Worktop'
+      ListField = 'Description'
+      ListSource = dtsWorktops
+      TabOrder = 2
+      OnClick = dblkpWorktopClick
+    end
+    object edtUnitCost: TCREditMoney
+      Left = 288
+      Top = 220
+      Width = 81
+      Height = 21
+      TabOrder = 8
+      OnChange = edtDepthChange
+      OnEnter = edtUnitCostEnter
+      OnExit = edtUnitCostExit
+    end
+    object edtTotalCost: TCREditMoney
+      Left = 640
+      Top = 220
+      Width = 81
+      Height = 21
+      TabStop = False
+      Color = clBtnFace
+      ReadOnly = True
+      TabOrder = 10
+      OnChange = edtTotalCostChange
+    end
+    object dblkpMaterial: TDBLookupComboBox
+      Left = 96
+      Top = 10
+      Width = 177
+      Height = 21
+      KeyField = 'Material_Type'
+      ListField = 'Description'
+      ListSource = dtsMaterial
+      TabOrder = 0
+      OnClick = dblkpMaterialClick
+    end
+    object dblkpSupplier: TDBLookupComboBox
+      Left = 96
+      Top = 41
+      Width = 249
+      Height = 21
+      KeyField = 'Supplier'
+      ListField = 'Supplier_Name'
+      ListSource = dtsSupplier
+      TabOrder = 1
+      OnClick = dblkpSupplierClick
+    end
+    object edtWastePercentage: TCREditInt
+      Left = 96
+      Top = 248
+      Width = 89
+      Height = 21
+      TabOrder = 11
+      OnChange = edtWastePercentageChange
+    end
+    object spnWasteMultiplier: TSpinEdit
+      Left = 288
+      Top = 248
+      Width = 41
+      Height = 22
+      MaxValue = 10
+      MinValue = 0
+      TabOrder = 12
+      Value = 0
+      OnChange = edtWastePercentageChange
+    end
+    object edtTotalWasteCost: TCREditMoney
+      Left = 456
+      Top = 248
+      Width = 81
+      Height = 21
+      TabStop = False
+      Color = clBtnFace
+      ReadOnly = True
+      TabOrder = 13
+    end
+    object dblkpSlabSize: TDBLookupComboBox
+      Left = 96
+      Top = 132
+      Width = 249
+      Height = 21
+      KeyField = 'Slab_Size'
+      ListField = 'Slab_Description'
+      ListSource = dtsSlabSize
+      TabOrder = 4
+      OnClick = dblkpSlabSizeClick
+    end
+    object edtSlabCost: TCREditMoney
+      Left = 456
+      Top = 220
+      Width = 81
+      Height = 21
+      TabOrder = 9
+      OnChange = edtSlabCostChange
+      OnEnter = edtSlabCostEnter
+      OnExit = edtSlabCostExit
+    end
+    object pnlAdhesive: TPanel
+      Left = 0
+      Top = 299
+      Width = 742
+      Height = 64
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 14
+      object Label19: TLabel
+        Left = 16
+        Top = 13
+        Width = 72
+        Height = 13
+        Caption = 'Adhesive Code'
+      end
+      object Label20: TLabel
+        Left = 410
+        Top = 45
+        Width = 39
+        Height = 13
+        Caption = 'Quantity'
+      end
+      object Label21: TLabel
+        Left = 406
+        Top = 13
+        Width = 43
+        Height = 13
+        Caption = 'Unit Cost'
+      end
+      object btnLUProducts: TSpeedButton
+        Left = 317
+        Top = 8
+        Width = 23
+        Height = 23
+        Caption = '...'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnLUProductsClick
+      end
+      object Label22: TLabel
+        Left = 539
+        Top = 45
+        Width = 95
+        Height = 13
+        Caption = 'Total Adhesive Cost'
+      end
+      object Label24: TLabel
+        Left = 590
+        Top = 13
+        Width = 43
+        Height = 13
+        Caption = 'Cost Unit'
+      end
+      object Label25: TLabel
+        Left = 16
+        Top = 45
+        Width = 53
+        Height = 13
+        Caption = 'Description'
+      end
+      object spnAdhesiveQuantity: TSpinEdit
+        Left = 456
+        Top = 40
+        Width = 50
+        Height = 22
+        MaxValue = 1000
+        MinValue = 0
+        TabOrder = 0
+        Value = 0
+        OnChange = spnAdhesiveQuantityChange
+      end
+      object edtAdhesiveCost: TCREditMoney
+        Left = 456
+        Top = 9
+        Width = 81
+        Height = 21
+        TabOrder = 1
+        OnChange = spnAdhesiveQuantityChange
+      end
+      object edtAdhesiveDescription: TMemo
+        Left = 96
+        Top = 41
+        Width = 273
+        Height = 21
+        Lines.Strings = (
+          'edtAdhesiveDescription')
+        ReadOnly = True
+        TabOrder = 2
+        WantReturns = False
+        WordWrap = False
+      end
+      object edtAdhesiveTotalCost: TCREditMoney
+        Left = 640
+        Top = 41
+        Width = 81
+        Height = 21
+        TabStop = False
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 3
+        OnChange = edtAdhesiveTotalCostChange
+      end
+      object edtAdhesiveProduct: TMemo
+        Left = 96
+        Top = 9
+        Width = 217
+        Height = 21
+        Lines.Strings = (
+          'edtAdhesiveProduct')
+        ReadOnly = True
+        TabOrder = 4
+        WantReturns = False
+        WordWrap = False
+      end
+      object btnClear: TBitBtn
+        Left = 347
+        Top = 7
+        Width = 25
+        Height = 25
+        TabOrder = 5
+        OnClick = btnClearClick
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000120B0000120B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+          55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+          305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+          005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+          B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+          B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+          B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+          B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+          05555777775555557F5555000555555505555577755555557555}
+        NumGlyphs = 2
+      end
+      object edtAdhesiveCostUnit: TMemo
+        Left = 640
+        Top = 9
+        Width = 80
+        Height = 21
+        TabOrder = 6
+        WantReturns = False
+        WordWrap = False
+        OnChange = edtAdhesiveCostUnitChange
+      end
+    end
+    object pnlPrices: TPanel
+      Left = 0
+      Top = 275
+      Width = 742
+      Height = 24
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 15
+      object Label15: TLabel
+        Left = 16
+        Top = 5
+        Width = 47
+        Height = 13
+        Caption = 'Markup %'
+      end
+      object Label16: TLabel
+        Left = 208
+        Top = 5
+        Width = 73
+        Height = 13
+        Caption = 'Unit Price/sq m'
+      end
+      object Label17: TLabel
+        Left = 400
+        Top = 5
+        Width = 48
+        Height = 13
+        Caption = 'Slab Price'
+      end
+      object Label18: TLabel
+        Left = 560
+        Top = 5
+        Width = 75
+        Height = 13
+        Caption = 'Total Slab Price'
+      end
+      object edtMarkupPercentage: TCREditInt
+        Left = 96
+        Top = 1
+        Width = 89
+        Height = 21
+        TabOrder = 0
+        OnChange = edtMarkupPercentageChange
+        OnEnter = edtMarkupPercentageEnter
+        OnExit = edtMarkupPercentageExit
+      end
+      object edtUnitPrice: TCREditMoney
+        Left = 288
+        Top = 1
+        Width = 81
+        Height = 21
+        TabOrder = 1
+        OnChange = edtUnitPriceChange
+        OnEnter = edtUnitPriceEnter
+        OnExit = edtUnitPriceExit
+      end
+      object edtSlabPrice: TCREditMoney
+        Left = 456
+        Top = 1
+        Width = 81
+        Height = 21
+        TabOrder = 2
+        OnChange = edtSlabPriceChange
+        OnEnter = edtSlabPriceEnter
+        OnExit = edtSlabPriceExit
+      end
+      object edtTotalPrice: TCREditMoney
+        Left = 640
+        Top = 1
+        Width = 81
+        Height = 21
+        TabStop = False
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 3
+      end
+    end
+    object pnlTotal: TPanel
+      Left = 0
+      Top = 363
+      Width = 742
+      Height = 24
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 16
+      object Label23: TLabel
+        Left = 574
+        Top = 5
+        Width = 59
+        Height = 13
+        Caption = 'Total Cost'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object edtTotalOverallCost: TCREditMoney
+        Left = 640
+        Top = 1
+        Width = 81
+        Height = 21
+        TabStop = False
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object edtQuantity: TCREditFloat
+      Left = 96
+      Top = 220
+      Width = 89
+      Height = 21
+      TabOrder = 7
+      OnChange = edtQuantityChange
+      OnEnter = edtQuantityEnter
+      OnExit = edtQuantityExit
+    end
+    object edtSlabArea: TCREditMoney
+      Left = 640
+      Top = 248
+      Width = 81
+      Height = 21
+      TabStop = False
+      Color = clBtnFace
+      ReadOnly = True
+      TabOrder = 17
+      OnChange = edtTotalCostChange
+    end
+  end
+  object pnlFooter: TPanel
+    Left = 0
+    Top = 387
+    Width = 742
+    Height = 46
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      742
+      46)
+    object lblDelete: TLabel
+      Left = 112
+      Top = 17
+      Width = 152
+      Height = 13
+      Anchors = [akLeft, akBottom]
+      Caption = 'Delete these slab details ?'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object btnOK: TBitBtn
+      Left = 289
+      Top = 11
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Caption = 'OK'
+      Default = True
+      Enabled = False
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = btnOKClick
+      NumGlyphs = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 377
+      Top = 11
+      Width = 75
+      Height = 25
+      Anchors = [akLeft, akBottom]
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+      NumGlyphs = 2
+    end
+  end
+  object qryWorktops: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select * '
+      'from worktop'
+      'where material_type = :material_type and'
+      
+        '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
+        '= :worktop'
+      'Order by Description')
+    Left = 448
+    Top = 96
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'material_type'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'worktop'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryWTThickness: TQuery
+    DatabaseName = 'wt'
+    DataSource = dtsWorktops
+    SQL.Strings = (
+      'select'
+      '  worktop_thickness.thickness,'
+      '  Thickness.Thickness_mm'
+      'from worktop_thickness, thickness'
+      'where (worktop = :worktop and'
+      '  worktop_thickness.thickness = thickness.thickness)'
+      'order by thickness_mm')
+    Left = 400
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'worktop'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsWorktops: TDataSource
+    DataSet = qryWorktops
+    Left = 440
+    Top = 56
+  end
+  object dtsWTThickness: TDataSource
+    DataSet = qryWTThickness
+    Left = 520
+    Top = 112
+  end
+  object qryOneWTThickness: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select  Worktop,'
+      '        Thickness,'
+      '        (select top 1 Unit_Cost'
+      '         from Prices'
+      
+        '         where Price_Pointer = Supplier_Worktop_thickness.Price_' +
+        'pointer and'
+      '                effective_Date <= now()'
+      '         order by effective_Date desc) as Unit_Cost,'
+      '        (select top 1 Price_unit'
+      '         from Prices'
+      
+        '         where Price_Pointer = Supplier_Worktop_thickness.Price_' +
+        'pointer and'
+      '                effective_Date <= now()'
+      '         order by effective_Date desc) as Price_Unit'
+      'from Supplier_Worktop_thickness'
+      'where supplier = :supplier and'
+      '      worktop = :Worktop and'
+      '      thickness = :Thickness')
+    Left = 496
+    Top = 56
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Worktop'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Thickness'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryMaterial: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select Material_Type.*'
+      'from Material_Type'
+      'where (inactive = '#39'N'#39' or inactive is null) '
+      'order by Description')
+    Left = 488
+    Top = 8
+  end
+  object dtsMaterial: TDataSource
+    DataSet = qryMaterial
+    Left = 440
+    Top = 8
+  end
+  object qrySupplier: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select Supplier.*'
+      'from Supplier'
+      
+        'where ((inactive = '#39'N'#39') or (inactive is null)) OR ((Supplier = :' +
+        'Supplier) OR (:Supplier = 0))'
+      'order by Supplier_Name')
+    Left = 344
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end>
+  end
+  object dtsSupplier: TDataSource
+    DataSet = qrySupplier
+    Left = 368
+    Top = 32
+  end
+  object qrySlabSize: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'select Slab_Size.*'
+      'from Slab_Size'
+      'where (inactive = '#39'N'#39' or inactive is null) '
+      'order by Slab_Size_Description')
+    Left = 360
+    Top = 88
+  end
+  object dtsSlabSize: TDataSource
+    DataSet = qryMTSlabSize
+    Left = 352
+    Top = 160
+  end
+  object qryMTSlabSize: TQuery
+    DatabaseName = 'wt'
+    SQL.Strings = (
+      'SELECT Material_Type_Slab_Size.Slab_Size,'
+      '       Material_Type_Slab_Size.Length,'
+      '       Material_Type_Slab_Size.Depth,'
+      '       Material_Type_Slab_Size.Slab_Size_Description,'
+      
+        '       CSTR(Material_Type_Slab_Size.Length) + '#39'mm x '#39' + CSTR(Mat' +
+        'erial_Type_Slab_Size.Depth) + '#39'mm '#39' + Material_Type_Slab_Size.Sl' +
+        'ab_Size_Description as Slab_Description'
+      'FROM Material_Type_Slab_Size'
+      'WHERE Material_Type = :Material_Type'
+      'ORDER BY Length')
+    Left = 488
+    Top = 248
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Material_Type'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryContractWorktops: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Worktop_Group.Customer,'
+      '        Customer_Worktop_Group.Group_Number,'
+      '        Customer_Worktop.Worktop,'
+      '        Worktop.Description,'
+      '        Customer_Worktop_Group.Material_Type,'
+      '        Material_Type.Description'
+      'FROM Material_Type'
+      '        INNER JOIN (Worktop'
+      '        INNER JOIN (Customer_Worktop_Group'
+      '        INNER JOIN Customer_Worktop'
+      
+        '          ON (Customer_Worktop_Group.Group_Number = Customer_Wor' +
+        'ktop.Group_Number) AND (Customer_Worktop_Group.Customer = Custom' +
+        'er_Worktop.Customer))'
+      '          ON Worktop.Worktop = Customer_Worktop.Worktop)'
+      
+        '          ON Material_Type.Material_Type = Customer_Worktop_Grou' +
+        'p.Material_Type'
+      'WHERE Customer_Worktop_Group.Customer = :Customer AND'
+      '      Customer_Worktop_Group.Group_Number = :Group_Number and'
+      
+        '      (worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR Wo' +
+        'rktop.worktop = :worktop'
+      'ORDER BY Worktop.Description')
+    Left = 520
+    Top = 176
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Group_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'worktop'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryContractPrice: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Worktop_Group_Thick.Customer,'
+      '        Customer_Worktop_Group_Thick.Group_Number,'
+      '        Customer_Worktop_Group_Thick.Thickness,'
+      '        (select top 1 Unit_Price'
+      '         from Prices'
+      
+        '         where Price_Pointer = Customer_Worktop_Group_Thick.Pric' +
+        'e_pointer and'
+      '                effective_Date <= now()'
+      '         order by effective_Date desc) as Unit_Price,'
+      '        (select top 1 Unit_Cost'
+      '         from Prices'
+      
+        '         where Price_Pointer = Customer_Worktop_Group_Thick.Pric' +
+        'e_pointer and'
+      '                effective_Date <= now()'
+      '         order by effective_Date desc) as Unit_Cost,'
+      '        (select top 1 Price_unit'
+      '         from Prices'
+      
+        '         where Price_Pointer = Customer_Worktop_Group_Thick.Pric' +
+        'e_pointer and'
+      '                effective_Date <= now()'
+      '         order by effective_Date desc) as Price_Unit'
+      'FROM Customer_Worktop_Group'
+      '      LEFT JOIN Customer_Worktop_Group_Thick'
+      
+        '        ON (Customer_Worktop_Group.Group_Number = Customer_Workt' +
+        'op_Group_Thick.Group_Number)'
+      
+        '        AND (Customer_Worktop_Group.Customer = Customer_Worktop_' +
+        'Group_Thick.Customer)'
+      'WHERE'
+      '  Customer_Worktop_Group_Thick.Customer = :Customer AND'
+      '  Customer_Worktop_Group_Thick.Group_Number = :Group_Number AND'
+      '  Customer_Worktop_Group_Thick.Thickness = :Thickness')
+    Left = 664
+    Top = 184
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Group_Number'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Thickness'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetContractSupplier: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT  Customer_Worktop_Group.Supplier'
+      'FROM  Customer_Worktop_Group'
+      'WHERE Customer_Worktop_Group.Customer = :Customer AND'
+      '      Customer_Worktop_Group.Group_Number = :Group_Number')
+    Left = 664
+    Top = 128
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Customer'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Group_Number'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryGetSupplierWorktop: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'SELECT'
+      '    Supplier_Worktop.Supplier,'
+      '    Supplier_Worktop.Worktop,'
+      '    Supplier_Worktop.inactive,'
+      '    Supplier_Worktop.Adhesive_Product_Code,'
+      '    Supplier_Worktop.Adhesive_Quantity_Per_Slab,'
+      '    Supplier_Product.Description as Adhesive_Description,'
+      '    Supplier_Product.Price_Pointer,'
+      '    Supplier_Product.Cost_Pack_Quantity,'
+      '    Supplier_Product.Sell_Pack_Quantity,'
+      '    (select top 1 Unit_price'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
+        'r and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Unit_Price,'
+      '    (select top 1 Unit_cost'
+      '      from Prices'
+      
+        '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
+        'r and'
+      '            Prices.effective_date <= now()'
+      '      order by Prices.effective_date desc) AS Unit_Cost,'
+      '    (select top 1 Price_Unit_Description'
+      '      from Prices, Price_unit'
+      
+        '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
+        'r and'
+      '            Prices.Price_unit = Price_Unit.Price_Unit and'
+      '            Prices.effective_date <= now()'
+      
+        '      order by Prices.effective_date desc) AS Price_Unit_Descrip' +
+        'tion'
+      'FROM Supplier_Product'
+      '        INNER JOIN Supplier_Worktop'
+      
+        '          ON (Supplier_Product.Supplier_Product_Code = Supplier_' +
+        'Worktop.Adhesive_Product_Code)'
+      
+        '            AND (Supplier_Product.Supplier = Supplier_Worktop.Su' +
+        'pplier)'
+      
+        'WHERE Supplier_Worktop.Supplier = :Supplier AND Supplier_Worktop' +
+        '.Worktop = :Worktop')
+    Left = 600
+    Top = 8
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Supplier'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Worktop'
+        ParamType = ptUnknown
+      end>
+  end
+end

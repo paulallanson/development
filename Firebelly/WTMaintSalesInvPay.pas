@@ -1,0 +1,324 @@
+unit WTMaintSalesInvPay;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, Db, DBTables, ExtCtrls;
+
+type
+  TfrmWTMaintSalesInvPay = class(TForm)
+    btnOK: TBitBtn;
+    btnCancel: TBitBtn;
+    GroupBox1: TGroupBox;
+    Label5: TLabel;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    edtCustomer: TEdit;
+    Label2: TLabel;
+    edtInvoiceNo: TEdit;
+    Label3: TLabel;
+    edtInvoiceDate: TEdit;
+    edtTotalGoods: TEdit;
+    Label4: TLabel;
+    edtReference: TEdit;
+    Label6: TLabel;
+    Label10: TLabel;
+    edtDatePaid: TEdit;
+    btnDate: TSpeedButton;
+    qryGetInvoice: TQuery;
+    qryUpInvoice: TQuery;
+    memTotalPaid: TMemo;
+    chkbxPaid: TCheckBox;
+    qryGetSILines: TQuery;
+    qryGetJobBag: TQuery;
+    qryUpdJobBag: TQuery;
+    qryGetPOdelivLines: TQuery;
+    qryUpdPODeliv: TQuery;
+    qryUpdPO: TQuery;
+    GroupBox3: TGroupBox;
+    Label7: TLabel;
+    memDepositPaid: TMemo;
+    memInvoiceTotal: TMemo;
+    Label8: TLabel;
+    procedure btnOKClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure chkbxPaidClick(Sender: TObject);
+    procedure btnDateClick(Sender: TObject);
+    procedure edtDatePaidExit(Sender: TObject);
+    procedure enableOK(Sender: TObject);
+    procedure SaveValue(Sender: TObject);
+    procedure ValidateMoney(Sender: TObject);
+  private
+    bPaid: boolean;
+    dtPaymentDate: TDateTime;
+    sOldValue: string;
+    DatePaid: TDateTime;
+    FActivated: boolean;
+    procedure GetInvoiceDetails;
+    procedure SavetoJobBag;
+    procedure ShowDetails;
+    procedure SavetoDB;
+    function InputDate(TempDate: TDateTime): TDateTime;
+    procedure UpdatePODelivery(tempCode: real; tempLine: integer);
+  public
+    bOK: boolean;
+    Mode: string;
+    SalesInvoice: integer;
+  end;
+
+var
+  frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay;
+
+implementation
+
+uses AllCommon, wtDataModule, DateSelV5;
+
+{$R *.DFM}
+
+procedure TfrmWTMaintSalesInvPay.btnOKClick(Sender: TObject);
+begin
+  {Check the Payment Date}
+  if (dtPaymentDate > paDateStr(edtDatePaid.Text)) and (bPaid = false) then
+    begin
+      messagedlg('The Paid Date is prior to the last Payment Import date. Please select a date after ' + paDateStr(dtPaymentDate), mtError, [mbAbort], 0);
+      edtDatePaid.SetFocus;
+      exit;
+    end;
+
+  SavetoDB;
+//  SavetoJobBag;
+  bOK := true;
+  close;
+end;
+
+procedure TfrmWTMaintSalesInvPay.FormActivate(Sender: TObject);
+begin
+  if not FActivated then
+  begin
+    GetInvoiceDetails;
+//    dtPaymentDate := dtmdlWorktops.GetLastPaymentDate;
+    ShowDetails;
+    FActivated := true;
+    enableok(self);
+  end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.GetInvoiceDetails;
+begin
+  with qryGetInvoice do
+    begin
+      close;
+      parambyname('Sales_invoice').asinteger := SalesInvoice;
+      open;
+    end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.ShowDetails;
+begin
+  edtCustomer.text := qryGetInvoice.fieldbyname('Customer_Name').asstring;
+  edtInvoiceNo.text := qryGetInvoice.fieldbyname('Invoice_no').asstring;
+  edtInvoiceDate.text := paDateStr(qryGetInvoice.fieldbyname('Invoice_Date').asdatetime);
+  edtReference.text := qryGetInvoice.fieldbyname('Reference').asstring;
+  edtTotalGoods.text := formatfloat('0.00',qryGetInvoice.fieldbyname('Total_Value').asfloat);
+  memTotalPaid.text := formatfloat('0.00',qryGetInvoice.fieldbyname('Paid_Amount').asfloat);
+  memDepositPaid.text := formatfloat('0.00',qryGetInvoice.fieldbyname('Deposit_Amount').asfloat);
+  memInvoiceTotal.text := formatfloat('0.00',qryGetInvoice.fieldbyname('Total_Value').asfloat);
+
+  chkbxPaid.Checked := qryGetInvoice.fieldbyname('Paid_Status').asstring = 'Y';
+  bPaid := (qryGetInvoice.fieldbyname('Paid_Status').asstring = 'Y');
+  
+  if paDateStr(qryGetInvoice.fieldbyname('Paid_Date').asdatetime) = '' then
+    begin
+      edtDatePaid.text := paDateStr(date);
+      DatePaid := date;
+    end
+  else
+    begin
+      edtDatePaid.text := paDateStr(qryGetInvoice.fieldbyname('Paid_Date').asdatetime);
+      DatePaid := qryGetInvoice.fieldbyname('Paid_Date').asdatetime;
+    end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.SavetoDB;
+begin
+  with qryUpInvoice do
+    begin
+      close;
+      parambyname('Sales_Invoice').asinteger := SalesInvoice;
+      parambyname('Paid_Amount').asfloat := strtofloat(memTotalPaid.text);
+      parambyname('Deposit_Amount').asfloat := strtofloat(memDepositPaid.text);
+      parambyname('Paid_Date').asdatetime := paDateStr(edtDatePaid.text);
+      if (strtofloat(memTotalPaid.text) = 0) and (strtofloat(edtTotalGoods.Text) <> 0) then
+        begin
+          parambyname('Paid_Status').asstring := '';
+          parambyname('Paid_Date').clear;
+        end
+      else
+      if strtofloat(memTotalPaid.text) = strtofloat(edtTotalGoods.text) then
+        parambyname('Paid_Status').asstring := 'Y'
+      else
+        parambyname('Paid_Status').asstring := 'p';
+      execsql;
+    end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.chkbxPaidClick(Sender: TObject);
+begin
+  if (Sender as TCheckbox).state = cbChecked then
+    begin
+      memTotalPaid.text := formatfloat('0.00',qryGetInvoice.fieldbyname('Total_Value').asfloat);
+    end
+  else
+  if (Sender as TCheckbox).state = cbUnChecked then
+    begin
+      memTotalPaid.text := formatfloat('0.00',0);
+    end;
+  enableok(self);
+end;
+
+procedure TfrmWTMaintSalesInvPay.SaveValue(Sender: TObject);
+begin
+  sOldValue := (Sender as TMemo).Text;
+end;
+
+procedure TfrmWTMaintSalesInvPay.ValidateMoney(Sender: TObject);
+var
+  TempStr: string;
+begin
+  {Validate money on exit}
+  TempStr := FormatMoney((Sender as TMemo).Text);
+  if TempStr = 'X' then
+  begin
+    (Sender as TMemo).Text := sOldValue;
+    (Sender as TMemo).SetFocus;
+  end
+  else
+    (Sender as TMemo).Text := TempStr;
+end;
+
+procedure TfrmWTMaintSalesInvPay.btnDateClick(Sender: TObject);
+begin
+  DatePaid := InputDate(DatePaid);
+  edtDatePaid.Text := paDateStr(DatePaid);
+  enableok(self);
+end;
+
+function TfrmWTMaintSalesInvPay.InputDate(TempDate: TDateTime): TDateTime;
+var
+  DateSelV5Form: TDateSelV5Form;
+begin
+  Result := TempDate;
+  DateSelV5Form := TDateSelV5Form.Create(Self);
+  try
+    try
+      DateSelV5Form.Date := TempDate;
+    except
+      DateSelV5Form.Date := Date;
+    end;
+    if DateSelV5Form.ShowModal = mrOK then
+      Result := DateSelV5Form.Date;
+  finally
+    DateSelV5Form.Free;
+  end;
+
+end;
+
+procedure TfrmWTMaintSalesInvPay.edtDatePaidExit(Sender: TObject);
+var
+  NewDate: TDateTime;
+begin
+  try
+    NewDate := StrToDate(edtDatePaid.Text);
+  except
+    begin
+      MessageDlg('Invalid Date', mtError, [mbOk], 0);
+      edtDatePaid.SetFocus;
+      Exit;
+    end;
+  end;
+
+  edtDatePaid.Text := paDateStr(NewDate);
+  DatePaid := NewDate;
+end;
+
+procedure TfrmWTMaintSalesInvPay.enableOK(Sender: TObject);
+begin
+  if (chkbxPaid.checked) then
+    begin
+      btnOK.enabled :=  (edtDatePaid.Text <> '') and
+                        (memTotalPaid.Text <> '')
+    end
+  else
+    begin
+      btnOK.enabled :=  true;
+    end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.SavetoJobBag;
+begin
+  {need to check if this invoice is connected to a job bag, if so then release the job}
+  with qryGetSILines do
+    begin
+      close;
+      parambyname('sales_invoice').asinteger := SalesInvoice;
+      open;
+
+      while eof <> true do
+        begin
+          if fieldbyname('Purchase_Order').asfloat <> 0 then
+            UpdatePODelivery(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+          qryGetJobBag.close;
+          qryGetJobBag.parambyname('Purchase_Order').asfloat := qryGetSILines.fieldbyname('Purchase_Order').asfloat;
+          qryGetJobBag.parambyname('Line').asinteger := qryGetSILines.fieldbyname('Line').asinteger;
+          qryGetJobBag.open;
+
+          if qryGetJobBag.recordcount > 0 then
+            begin
+              qryUpdJobBag.close;
+              qryUpdJobBag.parambyname('Job_Bag').asinteger := qryGetJobBag.fieldbyname('Job_Bag').asinteger;
+              if strtofloat(memTotalPaid.text) = strtofloat(edtTotalGoods.text) then
+                qryUpdJobBag.parambyname('On_Hold').asstring := 'N'
+              else
+                qryUpdJobBag.parambyname('On_Hold').asstring := 'P';
+              qryUpdJobBag.execsql;
+            end;
+          next;
+        end;
+    end;
+end;
+
+procedure TfrmWTMaintSalesInvPay.UpdatePODelivery(tempCode: real; tempLine: integer);
+begin
+  {need to check if the invoice lines are associated with purchase orders}
+  with qryGetPODelivLines do
+    begin
+      close;
+      parambyname('Purchase_Order').asfloat := tempCode;
+      parambyname('Line').asinteger := tempLine;
+      open;
+
+      while eof <> true do
+        begin
+          if (fieldbyname('Qty_Delivered').asinteger > 0) or (fieldbyname('Delivery_to_stock').asstring = 'Y') then
+            begin
+              next;
+              continue;
+            end;
+          qryUpdPODeliv.close;
+          qryUpdPODeliv.parambyname('Purchase_Order').asfloat := tempCode;
+          qryUpdPODeliv.parambyname('Line').asinteger := tempLine;
+          qryUpdPODeliv.parambyname('Delivery_no').asinteger := fieldbyname('Delivery_no').asinteger;
+          qryUpdPODeliv.parambyname('Date_Deliv_Actual').asdatetime := date;
+          qryUpdPODeliv.execsql;
+          next;
+        end;
+
+      qryUpdPO.close;
+      qryUpdPO.parambyname('Purchase_Order').asfloat := tempCode;
+      qryUpdPO.parambyname('Line').asinteger := tempLine;
+      qryUpdPO.ExecSQL;
+    end;
+end;
+
+end.

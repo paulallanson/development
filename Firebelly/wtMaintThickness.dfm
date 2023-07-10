@@ -1,0 +1,155 @@
+object frmWtMaintThickness: TfrmWtMaintThickness
+  Left = 253
+  Top = 202
+  BorderStyle = bsDialog
+  Caption = 'Thickness'
+  ClientHeight = 153
+  ClientWidth = 286
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnShow = FormShow
+  DesignSize = (
+    286
+    153)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 16
+    Top = 24
+    Width = 74
+    Height = 13
+    Caption = 'Thickness (mm)'
+  end
+  object btnOK: TBitBtn
+    Left = 64
+    Top = 112
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'OK'
+    Default = True
+    Enabled = False
+    ModalResult = 1
+    TabOrder = 3
+    OnClick = btnOKClick
+    NumGlyphs = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 152
+    Top = 112
+    Width = 75
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 4
+    NumGlyphs = 2
+  end
+  object chkbxInactive: TCheckBox
+    Left = 16
+    Top = 84
+    Width = 97
+    Height = 17
+    Anchors = [akLeft, akBottom]
+    Caption = 'Inactive'
+    TabOrder = 2
+  end
+  object chkbxShowOnline: TCheckBox
+    Left = 16
+    Top = 50
+    Width = 161
+    Height = 17
+    Caption = 'Show Thickness Online'
+    TabOrder = 1
+  end
+  object edtThicknessmm: TEdit
+    Left = 104
+    Top = 20
+    Width = 75
+    Height = 21
+    TabOrder = 0
+    Text = 'edtThicknessmm'
+    OnChange = EnableOK
+  end
+  object qryUpdate: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'UPDATE Thickness'
+      'SET'
+      '      Thickness_mm = :Thickness_mm,'
+      '      Show_Online = :Show_Online,'
+      '      inActive = :inactive'
+      'WHERE'
+      '  Thickness = :Thickness')
+    Left = 72
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'Thickness_mm'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Show_Online'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'inactive'
+        ParamType = ptUnknown
+      end
+      item
+        DataType = ftUnknown
+        Name = 'Thickness'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAdd: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'Insert Into Thickness'
+      '        (Thickness,'
+      '        Thickness_mm,'
+      '        inactive)'
+      'Select Max(Thickness)+1, :GUID, '#39'N'#39
+      'From Thickness'
+      ' ')
+    Left = 128
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'GUID'
+        ParamType = ptInput
+      end>
+  end
+  object qryGetLast: TQuery
+    DatabaseName = 'WT'
+    SQL.Strings = (
+      'Select Thickness'
+      'From Thickness'
+      'Where Thickness_mm = :GUID')
+    Left = 184
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'GUID'
+        ParamType = ptInput
+      end>
+  end
+  object qryZero: TQuery
+    DatabaseName = 'WT'
+    Left = 248
+    Top = 72
+  end
+end
