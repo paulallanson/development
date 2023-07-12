@@ -89,7 +89,7 @@ end;
 procedure TCREditInt.KeyPressed(Sender: TObject; var Key : char);
 begin
   if not (Key < #32) then  { not a control character }
-    if not (Key in ['0'..'9']) then
+    if not CharInSet(Key, ['0'..'9']) then
     begin
       MessageBeep(0);
       Key := #0;
@@ -123,7 +123,7 @@ begin
   begin
     decPlace := Pos('.', TEdit(Sender).Text);
     if not (Key < #32) then  { not a control character }
-      if (not (Key in ['0'..'9', '.'])) or ((decPlace > 0) and (Key = '.')) then
+      if (not CharInSet(Key, ['0'..'9', '.'])) or ((decPlace > 0) and (Key = '.')) then
       begin
         MessageBeep(0);
         Key := #0;
@@ -158,7 +158,7 @@ begin
   begin
     decPlace := Pos('.', TEdit(Sender).Text);
     if not (Key < #32) then  { not a control character }
-      if (not (Key in ['0'..'9', '.'])) or ((decPlace > 0) and (Key = '.')) then
+      if (not CharInSet(Key, ['0'..'9', '.'])) or ((decPlace > 0) and (Key = '.')) then
       begin
         MessageBeep(0);
         Key := #0;

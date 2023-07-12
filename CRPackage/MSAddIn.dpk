@@ -1,9 +1,10 @@
 package MSAddIn;
 
-{$R *.RES}
-{$R '..\crystal7\AddInDesignerObjects_TLB.dcr'}
-{$R '..\crystal7\Outlook_TLB.dcr'}
-{$ALIGN ON}
+{$R *.res}
+{$R 'Outlook_TLB.dcr'}
+{$R 'Office_TLB.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
 {$DEBUGINFO ON}
@@ -14,23 +15,29 @@ package MSAddIn;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
-{$STACKFRAMES OFF}
+{$STACKFRAMES ON}
 {$TYPEDADDRESS OFF}
 {$VARSTRINGCHECKS ON}
 {$WRITEABLECONST ON}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'MS AddIn'}
 {$IMPLICITBUILD OFF}
 
 requires
-  vcl50;
+  vcl;
 
 contains
-  AddInDesignerObjects_TLB in '..\Crystal7\AddInDesignerObjects_TLB.pas',
-  Outlook_TLB in '..\Crystal7\Outlook_TLB.pas';
+  Outlook_TLB in 'Outlook_TLB.pas',
+  Office_TLB in 'Office_TLB.pas';
 
 end.
+
+// ToDo GDK: AddInDesignerObjects_TLB in '..\Crystal7\AddInDesignerObjects_TLB.pas',
+
