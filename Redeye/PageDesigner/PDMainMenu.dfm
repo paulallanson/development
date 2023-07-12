@@ -12,11 +12,9 @@ object PDMainMenuFrm: TPDMainMenuFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CompLogoImage: TImage
     Left = 2
@@ -485,20 +483,21 @@ object PDMainMenuFrm: TPDMainMenuFrm
       F38CE961633A5858FFD9}
   end
   object gbButtons: TGroupBox
+    ParentBackground = False
     Left = 0
     Top = 72
     Width = 469
     Height = 181
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 71
+    ExplicitWidth = 465
     object btnAbout: TBitBtn
       Left = 8
       Top = 149
       Width = 75
       Height = 25
       Caption = 'A&bout'
-      TabOrder = 8
-      OnClick = btnAboutClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -513,6 +512,8 @@ object PDMainMenuFrm: TPDMainMenuFrm
         FB33373F37777733373333BFBF999FBFB3333373FF77733F7333333BFBFBFBFB
         3333333773FFFF77333333333FBFBF3333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 8
+      OnClick = btnAboutClick
     end
     object btnClose: TBitBtn
       Left = 387
@@ -520,8 +521,6 @@ object PDMainMenuFrm: TPDMainMenuFrm
       Width = 75
       Height = 25
       Caption = '&Close'
-      TabOrder = 7
-      OnClick = btnCloseClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -540,6 +539,8 @@ object PDMainMenuFrm: TPDMainMenuFrm
         333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
         0000}
       NumGlyphs = 2
+      TabOrder = 7
+      OnClick = btnCloseClick
     end
     object btnPaper: TBitBtn
       Left = 54

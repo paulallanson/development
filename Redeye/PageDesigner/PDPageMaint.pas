@@ -270,7 +270,7 @@ type
 implementation
 
 uses
-  PageDM, PBLogin, PBDatabase, PDLUPage, PDLetter;
+  PageDM, PBLogin, PBDatabase, PDLUPage, PDLetter, System.UITypes;
 
 {$R *.DFM}
 

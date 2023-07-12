@@ -93,7 +93,7 @@ var
 implementation
 
 uses
-  CCSCommon, Dialogs, LetterDM;
+  CCSCommon, Dialogs, LetterDM, System.UITypes;
 
 {$R *.DFM}
 

@@ -4,8 +4,8 @@ interface
 
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj,
-  Controls, Messages, Registry, Outlook8, COMobj, ActiveX, Math, strUtils,
-  DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook12_TLB;
+  Controls, Messages, Registry, Outlook2010, COMobj, ActiveX, Math, strUtils,
+  DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB;
 
 {Quick Reports Printer settings}
 procedure GetPrinterMargins(var TopMar, BottomMar, LeftMar, RightMar:
@@ -185,7 +185,8 @@ resourcestring
 implementation
 
 uses
-  Dialogs;
+  Dialogs, System.UITypes;
+
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
 
@@ -285,7 +286,7 @@ begin
       begin
         StrPCopy(@aName, KEY_PREFIX + KEYS[VerKey]);
         if VerQueryValue(pInfo, @aName, pVerInfo, VerInfoLen) then
-          Result := StrPas(pVerInfo);
+          Result := StrPas(PWideChar(pVerInfo));
       end;
     finally
       FreeMem(pInfo, VerLen);
@@ -1349,7 +1350,7 @@ var
 begin
   if Succeeded(SHGetDesktopFolder(pDesktopFolder)) then
   try
-    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PChar(APAth), -1, olePath, MAX_PATH);
+    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(APAth), -1, olePath, MAX_PATH);
     if Succeeded(pDesktopFolder.ParseDisplayName(0, nil, olePath, chEaten, pidl, dwAttributes)) then
       Result := pidl
     else

@@ -134,7 +134,7 @@ var
 implementation
 
 uses PBLogin, PBDatabase, PDAbout, PDPageMaint, PDLetterMaint, PDLUPage,
-  PDLetter, LetterDM, PDGenerateDg, PDDragDrop;
+  PDLetter, LetterDM, PDGenerateDg, PDDragDrop, System.UITypes;
 
 {$R *.DFM}
 

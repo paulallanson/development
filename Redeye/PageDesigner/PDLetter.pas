@@ -1088,7 +1088,7 @@ begin
   taCenter:       Trace('Alignment    = Centre');
   taRightJustify: Trace('Alignment    = Right');
   end;  { case }
-  Trace('UsesTab      = ' + BoolToStr(UsesTab)     );
+  Trace('UsesTab      = ' + UsesTab);
   Trace('============================');
 end;
 {$ENDIF}

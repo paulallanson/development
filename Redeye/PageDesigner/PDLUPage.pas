@@ -35,7 +35,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, StdCtrls, Buttons;
+  Grids, DBGrids, StdCtrls, Buttons, Data.DB;
 
 type
   TPDLuPageFrm = class(TForm)
@@ -67,7 +67,7 @@ type
 implementation
 
 uses
-  PageDM, PDLetter;
+  PageDM, PDLetter, System.UITypes;
 
 {$R *.DFM}
 

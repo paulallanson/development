@@ -205,7 +205,7 @@ type
 implementation
 
 uses
-  Printers, Math, PDDragDrop;
+  Printers, Math, PDDragDrop, System.UITypes;
   
 {$R *.DFM}
 

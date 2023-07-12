@@ -58,7 +58,8 @@ var
 
 implementation
 
-uses PBDatabase;
+uses
+  PBDatabase, System.UITypes;
 
 {$R *.DFM}
 

@@ -79,6 +79,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         'Pixels')
     end
     object rgOrientation: TRadioGroup
+      ParentBackground = False
       Left = 232
       Top = 8
       Width = 129
@@ -91,6 +92,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
       TabOrder = 2
     end
     object rgBlankOrPrinted: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 120
       Width = 98
@@ -104,6 +106,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
       OnClick = rgBlankOrPrintedClick
     end
     object gbPrintables: TGroupBox
+      ParentBackground = False
       Left = 112
       Top = 120
       Width = 161
@@ -388,6 +391,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Value = 8
           end
           object rgAlignment: TRadioGroup
+            ParentBackground = False
             Left = 4
             Top = 73
             Width = 237
@@ -603,6 +607,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Value = 8
           end
           object rgRegAlignment: TRadioGroup
+            ParentBackground = False
             Left = 4
             Top = 73
             Width = 237
@@ -629,6 +634,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area'
         ImageIndex = 2
         object gbLogo: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
@@ -730,6 +736,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 1'
         ImageIndex = 3
         object GroupBox1: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
@@ -831,6 +838,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 2'
         ImageIndex = 4
         object GroupBox2: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
@@ -932,6 +940,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 3'
         ImageIndex = 5
         object GroupBox3: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
@@ -1033,6 +1042,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'PrePrinted Area'
         ImageIndex = 6
         object gbPrePrinted: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 2
           Width = 313
@@ -1292,6 +1302,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
       OnClick = cbAddressClick
     end
     object gbMargins: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 61
       Width = 353
@@ -1387,6 +1398,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
       OnChange = edtNameChange
     end
     object pnlHead: TPanel
+      ParentBackground = False
       Left = 192
       Top = 13
       Width = 415
@@ -1535,6 +1547,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
     end
   end
   object gbPreview: TGroupBox
+    ParentBackground = False
     Left = 0
     Top = 56
     Width = 249

@@ -270,7 +270,8 @@ const
 
 implementation
 
-uses PBLogin, PBNarrativeDM, CCSCommon;
+uses
+  PBLogin, PBNarrativeDM, CCSCommon, System.UITypes;
 
 {$R *.DFM}
 
