@@ -52,33 +52,36 @@ program PageDesigner;
 
 uses
   Forms,
-  PDPageMaint in 'PDPageMaint.pas' {PDPageMaintFrm},
-  PageDM in 'PageDM.pas' {dmPage: TDataModule},
-  PBDatabase in '..\Broker2005\PBDatabase.pas' {dmBroker: TDataModule},
-  PBLogin in '..\Broker2005\PBLogin.pas' {PBLoginFrm},
-  PBEnvSel in '..\Broker2005\PBEnvSel.pas' {PBEnvSelFrm},
-  PDMainMenu in 'PDMainMenu.pas' {PDMainMenuFrm},
-  PDAbout in 'PDAbout.pas' {PDAboutFrm},
-  CCSPrint in '..\CCSCommonD7\CCSPrint.pas',
-  PDLUPage in 'PDLUPage.pas' {PDLuPageFrm},
-  PDLetterMaint in 'PDLetterMaint.pas' {PDLetterMaintFrm},
-  PDFontFrame in 'PDFontFrame.pas' {fmFontInfo: TFrame},
-  PDLetter in 'PDLetter.pas',
-  LetterDM in 'LetterDM.pas' {dmLetter: TDataModule},
-  CCSDebug in '..\CCSCommonD7\CCSDebug.pas',
-  PDGenerateDg in 'PDGenerateDg.pas' {PDGenerateDlg},
-  CCSCommon in '..\CCSCommonD7\CCSCommon.pas',
-  PDDragDrop in 'PDDragDrop.pas' {frmPreview},
-  PDConfirmWidth in 'PDConfirmWidth.pas' {dlgConfirmWidth},
-  PDIndentWidth in 'PDIndentWidth.pas' {dlgIndentWidth},
-  Office12_TLB in '..\CCSCommonD7\Office12_TLB.pas',
-  Outlook12_TLB in '..\CCSCommonD7\Outlook12_TLB.pas',
-  PBNarrativeDM in '..\broker2005\PBNarrativeDM.pas' {dmNarrative: TDataModule},
-  PBImages in '..\broker2005\PBImages.pas' {PBImagesFrm};
+  PDPageMaint in '..\PDPageMaint.pas' {PDPageMaintFrm},
+  PageDM in '..\PageDM.pas' {dmPage: TDataModule},
+  PBDatabase in '..\..\Broker2005\PBDatabase.pas' {dmBroker: TDataModule},
+  PBLogin in '..\..\Broker2005\PBLogin.pas' {PBLoginFrm},
+  PBEnvSel in '..\..\Broker2005\PBEnvSel.pas' {PBEnvSelFrm},
+  PDMainMenu in '..\PDMainMenu.pas' {PDMainMenuFrm},
+  PDAbout in '..\PDAbout.pas' {PDAboutFrm},
+  CCSPrint in '..\..\CCSCommonD7\CCSPrint.pas',
+  PDLUPage in '..\PDLUPage.pas' {PDLuPageFrm},
+  PDLetterMaint in '..\PDLetterMaint.pas' {PDLetterMaintFrm},
+  PDFontFrame in '..\PDFontFrame.pas' {fmFontInfo: TFrame},
+  PDLetter in '..\PDLetter.pas',
+  LetterDM in '..\LetterDM.pas' {dmLetter: TDataModule},
+  CCSDebug in '..\..\CCSCommonD7\CCSDebug.pas',
+  PDGenerateDg in '..\PDGenerateDg.pas' {PDGenerateDlg},
+  CCSCommon in '..\..\CCSCommonD7\CCSCommon.pas',
+  PDDragDrop in '..\PDDragDrop.pas' {frmPreview},
+  PDConfirmWidth in '..\PDConfirmWidth.pas' {dlgConfirmWidth},
+  PDIndentWidth in '..\PDIndentWidth.pas' {dlgIndentWidth},
+  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
+  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
+  PBNarrativeDM in '..\..\broker2005\PBNarrativeDM.pas' {dmNarrative: TDataModule},
+  PBImages in '..\..\broker2005\PBImages.pas' {PBImagesFrm};
 
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Redeye Page/Letter Layout Designer';
   Application.CreateForm(TdmBroker, dmBroker);
