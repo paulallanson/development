@@ -2,7 +2,7 @@ program csFax;
 
 uses
   Forms,
-  CSFaxStatus in 'CSFaxStatus.pas' {frmCSFaxStatus};
+  CSFaxStatus in '..\CSFaxStatus.pas' {frmCSFaxStatus};
 
 {$R *.RES}
 

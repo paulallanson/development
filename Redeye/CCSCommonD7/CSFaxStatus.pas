@@ -61,7 +61,7 @@ type
     procedure DisableButtons(Sender: TObject);
     procedure ReQueFaxBitBtnClick(Sender: TObject);
     procedure ReFreshBitBtnClick(Sender: TObject);
-    function GetFaxStatus(TempFax: string): string;
+    function GetFaxStatus(TempFax: string): Shortstring;
     procedure BitBtn1Click(Sender: TObject);
     procedure FaxDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
     procedure Timer1Timer(Sender: TObject);
@@ -176,7 +176,7 @@ begin
   FormActivate(Self);
 end;
 
-function TfrmCSFaxStatus.GetFaxStatus(TempFax: string): string;
+function TfrmCSFaxStatus.GetFaxStatus(TempFax: string): Shortstring;
 begin
   with GetFaxQuery do
   begin
@@ -189,7 +189,7 @@ begin
       Exit;
     end;
     First;
-    Result := GetFaxQuery.FieldByName('Status').AsString;
+    Result := Shortstring(GetFaxQuery.FieldByName('Status').AsString);
   end;
 end;
 

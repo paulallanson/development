@@ -56,9 +56,10 @@
         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
+        <DCC_UnitSearchPath>..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
@@ -89,74 +90,77 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="CCSCommon\CSStdUnits.pas">
+        <DCCReference Include="..\CSStdUnits.pas">
             <Form>Form1</Form>
         </DCCReference>
-        <DCCReference Include="CCSCommon\CSLUCust.pas">
+        <DCCReference Include="..\CSLUCust.pas">
             <Form>CSLUCustFrm</Form>
         </DCCReference>
-        <DCCReference Include="CCSCommon\CSMaintCust.pas">
+        <DCCReference Include="..\CSMaintCust.pas">
             <Form>CSMaintCustFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSDBMemo.pas">
+        <DCCReference Include="..\CSDBMemo.pas">
             <Form>CSDBMemoFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSNarrativeDM.pas">
+        <DCCReference Include="..\CSNarrativeDM.pas">
             <Form>dmNarrative</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="CSLUBranch.pas">
+        <DCCReference Include="..\CSLUBranch.pas">
             <Form>CSLUBranchFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintBranch.pas">
+        <DCCReference Include="..\CSMaintBranch.pas">
             <Form>CSMaintBranchFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSImages.pas">
+        <DCCReference Include="..\CSImages.pas">
             <Form>CSImagesFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSDelivNotes.pas">
+        <DCCReference Include="..\CSDelivNotes.pas">
             <Form>CSDelivNotesFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSLUCConta.pas">
+        <DCCReference Include="..\CSLUCConta.pas">
             <Form>CSLUCContaFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintCConta.pas">
+        <DCCReference Include="..\CSMaintCConta.pas">
             <Form>CSMaintCContaFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintGroups.pas">
+        <DCCReference Include="..\CSMaintGroups.pas">
             <Form>CSMaintGroupsFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintGroupsDets.pas">
+        <DCCReference Include="..\CSMaintGroupsDets.pas">
             <Form>CSMaintGroupsDetsFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSGroupsDM.pas">
+        <DCCReference Include="..\CSGroupsDM.pas">
             <Form>dmGroups</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="CSLUCRep.pas">
+        <DCCReference Include="..\CSLUCRep.pas">
             <Form>CSLUCRepFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintCRep.pas">
+        <DCCReference Include="..\CSMaintCRep.pas">
             <Form>CSMaintCRepFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSLUVATCode.pas">
+        <DCCReference Include="..\CSLUVATCode.pas">
             <Form>CSLUVATCodeFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSLUSupp.pas">
+        <DCCReference Include="..\CSLUSupp.pas">
             <Form>CSLUSuppFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintSupBrch.pas">
+        <DCCReference Include="..\CSMaintSupBrch.pas">
             <Form>CSMaintSupBrchFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSMaintSupCap.pas">
+        <DCCReference Include="..\CSMaintSupCap.pas">
             <Form>CSMaintSupCapFrm</Form>
         </DCCReference>
-        <DCCReference Include="CSCommon.pas"/>
+        <DCCReference Include="..\CSCommon.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
