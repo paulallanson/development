@@ -22,6 +22,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 573
     Width = 845
@@ -119,6 +120,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 837
@@ -764,6 +766,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Contract Details'
       ImageIndex = 8
       object Panel14: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 272
@@ -862,6 +865,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           ParentFont = False
         end
         object Panel16: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 270
@@ -944,6 +948,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
       end
       object Panel13: TPanel
+        ParentBackground = False
         Left = 272
         Top = 0
         Width = 565
@@ -952,6 +957,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Caption = 'Panel13'
         TabOrder = 1
         object Panel15: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 563
@@ -961,6 +967,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           TabOrder = 0
         end
         object pnlMaterialTypeFunctions: TPanel
+          ParentBackground = False
           Left = 472
           Top = 42
           Width = 92
@@ -1027,6 +1034,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
             end>
         end
         object pnlMaterialTypeFooter: TPanel
+          ParentBackground = False
           Left = 1
           Top = 503
           Width = 563
@@ -1105,6 +1113,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Quotes'
       ImageIndex = 2
       object Panel2: TPanel
+        ParentBackground = False
         Left = 720
         Top = 0
         Width = 85
@@ -1256,6 +1265,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           end>
       end
       object Panel4: TPanel
+        ParentBackground = False
         Left = 0
         Top = 429
         Width = 805
@@ -1361,6 +1371,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           end>
       end
       object Panel5: TPanel
+        ParentBackground = False
         Left = 720
         Top = 0
         Width = 85
@@ -1396,6 +1407,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
       end
       object Panel6: TPanel
+        ParentBackground = False
         Left = 0
         Top = 429
         Width = 805
@@ -1424,6 +1436,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ImageIndex = 4
       OnShow = tbsJobsShow
       object Panel7: TPanel
+        ParentBackground = False
         Left = 720
         Top = 0
         Width = 85
@@ -1459,6 +1472,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 0
         Top = 429
         Width = 805
@@ -1646,6 +1660,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           end>
       end
       object Panel9: TPanel
+        ParentBackground = False
         Left = 720
         Top = 0
         Width = 85
@@ -1672,6 +1687,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
       end
       object Panel10: TPanel
+        ParentBackground = False
         Left = 0
         Top = 429
         Width = 805
@@ -1699,6 +1715,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Activity'
       ImageIndex = 6
       object Panel3: TPanel
+        ParentBackground = False
         Left = 744
         Top = 0
         Width = 93
@@ -1821,6 +1838,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           DataSource = dtsOneCustomer
         end
         object GroupBox1: TGroupBox
+          ParentBackground = False
           Left = 4
           Top = 48
           Width = 645
@@ -1979,6 +1997,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Documents'
       ImageIndex = 7
       object Panel11: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 837
@@ -2074,6 +2093,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         end
       end
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 837

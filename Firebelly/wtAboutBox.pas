@@ -3,7 +3,7 @@ unit wtAboutBox;
 interface
 
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls,
-  Buttons, ExtCtrls, jpeg, gtQrCtrls;
+  Buttons, ExtCtrls, jpeg;
 
 type
   TfrmwtAboutBox = class(TForm)

@@ -100,6 +100,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     TabOrder = 6
   end
   object rdgrpType: TRadioGroup
+    ParentBackground = False
     Left = 248
     Top = 21
     Width = 113

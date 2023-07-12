@@ -94,6 +94,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 302
     Width = 1000
@@ -152,6 +153,7 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       OnClick = chkbxShowClick
     end
     object CustomerGroupBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 82
       Width = 385

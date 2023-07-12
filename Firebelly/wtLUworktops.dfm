@@ -100,6 +100,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 328
     Width = 783
@@ -200,6 +201,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 783

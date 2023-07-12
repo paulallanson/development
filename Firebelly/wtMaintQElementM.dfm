@@ -18,6 +18,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536
@@ -154,6 +155,7 @@ object frmWTMaintQElementM: TfrmWTMaintQElementM
       OnClick = dblkpMaterialClick
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 136
       Width = 521

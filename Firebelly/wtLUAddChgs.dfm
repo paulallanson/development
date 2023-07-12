@@ -80,6 +80,7 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 320
     Width = 690

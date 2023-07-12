@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, gtQrCtrls;
+  DB, DBTables;
 
 type
   TdtmdlNotes = class(TDataModule)

@@ -41,6 +41,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     OnClick = Button4Click
   end
   object rdgrpReps: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -54,6 +55,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     OnClick = rdgrpRepsClick
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -67,6 +69,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
@@ -151,6 +154,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
@@ -202,6 +206,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 52
     Top = 79
     Width = 289
@@ -288,6 +293,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     OnClick = btnPreviewClick
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -302,6 +308,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     TabOrder = 10
   end
   object grpbxReps: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -332,6 +339,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113

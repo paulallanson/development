@@ -33,6 +33,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       end>
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 570
     Width = 927
@@ -98,6 +99,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       NumGlyphs = 2
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 491
       Top = 1
       Width = 435
@@ -163,6 +165,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 927
@@ -264,6 +267,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 444
     Width = 927
@@ -297,6 +301,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Caption = 'Total Paid'
     end
     object Panel5: TPanel
+      ParentBackground = False
       Left = 741
       Top = 1
       Width = 185
@@ -449,6 +454,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 36
     Width = 927
@@ -618,6 +624,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       OnChange = edtDescriptionChange
     end
     object pnlRevenueCentre: TPanel
+      ParentBackground = False
       Left = -2
       Top = 160
       Width = 419
@@ -683,6 +690,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       end
     end
     object pnlCustomerBranch: TPanel
+      ParentBackground = False
       Left = 0
       Top = 104
       Width = 449
@@ -765,6 +773,7 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object Panel6: TPanel
+    ParentBackground = False
     Left = 0
     Top = 257
     Width = 927

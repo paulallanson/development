@@ -115,6 +115,7 @@ object frmwtLUCustJobs: TfrmwtLUCustJobs
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 277
     Width = 528

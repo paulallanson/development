@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, ExtCtrls, IniFiles, gtQrCtrls;
+  StdCtrls, Buttons, DB, DBTables, ExtCtrls, IniFiles;
 
 type
   TfrmWTLogin = class(TForm)

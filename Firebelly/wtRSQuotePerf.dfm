@@ -41,6 +41,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -54,6 +55,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 217
@@ -138,6 +140,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
@@ -197,6 +200,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 28
     Top = 87
     Width = 289
@@ -283,6 +287,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = btnPreviewClick
   end
   object rdgrpContacts: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -296,6 +301,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     OnClick = rdgrpContactsClick
   end
   object grpbxContacts: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -326,6 +332,7 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
     end
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105

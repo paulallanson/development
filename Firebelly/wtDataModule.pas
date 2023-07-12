@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, gtQrCtrls, ActiveX, Outlook12_TLB;
+  Db, DBTables, ActiveX, Outlook_TLB;
 
 type
   TdtmdlWorktops = class(TDataModule)

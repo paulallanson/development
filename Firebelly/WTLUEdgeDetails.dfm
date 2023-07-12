@@ -96,6 +96,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       end>
   end
   object pnlFoot: TPanel
+    ParentBackground = False
     Left = 0
     Top = 313
     Width = 751
@@ -188,6 +189,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 751

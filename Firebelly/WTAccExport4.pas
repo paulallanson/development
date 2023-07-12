@@ -34,7 +34,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, gtQrCtrls;
+  StdCtrls, Buttons;
 
 type
   TfrmWTAccExport4 = class(TForm)

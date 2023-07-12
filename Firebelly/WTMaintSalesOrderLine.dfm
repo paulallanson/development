@@ -19,6 +19,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 192
     Width = 626
@@ -96,6 +97,7 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 626

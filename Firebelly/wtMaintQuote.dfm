@@ -37,6 +37,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Caption = 'Email Address'
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1128
@@ -44,6 +45,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     Align = alTop
     TabOrder = 0
     object pnlRevenueCentre: TPanel
+      ParentBackground = False
       Left = 1
       Top = 128
       Width = 1126
@@ -109,6 +111,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       end
     end
     object pnlHeader: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 1126
@@ -703,6 +706,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         NumGlyphs = 2
       end
       object pnlAddress: TPanel
+        ParentBackground = False
         Left = 74
         Top = 0
         Width = 512
@@ -799,6 +803,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         NumGlyphs = 2
       end
       object pnlTelephone: TPanel
+        ParentBackground = False
         Left = 725
         Top = 0
         Width = 391
@@ -1061,6 +1066,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           206)
       end
       object Panel2: TPanel
+        ParentBackground = False
         Left = 0
         Top = 260
         Width = 1120
@@ -1083,6 +1089,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel10: TPanel
+        ParentBackground = False
         Left = 1035
         Top = 0
         Width = 85
@@ -1156,6 +1163,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           88)
       end
       object Panel5: TPanel
+        ParentBackground = False
         Left = 1064
         Top = 0
         Width = 86
@@ -1194,6 +1202,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel14: TPanel
+        ParentBackground = False
         Left = 0
         Top = 215
         Width = 1150
@@ -1241,6 +1250,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           92)
       end
       object Panel6: TPanel
+        ParentBackground = False
         Left = 1064
         Top = 0
         Width = 86
@@ -1279,6 +1289,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel15: TPanel
+        ParentBackground = False
         Left = 0
         Top = 215
         Width = 1150
@@ -1305,6 +1316,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Caption = 'Upstands/Splashbacks etc'
       ImageIndex = 3
       object Panel1: TPanel
+        ParentBackground = False
         Left = 1065
         Top = 0
         Width = 85
@@ -1379,6 +1391,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           86)
       end
       object Panel4: TPanel
+        ParentBackground = False
         Left = 0
         Top = 215
         Width = 1150
@@ -1433,6 +1446,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           64)
       end
       object Panel7: TPanel
+        ParentBackground = False
         Left = 1064
         Top = 0
         Width = 86
@@ -1471,6 +1485,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel16: TPanel
+        ParentBackground = False
         Left = 0
         Top = 215
         Width = 1150
@@ -1497,6 +1512,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Caption = 'Slab Details'
       ImageIndex = 9
       object Panel24: TPanel
+        ParentBackground = False
         Left = 1064
         Top = 0
         Width = 86
@@ -1536,6 +1552,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel25: TPanel
+        ParentBackground = False
         Left = 0
         Top = 215
         Width = 1150
@@ -1567,6 +1584,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel26: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1064
@@ -1575,6 +1593,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Caption = 'Panel26'
         TabOrder = 2
         object Panel27: TPanel
+          ParentBackground = False
           Left = 1
           Top = 161
           Width = 1062
@@ -1584,6 +1603,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
           TabOrder = 0
         end
         object Panel28: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 1062
@@ -1629,6 +1649,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Caption = 'Installation'
       ImageIndex = 8
       object Panel19: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1120
@@ -1645,6 +1666,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel21: TPanel
+        ParentBackground = False
         Left = 715
         Top = 17
         Width = 405
@@ -1689,6 +1711,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel22: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 715
@@ -1697,6 +1720,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BevelOuter = bvNone
         TabOrder = 1
         object Panel20: TPanel
+          ParentBackground = False
           Left = 0
           Top = 0
           Width = 465
@@ -1722,6 +1746,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       ImageIndex = 5
       OnShow = tbDocumentsShow
       object Panel11: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1120
@@ -1838,6 +1863,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Caption = 'Notes'
       ImageIndex = 12
       object Panel23: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1120
@@ -1854,6 +1880,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel12: TPanel
+        ParentBackground = False
         Left = 1085
         Top = 17
         Width = 35
@@ -1878,6 +1905,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object pnlNotes: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 1085
@@ -1899,6 +1927,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       Caption = 'Events'
       ImageIndex = 7
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 305
@@ -1925,6 +1954,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 755
         Top = 17
         Width = 365
@@ -1943,6 +1973,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         end
       end
       object Panel9: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1120
@@ -1951,6 +1982,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         TabOrder = 2
       end
       object Panel18: TPanel
+        ParentBackground = False
         Left = 305
         Top = 17
         Width = 450
@@ -1993,6 +2025,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       ImageIndex = 9
       OnShow = tbAnalysisShow
       object Panel17: TPanel
+        ParentBackground = False
         Left = 0
         Top = 260
         Width = 1120
@@ -3241,6 +3274,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
     end
   end
   object pnlFoot: TPanel
+    ParentBackground = False
     Left = 0
     Top = 485
     Width = 1128
@@ -3341,6 +3375,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
       NumGlyphs = 2
     end
     object pnlTotals: TPanel
+      ParentBackground = False
       Left = 621
       Top = 1
       Width = 506

@@ -143,6 +143,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         OnClick = Button3Click
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 368
         Top = 58
         Width = 289
@@ -1284,6 +1285,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         OnClick = Button1Click
       end
       object Panel2: TPanel
+        ParentBackground = False
         Left = 392
         Top = 40
         Width = 337
@@ -1291,6 +1293,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         Caption = 'Panel2'
         TabOrder = 1
         object Panel3: TPanel
+          ParentBackground = False
           Left = 311
           Top = 1
           Width = 25

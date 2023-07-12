@@ -5,7 +5,7 @@ interface
 uses                         
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, ComCtrls, ExtCtrls, Buttons, Grids, DBCtrls, wtQuotesDm,
-  CRControls, AllCommon, DB, DBTables, Spin, gtQrCtrls, DateSelV5, ToolWin,
+  CRControls, AllCommon, DB, DBTables, Spin, DateSelV5, ToolWin,
   ImgList, ShellAPI, Menus, Inifiles, DBGrids,
   taoCntrr, taoFrmts, taoMapi, Activex, AxCtrls, Clipbrd, ComObj,
   ShellCtrls;

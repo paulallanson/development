@@ -17,6 +17,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
   PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 164
     Width = 515
@@ -43,6 +44,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     end
   end
   object pnlRight: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 515
@@ -51,6 +53,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     BevelOuter = bvNone
     TabOrder = 1
     object pnlNumberRange: TPanel
+      ParentBackground = False
       Left = 274
       Top = 0
       Width = 241
@@ -99,6 +102,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       end
     end
     object pnlDateRange: TPanel
+      ParentBackground = False
       Left = 274
       Top = 0
       Width = 241
@@ -180,6 +184,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       end
     end
     object pnlInvOrCred: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 137
@@ -187,6 +192,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       Align = alLeft
       TabOrder = 2
       object rdgrpInvOrCred: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 121
@@ -201,6 +207,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       end
     end
     object pnleft: TPanel
+      ParentBackground = False
       Left = 137
       Top = 0
       Width = 137
@@ -208,6 +215,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       Align = alLeft
       TabOrder = 3
       object rdgrpExportBy: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 121
@@ -223,6 +231,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     end
   end
   object pnlExpFile: TPanel
+    ParentBackground = False
     Left = 0
     Top = 119
     Width = 515

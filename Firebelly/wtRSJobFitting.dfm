@@ -56,6 +56,7 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
     OnClick = Button4Click
   end
   object rdgrpOutput: TRadioGroup
+    ParentBackground = False
     Left = 248
     Top = 18
     Width = 92

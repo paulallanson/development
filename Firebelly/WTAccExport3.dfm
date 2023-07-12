@@ -1,22 +1,20 @@
 object frmWTAccExport3: TfrmWTAccExport3
   Left = 530
   Top = 147
-  Width = 355
-  Height = 326
   Caption = 'Export & Import Wizard'
+  ClientHeight = 288
+  ClientWidth = 343
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object AliasLbl: TLabel
     Left = 8
@@ -60,7 +58,6 @@ object frmWTAccExport3: TfrmWTAccExport3
     Width = 177
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 7
     OnChange = cbsourceChange
   end

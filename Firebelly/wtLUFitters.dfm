@@ -61,6 +61,7 @@ object frmWTLUFitters: TfrmWTLUFitters
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 232
     Width = 451

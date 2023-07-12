@@ -36,6 +36,7 @@ object frmWTMaintJob: TfrmWTMaintJob
     Caption = 'Email Address'
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1052
@@ -373,6 +374,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 565
     Width = 1052
@@ -544,6 +546,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         NumGlyphs = 2
       end
       object pnlAddress: TPanel
+        ParentBackground = False
         Left = 70
         Top = 0
         Width = 553
@@ -656,6 +659,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         NumGlyphs = 2
       end
       object pnlPlanning: TPanel
+        ParentBackground = False
         Left = 679
         Top = 0
         Width = 365
@@ -664,6 +668,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         BevelOuter = bvNone
         TabOrder = 3
         object GroupBox1: TGroupBox
+          ParentBackground = False
           Left = 92
           Top = 0
           Width = 241
@@ -723,6 +728,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           end
         end
         object GroupBox2: TGroupBox
+          ParentBackground = False
           Left = 92
           Top = 108
           Width = 241
@@ -916,6 +922,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           172)
       end
       object pnlElts: TPanel
+        ParentBackground = False
         Left = 959
         Top = 0
         Width = 85
@@ -988,6 +995,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           75)
       end
       object pnlCutOuts: TPanel
+        ParentBackground = False
         Left = 805
         Top = 0
         Width = 86
@@ -1050,6 +1058,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           92)
       end
       object pnlEdges: TPanel
+        ParentBackground = False
         Left = 805
         Top = 0
         Width = 86
@@ -1092,6 +1101,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       Caption = 'Upstands/Splashbacks etc'
       ImageIndex = 3
       object pnlUpstands: TPanel
+        ParentBackground = False
         Left = 959
         Top = 0
         Width = 85
@@ -1179,6 +1189,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           64)
       end
       object pnlExtras: TPanel
+        ParentBackground = False
         Left = 805
         Top = 0
         Width = 86
@@ -1239,6 +1250,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           94)
       end
       object pnlRemedials: TPanel
+        ParentBackground = False
         Left = 958
         Top = 0
         Width = 86
@@ -1281,6 +1293,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       Caption = 'Installation'
       ImageIndex = 8
       object Panel22: TPanel
+        ParentBackground = False
         Left = 329
         Top = 0
         Width = 310
@@ -1290,6 +1303,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 0
       end
       object pnlRiskNotes: TPanel
+        ParentBackground = False
         Left = 639
         Top = 0
         Width = 405
@@ -1308,6 +1322,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           TabOrder = 0
         end
         object Panel5: TPanel
+          ParentBackground = False
           Left = 0
           Top = 0
           Width = 405
@@ -1325,6 +1340,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         end
       end
       object pnlInstall: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 329
@@ -1341,6 +1357,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           TabOrder = 0
         end
         object Panel1: TPanel
+          ParentBackground = False
           Left = 1
           Top = 212
           Width = 327
@@ -1391,6 +1408,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           end
         end
         object Panel6: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 327
@@ -1413,6 +1431,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       ImageIndex = 5
       OnShow = tbDocumentsShow
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1044
@@ -1528,6 +1547,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       Caption = 'Notes'
       ImageIndex = 11
       object Panel7: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1044
@@ -1560,6 +1580,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       Caption = 'Events'
       ImageIndex = 8
       object Panel9: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 891
@@ -1568,6 +1589,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         TabOrder = 0
       end
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 345
@@ -1594,6 +1616,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 574
         Top = 17
         Width = 317
@@ -1612,6 +1635,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         end
       end
       object pnlEvents: TPanel
+        ParentBackground = False
         Left = 345
         Top = 17
         Width = 229
@@ -1884,6 +1908,7 @@ object frmWTMaintJob: TfrmWTMaintJob
     end
   end
   object Panel4: TPanel
+    ParentBackground = False
     Left = 0
     Top = 464
     Width = 1052

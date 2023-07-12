@@ -286,6 +286,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 306
     Width = 962
@@ -308,6 +309,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 690
       Top = 1
       Width = 271
@@ -400,6 +402,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 962

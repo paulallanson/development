@@ -711,6 +711,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 6
       end
       object GroupBox1: TGroupBox
+        ParentBackground = False
         Left = 408
         Top = 8
         Width = 273
@@ -829,6 +830,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 14
       end
       object grpbxRemedials: TGroupBox
+        ParentBackground = False
         Left = 16
         Top = 352
         Width = 393
@@ -991,6 +993,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button3Click
       end
       object grpbxCosting: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 280
         Width = 481
@@ -1218,6 +1221,7 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button11Click
       end
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 440
         Width = 681
@@ -1239,6 +1243,7 @@ object frmWTMaintParams: TfrmWTMaintParams
           Caption = 'Shared Folder'
         end
         object grpbxDocumentTransfer: TGroupBox
+          ParentBackground = False
           Left = 368
           Top = 15
           Width = 305
@@ -1864,6 +1869,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 669
     Width = 752

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Math, gtQrCtrls;
+  Db, DBTables, Math;
 
 type
   TdmAccExport = class(TDataModule)

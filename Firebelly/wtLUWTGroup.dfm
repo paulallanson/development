@@ -60,6 +60,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 232
     Width = 426
@@ -127,6 +128,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 426

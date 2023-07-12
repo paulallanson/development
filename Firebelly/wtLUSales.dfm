@@ -39,6 +39,7 @@ object frmwtLUSales: TfrmwtLUSales
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 429
     Width = 1462
@@ -422,6 +423,7 @@ object frmwtLUSales: TfrmwtLUSales
         Width = 1458
       end>
     object Panel3: TPanel
+      ParentBackground = False
       Left = 9
       Top = 0
       Width = 1445

@@ -55,6 +55,7 @@ object frmwtLUEdges: TfrmwtLUEdges
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 337
     Width = 745

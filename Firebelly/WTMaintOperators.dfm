@@ -141,6 +141,7 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     TabOrder = 10
   end
   object grpbxReminders: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 280
     Width = 337
@@ -181,6 +182,7 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     TabOrder = 9
   end
   object grpbxScheduling: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 368
     Width = 337

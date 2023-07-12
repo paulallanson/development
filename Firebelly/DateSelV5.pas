@@ -41,7 +41,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls, gtQrCtrls;
+  StdCtrls, Buttons, ComCtrls;
 
 type
   TDateSelV5Form = class(TForm)

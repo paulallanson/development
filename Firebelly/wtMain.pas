@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ImgList, ComCtrls, ToolWin, IniFiles, StdActns, ActnList,
-  ShellAPI, AllCommon, DB, DBTables, Grids, DBGrids, gtQrCtrls;
+  ShellAPI, AllCommon, DB, DBTables, Grids, DBGrids, System.Actions,
+  System.ImageList;
 
 type
   TfrmWTMain = class(TForm)

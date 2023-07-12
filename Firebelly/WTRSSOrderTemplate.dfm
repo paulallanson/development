@@ -42,6 +42,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     OnClick = Button4Click
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -55,6 +56,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
@@ -139,6 +141,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
@@ -180,6 +183,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113
@@ -233,6 +237,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -247,6 +252,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     TabOrder = 11
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 60
     Top = 111
     Width = 289
@@ -270,6 +276,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     end
   end
   object rdgrpReps: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -283,6 +290,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     OnClick = rdgrpRepsClick
   end
   object grpbxReps: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219

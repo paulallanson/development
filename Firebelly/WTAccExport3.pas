@@ -161,7 +161,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, Grids, DBGrids, ComCtrls, Inifiles, gtQrCtrls;
+  StdCtrls, Buttons, DB, DBTables, Grids, DBGrids, ComCtrls, Inifiles;
 
 type
   TfrmWTAccExport3 = class(TForm)

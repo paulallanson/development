@@ -1,9 +1,9 @@
 object frmWTMain: TfrmWTMain
   Left = 72
   Top = 61
-  Width = 1158
-  Height = 489
   Caption = 'Firebelly Worktop Management System'
+  ClientHeight = 0
+  ClientWidth = 120
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object frmWTMain: TfrmWTMain
   Font.Style = []
   FormStyle = fsMDIForm
   Menu = mnMenu
-  OldCreateOrder = False
   Position = poScreenCenter
   ShowHint = True
   WindowState = wsMaximized
@@ -20,12 +19,11 @@ object frmWTMain: TfrmWTMain
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1150
+    Width = 120
     Height = 40
     Bands = <
       item
@@ -34,6 +32,7 @@ object frmWTMain: TfrmWTMain
         MinHeight = 36
         Width = 1146
       end>
+    ExplicitWidth = 1150
     object ToolBar1: TToolBar
       Left = 9
       Top = 0
@@ -45,7 +44,6 @@ object frmWTMain: TfrmWTMain
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
-      Flat = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -158,8 +156,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = 419
-    Width = 1150
+    Top = -19
+    Width = 120
     Height = 19
     Panels = <
       item
@@ -171,6 +169,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
+    ExplicitTop = 419
+    ExplicitWidth = 1150
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

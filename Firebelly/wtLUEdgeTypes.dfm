@@ -61,6 +61,7 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 160
     Width = 415

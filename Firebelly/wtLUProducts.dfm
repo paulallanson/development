@@ -88,6 +88,7 @@ object frmWTLUProducts: TfrmWTLUProducts
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 425
     Width = 849
@@ -143,6 +144,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 759
     Top = 0
     Width = 90

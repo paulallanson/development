@@ -18,6 +18,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 228
     Width = 642
@@ -105,6 +106,7 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 642

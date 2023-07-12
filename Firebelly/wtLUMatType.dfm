@@ -60,6 +60,7 @@ object frmWTLUMatType: TfrmWTLUMatType
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 308
     Width = 686

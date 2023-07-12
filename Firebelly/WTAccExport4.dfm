@@ -1,19 +1,17 @@
 object frmWTAccExport4: TfrmWTAccExport4
   Left = 297
   Top = 173
-  Width = 354
-  Height = 320
   Caption = 'Export & Import Wizard'
+  ClientHeight = 282
+  ClientWidth = 342
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object BitBtn1: TBitBtn
     Left = 256
@@ -25,6 +23,7 @@ object frmWTAccExport4: TfrmWTAccExport4
     OnClick = BitBtn1Click
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 321

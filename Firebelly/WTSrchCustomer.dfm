@@ -42,6 +42,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       end>
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 320
     Top = 0
     Width = 98
@@ -94,6 +95,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 343
     Width = 418

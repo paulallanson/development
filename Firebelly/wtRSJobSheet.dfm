@@ -19,6 +19,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 247
     Width = 536
@@ -90,6 +91,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536
@@ -135,6 +137,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
   end
   object pnlDocuments: TPanel
+    ParentBackground = False
     Left = 0
     Top = 49
     Width = 536
@@ -165,6 +168,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 97
     Width = 536

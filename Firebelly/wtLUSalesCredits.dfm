@@ -299,6 +299,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 306
     Width = 960
@@ -321,6 +322,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 676
       Top = 1
       Width = 283
@@ -413,6 +415,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 960

@@ -16,6 +16,7 @@ object frmWTMaintQEvents: TfrmWTMaintQEvents
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 297
     Width = 345
@@ -61,6 +62,7 @@ object frmWTMaintQEvents: TfrmWTMaintQEvents
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 345
@@ -120,6 +122,7 @@ object frmWTMaintQEvents: TfrmWTMaintQEvents
     end
   end
   object pnldetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 73
     Width = 345

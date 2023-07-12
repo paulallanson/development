@@ -54,6 +54,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     NumGlyphs = 2
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 457

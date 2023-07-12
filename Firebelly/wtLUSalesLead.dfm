@@ -61,6 +61,7 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 226
     Width = 440

@@ -137,6 +137,7 @@ object frmwtLUCustInvoices: TfrmwtLUCustInvoices
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 376
     Width = 692

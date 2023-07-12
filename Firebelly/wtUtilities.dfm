@@ -38,6 +38,7 @@ object frmWTUtilities: TfrmWTUtilities
     NumGlyphs = 2
   end
   object rdgUtilities: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 233

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, ImgList, ToolWin, gtQrCtrls;
+  ComCtrls, ImgList, ToolWin, System.ImageList;
 
 type
   TfrmWTDatabase = class(TForm)

@@ -1,17 +1,15 @@
 object frmAllImages: TfrmAllImages
   Left = 290
   Top = 226
-  Width = 354
-  Height = 322
   Caption = 'frmAllImages'
+  ClientHeight = 284
+  ClientWidth = 342
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object ReportImage: TImage
     Left = 24
@@ -830,7 +828,6 @@ object frmAllImages: TfrmAllImages
     Width = 49
     Height = 25
     Caption = 'Off'
-    TabOrder = 0
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -845,6 +842,7 @@ object frmAllImages: TfrmAllImages
       8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
       3333333773FFFF77333333333000003333333333377777333333}
     NumGlyphs = 2
+    TabOrder = 0
   end
   object OnBitBtn: TBitBtn
     Left = 280
@@ -852,7 +850,6 @@ object frmAllImages: TfrmAllImages
     Width = 49
     Height = 25
     Caption = 'On'
-    TabOrder = 1
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -867,5 +864,6 @@ object frmAllImages: TfrmAllImages
       8033373F773337733733330F8700078803333373FF77733F733333300FFF8800
       3333333773FFFF77333333333000003333333333377777333333}
     NumGlyphs = 2
+    TabOrder = 1
   end
 end

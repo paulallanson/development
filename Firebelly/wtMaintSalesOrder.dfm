@@ -22,6 +22,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1162
@@ -101,6 +102,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 36
     Width = 1162
@@ -227,6 +229,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ParentFont = False
     end
     object pnlAddress: TPanel
+      ParentBackground = False
       Left = 75
       Top = 1
       Width = 622
@@ -296,6 +299,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object grpMaterials: TGroupBox
+      ParentBackground = False
       Left = 946
       Top = 181
       Width = 193
@@ -502,6 +506,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = chkbxMaterialRequiredClick
     end
     object rdgrpDateType: TRadioGroup
+      ParentBackground = False
       Left = 752
       Top = 61
       Width = 185
@@ -522,6 +527,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = rdgrpDateTypeClick
     end
     object grpDates: TGroupBox
+      ParentBackground = False
       Left = 946
       Top = 61
       Width = 194
@@ -613,6 +619,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object rdgrpJobType: TRadioGroup
+      ParentBackground = False
       Left = 752
       Top = 142
       Width = 185
@@ -636,6 +643,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = rdgrpJobTypeClick
     end
     object pnlRevenueCentre: TPanel
+      ParentBackground = False
       Left = 376
       Top = 155
       Width = 352
@@ -712,6 +720,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 714
     Width = 1162
@@ -814,6 +823,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end>
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 520
     Width = 1162
@@ -821,6 +831,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Align = alBottom
     TabOrder = 3
     object Panel5: TPanel
+      ParentBackground = False
       Left = 808
       Top = 1
       Width = 353
@@ -951,6 +962,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         OnExit = edtDepositTermsExit
       end
       object pnlSubContract: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 353
@@ -1020,6 +1032,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlFitters: TPanel
+      ParentBackground = False
       Left = 578
       Top = 1
       Width = 230
@@ -1160,6 +1173,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlInstallAddress: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 344
@@ -1373,6 +1387,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlInstallContact: TPanel
+      ParentBackground = False
       Left = 345
       Top = 1
       Width = 233
@@ -1506,6 +1521,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ImageIndex = 1
       OnShow = tbDocumentsShow
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
@@ -1580,6 +1596,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object pnlDocuments: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 1121
@@ -1588,6 +1605,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         BevelOuter = bvNone
         TabOrder = 2
         object pnlPlanDocument: TPanel
+          ParentBackground = False
           Left = 0
           Top = 129
           Width = 1121
@@ -1679,6 +1697,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Notes'
       ImageIndex = 8
       object Panel10: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
@@ -1717,6 +1736,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         OnChange = edtApplianceDetailsChange
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 449
         Top = 17
         Width = 16
@@ -1748,6 +1768,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         BorderStyle = bsNone
         TabOrder = 0
         object pnlContactInfo: TPanel
+          ParentBackground = False
           Left = 0
           Top = 0
           Width = 473
@@ -1792,6 +1813,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Events'
       ImageIndex = 4
       object Panel9: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
@@ -1800,6 +1822,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         TabOrder = 0
       end
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 305
@@ -1826,6 +1849,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel18: TPanel
+        ParentBackground = False
         Left = 305
         Top = 17
         Width = 408
@@ -1863,6 +1887,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 713
         Top = 17
         Width = 441
@@ -1885,6 +1910,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Jobs'
       ImageIndex = 9
       object Panel11: TPanel
+        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
@@ -2013,6 +2039,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Remedials'
       ImageIndex = 10
       object Panel13: TPanel
+        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
@@ -2157,6 +2184,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Purchases'
       ImageIndex = 5
       object Panel2: TPanel
+        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
@@ -2304,6 +2332,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end>
       end
       object pnlPurchasesFoot: TPanel
+        ParentBackground = False
         Left = 0
         Top = 164
         Width = 1154
@@ -2326,6 +2355,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Sales Invoices'
       ImageIndex = 7
       object Panel6: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
@@ -2400,6 +2430,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end>
       end
       object Panel19: TPanel
+        ParentBackground = False
         Left = 0
         Top = 159
         Width = 1154
@@ -2432,6 +2463,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel7: TPanel
+        ParentBackground = False
         Left = 1069
         Top = 25
         Width = 85

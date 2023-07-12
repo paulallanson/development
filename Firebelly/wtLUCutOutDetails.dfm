@@ -80,6 +80,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 301
     Width = 743
@@ -183,6 +184,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 743

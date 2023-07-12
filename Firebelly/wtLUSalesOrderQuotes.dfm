@@ -31,6 +31,7 @@ object frmWTLUSalesOrderQuotes: TfrmWTLUSalesOrderQuotes
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 372
     Width = 1007

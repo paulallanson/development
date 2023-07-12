@@ -100,6 +100,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     OnClick = chkbxOnlyShowGrandTotalClick
   end
   object selectionGrp: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 313
@@ -189,6 +190,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 9
   end
   object rdgrpType: TRadioGroup
+    ParentBackground = False
     Left = 328
     Top = 8
     Width = 105

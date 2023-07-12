@@ -94,6 +94,7 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     OnClick = Button3Click
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 368
     Top = 50
     Width = 289

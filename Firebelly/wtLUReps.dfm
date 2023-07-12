@@ -61,6 +61,7 @@ object frmWTLUReps: TfrmWTLUReps
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 256
     Width = 418

@@ -11,11 +11,9 @@ object frmWTAccExport1: TfrmWTAccExport1
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -68,6 +66,7 @@ object frmWTAccExport1: TfrmWTAccExport1
     OnClick = ActionListBoxClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 256
     Width = 313

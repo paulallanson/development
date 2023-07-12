@@ -60,6 +60,7 @@ object frmWtLUThickness: TfrmWtLUThickness
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 280
     Width = 692

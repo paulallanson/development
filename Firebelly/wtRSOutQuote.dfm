@@ -20,6 +20,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
   PixelsPerInch = 96
   TextHeight = 13
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 36
     Top = 95
     Width = 289
@@ -64,6 +65,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     OnClick = Button4Click
   end
   object rdgrpContacts: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -77,6 +79,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     OnClick = rdgrpContactsClick
   end
   object rdgrpCustomer: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -90,6 +93,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
@@ -174,6 +178,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     end
   end
   object grpbxContacts: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
@@ -204,6 +209,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     end
   end
   object grpbxCustomer: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
@@ -275,6 +281,7 @@ object frmWTRSOutQuote: TfrmWTRSOutQuote
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105

@@ -36,6 +36,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     OnClick = Button4Click
   end
   object SelectionGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 10
     Width = 161
@@ -57,6 +58,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     OnClick = btnPreviewClick
   end
   object rdgrpType: TRadioGroup
+    ParentBackground = False
     Left = 184
     Top = 10
     Width = 113

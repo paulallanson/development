@@ -38,6 +38,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Caption = 'Tools Required?'
   end
   object pnlbottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 616
     Width = 908
@@ -128,6 +129,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 908
@@ -307,6 +309,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
   end
   object pnlfooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 511
     Width = 908
@@ -526,6 +529,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 81
     Width = 908
@@ -534,6 +538,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Caption = 'Panel2'
     TabOrder = 3
     object pnlLeft: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 448
@@ -612,6 +617,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       end
     end
     object pnlRight: TPanel
+      ParentBackground = False
       Left = 449
       Top = 1
       Width = 458

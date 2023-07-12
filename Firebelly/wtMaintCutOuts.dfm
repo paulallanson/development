@@ -113,6 +113,7 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     OnChange = EnableOK
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 368
     Top = 55
     Width = 289

@@ -66,6 +66,7 @@ object frmwtLUVat: TfrmwtLUVat
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 184
     Width = 424

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, wtNotesDM, gtQrCtrls, AllCommon, wtSupplierDM;
+  Db, DBTables, wtNotesDM, AllCommon, wtSupplierDM;
                  
 type
   TqMode   = (qAdd, qChange, qDelete, qCopy, qView, qRestrict, qRequote);

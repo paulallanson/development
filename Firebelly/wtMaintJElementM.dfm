@@ -18,6 +18,7 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536

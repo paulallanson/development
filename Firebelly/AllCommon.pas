@@ -4,7 +4,7 @@ interface
 
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj,
-  Controls, Messages, Registry, Outlook8, COMobj, ActiveX, Math,
+  Controls, Messages, Registry, Outlook_TLB, COMobj, ActiveX, Math,
   DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook12_TLB,
   wtDataModule;
 
@@ -240,7 +240,7 @@ begin
       begin
         StrPCopy(@aName, KEY_PREFIX + KEYS[VerKey]);
         if VerQueryValue(pInfo, @aName, pVerInfo, VerInfoLen) then
-          Result := StrPas(pVerInfo);
+          Result := StrPas(PWideChar(pVerInfo));
       end;
     finally
       FreeMem(pInfo, VerLen);
@@ -1276,8 +1276,8 @@ begin
    begin
      wnd   := Application.Handle;
      wFunc := Flag; //FO_MOVE, FO_COPY, FO_DELETE or FO_RENAME
-     pFrom := PAnsiChar(fromFileOrFolder);
-     pTo   := PAnsiChar(toFileOrFolder);
+     pFrom := PWideChar(fromFileOrFolder);
+     pTo   := PWideChar(toFileOrFolder);
    end;
    result := SHFileOperation(shellinfo) = 0;
 end;
@@ -1461,7 +1461,7 @@ var
 begin
   if Succeeded(SHGetDesktopFolder(pDesktopFolder)) then
   try
-    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PChar(APAth), -1, olePath, MAX_PATH);
+    MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, PAnsiChar(APAth), -1, olePath, MAX_PATH);
     if Succeeded(pDesktopFolder.ParseDisplayName(0, nil, olePath, chEaten, pidl, dwAttributes)) then
       Result := pidl
     else

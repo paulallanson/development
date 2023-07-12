@@ -267,6 +267,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 306
     Width = 718
@@ -330,6 +331,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 718
@@ -352,6 +354,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           Width = 712
         end>
       object Panel3: TPanel
+        ParentBackground = False
         Left = 9
         Top = 0
         Width = 699

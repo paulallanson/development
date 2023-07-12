@@ -93,6 +93,7 @@ object frmwtMaintVat: TfrmwtMaintVat
     TabOrder = 2
   end
   object grpbxReverseCharge: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 112
     Width = 377

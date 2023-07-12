@@ -30,6 +30,7 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 259
     Width = 726

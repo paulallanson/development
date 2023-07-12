@@ -59,6 +59,7 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     NumGlyphs = 2
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 561

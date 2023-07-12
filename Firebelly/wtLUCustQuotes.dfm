@@ -37,6 +37,7 @@ object frmwtLUCustQuotes: TfrmwtLUCustQuotes
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 342
     Width = 659
