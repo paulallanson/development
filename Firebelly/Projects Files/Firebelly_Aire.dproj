@@ -1,0 +1,636 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8DB276B5-DECB-497A-9780-417A94837B88}</ProjectGuid>
+        <MainSource>Firebelly_Aire.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>19.5</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_N>true</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <DCC_WriteableConstants>true</DCC_WriteableConstants>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_DcuOutput>..\Aire\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DebugSourcePath>C:\Program Files\Borland\Delphi7\quickrpt\;$(DebugSourcePath)</DebugSourcePath>
+        <DCC_UsePackage>VCL50;VCLX50;VCLSMP50;VCLDB50;VCLADO50;ibevnt50;VCLBDE50;QRPT50;VCLIB50;VCLMID50;VCLIE50;INETDB50;INET50;NMFAST50;WEBMID50;dclocx50;dclaxserver50;VCLDBX50;TEEQR50;TEEUI50;TEEDB50;TEE50;DSS50;Crystal7;RBCIDE45;RBIDE45;RBRCL45;RBBDE45;RBUSER45;RBDB45;dclRBA45;RBDAD45;dclRBI45;RBRIDE45;RBRAP45;PSQRD50;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Define>ROMANY;$(DCC_Define)</DCC_Define>
+        <DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+        <DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+        <DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+        <SanitizedProjectName>Firebelly_Aire</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>2057</VerInfo_Locale>
+        <VerInfo_Keys>FileVersion=1.0.0.0</VerInfo_Keys>
+        <DCC_ExeOutput>..\Aire\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_UnitSearchPath>..\..\CRPackage;..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>Firebelly_Aire_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>Firebelly_Aire_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <DCC_ExeOutput>..\Aire\$(Platform)\$(Config)</DCC_ExeOutput>
+        <Icon_MainIcon>Firebelly_Aire_Icon1.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="..\wtSplash.pas">
+            <Form>frmWTSplash</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtDatabase.pas">
+            <Form>frmWTDatabase</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtCustomerDM.pas">
+            <Form>dtmdlCustomers</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtDataModule.pas">
+            <Form>dtmdlWorktops</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUThickness.pas">
+            <Form>frmWtLUThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUworktops.pas">
+            <Form>frmWtLUWorktops</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintParams.pas">
+            <Form>frmWTMaintParams</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUMatType.pas">
+            <Form>frmWTLUMatType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintProductGroup.pas">
+            <Form>frmWtMaintProductGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintThickness.pas">
+            <Form>frmWtMaintThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUWTThickness.pas">
+            <Form>frmWTLUWTThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTThickness.pas">
+            <Form>frmWTMaintWTThickness</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustomer.pas">
+            <Form>frmWTLUCustomer</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAutoPriceChange.pas">
+            <Form>frmWTAutoPriceChange</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQuote.pas">
+            <Form>frmWTMaintQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintCustomer.pas">
+            <Form>frmWtMaintCustomer</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUAddChgs.pas">
+            <Form>frmWTLUAddChgs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustQuotes.pas">
+            <Form>frmwtLUCustQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustJobs.pas">
+            <Form>frmwtLUCustJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustInvoices.pas">
+            <Form>frmwtLUCustInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTCustJobsDM.pas">
+            <Form>dtmdlCustJobs</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTCustInvoicesDM.pas">
+            <Form>dtmdlCustInvoices</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtAboutBox.pas">
+            <Form>frmwtAboutBox</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMain.pas">
+            <Form>frmWTMain</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTQuotesDM.pas">
+            <Form>dtmdlQuote</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtCommon.pas"/>
+        <DCCReference Include="..\wtLUQuotes.pas">
+            <Form>frmwtLUQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtNotesDM.pas">
+            <Form>dtmdlNotes</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUEdges.pas">
+            <Form>frmwtLUEdges</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintEdges.pas">
+            <Form>frmWTMaintEdges</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCutOuts.pas">
+            <Form>frmWTMaintCutOuts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintEdgeDetails.pas">
+            <Form>frmWTMaintEdgeDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCustType.pas">
+            <Form>frmWTLUCustType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCustTypes.pas">
+            <Form>frmWTMaintCustTypes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUVat.pas">
+            <Form>frmwtLUVat</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintVat.pas">
+            <Form>frmwtMaintVat</Form>
+        </DCCReference>
+        <DCCReference Include="..\AllCommon.pas"/>
+        <DCCReference Include="..\WTSrchCustomer.pas">
+            <Form>frmWTSrchCustomer</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQUpstand.pas">
+            <Form>frmWTMaintQUpstand</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQCutOut.pas">
+            <Form>frmWtMaintQCutOut</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQEdge.pas">
+            <Form>frmWTMaintQEdge</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQExtra.pas">
+            <Form>frmWTMaintQExtra</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCustomerConts.pas">
+            <Form>frmwtMaintCustomerConts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSrchCustContacts.pas">
+            <Form>frmWTSrchCustContacts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQElement.pas">
+            <Form>frmWTMaintQElement</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUPurchases.pas">
+            <Form>frmwtLUPurchases</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSales.pas">
+            <Form>frmwtLUSales</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTJobsDM.pas">
+            <Form>dtmdlJob</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUJobs.pas">
+            <Form>frmwtLUJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSalesOrderDM.pas">
+            <Form>dtmdlSalesOrder</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesOrder.pas">
+            <Form>frmWTMaintSalesOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtPurchasesDM.pas">
+            <Form>dtmdlPurchase</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintPurchOrders.pas">
+            <Form>frmWTMaintPurchOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtSalesInvoiceDM.pas">
+            <Form>dtmdlSalesInvoice</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesInvoice.pas">
+            <Form>frmWTMaintSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuote.pas">
+            <Form>frmWTRSQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUWTGroup.pas">
+            <Form>frmWTLUWTGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTGroup.pas">
+            <Form>frmWTMaintWTGroup</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintAddChgs.pas">
+            <Form>frmwtMaintAddChgs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJob.pas">
+            <Form>frmWTMaintJob</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJUpstand.pas">
+            <Form>frmWTMaintJUpstand</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJEdge.pas">
+            <Form>frmWTMaintJEdge</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJElement.pas">
+            <Form>frmWTMaintJElement</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJExtra.pas">
+            <Form>frmWTMaintJExtra</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJCutOut.pas">
+            <Form>frmWtMaintJCutOut</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSJobCutSched.pas">
+            <Form>frmWTRSJobCutSched</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSJobMasonRpt.pas">
+            <Form>frmWTRSJobMasonRpt</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPJobMasonRpt.pas">
+            <Form>frmWTRPJobMasonRpt</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPJobCutSched.pas">
+            <Form>frmWTRPJobCutSched</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTQuoteSearch.pas">
+            <Form>frmWTQuoteSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTJobSearch.pas">
+            <Form>frmWTJobSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQEvents.pas">
+            <Form>frmWTMaintQEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJEvents.pas">
+            <Form>frmWTMaintJEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtUtilities.pas">
+            <Form>frmWTUtilities</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUOperators.pas">
+            <Form>frmWTLUOperators</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintOperators.pas">
+            <Form>frmWTMaintOperators</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTUpdateDB.pas">
+            <Form>dtmdlUpdateDB</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTLogin.pas">
+            <Form>frmWTLogin</Form>
+        </DCCReference>
+        <DCCReference Include="..\WtLUWTGroupPrices.pas">
+            <Form>frmWtLUWTGroupPrices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintWTGPrices.pas">
+            <Form>frmWTMaintWTGPrices</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSJobSheet.pas">
+            <Form>frmWTRSJobSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPJobAccSheet.pas">
+            <Form>frmwtRPJobAccSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUEdgeTypes.pas">
+            <Form>frmWTLUEdgeTypes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintEdgeType.pas">
+            <Form>frmWTMaintEdgeType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintQElementM.pas">
+            <Form>frmWTMaintQElementM</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJElementM.pas">
+            <Form>frmWTMaintJElementM</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuotePerf.pas">
+            <Form>frmWTRSQuotePerf</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtSendFax.pas">
+            <Form>frmWTSendFax</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtFaxList.pas">
+            <Form>frmWTFaxList</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtEmailList.pas">
+            <Form>frmWTEmailList</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintClient.pas">
+            <Form>frmWTMaintClient</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUQuoteRpts.pas">
+            <Form>frmWTLUQuoteRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPQuotePerf.pas">
+            <Form>frmwtRPQuotePerf</Form>
+        </DCCReference>
+        <DCCReference Include="..\DateSelV5.pas">
+            <Form>DateSelV5Form</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSOutQuote.pas">
+            <Form>frmWTRSOutQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPOutQuote.pas">
+            <Form>frmwtRPOutQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\AllImages.pas">
+            <Form>frmAllImages</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSalesOrderJobLine.pas">
+            <Form>frmWTMaintSalesOrderJobLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUStock.pas">
+            <Form>frmWTLUStock</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtStockDM.pas">
+            <Form>dtmdlStock</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\wtLUReps.pas">
+            <Form>frmWTLUReps</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintReps.pas">
+            <Form>frmWTMaintReps</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUProductGroups.pas">
+            <Form>frmWTLUProductGroups</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintMatType.pas">
+            <Form>frmWtMaintMatType</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintProduct.pas">
+            <Form>frmWtMaintProduct</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUProducts.pas">
+            <Form>frmWTLUProducts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesInvoiceLine.pas">
+            <Form>frmWTMaintSalesInvoiceLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSalesInvoice.pas">
+            <Form>frmwtRSSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesInvoices.pas">
+            <Form>frmWTLUSalesInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSalesInvoiceSO.pas">
+            <Form>frmWTLUSalesInvoiceSO</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintSalesOrderLine.pas">
+            <Form>frmWTMaintSalesOrderLine</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOrder.pas">
+            <Form>frmWTRSSOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSOLines.pas">
+            <Form>frmWTLUSOLines</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUManageMentRpts.pas">
+            <Form>frmWTLUSOrderRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOrderTemplate.pas">
+            <Form>frmwtRPSOrderTemplate</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRSSOrderTemplate.pas">
+            <Form>frmWTRSSOrderTemplate</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTSOrderSearch.pas">
+            <Form>frmWTSOrderSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJobComplete.pas">
+            <Form>frmWTMaintJobComplete</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesOrderQuotes.pas">
+            <Form>frmWTLUSalesOrderQuotes</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesCredits.pas">
+            <Form>frmWTLUSalesCredits</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUSalesInvoiceCN.pas">
+            <Form>frmWTLUSalesInvoiceCN</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSalesInvoiceReprint.pas">
+            <Form>frmWTRSSalesInvoiceReprint</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtAccExport1.pas">
+            <Form>frmWTAccExport1</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport2.pas">
+            <Form>frmWTAccExport2</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport3.pas">
+            <Form>frmWTAccExport3</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExportDM.pas">
+            <Form>dmAccExport</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExport4.pas">
+            <Form>frmWTAccExport4</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTAccExportFactInvs.pas">
+            <Form>frmWTAccExportFactInvs</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLoginError.pas">
+            <Form>frmWTLoginError</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLicence.pas">
+            <Form>frmWTLicence</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUJobRpts.pas">
+            <Form>frmWTLUJobRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSOutJobs.pas">
+            <Form>frmWTRSOutJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPOutJobs.pas">
+            <Form>frmwtRPOutJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPSOAntInvoice.pas">
+            <Form>frmwtRPSOAntInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSSOAntInvoice.pas">
+            <Form>frmWTRSSOAntInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPTemplate.pas">
+            <Form>frmwtRPTemplate</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\wtRPSalesInvoice.pas">
+            <Form>frmWTRPSalesInvoice</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\wtRPSOrder.pas">
+            <Form>frmwtRPSOrder</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\wtRPQuote.pas">
+            <Form>frmwtRPQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\WtRPJobSheet.pas">
+            <Form>frmwtRPJobSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\WtRPJobFitting.pas">
+            <Form>frmwtRPJobFitting</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRPJob.pas">
+            <Form>frmwtRPJob</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintFitters.pas">
+            <Form>frmWTMaintFitters</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUFitters.pas">
+            <Form>frmWTLUFitters</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintJRemedial.pas">
+            <Form>frmWTMaintJRemedial</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintSalesLead.pas">
+            <Form>frmWTMaintSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUSalesLead.pas">
+            <Form>frmWTLUSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTRPQuoteSalesLead.pas">
+            <Form>frmwtRPQuoteSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSQuoteSalesLead.pas">
+            <Form>frmWTRSQuoteSalesLead</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtRSJobFitting.pas">
+            <Form>frmWTRSJobFitting</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTLUEdgeDetails.pas">
+            <Form>frmWTLUEdgeDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCutOutDetails.pas">
+            <Form>frmWTLUCutOutDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtMaintCutOutDetails.pas">
+            <Form>frmWTMaintCutOutDetails</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtLUCutOuts.pas">
+            <Form>frmWTLUCutOuts</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTMaintTrade.pas">
+            <Form>frmWTMaintTrade</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\wtRPQuoteTrade.pas">
+            <Form>frmwtRPQuoteTrade</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\WtRPJobFittingTrade.pas">
+            <Form>frmwtRPJobFittingTrade</Form>
+        </DCCReference>
+        <DCCReference Include="..\wtWin7.pas"/>
+        <DCCReference Include="..\Aire\Reports\WtRPJobRemedialSheet.pas">
+            <Form>frmwtRPJobRemedialSheet</Form>
+        </DCCReference>
+        <DCCReference Include="..\Aire\Reports\wtRPQuoteSummary.pas">
+            <Form>frmwtRPQuoteSummary</Form>
+        </DCCReference>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">Firebelly_Aire.dpr</Source>
+                </Source>
+                <Language>
+                    <Language Name="ProjectLang">$00000809</Language>
+                </Language>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
