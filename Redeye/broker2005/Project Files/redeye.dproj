@@ -1,0 +1,1396 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{ED67ACC5-BF35-401E-8897-123126C663B2}</ProjectGuid>
+        <MainSource>redeye.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>19.5</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <SanitizedProjectName>redeye</SanitizedProjectName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
+        <DCC_UnitSearchPath>..\;..\..\CCSCommonD7;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>redeye_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>redeye_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_RangeChecking>true</DCC_RangeChecking>
+        <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="..\PBWin7.pas"/>
+        <DCCReference Include="..\pbMainMenu.pas">
+            <Form>frmpbMainMenu</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustomers.pas">
+            <Form>frmpbluCustomers</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluSuppliers.pas">
+            <Form>frmpbluSuppliers</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbDatabase.pas">
+            <Form>dmBroker</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbLogin.pas">
+            <Form>frmpbLogin</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbEnvSel.pas">
+            <Form>frmpbEnvSel</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbCustomerDm.pas">
+            <Form>dtmdlCustomers</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustOrders.pas">
+            <Form>frmpbluCustOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbOrdersDm.pas">
+            <Form>dtmdlOrders</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbSupplierDm.pas">
+            <Form>dtmdlSuppliers</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbluOrdersSearch.pas">
+            <Form>frmpbluOrdersSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCust.pas">
+            <Form>PBMaintCustFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSPrint.pas"/>
+        <DCCReference Include="..\pbluCustBrSelect.pas">
+            <Form>frmpbluCustBrSelect</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBImages.pas">
+            <Form>PBImagesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDBMemo.pas">
+            <Form>PBDBMemoFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDelivNotes.pas">
+            <Form>PBDelivNotesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCompany.pas">
+            <Form>PBMaintCompanyFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluSupplierSelect.pas">
+            <Form>frmpbluSupplierSelect</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPrdTyp.pas">
+            <Form>PBLUPrdTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintRep.pas">
+            <Form>PBMaintRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLURep.pas">
+            <Form>PBLURepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUAdHoc.pas">
+            <Form>PBLUAdHocFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCust.pas">
+            <Form>PBLUCustFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPrdTypCap.pas">
+            <Form>PBLUPrdTypCapFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPrdTypOChg.pas">
+            <Form>PBLUPrdTypOChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPrdTypQu.pas">
+            <Form>PBLUPrdTypQuFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPrdTypQuList.pas">
+            <Form>PBLUPrdTypQuListfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLURepNom.pas">
+            <Form>PBLURepNomFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSConta.pas">
+            <Form>PBLUSContaFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupBrch.pas">
+            <Form>PBLUSupBrchFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupp.pas">
+            <Form>PBLUSuppFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintAdHoc.pas">
+            <Form>PBMaintAdHocFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintGroups.pas">
+            <Form>PBMaintGroupsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintGroupsDets.pas">
+            <Form>PBMaintGroupsDetsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPrdTyp.pas">
+            <Form>PBMaintPrdTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPrdTypCap.pas">
+            <Form>PBMaintPrdTypCapFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPrdTypOChg.pas">
+            <Form>PBMaintPrdTypOChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPrdTypQu.pas">
+            <Form>PBMaintPrdTypQuFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintRepNom.pas">
+            <Form>PBMaintRepNomFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSConta.pas">
+            <Form>PBMaintSContaFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSupBrch.pas">
+            <Form>PBMaintSupBrchFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSupp.pas">
+            <Form>PBMaintSuppFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSuppCap.pas">
+            <Form>PBMaintSuppCapFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSpecIns.pas">
+            <Form>PBMaintSpecInsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSpecIns.pas">
+            <Form>PBLUSpecInsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUAddCharges.pas">
+            <Form>PBLUAddChrgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUPriceUnit.pas">
+            <Form>PBLUPriceUnitFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintAddChrgs.pas">
+            <Form>PBMaintAddChrgsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPriceUnit.pas">
+            <Form>PBMaintPriceUnitFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUStandSize.pas">
+            <Form>PBLUStandSizeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPaper.pas">
+            <Form>PBMaintPaperFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintStandSize.pas">
+            <Form>PBMaintStandSizeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUArtwrkTyp.pas">
+            <Form>PBLUArtwrkTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintArtwrkTyp.pas">
+            <Form>PBMaintArtwrkTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintOpsDet.pas">
+            <Form>PBMaintOpsDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUOps.pas">
+            <Form>PBLUOpsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBAuditControl.pas">
+            <Form>PBAuditControlFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintInterf.pas">
+            <Form>PBMaintInterfFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintLastNos.pas">
+            <Form>PBMaintLastNosFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintOpsDetPass.pas">
+            <Form>PBMaintOpsDetPassFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintVATCode.pas">
+            <Form>PBMaintVATCodeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBAuditDM.pas">
+            <Form>PBAuditDataMod</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBLUBranch.pas">
+            <Form>PBLUBranchFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCConta.pas">
+            <Form>PBLUCContaFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCContaEvents.pas">
+            <Form>PBLUCContaEventsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCRep.pas">
+            <Form>PBLUCRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUFormRef.pas">
+            <Form>PBLUFormRefFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintBranch.pas">
+            <Form>PBMaintBranchFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCConta.pas">
+            <Form>PBMaintCContaFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintContApp.pas">
+            <Form>PBMaintContAppfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCRep.pas">
+            <Form>PBMaintCRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintFormRef.pas">
+            <Form>PBMaintFormRefFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrd.pas">
+            <Form>PBMaintPOrdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBIntSelDM.pas">
+            <Form>dmIntSel</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBPOObjects.pas"/>
+        <DCCReference Include="..\PBPODataMod.pas">
+            <Form>PBPODM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\DateSelV5.pas">
+            <Form>DateSelV5Form</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBJobBagDM.pas">
+            <Form>dmJobBag</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLine.pas">
+            <Form>PBMaintPOrdLineFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLineDeliv.pas">
+            <Form>PBMaintPOrdLineDelivFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLineExtChg.pas">
+            <Form>PBMaintPOrdLineExtChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUProofHistN.pas">
+            <Form>PBLUProofHistNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBPOAddDtls.pas">
+            <Form>PBPOAddDtlsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOAddNotes.pas">
+            <Form>PBMaintPOAddNotesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBPartDescDg.pas">
+            <Form>PBPartDescDlg</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLInactive.pas">
+            <Form>PBMaintPOrdLInactiveFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUReasCode.pas">
+            <Form>PBLUReasCodeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintReasCode.pas">
+            <Form>PBMaintReasCodeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLineCallOff.pas">
+            <Form>PBMaintPOrdLineCallOffFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCustFormRef.pas">
+            <Form>PBLUCustFormRefFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdLView.pas">
+            <Form>PBMaintPOrdLViewFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintIntNote.pas">
+            <Form>PBMaintIntNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPOrdN.pas">
+            <Form>PBRSPOrdNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSDataBroker.pas">
+            <Form>DataBroker</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\PAGEDESIGNER\LetterDM.pas">
+            <Form>dmLetter</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\PAGEDESIGNER\PDLetter.pas"/>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSPress.pas">
+            <Form>frmPrintingPress</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSDevil.pas"/>
+        <DCCReference Include="..\..\CCSCOMMOND7\Compositor.pas">
+            <Form>Compositor</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDBPOrdLtr.pas">
+            <Form>dbPOrdLtr</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBFaxList.pas">
+            <Form>PBFaxListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEmailList.pas">
+            <Form>PBEmailListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBSendFax.pas">
+            <Form>PBSendFaxFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustStock.pas">
+            <Form>frmpbluCustStock</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbStockDm.pas">
+            <Form>dtmdlStock</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbLuBranches.pas">
+            <Form>frmpbluBranches</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustEnquiries.pas">
+            <Form>frmpbluCustEnquiries</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbEnqsdm.pas">
+            <Form>dtmdlEnqs</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbluContacts.pas">
+            <Form>frmpbluContacts</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluEnqsSearch.pas">
+            <Form>frmpbluEnqsSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkMvmnts.pas">
+            <Form>STLUStkMvmntsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkLoc.pas">
+            <Form>STLUStkLocFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkBinLots.pas">
+            <Form>STLUStkBinLotsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkSales.pas">
+            <Form>STLUStkSalesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkProduction.pas">
+            <Form>STLUStkProductionFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStkPurchases.pas">
+            <Form>STLUStkPurchasesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBenquiry.pas">
+            <Form>PBEnquiryFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STSOObjects.pas"/>
+        <DCCReference Include="..\PBenqline.pas">
+            <Form>PBEnqLineTmp</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqLineDtls.pas">
+            <Form>PBEnqLineDtlsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqAddDtls.pas">
+            <Form>PBEnqAddDtlsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqDataMod.pas">
+            <Form>PBEnqDataModFrm</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBPOToEnq.pas">
+            <Form>PBPOToEnqFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqSelSup.pas">
+            <Form>PBEnqSelSupFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSEnqN.pas">
+            <Form>PBRSEnqNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDBEnqLtr.pas">
+            <Form>dbEnqLtr</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqSuppDataMod.pas">
+            <Form>PBEnqSuppDataModFrm</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqSupTmp.pas">
+            <Form>PBEnqSupTmpFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUEnqAddChg.pas">
+            <Form>PBLUEnqAddChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqRespQty.pas">
+            <Form>PBEnqRespQtyFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqJobPrice.pas">
+            <Form>PBEnqJobPriceFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqJobDtls.pas">
+            <Form>PBEnqJobDtlsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqAddChg.pas">
+            <Form>PBEnqAddChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDBQuoLtr.pas">
+            <Form>dbQuoLtr</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBDBQuoSumLtr.pas">
+            <Form>dbQuoSumLtr</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBRSQuoN.pas">
+            <Form>PBRSQuoNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STSODataMod.pas">
+            <Form>STSalesOrdDM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STMaintSOrdLineServ.pas">
+            <Form>STMaintSOrdLineServFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtMnt.pas">
+            <Form>STPrtMntFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtMntDetsMulti.pas">
+            <Form>STPrtMntDetsMultiFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtMntDets.pas">
+            <Form>STPrtMntDetsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\StMntPrtSupp.pas">
+            <Form>STMntPrtSuppFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUPrtGrp.pas">
+            <Form>STLUPrtGrpFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntPrtGrp.pas">
+            <Form>STMntPrtGrpFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STProdImport.pas">
+            <Form>STProdImportFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintPrtEComm.pas">
+            <Form>STMaintPrtECommFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintSOrdLine.pas">
+            <Form>STMaintSOrdLineFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CSLUCustCstCntr.pas">
+            <Form>CSLUCustCstCntrFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CSMaintCustCstCntr.pas">
+            <Form>CsMaintCustCstCntrFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintSinvExtChg.pas">
+            <Form>STMaintSInvExtChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintSOrdSerialNos.pas">
+            <Form>STMaintSOrdSerialNosFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBNarrativeDM.pas">
+            <Form>dmNarrative</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustDeliv.pas">
+            <Form>frmpbluOrderdeliv</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtAllocSales.pas">
+            <Form>STPrtAllocSalesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STStockDM.pas">
+            <Form>STStockDataMod</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STPrtAllocStStock.pas">
+            <Form>STPrtAllocStStockFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSPickNote.pas">
+            <Form>STRSPickNotefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPickObject.pas"/>
+        <DCCReference Include="..\STPickingDM.pas">
+            <Form>STPickDM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STPickbyPart.pas">
+            <Form>STPickbyPartFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPickItem.pas">
+            <Form>STPickItemFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSSalesOrd.pas">
+            <Form>STRSSalesOrdfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSDelivNote.pas">
+            <Form>PBRSDelivNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSBoxLabels.pas">
+            <Form>PBRSBoxLabelsfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintDeliv.pas">
+            <Form>PBMaintDelivFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbStockMoveDm.pas">
+            <Form>dtmdlStockMove</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintDelivBin.pas">
+            <Form>PBMaintDelivBinfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMntPrtBinUpd.pas">
+            <Form>PBMntPrtBinUpdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMntPrtBin.pas">
+            <Form>PBMntPrtBinFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBDelivStock.pas">
+            <Form>PBDelivStockFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSBoxLabels.pas">
+            <Form>STRSBoxLabelsfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustJobs.pas">
+            <Form>frmpbluCustJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbJobsDm.pas">
+            <Form>dtmdlJobs</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustJobsSearch.pas">
+            <Form>frmpbluCustJobsSearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintJobBagDets.pas">
+            <Form>PBMaintJobBagDetsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintJobBagRC.pas">
+            <Form>PBMaintJobBagRCFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintQEnq.pas">
+            <Form>PBMaintQEnqFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnquiryDataMod.pas">
+            <Form>PBEnqDM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBRSProofN.pas">
+            <Form>PBRSProofNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintProofHistN.pas">
+            <Form>PBMaintProofHistNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBAutoPODets.pas">
+            <Form>PBAutoPODetsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBAutoPO.pas">
+            <Form>PBAutoPOFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBAutoPODataMod.pas">
+            <Form>PBAutoPODM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STMaintProduct.pas">
+            <Form>frmSTMaintProduct</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintProductLvls.pas">
+            <Form>frmSTMaintProductLvls</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtTran.pas">
+            <Form>STPrtTranFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtTransQty.pas">
+            <Form>STPrtTransQtyFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUBinPrt.pas">
+            <Form>STLUBinPrtFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtTransRecv.pas">
+            <Form>STPrtTransRecvFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtTransSN.pas">
+            <Form>STPrtTransSNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStStkNumbers.pas">
+            <Form>STLUStStkNumbersFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintStStkNumbers.pas">
+            <Form>STMaintStStkNumbersfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPProof.pas">
+            <Form>PBRPProofFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPDeliv.pas">
+            <Form>PBRPDelivFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUProductLvls.pas">
+            <Form>frmSTLUProductLvls</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUDeliveriesDM.pas">
+            <Form>dtmdlDeliveries</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPDeliv.pas">
+            <Form>STRPDelivfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPLabels.pas">
+            <Form>STRPLabelsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPPick.pas">
+            <Form>STRPPickfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSDelivNote.pas">
+            <Form>STRSDelivNotefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluOrders.pas">
+            <Form>frmpbLUOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluVatCode.pas">
+            <Form>PBLUVATCodeFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPrtMntLvls.pas">
+            <Form>STPrtMntLvlsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUSuppPrt.pas">
+            <Form>STLUSuppPrtFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSLabels.pas">
+            <Form>STRSLabelsfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPBxLabels.pas">
+            <Form>STRPBxLabelsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSMaintPrtImages.pas">
+            <Form>CCSMaintPrtImagesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\gifimage.pas"/>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSImageViewer.pas">
+            <Form>CCSImageViewerFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntSOrd.pas">
+            <Form>STMntSOrdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntSOrdSpecIn.pas">
+            <Form>STMntSOrdSpecInFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUEnquiries.pas">
+            <Form>frmPBLuEnquiries</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLuStock.pas">
+            <Form>frmPBLUStock</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLuSalesOrders.pas">
+            <Form>frmPBLUSalesOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLuJobs.pas">
+            <Form>frmPBLUJobs</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUSalesInvoices.pas">
+            <Form>frmPBLUSalesInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUPurchaseInvoices.pas">
+            <Form>frmPBLUPurchaseInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBSalesInvoiceDm.pas">
+            <Form>dmSalesInvoice</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSalesInvoiceSO.pas">
+            <Form>PBLUSalesInvoiceSOfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSalesInvoiceCN.pas">
+            <Form>PBLUSalesInvoiceCNfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSalesInvoiceJB.pas">
+            <Form>PBLUSalesInvoiceJBfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSalesInvoiceJBL.pas">
+            <Form>PBLUSalesInvoiceJBLfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSalesInvoicePO.pas">
+            <Form>PBLUSalesInvoicePOfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSalesInvoiceLine.pas">
+            <Form>PBMaintSalesInvoiceLinefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSalesInvoice.pas">
+            <Form>PBMaintSalesInvoicefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBSalesInvRPrint.pas">
+            <Form>PBSalesInvRPrintFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBSalesInvPrint.pas">
+            <Form>PBSalesInvPrintFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintInvChgs.pas">
+            <Form>PBMaintInvChgsfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntStorTyp.pas">
+            <Form>STMntStorTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUStorTyp.pas">
+            <Form>STLUStorTypFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntPrtStor.pas">
+            <Form>STMntPrtStorFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUPrtStor.pas">
+            <Form>STLUPrtStorFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntPrtBinUpd.pas">
+            <Form>STMntPrtBinUpdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntPrtBin.pas">
+            <Form>STMntPrtBinFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUStockRpts.pas">
+            <Form>frmPBLUStockRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSStkBalRep.pas">
+            <Form>STRSStkBalRepfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPStkBalRep2.pas">
+            <Form>STRPStkBalRep2frm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPStkBalRep.pas">
+            <Form>STRPStkBalRepfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STFaxList.pas">
+            <Form>STFaxListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STEmailList.pas">
+            <Form>STEmailListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\StMovSl.pas">
+            <Form>StMovSlfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\StMovRep.pas">
+            <Form>StMovRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSSlwMvngStkRep.pas">
+            <Form>STRSSlwMvngStkRepfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPSlwMvngStkRep.pas">
+            <Form>STRPSlwMvngStkRepfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STNegStkRep.pas">
+            <Form>STNegStkRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STNegStksl.pas">
+            <Form>STNegStkSlfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSStkVal.pas">
+            <Form>STRSStkValfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STStkValSl.pas">
+            <Form>STStkValSlfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STStkValRep.pas">
+            <Form>STStkValRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STStkVarRep.pas">
+            <Form>STStkVarRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSAgedStk.pas">
+            <Form>STRSAgedStkFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPAgedStk.pas">
+            <Form>STRPAgedStkFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPSalesByCust.pas">
+            <Form>STRPSalesByCustFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSSalesByCust.pas">
+            <Form>STRSSalesByCustFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUSordDM.pas">
+            <Form>DmLookupSOrd</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STRPSOHistory.pas">
+            <Form>STRPSOHistoryFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSSOHistory.pas">
+            <Form>STRSSOHistoryFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUPrtByCustOrder.pas">
+            <Form>STLUPrtByCustOrderFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPWorkIP.pas">
+            <Form>STRPWorkIPfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSWorkIP.pas">
+            <Form>STRSWorkIPfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPartSuppSel.pas">
+            <Form>STPartSuppSelFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPCustProdUsage.pas">
+            <Form>STRPCustProdUsagefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPCustStkBal.pas">
+            <Form>STRPCustStkBalfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSCustProdUsage.pas">
+            <Form>STRSCustProdUsageFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSCustStkBal.pas">
+            <Form>STRSCustStkBalfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPartSuppRep.pas">
+            <Form>STPartSuppRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPartSuppDM.pas">
+            <Form>STPartSDM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSemailHandler.pas">
+            <Form>emailHandler</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSEmailList.pas">
+            <Form>CCSEmailListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSBoxLabelsDeliv.pas">
+            <Form>STRSBoxLabelsDelivFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPLabelsDeliv.pas">
+            <Form>STRPLabelsdelivFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUOrderRpts.pas">
+            <Form>frmPBLUOrderRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBFaxToOne.pas">
+            <Form>PBFaxToOneFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEmailToOne.pas">
+            <Form>PBEmailToOneFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSEnqSel.pas">
+            <Form>PBRSEnqSelFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPEnqLst.pas">
+            <Form>PBRPEnqLstFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqNote.pas">
+            <Form>PBEnqNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqQuantities.pas">
+            <Form>PBEnqQuantitiesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqSuppRespns.pas">
+            <Form>PBEnqSuppRespnsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBEnqSupResp.pas">
+            <Form>PBEnqSupRespFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUJobRpts.pas">
+            <Form>frmPBLUJobRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRDPORep.pas">
+            <Form>PBRDPORepDataMod</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBRSWorkIP.pas">
+            <Form>PBRSWorkIPfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRP4CastSumm.pas">
+            <Form>PBRP4CastSummFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRS4CastInvs.pas">
+            <Form>PBRS4CastInvsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRS4CastSumm.pas">
+            <Form>PBRS4CastSummfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRP4CastInvs.pas">
+            <Form>PBRP4CastInvsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSRptOrds.pas">
+            <Form>PBRSRptOrdsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPRptOrds.pas">
+            <Form>PBRPRptOrdsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPWorkIP.pas">
+            <Form>PBRPWorkIPfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSJBMargin.pas">
+            <Form>PBRSJBMarginfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSODueEnq.pas">
+            <Form>PBRSODueEnqFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSODueQte.pas">
+            <Form>PBRSODueQteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPODue.pas">
+            <Form>PBRSPODueFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPORepM.pas">
+            <Form>PBRSPORepMFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPOREP.pas">
+            <Form>PBRSPORepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPPOnotonJB.pas">
+            <Form>PBRPPOnotonJBfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPOnotonJB.pas">
+            <Form>PBRSPOnotonJBfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUSalesInvRpts.pas">
+            <Form>frmPBLUSalesInvRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPJBMargin.pas">
+            <Form>PBRPJBMarginFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPODueEnq.pas">
+            <Form>PBRPODueEnqFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPODueQte.pas">
+            <Form>PBRPODueQteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPPODue.pas">
+            <Form>PBRPPODueFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPPORep.pas">
+            <Form>PBRPPORepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPPORepM.pas">
+            <Form>PBRPPORepMFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPRepProfitSumm.pas">
+            <Form>PBRPRepProfitSummFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesByInv.pas">
+            <Form>PBRPSalesByInvFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesByInvDet.pas">
+            <Form>PBRPSalesByInvDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesbyProd.pas">
+            <Form>PBRPSalesbyProdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesComm.pas">
+            <Form>PBRPSalesCommFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesCommbyCat.pas">
+            <Form>PBRPSalesCommbyCatFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesProfit.pas">
+            <Form>PBRPSalesProfitFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPSalesProfitSumm.pas">
+            <Form>PBRPSalesProfitSummFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustState.pas">
+            <Form>PBRSCustStateFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustTurn.pas">
+            <Form>PBRSCustTurnFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesByInv.pas">
+            <Form>PBRSSalesByInvFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesByProd.pas">
+            <Form>PBRSSalesByProdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesComm.pas">
+            <Form>PBRSSalesCommFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesProfit.pas">
+            <Form>PBRSSalesProfitfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSInvDM.pas">
+            <Form>dmLookUpSInv</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBRPProofStatus.pas">
+            <Form>PBRPProofStatusfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSProofStatus.pas">
+            <Form>PBRSProofStatusFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBSupplierInvoiceDm.pas">
+            <Form>dmSupplierInvoice</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSuppInvoice.pas">
+            <Form>PBMaintSuppInvoicefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSuppInvoicePass.pas">
+            <Form>PBMaintSuppInvoicePassFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSuppInvoiceChgs.pas">
+            <Form>PBMaintSuppInvoiceChgsfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSuppInvoiceLine.pas">
+            <Form>PBMaintSuppInvoiceLinefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupplierInvoicePurch.pas">
+            <Form>PBLUSupplierInvoicePurchFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupplierInvoiceCN.pas">
+            <Form>PBLUSupplierInvoiceCNFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupplierInvoiceJB.pas">
+            <Form>PBLUSupplierInvoiceJBFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUSupplierInvoicePO.pas">
+            <Form>PBLUSupplierInvoicePOFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUPurchaseOrders.pas">
+            <Form>frmPBLUPurchaseOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbPOrdersDM.pas">
+            <Form>dtmdlPOrders</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STMntPOrd.pas">
+            <Form>STMntPOrdFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPOObjects.pas"/>
+        <DCCReference Include="..\STPODataMod.pas">
+            <Form>STPODM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\STMntPOrdAdd.pas">
+            <Form>STMntPOrdAddFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMntPOrdQty.pas">
+            <Form>STMntPOrdQtyFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintPOExtChg.pas">
+            <Form>STMaintPOExtChgFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPordRSl.pas">
+            <Form>STPordRSlFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STPOrdRep.pas">
+            <Form>STPOrdRepFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STPODirectConf.pas">
+            <Form>STPODirectConfFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintParam.pas">
+            <Form>STMaintParamFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUFormRef.pas">
+            <Form>frmSTLUFormRef</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintFormRef.pas">
+            <Form>frmSTMaintFormRef</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUCustOrdersJB.pas">
+            <Form>frmpbluCustOrdersJB</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluCustEvents.pas">
+            <Form>frmPBLUCustEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbEventsDM.pas">
+            <Form>dtmdlEvents</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCContaEvents.pas">
+            <Form>PBMaintCContaEventsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintContactEvents.pas">
+            <Form>frmPBMaintContactEvents</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUReps.pas">
+            <Form>frmPBLUReps</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLUCustomerRpts.pas">
+            <Form>frmPBLUCustomerRpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustContDet.pas">
+            <Form>PBRSCustContDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustDet.pas">
+            <Form>PBRSCustDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPCustContDet.pas">
+            <Form>PBRPCustContDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPCustDet.pas">
+            <Form>PBRPCustDetFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSCommon.pas"/>
+        <DCCReference Include="..\..\CCSCOMMOND7\taoMAPI.pas"/>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPLabelsReels.pas">
+            <Form>PBRPLabelsReelsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSMaintProdImages.pas">
+            <Form>CCSMaintProdImagesFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCOMMOND7\CCSProgressBar.pas">
+            <Form>frmCCSProgressBar</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPStockLabels.pas">
+            <Form>STRPStockLabelsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPJobBag.pas">
+            <Form>frmPBRPJobBag</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPJobBagSched.pas">
+            <Form>frmPBRPJobBagSched</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintWorkCentre.pas">
+            <Form>PBMaintWorkCentreFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUWorkCentre.pas">
+            <Form>PBLUWorkCentrefrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPLabels.pas">
+            <Form>PBRPLabelsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintProofStatus.pas">
+            <Form>PBMaintProofStatusFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUProofStatus.pas">
+            <Form>PBLUProofStatusFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPPickingNote.pas">
+            <Form>STRPPickingNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintJobBag.pas">
+            <Form>PBMaintJobBagFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCustomerCats.pas">
+            <Form>PBLUCustomerCatsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintCustomerCats.pas">
+            <Form>PBMaintCustomerCatsFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCategory.pas">
+            <Form>PBLUCategoryFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUCustProductTemp.pas">
+            <Form>PBLUCustProductTempFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustCatKPI.pas">
+            <Form>PBRSCustCatKPIfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSSalesByPrdCat.pas">
+            <Form>PBRSSalesByPrdCatFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPCustCatKPI.pas">
+            <Form>PBRPCustCatKPIFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPCustState.pas">
+            <Form>PBRPCustStateFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSPurchByInv.pas">
+            <Form>PBRSPurchByInvFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintQuote.pas">
+            <Form>PBMaintQuoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBWOrdersDm.pas">
+            <Form>dtmdlWOrders</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintProcess.pas">
+            <Form>PBMaintProcessFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUProcess.pas">
+            <Form>PBLUProcessFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintWorksOrders.pas">
+            <Form>frmPBMaintWorksOrders</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\SFDC\SFJobBagLogDM.pas">
+            <Form>dtmdlJobBagLog</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPQuote.pas">
+            <Form>frmPBRPQuote</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSFSCClaim.pas">
+            <Form>PBRSFSCClaimFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPProductList.pas">
+            <Form>STRPProductListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STLUCustPart.pas">
+            <Form>STLUCustPartFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STMaintCustPart.pas">
+            <Form>STMaintCustPartFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbluNCASearch.pas">
+            <Form>frmpbluNCASearch</Form>
+        </DCCReference>
+        <DCCReference Include="..\pbLuNCA.pas">
+            <Form>frmPBluNCA</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBLUNCARpts.pas">
+            <Form>frmPBLUNCARpts</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPSalesInv.pas">
+            <Form>PBRPSalesInvFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSProductList.pas">
+            <Form>STRSProductListFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSJBDraft.pas">
+            <Form>PBRSJBDraftFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRPJBDraft.pas">
+            <Form>PBRPJBDraftFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSCustInvoice.pas">
+            <Form>PBRSCustInvoiceFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintSalesInvoiceDetail.pas">
+            <Form>PBMaintSalesInvoiceDetailFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\STRPSord.pas">
+            <Form>STRPSordFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\Quick Reports\Nexus\PBRPNonConform.pas">
+            <Form>frmPBRPNonConform</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNonConform.pas">
+            <Form>frmPBRSNonConform</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCAClient.pas">
+            <Form>PBRSNCAClientfrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCACostGraph.pas">
+            <Form>PBRSNCACostGraphFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCAReason.pas">
+            <Form>PBRSNCAReasonFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCASource.pas">
+            <Form>PBRSNCASourceFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBRSNCASourcePie.pas">
+            <Form>PBRSNCASourcePieFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintNonConfDoc.pas">
+            <Form>PBMaintNonConfDocFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\PBMaintPOrdNonConfDoc.pas">
+            <Form>PBMaintPOrdNonConfDocFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRSPODelivNote.pas">
+            <Form>STRSPODelivNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\STRPPODelivNote.pas">
+            <Form>STRPPODelivNoteFrm</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\CCSCommonD7\Outlook12_TLB.pas"/>
+        <DCCReference Include="..\..\CCSCommonD7\Office12_TLB.pas"/>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">redeye.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

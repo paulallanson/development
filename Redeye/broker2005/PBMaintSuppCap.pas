@@ -267,7 +267,7 @@ begin
 {Add a selected product type} ;
 For iTempCount := 0 to (UnSelProdTypsDBGrid.SelectedRows.Count - 1) do
     begin
-    UnSelProdTypsDS.DataSet.GotoBookmark(Pointer(UnSelProdTypsDBGrid.SelectedRows[iTempCount])) ;
+    UnSelProdTypsDS.DataSet.GotoBookmark(TBookmark(UnSelProdTypsDBGrid.SelectedRows[iTempCount])) ;
     {The following SQL adds the default capability into Int_Sel} ;
     With AddIntSelSQL do
         begin
@@ -485,7 +485,7 @@ begin
 {Add a selected product type} ;
 For iTempCount := 0 to (UnSelCapsDBGrid.SelectedRows.Count - 1) do
     begin
-    UnSelCapsDS.DataSet.GotoBookmark(Pointer(UnSelCapsDBGrid.SelectedRows[iTempCount])) ;
+    UnSelCapsDS.DataSet.GotoBookmark(TBookmark(UnSelCapsDBGrid.SelectedRows[iTempCount])) ;
     {Add capability into tree} ;
     AddTreeNode(TCapDet(SuppCapTreeView.Selected.Data).ProdTyp,
                 UnSelCapsDS.DataSet.FieldByName('Capability').AsInteger, False,
