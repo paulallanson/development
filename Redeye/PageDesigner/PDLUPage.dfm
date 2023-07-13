@@ -3,19 +3,17 @@ object PDLuPageFrm: TPDLuPageFrm
   Top = 215
   BorderStyle = bsDialog
   Caption = 'Select page layout'
-  ClientHeight = 227
-  ClientWidth = 313
+  ClientHeight = 226
+  ClientWidth = 309
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object CloseBitBtn: TBitBtn
     Left = 233
@@ -24,8 +22,6 @@ object PDLuPageFrm: TPDLuPageFrm
     Height = 25
     Cancel = True
     Caption = '&Close'
-    ModalResult = 2
-    TabOrder = 0
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -43,7 +39,9 @@ object PDLuPageFrm: TPDLuPageFrm
       8888333F00003333330000003333333333333FFFFFF3333F00003333330AAAA0
       333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
       0000}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 0
   end
   object SelectBitBtn: TBitBtn
     Left = 233
@@ -52,9 +50,6 @@ object PDLuPageFrm: TPDLuPageFrm
     Height = 25
     Caption = '&Select'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -119,7 +114,10 @@ object PDLuPageFrm: TPDLuPageFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = SelectBitBtnClick
   end
   object DetsDBGrid: TDBGrid
     Left = 8
@@ -150,9 +148,6 @@ object PDLuPageFrm: TPDLuPageFrm
     Width = 70
     Height = 25
     Caption = '&Delete'
-    TabOrder = 3
-    Visible = False
-    OnClick = btnDeleteClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -167,5 +162,8 @@ object PDLuPageFrm: TPDLuPageFrm
       0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
       3333333337FFF7F3333333333000003333333333377777333333}
     NumGlyphs = 2
+    TabOrder = 3
+    Visible = False
+    OnClick = btnDeleteClick
   end
 end

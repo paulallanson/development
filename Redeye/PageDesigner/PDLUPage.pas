@@ -67,7 +67,8 @@ type
 implementation
 
 uses
-  PageDM, PDLetter, System.UITypes;
+  PageDM, PDLetter, System.UITypes,
+  FireDAC.Stan.Param;
 
 {$R *.DFM}
 

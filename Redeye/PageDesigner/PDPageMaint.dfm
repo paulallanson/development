@@ -12,12 +12,10 @@ object PDPageMaintFrm: TPDPageMaintFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object gbDetails: TGroupBox
     Left = 263
@@ -59,7 +57,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Top = 13
       Width = 145
       Height = 21
-      ItemHeight = 13
       TabOrder = 0
       Items.Strings = (
         'A4'
@@ -71,7 +68,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       Items.Strings = (
         'Inches'
@@ -79,7 +75,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         'Pixels')
     end
     object rgOrientation: TRadioGroup
-      ParentBackground = False
       Left = 232
       Top = 8
       Width = 129
@@ -89,10 +84,10 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Items.Strings = (
         'Portrait'
         'Landscape')
+      ParentBackground = False
       TabOrder = 2
     end
     object rgBlankOrPrinted: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 120
       Width = 98
@@ -102,15 +97,16 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Items.Strings = (
         'Blank'
         'Pre-printed')
+      ParentBackground = False
       TabOrder = 3
       OnClick = rgBlankOrPrintedClick
     end
     object gbPrintables: TGroupBox
-      ParentBackground = False
       Left = 112
       Top = 120
       Width = 161
       Height = 121
+      ParentBackground = False
       TabOrder = 4
       object cbLogo: TDBCheckBox
         Left = 8
@@ -377,7 +373,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Width = 113
             Height = 21
             Style = csDropDownList
-            ItemHeight = 0
             TabOrder = 4
           end
           object edtFontSize: TSpinEdit
@@ -391,7 +386,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Value = 8
           end
           object rgAlignment: TRadioGroup
-            ParentBackground = False
             Left = 4
             Top = 73
             Width = 237
@@ -403,6 +397,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
               'Left justify'
               'Centre'
               'Right justify')
+            ParentBackground = False
             TabOrder = 6
           end
           object chkbxAutowrap: TCheckBox
@@ -593,7 +588,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Width = 113
             Height = 21
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 4
           end
           object edtRegFontSize: TSpinEdit
@@ -607,7 +601,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
             Value = 8
           end
           object rgRegAlignment: TRadioGroup
-            ParentBackground = False
             Left = 4
             Top = 73
             Width = 237
@@ -619,6 +612,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
               'Left justify'
               'Centre'
               'Right justify')
+            ParentBackground = False
             TabOrder = 6
           end
           object chkbxRegAutoWrap: TCheckBox
@@ -634,12 +628,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area'
         ImageIndex = 2
         object gbLogo: TGroupBox
-          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
           Height = 100
           Caption = ' Logo Print Area '
+          ParentBackground = False
           TabOrder = 0
           object labTopL: TLabel
             Left = 19
@@ -736,12 +730,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 1'
         ImageIndex = 3
         object GroupBox1: TGroupBox
-          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
           Height = 100
           Caption = ' Logo Print Area '
+          ParentBackground = False
           TabOrder = 0
           object Label11: TLabel
             Left = 19
@@ -838,12 +832,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 2'
         ImageIndex = 4
         object GroupBox2: TGroupBox
-          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
           Height = 100
           Caption = ' Logo Print Area '
+          ParentBackground = False
           TabOrder = 0
           object Label16: TLabel
             Left = 19
@@ -940,12 +934,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'Logo Area 3'
         ImageIndex = 5
         object GroupBox3: TGroupBox
-          ParentBackground = False
           Left = 9
           Top = 2
           Width = 340
           Height = 100
           Caption = ' Logo Print Area '
+          ParentBackground = False
           TabOrder = 0
           object Label21: TLabel
             Left = 19
@@ -1042,12 +1036,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Caption = 'PrePrinted Area'
         ImageIndex = 6
         object gbPrePrinted: TGroupBox
-          ParentBackground = False
           Left = 9
           Top = 2
           Width = 313
           Height = 65
           Caption = ' Pre-printed Area '
+          ParentBackground = False
           TabOrder = 0
           object Label28: TLabel
             Left = 19
@@ -1123,8 +1117,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 6
-      OnClick = btnSaveClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -1190,6 +1182,8 @@ object PDPageMaintFrm: TPDPageMaintFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnSaveClick
     end
     object btnCancel: TBitBtn
       Left = 286
@@ -1197,8 +1191,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Width = 75
       Height = 25
       Caption = 'Cancel'
-      TabOrder = 7
-      OnClick = btnCancelClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -1264,6 +1256,8 @@ object PDPageMaintFrm: TPDPageMaintFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 7
+      OnClick = btnCancelClick
     end
     object btnShow: TBitBtn
       Left = 286
@@ -1271,8 +1265,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
       Width = 75
       Height = 25
       Caption = 'Preview'
-      TabOrder = 8
-      OnClick = btnShowClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1287,6 +1279,8 @@ object PDPageMaintFrm: TPDPageMaintFrm
         70E337F33333333337F3E0FFFFFFFFFFF0E337FFFFFFFFFFF7F3E00000000000
         00E33777777777777733EEEEEEEEEEEEEEE33333333333333333}
       NumGlyphs = 2
+      TabOrder = 8
+      OnClick = btnShowClick
     end
     object cbPrintDefault: TDBCheckBox
       Left = 8
@@ -1302,12 +1296,12 @@ object PDPageMaintFrm: TPDPageMaintFrm
       OnClick = cbAddressClick
     end
     object gbMargins: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 61
       Width = 353
       Height = 57
       Caption = 'Margins'
+      ParentBackground = False
       TabOrder = 10
       object labTopM: TLabel
         Left = 53
@@ -1382,6 +1376,7 @@ object PDPageMaintFrm: TPDPageMaintFrm
     Height = 49
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 781
     object labGiveName: TLabel
       Left = 11
       Top = 8
@@ -1398,11 +1393,11 @@ object PDPageMaintFrm: TPDPageMaintFrm
       OnChange = edtNameChange
     end
     object pnlHead: TPanel
-      ParentBackground = False
       Left = 192
       Top = 13
       Width = 415
       Height = 31
+      ParentBackground = False
       TabOrder = 1
       object btnLookup: TSpeedButton
         Left = 12
@@ -1427,9 +1422,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Width = 70
         Height = 25
         Caption = 'Add'
-        TabOrder = 0
-        Visible = False
-        OnClick = btnAddClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1444,6 +1436,9 @@ object PDPageMaintFrm: TPDPageMaintFrm
           B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
           3BB33773333773333773B333333B3333333B7333333733333337}
         NumGlyphs = 2
+        TabOrder = 0
+        Visible = False
+        OnClick = btnAddClick
       end
       object btnChange: TBitBtn
         Left = 115
@@ -1451,9 +1446,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Width = 70
         Height = 25
         Caption = 'Change'
-        TabOrder = 1
-        Visible = False
-        OnClick = btnChangeClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1468,6 +1460,9 @@ object PDPageMaintFrm: TPDPageMaintFrm
           0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
           00333377737FFFFF773333303300000003333337337777777333}
         NumGlyphs = 2
+        TabOrder = 1
+        Visible = False
+        OnClick = btnChangeClick
       end
       object btnView: TBitBtn
         Left = 189
@@ -1475,9 +1470,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Width = 70
         Height = 25
         Caption = 'View'
-        TabOrder = 2
-        Visible = False
-        OnClick = btnViewClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1492,6 +1484,9 @@ object PDPageMaintFrm: TPDPageMaintFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 2
+        Visible = False
+        OnClick = btnViewClick
       end
       object btnDelete: TBitBtn
         Left = 263
@@ -1499,9 +1494,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Width = 70
         Height = 25
         Caption = 'Delete'
-        TabOrder = 3
-        Visible = False
-        OnClick = btnDeleteClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1516,6 +1508,9 @@ object PDPageMaintFrm: TPDPageMaintFrm
           0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
           3333333337FFF7F3333333333000003333333333377777333333}
         NumGlyphs = 2
+        TabOrder = 3
+        Visible = False
+        OnClick = btnDeleteClick
       end
       object btnClose: TBitBtn
         Left = 337
@@ -1523,8 +1518,6 @@ object PDPageMaintFrm: TPDPageMaintFrm
         Width = 70
         Height = 25
         Caption = '&Close'
-        TabOrder = 4
-        OnClick = btnCloseClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -1543,16 +1536,18 @@ object PDPageMaintFrm: TPDPageMaintFrm
           333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
           0000}
         NumGlyphs = 2
+        TabOrder = 4
+        OnClick = btnCloseClick
       end
     end
   end
   object gbPreview: TGroupBox
-    ParentBackground = False
     Left = 0
     Top = 56
     Width = 249
     Height = 433
     Caption = ' Preview '
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object desPage: TLabel

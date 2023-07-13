@@ -39,11 +39,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmPage = class(TDataModule)
-    qryPage: TQuery;
+    qryPage: TFDQuery;
     dsPage: TDataSource;
     qryPagef_PageLayoutName: TStringField;
     qryPagef_TopMargin: TFloatField;
@@ -69,14 +72,14 @@ type
     qryPagef_PPWidth: TFloatField;
     qryPagef_PPHeight: TFloatField;
     qryPagef_LogoFile: TStringField;
-    qryPageLookup: TQuery;
+    qryPageLookup: TFDQuery;
     dsPageLookup: TDataSource;
-    qryLetterLookup: TQuery;
+    qryLetterLookup: TFDQuery;
     dsLetterLookup: TDataSource;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     qryPagef_FaxDefault: TStringField;
     qryPagef_PrintDefault: TStringField;
-    qryDefaults: TQuery;
+    qryDefaults: TFDQuery;
     qryPagef_AddressFontName: TStringField;
     qryPagef_AddressFontSize: TIntegerField;
     qryPagef_AddressFontStyle: TIntegerField;

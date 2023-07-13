@@ -1,11 +1,8 @@
 object dmLetter: TdmLetter
-  OldCreateOrder = False
-  Left = 144
-  Top = 119
   Height = 479
   Width = 741
-  object qryLetter: TQuery
-    DatabaseName = 'PB'
+  object qryLetter: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM tb_LetterLayout'
       'WHERE f_LetterName = :Name')
@@ -13,13 +10,13 @@ object dmLetter: TdmLetter
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryElement: TQuery
-    DatabaseName = 'PB'
+  object qryElement: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM tb_LetterElement'
       'WHERE f_LetterName = :Name')
@@ -27,14 +24,13 @@ object dmLetter: TdmLetter
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryAddLetter: TQuery
-    DatabaseName = 'PB'
-    RequestLive = True
+  object qryAddLetter: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO tb_LetterLayout'
       
@@ -59,113 +55,113 @@ object dmLetter: TdmLetter
     Top = 120
     ParamData = <
       item
-        DataType = ftString
         Name = 'LetterName'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'LetterType'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font1Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font1Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font1Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font2Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font2Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font2Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font3Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font3Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font3Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font4Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font4Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font4Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font5Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font5Size'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Font5Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Default'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'TabUnit'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'TabStop1'
+        DataType = ftFloat
         ParamType = ptInput
       end
       item
-        DataType = ftFloat
         Name = 'TabStop2'
+        DataType = ftFloat
         ParamType = ptInput
       end>
   end
-  object qryLayouts: TQuery
-    DatabaseName = 'PB'
+  object qryLayouts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 32
@@ -498,9 +494,8 @@ object dmLetter: TdmLetter
     Left = 104
     Top = 120
   end
-  object qryUpdLetter: TQuery
-    DatabaseName = 'PB'
-    RequestLive = True
+  object qryUpdLetter: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE tb_LetterLayout SET'
       #9' f_Font1Name =   :Font1Name'
@@ -528,109 +523,108 @@ object dmLetter: TdmLetter
     Top = 176
     ParamData = <
       item
-        DataType = ftString
         Name = 'Font1Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font1Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font1Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font2Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font2Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font2Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font3Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font3Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font3Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font4Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font4Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font4Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Font5Name'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font5Size'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Font5Style'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Default'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'TabUnit'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'TabStop1'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'TabStop2'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'TabStop1'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'TabStop2'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Name'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryDefaults: TQuery
-    DatabaseName = 'PB'
-    RequestLive = True
+  object qryDefaults: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE tb_LetterLayout SET f_LetterTypeDefault = '#39'N'#39
       'WHERE f_LetterType = :Type'
@@ -639,21 +633,21 @@ object dmLetter: TdmLetter
     Top = 176
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryExportFilter: TQuery
-    DatabaseName = 'PB'
+  object qryExportFilter: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select ExportFilter, Description'
       'from ExportFilter')
     Left = 32
     Top = 280
   end
-  object qryGetExportFilter: TQuery
-    DatabaseName = 'PB'
+  object qryGetExportFilter: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select ExportFilter, Description'
       'from Exportfilter'
@@ -662,9 +656,11 @@ object dmLetter: TdmLetter
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Exportfilter'
-        ParamType = ptUnknown
       end>
+  end
+  object FDConn: TFDConnection
+    Left = 184
+    Top = 16
   end
 end

@@ -178,7 +178,7 @@ begin
 {$IFDEF DEMO}
   Demo := True;
   Self.Caption := Self.Caption + ' Demonstration Version';
-  dmBroker.PBLDatabase.AliasName := 'BrokerDemo';
+  dmBroker.PBLDatabase.ConnectionDefName := 'BrokerDemo';
 {$ELSE}
   Demo := False;
   TempUserSize := SizeOf(TempUser);

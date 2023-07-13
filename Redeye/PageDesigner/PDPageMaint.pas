@@ -270,7 +270,8 @@ type
 implementation
 
 uses
-  PageDM, PBLogin, PBDatabase, PDLUPage, PDLetter, System.UITypes;
+  PageDM, PBLogin, PBDatabase, PDLUPage, PDLetter, System.UITypes,
+  FireDAC.Stan.Param;
 
 {$R *.DFM}
 
@@ -330,7 +331,7 @@ begin
   cmbRegFontName.Sorted := true;
   cmbRegFontName.ItemIndex := 0;
 
-  dmPage.qryPage.RequestLive := true;
+  dmPage.qryPage.UpdateOptions.RequestLive := true;
 end;
 
 procedure TPDPageMaintFrm.DrawPage;
@@ -700,7 +701,7 @@ end;
 
 procedure TPDPageMaintFrm.FormDestroy(Sender: TObject);
 begin
-  dmPage.qryPage.RequestLive := false;
+  dmPage.qryPage.UpdateOptions.RequestLive := false;
   if Assigned(Page) then
     Page.Free;
 end;

@@ -112,21 +112,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, PDLetter, ADODB;
+  Db, PDLetter, ADODB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FireDAC.UI.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait;
 
 type
   TdmLetter = class(TDataModule)
-    qryLetter: TQuery;
-    qryElement: TQuery;
-    qryAddLetter: TQuery;
-    qryLayouts: TQuery;
+    qryLetter: TFDQuery;
+    qryElement: TFDQuery;
+    qryAddLetter: TFDQuery;
+    qryLayouts: TFDQuery;
     ADOConn: TADOConnection;
     ADOAddElement: TADOQuery;
     ADOUpdElement: TADOQuery;
-    qryUpdLetter: TQuery;
-    qryDefaults: TQuery;
-    qryExportFilter: TQuery;
-    qryGetExportFilter: TQuery;
+    qryUpdLetter: TFDQuery;
+    qryDefaults: TFDQuery;
+    qryExportFilter: TFDQuery;
+    qryGetExportFilter: TFDQuery;
+    FDConn: TFDConnection;
     procedure ADOConnBeforeConnect(Sender: TObject);
   private
     FOldDatabase : Boolean;
