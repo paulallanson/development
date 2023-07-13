@@ -74,3 +74,10 @@ modules/
 
 # Access databases
 *.mdb
+
+#Components
+Components/Quasidata/
+Client_files/
+Data/
+
+
