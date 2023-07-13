@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls, ComCtrls, gtQrCtrls, wtDBMemo;
+  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls, ComCtrls, wtDBMemo;
 
 type
   TfrmWTMaintContactEvents = class(TForm)

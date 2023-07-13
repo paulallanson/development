@@ -3,7 +3,7 @@ unit wtCommon;
 interface
 
 uses
-  Classes, Forms, gtQrCtrls;
+  Classes, Forms;
 
   { If passed a date, wtDateStr will return a string;  if passed a
   string, it will return a date. }

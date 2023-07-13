@@ -3,24 +3,22 @@ object frmWTLUContactType: TfrmWTLUContactType
   Top = 170
   BorderStyle = bsDialog
   Caption = 'Maintain Contact Types'
-  ClientHeight = 337
-  ClientWidth = 480
+  ClientHeight = 336
+  ClientWidth = 476
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 480
-    Height = 268
+    Width = 476
+    Height = 267
     Align = alClient
     DataSource = srcContactType
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -44,8 +42,8 @@ object frmWTLUContactType: TfrmWTLUContactType
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 318
-    Width = 480
+    Top = 317
+    Width = 476
     Height = 19
     Panels = <
       item
@@ -54,17 +52,21 @@ object frmWTLUContactType: TfrmWTLUContactType
       item
         Width = 50
       end>
+    ExplicitTop = 318
+    ExplicitWidth = 480
   end
   object Panel1: TPanel
     Left = 0
-    Top = 268
-    Width = 480
+    Top = 267
+    Width = 476
     Height = 50
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 268
+    ExplicitWidth = 480
     DesignSize = (
-      480
+      476
       50)
     object btnAdd: TBitBtn
       Left = 16
@@ -106,9 +108,9 @@ object frmWTLUContactType: TfrmWTLUContactType
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 286

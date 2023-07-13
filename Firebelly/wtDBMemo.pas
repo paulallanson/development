@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, DB, Buttons, DBTables, gtQrCtrls;
+  StdCtrls, DBCtrls, DB, Buttons, DBTables;
 
 type
   TfrmwtDBMemo = class(TForm)

@@ -3,7 +3,7 @@ unit WTSalesOrderDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, wtNotesDM, wtQuotesDM, gtQrCtrls, AllCommon, ShellAPI;
+  SysUtils, Classes, DB, DBTables, wtNotesDM, wtQuotesDM, AllCommon, ShellAPI;
 
 type
   TsopMode   = (sopAdd, sopChange, sopDelete, sopCopy, sopView, sopConvert, sopRemedial);

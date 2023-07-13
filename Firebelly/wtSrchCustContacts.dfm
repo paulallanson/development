@@ -3,19 +3,17 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
   Top = 117
   BorderStyle = bsDialog
   Caption = 'Search for Customer contacts'
-  ClientHeight = 354
-  ClientWidth = 358
+  ClientHeight = 353
+  ClientWidth = 354
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -71,9 +69,9 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
     Width = 75
     Height = 25
     Caption = '&Close'
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object btnAdd: TBitBtn
     Left = 272

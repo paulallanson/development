@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, wtNotesDM, gtQrCtrls, AllCommon, Math;
+  Db, DBTables, wtNotesDM, AllCommon, Math;
 
 type
   TjMode   = (jAdd, jChange, jDelete, jCopy, jView, jConvert, jRestrict);

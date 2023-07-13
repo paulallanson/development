@@ -3,7 +3,7 @@ unit wtStockDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, gtQrCtrls;
+  SysUtils, Classes, DB, DBTables;
 
 type
   TstkMode   = (stkAdd, stkChange, stkDelete, stkCopy, stkView);

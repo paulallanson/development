@@ -1,20 +1,18 @@
 object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
   Left = 283
   Top = 85
-  Width = 481
-  Height = 415
   Caption = 'Contact details'
+  ClientHeight = 376
+  ClientWidth = 465
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object lbldelete: TLabel
     Left = 128
@@ -38,9 +36,9 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 356
@@ -50,16 +48,16 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 457
     Height = 297
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16

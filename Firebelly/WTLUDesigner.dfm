@@ -3,24 +3,22 @@ object frmWTLUDesigner: TfrmWTLUDesigner
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Maintain Designers'
-  ClientHeight = 416
-  ClientWidth = 706
+  ClientHeight = 415
+  ClientWidth = 702
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 706
-    Height = 310
+    Width = 702
+    Height = 309
     Align = alClient
     DataSource = srcDesigner
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLUDesigner: TfrmWTLUDesigner
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 397
-    Width = 706
+    Top = 396
+    Width = 702
     Height = 19
     Panels = <
       item
@@ -59,17 +57,21 @@ object frmWTLUDesigner: TfrmWTLUDesigner
       item
         Width = 50
       end>
+    ExplicitTop = 397
+    ExplicitWidth = 706
   end
   object Panel1: TPanel
     Left = 0
-    Top = 310
-    Width = 706
+    Top = 309
+    Width = 702
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 310
+    ExplicitWidth = 706
     DesignSize = (
-      706
+      702
       87)
     object Label4: TLabel
       Left = 8
@@ -118,9 +120,9 @@ object frmWTLUDesigner: TfrmWTLUDesigner
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8

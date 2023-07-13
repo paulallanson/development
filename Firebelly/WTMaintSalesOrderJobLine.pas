@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtSalesOrderDM, StdCtrls, Buttons, ExtCtrls, DBCtrls, gtQrCtrls;
+  Dialogs, wtSalesOrderDM, StdCtrls, Buttons, ExtCtrls, DBCtrls;
 
 type
   TfrmWTMaintSalesOrderJobLine = class(TForm)

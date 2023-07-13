@@ -3,22 +3,20 @@ object frmwtMaintVat: TfrmwtMaintVat
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Vat Rates'
-  ClientHeight = 324
-  ClientWidth = 419
+  ClientHeight = 323
+  ClientWidth = 415
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    419
-    324)
-  PixelsPerInch = 96
+    415
+    323)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -61,28 +59,30 @@ object frmwtMaintVat: TfrmwtMaintVat
   end
   object btnOK: TBitBtn
     Left = 128
-    Top = 286
+    Top = 285
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 286
   end
   object BitBtn2: TBitBtn
     Left = 208
-    Top = 286
+    Top = 285
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
+    ExplicitTop = 286
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -93,12 +93,12 @@ object frmwtMaintVat: TfrmwtMaintVat
     TabOrder = 2
   end
   object grpbxReverseCharge: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 112
     Width = 377
     Height = 97
     Enabled = False
+    ParentBackground = False
     TabOrder = 3
     object Label4: TLabel
       Left = 8

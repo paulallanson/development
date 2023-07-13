@@ -3,22 +3,20 @@ object frmWTMaintReps: TfrmWTMaintReps
   Top = 143
   BorderStyle = bsDialog
   Caption = 'Reps details'
-  ClientHeight = 238
-  ClientWidth = 378
+  ClientHeight = 237
+  ClientWidth = 374
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    378
-    238)
-  PixelsPerInch = 96
+    374
+    237)
   TextHeight = 13
   object lblName: TLabel
     Left = 8
@@ -57,7 +55,7 @@ object frmWTMaintReps: TfrmWTMaintReps
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -65,21 +63,23 @@ object frmWTMaintReps: TfrmWTMaintReps
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 200
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
+    ExplicitTop = 200
   end
   object chkbxIsCustomer: TCheckBox
     Left = 8
@@ -95,7 +95,6 @@ object frmWTMaintReps: TfrmWTMaintReps
     Top = 48
     Width = 201
     Height = 21
-    ItemHeight = 13
     TabOrder = 0
     OnChange = EnableOK
     OnClick = cmbCommissionTypeClick
@@ -126,10 +125,10 @@ object frmWTMaintReps: TfrmWTMaintReps
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
     OnClick = btnCustomerSearchClick
-    NumGlyphs = 2
   end
   object chkbxInactive: TCheckBox
     Left = 8

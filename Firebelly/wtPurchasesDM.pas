@@ -3,7 +3,7 @@ unit wtPurchasesDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, gtQrCtrls, Math, Forms, wtNotesDM, wtSupplierDM;
+  SysUtils, Classes, DB, DBTables, Math, Forms, wtNotesDM, wtSupplierDM;
 
 type
   TpopMode   = (popAdd, popChange, popDelete, popCopy, popRaise, popView);

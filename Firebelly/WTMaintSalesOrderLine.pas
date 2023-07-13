@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtSalesOrderDM, StdCtrls, Buttons, ExtCtrls, DBCtrls, gtQrCtrls;
+  Dialogs, Data.DB, wtSalesOrderDM, StdCtrls, Buttons, ExtCtrls, DBCtrls;
 
 type
   TfrmWTMaintSalesOrderLine = class(TForm)
@@ -222,7 +222,7 @@ begin
                 SOLine.free;
                 for iCount := 0 to (frmwtLUProducts.dbgDetails.SelectedRows.Count - 1) do
                   begin
-                    frmwtLUProducts.dbgDetails.datasource.DataSet.GotoBookmark(Pointer(frmwtLUProducts.dbgDetails.SelectedRows[iCount])) ;
+                    frmwtLUProducts.dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(frmwtLUProducts.dbgDetails.SelectedRows[iCount])) ;
 
                     SOLine := TSOLine.Create(SOrder);
                     try

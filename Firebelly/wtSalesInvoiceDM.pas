@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, allCommon, gtQrCtrls;
+  Db, DBTables, allCommon;
 
 type
   TSIMode   = (siAdd, siChange, siDelete, siRaise, siView);

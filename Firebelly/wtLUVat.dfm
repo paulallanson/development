@@ -3,24 +3,22 @@ object frmwtLUVat: TfrmwtLUVat
   Top = 107
   BorderStyle = bsDialog
   Caption = 'VAT rates'
-  ClientHeight = 277
-  ClientWidth = 424
+  ClientHeight = 276
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 424
-    Height = 184
+    Width = 420
+    Height = 183
     Align = alClient
     DataSource = srcVat
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,8 +52,8 @@ object frmwtLUVat: TfrmwtLUVat
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 258
-    Width = 424
+    Top = 257
+    Width = 420
     Height = 19
     Panels = <
       item
@@ -64,18 +62,22 @@ object frmwtLUVat: TfrmwtLUVat
       item
         Width = 50
       end>
+    ExplicitTop = 258
+    ExplicitWidth = 424
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 184
-    Width = 424
+    Top = 183
+    Width = 420
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 184
+    ExplicitWidth = 424
     DesignSize = (
-      424
+      420
       74)
     object BitBtn1: TBitBtn
       Left = 8
@@ -115,9 +117,9 @@ object frmwtLUVat: TfrmwtLUVat
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8

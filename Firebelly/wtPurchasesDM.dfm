@@ -1,7 +1,4 @@
 object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
-  OldCreateOrder = False
-  Left = 192
-  Top = 107
   Height = 565
   Width = 1024
   object qryAllPurchases: TQuery

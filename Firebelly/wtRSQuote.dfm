@@ -3,26 +3,24 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 358
-  ClientWidth = 452
+  ClientHeight = 357
+  ClientWidth = 448
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    452
-    358)
-  PixelsPerInch = 96
+    448
+    357)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 321
+    Top = 320
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -30,16 +28,18 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
+    ExplicitTop = 321
   end
   object Button4: TButton
     Left = 368
-    Top = 321
+    Top = 320
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
+    ExplicitTop = 321
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -70,7 +70,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 321
+    Top = 320
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -78,10 +78,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
+    ExplicitTop = 321
   end
   object btnEmail: TButton
     Left = 184
-    Top = 321
+    Top = 320
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -89,6 +90,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
+    ExplicitTop = 321
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
@@ -100,12 +102,12 @@ object frmWTRSQuote: TfrmWTRSQuote
     OnClick = chkbxOnlyShowGrandTotalClick
   end
   object selectionGrp: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 313
     Height = 129
     Caption = 'Quote Number Selection'
+    ParentBackground = False
     TabOrder = 0
     object Label2: TLabel
       Left = 8
@@ -190,7 +192,6 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 9
   end
   object rdgrpType: TRadioGroup
-    ParentBackground = False
     Left = 328
     Top = 8
     Width = 105
@@ -200,6 +201,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Items.Strings = (
       'Detailed'
       'Summary')
+    ParentBackground = False
     TabOrder = 1
   end
   object chkbxEndUserMarkup: TCheckBox

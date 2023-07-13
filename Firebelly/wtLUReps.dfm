@@ -3,24 +3,22 @@ object frmWTLUReps: TfrmWTLUReps
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Maintain reps'
-  ClientHeight = 351
-  ClientWidth = 418
+  ClientHeight = 350
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 418
-    Height = 256
+    Width = 414
+    Height = 255
     Align = alClient
     DataSource = srcReps
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLUReps: TfrmWTLUReps
   end
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 332
-    Width = 418
+    Top = 331
+    Width = 414
     Height = 19
     Panels = <
       item
@@ -59,18 +57,22 @@ object frmWTLUReps: TfrmWTLUReps
       item
         Width = 50
       end>
+    ExplicitTop = 332
+    ExplicitWidth = 418
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 256
-    Width = 418
+    Top = 255
+    Width = 414
     Height = 76
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 256
+    ExplicitWidth = 418
     DesignSize = (
-      418
+      414
       76)
     object btnAdd: TBitBtn
       Left = 8
@@ -112,9 +114,9 @@ object frmWTLUReps: TfrmWTLUReps
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8

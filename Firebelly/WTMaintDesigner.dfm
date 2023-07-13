@@ -3,21 +3,19 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
   Top = 211
   BorderStyle = bsDialog
   Caption = 'Maintain Designer Details'
-  ClientHeight = 115
-  ClientWidth = 361
+  ClientHeight = 114
+  ClientWidth = 357
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    361
-    115)
-  PixelsPerInch = 96
+    357
+    114)
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -28,7 +26,7 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 78
+    Top = 77
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -36,21 +34,23 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 78
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 78
+    Top = 77
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 3
     NumGlyphs = 2
+    TabOrder = 3
+    ExplicitTop = 78
   end
   object chkbxInactive: TCheckBox
     Left = 8

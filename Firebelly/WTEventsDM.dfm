@@ -1,7 +1,4 @@
 object dtmdlEvents: TdtmdlEvents
-  OldCreateOrder = False
-  Left = 192
-  Top = 107
   Height = 375
   Width = 544
   object qryEvents: TQuery

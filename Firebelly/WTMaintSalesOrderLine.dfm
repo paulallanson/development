@@ -3,35 +3,35 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
   Top = 123
   BorderStyle = bsDialog
   Caption = 'Sales Order line details'
-  ClientHeight = 232
-  ClientWidth = 626
+  ClientHeight = 231
+  ClientWidth = 622
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 192
-    Width = 626
+    Top = 191
+    Width = 622
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     TabStop = True
+    ExplicitTop = 192
+    ExplicitWidth = 626
     DesignSize = (
-      626
+      622
       40)
     object lblDelete: TLabel
-      Left = 302
+      Left = 294
       Top = 12
       Width = 145
       Height = 15
@@ -43,9 +43,10 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 302
     end
     object btnOK: TBitBtn
-      Left = 462
+      Left = 454
       Top = 7
       Width = 75
       Height = 25
@@ -58,9 +59,6 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -79,9 +77,13 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOKClick
+      ExplicitLeft = 462
     end
     object btnCancel: TBitBtn
-      Left = 542
+      Left = 534
       Top = 7
       Width = 75
       Height = 25
@@ -91,19 +93,23 @@ object frmWTMaintSalesOrderLine: TfrmWTMaintSalesOrderLine
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      Kind = bkCancel
+      ExplicitLeft = 542
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 626
-    Height = 192
+    Width = 622
+    Height = 191
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 626
+    ExplicitHeight = 192
     object Label1: TLabel
       Left = 10
       Top = 24

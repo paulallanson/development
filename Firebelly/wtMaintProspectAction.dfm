@@ -11,14 +11,12 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
     392
     104)
-  PixelsPerInch = 96
   TextHeight = 13
   object lblName: TLabel
     Left = 8
@@ -37,9 +35,9 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -50,8 +48,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object edtProspectActionDescription: TEdit
     Left = 80

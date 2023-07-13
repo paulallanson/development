@@ -1,7 +1,4 @@
 object dtmdlJob: TdtmdlJob
-  OldCreateOrder = True
-  Left = 282
-  Top = 95
   Height = 619
   Width = 946
   object dtsAllJobs: TDataSource

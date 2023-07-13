@@ -3,22 +3,20 @@ object frmWTMaintContactType: TfrmWTMaintContactType
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Maintain Contact Type Details'
-  ClientHeight = 90
-  ClientWidth = 382
+  ClientHeight = 89
+  ClientWidth = 378
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    382
-    90)
-  PixelsPerInch = 96
+    378
+    89)
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -29,7 +27,7 @@ object frmWTMaintContactType: TfrmWTMaintContactType
   end
   object btnOK: TBitBtn
     Left = 184
-    Top = 53
+    Top = 52
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -37,21 +35,23 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 53
   end
   object BitBtn2: TBitBtn
     Left = 272
-    Top = 53
+    Top = 52
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
+    ExplicitTop = 53
   end
   object edtContactTypeDescription: TEdit
     Left = 80

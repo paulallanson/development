@@ -1,7 +1,4 @@
 object dtmdlSalesOrder: TdtmdlSalesOrder
-  OldCreateOrder = False
-  Left = 177
-  Top = 44
   Height = 629
   Width = 1279
   object qryAllSales: TQuery

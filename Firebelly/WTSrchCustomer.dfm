@@ -1,26 +1,24 @@
 object frmWTSrchCustomer: TfrmWTSrchCustomer
   Left = 506
   Top = 152
-  Width = 426
-  Height = 482
   Caption = 'Search for customer'
+  ClientHeight = 443
+  ClientWidth = 410
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 320
-    Height = 343
+    Width = 312
+    Height = 335
     Align = alClient
     DataSource = dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -42,17 +40,19 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       end>
   end
   object pnlFunctions: TPanel
-    ParentBackground = False
-    Left = 320
+    Left = 312
     Top = 0
     Width = 98
-    Height = 343
+    Height = 335
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 320
+    ExplicitHeight = 343
     DesignSize = (
       98
-      343)
+      335)
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -95,16 +95,18 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     end
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 343
-    Width = 418
+    Top = 335
+    Width = 410
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 343
+    ExplicitWidth = 418
     DesignSize = (
-      418
+      410
       89)
     object Label1: TLabel
       Left = 8
@@ -157,8 +159,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 432
-    Width = 418
+    Top = 424
+    Width = 410
     Height = 19
     Panels = <
       item
@@ -167,6 +169,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 432
+    ExplicitWidth = 418
   end
   object qryDetails: TQuery
     DatabaseName = 'wt'

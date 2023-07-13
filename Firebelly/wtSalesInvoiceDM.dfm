@@ -1,7 +1,4 @@
 object dtmdlSalesInvoice: TdtmdlSalesInvoice
-  OldCreateOrder = False
-  Left = 230
-  Top = 121
   Height = 541
   Width = 1035
   object dsDummy: TDataSource

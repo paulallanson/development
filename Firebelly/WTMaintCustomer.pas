@@ -6,9 +6,9 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, DBCtrls, Mask, ComCtrls, Grids, DBGrids, DB, ExtCtrls,
   DBTables, wtCustomerDM, Variants, WTQuotesDM, WTJobsDM, WTSalesOrderDM,
-  WTSalesInvoiceDM, gtQrCtrls, ImgList, ShellAPI, ToolWin, Inifiles,
-  taoCntrr, taoFrmts, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls;
+  WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles,
+  Activex, AxCtrls, Clipbrd, ComObj, Menus,
+  CRControls, System.ImageList;
 
 type
   TfrmWtMaintCustomer = class(TForm)
@@ -157,34 +157,6 @@ type
     SpeedButton7: TSpeedButton;
     chkbxShowLabourCharges: TCheckBox;
     chkbxUseforGeneralQuoting: TCheckBox;
-    taoWinControl1: TtaoWinControl;
-    taoWinControl1In1: TtaoInFileContents;
-    taoWinControl1In2: TtaoInCells;
-    taoWinControl1In3: TtaoInBiff8;
-    taoWinControl1In4: TtaoInBiff5;
-    taoWinControl1In5: TtaoInUnicodeText;
-    taoWinControl1In6: TtaoInText;
-    taoWinControl1In7: TtaoInHDrop;
-    taoWinControl1In8: TtaoInShellIDList;
-    taoWinControl1In9: TtaoInFileContentsW;
-    taoWinControl1In10: TtaoInOEMessage;
-    taoWinControl1In11: TtaoInURL;
-    taoWinControl1In12: TtaoInURLNetscape4;
-    taoWinControl1Out1: TtaoOutBiff8;
-    taoWinControl1Out2: TtaoOutRtf;
-    taoWinControl1Out3: TtaoOutUnicodeText;
-    taoWinControl1Out4: TtaoOutText;
-    taoWinControl1Out5: TtaoOutCells;
-    taoWinControl1Out6: TtaoOutHDrop;
-    taoWinControl1Out7: TtaoOutFileNameMap;
-    taoWinControl1Out8: TtaoOutShellIDList;
-    taoWinControl1Out9: TtaoOutFileDescriptor;
-    taoWinControl1Out10: TtaoOutFileDescriptorW;
-    taoWinControl1Out11: TtaoOutFileContents;
-    taoWinControl1Out12: TtaoOutPreferredEffect;
-    taoWinControl1Out13: TtaoOutURL;
-    taoWinControl1Out14: TtaoOutURLShortcut;
-    taoWinControl1Out15: TtaoOutURLShortcutTitle;
     pmnuDocuments: TPopupMenu;
     pmnuOpen: TMenuItem;
     pmnuPaste: TMenuItem;
@@ -304,12 +276,6 @@ type
     procedure btnAddWorktopGroupClick(Sender: TObject);
     procedure btnClearGroupClick(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
-    procedure taoWinControl1SetDataPaste(Sender: TObject;
-      Data: IInterface);
-    procedure taoWinControl1SetDataTarget(Sender: TObject;
-      Data: IInterface; X, Y: Integer);
-    procedure taoWinControl1UpdateAction(Sender: TObject;
-      Action: TtaoUpdateAction; var Enable: Boolean);
     procedure lstvwDocumentsColumnClick(Sender: TObject;
       Column: TListColumn);
     procedure lstvwDocumentsCompare(Sender: TObject; Item1,
@@ -2246,27 +2212,6 @@ begin
   dtmdlOneCustomer.qryLevelofImportance.close;
   dtmdlOneCustomer.qryLevelofImportance.open;
 
-end;
-
-procedure TfrmWtMaintCustomer.taoWinControl1SetDataPaste(Sender: TObject;
-  Data: IInterface);
-begin
-  MyWinControlSetData(Data);
-end;
-
-procedure TfrmWtMaintCustomer.taoWinControl1SetDataTarget(Sender: TObject;
-  Data: IInterface; X, Y: Integer);
-begin
-{ Ignore the drop point. So we can handle drag-and-drop and clipboard operations in uniform way. }
-  MyWinControlSetData(Data);
-
-end;
-
-procedure TfrmWtMaintCustomer.taoWinControl1UpdateAction(Sender: TObject;
-  Action: TtaoUpdateAction; var Enable: Boolean);
-begin
- { The Paste sub-item in the Edit menu is linked to an Action object. Enable is False on enter. }
-  Enable := True;
 end;
 
 procedure TfrmWtMaintCustomer.MyWinControlSetData(const Data: IUnknown);
