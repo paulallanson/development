@@ -1,9 +1,9 @@
 object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Left = 176
   Top = 4
-  Width = 1170
-  Height = 805
   Caption = ';'#39
+  ClientHeight = 766
+  ClientWidth = 1154
   Color = clBtnFace
   Constraints.MinHeight = 550
   Constraints.MinWidth = 1170
@@ -12,25 +12,24 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 1162
+    Width = 1154
     Height = 36
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1162
     DesignSize = (
-      1162
+      1154
       36)
     object Label1: TLabel
       Left = 16
@@ -102,16 +101,17 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 36
-    Width = 1162
+    Width = 1154
     Height = 269
     Align = alTop
     Anchors = [akRight, akBottom]
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1162
     DesignSize = (
-      1162
+      1154
       269)
     object Label11: TLabel
       Left = 17
@@ -229,7 +229,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ParentFont = False
     end
     object pnlAddress: TPanel
-      ParentBackground = False
       Left = 75
       Top = 1
       Width = 622
@@ -237,6 +236,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Anchors = [akLeft, akTop, akRight]
       BevelOuter = bvNone
       Caption = 'pnlAddress'
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         622
@@ -299,13 +299,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object grpMaterials: TGroupBox
-      ParentBackground = False
       Left = 946
       Top = 181
       Width = 193
       Height = 77
       Anchors = [akTop, akRight]
       Enabled = False
+      ParentBackground = False
       TabOrder = 12
       DesignSize = (
         193
@@ -341,8 +341,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Top = 18
         Width = 25
         Height = 25
-        TabOrder = 1
-        OnClick = btnMatsReqDateClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -357,14 +355,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnMatsReqDateClick
       end
       object btnMatsRecDate: TBitBtn
         Left = 152
         Top = 47
         Width = 25
         Height = 25
-        TabOrder = 2
-        OnClick = btnMatsRecDateClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -379,6 +377,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnMatsRecDateClick
       end
       object edtMatsRecDate: TEdit
         Left = 64
@@ -506,7 +506,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = chkbxMaterialRequiredClick
     end
     object rdgrpDateType: TRadioGroup
-      ParentBackground = False
       Left = 752
       Top = 61
       Width = 185
@@ -522,18 +521,19 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         'Provisional'
         'Confirmed'
         'TBC')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 9
       OnClick = rdgrpDateTypeClick
     end
     object grpDates: TGroupBox
-      ParentBackground = False
       Left = 946
       Top = 61
       Width = 194
       Height = 77
       Anchors = [akTop, akRight]
       Caption = 'Dates'
+      ParentBackground = False
       TabOrder = 10
       DesignSize = (
         194
@@ -569,8 +569,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Top = 19
         Width = 25
         Height = 25
-        TabOrder = 1
-        OnClick = btnTempDateClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -585,6 +583,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnTempDateClick
       end
       object edtReqDate: TEdit
         Left = 64
@@ -600,8 +600,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Top = 48
         Width = 25
         Height = 25
-        TabOrder = 3
-        OnClick = btnReqdDateClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -616,10 +614,11 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = btnReqdDateClick
       end
     end
     object rdgrpJobType: TRadioGroup
-      ParentBackground = False
       Left = 752
       Top = 142
       Width = 185
@@ -638,18 +637,19 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         'Collection Only'
         'Remedial - Production'
         'Remedial - No Production')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 13
       OnClick = rdgrpJobTypeClick
     end
     object pnlRevenueCentre: TPanel
-      ParentBackground = False
       Left = 376
       Top = 155
       Width = 352
       Height = 41
       Anchors = [akLeft, akTop, akRight]
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 14
       DesignSize = (
         352
@@ -720,15 +720,17 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     end
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 714
-    Width = 1162
+    Top = 706
+    Width = 1154
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 714
+    ExplicitWidth = 1162
     DesignSize = (
-      1162
+      1154
       41)
     object lblDeleteprompt: TLabel
       Left = 822
@@ -753,8 +755,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 2
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -773,6 +773,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 1070
@@ -780,8 +782,9 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 3
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 3
     end
     object chkbxonHold: TCheckBox
       Left = 8
@@ -811,8 +814,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 755
-    Width = 1162
+    Top = 747
+    Width = 1154
     Height = 19
     Panels = <
       item
@@ -821,25 +824,30 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       item
         Width = 50
       end>
+    ExplicitTop = 755
+    ExplicitWidth = 1162
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 520
-    Width = 1162
+    Top = 512
+    Width = 1154
     Height = 194
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 520
+    ExplicitWidth = 1162
     object Panel5: TPanel
-      ParentBackground = False
-      Left = 808
+      Left = 800
       Top = 1
       Width = 353
       Height = 192
       Align = alRight
       Anchors = [akRight, akBottom]
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 808
       DesignSize = (
         353
         192)
@@ -962,12 +970,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         OnExit = edtDepositTermsExit
       end
       object pnlSubContract: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 353
         Height = 81
         Align = alTop
+        ParentBackground = False
         TabOrder = 6
         object Label31: TLabel
           Left = 8
@@ -1032,15 +1040,16 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlFitters: TPanel
-      ParentBackground = False
       Left = 578
       Top = 1
-      Width = 230
+      Width = 222
       Height = 192
       Align = alClient
+      ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 230
       DesignSize = (
-        230
+        222
         192)
       object Label29: TLabel
         Left = 9
@@ -1173,12 +1182,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlInstallAddress: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 344
       Height = 192
       Align = alLeft
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         344
@@ -1387,12 +1396,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object pnlInstallContact: TPanel
-      ParentBackground = False
       Left = 345
       Top = 1
       Width = 233
       Height = 192
       Align = alLeft
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         233
@@ -1482,11 +1491,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   object pcDetails: TPageControl
     Left = 0
     Top = 305
-    Width = 1162
-    Height = 215
+    Width = 1154
+    Height = 207
     ActivePage = tbRemedials
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1162
+    ExplicitHeight = 215
     object tbDetails: TTabSheet
       Caption = 'Details'
       object dbgLines: TStringGrid
@@ -1521,14 +1532,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ImageIndex = 1
       OnShow = tbDocumentsShow
       object Panel12: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
-        Width = 1154
+        Width = 1146
         Height = 17
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1154
         object Label44: TLabel
           Left = 2
           Top = 0
@@ -1538,10 +1550,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object tbrDocuments: TToolBar
-        Left = 1121
+        Left = 1113
         Top = 17
         Width = 33
-        Height = 170
+        Height = 162
         Align = alRight
         ButtonHeight = 30
         ButtonWidth = 30
@@ -1551,6 +1563,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
+        ExplicitLeft = 1121
+        ExplicitHeight = 170
         object btnExcel: TToolButton
           Left = 0
           Top = 2
@@ -1596,24 +1610,28 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object pnlDocuments: TPanel
-        ParentBackground = False
         Left = 0
         Top = 17
-        Width = 1121
-        Height = 170
+        Width = 1113
+        Height = 162
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1121
+        ExplicitHeight = 170
         object pnlPlanDocument: TPanel
-          ParentBackground = False
           Left = 0
-          Top = 129
-          Width = 1121
+          Top = 121
+          Width = 1113
           Height = 41
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 129
+          ExplicitWidth = 1121
           DesignSize = (
-            1121
+            1113
             41)
           object Label32: TLabel
             Left = 8
@@ -1658,7 +1676,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 185
-          Height = 129
+          Height = 121
           ObjectTypes = [otFolders]
           Root = 'C:\'
           ShellListView = slvDocuments
@@ -1676,8 +1694,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object slvDocuments: TShellListView
           Left = 185
           Top = 0
-          Width = 936
-          Height = 129
+          Width = 928
+          Height = 121
           AutoRefresh = True
           ObjectTypes = [otFolders, otNonFolders]
           Root = 'C:\'
@@ -1697,16 +1715,16 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Notes'
       ImageIndex = 8
       object Panel10: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
         Height = 17
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          1154
+          1146
           17)
         object lblApplianceDetails: TLabel
           Left = 0
@@ -1715,43 +1733,49 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Height = 17
           Align = alLeft
           Caption = 'Appliance Details (255 chars)'
+          ExplicitHeight = 13
         end
         object lblNotes: TLabel
-          Left = 554
+          Left = 538
           Top = 0
           Width = 28
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Notes'
+          ExplicitLeft = 554
         end
       end
       object edtApplianceDetails: TMemo
         Left = 0
         Top = 17
         Width = 449
-        Height = 170
+        Height = 162
         Align = alLeft
         MaxLength = 255
         TabOrder = 1
         OnChange = edtApplianceDetailsChange
+        ExplicitHeight = 170
       end
       object Panel1: TPanel
-        ParentBackground = False
         Left = 449
         Top = 17
         Width = 16
-        Height = 170
+        Height = 162
         Align = alLeft
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
+        ExplicitHeight = 170
       end
       object memNotes: TMemo
         Left = 465
         Top = 17
-        Width = 689
-        Height = 170
+        Width = 681
+        Height = 162
         Align = alClient
         TabOrder = 3
+        ExplicitWidth = 689
+        ExplicitHeight = 170
       end
     end
     object tbContactDetails: TTabSheet
@@ -1768,13 +1792,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         BorderStyle = bsNone
         TabOrder = 0
         object pnlContactInfo: TPanel
-          ParentBackground = False
           Left = 0
           Top = 0
           Width = 473
           Height = 187
           Align = alLeft
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 0
           object Label26: TLabel
             Left = 6
@@ -1813,21 +1837,21 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Events'
       ImageIndex = 4
       object Panel9: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
         Height = 17
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
       end
       object Panel3: TPanel
-        ParentBackground = False
         Left = 0
         Top = 17
         Width = 305
         Height = 170
         Align = alLeft
+        ParentBackground = False
         TabOrder = 1
         object sgEvents: TStringGrid
           Left = 1
@@ -1849,12 +1873,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel18: TPanel
-        ParentBackground = False
         Left = 305
         Top = 17
         Width = 408
         Height = 170
         Align = alClient
+        ParentBackground = False
         TabOrder = 2
         object btnAddEvents: TBitBtn
           Left = 8
@@ -1887,12 +1911,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel8: TPanel
-        ParentBackground = False
         Left = 713
         Top = 17
         Width = 441
         Height = 170
         Align = alRight
+        ParentBackground = False
         TabOrder = 3
         object memEventNotes: TMemo
           Left = 1
@@ -1910,12 +1934,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Jobs'
       ImageIndex = 9
       object Panel11: TPanel
-        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
         Height = 187
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnJobChange: TBitBtn
           Left = 10
@@ -2039,12 +2063,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Remedials'
       ImageIndex = 10
       object Panel13: TPanel
-        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
         Height = 187
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnRemedialChange: TBitBtn
           Left = 10
@@ -2184,12 +2208,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Purchases'
       ImageIndex = 5
       object Panel2: TPanel
-        ParentBackground = False
         Left = 1061
         Top = 0
         Width = 93
         Height = 164
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnPOChange: TBitBtn
           Left = 10
@@ -2332,13 +2356,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end>
       end
       object pnlPurchasesFoot: TPanel
-        ParentBackground = False
         Left = 0
         Top = 164
         Width = 1154
         Height = 23
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
         object chkbxShowInactive: TCheckBox
           Left = 8
@@ -2355,12 +2379,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Sales Invoices'
       ImageIndex = 7
       object Panel6: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1154
         Height = 25
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
         object Label36: TLabel
           Left = 13
@@ -2430,15 +2454,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           end>
       end
       object Panel19: TPanel
-        ParentBackground = False
         Left = 0
         Top = 159
         Width = 1154
         Height = 28
         Align = alBottom
+        ParentBackground = False
         TabOrder = 2
         DesignSize = (
-          1154
+          1146
           28)
         object Label42: TLabel
           Left = 430
@@ -2463,13 +2487,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel7: TPanel
-        ParentBackground = False
-        Left = 1069
+        Left = 1061
         Top = 25
         Width = 85
-        Height = 134
+        Height = 126
         Align = alRight
+        ParentBackground = False
         TabOrder = 3
+        ExplicitLeft = 1069
+        ExplicitHeight = 134
         object btnViewSI: TBitBtn
           Left = 8
           Top = 8
@@ -2590,7 +2616,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end>
       end
@@ -2698,135 +2723,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     Top = 228
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -3084,12 +2981,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
+      2800000040000000200000000100010000000000000100000000000000000000
       000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

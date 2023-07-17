@@ -8,7 +8,7 @@ uses
   ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM,
   ToolWin, IniFiles, DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB,
   Activex, AxCtrls, Clipbrd, ComObj,
-  ShellCtrls;
+  ShellCtrls, System.ImageList;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -467,7 +467,7 @@ var
 
 implementation
 
-uses wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
+uses taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
   WTSrchCustContacts, wtNotesDM, wtDBMemo, WTLUSalesOrderQuotes, WTMaintSOEvents, wtLUReps, DateSelV5,
   wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE,
   WTExcelOLE, wtLUFitters, WTMaintCustomer, WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder,

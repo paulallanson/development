@@ -191,7 +191,7 @@ begin
   if lstbxDocuments.selcount > 0 then
     PrintDocuments;
 
-  printer.printerindex := -1;
+  printers.Printer.printerindex := -1;
 
   close;
 end;
@@ -454,7 +454,7 @@ begin
             begin
               frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
               try
-                Printer.PrinterIndex := -1;
+                printers.Printer.printerindex := -1;
                 frmWTRPJobRemedialSheet.Job := strtoint(memSelection.text);
                 frmWTRPJobRemedialSheet.RemedialNo := 0;
                 frmWTRPJobRemedialSheet.bRemedialTemplate := true;
@@ -468,7 +468,7 @@ begin
                     frmWTRPJobRemedialSheet.bPreview := false;
                     sAttachmentType := 'PDF';
                     sFileName := 'RS' + memSelection.text + '-J' + memSOrderNumber.text;
-                    PrinterTools.New.PrintToAttachment(bRemedialSheet.qrpJobSheet, AttachmentList, sFileName, sAttachmentType);
+                    PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, AttachmentList, sFileName, sAttachmentType);
                   end;
               finally
                 frmWTRPJobRemedialSheet.Free;
