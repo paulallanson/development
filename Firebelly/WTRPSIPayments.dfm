@@ -92,7 +92,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -123,7 +123,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 64
         Top = 8
         Width = 80
@@ -184,7 +184,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 14
         Top = 2
         Width = 70
@@ -210,7 +210,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 256
         Top = 2
         Width = 233
@@ -236,7 +236,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 974
         Top = 2
         Width = 64
@@ -262,7 +262,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 592
         Top = 2
         Width = 97
@@ -288,7 +288,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 696
         Top = 2
         Width = 105
@@ -314,7 +314,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 816
         Top = 2
         Width = 121
@@ -340,7 +340,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 105
         Top = 2
         Width = 62
@@ -366,7 +366,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Left = 177
         Top = 2
         Width = 53
@@ -392,7 +392,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText5: TgtQRDBText
+      object gtQRDBText5: TQRDBText
         Left = 496
         Top = 2
         Width = 73
@@ -439,7 +439,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         76.729166666666670000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 959
         Top = 9
         Width = 79
@@ -470,7 +470,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 902
         Top = -1
         Width = 137
@@ -488,7 +488,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 743
         Top = 9
         Width = 108
@@ -519,7 +519,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 858
         Top = 9
         Width = 28
@@ -571,7 +571,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 818
         Top = 7
         Width = 68
@@ -602,7 +602,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 949
         Top = 7
         Width = 90
@@ -633,7 +633,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 902
         Top = -1
         Width = 137
@@ -670,7 +670,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 460
         Top = 2
         Width = 113
@@ -701,7 +701,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -731,7 +731,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Transparent = False
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 16
         Top = 71
         Width = 67
@@ -762,7 +762,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 256
         Top = 71
         Width = 47
@@ -793,7 +793,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -824,7 +824,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -853,7 +853,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Transparent = False
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 592
         Top = 71
         Width = 20
@@ -884,7 +884,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -915,7 +915,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 104
         Top = 71
         Width = 59
@@ -946,7 +946,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 176
         Top = 71
         Width = 51
@@ -977,7 +977,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 696
         Top = 71
         Width = 55
@@ -1008,7 +1008,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 816
         Top = 71
         Width = 80
@@ -1039,7 +1039,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 1000
         Top = 71
         Width = 38
@@ -1070,7 +1070,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 496
         Top = 71
         Width = 70

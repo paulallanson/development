@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, DBTables, gtQrCtrls;
+  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTMaintWTGPrices = class(TForm)

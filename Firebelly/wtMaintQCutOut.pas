@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, wtQuotesDM, StdCtrls, Buttons, Spin, CRControls, DBCtrls, DB,
-  DBTables, ExtCtrls, gtQrCtrls;
+  DBTables, ExtCtrls, QrCtrls;
 
 type
   TfrmWTMaintQCutOut = class(TForm)

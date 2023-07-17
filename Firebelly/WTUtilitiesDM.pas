@@ -3,7 +3,7 @@ unit WTUtilitiesDM;
 interface
 
 uses
-  SysUtils, Classes, gtQrCtrls;
+  SysUtils, Classes, QrCtrls;
 
 type
   TdtmdlUtilities = class(TDataModule)

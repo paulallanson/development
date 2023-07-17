@@ -4,52 +4,52 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBTables, Quickrep, DB, StdCtrls, ExtCtrls, gtQrCtrls;
+  DBTables, QuickRpt, DB, StdCtrls, ExtCtrls, QrCtrls;
 
 type
   TWTRepsFrm = class(TForm)
-    QuickReport1: TQuickReport;
+    QuickReport1: TQuickRep;
     PageHeadBand: TQRBand;
-    ListLbl: TgtQRLabel;
+    ListLbl: TQRLabel;
     WorktopSQL: TQuery;
     WorktopSRC: TDataSource;
     Thickness: TQuery;
     QRBand3: TQRBand;
-    QRDBText2: TgtQRDBText;
+    QRDBText2: TQRDBText;
     ThicknessSRC: TDataSource;
-    RetailText: TgtQRDBText;
+    RetailText: TQRDBText;
     QRBand4: TQRBand;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    RetailLbl: TgtQRLabel;
-    QRSysData1: TgtQRSysData;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    RetailLbl: TQRLabel;
+    QRSysData1: TQRSysData;
     QRBand5: TQRBand;
     WorktopSQLworktop: TStringField;
     WorktopSQLDescription: TStringField;
     WorktopSQLStocked: TStringField;
     WorktopSQLUse_For_Estimating: TStringField;
-    QRDBText6: TgtQRDBText;
+    QRDBText6: TQRDBText;
     MaterialHeader: TQRBand;
-    QRLabel7: TgtQRLabel;
-    QRDetailLink3: TQRDetailLink;
+    QRLabel7: TQRLabel;
+    QRDetailLink3: TQRSubDetail;
     MaterialSQL: TQuery;
     MaterialSRC: TDataSource;
     MaterialSQLMaterial_Type: TIntegerField;
     MaterialSQLDescription: TStringField;
-    QRDetailLink1: TQRDetailLink;
-    QRDetailLink2: TQRDetailLink;
-    QRDBText1: TgtQRDBText;
-    QRLabel8: TgtQRLabel;
-    Customer: TgtQRLabel;
-    CustLbl: TgtQRLabel;
-    Discount: TgtQRLabel;
-    DiscountLbl: TgtQRLabel;
+    QRDetailLink1: TQRSubDetail;
+    QRDetailLink2: TQRSubDetail;
+    QRDBText1: TQRDBText;
+    QRLabel8: TQRLabel;
+    Customer: TQRLabel;
+    CustLbl: TQRLabel;
+    Discount: TQRLabel;
+    DiscountLbl: TQRLabel;
     CustSQL: TQuery;
     PBandSQL: TQuery;
     ThicknessCostSQL: TQuery;
     Image2: TImage;
-    QRSysData2: TgtQRSysData;
-    QRLabel1: TgtQRLabel;
+    QRSysData2: TQRSysData;
+    QRLabel1: TQRLabel;
     procedure QuickReport1BeforePrint(var PrintReport: Boolean);
     procedure QRBand3BeforePrint(var PrintBand: Boolean);
     procedure QRBand3AfterPrint(BandPrinted: Boolean);

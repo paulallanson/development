@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
-  wtRPTemplate, gtQrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls;
+  wtRPTemplate, QrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls;
 
 type
   TfrmWTRSTemplateSheet = class(TForm)

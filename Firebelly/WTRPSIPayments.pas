@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmwtRPSIPayments = class(TForm)
@@ -12,39 +12,39 @@ type
     qryReport: TQuery;
     qrbGroupHeader: TQRGroup;
     qrsbDetails: TQRSubDetail;
-    qrlblSortBy: TgtQRLabel;
-    qrGroupbyText: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
+    qrlblSortBy: TQRLabel;
+    qrGroupbyText: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText6: TQRDBText;
     qrbGroupFooter: TQRBand;
-    qrlblCustTotal: TgtQRLabel;
-    QRShape1: TgtQRShape;
+    qrlblCustTotal: TQRLabel;
+    QRShape1: TQRShape;
     QRBand2: TQRBand;
-    QRLabel10: TgtQRLabel;
-    qrlblReportTotal: TgtQRLabel;
-    QRShape2: TgtQRShape;
+    QRLabel10: TQRLabel;
+    qrlblReportTotal: TQRLabel;
+    QRShape2: TQRShape;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
-    QRSysData1: TgtQRSysData;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    QRSysData2: TgtQRSysData;
-    QRDBText9: TgtQRDBText;
-    QRDBText10: TgtQRDBText;
-    QRLabel1: TgtQRLabel;
-    qrlblSelection: TgtQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
-    gtQRLabel5: TgtQRLabel;
-    gtQRDBText1: TgtQRDBText;
-    gtQRDBText2: TgtQRDBText;
-    gtQRDBText3: TgtQRDBText;
-    gtQRDBText4: TgtQRDBText;
-    qrGroupbyFootText: TgtQRDBText;
-    QRLabel2: TgtQRLabel;
+    qrlblCaption: TQRLabel;
+    QRSysData1: TQRSysData;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    QRSysData2: TQRSysData;
+    QRDBText9: TQRDBText;
+    QRDBText10: TQRDBText;
+    QRLabel1: TQRLabel;
+    qrlblSelection: TQRLabel;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    gtQRLabel1: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRLabel5: TQRLabel;
+    gtQRDBText1: TQRDBText;
+    gtQRDBText2: TQRDBText;
+    gtQRDBText3: TQRDBText;
+    gtQRDBText4: TQRDBText;
+    qrGroupbyFootText: TQRDBText;
+    QRLabel2: TQRLabel;
     qryReportPayment: TIntegerField;
     qryReportPayment_date: TDateTimeField;
     qryReportPaid_Amount: TFloatField;
@@ -58,8 +58,8 @@ type
     qryReportRep_Name: TStringField;
     qryReportIs_Retail_Customer: TStringField;
     qryReportInvoice_no: TStringField;
-    gtQRLabel6: TgtQRLabel;
-    gtQRDBText5: TgtQRDBText;
+    gtQRLabel6: TQRLabel;
+    gtQRDBText5: TQRDBText;
     qryReportAccount_Code: TStringField;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

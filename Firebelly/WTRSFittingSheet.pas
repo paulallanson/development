@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
-  wtRPJobFitting, gtQrExport, AllCommon, ComObj, DBCtrls, ExtCtrls,
+  wtRPJobFitting, QrExport, AllCommon, ComObj, DBCtrls, ExtCtrls,
   WTRPJobRemedialSheet, ComCtrls;
 
 type

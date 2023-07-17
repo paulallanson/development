@@ -87,7 +87,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         261.937500000000000000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 274
         Top = 2
         Width = 172
@@ -118,7 +118,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 12
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 323
         Top = 26
         Width = 74
@@ -149,7 +149,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 654
         Top = 8
         Width = 56
@@ -178,7 +178,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         Transparent = False
         FontSize = 8
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 640
         Top = 23
         Width = 69
@@ -208,7 +208,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         Transparent = False
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 594
         Top = 82
         Width = 54
@@ -239,7 +239,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 48
         Top = 82
         Width = 41
@@ -270,7 +270,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 232
         Top = 82
         Width = 70
@@ -301,7 +301,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 416
         Top = 82
         Width = 59
@@ -332,7 +332,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 104
         Top = 46
         Width = 513
@@ -363,7 +363,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 680
         Top = 66
         Width = 33
@@ -394,7 +394,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 514
         Top = 82
         Width = 59
@@ -448,7 +448,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblSalesCount: TgtQRLabel
+      object qrlblSalesCount: TQRLabel
         Left = 638
         Top = 3
         Width = 76
@@ -479,7 +479,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 48
         Top = 3
         Width = 101
@@ -511,7 +511,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 232
         Top = 3
         Width = 98
@@ -543,7 +543,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Left = 416
         Top = 3
         Width = 85
@@ -575,7 +575,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSalesTotal: TgtQRLabel
+      object qrlblSalesTotal: TQRLabel
         Left = 578
         Top = 3
         Width = 71
@@ -606,7 +606,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblArea: TgtQRLabel
+      object qrlblArea: TQRLabel
         Left = 527
         Top = 3
         Width = 45
@@ -660,7 +660,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
       FooterBand = qrbGroupFooter1
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy1: TgtQRLabel
+      object qrlblSortBy1: TQRLabel
         Left = 5
         Top = 4
         Width = 47
@@ -691,7 +691,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText1: TgtQRDBText
+      object qrGroupbyText1: TQRDBText
         Left = 101
         Top = 4
         Width = 80
@@ -746,7 +746,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
       FooterBand = qrbGroupFooter2
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy2: TgtQRLabel
+      object qrlblSortBy2: TQRLabel
         Left = 29
         Top = 4
         Width = 47
@@ -777,7 +777,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText2: TgtQRDBText
+      object qrGroupbyText2: TQRDBText
         Left = 125
         Top = 4
         Width = 80
@@ -829,7 +829,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         84.666666666666670000
         1899.708333333333000000)
       BandType = rbSummary
-      object qrlblReportCount: TgtQRLabel
+      object qrlblReportCount: TQRLabel
         Left = 617
         Top = 7
         Width = 96
@@ -860,7 +860,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 379
         Top = 7
         Width = 68
@@ -891,7 +891,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 504
         Top = -1
         Width = 209
@@ -909,7 +909,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 559
         Top = 7
         Width = 90
@@ -940,7 +940,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportArea: TgtQRLabel
+      object qrlblReportArea: TQRLabel
         Left = 483
         Top = 7
         Width = 89
@@ -992,7 +992,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         84.666666666666670000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object qrlblSort1Count: TgtQRLabel
+      object qrlblSort1Count: TQRLabel
         Left = 639
         Top = 7
         Width = 75
@@ -1023,7 +1023,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 504
         Top = -1
         Width = 209
@@ -1041,7 +1041,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrTotalbyText1: TgtQRDBText
+      object qrTotalbyText1: TQRDBText
         Left = 413
         Top = 7
         Width = 80
@@ -1073,7 +1073,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSort1Total: TgtQRLabel
+      object qrlblSort1Total: TQRLabel
         Left = 580
         Top = 7
         Width = 70
@@ -1104,7 +1104,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSort1Area: TgtQRLabel
+      object qrlblSort1Area: TQRLabel
         Left = 501
         Top = 7
         Width = 71
@@ -1157,7 +1157,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         84.666666666666670000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object qrlblSort2Count: TgtQRLabel
+      object qrlblSort2Count: TQRLabel
         Left = 639
         Top = 7
         Width = 75
@@ -1188,7 +1188,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrshpSubTotal: TgtQRShape
+      object qrshpSubTotal: TQRShape
         Left = 504
         Top = -1
         Width = 209
@@ -1206,7 +1206,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrSubTotalbyText2: TgtQRDBText
+      object qrSubTotalbyText2: TQRDBText
         Left = 413
         Top = 7
         Width = 80
@@ -1238,7 +1238,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrSubTotalbyText1: TgtQRDBText
+      object qrSubTotalbyText1: TQRDBText
         Left = 277
         Top = 7
         Width = 80
@@ -1270,7 +1270,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSort2Total: TgtQRLabel
+      object qrlblSort2Total: TQRLabel
         Left = 580
         Top = 7
         Width = 70
@@ -1301,7 +1301,7 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSort2Area: TgtQRLabel
+      object qrlblSort2Area: TQRLabel
         Left = 502
         Top = 7
         Width = 71

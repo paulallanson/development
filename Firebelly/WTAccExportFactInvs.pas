@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, Db, DBTables, FileCtrl, IniFiles, gtQrCtrls;
+  ExtCtrls, StdCtrls, Buttons, Db, DBTables, FileCtrl, IniFiles, QrCtrls;
 
 type
   TfrmWTAccExportFactInvs = class(TForm)

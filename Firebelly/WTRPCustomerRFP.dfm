@@ -1004,7 +1004,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 10
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 460
         Top = 0
         Width = 245
@@ -1083,7 +1083,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 10
       end
-      object qrlblSiteName: TgtQRLabel
+      object qrlblSiteName: TQRLabel
         Left = 48
         Top = 385
         Width = 80
@@ -1233,7 +1233,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = False
         FontSize = 9
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 556
         Top = 79
         Width = 51
@@ -1264,7 +1264,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 583
         Top = 111
         Width = 24
@@ -1295,7 +1295,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 512
         Top = 143
         Width = 95
@@ -1326,7 +1326,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 9
       end
-      object qrlblPaymentTerms: TgtQRLabel
+      object qrlblPaymentTerms: TQRLabel
         Left = 12
         Top = 23
         Width = 109
@@ -1357,7 +1357,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 9
       end
-      object qrshpPayment: TgtQRShape
+      object qrshpPayment: TQRShape
         Left = 8
         Top = 43
         Width = 409
@@ -1375,7 +1375,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object memPayment: TgtQRMemo
+      object memPayment: TQRMemo
         Left = 16
         Top = 49
         Width = 393
@@ -1427,7 +1427,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         134.937500000000000000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object qrlblLabourUTR: TgtQRLabel
+      object qrlblLabourUTR: TQRLabel
         Left = 44
         Top = 5
         Width = 51
@@ -1458,7 +1458,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLabourValue: TgtQRLabel
+      object qrlblLabourValue: TQRLabel
         Left = 44
         Top = 29
         Width = 77

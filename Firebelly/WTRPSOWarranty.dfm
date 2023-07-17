@@ -91,7 +91,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         2770.187500000000000000)
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -122,7 +122,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -173,7 +173,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 460
         Top = 2
         Width = 114
@@ -204,7 +204,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -234,7 +234,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 0
         Top = 71
         Width = 59
@@ -265,7 +265,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 136
         Top = 71
         Width = 47
@@ -296,7 +296,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 296
         Top = 71
         Width = 52
@@ -327,7 +327,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -358,7 +358,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -387,7 +387,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Transparent = False
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 440
         Top = 71
         Width = 20
@@ -418,7 +418,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -449,7 +449,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 64
         Top = 71
         Width = 54
@@ -480,7 +480,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 960
         Top = 71
         Width = 32
@@ -511,7 +511,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 552
         Top = 71
         Width = 55
@@ -571,7 +571,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 0
         Top = 1
         Width = 62
@@ -597,7 +597,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 296
         Top = 1
         Width = 137
@@ -623,7 +623,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 136
         Top = 1
         Width = 153
@@ -649,7 +649,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 440
         Top = 1
         Width = 97
@@ -675,7 +675,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object qrlblFittingDate: TgtQRLabel
+      object qrlblFittingDate: TQRLabel
         Left = 66
         Top = 1
         Width = 71
@@ -700,7 +700,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDescription: TgtQRLabel
+      object qrlblDescription: TQRLabel
         Left = 552
         Top = 1
         Width = 75
@@ -725,7 +725,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 960
         Top = 1
         Width = 130

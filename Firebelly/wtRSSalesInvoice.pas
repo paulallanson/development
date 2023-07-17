@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, gtQrCtrls, IniFiles, AllCommon;
+  Dialogs, StdCtrls, ExtCtrls, QrCtrls, IniFiles, AllCommon;
 
 type
   TfrmwtRSSalesInvoice = class(TForm)

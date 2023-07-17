@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtRSQuote, StdCtrls, ExtCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, wtRSQuote, StdCtrls, ExtCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTRSJobCutSched = class(TfrmWTRSQuote)

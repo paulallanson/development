@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, DB, DBTables, IniFiles, wtRPQuote,
-  gtQrExport, StrUtils, ShellAPI, wtRPQuoteSummary;
+  QrExport, StrUtils, ShellAPI, wtRPQuoteSummary;
 
 type
   TfrmWTRSQuote = class(TForm)
@@ -72,8 +72,9 @@ type
     function BuildQueryString: string;
     function GetQuoteMaterial(tempQuote: integer): string;
     function IncrementNo(StartStr: String): String;
-    procedure PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
-    procedure PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
+    // ToDo GDK: Remove after testings
+    // procedure PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
+    // procedure PrintSummaryToAttachment(frmWTRPQuote: TfrmWTRPQuoteSummary; tempCode: string);
     procedure PrintDocument(const documentToPrint: string);
     procedure PrintDocuments;
     { Private declarations }
@@ -92,8 +93,9 @@ var
 
 implementation
 
-uses wtDataModule, wtSendFax, wtFaxList, wtRPTemplate, AllEmailHandler,
-  wtRPQuoteTrade, wtEmailList, wtMain, AllCommon;
+uses
+  wtDataModule, wtSendFax, wtFaxList, wtRPTemplate, AllEmailHandler,
+  wtRPQuoteTrade, wtEmailList, wtMain, AllCommon, Printer.Tools;
 
 const
 
@@ -313,7 +315,7 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrintToAttachment(frmwtRPQuote, EmailArray[irow,1]);
+              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
 
               if iQuoteCount = 1 then
                 begin
@@ -398,7 +400,7 @@ begin
 
               frmwtRPQuote.GetDetails;
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPQuote, EmailArray[irow,1]);
+              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1] + ' - ' + frmwtRPQuote.qryReport.fieldbyname('Reference').asstring;
 
@@ -606,7 +608,7 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrintSummaryToAttachment(frmwtRPQuoteSummary, EmailArray[irow,1]);
+              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
 
               if iQuoteCount = 1 then
                 begin
@@ -704,7 +706,8 @@ begin
 
               frmwtRPQuoteSummary.GetDetails;
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrintSummaryToAttachment(frmwtRPQuoteSummary, EmailArray[irow,1]);
+
+              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1];
 
@@ -1556,6 +1559,7 @@ For Count := StrLength downto 1 do
        end ;
 end ;
 
+(*
 procedure TfrmWTRSQuote.PrintToAttachment(frmWTRPQuote: TfrmWTRPQuote; tempCode: string);
 var
   i: integer;
@@ -1813,6 +1817,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSQuote.chkbxOnlyShowGrandTotalClick(Sender: TObject);
 begin

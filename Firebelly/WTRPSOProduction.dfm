@@ -96,7 +96,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
       HeaderBand = qrgrpHeadMaterial
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblMaterialDescription: TgtQRLabel
+      object qrlblMaterialDescription: TQRLabel
         Left = 64
         Top = 4
         Width = 136
@@ -121,7 +121,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblArea: TgtQRLabel
+      object qrlblArea: TQRLabel
         Left = 480
         Top = 4
         Width = 52
@@ -166,7 +166,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         5.291666666666667000
         1899.708333333333000000)
       BandType = rbGroupHeader
-      object qrlblMaterialTitle: TgtQRLabel
+      object qrlblMaterialTitle: TQRLabel
         Left = 64
         Top = 8
         Width = 117
@@ -191,7 +191,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblMaterialCount: TgtQRLabel
+      object qrlblMaterialCount: TQRLabel
         Left = 434
         Top = 8
         Width = 65
@@ -241,7 +241,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
       HeaderBand = qrgrpHeadCutOuts
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblCutOutDescription: TgtQRLabel
+      object qrlblCutOutDescription: TQRLabel
         Left = 64
         Top = 8
         Width = 393
@@ -266,7 +266,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblQuantity: TgtQRLabel
+      object qrlblQuantity: TQRLabel
         Left = 458
         Top = 8
         Width = 74
@@ -312,7 +312,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         5.291666666666667000
         1899.708333333333000000)
       BandType = rbGroupHeader
-      object qrlblCutOutTitle: TgtQRLabel
+      object qrlblCutOutTitle: TQRLabel
         Left = 64
         Top = 6
         Width = 53
@@ -337,7 +337,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblCutOutCount: TgtQRLabel
+      object qrlblCutOutCount: TQRLabel
         Left = 454
         Top = 6
         Width = 46
@@ -388,7 +388,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
       HeaderBand = qrgrpEdgeProfile
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblEdgeProfileDescription: TgtQRLabel
+      object qrlblEdgeProfileDescription: TQRLabel
         Left = 64
         Top = 8
         Width = 393
@@ -413,7 +413,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblLength: TgtQRLabel
+      object qrlblLength: TQRLabel
         Left = 468
         Top = 8
         Width = 64
@@ -459,7 +459,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         5.291666666666667000
         1899.708333333333000000)
       BandType = rbGroupHeader
-      object qrlblEdgeTitle: TgtQRLabel
+      object qrlblEdgeTitle: TQRLabel
         Left = 64
         Top = 7
         Width = 78
@@ -484,7 +484,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblEdgeCount: TgtQRLabel
+      object qrlblEdgeCount: TQRLabel
         Left = 437
         Top = 7
         Width = 63
@@ -528,7 +528,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         304.270833333333300000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 226
         Top = 2
         Width = 269
@@ -559,7 +559,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 14
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 316
         Top = 26
         Width = 88
@@ -590,7 +590,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 9
       end
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 654
         Top = 8
         Width = 56
@@ -619,7 +619,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         Transparent = False
         FontSize = 8
       end
-      object gtQRSysData2: TgtQRSysData
+      object gtQRSysData2: TQRSysData
         Left = 640
         Top = 23
         Width = 69
@@ -649,7 +649,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         Transparent = False
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 183
         Top = 46
         Width = 353
@@ -680,7 +680,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 9
       end
-      object qrlblCategoryTitle: TgtQRLabel
+      object qrlblCategoryTitle: TQRLabel
         Left = 64
         Top = 94
         Width = 169
@@ -705,7 +705,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblCategoryCount: TgtQRLabel
+      object qrlblCategoryCount: TQRLabel
         Left = 486
         Top = 94
         Width = 46
@@ -750,7 +750,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         79.375000000000000000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 312
         Top = 8
         Width = 105
@@ -781,7 +781,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object qrlblTotalArea: TgtQRLabel
+      object qrlblTotalArea: TQRLabel
         Left = 472
         Top = 8
         Width = 60
@@ -812,7 +812,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 284
         Top = 0
         Width = 249
@@ -850,7 +850,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         79.375000000000000000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object qrlblTotalLength: TgtQRLabel
+      object qrlblTotalLength: TQRLabel
         Left = 426
         Top = 8
         Width = 106
@@ -881,7 +881,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 304
         Top = 8
         Width = 125
@@ -912,7 +912,7 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 284
         Top = 0
         Width = 249

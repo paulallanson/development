@@ -4,36 +4,36 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTRPSOWarranty = class(TForm)
     qrpDetails: TQuickRep;
     qrySalesOrders: TQuery;
     qrbGroupHeader: TQRGroup;
-    qrlblSortBy: TgtQRLabel;
-    qrGroupbyText: TgtQRDBText;
+    qrlblSortBy: TQRLabel;
+    qrGroupbyText: TQRDBText;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
-    QRSysData1: TgtQRSysData;
-    QRLabel3: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    QRSysData2: TgtQRSysData;
-    QRLabel1: TgtQRLabel;
-    qrlblSelection: TgtQRLabel;
-    gtQRLabel1: TgtQRLabel;
+    qrlblCaption: TQRLabel;
+    QRSysData1: TQRSysData;
+    QRLabel3: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    QRSysData2: TQRSysData;
+    QRLabel1: TQRLabel;
+    qrlblSelection: TQRLabel;
+    gtQRLabel1: TQRLabel;
     qrsbDetails: TQRSubDetail;
-    QRDBText2: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    QRDBText10: TgtQRDBText;
-    qrlblFittingDate: TgtQRLabel;
-    qrlblDescription: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
-    gtQRDBText2: TgtQRDBText;
-    gtQRLabel2: TgtQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRDBText10: TQRDBText;
+    qrlblFittingDate: TQRLabel;
+    qrlblDescription: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRDBText2: TQRDBText;
+    gtQRLabel2: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;

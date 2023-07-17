@@ -89,7 +89,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         219.604166666666700000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 443
         Top = 8
         Width = 149
@@ -120,7 +120,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 24
         Width = 69
@@ -150,7 +150,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         Transparent = False
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 24
         Top = 65
         Width = 18
@@ -181,7 +181,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 32
         Width = 74
@@ -212,7 +212,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 981
         Top = 8
         Width = 56
@@ -241,7 +241,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         Transparent = False
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 96
         Top = 65
         Width = 47
@@ -272,7 +272,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 168
         Top = 65
         Width = 62
@@ -303,7 +303,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 248
         Top = 65
         Width = 29
@@ -334,7 +334,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 654
         Top = 65
         Width = 25
@@ -365,7 +365,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 750
         Top = 65
         Width = 72
@@ -396,7 +396,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 880
         Top = 65
         Width = 23
@@ -427,7 +427,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 950
         Top = 65
         Width = 51
@@ -482,7 +482,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
       DataSet = qryReport
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblActivity: TgtQRLabel
+      object qrlblActivity: TQRLabel
         Left = 752
         Top = 4
         Width = 78
@@ -544,7 +544,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object qrlblFitterName: TgtQRLabel
+      object qrlblFitterName: TQRLabel
         Left = 652
         Top = 4
         Width = 72
@@ -575,7 +575,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object qrlblLogDate: TgtQRLabel
+      object qrlblLogDate: TQRLabel
         Left = 169
         Top = 4
         Width = 61
@@ -606,7 +606,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCost: TgtQRLabel
+      object qrlblCost: TQRLabel
         Left = 864
         Top = 4
         Width = 43
@@ -637,7 +637,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCompleted: TgtQRLabel
+      object qrlblCompleted: TQRLabel
         Left = 940
         Top = 4
         Width = 71
@@ -689,7 +689,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
       Expression = 'Job'
       Master = qrsbActivity
       ReprintOnNewPage = False
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 22
         Top = 4
         Width = 21
@@ -721,7 +721,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 94
         Top = 4
         Width = 323
@@ -753,7 +753,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 558
         Top = 4
         Width = 87
@@ -785,7 +785,7 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 491
         Top = 4
         Width = 57

@@ -4,61 +4,61 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmwtRPSOAntInvoice = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
+    qrlblCaption: TQRLabel;
     qrySalesOrders: TQuery;
     qrsbDetails: TQRSubDetail;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    QRDBText10: TgtQRDBText;
-    QRDBText11: TgtQRDBText;
-    QRLabel1: TgtQRLabel;
-    QRLabel12: TgtQRLabel;
-    QRLabel14: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRDBText10: TQRDBText;
+    QRDBText11: TQRDBText;
+    QRLabel1: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRLabel14: TQRLabel;
+    qrlblDateRange: TQRLabel;
     QRBand2: TQRBand;
-    QRLabel10: TgtQRLabel;
-    qrlblReportTotal: TgtQRLabel;
-    QRShape2: TgtQRShape;
-    QRDBText1: TgtQRDBText;
-    QRDBText9: TgtQRDBText;
-    qrlblVATTotal: TgtQRLabel;
-    qrlblGoodsTotal: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRDBText8: TgtQRDBText;
-    QRLabel9: TgtQRLabel;
-    QRDBText12: TgtQRDBText;
-    qrlblDeposit: TgtQRLabel;
-    qrlblDateRequired: TgtQRLabel;
-    QRSysData2: TgtQRSysData;
-    QRSysData1: TgtQRSysData;
-    qrlblSelection: TgtQRLabel;
+    QRLabel10: TQRLabel;
+    qrlblReportTotal: TQRLabel;
+    QRShape2: TQRShape;
+    QRDBText1: TQRDBText;
+    QRDBText9: TQRDBText;
+    qrlblVATTotal: TQRLabel;
+    qrlblGoodsTotal: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRDBText8: TQRDBText;
+    QRLabel9: TQRLabel;
+    QRDBText12: TQRDBText;
+    qrlblDeposit: TQRLabel;
+    qrlblDateRequired: TQRLabel;
+    QRSysData2: TQRSysData;
+    QRSysData1: TQRSysData;
+    qrlblSelection: TQRLabel;
     qrbGroupHeader: TQRGroup;
-    qrlblSortBy: TgtQRLabel;
-    qrGroupbyText: TgtQRDBText;
+    qrlblSortBy: TQRLabel;
+    qrGroupbyText: TQRDBText;
     qrbGroupFooter: TQRBand;
-    qrlblCustTotal: TgtQRLabel;
-    qrlblCustVAT: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    qrGroupbyFootText: TgtQRDBText;
-    gtQRLabel1: TgtQRLabel;
-    qrlblCustGoods: TgtQRLabel;
-    qrlblCustDeposit: TgtQRLabel;
-    gtqrStatus: TgtQRLabel;
+    qrlblCustTotal: TQRLabel;
+    qrlblCustVAT: TQRLabel;
+    QRShape1: TQRShape;
+    qrGroupbyFootText: TQRDBText;
+    gtQRLabel1: TQRLabel;
+    qrlblCustGoods: TQRLabel;
+    qrlblCustDeposit: TQRLabel;
+    gtqrStatus: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbCustomerFooterAfterPrint(Sender: TQRCustomBand;
@@ -256,20 +256,20 @@ begin
   qrsbDetails.color := clWhite;
   for iCount := 0 to pred(componentcount) do
     begin
-      if Components[iCount] is TgtQRDBText then
+      if Components[iCount] is TQRDBText then
         begin
-          TgtQRDBText(Components[iCount]).color := clWhite;
-          TgtQRDBText(Components[iCount]).font.Style := [];
+          TQRDBText(Components[iCount]).color := clWhite;
+          TQRDBText(Components[iCount]).font.Style := [];
         end;
-      if Components[iCount] is TgtQRLabel then
+      if Components[iCount] is TQRLabel then
         begin
-          TgtQRLabel(Components[iCount]).color := clWhite;
-          TgtQRLabel(Components[iCount]).font.Style := [];
+          TQRLabel(Components[iCount]).color := clWhite;
+          TQRLabel(Components[iCount]).font.Style := [];
         end;
-      if Components[iCount] is TgtQRRichText then
+      if Components[iCount] is TQRRichText then
         begin
-          TgtQRRichText(Components[iCount]).color := clWhite;
-          TgtQRRichText(Components[iCount]).font.Style := [];
+          TQRRichText(Components[iCount]).color := clWhite;
+          TQRRichText(Components[iCount]).font.Style := [];
         end;
     end;
 
@@ -280,21 +280,21 @@ begin
         begin
           if Components[iCount].Tag = 1 then
             begin
-              if Components[iCount] is TgtQRDBText then
-                TgtQRDBText(Components[iCount]).color := clMoneyGreen;
-              if Components[iCount] is TgtQRLabel then
-                TgtQRLabel(Components[iCount]).color := clMoneyGreen;
-              if Components[iCount] is TgtQRRichText then
-                TgtQRRichText(Components[iCount]).color := clMoneyGreen;
+              if Components[iCount] is TQRDBText then
+                TQRDBText(Components[iCount]).color := clMoneyGreen;
+              if Components[iCount] is TQRLabel then
+                TQRLabel(Components[iCount]).color := clMoneyGreen;
+              if Components[iCount] is TQRRichText then
+                TQRRichText(Components[iCount]).color := clMoneyGreen;
             end
           else
             begin
-              if Components[iCount] is TgtQRDBText then
-                TgtQRDBText(Components[iCount]).color := clWhite;
-              if Components[iCount] is TgtQRLabel then
-                TgtQRLabel(Components[iCount]).color := clWhite;
-              if Components[iCount] is TgtQRRichText then
-                TgtQRRichText(Components[iCount]).color := clWhite;
+              if Components[iCount] is TQRDBText then
+                TQRDBText(Components[iCount]).color := clWhite;
+              if Components[iCount] is TQRLabel then
+                TQRLabel(Components[iCount]).color := clWhite;
+              if Components[iCount] is TQRRichText then
+                TQRRichText(Components[iCount]).color := clWhite;
             end;
 
         end;
@@ -307,21 +307,21 @@ begin
         begin
           if Components[iCount].Tag = 1 then
             begin
-              if Components[iCount] is TgtQRDBText then
-                TgtQRDBText(Components[iCount]).font.Style := [fsitalic, fsbold];
-              if Components[iCount] is TgtQRLabel then
-                TgtQRLabel(Components[iCount]).font.Style := [fsitalic, fsbold];
-              if Components[iCount] is TgtQRRichText then
-                TgtQRRichText(Components[iCount]).font.Style := [fsitalic, fsbold];
+              if Components[iCount] is TQRDBText then
+                TQRDBText(Components[iCount]).font.Style := [fsitalic, fsbold];
+              if Components[iCount] is TQRLabel then
+                TQRLabel(Components[iCount]).font.Style := [fsitalic, fsbold];
+              if Components[iCount] is TQRRichText then
+                TQRRichText(Components[iCount]).font.Style := [fsitalic, fsbold];
             end
           else
             begin
-              if Components[iCount] is TgtQRDBText then
-                TgtQRDBText(Components[iCount]).font.Style := [];
-              if Components[iCount] is TgtQRLabel then
-                TgtQRLabel(Components[iCount]).font.Style := [];
-              if Components[iCount] is TgtQRRichText then
-                TgtQRRichText(Components[iCount]).font.Style := [];
+              if Components[iCount] is TQRDBText then
+                TQRDBText(Components[iCount]).font.Style := [];
+              if Components[iCount] is TQRLabel then
+                TQRLabel(Components[iCount]).font.Style := [];
+              if Components[iCount] is TQRRichText then
+                TQRRichText(Components[iCount]).font.Style := [];
             end;
 
         end;

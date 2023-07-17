@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, gtQrCtrls;
+  Dialogs, ComCtrls, QrCtrls;
 
 type
   TfrmwtRptsQuotes = class(TForm)

@@ -34,7 +34,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, DB, DBTables, StdCtrls, Buttons, ExtCtrls, gtQrCtrls;
+  Grids, DBGrids, DB, DBTables, StdCtrls, Buttons, ExtCtrls, QrCtrls;
 
 type
   TfrmAllFaxStatus = class(TForm)

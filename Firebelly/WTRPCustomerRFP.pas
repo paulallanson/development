@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables,
-  allCommon, gtQrCtrls, gtQrExport, qrprntr, printers, jpeg;
+  allCommon, QrCtrls, QrExport, qrprntr, printers, jpeg;
 
 type
   TfrmWTRPCustomerRFP = class(TForm)
@@ -49,22 +49,22 @@ type
     lblVat: TQRLabel;
     lblCustomerRef: TQRLabel;
     qryGetSO: TQuery;
-    QRLabel1: TgtQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    QRLabel15: TgtQRLabel;
+    QRLabel1: TQRLabel;
+    gtQRLabel2: TQRLabel;
+    QRLabel15: TQRLabel;
     GetNarrSQL: TQuery;
-    qriHeadLogo: TgtQRImage;
+    qriHeadLogo: TQRImage;
     QRLabel9: TQRLabel;
     QRLabel16: TQRLabel;
     lblGoods: TQRLabel;
-    qrlblPaymentTerms: TgtQRLabel;
-    qrshpPayment: TgtQRShape;
-    memPayment: TgtQRMemo;
+    qrlblPaymentTerms: TQRLabel;
+    qrshpPayment: TQRShape;
+    memPayment: TQRMemo;
     QRLabel11: TQRLabel;
-    qrlblSiteName: TgtQRLabel;
+    qrlblSiteName: TQRLabel;
     qrsdQLabour: TQRBand;
-    qrlblLabourUTR: TgtQRLabel;
-    qrlblLabourValue: TgtQRLabel;
+    qrlblLabourUTR: TQRLabel;
+    qrlblLabourValue: TQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;

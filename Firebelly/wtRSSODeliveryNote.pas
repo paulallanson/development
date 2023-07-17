@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
-  wtRPSODeliveryNote, gtQrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls;
+  wtRPSODeliveryNote, QrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls;
 
 type
   TfrmWTRSSODeliveryNote = class(TForm)

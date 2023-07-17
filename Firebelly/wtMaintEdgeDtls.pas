@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   wtMaintworktops, Grids, DBGrids, DBCtrls, StdCtrls, Buttons, Mask,
-  CRControls, gtQrCtrls;
+  CRControls, QrCtrls;
 
 type
   TfrmWtMaintEdgeDtls = class(TfrmWtMaintWorktops)

@@ -4,28 +4,40 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook8, ActiveX, COMobj, gtQrExport, Db, DBTables, Variants, gtQrCtrls, Outlook12_TLB;
+  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, DBTables, Variants, QrCtrls, Outlook12_TLB,
+  gtClasses3, gtXportIntf, gtQRXportIntf, Printer.Enums, gtCstDocEng,
+  gtCstPlnEng, gtCstHTMLEng, gtExHTMLEng, gtHTMLEng, gtCstGfxEng, gtBMPEng,
+  gtCstPDFEng, gtExPDFEng, gtPDFEng, gtJPEGEng, gtGIFEng, gtRTFEng;
 
 type
   TemailHandler = class(TDataModule)
     qrySelCustomerContacts: TQuery;
     qryEmailList: TQuery;
+    gtQRExportInterface1: TgtQRExportInterface;
+    gtHTMLEngine1: TgtHTMLEngine;
+    gtPDFEngine1: TgtPDFEngine;
+    gtBMPEngine1: TgtBMPEngine;
+    gtRTFEngine1: TgtRTFEngine;
+    gtGIFEngine1: TgtGIFEngine;
+    gtJPEGEngine1: TgtJPEGEngine;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
     attachmentTypeList: TStringList;
-    FEmailAttachment: TstringList;
+    FEmailAttachment: TStringList;
     recipientList: TStringList;
     CCList: TStringList;
     fileName: string;
     function populateRecipientList(customer, branch: integer): boolean;
-    procedure PrintToAttachment(report: TQuickRep; attachmentType: string);
-    procedure PrintToHTM(report: TQuickRep);
-    procedure PrintToPDF(report: TQuickRep);
-    procedure PrintToBMP(report: TQuickRep);
-    procedure PrintToRTF(report: TQuickRep);
-    procedure PrintToGIF(report: TQuickRep);
-    procedure PrintToJPG(report: TQuickRep);
+//    GDK ToDo: Remove after tests
+//    procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
+//    procedure PrintToAttachment(const Report: TQuickRep; const attachmentType: string);
+//    procedure PrintToHTM(report: TQuickRep);
+//    procedure PrintToPDF(report: TQuickRep);
+//    procedure PrintToBMP(report: TQuickRep);
+//    procedure PrintToRTF(report: TQuickRep);
+//    procedure PrintToGIF(report: TQuickRep);
+//    procedure PrintToJPG(report: TQuickRep);
     function GetRecipientList(sQueryString: string): boolean;
     procedure SendEmail(report: TQuickRep; fileName, Subject: string);
   public
@@ -44,7 +56,8 @@ var
 
 implementation
 
-uses AllCommon, AllEmailList;
+uses
+  AllCommon, AllEmailList, Printer.Tools;
 
 {$R *.DFM}
 
@@ -59,7 +72,7 @@ begin
 
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    self.PrintToAttachment(report, self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
     self.EmailViaOutlook(self.recipientList[inx], 'Test Email', self.FEmailAttachment, self.CCList[inx]);
   end;
 end;
@@ -73,7 +86,7 @@ begin
 
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    self.PrintToAttachment(report, self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
 
     try
       for icount := 0 to pred(AttachmentList.Count) do
@@ -92,7 +105,7 @@ var
 begin
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    self.PrintToAttachment(report, self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
     self.EmailViaOutlook(self.recipientList[inx], Subject, self.FEmailAttachment, self.CCList[inx]);
   end;
 end;
@@ -100,21 +113,19 @@ end;
 procedure TemailHandler.CreateOneEmail(report: TQuickRep; sQueryString: string; fileName, Subject: string);
 var
   inx: integer;
-  attachmentType, recipientList: string;
+  recipientList: string;
 begin
   self.fileName := fileName;
 
   if not self.GetRecipientList(sQueryString) then
     exit;
 
-  attachmentType := self.attachmentTypeList[0];
-
   recipientList := '';
 
   for inx := 0 to (self.recipientList.count - 1) do
     recipientList := recipientList + self.recipientList[inx] + ';';
 
-  self.PrintToAttachment(report, attachmentType);
+  PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[0]);
   self.EmailViaOutlook(recipientList, Subject, self.FEmailAttachment, self.CCList[0]);
 end;
 
@@ -188,23 +199,6 @@ begin
     Outlook.Quit;
     Outlook := nil;
   end;
-end;
-
-procedure TemailHandler.PrintToAttachment(report: TQuickRep; attachmentType: string);
-begin
-  if attachmentType = 'BMP' then
-    self.PrintToBMP(report)
-  else if attachmentType = 'GIF' then
-    self.PrintToGIF(report)
-  else if attachmentType = 'HTML' then
-    self.PrintToHTM(report)
-  else if attachmentType = 'JPG' then
-    self.PrintToJPG(report)
-  else if attachmentType = 'PDF' then
-    self.PrintToPDF(report)
-  else if attachmentType = 'RTF' then
-    self.PrintToRTF(report);
-    
 end;
 
 procedure TemailHandler.DataModuleCreate(Sender: TObject);
@@ -352,6 +346,23 @@ begin
     self.qryEmailList.active := false;
   end;
 
+end;
+
+(* GDK ToDo: Remove after tests
+procedure TemailHandler.PrintToAttachment(report: TQuickRep; attachmentType: string);
+begin
+  if attachmentType = 'BMP' then
+    self.PrintToBMP(report)
+  else if attachmentType = 'GIF' then
+    self.PrintToGIF(report)
+  else if attachmentType = 'HTML' then
+    self.PrintToHTM(report)
+  else if attachmentType = 'JPG' then
+    self.PrintToJPG(report)
+  else if attachmentType = 'PDF' then
+    self.PrintToPDF(report)
+  else if attachmentType = 'RTF' then
+    self.PrintToRTF(report);
 end;
 
 procedure TemailHandler.PrintToBMP(report: TQuickRep);
@@ -517,5 +528,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

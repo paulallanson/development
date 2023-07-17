@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, Grids, DBGrids, DB,
-  DBTables, wtContractsDM, gtQrCtrls;
+  DBTables, wtContractsDM, QrCtrls;
 
 type
   TfrmWTLUContractQuotes = class(TForm)

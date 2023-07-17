@@ -3,7 +3,7 @@ unit WTMaintQuotes;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, gtQrCtrls;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, QrCtrls;
 
 type
   TfrmWTMaintQuotes = class(TForm)

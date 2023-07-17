@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls;
 
 type
   TfrmwtRPJobAccSheet = class(TForm)
@@ -21,33 +21,33 @@ type
     qryCustomer: TQuery;
     dtsAddress: TDataSource;
     qrbQFooter: TQRBand;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    qrlblInstallation: TgtQRLabel;
-    qrlblSurvey: TgtQRLabel;
-    qrlblDelivery: TgtQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    qrlblInstallation: TQRLabel;
+    qrlblSurvey: TQRLabel;
+    qrlblDelivery: TQRLabel;
     qryCompany: TQuery;
     qrygetNotes: TQuery;
-    QRLabel1: TgtQRLabel;
-    qrmAddress: TgtQRMemo;
-    QRDBText5: TgtQRDBText;
-    QRLabel2: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
-    QRDBText2: TgtQRDBText;
-    QRLabel3: TgtQRLabel;
-    QRDBText4: TgtQRDBText;
-    QRLabel5: TgtQRLabel;
-    QRShape2: TgtQRShape;
-    QRLabel12: TgtQRLabel;
-    lblGrossSupply: TgtQRLabel;
-    qrlblGrossPrice: TgtQRLabel;
-    QRLabel17: TgtQRLabel;
-    qrlblVAT: TgtQRLabel;
-    QRShape4: TgtQRShape;
-    QRLabel18: TgtQRLabel;
-    qrlblGross: TgtQRLabel;
-    qrlblNett: TgtQRLabel;
+    QRLabel1: TQRLabel;
+    qrmAddress: TQRMemo;
+    QRDBText5: TQRDBText;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRShape2: TQRShape;
+    QRLabel12: TQRLabel;
+    lblGrossSupply: TQRLabel;
+    qrlblGrossPrice: TQRLabel;
+    QRLabel17: TQRLabel;
+    qrlblVAT: TQRLabel;
+    QRShape4: TQRShape;
+    QRLabel18: TQRLabel;
+    qrlblGross: TQRLabel;
+    qrlblNett: TQRLabel;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;

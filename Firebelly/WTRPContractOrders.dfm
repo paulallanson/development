@@ -92,7 +92,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -123,7 +123,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -184,7 +184,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Tag = 1
         Left = 511
         Top = 2
@@ -217,7 +217,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Tag = 1
         Left = 574
         Top = 2
@@ -250,7 +250,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOrderValue: TgtQRLabel
+      object qrlblOrderValue: TQRLabel
         Tag = 1
         Left = 970
         Top = 2
@@ -282,7 +282,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Tag = 1
         Left = 646
         Top = 2
@@ -315,7 +315,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblInvoiced: TgtQRLabel
+      object qrlblInvoiced: TQRLabel
         Tag = 1
         Left = 934
         Top = 2
@@ -347,7 +347,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTempDate: TgtQRLabel
+      object qrlblTempDate: TQRLabel
         Tag = 1
         Left = 808
         Top = 2
@@ -379,7 +379,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblFitDate: TgtQRLabel
+      object qrlblFitDate: TQRLabel
         Tag = 1
         Left = 872
         Top = 2
@@ -432,7 +432,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         79.375000000000000000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 962
         Top = 9
         Width = 79
@@ -463,7 +463,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 742
         Top = -1
         Width = 300
@@ -481,7 +481,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 711
         Top = 8
         Width = 108
@@ -512,7 +512,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 826
         Top = 8
         Width = 28
@@ -543,7 +543,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustCount: TgtQRLabel
+      object qrlblCustCount: TQRLabel
         Left = 890
         Top = 9
         Width = 31
@@ -595,7 +595,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 771
         Top = 9
         Width = 83
@@ -626,7 +626,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 742
         Top = -1
         Width = 300
@@ -644,7 +644,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 951
         Top = 9
         Width = 90
@@ -675,7 +675,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportCount: TgtQRLabel
+      object qrlblReportCount: TQRLabel
         Left = 890
         Top = 9
         Width = 31
@@ -725,7 +725,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 439
         Top = 2
         Width = 157
@@ -756,7 +756,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -786,7 +786,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 71
         Width = 42
@@ -817,7 +817,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 56
         Top = 71
         Width = 67
@@ -848,7 +848,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 200
         Top = 71
         Width = 47
@@ -879,7 +879,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -910,7 +910,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -939,7 +939,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         Transparent = False
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -970,7 +970,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 133
         Top = 71
         Width = 56
@@ -1001,7 +1001,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 392
         Top = 71
         Width = 20
@@ -1032,7 +1032,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 510
         Top = 71
         Width = 48
@@ -1063,7 +1063,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 574
         Top = 71
         Width = 59
@@ -1094,7 +1094,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 982
         Top = 71
         Width = 60
@@ -1125,7 +1125,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 646
         Top = 71
         Width = 52
@@ -1156,7 +1156,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 806
         Top = 71
         Width = 52
@@ -1187,7 +1187,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 870
         Top = 71
         Width = 52
@@ -1218,7 +1218,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 934
         Top = 71
         Width = 41
@@ -1272,7 +1272,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
       FooterBand = qrbQuoteFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = -24
         Top = 1
         Width = 73
@@ -1304,7 +1304,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 56
         Top = 1
         Width = 70
@@ -1336,7 +1336,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText8: TgtQRDBText
+      object QRDBText8: TQRDBText
         Left = 133
         Top = 1
         Width = 59
@@ -1368,7 +1368,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 200
         Top = 1
         Width = 185
@@ -1400,7 +1400,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 392
         Top = 1
         Width = 113
@@ -1432,7 +1432,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 512
         Top = 1
         Width = 145
@@ -1464,7 +1464,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 688
         Top = 1
         Width = 153
@@ -1516,7 +1516,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         79.375000000000000000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 742
         Top = -1
         Width = 300
@@ -1534,7 +1534,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 775
         Top = 7
         Width = 78
@@ -1565,7 +1565,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblContractTotal: TgtQRLabel
+      object qrlblContractTotal: TQRLabel
         Left = 941
         Top = 7
         Width = 100
@@ -1596,7 +1596,7 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
         WordWrap = True
         FontSize = 8
       end
-      object qrlblContractCount: TgtQRLabel
+      object qrlblContractCount: TQRLabel
         Left = 890
         Top = 7
         Width = 31

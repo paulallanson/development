@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  wtLUworktops, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DBTables, DB, gtQrCtrls;
+  wtLUworktops, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DBTables, DB, QrCtrls;
 
 type
   TfrmWtLUEdgeDtls = class(TfrmWtLUWorktops)

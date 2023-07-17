@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, Mask, gtQrCtrls, CRControls, DB, DBTables;
+  StdCtrls, Buttons, DBCtrls, Mask, QrCtrls, CRControls, DB, DBTables;
 
 type
   TfrmWtMaintThickness = class(TForm)

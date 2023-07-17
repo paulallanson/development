@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QrCtrls;
 
 type
   TfrmWTRPJobMasonRpt = class(TForm)

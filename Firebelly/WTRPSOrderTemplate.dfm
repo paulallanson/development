@@ -90,7 +90,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -121,7 +121,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -153,7 +153,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblPhone: TgtQRLabel
+      object qrlblPhone: TQRLabel
         Left = 264
         Top = 8
         Width = 74
@@ -184,7 +184,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrPhoneText: TgtQRDBText
+      object qrPhoneText: TQRDBText
         Left = 344
         Top = 8
         Width = 90
@@ -245,7 +245,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Tag = 1
         Left = 8
         Top = 1
@@ -272,7 +272,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Tag = 1
         Left = 64
         Top = 1
@@ -299,7 +299,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Tag = 1
         Left = 520
         Top = 1
@@ -326,7 +326,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Tag = 1
         Left = 264
         Top = 1
@@ -353,7 +353,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTotal: TgtQRLabel
+      object qrlblTotal: TQRLabel
         Tag = 1
         Left = 985
         Top = 0
@@ -385,7 +385,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Tag = 1
         Left = 128
         Top = 1
@@ -412,7 +412,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrrchTextAddress: TgtQRRichText
+      object qrrchTextAddress: TQRRichText
         Tag = 1
         Left = 664
         Top = 1
@@ -439,7 +439,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Lines.Strings = (
           'qrrchTextAddress')
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Tag = 1
         Left = 264
         Top = 17
@@ -466,7 +466,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblVAT: TgtQRLabel
+      object qrlblVAT: TQRLabel
         Tag = 1
         Left = 912
         Top = 0
@@ -498,7 +498,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGoods: TgtQRLabel
+      object qrlblGoods: TQRLabel
         Tag = 1
         Left = 836
         Top = 0
@@ -530,7 +530,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTemplateDate: TgtQRLabel
+      object qrlblTemplateDate: TQRLabel
         Tag = 1
         Left = 185
         Top = 1
@@ -583,7 +583,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         76.729166666666670000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 962
         Top = 7
         Width = 79
@@ -614,7 +614,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustVAT: TgtQRLabel
+      object qrlblCustVAT: TQRLabel
         Left = 886
         Top = 7
         Width = 75
@@ -645,7 +645,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -663,7 +663,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 647
         Top = 9
         Width = 108
@@ -694,7 +694,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 762
         Top = 9
         Width = 28
@@ -725,7 +725,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustGoods: TgtQRLabel
+      object qrlblCustGoods: TQRLabel
         Left = 809
         Top = 7
         Width = 88
@@ -777,7 +777,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 722
         Top = 7
         Width = 68
@@ -808,7 +808,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 951
         Top = 7
         Width = 90
@@ -839,7 +839,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -857,7 +857,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblReportVAT: TgtQRLabel
+      object qrlblReportVAT: TQRLabel
         Left = 875
         Top = 7
         Width = 86
@@ -888,7 +888,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportGoods: TgtQRLabel
+      object qrlblReportGoods: TQRLabel
         Left = 798
         Top = 7
         Width = 99
@@ -938,7 +938,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 404
         Top = 5
         Width = 226
@@ -969,7 +969,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -999,7 +999,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 71
         Width = 59
@@ -1030,7 +1030,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 80
         Top = 71
         Width = 23
@@ -1061,7 +1061,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 264
         Top = 71
         Width = 104
@@ -1092,7 +1092,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 520
         Top = 71
         Width = 52
@@ -1123,7 +1123,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 984
         Top = 71
         Width = 55
@@ -1154,7 +1154,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 27
         Width = 74
@@ -1185,7 +1185,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 128
         Top = 71
         Width = 30
@@ -1216,7 +1216,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 184
         Top = 71
         Width = 69
@@ -1247,7 +1247,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 664
         Top = 71
         Width = 86
@@ -1278,7 +1278,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -1307,7 +1307,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Transparent = False
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 864
         Top = 71
         Width = 33
@@ -1338,7 +1338,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 936
         Top = 71
         Width = 23
@@ -1369,7 +1369,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 47
         Width = 65

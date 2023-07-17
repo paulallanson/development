@@ -29,7 +29,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, ExtCtrls, gtQrCtrls;
+  StdCtrls, Buttons, Grids, ExtCtrls, QrCtrls;
 
 type
   TfrmWTFaxList = class(TForm)

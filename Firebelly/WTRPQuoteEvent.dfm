@@ -89,7 +89,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         219.604166666666700000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 449
         Top = 8
         Width = 137
@@ -120,7 +120,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 24
         Width = 69
@@ -150,7 +150,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         Transparent = False
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 24
         Top = 65
         Width = 30
@@ -181,7 +181,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 32
         Width = 74
@@ -212,7 +212,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 981
         Top = 8
         Width = 56
@@ -241,7 +241,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         Transparent = False
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 96
         Top = 65
         Width = 47
@@ -272,7 +272,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 168
         Top = 65
         Width = 53
@@ -303,7 +303,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 264
         Top = 65
         Width = 29
@@ -334,7 +334,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 672
         Top = 65
         Width = 44
@@ -386,7 +386,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
       Expression = 'Account_Manager_Name'
       Master = qrsbActivity
       ReprintOnNewPage = False
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 8
         Width = 100
@@ -417,7 +417,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 120
         Top = 8
         Width = 137
@@ -473,7 +473,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
       DataSet = qryReport
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblActivity: TgtQRLabel
+      object qrlblActivity: TQRLabel
         Left = 168
         Top = 4
         Width = 78
@@ -535,7 +535,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOperatorName: TgtQRLabel
+      object qrlblOperatorName: TQRLabel
         Left = 675
         Top = 4
         Width = 126
@@ -587,7 +587,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
       Expression = 'Quote'
       Master = qrsbActivity
       ReprintOnNewPage = False
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 22
         Top = 1
         Width = 34
@@ -619,7 +619,7 @@ object frmWTRPQuoteEvent: TfrmWTRPQuoteEvent
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 94
         Top = 1
         Width = 219

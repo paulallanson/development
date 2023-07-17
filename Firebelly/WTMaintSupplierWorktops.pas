@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DBCtrls, StdCtrls, Grids, DBGrids, Buttons, ExtCtrls, ComCtrls,
-  WTSupplierDM;
+  WTSupplierDM, Data.DB;
 
 type
   TfrmWTMaintSupplierWorktops = class(TForm)
@@ -75,7 +75,7 @@ begin
         begin
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+              dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
 
               AddSupplierWorktops(dbgDetails.datasource.dataset.fieldbyname('Worktop').asinteger);
             end;

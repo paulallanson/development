@@ -4,8 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, StdCtrls, DBTables, Buttons, Printers, ExtCtrls, gtQrCtrls, IniFiles,
-  wtRPSalesInvoice, gtQrExport, AllCommon;
+  DB, StdCtrls, DBTables, Buttons, Printers, ExtCtrls, QrCtrls, IniFiles,
+  wtRPSalesInvoice, QrExport, AllCommon;
 
 type
   TfrmWTRSSalesInvoiceReprint = class(TForm)
@@ -60,7 +60,8 @@ type
   private
     FEmailAttachment : TstringList;
     sAttachmentType: string;
-    procedure PrintToAttachment(frmWTRPSalesInvoice: TfrmWTRPSalesInvoice; tempCode: string);
+    // GDK ToDo: Remove after testings
+    // procedure PrintToAttachment(frmWTRPSalesInvoice: TfrmWTRPSalesInvoice; tempCode: string);
   end;
 
 var
@@ -69,7 +70,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtEmailList, wtMain;
+uses
+  wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
   SQLCore =
@@ -606,7 +608,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  Printtoattachment(frmWTRPSalesInvoice, EmailArray[irow,1]);
+                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, sFileName, EmailArray[irow,1]);
 
                   if iInvoiceCount = 1 then
                     begin
@@ -673,7 +675,7 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  Printtoattachment(frmWTRPSalesInvoice, EmailArray[irow,1]);
+                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, sFileName, EmailArray[irow,1]);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];
 
@@ -759,6 +761,7 @@ begin
   TEdit(memselection).charcase := ecUpperCase;
 end;
 
+(*
 procedure TfrmWTRSSalesInvoiceReprint.PrintToAttachment(
   frmWTRPSalesInvoice: TfrmWTRPSalesInvoice; tempCode: string);
 var
@@ -888,5 +891,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

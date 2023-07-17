@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, wtSalesInvoiceDM,
-  Db, DBTables, gtQrCtrls, IniFiles, Buttons;
+  Db, DBTables, QrCtrls, IniFiles, Buttons;
 
 type
   TfrmWTLUSalesInvoices = class(TForm)

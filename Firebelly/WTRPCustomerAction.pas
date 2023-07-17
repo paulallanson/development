@@ -4,37 +4,37 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmwtRPCustomerAction = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
+    qrlblCaption: TQRLabel;
     qryReport: TQuery;
     qrgCustomerHead: TQRGroup;
     qrsbDetails: TQRSubDetail;
-    QRLabel2: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    QRLabel14: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    QRDBText9: TgtQRDBText;
-    QRSysData2: TgtQRSysData;
-    QRSysData1: TgtQRSysData;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText4: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText11: TgtQRDBText;
-    QRDBText12: TgtQRDBText;
-    QRLabel1: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    gtQRDBText1: TgtQRDBText;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel14: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    QRDBText9: TQRDBText;
+    QRSysData2: TQRSysData;
+    QRSysData1: TQRSysData;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText11: TQRDBText;
+    QRDBText12: TQRDBText;
+    QRLabel1: TQRLabel;
+    QRLabel5: TQRLabel;
+    gtQRLabel1: TQRLabel;
+    gtQRDBText1: TQRDBText;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;

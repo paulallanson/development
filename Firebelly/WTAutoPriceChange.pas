@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ExtCtrls, DB, DBTables, Grids, DBGrids, ComCtrls,
-  CRControls, DBCtrls, gtQrCtrls, Mask, DateUtils;
+  CRControls, DBCtrls, QrCtrls, Mask, DateUtils;
 
 type
   TfrmWTAutoPriceChange = class(TForm)

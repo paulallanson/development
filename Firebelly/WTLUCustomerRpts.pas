@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, gtQrCtrls;
+  ComCtrls, StdCtrls, ExtCtrls, QrCtrls;
 
 type
   TfrmWTLUCustomerRpts = class(TForm)

@@ -4,32 +4,32 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTRPQuoteEvent = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
-    QRSysData1: TgtQRSysData;
+    qrlblCaption: TQRLabel;
+    QRSysData1: TQRSysData;
     qryReport: TQuery;
     qrgOperatorHead: TQRGroup;
-    QRLabel2: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
-    QRLabel4: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    QRSysData2: TgtQRSysData;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRLabel4: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    QRSysData2: TQRSysData;
     qrsbActivity: TQRSubDetail;
-    qrlblActivity: TgtQRLabel;
+    qrlblActivity: TQRLabel;
     qrlblNotes: TQRLabel;
-    qrlblOperatorName: TgtQRLabel;
-    gtQRLabel5: TgtQRLabel;
+    qrlblOperatorName: TQRLabel;
+    gtQRLabel5: TQRLabel;
     qrpQuoteHead: TQRGroup;
-    gtQRDBText1: TgtQRDBText;
-    QRDBText2: TgtQRDBText;
-    gtQRLabel1: TgtQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
+    gtQRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    gtQRLabel1: TQRLabel;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel3: TQRLabel;
     procedure qrsbActivityBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure FormCreate(Sender: TObject);

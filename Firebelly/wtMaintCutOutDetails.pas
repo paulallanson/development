@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, CRControls, Buttons, DBCtrls, gtQrCtrls;
+  Dialogs, DB, DBTables, StdCtrls, CRControls, Buttons, DBCtrls, QrCtrls;
 
 type
   TfrmWTMaintCutOutDetails = class(TForm)

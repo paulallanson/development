@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, ExtCtrls, OleCtnrs, Grids, DBGrids, DBTables, AllCommon,
-  Buttons, DB, gtQrCtrls;
+  Buttons, DB, QrCtrls;
 
 type
   TfrmWTSendtoExcel = class(TForm)

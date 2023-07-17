@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtPurchasesDM, gtQrCtrls;
+  Dialogs, wtPurchasesDM, QrCtrls;
 
 type
   TfrmWTMaintPurchOrders = class(TForm)

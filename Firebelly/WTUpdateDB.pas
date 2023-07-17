@@ -3,7 +3,7 @@ unit WTUpdateDB;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, gtQrCtrls;
+  SysUtils, Classes, DB, DBTables, QrCtrls;
 
 type
   TdtmdlUpdateDB = class(TDataModule)

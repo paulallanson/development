@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, gtQrCtrls,
+  Dialogs, ExtCtrls, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
   ComCtrls;
 
 type

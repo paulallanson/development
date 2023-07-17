@@ -6,8 +6,8 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Mask, DBCtrls, Buttons, ExtCtrls, ComCtrls, DB, ShellAPI,
   DBTables, ImgList, ToolWin, Grids, DBGrids, wtSupplierDM, Spin, Inifiles, DateSelV5,
-  taoCntrr, taoFrmts, taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls;
+  taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
+  CRControls, System.ImageList;
 
 type
   TfrmWTMaintSupplier = class(TForm)
@@ -107,34 +107,6 @@ type
     BitBtn12: TBitBtn;
     dbgWorktopDetails: TDBGrid;
     tmrWorktopSearch: TTimer;
-    taoWinControl1: TtaoWinControl;
-    taoWinControl1In1: TtaoInFileContents;
-    taoWinControl1In2: TtaoInCells;
-    taoWinControl1In3: TtaoInBiff8;
-    taoWinControl1In4: TtaoInBiff5;
-    taoWinControl1In5: TtaoInUnicodeText;
-    taoWinControl1In6: TtaoInText;
-    taoWinControl1In7: TtaoInHDrop;
-    taoWinControl1In8: TtaoInShellIDList;
-    taoWinControl1In9: TtaoInFileContentsW;
-    taoWinControl1In10: TtaoInOEMessage;
-    taoWinControl1In11: TtaoInURL;
-    taoWinControl1In12: TtaoInURLNetscape4;
-    taoWinControl1Out1: TtaoOutBiff8;
-    taoWinControl1Out2: TtaoOutRtf;
-    taoWinControl1Out3: TtaoOutUnicodeText;
-    taoWinControl1Out4: TtaoOutText;
-    taoWinControl1Out5: TtaoOutCells;
-    taoWinControl1Out6: TtaoOutHDrop;
-    taoWinControl1Out7: TtaoOutFileNameMap;
-    taoWinControl1Out8: TtaoOutShellIDList;
-    taoWinControl1Out9: TtaoOutFileDescriptor;
-    taoWinControl1Out10: TtaoOutFileDescriptorW;
-    taoWinControl1Out11: TtaoOutFileContents;
-    taoWinControl1Out12: TtaoOutPreferredEffect;
-    taoWinControl1Out13: TtaoOutURL;
-    taoWinControl1Out14: TtaoOutURLShortcut;
-    taoWinControl1Out15: TtaoOutURLShortcutTitle;
     pmnuDocuments: TPopupMenu;
     pmnuOpen: TMenuItem;
     pmnuPaste: TMenuItem;
@@ -219,12 +191,6 @@ type
     procedure dbgWorktopDetailsDblClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn6Click(Sender: TObject);
-    procedure taoWinControl1SetDataPaste(Sender: TObject;
-      Data: IInterface);
-    procedure taoWinControl1SetDataTarget(Sender: TObject;
-      Data: IInterface; X, Y: Integer);
-    procedure taoWinControl1UpdateAction(Sender: TObject;
-      Action: TtaoUpdateAction; var Enable: Boolean);
     procedure pmnuDocumentsPopup(Sender: TObject);
     procedure pmnuOpenClick(Sender: TObject);
     procedure pmnuPasteClick(Sender: TObject);
@@ -261,7 +227,6 @@ type
     procedure SetProductButtonsFunction(Dataset: TDataset);
     procedure SetWorktopButtons(Sender: TObject; Field: TField);
     function FormatDateasDateTime(sDate: string): TDateTime;
-    procedure MyWinControlSetData(const Data: IInterface);
     function ParseDocumentFrom(tmpFrom: string): string;
     procedure ParseMessage(const AFileName: string; var ATo, AFrom,
       ASubject, ADate, ABody: string);
@@ -687,7 +652,7 @@ begin
 
         for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
           begin
-            dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+            dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
 
             if frmWTMaintSupplierWorktopCost.BasisGroup.itemindex = 1 then
   	          rCost := dbgDetails.DataSource.DataSet.fieldbyname('Unit_Cost').asfloat * (1+(strtofloat(frmWTMaintSupplierWorktopCost.edtChange.text)/100))
@@ -773,7 +738,7 @@ begin
         begin
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+              dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
               SupplierWorktopInactive(Supplier, dbgDetails.DataSource.DataSet.fieldbyname('Worktop').asinteger, false);
             end;
           dtmdlOneSupplier.RefreshWorktopPrices(Supplier);
@@ -787,7 +752,7 @@ begin
             begin
               for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
                 begin
-                  dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+                  dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
                   SupplierWorktopDelete(Supplier, dbgDetails.DataSource.DataSet.fieldbyname('Worktop').asinteger);
                 end;
               dtmdlOneSupplier.RefreshWorktopPrices(Supplier);
@@ -799,7 +764,7 @@ begin
             begin
               for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
                 begin
-                  dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+                  dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
                   SupplierWorktopInactive(Supplier, dbgDetails.DataSource.DataSet.fieldbyname('Worktop').asinteger, true);
                 end;
               dtmdlOneSupplier.RefreshWorktopPrices(Supplier);
@@ -1281,121 +1246,6 @@ begin
         end;
      end;
 
-end;
-
-procedure TfrmWTMaintSupplier.taoWinControl1SetDataPaste(Sender: TObject;
-  Data: IInterface);
-begin
-  MyWinControlSetData(Data);
-
-end;
-
-procedure TfrmWTMaintSupplier.taoWinControl1SetDataTarget(Sender: TObject;
-  Data: IInterface; X, Y: Integer);
-begin
-{ Ignore the drop point. So we can handle drag-and-drop and clipboard operations in uniform way. }
-  MyWinControlSetData(Data);
-
-end;
-
-procedure TfrmWTMaintSupplier.taoWinControl1UpdateAction(Sender: TObject;
-  Action: TtaoUpdateAction; var Enable: Boolean);
-begin
- { The Paste sub-item in the Edit menu is linked to an Action object. Enable is False on enter. }
-  Enable := True;
-
-end;
-
-procedure TfrmWTMaintSupplier.MyWinControlSetData(const Data: IUnknown);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'This file doesn''t come from Microsoft Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  MyData: ItaoCells;
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  myNewDate: TDateTime;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  sFile, sFullFile: string;
-  iLength, iPos, icount: integer;
-begin
-  if Supports(Data, ItaoCells, MyData) then
-    begin
-      MyPath := dtmdlWorktops.GetCompanySupplierDirectory + '\' + edtSupplierName.text +'\';
-
-      if not DirectoryExists(MyPath) then
-  	    begin
-     	    CreateDirectory(MyPath);
-  	    end;
-
-      for i := 0 to MyData.RowCount - 1 do
-        begin
-          MyFileName := MyData[0, i];
-          MyExtension := LowerCase(ExtractFileExt(MyFileName));
-          if MyExtension = cExtensionOutlook then
-            begin
-
-{ Store the contents as a file on the disk. }
-              MyFilePath := MyPath + MyFileName;
-
-{If the file name already exists then increase the number}
-              icount := 0;
-              NewFilePath := MyFilePath;
-              while FileExists(NewFilePath) = true do
-                begin
-                  inc(icount);
-                  NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-                end;
-
-              MyFilePath := NewFilePath;
-
-              MyFileStream := TFileStream.Create(MyFilePath, fmCreate or fmShareDenyWrite);
-              try
-                TextToStream(MyData[1, i], MyFileStream);
-              finally
-                MyFileStream.Free;
-              end;
-{ GUI }
-              try
-                ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-                if trim(MyDate) = '' then
-                  myNewDate := date
-                else
-                  myNewDate := FormatDateasDateTime(MyDate);
-              except
-                myNewdate := date
-              end;
-//  This is where we add the data into the grid and to the document component
-
-              ShowDocuments;
-            end
-          else
-            begin
-              sFullFile := myFileName;
-              iLength := length(sFullFile);
-
-              iCount := 1;
-
-              while iCount <> 0 do
-                begin
-                  ipos := pos('\',sFullFile);
-
-                  sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                  iCount := pos('\',sFullFile);
-                end;
-
-              sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-              FileCopy(myFileName, myPath + sfile) ;
-              ShowDocuments;
-            end;
-        end;
-    end;
 end;
 
 procedure TfrmWTMaintSupplier.ParseMessage(const AFileName: string; var ATo, AFrom,

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, DateUtils, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, DateUtils, QrCtrls;
 
 type
   TfrmwtRPSOrderSchedule = class(TForm)
@@ -12,21 +12,21 @@ type
     qrySalesOrders: TQuery;
     qrbGroupHeader: TQRGroup;
     qrsbDetails: TQRSubDetail;
-    qrlblSortBy: TgtQRLabel;
-    qrGroupbyText: TgtQRDBText;
-    QRDBText2: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    qrlblPhone: TgtQRLabel;
-    qrPhoneText: TgtQRDBText;
+    qrlblSortBy: TQRLabel;
+    qrGroupbyText: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    qrlblPhone: TQRLabel;
+    qrPhoneText: TQRDBText;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
-    QRSysData1: TgtQRSysData;
-    QRLabel3: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    qrdbTemplateDate: TgtQRDBText;
+    qrlblCaption: TQRLabel;
+    QRSysData1: TQRSysData;
+    QRLabel3: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    qrdbTemplateDate: TQRDBText;
     qrySalesOrdersSales_Order: TIntegerField;
     qrySalesOrdersSales_order_Line_no: TIntegerField;
     qrySalesOrdersNett_Price: TFloatField;
@@ -48,39 +48,39 @@ type
     qrySalesOrdersInstall_Address: TIntegerField;
     qrySalesOrdersSales_Order_Status: TIntegerField;
     qrySalesOrdersSales_Order_Status_Desc: TStringField;
-    QRSysData2: TgtQRSysData;
-    qrdbDescription: TgtQRDBText;
-    qrlblWeek1: TgtQRLabel;
-    qrlblWeek2: TgtQRLabel;
-    qrlblWeek3: TgtQRLabel;
-    qrlblWeek4: TgtQRLabel;
-    qrlblWeek5: TgtQRLabel;
-    qrlblWeek6: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    qrdbFittingDate: TgtQRDBText;
+    QRSysData2: TQRSysData;
+    qrdbDescription: TQRDBText;
+    qrlblWeek1: TQRLabel;
+    qrlblWeek2: TQRLabel;
+    qrlblWeek3: TQRLabel;
+    qrlblWeek4: TQRLabel;
+    qrlblWeek5: TQRLabel;
+    qrlblWeek6: TQRLabel;
+    QRLabel11: TQRLabel;
+    qrdbFittingDate: TQRDBText;
     qrySalesOrdersDate_Required: TDateTimeField;
     qrySalesOrdersMaterials_Required: TStringField;
-    qrlblOverdueDate: TgtQRLabel;
-    qrlblMatDate: TgtQRLabel;
+    qrlblOverdueDate: TQRLabel;
+    qrlblMatDate: TQRLabel;
     qrySalesOrdersMaterials_Reqd_Date: TDateTimeField;
     qrySalesOrdersMaterials_Recd_Date: TDateTimeField;
-    qrlblFutureDate: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    QRLabel2: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
+    qrlblFutureDate: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRShape1: TQRShape;
+    QRLabel2: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
     qrySalesOrdersDate_Type: TStringField;
-    QRShape2: TgtQRShape;
-    QRShape3: TgtQRShape;
-    QRShape4: TgtQRShape;
-    QRShape5: TgtQRShape;
-    QRShape6: TgtQRShape;
-    qrlblMatReceived: TgtQRLabel;
-    QRLabel9: TgtQRLabel;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    QRShape5: TQRShape;
+    QRShape6: TQRShape;
+    qrlblMatReceived: TQRLabel;
+    QRLabel9: TQRLabel;
     qrySalesOrdersOn_Hold: TStringField;
-    qrlblOnHold: TgtQRLabel;
+    qrlblOnHold: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;
@@ -160,7 +160,7 @@ procedure TfrmwtRPSOrderSchedule.qrsbDetailsBeforePrint(Sender: TQRCustomBand;
 var
   CompleteTotal, QuoteTotal, VATTotal: real;
   icount: integer;
-  templbl: TgtQRLabel;
+  templbl: TQRLabel;
 begin
   {position the template date details}
   for icount := 1 to 6 do
@@ -168,7 +168,7 @@ begin
       if (qrySalesOrders.fieldbyname('Template_Date').asdatetime >= weekdates[icount]) and
          (qrySalesOrders.fieldbyname('Template_Date').asdatetime < (weekdates[icount]+7)) then
         begin
-          templbl := ((FindComponent('qrlblWeek' + IntToStr(icount))) as TgtQRLabel);
+          templbl := ((FindComponent('qrlblWeek' + IntToStr(icount))) as TQRLabel);
           try
             templbl.Caption := padateStr(WeekDates[icount]);
           except
@@ -192,7 +192,7 @@ begin
       if (qrySalesOrders.fieldbyname('Date_Required').asdatetime >= weekdates[icount]) and
          (qrySalesOrders.fieldbyname('Date_Required').asdatetime < (weekdates[icount]+7)) then
         begin
-          templbl := ((FindComponent('qrlblWeek' + IntToStr(icount))) as TgtQRLabel);
+          templbl := ((FindComponent('qrlblWeek' + IntToStr(icount))) as TQRLabel);
           try
             templbl.Caption := padateStr(WeekDates[icount]);
           except
@@ -353,11 +353,11 @@ procedure TfrmwtRPSOrderSchedule.QRBand1BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
   i: integer;
-  templbl: TgtQRLabel;
+  templbl: TQRLabel;
 begin
   for i := 1 to 6 do
     begin
-      templbl := ((FindComponent('qrlblWeek' + IntToStr(i))) as TgtQRLabel);
+      templbl := ((FindComponent('qrlblWeek' + IntToStr(i))) as TQRLabel);
       try
         templbl.Caption := padateStr(WeekDates[i]);
       except

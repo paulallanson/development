@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon;
 
 type
   TfrmWTRPJobCutSched = class(TForm)
@@ -13,44 +13,44 @@ type
     dtsReport: TDataSource;
     qryJElements: TQuery;
     qrgJob: TQRGroup;
-    QRLabel1: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    QRLabel9: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    QRLabel12: TgtQRLabel;
-    QRLabel13: TgtQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRLabel13: TQRLabel;
     qrsdElement: TQRSubDetail;
-    QRShape1: TgtQRShape;
-    QRShape2: TgtQRShape;
-    QRShape3: TgtQRShape;
-    QRShape4: TgtQRShape;
-    QRShape5: TgtQRShape;
-    QRShape6: TgtQRShape;
-    QRShape7: TgtQRShape;
-    QRShape8: TgtQRShape;
-    QRShape9: TgtQRShape;
-    QRShape10: TgtQRShape;
-    qrlblCount: TgtQRLabel;
-    qrlblDescription: TgtQRLabel;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText4: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    QRSysData1: TgtQRSysData;
-    qrlblDateRequired: TgtQRLabel;
-    qrlblJobNumber: TgtQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    QRShape5: TQRShape;
+    QRShape6: TQRShape;
+    QRShape7: TQRShape;
+    QRShape8: TQRShape;
+    QRShape9: TQRShape;
+    QRShape10: TQRShape;
+    qrlblCount: TQRLabel;
+    qrlblDescription: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRSysData1: TQRSysData;
+    qrlblDateRequired: TQRLabel;
+    qrlblJobNumber: TQRLabel;
     qryUpJStatus: TQuery;
     qryUpSOStatus: TQuery;
-    qrlblSalesOrder: TgtQRLabel;
+    qrlblSalesOrder: TQRLabel;
     procedure qrpCutScheduleBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgJobBeforePrint(Sender: TQRCustomBand;

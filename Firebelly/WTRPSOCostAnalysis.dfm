@@ -92,7 +92,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -123,7 +123,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 80
         Top = 8
         Width = 80
@@ -184,7 +184,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 0
         Top = 1
         Width = 62
@@ -210,7 +210,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrdbDate: TgtQRDBText
+      object qrdbDate: TQRDBText
         Left = 68
         Top = 1
         Width = 62
@@ -237,7 +237,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 320
         Top = 1
         Width = 153
@@ -263,7 +263,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 136
         Top = 1
         Width = 185
@@ -289,7 +289,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 774
         Top = 1
         Width = 67
@@ -315,7 +315,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 584
         Top = 1
         Width = 89
@@ -341,7 +341,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 675
         Top = 1
         Width = 89
@@ -367,7 +367,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCost: TgtQRLabel
+      object qrlblCost: TQRLabel
         Left = 871
         Top = 0
         Width = 43
@@ -392,7 +392,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCostPerc: TgtQRLabel
+      object qrlblCostPerc: TQRLabel
         Left = 976
         Top = 0
         Width = 65
@@ -417,7 +417,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 472
         Top = 1
         Width = 97
@@ -443,7 +443,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblMargin: TgtQRLabel
+      object qrlblMargin: TQRLabel
         Left = 936
         Top = 0
         Width = 53
@@ -468,7 +468,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportDate: TgtQRLabel
+      object qrlblReportDate: TQRLabel
         Left = 62
         Top = 1
         Width = 75
@@ -514,7 +514,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustPerc: TgtQRLabel
+      object qrlblCustPerc: TQRLabel
         Left = 964
         Top = 7
         Width = 77
@@ -545,7 +545,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustMargin: TgtQRLabel
+      object qrlblCustMargin: TQRLabel
         Left = 898
         Top = 7
         Width = 90
@@ -576,7 +576,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustCost: TgtQRLabel
+      object qrlblCustCost: TQRLabel
         Left = 837
         Top = 7
         Width = 78
@@ -607,7 +607,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustGoods: TgtQRLabel
+      object qrlblCustGoods: TQRLabel
         Left = 753
         Top = 7
         Width = 88
@@ -638,7 +638,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -656,7 +656,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 623
         Top = 7
         Width = 108
@@ -687,7 +687,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 738
         Top = 7
         Width = 28
@@ -739,7 +739,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object qrlblReportPerc: TgtQRLabel
+      object qrlblReportPerc: TQRLabel
         Left = 953
         Top = 7
         Width = 88
@@ -770,7 +770,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportMargin: TgtQRLabel
+      object qrlblReportMargin: TQRLabel
         Left = 887
         Top = 7
         Width = 101
@@ -801,7 +801,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportCost: TgtQRLabel
+      object qrlblReportCost: TQRLabel
         Left = 827
         Top = 7
         Width = 89
@@ -832,7 +832,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportGoods: TgtQRLabel
+      object qrlblReportGoods: TQRLabel
         Left = 743
         Top = 7
         Width = 99
@@ -863,7 +863,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 698
         Top = 7
         Width = 68
@@ -894,7 +894,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -931,7 +931,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 396
         Top = 2
         Width = 243
@@ -962,7 +962,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 976
         Top = 23
         Width = 69
@@ -992,7 +992,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 0
         Top = 71
         Width = 59
@@ -1023,7 +1023,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDate: TgtQRLabel
+      object qrlblDate: TQRLabel
         Left = 70
         Top = 71
         Width = 54
@@ -1054,7 +1054,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 136
         Top = 71
         Width = 47
@@ -1085,7 +1085,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 320
         Top = 71
         Width = 52
@@ -1116,7 +1116,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 1004
         Top = 71
         Width = 36
@@ -1147,7 +1147,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -1178,7 +1178,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 990
         Top = 8
         Width = 56
@@ -1207,7 +1207,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         Transparent = False
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 806
         Top = 71
         Width = 33
@@ -1238,7 +1238,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 851
         Top = 71
         Width = 63
@@ -1269,7 +1269,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 584
         Top = 71
         Width = 20
@@ -1300,7 +1300,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -1331,7 +1331,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 675
         Top = 71
         Width = 32
@@ -1362,7 +1362,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 472
         Top = 71
         Width = 98
@@ -1393,7 +1393,7 @@ object frmWTRPSOCostAnalysis: TfrmWTRPSOCostAnalysis
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 955
         Top = 71
         Width = 33

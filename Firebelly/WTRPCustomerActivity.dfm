@@ -90,7 +90,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         240.770833333333300000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 431
         Top = 8
         Width = 173
@@ -121,7 +121,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 24
         Width = 69
@@ -151,7 +151,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Transparent = False
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 24
         Top = 65
         Width = 47
@@ -182,7 +182,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 248
         Top = 65
         Width = 64
@@ -213,7 +213,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 32
         Width = 74
@@ -244,7 +244,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 981
         Top = 8
         Width = 56
@@ -273,7 +273,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Transparent = False
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 520
         Top = 65
         Width = 61
@@ -304,7 +304,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 608
         Top = 65
         Width = 61
@@ -335,7 +335,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 704
         Top = 65
         Width = 60
@@ -366,7 +366,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 776
         Top = 65
         Width = 60
@@ -397,7 +397,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 880
         Top = 65
         Width = 66
@@ -428,7 +428,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 954
         Top = 65
         Width = 66
@@ -459,7 +459,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 336
         Top = 65
         Width = 74
@@ -512,7 +512,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       FooterBand = qrbCustomerFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 8
         Width = 23
@@ -543,7 +543,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 64
         Top = 8
         Width = 53
@@ -604,7 +604,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblSOrderValue: TgtQRLabel
+      object qrlblSOrderValue: TQRLabel
         Left = 752
         Top = 1
         Width = 84
@@ -635,7 +635,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 22
         Top = 1
         Width = 219
@@ -661,7 +661,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 248
         Top = 1
         Width = 67
@@ -687,7 +687,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblLastActivity: TgtQRLabel
+      object qrlblLastActivity: TQRLabel
         Left = 504
         Top = 1
         Width = 78
@@ -718,7 +718,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblQuoteCount: TgtQRLabel
+      object qrlblQuoteCount: TQRLabel
         Left = 592
         Top = 1
         Width = 78
@@ -749,7 +749,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSOrderCount: TgtQRLabel
+      object qrlblSOrderCount: TQRLabel
         Left = 680
         Top = 1
         Width = 84
@@ -780,7 +780,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSInvoiceCount: TgtQRLabel
+      object qrlblSInvoiceCount: TQRLabel
         Left = 853
         Top = 1
         Width = 90
@@ -811,7 +811,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSInvoiceValue: TgtQRLabel
+      object qrlblSInvoiceValue: TQRLabel
         Left = 930
         Top = 1
         Width = 90
@@ -842,7 +842,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 336
         Top = 1
         Width = 136
@@ -889,7 +889,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         97.895833333333330000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblGrpQuoteCount: TgtQRLabel
+      object qrlblGrpQuoteCount: TQRLabel
         Left = 573
         Top = 9
         Width = 96
@@ -920,7 +920,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 64
         Top = 9
         Width = 136
@@ -951,7 +951,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustomerCount: TgtQRLabel
+      object qrlblCustomerCount: TQRLabel
         Left = 216
         Top = 9
         Width = 115
@@ -982,7 +982,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGrpOrderCount: TgtQRLabel
+      object qrlblGrpOrderCount: TQRLabel
         Left = 670
         Top = 9
         Width = 95
@@ -1031,7 +1031,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblGrpOrderValue: TgtQRLabel
+      object qrlblGrpOrderValue: TQRLabel
         Left = 742
         Top = 9
         Width = 95
@@ -1062,7 +1062,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGrpInvoicecount: TgtQRLabel
+      object qrlblGrpInvoicecount: TQRLabel
         Left = 843
         Top = 9
         Width = 100
@@ -1093,7 +1093,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGrpInvoicevalue: TgtQRLabel
+      object qrlblGrpInvoicevalue: TQRLabel
         Left = 922
         Top = 9
         Width = 99
@@ -1145,7 +1145,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         127.000000000000000000
         2770.187500000000000000)
       BandType = rbSummary
-      object qrlblTotalInvoiceCount: TgtQRLabel
+      object qrlblTotalInvoiceCount: TQRLabel
         Left = 820
         Top = 15
         Width = 125
@@ -1176,7 +1176,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTotalOrderValue: TgtQRLabel
+      object qrlblTotalOrderValue: TQRLabel
         Left = 721
         Top = 15
         Width = 116
@@ -1207,7 +1207,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTotalInvoiceValue: TgtQRLabel
+      object qrlblTotalInvoiceValue: TQRLabel
         Left = 894
         Top = 15
         Width = 123
@@ -1238,7 +1238,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTotalQuoteCount: TgtQRLabel
+      object qrlblTotalQuoteCount: TQRLabel
         Left = 549
         Top = 15
         Width = 119
@@ -1269,7 +1269,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 498
         Top = 15
         Width = 75
@@ -1300,7 +1300,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 592
         Top = 4
         Width = 430
@@ -1318,7 +1318,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblTotalOrderCount: TgtQRLabel
+      object qrlblTotalOrderCount: TQRLabel
         Left = 643
         Top = 15
         Width = 118
@@ -1349,7 +1349,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 32
         Top = 17
         Width = 166
@@ -1380,7 +1380,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblTotalCustomerCount: TgtQRLabel
+      object qrlblTotalCustomerCount: TQRLabel
         Left = 216
         Top = 17
         Width = 142
@@ -1435,7 +1435,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       DataSet = qryActivityDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblActivity: TgtQRLabel
+      object qrlblActivity: TQRLabel
         Left = 48
         Top = 4
         Width = 78
@@ -1497,7 +1497,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblContactName: TgtQRLabel
+      object qrlblContactName: TQRLabel
         Left = 139
         Top = 4
         Width = 126
@@ -1528,7 +1528,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOperatorName: TgtQRLabel
+      object qrlblOperatorName: TQRLabel
         Left = 675
         Top = 4
         Width = 126

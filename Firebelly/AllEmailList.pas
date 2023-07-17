@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, DBTables, IniFiles, gtQrCtrls;
+  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, DBTables, IniFiles, QrCtrls;
 
 type
   TAllEmailListFrm = class(TForm)

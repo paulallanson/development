@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, wtJobsDm, DBCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, ComCtrls, StdCtrls, wtJobsDm, DBCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTMaintJobComplete = class(TForm)

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, wtQuotesDM, gtQrCtrls;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, wtQuotesDM, QrCtrls;
 
 type
   TfrmWTMaintQEvents = class(TForm)

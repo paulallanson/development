@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, gtQrCtrls, QRCtrls, QuickRpt, ExtCtrls, AllCommon;
+  Dialogs, DB, DBTables, QrCtrls, QRCtrls, QuickRpt, ExtCtrls, AllCommon;
 
 type
   TfrmWTRPSODeliveryNote = class(TForm)
@@ -14,27 +14,27 @@ type
     qryReport: TQuery;
     dtsReport: TDataSource;
     qryGetNotes: TQuery;
-    gtQRDBText8: TgtQRDBText;
-    gtQRDBText9: TgtQRDBText;
+    gtQRDBText8: TQRDBText;
+    gtQRDBText9: TQRDBText;
     qrbSignature: TQRBand;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
-    gtQRLabel5: TgtQRLabel;
-    gtQRLabel6: TgtQRLabel;
-    gtQRLabel7: TgtQRLabel;
-    gtQRLabel8: TgtQRLabel;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRLabel5: TQRLabel;
+    gtQRLabel6: TQRLabel;
+    gtQRLabel7: TQRLabel;
+    gtQRLabel8: TQRLabel;
     QRBand1: TQRBand;
-    gtQRLabel28: TgtQRLabel;
-    qriheadlogo: TgtQRImage;
-    gtQRLabel31: TgtQRLabel;
-    gtQRLabel32: TgtQRLabel;
-    qrrchTextInstallAddress: TgtQRRichText;
-    gtQRLabel34: TgtQRLabel;
-    gtQRLabel33: TgtQRLabel;
-    gtQRDBText10: TgtQRDBText;
-    gtQRLabel1: TgtQRLabel;
-    qrlblDeliveryDate: TgtQRLabel;
+    gtQRLabel28: TQRLabel;
+    qriheadlogo: TQRImage;
+    gtQRLabel31: TQRLabel;
+    gtQRLabel32: TQRLabel;
+    qrrchTextInstallAddress: TQRRichText;
+    gtQRLabel34: TQRLabel;
+    gtQRLabel33: TQRLabel;
+    gtQRDBText10: TQRDBText;
+    gtQRLabel1: TQRLabel;
+    qrlblDeliveryDate: TQRLabel;
     procedure FormCreate(Sender: TObject);
     procedure QRGroup1BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

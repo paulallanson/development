@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, wtQuotesDM, gtQrCtrls, Spin, Buttons, DateSelV5, AllCommon;
+  Dialogs, StdCtrls, wtQuotesDM, QrCtrls, Spin, Buttons, DateSelV5, AllCommon;
 
 type
   TfrmWTQuoteSearch = class(TForm)

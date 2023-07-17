@@ -92,7 +92,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -123,7 +123,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -184,7 +184,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 8
         Top = 1
         Width = 62
@@ -210,7 +210,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 77
         Top = 1
         Width = 62
@@ -236,7 +236,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 384
         Top = 1
         Width = 137
@@ -262,7 +262,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 144
         Top = 1
         Width = 233
@@ -288,7 +288,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText8: TgtQRDBText
+      object QRDBText8: TQRDBText
         Left = 641
         Top = 1
         Width = 72
@@ -314,7 +314,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 144
         Top = 17
         Width = 393
@@ -340,7 +340,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 827
         Top = 1
         Width = 67
@@ -366,7 +366,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText7: TgtQRDBText
+      object QRDBText7: TQRDBText
         Left = 906
         Top = 1
         Width = 52
@@ -392,7 +392,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 980
         Top = 1
         Width = 58
@@ -418,7 +418,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 528
         Top = 1
         Width = 97
@@ -444,7 +444,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 721
         Top = 1
         Width = 72
@@ -491,7 +491,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         76.729166666666670000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 962
         Top = 7
         Width = 79
@@ -522,7 +522,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustVAT: TgtQRLabel
+      object qrlblCustVAT: TQRLabel
         Left = 886
         Top = 7
         Width = 75
@@ -553,7 +553,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -571,7 +571,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 647
         Top = 9
         Width = 108
@@ -602,7 +602,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 762
         Top = 9
         Width = 28
@@ -633,7 +633,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustGoods: TgtQRLabel
+      object qrlblCustGoods: TQRLabel
         Left = 809
         Top = 7
         Width = 88
@@ -685,7 +685,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 722
         Top = 7
         Width = 68
@@ -716,7 +716,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 951
         Top = 7
         Width = 90
@@ -747,7 +747,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 792
         Top = -1
         Width = 249
@@ -765,7 +765,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblReportVAT: TgtQRLabel
+      object qrlblReportVAT: TQRLabel
         Left = 875
         Top = 7
         Width = 86
@@ -796,7 +796,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportGoods: TgtQRLabel
+      object qrlblReportGoods: TQRLabel
         Left = 798
         Top = 7
         Width = 99
@@ -846,7 +846,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 445
         Top = 2
         Width = 144
@@ -877,7 +877,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -907,7 +907,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 71
         Width = 59
@@ -938,7 +938,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 80
         Top = 71
         Width = 54
@@ -969,7 +969,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 144
         Top = 71
         Width = 47
@@ -1000,7 +1000,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 384
         Top = 71
         Width = 52
@@ -1031,7 +1031,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 984
         Top = 71
         Width = 55
@@ -1062,7 +1062,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -1093,7 +1093,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 640
         Top = 71
         Width = 69
@@ -1124,7 +1124,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -1153,7 +1153,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         Transparent = False
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 864
         Top = 71
         Width = 33
@@ -1184,7 +1184,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 936
         Top = 71
         Width = 23
@@ -1215,7 +1215,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 528
         Top = 71
         Width = 20
@@ -1246,7 +1246,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -1277,7 +1277,7 @@ object frmwtRPSalesOrder: TfrmwtRPSalesOrder
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 720
         Top = 71
         Width = 69

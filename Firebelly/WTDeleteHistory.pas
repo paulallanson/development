@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ComCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, StdCtrls, Buttons, ComCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTDeleteHistory = class(TForm)

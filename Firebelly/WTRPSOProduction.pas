@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls, QrCtrls;
 
 type
   TfrmWTRPSOProduction = class(TForm)
@@ -13,41 +13,41 @@ type
     qryCutOuts: TQuery;
     qryEdges: TQuery;
     qrSubMaterial: TQRSubDetail;
-    qrlblMaterialDescription: TgtQRLabel;
-    qrlblArea: TgtQRLabel;
+    qrlblMaterialDescription: TQRLabel;
+    qrlblArea: TQRLabel;
     qrgrpHeadMaterial: TQRBand;
-    qrlblMaterialTitle: TgtQRLabel;
-    qrlblMaterialCount: TgtQRLabel;
+    qrlblMaterialTitle: TQRLabel;
+    qrlblMaterialCount: TQRLabel;
     qrSubCutOuts: TQRSubDetail;
-    qrlblCutOutDescription: TgtQRLabel;
-    qrlblQuantity: TgtQRLabel;
+    qrlblCutOutDescription: TQRLabel;
+    qrlblQuantity: TQRLabel;
     qrgrpHeadCutOuts: TQRBand;
-    qrlblCutOutTitle: TgtQRLabel;
-    qrlblCutOutCount: TgtQRLabel;
+    qrlblCutOutTitle: TQRLabel;
+    qrlblCutOutCount: TQRLabel;
     qrsubEdgeProfile: TQRSubDetail;
-    qrlblEdgeProfileDescription: TgtQRLabel;
-    qrlblLength: TgtQRLabel;
+    qrlblEdgeProfileDescription: TQRLabel;
+    qrlblLength: TQRLabel;
     qrgrpEdgeProfile: TQRBand;
-    qrlblEdgeTitle: TgtQRLabel;
-    qrlblEdgeCount: TgtQRLabel;
+    qrlblEdgeTitle: TQRLabel;
+    qrlblEdgeCount: TQRLabel;
     QRBand1: TQRBand;
-    qrlblCaption: TgtQRLabel;
-    qrlblDateRange: TgtQRLabel;
-    gtQRSysData1: TgtQRSysData;
-    gtQRSysData2: TgtQRSysData;
-    qrlblSelection: TgtQRLabel;
-    qrlblCategoryTitle: TgtQRLabel;
-    qrlblCategoryCount: TgtQRLabel;
+    qrlblCaption: TQRLabel;
+    qrlblDateRange: TQRLabel;
+    gtQRSysData1: TQRSysData;
+    gtQRSysData2: TQRSysData;
+    qrlblSelection: TQRLabel;
+    qrlblCategoryTitle: TQRLabel;
+    qrlblCategoryCount: TQRLabel;
     qrgrpFootMaterial: TQRBand;
-    gtQRLabel1: TgtQRLabel;
-    qrlblTotalArea: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
+    gtQRLabel1: TQRLabel;
+    qrlblTotalArea: TQRLabel;
+    gtQRShape1: TQRShape;
     qryBaseCutOuts: TQuery;
     qryBaseEdges: TQuery;
     qrgrpFootEdgeProfile: TQRBand;
-    gtQRLabel2: TgtQRLabel;
-    qrlblTotalLength: TgtQRLabel;
-    gtQRShape3: TgtQRShape;
+    gtQRLabel2: TQRLabel;
+    qrlblTotalLength: TQRLabel;
+    gtQRShape3: TQRShape;
     procedure qrSubMaterialBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure FormCreate(Sender: TObject);

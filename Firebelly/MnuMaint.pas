@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, gtQrCtrls;
+  StdCtrls, Buttons, ExtCtrls, DB, DBTables, QrCtrls;
 
 type
   TMnuMaintFrm = class(TForm)

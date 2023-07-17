@@ -92,7 +92,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -123,7 +123,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -184,7 +184,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 8
         Top = 1
         Width = 62
@@ -210,7 +210,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 77
         Top = 1
         Width = 62
@@ -236,7 +236,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 368
         Top = 1
         Width = 137
@@ -262,7 +262,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 144
         Top = 1
         Width = 217
@@ -288,7 +288,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 144
         Top = 17
         Width = 393
@@ -314,7 +314,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 686
         Top = 1
         Width = 67
@@ -340,7 +340,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText7: TgtQRDBText
+      object QRDBText7: TQRDBText
         Left = 765
         Top = 1
         Width = 52
@@ -366,7 +366,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 839
         Top = 1
         Width = 58
@@ -392,7 +392,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 512
         Top = 1
         Width = 97
@@ -418,7 +418,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 614
         Top = 1
         Width = 72
@@ -444,7 +444,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 899
         Top = 1
         Width = 64
@@ -470,7 +470,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDifference: TgtQRLabel
+      object qrlblDifference: TQRLabel
         Left = 965
         Top = 0
         Width = 72
@@ -522,7 +522,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         76.729166666666670000
         2770.187500000000000000)
       BandType = rbGroupFooter
-      object qrlblCustTotal: TgtQRLabel
+      object qrlblCustTotal: TQRLabel
         Left = 819
         Top = 7
         Width = 79
@@ -553,7 +553,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustVAT: TgtQRLabel
+      object qrlblCustVAT: TQRLabel
         Left = 744
         Top = 7
         Width = 75
@@ -584,7 +584,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 648
         Top = -1
         Width = 393
@@ -602,7 +602,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrGroupbyFootText: TgtQRDBText
+      object qrGroupbyFootText: TQRDBText
         Left = 505
         Top = 9
         Width = 108
@@ -633,7 +633,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 620
         Top = 9
         Width = 28
@@ -664,7 +664,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustGoods: TgtQRLabel
+      object qrlblCustGoods: TQRLabel
         Left = 667
         Top = 7
         Width = 88
@@ -695,7 +695,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustInvoice: TgtQRLabel
+      object qrlblCustInvoice: TQRLabel
         Left = 883
         Top = 7
         Width = 79
@@ -726,7 +726,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblCustDiff: TgtQRLabel
+      object qrlblCustDiff: TQRLabel
         Left = 959
         Top = 7
         Width = 79
@@ -778,7 +778,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         84.666666666666670000
         2770.187500000000000000)
       BandType = rbSummary
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 580
         Top = 7
         Width = 68
@@ -809,7 +809,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportTotal: TgtQRLabel
+      object qrlblReportTotal: TQRLabel
         Left = 809
         Top = 7
         Width = 90
@@ -840,7 +840,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 648
         Top = -1
         Width = 393
@@ -858,7 +858,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblReportVAT: TgtQRLabel
+      object qrlblReportVAT: TQRLabel
         Left = 733
         Top = 7
         Width = 86
@@ -889,7 +889,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportGoods: TgtQRLabel
+      object qrlblReportGoods: TQRLabel
         Left = 656
         Top = 7
         Width = 99
@@ -920,7 +920,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportInvoice: TgtQRLabel
+      object qrlblReportInvoice: TQRLabel
         Left = 873
         Top = 7
         Width = 90
@@ -951,7 +951,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblReportDiff: TgtQRLabel
+      object qrlblReportDiff: TQRLabel
         Left = 949
         Top = 7
         Width = 90
@@ -1001,7 +1001,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         238.125000000000000000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 378
         Top = 2
         Width = 278
@@ -1032,7 +1032,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -1062,7 +1062,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 71
         Width = 59
@@ -1093,7 +1093,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 80
         Top = 71
         Width = 54
@@ -1124,7 +1124,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 144
         Top = 71
         Width = 47
@@ -1155,7 +1155,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 368
         Top = 71
         Width = 52
@@ -1186,7 +1186,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 840
         Top = 71
         Width = 55
@@ -1217,7 +1217,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 25
         Width = 74
@@ -1248,7 +1248,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -1277,7 +1277,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         Transparent = False
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 720
         Top = 71
         Width = 33
@@ -1308,7 +1308,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 792
         Top = 71
         Width = 23
@@ -1339,7 +1339,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 512
         Top = 71
         Width = 20
@@ -1370,7 +1370,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 479
         Top = 45
         Width = 65
@@ -1401,7 +1401,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 624
         Top = 71
         Width = 54
@@ -1432,7 +1432,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 922
         Top = 71
         Width = 41
@@ -1463,7 +1463,7 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 977
         Top = 71
         Width = 59

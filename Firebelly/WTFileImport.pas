@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, DB, DBTables, gtQrCtrls;
+  Dialogs, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, DB, DBTables, QrCtrls;
 
 type
   TfrmWTFileImport = class(TForm)

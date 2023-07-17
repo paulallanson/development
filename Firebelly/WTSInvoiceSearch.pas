@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, wtSalesInvoiceDM, gtQrCtrls, Spin;
+  Dialogs, StdCtrls, wtSalesInvoiceDM, QrCtrls, Spin;
 
 type
   TfrmWTSInvoiceSearch = class(TForm)

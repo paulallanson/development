@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, DB, DBTables, gtQrCtrls, IniFiles, allCommon;
+  Dialogs, StdCtrls, ExtCtrls, DB, DBTables, QrCtrls, IniFiles, allCommon;
 
 type
   TfrmWTRSSOrder = class(TForm)

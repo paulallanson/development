@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, wtJobsDM, StdCtrls, Buttons, DB, DBTables, CRControls, Spin,
-  DBCtrls, ExtCtrls, gtQrCtrls;
+  DBCtrls, ExtCtrls, QrCtrls;
 
 type
   TfrmWTMaintJExtra = class(TForm)

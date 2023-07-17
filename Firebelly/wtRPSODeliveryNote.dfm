@@ -92,7 +92,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
       DataSet = qryReport
       PrintBefore = False
       PrintIfEmpty = True
-      object gtQRDBText8: TgtQRDBText
+      object gtQRDBText8: TQRDBText
         Left = 0
         Top = 4
         Width = 73
@@ -124,7 +124,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText9: TgtQRDBText
+      object gtQRDBText9: TQRDBText
         Left = 120
         Top = 4
         Width = 59
@@ -197,7 +197,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         463.020833333333300000
         1899.708333333333000000)
       BandType = rbPageFooter
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 0
         Top = 10
         Width = 361
@@ -228,7 +228,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 8
         Top = 57
         Width = 120
@@ -253,7 +253,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 8
         Top = 153
         Width = 88
@@ -278,7 +278,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 192
         Top = 97
         Width = 465
@@ -305,7 +305,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 192
         Top = 153
         Width = 465
@@ -332,7 +332,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 192
         Top = 57
         Width = 465
@@ -359,7 +359,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 8
         Top = 97
         Width = 84
@@ -403,7 +403,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         899.583333333333300000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object gtQRLabel28: TgtQRLabel
+      object gtQRLabel28: TQRLabel
         Left = 407
         Top = 4
         Width = 306
@@ -434,7 +434,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 28
       end
-      object qriheadlogo: TgtQRImage
+      object qriheadlogo: TQRImage
         Left = 4
         Top = 8
         Width = 245
@@ -451,7 +451,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
           648.229166666666700000)
         Stretch = True
       end
-      object gtQRLabel31: TgtQRLabel
+      object gtQRLabel31: TQRLabel
         Left = 8
         Top = 319
         Width = 58
@@ -482,7 +482,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel32: TgtQRLabel
+      object gtQRLabel32: TQRLabel
         Left = 120
         Top = 319
         Width = 66
@@ -513,7 +513,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextInstallAddress: TgtQRRichText
+      object qrrchTextInstallAddress: TQRRichText
         Left = 8
         Top = 200
         Width = 321
@@ -539,7 +539,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         Lines.Strings = (
           'InstallAddress')
       end
-      object gtQRLabel34: TgtQRLabel
+      object gtQRLabel34: TQRLabel
         Left = 8
         Top = 177
         Width = 84
@@ -570,7 +570,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel33: TgtQRLabel
+      object gtQRLabel33: TQRLabel
         Left = 8
         Top = 148
         Width = 106
@@ -601,7 +601,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText10: TgtQRDBText
+      object gtQRDBText10: TQRDBText
         Left = 116
         Top = 148
         Width = 98
@@ -633,7 +633,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 512
         Top = 148
         Width = 90
@@ -664,7 +664,7 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
         WordWrap = True
         FontSize = 10
       end
-      object qrlblDeliveryDate: TgtQRLabel
+      object qrlblDeliveryDate: TQRLabel
         Left = 616
         Top = 148
         Width = 81

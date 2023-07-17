@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  wtLUWTThickness, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, gtQrCtrls;
+  wtLUWTThickness, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, QrCtrls;
 
 type
   TfrmWTLUCoutThickness = class(TfrmWTLUWTThickness)

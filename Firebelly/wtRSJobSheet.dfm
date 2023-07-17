@@ -11,22 +11,22 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 247
     Width = 536
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 246
+    ExplicitWidth = 532
     DesignSize = (
       536
       89)
@@ -91,13 +91,14 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 536
     Height = 49
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 532
     DesignSize = (
       536
       49)
@@ -109,12 +110,13 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Caption = 'Job No.'
     end
     object Label2: TLabel
-      Left = 384
+      Left = 380
       Top = 8
       Width = 75
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Sales Order No.'
+      ExplicitLeft = 384
     end
     object memSelection: TMemo
       Left = 8
@@ -126,7 +128,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       OnChange = EnableRun
     end
     object memSOrderNumber: TMemo
-      Left = 384
+      Left = 380
       Top = 24
       Width = 130
       Height = 21
@@ -134,17 +136,20 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       ReadOnly = True
       TabOrder = 1
       OnChange = EnableRun
+      ExplicitLeft = 376
     end
   end
   object pnlDocuments: TPanel
-    ParentBackground = False
     Left = 0
     Top = 49
     Width = 536
     Height = 48
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 532
+    ExplicitHeight = 47
     object Label3: TLabel
       Left = 8
       Top = 5
@@ -158,7 +163,6 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Width = 273
       Height = 22
       Style = csOwnerDrawFixed
-      ItemHeight = 16
       ItemIndex = 0
       TabOrder = 0
       Text = '<All>'
@@ -168,14 +172,16 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 97
     Width = 536
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 96
+    ExplicitWidth = 532
     object lstbxDocuments: TListBox
       Left = 8
       Top = 14

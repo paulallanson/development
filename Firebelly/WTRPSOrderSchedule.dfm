@@ -90,7 +90,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         2770.187500000000000000)
       Master = qrpDetails
       ReprintOnNewPage = False
-      object qrlblSortBy: TgtQRLabel
+      object qrlblSortBy: TQRLabel
         Left = 0
         Top = 8
         Width = 47
@@ -121,7 +121,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrGroupbyText: TgtQRDBText
+      object qrGroupbyText: TQRDBText
         Left = 96
         Top = 8
         Width = 80
@@ -153,7 +153,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblPhone: TgtQRLabel
+      object qrlblPhone: TQRLabel
         Left = 272
         Top = 8
         Width = 74
@@ -184,7 +184,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrPhoneText: TgtQRDBText
+      object qrPhoneText: TQRDBText
         Left = 352
         Top = 8
         Width = 90
@@ -236,7 +236,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         283.104166666666700000
         2770.187500000000000000)
       BandType = rbPageHeader
-      object qrlblCaption: TgtQRLabel
+      object qrlblCaption: TQRLabel
         Left = 410
         Top = 8
         Width = 213
@@ -267,7 +267,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 12
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 968
         Top = 23
         Width = 69
@@ -297,7 +297,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Transparent = False
         FontSize = 8
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 89
         Width = 59
@@ -328,7 +328,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 80
         Top = 89
         Width = 104
@@ -359,7 +359,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 296
         Top = 89
         Width = 52
@@ -390,7 +390,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 475
         Top = 32
         Width = 74
@@ -421,7 +421,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRSysData2: TgtQRSysData
+      object QRSysData2: TQRSysData
         Left = 982
         Top = 8
         Width = 56
@@ -450,7 +450,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Transparent = False
         FontSize = 8
       end
-      object qrlblWeek1: TgtQRLabel
+      object qrlblWeek1: TQRLabel
         Left = 576
         Top = 89
         Width = 54
@@ -481,7 +481,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblWeek2: TgtQRLabel
+      object qrlblWeek2: TQRLabel
         Left = 645
         Top = 89
         Width = 54
@@ -512,7 +512,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblWeek3: TgtQRLabel
+      object qrlblWeek3: TQRLabel
         Left = 714
         Top = 89
         Width = 54
@@ -543,7 +543,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblWeek4: TgtQRLabel
+      object qrlblWeek4: TQRLabel
         Left = 783
         Top = 89
         Width = 54
@@ -574,7 +574,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblWeek5: TgtQRLabel
+      object qrlblWeek5: TQRLabel
         Left = 852
         Top = 89
         Width = 54
@@ -605,7 +605,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblWeek6: TgtQRLabel
+      object qrlblWeek6: TQRLabel
         Left = 921
         Top = 89
         Width = 54
@@ -636,7 +636,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 448
         Top = 89
         Width = 44
@@ -667,7 +667,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOverdueDate: TgtQRLabel
+      object qrlblOverdueDate: TQRLabel
         Left = 505
         Top = 89
         Width = 62
@@ -698,7 +698,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblFutureDate: TgtQRLabel
+      object qrlblFutureDate: TQRLabel
         Left = 987
         Top = 89
         Width = 32
@@ -729,7 +729,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 504
         Top = 72
         Width = 525
@@ -747,7 +747,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 728
         Top = 68
         Width = 104
@@ -778,7 +778,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 8
         Width = 23
@@ -809,7 +809,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 56
         Top = 8
         Width = 90
@@ -840,7 +840,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 56
         Top = 46
         Width = 69
@@ -871,7 +871,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 56
         Top = 65
         Width = 54
@@ -902,7 +902,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 56
         Top = 27
         Width = 92
@@ -961,7 +961,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 437
         Top = 0
         Width = 545
@@ -979,7 +979,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 499
         Top = 0
         Width = 418
@@ -997,7 +997,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape4: TgtQRShape
+      object QRShape4: TQRShape
         Left = 567
         Top = 0
         Width = 281
@@ -1015,7 +1015,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape5: TgtQRShape
+      object QRShape5: TQRShape
         Left = 636
         Top = 0
         Width = 142
@@ -1033,7 +1033,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 8
         Top = 4
         Width = 62
@@ -1059,7 +1059,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 288
         Top = 4
         Width = 145
@@ -1085,7 +1085,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 80
         Top = 4
         Width = 201
@@ -1111,7 +1111,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrdbTemplateDate: TgtQRDBText
+      object qrdbTemplateDate: TQRDBText
         Left = 508
         Top = 4
         Width = 72
@@ -1143,7 +1143,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrdbDescription: TgtQRDBText
+      object qrdbDescription: TQRDBText
         Left = 80
         Top = 20
         Width = 353
@@ -1169,7 +1169,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblMatDate: TgtQRLabel
+      object qrlblMatDate: TQRLabel
         Left = 440
         Top = 4
         Width = 60
@@ -1200,7 +1200,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 706
         Top = 0
         Width = 6
@@ -1218,7 +1218,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object qrlblMatReceived: TgtQRLabel
+      object qrlblMatReceived: TQRLabel
         Left = 440
         Top = 20
         Width = 60
@@ -1249,7 +1249,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrdbFittingDate: TgtQRDBText
+      object qrdbFittingDate: TQRDBText
         Left = 636
         Top = 2
         Width = 72
@@ -1281,7 +1281,7 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOnHold: TgtQRLabel
+      object qrlblOnHold: TQRLabel
         Left = 984
         Top = 4
         Width = 47

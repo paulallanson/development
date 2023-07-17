@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, wtSalesOrderDM, gtQrCtrls, Spin;
+  Dialogs, StdCtrls, wtSalesOrderDM, QrCtrls, Spin;
 
 type
   TfrmWTSOrderSearch = class(TForm)

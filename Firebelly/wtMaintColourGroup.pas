@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, gtQrCtrls, DB, DBTables, StrUtils;
+  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, DBTables, StrUtils;
 
 type
   TfrmWtMaintColourGroup = class(TForm)

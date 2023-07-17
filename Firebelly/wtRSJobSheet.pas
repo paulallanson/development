@@ -4,8 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, ExtCtrls, gtQrCtrls, printers, Inifiles, DB,
-  DBTables, gtQrExport, AllCommon, ComObj, WTRPJobRemedialSheet;
+  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles, DB,
+  DBTables, QrExport, AllCommon, ComObj, WTRPJobRemedialSheet;
 
 type
   TfrmWTRSJobSheet = class(TForm)
@@ -71,9 +71,8 @@ type
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
     procedure SetSOrderNumber(const Value: string);
-    procedure PrintRemedialToAttachment(
-      frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode,
-      tmpOrder: string);
+    // ToDo GDK: remove after testings
+    // procedure PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
     { Private declarations }
   public
     sJobNumber: string;
@@ -89,8 +88,10 @@ var
 
 implementation
 
-uses wtRPQuote, WtRPJobSheet, wtRPJobAccSheet, WTRPJobCutSched, WtRPJobFitting,
-  wtRPJob, AllEmailHandler, wtDataModule, WtRPJobFittingTrade, wtRPJobSheetClient;
+uses
+  wtRPQuote, WtRPJobSheet, wtRPJobAccSheet, WTRPJobCutSched, WtRPJobFitting,
+  wtRPJob, AllEmailHandler, wtDataModule, WtRPJobFittingTrade, wtRPJobSheetClient,
+  Printer.Tools;
 
 const
   SQLFitting =
@@ -466,7 +467,8 @@ begin
                   begin
                     frmWTRPJobRemedialSheet.bPreview := false;
                     sAttachmentType := 'PDF';
-                    PrintRemedialtoAttachment(frmWTRPJobRemedialSheet, memSelection.text, memSOrderNumber.text);
+                    sFileName := 'RS' + memSelection.text + '-J' + memSOrderNumber.text;
+                    PrinterTools.New.PrintToAttachment(bRemedialSheet.qrpJobSheet, AttachmentList, sFileName, sAttachmentType);
                   end;
               finally
                 frmWTRPJobRemedialSheet.Free;
@@ -1290,6 +1292,7 @@ begin
     lstbxDocuments.ClearSelection;
 end;
 
+(*
 procedure TfrmWTRSJobSheet.PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
 var
   i: integer;
@@ -1418,6 +1421,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.
 

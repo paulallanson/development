@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, Db, Grids, DBGrids, WTJobsDM,
-  Menus, AllCommon, IniFiles, Buttons, gtQrCtrls;
+  Menus, AllCommon, IniFiles, Buttons, QrCtrls;
 
 type
   TfrmwtLUJobs = class(TForm)
