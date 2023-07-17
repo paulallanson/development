@@ -1,0 +1,16 @@
+unit Printer.Interfaces;
+
+interface
+
+uses
+  QuickRpt, System.Classes;
+
+type
+  IPrinterToAttachment = interface
+    ['{6C882DC9-2EAB-4124-AAA9-E8C2AEC4283A}']
+    procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
+  end;
+
+implementation
+
+end. 
