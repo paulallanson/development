@@ -117,7 +117,7 @@ uses
   wtLUSOLines in '..\wtLUSOLines.pas' {frmWTLUSOLines},
   WTLUManageMentRpts in '..\WTLUManageMentRpts.pas' {frmWTLUSOrderRpts},
   WTRPSOrderTemplate in '..\WTRPSOrderTemplate.pas' {frmwtRPSOrderTemplate},
-  wtRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate},
+  WTRSSOrderTemplate in '..\WTRSSOrderTemplate.pas' {frmWTRSSOrderTemplate},
   WTSOrderSearch in '..\WTSOrderSearch.pas' {frmWTSOrderSearch},
   wtMaintJobComplete in '..\wtMaintJobComplete.pas' {frmWTMaintJobComplete},
   wtLUSalesOrderQuotes in '..\wtLUSalesOrderQuotes.pas' {frmWTLUSalesOrderQuotes},
@@ -141,7 +141,7 @@ uses
   wtRPSalesInvoice in '..\Aire\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
   wtRPSOrder in '..\Aire\Reports\wtRPSOrder.pas' {frmwtRPSOrder},
   wtRPQuote in '..\Aire\Reports\wtRPQuote.pas' {frmwtRPQuote},
-  wtRPJobSheet in '..\Aire\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
+  WtRPJobSheet in '..\Aire\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
   WtRPJobFitting in '..\Aire\Reports\WtRPJobFitting.pas' {frmwtRPJobFitting},
   wtRPJob in '..\wtRPJob.pas' {frmwtRPJob},
   wtMaintFitters in '..\wtMaintFitters.pas' {frmWTMaintFitters},
@@ -159,9 +159,12 @@ uses
   WTMaintTrade in '..\WTMaintTrade.pas' {frmWTMaintTrade},
   wtRPQuoteTrade in '..\Aire\Reports\wtRPQuoteTrade.pas' {frmwtRPQuoteTrade},
   WtRPJobFittingTrade in '..\Aire\Reports\WtRPJobFittingTrade.pas' {frmwtRPJobFittingTrade},
-  WTWin7 in '..\wtWin7.pas',
+  wtWin7 in '..\wtWin7.pas',
   WtRPJobRemedialSheet in '..\Aire\Reports\WtRPJobRemedialSheet.pas' {frmwtRPJobRemedialSheet},
-  wtRPQuoteSummary in '..\Aire\Reports\wtRPQuoteSummary.pas' {frmwtRPQuoteSummary};
+  wtRPQuoteSummary in '..\Aire\Reports\wtRPQuoteSummary.pas' {frmwtRPQuoteSummary},
+  Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
+  Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
+  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas';
 
 {$R *.RES}
 
