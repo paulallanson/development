@@ -11,12 +11,10 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
     349
     148)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -56,7 +54,6 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
     OnClick = Button4Click
   end
   object rdgrpOutput: TRadioGroup
-    ParentBackground = False
     Left = 248
     Top = 18
     Width = 92
@@ -66,6 +63,7 @@ object frmWTRSJobFitting: TfrmWTRSJobFitting
     Items.Strings = (
       'Print'
       'Preview')
+    ParentBackground = False
     TabOrder = 3
   end
   object chkbxAccounts: TCheckBox

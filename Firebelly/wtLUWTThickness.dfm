@@ -11,10 +11,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -124,8 +122,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Height = 25
     Caption = '&Close'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object chkbxShowInactive: TCheckBox
     Left = 8

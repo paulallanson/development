@@ -11,11 +11,9 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -92,9 +90,9 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     Width = 75
     Height = 25
     Caption = '&Close'
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object edtSearch: TEdit
     Left = 8

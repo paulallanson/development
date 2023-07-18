@@ -58,7 +58,8 @@ var
 
 implementation
 
-uses wtLUMatType, wtDataModule, wtMain;
+uses
+  wtLUMatType, wtDataModule, wtMain, System.UITypes;
 
 {$R *.dfm}
 

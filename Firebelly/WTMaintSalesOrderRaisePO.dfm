@@ -1,23 +1,21 @@
 object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
   Left = 270
   Top = 107
-  Width = 711
-  Height = 412
   Caption = 'Raise Purchase Orders'
+  ClientHeight = 373
+  ClientWidth = 695
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 703
+    Width = 695
     Height = 49
     Align = alTop
     TabOrder = 0
@@ -48,8 +46,6 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
       Top = 11
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -64,17 +60,19 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnDateRequiredClick
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 320
-    Width = 703
+    Top = 308
+    Width = 695
     Height = 46
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      703
+      695
       46)
     object btnOK: TBitBtn
       Left = 270
@@ -86,9 +84,9 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
       Default = True
       Enabled = False
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 358
@@ -99,22 +97,22 @@ object frmWTMaintSalesOrderRaisePO: TfrmWTMaintSalesOrderRaisePO
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 366
-    Width = 703
+    Top = 354
+    Width = 695
     Height = 19
     Panels = <>
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 49
-    Width = 703
-    Height = 271
+    Width = 695
+    Height = 259
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3

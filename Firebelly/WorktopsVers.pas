@@ -30,6 +30,9 @@ implementation
 
 {$R *.DFM}
 
+uses
+  System.UITypes;
+
 procedure TfrmWorktopsVers.FormActivate(Sender: TObject);
 Var
 FiName, DiName: Array [0..255] of char ;

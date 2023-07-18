@@ -11,11 +11,9 @@ object frmWTLUMatType: TfrmWTLUMatType
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -58,15 +56,19 @@ object frmWTLUMatType: TfrmWTLUMatType
       item
         Width = 50
       end>
+    ExplicitTop = 394
+    ExplicitWidth = 682
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 308
     Width = 686
     Height = 87
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 307
+    ExplicitWidth = 682
     DesignSize = (
       686
       87)
@@ -124,8 +126,8 @@ object frmWTLUMatType: TfrmWTLUMatType
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
     end
     object btnExcel: TBitBtn
       Left = 512

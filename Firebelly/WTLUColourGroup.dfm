@@ -11,11 +11,9 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -117,8 +115,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 4
       NumGlyphs = 2
+      TabOrder = 4
     end
     object btnExcel: TBitBtn
       Left = 248

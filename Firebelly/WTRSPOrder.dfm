@@ -11,7 +11,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -20,7 +19,6 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   DesignSize = (
     375
     176)
-  PixelsPerInch = 96
   TextHeight = 13
   object memSelection: TMemo
     Left = 8

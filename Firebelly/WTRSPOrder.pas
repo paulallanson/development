@@ -49,7 +49,8 @@ var
 
 implementation
 
-uses wtDataModule, wtRPPOrder, AllEmailHandler;
+uses
+  wtDataModule, wtRPPOrder, AllEmailHandler, System.UITypes;
 
 const
   SQLCore =

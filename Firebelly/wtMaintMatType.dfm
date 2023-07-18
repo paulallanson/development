@@ -3,8 +3,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   Top = 75
   BorderStyle = bsDialog
   Caption = 'Material Types'
-  ClientHeight = 382
-  ClientWidth = 857
+  ClientHeight = 381
+  ClientWidth = 853
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    857
-    382)
+    853
+    381)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -27,7 +27,7 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   end
   object btnOK: TBitBtn
     Left = 266
-    Top = 345
+    Top = 344
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -38,11 +38,10 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    ExplicitTop = 344
   end
   object BitBtn2: TBitBtn
     Left = 354
-    Top = 345
+    Top = 344
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -52,17 +51,15 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
-    ExplicitTop = 344
   end
   object chkbxInactive: TCheckBox
     Left = 8
-    Top = 342
+    Top = 341
     Width = 97
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 3
-    ExplicitTop = 341
   end
   object PageControl1: TPageControl
     Left = 8
@@ -1432,13 +1429,12 @@ object frmWtMaintMatType: TfrmWtMaintMatType
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
-    Top = 313
+    Top = 312
     Width = 161
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show Material Type Online'
     TabOrder = 2
-    ExplicitTop = 312
   end
   object edtDescription: TEdit
     Left = 85

@@ -162,8 +162,9 @@ var
 
 implementation
 
-uses wtMain, AllCommon, WTSrchSupplier, WTLUSupplierContacts, WTMaintPurchaseOrderLine, DateSelV5,
-  wtDataModule, WTMaintPurchaseOrderLineProd, WTLUPOrderSalesOrderLine, WTMaintPOEvents;
+uses
+  wtMain, AllCommon, WTSrchSupplier, WTLUSupplierContacts, WTMaintPurchaseOrderLine, DateSelV5,
+  wtDataModule, WTMaintPurchaseOrderLineProd, WTLUPOrderSalesOrderLine, WTMaintPOEvents, System.UITypes;
 
 {$R *.dfm}
 

@@ -50,7 +50,7 @@ var
 implementation
 
 uses
-  wtMaintMatType, wtMain;
+  wtMaintMatType, wtMain, System.UITypes;
 
 {$R *.DFM}
 

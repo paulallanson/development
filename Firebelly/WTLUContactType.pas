@@ -44,7 +44,7 @@ var
 
 implementation
 
-uses WTMaintDesigner, WTMaintContactType, wtMain;
+uses UITypes, WTMaintDesigner, WTMaintContactType, wtMain;
 
 {$R *.dfm}
 
@@ -98,10 +98,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Contact_Type_Description').asstring
-                    + ' contact type has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Contact_Type_Description').asstring + ' contact type has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

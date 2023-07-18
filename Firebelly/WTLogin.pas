@@ -61,7 +61,7 @@ var
 
 implementation
 
-uses wtDataModule, WTEnvSel;
+uses UITypes, wtDataModule, WTEnvSel;
 
 {$R *.DFM}
 
@@ -172,9 +172,7 @@ begin
       begin
         MessageDlg('The version of software you are using is incompatible ' +#13
           + 'with this program.  Contact your vendor for more information ' +#13
-          + 'on upgrading to the latest release(s).' + #13+#13
-          + 'Error detected was: ' + E.Message,
-          mtError, [mbAbort], 0);
+          + 'on upgrading to the latest release(s).' + #13+#13 + 'Error detected was: ' + E.Message, mtError, [mbAbort], 0);
         Close;
         Exit;
       end;

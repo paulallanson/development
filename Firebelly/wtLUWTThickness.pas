@@ -54,7 +54,8 @@ var
 
 implementation
 
-uses WTMaintWTThickness, wtDataModule, wtMain;
+uses
+  WTMaintWTThickness, wtDataModule, wtMain, System.UITypes;
   
 {$R *.DFM}
 

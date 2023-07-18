@@ -45,7 +45,7 @@ var
 
 implementation
 
-uses wtMaintSalesLead, wtMain;
+uses UITypes, wtMaintSalesLead, wtMain;
 
 {$R *.dfm}
 
@@ -109,10 +109,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Sales_Lead_Source_Descr').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Sales_Lead_Source_Descr').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

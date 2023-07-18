@@ -11,10 +11,8 @@ object frmWTLUFitters: TfrmWTLUFitters
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -59,16 +57,20 @@ object frmWTLUFitters: TfrmWTLUFitters
       item
         Width = 50
       end>
+    ExplicitTop = 298
+    ExplicitWidth = 447
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 232
     Width = 451
     Height = 67
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 231
+    ExplicitWidth = 447
     DesignSize = (
       451
       67)
@@ -132,9 +134,9 @@ object frmWTLUFitters: TfrmWTLUFitters
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 5
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
   end
   object srcFitters: TDataSource

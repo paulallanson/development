@@ -70,7 +70,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, wtMain,
+uses UITypes, ComObj, ActiveX, wtMain,
   wtSrchCustContacts, WTEventsDM, wtLUProspectAction;
 
 {$R *.DFM}

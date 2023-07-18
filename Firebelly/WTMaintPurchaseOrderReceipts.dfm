@@ -1,9 +1,9 @@
 object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Left = 206
   Top = 114
-  Width = 870
-  Height = 480
   Caption = 'Maintain Purchase Order Receipts'
+  ClientHeight = 441
+  ClientWidth = 854
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,18 +11,16 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 434
-    Width = 862
+    Top = 422
+    Width = 854
     Height = 19
     Panels = <
       item
@@ -34,13 +32,13 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   end
   object Panel2: TPanel
     Left = 0
-    Top = 393
-    Width = 862
+    Top = 381
+    Width = 854
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      862
+      854
       41)
     object btbtnClose: TBitBtn
       Left = 776
@@ -48,8 +46,9 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object btnOK: TBitBtn
       Left = 688
@@ -60,8 +59,6 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       Caption = 'Confirm'
       Default = True
       Enabled = False
-      TabOrder = 1
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -80,12 +77,14 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnOKClick
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 854
     Height = 145
     Align = alTop
     TabOrder = 2
@@ -136,8 +135,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       Top = 48
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 1
       OnChange = CheckOK
     end
@@ -193,8 +192,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   object dbgLines: TStringGrid
     Left = 0
     Top = 145
-    Width = 862
-    Height = 248
+    Width = 854
+    Height = 236
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20

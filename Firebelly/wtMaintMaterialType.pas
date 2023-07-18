@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, jpeg, ExtDlgs,
-  ImgList, ComCtrls, ToolWin, Grids, DBGrids, DB, DBTables;
+  ImgList, ComCtrls, ToolWin, Grids, DBGrids, DB, DBTables,
+  System.ImageList;
 
 type
   TfrmWtMaintMaterialType = class(TForm)
@@ -111,7 +112,7 @@ implementation
 
 uses
   wtLUMaterialType, wtDataModule, WTMaintMaterialTypeUpstands, ComObj, ActiveX,
-  WTMaintMaterialTypeWeight;
+  WTMaintMaterialTypeWeight, System.UITypes;
   
 {$R *.DFM}
 

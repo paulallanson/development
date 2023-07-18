@@ -626,7 +626,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = BitBtn5Click
         end
         object btnSweep: TBitBtn
-          Left = 904
+          Left = 896
           Top = 6
           Width = 75
           Height = 25

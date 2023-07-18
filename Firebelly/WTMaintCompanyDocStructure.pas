@@ -45,7 +45,7 @@ var
 
 implementation
 
-uses WTMaintCompanyDocName, wtDataModule;
+uses UITypes, WTMaintCompanyDocName, wtDataModule;
 
 {$R *.dfm}
 
@@ -191,9 +191,7 @@ begin
       try
         lstNames.Items.Delete(key);
         bChanged := true;
-      except
-        messagedlg(lstNames.Items[key] + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(lstNames.Items[key] + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 

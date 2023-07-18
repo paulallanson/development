@@ -50,7 +50,7 @@ var
 
 implementation
 
-uses WTMaintDesigner, wtMain;
+uses UITypes, WTMaintDesigner, wtMain;
 
 {$R *.dfm}
 
@@ -114,10 +114,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Designer_Name').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Designer_Name').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

@@ -95,7 +95,7 @@ implementation
 
 uses
   wtDataModule, wtSendFax, wtFaxList, wtRPTemplate, AllEmailHandler,
-  wtRPQuoteTrade, wtEmailList, wtMain, AllCommon, Printer.Tools;
+  wtRPQuoteTrade, wtEmailList, wtMain, AllCommon, Printer.Tools, System.UITypes;
 
 const
 

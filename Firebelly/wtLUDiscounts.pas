@@ -43,7 +43,8 @@ var
 
 implementation
 
-uses wtMain, wtMaintDiscounts;
+uses
+  wtMain, wtMaintDiscounts, System.UITypes;
 
 {$R *.dfm}
 

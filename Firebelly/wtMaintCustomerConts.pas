@@ -195,7 +195,7 @@ end;
 
 procedure TfrmwtMaintCustomerConts.SaveToDB;
 begin
-  if FunctionMode[1] in ['A', 'C'] then
+  if CharInSet(FunctionMode[1], ['A', 'C']) then
   begin
     if FunctionMode = 'A' then
     begin

@@ -102,7 +102,7 @@ var
 
 implementation
 
-uses wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon;
+uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon;
 
 {$R *.dfm}
 
@@ -152,7 +152,7 @@ end;
 
 procedure TfrmWTMaintBranch.btnOKClick(Sender: TObject);
 begin
-  if sFuncMode[1] in ['A'] then
+  if CharInSet(sFuncMode[1], ['A']) then
     begin
       if iBranch = 0 then
         begin
@@ -216,7 +216,7 @@ begin
       dtmdlWorktops.CreateCustomerSiteDocDirectory(self.CustomerName, edtName.Text);
     end
   else
-  if sFuncMode[1] in ['C'] then
+  if CharInSet(sFuncMode[1], ['C']) then
     begin
       if iAddress = 0 then
         begin

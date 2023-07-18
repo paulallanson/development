@@ -45,7 +45,7 @@ var
 implementation
 
 uses
-  WTMaintFinish, wtMain;
+  WTMaintFinish, wtMain, System.UITypes;
 
 {$R *.DFM}
 

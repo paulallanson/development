@@ -11,10 +11,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -58,16 +56,20 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       item
         Width = 50
       end>
+    ExplicitTop = 286
+    ExplicitWidth = 422
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 232
     Width = 426
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 231
+    ExplicitWidth = 422
     object BitBtn1: TBitBtn
       Left = 8
       Top = 25
@@ -104,8 +106,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
       Height = 25
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -128,14 +130,15 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 426
     Height = 57
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 422
     object Label1: TLabel
       Left = 8
       Top = 8

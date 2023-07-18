@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, QrCtrls;
+  Dialogs, StdCtrls, ExtCtrls, QrCtrls, System.UITypes;
 
 type
   TfrmWTRSJobFitting = class(TForm)

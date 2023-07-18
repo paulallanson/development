@@ -61,8 +61,9 @@ var
 
 implementation
 
-uses wtLUWTThickness, wtMaintWT, WTLUWorktopPrices,
-  wtMain;
+uses
+  wtLUWTThickness, wtMaintWT, WTLUWorktopPrices,
+  wtMain, System.UITypes;
 
 {$R *.DFM}
 

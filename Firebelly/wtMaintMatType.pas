@@ -110,7 +110,7 @@ implementation
 
 uses
   wtLUMatType, wtDataModule, WTMaintMatTypeSlabs, WTLUMaterialType, ComObj, ActiveX,
-  WTSrchSupplier;
+  WTSrchSupplier, System.UITypes;
   
 {$R *.DFM}
 

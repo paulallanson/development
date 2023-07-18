@@ -72,7 +72,8 @@ var
 
 implementation
 
-uses AllCommon;
+uses
+  AllCommon, System.UITypes;
 
 {$R *.dfm}
 

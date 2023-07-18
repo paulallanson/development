@@ -52,7 +52,7 @@ var
 
 implementation
 
-uses wtMaintVat, wtMain;
+uses UITypes, wtMaintVat, wtMain;
 
 {$R *.dfm}
 
@@ -99,10 +99,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Description').asstring
-                    + ' VAT has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Description').asstring + ' VAT has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

@@ -250,10 +250,11 @@ var
 
 implementation
 
-uses AllCommon, WTMaintSupplierWorktops, wtLUMatType, WTMaintSupplierWorktopCost,
+uses
+  AllCommon, WTMaintSupplierWorktops, wtLUMatType, WTMaintSupplierWorktopCost,
   WTMaintSupplierWTThicknessCost, wtDataModule, wtMain, wtLUworktops,
   WTMaintSupplierProduct, WTMaintSupplierWorktop, WTWordOLE, WTExcelOLE,
-  WTMaintEmail;
+  WTMaintEmail, System.UITypes;
 
 {$R *.dfm}
 

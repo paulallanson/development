@@ -11,11 +11,9 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
     Left = 0
@@ -29,7 +27,7 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       758
       40)
     object btnOK: TBitBtn
-      Left = 594
+      Left = 590
       Top = 7
       Width = 75
       Height = 25
@@ -42,9 +40,6 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -63,9 +58,12 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
-      Left = 674
+      Left = 670
       Top = 7
       Width = 75
       Height = 25
@@ -75,9 +73,10 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      Kind = bkCancel
     end
     object chkbxInactive: TCheckBox
       Left = 16

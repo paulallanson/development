@@ -78,7 +78,7 @@ var
 
 implementation
 
-uses wtMaintProduct, wtDataModule, wtMain, AllCommon;
+uses UITypes, wtMaintProduct, wtDataModule, wtMain, AllCommon;
 
 {$R *.dfm}
 
@@ -170,10 +170,7 @@ begin
         DeleteProduct(PPointer);
         dtmdlWorktops.DeletePrices(PPointer);
         dtmdlWorktops.DeletePointer(PPointer);
-      except
-        messagedlg('Product ' + dbgDetails.DataSource.DataSet.fieldbyname('Product_Code').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg('Product ' + dbgDetails.DataSource.DataSet.fieldbyname('Product_Code').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
       Refresh;
     end;

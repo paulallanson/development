@@ -176,7 +176,7 @@ resourcestring
 
 implementation
 
-uses
+uses UITypes, 
   Dialogs;
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -482,8 +482,7 @@ begin
       end
       else
       begin
-          MessageDlg('You can''t save a document outside the Company Document Directory',
-                                                mtError,[mbOK],0) ;
+          MessageDlg('You can''t save a document outside the Company Document Directory', mtError,[mbOK],0) ;
           svDlgOfficeDoc.FileName := sSubject;
           svDlgOfficeDoc.InitialDir := sFilePath;
           okToSave := false;
@@ -2191,4 +2190,3 @@ begin
 end;
 
 end.
-

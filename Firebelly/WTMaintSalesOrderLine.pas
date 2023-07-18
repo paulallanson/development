@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses wtStockDM, wtLUProducts, Allcommon, wtLUVat;
+uses UITypes, wtStockDM, wtLUProducts, Allcommon, wtLUVat;
 
 {$R *.dfm}
 

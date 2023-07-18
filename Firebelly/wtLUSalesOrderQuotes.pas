@@ -45,6 +45,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.dfm}
 
 procedure TfrmWTLUSalesOrderQuotes.SetQuoteEdit(Dataset: TDataset);

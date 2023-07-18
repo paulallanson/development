@@ -45,7 +45,8 @@ var
 
 implementation
 
-uses wtMaintFitters, wtMain;
+uses
+  wtMaintFitters, wtMain, System.UITypes;
 
 {$R *.dfm}
 

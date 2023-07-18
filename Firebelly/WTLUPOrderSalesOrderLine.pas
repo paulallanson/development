@@ -68,6 +68,9 @@ var
 
 implementation
 
+uses
+  System.UITypes;
+
 {$R *.dfm}
 
 { TfrmWTLUPOrderSalesOrderLine }

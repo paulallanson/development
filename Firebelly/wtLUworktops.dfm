@@ -11,12 +11,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -98,15 +96,19 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       item
         Width = 50
       end>
+    ExplicitTop = 392
+    ExplicitWidth = 779
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 328
     Width = 783
     Height = 65
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 327
+    ExplicitWidth = 779
     DesignSize = (
       783
       65)
@@ -126,6 +128,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
+      ExplicitLeft = 349
     end
     object btnEdit: TBitBtn
       Left = 439
@@ -137,6 +140,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 1
       OnClick = btnEditClick
+      ExplicitLeft = 435
     end
     object btnDelete: TBitBtn
       Left = 526
@@ -148,6 +152,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
+      ExplicitLeft = 522
     end
     object BitBtn4: TBitBtn
       Left = 699
@@ -157,8 +162,9 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Anchors = [akRight, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
+      ExplicitLeft = 695
     end
     object btnThickness: TBitBtn
       Left = 267
@@ -170,6 +176,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 4
       OnClick = btnThicknessClick
+      ExplicitLeft = 263
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -198,16 +205,18 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 7
       OnClick = btnExcelClick
+      ExplicitLeft = 608
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 783
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 779
     object Label1: TLabel
       Left = 16
       Top = 16

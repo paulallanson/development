@@ -52,7 +52,7 @@ var
 
 implementation
 
-uses wtLUVat, ComObj, ActiveX;
+uses UITypes, wtLUVat, ComObj, ActiveX;
 
 {$R *.dfm}
 
@@ -121,7 +121,7 @@ procedure TfrmwtMaintVat.SaveToDB;
 var
   iPathLength, iFileLength: integer;
 begin
-  if FunctionMode[1] in ['A', 'C'] then
+  if CharInSet(FunctionMode[1], ['A', 'C']) then
   begin
     if FunctionMode = 'A' then
     begin

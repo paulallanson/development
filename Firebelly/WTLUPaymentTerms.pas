@@ -43,7 +43,8 @@ var
 
 implementation
 
-uses WTMaintPaymentTerms, wtMain;
+uses
+  WTMaintPaymentTerms, wtMain, System.UITypes;
 
 {$R *.dfm}
 

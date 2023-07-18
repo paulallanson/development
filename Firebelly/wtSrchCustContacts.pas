@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses wtMaintCustomerConts;
+uses UITypes, wtMaintCustomerConts;
 
 {$R *.dfm}
 
@@ -149,10 +149,7 @@ begin
             execsql;
           end;
         refreshdata;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Contact_Name').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Contact_Name').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;
