@@ -348,7 +348,7 @@ begin
 
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+              dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
               if iCount = 0 then
                 itempSel := dbgDetails.datasource.DataSet.FieldByName('Purch_Ord').asinteger;
 
@@ -690,7 +690,7 @@ begin
     begin
       for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
         begin
-          dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+          dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
           if icount = 0 then
             key := dbgDetails.datasource.DataSet.FieldByName('Purch_Ord_no').asstring
           else

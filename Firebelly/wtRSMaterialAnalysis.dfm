@@ -3,36 +3,35 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   Top = 91
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Material Analysis'
-  ClientHeight = 420
-  ClientWidth = 643
+  ClientHeight = 419
+  ClientWidth = 639
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    643
-    420)
-  PixelsPerInch = 96
+    639
+    419)
   TextHeight = 13
   object btnPrint: TButton
     Left = 16
-    Top = 381
+    Top = 380
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 381
   end
   object Button4: TButton
     Left = 534
-    Top = 381
+    Top = 380
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,6 +39,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 381
   end
   object rdgrpReps: TRadioGroup
     Left = 16
@@ -111,8 +111,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -127,14 +125,14 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -149,6 +147,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object OleContainer1: TOleContainer
@@ -163,13 +163,11 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnExcel: TBitBtn
     Left = 198
-    Top = 381
+    Top = 380
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 7
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -213,16 +211,20 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 7
+    OnClick = btnExcelClick
+    ExplicitTop = 381
   end
   object btnPreview: TButton
     Left = 104
-    Top = 381
+    Top = 380
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 8
     OnClick = btnPreviewClick
+    ExplicitTop = 381
   end
   object grpbxReps: TGroupBox
     Left = 128
@@ -245,7 +247,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reps'
@@ -330,7 +331,6 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Office Contacts'

@@ -379,7 +379,7 @@ begin
         begin
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+              dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
               DeletePriceRecord(dbgDetails.datasource.dataset.fieldbyname('Price_Pointer').asinteger,
                           dbgDetails.datasource.dataset.fieldbyname('Effective_Date').asdatetime);
             end;

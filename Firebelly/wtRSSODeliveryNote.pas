@@ -52,9 +52,9 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    procedure PrintToAttachment(frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote; tempCode: string);
-    procedure PrintQuoteToAttachment(frmwtRPQuote: TfrmwtRPQuote;
-      tempCode, tmpOrder: string);
+    // ToDo GDK: remove after testing
+    // procedure PrintToAttachment(frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote; tempCode: string);
+    // procedure PrintQuoteToAttachment(frmwtRPQuote: TfrmwtRPQuote; tempCode, tmpOrder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
   private
     bCancelledPrint: boolean;
@@ -79,7 +79,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtEmailList, wtMain;
+uses
+  wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
   SQLTemplate =
@@ -181,7 +182,7 @@ begin
         if frmWTRPSODeliveryNote.qrpDetails.tag = 0 then
           begin
             frmWTRPSODeliveryNote.qrpDetails.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.printer.Printers[Printers.printer.printerindex];
             DefaultBin := GetBinSelection;
           end
         else
@@ -326,7 +327,7 @@ begin
           sBodyText := 'Please find attached Delivery Note.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          Printtoattachment(frmWTRPSODeliveryNote, EmailArray[irow,1]);
+          PrinterTools.New.Printtoattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, sfilename, EmailArray[irow,1]);
 
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
         finally
@@ -397,7 +398,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin
@@ -415,7 +416,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -599,6 +600,7 @@ begin
   memSelection.SetFocus;
 end;
 
+(*
 procedure TfrmWTRSSODeliveryNote.PrintToAttachment(frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote; tempCode: string);
 var
   i: integer;
@@ -856,6 +858,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSSODeliveryNote.memSelectionChange(Sender: TObject);
 begin

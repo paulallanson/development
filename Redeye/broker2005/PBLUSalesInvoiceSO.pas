@@ -175,7 +175,7 @@ begin
         begin
           for iCount := 0 to (dbgSO.SelectedRows.Count - 1) do
             begin
-              dbgSO.datasource.DataSet.GotoBookmark(Pointer(dbgSO.SelectedRows[iCount])) ;
+              dbgSO.datasource.DataSet.GotoBookmark(TBookmark(dbgSO.SelectedRows[iCount])) ;
               aInvoice := TSalesInvoice.Create(dmSalesInvoice);
               try
                 dmSalesInvoice.SONumber := dbgSO.DataSource.dataset.fieldbyname('Sales_Order').asinteger;

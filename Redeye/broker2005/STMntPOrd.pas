@@ -985,7 +985,7 @@ Try
       with STMntPOrdAddFrm.PartsDBGrid.DataSource.DataSet do
       for iTempCount := 0 to STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Count - 1 do
           begin
-          GotoBookmark(pointer(STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Items[iTempCount]));
+          GotoBookmark(TBookmark(STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Items[iTempCount]));
               AddListItem(FieldByName('Part').AsString,
                            FieldByName('Part_Description').AsString,
                            StoreDBLookupComboBox.KeyValue,
@@ -1372,7 +1372,7 @@ Try
       with STMntPOrdAddFrm.PartsDBGrid.DataSource.DataSet do
       for iTempCount := 0 to STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Count - 1 do
           begin
-          GotoBookmark(pointer(STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Items[iTempCount]));
+          GotoBookmark(TBookmark(STMntPOrdAddFrm.PartsDBGrid.SelectedRows.Items[iTempCount]));
 
            if STMntPOrdAddFrm.bIsSample then
               sTempDescr := FieldByName('Part_Description').AsString + ' (SAMPLE)'

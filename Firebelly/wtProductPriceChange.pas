@@ -84,7 +84,7 @@ begin
       begin
         for iCount := (frmwtLUProducts.dbgDetails.SelectedRows.Count - 1) downto 0 do
           begin
-            frmwtLUProducts.dbgDetails.datasource.DataSet.GotoBookmark(Pointer(frmwtLUProducts.dbgDetails.SelectedRows[iCount])) ;
+            frmwtLUProducts.dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(frmwtLUProducts.dbgDetails.SelectedRows[iCount])) ;
             lstbxProductsCode.Items.Add(frmwtLUProducts.dbgDetails.datasource.DataSet.fieldbyname('Product').asstring);
             lstbxProducts.Items.Add(frmwtLUProducts.dbgDetails.datasource.DataSet.fieldbyname('Product_Code').asstring);
           end;

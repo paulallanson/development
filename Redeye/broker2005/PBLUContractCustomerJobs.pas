@@ -153,7 +153,7 @@ begin
         begin
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+              dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
               AddToContract(dbgDetails.datasource.DataSet.fieldbyname('Job_Bag').asinteger);
               AddPOToContract(dbgDetails.datasource.DataSet.fieldbyname('Job_Bag').asinteger);
             end;

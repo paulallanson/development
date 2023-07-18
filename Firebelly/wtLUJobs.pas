@@ -607,7 +607,7 @@ begin
         begin
           for iCount := (dbgDetails.SelectedRows.Count - 1) downto 0 do
             begin
-              dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+              dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
 
               Key := dbgDetails.datasource.DataSet.fieldbyname('Job').asinteger;
 

@@ -6655,7 +6655,7 @@ begin
       PBLUArtwrkTypfrm.DetsDbGrid.Datasource.Dataset.DisableControls;
       for TempLoop := 0 to pred(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows.count) do
 		    begin
-          PBLUArtwrkTypfrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows[TempLoop]));
+          PBLUArtwrkTypfrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows[TempLoop]));
           SelectedLine.ArtWork := SelectedLine.ArtWork +
             (PBLUArtwrkTypfrm.DetsDBGrid.dataSource.dataset.fieldbyname('Artwork_Instructions').asstring) +
             #13#10;
@@ -6793,7 +6793,7 @@ begin
         for x:=0 to pred(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Count) do
         begin
           ExtraCharge := TExtraCharge.Create;
-          GotoBookmark(pointer(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
+          GotoBookmark(TBookmark(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
           ExtraCharge.Details := FieldByName('Details').asString;
           ExtraCharge.Amount := FieldByName('Amount').asFloat;
           ExtraCharge.QuotationPrice := FieldByName('Quotation_price').asFloat;

@@ -7,7 +7,7 @@ uses
   StdCtrls, ComCtrls, ExtCtrls, Buttons, Grids, DBCtrls, wtQuotesDm,
   CRControls, AllCommon, DB, DBTables, Spin, DateSelV5, ToolWin,
   ImgList, ShellAPI, Menus, Inifiles, DBGrids,
-  Activex, AxCtrls, Clipbrd, ComObj,
+  Activex, AxCtrls, Clipbrd, ComObj, taoMAPI,
   ShellCtrls, System.ImageList;
 
 type
@@ -514,7 +514,6 @@ type
     procedure MoveOriginalQuoteDocuments;
     procedure SetOriginalQuoteFromReQuote(const Value: integer);
     function FormatDateasDateTime(sDate: string): TDateTime;
-    procedure MyWinControlSetData(const Data: IInterface);
     function ParseDocumentFrom(tmpFrom: string): string;
     procedure ParseMessage(const AFileName: string; var ATo, AFrom,
       ASubject, ADate, ABody: string);
@@ -4280,102 +4279,6 @@ begin
     tempdate := edtExpiryDate.text;
 
   edtExpiryDate.text := paDatestr(InputDate(paDateStr(tempdate)));
-end;
-
-procedure TfrmWTMaintQuote.MyWinControlSetData(const Data: IUnknown);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'This file doesn''t come from Microsoft Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  MyData: ItaoCells;
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  myNewDate: TDateTime;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  sFile, sFullFile: string;
-  iLength, iPos, icount: integer;
-begin
-  if Supports(Data, ItaoCells, MyData) then
-    begin
-//      MyPath := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey) +'\';
-      if stvDocuments.TopItem.Text = stvDocuments.Selected.Text then
-        MyPath := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey) +'\'
-      else
-        MyPath := dtmdlWorktops.GetCompanyQuoteDirectory + '\' + inttostr(Quote.dbKey) +'\' + stvDocuments.Selected.Text +'\';
-
-      if not DirectoryExists(MyPath) then
-  	    begin
-     	    CreateDirectory(MyPath);
-  	    end;
-
-      for i := 0 to MyData.RowCount - 1 do
-        begin
-          MyFileName := MyData[0, i];
-          MyExtension := LowerCase(ExtractFileExt(MyFileName));
-          if MyExtension = cExtensionOutlook then
-            begin
-
-{ Store the contents as a file on the disk. }
-              MyFilePath := MyPath + MyFileName;
-
-{If the file name already exists then increase the number}
-              icount := 0;
-              NewFilePath := MyFilePath;
-              while FileExists(NewFilePath) = true do
-                begin
-                  inc(icount);
-                  NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-                end;
-
-              MyFilePath := NewFilePath;
-
-              MyFileStream := TFileStream.Create(MyFilePath, fmCreate or fmShareDenyWrite);
-              try
-                TextToStream(MyData[1, i], MyFileStream);
-              finally
-                MyFileStream.Free;
-              end;
-{ GUI }
-              try
-                ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-                if trim(MyDate) = '' then
-                  myNewDate := date
-                else
-                  myNewDate := FormatDateasDateTime(MyDate);
-              except
-                myNewdate := date
-              end;
-//  This is where we add the data into the grid and to the document component
-
-              ShowDocuments(Quote.dbKey);
-            end
-          else
-            begin
-              sFullFile := myFileName;
-              iLength := length(sFullFile);
-
-              iCount := 1;
-
-              while iCount <> 0 do
-                begin
-                  ipos := pos('\',sFullFile);
-
-                  sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                  iCount := pos('\',sFullFile);
-                end;
-
-              sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-              FileCopy(myFileName, myPath + sfile) ;
-              ShowDocuments(Quote.dbkey);
-            end;
-        end;
-    end;
 end;
 
 procedure TfrmWTMaintQuote.ParseMessage(const AFileName: string; var ATo, AFrom,

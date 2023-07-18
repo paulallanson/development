@@ -279,7 +279,7 @@ begin
         begin
           for iCount := 0 to (dbgPO.SelectedRows.Count - 1) do
             begin
-              dbgPO.datasource.DataSet.GotoBookmark(Pointer(dbgPO.SelectedRows[iCount])) ;
+              dbgPO.datasource.DataSet.GotoBookmark(TBookmark(dbgPO.SelectedRows[iCount])) ;
               aInvoice := TSalesInvoice.Create(dmSalesInvoice);
               try
                 dmSalesInvoice.PONumber := dbgPO.DataSource.dataset.fieldbyname('Purchase_Order').asfloat;

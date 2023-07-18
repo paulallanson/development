@@ -307,7 +307,7 @@ begin
   try
     for TempLoop := 0 to pred(dbgDetails.SelectedRows.count) do
       begin
-        dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[TempLoop]));
+        dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[TempLoop]));
 //        Key := dtmdlAllSuppInvoices.CurrentSInvoice;
         Key := dbgDetails.DataSource.DataSet.fieldbyname('Supplier_invoice').asinteger;
         try

@@ -1316,7 +1316,7 @@ begin
         begin
           for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
             begin
-              dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+              dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
               if (dbgDetails.datasource.DataSet.FieldByName('Sales_order_head_Status').asinteger >=  150) and
                  (dbgDetails.datasource.DataSet.FieldByName('Sales_order_head_Status').asinteger < 250) then
                 dtmdlSOOrders.SetSOInvoiceStatus(dbgDetails.datasource.DataSet.FieldByName('Sales_order').asinteger);

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables,
-  allCommon, QrCtrls, QrExport, qrprntr, printers, jpeg;
+  allCommon, QrExport, qrprntr, printers, jpeg;
 
 type
   TfrmWTRPCustomerRFP = class(TForm)

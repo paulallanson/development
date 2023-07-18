@@ -455,7 +455,7 @@ begin
       begin
         for x:=0 to pred(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Count) do
         begin
-          GotoBookmark(pointer(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
+          GotoBookmark(TBookmark(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
           with AddChargesGrid do
           begin
             if Cells[0, 1] <> '' then

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, DateUtils, QrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, DateUtils;
 
 type
   TfrmwtRPSOrderSchedule = class(TForm)

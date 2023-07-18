@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QrCtrls, QRCtrls, QuickRpt, ExtCtrls, AllCommon;
+  Dialogs, DB, DBTables, QRCtrls, QuickRpt, ExtCtrls, AllCommon;
 
 type
   TfrmWTRPSODeliveryNote = class(TForm)

@@ -514,7 +514,7 @@ begin
 
       for inx := 0 to self.dbgDetails.SelectedRows.Count - 1 do
       begin
-        dbgDetails.DataSource.DataSet.GotoBookmark(pointer(dbgDetails.SelectedRows.Items[inx]));
+        dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows.Items[inx]));
         enqList.Add(dbgDetails.DataSource.DataSet.FieldByName('enquiry').asString)
       end;
       bTempOK := PBRSEnqFrm.PrintEnquiries(enqList);
@@ -621,7 +621,7 @@ begin
     begin
       for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
         begin
-          dbgDetails.Datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+          dbgDetails.Datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
           if icount = 0 then
             sMulti := dbgDetails.datasource.dataset.fieldbyname('Enquiry').asstring
           else

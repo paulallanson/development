@@ -7,7 +7,7 @@ uses
   Dialogs, wtSalesOrderDM, Grids, ComCtrls, StdCtrls, DBCtrls, Buttons,
   ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM,
   ToolWin, IniFiles, DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB,
-  Activex, AxCtrls, Clipbrd, ComObj,
+  Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
   ShellCtrls, System.ImageList;
 
 type
@@ -473,7 +473,7 @@ uses taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesO
   WTExcelOLE, wtLUFitters, WTMaintCustomer, WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder,
   WTMaintSalesOrderRaisePO, WTMaintSalesInvoice, WTRSSalesInvoiceReprint, WtMaintJob, WtRSJobSheet, WtMaintJobComplete,
   WTMaintJRemedial, WTRSJobRemedialSheet, WtRPJobRemedialSheet,
-  WTLUCustomerSite, wtRPQuote;
+  WTLUCustomerSite, wtRPQuote, QRPDFFilt;
 
 {$R *.dfm}
 
@@ -5082,8 +5082,7 @@ var
   sAttachment: array[0..255] of Char;
   iCount: integer;
   sLocation, sDest, sFileName: string;
-  AFilters: TgtQRFilters;
-  PDFFilter: TgtQRPDFFilter;
+  PDFFilter: TQRPDFDocumentFilter;
 begin
   sDest :=  dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(iSorder) + '\' ;
 
@@ -5110,7 +5109,7 @@ begin
     sFileName := 'RS' + inttostr(iSorder) + '-J'+ inttostr(iJob) + 'L' + inttostr(iRemedial);
 
     FEmailAttachment.add(sLocation + sFilename + '.pdf');
-    PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+    PDFFilter := TQRPDFDocumentFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
     try
       frmWTRPJobRemedialSheet.qrpJobSheet.Prepare;
       frmWTRPJobRemedialSheet.qrpJobSheet.ExportToFilter(PDFFilter);
@@ -5225,8 +5224,7 @@ var
   sAttachment: array[0..255] of Char;
   iCount: integer;
   sLocation, sDest, sQuoteFolder, sFileName: string;
-  AFilters: TgtQRFilters;
-  PDFFilter: TgtQRPDFFilter;
+  PDFFilter: TQRPDFDocumentFilter;
 begin
   sQuoteFolder := dtmdlWorktops.GetCompanyQuoteDocumentFolder;
 
@@ -5259,7 +5257,7 @@ begin
     sFileName := 'Q' + inttostr(iQuote);
 
     FEmailAttachment.add(sLocation + sFilename + '.pdf');
-    PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+    PDFFilter := TQRPDFDocumentFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
     try
       frmwtRPQuote.qrpDetails.Prepare;
       frmwtRPQuote.qrpDetails.ExportToFilter(PDFFilter);

@@ -7,7 +7,7 @@ uses
   StdCtrls, Buttons, DBCtrls, Mask, ComCtrls, Grids, DBGrids, DB, ExtCtrls,
   DBTables, wtCustomerDM, Variants, WTQuotesDM, WTJobsDM, WTSalesOrderDM,
   WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles,
-  Activex, AxCtrls, Clipbrd, ComObj, Menus,
+  Activex, AxCtrls, Clipbrd, ComObj, Menus, taoMAPI,
   CRControls, System.ImageList;
 
 type
@@ -337,7 +337,6 @@ type
     procedure SetGroupDescription(const Value: string);
     procedure SetMaterialType(const Value: integer);
     procedure SetGroupInactive(const Value: boolean);
-    procedure MyWinControlSetData(const Data: IInterface);
     procedure ParseMessage(const AFileName: string; var ATo, AFrom,
       ASubject, ADate, ABody: string);
     function FormatDateasDateTime(sDate: string): TDateTime;
@@ -2212,98 +2211,6 @@ begin
   dtmdlOneCustomer.qryLevelofImportance.close;
   dtmdlOneCustomer.qryLevelofImportance.open;
 
-end;
-
-procedure TfrmWtMaintCustomer.MyWinControlSetData(const Data: IUnknown);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'This file doesn''t come from Microsoft Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  MyData: ItaoCells;
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  myNewDate: TDateTime;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  sFile, sFullFile: string;
-  iLength, iPos, icount: integer;
-begin
-  if Supports(Data, ItaoCells, MyData) then
-    begin
-      MyPath := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + edtCustomerName.text +'\';
-
-      if not DirectoryExists(MyPath) then
-  	    begin
-     	    CreateDirectory(MyPath);
-  	    end;
-
-      for i := 0 to MyData.RowCount - 1 do
-        begin
-          MyFileName := MyData[0, i];
-          MyExtension := LowerCase(ExtractFileExt(MyFileName));
-          if MyExtension = cExtensionOutlook then
-            begin
-
-{ Store the contents as a file on the disk. }
-              MyFilePath := MyPath + MyFileName;
-
-{If the file name already exists then increase the number}
-              icount := 0;
-              NewFilePath := MyFilePath;
-              while FileExists(NewFilePath) = true do
-                begin
-                  inc(icount);
-                  NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-                end;
-
-              MyFilePath := NewFilePath;
-
-              MyFileStream := TFileStream.Create(MyFilePath, fmCreate or fmShareDenyWrite);
-              try
-                TextToStream(MyData[1, i], MyFileStream);
-              finally
-                MyFileStream.Free;
-              end;
-{ GUI }
-              try
-                ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-                if trim(MyDate) = '' then
-                  myNewDate := date
-                else
-                  myNewDate := FormatDateasDateTime(MyDate);
-              except
-                myNewdate := date
-              end;
-//  This is where we add the data into the grid and to the document component
-
-              ShowDocuments;
-            end
-          else
-            begin
-              sFullFile := myFileName;
-              iLength := length(sFullFile);
-
-              iCount := 1;
-
-              while iCount <> 0 do
-                begin
-                  ipos := pos('\',sFullFile);
-
-                  sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                  iCount := pos('\',sFullFile);
-                end;
-
-              sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-              FileCopy(myFileName, myPath + sfile) ;
-              ShowDocuments;
-            end;
-        end;
-    end;
 end;
 
 procedure TfrmWtMaintCustomer.ParseMessage(const AFileName: string; var ATo, AFrom,

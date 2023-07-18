@@ -514,7 +514,7 @@ begin
         begin
           for iCount := (dbgDetails.SelectedRows.Count - 1) downto 0 do
             begin
-              dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+              dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
 
               if dbgdetails.DataSource.DataSet.FieldByName('sales_order_status').asinteger < 100 then
                 begin
@@ -745,7 +745,7 @@ begin
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
       begin
-        dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+        dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
         if iCount = 0 then
           frmWTRSTemplateSheet.memselection.Text := dbgDetails.datasource.dataset.fieldbyname('sales_order').asstring
         else
@@ -985,7 +985,7 @@ begin
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
       begin
-        dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+        dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
         if iCount = 0 then
           frmWTRSFittingConfirm.memselection.Text := dbgDetails.datasource.dataset.fieldbyname('sales_order').asstring
         else

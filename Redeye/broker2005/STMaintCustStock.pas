@@ -199,7 +199,7 @@ begin
     begin
       for icount := 0 to (dbgDetailsFrom.SelectedRows.Count - 1) do
         begin
-          dtsProductsFrom.DataSet.GotoBookmark(Pointer(dbgDetailsFrom.SelectedRows[iCount])) ;
+          dtsProductsFrom.DataSet.GotoBookmark(TBookmark(dbgDetailsFrom.SelectedRows[iCount])) ;
             with dtsProductsFrom.DataSet do
               begin
                 tmpPart := fieldbyname('Part').asstring;
@@ -250,7 +250,7 @@ begin
     begin
       for icount := 0 to (dbgDetailsTo.SelectedRows.Count - 1) do
         begin
-          dtsProductsTo.DataSet.GotoBookmark(Pointer(dbgDetailsTo.SelectedRows[iCount])) ;
+          dtsProductsTo.DataSet.GotoBookmark(TBookmark(dbgDetailsTo.SelectedRows[iCount])) ;
             with dtsProductsTo.DataSet do
               begin
                 tmpPart := fieldbyname('Part').asstring;
@@ -293,7 +293,7 @@ begin
       {}
       for icount := 0 to (dbgDetailsFrom.SelectedRows.Count - 1) do
         begin
-          dtsProductsFrom.DataSet.GotoBookmark(Pointer(dbgDetailsFrom.SelectedRows[iCount])) ;
+          dtsProductsFrom.DataSet.GotoBookmark(TBookmark(dbgDetailsFrom.SelectedRows[iCount])) ;
             with dtsProductsFrom.DataSet do
               begin
                 tmpPart := fieldbyname('Part').asstring;
@@ -327,7 +327,7 @@ begin
       {}
       for icount := 0 to (dbgDetailsTo.SelectedRows.Count - 1) do
         begin
-          dtsProductsTo.DataSet.GotoBookmark(Pointer(dbgDetailsTo.SelectedRows[iCount])) ;
+          dtsProductsTo.DataSet.GotoBookmark(TBookmark(dbgDetailsTo.SelectedRows[iCount])) ;
             with dtsProductsTo.DataSet do
               begin
                 tmpPart := fieldbyname('Part').asstring;

@@ -279,7 +279,7 @@ begin
     with DetsDBGrid.DataSource.DataSet do
       for inx:=0 to DetsDBGrid.SelectedRows.Count-1 do
       begin
-        GotoBookmark(pointer(DetsDBGrid.SelectedRows.Items[inx]));
+        GotoBookmark(TBookmark(DetsDBGrid.SelectedRows.Items[inx]));
         poNum := self.qrySelUnPaidAgedStkStock_Ref.asFloat;
 
         qryUpdPOLine.ParamByName('PO').asFloat := poNum;

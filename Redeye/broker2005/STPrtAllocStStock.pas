@@ -119,7 +119,7 @@ begin
   {Process the allocations} ;
   for iTempCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
   begin
-    dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iTempCount])) ;
+    dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iTempCount])) ;
     with qryStoreStock do
       begin
         iQtyFreetoPick := ((qryStoreStock.fieldbyname('Store_Quantity').asinteger) - (qryStoreStock.fieldbyname('Quantity_Allocated').asinteger));

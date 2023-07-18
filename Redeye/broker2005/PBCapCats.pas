@@ -104,7 +104,7 @@ With qryGetProductType do
                 For iTempCount := 0 to (CapDBGrid.SelectedRows.Count - 1) do
                         begin
                         {Loop through the selected questions} ;
-                        CapsDS.DataSet.GotoBookmark(Pointer(CapDBGrid.SelectedRows[iTempCount])) ;
+                        CapsDS.DataSet.GotoBookmark(TBookmark(CapDBGrid.SelectedRows[iTempCount])) ;
                         With GetLastNoSQL do
                                 begin
                                 Close ;

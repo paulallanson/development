@@ -1,31 +1,25 @@
 object frmwtRPSIPayments: TfrmwtRPSIPayments
   Left = 43
   Top = 110
-  Width = 1177
-  Height = 615
   Caption = 'Payment Report'
+  ClientHeight = 576
+  ClientWidth = 1161
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -45,6 +39,7 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -58,13 +53,17 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Sales Orders due for templating Quote Report'
     SnapToGrid = True
@@ -72,23 +71,26 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrbGroupHeader: TQRGroup
       Left = 38
       Top = 128
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
@@ -97,20 +99,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 8
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           21.166666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -120,7 +118,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
@@ -128,20 +128,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 8
         Width = 80
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           169.333333333333300000
           21.166666666666670000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -152,7 +148,11 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -161,15 +161,10 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Top = 160
       Width = 1047
       Height = 23
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -181,6 +176,8 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Size.Values = (
         60.854166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -189,25 +186,25 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 70
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           37.041666666666670000
           5.291666666666667000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Payment_Date'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -215,25 +212,26 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 233
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           677.333333333333400000
           5.291666666666667000
           616.479166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText9: TQRDBText
@@ -241,25 +239,25 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2577.041666666667000000
           5.291666666666667000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Paid_Amount'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText10: TQRDBText
@@ -267,25 +265,26 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 97
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1566.333333333333000000
           5.291666666666667000
           256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Rep_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText1: TQRDBText
@@ -293,25 +292,26 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 105
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1841.500000000000000000
           5.291666666666667000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Payment_Description'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText2: TQRDBText
@@ -319,25 +319,26 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 121
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2159.000000000000000000
           5.291666666666667000
           320.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Payment_Method_Description'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText3: TQRDBText
@@ -345,25 +346,25 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 62
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           277.812500000000000000
           5.291666666666667000
           164.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText4: TQRDBText
@@ -371,25 +372,25 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           468.312500000000000000
           5.291666666666667000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Invoice_no'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText5: TQRDBText
@@ -397,25 +398,25 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 2
         Width = 73
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1312.333333333333000000
           5.291666666666667000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Account_Code'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -424,40 +425,33 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Top = 183
       Width = 1047
       Height = 29
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbGroupFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGroupFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         76.729166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblCustTotal: TQRLabel
         Left = 959
         Top = 9
         Width = 79
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2537.354166666667000000
           23.812500000000000000
           209.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustTotal'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -467,7 +461,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape1: TQRShape
@@ -475,16 +471,14 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = -1
         Width = 137
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           2386.541666666667000000
           -2.645833333333333000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -493,20 +487,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 9
         Width = 108
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1965.854166666667000000
           23.812500000000000000
           285.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         Font.Charset = DEFAULT_CHARSET
@@ -516,7 +506,11 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -524,20 +518,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 9
         Width = 28
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2270.125000000000000000
           23.812500000000000000
           74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -547,7 +537,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -556,40 +548,33 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Top = 212
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRBand2AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel10: TQRLabel
         Left = 818
         Top = 7
         Width = 68
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2164.291666666667000000
           18.520833333333330000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Report Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -599,7 +584,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotal: TQRLabel
@@ -607,20 +594,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 7
         Width = 90
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2510.895833333333000000
           18.520833333333330000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportTotal'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -630,7 +613,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape2: TQRShape
@@ -638,16 +623,14 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = -1
         Width = 137
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           2386.541666666667000000
           -2.645833333333333000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -657,38 +640,32 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       Top = 38
       Width = 1047
       Height = 90
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         238.125000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
         Left = 460
         Top = 2
         Width = 113
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1217.083333333333000000
           5.291666666666667000
           298.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Payment Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -698,7 +675,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRSysData1: TQRSysData
@@ -706,19 +685,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 23
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2561.166666666667000000
           60.854166666666670000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
@@ -729,6 +705,8 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -736,20 +714,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 67
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           42.333333333333330000
           187.854166666666700000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Payment Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -759,7 +733,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -767,20 +743,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           677.333333333333300000
           187.854166666666700000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -790,7 +762,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
@@ -798,20 +772,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 25
         Width = 74
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1256.770833333333000000
           66.145833333333330000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateRange'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -821,7 +791,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -829,19 +801,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2598.208333333333000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -850,7 +819,10 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel1: TQRLabel
@@ -858,20 +830,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 20
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1566.333333333333000000
           187.854166666666700000
           52.916666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Rep'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -881,7 +849,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSelection: TQRLabel
@@ -889,20 +859,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 45
         Width = 65
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1267.354166666667000000
           119.062500000000000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSelection'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -912,7 +878,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
@@ -920,20 +888,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           275.166666666666700000
           187.854166666666700000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -943,7 +907,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
@@ -951,20 +917,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 51
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           465.666666666666700000
           187.854166666666700000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoice No'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -974,7 +936,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
@@ -982,20 +946,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 55
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1841.500000000000000000
           187.854166666666700000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1005,7 +965,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
@@ -1013,20 +975,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 80
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2159.000000000000000000
           187.854166666666700000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Payment Method'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1036,7 +994,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel5: TQRLabel
@@ -1044,20 +1004,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 38
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2645.833333333333000000
           187.854166666666700000
           100.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Amount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1067,7 +1023,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel6: TQRLabel
@@ -1075,20 +1033,16 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Top = 71
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1312.333333333333000000
           187.854166666666700000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Account Code'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1098,7 +1052,9 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end

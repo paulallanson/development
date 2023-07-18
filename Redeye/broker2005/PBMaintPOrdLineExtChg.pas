@@ -246,7 +246,7 @@ begin
       for x:=0 to pred(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Count) do
       begin
         ExtraCharge := TExtraCharge.Create;
-        GotoBookmark(pointer(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
+        GotoBookmark(TBookmark(PBLUAddChrgFrm.dbgrdDets.SelectedRows.Items[x]));
         ExtraCharge.Details := FieldByName('Details').asString;
         ExtraCharge.Amount := FieldByName('Amount').asFloat;
         ExtraCharge.QuotationPrice := FieldByName('Quotation_price').asFloat;

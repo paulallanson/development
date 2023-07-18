@@ -374,7 +374,7 @@ begin
     DetsDbGrid.Datasource.Dataset.DisableControls;
     for TempLoop := 0 to pred(DetsDBGrid.SelectedRows.count) do
 		  begin
-        DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(DetsDBGrid.SelectedRows[TempLoop]));
+        DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(DetsDBGrid.SelectedRows[TempLoop]));
         PBRSCustStateFrm.SelectLst.Add(DetsDBGrid.dataSource.dataset.fieldbyname('Sales_invoice').asstring);
       end;
     DetsDbGrid.Datasource.Dataset.EnableControls;
@@ -458,7 +458,7 @@ begin
     DetsDbGrid.Datasource.Dataset.DisableControls;
     for TempLoop := 0 to pred(DetsDBGrid.SelectedRows.count) do
 		  begin
-        DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(DetsDBGrid.SelectedRows[TempLoop]));
+        DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(DetsDBGrid.SelectedRows[TempLoop]));
         dmLookUpSInv.SetStatementNo(DetsDBGrid.dataSource.dataset.fieldbyname('Sales_invoice').asinteger);
       end;
     DetsDbGrid.Datasource.Dataset.EnableControls;

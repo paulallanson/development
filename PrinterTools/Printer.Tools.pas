@@ -22,9 +22,10 @@ type
     { Private declarations }
   public
     { Public declarations }
+    constructor Create;
+    class function New: IPrinterToAttachment;
     procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
-    class function New: IPrinterToAttachment;
   end;
 
 var
@@ -36,6 +37,17 @@ uses
   AllCommon;
 
 { TPrinterTools }
+
+constructor TPrinterTools.Create;
+begin
+  gtQRExportInterface1 := TgtQRExportInterface.Create(nil);
+  gtHTMLEngine1 := TgtHTMLEngine.Create(nil);
+  gtPDFEngine1 := TgtPDFEngine.Create(nil);
+  gtBMPEngine1 := TgtBMPEngine.Create(nil);
+  gtRTFEngine1 := TgtRTFEngine.Create(nil);
+  gtGIFEngine1 := TgtGIFEngine.Create(nil);
+  gtJPEGEngine1 := TgtJPEGEngine.Create(nil);
+end;
 
 class function TPrinterTools.New: IPrinterToAttachment;
 begin

@@ -1,29 +1,23 @@
 object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
   Left = 43
   Top = 110
-  Width = 1171
-  Height = 615
   Caption = 'Sales by Invoice Report'
+  ClientHeight = 576
+  ClientWidth = 1155
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -56,13 +51,17 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Sales Order Scheduling  Report'
     SnapToGrid = True
@@ -70,23 +69,26 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrbGroupHeader: TQRGroup
       Left = 38
       Top = 121
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       FooterBand = qrbGroupFooter
       Master = qrpDetails
       ReprintOnNewPage = False
@@ -95,20 +97,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 8
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           21.166666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -118,7 +116,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
@@ -126,20 +126,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 8
         Width = 80
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           254.000000000000000000
           21.166666666666670000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -150,7 +146,11 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -159,38 +159,32 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Top = 38
       Width = 1047
       Height = 83
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         219.604166666666700000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
         Left = 434
         Top = 8
         Width = 164
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1148.291666666667000000
           21.166666666666670000
           433.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales by Invoice Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -200,7 +194,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRSysData1: TQRSysData
@@ -208,19 +204,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 23
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2582.333333333333000000
           60.854166666666670000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
@@ -231,6 +224,8 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel3: TQRLabel
@@ -238,20 +233,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 54
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           171.979166666666700000
           142.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoice No.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -261,7 +252,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -269,20 +262,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 104
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           381.000000000000000000
           171.979166666666700000
           275.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer/Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -292,7 +281,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel6: TQRLabel
@@ -300,20 +291,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 23
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           190.500000000000000000
           171.979166666666700000
           60.854166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -323,7 +310,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
@@ -331,20 +320,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 32
         Width = 74
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1256.770833333333000000
           84.666666666666670000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateRange'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -354,7 +339,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -362,19 +349,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2619.375000000000000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -383,7 +367,10 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel1: TQRLabel
@@ -391,20 +378,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           846.666666666666700000
           171.979166666666700000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Account Code'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -414,7 +397,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -422,20 +407,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1748.895833333333000000
           171.979166666666700000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sell Price'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -445,7 +426,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -453,20 +436,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 23
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1989.666666666667000000
           171.979166666666700000
           60.854166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'VAT'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -476,7 +455,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel7: TQRLabel
@@ -484,20 +465,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 24
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2180.166666666667000000
           171.979166666666700000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -507,7 +484,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel9: TQRLabel
@@ -515,20 +494,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1079.500000000000000000
           171.979166666666700000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -538,7 +513,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
@@ -546,20 +523,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 23
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2362.729166666667000000
           171.979166666666700000
           60.854166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -569,7 +542,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
@@ -577,20 +552,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 33
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2532.062500000000000000
           171.979166666666700000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Margin'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -600,7 +571,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
@@ -608,20 +581,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 20
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1291.166666666667000000
           171.979166666666700000
           52.916666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Rep'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -631,7 +600,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
@@ -639,20 +610,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 65
         Width = 36
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2669.645833333333000000
           171.979166666666700000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cost %'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -662,7 +629,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -671,15 +640,10 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Top = 153
       Width = 1047
       Height = 40
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -691,6 +655,8 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Size.Values = (
         105.833333333333300000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -699,24 +665,22 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 65
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2592.916666666667000000
           10.583333333333330000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCostPerc'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -724,25 +688,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           10.583333333333330000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Invoice_no'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText5: TQRDBText
@@ -750,25 +714,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 63
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           187.854166666666700000
           10.583333333333330000
           166.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Invoice_Date'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -776,25 +740,26 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 169
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           381.000000000000000000
           10.583333333333330000
           447.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrdbDescription: TQRDBText
@@ -802,16 +767,14 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 20
         Width = 337
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           381.000000000000000000
           52.916666666666670000
           891.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -820,7 +783,11 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         DataSet = qryReport
         DataField = 'Description'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText1: TQRDBText
@@ -828,25 +795,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 73
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           846.666666666666700000
           10.583333333333330000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Account_Code'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
@@ -854,25 +821,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 52
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1079.500000000000000000
           10.583333333333330000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
@@ -880,25 +847,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 67
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1693.333333333333000000
           10.583333333333330000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Goods_Value'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText7: TQRDBText
@@ -906,25 +873,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 57
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1910.291666666667000000
           10.583333333333330000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'VAT_Value'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText8: TQRDBText
@@ -932,25 +899,25 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 58
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2098.145833333333000000
           10.583333333333330000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Total_Value'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCost: TQRLabel
@@ -958,24 +925,22 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 43
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2312.458333333333000000
           10.583333333333330000
           113.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCost'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblMargin: TQRLabel
@@ -983,24 +948,22 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 53
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2479.145833333333000000
           10.583333333333330000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblMargin'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText1: TQRDBText
@@ -1008,25 +971,26 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 4
         Width = 137
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1291.166666666667000000
           10.583333333333330000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Rep_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1035,40 +999,33 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Top = 193
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbGroupFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGroupFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblCustCostPerc: TQRLabel
         Left = 942
         Top = 7
         Width = 103
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2492.375000000000000000
           18.520833333333330000
           272.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustCostPerc'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1078,7 +1035,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCustMargin: TQRLabel
@@ -1086,20 +1045,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 90
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2381.250000000000000000
           18.520833333333330000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustMargin'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1109,7 +1064,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCustCost: TQRLabel
@@ -1117,20 +1074,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 78
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2219.854166666667000000
           18.520833333333330000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustCost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1140,7 +1093,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrGroupbyFooter: TQRDBText
@@ -1148,20 +1103,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 94
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1262.062500000000000000
           18.520833333333330000
           248.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1172,7 +1123,11 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel13: TQRLabel
@@ -1180,20 +1135,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 28
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1529.291666666667000000
           18.520833333333330000
           74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1203,7 +1154,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape1: TQRShape
@@ -1211,16 +1164,14 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = -1
         Width = 353
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1820.333333333333000000
           -2.645833333333333000
           933.979166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1229,20 +1180,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 79
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2045.229166666667000000
           18.520833333333330000
           209.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustTotal'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1252,7 +1199,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCustVat: TQRLabel
@@ -1260,20 +1209,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1878.541666666667000000
           18.520833333333330000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustVat'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1283,7 +1228,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCustSell: TQRLabel
@@ -1291,20 +1238,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1682.750000000000000000
           18.520833333333330000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustSell'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1314,7 +1257,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1323,39 +1268,32 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
       Top = 225
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object qrlblReportCostPerc: TQRLabel
         Left = 931
         Top = 7
         Width = 114
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2463.270833333333000000
           18.520833333333330000
           301.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportCostPerc'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1365,7 +1303,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel10: TQRLabel
@@ -1373,20 +1313,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 68
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1426.104166666667000000
           18.520833333333330000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Report Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1396,7 +1332,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotal: TQRLabel
@@ -1404,20 +1342,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 90
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2016.125000000000000000
           18.520833333333330000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportTotal'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1427,7 +1361,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape2: TQRShape
@@ -1435,16 +1371,14 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = -1
         Width = 353
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1820.333333333333000000
           -2.645833333333333000
           933.979166666666600000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1453,20 +1387,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 81
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1849.437500000000000000
           18.520833333333330000
           214.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportVat'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1476,7 +1406,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportSell: TQRLabel
@@ -1484,20 +1416,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 83
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1653.645833333333000000
           18.520833333333330000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportSell'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1507,7 +1435,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportCost: TQRLabel
@@ -1515,20 +1445,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 89
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2196.041666666667000000
           18.520833333333330000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportCost'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1538,7 +1464,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportMargin: TQRLabel
@@ -1546,20 +1474,16 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Top = 7
         Width = 101
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2354.791666666667000000
           18.520833333333330000
           267.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblReportMargin'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1569,7 +1493,9 @@ object frmwtRPSalesbyInvoice: TfrmwtRPSalesbyInvoice
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end

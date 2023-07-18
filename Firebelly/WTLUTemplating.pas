@@ -663,7 +663,7 @@ begin
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
       begin
-        dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+        dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
         if iCount = 0 then
           frmWTRSTemplateSheet.memselection.Text := dbgDetails.datasource.dataset.fieldbyname('sales_order').asstring
         else

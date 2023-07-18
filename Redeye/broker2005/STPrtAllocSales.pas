@@ -171,7 +171,7 @@ begin
                             mtConfirmation, [mbYes, mbNo], 0) = mrNo then exit;
     for iTempCount := 0 to (DetsDBGrid.SelectedRows.Count - 1) do
       begin
-        DetsDataSource.DataSet.GotoBookmark(Pointer(DetsDBGrid.SelectedRows[iTempCount])) ;
+        DetsDataSource.DataSet.GotoBookmark(TBookmark(DetsDBGrid.SelectedRows[iTempCount])) ;
         With GetDetsSQL do
           begin
             if FieldByName('Qty_free').AsInteger < (FieldByName('Quantity_Ordered').AsInteger + FieldByName('Quantity_Overs').AsInteger) then
@@ -195,7 +195,7 @@ begin
   {Process the allocations} ;
   For iTempCount := 0 to (DetsDBGrid.SelectedRows.Count - 1) do
     begin
-    DetsDataSource.DataSet.GotoBookmark(Pointer(DetsDBGrid.SelectedRows[iTempCount])) ;
+    DetsDataSource.DataSet.GotoBookmark(TBookmark(DetsDBGrid.SelectedRows[iTempCount])) ;
     With GetDetsSQL do
       begin
         if bDeAlloc then

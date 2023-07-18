@@ -969,14 +969,14 @@ begin
       exit;
     If AlloroneRadiogroup.itemindex =0 then
       begin
-        PBLUPordFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUPordFrm.DetsDBGrid.SelectedRows[0]));
+        PBLUPordFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUPordFrm.DetsDBGrid.SelectedRows[0]));
         selectionmemo.lines.Add(FloattoStr(PBLUPordFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Purchase_Order').AsFloat));
         end
       else
       for TempLoop := 0 to (PBLUPordFrm.DetsDBGrid.SelectedRows.count -1) do
       begin
       found := false;
-      PBLUPordFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUPordFrm.DetsDBGrid.SelectedRows[TempLoop]));
+      PBLUPordFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUPordFrm.DetsDBGrid.SelectedRows[TempLoop]));
       for iloop := 1 to Enqarraycount do
             begin
              if PBLUPordFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Purchase_Order').AsFloat =

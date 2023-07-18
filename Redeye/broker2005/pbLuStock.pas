@@ -448,7 +448,7 @@ begin
       bTempAskDets := False ;
       for iTempCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
         begin
-          dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iTempCount])) ;
+          dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iTempCount])) ;
           TempPart := dbgDetails.datasource.DataSet.fieldbyname('Part').asstring;
           if iTempCount = 0 then
             FirstPart := TempPart;

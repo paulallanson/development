@@ -684,7 +684,7 @@ begin
         iStatus := PBMaintWOrderStatusFrm.NewStatus;
         for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
           begin
-            dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount]));
+            dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
             dtmdlAllWOrders.SetWOStatus(dbgDetails.datasource.DataSet.fieldbyname('Works_Order').asinteger, iStatus);
           end;
         dtmdlAllWOrders.refreshdata;

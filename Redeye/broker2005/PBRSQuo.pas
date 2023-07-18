@@ -495,14 +495,14 @@ begin
 
   If AlloroneRadiogroup.itemindex =0 then
       begin
-        PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUEnqFrm.DetsDBGrid.SelectedRows[0]));
+        PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUEnqFrm.DetsDBGrid.SelectedRows[0]));
         selectionmemo.lines.Add(InttoStr(PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Enquiry').AsInteger));
         end
       else
       for TempLoop := 0 to (PBLUEnqFrm.DetsDBGrid.SelectedRows.count -1) do
       begin
       found := false;
-      PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUEnqFrm.DetsDBGrid.SelectedRows[TempLoop]));
+      PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUEnqFrm.DetsDBGrid.SelectedRows[TempLoop]));
       for iloop := 1 to Enqarraycount do
             begin
              if PBLUEnqFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Enquiry').AsInteger =

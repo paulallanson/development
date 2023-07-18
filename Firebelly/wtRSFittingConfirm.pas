@@ -66,7 +66,8 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    procedure PrintToAttachment(frmWTRRSOrder: TfrmWTRPSOrder; tempCode: string);
+    // GDK ToDo: remover after testings
+    // procedure PrintToAttachment(frmWTRRSOrder: TfrmWTRPSOrder; tempCode: string);
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
     function GetSOColourFile(iOrder: integer): string;
@@ -103,7 +104,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtEmailList, wtMain;
+uses
+  wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
   SQLTemplate =
@@ -184,7 +186,7 @@ procedure TfrmWTRSFittingConfirm.btnPrintClick(Sender: TObject);
 begin
   RunReport(false);
   if bCancelledPrint then exit;
-  
+
   //Check if any additional documents need printing
   with lstbxDocuments do
     begin
@@ -193,7 +195,7 @@ begin
       else
         PrintDocuments;
     end;
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmWTRSFittingConfirm.btnPreviewClick(Sender: TObject);
@@ -238,7 +240,7 @@ begin
         if frmWTRPSOrder.qrpDetails.tag = 0 then
           begin
             frmWTRPSOrder.qrpDetails.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[Printers.Printer.PrinterIndex];
             DefaultBin := GetBinSelection;
           end
         else
@@ -598,7 +600,7 @@ begin
             end;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          Printtoattachment(frmWTRPSOrder, EmailArray[irow,1]);
+          PrinterTools.New.Printtoattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, sFileName, EmailArray[irow,1]);
 
           {Create the Terms and Conditions as an attachment}
           if self.chkbxAttachTerms.checked and (sTermsAndConditionsFile <> '') then
@@ -774,7 +776,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin
@@ -792,7 +794,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1000,6 +1002,7 @@ begin
   memSelection.SetFocus;
 end;
 
+(*
 procedure TfrmWTRSFittingConfirm.PrintToAttachment(frmWTRRSOrder: TfrmWTRPSOrder; tempCode: string);
 var
   i: integer;
@@ -1128,6 +1131,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSFittingConfirm.memSelectionChange(Sender: TObject);
 begin

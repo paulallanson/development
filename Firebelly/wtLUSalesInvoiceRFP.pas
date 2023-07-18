@@ -358,7 +358,7 @@ begin
     dbgDetails.Datasource.Dataset.DisableControls;
     for TempLoop := 0 to pred(dbgDetails.SelectedRows.count) do
 		  begin
-        dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[TempLoop]));
+        dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[TempLoop]));
         frmWTRSCustomerRFP.SelectLst.Add(dbgDetails.dataSource.dataset.fieldbyname('Sales_invoice').asstring);
       end;
     dbgDetails.Datasource.Dataset.EnableControls;
@@ -432,7 +432,7 @@ begin
     dbgDetails.Datasource.Dataset.DisableControls;
     for TempLoop := 0 to pred(dbgDetails.SelectedRows.count) do
 		  begin
-        dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[TempLoop]));
+        dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[TempLoop]));
         SetStatementNo(dbgDetails.dataSource.dataset.fieldbyname('Sales_invoice').asinteger);
       end;
     dbgDetails.Datasource.Dataset.EnableControls;

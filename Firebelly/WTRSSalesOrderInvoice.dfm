@@ -3,22 +3,20 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Invoice Comparison Report'
-  ClientHeight = 365
-  ClientWidth = 526
+  ClientHeight = 364
+  ClientWidth = 522
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    526
-    365)
-  PixelsPerInch = 96
+    522
+    364)
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -45,17 +43,18 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object btnPrint: TButton
     Left = 8
-    Top = 328
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 328
   end
   object Button4: TButton
     Left = 432
-    Top = 328
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -63,6 +62,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 328
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -121,8 +121,6 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -137,14 +135,14 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -159,6 +157,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
@@ -228,23 +228,25 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object btnPreview: TButton
     Left = 96
-    Top = 328
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 328
   end
   object btnExcel: TButton
     Left = 184
-    Top = 328
+    Top = 327
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 328
   end
   object OleContainer1: TOleContainer
     Left = 316
@@ -313,7 +315,6 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reps'

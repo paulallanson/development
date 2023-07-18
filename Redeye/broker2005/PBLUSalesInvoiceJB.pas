@@ -181,7 +181,7 @@ begin
         begin
           for iCount := 0 to (dbgjb.SelectedRows.Count - 1) do
             begin
-              dbgjb.datasource.DataSet.GotoBookmark(Pointer(dbgjb.SelectedRows[iCount])) ;
+              dbgjb.datasource.DataSet.GotoBookmark(TBookmark(dbgjb.SelectedRows[iCount])) ;
               aInvoice := TSalesInvoice.Create(dmSalesInvoice);
               try
                 dmSalesInvoice.JBNumber := dbgJB.DataSource.dataset.fieldbyname('Job_Bag').asinteger;

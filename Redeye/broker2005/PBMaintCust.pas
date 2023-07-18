@@ -4915,7 +4915,7 @@ begin
 
       for inx := 0 to self.dbgEnquiryDetails.SelectedRows.Count - 1 do
       begin
-        dbgEnquiryDetails.DataSource.DataSet.GotoBookmark(pointer(dbgEnquiryDetails.SelectedRows.Items[inx]));
+        dbgEnquiryDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgEnquiryDetails.SelectedRows.Items[inx]));
         enqList.Add(dbgEnquiryDetails.DataSource.DataSet.FieldByName('enquiry').asString)
       end;
       bTempOK := PBRSEnqFrm.PrintEnquiries(enqList);
@@ -5039,7 +5039,7 @@ begin
     begin
       for iCount := 0 to (dbgEnquiryDetails.SelectedRows.Count - 1) do
         begin
-          dbgEnquiryDetails.Datasource.DataSet.GotoBookmark(Pointer(dbgEnquiryDetails.SelectedRows[iCount]));
+          dbgEnquiryDetails.Datasource.DataSet.GotoBookmark(TBookmark(dbgEnquiryDetails.SelectedRows[iCount]));
           if icount = 0 then
             sMulti := dbgEnquiryDetails.datasource.dataset.fieldbyname('Enquiry').asstring
           else
@@ -7982,7 +7982,7 @@ begin
 
   for iTempCount := 0 to (dbgContactDetails.SelectedRows.Count - 1) do
     begin
-      dbgContactDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgContactDetails.SelectedRows[iTempCount])) ;
+      dbgContactDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgContactDetails.SelectedRows[iTempCount])) ;
       iTempContact := dbgContactDetails.datasource.DataSet.fieldbyname('Contact_no').asinteger;
       iTempBranch := dbgBranchDetails.datasource.DataSet.fieldbyname('Branch_no').asinteger;
       sName := dbgContactDetails.datasource.DataSet.fieldbyname('Name').asstring;
@@ -8476,7 +8476,7 @@ begin
 
       for iCount := 0 to (dbgCategoryDetails.SelectedRows.Count - 1) do
         begin
-          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgCategoryDetails.SelectedRows[iCount])) ;
+          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgCategoryDetails.SelectedRows[iCount])) ;
 
           if dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category_Used').asstring = '' then
             begin
@@ -8517,7 +8517,7 @@ begin
       ActiveCategoryCode := dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category').asinteger;
       for iCount := 0 to (dbgCategoryDetails.SelectedRows.Count - 1) do
         begin
-          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgCategoryDetails.SelectedRows[iCount])) ;
+          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgCategoryDetails.SelectedRows[iCount])) ;
 
           if dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category_Used').asstring = '' then
             begin
@@ -8560,7 +8560,7 @@ begin
 
       for iCount := 0 to (dbgCategoryDetails.SelectedRows.Count - 1) do
         begin
-          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgCategoryDetails.SelectedRows[iCount])) ;
+          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgCategoryDetails.SelectedRows[iCount])) ;
 
           if (dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category_Used').asstring = '') then
             begin
@@ -8602,7 +8602,7 @@ begin
       ActiveCategoryCode := dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category').asinteger;
       for iCount := 0 to (dbgCategoryDetails.SelectedRows.Count - 1) do
         begin
-          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgCategoryDetails.SelectedRows[iCount])) ;
+          dbgCategoryDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgCategoryDetails.SelectedRows[iCount])) ;
 
           if (dbgCategoryDetails.DataSource.DataSet.fieldbyname('Category_Used').asstring = '') then
             begin

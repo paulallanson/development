@@ -1,31 +1,25 @@
 object frmWTRPSOWarranty: TfrmWTRPSOWarranty
   Left = 91
   Top = 66
-  Width = 1396
-  Height = 615
   Caption = 'Warranty Report'
+  ClientHeight = 576
+  ClientWidth = 1380
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qrySalesOrders
     Font.Charset = DEFAULT_CHARSET
@@ -45,6 +39,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -58,13 +53,17 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Sales Orders due for templating Quote Report'
     SnapToGrid = True
@@ -72,23 +71,26 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrbGroupHeader: TQRGroup
       Left = 38
       Top = 128
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       ReprintOnNewPage = False
       object qrlblSortBy: TQRLabel
@@ -96,20 +98,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 8
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           21.166666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -119,7 +117,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
@@ -127,20 +127,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 8
         Width = 80
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           254.000000000000000000
           21.166666666666670000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Customer_Name'
@@ -151,7 +147,11 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -160,38 +160,32 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       Top = 38
       Width = 1047
       Height = 90
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         238.125000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
         Left = 460
         Top = 2
         Width = 114
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1217.083333333333000000
           5.291666666666667000
           301.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Warranty Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -201,7 +195,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRSysData1: TQRSysData
@@ -209,19 +205,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 23
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2561.166666666667000000
           60.854166666666670000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
@@ -232,6 +225,8 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel3: TQRLabel
@@ -239,20 +234,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 59
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           187.854166666666700000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Order'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -262,7 +253,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -270,20 +263,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           359.833333333333300000
           187.854166666666700000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -293,7 +282,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel6: TQRLabel
@@ -301,20 +292,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 52
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           783.166666666666700000
           187.854166666666700000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Reference'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -324,7 +311,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
@@ -332,20 +321,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 25
         Width = 74
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1256.770833333333000000
           66.145833333333330000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateRange'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -355,7 +340,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -363,19 +350,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2598.208333333333000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -384,7 +368,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel1: TQRLabel
@@ -392,20 +379,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 20
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1164.166666666667000000
           187.854166666666700000
           52.916666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Rep'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -415,7 +398,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSelection: TQRLabel
@@ -423,20 +408,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 45
         Width = 65
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1267.354166666667000000
           119.062500000000000000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSelection'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -446,7 +427,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
@@ -454,20 +437,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 54
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           169.333333333333300000
           187.854166666666700000
           142.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Fitting Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -477,7 +456,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
@@ -485,20 +466,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 32
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2540.000000000000000000
           187.854166666666700000
           84.666666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Status'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -508,7 +485,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
@@ -516,20 +495,16 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 71
         Width = 55
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1460.500000000000000000
           187.854166666666700000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -539,7 +514,9 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -548,15 +525,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       Top = 160
       Width = 1047
       Height = 25
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -568,6 +540,8 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       Size.Values = (
         66.145833333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -576,25 +550,25 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 62
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           0.000000000000000000
           2.645833333333333000
           164.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Sales_Order'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText5: TQRDBText
@@ -602,25 +576,26 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 137
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           783.166666666666700000
           2.645833333333333000
           362.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Reference'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -628,25 +603,26 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 153
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           359.833333333333300000
           2.645833333333333000
           404.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Customer_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText10: TQRDBText
@@ -654,25 +630,26 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 97
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1164.166666666667000000
           2.645833333333333000
           256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Rep_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblFittingDate: TQRLabel
@@ -680,24 +657,22 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 71
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           174.625000000000000000
           2.645833333333333000
           187.854166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblFittingDate'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDescription: TQRLabel
@@ -705,24 +680,22 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 75
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1460.500000000000000000
           2.645833333333333000
           198.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDescription'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText2: TQRDBText
@@ -730,25 +703,25 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Top = 1
         Width = 130
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2540.000000000000000000
           2.645833333333333000
           343.958333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Sales_Order_Status_Desc'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end

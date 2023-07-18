@@ -205,7 +205,7 @@ begin
   try
     for icount := 0 to (dbgDetails.SelectedRows.Count - 1) do
     begin
-      dtsEInvoice.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+      dtsEInvoice.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
       with dtsEInvoice.DataSet do
         begin
           exportInvoice(fieldbyname('Sales_invoice').asinteger);

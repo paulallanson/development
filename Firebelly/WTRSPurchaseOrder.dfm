@@ -3,21 +3,19 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Purchase Order Report'
-  ClientHeight = 326
-  ClientWidth = 504
+  ClientHeight = 325
+  ClientWidth = 500
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    504
-    326)
-  PixelsPerInch = 96
+    500
+    325)
   TextHeight = 13
   object lstbxSuppliersCode: TListBox
     Left = 96
@@ -30,17 +28,18 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 289
   end
   object Button4: TButton
     Left = 416
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,6 +47,7 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 289
   end
   object rdgrpSupplier: TRadioGroup
     Left = 8
@@ -106,8 +106,6 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -122,14 +120,14 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -144,6 +142,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxSupplier: TGroupBox
@@ -213,23 +213,25 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
   end
   object btnPreview: TButton
     Left = 96
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 289
   end
   object btnExcel: TButton
     Left = 184
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 289
   end
   object OleContainer1: TOleContainer
     Left = 316
@@ -298,7 +300,6 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Contacts'

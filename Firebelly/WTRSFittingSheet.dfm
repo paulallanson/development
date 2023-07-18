@@ -11,12 +11,10 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object SelectLst: TListBox
     Left = 176
@@ -112,7 +110,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
       Width = 273
       Height = 22
       Style = csOwnerDrawFixed
-      ItemHeight = 16
       ItemIndex = 0
       TabOrder = 0
       Text = '<All>'

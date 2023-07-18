@@ -235,7 +235,7 @@ begin
     begin
       for iCount := 0 to (dbgPurch.SelectedRows.Count - 1) do
         begin
-          dbgPurch.datasource.DataSet.GotoBookmark(Pointer(dbgPurch.SelectedRows[iCount]));
+          dbgPurch.datasource.DataSet.GotoBookmark(TBookmark(dbgPurch.SelectedRows[iCount]));
           CreateSuppInvoiceLines;
         end;
     end;

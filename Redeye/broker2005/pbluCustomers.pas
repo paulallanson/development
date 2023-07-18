@@ -418,7 +418,7 @@ begin
       bTempAskDets := False ;
       for iTempCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
         begin
-          dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iTempCount])) ;
+          dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iTempCount])) ;
           iTempCode := dbgDetails.datasource.DataSet.fieldbyname('Customer').asinteger;
           if iTempCount = 0 then
             iFirstCode := iTempCode;

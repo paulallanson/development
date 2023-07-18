@@ -58,7 +58,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       ParentFont = False
     end
     object Label9: TLabel
-      Left = 731
+      Left = 727
       Top = 12
       Width = 83
       Height = 13
@@ -70,6 +70,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 731
     end
     object lblExpiryDate: TLabel
       Left = 440
@@ -121,7 +122,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       TabOrder = 0
     end
     object dblkpOperator: TDBLookupComboBox
-      Left = 827
+      Left = 823
       Top = 8
       Width = 145
       Height = 21
@@ -195,7 +196,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       984
       41)
     object lblDeleteprompt: TLabel
-      Left = 668
+      Left = 664
       Top = 12
       Width = 132
       Height = 16
@@ -207,14 +208,16 @@ object frmWTMaintContract: TfrmWTMaintContract
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 668
     end
     object Label7: TLabel
-      Left = 488
+      Left = 484
       Top = 14
       Width = 89
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Total Quote Value:'
+      ExplicitLeft = 488
     end
     object Label10: TLabel
       Left = 208
@@ -224,7 +227,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       Caption = 'Lowest Price Option:'
     end
     object btnOK: TBitBtn
-      Left = 812
+      Left = 808
       Top = 8
       Width = 75
       Height = 25
@@ -253,7 +256,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
-      Left = 900
+      Left = 896
       Top = 8
       Width = 75
       Height = 25
@@ -271,7 +274,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       TabOrder = 2
     end
     object btnSave: TBitBtn
-      Left = 724
+      Left = 720
       Top = 8
       Width = 75
       Height = 25
@@ -297,7 +300,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       OnClick = btnSaveClick
     end
     object edtQuoteValue: TMemo
-      Left = 584
+      Left = 580
       Top = 10
       Width = 79
       Height = 21
@@ -314,7 +317,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     object cmbOptions: TComboBox
       Left = 320
       Top = 10
-      Width = 161
+      Width = 157
       Height = 21
       Style = csDropDownList
       Anchors = [akLeft, akTop, akRight]
@@ -401,7 +404,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       ParentFont = False
     end
     object btnContactClear: TSpeedButton
-      Left = 616
+      Left = 612
       Top = 31
       Width = 23
       Height = 22
@@ -427,6 +430,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       NumGlyphs = 2
       ParentFont = False
       OnClick = btnContactClearClick
+      ExplicitLeft = 616
     end
     object Label13: TLabel
       Left = 16
@@ -457,7 +461,7 @@ object frmWTMaintContract: TfrmWTMaintContract
       ParentFont = False
     end
     object btnCustomer: TBitBtn
-      Left = 704
+      Left = 700
       Top = 6
       Width = 22
       Height = 22
@@ -478,7 +482,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     object edtCustomerName: TEdit
       Left = 104
       Top = 7
-      Width = 593
+      Width = 589
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
@@ -488,7 +492,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     object edtDeveloper: TEdit
       Left = 104
       Top = 86
-      Width = 865
+      Width = 861
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 5
@@ -497,7 +501,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     object edtLocation: TEdit
       Left = 104
       Top = 115
-      Width = 865
+      Width = 861
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 6
@@ -506,14 +510,14 @@ object frmWTMaintContract: TfrmWTMaintContract
     object edtDescription: TEdit
       Left = 104
       Top = 172
-      Width = 865
+      Width = 861
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 9
       OnChange = edtDescriptionChange
     end
     object btnContactSearch: TBitBtn
-      Left = 581
+      Left = 577
       Top = 31
       Width = 22
       Height = 22
@@ -533,7 +537,7 @@ object frmWTMaintContract: TfrmWTMaintContract
     object edtContact: TEdit
       Left = 104
       Top = 32
-      Width = 465
+      Width = 461
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
@@ -848,7 +852,7 @@ object frmWTMaintContract: TfrmWTMaintContract
           Caption = 'Documents'
         end
         object lblNotes: TLabel
-          Left = 583
+          Left = 575
           Top = 0
           Width = 28
           Height = 13

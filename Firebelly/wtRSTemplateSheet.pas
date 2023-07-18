@@ -76,9 +76,9 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    procedure PrintToAttachment(frmWTRRTemplate: TfrmwtRPTemplate; tempCode: string);
-    procedure PrintQuoteToAttachment(frmwtRPQuote: TfrmwtRPQuote;
-      tempCode, tmpOrder: string);
+    // ToDo GDK: Remove after testing
+    // procedure PrintToAttachment(frmWTRRTemplate: TfrmwtRPTemplate; tempCode: string);
+    // procedure PrintQuoteToAttachment(frmwtRPQuote: TfrmwtRPQuote; tempCode, tmpOrder: string);
     procedure RunPlanPrint;
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure GetSiteDocuments(tempOrder: integer);
@@ -116,7 +116,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtEmailList, wtMain;
+uses
+  wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
   SQLTemplate =
@@ -223,7 +224,8 @@ begin
       else
         PrintSiteDocuments;
     end;
-  printer.printerindex := -1;
+
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmWTRSTemplateSheet.btnPreviewClick(Sender: TObject);
@@ -249,11 +251,11 @@ begin
           try
 //            Changed 16 July 2014 to test why documents not printing!!!!!!
 
-            Printer.PrinterIndex := -1;
-            for icount := 0 to pred(Printer.Printers.count) do
+            Printers.Printer.PrinterIndex := -1;
+            for icount := 0 to pred(Printers.Printer.Printers.Count) do
               begin
-                if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-                  Printer.PrinterIndex := icount;
+                if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
+                  Printers.Printer.PrinterIndex := icount;
               end;
 
             if DefaultPrinter <> '' then
@@ -349,7 +351,7 @@ begin
         if frmwtRPTemplate.qrpDetails.tag = 0 then
           begin
             frmWtRPTemplate.qrpDetails.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[Printers.printer.printerindex];
             DefaultBin := GetBinSelection;
           end
         else
@@ -657,7 +659,7 @@ begin
           sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+          PrinterTools.New.Printtoattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, sFileName, EmailArray[irow,1]);
 
           if self.chkbxPrint.checked then
             begin
@@ -672,7 +674,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;
@@ -686,9 +688,9 @@ begin
                         else
                           begin
                             // decide which address to show on quote
-                            frmwtRPQuote.bEndUser := false ;
+                            frmwtRPQuote.bEndUser := false;
                             frmWTRPQuote.bPreview := false;
-                            PrintQuotetoAttachment(frmWTRPQuote, inttostr(qryGetSOQuotesEmails.fieldbyname('Quote').asinteger)+ 'L' + inttostr(iRow), EmailArray[irow,1]);
+                            PrinterTools.New.PrinttoAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, sFileName + qryGetSOQuotesEmails.fieldbyname('Quote').asinteger.ToString + 'L' + iRow.ToString, EmailArray[irow,1]);
                           end;
                       finally
                         frmWTRPQuote.Free;
@@ -874,7 +876,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+              PrinterTools.New.Printtoattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, sFilename, EmailArray[irow,1]);
 
               if iOrderCount = 1 then
                 begin
@@ -903,7 +905,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;
@@ -919,7 +921,7 @@ begin
                             // decide which address to show on quote
                             frmwtRPQuote.bEndUser := false ;
                             frmWTRPQuote.bPreview := false;
-                            PrintQuotetoAttachment(frmWTRPQuote, inttostr(qryGetSOQuotesEmails.fieldbyname('Quote').asinteger)+ 'L' + inttostr(iRow), EmailArray[irow,1]);
+                            PrinterTools.New.PrintToAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, sFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                           end;
                       finally
                         frmWTRPQuote.Free;
@@ -1023,7 +1025,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+              PrinterTools.New.Printtoattachment(frmwtRPTemplate.qrpDetails, FEmailAttachment, sFileName, EmailArray[irow,1]);
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
 //              sSubject := 'Template Documents: ' + EmailArray[irow,1];
@@ -1047,7 +1049,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;
@@ -1063,7 +1065,7 @@ begin
                             // decide which address to show on quote
                             frmwtRPQuote.bEndUser := false ;
                             frmWTRPQuote.bPreview := false;
-                            PrintQuotetoAttachment(frmWTRPQuote, inttostr(qryGetSOQuotesEmails.fieldbyname('Quote').asinteger), EmailArray[irow,1]);
+                            PrinterTools.New.PrinttoAttachment(frmWTRPQuote.qrpDetails, FEmailAttachment, sFileName + qryGetSOQuotesEmails.fieldbyname('Quote').AsString, EmailArray[irow,1]);
                           end;
                       finally
                         frmWTRPQuote.Free;
@@ -1188,7 +1190,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin
@@ -1206,7 +1208,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1418,6 +1420,7 @@ begin
   memSelection.SetFocus;
 end;
 
+(*
 procedure TfrmWTRSTemplateSheet.PrintToAttachment(frmWTRRTemplate: TfrmwtRPTemplate; tempCode: string);
 var
   i: integer;
@@ -1672,9 +1675,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSTemplateSheet.memSelectionChange(Sender: TObject);
 begin

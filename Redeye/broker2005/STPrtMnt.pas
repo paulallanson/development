@@ -234,7 +234,7 @@ else
    bTempAskDets := False ;
    For iTempCount := 0 to (PartsDBGrid.SelectedRows.Count - 1) do
        begin
-       PartsDataSource.DataSet.GotoBookmark(Pointer(PartsDBGrid.SelectedRows[iTempCount])) ;
+       PartsDataSource.DataSet.GotoBookmark(TBookmark(PartsDBGrid.SelectedRows[iTempCount])) ;
        TempPart := PartsDataSource.DataSet.FieldByName('Part').AsString; ;
        If bTempAskDets = False then
           begin
@@ -718,7 +718,7 @@ begin
 bTempAskDets := False ;
 For iTempCount := 0 to (PartsDBGrid.SelectedRows.Count - 1) do
     begin
-    PartsDataSource.DataSet.GotoBookmark(Pointer(PartsDBGrid.SelectedRows[iTempCount])) ;
+    PartsDataSource.DataSet.GotoBookmark(TBookmark(PartsDBGrid.SelectedRows[iTempCount])) ;
     If bTempAskDets = False then
        begin
        STMntPrtSuppFrm := TSTMntPrtSuppFrm.Create(Self);

@@ -753,7 +753,7 @@ begin
       PBLUArtwrkTypfrm.DetsDbGrid.Datasource.Dataset.DisableControls;
       for TempLoop := 0 to pred(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows.count) do
 		    begin
-          PBLUArtwrkTypfrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows[TempLoop]));
+          PBLUArtwrkTypfrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(PBLUArtwrkTypfrm.DetsDBGrid.SelectedRows[TempLoop]));
           ArtEdit.text := ArtEdit.text +
             (PBLUArtwrkTypfrm.DetsDBGrid.dataSource.dataset.fieldbyname('Artwork_Instructions').asstring) +
             #13#10;

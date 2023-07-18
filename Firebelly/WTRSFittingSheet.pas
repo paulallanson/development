@@ -78,7 +78,8 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    procedure PrintToAttachment(frmWTRRJobFitting: TfrmwtRPJobFitting; tempCode: string);
+    // ToDo GDK: remove after testing
+    // procedure PrintToAttachment(frmWTRRJobFitting: TfrmwtRPJobFitting; tempCode: string);
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure GetSiteDocuments(tempOrder: integer);
     function GetKitchenPlan(tmpOrder: integer): string;
@@ -117,7 +118,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtEmailList, wtMain;
+uses
+  wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
   SQLTemplate =
@@ -204,7 +206,7 @@ begin
       else
         PrintSiteDocuments;
     end;
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmWTRSFittingSheet.btnPreviewClick(Sender: TObject);
@@ -223,11 +225,11 @@ begin
   try
     PrinterSettings := TPrinterSettings.Create;
     try
-      Printer.PrinterIndex := -1;
-      for icount := 0 to pred(Printer.Printers.count) do
+      Printers.Printer.PrinterIndex := -1;
+      for icount := 0 to pred(Printers.Printer.Printers.count) do
         begin
-          if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-            Printer.PrinterIndex := icount;
+          if pos(DefaultPrinter,Printers.Printer.printers[icount]) > 0 then
+            Printers.Printer.PrinterIndex := icount;
         end;
 
       if DefaultPrinter <> '' then
@@ -278,7 +280,7 @@ begin
           close;
         end;
     finally
-      DefaultPrinter := printer.Printers[printer.printerindex];
+      DefaultPrinter := Printers.Printer.Printers[Printers.Printer.PrinterIndex];
       DefaultBin := GetBinSelection;
       PrinterSettings.Free;
     end;
@@ -549,7 +551,7 @@ begin
           if frmwtRPJobFitting.GetDetails > 0 then
             begin
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPJobFitting, EmailArray[irow,1]);
+              PrinterTools.New.Printtoattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, sfilename, EmailArray[irow,1]);
             end;
 
           if self.chkbxPrint.checked then
@@ -565,7 +567,7 @@ begin
                     begin
                       frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmWTRPJobRemedialSheet.Job := qryGetSORemedialsEmails.fieldbyname('Job').asinteger;
                         frmWTRPJobRemedialSheet.RemedialNo := 0;
@@ -761,7 +763,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  Printtoattachment(frmwtRPJobFitting, EmailArray[irow,1]);
+                  PrinterTools.New.Printtoattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, sFilename, EmailArray[irow,1]);
                 end;
 
               if iOrderCount = 1 then
@@ -868,7 +870,7 @@ begin
               if frmwtRPJobFitting.GetDetails > 0 then
                 begin
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  Printtoattachment(frmwtRPJobFitting, EmailArray[irow,1]);
+                  PrinterTools.New.Printtoattachment(frmwtRPJobFitting.qrpJobSheet, FEmailAttachment, sFilename, EmailArray[irow,1]);
                 end;
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
@@ -893,7 +895,7 @@ begin
                       begin
                         frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
                         try
-                          Printer.PrinterIndex := -1;
+                          Printers.Printer.PrinterIndex := -1;
 
                           frmWTRPJobRemedialSheet.Job := qryGetSORemedialsEmails.fieldbyname('Job').asinteger;
                           frmWTRPJobRemedialSheet.RemedialNo := 0;
@@ -1023,7 +1025,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin
@@ -1041,7 +1043,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter(Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1253,6 +1255,7 @@ begin
   memSelection.SetFocus;
 end;
 
+(*
 procedure TfrmWTRSFittingSheet.PrintToAttachment(frmwtRRJobFitting: TfrmwtRPJobFitting; tempCode: string);
 var
   i: integer;
@@ -1386,6 +1389,7 @@ procedure TfrmWTRSFittingSheet.memSelectionChange(Sender: TObject);
 begin
   enableRun(self);
 end;
+*)
 
 procedure TfrmWTRSFittingSheet.chkbxAllDocumentsClick(Sender: TObject);
 var

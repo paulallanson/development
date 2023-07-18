@@ -279,7 +279,7 @@ begin
       try
         for icount := 0 to (dbgdetails.SelectedRows.Count - 1) do
           begin
-            dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgdetails.SelectedRows[iCount])) ;
+            dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgdetails.SelectedRows[iCount])) ;
             if icount = 0 then
               begin
                 dmSupplierInvoice.PONumber := dbgdetails.DataSource.dataset.fieldbyname('Purchase_Order').asinteger;

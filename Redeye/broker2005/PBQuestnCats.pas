@@ -104,7 +104,7 @@ With qryGetProductType do
                 For iTempCount := 0 to (QuestnDBGrid.SelectedRows.Count - 1) do
                         begin
                         {Loop through the selected questions} ;
-                        QuestnsDS.DataSet.GotoBookmark(Pointer(QuestnDBGrid.SelectedRows[iTempCount])) ;
+                        QuestnsDS.DataSet.GotoBookmark(TBookmark(QuestnDBGrid.SelectedRows[iTempCount])) ;
                         With GetLastNoSQL do
                                 begin
                                 Close ;

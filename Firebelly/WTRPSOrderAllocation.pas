@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QRCtrls, QrCtrls, QuickRpt, ExtCtrls, DB, DBTables,
+  Dialogs, QRCtrls, QuickRpt, ExtCtrls, DB, DBTables,
   QrExport, qrprntr, printers, AllCommon;
 
 type

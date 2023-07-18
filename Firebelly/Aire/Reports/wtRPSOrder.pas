@@ -4,8 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls,
+  QrExport, qrprntr, printers, AllCommon;
 
 type
   TfrmwtRPSOrder = class(TForm)

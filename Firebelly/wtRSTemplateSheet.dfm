@@ -3,20 +3,18 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
-  ClientHeight = 455
-  ClientWidth = 529
+  ClientHeight = 454
+  ClientWidth = 525
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object SelectLst: TListBox
     Left = 176
@@ -30,14 +28,16 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 375
-    Width = 529
+    Top = 374
+    Width = 525
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 375
+    ExplicitWidth = 529
     DesignSize = (
-      529
+      525
       80)
     object btnPrint: TButton
       Left = 8
@@ -94,11 +94,12 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 529
+    Width = 525
     Height = 62
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 529
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -112,7 +113,6 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       Width = 273
       Height = 22
       Style = csOwnerDrawFixed
-      ItemHeight = 16
       ItemIndex = 0
       TabOrder = 0
       Text = '<All>'
@@ -124,10 +124,11 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 529
+    Width = 525
     Height = 138
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 529
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -175,11 +176,13 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 200
-    Width = 529
-    Height = 175
+    Width = 525
+    Height = 174
     Align = alClient
     Caption = 'pnlDocumentDetails'
     TabOrder = 4
+    ExplicitWidth = 529
+    ExplicitHeight = 175
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1

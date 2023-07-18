@@ -1,31 +1,25 @@
 object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
   Left = 49
   Top = 110
-  Width = 1163
-  Height = 615
   Caption = 'Customer Activity Report'
+  ClientHeight = 576
+  ClientWidth = 1147
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -45,6 +39,7 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -58,13 +53,17 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Quotation Report'
     SnapToGrid = True
@@ -72,43 +71,43 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
       Left = 38
       Top = 38
       Width = 1047
       Height = 91
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         240.770833333333300000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
         Left = 431
         Top = 8
         Width = 173
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1140.354166666667000000
           21.166666666666670000
           457.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Activity Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -118,7 +117,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRSysData1: TQRSysData
@@ -126,19 +127,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 24
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2561.166666666667000000
           63.500000000000000000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
@@ -149,6 +147,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -156,20 +156,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 47
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           63.500000000000000000
           171.979166666666700000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -179,7 +175,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -187,20 +185,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 64
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           656.166666666666700000
           171.979166666666700000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Created'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -210,7 +204,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
@@ -218,20 +214,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 32
         Width = 74
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1256.770833333333000000
           84.666666666666670000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateRange'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -241,7 +233,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -249,19 +243,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2595.562500000000000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -270,7 +261,10 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
@@ -278,20 +272,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 61
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1375.833333333333000000
           171.979166666666700000
           161.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Last Activity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -301,7 +291,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
@@ -309,20 +301,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 61
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1608.666666666667000000
           171.979166666666700000
           161.395833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Quote Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -332,7 +320,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel3: TQRLabel
@@ -340,20 +330,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 60
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1862.666666666667000000
           171.979166666666700000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -363,7 +349,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
@@ -371,20 +359,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 60
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2053.166666666667000000
           171.979166666666700000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Value'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -394,7 +378,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel7: TQRLabel
@@ -402,20 +388,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2328.333333333333000000
           171.979166666666700000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoice Count'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -425,7 +407,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel8: TQRLabel
@@ -433,20 +417,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 66
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2524.125000000000000000
           171.979166666666700000
           174.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Invoice Value'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -456,7 +436,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel6: TQRLabel
@@ -464,20 +446,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 65
         Width = 74
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           889.000000000000000000
           171.979166666666700000
           195.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Type'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -487,7 +465,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -496,18 +476,15 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Top = 129
       Width = 1047
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         84.666666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'Rep_Name'
       FooterBand = qrbCustomerFooter
       Master = qrpDetails
@@ -517,20 +494,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 8
         Width = 23
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           21.166666666666670000
           60.854166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Rep:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -540,7 +513,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText1: TQRDBText
@@ -548,20 +523,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 8
         Width = 53
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           169.333333333333300000
           21.166666666666670000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Rep_Name'
@@ -572,7 +543,11 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -581,15 +556,10 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Top = 161
       Width = 1047
       Height = 19
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -601,6 +571,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Size.Values = (
         50.270833333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       PrintBefore = False
       PrintIfEmpty = True
@@ -609,20 +581,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 84
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1989.666666666667000000
           2.645833333333333000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSOrderValue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -632,7 +600,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -640,25 +610,26 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 219
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           58.208333333333330000
           2.645833333333333000
           579.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
@@ -666,25 +637,25 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 67
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           656.166666666666700000
           2.645833333333333000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Date_Created'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblLastActivity: TQRLabel
@@ -692,20 +663,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 78
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1333.500000000000000000
           2.645833333333333000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblLastActivity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -715,7 +682,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblQuoteCount: TQRLabel
@@ -723,20 +692,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 78
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1566.333333333333000000
           2.645833333333333000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblQuoteCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -746,7 +711,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSOrderCount: TQRLabel
@@ -754,20 +721,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 84
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1799.166666666667000000
           2.645833333333333000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSOrderCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -777,7 +740,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSInvoiceCount: TQRLabel
@@ -785,20 +750,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 90
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2256.895833333333000000
           2.645833333333333000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSInvoiceCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -808,7 +769,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSInvoiceValue: TQRLabel
@@ -816,20 +779,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 90
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2460.625000000000000000
           2.645833333333333000
           238.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSInvoiceValue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -839,7 +798,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRDBText1: TQRDBText
@@ -847,25 +808,25 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 1
         Width = 136
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           889.000000000000000000
           2.645833333333333000
           359.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Type_description'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -874,40 +835,33 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Top = 205
       Width = 1047
       Height = 37
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbCustomerFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbCustomerFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         97.895833333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblGrpQuoteCount: TQRLabel
         Left = 573
         Top = 9
         Width = 96
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1516.062500000000000000
           23.812500000000000000
           254.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblGrpQuoteCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -917,7 +871,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel5: TQRLabel
@@ -925,20 +881,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 136
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           169.333333333333300000
           23.812500000000000000
           359.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Count/Quoted'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -948,7 +900,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblCustomerCount: TQRLabel
@@ -956,20 +910,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 115
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           571.500000000000000000
           23.812500000000000000
           304.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCustomerCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -979,7 +929,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblGrpOrderCount: TQRLabel
@@ -987,20 +939,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 95
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1772.708333333333000000
           23.812500000000000000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblGrpOrderCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1010,7 +958,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape1: TQRShape
@@ -1018,16 +968,14 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 0
         Width = 430
         Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           31.750000000000000000
           1566.333333333333000000
           0.000000000000000000
           1137.708333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1036,20 +984,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 95
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1963.208333333333000000
           23.812500000000000000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblGrpOrderValue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1059,7 +1003,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblGrpInvoicecount: TQRLabel
@@ -1067,20 +1013,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 100
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2230.437500000000000000
           23.812500000000000000
           264.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblGrpInvoicecount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1090,7 +1032,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblGrpInvoicevalue: TQRLabel
@@ -1098,20 +1042,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 9
         Width = 99
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2439.458333333333000000
           23.812500000000000000
           261.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblGrpInvoicevalue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1121,7 +1061,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1130,40 +1072,33 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Top = 242
       Width = 1047
       Height = 48
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRBand2AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         127.000000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object qrlblTotalInvoiceCount: TQRLabel
         Left = 820
         Top = 15
         Width = 125
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2169.583333333333000000
           39.687500000000000000
           330.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalInvoiceCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1173,7 +1108,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalOrderValue: TQRLabel
@@ -1181,20 +1118,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 15
         Width = 116
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1907.645833333333000000
           39.687500000000000000
           306.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalOrderValue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1204,7 +1137,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalInvoiceValue: TQRLabel
@@ -1212,20 +1147,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 15
         Width = 123
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2365.375000000000000000
           39.687500000000000000
           325.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalInvoiceValue'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1235,7 +1166,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalQuoteCount: TQRLabel
@@ -1243,20 +1176,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 15
         Width = 119
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1452.562500000000000000
           39.687500000000000000
           314.854166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalQuoteCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1266,7 +1195,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel10: TQRLabel
@@ -1274,20 +1205,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 15
         Width = 75
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1317.625000000000000000
           39.687500000000000000
           198.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Report Totals'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1297,7 +1224,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRShape2: TQRShape
@@ -1305,16 +1234,14 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 4
         Width = 430
         Height = 10
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           26.458333333333330000
           1566.333333333333000000
           10.583333333333330000
           1137.708333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1323,20 +1250,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 15
         Width = 118
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1701.270833333333000000
           39.687500000000000000
           312.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalOrderCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1346,7 +1269,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object gtQRLabel9: TQRLabel
@@ -1354,20 +1279,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 17
         Width = 166
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           84.666666666666670000
           44.979166666666670000
           439.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Customer Count/Quoted'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1377,7 +1298,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalCustomerCount: TQRLabel
@@ -1385,20 +1308,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 17
         Width = 142
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           571.500000000000000000
           44.979166666666670000
           375.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblTotalCustomerCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1408,7 +1327,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1417,20 +1338,17 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       Top = 180
       Width = 1047
       Height = 25
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrsbActivityBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         66.145833333333330000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrsbDetails
       DataSet = qryActivityDetails
       PrintBefore = False
@@ -1440,20 +1358,16 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 4
         Width = 78
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           127.000000000000000000
           10.583333333333330000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblLastActivity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1463,7 +1377,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblNotes: TQRLabel
@@ -1471,16 +1387,14 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 4
         Width = 393
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           719.666666666666700000
           10.583333333333330000
           1039.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1494,7 +1408,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblContactName: TQRLabel
@@ -1502,20 +1418,17 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 4
         Width = 126
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           367.770833333333300000
           10.583333333333330000
           333.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblLastActivity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1525,7 +1438,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOperatorName: TQRLabel
@@ -1533,20 +1448,17 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Top = 4
         Width = 126
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1785.937500000000000000
           10.583333333333330000
           333.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblLastActivity'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1556,7 +1468,9 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end

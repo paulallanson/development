@@ -39,12 +39,12 @@ object frmwtLUQuotes: TfrmwtLUQuotes
     ExplicitWidth = 1367
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 503
     Width = 1359
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     ExplicitTop = 511
     ExplicitWidth = 1367
@@ -64,7 +64,6 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 1076
       Top = 1
       Width = 290
@@ -72,6 +71,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       Align = alRight
       Alignment = taRightJustify
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         290
@@ -407,7 +407,6 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       end>
     ExplicitWidth = 1367
     object Panel3: TPanel
-      ParentBackground = False
       Left = 9
       Top = 0
       Width = 1350
@@ -415,6 +414,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       Align = alLeft
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         1344
@@ -448,7 +448,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1106
+        Left = 1100
         Top = 7
         Width = 69
         Height = 13
@@ -463,7 +463,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1112
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1186
+        Left = 1180
         Top = 3
         Width = 145
         Height = 21

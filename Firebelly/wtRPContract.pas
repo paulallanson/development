@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, QrCtrls, QuickRpt, ExtCtrls, Printers;
+  Dialogs, DB, DBTables, QRCtrls, QuickRpt, ExtCtrls, Printers;
 
 type
   TfrmWTRPContract = class(TForm)

@@ -141,7 +141,7 @@ begin
       begin
         for iCount := (frmwtSrchSupplier.dbgDetails.SelectedRows.Count - 1) downto 0 do
           begin
-            frmwtSrchSupplier.dbgDetails.datasource.DataSet.GotoBookmark(Pointer(frmwtSrchSupplier.dbgDetails.SelectedRows[iCount])) ;
+            frmwtSrchSupplier.dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(frmwtSrchSupplier.dbgDetails.SelectedRows[iCount])) ;
             lstbxSuppliersCode.Items.Add(frmwtSrchSupplier.dbgDetails.datasource.DataSet.fieldbyname('Supplier').asstring);
             lstbxSuppliers.Items.Add(frmwtSrchSupplier.dbgDetails.datasource.DataSet.fieldbyname('Supplier_Name').asstring);
           end;

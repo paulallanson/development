@@ -261,7 +261,7 @@ begin
   SuppsDbGrid.Datasource.Dataset.DisableControls;
   for TempLoop := 0 to pred(SuppsDBGrid.SelectedRows.count) do
     begin
-      SuppsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(SuppsDBGrid.SelectedRows[TempLoop]));
+      SuppsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(SuppsDBGrid.SelectedRows[TempLoop]));
       {Add a selected supplier into the selected list}
       with AddIntSelSQL do
       begin
@@ -294,7 +294,7 @@ begin
   SupSelDbGrid.Datasource.Dataset.DisableControls;
   for TempLoop := 0 to pred(SupSelDbGrid.SelectedRows.count) do
     begin
-      SupSelDbGrid.DataSource.DataSet.GotoBookmark(Pointer(SupSelDbGrid.SelectedRows[TempLoop]));
+      SupSelDbGrid.DataSource.DataSet.GotoBookmark(TBookmark(SupSelDbGrid.SelectedRows[TempLoop]));
       {Delete the suppliers from the left hand side}
       with DelIntSelSQL do
       begin

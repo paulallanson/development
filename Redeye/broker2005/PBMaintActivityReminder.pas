@@ -213,7 +213,7 @@ begin
     begin
       for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
         begin
-          dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+          dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
 
           aActivity := TActivity.Create(dtmdlActivityReminder);
           try

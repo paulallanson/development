@@ -770,7 +770,7 @@ begin
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
       begin
-        dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+        dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
         if iCount = 0 then
           frmWTRSFittingSheet.memselection.Text := dbgDetails.datasource.dataset.fieldbyname('sales_order').asstring
         else
@@ -894,7 +894,7 @@ begin
 
             for iCount := (dbgDetails.SelectedRows.Count - 1) downto 0 do
               begin
-                dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+                dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
 
                 Key := dbgDetails.datasource.dataset.fieldbyname('Job').asinteger;
                 SOrder := dbgDetails.datasource.dataset.fieldbyname('Sales_Order').asinteger;
@@ -954,7 +954,7 @@ begin
     {Build up the selection memo box based on the selection}
     for iCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
       begin
-        dbgDetails.datasource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+        dbgDetails.datasource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
         if iCount = 0 then
           frmWTRSSODeliveryNote.memselection.Text := dbgDetails.datasource.dataset.fieldbyname('sales_order').asstring
         else

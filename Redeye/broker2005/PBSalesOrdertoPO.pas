@@ -82,7 +82,7 @@ begin
   try
     for icount := 0 to (dbgDetails.SelectedRows.Count - 1) do
     begin
-      dtsDirectSO.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iCount])) ;
+      dtsDirectSO.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount])) ;
       with dtsDirectSO.DataSet do
         begin
           //create SO object and load data from database

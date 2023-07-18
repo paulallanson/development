@@ -426,7 +426,7 @@ begin
 
   for iTempCount := 0 to (dbgDetails.SelectedRows.Count - 1) do
     begin
-      dbgDetails.DataSource.DataSet.GotoBookmark(Pointer(dbgDetails.SelectedRows[iTempCount])) ;
+      dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iTempCount])) ;
       iTempContact := dbgDetails.datasource.DataSet.fieldbyname('Contact_no').asinteger;
       iTempBranch := dbgDetails.datasource.DataSet.fieldbyname('Branch_no').asinteger;
       sName := dbgDetails.datasource.DataSet.fieldbyname('Contact_Name').asstring;

@@ -105,7 +105,7 @@ begin
   begin
     for inx := 0 to (dbgrdOut.SelectedRows.Count - 1) do
     begin
-      GotoBookmark(pointer(dbgrdOut.SelectedRows.Items[inx]));
+      GotoBookmark(TBookmark(dbgrdOut.SelectedRows.Items[inx]));
       qryUpdProdType.ParamByName('category').asInteger :=
         dblucmbbxCategories.ListSource.DataSet.FieldByName('category').asInteger;
       qryUpdProdType.ParamByName('product_type').asInteger :=

@@ -226,7 +226,7 @@ STLUPOrdFrm := TSTLUPOrdFrm.Create(Self);
        for TempLoop := 0 to (STLUPOrdFrm.DetsDBGrid.SelectedRows.count -1) do
       begin
       found := false;
-      STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(STLUPOrdFrm.DetsDBGrid.SelectedRows[TempLoop]));
+      STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(STLUPOrdFrm.DetsDBGrid.SelectedRows[TempLoop]));
       for iloop := 1 to Enqarraycount do
             begin
              if STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Purch_Ord').AsInteger =
@@ -317,7 +317,7 @@ begin
       for TempLoop := 0 to (STLUPOrdFrm.DetsDBGrid.SelectedRows.count -1) do
       begin
       found := false;
-      STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(Pointer(STLUPOrdFrm.DetsDBGrid.SelectedRows[TempLoop]));
+      STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.GotoBookmark(TBookmark(STLUPOrdFrm.DetsDBGrid.SelectedRows[TempLoop]));
       for iloop := 1 to Enqarraycount do
             begin
              if STLUPOrdFrm.DetsDBGrid.DataSource.DataSet.FieldByName('Purch_Ord').AsInteger =

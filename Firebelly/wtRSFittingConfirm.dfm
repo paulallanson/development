@@ -3,20 +3,18 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   Top = 115
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
-  ClientHeight = 427
-  ClientWidth = 552
+  ClientHeight = 426
+  ClientWidth = 548
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object SelectLst: TListBox
     Left = 176
@@ -30,14 +28,14 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 347
-    Width = 552
+    Top = 346
+    Width = 548
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      552
+      548
       80)
     object btnPrint: TButton
       Left = 8
@@ -93,8 +91,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 197
-    Width = 552
+    Top = 196
+    Width = 548
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
@@ -122,8 +120,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 552
-    Height = 59
+    Width = 548
+    Height = 58
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
@@ -140,7 +138,6 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       Width = 273
       Height = 22
       Style = csOwnerDrawFixed
-      ItemHeight = 16
       ItemIndex = 0
       TabOrder = 0
       Text = '<All>'
@@ -152,10 +149,11 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 552
+    Width = 548
     Height = 138
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 552
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
