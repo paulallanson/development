@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, DBTables, jpeg,
-  ExtDlgs, ComCtrls, ImgList, Grids, DBGrids, ToolWin, wtNotesDM;
+  ExtDlgs, ComCtrls, ImgList, Grids, DBGrids, ToolWin, wtNotesDM,
+  System.ImageList;
 
 type
   TfrmWtMaintMatType = class(TForm)

@@ -424,7 +424,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
         Alignment = taLeftJustify
         AutoStretch = True
         Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Arial'

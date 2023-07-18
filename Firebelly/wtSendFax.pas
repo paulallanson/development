@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, ExtCtrls, printers, ShellAPI, DB, DBTables, Inifiles,
-  AdFaxCtl, syncobjs, QrCtrls;
+  AdFaxCtl, syncobjs, QrCtrls, OoMisc;
 
 type
   TfrmWTSendFax = class(TForm)

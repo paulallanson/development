@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, Db, Grids, DBGrids, wtSalesOrderDM,
-  AllCommon, IniFiles, Buttons, QrCtrls, DateUtils;
+  AllCommon, IniFiles, Buttons, QrCtrls, DateUtils, System.ImageList;
 
 type
   TfrmwtLUSales = class(TForm)

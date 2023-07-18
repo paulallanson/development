@@ -9,6 +9,7 @@ uses
 type
   TfrmWTRSJobCutSched = class(TfrmWTRSQuote)
     Button1: TButton;
+    Label1: TLabel;
     procedure EnableRun(Sender: TObject);
     procedure btnRunClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);

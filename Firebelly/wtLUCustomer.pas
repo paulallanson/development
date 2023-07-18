@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ImgList, ComCtrls, ExtCtrls, ToolWin, Grids, DBGrids, Menus, StdCtrls, Db,
   wtluCustQuotes, wtLuCustJobs, wtluCustInvoices, DBTables, AllCommon,
-  Buttons, QrCtrls, Inifiles;
+  Buttons, QrCtrls, Inifiles, System.ImageList;
 
 type
   TfrmWTLUCustomer = class(TForm)

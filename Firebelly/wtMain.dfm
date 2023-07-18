@@ -2,8 +2,8 @@ object frmWTMain: TfrmWTMain
   Left = 72
   Top = 61
   Caption = 'Firebelly Worktop Management System'
-  ClientHeight = 0
-  ClientWidth = 120
+  ClientHeight = 694
+  ClientWidth = 1501
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,24 +23,24 @@ object frmWTMain: TfrmWTMain
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 120
+    Width = 1501
     Height = 40
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 36
-        Width = 1146
+        Width = 1495
       end>
-    ExplicitWidth = 1150
+    ExplicitWidth = 120
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1133
+      Width = 1486
       Height = 36
       AutoSize = True
       ButtonHeight = 36
-      ButtonWidth = 65
+      ButtonWidth = 59
       Caption = 'ToolBar1'
       EdgeInner = esNone
       EdgeOuter = esNone
@@ -65,14 +65,14 @@ object frmWTMain: TfrmWTMain
         OnClick = btnCustomersClick
       end
       object btnSuppliers: TToolButton
-        Left = 65
+        Left = 59
         Top = 0
         Caption = 'Su&ppliers'
         ImageIndex = 7
         OnClick = btnSuppliersClick
       end
       object btnContracts: TToolButton
-        Left = 130
+        Left = 118
         Top = 0
         Caption = 'Contracts'
         ImageIndex = 8
@@ -80,7 +80,7 @@ object frmWTMain: TfrmWTMain
         OnClick = btnContractsClick
       end
       object btnQuotes: TToolButton
-        Left = 195
+        Left = 177
         Top = 0
         Hint = 'Quotes|Maintain Quotes Estimates and Quotations'
         Caption = '&Quotes'
@@ -91,21 +91,21 @@ object frmWTMain: TfrmWTMain
         OnClick = btnQuotesClick
       end
       object btnSales: TToolButton
-        Left = 260
+        Left = 236
         Top = 0
         Caption = '&Sales'
         ImageIndex = 6
         OnClick = btnSalesClick
       end
       object btnTemplating: TToolButton
-        Left = 325
+        Left = 295
         Top = 0
         Caption = '&Templating'
         ImageIndex = 11
         OnClick = btnTemplatingClick
       end
       object btnJobs: TToolButton
-        Left = 390
+        Left = 354
         Top = 0
         Hint = 'Jobs|Maintain Job details'
         Caption = '&Jobs'
@@ -116,14 +116,14 @@ object frmWTMain: TfrmWTMain
         OnClick = btnJobsClick
       end
       object btnFitting: TToolButton
-        Left = 455
+        Left = 413
         Top = 0
         Caption = '&Fitting'
         ImageIndex = 11
         OnClick = btnFittingClick
       end
       object btnStock: TToolButton
-        Left = 520
+        Left = 472
         Top = 0
         Caption = 'Stoc&k'
         ImageIndex = 5
@@ -131,7 +131,7 @@ object frmWTMain: TfrmWTMain
         OnClick = btnStockClick
       end
       object btnPurchasing: TToolButton
-        Left = 585
+        Left = 531
         Top = 0
         Caption = '&Purchase'
         ImageIndex = 3
@@ -139,14 +139,14 @@ object frmWTMain: TfrmWTMain
         OnClick = btnPurchasingClick
       end
       object btnSalesInvoices: TToolButton
-        Left = 650
+        Left = 590
         Top = 0
         Caption = '&Invoicing'
         DropdownMenu = pmnuSInvoicing
         ImageIndex = 4
       end
       object btnPrices: TToolButton
-        Left = 715
+        Left = 649
         Top = 0
         Caption = 'Colours'
         ImageIndex = 10
@@ -156,8 +156,8 @@ object frmWTMain: TfrmWTMain
   end
   object stsbrStatus: TStatusBar
     Left = 0
-    Top = -19
-    Width = 120
+    Top = 675
+    Width = 1501
     Height = 19
     Panels = <
       item
@@ -169,8 +169,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
-    ExplicitTop = 419
-    ExplicitWidth = 1150
+    ExplicitTop = -19
+    ExplicitWidth = 120
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

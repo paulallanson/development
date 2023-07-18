@@ -120,7 +120,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         Size.Values = (
           105.833333333333300000
           21.166666666666670000
-          42.333333333333340000
+          42.333333333333330000
           291.041666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -297,7 +297,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         Size.Values = (
           44.979166666666670000
           317.500000000000000000
-          740.833333333333200000
+          740.833333333333300000
           156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -323,8 +323,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         Size.Values = (
           44.979166666666670000
           23.812500000000000000
-          740.833333333333200000
-          264.583333333333400000)
+          740.833333333333300000
+          264.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -364,7 +364,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
           44.979166666666670000
           21.166666666666670000
           317.500000000000000000
-          328.083333333333400000)
+          328.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
