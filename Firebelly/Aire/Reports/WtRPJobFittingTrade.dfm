@@ -1873,8 +1873,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
       VertAdjust = 0
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Job.*,'
       '        Operator.Operator_Name,'
@@ -1898,8 +1898,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Left = 200
     Top = 96
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -1913,8 +1913,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -1939,16 +1939,16 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Left = 350
     Top = 123
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 357
     Top = 378
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1962,8 +1962,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         ParamType = ptUnknown
       end>
   end
-  object qryUpJStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpJStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       
@@ -1989,8 +1989,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Company_Name,'
       'Street,'

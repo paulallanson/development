@@ -143,8 +143,8 @@ object frmWTLUReason: TfrmWTLUReason
     Left = 136
     Top = 120
   end
-  object qryReason: TQuery
-    DatabaseName = 'WT'
+  object qryReason: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Inactive_Reason'
@@ -161,8 +161,8 @@ object frmWTLUReason: TfrmWTLUReason
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

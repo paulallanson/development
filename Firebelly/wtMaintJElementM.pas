@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, CRControls, DBCtrls, ExtCtrls, DB, DBTables,
-  wtJobsDM, QrCtrls;
+  Dialogs, StdCtrls, Buttons, CRControls, DBCtrls, ExtCtrls, DB, wtJobsDM, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJElementM = class(TForm)
@@ -24,12 +26,12 @@ type
     dblkpWTGroup: TDBLookupComboBox;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWTGroup: TQuery;
+    qryWTGroup: TFDQuery;
     dtsWTGroup: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWTThickness: TDataSource;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

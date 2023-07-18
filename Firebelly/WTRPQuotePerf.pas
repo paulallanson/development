@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPQuotePerf = class(TForm)
@@ -12,7 +15,7 @@ type
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
     QRSysData1: TQRSysData;
-    qryQuotes: TQuery;
+    qryQuotes: TFDQuery;
     qrgCustomerHead: TQRGroup;
     qrsbDetails: TQRSubDetail;
     QRLabel2: TQRLabel;
@@ -65,7 +68,7 @@ type
     qrlDeliveryPrice: TQRLabel;
     qrlblRequote: TQRLabel;
     gtQRLabel1: TQRLabel;
-    qryReQuote: TQuery;
+    qryReQuote: TFDQuery;
     qrlblStatus: TQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

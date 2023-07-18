@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TWTRPCustTurnFrm = class(TForm)
@@ -23,7 +26,7 @@ type
     qrlblGPM1: TQRLabel;
     qrlblGPMUp1: TQRLabel;
     qrlblGPMUp2: TQRLabel;
-    QryCustTurn: TQuery;
+    QryCustTurn: TFDQuery;
     QryCustTurnName: TStringField;
     QryCustTurnSel1: TFloatField;
     QryCustTurnSel3: TFloatField;

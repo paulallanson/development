@@ -331,8 +331,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
     Caption = 'Only Show Difference'
     TabOrder = 15
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

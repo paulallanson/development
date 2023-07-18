@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintWTGPrices = class(TForm)
@@ -20,16 +23,16 @@ type
     Label7: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    lkpThickness: TQuery;
+    lkpThickness: TFDQuery;
     srclkpThickness: TDataSource;
-    lkpWTGroup: TQuery;
+    lkpWTGroup: TFDQuery;
     stclkpWTGroup: TDataSource;
-    qryWTThickness: TQuery;
+    qryWTThickness: TFDQuery;
     Button1: TButton;
-    qryGetGroupWT: TQuery;
-    qryCheckWTThickness: TQuery;
-    qryAddWTThickness: TQuery;
-    qryAdd: TQuery;
+    qryGetGroupWT: TFDQuery;
+    qryCheckWTThickness: TFDQuery;
+    qryAddWTThickness: TFDQuery;
+    qryAdd: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

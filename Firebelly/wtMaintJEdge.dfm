@@ -181,8 +181,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
       OnClick = btnEdgeClick
     end
   end
-  object qryEdgeType: TQuery
-    DatabaseName = 'wt'
+  object qryEdgeType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Edge_Type')
@@ -194,8 +194,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Left = 56
     Top = 136
   end
-  object qryEdgeThickness: TQuery
-    DatabaseName = 'wt'
+  object qryEdgeThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Edge_profile.Edge_profile,'
       '        Edge_profile.description,'
@@ -224,8 +224,8 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Left = 296
     Top = 8
   end
-  object qryOneEdgeThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneEdgeThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Edge_profile,'
       '        Material_type,'

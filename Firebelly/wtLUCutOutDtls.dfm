@@ -37,10 +37,10 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
         Visible = True
       end>
   end
-  object tblCOutThickness: TTable [25]
+  object tblCOutThickness: TFDTable [25]
     BeforePost = tblCOutThicknessBeforePost
     OnNewRecord = tblCOutThicknessNewRecord
-    DatabaseName = 'WT'
+    ConnectionName = 'WT'
     IndexFieldNames = 'Cutout'
     TableName = 'Cutout_thickness'
     Left = 312
@@ -51,8 +51,8 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     Left = 352
     Top = 256
   end
-  object lkpCOutThickness: TQuery [27]
-    DatabaseName = 'WT'
+  object lkpCOutThickness: TFDQuery [27]
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Cutout_Thickness.*,'
       '  CutOut.Description,'
@@ -134,8 +134,8 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     Left = 216
     Top = 256
   end
-  object qryDelCOutThick: TQuery [29]
-    DatabaseName = 'wt'
+  object qryDelCOutThick: TFDQuery [29]
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from cutout_thickness'
       'where price_pointer = :price_pointer')
@@ -148,8 +148,8 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
         ParamType = ptUnknown
       end>
   end
-  object qryDelCOThick: TQuery [30]
-    DatabaseName = 'wt'
+  object qryDelCOThick: TFDQuery [30]
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from CutOut_thickness'
       'where price_pointer = :price_pointer')

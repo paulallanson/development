@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, DBTables, IniFiles, QrCtrls;
+  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, IniFiles, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TAllEmailListFrm = class(TForm)
@@ -14,7 +17,7 @@ type
     Panel2: TPanel;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    ExFilterSQL: TQuery;
+    ExFilterSQL: TFDQuery;
     ExFilterSRC: TDataSource;
     lblCount: TLabel;
     procedure FormCreate(Sender: TObject);

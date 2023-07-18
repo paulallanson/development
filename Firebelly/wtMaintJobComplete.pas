@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, wtJobsDm, DBCtrls, DB, DBTables, QrCtrls;
+  Dialogs, ComCtrls, StdCtrls, wtJobsDm, DBCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJobComplete = class(TForm)
@@ -28,7 +31,7 @@ type
     edtDate: TEdit;
     Label9: TLabel;
     dblkpOperator: TDBLookupComboBox;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

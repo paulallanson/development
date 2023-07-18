@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, ComCtrls, ImgList, Buttons, StdCtrls, ExtCtrls,
-  ToolWin, DB, DBTables, wtSalesOrderDM, AllCommon, IniFiles, DateUtils, DateSelV5;
+  ToolWin, DB, wtSalesOrderDM, AllCommon, IniFiles, DateUtils, DateSelV5;
 
 type
   TfrmWTLUTemplating = class(TForm)

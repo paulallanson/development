@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, QrCtrls, DB,
-  DBTables, Spin;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, QrCtrls, DB, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSalesInvoiceMaterialPerf = class(TForm)
@@ -33,7 +35,7 @@ type
     grpbxReps: TGroupBox;
     Label3: TLabel;
     cmbReps: TComboBox;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     rdgrpSortBy: TRadioGroup;
     chkbxPageBreak: TCheckBox;

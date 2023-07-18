@@ -52,8 +52,8 @@ object frmWTUtilities: TfrmWTUtilities
       'Delete Unattached Contract Quotes')
     TabOrder = 2
   end
-  object qryCheckPrices: TQuery
-    DatabaseName = 'WT'
+  object qryCheckPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'delete from price_pointer'
       
@@ -62,8 +62,8 @@ object frmWTUtilities: TfrmWTUtilities
     Left = 200
     Top = 16
   end
-  object qryCheckOrder: TQuery
-    DatabaseName = 'Wt'
+  object qryCheckOrder: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'UPDATE Sales_Order'
       'set sales_order_status = 100'
@@ -83,8 +83,8 @@ object frmWTUtilities: TfrmWTUtilities
     Left = 160
     Top = 16
   end
-  object qryCheckOrders: TQuery
-    DatabaseName = 'wt'
+  object qryCheckOrders: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order'
       'set sales_order_Status = 100'

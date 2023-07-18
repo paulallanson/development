@@ -159,8 +159,8 @@ object frmWTLUDesigner: TfrmWTLUDesigner
     Left = 136
     Top = 120
   end
-  object qryDesigner: TQuery
-    DatabaseName = 'WT'
+  object qryDesigner: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Designer'
@@ -184,8 +184,8 @@ object frmWTLUDesigner: TfrmWTLUDesigner
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 208
     Top = 120
   end

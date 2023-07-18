@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, CRControls, Mask, DBCtrls, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, Buttons, CRControls, Mask, DBCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtMaintAddChgs = class(TForm)
@@ -15,15 +18,15 @@ type
     edtmnySell: TCREditMoney;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    lkpPriceBasis: TQuery;
+    lkpPriceBasis: TFDQuery;
     dtsPriceBasis: TDataSource;
     chkbxInactive: TCheckBox;
     chkbxDoNotDiscount: TCheckBox;
     edtDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);

@@ -202,8 +202,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Left = 168
     Top = 56
   end
-  object qryCustomerBranch: TQuery
-    DatabaseName = 'WT'
+  object qryCustomerBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Customer_Branch.*, '
@@ -241,8 +241,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 304
     Top = 56
   end

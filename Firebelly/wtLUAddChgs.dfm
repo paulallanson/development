@@ -165,8 +165,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     Left = 112
     Top = 160
   end
-  object lkpExtras: TQuery
-    DatabaseName = 'WT'
+  object lkpExtras: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Extra_Charge.*,'
       ' (select top 1 Unit_price'
@@ -237,8 +237,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       Size = 1
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 176
     Top = 160
   end

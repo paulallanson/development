@@ -1,8 +1,8 @@
 object dtmdlEvents: TdtmdlEvents
   Height = 375
   Width = 544
-  object qryEvents: TQuery
-    DatabaseName = 'wt'
+  object qryEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer_Contact_Event.Customer_Cont_Event_No,'
       '        Customer_Contact_Event.Customer,'
@@ -60,7 +60,7 @@ object dtmdlEvents: TdtmdlEvents
     Left = 80
     Top = 40
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT  Customer_Event.Customer_Event_no,'
       '        Customer_Event.Customer,'

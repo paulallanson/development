@@ -4,16 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB,
-  DBTables, Spin, ExtCtrls, Math;
+  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintQSlab = class(TForm)
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     pnlDetails: TPanel;
     Label1: TLabel;
     Label2: TLabel;
@@ -29,14 +31,14 @@ type
     Label7: TLabel;
     edtTotalCost: TCREditMoney;
     dblkpMaterial: TDBLookupComboBox;
-    qryMaterial: TQuery;
+    qryMaterial: TFDQuery;
     dtsMaterial: TDataSource;
     Label8: TLabel;
     dblkpSupplier: TDBLookupComboBox;
-    qrySupplier: TQuery;
+    qrySupplier: TFDQuery;
     dtsSupplier: TDataSource;
     Label9: TLabel;
-    qrySlabSize: TQuery;
+    qrySlabSize: TFDQuery;
     dtsSlabSize: TDataSource;
     Label10: TLabel;
     edtWastePercentage: TCREditInt;
@@ -46,7 +48,7 @@ type
     edtTotalWasteCost: TCREditMoney;
     SpeedButton1: TSpeedButton;
     Label13: TLabel;
-    qryMTSlabSize: TQuery;
+    qryMTSlabSize: TFDQuery;
     dblkpSlabSize: TDBLookupComboBox;
     edtSlabCost: TCREditMoney;
     Label14: TLabel;
@@ -54,9 +56,9 @@ type
     lblDelete: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryContractWorktops: TQuery;
-    qryContractPrice: TQuery;
-    qryGetContractSupplier: TQuery;
+    qryContractWorktops: TFDQuery;
+    qryContractPrice: TFDQuery;
+    qryGetContractSupplier: TFDQuery;
     pnlAdhesive: TPanel;
     Label19: TLabel;
     pnlPrices: TPanel;
@@ -84,7 +86,7 @@ type
     Label24: TLabel;
     edtAdhesiveCostUnit: TMemo;
     Label25: TLabel;
-    qryGetSupplierWorktop: TQuery;
+    qryGetSupplierWorktop: TFDQuery;
     edtQuantity: TCREditFloat;
     Label26: TLabel;
     edtSlabArea: TCREditMoney;

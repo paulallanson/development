@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls, Math, qrprntr, printers;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls, Math, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobFitting = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qryGetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qryGetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     memAddress: TgtQRRichText;
     qrchdSatisfaction: TQRChildBand;
     QRLabel11: TgtQRLabel;
@@ -34,7 +37,7 @@ type
     QRMemo4: TgtQRMemo;
     QRLabel50: TgtQRLabel;
     QRLabel51: TgtQRLabel;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrbSignature: TQRBand;
     QRLabel60: TgtQRLabel;
     QRLabel61: TgtQRLabel;
@@ -94,21 +97,21 @@ type
     gtQRLabel1: TgtQRLabel;
     qrlblEdgeDetail: TgtQRLabel;
     qrlblThickness: TgtQRLabel;
-    qryJobEdge: TQuery;
-    qryJobThickness: TQuery;
-    qryJobUpstand: TQuery;
+    qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     qriHeadLogo: TgtQRImage;
     gtQRShape27: TgtQRShape;
     gtQRLabel12: TgtQRLabel;
     qrlblColour: TgtQRLabel;
-    qryJobWorktop: TQuery;
+    qryJobWorktop: TFDQuery;
     gtQRLabel19: TgtQRLabel;
     gtQRLabel20: TgtQRLabel;
     gtQRShape31: TgtQRShape;
     gtQRLabel24: TgtQRLabel;
     gtQRShape32: TgtQRShape;
     gtQRLabel25: TgtQRLabel;
-    qryJobWorktopCount: TQuery;
+    qryJobWorktopCount: TFDQuery;
     qrchdDelivery: TQRChildBand;
     gtQRLabel28: TgtQRLabel;
     qriheadlogo3: TgtQRImage;
@@ -122,12 +125,12 @@ type
     gtQRLabel34: TgtQRLabel;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;
-    qryQElements: TQuery;
+    qryQElements: TFDQuery;
     gtQRLabel44: TgtQRLabel;
     gtQRLabel45: TgtQRLabel;
     lblQuantity: TgtQRLabel;
     gtQRLabel46: TgtQRLabel;
-    qryJobWorktopWeight: TQuery;
+    qryJobWorktopWeight: TFDQuery;
     qrlblWorktopWeight: TgtQRLabel;
     gtQRShape37: TgtQRShape;
     gtQRShape38: TgtQRShape;

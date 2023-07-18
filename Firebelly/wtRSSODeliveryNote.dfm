@@ -117,8 +117,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
       end
     end
   end
-  object qryGetSalesOrderEmailsOlder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOlder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.quote,'
       '        Sales_Order_Line.description,'
@@ -165,8 +165,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmailsOld: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOld: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Sales_Order_Line.quote,'
       '        Sales_Order_Line.description,'
@@ -218,8 +218,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Sales_Order.Sales_order,'
@@ -269,8 +269,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmails: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrderEmails: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '        Sales_Order.Customer,'
@@ -307,8 +307,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmail: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmail: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Sales_Order.Sales_order,'

@@ -286,8 +286,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
       Text = 'cmbMaterialUse'
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -321,9 +321,9 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -351,8 +351,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     Left = 232
     Top = 120
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -387,8 +387,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'wt'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Worktop_Group.*'
       'from Worktop_Group'
@@ -418,8 +418,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     Left = 496
     Top = 112
   end
-  object qryMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Material_Type.*'
       'from Material_Type'
@@ -441,8 +441,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
     Left = 320
     Top = 8
   end
-  object qryContractWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryContractWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
@@ -487,8 +487,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryContractPrice: TQuery
-    DatabaseName = 'WT'
+  object qryContractPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'
@@ -538,8 +538,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryCustomerWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
@@ -600,8 +600,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerPrice: TQuery
-    DatabaseName = 'WT'
+  object qryCustomerPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'
@@ -651,8 +651,8 @@ object frmWTMaintQElement: TfrmWTMaintQElement
         ParamType = ptUnknown
       end>
   end
-  object qryMaterialUse: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialUse: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Use'

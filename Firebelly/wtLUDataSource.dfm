@@ -125,8 +125,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     Left = 152
     Top = 120
   end
-  object qryDataSource: TQuery
-    DatabaseName = 'WT'
+  object qryDataSource: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Data_Source'
@@ -144,8 +144,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

@@ -205,8 +205,8 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
       ParentFont = False
     end
   end
-  object qryDelCustWTGroupPrices: TQuery
-    DatabaseName = 'wt'
+  object qryDelCustWTGroupPrices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from Customer_Worktop_Group_Thick'
       'where price_pointer = :price_pointer')
@@ -225,8 +225,8 @@ object frmWTLUCustWTGroupPrices: TfrmWTLUCustWTGroupPrices
     Left = 192
     Top = 112
   end
-  object lkpCustWTGroupPrices: TQuery
-    DatabaseName = 'WT'
+  object lkpCustWTGroupPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Customer_Worktop_Group_Thick.*,'

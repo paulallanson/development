@@ -146,8 +146,8 @@ object frmwtLUVat: TfrmwtLUVat
     Left = 192
     Top = 64
   end
-  object qryVat: TQuery
-    DatabaseName = 'WT'
+  object qryVat: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Vat'
@@ -193,8 +193,8 @@ object frmwtLUVat: TfrmwtLUVat
       FieldName = 'Reverse_Charge_Vat_Rate'
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 304
     Top = 72
   end

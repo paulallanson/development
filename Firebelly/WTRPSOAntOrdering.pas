@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSOAntOrdering = class(TForm)
     qrpDetails: TQuickRep;
-    qrySalesOrders: TQuery;
+    qrySalesOrders: TFDQuery;
     qrbGroupHeader: TQRGroup;
     qrlblSortBy: TQRLabel;
     qrGroupbyText: TQRDBText;
@@ -61,8 +64,8 @@ type
     qrlblCustCost: TQRLabel;
     qrlblReportCost: TQRLabel;
     qrlblWorktopMaterial: TQRLabel;
-    qryWTElement: TQuery;
-    OLDqrySalesOrders: TQuery;
+    qryWTElement: TFDQuery;
+    OLDqrySalesOrders: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsbDetailsBeforePrint(Sender: TQRCustomBand;

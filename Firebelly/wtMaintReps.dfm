@@ -155,8 +155,8 @@ object frmWTMaintReps: TfrmWTMaintReps
     TabOrder = 8
     Text = 'edtCommissionRate'
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Name'
       'from Customer where Customer = :Customer')
@@ -169,8 +169,8 @@ object frmWTMaintReps: TfrmWTMaintReps
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Rep'
       'SET'
@@ -221,8 +221,8 @@ object frmWTMaintReps: TfrmWTMaintReps
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Rep'
       '        (Rep,'
@@ -240,8 +240,8 @@ object frmWTMaintReps: TfrmWTMaintReps
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Rep'
       'From Rep'
@@ -255,8 +255,8 @@ object frmWTMaintReps: TfrmWTMaintReps
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables,
-  CRControls;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintReps = class(TForm)
@@ -19,15 +21,15 @@ type
     cmbCommissionType: TComboBox;
     edtCustomerName: TEdit;
     btnCustomerSearch: TBitBtn;
-    qryGetCustomer: TQuery;
+    qryGetCustomer: TFDQuery;
     lblCommissionPerc: TLabel;
     chkbxInactive: TCheckBox;
     edtRepName: TEdit;
     edtCommissionRate: TCREditFloat;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure chkbxIsCustomerClick(Sender: TObject);

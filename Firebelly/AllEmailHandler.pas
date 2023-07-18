@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, DBTables, Variants, QrCtrls, Outlook12_TLB,
+  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, Variants, QrCtrls, Outlook12_TLB,
   gtClasses3, gtXportIntf, gtQRXportIntf, Printer.Enums, gtCstDocEng,
   gtCstPlnEng, gtCstHTMLEng, gtExHTMLEng, gtHTMLEng, gtCstGfxEng, gtBMPEng,
-  gtCstPDFEng, gtExPDFEng, gtPDFEng, gtJPEGEng, gtGIFEng, gtRTFEng;
+  gtCstPDFEng, gtExPDFEng, gtPDFEng, gtJPEGEng, gtGIFEng, gtRTFEng,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TemailHandler = class(TDataModule)
-    qrySelCustomerContacts: TQuery;
-    qryEmailList: TQuery;
+    qrySelCustomerContacts: TFDQuery;
+    qryEmailList: TFDQuery;
     gtQRExportInterface1: TgtQRExportInterface;
     gtHTMLEngine1: TgtHTMLEngine;
     gtPDFEngine1: TgtPDFEngine;

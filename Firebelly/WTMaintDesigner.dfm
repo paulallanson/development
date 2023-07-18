@@ -69,8 +69,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
     Text = 'edtDesignerName'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Designer'
       'SET'
@@ -97,8 +97,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Designer'
       '        (Designer,'
@@ -116,8 +116,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Designer'
       'From Designer'
@@ -131,8 +131,8 @@ object frmWTMaintDesigner: TfrmWTMaintDesigner
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

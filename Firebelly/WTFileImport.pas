@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTFileImport = class(TForm)
@@ -31,7 +34,7 @@ type
     opndlgImportFile: TOpenDialog;
     Label2: TLabel;
     dblkpDataSource: TDBLookupComboBox;
-    qryDataSource: TQuery;
+    qryDataSource: TFDQuery;
     dtsDataSource: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btnFindFileClick(Sender: TObject);

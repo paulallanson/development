@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPPOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgPurchaseOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdPOLines: TQRSubDetail;
-    qrySupplier: TQuery;
+    qrySupplier: TFDQuery;
     qrbPOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
@@ -27,7 +30,7 @@ type
     QRLabel3: TgtQRLabel;
     qrlblNett: TgtQRLabel;
     QRLabel1: TgtQRLabel;
-    qryPOLine: TQuery;
+    qryPOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrlblTotalLineCost: TgtQRLabel;
     QRLabel9: TgtQRLabel;
@@ -52,8 +55,8 @@ type
     QRShape9: TgtQRShape;
     memDeliveryNotes: TgtQRMemo;
     qrshpPayment: TgtQRShape;
-    qryCompanyAddress: TQuery;
-    GetNarrSQL: TQuery;
+    qryCompanyAddress: TFDQuery;
+    GetNarrSQL: TFDQuery;
     dtsPOLine: TDataSource;
     gtQRLabel5: TgtQRLabel;
     gtQRLabel6: TgtQRLabel;
@@ -90,7 +93,7 @@ type
     qrlblUnitCost: TgtQRLabel;
     qrlblLineCost: TgtQRLabel;
     qrlblDiscountValue: TgtQRLabel;
-    qryUpPO: TQuery;
+    qryUpPO: TFDQuery;
     qrlblDescription: TgtQRLabel;
     gtQRShape13: TgtQRShape;
     ChildBand1: TQRChildBand;

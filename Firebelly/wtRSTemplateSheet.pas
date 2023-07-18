@@ -4,19 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
+  Dialogs, StdCtrls, ShellAPI, DB, CheckLst, printers, IniFiles,
   wtRPTemplate, QrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls,
-  ComCtrls;
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSTemplateSheet = class(TForm)
     SelectLst: TListBox;
-    qryGetSOQuotes: TQuery;
-    qryGetSalesOrders: TQuery;
-    qryGetSalesOrderEmails: TQuery;
-    qryGetSOQuotesEmails: TQuery;
-    qryGetSalesOrderEmailsOlder: TQuery;
-    qryGetSalesOrderEmailsOld: TQuery;
+    qryGetSOQuotes: TFDQuery;
+    qryGetSalesOrders: TFDQuery;
+    qryGetSalesOrderEmails: TFDQuery;
+    qryGetSOQuotesEmails: TFDQuery;
+    qryGetSalesOrderEmailsOlder: TFDQuery;
+    qryGetSalesOrderEmailsOld: TFDQuery;
     pnlFooter: TPanel;
     btnPrint: TButton;
     btnPreview: TButton;
@@ -30,11 +33,11 @@ type
     memSelection: TMemo;
     chkbxPrint: TCheckBox;
     cmbDocuments: TComboBox;
-    qryDocumentStructure: TQuery;
+    qryDocumentStructure: TFDQuery;
     chkbxPrintPlan: TCheckBox;
     chkbxMerge: TCheckBox;
-    qryGetSalesOrdersOld: TQuery;
-    qryGetSalesOrder: TQuery;
+    qryGetSalesOrdersOld: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
     pnlDocumentDetails: TPanel;
     pgDocumentDetails: TPageControl;
     TabSheet1: TTabSheet;

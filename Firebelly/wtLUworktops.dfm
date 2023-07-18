@@ -255,8 +255,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnClick = dblkpMaterialTypeClick
     end
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -270,8 +270,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     Left = 280
     Top = 168
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description,'
@@ -345,8 +345,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     Left = 440
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 376
     Top = 16
   end

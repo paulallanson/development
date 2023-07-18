@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, QrCtrls, ComCtrls, OleCtnrs, DB,
-  DBTables, Menus;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, QrCtrls, ComCtrls, OleCtnrs, DB, Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSIPayments = class(TForm)
@@ -29,7 +31,7 @@ type
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
     rdgrpCategory: TRadioGroup;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     lstbxCustomersCode: TListBox;
     lstbxCustomers: TListBox;

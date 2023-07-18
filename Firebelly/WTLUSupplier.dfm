@@ -843,8 +843,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     Left = 360
     Top = 131
   end
-  object qryDummy: TQuery
-    DatabaseName = 'wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier.*'
       'from Supplier'
@@ -867,8 +867,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
     Left = 192
     Top = 200
   end
-  object qrySuppliers: TQuery
-    DatabaseName = 'wt'
+  object qrySuppliers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier.*'
       'from Supplier'
@@ -890,8 +890,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete '
       'from Supplier'

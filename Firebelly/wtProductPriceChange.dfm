@@ -181,8 +181,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     ListSource = dtsProductGroup
     TabOrder = 9
   end
-  object qryProductGroup: TQuery
-    DatabaseName = 'WT'
+  object qryProductGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Product_Group'
@@ -195,8 +195,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Left = 272
     Top = 24
   end
-  object qryProducts: TQuery
-    DatabaseName = 'WT'
+  object qryProducts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Product.Product,'
       '        Product.Price_pointer,'
@@ -219,8 +219,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryPrice: TQuery
-    DatabaseName = 'WT'
+  object qryPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select top 1 *'
       'from prices'

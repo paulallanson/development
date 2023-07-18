@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, jpeg, ExtDlgs,
-  ImgList, ComCtrls, ToolWin, Grids, DBGrids, DB, DBTables;
+  ImgList, ComCtrls, ToolWin, Grids, DBGrids, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtMaintMaterialType = class(TForm)
@@ -23,9 +26,9 @@ type
     Panel1: TPanel;
     imgWorktop: TImage;
     OpenPictureDialog1: TOpenPictureDialog;
-    qryUpstands: TQuery;
+    qryUpstands: TFDQuery;
     dtsUpstands: TDataSource;
-    qryDelUpstand: TQuery;
+    qryDelUpstand: TFDQuery;
     TabSheet2: TTabSheet;
     Label3: TLabel;
     Panel2: TPanel;
@@ -53,9 +56,9 @@ type
     btnWeightDelete: TToolButton;
     dbgWeights: TDBGrid;
     Label6: TLabel;
-    qryweights: TQuery;
+    qryweights: TFDQuery;
     dtsWeights: TDataSource;
-    qryDelWeight: TQuery;
+    qryDelWeight: TFDQuery;
     edtDescription: TEdit;
     edtShortDescription: TEdit;
     memLongDescription: TMemo;
@@ -63,11 +66,11 @@ type
     edtPurchaseNominal: TEdit;
     edtSalesNominalRetail: TEdit;
     edtPurchaseNominalRetail: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     TabSheet5: TTabSheet;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

@@ -4,20 +4,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, Grids, DBGrids, ComCtrls,
-  CRControls, DBCtrls, QrCtrls, Mask, DateUtils;
+  StdCtrls, Buttons, ExtCtrls, DB, Grids, DBGrids, ComCtrls,
+  CRControls, DBCtrls, QrCtrls, Mask, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTAutoPriceChange = class(TForm)
     rdgrpPriceChange: TRadioGroup;
     lblPriceChange: TLabel;
-    qryWorktop: TQuery;
+    qryWorktop: TFDQuery;
     Label2: TLabel;
-    qryPrice: TQuery;
+    qryPrice: TFDQuery;
     BasisGroup: TRadioGroup;
-    qryEdge: TQuery;
-    qryCutOut: TQuery;
-    qryAdd: TQuery;
+    qryEdge: TFDQuery;
+    qryCutOut: TFDQuery;
+    qryAdd: TFDQuery;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     dtpckEffective: TDateTimePicker;
@@ -26,17 +29,17 @@ type
     grpbxWTGroups: TGroupBox;
     Label3: TLabel;
     dblkpWTGroup: TDBLookupComboBox;
-    qryWTGroups: TQuery;
+    qryWTGroups: TFDQuery;
     dtsWTGroup: TDataSource;
     Label4: TLabel;
     dblkpMaterialType: TDBLookupComboBox;
-    qryMaterial: TQuery;
+    qryMaterial: TFDQuery;
     dtsMaterial: TDataSource;
-    qryWTGPrices: TQuery;
+    qryWTGPrices: TFDQuery;
     grpbxThickness: TGroupBox;
     Label1: TLabel;
     dblkpthickness: TDBLookupComboBox;
-    qryThickness: TQuery;
+    qryThickness: TFDQuery;
     dtsThickness: TDataSource;
     Label5: TLabel;
     edtTime: TMaskEdit;

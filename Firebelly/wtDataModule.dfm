@@ -4,26 +4,26 @@ object dtmdlWorktops: TdtmdlWorktops
   Top = 68
   Height = 589
   Width = 1036
-  object dtbsWorktops: TDatabase
-    AliasName = 'Worktop'
-    DatabaseName = 'WT'
+  object dtbsWorktops: TFDConnection
+    ConnectionDefName = 'Worktop'
+    ConnectionName = 'WT'
     Params.Strings = (
       'USER NAME=admin')
-    SessionName = 'Default'
+
     AfterConnect = dtbsWorktopsAfterConnect
     OnLogin = dtbsWorktopsLogin
     Left = 24
     Top = 24
   end
-  object qryNewPrice: TQuery
-    DatabaseName = 'WT'
+  object qryNewPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Price_Pointer) from Price_Pointer')
     Left = 24
     Top = 80
   end
-  object lkpPriceBasis: TTable
-    DatabaseName = 'WT'
+  object lkpPriceBasis: TFDTable
+    ConnectionName = 'WT'
     TableName = 'Price_Basis'
     Left = 24
     Top = 192
@@ -40,8 +40,8 @@ object dtmdlWorktops: TdtmdlWorktops
       Size = 2
     end
   end
-  object qryAddPrice: TQuery
-    DatabaseName = 'WT'
+  object qryAddPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'insert into Prices (Price_Pointer,Effective_Date,Price_Basis,Uni' +
@@ -92,8 +92,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddPointer: TQuery
-    DatabaseName = 'WT'
+  object qryAddPointer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'insert into Price_Pointer (Price_Pointer,Price_Type)'
       'values (:Pointer,:Type)'
@@ -112,8 +112,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDelPrice: TQuery
-    DatabaseName = 'WT'
+  object qryDelPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'delete from Prices'
       'where Price_pointer = :Price_pointer')
@@ -126,8 +126,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDelPricePointer: TQuery
-    DatabaseName = 'WT'
+  object qryDelPricePointer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'delete from Price_pointer'
       'where Price_pointer = :price_pointer')
@@ -140,8 +140,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'WT'
+  object qryCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  *'
       'from company'
@@ -149,8 +149,8 @@ object dtmdlWorktops: TdtmdlWorktops
     Left = 24
     Top = 304
   end
-  object qryGetLastIntSel: TQuery
-    DatabaseName = 'Wt'
+  object qryGetLastIntSel: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Select Max(Int_Sel_Code) as Last_Code'
       'From Int_Sel'
@@ -159,8 +159,8 @@ object dtmdlWorktops: TdtmdlWorktops
     Left = 104
     Top = 305
   end
-  object qryDelWork: TQuery
-    DatabaseName = 'Wt'
+  object qryDelWork: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
@@ -174,8 +174,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddWork: TQuery
-    DatabaseName = 'Wt'
+  object qryAddWork: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -198,8 +198,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddIntSel: TQuery
-    DatabaseName = 'Wt'
+  object qryAddIntSel: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, text100)'
@@ -235,8 +235,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'WT'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Company'
       'Set Software_CheckSum  = :Software_CheckSum'
@@ -250,8 +250,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddWorkStation: TQuery
-    DatabaseName = 'WT'
+  object qryAddWorkStation: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into WorkStation'
       
@@ -290,8 +290,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetWorkStation: TQuery
-    DatabaseName = 'WT'
+  object qryGetWorkStation: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select WorkStation from WorkStation'
       'Where WorkStation = :WorkStation')
@@ -304,8 +304,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStations: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteWorkStations: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From WorkStation '
       'Where'
@@ -325,8 +325,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStation: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteWorkStation: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From WorkStation '
       'Where'
@@ -340,8 +340,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'WT'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * '
       'from address'
@@ -355,8 +355,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryCheckWSLock: TQuery
-    DatabaseName = 'WT'
+  object qryCheckWSLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'SELECT Workstation_Lock.*, Workstation.Workstation_Name, Worksta' +
@@ -411,8 +411,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastWSLock: TQuery
-    DatabaseName = 'WT'
+  object qryGetLastWSLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Lock_No) as Last_Lock_No'
       'from Workstation_Lock'
@@ -426,8 +426,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddWSLock: TQuery
-    DatabaseName = 'WT'
+  object qryAddWSLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'insert into Workstation_Lock'
       '(Workstation,'
@@ -500,8 +500,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteWSLock: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteWSLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete from Workstation_Lock'
       'where Workstation = :Workstation AND'
@@ -550,8 +550,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'WT'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * FROM Operator'
       'WHERE Operator = :Operator')
@@ -564,8 +564,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Customer.Customer'
       'FROM Customer'
@@ -573,8 +573,8 @@ object dtmdlWorktops: TdtmdlWorktops
     Left = 304
     Top = 424
   end
-  object qryCompanyNew: TQuery
-    DatabaseName = 'WT'
+  object qryCompanyNew: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  Company,'
       '        Company_Name,'
@@ -589,8 +589,8 @@ object dtmdlWorktops: TdtmdlWorktops
     Left = 104
     Top = 248
   end
-  object qryGetOneCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryGetOneCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Credit_Status,'
@@ -615,8 +615,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetCurrentPromo: TQuery
-    DatabaseName = 'WT'
+  object qryGetCurrentPromo: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1 Image_Path'
       'From Sale_Offer'
@@ -647,16 +647,16 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryComp: TQuery
-    DatabaseName = 'wt'
+  object qryComp: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from'
       'Company')
     Left = 432
     Top = 9
   end
-  object qryAddIntSelFull: TQuery
-    DatabaseName = 'Wt'
+  object qryAddIntSelFull: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Sel5, Tag, text100)'
@@ -719,8 +719,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryCheckSOLock: TQuery
-    DatabaseName = 'WT'
+  object qryCheckSOLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM AppointmentStatus'
@@ -741,8 +741,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastSOLock: TQuery
-    DatabaseName = 'WT'
+  object qryGetLastSOLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(ID) as Last_Lock_No'
       'from AppointmentStatus'
@@ -756,8 +756,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryAddSOLock: TQuery
-    DatabaseName = 'WT'
+  object qryAddSOLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'insert into AppointmentStatus (ID, Is_Opened, [User], Workstatio' +
@@ -793,8 +793,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSOLock: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteSOLock: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete from AppointmentStatus'
       'where'
@@ -813,8 +813,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetDocumentNames: TQuery
-    DatabaseName = 'WT'
+  object qryGetDocumentNames: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Document_Structure'
@@ -828,8 +828,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryGetRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'
@@ -843,8 +843,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetProduct: TQuery
-    DatabaseName = 'WT'
+  object qryGetProduct: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Product'
@@ -858,8 +858,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerBranch: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Branch.Customer,'
       '        Customer_Branch.Branch_Name'
@@ -881,8 +881,8 @@ object dtmdlWorktops: TdtmdlWorktops
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranches: TQuery
-    DatabaseName = 'WT'
+  object qryGetBranches: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Branch'

@@ -148,8 +148,8 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       TabOrder = 1
     end
   end
-  object qrySOLines: TQuery
-    DatabaseName = 'wt'
+  object qrySOLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *,'
       

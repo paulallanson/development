@@ -61,8 +61,8 @@ object frmWTMaintCountry: TfrmWTMaintCountry
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Country'
       'SET'
@@ -83,8 +83,8 @@ object frmWTMaintCountry: TfrmWTMaintCountry
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Country'
       '('
@@ -104,8 +104,8 @@ object frmWTMaintCountry: TfrmWTMaintCountry
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Country) as Country'
       'From Country')

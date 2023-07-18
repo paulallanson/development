@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, ExtDlgs, jpeg,
-  ExtCtrls, DB, DBTables;
+  ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintEdges = class(TForm)
@@ -20,10 +23,10 @@ type
     Panel1: TPanel;
     imgWorktop: TImage;
     OpenPictureDialog1: TOpenPictureDialog;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     edtDescription: TEdit;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

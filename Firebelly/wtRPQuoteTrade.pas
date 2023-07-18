@@ -4,22 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, QrExport, QrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPQuoteTrade = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     qrbPageFooter: TQRBand;
-    qryQElements: TQuery;
+    qryQElements: TFDQuery;
     dtsReport: TDataSource;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TQRLabel;
     lblWorktopArea: TQRLabel;
     qrsdQCutOuts: TQRSubDetail;
-    qryQCutOuts: TQuery;
+    qryQCutOuts: TFDQuery;
     qrlblCutOutDescription: TQRDBText;
     qrlblQuantity: TQRLabel;
     qrsdQEdges: TQRSubDetail;
@@ -27,10 +29,10 @@ type
     qrlblEdgeDescription: TQRDBText;
     qrsdQExtras: TQRSubDetail;
     qrlblExtraDescription: TQRDBText;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbQFooter: TQRBand;
     lblGrossSupply: TQRLabel;
@@ -45,11 +47,11 @@ type
     QRLabel9: TQRLabel;
     qrcbTerms: TQRChildBand;
     QRLabel10: TQRLabel;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qriFootLogo: TQRImage;
     qrlblCompanyAdd: TQRLabel;
-    qryUpQuote: TQuery;
+    qryUpQuote: TFDQuery;
     qrcbNotes: TQRChildBand;
     qrlNotes: TQRLabel;
     qrcbSignature: TQRChildBand;
@@ -112,7 +114,7 @@ type
     QRLabel30: TQRLabel;
     QRDBText10: TQRDBText;
     QRDBText5: TQRDBText;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRLabel11: TQRLabel;
     QRShape11: TQRShape;
     gtQRFilters1: TgtQRFilters;

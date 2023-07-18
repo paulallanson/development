@@ -114,8 +114,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     Height = 17
     TabOrder = 3
   end
-  object qryGetOrders: TQuery
-    DatabaseName = 'WT'
+  object qryGetOrders: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.sales_order,'
       '        Sales_Order.Customer_Name,'

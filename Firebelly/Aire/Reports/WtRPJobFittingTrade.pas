@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobFittingTrade = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     QRLabel24: TQRLabel;
     QRLabel26: TQRLabel;
     QRLabel27: TQRLabel;

@@ -96,8 +96,8 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     TabOrder = 3
     Kind = bkCancel
   end
-  object qryCContacts: TQuery
-    DatabaseName = 'wt'
+  object qryCContacts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select distinct Contact_No, Contact_Name, Email_Address'
       'from Customer_Contact'
@@ -117,8 +117,8 @@ object WTMaintEmailFrm: TWTMaintEmailFrm
     Left = 336
     Top = 24
   end
-  object qrySContacts: TQuery
-    DatabaseName = 'wt'
+  object qrySContacts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select distinct Contact_No, Contact_Name, Email_Address'
       'from Supplier_Contact'

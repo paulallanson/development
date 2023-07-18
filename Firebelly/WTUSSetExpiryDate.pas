@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Spin, StdCtrls, Buttons, DB, DBTables;
+  Dialogs, Spin, StdCtrls, Buttons, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTUSSetExpiryDate = class(TForm)
@@ -20,7 +23,7 @@ type
     Label62: TLabel;
     spnExpiryDays: TSpinEdit;
     Label63: TLabel;
-    qryUpdQuotes: TQuery;
+    qryUpdQuotes: TFDQuery;
     Label3: TLabel;
     procedure enableOK(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

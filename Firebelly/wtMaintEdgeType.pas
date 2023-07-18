@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintEdgeType = class(TForm)
@@ -14,10 +17,10 @@ type
     chkbxInactive: TCheckBox;
     chkbxShowOnline: TCheckBox;
     edtEdgeTypeDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure EnableOK(Sender: TObject);

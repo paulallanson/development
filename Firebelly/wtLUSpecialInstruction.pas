@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, ComCtrls;
+  ExtCtrls, DB, StdCtrls, Buttons, Grids, DBGrids, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUSpecialInstruction = class(TForm)
     DetsDBGrid: TDBGrid;
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     Panel1: TPanel;
     btnAdd: TBitBtn;
     btnEdit: TBitBtn;

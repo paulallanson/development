@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, ExtDlgs, jpeg, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtMaintTextureGroup = class(TForm)
@@ -21,10 +23,10 @@ type
     imgWorktop: TImage;
     OpenPictureDialog1: TOpenPictureDialog;
     edtDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

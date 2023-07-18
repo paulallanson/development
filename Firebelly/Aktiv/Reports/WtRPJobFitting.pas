@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon, gtQrCtrls,
-  jpeg;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, AllCommon, gtQrCtrls,
+  jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPJobFitting = class(TForm)
     qrpJobSheet: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     qrgJob: TQRGroup;
     qrsdElement: TQRSubDetail;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     QRBand1: TQRBand;
     QRLabel1: TgtQRLabel;
     QRLabel2: TgtQRLabel;
@@ -35,7 +38,7 @@ type
     QRLabel76: TgtQRLabel;
     QRDBText10: TgtQRDBText;
     QRLabel13: TgtQRLabel;
-    qryUpJStatus: TQuery;
+    qryUpJStatus: TFDQuery;
     grfjob: TQRBand;
     QRLabel3: TgtQRLabel;
     QRLabel4: TgtQRLabel;
@@ -57,7 +60,7 @@ type
     QRShape8: TgtQRShape;
     qrlblCount: TgtQRLabel;
     qrlblDescription: TgtQRLabel;
-    qryJElements: TQuery;
+    qryJElements: TFDQuery;
     qrlblCustomerSignature: TgtQRLabel;
     qrshpSignature: TgtQRShape;
     qrlblterms3: TgtQRRichText;

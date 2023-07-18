@@ -173,8 +173,8 @@ object frmwtMaintVat: TfrmwtMaintVat
     TabOrder = 7
     Text = 'edtVatCode'
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Vat'
       'SET'
@@ -231,8 +231,8 @@ object frmwtMaintVat: TfrmwtMaintVat
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Vat'
       '        (Vat, Vat_Rate,'
@@ -249,8 +249,8 @@ object frmwtMaintVat: TfrmwtMaintVat
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Vat'
       'Where'
@@ -264,8 +264,8 @@ object frmwtMaintVat: TfrmwtMaintVat
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Vat'
       'From Vat'
@@ -279,8 +279,8 @@ object frmwtMaintVat: TfrmwtMaintVat
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

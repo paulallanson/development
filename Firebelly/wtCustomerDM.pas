@@ -4,25 +4,28 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlCustomers = class(TDataModule)
-    qryBranches: TQuery;
+    qryBranches: TFDQuery;
     dtsBranches: TDataSource;
-    qryRep: TQuery;
+    qryRep: TFDQuery;
     dtsRep: TDataSource;
-    lkpCustomerType: TQuery;
+    lkpCustomerType: TFDQuery;
     dtsCustomerType: TDataSource;
     dtsVAT: TDataSource;
-    lkpVAT: TQuery;
-    lkpCreditStatus: TQuery;
+    lkpVAT: TFDQuery;
+    lkpCreditStatus: TFDQuery;
     dtsCreditStatus: TDataSource;
-    qryQuotes: TQuery;
-    qryEvents: TQuery;
+    qryQuotes: TFDQuery;
+    qryEvents: TFDQuery;
     dtsEvents: TDataSource;
     dtsQuotes: TDataSource;
-    qrySOrders: TQuery;
+    qrySOrders: TFDQuery;
     qrySOrdersSales_Order: TIntegerField;
     qrySOrdersDate_Raised: TDateTimeField;
     qrySOrdersDate_Required: TDateTimeField;
@@ -51,7 +54,7 @@ type
     qrySOrdersOn_Hold: TStringField;
     qrySOrdersStatus_Text: TStringField;
     dtsSOrders: TDataSource;
-    qryJobs: TQuery;
+    qryJobs: TFDQuery;
     qryJobsJob: TFloatField;
     qryJobsJob_Status: TIntegerField;
     qryJobsQuote: TIntegerField;
@@ -96,7 +99,7 @@ type
     qryJobsSales_Order: TIntegerField;
     qryJobsis_retail_customer: TStringField;
     dtsJobs: TDataSource;
-    qryInvoices: TQuery;
+    qryInvoices: TFDQuery;
     qryInvoicesInvoice_Date: TDateTimeField;
     qryInvoicesCustomer: TIntegerField;
     qryInvoicesInactive: TStringField;
@@ -138,21 +141,21 @@ type
     qryQuotesAddress: TIntegerField;
     qryQuotesGross_Price: TFloatField;
     qryQuotesIs_Retail_Customer: TStringField;
-    qryAction: TQuery;
+    qryAction: TFDQuery;
     dtsAction: TDataSource;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
-    qryCustContact: TQuery;
+    qryCustContact: TFDQuery;
     dtsCustContact: TDataSource;
-    qryProspectStatus: TQuery;
+    qryProspectStatus: TFDQuery;
     dtsProspectStatus: TDataSource;
-    qryPaymentTerms: TQuery;
+    qryPaymentTerms: TFDQuery;
     dtsPaymentTerms: TDataSource;
-    qryWorkGroups: TQuery;
-    qryGetAddress: TQuery;
-    qryLevelofImportance: TQuery;
+    qryWorkGroups: TFDQuery;
+    qryGetAddress: TFDQuery;
+    qryLevelofImportance: TFDQuery;
     dtsLeveloFImportance: TDataSource;
-    qryMaterialTypes: TQuery;
+    qryMaterialTypes: TFDQuery;
     dtsMaterialTypes: TDataSource;
   private
     FContactCount: integer;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, CRControls, Buttons, DBCtrls, DB, DBTables;
+  Dialogs, StdCtrls, CRControls, Buttons, DBCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustCutOut = class(TForm)
@@ -17,9 +20,9 @@ type
     BitBtn2: TBitBtn;
     Label4: TLabel;
     Label3: TLabel;
-    lkpCutOuts: TQuery;
+    lkpCutOuts: TFDQuery;
     srclkpCutOuts: TDataSource;
-    qryAdd: TQuery;
+    qryAdd: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure btnCutOutsClick(Sender: TObject);

@@ -232,8 +232,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Left = 288
     Top = 80
   end
-  object qryCustomerGroups: TQuery
-    DatabaseName = 'wt'
+  object qryCustomerGroups: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Customer_Worktop_Group'
@@ -248,8 +248,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryEdgeGroups: TQuery
-    DatabaseName = 'WT'
+  object qryEdgeGroups: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Group_Id as Group_Number,'
       '          Group_Description'
@@ -265,8 +265,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryWTGroups: TQuery
-    DatabaseName = 'wt'
+  object qryWTGroups: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Customer_Worktop_Group'
@@ -281,8 +281,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryPrice: TQuery
-    DatabaseName = 'WT'
+  object qryPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select top 1 *'
       'from prices'
@@ -298,8 +298,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'
@@ -335,8 +335,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryCutOut: TQuery
-    DatabaseName = 'WT'
+  object qryCutOut: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Cutout_Edge_Group.Customer,'
       '        Customer_Cutout_Edge_Group.Group_ID,'
@@ -364,8 +364,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
         ParamType = ptUnknown
       end>
   end
-  object qryEdge: TQuery
-    DatabaseName = 'WT'
+  object qryEdge: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Cutout_Edge_Group.Customer,'
       '        Customer_Cutout_Edge_Group.Group_ID,'

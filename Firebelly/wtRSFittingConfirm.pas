@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
+  Dialogs, StdCtrls, ShellAPI, DB, CheckLst, printers, IniFiles,
   WTRPSOrder, QrExport, AllCommon, ComObj, DBCtrls, ExtCtrls, wtSalesOrderDM,
-  DateUtils, wtNotesDM, ComCtrls;
+  DateUtils, wtNotesDM, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 type
   TfrmWTRSFittingConfirm = class(TForm)
     SelectLst: TListBox;
-    qryGetSOQuotes: TQuery;
-    qryGetSalesOrders: TQuery;
-    qryGetSalesOrderEmails: TQuery;
-    qryGetSOQuotesEmails: TQuery;
-    qryGetSalesOrder: TQuery;
+    qryGetSOQuotes: TFDQuery;
+    qryGetSalesOrders: TFDQuery;
+    qryGetSalesOrderEmails: TFDQuery;
+    qryGetSOQuotesEmails: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
     pnlFooter: TPanel;
     btnPrint: TButton;
     btnPreview: TButton;
@@ -29,12 +32,12 @@ type
     Label3: TLabel;
     memSelection: TMemo;
     cmbDocuments: TComboBox;
-    qryDocumentStructure: TQuery;
+    qryDocumentStructure: TFDQuery;
     chkbxAllDocuments: TCheckBox;
     chkbxMerge: TCheckBox;
     chkbxAttachTerms: TCheckBox;
     chkbxAttachColour: TCheckBox;
-    qryGetMaterialDescription: TQuery;
+    qryGetMaterialDescription: TFDQuery;
     procedure EnableRun(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);

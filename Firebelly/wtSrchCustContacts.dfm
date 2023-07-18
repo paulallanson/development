@@ -102,8 +102,8 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
     TabOrder = 6
     OnClick = btnDeleteClick
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Customer_contact'
@@ -135,8 +135,8 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
     Left = 96
     Top = 168
   end
-  object qryContactType: TQuery
-    DatabaseName = 'WT'
+  object qryContactType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Contact_Type'
       'Order by Contact_Type_description')
@@ -148,8 +148,8 @@ object frmWTSrchCustContacts: TfrmWTSrchCustContacts
     Left = 216
     Top = 176
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 272
     Top = 112
   end

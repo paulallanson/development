@@ -4,25 +4,28 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrExport, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPTemplate = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblTemplate: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     gtQRFilters1: TgtQRFilters;
     qrmSiteAddress: TgtQRMemo;
-    qryQuote: TQuery;
+    qryQuote: TFDQuery;
     gtQRLabel6: TgtQRLabel;
     gtQRDBText2: TgtQRDBText;
     gtQRLabel7: TgtQRLabel;
@@ -62,9 +65,9 @@ type
     qrlblEdgeDetail: TgtQRLabel;
     qrlblUpstand: TgtQRLabel;
     qrlblOfficeContact: TgtQRLabel;
-    qryQuoteEdge: TQuery;
-    qryQuoteThickness: TQuery;
-    qryQuoteUpstand: TQuery;
+    qryQuoteEdge: TFDQuery;
+    qryQuoteThickness: TFDQuery;
+    qryQuoteUpstand: TFDQuery;
     gtQRShape45: TgtQRShape;
     gtQRShape1: TgtQRShape;
     gtQRLabel5: TgtQRLabel;
@@ -72,7 +75,7 @@ type
     gtQRShape11: TgtQRShape;
     gtQRLabel12: TgtQRLabel;
     qrlblColour: TgtQRLabel;
-    qryQuoteElement: TQuery;
+    qryQuoteElement: TFDQuery;
     gtQRShape13: TgtQRShape;
     gtQRLabel13: TgtQRLabel;
     gtQRLabel15: TgtQRLabel;
@@ -144,17 +147,17 @@ type
     gtQRLabel50: TgtQRLabel;
     qrlblTemplateDate: TgtQRLabel;
     qrlblFittingDate: TgtQRLabel;
-    qryGetSalesOrder: TQuery;
+    qryGetSalesOrder: TFDQuery;
     gtQRLabel8: TgtQRLabel;
     gtQRLabel51: TgtQRLabel;
     qrlblColour2: TgtQRLabel;
     gtQRLabel53: TgtQRLabel;
-    qryQuoteMaterial: TQuery;
-    qryQuoteSlabs: TQuery;
+    qryQuoteMaterial: TFDQuery;
+    qryQuoteSlabs: TFDQuery;
     qrlblSlab: TgtQRLabel;
     qrlblSlab2: TgtQRLabel;
     qrlblUpstandHeight: TgtQRLabel;
-    qryCustomerContact: TQuery;
+    qryCustomerContact: TFDQuery;
     gtQRLabel52: TgtQRLabel;
     gtQRLabel54: TgtQRLabel;
     qrlblCustomerName: TgtQRLabel;

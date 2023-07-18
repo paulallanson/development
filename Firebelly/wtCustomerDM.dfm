@@ -4,8 +4,8 @@ object dtmdlCustomers: TdtmdlCustomers
   Top = 104
   Height = 555
   Width = 725
-  object qryBranches: TQuery
-    DatabaseName = 'WT'
+  object qryBranches: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
@@ -25,8 +25,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 108
     Top = 16
   end
-  object qryRep: TQuery
-    DatabaseName = 'WT'
+  object qryRep: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from rep'
@@ -39,8 +39,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 264
   end
-  object lkpCustomerType: TQuery
-    DatabaseName = 'WT'
+  object lkpCustomerType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from customer_type'
       'order by description')
@@ -57,15 +57,15 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 136
   end
-  object lkpVAT: TQuery
-    DatabaseName = 'wt'
+  object lkpVAT: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from VAT')
     Left = 40
     Top = 136
   end
-  object lkpCreditStatus: TQuery
-    DatabaseName = 'wt'
+  object lkpCreditStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from credit_status')
     Left = 40
@@ -76,8 +76,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 200
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -258,8 +258,8 @@ object dtmdlCustomers: TdtmdlCustomers
       Size = 1
     end
   end
-  object qryEvents: TQuery
-    DatabaseName = 'wt'
+  object qryEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer_Event.Customer_Event_no,'
       '        Customer_Event.Customer,'
@@ -304,8 +304,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 320
   end
-  object qrySOrders: TQuery
-    DatabaseName = 'WT'
+  object qrySOrders: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sales_order.*,'
       '  Customer.Customer_name as original_customer_name,'
@@ -463,8 +463,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 384
   end
-  object qryJobs: TQuery
-    DatabaseName = 'WT'
+  object qryJobs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -538,165 +538,165 @@ object dtmdlCustomers: TdtmdlCustomers
       end>
     object qryJobsJob: TFloatField
       FieldName = 'Job'
-      Origin = 'WT.Job.Job'
+
     end
     object qryJobsJob_Status: TIntegerField
       FieldName = 'Job_Status'
-      Origin = 'WT.Job.Job_Status'
+
     end
     object qryJobsQuote: TIntegerField
       FieldName = 'Quote'
-      Origin = 'WT.Job.Quote'
+
     end
     object qryJobsCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'WT.Job.Customer'
+
     end
     object qryJobsContact_name: TStringField
       FieldName = 'Contact_name'
-      Origin = 'WT.Job.Contact_name'
+
       Size = 50
     end
     object qryJobsOrder_ref_no: TStringField
       FieldName = 'Order_ref_no'
-      Origin = 'WT.Job.Order_ref_no'
+
       Size = 30
     end
     object qryJobsDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-      Origin = 'WT.Job.Date_Raised'
+
     end
     object qryJobsDate_Required: TDateTimeField
       FieldName = 'Date_Required'
-      Origin = 'WT.Job.Date_Required'
+
     end
     object qryJobsPayment_due: TDateTimeField
       FieldName = 'Payment_due'
-      Origin = 'WT.Job.Payment_due'
+
     end
     object qryJobsProduction_date: TDateTimeField
       FieldName = 'Production_date'
-      Origin = 'WT.Job.Production_date'
+
     end
     object qryJobsTemplate_date: TDateTimeField
       FieldName = 'Template_date'
-      Origin = 'WT.Job.Template_date'
+
     end
     object qryJobsInstallation_date: TDateTimeField
       FieldName = 'Installation_date'
-      Origin = 'WT.Job.Installation_date'
+
     end
     object qryJobsDeposit_amount: TFloatField
       FieldName = 'Deposit_amount'
-      Origin = 'WT.Job.Deposit_amount'
+
       currency = True
     end
     object qryJobsDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-      Origin = 'WT.Job.Delivery_Price'
+
       currency = True
     end
     object qryJobsInstallation_price: TFloatField
       FieldName = 'Installation_price'
-      Origin = 'WT.Job.Installation_price'
+
       currency = True
     end
     object qryJobsSurvey_price: TFloatField
       FieldName = 'Survey_price'
-      Origin = 'WT.Job.Survey_price'
+
       currency = True
     end
     object qryJobsOperator: TIntegerField
       FieldName = 'Operator'
-      Origin = 'WT.Job.Operator'
+
     end
     object qryJobsProduction_date_Actual: TDateTimeField
       FieldName = 'Production_date_Actual'
-      Origin = 'WT.Job.Production_date_Actual'
+
     end
     object qryJobsTemplate_date_actual: TDateTimeField
       FieldName = 'Template_date_actual'
-      Origin = 'WT.Job.Template_date_actual'
+
     end
     object qryJobsInstallation_date_actual: TDateTimeField
       FieldName = 'Installation_date_actual'
-      Origin = 'WT.Job.Installation_date_actual'
+
     end
     object qryJobsDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Job.Description'
+
       Size = 50
     end
     object qryJobsMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
-      Origin = 'WT.Job.Material_Type'
+
     end
     object qryJobsExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
-      Origin = 'WT.Job.Extra_Notes'
+
     end
     object qryJobsAvailability: TIntegerField
       FieldName = 'Availability'
-      Origin = 'WT.Job.Availability'
+
     end
     object qryJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
-      Origin = 'WT.Job.Payment_Terms'
+
     end
     object qryJobsReference: TStringField
       FieldName = 'Reference'
-      Origin = 'WT.Job.Reference'
+
       Size = 50
     end
     object qryJobsNett_Price: TFloatField
       FieldName = 'Nett_Price'
-      Origin = 'WT.Job.Nett_Price'
+
       currency = True
     end
     object qryJobsInactive: TStringField
       FieldName = 'Inactive'
-      Origin = 'WT.Job.Inactive'
+
       Size = 1
     end
     object qryJobsInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
-      Origin = 'WT.Job.Inactive_Reason'
+
     end
     object qryJobsAddress: TIntegerField
       FieldName = 'Address'
-      Origin = 'WT.Job.Address'
+
     end
     object qryJobsDiscount_Rate: TFloatField
       FieldName = 'Discount_Rate'
-      Origin = 'WT.Job.Discount_Rate'
+
     end
     object qryJobsDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-      Origin = 'WT.Job.Discount_Value'
+
       currency = True
     end
     object qryJobsCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-      Origin = 'WT.Job.Customer_Name'
+
       Size = 50
     end
     object qryJobsMaterial_Description: TStringField
       FieldName = 'Material_Description'
-      Origin = 'WT.Material_Type.Description'
+
     end
     object qryJobsStatus_Description: TStringField
       FieldName = 'Status_Description'
-      Origin = 'WT.Job_Status.Job_Status_Description'
+
       Size = 50
     end
     object qryJobsOperator_Name: TStringField
       FieldName = 'Operator_Name'
-      Origin = 'WT.Operator.Operator_Name'
+
       Size = 30
     end
     object qryJobsGross_Price: TFloatField
       FieldName = 'Gross_Price'
-      Origin = 'WT.Job.Nett_Price'
+
       currency = True
     end
     object qryJobsInstall_Address: TIntegerField
@@ -724,8 +724,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 72
   end
-  object qryInvoices: TQuery
-    DatabaseName = 'wt'
+  object qryInvoices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -853,8 +853,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 136
   end
-  object qryAction: TQuery
-    DatabaseName = 'WT'
+  object qryAction: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Prospect_Action'
@@ -867,8 +867,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 448
   end
-  object qryOperator: TQuery
-    DatabaseName = 'WT'
+  object qryOperator: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Operator'
@@ -882,8 +882,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 200
   end
-  object qryCustContact: TQuery
-    DatabaseName = 'wt'
+  object qryCustContact: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from customer_contact'
@@ -904,8 +904,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 264
   end
-  object qryProspectStatus: TQuery
-    DatabaseName = 'wt'
+  object qryProspectStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Prospect_Status')
     Left = 192
@@ -916,8 +916,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 320
   end
-  object qryPaymentTerms: TQuery
-    DatabaseName = 'wt'
+  object qryPaymentTerms: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Payment_Terms'
       'order by Payment_Terms_Description')
@@ -929,8 +929,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 376
   end
-  object qryWorkGroups: TQuery
-    DatabaseName = 'wt'
+  object qryWorkGroups: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select *'
       'from Customer_Worktop_Group'
@@ -945,8 +945,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'WT'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * from Address'
       'WHERE Address = :Address')
@@ -959,8 +959,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryLevelofImportance: TQuery
-    DatabaseName = 'WT'
+  object qryLevelofImportance: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Level_of_Importance'
@@ -974,8 +974,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 280
     Top = 448
   end
-  object qryMaterialTypes: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialTypes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Material_Type.ID,'
       '        Customer_Material_Type.Customer,'

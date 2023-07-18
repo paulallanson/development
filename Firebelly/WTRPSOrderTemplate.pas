@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrderTemplate = class(TForm)
     qrpDetails: TQuickRep;
-    qrySalesOrders: TQuery;
+    qrySalesOrders: TFDQuery;
     qrbGroupHeader: TQRGroup;
     qrsbDetails: TQRSubDetail;
     qrlblSortBy: TQRLabel;
@@ -59,7 +62,7 @@ type
     qrySalesOrdersReference: TStringField;
     qrySalesOrdersTelephone_number: TStringField;
     qrrchTextAddress: TQRRichText;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     qrySalesOrdersDescription: TStringField;
     qrySalesOrdersInstall_Address: TIntegerField;
     qrGroupbyFootText: TQRDBText;
@@ -88,7 +91,7 @@ type
     qrySalesOrdersInstall_Phone: TStringField;
     qrySalesOrdersEmail_Address: TStringField;
     qrySalesOrdersIsTemplateInOutlook: TStringField;
-    OLDqrySalesOrders: TQuery;
+    OLDqrySalesOrders: TFDQuery;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
     FloatField1: TFloatField;

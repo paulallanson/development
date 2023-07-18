@@ -1101,8 +1101,8 @@ object frmwtRPOutJobs: TfrmwtRPOutJobs
       end
     end
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Job.Job_Status,'

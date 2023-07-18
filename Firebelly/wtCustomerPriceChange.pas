@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, CRControls, Buttons, Mask, ComCtrls, ExtCtrls, DBCtrls,
-  Menus, DB, DBTables, DateUtils;
+  Menus, DB, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtCustomerPriceChange = class(TForm)
@@ -32,13 +35,13 @@ type
     pmnCustomers: TPopupMenu;
     Delete1: TMenuItem;
     dtsWTGroup: TDataSource;
-    qryCustomerGroups: TQuery;
-    qryEdgeGroups: TQuery;
-    qryWTGroups: TQuery;
-    qryPrice: TQuery;
-    qryWorktop: TQuery;
-    qryCutOut: TQuery;
-    qryEdge: TQuery;
+    qryCustomerGroups: TFDQuery;
+    qryEdgeGroups: TFDQuery;
+    qryWTGroups: TFDQuery;
+    qryPrice: TFDQuery;
+    qryWorktop: TFDQuery;
+    qryCutOut: TFDQuery;
+    qryEdge: TFDQuery;
     procedure rdgrpCustomerClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
     procedure EnableOK(sender: TObject);

@@ -100,8 +100,8 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
     Left = 16
     Top = 83
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE AppointmentType'
       'SET'
@@ -122,8 +122,8 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into AppointmentType'
       '        (ID,'
@@ -140,8 +140,8 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select ID'
       'From AppointmentType'
@@ -155,8 +155,8 @@ object frmWTMaintAppointmentType: TfrmWTMaintAppointmentType
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

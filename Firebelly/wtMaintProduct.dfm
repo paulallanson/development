@@ -247,8 +247,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     TabOrder = 10
     Text = 'edtDefaultPurchaseNominal'
   end
-  object qryProductGroup: TQuery
-    DatabaseName = 'WT'
+  object qryProductGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Product_Group'
@@ -256,8 +256,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 392
     Top = 24
   end
-  object qryVat: TQuery
-    DatabaseName = 'WT'
+  object qryVat: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from VAT'
@@ -275,8 +275,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Left = 320
     Top = 128
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Product'
       'SET'
@@ -333,8 +333,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Product'
       '        (Product,'
@@ -365,8 +365,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Product'
       'From Product'
@@ -380,8 +380,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

@@ -1418,8 +1418,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Left = 1059
     Top = 108
   end
-  object qryGetCompany: TQuery
-    DatabaseName = 'WT'
+  object qryGetCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Company.Company_Name,'
       '        Street,'
@@ -1436,8 +1436,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Left = 976
     Top = 111
   end
-  object qrySalesInv: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesInv: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_invoice.Customer,'
       '        Sales_invoice.Account_code,'
@@ -1483,8 +1483,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         ParamType = ptUnknown
       end>
   end
-  object qryUpSalesInv: TQuery
-    DatabaseName = 'WT'
+  object qryUpSalesInv: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'update Sales_invoice'
       'set Application_reference = :Application_reference,'
@@ -1527,8 +1527,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         ParamType = ptUnknown
       end>
   end
-  object qryUpCustomerBranch: TQuery
-    DatabaseName = 'WT'
+  object qryUpCustomerBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'update Customer'
       'set Last_Application_ref = :Last_Application_Ref'
@@ -1547,8 +1547,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'WT'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Order_Ref_No, Reference'
       'from Sales_Order'
@@ -1562,8 +1562,8 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'wt'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Notes_Text'
       'From Notes'

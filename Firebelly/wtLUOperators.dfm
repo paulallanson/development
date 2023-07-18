@@ -149,8 +149,8 @@ object frmWTLUOperators: TfrmWTLUOperators
     Left = 152
     Top = 120
   end
-  object qryOperators: TQuery
-    DatabaseName = 'WT'
+  object qryOperators: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Operator'
@@ -168,8 +168,8 @@ object frmWTLUOperators: TfrmWTLUOperators
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

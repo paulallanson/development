@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DBCtrls, Mask, CRControls, DBTables, DB;
+  Dialogs, StdCtrls, Buttons, DBCtrls, Mask, CRControls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintWorktopDetails = class(TForm)
@@ -26,7 +29,7 @@ type
     edtmnySell: TCREditMoney;
     Label7: TLabel;
     Label8: TLabel;
-    tblWorktops: TTable;
+    tblWorktops: TFDTable;
     tblWorktopsWorktop: TIntegerField;
     tblWorktopsDescription: TStringField;
     tblWorktopsNot_used_for_quoting: TStringField;
@@ -34,9 +37,9 @@ type
     tblWorktopsWorktop_Group: TIntegerField;
     tblWorktopsWorktop_Group_Desc: TStringField;
     tblWorktopsinactive: TStringField;
-    qryNewWorktops: TQuery;
-    lkpGroup: TQuery;
-    lkpMatType: TQuery;
+    qryNewWorktops: TFDQuery;
+    lkpGroup: TFDQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
     dtsGroup: TDataSource;
     procedure EnableOK(Sender: TObject);

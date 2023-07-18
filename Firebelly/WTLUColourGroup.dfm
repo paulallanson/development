@@ -136,8 +136,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
     Left = 168
     Top = 56
   end
-  object qryColourGroup: TQuery
-    DatabaseName = 'WT'
+  object qryColourGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Colour_Group'
@@ -155,8 +155,8 @@ object frmWTLUColourGroup: TfrmWTLUColourGroup
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 240
     Top = 56
   end

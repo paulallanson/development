@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
+    qryAddress: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpQuote: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpQuote: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
@@ -29,12 +32,12 @@ type
     QRLabel3: TgtQRLabel;
     QRDBText4: TgtQRDBText;
     QRLabel5: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRShape1: TgtQRShape;
     QRLabel1: TgtQRLabel;
     QRLabel4: TgtQRLabel;
     qrmSiteAddress: TgtQRMemo;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
@@ -63,10 +66,10 @@ type
     QRLabel12: TgtQRLabel;
     QRLabel14: TgtQRLabel;
     QRLabel15: TgtQRLabel;
-    qryQElements: TQuery;
-    qryQEdges: TQuery;
-    qryQCutOuts: TQuery;
-    qryQExtras: TQuery;
+    qryQElements: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQCutOuts: TFDQuery;
+    qryQExtras: TFDQuery;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;
     lblWorktopArea: TgtQRLabel;
@@ -94,12 +97,12 @@ type
     qrlblBalance: TgtQRLabel;
     QRLabel13: TgtQRLabel;
     qrlblDepositTerms: TgtQRLabel;
-    qryCompanyAddress: TQuery;
+    qryCompanyAddress: TFDQuery;
     qrlblDescription: TgtQRLabel;
-    GetNarrSQL: TQuery;
-    qryCustomer: TQuery;
+    GetNarrSQL: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsSOLine: TDataSource;
-    qryUpSOStatus: TQuery;
+    qryUpSOStatus: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgSalesOrderBeforePrint(Sender: TQRCustomBand;

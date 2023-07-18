@@ -1636,8 +1636,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job.*,'
       '        Customer.Customer_Name,'
@@ -1667,9 +1667,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Left = 216
     Top = 16
   end
-  object qryJElements: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryJElements: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -1697,8 +1697,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         ParamType = ptUnknown
       end>
   end
-  object qryUpJStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpJStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       'set Job_status = :Job_Status'
@@ -1717,13 +1717,13 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOStatus: TFDQuery
+    ConnectionName = 'wt'
     Left = 77
     Top = 16
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1737,8 +1737,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -1764,8 +1764,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Left = 582
     Top = 11
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'

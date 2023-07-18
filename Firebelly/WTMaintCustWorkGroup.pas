@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, DBCtrls;
+  Dialogs, DB, StdCtrls, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustWorkGroup = class(TForm)
@@ -15,7 +18,7 @@ type
     chkbxInactive: TCheckBox;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryMatTypes: TQuery;
+    qryMatTypes: TFDQuery;
     dtsMatTypes: TDataSource;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

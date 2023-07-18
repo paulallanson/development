@@ -783,8 +783,8 @@ object frmWTRPJobRemedial: TfrmWTRPJobRemedial
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job_Remedial.Remedial_Number,'

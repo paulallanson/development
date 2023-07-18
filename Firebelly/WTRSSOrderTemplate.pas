@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, QrCtrls, ComCtrls, OleCtnrs, IniFiles, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSOrderTemplate = class(TForm)
@@ -36,7 +38,7 @@ type
     grpbxReps: TGroupBox;
     Label3: TLabel;
     cmbReps: TComboBox;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     chkbxShowOnlyScheduled: TCheckBox;
     chkbxIncludeInvoiced: TCheckBox;

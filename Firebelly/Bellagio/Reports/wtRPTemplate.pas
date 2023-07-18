@@ -4,25 +4,28 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrExport, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPTemplate = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryEndUser: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryEndUser: TFDQuery;
     gtQRFilters1: TgtQRFilters;
-    qryQuote: TQuery;
-    qryQuoteEdge: TQuery;
-    qryQuoteThickness: TQuery;
-    qryQuoteUpstand: TQuery;
+    qryQuote: TFDQuery;
+    qryQuoteEdge: TFDQuery;
+    qryQuoteThickness: TFDQuery;
+    qryQuoteUpstand: TFDQuery;
     QRBand1: TQRBand;
     gtQRSysData1: TgtQRSysData;
     gtQRShape14: TgtQRShape;
@@ -66,9 +69,9 @@ type
     gtQRShape7: TgtQRShape;
     gtQRLabel12: TgtQRLabel;
     gtQRLabel13: TgtQRLabel;
-    qrySalesOrder: TQuery;
+    qrySalesOrder: TFDQuery;
     qrsdSOLines: TQRSubDetail;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
     qrySOLineJob: TFloatField;
@@ -112,7 +115,7 @@ type
     gtQRMemo6: TgtQRMemo;
     gtQRLabel40: TgtQRLabel;
     qrlblInstallEmail: TgtQRLabel;
-    qryQuoteMaterial: TQuery;
+    qryQuoteMaterial: TFDQuery;
     gtQRRichText9: TgtQRRichText;
     gtQRRichText12: TgtQRRichText;
     gtQRRichText10: TgtQRRichText;

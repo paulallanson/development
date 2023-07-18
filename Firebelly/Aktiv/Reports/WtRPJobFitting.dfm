@@ -8530,8 +8530,8 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job.*,'
       '        Customer.Customer_Name,'
@@ -8556,8 +8556,8 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
     Left = 216
     Top = 16
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -8571,8 +8571,8 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryUpJStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpJStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       
@@ -8598,9 +8598,9 @@ object frmWTRPJobFitting: TfrmWTRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJElements: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryJElements: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Thickness.Thickness_mm,'

@@ -141,8 +141,8 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
     Left = 168
     Top = 64
   end
-  object qryTextureGroup: TQuery
-    DatabaseName = 'WT'
+  object qryTextureGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Texture_Group'
@@ -160,8 +160,8 @@ object frmWTLUTextureGroup: TfrmWTLUTextureGroup
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 248
     Top = 64
   end

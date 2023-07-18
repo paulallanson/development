@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, DBTables, StrUtils;
+  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, StrUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtMaintColourGroup = class(TForm)
@@ -19,10 +22,10 @@ type
     edtColourCode: TEdit;
     Label3: TLabel;
     edtDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

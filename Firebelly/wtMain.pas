@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ImgList, ComCtrls, ToolWin, IniFiles, StdActns, ActnList,
-  ShellAPI, AllCommon, DB, DBTables, Grids, DBGrids, System.Actions,
+  ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions,
   System.ImageList;
 
 type
@@ -430,7 +430,7 @@ begin
     StrPCopy(AppIniFile,'myWorktops.ini');
 
 {$IFDEF DEMO}
-//  dtmdlWorktops.dtbsWorktops.AliasName := 'WorktopDemo';
+//  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
 {$ELSE}
 (*  TempUserSize := SizeOf(TempUser);
   GetUserName(Addr(TempUser), TempUserSize);
@@ -1385,8 +1385,8 @@ begin
     begin
       EmailApplication := ReadString('Email', 'Application', 'None');
       EmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-//      EmailAccount := ReadString('Email', pchar(dtmdlWorktops.dtbsWorktops.AliasName + ' Email Account'), 'None');
-      EmailAccount := ReadString('Email', dtmdlWorktops.dtbsWorktops.AliasName + ' Email Account', 'None');
+//      EmailAccount := ReadString('Email', pchar(dtmdlWorktops.dtbsWorktops.ConnectionDefName + ' Email Account'), 'None');
+      EmailAccount := ReadString('Email', dtmdlWorktops.dtbsWorktops.ConnectionDefName + ' Email Account', 'None');
       Free;
     end;
 end;

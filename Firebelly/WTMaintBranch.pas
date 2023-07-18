@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, DBCtrls, ComCtrls,
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls, ComCtrls,
   ExtCtrls, ToolWin, ImgList, SHELLAPI, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls, System.ImageList, taoMAPI;
+  CRControls, System.ImageList, taoMAPI,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintBranch = class(TForm)
     lblName: TLabel;
     edtName: TEdit;
-    qryGetLastNo: TQuery;
-    qryAdd: TQuery;
-    qryUpd: TQuery;
-    qryDel: TQuery;
+    qryGetLastNo: TFDQuery;
+    qryAdd: TFDQuery;
+    qryUpd: TFDQuery;
+    qryDel: TFDQuery;
     Label34: TLabel;
     edtStreet: TEdit;
     edtLocale: TEdit;
@@ -25,14 +28,14 @@ type
     edtPostcode: TEdit;
     Label39: TLabel;
     edtCounty: TEdit;
-    qryGetBranch: TQuery;
-    qryGetAddress: TQuery;
-    qryAddAddress: TQuery;
-    qryUpAddress: TQuery;
-    qryGetNextAdd: TQuery;
+    qryGetBranch: TFDQuery;
+    qryGetAddress: TFDQuery;
+    qryAddAddress: TFDQuery;
+    qryUpAddress: TFDQuery;
+    qryGetNextAdd: TFDQuery;
     dblkpQSContact: TDBLookupComboBox;
     Label1: TLabel;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
     Label2: TLabel;
     dblkpInstallationContact: TDBLookupComboBox;

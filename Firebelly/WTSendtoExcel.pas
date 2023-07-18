@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, ExtCtrls, OleCtnrs, Grids, DBGrids, DBTables, AllCommon,
+  Dialogs, ComCtrls, StdCtrls, ExtCtrls, OleCtnrs, Grids, DBGrids, AllCommon,
   Buttons, DB, QrCtrls;
 
 type
@@ -29,7 +29,12 @@ type
 var
   frmWTSendtoExcel: TfrmWTSendtoExcel;
 
-implementation
+implementation
+
+uses
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 {$R *.dfm}
 
@@ -47,7 +52,7 @@ end;
 procedure TfrmWTSendtoExcel.ExportQueryToExcel;
 var
   icol, icolcount: integer;
-  tmpQuery: TQuery;
+  tmpQuery: TFDQuery;
   tmpDBField: TField;
   tempFileName: string;
   tempStr: string;
@@ -56,8 +61,8 @@ var
   SavePlace: TBookmark;
   tmpDataSrc: TDataSource;
 begin
-//  tmpQuery := TQuery.Create(self);
-  tmpQuery :=(ExportDBGrid.datasource.dataset as TQuery);
+//  tmpQuery := TFDQuery.Create(self);
+  tmpQuery :=(ExportDBGrid.datasource.dataset as TFDQuery);
   tmpDataSrc := (ExportDBGrid.datasource as TDataSource);
 
   prgbrExport.Max := tmpQuery.RecordCount;
@@ -131,7 +136,7 @@ end;
 procedure TfrmWTSendtoExcel.ExportTableToExcel;
 var
   icol, icolcount: integer;
-  tmpTable: TTable;
+  tmpTable: TFDTable;
   tmpDBField: TField;
   tempFileName: string;
   tempStr: string;
@@ -140,8 +145,8 @@ var
   SavePlace: TBookmark;
   tmpDataSrc: TDataSource;
 begin
-//  tmpQuery := TQuery.Create(self);
-  tmpTable :=(ExportDBGrid.datasource.dataset as TTable);
+//  tmpQuery := TFDQuery.Create(self);
+  tmpTable :=(ExportDBGrid.datasource.dataset as TFDTable);
   tmpDataSrc := (ExportDBGrid.datasource as TDataSource);
 
   prgbrExport.Max := tmpTable.RecordCount;

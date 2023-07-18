@@ -124,8 +124,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
     TabOrder = 5
     NumGlyphs = 2
   end
-  object lkpCutOuts: TQuery
-    DatabaseName = 'WT'
+  object lkpCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from cutout'
       'where cutout not in'
@@ -154,8 +154,8 @@ object frmWTMaintCutOutDetails: TfrmWTMaintCutOutDetails
     Left = 128
     Top = 8
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'INSERT INTO CutOut_Thickness'
       '('

@@ -361,8 +361,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       TabOrder = 0
     end
   end
-  object GetLastIntSelSQL: TQuery
-    DatabaseName = 'WT'
+  object GetLastIntSelSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Max(Int_Sel_Code) as Last_Code'
       'From Int_Sel'
@@ -371,8 +371,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Left = 208
     Top = 12
   end
-  object DelWorkSQL: TQuery
-    DatabaseName = 'WT'
+  object DelWorkSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
@@ -386,8 +386,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object AddWorkSQL: TQuery
-    DatabaseName = 'WT'
+  object AddWorkSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -410,8 +410,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object AddIntSelQuery: TQuery
-    DatabaseName = 'WT'
+  object AddIntSelQuery: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, text100)'
@@ -466,8 +466,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesByInv: TQuery
-    DatabaseName = 'WT'
+  object qrySalesByInv: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Invoice.Inv_to_Customer AS Customer,'
       #9'Sales_Invoice.Sales_Invoice,'
@@ -515,8 +515,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
       FieldName = 'Branch_No'
     end
   end
-  object GetCostsQuery: TQuery
-    DatabaseName = 'WT'
+  object GetCostsQuery: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'SELECT Sales_Invoice_Line.Qty_Invoiced, Purchase_OrderLine.Order' +
@@ -551,8 +551,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'WT'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sum(Amount) as Add_Cost'
       'from Purch_Ord_line_add_chg'
@@ -574,8 +574,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetPOCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select'
       'Purch_Ord.Purch_Ord, Purch_Ord.Purch_ord_no, '
@@ -605,8 +605,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'select sum(Part_Cost*((Sales_invoice_line.Qty_Invoiced*1.0000)/(' +
@@ -642,8 +642,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOCosts: TQuery
-    DatabaseName = 'WT'
+  object qryAddPOCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sum(Amount) as Total_Cost'
       'from Purch_Ord_add_charge'
@@ -665,8 +665,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetJBCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -715,8 +715,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object SQLUpdIntSel: TQuery
-    DatabaseName = 'PB'
+  object SQLUpdIntSel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Int_Sel'
       'set Sel4 = Sel4 + :Sel4,'
@@ -774,8 +774,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCreditLines: TQuery
-    DatabaseName = 'WT'
+  object qryCreditLines: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -806,8 +806,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetProdCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select  Order_Price,'
       '        Price_unit_Factor as Order_unit_Factor,'
@@ -831,8 +831,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCrCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetJBCrCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag_Line_Cost '
       'FROM Job_Bag_Line_Dets'
@@ -853,8 +853,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCrCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetPOCrCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select'
       '  Purch_Ord.Purch_Ord,'
@@ -893,8 +893,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCrCosts: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOCrCosts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order_line.Sales_Order,'
       '        Sales_Order_line.Sales_Order_line_no,'
@@ -924,8 +924,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvAddChrg: TQuery
-    DatabaseName = 'WT'
+  object qryGetInvAddChrg: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from sales_invoice_add_charge'
@@ -939,8 +939,8 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object SQLRep: TQuery
-    DatabaseName = 'WT'
+  object SQLRep: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Rep, Name'
       'from Rep'

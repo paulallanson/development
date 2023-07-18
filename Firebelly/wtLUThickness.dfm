@@ -152,8 +152,8 @@ object frmWtLUThickness: TfrmWtLUThickness
     Left = 152
     Top = 104
   end
-  object qryThickness: TQuery
-    DatabaseName = 'WT'
+  object qryThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Thickness'
@@ -177,8 +177,8 @@ object frmWtLUThickness: TfrmWtLUThickness
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 104
   end

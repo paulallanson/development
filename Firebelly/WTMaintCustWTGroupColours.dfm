@@ -210,8 +210,8 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
       Kind = bkCancel
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Customer_Worktop'
       'where Customer = :Customer AND Group_Number = :Group_Number')
@@ -229,8 +229,8 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert into Customer_Worktop'
       '(Customer,'
@@ -264,8 +264,8 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
         ParamType = ptUnknown
       end>
   end
-  object qryMembers: TQuery
-    DatabaseName = 'wt'
+  object qryMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer_Worktop.Customer,'
       '        Customer_Worktop.Group_Number,'
@@ -292,8 +292,8 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
         ParamType = ptUnknown
       end>
   end
-  object qryNonMembers: TQuery
-    DatabaseName = 'wt'
+  object qryNonMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description as Worktop_Description,'
@@ -320,8 +320,8 @@ object frmWTMaintCustWTGroupColours: TfrmWTMaintCustWTGroupColours
     Left = 416
     Top = 72
   end
-  object qryDummy: TQuery
-    DatabaseName = 'wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description as Worktop_Description,'

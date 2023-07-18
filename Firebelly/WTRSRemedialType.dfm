@@ -416,8 +416,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     TabOrder = 15
     OnClick = TotByRadioGroupClick
   end
-  object qryCategory: TQuery
-    DatabaseName = 'WT'
+  object qryCategory: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Remedial_Category'
@@ -425,8 +425,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 235
     Top = 24
   end
-  object qryType: TQuery
-    DatabaseName = 'WT'
+  object qryType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Remedial_Type'
@@ -434,8 +434,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Left = 235
     Top = 88
   end
-  object qryDept: TQuery
-    DatabaseName = 'WT'
+  object qryDept: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Remedial_Dept'

@@ -4,18 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtJobsDM, StdCtrls, Buttons, Spin, CRControls, DBCtrls, DB,
-  DBTables, ExtCtrls, QrCtrls;
+  Dialogs, wtJobsDM, StdCtrls, Buttons, Spin, CRControls, DBCtrls, DB, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJEdge = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryEdgeType: TQuery;
+    qryEdgeType: TFDQuery;
     dtsEdgeType: TDataSource;
-    qryEdgeThickness: TQuery;
+    qryEdgeThickness: TFDQuery;
     dtsEdgeThickness: TDataSource;
-    qryOneEdgeThickness: TQuery;
+    qryOneEdgeThickness: TFDQuery;
     pnlDetails: TPanel;
     Label1: TLabel;
     edtMaterial: TEdit;

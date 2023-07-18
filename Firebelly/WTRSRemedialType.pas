@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, ExtCtrls, Buttons, DateSelV5,
-  OleCtnrs, ComCtrls;
+  Db, StdCtrls, ExtCtrls, Buttons, DateSelV5,
+  OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSRemedialType = class(TForm)
@@ -38,9 +41,9 @@ type
     cmbCategory: TComboBox;
     cmbReason: TComboBox;
     cmbDept: TComboBox;
-    qryCategory: TQuery;
-    qryType: TQuery;
-    qryDept: TQuery;
+    qryCategory: TFDQuery;
+    qryType: TFDQuery;
+    qryDept: TFDQuery;
     rdgrpShow: TRadioGroup;
     procedure rdgrpReasonClick(Sender: TObject);
     procedure rdgrpDeptClick(Sender: TObject);

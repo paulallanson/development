@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, CRControls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, CRControls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintMatTypeSlabs = class(TForm)
@@ -18,8 +21,8 @@ type
     edtLength: TCREditInt;
     edtDepth: TCREditInt;
     edtSlabSizeDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure edtLengthChange(Sender: TObject);

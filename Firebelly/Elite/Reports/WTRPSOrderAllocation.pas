@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, DB, DBTables,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, DB, gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSOrderAllocation = class(TForm)
@@ -32,14 +34,14 @@ type
     qrlblTemplateDate: TgtQRLabel;
     qrlblDateRequired: TgtQRLabel;
     gtQRShape1: TgtQRShape;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsAddress: TDataSource;
     gtQRDBText2: TgtQRDBText;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
-    qryCompanyAddress: TQuery;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
+    qryCompanyAddress: TFDQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     grpDate: TQRGroup;
     gtQRShape11: TgtQRShape;
     gtQRShape12: TgtQRShape;

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables, QrCtrls, AllCommon,
-  CRControls;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, QrCtrls, AllCommon,
+  CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintPayments = class(TForm)
@@ -16,15 +19,15 @@ type
     Label1: TLabel;
     Label3: TLabel;
     dblkpPaymentMethod: TDBLookupComboBox;
-    qryPaymentMethod: TQuery;
+    qryPaymentMethod: TFDQuery;
     dtsPaymentMethod: TDataSource;
     edtDate: TEdit;
     btnDate: TBitBtn;
     edtPaymentDescription: TEdit;
     edtPaidAmount: TCREditMoney;
-    qryAdd: TQuery;
-    qryUpdate: TQuery;
-    qryGetLast: TQuery;
+    qryAdd: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryGetLast: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormShow(Sender: TObject);

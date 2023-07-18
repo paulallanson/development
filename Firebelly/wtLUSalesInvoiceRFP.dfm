@@ -1176,8 +1176,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Left = 392
     Top = 125
   end
-  object qryDetails: TQuery
-    DatabaseName = 'WT'
+  object qryDetails: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,'
       '        Sales_Invoice.Customer,'
@@ -1289,8 +1289,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
     Left = 496
     Top = 8
   end
-  object qryGetCustAFP: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustAFP: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT Application_Reference,'
       '        Application_Date,'
@@ -1314,8 +1314,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'WT'
+  object qryDummy: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,'
       '        Sales_Invoice.Customer,'
@@ -1426,8 +1426,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = pmnuDeleteClick
     end
   end
-  object qrySetApplication: TQuery
-    DatabaseName = 'WT'
+  object qrySetApplication: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'update sales_invoice'
       'set Application_reference = NULL,'

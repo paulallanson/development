@@ -1298,8 +1298,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Left = 688
     Top = 64
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sale_Offer'
       'SET'
@@ -1350,8 +1350,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Sale_Offer'
       '('
@@ -1406,8 +1406,8 @@ object frmwtMaintOffer: TfrmwtMaintOffer
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Sale_Offer) as Sale_Offer'
       'From Sale_Offer')

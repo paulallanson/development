@@ -104,8 +104,8 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
       'Fixed'
       'Percentage')
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Discount'
       'SET'
@@ -144,8 +144,8 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Discount'
       '('
@@ -186,8 +186,8 @@ object frmwtMaintDiscounts: TfrmwtMaintDiscounts
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Discount) as Discount'
       'From Discount')

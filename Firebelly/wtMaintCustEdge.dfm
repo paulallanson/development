@@ -126,8 +126,8 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     TabOrder = 5
     NumGlyphs = 2
   end
-  object lkpEdges: TQuery
-    DatabaseName = 'WT'
+  object lkpEdges: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Edge_Profile'
       'where Edge_Profile not in'
@@ -154,8 +154,8 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     Left = 352
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_Edge'
       '('

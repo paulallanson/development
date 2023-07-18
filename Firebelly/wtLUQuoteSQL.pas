@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, WTQuotesDM;
+  Dialogs, DB, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, WTQuotesDM;
 
 type
   TfrmWTLUQuoteSQL = class(TForm)

@@ -325,8 +325,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Left = 216
     Top = 256
   end
-  object lkpCOutThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpCOutThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Cutout_thickness.Cutout,'
@@ -459,8 +459,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Size = 50
     end
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -474,8 +474,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Left = 280
     Top = 168
   end
-  object qryDelCOutThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelCOutThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from cutout_thickness'
       'where price_pointer = :price_pointer')
@@ -488,8 +488,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
         ParamType = ptUnknown
       end>
   end
-  object qryGetCutOutThickness: TQuery
-    DatabaseName = 'wt'
+  object qryGetCutOutThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  CutOut_thickness.Material_Type,'
@@ -536,8 +536,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
         ParamType = ptUnknown
       end>
   end
-  object qryAddCutOutThickness: TQuery
-    DatabaseName = 'WT'
+  object qryAddCutOutThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'Insert into CutOut_Thickness (CutOut, Edge_Type, Material_Type, ' +
@@ -567,8 +567,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteCutOutThickness: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteCutOutThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM CutOut_Thickness'
       'WHERE Material_Type = :Material_type AND'
@@ -594,8 +594,8 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Left = 504
     Top = 256
   end
-  object lkpEdgeType: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Edge_Type'

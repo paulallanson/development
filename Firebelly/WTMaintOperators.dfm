@@ -267,8 +267,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
     ListSource = dtsRevCentre
     TabOrder = 13
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Operator'
       'SET'
@@ -355,8 +355,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Operator'
       '        (Operator,'
@@ -375,8 +375,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Operator'
       'From Operator'
@@ -390,8 +390,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'
@@ -442,8 +442,8 @@ object frmWTMaintOperators: TfrmWTMaintOperators
         ParamType = ptUnknown
       end>
   end
-  object qryRevCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'

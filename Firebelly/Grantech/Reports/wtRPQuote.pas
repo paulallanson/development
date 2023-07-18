@@ -4,28 +4,31 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrExport, gtQrCtrls,
-  jpeg;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPQuote = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
-    qryQElements: TQuery;
+    qryQElements: TFDQuery;
     dtsReport: TDataSource;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;
     lblWorktopArea: TgtQRLabel;
     qrsdQEdges: TQRSubDetail;
-    qryQCutOuts: TQuery;
+    qryQCutOuts: TFDQuery;
     qrsdQCutOuts: TQRSubDetail;
     qrsdQExtras: TQRSubDetail;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbQFooter: TQRBand;
     lblGrossSupply: TgtQRLabel;
@@ -38,16 +41,16 @@ type
     qrlblDelivery: TgtQRLabel;
     qrcbAvailability: TQRChildBand;
     QRLabel9: TgtQRLabel;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpQuote: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpQuote: TFDQuery;
     qrcbNotes: TQRChildBand;
     qrlNotes: TgtQRLabel;
     qrlblQuoteCaption: TgtQRLabel;
     qrrchTextNotes: TgtQRRichText;
     qrrchTextAvailability: TgtQRRichText;
     QRDBText5: TgtQRDBText;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     gtQRFilters1: TgtQRFilters;
     lblWorktopTotal: TgtQRLabel;
     lblExtraTotal: TgtQRLabel;

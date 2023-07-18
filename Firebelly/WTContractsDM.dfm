@@ -4,13 +4,13 @@ object dtmdlContract: TdtmdlContract
   Top = 107
   Height = 522
   Width = 1084
-  object qryZero: TQuery
-    DatabaseName = 'wt'
+  object qryZero: TFDQuery
+    ConnectionName = 'wt'
     Left = 216
     Top = 8
   end
-  object qryCQHeader: TQuery
-    DatabaseName = 'wt'
+  object qryCQHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'
@@ -66,8 +66,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQAddHeader: TQuery
-    DatabaseName = 'wT'
+  object qryCQAddHeader: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'INSERT INTO Contract_Quote'
       '(       Contract_Quote,'
@@ -225,8 +225,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQUpHeader: TQuery
-    DatabaseName = 'wt'
+  object qryCQUpHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Contract_Quote'
       'Set Account_Manager = :Account_Manager,'
@@ -341,16 +341,16 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQGetLast: TQuery
-    DatabaseName = 'wt'
+  object qryCQGetLast: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Last_Contract_Quote_Number'
       'from Company')
     Left = 272
     Top = 8
   end
-  object qryAllContracts: TQuery
-    DatabaseName = 'WT'
+  object qryAllContracts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'
@@ -396,7 +396,7 @@ object dtmdlContract: TdtmdlContract
     Left = 96
     Top = 8
   end
-  object qrydummy: TQuery
+  object qrydummy: TFDQuery
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'
@@ -438,8 +438,8 @@ object dtmdlContract: TdtmdlContract
     Left = 160
     Top = 8
   end
-  object qryCustContracts: TQuery
-    DatabaseName = 'WT'
+  object qryCustContracts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote.*'
       'from Quote'
@@ -465,8 +465,8 @@ object dtmdlContract: TdtmdlContract
     Left = 96
     Top = 64
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator'
@@ -479,8 +479,8 @@ object dtmdlContract: TdtmdlContract
     Left = 760
     Top = 72
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'wt'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set last_Contract_Quote_number = :last_Contract_Quote_number'
@@ -494,8 +494,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQAddLine: TQuery
-    DatabaseName = 'WT'
+  object qryCQAddLine: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Contract_Quote_Line'
       '('
@@ -542,8 +542,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQAllLines: TQuery
-    DatabaseName = 'WT'
+  object qryCQAllLines: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Contract_Quote,'
       '        Line_Number,'
@@ -562,8 +562,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCQLOptions: TQuery
-    DatabaseName = 'WT'
+  object qryGetCQLOptions: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Contract_Quote_Line_Option.Contract_Quote,'
       '        Contract_Quote_Line_Option.Line_Number,'
@@ -617,8 +617,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQLAddOption: TQuery
-    DatabaseName = 'WT'
+  object qryCQLAddOption: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Contract_Quote_Line_Option'
       '('
@@ -747,8 +747,8 @@ object dtmdlContract: TdtmdlContract
     Left = 760
     Top = 136
   end
-  object qryCustQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryCustQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -812,8 +812,8 @@ object dtmdlContract: TdtmdlContract
     Left = 832
     Top = 136
   end
-  object qryGetCustomerWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Top 1 Worktop'
       'FROM Customer_Worktop'
@@ -832,8 +832,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerPrice: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  Customer,'
       '        Group_Number,'
@@ -882,8 +882,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQAllEvents: TQuery
-    DatabaseName = 'wt'
+  object qryCQAllEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Contract_Quote_internal_Note, Operator'
@@ -898,8 +898,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQAddEvent: TQuery
-    DatabaseName = 'wt'
+  object qryCQAddEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Contract_Quote_Internal_Note ('
       'Contract_Quote,'
@@ -942,8 +942,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCutOutPrice: TQuery
-    DatabaseName = 'wt'
+  object qryGetCutOutPrice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select TOP 1'
       '        CutOut,'
@@ -993,8 +993,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetEdgePrice: TQuery
-    DatabaseName = 'wt'
+  object qryGetEdgePrice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select TOP 1'
       '        Edge_profile,'
@@ -1038,8 +1038,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'WT'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Address'
@@ -1053,16 +1053,16 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextAdd: TQuery
-    DatabaseName = 'wt'
+  object qryGetNextAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
     Left = 488
     Top = 8
   end
-  object qryAddAddress: TQuery
-    DatabaseName = 'wT'
+  object qryAddAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'insert into Address'
       '(Address,'
@@ -1133,8 +1133,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryUpAddress: TQuery
-    DatabaseName = 'wT'
+  object qryUpAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Address'
       'set'
@@ -1196,8 +1196,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryDelAddress: TQuery
-    DatabaseName = 'wT'
+  object qryDelAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
@@ -1210,8 +1210,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuoteAddress: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuoteAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Customer = :Customer,'
@@ -1242,8 +1242,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryUpContractAddress: TQuery
-    DatabaseName = 'wt'
+  object qryUpContractAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Contract_Quote'
       'set Customer = :Customer,'
@@ -1274,8 +1274,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerWG: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerWG: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Worktop_Group'
@@ -1295,8 +1295,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustomerWG: TQuery
-    DatabaseName = 'WT'
+  object qryAddCustomerWG: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_Worktop_Group'
       
@@ -1326,8 +1326,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerWT: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerWT: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Worktop'
@@ -1347,8 +1347,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustomerWT: TQuery
-    DatabaseName = 'WT'
+  object qryAddCustomerWT: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_Worktop'
       'Values (:Customer, :Group_Number, :Worktop, '#39'N'#39')')
@@ -1371,8 +1371,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerTH: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerTH: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *,'
       '    (select top 1 Unit_price'
@@ -1399,8 +1399,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustomerTH: TQuery
-    DatabaseName = 'WT'
+  object qryAddCustomerTH: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_Worktop_Group_Thick'
       'Values (:Customer, :Group_Number, :Thickness, :Price_Pointer)')
@@ -1428,8 +1428,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustGroupWorktop: TQuery
-    DatabaseName = 'Wt'
+  object qryGetCustGroupWorktop: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Worktop'
@@ -1455,8 +1455,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustGroupThickness: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustGroupThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Worktop_Group_Thick'
@@ -1482,8 +1482,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryReQuoteCount: TQuery
-    DatabaseName = 'wt'
+  object qryReQuoteCount: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT max(Quote_Number) as Last_ReQuote'
       'FROM Contract_Quote'
@@ -1497,8 +1497,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'WT'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Contract_Quote'
       'From Contract_Quote'
@@ -1512,8 +1512,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptInput
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'WT'
+  object DelSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Contract_Quote'
       'Where'
@@ -1527,8 +1527,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'WT'
+  object AddSQL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Contract_Quote'
       
@@ -1555,8 +1555,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryCQUpdateHeader: TQuery
-    DatabaseName = 'wt'
+  object qryCQUpdateHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Contract_Quote'
       'Set Account_Manager = :Account_Manager,'
@@ -1689,8 +1689,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerSupplier: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerSupplier: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Supplier'
       'FROM Customer_Worktop_Group'
@@ -1709,8 +1709,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerCutOutPrice: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerCutOutPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Cutout_Edge_Group.Customer,'
       '        Customer_Cutout_Edge_Group.Material_Type,'
@@ -1768,8 +1768,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerEdgePrice: TQuery
-    DatabaseName = 'WT'
+  object qryGetCustomerEdgePrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Cutout_Edge_Group.Customer,'
       '        Customer_Cutout_Edge_Group.Material_Type,'
@@ -1827,8 +1827,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetMaterialSlab: TQuery
-    DatabaseName = 'WT'
+  object qryGetMaterialSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Length, Depth'
       'FROM Material_Type_Slab_Size'
@@ -1847,8 +1847,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'

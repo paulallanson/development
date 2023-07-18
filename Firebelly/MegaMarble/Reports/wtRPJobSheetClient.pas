@@ -4,24 +4,27 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobSheetClient = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpQuote: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpQuote: TFDQuery;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
     QRDBText1: TgtQRDBText;
@@ -31,9 +34,9 @@ type
     QRLabel5: TgtQRLabel;
     QRLabel18: TgtQRLabel;
     qrlblGross: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRLabel1: TgtQRLabel;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
     qrySOLineJob: TFloatField;
@@ -76,8 +79,8 @@ type
     qrVertLine1: TgtQRShape;
     qrVertLine2: TgtQRShape;
     qrHorzLine1: TgtQRShape;
-    qryCompanyAddress: TQuery;
-    GetNarrSQL: TQuery;
+    qryCompanyAddress: TFDQuery;
+    GetNarrSQL: TFDQuery;
     qrlblDescription: TgtQRLabel;
     qrlblDateRequired: TgtQRLabel;
     qrySOLineMarkup_Value: TFloatField;

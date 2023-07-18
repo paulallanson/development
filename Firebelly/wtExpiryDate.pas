@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, AllCommon, DB, DBTables;
+  Dialogs, StdCtrls, AllCommon, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTExpiryDate = class(TForm)
@@ -14,7 +17,7 @@ type
     Button2: TButton;
     Label2: TLabel;
     edtoldExpiryDate: TEdit;
-    qryUpCompany: TQuery;
+    qryUpCompany: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure edtNewExpiryDateExit(Sender: TObject);
     procedure edtNewExpiryDateChange(Sender: TObject);

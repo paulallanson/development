@@ -4,24 +4,27 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpSOStatus: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpSOStatus: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
@@ -35,9 +38,9 @@ type
     qrlblVAT: TgtQRLabel;
     qrlblGross: TgtQRLabel;
     qrlblNett: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRLabel1: TgtQRLabel;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
@@ -99,8 +102,8 @@ type
     gtQRShape12: TgtQRShape;
     memPayment: TgtQRMemo;
     qrshpPayment: TgtQRShape;
-    qryCompanyAddress: TQuery;
-    GetNarrSQL: TQuery;
+    qryCompanyAddress: TFDQuery;
+    GetNarrSQL: TFDQuery;
     qrlblDepositTerms: TgtQRLabel;
     gtQRLabel7: TgtQRLabel;
     qrlblDescription: TgtQRLabel;
@@ -109,10 +112,10 @@ type
     qrlblFitDateLabel: TgtQRLabel;
     qrlblDateRequired: TgtQRLabel;
     qrlblTemplateDate: TgtQRLabel;
-    qryQElements: TQuery;
-    qryQEdges: TQuery;
-    qryQCutOuts: TQuery;
-    qryQExtras: TQuery;
+    qryQElements: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQCutOuts: TFDQuery;
+    qryQExtras: TFDQuery;
     dtsSOLine: TDataSource;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;

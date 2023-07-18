@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, CRControls, DBCtrls, ExtCtrls, DB, DBTables,
-  wtQuotesDM, QrCtrls;
+  Dialogs, StdCtrls, Buttons, CRControls, DBCtrls, ExtCtrls, DB, wtQuotesDM, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintQElementM = class(TForm)
@@ -23,27 +25,27 @@ type
     dblkpWTGroup: TDBLookupComboBox;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWTGroup: TQuery;
+    qryWTGroup: TFDQuery;
     dtsWTGroup: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
-    qryWTThickness: TQuery;
+    qryWTThickness: TFDQuery;
     dtsWTThickness: TDataSource;
-    qryWorktops: TQuery;
+    qryWorktops: TFDQuery;
     dblkpMaterial: TDBLookupComboBox;
-    qryMaterial: TQuery;
+    qryMaterial: TFDQuery;
     dtsMaterial: TDataSource;
     GroupBox1: TGroupBox;
     Label5: TLabel;
     dblkpUPThickness: TDBLookupComboBox;
-    qryUpThickness: TQuery;
+    qryUpThickness: TFDQuery;
     dtsUPThickness: TDataSource;
     Label6: TLabel;
     edtUPUnitPrice: TCREditMoney;
-    qryContractWorktops: TQuery;
-    qryContractPrice: TQuery;
-    qryCustomerWorktops: TQuery;
-    qryCustomerPrice: TQuery;
+    qryContractWorktops: TFDQuery;
+    qryContractPrice: TFDQuery;
+    qryCustomerWorktops: TFDQuery;
+    qryCustomerPrice: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure dblkpWorktopClick(Sender: TObject);

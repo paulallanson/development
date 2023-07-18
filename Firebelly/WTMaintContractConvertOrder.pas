@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Buttons, DB, DBTables, Grids, DBGrids,
-  ExtCtrls, wtDataModule, Spin;
+  Dialogs, StdCtrls, DBCtrls, Buttons, DB, Grids, DBGrids,
+  ExtCtrls, wtDataModule, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintContractConvertOrder = class(TForm)
-    qryWorktops: TQuery;
+    qryWorktops: TFDQuery;
     dtsWorktops: TDataSource;
-    qryGetQElement: TQuery;
-    qryGetWTThickness: TQuery;
-    qryThickness: TQuery;
+    qryGetQElement: TFDQuery;
+    qryGetWTThickness: TFDQuery;
+    qryThickness: TFDQuery;
     dtsThickness: TDataSource;
     pnlFooter: TPanel;
     btnOK: TBitBtn;
@@ -27,10 +30,10 @@ type
     dblkpThickness: TDBLookupComboBox;
     Label3: TLabel;
     dtsSalesOrders: TDataSource;
-    qrySalesOrders: TQuery;
+    qrySalesOrders: TFDQuery;
     dbgDetails: TDBGrid;
-    qryGetMaterialSlabSize: TQuery;
-    qryGetQSlab: TQuery;
+    qryGetMaterialSlabSize: TFDQuery;
+    qryGetQSlab: TFDQuery;
     Label9: TLabel;
     edtCustomerPO: TEdit;
     lblNoOfOrders: TLabel;

@@ -104,8 +104,8 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     TabOrder = 6
     OnChange = edtSearchChange
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Supplier_contact'
@@ -137,8 +137,8 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     Left = 80
     Top = 176
   end
-  object qryContactType: TQuery
-    DatabaseName = 'WT'
+  object qryContactType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Contact_Type'
       'Order by Contact_Type_description')
@@ -150,8 +150,8 @@ object frmWTLUSupplierContacts: TfrmWTLUSupplierContacts
     Left = 152
     Top = 240
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 272
     Top = 112
   end

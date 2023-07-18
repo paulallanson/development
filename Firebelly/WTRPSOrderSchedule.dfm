@@ -1255,8 +1255,8 @@ object frmwtRPSOrderSchedule: TfrmwtRPSOrderSchedule
       end
     end
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Sales_Order,'
       '        Sales_Order_Line.Sales_order_Line_no,'

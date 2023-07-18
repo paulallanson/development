@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
@@ -29,9 +32,9 @@ type
     QRLabel3: TgtQRLabel;
     QRDBText4: TgtQRDBText;
     QRLabel5: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRLabel1: TgtQRLabel;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
@@ -81,8 +84,8 @@ type
     gtQRShape9: TgtQRShape;
     gtQRShape10: TgtQRShape;
     gtQRShape11: TgtQRShape;
-    qryCompanyAddress: TQuery;
-    GetNarrSQL: TQuery;
+    qryCompanyAddress: TFDQuery;
+    GetNarrSQL: TFDQuery;
     gtQRLabel7: TgtQRLabel;
     qrlblDescription: TgtQRLabel;
     gtQRDBText2: TgtQRDBText;
@@ -90,10 +93,10 @@ type
     qrlblDateRequired: TgtQRLabel;
     qriHeadLogo: TgtQRImage;
     qrySOLineMarkup_Value: TFloatField;
-    qryQElements: TQuery;
-    qryQEdges: TQuery;
-    qryQCutOuts: TQuery;
-    qryQExtras: TQuery;
+    qryQElements: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQCutOuts: TFDQuery;
+    qryQExtras: TFDQuery;
     dtsSOLine: TDataSource;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;
@@ -106,13 +109,13 @@ type
     qrlblEdgeDescription: TgtQRLabel;
     qrsdQExtras: TQRSubDetail;
     qrlblExtraDescription: TgtQRLabel;
-    qryUpSOStatus: TQuery;
+    qryUpSOStatus: TFDQuery;
     gtQRLabel9: TgtQRLabel;
     qrlblInstallPhone: TgtQRLabel;
     gtQRLabel11: TgtQRLabel;
     qrlblInstallEmail: TgtQRLabel;
     qrlblExtraQuantity: TgtQRLabel;
-    qryRevenueCentre: TQuery;
+    qryRevenueCentre: TFDQuery;
     qrlblDepositTerms: TgtQRLabel;
     qrshpPayment: TgtQRShape;
     QRShape10: TgtQRShape;

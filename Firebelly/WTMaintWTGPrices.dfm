@@ -137,8 +137,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     TabOrder = 6
     OnClick = Button1Click
   end
-  object lkpThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Thickness'
@@ -177,8 +177,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Left = 224
     Top = 56
   end
-  object lkpWTGroup: TQuery
-    DatabaseName = 'WT'
+  object lkpWTGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * '
       'from Worktop_Group'
@@ -206,8 +206,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Left = 224
     Top = 16
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'WT'
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Worktop_thickness.*'
       'from Worktop_thickness, worktop'
@@ -234,8 +234,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         ParamType = ptUnknown
       end>
   end
-  object qryGetGroupWT: TQuery
-    DatabaseName = 'wt'
+  object qryGetGroupWT: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop_Group.Worktop_Group,'
       '        Worktop_Group.Worktop_Group_Description,'
@@ -263,8 +263,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         ParamType = ptUnknown
       end>
   end
-  object qryCheckWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryCheckWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Worktop, Thickness'
       'FROM Worktop_Thickness'
@@ -284,8 +284,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         ParamType = ptUnknown
       end>
   end
-  object qryAddWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryAddWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'insert into Worktop_Thickness (Worktop, Thickness, Price_Pointer' +
@@ -310,8 +310,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'INSERT INTO Worktop_Group_Prices'
       '('

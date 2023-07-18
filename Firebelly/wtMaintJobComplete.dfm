@@ -185,8 +185,8 @@ object frmWTMaintJobComplete: TfrmWTMaintJobComplete
     ReadOnly = True
     TabOrder = 10
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator')

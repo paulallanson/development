@@ -1498,8 +1498,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -1520,8 +1520,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 336
     Top = 128
   end
-  object qryWTGPrices: TQuery
-    DatabaseName = 'wt'
+  object qryWTGPrices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Worktop_group_Prices.*,'
       '    (select top 1 Unit_price'
@@ -1565,8 +1565,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryAddWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryAddWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'insert into Worktop_Thickness (Worktop, Thickness, Price_Pointer' +
@@ -1596,8 +1596,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 112
     Top = 192
   end
-  object lkpWTThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Worktop_thickness.Worktop,'
       '      Worktop_thickness.Thickness,'
@@ -1666,8 +1666,8 @@ object frmWTMaintWT: TfrmWTMaintWT
       FieldName = 'Price_Pointer'
     end
   end
-  object qryDelWTThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelWTThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from worktop_thickness'
       'where price_pointer = :price_pointer')
@@ -1680,8 +1680,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object lkpWorktopFinish: TQuery
-    DatabaseName = 'WT'
+  object lkpWorktopFinish: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Worktop_Finish'
       
@@ -1702,8 +1702,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 80
     Top = 184
   end
-  object qryCheckWTThickness: TQuery
-    DatabaseName = 'wT'
+  object qryCheckWTThickness: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'Select Worktop, Thickness, Price_Pointer'
       'From Worktop_Thickness'
@@ -1723,8 +1723,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteColour: TQuery
-    DatabaseName = 'wt'
+  object qryDeleteColour: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Worktop_Colour_Group'
       'where Worktop = :Worktop')
@@ -1737,8 +1737,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryAddColour: TQuery
-    DatabaseName = 'wt'
+  object qryAddColour: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert Into Worktop_Colour_Group'
       '        (Worktop_Colour_Group,'
@@ -1762,8 +1762,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Colour_Group.Colour_Group,'
       '        Colour_Group.Description as Colour_Group_Description'
@@ -1773,8 +1773,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 328
     Top = 240
   end
-  object qryNonMembers: TQuery
-    DatabaseName = 'wt'
+  object qryNonMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description as Worktop_Description,'
@@ -1801,8 +1801,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 416
     Top = 168
   end
-  object qryMembers: TQuery
-    DatabaseName = 'wt'
+  object qryMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop_Colour_Group.Worktop,'
       '        Worktop_Colour_Group.Worktop_Colour_Group,'
@@ -1835,8 +1835,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 560
     Top = 160
   end
-  object lkpDiscounts: TQuery
-    DatabaseName = 'WT'
+  object lkpDiscounts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Discount'
       
@@ -1857,8 +1857,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 552
     Top = 16
   end
-  object qryWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Worktop'
@@ -1872,8 +1872,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop'
       'SET'
@@ -1948,8 +1948,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop'
       '        (Worktop,'
@@ -1966,8 +1966,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Worktop'
       'Where'
@@ -1981,8 +1981,8 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Worktop'
       'From Worktop'
@@ -1996,15 +1996,15 @@ object frmWTMaintWT: TfrmWTMaintWT
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '')
     Left = 696
     Top = 336
   end
-  object lkpGroup: TQuery
-    DatabaseName = 'WT'
+  object lkpGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from worktop_group'
@@ -2031,8 +2031,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Left = 280
     Top = 248
   end
-  object qryAddColourSQL: TQuery
-    DatabaseName = 'wt'
+  object qryAddColourSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert Into Worktop_Colour_Group'
       '        (Worktop_Colour_Group,'

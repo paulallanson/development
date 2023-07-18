@@ -157,8 +157,8 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
     Left = 184
     Top = 120
   end
-  object qryRemedialCategory: TQuery
-    DatabaseName = 'WT'
+  object qryRemedialCategory: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Remedial_Category'
@@ -182,8 +182,8 @@ object frmWTLURemedialCategory: TfrmWTLURemedialCategory
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 264
     Top = 120
   end

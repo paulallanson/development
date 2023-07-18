@@ -1442,8 +1442,8 @@ object frmWTRPJobValue: TfrmWTRPJobValue
       end
     end
   end
-  object qryJobs: TQuery
-    DatabaseName = 'Wt'
+  object qryJobs: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Job.*,'
       '        Customer.Customer_name as Customer_Name_Actual,'

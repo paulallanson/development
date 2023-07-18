@@ -213,8 +213,8 @@ object frmWTFileImport: TfrmWTFileImport
     Left = 72
     Top = 136
   end
-  object qryDataSource: TQuery
-    DatabaseName = 'wt'
+  object qryDataSource: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Data_Source'
       'order by Data_Source_Title')

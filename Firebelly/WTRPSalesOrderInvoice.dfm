@@ -1430,8 +1430,8 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
       end
     end
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Date_Raised,'
@@ -1532,71 +1532,71 @@ object frmWTRPSalesOrderInvoice: TfrmWTRPSalesOrderInvoice
       end>
     object qrySalesOrdersSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'WT.Sales_Order.Sales_Order'
+
     end
     object qrySalesOrdersDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-      Origin = 'WT.Sales_Order.Date_Raised'
+
     end
     object qrySalesOrdersSales_Order_Status: TIntegerField
       FieldName = 'Sales_Order_Status'
-      Origin = 'WT.Sales_Order.Sales_Order_Status'
+
     end
     object qrySalesOrdersSales_Order_Status_Desc: TStringField
       FieldName = 'Sales_Order_Status_Desc'
-      Origin = 'WT.Sales_Order_Status.Sales_Order_Status_Desc'
+
       Size = 30
     end
     object qrySalesOrdersTemplate_Date: TDateTimeField
       FieldName = 'Template_Date'
-      Origin = 'WT.Sales_Order.Template_Date'
+
     end
     object qrySalesOrdersInstall_Address: TIntegerField
       FieldName = 'Install_Address'
-      Origin = 'WT.Sales_Order.Install_Address'
+
     end
     object qrySalesOrdersCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-      Origin = 'WT.Sales_Order.Customer_Name'
+
       Size = 50
     end
     object qrySalesOrdersReference: TStringField
       FieldName = 'Reference'
-      Origin = 'WT.Sales_Order.Reference'
+
       Size = 30
     end
     object qrySalesOrdersTelephone_number: TStringField
       FieldName = 'Telephone_number'
-      Origin = 'WT.Customer.Telephone_number'
+
       Size = 30
     end
     object qrySalesOrdersGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      Origin = 'WT.Sales_Order.Goods_Value'
+
       DisplayFormat = '0.00'
     end
     object qrySalesOrdersVAT_Value: TFloatField
       FieldName = 'VAT_Value'
-      Origin = 'WT.Sales_Order.VAT_Value'
+
       DisplayFormat = '0.00'
     end
     object qrySalesOrdersTotal_Value: TFloatField
       FieldName = 'Total_Value'
-      Origin = 'WT.Sales_Order.VAT_Value'
+
       DisplayFormat = '0.00'
     end
     object qrySalesOrdersRep: TIntegerField
       FieldName = 'Rep'
-      Origin = 'WT.Sales_Order.Rep'
+
     end
     object qrySalesOrdersRep_Name: TStringField
       FieldName = 'Rep_Name'
-      Origin = 'WT.Rep.Rep_Name'
+
       Size = 50
     end
     object qrySalesOrdersDate_Required: TDateTimeField
       FieldName = 'Date_Required'
-      Origin = 'WT.Sales_Order.Date_Required'
+
     end
     object qrySalesOrdersTotal_Invoice: TFloatField
       FieldName = 'Total_Invoice'

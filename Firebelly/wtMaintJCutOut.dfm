@@ -184,8 +184,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
       OnClick = btnCutOutsClick
     end
   end
-  object qryEdgeType: TQuery
-    DatabaseName = 'wt'
+  object qryEdgeType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Edge_Type')
@@ -197,8 +197,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
     Left = 56
     Top = 136
   end
-  object qryCOThickness: TQuery
-    DatabaseName = 'wt'
+  object qryCOThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  cutout.cutout,'
       '        cutout.description,'
@@ -222,8 +222,8 @@ object frmWtMaintJCutOut: TfrmWtMaintJCutOut
         ParamType = ptUnknown
       end>
   end
-  object qryOneCOThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneCOThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  CutOut,'
       '        Material_type,'

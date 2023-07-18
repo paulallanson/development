@@ -151,8 +151,8 @@ object frmWTLUMatType: TfrmWTLUMatType
     Left = 168
     Top = 56
   end
-  object qryMatType: TQuery
-    DatabaseName = 'WT'
+  object qryMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Type'
@@ -175,8 +175,8 @@ object frmWTLUMatType: TfrmWTLUMatType
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 240
     Top = 56
   end

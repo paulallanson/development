@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, AllCommon, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPJobCutSched = class(TForm)
     qrpCutSchedule: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryJElements: TQuery;
+    qryJElements: TFDQuery;
     qrgJob: TQRGroup;
     qrsdElement: TQRSubDetail;
     QRShape1: TgtQRShape;
@@ -27,9 +30,9 @@ type
     QRDBText4: TgtQRDBText;
     QRDBText5: TgtQRDBText;
     QRDBText6: TgtQRDBText;
-    qryUpJStatus: TQuery;
-    qryUpSOStatus: TQuery;
-    qrygetNotes: TQuery;
+    qryUpJStatus: TFDQuery;
+    qryUpSOStatus: TFDQuery;
+    qrygetNotes: TFDQuery;
     QRBand1: TQRBand;
     QRLabel1: TgtQRLabel;
     QRLabel3: TgtQRLabel;
@@ -49,7 +52,7 @@ type
     QRLabel13: TgtQRLabel;
     qriHeadLogo: TgtQRImage;
     qrmemCompanyAdd: TgtQRMemo;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     gtQRShape1: TgtQRShape;
     gtQRShape2: TgtQRShape;
     gtQRShape3: TgtQRShape;
@@ -77,9 +80,9 @@ type
     qrlblFitterNumber: TgtQRLabel;
     gtQRLabel9: TgtQRLabel;
     gtQRDBText8: TgtQRDBText;
-    qryAddress: TQuery;
+    qryAddress: TFDQuery;
     dtsAddress: TDataSource;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     procedure qrpCutScheduleBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgJobBeforePrint(Sender: TQRCustomBand;

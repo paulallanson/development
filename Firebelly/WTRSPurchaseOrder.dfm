@@ -308,8 +308,8 @@ object frmWTRSPurchaseOrder: TfrmWTRSPurchaseOrder
         'All Contacts')
     end
   end
-  object qryOperators: TQuery
-    DatabaseName = 'WT'
+  object qryOperators: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Operator'

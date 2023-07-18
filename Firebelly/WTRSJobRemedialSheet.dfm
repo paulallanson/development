@@ -262,8 +262,8 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
         Visible = True
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '      Job_Remedial.job,'
@@ -299,8 +299,8 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Left = 232
     Top = 232
   end
-  object qryJob: TQuery
-    DatabaseName = 'WT'
+  object qryJob: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Customer.Customer_Name,'
@@ -323,7 +323,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Left = 248
     Top = 16
   end
-  object qryReportDummy: TQuery
+  object qryReportDummy: TFDQuery
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job.Job_Status,'

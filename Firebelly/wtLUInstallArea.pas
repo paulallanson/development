@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBTables, DB, ComCtrls, StdCtrls, Buttons, ExtCtrls, Grids,
-  DBGrids;
+  Dialogs, DB, ComCtrls, StdCtrls, Buttons, ExtCtrls, Grids,
+  DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUInstallArea = class(TForm)
@@ -19,8 +22,8 @@ type
     btnExcel: TBitBtn;
     stsbrDetails: TStatusBar;
     dtsInstallationAreas: TDataSource;
-    qryInstallationArea: TQuery;
-    qryDelete: TQuery;
+    qryInstallationArea: TFDQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     edtName: TEdit;
     tmrRefresh: TTimer;

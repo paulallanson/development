@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls;
+  Dialogs, ExtCtrls, QuickRpt, DB, QRCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSOProduction = class(TForm)
     qrpdetails: TQuickRep;
-    qryWorktops: TQuery;
-    qryCutOuts: TQuery;
-    qryEdges: TQuery;
+    qryWorktops: TFDQuery;
+    qryCutOuts: TFDQuery;
+    qryEdges: TFDQuery;
     qrSubMaterial: TQRSubDetail;
     qrlblMaterialDescription: TQRLabel;
     qrlblArea: TQRLabel;
@@ -42,8 +45,8 @@ type
     gtQRLabel1: TQRLabel;
     qrlblTotalArea: TQRLabel;
     gtQRShape1: TQRShape;
-    qryBaseCutOuts: TQuery;
-    qryBaseEdges: TQuery;
+    qryBaseCutOuts: TFDQuery;
+    qryBaseEdges: TFDQuery;
     qrgrpFootEdgeProfile: TQRBand;
     gtQRLabel2: TQRLabel;
     qrlblTotalLength: TQRLabel;

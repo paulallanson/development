@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPJobCutSched = class(TForm)
     qrpCutSchedule: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryJElements: TQuery;
+    qryJElements: TFDQuery;
     qrgJob: TQRGroup;
     QRLabel1: TQRLabel;
     QRLabel2: TQRLabel;
@@ -48,8 +51,8 @@ type
     QRSysData1: TQRSysData;
     qrlblDateRequired: TQRLabel;
     qrlblJobNumber: TQRLabel;
-    qryUpJStatus: TQuery;
-    qryUpSOStatus: TQuery;
+    qryUpJStatus: TFDQuery;
+    qryUpSOStatus: TFDQuery;
     qrlblSalesOrder: TQRLabel;
     procedure qrpCutScheduleBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

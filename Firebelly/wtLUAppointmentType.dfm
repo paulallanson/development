@@ -114,8 +114,8 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
     Left = 216
     Top = 64
   end
-  object qryDelete: TQuery
-    DatabaseName = 'wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Level_of_Importance'
       'where Level_of_Importance = :Level_of_Importance')
@@ -128,8 +128,8 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
         ParamType = ptUnknown
       end>
   end
-  object qryDefaults: TQuery
-    DatabaseName = 'WT'
+  object qryDefaults: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE AppointmentType'
       'Set AppointmentColour = 23'
@@ -137,8 +137,8 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
     Left = 96
     Top = 152
   end
-  object qryAppointmentType: TQuery
-    DatabaseName = 'WT'
+  object qryAppointmentType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM AppointmentType'

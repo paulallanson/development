@@ -262,8 +262,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Left = 368
     Top = 64
   end
-  object qryCustEdge: TQuery
-    DatabaseName = 'WT'
+  object qryCustEdge: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '  Customer_Edge.Group_Id,'
@@ -376,8 +376,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       FieldName = 'Edge_Profile'
     end
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -391,8 +391,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Left = 168
     Top = 56
   end
-  object qryGetCustEdges: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustEdges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Customer_Edge.Group_Id,'
@@ -427,8 +427,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustEdge: TQuery
-    DatabaseName = 'WT'
+  object qryAddCustEdge: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'Insert into Customer_Edge (Group_Id, Edge_Profile, Price_Pointer' +
@@ -465,8 +465,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Left = 504
     Top = 256
   end
-  object lkpEdgeType: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Edge_Type'
@@ -482,8 +482,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Left = 248
     Top = 56
   end
-  object qryDelCustEdge: TQuery
-    DatabaseName = 'WT'
+  object qryDelCustEdge: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Customer_Edge'
       'Where Price_Pointer = :Price_Pointer')
@@ -496,8 +496,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
         ParamType = ptUnknown
       end>
   end
-  object lkpCustEdgeGroup: TQuery
-    DatabaseName = 'WT'
+  object lkpCustEdgeGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Group_Id, Group_Description'
       'FROM Customer_Cutout_Edge_Group'
@@ -517,8 +517,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Left = 440
     Top = 64
   end
-  object qryDelAllCustEdges: TQuery
-    DatabaseName = 'WT'
+  object qryDelAllCustEdges: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Customer_Edge'
       'Where Group_Id = :Group_Id')

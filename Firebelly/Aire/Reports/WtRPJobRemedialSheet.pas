@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobRemedialSheet = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     memAddress: TQRRichText;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrlblSOCaption: TQRLabel;
     gtQRShape1: TQRShape;
     gtQRDBText2: TQRDBText;
@@ -57,9 +60,9 @@ type
     gtQRShape4: TQRShape;
     gtQRShape26: TQRShape;
     gtQRLabel1: TQRLabel;
-    qryJobEdge: TQuery;
-    qryJobThickness: TQuery;
-    qryJobUpstand: TQuery;
+    qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     gtQRLabel3: TQRLabel;
     gtQRLabel5: TQRLabel;
     gtQRLabel6: TQRLabel;

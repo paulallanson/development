@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPJobSheetClient = class(TForm)
     qrpDetails: TQuickRep;
     qrgJob: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRLabel1: TgtQRLabel;
     qrsdJElements: TQRSubDetail;
     lblWorktopSize: TgtQRLabel;
@@ -32,10 +35,10 @@ type
     qrlblEdgeDescription: TgtQRDBText;
     qrsdJExtras: TQRSubDetail;
     qrlblExtraDescription: TgtQRDBText;
-    qryJElements: TQuery;
-    qryJCutOuts: TQuery;
-    qryJEdges: TQuery;
-    qryJExtras: TQuery;
+    qryJElements: TFDQuery;
+    qryJCutOuts: TFDQuery;
+    qryJEdges: TFDQuery;
+    qryJExtras: TFDQuery;
     qrsdJRemedials: TQRSubDetail;
     qrmRemedials: TgtQRMemo;
     QRDBText3: TgtQRDBText;
@@ -50,7 +53,7 @@ type
     gtQRShape5: TgtQRShape;
     gtQRLabel4: TgtQRLabel;
     gtQRLabel5: TgtQRLabel;
-    Query1: TQuery;
+    Query1: TFDQuery;
     qrmAddress: TgtQRMemo;
     QRLabel5: TgtQRLabel;
     QRDBText4: TgtQRDBText;
@@ -81,7 +84,7 @@ type
     QRDBText12: TgtQRDBText;
     gtQRLabel6: TgtQRLabel;
     gtQRDBText4: TgtQRDBText;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qriHeadLogo: TgtQRImage;
     qrcbNotes: TQRChildBand;
     qrlNotes: TgtQRLabel;

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, DBTables, QrCtrls, Math,
-  Mask, WTLUCustWTGroupPrices;
+  Dialogs, StdCtrls, DBCtrls, Buttons, CRControls, DB, QrCtrls, Math,
+  Mask, WTLUCustWTGroupPrices,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustWTGroupPrices = class(TForm)
@@ -15,14 +18,14 @@ type
     Label5: TLabel;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    lkpThickness: TQuery;
+    lkpThickness: TFDQuery;
     srclkpThickness: TDataSource;
     Label4: TLabel;
     edtmnyCost: TCREditMoney;
     Label15: TLabel;
     edtMarkupPercentage: TCREditMoney;
-    qryAdd: TQuery;
-    qryUpdate: TQuery;
+    qryAdd: TFDQuery;
+    qryUpdate: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

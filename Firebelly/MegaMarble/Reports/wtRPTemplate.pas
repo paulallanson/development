@@ -4,28 +4,31 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrExport, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPTemplate = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblTemplate: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     gtQRFilters1: TgtQRFilters;
     QRLabel14: TgtQRLabel;
     QRLabel15: TgtQRLabel;
     gtQRLabel4: TgtQRLabel;
     qrmSiteAddress: TgtQRMemo;
-    qryQuote: TQuery;
+    qryQuote: TFDQuery;
     QRLabel16: TgtQRLabel;
     gtQRShape1: TgtQRShape;
     QRLabel17: TgtQRLabel;
@@ -170,9 +173,9 @@ type
     qrlblThickness: TgtQRLabel;
     qrlblUpstand: TgtQRLabel;
     qrlblOfficeContact: TgtQRLabel;
-    qryQuoteEdge: TQuery;
-    qryQuoteThickness: TQuery;
-    qryQuoteUpstand: TQuery;
+    qryQuoteEdge: TFDQuery;
+    qryQuoteThickness: TFDQuery;
+    qryQuoteUpstand: TFDQuery;
     gtQRLabel17: TgtQRLabel;
     gtQRShape15: TgtQRShape;
     gtQRLabel18: TgtQRLabel;

@@ -315,8 +315,8 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
     Caption = 'Only Show Scheduled Orders'
     TabOrder = 14
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

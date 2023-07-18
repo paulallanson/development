@@ -726,8 +726,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job.*, Operator.Operator_Name'
       'from Job, Operator'
@@ -742,8 +742,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQElements: TQuery
-    DatabaseName = 'WT'
+  object qryQElements: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_element.*, '
       'worktop.description,'
@@ -767,8 +767,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Left = 200
     Top = 48
   end
-  object qryQCutOuts: TQuery
-    DatabaseName = 'WT'
+  object qryQCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -783,8 +783,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQEdges: TQuery
-    DatabaseName = 'wt'
+  object qryQEdges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -800,8 +800,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         ParamType = ptUnknown
       end>
   end
-  object qryQExtras: TQuery
-    DatabaseName = 'WT'
+  object qryQExtras: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -816,8 +816,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         ParamType = ptUnknown
       end>
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -831,8 +831,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -858,16 +858,16 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Left = 350
     Top = 123
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 453
     Top = 95
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'

@@ -1441,8 +1441,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object lkpWorktopType: TQuery
-    DatabaseName = 'WT'
+  object lkpWorktopType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Worktop_Type'
       
@@ -2013,8 +2013,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
       9E79C4030107F83F7EFEEC0703FFF83F00000000000000000000000000000000
       000000000000}
   end
-  object qrySlabs: TQuery
-    DatabaseName = 'Wt'
+  object qrySlabs: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Select'
       '  Slab_Size,'
@@ -2039,8 +2039,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Left = 568
     Top = 72
   end
-  object qrySuppliers: TQuery
-    DatabaseName = 'WT'
+  object qrySuppliers: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Supplier, Supplier_Name'
       'FROM Supplier'
@@ -2054,8 +2054,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
     Left = 348
     Top = 192
   end
-  object qryDelSlabSize: TQuery
-    DatabaseName = 'wt'
+  object qryDelSlabSize: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Material_Type_Slab_Size'
       'where Slab_Size = :Slab_Size')
@@ -2068,8 +2068,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Material_Type'
       'SET'
@@ -2156,8 +2156,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Material_Type'
       '        (Material_Type,'
@@ -2174,8 +2174,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Material_Type'
       'Where'
@@ -2189,8 +2189,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Material_Type'
       'From Material_Type'
@@ -2204,8 +2204,8 @@ object frmWtMaintMatType: TfrmWtMaintMatType
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, ComCtrls, ToolWin, ImgList, StdCtrls, Buttons,
-  ExtCtrls, DB, DBTables, Menus;
+  ExtCtrls, DB, Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUSalesInvoiceRFP = class(TForm)
@@ -31,18 +34,18 @@ type
     edtDateTo: TEdit;
     btnPrint: TButton;
     Button4: TButton;
-    qryDetails: TQuery;
+    qryDetails: TFDQuery;
     dtsDetails: TDataSource;
     btnSweep: TButton;
-    qryGetCustAFP: TQuery;
-    qryDummy: TQuery;
+    qryGetCustAFP: TFDQuery;
+    qryDummy: TFDQuery;
     Label1: TLabel;
     edtSiteName: TEdit;
     btnSite: TBitBtn;
     pmnDetails: TPopupMenu;
     pmnuPrint: TMenuItem;
     pmnuDelete: TMenuItem;
-    qrySetApplication: TQuery;
+    qrySetApplication: TFDQuery;
     procedure btnCustomerClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure DateFromButtonClick(Sender: TObject);

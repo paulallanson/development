@@ -295,8 +295,8 @@ object frmWTRSQuoteDecline: TfrmWTRSQuoteDecline
       'Commercial')
     TabOrder = 12
   end
-  object qryReason: TQuery
-    DatabaseName = 'WT'
+  object qryReason: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Inactive_Reason'

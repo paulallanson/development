@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Mask, DBCtrls, ExtCtrls, Grids, DBGrids, Buttons, DBTables, DB, QrCtrls,
-  ComCtrls;
+  StdCtrls, Mask, DBCtrls, ExtCtrls, Grids, DBGrids, Buttons, DB, QrCtrls,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtLUThickness = class(TForm)
@@ -19,8 +22,8 @@ type
     BitBtn3: TBitBtn;
     btnExcel: TBitBtn;
     BitBtn4: TBitBtn;
-    qryThickness: TQuery;
-    qryDelete: TQuery;
+    qryThickness: TFDQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     edtName: TEdit;
     tmrRefresh: TTimer;

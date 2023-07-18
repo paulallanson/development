@@ -220,8 +220,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Visible = False
     end
   end
-  object qryDocumentStructure: TQuery
-    DatabaseName = 'WT'
+  object qryDocumentStructure: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Folder_Name'
       'FROM Document_Structure'
@@ -230,8 +230,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     Left = 352
     Top = 32
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Job.Job_Status,'

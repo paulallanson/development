@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTSrchCustContacts = class(TForm)
@@ -13,15 +16,15 @@ type
     edtSearch: TEdit;
     btnSelect: TBitBtn;
     BitBtn2: TBitBtn;
-    qryDetails: TQuery;
+    qryDetails: TFDQuery;
     dtsDetails: TDataSource;
     tmrSearch: TTimer;
     btnAdd: TBitBtn;
     btnChange: TBitBtn;
     btnDelete: TBitBtn;
-    qryContactType: TQuery;
+    qryContactType: TFDQuery;
     dtsContactType: TDataSource;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);
     procedure tmrSearchTimer(Sender: TObject);

@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, AllCommon, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, AllCommon, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPJobCutSched = class(TForm)
     qrpCutSchedule: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryJElements: TQuery;
+    qryJElements: TFDQuery;
     qrgJob: TQRGroup;
     qrsdElement: TQRSubDetail;
     QRShape1: TgtQRShape;
@@ -27,9 +30,9 @@ type
     QRDBText4: TgtQRDBText;
     QRDBText5: TgtQRDBText;
     QRDBText6: TgtQRDBText;
-    qryUpJStatus: TQuery;
-    qryUpSOStatus: TQuery;
-    qrygetNotes: TQuery;
+    qryUpJStatus: TFDQuery;
+    qryUpSOStatus: TFDQuery;
+    qrygetNotes: TFDQuery;
     QRBand1: TQRBand;
     QRLabel1: TgtQRLabel;
     QRLabel2: TgtQRLabel;
@@ -68,9 +71,9 @@ type
     QRSysData1: TgtQRSysData;
     gtQRShape4: TgtQRShape;
     QRShape35: TgtQRShape;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryAddress: TQuery;
+    qryAddress: TFDQuery;
     gtQRLabel4: TgtQRLabel;
     qrmSiteAddress: TgtQRMemo;
     gtQRShape5: TgtQRShape;

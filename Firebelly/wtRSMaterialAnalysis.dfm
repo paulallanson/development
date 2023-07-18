@@ -466,8 +466,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       'Material')
     TabOrder = 20
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -480,13 +480,13 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Left = 248
     Top = 96
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     Left = 304
     Top = 216
   end
-  object qryContacts: TQuery
-    DatabaseName = 'WT'
+  object qryContacts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Operator, Operator_Name'
       'from Operator'
@@ -500,8 +500,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Left = 248
     Top = 24
   end
-  object qrySOReport: TQuery
-    DatabaseName = 'WT'
+  object qrySOReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       
@@ -565,8 +565,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
       OnClick = Delete1Click
     end
   end
-  object qrySIReport: TQuery
-    DatabaseName = 'WT'
+  object qrySIReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       

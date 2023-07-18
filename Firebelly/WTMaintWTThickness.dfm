@@ -135,8 +135,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Caption = 'Inactive'
     TabOrder = 5
   end
-  object lkpThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Thickness'
@@ -167,8 +167,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Left = 312
     Top = 16
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'wt'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Worktop_Thickness'
       'SET inactive = :inactive'
@@ -187,8 +187,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'INSERT INTO Worktop_Thickness'
       '('

@@ -87,8 +87,8 @@ object frmWTMaintCustWorkGroup: TfrmWTMaintCustWorkGroup
     OnClick = BitBtn2Click
     NumGlyphs = 2
   end
-  object qryMatTypes: TQuery
-    DatabaseName = 'wt'
+  object qryMatTypes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select *'
       'from Material_Type'

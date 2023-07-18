@@ -108,8 +108,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
     Left = 48
     Top = 115
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Level_of_Importance'
       'SET'
@@ -148,8 +148,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Level_of_Importance'
       '('
@@ -190,8 +190,8 @@ object frmwtMaintLevelofImportance: TfrmwtMaintLevelofImportance
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Level_of_Importance) as Level_of_Importance'
       'From Level_of_Importance')

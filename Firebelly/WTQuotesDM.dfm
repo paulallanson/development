@@ -4,8 +4,8 @@ object dtmdlQuote: TdtmdlQuote
   Top = 103
   Height = 649
   Width = 1083
-  object qryAllQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryAllQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -151,13 +151,13 @@ object dtmdlQuote: TdtmdlQuote
       FieldName = 'Address'
     end
   end
-  object qryZero: TQuery
-    DatabaseName = 'wt'
+  object qryZero: TFDQuery
+    ConnectionName = 'wt'
     Left = 352
     Top = 8
   end
-  object qryQHeader: TQuery
-    DatabaseName = 'wt'
+  object qryQHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -250,16 +250,16 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQGetLast: TQuery
-    DatabaseName = 'wt'
+  object qryQGetLast: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Last_Quote_Number'
       'from Company')
     Left = 288
     Top = 8
   end
-  object qryQAddHeader: TQuery
-    DatabaseName = 'wt'
+  object qryQAddHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert INTO Quote'
       '(       Quote,'
@@ -738,8 +738,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQUpHeader: TQuery
-    DatabaseName = 'wt'
+  object qryQUpHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'Set Account_Manager = :Account_Manager,'
@@ -1118,8 +1118,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryCustQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryCustQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote.*'
       'from Quote'
@@ -1140,7 +1140,7 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qrydummy: TQuery
+  object qrydummy: TFDQuery
     SQL.Strings = (
       '        Quote.Quote,'
       '        Quote.Date_Required,'
@@ -1199,8 +1199,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 160
     Top = 8
   end
-  object qryQElement: TQuery
-    DatabaseName = 'wt'
+  object qryQElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -1260,8 +1260,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAddElement: TQuery
-    DatabaseName = 'wt'
+  object qryQAddElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Element ('
       'Quote,'
@@ -1397,8 +1397,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllElements: TQuery
-    DatabaseName = 'wt'
+  object qryQAllElements: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -1454,8 +1454,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQExtra: TQuery
-    DatabaseName = 'wt'
+  object qryQExtra: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Extra.Extra_no,'
       '        Quote_Extra.Do_Not_Discount,'
@@ -1488,8 +1488,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQCutOut: TQuery
-    DatabaseName = 'wt'
+  object qryQCutOut: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Cutout.Quote,'
       '        Quote_Cutout.Cutout_number,'
@@ -1532,8 +1532,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQEdge: TQuery
-    DatabaseName = 'wt'
+  object qryQEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Edge.Edge_number,'
       '        Quote_Edge.Quote,'
@@ -1574,8 +1574,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAddExtra: TQuery
-    DatabaseName = 'wt'
+  object qryQAddExtra: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Extra ('
       'Quote,'
@@ -1639,8 +1639,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAddCutOut: TQuery
-    DatabaseName = 'wt'
+  object qryQAddCutOut: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Cutout ('
       'Quote,'
@@ -1718,8 +1718,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAddEdge: TQuery
-    DatabaseName = 'wt'
+  object qryQAddEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Edge ('
       'Quote,'
@@ -1797,8 +1797,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllCutOuts: TQuery
-    DatabaseName = 'wt'
+  object qryQAllCutOuts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Cutout.Quote,'
       '        Quote_Cutout.Cutout_number,'
@@ -1836,8 +1836,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllEdges: TQuery
-    DatabaseName = 'wt'
+  object qryQAllEdges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Edge.Edge_number,'
       '        Quote_Edge.Quote,'
@@ -1873,8 +1873,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllExtras: TQuery
-    DatabaseName = 'wt'
+  object qryQAllExtras: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Extra.Extra_no,'
       '        Quote_Extra.Do_Not_Discount,'
@@ -1902,8 +1902,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQUpElement: TQuery
-    DatabaseName = 'wt'
+  object qryQUpElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Quote_Element'
       'SET Element_Number = :ELement_Number,'
@@ -1970,8 +1970,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQUpCutOuts: TQuery
-    DatabaseName = 'wt'
+  object qryQUpCutOuts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Quote_Element'
       'SET Element_Number = :ELement_Number,'
@@ -2038,8 +2038,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'wt'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
@@ -2055,8 +2055,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select'
       '      Street,'
@@ -2088,8 +2088,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Material_type'
       'where '
@@ -2111,8 +2111,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 96
     Top = 448
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator'
@@ -2132,16 +2132,16 @@ object dtmdlQuote: TdtmdlQuote
     Left = 216
     Top = 448
   end
-  object qryGetNextAdd: TQuery
-    DatabaseName = 'wt'
+  object qryGetNextAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
     Left = 488
     Top = 8
   end
-  object qryAddAddress: TQuery
-    DatabaseName = 'wT'
+  object qryAddAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'insert into Address'
       '(Address,'
@@ -2212,8 +2212,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpAddress: TQuery
-    DatabaseName = 'wT'
+  object qryUpAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Address'
       'set'
@@ -2275,8 +2275,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryDelAddress: TQuery
-    DatabaseName = 'wT'
+  object qryDelAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
@@ -2289,8 +2289,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryQUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2343,8 +2343,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllUpstands: TQuery
-    DatabaseName = 'wt'
+  object qryQAllUpstands: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2405,8 +2405,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'wt'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set last_quote_number = :last_quote_number'
@@ -2420,8 +2420,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'wt'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Vat'
       'where vat = :vat')
@@ -2434,8 +2434,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQEvent: TQuery
-    DatabaseName = 'wt'
+  object qryQEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Quote_internal_Note, Operator'
@@ -2455,8 +2455,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllEvents: TQuery
-    DatabaseName = 'wt'
+  object qryQAllEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Quote_internal_Note, Operator'
@@ -2471,8 +2471,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAddEvent: TQuery
-    DatabaseName = 'wt'
+  object qryQAddEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Internal_Note ('
       'Quote,'
@@ -2515,8 +2515,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuote: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status'
@@ -2535,8 +2535,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'WT'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Worktop_Group'
       'from Worktop_Group'
@@ -2550,8 +2550,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLine: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_order, Sales_order_line_no'
       'from sales_order_line'
@@ -2565,8 +2565,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Sales_order'
       'set SAles_order_Status = :sales_order_Status'
@@ -2585,8 +2585,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuoteSO: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuoteSO: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status,'
@@ -2611,8 +2611,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOLine: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Sales_order_line'
       'set Job = :Job'
@@ -2637,8 +2637,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetJob: TQuery
-    DatabaseName = 'wt'
+  object qryGetJob: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job'
       'from Job'
@@ -2652,8 +2652,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryDesigner: TQuery
-    DatabaseName = 'WT'
+  object qryDesigner: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Designer'
@@ -2675,8 +2675,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 816
     Top = 16
   end
-  object qryLeadSource: TQuery
-    DatabaseName = 'WT'
+  object qryLeadSource: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Sales_lead_Source'
@@ -2698,8 +2698,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 824
     Top = 80
   end
-  object qryBranch: TQuery
-    DatabaseName = 'WT'
+  object qryBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
@@ -2725,8 +2725,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 816
     Top = 152
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -2761,8 +2761,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryVat: TQuery
-    DatabaseName = 'wt'
+  object qryVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Vat'
       'where (inactive = '#39'N'#39' or inactive is null) or vat = :vat'
@@ -2781,8 +2781,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 816
     Top = 272
   end
-  object qryUpSOLineValues: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOLineValues: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Sales_order_line'
       'SET Unit_Price = :Unit_Price,'
@@ -2861,8 +2861,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOHead: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Sales_order'
       'SET '
@@ -2888,8 +2888,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetContacts: TQuery
-    DatabaseName = 'wT'
+  object qryGetContacts: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Contact'
@@ -2903,8 +2903,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQReason: TQuery
-    DatabaseName = 'wt'
+  object qryQReason: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Inactive_Reason'
@@ -2918,8 +2918,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 96
     Top = 512
   end
-  object qryReQuoteCount: TQuery
-    DatabaseName = 'wt'
+  object qryReQuoteCount: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT max(Quote_Number) as Last_ReQuote'
       'FROM Quote'
@@ -2933,8 +2933,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetLinkedQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetLinkedQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Operator.Operator_Name,'
       '        Account_Manager.Operator_Name AS Account_Manager_Name,'
@@ -2976,67 +2976,67 @@ object dtmdlQuote: TdtmdlQuote
       end>
     object qryGetLinkedQuotesOperator_Name: TStringField
       FieldName = 'Operator_Name'
-      Origin = 'WT.Operator.Operator_Name'
+
       Size = 30
     end
     object qryGetLinkedQuotesAccount_Manager_Name: TStringField
       FieldName = 'Account_Manager_Name'
-      Origin = 'WT.Operator.Operator_Name'
+
       Size = 30
     end
     object qryGetLinkedQuotesQuote: TIntegerField
       FieldName = 'Quote'
-      Origin = 'WT.Quote.Quote'
+
     end
     object qryGetLinkedQuotesDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-      Origin = 'WT.Quote.Date_Raised'
+
     end
     object qryGetLinkedQuotesDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Quote.Description'
+
       Size = 255
     end
     object qryGetLinkedQuotesMaterial_Type_Description: TStringField
       FieldName = 'Material_Type_Description'
-      Origin = 'WT.Material_Type.Description'
+
     end
     object qryGetLinkedQuotesQuote_Number: TFloatField
       FieldName = 'Quote_Number'
-      Origin = 'WT.Quote.Quote_Number'
+
     end
     object qryGetLinkedQuotesOriginal_Quote: TIntegerField
       FieldName = 'Original_Quote'
-      Origin = 'WT.Quote.Original_Quote'
+
     end
     object qryGetLinkedQuotesInstallation_price: TFloatField
       FieldName = 'Installation_price'
-      Origin = 'WT.Quote.Installation_price'
+
       DisplayFormat = #163'0.00'
     end
     object qryGetLinkedQuotesDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-      Origin = 'WT.Quote.Delivery_Price'
+
       DisplayFormat = #163'0.00'
     end
     object qryGetLinkedQuotesSurvey_price: TFloatField
       FieldName = 'Survey_price'
-      Origin = 'WT.Quote.Survey_price'
+
       DisplayFormat = #163'0.00'
     end
     object qryGetLinkedQuotesComplete_Price: TFloatField
       FieldName = 'Complete_Price'
-      Origin = 'WT.Quote.Nett_Price'
+
       DisplayFormat = #163'0.00'
     end
     object qryGetLinkedQuotesTotal_Price: TFloatField
       FieldName = 'Total_Price'
-      Origin = 'WT.Quote.Nett_Price'
+
       DisplayFormat = #163'0.00'
     end
     object qryGetLinkedQuotesQuote_status_description: TStringField
       FieldName = 'Quote_status_description'
-      Origin = 'WT.Quote_Status.Quote_status_description'
+
       Size = 50
     end
   end
@@ -3045,8 +3045,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 760
     Top = 416
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'wt'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Top 1 Sales_Order'
       'from Sales_Order_Line'
@@ -3060,8 +3060,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuoteAddress: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuoteAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Customer = :Customer,'
@@ -3092,8 +3092,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetSpeculativeQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryGetSpeculativeQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'SELECT Quote.Quote, Quote.Customer, Quote.Address, Customer.Is_R' +
@@ -3113,8 +3113,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryDeclineQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryDeclineQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Quote'
       'SET Inactive = '#39'Y'#39', inactive_Reason = :inactive_Reason'
@@ -3134,7 +3134,7 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryDummyOld: TQuery
+  object qryDummyOld: TFDQuery
     SQL.Strings = (
       '        Quote.Quote,'
       '        Quote.Date_Required,'
@@ -3187,7 +3187,7 @@ object dtmdlQuote: TdtmdlQuote
     Left = 160
     Top = 56
   end
-  object qryOldDummy: TQuery
+  object qryOldDummy: TFDQuery
     SQL.Strings = (
       '        Quote.Quote,'
       '        Quote.Date_Required,'
@@ -3240,8 +3240,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 416
     Top = 8
   end
-  object qryQAddSlab: TQuery
-    DatabaseName = 'wt'
+  object qryQAddSlab: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Quote_Slab ('
       'Quote,'
@@ -3394,8 +3394,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQAllSlabs: TQuery
-    DatabaseName = 'wt'
+  object qryQAllSlabs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Slab.Quote,'
       '        Quote_Slab.Slab_Number,'
@@ -3448,8 +3448,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetProduct: TQuery
-    DatabaseName = 'WT'
+  object qryGetProduct: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -3482,8 +3482,8 @@ object dtmdlQuote: TdtmdlQuote
         ParamType = ptUnknown
       end>
   end
-  object qryGetProducts: TQuery
-    DatabaseName = 'WT'
+  object qryGetProducts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Supplier_Product_Code, Description'
       'FROM Supplier_Product'
@@ -3502,8 +3502,8 @@ object dtmdlQuote: TdtmdlQuote
     Left = 896
     Top = 480
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'

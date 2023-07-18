@@ -133,8 +133,8 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     TabOrder = 2
     Text = 'edtPaidAmount'
   end
-  object qryPaymentMethod: TQuery
-    DatabaseName = 'WT'
+  object qryPaymentMethod: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Payment_Method_Description, Payment_Method'
       'FROM Payment_Method'
@@ -147,8 +147,8 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Left = 352
     Top = 24
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Payment'
       '('
@@ -203,8 +203,8 @@ object frmWTMaintPayments: TfrmWTMaintPayments
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Payment'
       'SET'
@@ -255,8 +255,8 @@ object frmWTMaintPayments: TfrmWTMaintPayments
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Payment) as Last_Payment'
       'From Payment')

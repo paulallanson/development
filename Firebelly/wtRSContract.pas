@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, DB, DBTables, QrCtrls, IniFiles, printers,
-  Buttons, OleCtnrs, ComCtrls;
+  Dialogs, StdCtrls, ExtCtrls, DB, QrCtrls, IniFiles, printers,
+  Buttons, OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSContract = class(TForm)
@@ -15,11 +18,11 @@ type
     Button4: TButton;
     chkbxprintLogo: TCheckBox;
     SelectLst: TListBox;
-    qryGetQuotes: TQuery;
-    qryGetRange: TQuery;
+    qryGetQuotes: TFDQuery;
+    qryGetRange: TFDQuery;
     btnPreview: TButton;
     btnEmail: TButton;
-    qryQuoteMaterial: TQuery;
+    qryQuoteMaterial: TFDQuery;
     chkbxIncludeTemplating: TCheckBox;
     btnExcel: TBitBtn;
     pnlExportPrgrss: TPanel;

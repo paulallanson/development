@@ -122,8 +122,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object lkpPriceBasis: TQuery
-    DatabaseName = 'wt'
+  object lkpPriceBasis: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Price_basis')
     Left = 296
@@ -134,8 +134,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Left = 336
     Top = 16
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Extra_Charge'
       'SET'
@@ -174,8 +174,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Extra_Charge'
       '        (Extra_Charge,'
@@ -199,8 +199,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Extra_Charge'
       'From Extra_Charge'
@@ -214,8 +214,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

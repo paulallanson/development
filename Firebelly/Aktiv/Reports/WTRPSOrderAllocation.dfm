@@ -1314,8 +1314,8 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       'Sales_Order.Sales_Order,'
@@ -1479,8 +1479,8 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
     Left = 718
     Top = 19
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -1494,8 +1494,8 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '      Customer,'
@@ -1525,8 +1525,8 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Street,'
       'Locale,'
@@ -1543,16 +1543,16 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
     Left = 784
     Top = 17
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 694
     Top = 7
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'

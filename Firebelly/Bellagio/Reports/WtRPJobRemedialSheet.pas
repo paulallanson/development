@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobRemedialSheet = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     memAddress: TgtQRRichText;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     gtQRShape1: TgtQRShape;
     gtQRDBText2: TgtQRDBText;
@@ -52,9 +55,9 @@ type
     gtQRShape4: TgtQRShape;
     gtQRShape26: TgtQRShape;
     gtQRLabel1: TgtQRLabel;
-    qryJobEdge: TQuery;
-    qryJobThickness: TQuery;
-    qryJobUpstand: TQuery;
+    qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     qriHeadLogo: TgtQRImage;
     gtQRSysData1: TgtQRSysData;
     gtQRShape12: TgtQRShape;
@@ -88,13 +91,13 @@ type
     gtQRShape6: TgtQRShape;
     QRLabel24: TgtQRLabel;
     gtQRShape5: TgtQRShape;
-    OlderqryReport: TQuery;
+    OlderqryReport: TFDQuery;
     gtQRDBText1: TgtQRDBText;
     gtQRDBText3: TgtQRDBText;
     gtQRDBText4: TgtQRDBText;
-    qryRevenueCentre: TQuery;
-    OldqryReport: TQuery;
-    qryReport: TQuery;
+    qryRevenueCentre: TFDQuery;
+    OldqryReport: TFDQuery;
+    qryReport: TFDQuery;
     qrrchTextRemedialDetails: TgtQRMemo;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

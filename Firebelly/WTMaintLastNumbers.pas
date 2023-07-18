@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, CRControls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, CRControls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintLastNumbers = class(TForm)
@@ -24,8 +27,8 @@ type
     edtLastCreditNoteNumber: TCREditInt;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryUpCompany: TQuery;
-    qryCompany: TQuery;
+    qryUpCompany: TFDQuery;
+    qryCompany: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);

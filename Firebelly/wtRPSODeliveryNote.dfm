@@ -663,8 +663,8 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Sales_Order.Sales_order,'
@@ -719,8 +719,8 @@ object frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote
     Left = 192
     Top = 24
   end
-  object qryGetNotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'

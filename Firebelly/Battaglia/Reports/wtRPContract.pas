@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers;
+  Dialogs, DB, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPContract = class(TForm)
@@ -32,14 +35,14 @@ type
     gtQRShape7: TgtQRShape;
     gtQRShape8: TgtQRShape;
     gtQRShape9: TgtQRShape;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     qrgQuote: TQRGroup;
-    qryCompany: TQuery;
-    qryCustomer: TQuery;
+    qryCompany: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryAddress: TQuery;
-    qrygetNotes: TQuery;
+    qryAddress: TFDQuery;
+    qrygetNotes: TFDQuery;
     gtQRShape1: TgtQRShape;
     gtQRLabel1: TgtQRLabel;
     gtQRDBText1: TgtQRDBText;
@@ -47,8 +50,8 @@ type
     gtQRShapeDrawing: TgtQRShape;
     qrlblDrawingNumber: TgtQRLabel;
     gtQRShapeOption5: TgtQRShape;
-    qryContractLine: TQuery;
-    qryContractOption: TQuery;
+    qryContractLine: TFDQuery;
+    qryContractOption: TFDQuery;
     qrbContractLineHeader: TQRBand;
     gtQRShapeHead0: TgtQRShape;
     gtQRShapeHead1: TgtQRShape;
@@ -69,7 +72,7 @@ type
     qrlblOption3: TgtQRLabel;
     qrlblOption4: TgtQRLabel;
     dtsContractLine: TDataSource;
-    qryOptionHeaders: TQuery;
+    qryOptionHeaders: TFDQuery;
     gtQRShapeOption6: TgtQRShape;
     gtQRShapeHead5: TgtQRShape;
     gtQRShapeHead6: TgtQRShape;
@@ -82,7 +85,7 @@ type
     qrrchTextNotes: TgtQRRichText;
     qrlblDrawingNumberMemo: TgtQRRichText;
     qrlblOptionHead0: TgtQRRichText;
-    qryOptionHeadersHeight: TQuery;
+    qryOptionHeadersHeight: TFDQuery;
     qrbTotals: TQRBand;
     qrbContractLineFooter: TQRChildBand;
     gtQRLabel2: TgtQRLabel;
@@ -97,7 +100,7 @@ type
     qrtxtOptionColours4: TgtQRRichText;
     qrtxtOptionColours5: TgtQRRichText;
     qrtxtOptionColours6: TgtQRRichText;
-    qryOptionColours: TQuery;
+    qryOptionColours: TFDQuery;
     qrbPageFooter: TQRBand;
     qrlblCompanyAdd: TgtQRLabel;
     gtQRShapeHead7: TgtQRShape;

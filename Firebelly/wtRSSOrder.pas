@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, DB, DBTables, QrCtrls, IniFiles, allCommon;
+  Dialogs, StdCtrls, ExtCtrls, DB, QrCtrls, IniFiles, allCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSOrder = class(TForm)
@@ -13,11 +16,11 @@ type
     btnPrint: TButton;
     Button4: TButton;
     SelectLst: TListBox;
-    qryGetQuotes: TQuery;
-    qryGetRange: TQuery;
+    qryGetQuotes: TFDQuery;
+    qryGetRange: TFDQuery;
     btnPreview: TButton;
-    qryGetSOQuote: TQuery;
-    qryGetSOQuotes: TQuery;
+    qryGetSOQuote: TFDQuery;
+    qryGetSOQuotes: TFDQuery;
     btnEmail: TButton;
     chkbxprintLogo: TCheckBox;
     rdgrpType: TRadioGroup;

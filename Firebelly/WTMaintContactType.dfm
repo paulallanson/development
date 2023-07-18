@@ -62,8 +62,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
     Text = 'edtContactTypeDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Contact_Type'
       'SET'
@@ -84,8 +84,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Contact_Type'
       '        (Contact_Type,'
@@ -102,8 +102,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Contact_Type'
       'From Contact_Type'
@@ -117,8 +117,8 @@ object frmWTMaintContactType: TfrmWTMaintContactType
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 312
     Top = 40
   end

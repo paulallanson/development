@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
     lblGrossSupply: TgtQRLabel;
@@ -26,9 +29,9 @@ type
     qrlblInstallation: TgtQRLabel;
     qrlblSurvey: TgtQRLabel;
     qrlblDelivery: TgtQRLabel;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpQuote: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpQuote: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     qrmAddress: TgtQRMemo;
     QRLabel2: TgtQRLabel;
@@ -43,13 +46,13 @@ type
     qrlblGross: TgtQRLabel;
     QRShape4: TgtQRShape;
     qrlblNett: TgtQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRShape1: TgtQRShape;
     QRLabel1: TgtQRLabel;
     QRLabel4: TgtQRLabel;
     qrmSiteAddress: TgtQRMemo;
     QRDBText3: TgtQRDBText;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;

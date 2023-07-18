@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobSheet = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
-    qryQElements: TQuery;
+    qryReport: TFDQuery;
+    qryQElements: TFDQuery;
     dtsReport: TDataSource;
-    qryQCutOuts: TQuery;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryQCutOuts: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrbPageHeader: TQRBand;
     QRShape26: TgtQRShape;
     QRShape27: TgtQRShape;
@@ -122,7 +125,7 @@ type
     QRShape48: TgtQRShape;
     QRLabel45: TgtQRLabel;
     QRShape49: TgtQRShape;
-    qryCompanyAddress: TQuery;
+    qryCompanyAddress: TFDQuery;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;

@@ -4,20 +4,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  wtLUworktops, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DBTables, DB, QrCtrls;
+  wtLUworktops, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtLUEdgeDtls = class(TfrmWtLUWorktops)
     Label2: TLabel;
     dblkpEdgeType: TDBLookupComboBox;
-    lkpEdgeType: TQuery;
+    lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
-    tblEdgethickness: TTable;
+    tblEdgethickness: TFDTable;
     srcEdgeThickness: TDataSource;
-    lkpEdgeThickness: TQuery;
+    lkpEdgeThickness: TFDQuery;
     srclkpEdgeThickness: TDataSource;
-    qryDelEdgeThick: TQuery;
-    qryDelEdgThick: TQuery;
+    qryDelEdgeThick: TFDQuery;
+    qryDelEdgThick: TFDQuery;
     lkpEdgeThicknessEdge_profile: TIntegerField;
     lkpEdgeThicknessEdge_Type: TIntegerField;
     lkpEdgeThicknessMaterial_Type: TIntegerField;

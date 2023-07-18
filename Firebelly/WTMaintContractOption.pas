@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, DBCtrls, WTContractsDM;
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls, WTContractsDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintContractOption = class(TForm)
@@ -15,13 +18,13 @@ type
     Label2: TLabel;
     dblkpOptions: TDBLookupComboBox;
     dtsOptions: TDataSource;
-    qryOptions: TQuery;
+    qryOptions: TFDQuery;
     Label3: TLabel;
     edtQuoteDescription: TMemo;
     btnOptions: TBitBtn;
     dblkpThickness: TDBLookupComboBox;
     Label4: TLabel;
-    qryOptionThickness: TQuery;
+    qryOptionThickness: TFDQuery;
     dtsOptionThickness: TDataSource;
     procedure EnableOK(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

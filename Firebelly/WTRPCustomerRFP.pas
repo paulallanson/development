@@ -4,15 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables,
-  allCommon, QrExport, qrprntr, printers, jpeg;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, allCommon, QrExport, qrprntr, printers, jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPCustomerRFP = class(TForm)
     InvoiceReport: TQuickRep;
     dtsSalesInv: TDataSource;
     dtsGetCompany: TDataSource;
-    qryGetCompany: TQuery;
+    qryGetCompany: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -21,7 +23,7 @@ type
     InvDetailBand: TQRSubDetail;
     QRBand1: TQRBand;
     lblRundate: TQRLabel;
-    qrySalesInv: TQuery;
+    qrySalesInv: TFDQuery;
     GrpFootQRBand: TQRBand;
     lblInvoiceNo: TQRLabel;
     QRLabel2: TQRLabel;
@@ -33,8 +35,8 @@ type
     QRLabel10: TQRLabel;
     QRLabel13: TQRLabel;
     QRLabel12: TQRLabel;
-    qryUpSalesInv: TQuery;
-    qryUpCustomerBranch: TQuery;
+    qryUpSalesInv: TFDQuery;
+    qryUpCustomerBranch: TFDQuery;
     QRLabel17: TQRLabel;
     LblTotal: TQRLabel;
     TotGoodsQRLbl: TQRLabel;
@@ -48,11 +50,11 @@ type
     QRLabel14: TQRLabel;
     lblVat: TQRLabel;
     lblCustomerRef: TQRLabel;
-    qryGetSO: TQuery;
+    qryGetSO: TFDQuery;
     QRLabel1: TQRLabel;
     gtQRLabel2: TQRLabel;
     QRLabel15: TQRLabel;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     qriHeadLogo: TQRImage;
     QRLabel9: TQRLabel;
     QRLabel16: TQRLabel;

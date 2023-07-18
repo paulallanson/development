@@ -336,8 +336,8 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     Caption = 'Include Orders up to Fully Invoiced'
     TabOrder = 15
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

@@ -128,8 +128,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Install_address,'
@@ -158,8 +158,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qrySOL: TQuery
-    DatabaseName = 'WT'
+  object qrySOL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  sales_order_line.sales_order,'
       '        sales_order.extra_notes,'
@@ -177,8 +177,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qrySIL: TQuery
-    DatabaseName = 'WT'
+  object qrySIL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'select Sales_Invoice_Line.Sales_invoice, Sales_Invoice.Notes, Sa' +
@@ -195,13 +195,13 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'Wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'Wt'
     Left = 80
     Top = 136
   end
-  object qryJobs: TQuery
-    DatabaseName = 'WT'
+  object qryJobs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  Job,'
       '        Install_address,'
@@ -220,8 +220,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qryQintNotes: TQuery
-    DatabaseName = 'WT'
+  object qryQintNotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Quote_Internal_Note'
@@ -235,8 +235,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qryJSOL: TQuery
-    DatabaseName = 'WT'
+  object qryJSOL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sales_order_line.sales_order, sales_order.extra_notes'
       'from Sales_Order_Line, Sales_Order'
@@ -251,8 +251,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
         ParamType = ptUnknown
       end>
   end
-  object qryJIntNotes: TQuery
-    DatabaseName = 'WT'
+  object qryJIntNotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Job_Internal_Note'

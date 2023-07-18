@@ -385,8 +385,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     ExplicitTop = 540
     ExplicitWidth = 522
   end
-  object qryGetLastNo: TQuery
-    DatabaseName = 'wt'
+  object qryGetLastNo: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Max(Branch_No) as Last_no'
       'from Customer_Branch'
@@ -400,8 +400,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert into Customer_Branch'
       '(Customer,'
@@ -460,8 +460,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryUpd: TQuery
-    DatabaseName = 'wt'
+  object qryUpd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Customer_Branch'
       'set Branch_Name = :Branch_Name,'
@@ -509,8 +509,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'wt'
+  object qryDel: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Customer_Branch'
       'where Customer = :Customer and Branch_no = :Branch_no')
@@ -528,8 +528,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranch: TQuery
-    DatabaseName = 'WT'
+  object qryGetBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Branch'
@@ -549,8 +549,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'WT'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Address'
@@ -564,8 +564,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryAddAddress: TQuery
-    DatabaseName = 'wT'
+  object qryAddAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'insert into Address'
       '(Address,'
@@ -643,8 +643,8 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryUpAddress: TQuery
-    DatabaseName = 'wT'
+  object qryUpAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Address'
       'set'
@@ -706,16 +706,16 @@ object frmWTMaintBranch: TfrmWTMaintBranch
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextAdd: TQuery
-    DatabaseName = 'wt'
+  object qryGetNextAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
     Left = 104
     Top = 8
   end
-  object qryContacts: TQuery
-    DatabaseName = 'WT'
+  object qryContacts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Contact_no, Contact_name'
       'FROM Customer_Contact'

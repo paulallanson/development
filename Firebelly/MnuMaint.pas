@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, QrCtrls;
+  StdCtrls, Buttons, ExtCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client;
 
 type
   TMnuMaintFrm = class(TForm)
@@ -22,7 +25,7 @@ type
     BitBtn5: TBitBtn;
     BitBtn11: TBitBtn;
     BitBtn9: TBitBtn;
-    Database1: TDatabase;
+    Database1: TFDConnection;
     procedure BitBtn5Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

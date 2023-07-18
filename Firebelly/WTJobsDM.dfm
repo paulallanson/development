@@ -6,8 +6,8 @@ object dtmdlJob: TdtmdlJob
     Left = 88
     Top = 24
   end
-  object qryAllJobs: TQuery
-    DatabaseName = 'WT'
+  object qryAllJobs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -30,165 +30,165 @@ object dtmdlJob: TdtmdlJob
     Top = 24
     object qryAllJobsJob: TFloatField
       FieldName = 'Job'
-      Origin = 'WT.Job.Job'
+
     end
     object qryAllJobsJob_Status: TIntegerField
       FieldName = 'Job_Status'
-      Origin = 'WT.Job.Job_Status'
+
     end
     object qryAllJobsQuote: TIntegerField
       FieldName = 'Quote'
-      Origin = 'WT.Job.Quote'
+
     end
     object qryAllJobsCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'WT.Job.Customer'
+
     end
     object qryAllJobsContact_name: TStringField
       FieldName = 'Contact_name'
-      Origin = 'WT.Job.Contact_name'
+
       Size = 50
     end
     object qryAllJobsOrder_ref_no: TStringField
       FieldName = 'Order_ref_no'
-      Origin = 'WT.Job.Order_ref_no'
+
       Size = 30
     end
     object qryAllJobsDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-      Origin = 'WT.Job.Date_Raised'
+
     end
     object qryAllJobsDate_Required: TDateTimeField
       FieldName = 'Date_Required'
-      Origin = 'WT.Job.Date_Required'
+
     end
     object qryAllJobsPayment_due: TDateTimeField
       FieldName = 'Payment_due'
-      Origin = 'WT.Job.Payment_due'
+
     end
     object qryAllJobsProduction_date: TDateTimeField
       FieldName = 'Production_date'
-      Origin = 'WT.Job.Production_date'
+
     end
     object qryAllJobsTemplate_date: TDateTimeField
       FieldName = 'Template_date'
-      Origin = 'WT.Job.Template_date'
+
     end
     object qryAllJobsInstallation_date: TDateTimeField
       FieldName = 'Installation_date'
-      Origin = 'WT.Job.Installation_date'
+
     end
     object qryAllJobsDeposit_amount: TFloatField
       FieldName = 'Deposit_amount'
-      Origin = 'WT.Job.Deposit_amount'
+
       currency = True
     end
     object qryAllJobsDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-      Origin = 'WT.Job.Delivery_Price'
+
       currency = True
     end
     object qryAllJobsInstallation_price: TFloatField
       FieldName = 'Installation_price'
-      Origin = 'WT.Job.Installation_price'
+
       currency = True
     end
     object qryAllJobsSurvey_price: TFloatField
       FieldName = 'Survey_price'
-      Origin = 'WT.Job.Survey_price'
+
       currency = True
     end
     object qryAllJobsOperator: TIntegerField
       FieldName = 'Operator'
-      Origin = 'WT.Job.Operator'
+
     end
     object qryAllJobsProduction_date_Actual: TDateTimeField
       FieldName = 'Production_date_Actual'
-      Origin = 'WT.Job.Production_date_Actual'
+
     end
     object qryAllJobsTemplate_date_actual: TDateTimeField
       FieldName = 'Template_date_actual'
-      Origin = 'WT.Job.Template_date_actual'
+
     end
     object qryAllJobsInstallation_date_actual: TDateTimeField
       FieldName = 'Installation_date_actual'
-      Origin = 'WT.Job.Installation_date_actual'
+
     end
     object qryAllJobsDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Job.Description'
+
       Size = 50
     end
     object qryAllJobsMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
-      Origin = 'WT.Job.Material_Type'
+
     end
     object qryAllJobsExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
-      Origin = 'WT.Job.Extra_Notes'
+
     end
     object qryAllJobsAvailability: TIntegerField
       FieldName = 'Availability'
-      Origin = 'WT.Job.Availability'
+
     end
     object qryAllJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
-      Origin = 'WT.Job.Payment_Terms'
+
     end
     object qryAllJobsReference: TStringField
       FieldName = 'Reference'
-      Origin = 'WT.Job.Reference'
+
       Size = 50
     end
     object qryAllJobsNett_Price: TFloatField
       FieldName = 'Nett_Price'
-      Origin = 'WT.Job.Nett_Price'
+
       currency = True
     end
     object qryAllJobsInactive: TStringField
       FieldName = 'Inactive'
-      Origin = 'WT.Job.Inactive'
+
       Size = 1
     end
     object qryAllJobsInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
-      Origin = 'WT.Job.Inactive_Reason'
+
     end
     object qryAllJobsAddress: TIntegerField
       FieldName = 'Address'
-      Origin = 'WT.Job.Address'
+
     end
     object qryAllJobsDiscount_Rate: TFloatField
       FieldName = 'Discount_Rate'
-      Origin = 'WT.Job.Discount_Rate'
+
     end
     object qryAllJobsDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-      Origin = 'WT.Job.Discount_Value'
+
       currency = True
     end
     object qryAllJobsCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-      Origin = 'WT.Job.Customer_Name'
+
       Size = 50
     end
     object qryAllJobsMaterial_Description: TStringField
       FieldName = 'Material_Description'
-      Origin = 'WT.Material_Type.Description'
+
     end
     object qryAllJobsStatus_Description: TStringField
       FieldName = 'Status_Description'
-      Origin = 'WT.Job_Status.Job_Status_Description'
+
       Size = 50
     end
     object qryAllJobsOperator_Name: TStringField
       FieldName = 'Operator_Name'
-      Origin = 'WT.Operator.Operator_Name'
+
       Size = 30
     end
     object qryAllJobsGross_Price: TFloatField
       FieldName = 'Gross_Price'
-      Origin = 'WT.Job.Nett_Price'
+
       currency = True
     end
     object qryAllJobsInstall_Address: TIntegerField
@@ -230,7 +230,7 @@ object dtmdlJob: TdtmdlJob
       EditFormat = '#,##0'
     end
   end
-  object qrydummy: TQuery
+  object qrydummy: TFDQuery
     SQL.Strings = (
       '        Job.*,'
       '        Material_Type.Description AS Material_Description,'
@@ -280,13 +280,13 @@ object dtmdlJob: TdtmdlJob
     Left = 144
     Top = 24
   end
-  object qryZero: TQuery
-    DatabaseName = 'wt'
+  object qryZero: TFDQuery
+    ConnectionName = 'wt'
     Left = 288
     Top = 32
   end
-  object qryjHeader: TQuery
-    DatabaseName = 'wt'
+  object qryjHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -316,8 +316,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAddHeader: TQuery
-    DatabaseName = 'wt'
+  object qryjAddHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert INTO Job'
       '(       Job,'
@@ -650,8 +650,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjUpHeader: TQuery
-    DatabaseName = 'wt'
+  object qryjUpHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Job'
       'Set Operator = :Operator,'
@@ -934,8 +934,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjElement: TQuery
-    DatabaseName = 'wt'
+  object qryjElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Worktop_thickness.Price_pointer,'
@@ -971,8 +971,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAddElement: TQuery
-    DatabaseName = 'wt'
+  object qryjAddElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Job_Element ('
       'Job,'
@@ -1102,8 +1102,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAllElements: TQuery
-    DatabaseName = 'wt'
+  object qryjAllElements: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Element.Job,'
       '        Job_Element.Element_Description,'
@@ -1153,8 +1153,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjExtra: TQuery
-    DatabaseName = 'wt'
+  object qryjExtra: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Extra.*,'
       '        Extra_Charge.Description,'
@@ -1180,8 +1180,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjCutOut: TQuery
-    DatabaseName = 'wt'
+  object qryjCutOut: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Cutout.*,'
       '        CutOut.Description as Cutout_Description,'
@@ -1213,8 +1213,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjEdge: TQuery
-    DatabaseName = 'wt'
+  object qryjEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Edge.*,'
       '        Edge_profile.Description as Edge_Description,'
@@ -1246,8 +1246,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAddExtra: TQuery
-    DatabaseName = 'wt'
+  object qryjAddExtra: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Job_Extra ('
       'Job,'
@@ -1304,8 +1304,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAddCutOut: TQuery
-    DatabaseName = 'wt'
+  object qryjAddCutOut: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Job_Cutout ('
       'Job,'
@@ -1369,8 +1369,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAddEdge: TQuery
-    DatabaseName = 'wt'
+  object qryjAddEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Job_Edge ('
       'Job,'
@@ -1434,8 +1434,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAllCutOuts: TQuery
-    DatabaseName = 'wt'
+  object qryJAllCutOuts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Cutout.Job,'
       '        Job_Cutout.Cutout_number,'
@@ -1469,8 +1469,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAllEdges: TQuery
-    DatabaseName = 'wt'
+  object qryjAllEdges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Edge.Edge_number,'
       '        Job_Edge.Job,'
@@ -1504,8 +1504,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAllExtras: TQuery
-    DatabaseName = 'wt'
+  object qryJAllExtras: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Extra.Extra_no,'
       '        Job_Extra.Job,'
@@ -1532,8 +1532,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjUpElement: TQuery
-    DatabaseName = 'wt'
+  object qryjUpElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Job_Element'
       'SET Element_Number = :ELement_Number,'
@@ -1600,8 +1600,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjUpCutOuts: TQuery
-    DatabaseName = 'wt'
+  object qryjUpCutOuts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Job_Element'
       'SET Element_Number = :ELement_Number,'
@@ -1668,8 +1668,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'wt'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
@@ -1684,8 +1684,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Street, Locale,Town_City, Postcode, County_State,Telephon' +
@@ -1700,8 +1700,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Material_type'
       'order by Material_type.description')
@@ -1713,8 +1713,8 @@ object dtmdlJob: TdtmdlJob
     Left = 96
     Top = 392
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator')
@@ -1726,8 +1726,8 @@ object dtmdlJob: TdtmdlJob
     Left = 216
     Top = 392
   end
-  object qryjUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryjUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Worktop_thickness.Price_pointer,'
@@ -1763,8 +1763,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryjAllUpstands: TQuery
-    DatabaseName = 'wt'
+  object qryjAllUpstands: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Element.Job,'
       '        Job_Element.Element_Number,'
@@ -1817,8 +1817,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'wt'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set last_job_number = :last_job_number'
@@ -1832,16 +1832,16 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJGetLast: TQuery
-    DatabaseName = 'wt'
+  object qryJGetLast: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Last_Job_Number'
       'from Company')
     Left = 224
     Top = 8
   end
-  object qryDelAddress: TQuery
-    DatabaseName = 'wT'
+  object qryDelAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
@@ -1854,16 +1854,16 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextAdd: TQuery
-    DatabaseName = 'wt'
+  object qryGetNextAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
     Left = 488
     Top = 8
   end
-  object qryAddAddress: TQuery
-    DatabaseName = 'wT'
+  object qryAddAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'insert into Address'
       '(Address,'
@@ -1934,8 +1934,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryUpAddress: TQuery
-    DatabaseName = 'wT'
+  object qryUpAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Address'
       'set'
@@ -1997,8 +1997,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryVat: TQuery
-    DatabaseName = 'wt'
+  object qryVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Vat'
       'where vat = :vat')
@@ -2011,8 +2011,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQHeader: TQuery
-    DatabaseName = 'wt'
+  object qryQHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '        Quote.Quote,'
@@ -2082,8 +2082,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQAllElements: TQuery
-    DatabaseName = 'wt'
+  object qryQAllElements: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2132,8 +2132,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQAllCutOuts: TQuery
-    DatabaseName = 'wt'
+  object qryQAllCutOuts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Cutout.Quote,'
       '        Quote_Cutout.Cutout_number,'
@@ -2169,8 +2169,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQAllEdges: TQuery
-    DatabaseName = 'wt'
+  object qryQAllEdges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Edge.Edge_number,'
       '        Quote_Edge.Quote,'
@@ -2204,8 +2204,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQAllExtras: TQuery
-    DatabaseName = 'wt'
+  object qryQAllExtras: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Extra.Extra_no,'
       '        Quote_Extra.Quote,'
@@ -2232,8 +2232,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryQAllUpstands: TQuery
-    DatabaseName = 'wt'
+  object qryQAllUpstands: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2285,8 +2285,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJEvent: TQuery
-    DatabaseName = 'wt'
+  object qryJEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Job_internal_Note, Operator'
@@ -2306,8 +2306,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAddEvent: TQuery
-    DatabaseName = 'wt'
+  object qryJAddEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Job_Internal_Note ('
       'Job,'
@@ -2350,8 +2350,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAllEvents: TQuery
-    DatabaseName = 'wt'
+  object qryJAllEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Job_internal_Note, Operator'
@@ -2366,8 +2366,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuote: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = 30'
@@ -2381,8 +2381,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOLine: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order_line'
       'set Job = :Job'
@@ -2401,8 +2401,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpSOStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order'
       'set Sales_order_Status = :Sales_Order_Status'
@@ -2421,8 +2421,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'wt'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from sales_order_line, sales_order'
@@ -2438,8 +2438,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJUpStatus: TQuery
-    DatabaseName = 'wt'
+  object qryJUpStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       'set Job_Status = :Job_Status,'
@@ -2464,8 +2464,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'wt'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Sales_Order_Line.Sales_order,'
       '        Sales_Order.Sales_Order_Status,'
@@ -2484,8 +2484,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLines: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select count(Sales_order) as total_lines,'
       '(select count(sales_order)'
@@ -2532,8 +2532,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJRemedial: TQuery
-    DatabaseName = 'WT'
+  object qryJRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job_Remedial.Additional_Notes,'
@@ -2581,8 +2581,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAddRemedial: TQuery
-    DatabaseName = 'WT'
+  object qryJAddRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'insert into Job_Remedial'
       '(Job,'
@@ -2767,8 +2767,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryJAllRemedials: TQuery
-    DatabaseName = 'WT'
+  object qryJAllRemedials: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job_Remedial.Additional_Notes,'
@@ -2816,8 +2816,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryFitter: TQuery
-    DatabaseName = 'WT'
+  object qryFitter: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * '
       'from Fitter'
@@ -2830,8 +2830,8 @@ object dtmdlJob: TdtmdlJob
     Left = 688
     Top = 16
   end
-  object qryDesigner: TQuery
-    DatabaseName = 'WT'
+  object qryDesigner: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Designer'
@@ -2849,8 +2849,8 @@ object dtmdlJob: TdtmdlJob
     Left = 816
     Top = 152
   end
-  object qryBranch: TQuery
-    DatabaseName = 'WT'
+  object qryBranch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
@@ -2865,8 +2865,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryReason: TQuery
-    DatabaseName = 'wt'
+  object qryReason: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Inactive_Reason'
@@ -2880,8 +2880,8 @@ object dtmdlJob: TdtmdlJob
     Left = 96
     Top = 512
   end
-  object qryAddRemedial: TQuery
-    DatabaseName = 'WT'
+  object qryAddRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'insert into Remedial'
       '('
@@ -2949,8 +2949,8 @@ object dtmdlJob: TdtmdlJob
         ParamType = ptUnknown
       end>
   end
-  object qryCheckRemedial: TQuery
-    DatabaseName = 'WT'
+  object qryCheckRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Remedial.ID'
       'FROM Remedial'

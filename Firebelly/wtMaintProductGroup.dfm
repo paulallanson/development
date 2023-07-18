@@ -69,8 +69,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
     Text = 'edtProductGroupDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Product_Group'
       'SET'
@@ -97,8 +97,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Product_Group'
       '        (Product_Group,'
@@ -116,8 +116,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Product_Group'
       'From Product_Group'
@@ -131,8 +131,8 @@ object frmWtMaintProductGroup: TfrmWtMaintProductGroup
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

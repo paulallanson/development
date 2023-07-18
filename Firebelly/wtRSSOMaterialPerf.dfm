@@ -401,8 +401,8 @@ object frmWTRSSOMaterialPerf: TfrmWTRSSOMaterialPerf
       Value = 0
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

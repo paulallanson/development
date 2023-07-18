@@ -271,16 +271,16 @@ object frmWTMaintClient: TfrmWTMaintClient
     ParentFont = False
     TabOrder = 9
   end
-  object GetApplicQuery: TQuery
-    DatabaseName = 'wt'
+  object GetApplicQuery: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from'
       'Email_application')
     Left = 280
     Top = 8
   end
-  object GetTypQuery: TQuery
-    DatabaseName = 'wt'
+  object GetTypQuery: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from'
       'ExportFilter')

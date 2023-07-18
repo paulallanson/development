@@ -1101,9 +1101,9 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       end
     end
   end
-  object tblOneSupplier: TTable
+  object tblOneSupplier: TFDTable
     OnNewRecord = tblOneSupplierNewRecord
-    DatabaseName = 'wt'
+    ConnectionName = 'wt'
     Filtered = True
     TableName = 'Supplier'
     Left = 376
@@ -1114,8 +1114,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Left = 480
     Top = 336
   end
-  object qryNewSupplier: TQuery
-    DatabaseName = 'WT'
+  object qryNewSupplier: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Supplier) from Supplier')
     Left = 376
@@ -1454,8 +1454,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Left = 640
     Top = 160
   end
-  object qryOneSupplier: TQuery
-    DatabaseName = 'WT'
+  object qryOneSupplier: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Supplier'
@@ -1469,8 +1469,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Supplier'
       'SET'
@@ -1563,8 +1563,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Supplier'
       '        (Supplier,'
@@ -1581,8 +1581,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Supplier'
       'Where'
@@ -1596,8 +1596,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Supplier'
       'From Supplier'
@@ -1611,8 +1611,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 864
     Top = 400
   end

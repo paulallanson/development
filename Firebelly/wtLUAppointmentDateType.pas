@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtLUAppointmentDateType = class(TForm)
@@ -15,7 +18,7 @@ type
     btnEdit: TBitBtn;
     BitBtn4: TBitBtn;
     btnExcel: TBitBtn;
-    qryAppointmentDateType: TQuery;
+    qryAppointmentDateType: TFDQuery;
     procedure btnEditClick(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);

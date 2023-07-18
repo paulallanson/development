@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobRemedialSheet = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    OldqryReport: TQuery;
+    OldqryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     memAddress: TgtQRRichText;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrlblSOCaption: TgtQRLabel;
     gtQRShape1: TgtQRShape;
     qrlblOrderNoLabel: TgtQRLabel;
@@ -38,7 +41,7 @@ type
     QRLabel5: TgtQRLabel;
     QRDBText4: TgtQRDBText;
     gtQRShape4: TgtQRShape;
-    qryJobEdge: TQuery;
+    qryJobEdge: TFDQuery;
     qriHeadLogo: TgtQRImage;
     gtQRSysData1: TgtQRSysData;
     QRBand1: TQRBand;
@@ -61,10 +64,10 @@ type
     QRDBText6: TgtQRDBText;
     qrrchTextInstallAddress: TgtQRMemo;
     qrrchTextRemedialDetails: TgtQRMemo;
-    qryJobWorktops: TQuery;
+    qryJobWorktops: TFDQuery;
     gtQRLabel49: TgtQRLabel;
     gtQRDBText4: TgtQRDBText;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     gtQRLabel22: TgtQRLabel;
     gtQRShape12: TgtQRShape;
     qrrchTextMaterialDetails: TgtQRMemo;
@@ -99,7 +102,7 @@ type
     gtQRLabel2: TgtQRLabel;
     qrlblRemedialNoLabel: TgtQRLabel;
     qrlblRemedialNo: TgtQRLabel;
-    qryGetVersionNumber: TQuery;
+    qryGetVersionNumber: TFDQuery;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;

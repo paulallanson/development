@@ -83,8 +83,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
     TabOrder = 7
     OnClick = dblkpEdgeTypeClick
   end
-  object lkpEdgeType: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Edge_Type'
@@ -97,10 +97,10 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
     Left = 448
     Top = 32
   end
-  object tblEdgethickness: TTable
+  object tblEdgethickness: TFDTable
     BeforePost = tblEdgethicknessBeforePost
     OnNewRecord = tblEdgethicknessNewRecord
-    DatabaseName = 'WT'
+    ConnectionName = 'WT'
     IndexFieldNames = 'Edge_profile;Edge_Type;Material_Type'
     TableName = 'Edge_thickness'
     Left = 208
@@ -111,8 +111,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
     Left = 296
     Top = 216
   end
-  object lkpEdgeThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Edge_Thickness.*,'
       'Edge_Profile.Description,'
@@ -194,8 +194,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
     Left = 112
     Top = 216
   end
-  object qryDelEdgeThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelEdgeThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from edge_thickness'
       'where price_pointer = :price_pointer')
@@ -208,8 +208,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
         ParamType = ptUnknown
       end>
   end
-  object qryDelEdgThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelEdgThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from Edge_thickness'
       'where price_pointer = :price_pointer')

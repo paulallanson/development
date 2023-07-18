@@ -157,8 +157,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     Left = 136
     Top = 120
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'
@@ -182,8 +182,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 208
     Top = 120
   end

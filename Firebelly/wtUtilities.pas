@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTUtilities = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     rdgUtilities: TRadioGroup;
-    qryCheckPrices: TQuery;
-    qryCheckOrder: TQuery;
-    qryCheckOrders: TQuery;
+    qryCheckPrices: TFDQuery;
+    qryCheckOrder: TFDQuery;
+    qryCheckOrders: TFDQuery;
     procedure btnOKClick(Sender: TObject);
   private
     procedure CheckPrices;

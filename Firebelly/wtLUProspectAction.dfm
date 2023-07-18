@@ -125,8 +125,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     Left = 144
     Top = 120
   end
-  object qryAction: TQuery
-    DatabaseName = 'WT'
+  object qryAction: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Prospect_Action'
@@ -135,8 +135,8 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     Left = 72
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

@@ -433,8 +433,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Left = 232
     Top = 160
   end
-  object stdSQL: TQuery
-    DatabaseName = 'wt'
+  object stdSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  DISTINCT'
       '        Address.Address_name,'
@@ -456,8 +456,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Left = 352
     Top = 168
   end
-  object qryCurrentContStatus: TQuery
-    DatabaseName = 'wt'
+  object qryCurrentContStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Customer_Contact.Contact_Name,'
@@ -504,8 +504,8 @@ object frmWTRSRetailAddress: TfrmWTRSRetailAddress
     Left = 352
     Top = 112
   end
-  object qryOrdered: TQuery
-    DatabaseName = 'wt'
+  object qryOrdered: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '    Address.Address_name,'

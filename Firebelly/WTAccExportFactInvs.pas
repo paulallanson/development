@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, Db, DBTables, FileCtrl, IniFiles, QrCtrls;
+  ExtCtrls, StdCtrls, Buttons, Db, FileCtrl, IniFiles, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTAccExportFactInvs = class(TForm)
@@ -24,9 +27,9 @@ type
     btnBrowse: TButton;
     btnExport: TButton;
     btnCancel: TButton;
-    qrySalesInvByDate: TQuery;
-    qrySalesInvByNumber: TQuery;
-    qrySalesInvs: TQuery;
+    qrySalesInvByDate: TFDQuery;
+    qrySalesInvByNumber: TFDQuery;
+    qrySalesInvs: TFDQuery;
     OpenDialog1: TOpenDialog;
     edtInvNo: TEdit;
     lblInvNumber: TLabel;
@@ -37,12 +40,12 @@ type
     SelectionMemo: TMemo;
     Label1: TLabel;
     SelectLst: TListBox;
-    GetInvRngSQL: TQuery;
-    DelWorkSQL: TQuery;
-    AddIntSelQuery: TQuery;
-    AddWorkSQL: TQuery;
-    GetLastIntSelSQL: TQuery;
-    qryUpdInvs: TQuery;
+    GetInvRngSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    AddIntSelQuery: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
+    qryUpdInvs: TFDQuery;
     procedure btnDateFromClick(Sender: TObject);
     procedure btnDateToClick(Sender: TObject);
     procedure edtDateFromExit(Sender: TObject);

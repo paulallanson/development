@@ -4,41 +4,43 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, QrExport, QrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPQuoteSummary = class(TForm)
     qrpDetails: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     qrbPageFooter: TQRBand;
-    qryQElements: TQuery;
+    qryQElements: TFDQuery;
     dtsReport: TDataSource;
     qrsdQElements: TQRSubDetail;
     lblWorktopSize: TQRLabel;
     lblWorktopArea: TQRLabel;
     qrsdQCutOuts: TQRSubDetail;
-    qryQCutOuts: TQuery;
+    qryQCutOuts: TFDQuery;
     qrlblQuantity: TQRLabel;
     qrsdQEdges: TQRSubDetail;
     qrlblLength: TQRLabel;
     qrsdQExtras: TQRSubDetail;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbQFooter: TQRBand;
     qrcbAvailability: TQRChildBand;
     QRLabel9: TQRLabel;
     qrcbTerms: TQRChildBand;
     QRLabel10: TQRLabel;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qriFootLogo: TQRImage;
     qrlblCompanyAdd: TQRLabel;
-    qryUpQuote: TQuery;
+    qryUpQuote: TFDQuery;
     qrcbNotes: TQRChildBand;
     qrlNotes: TQRLabel;
     qriHeadLogo: TQRImage;
@@ -58,13 +60,13 @@ type
     QRLabel16: TQRLabel;
     QRDBText6: TQRDBText;
     QRDBText5: TQRDBText;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     gtQRFilters1: TgtQRFilters;
     qrlblExtraDescription: TQRLabel;
     qrlblExtraQuantity: TQRLabel;
     qrlblEdgeDescription: TQRLabel;
     qrlblCutOut: TQRLabel;
-    qryQOptions: TQuery;
+    qryQOptions: TFDQuery;
     qrsdQOptions: TQRSubDetail;
     lblOptionDescription: TQRLabel;
     lblQuoteOption: TQRLabel;

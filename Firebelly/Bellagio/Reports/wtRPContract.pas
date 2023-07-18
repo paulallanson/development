@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers;
+  Dialogs, DB, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPContract = class(TForm)
@@ -34,27 +37,27 @@ type
     gtQRShape8: TgtQRShape;
     gtQRShape9: TgtQRShape;
     qrlblCompanyAdd: TgtQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     qrgQuote: TQRGroup;
-    qryCompany: TQuery;
-    qryCustomer: TQuery;
+    qryCompany: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryAddress: TQuery;
-    qrygetNotes: TQuery;
+    qryAddress: TFDQuery;
+    qrygetNotes: TFDQuery;
     gtQRShape1: TgtQRShape;
     gtQRLabel1: TgtQRLabel;
     gtQRDBText1: TgtQRDBText;
     qrsdContractLine: TQRSubDetail;
-    qryContractLine: TQuery;
-    qryContractOption: TQuery;
+    qryContractLine: TFDQuery;
+    qryContractOption: TFDQuery;
     qrbContractLineHeader: TQRBand;
     dtsContractLine: TDataSource;
-    qryOptionHeaders: TQuery;
+    qryOptionHeaders: TFDQuery;
     qrcbNotes: TQRChildBand;
     qrlNotes: TgtQRLabel;
     qrrchTextNotes: TgtQRRichText;
-    qryOptionHeadersHeight: TQuery;
+    qryOptionHeadersHeight: TFDQuery;
     qrbTotals: TQRBand;
     qrbContractLineFooter: TQRChildBand;
     gtQRLabel2: TgtQRLabel;
@@ -62,7 +65,7 @@ type
     QRLabel9: TgtQRLabel;
     qrrchTextAvailability: TgtQRRichText;
     qrbOptionSummary: TQRChildBand;
-    qryOptionColours: TQuery;
+    qryOptionColours: TFDQuery;
     qrbTemplateFitting: TQRChildBand;
     qrlblOptionHead0: TgtQRRichText;
     gtQRShapeHead0: TgtQRShape;
@@ -125,7 +128,7 @@ type
     qrtxtOptionColours5: TgtQRRichText;
     qrtxtOptionColours6: TgtQRRichText;
     qrtxtOptionColours7: TgtQRRichText;
-    qryRevenueCentre: TQuery;
+    qryRevenueCentre: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);

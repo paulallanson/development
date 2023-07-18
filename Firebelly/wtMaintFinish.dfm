@@ -1201,8 +1201,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Left = 784
     Top = 144
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop_Finish'
       'SET'
@@ -1253,8 +1253,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop_Finish'
       '        (Worktop_Finish,'
@@ -1271,8 +1271,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Worktop_Finish'
       'From Worktop_Finish'
@@ -1286,8 +1286,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ' '
       '')

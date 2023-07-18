@@ -70,8 +70,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
     Text = 'edtDataSourceTitle'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Data_Source'
       'SET'
@@ -98,8 +98,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Data_Source'
       '        (Data_Source,'
@@ -117,8 +117,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Data_Source'
       'From Data_Source'
@@ -132,8 +132,8 @@ object frmWTMaintDataSource: TfrmWTMaintDataSource
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

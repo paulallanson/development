@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Mask, DBCtrls, StdCtrls, Buttons, DB, DBTables, ExtCtrls;
+  Dialogs, Mask, DBCtrls, StdCtrls, Buttons, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtMaintCustomerConts = class(TForm)
@@ -31,11 +34,11 @@ type
     edtFaxNumber: TEdit;
     edtMobileNumber: TEdit;
     edtEmailAddress: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormShow(Sender: TObject);

@@ -339,8 +339,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
     TabOrder = 15
     OnClick = rdgrpSelectByClick
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

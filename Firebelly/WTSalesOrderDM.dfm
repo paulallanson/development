@@ -1,8 +1,8 @@
 object dtmdlSalesOrder: TdtmdlSalesOrder
   Height = 629
   Width = 1279
-  object qryAllSales: TQuery
-    DatabaseName = 'WT'
+  object qryAllSales: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sales_order.*,'
       '  Customer.Customer_name as original_customer_name,'
@@ -204,7 +204,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 88
     Top = 24
   end
-  object qrydummy: TQuery
+  object qrydummy: TFDQuery
     SQL.Strings = (
       '  sales_order.*,'
       '  Customer.Customer_name as Original_Customer_name,'
@@ -270,21 +270,21 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 144
     Top = 24
   end
-  object qryZero: TQuery
-    DatabaseName = 'wt'
+  object qryZero: TFDQuery
+    ConnectionName = 'wt'
     Left = 288
     Top = 32
   end
-  object qrySOGetLast: TQuery
-    DatabaseName = 'wt'
+  object qrySOGetLast: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Last_Sales_Order_number'
       'from Company')
     Left = 224
     Top = 32
   end
-  object qrySOHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySOHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order.*,'
       '        Customer.Is_retail_customer,'
@@ -324,8 +324,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOAllLines: TQuery
-    DatabaseName = 'wt'
+  object qrySOAllLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Line.*,'
       '        Product.Product_Description,'
@@ -368,8 +368,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Operator')
@@ -381,8 +381,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 216
     Top = 392
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'wt'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set last_sales_order_number = :last_sales_order_number'
@@ -396,8 +396,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOAddHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySOAddHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert INTO Sales_Order'
       '(       Sales_Order,'
@@ -792,8 +792,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Date_Required = :Date_Required,'
@@ -1112,8 +1112,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -1161,8 +1161,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOAddLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOAddLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sales_Order_Line ('
       'Sales_Order,'
@@ -1324,8 +1324,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryRep: TQuery
-    DatabaseName = 'WT'
+  object qryRep: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * '
       'from Rep')
@@ -1337,8 +1337,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 520
     Top = 40
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Street, Locale,Town_City, Postcode, County_State,Telephon' +
@@ -1353,8 +1353,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrygetRep: TQuery
-    DatabaseName = 'wt'
+  object qrygetRep: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Rep'
       'where Rep = :rep')
@@ -1367,8 +1367,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'wt'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Address_Name, Street, Locale,Town_City, Postcode, County_' +
@@ -1383,16 +1383,16 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextAdd: TQuery
-    DatabaseName = 'wt'
+  object qryGetNextAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
     Left = 416
     Top = 16
   end
-  object qryAddAddress: TQuery
-    DatabaseName = 'wT'
+  object qryAddAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'insert into Address'
       '(Address,'
@@ -1470,8 +1470,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpAddress: TQuery
-    DatabaseName = 'wT'
+  object qryUpAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Address'
       'set'
@@ -1533,8 +1533,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryDelAddress: TQuery
-    DatabaseName = 'wT'
+  object qryDelAddress: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
@@ -1547,8 +1547,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryVAT: TQuery
-    DatabaseName = 'wt'
+  object qryVAT: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from VAt'
@@ -1557,21 +1557,21 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 232
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
-      Origin = 'WT.Vat.Vat'
+
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      Origin = 'WT.Vat.Vat_Rate'
+
       DisplayFormat = '0.00'
     end
     object qryVATDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Vat.Description'
+
       Size = 40
     end
     object qryVATVat_Code: TStringField
       FieldName = 'Vat_Code'
-      Origin = 'WT.Vat.Vat_Code'
+
       Size = 1
     end
   end
@@ -1580,8 +1580,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 464
     Top = 232
   end
-  object qryjobHeader: TQuery
-    DatabaseName = 'wt'
+  object qryjobHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -1607,8 +1607,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'wt'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from vat'
@@ -1622,8 +1622,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQHeader: TQuery
-    DatabaseName = 'wt'
+  object qryQHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -1695,8 +1695,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCustQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryCustQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT TOP 500'
       '        Quote.Quote,'
@@ -1750,8 +1750,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 584
     Top = 344
   end
-  object qryGetQuoteJob: TQuery
-    DatabaseName = 'wt'
+  object qryGetQuoteJob: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job.Job'
       'from Job'
@@ -1765,8 +1765,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLines: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select count(Sales_order) as total_lines,'
       '(select sum(quantity)'
@@ -1894,8 +1894,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpStatus: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update sales_order'
       'set sales_order_status = :sales_order_Status'
@@ -1914,8 +1914,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpdLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpdLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order_Line'
       'set Job = :Job,'
@@ -2055,8 +2055,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOrderInvoices: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOrderInvoices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Sales_Invoice_Line'
       'where sales_order = :sales_order')
@@ -2069,8 +2069,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySetSOrderInactive: TQuery
-    DatabaseName = 'wt'
+  object qrySetSOrderInactive: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update sales_order'
       'set inactive = '#39'Y'#39
@@ -2084,8 +2084,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryUpCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update customer'
       'set prospect = '#39'N'#39
@@ -2099,8 +2099,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuote: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status'
@@ -2119,8 +2119,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpSalesInvoice: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpSalesInvoice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Invoice'
       'Set Customer_Name = :Customer_Name'
@@ -2139,8 +2139,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetLinkedQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetLinkedQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Sales_Order,'
       '        Sales_Order_Line.Sales_order_Line_no,'
@@ -2248,8 +2248,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 704
     Top = 16
   end
-  object qryGetSOHead: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select *'
       'From Sales_Order'
@@ -2263,8 +2263,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryFitter: TQuery
-    DatabaseName = 'WT'
+  object qryFitter: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Fitter'
@@ -2279,8 +2279,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryTemplater: TQuery
-    DatabaseName = 'WT'
+  object qryTemplater: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Fitter'
@@ -2305,8 +2305,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 728
     Top = 280
   end
-  object qrySOEvent: TQuery
-    DatabaseName = 'wt'
+  object qrySOEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Sales_Order_internal_Note, Operator'
@@ -2328,8 +2328,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOAddEvent: TQuery
-    DatabaseName = 'wt'
+  object qrySOAddEvent: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sales_Order_Internal_Note ('
       'Sales_Order,'
@@ -2372,8 +2372,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOAllEvents: TQuery
-    DatabaseName = 'wt'
+  object qrySOAllEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select *, Operator.Operator_Name'
       'from Sales_Order_internal_Note, Operator'
@@ -2388,8 +2388,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQAllEvents: TQuery
-    DatabaseName = 'wt'
+  object qryQAllEvents: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, Operator.Operator_Name'
       'from Quote_internal_Note, Operator'
@@ -2404,8 +2404,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuoteVersions: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuoteVersions: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status'
@@ -2430,8 +2430,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetQuote: TQuery
-    DatabaseName = 'WT'
+  object qryGetQuote: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote,'
       '        Quote_Number,'
@@ -2447,8 +2447,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteSlabs: TQuery
-    DatabaseName = 'Wt'
+  object qryQuoteSlabs: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT Quote_Slab.Supplier'
       'FROM Quote_Slab'
@@ -2463,8 +2463,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOPurchases: TQuery
-    DatabaseName = 'WT'
+  object qrySOPurchases: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Purchase_orderline.Purchase_Order,'
       '        Purchase_orderline.Line_no,'
@@ -2648,8 +2648,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 96
     Top = 400
   end
-  object qryRemovePO: TQuery
-    DatabaseName = 'WT'
+  object qryRemovePO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Purchase_OrderLine'
       'set Sales_Order = NULL,'
@@ -2670,8 +2670,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryDeletePO: TQuery
-    DatabaseName = 'WT'
+  object qryDeletePO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Purchase_Order'
       'set Inactive = '#39'Y'#39
@@ -2685,8 +2685,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerContact: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomerContact: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Contact_no'
       'from Customer_Contact '
@@ -2705,8 +2705,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOSlabs: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOSlabs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Slab_Number'
       'FROM Sales_Order_line, Quote_Slab'
@@ -2721,8 +2721,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchases: TQuery
-    DatabaseName = 'WT'
+  object qryGetPurchases: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Purchase_Order'
       'FROM Purchase_Orderline'
@@ -2737,8 +2737,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOrderEmail: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOrderEmail: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '       Sales_Order.Sales_Order,'
@@ -2765,8 +2765,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetQuoteSlabs: TQuery
-    DatabaseName = 'Wt'
+  object qryGetQuoteSlabs: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Quote_Slab.Supplier,'
       '        Supplier.Supplier_name,'
@@ -2808,8 +2808,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 504
     Top = 520
   end
-  object qrySalesInvoices: TQuery
-    DatabaseName = 'WT'
+  object qrySalesInvoices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Sales_invoice.Sales_Invoice,'
@@ -2872,8 +2872,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 768
     Top = 528
   end
-  object qryUpQuoteCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryUpQuoteCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Quote'
       'set Customer = :Customer,'
@@ -2898,8 +2898,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpJobCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryUpJobCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Job'
       'set Customer = :Customer,'
@@ -2924,8 +2924,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLQuoteNo: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOLQuoteNo: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1 Quote'
       'FROM sales_order_line'
@@ -2942,8 +2942,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryJobs: TQuery
-    DatabaseName = 'WT'
+  object qryJobs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Job.Job_Status,'
@@ -2983,8 +2983,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 704
     Top = 64
   end
-  object qryRemedials: TQuery
-    DatabaseName = 'WT'
+  object qryRemedials: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Sales_Order,'
       '        Job.Job,'
@@ -3030,8 +3030,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 704
     Top = 112
   end
-  object qryJobsDummy: TQuery
-    DatabaseName = 'WT'
+  object qryJobsDummy: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '  Sales_Order.*,'
       '  Customer.Customer_name AS Original_Customer_name,'
@@ -3109,8 +3109,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 88
     Top = 72
   end
-  object qrySOUpTemplate: TQuery
-    DatabaseName = 'WT'
+  object qrySOUpTemplate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order'
       'SET Template_Docs_Returned = :Template_Docs_Returned'
@@ -3129,8 +3129,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpFitting: TQuery
-    DatabaseName = 'WT'
+  object qrySOUpFitting: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Order'
       'SET Fitting_Docs_Returned = :Fitting_Docs_Returned'
@@ -3149,8 +3149,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'
@@ -3163,8 +3163,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 928
     Top = 16
   end
-  object qryRemedialCount: TQuery
-    DatabaseName = 'wt'
+  object qryRemedialCount: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT max(Sales_Order_Number) as Last_Remedial'
       'FROM Sales_Order'
@@ -3178,7 +3178,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryRemedialReport: TQuery
+  object qryRemedialReport: TFDQuery
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job.Job_Status,'
@@ -3252,8 +3252,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryJobsDummyOlder: TQuery
-    DatabaseName = 'WT'
+  object qryJobsDummyOlder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '    sales_order.*,'
       '    Customer.Customer_name AS Original_Customer_name,'
@@ -3323,8 +3323,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Left = 224
     Top = 80
   end
-  object qrySOUpRemedial: TQuery
-    DatabaseName = 'WT'
+  object qrySOUpRemedial: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Job_Remedial'
       'SET'#9'Job_Remedial.Completed = :Completed'
@@ -3346,8 +3346,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
         ParamType = ptUnknown
       end>
   end
-  object qryJobsDummyOld: TQuery
-    DatabaseName = 'WT'
+  object qryJobsDummyOld: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '    sales_order.*,'
       '    Customer.Customer_name AS Original_Customer_name,'

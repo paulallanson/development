@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, DBTables, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, DBCtrls, Grids, DBGrids, Buttons, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUEdgeDetails = class(TForm)
     dbgDetails: TDBGrid;
-    qryDelEdgeThick: TQuery;
-    lkpEdgeThickness: TQuery;
+    qryDelEdgeThick: TFDQuery;
+    lkpEdgeThickness: TFDQuery;
     lkpEdgeThicknessEdge_profile: TIntegerField;
     lkpEdgeThicknessEdge_Type: TIntegerField;
     lkpEdgeThicknessMaterial_Type: TIntegerField;
@@ -22,13 +25,13 @@ type
     lkpEdgeThicknessPrice_Unit_Description: TStringField;
     lkpEdgeThicknessinactive: TStringField;
     srclkpEdgeThickness: TDataSource;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    lkpEdgeType: TQuery;
+    lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
-    qryGetEdgeThickness: TQuery;
-    qryAddEdgeThickness: TQuery;
-    qryDeleteEdgeThickness: TQuery;
+    qryGetEdgeThickness: TFDQuery;
+    qryAddEdgeThickness: TFDQuery;
+    qryDeleteEdgeThickness: TFDQuery;
     tmrRefresh: TTimer;
     stsbrDetails: TStatusBar;
     lkpEdgeThicknessMaterial_Description: TStringField;

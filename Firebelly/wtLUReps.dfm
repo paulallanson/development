@@ -145,8 +145,8 @@ object frmWTLUReps: TfrmWTLUReps
     Left = 136
     Top = 120
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Rep'
@@ -164,8 +164,8 @@ object frmWTLUReps: TfrmWTLUReps
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

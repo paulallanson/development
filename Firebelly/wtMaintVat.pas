@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Mask, DBCtrls, Buttons, CRControls, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtMaintVat = class(TForm)
@@ -22,11 +24,11 @@ type
     edtDescription: TEdit;
     edtVatCode: TEdit;
     edtInvoiceText: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     Label5: TLabel;
     edtRCVateRate: TCREditFloat;
     procedure btnOKClick(Sender: TObject);

@@ -995,8 +995,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     Left = 360
     Top = 131
   end
-  object qryCustomers: TQuery
-    DatabaseName = 'wt'
+  object qryCustomers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer.*,'
       '        Customer_Type.Description,'
@@ -1029,8 +1029,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     Left = 192
     Top = 200
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'delete '
       'from customer'
@@ -1044,8 +1044,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer.*,'
       '        Customer_Type.Description,'

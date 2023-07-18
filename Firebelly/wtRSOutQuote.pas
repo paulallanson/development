@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Buttons, QrCtrls, ComCtrls, OleCtnrs, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSOutQuote = class(TForm)
@@ -33,7 +35,7 @@ type
     prgbrExport: TProgressBar;
     cmbContacts: TComboBox;
     Label3: TLabel;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
     rdgrpCategory: TRadioGroup;
     procedure Button4Click(Sender: TObject);

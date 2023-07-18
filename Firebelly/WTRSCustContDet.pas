@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, Spin, ComCtrls, OleCtnrs, AllCommon;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, Spin, ComCtrls, OleCtnrs, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSCustContDet = class(TForm)
@@ -17,7 +20,7 @@ type
     Panel1: TPanel;
     btnPreview: TBitBtn;
     btnPrint: TBitBtn;
-    qryCustType: TQuery;
+    qryCustType: TFDQuery;
     cmbbxContStatus: TComboBox;
     btnCancel: TBitBtn;
     cbSort1: TComboBox;
@@ -32,8 +35,8 @@ type
     Panel3: TPanel;
     Label7: TLabel;
     RepComboBox: TComboBox;
-    qryContType: TQuery;
-    QryRep: TQuery;
+    qryContType: TFDQuery;
+    QryRep: TFDQuery;
     RadioGroup1: TRadioGroup;
     chkbxCustomers: TCheckBox;
     chkbxContacts: TCheckBox;
@@ -44,9 +47,9 @@ type
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
-    qryExcel: TQuery;
-    stdSQL: TQuery;
-    qryCurrentContStatus: TQuery;
+    qryExcel: TFDQuery;
+    stdSQL: TFDQuery;
+    qryCurrentContStatus: TFDQuery;
     qryCustTypeDescription: TStringField;
     qryContTypeContact_Type_Description: TStringField;
     QryRepRep_Name: TStringField;
@@ -91,7 +94,7 @@ type
     function BuildQueryString: string;
     procedure CallReport(const bPreview : Boolean);
     function Ordering(aBox: TComboBox): string;
-    procedure ExportToFile(fileName: string; tempqry: TQuery);
+    procedure ExportToFile(fileName: string; tempqry: TFDQuery);
     function GetYearDescription(iCode: integer): string;
   public
     { Public declarations }
@@ -377,7 +380,7 @@ function TfrmWTRSCustContDet.GetYearDescription(iCode: integer): string;
 begin
 end;
 
-procedure TfrmWTRSCustContDet.ExportToFile(fileName: string; tempqry: TQuery);
+procedure TfrmWTRSCustContDet.ExportToFile(fileName: string; tempqry: TFDQuery);
 var
   tempStr: string;
   exportFile: textFile;

@@ -4,18 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB,
-  DBTables, Spin, ExtCtrls, QrCtrls;
+  Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJUpstand = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     pnlDetails: TPanel;
     Label1: TLabel;
     edtMaterial: TEdit;
@@ -38,7 +40,7 @@ type
     edtPolishPrice: TCREditMoney;
     Label10: TLabel;
     dblkpMaterialUse: TDBLookupComboBox;
-    qryMaterialUse: TQuery;
+    qryMaterialUse: TFDQuery;
     dtsMaterialUse: TDataSource;
     SpeedButton1: TSpeedButton;
     Label12: TLabel;

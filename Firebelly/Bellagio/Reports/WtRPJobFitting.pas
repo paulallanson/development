@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls, AllCommon, qrprntr, printers;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls, AllCommon, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobFitting = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     memAddress: TgtQRRichText;
     qrchdSatisfaction: TQRChildBand;
     QRLabel11: TgtQRLabel;
@@ -49,7 +52,7 @@ type
     QRShape10: TgtQRShape;
     QRLabel58: TgtQRLabel;
     QRLabel59: TgtQRLabel;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     QRBand1: TQRBand;
     QRLabel60: TgtQRLabel;
     QRLabel61: TgtQRLabel;
@@ -136,9 +139,9 @@ type
     qrlblUpstand: TgtQRLabel;
     qrlblWindowCill: TgtQRLabel;
     qrlblSplashback: TgtQRLabel;
-    qryJobEdge: TQuery;
-    qryJobThickness: TQuery;
-    qryJobUpstand: TQuery;
+    qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     gtQRLabel10: TgtQRLabel;
     gtQRDBText6: TgtQRDBText;
     gtQRLabel11: TgtQRLabel;
@@ -153,7 +156,7 @@ type
     gtQRDBText9: TgtQRDBText;
     gtQRDBText10: TgtQRDBText;
     qrbAdditionalItemsFooter: TQRBand;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
     qrySOLineJob: TFloatField;
@@ -200,7 +203,7 @@ type
     gtQRShape33: TgtQRShape;
     gtQRLabel22: TgtQRLabel;
     gtQRDBText12: TgtQRDBText;
-    qryRevenueCentre: TQuery;
+    qryRevenueCentre: TFDQuery;
     QRLabel70: TgtQRLabel;
     QRDBText10: TgtQRDBText;
     gtQRLabel3: TgtQRLabel;
@@ -209,7 +212,7 @@ type
     gtQRDBText1: TgtQRDBText;
     gtQRLabel24: TgtQRLabel;
     gtQRDBText13: TgtQRDBText;
-    qryReportOld: TQuery;
+    qryReportOld: TFDQuery;
     procedure qrpJobSheetBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;

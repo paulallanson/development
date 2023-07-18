@@ -346,8 +346,8 @@ object frmWTRSQuotePerf: TfrmWTRSQuotePerf
       'Commercial')
     TabOrder = 12
   end
-  object qryContacts: TQuery
-    DatabaseName = 'WT'
+  object qryContacts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Operator'

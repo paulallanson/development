@@ -4,31 +4,34 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls,
-  gtQrExport, qrprntr, printers, AllCommon;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  gtQrExport, qrprntr, printers, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPSOrder = class(TForm)
     qrpDetails: TQuickRep;
     qrgSalesOrder: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
     qrsdSOLines: TQRSubDetail;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbSOFooter: TQRBand;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpQuote: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpQuote: TFDQuery;
     QRLabel17: TgtQRLabel;
     QRLabel18: TgtQRLabel;
     qrlblVAT: TgtQRLabel;
     qrlblGross: TgtQRLabel;
     qrlblNett: TgtQRLabel;
-    qryEndUser: TQuery;
-    qrySOLine: TQuery;
+    qryEndUser: TFDQuery;
+    qrySOLine: TFDQuery;
     QRDBText7: TgtQRDBText;
     qrySOLineSales_Order: TIntegerField;
     qrySOLineSales_order_Line_no: TIntegerField;
@@ -76,7 +79,7 @@ type
     gtQRShape12: TgtQRShape;
     memPayment: TgtQRMemo;
     qrshpPayment: TgtQRShape;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     qrlblDepositTerms: TgtQRLabel;
     gtQRLabel7: TgtQRLabel;
     qrlblDescription: TgtQRLabel;
@@ -93,10 +96,10 @@ type
     qrsdQExtras: TQRSubDetail;
     qrlblExtraQuantity: TgtQRDBText;
     qrlblExtraDescription: TgtQRLabel;
-    qryQElements: TQuery;
-    qryQEdges: TQuery;
-    qryQCutOuts: TQuery;
-    qryQExtras: TQuery;
+    qryQElements: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQCutOuts: TFDQuery;
+    qryQExtras: TFDQuery;
     dtsSOLine: TDataSource;
     qriHeadLogo: TgtQRImage;
     memAddress: TgtQRMemo;
@@ -127,7 +130,7 @@ type
     qrlblTemplateDate: TgtQRLabel;
     qrlblDateRequired: TgtQRLabel;
     qrlblSOCaption: TgtQRLabel;
-    qryCompanyAddress: TQuery;
+    qryCompanyAddress: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrgSalesOrderBeforePrint(Sender: TQRCustomBand;

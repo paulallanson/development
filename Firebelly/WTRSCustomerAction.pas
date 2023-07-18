@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, DB, DBTables, QrCtrls, ComCtrls,
-  OleCtnrs;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, DB, QrCtrls, ComCtrls,
+  OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSCustomerAction = class(TForm)
@@ -22,14 +25,14 @@ type
     grpbxAction: TGroupBox;
     Label3: TLabel;
     cmbAction: TComboBox;
-    qryAction: TQuery;
+    qryAction: TFDQuery;
     dtsAction: TDataSource;
     chkbxPageBreak: TCheckBox;
     rdgrpOperators: TRadioGroup;
     grpbxOperators: TGroupBox;
     Label4: TLabel;
     cmbOperators: TComboBox;
-    qryOperators: TQuery;
+    qryOperators: TFDQuery;
     dtsOperators: TDataSource;
     Button1: TButton;
     Button2: TButton;

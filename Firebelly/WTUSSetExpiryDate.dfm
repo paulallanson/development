@@ -158,8 +158,8 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     TabOrder = 3
     Value = 0
   end
-  object qryUpdQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryUpdQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Quote'
       'SET Expiry_Date = Date_Raised + :Expiry_Days'

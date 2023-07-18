@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, DBCtrls, StdCtrls, Buttons, DBTables, DB, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Grids, DBGrids, DBCtrls, StdCtrls, Buttons, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtLUWorktops = class(TForm)
     dbgDetails: TDBGrid;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryWorktops: TQuery;
+    qryWorktops: TFDQuery;
     srcLUWorktops: TDataSource;
     tmrRefresh: TTimer;
     stsbrDetails: TStatusBar;
@@ -30,7 +33,7 @@ type
     dblkpMaterialType: TDBLookupComboBox;
     btnExcel: TBitBtn;
     SpeedButton2: TSpeedButton;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

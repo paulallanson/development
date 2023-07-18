@@ -145,8 +145,8 @@ object frmwtLUOffer: TfrmwtLUOffer
     Left = 184
     Top = 64
   end
-  object qrySalesOffer: TQuery
-    DatabaseName = 'WT'
+  object qrySalesOffer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Sale_Offer'
@@ -164,8 +164,8 @@ object frmwtLUOffer: TfrmwtLUOffer
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 256
     Top = 64
   end

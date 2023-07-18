@@ -1554,8 +1554,8 @@ object frmwtRPContractOrders: TfrmwtRPContractOrders
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote_Number,'
       '        Contract_Quote.Contract_Quote,'

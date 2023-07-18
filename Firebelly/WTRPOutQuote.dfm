@@ -1371,8 +1371,8 @@ object frmwtRPOutQuote: TfrmwtRPOutQuote
       end
     end
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'Wt'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Quote.*,'
       '        Customer.Customer_Name as Customer_Name_Actual,'
@@ -1473,8 +1473,8 @@ object frmwtRPOutQuote: TfrmwtRPOutQuote
         ParamType = ptUnknown
       end>
   end
-  object qryReQuote: TQuery
-    DatabaseName = 'wt'
+  object qryReQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'SELECT Sum(Quote.Nett_Price - Quote.Discount_Value + Quote.Marku' +
@@ -1507,7 +1507,7 @@ object frmwtRPOutQuote: TfrmwtRPOutQuote
         ParamType = ptUnknown
       end>
   end
-  object qryEvent: TQuery
+  object qryEvent: TFDQuery
     Left = 328
     Top = 240
   end

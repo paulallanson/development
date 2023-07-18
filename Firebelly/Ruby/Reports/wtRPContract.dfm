@@ -2315,8 +2315,8 @@ object frmWTRPContract: TfrmWTRPContract
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'
@@ -2357,16 +2357,16 @@ object frmWTRPContract: TfrmWTRPContract
     Left = 120
     Top = 16
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 350
     Top = 23
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -2395,8 +2395,8 @@ object frmWTRPContract: TfrmWTRPContract
     Left = 502
     Top = 19
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -2410,8 +2410,8 @@ object frmWTRPContract: TfrmWTRPContract
         ParamType = ptUnknown
       end>
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -2426,9 +2426,9 @@ object frmWTRPContract: TfrmWTRPContract
         ParamType = ptUnknown
       end>
   end
-  object qryContractLine: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsReport
+  object qryContractLine: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'Select * '
       'from Contract_Quote_Line'
@@ -2443,9 +2443,9 @@ object frmWTRPContract: TfrmWTRPContract
         ParamType = ptUnknown
       end>
   end
-  object qryContractOption: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsContractLine
+  object qryContractOption: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsContractLine
     SQL.Strings = (
       'Select *'
       'FROM Contract_Quote_Line_Option'
@@ -2471,9 +2471,9 @@ object frmWTRPContract: TfrmWTRPContract
     Left = 200
     Top = 96
   end
-  object qryOptionHeaders: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryOptionHeaders: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'Select Option_Description'
       'FROM Contract_Quote_Line_Option'
@@ -2489,8 +2489,8 @@ object frmWTRPContract: TfrmWTRPContract
         ParamType = ptUnknown
       end>
   end
-  object qryOptionHeadersHeight: TQuery
-    DatabaseName = 'WT'
+  object qryOptionHeadersHeight: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Option_Description'
       'FROM Contract_Quote_Line_Option'
@@ -2506,9 +2506,9 @@ object frmWTRPContract: TfrmWTRPContract
         ParamType = ptUnknown
       end>
   end
-  object qryOptionColours: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsContractLine
+  object qryOptionColours: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsContractLine
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote_Line_Option.Line_Number,'

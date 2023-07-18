@@ -3,39 +3,42 @@ unit WTSupplierDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables;
+  SysUtils, Classes, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlSuppliers = class(TDataModule)
-    qryMaterialType: TQuery;
-    qryGetMaterialGroups: TQuery;
+    qryMaterialType: TFDQuery;
+    qryGetMaterialGroups: TFDQuery;
     dtsMaterialType: TDataSource;
     dtsGetMaterialGroup: TDataSource;
-    qryWorktops: TQuery;
+    qryWorktops: TFDQuery;
     dtsWorktops: TDataSource;
-    qryGetWTThickness: TQuery;
-    qryAddSupplierWT: TQuery;
-    qryAddSupplierWTThickness: TQuery;
-    qryWorktopPrices: TQuery;
+    qryGetWTThickness: TFDQuery;
+    qryAddSupplierWT: TFDQuery;
+    qryAddSupplierWTThickness: TFDQuery;
+    qryWorktopPrices: TFDQuery;
     dtsWorktopPrices: TDataSource;
-    qryDummyPrices: TQuery;
-    qryChkSupplierWT: TQuery;
-    qryChkSupplierWTThickness: TQuery;
-    qrySupplierWTInactive: TQuery;
-    qrySupplierWTDelete: TQuery;
-    qrySupplierWTThickDelete: TQuery;
-    qryChkSupplierProd: TQuery;
-    qryAddSupplierProd: TQuery;
-    qryUpdSupplierProd: TQuery;
-    qryProductPrices: TQuery;
+    qryDummyPrices: TFDQuery;
+    qryChkSupplierWT: TFDQuery;
+    qryChkSupplierWTThickness: TFDQuery;
+    qrySupplierWTInactive: TFDQuery;
+    qrySupplierWTDelete: TFDQuery;
+    qrySupplierWTThickDelete: TFDQuery;
+    qryChkSupplierProd: TFDQuery;
+    qryAddSupplierProd: TFDQuery;
+    qryUpdSupplierProd: TFDQuery;
+    qryProductPrices: TFDQuery;
     dtsProductPrices: TDataSource;
-    qryDummyProductPrices: TQuery;
-    qryGetSupplierProd: TQuery;
-    qryDelete: TQuery;
-    qryDeletePrices: TQuery;
-    qrySupplierWorktops: TQuery;
+    qryDummyProductPrices: TFDQuery;
+    qryGetSupplierProd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryDeletePrices: TFDQuery;
+    qrySupplierWorktops: TFDQuery;
     dtsSupplierWorktops: TDataSource;
-    qryDummySupplierWorktops: TQuery;
+    qryDummySupplierWorktops: TFDQuery;
   private
     { Private declarations }
   public

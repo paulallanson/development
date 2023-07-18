@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls, gtQrCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobFitting = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     qrchdSatisfaction: TQRChildBand;
     QRLabel11: TgtQRLabel;
     QRLabel17: TgtQRLabel;
@@ -47,7 +50,7 @@ type
     QRShape10: TgtQRShape;
     QRLabel58: TgtQRLabel;
     QRLabel59: TgtQRLabel;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrsubRemedial: TQRSubDetail;
     qrmRemedials: TgtQRMemo;
     QRDBText9: TgtQRDBText;
@@ -143,9 +146,9 @@ type
     qrlblUpstand: TgtQRLabel;
     qrlblWindowCill: TgtQRLabel;
     qrlblSplashback: TgtQRLabel;
-    qryJobEdge: TQuery;
-    qryJobThickness: TQuery;
-    qryJobUpstand: TQuery;
+    qryJobEdge: TFDQuery;
+    qryJobThickness: TFDQuery;
+    qryJobUpstand: TFDQuery;
     gtQRLabel10: TgtQRLabel;
     gtQRDBText6: TgtQRDBText;
     qrrchTextInstallAddress1: TgtQRRichText;

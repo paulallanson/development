@@ -261,8 +261,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       OnExit = ValidateMoney
     end
   end
-  object qryVAT: TQuery
-    DatabaseName = 'WT'
+  object qryVAT: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from VAT'
       'where (inactive  = '#39'N'#39' or inactive is NULL) OR Vat = :Vat'
@@ -277,21 +277,21 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       end>
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
-      Origin = 'WT.Vat.Vat'
+
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      Origin = 'WT.Vat.Vat_Rate'
+
       DisplayFormat = '0.00'
     end
     object qryVATDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Vat.Description'
+
       Size = 40
     end
     object qryVATVat_Code: TStringField
       FieldName = 'Vat_Code'
-      Origin = 'WT.Vat.Vat_Code'
+
       Size = 1
     end
   end

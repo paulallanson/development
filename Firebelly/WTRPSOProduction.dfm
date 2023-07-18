@@ -869,8 +869,8 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
       end
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Material_Type.Description AS Material_Description,'
       
@@ -937,8 +937,8 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         ParamType = ptUnknown
       end>
   end
-  object qryCutOuts: TQuery
-    DatabaseName = 'WT'
+  object qryCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Material_Type.Description AS Material_Description,'
       '        Edge_Type.Edge_Type_Description,'
@@ -998,8 +998,8 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         ParamType = ptUnknown
       end>
   end
-  object qryEdges: TQuery
-    DatabaseName = 'WT'
+  object qryEdges: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Edge_profile.Description AS Edge_Profile_Description,'
       '        Material_Type.Description as Material_Description,'
@@ -1059,8 +1059,8 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         ParamType = ptUnknown
       end>
   end
-  object qryBaseCutOuts: TQuery
-    DatabaseName = 'WT'
+  object qryBaseCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'FROM Customer'
       '        INNER JOIN (Sales_Order'
@@ -1122,8 +1122,8 @@ object frmWTRPSOProduction: TfrmWTRPSOProduction
         ParamType = ptUnknown
       end>
   end
-  object qryBaseEdges: TQuery
-    DatabaseName = 'WT'
+  object qryBaseEdges: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'FROM Customer'
       '      INNER JOIN (Sales_Order'

@@ -151,8 +151,8 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
     Left = 424
     Top = 8
   end
-  object qryOptions: TQuery
-    DatabaseName = 'WT'
+  object qryOptions: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select *'
       'from Customer_Worktop_Group'
@@ -167,8 +167,8 @@ object frmWTMaintContractOption: TfrmWTMaintContractOption
         ParamType = ptUnknown
       end>
   end
-  object qryOptionThickness: TQuery
-    DatabaseName = 'WT'
+  object qryOptionThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'

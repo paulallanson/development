@@ -4,8 +4,8 @@ object dmAccExport: TdmAccExport
   Top = 83
   Height = 559
   Width = 814
-  object SalesInvNarrSQL: TQuery
-    DatabaseName = 'wt'
+  object SalesInvNarrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from Narrative_line'
@@ -20,8 +20,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object SalesInvAddSQL: TQuery
-    DatabaseName = 'wt'
+  object SalesInvAddSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT '
       'sales_inv_line_add_chg.Additional_Charge, '
@@ -53,8 +53,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCompanyAccSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCompanyAccSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set '#9'Last_File_No_Acc = :Last_File_No_Acc')
@@ -67,8 +67,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object oldPurchaseInvSQL: TQuery
-    DatabaseName = 'wt'
+  object oldPurchaseInvSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Supplier_Invoice.Vat_Value as Total_Vat_Value,'
       '        Supplier_Invoice.Goods_Value as Total_Goods_Value,'
@@ -113,8 +113,8 @@ object dmAccExport: TdmAccExport
     Left = 408
     Top = 8
   end
-  object UpSupplierInvSQL: TQuery
-    DatabaseName = 'wt'
+  object UpSupplierInvSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Supplier_Invoice_Line'
       'set Supp_invoice_Status = :Status_To'
@@ -133,8 +133,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCustomerSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCustomerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Customer'
       'set Account_Code_on_Ledger = :Status_To'
@@ -156,8 +156,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object POCustomerSQL: TQuery
-    DatabaseName = 'wt'
+  object POCustomerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select customer_branch.*,'
       '        Customer.Name as Customer_Name,'
@@ -214,8 +214,8 @@ object dmAccExport: TdmAccExport
     Left = 384
     Top = 120
   end
-  object POSupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object POSupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'supplier_branch.*,'
       '        supplier.Name as supplier_Name,'
@@ -247,8 +247,8 @@ object dmAccExport: TdmAccExport
     Left = 384
     Top = 72
   end
-  object UpSupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object UpSupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Supplier'
       'set Account_Code_on_Ledger = :Status_To'
@@ -270,8 +270,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpSalesInvHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object UpSalesInvHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Sales_Invoice'
       'set Sales_Invoice_Status = :Status_To'
@@ -291,8 +291,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpSupplierInvHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object UpSupplierInvHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Supplier_Invoice'
       'set Supp_invoice_Status = :Status_To'
@@ -312,8 +312,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpInvSupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object UpInvSupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Supplier'
       'set Account_Code_on_Ledger = '#39'I'#39
@@ -331,8 +331,8 @@ object dmAccExport: TdmAccExport
     Left = 456
     Top = 224
   end
-  object UpPOCustomerSQL: TQuery
-    DatabaseName = 'wt'
+  object UpPOCustomerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Customer_Branch'
       'set Account_Code_on_Ledger = '#39'P'#39
@@ -354,8 +354,8 @@ object dmAccExport: TdmAccExport
     Left = 472
     Top = 120
   end
-  object UpPOSupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object UpPOSupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Supplier_Branch'
       'set Account_Code_on_Ledger = '#39'P'#39
@@ -377,8 +377,8 @@ object dmAccExport: TdmAccExport
     Left = 456
     Top = 72
   end
-  object BranchSQL: TQuery
-    DatabaseName = 'wt'
+  object BranchSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Customer,'
       #9#9#9'Branch_no'
@@ -393,8 +393,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpStockSQL: TQuery
-    DatabaseName = 'wt'
+  object UpStockSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Form_Reference ('#9'Customer,'
       #9#9#9#9#9#9#9#9#9#9'Branch_no,'
@@ -437,8 +437,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCurrSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCurrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into currency_code (currency_code,'
       #9#9#9#9#9#9#9#9#9'currency_code_Descr,'
@@ -472,8 +472,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object CurrencySQL: TQuery
-    DatabaseName = 'wt'
+  object CurrencySQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select currency_code'
       'from currency_code'
@@ -487,8 +487,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCustSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCustSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Customer'
       'set Credit_Limit = :Credit_Limit,'
@@ -525,8 +525,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object StockSQL: TQuery
-    DatabaseName = 'wt'
+  object StockSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Form_Reference'
       'from form_Reference'
@@ -552,16 +552,16 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object MaxStockSQL: TQuery
-    DatabaseName = 'wt'
+  object MaxStockSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(Form_Reference) as Last_Reference'
       'from Form_Reference')
     Left = 560
     Top = 240
   end
-  object UpCompanyInvSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCompanyInvSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set '#9'Last_File_No_Inv = :Last_File_No_Inv')
@@ -574,8 +574,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCompanySQL: TQuery
-    DatabaseName = 'wt'
+  object UpCompanySQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set '#9'Last_File_No_Acc = :Last_File_No_Acc,'
@@ -594,8 +594,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object PurchaseInvAddSQL: TQuery
-    DatabaseName = 'wt'
+  object PurchaseInvAddSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Supp_Inv_Line_Add_Chg'
@@ -615,8 +615,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object GetFormRefSQL: TQuery
-    DatabaseName = 'wt'
+  object GetFormRefSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Form_Reference_ID, Form_Reference_Descr, Stocked_Item'
       'from Form_Reference'
@@ -642,8 +642,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object UpCompanyExpSQL: TQuery
-    DatabaseName = 'wt'
+  object UpCompanyExpSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set data_export_directory = :data_export_directory'
@@ -657,8 +657,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object InvSupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object InvSupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select distinct'#9'Supplier.*,'
       #9'      '#39#39' as VAT_Reference,'
@@ -689,8 +689,8 @@ object dmAccExport: TdmAccExport
     Left = 384
     Top = 240
   end
-  object qryDelSageInvs: TQuery
-    DatabaseName = 'wt'
+  object qryDelSageInvs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Sage_Invoice_Import'
       'where Operator = :Operator')
@@ -703,8 +703,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryUpSageInvs: TQuery
-    DatabaseName = 'wt'
+  object qryUpSageInvs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sage_Invoice_Import'
       '(Operator,'
@@ -803,8 +803,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object SalesInvChgsSQL: TQuery
-    DatabaseName = 'wt'
+  object SalesInvChgsSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Invoice_Add_Charge.*, VAT_Code.VAT_Rate'
       'from Sales_Invoice_Add_Charge, VAT_Code'
@@ -819,8 +819,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryGetSageImport: TQuery
-    DatabaseName = 'wt'
+  object qryGetSageImport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select'
       '  Invoice_Date,'
@@ -857,8 +857,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object PurchaseInvSQL: TQuery
-    DatabaseName = 'wt'
+  object PurchaseInvSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Supplier_Invoice_Line.Supplier_Invoice,'
       '        Supplier_Invoice_Line.Invoice_Line_No,'
@@ -909,8 +909,8 @@ object dmAccExport: TdmAccExport
     Left = 360
     Top = 16
   end
-  object PurchaseInvChgsSQL: TQuery
-    DatabaseName = 'wt'
+  object PurchaseInvChgsSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier_Invoice_Charge.*, VAT_Code.VAT_Rate'
       'from Supplier_Invoice_Charge, VAT_Code'
@@ -925,8 +925,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesInvoice: TQuery
-    DatabaseName = 'wt'
+  object qryGetSalesInvoice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Goods_Value,'
       '        Vat_Value,'
@@ -944,8 +944,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierInvoice: TQuery
-    DatabaseName = 'wt'
+  object qryGetSupplierInvoice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Goods_Value,'
       '        Vat_Value,'
@@ -965,8 +965,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryVATCode: TQuery
-    DatabaseName = 'wt'
+  object qryVATCode: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from VAT_Code'
@@ -980,8 +980,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPendingSI: TQuery
-    DatabaseName = 'wt'
+  object qryUpdPendingSI: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update sales_invoice'
       'set export_filename = :export_filename'
@@ -995,8 +995,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPendingPI: TQuery
-    DatabaseName = 'wt'
+  object qryUpdPendingPI: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update supplier_invoice'
       'set export_filename = :export_filename'
@@ -1010,8 +1010,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object CompanySQL: TQuery
-    DatabaseName = 'wt'
+  object CompanySQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Company.*, Accounts_Package.Accounts_package_Description'
       'from Company, Accounts_Package'
@@ -1021,8 +1021,8 @@ object dmAccExport: TdmAccExport
     Left = 24
     Top = 120
   end
-  object CustPendingSQL: TQuery
-    DatabaseName = 'wt'
+  object CustPendingSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer.Customer_Name'
       'from Customer'
@@ -1030,8 +1030,8 @@ object dmAccExport: TdmAccExport
     Left = 224
     Top = 16
   end
-  object SuppPendingSQL: TQuery
-    DatabaseName = 'wt'
+  object SuppPendingSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier.Supplier_Name'
       'from Supplier'
@@ -1039,8 +1039,8 @@ object dmAccExport: TdmAccExport
     Left = 224
     Top = 64
   end
-  object SalesPendingSQl: TQuery
-    DatabaseName = 'wt'
+  object SalesPendingSQl: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice'
       'from Sales_invoice'
@@ -1048,8 +1048,8 @@ object dmAccExport: TdmAccExport
     Left = 224
     Top = 120
   end
-  object PurchPendingSQL: TQuery
-    DatabaseName = 'wt'
+  object PurchPendingSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier_invoice'
       'from Supplier_invoice'
@@ -1057,8 +1057,8 @@ object dmAccExport: TdmAccExport
     Left = 224
     Top = 176
   end
-  object UpInvCustomerSQL: TQuery
-    DatabaseName = 'wt'
+  object UpInvCustomerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Customer'
       'set Account_Code_on_Ledger = '#39'I'#39
@@ -1076,8 +1076,8 @@ object dmAccExport: TdmAccExport
     Left = 456
     Top = 176
   end
-  object customerSQL: TQuery
-    DatabaseName = 'wt'
+  object customerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'customer.*,'
       '        '#39#39' as Vat_Reference,'
@@ -1099,8 +1099,8 @@ object dmAccExport: TdmAccExport
     Left = 24
     Top = 16
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'wt'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'supplier.*,'
       '        '#39#39' as Vat_Reference,'
@@ -1116,8 +1116,8 @@ object dmAccExport: TdmAccExport
     Left = 24
     Top = 64
   end
-  object InvCustomerSQL: TQuery
-    DatabaseName = 'wt'
+  object InvCustomerSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select distinct'#9'customer.*,'
       #9'      '#39#39' as VAT_Reference,'
@@ -1147,8 +1147,8 @@ object dmAccExport: TdmAccExport
     Left = 384
     Top = 176
   end
-  object SalesInvSQL: TQuery
-    DatabaseName = 'wt'
+  object SalesInvSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_invoice_line.Sales_invoice,'
       'Sales_invoice_line.Invoice_line_no,'
@@ -1213,8 +1213,8 @@ object dmAccExport: TdmAccExport
     Left = 24
     Top = 280
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'wt'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Sales_order,'
       '        Reference,'
@@ -1235,8 +1235,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryDelXeroInvs: TQuery
-    DatabaseName = 'wt'
+  object qryDelXeroInvs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Xero_Invoice_Import'
       'where Operator = :Operator')
@@ -1249,8 +1249,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryUpXeroInvs: TQuery
-    DatabaseName = 'wt'
+  object qryUpXeroInvs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Xero_Invoice_Import'
       '(Operator,'
@@ -1335,8 +1335,8 @@ object dmAccExport: TdmAccExport
         ParamType = ptUnknown
       end>
   end
-  object qryGetXeroImport: TQuery
-    DatabaseName = 'wt'
+  object qryGetXeroImport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       'Customer_Name,'

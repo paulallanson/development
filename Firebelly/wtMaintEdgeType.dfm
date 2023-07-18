@@ -78,8 +78,8 @@ object frmWTMaintEdgeType: TfrmWTMaintEdgeType
     Text = 'edtEdgeTypeDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Edge_Type'
       'SET'
@@ -112,8 +112,8 @@ object frmWTMaintEdgeType: TfrmWTMaintEdgeType
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Edge_Type'
       '        (Edge_Type,'
@@ -131,8 +131,8 @@ object frmWTMaintEdgeType: TfrmWTMaintEdgeType
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Edge_Type'
       'From Edge_Type'
@@ -146,8 +146,8 @@ object frmWTMaintEdgeType: TfrmWTMaintEdgeType
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

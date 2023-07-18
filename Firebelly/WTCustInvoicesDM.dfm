@@ -9,8 +9,8 @@ object dtmdlCustInvoices: TdtmdlCustInvoices
     Left = 80
     Top = 24
   end
-  object qryInvoices: TQuery
-    DatabaseName = 'WT'
+  object qryInvoices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Invoices'

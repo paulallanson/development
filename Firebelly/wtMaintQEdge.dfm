@@ -253,8 +253,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
       OnChange = edtDiscountChange
     end
   end
-  object qryEdgeType: TQuery
-    DatabaseName = 'wt'
+  object qryEdgeType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Edge_Type'
@@ -275,8 +275,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Left = 256
     Top = 8
   end
-  object qryEdgeThickness: TQuery
-    DatabaseName = 'wt'
+  object qryEdgeThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Edge_profile.Edge_profile,'
       '        Edge_profile.description,'
@@ -313,8 +313,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Left = 440
     Top = 64
   end
-  object qryOneEdgeThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneEdgeThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Edge_profile,'
       '        Material_type,'
@@ -357,8 +357,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
         ParamType = ptUnknown
       end>
   end
-  object qryContractEdge: TQuery
-    DatabaseName = 'wt'
+  object qryContractEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Edge_Profile.description,'
       '        Customer_Cutout_Edge_Group.Customer,'
@@ -415,8 +415,8 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
         ParamType = ptUnknown
       end>
   end
-  object qryOneCustomerPrice: TQuery
-    DatabaseName = 'wt'
+  object qryOneCustomerPrice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer_Cutout_Edge_Group.Customer,'
       '        Customer_Cutout_Edge_Group.Material_Type,'

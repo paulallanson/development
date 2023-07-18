@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DBTables, DB, QrCtrls;
+  ExtCtrls, DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintTrade = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     srcTrade: TDataSource;
-    tblTrade: TTable;
+    tblTrade: TFDTable;
     Label8: TLabel;
     edtName: TDBEdit;
     Label11: TLabel;
