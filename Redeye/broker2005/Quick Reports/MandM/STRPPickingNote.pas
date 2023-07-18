@@ -484,7 +484,7 @@ var
    irow: integer;
 begin
   {set the printer to what the user selected}
-  qrDetails.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrDetails.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }

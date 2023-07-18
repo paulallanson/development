@@ -277,7 +277,7 @@ var
   hDeviceMode: THandle;
 begin
 
-(*  if Printer.PrinterIndex = cboPrinter.ItemIndex then
+(*  if Printers.Printer.PrinterIndex = cboPrinter.ItemIndex then
     begin
       printCommand := 'print';
       printerInfo := '';
@@ -285,7 +285,7 @@ begin
   else
     begin
       printCommand := 'printto';
-      Printer.PrinterIndex := cboPrinter.ItemIndex;
+      Printers.Printer.PrinterIndex := cboPrinter.ItemIndex;
       Printer.GetPrinter(Device, Driver, Port, hDeviceMode) ;
       printerInfo := Format('"%s" "%s" "%s"', [Device, Driver, Port]) ;
     end;

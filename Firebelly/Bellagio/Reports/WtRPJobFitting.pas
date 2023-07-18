@@ -270,7 +270,7 @@ var
   Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  qrpJobSheet.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrpJobSheet.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrpJobSheet.PrinterSettings.OutputBin := Bin;   {set the output bin the }

@@ -313,7 +313,7 @@ begin
 *)
   end;
 
-  PBLabelsQuickReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  PBLabelsQuickReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   PBLabelsQuickReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }

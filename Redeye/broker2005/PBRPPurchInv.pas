@@ -176,7 +176,7 @@ begin
   RepTotal_Vat := 0;
   RepTotal_Cost := 0;
   {set the printer to what the user selected}
-  qckrpPurchInv.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qckrpPurchInv.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qckrpPurchInv.PrinterSettings.OutputBin := Bin;   {set the output bin the }

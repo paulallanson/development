@@ -179,11 +179,11 @@ begin
     if not FPrinted and not Preview then
       begin
       {Find the default printer in the list of printers }
-      Printer.PrinterIndex := -1;
+      Printers.Printer.PrinterIndex := -1;
       for icount := 0 to pred(Printer.Printers.count) do
         begin
           if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-            Printer.PrinterIndex := icount;
+            Printers.Printer.PrinterIndex := icount;
         end;
       if DefaultPrinter <> '' then
         begin
@@ -231,7 +231,7 @@ begin
           PBRPDelivFrm.PBDelivQuickReport.Print;
         end;
     finally
-      printer.printerindex := -1;
+      Printers.Printer.PrinterIndex := -1;
       FPrinted := false;
       PrinterSettings.Free;
     end;
@@ -407,11 +407,11 @@ begin
 
 
   {Find the default printer in the list of printers }
-  Printer.PrinterIndex := -1;
+  Printers.Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
       if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-        Printer.PrinterIndex := icount;
+        Printers.Printer.PrinterIndex := icount;
     end;
 *)
 end;
@@ -435,7 +435,7 @@ begin
       Free;
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TPBRSDelivNoteFrm.SetPrinterBin(BinCode : integer );

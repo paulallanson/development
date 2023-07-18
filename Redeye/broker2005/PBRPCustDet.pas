@@ -89,7 +89,7 @@ var
    Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  QRPCustStat.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  QRPCustStat.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   QRPCustStat.PrinterSettings.OutputBin := Bin;   {set the output bin the }

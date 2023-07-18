@@ -271,7 +271,7 @@ begin
     clearfaxarray(self);
     FaxReport(Self);
   finally
-    Printer.PrinterIndex := -1;  { Set printer back to default }
+    Printers.Printer.PrinterIndex := -1;  { Set printer back to default }
   end;
  end;
 

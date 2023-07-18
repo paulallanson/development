@@ -341,7 +341,7 @@ var
    Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  qrReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }

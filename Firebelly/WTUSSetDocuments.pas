@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Spin, StdCtrls, Buttons, DB, DBTables, QrExport, ShellAPI,
+  Dialogs, Spin, StdCtrls, Buttons, DB, DBTables, QrExport, ShellAPI, QRPDFFilt,
   ComCtrls;
 
 type
@@ -145,8 +145,7 @@ var
   sAttachment: array[0..255] of Char;
   iCount: integer;
   sLocation, sDest, sQuoteFolder, sFileName: string;
-  AFilters: TgtQRFilters;
-  PDFFilter: TgtQRPDFFilter;
+  PDFFilter: TQRPDFDocumentFilter;
 begin
   sQuoteFolder := dtmdlWorktops.GetCompanyQuoteDocumentFolder;
 
@@ -183,7 +182,7 @@ begin
     sFileName := 'Q' + inttostr(iQuote);
 
     FEmailAttachment.add(sLocation + sFilename + '.pdf');
-    PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
+    PDFFilter := TQRPDFDocumentFilter.Create(FEmailAttachment[pred(FEmailAttachment.count)]);
     try
       frmwtRPQuote.qrpDetails.Prepare;
       frmwtRPQuote.qrpDetails.ExportToFilter(PDFFilter);

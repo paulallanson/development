@@ -68,7 +68,7 @@ begin
     if (Pos('APF FAX PRINTER', UpperCase(Printer.Printers[TempLoop])) > 0) or
        (Pos('PRINTFAX', UpperCase(Printer.Printers[TempLoop])) > 0) then
     begin
-      Printer.PrinterIndex := TempLoop;
+      Printers.Printer.PrinterIndex := TempLoop;
       Printer.GetPrinter(TempPrintDevice, TempPrintName, TempPrintPort, TempPrintDevMode) ;
       Printer.SetPrinter(TempPrintDevice, TempPrintName, TempPrintPort, 0) ;
       FaxFound := True;

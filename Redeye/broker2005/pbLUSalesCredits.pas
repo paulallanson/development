@@ -839,7 +839,7 @@ begin
       Free;
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmPBLUSalesCredits.btnEInvoiceClick(Sender: TObject);

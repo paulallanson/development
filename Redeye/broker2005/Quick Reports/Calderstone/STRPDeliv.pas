@@ -284,7 +284,7 @@ begin
 *)
 
   {set the printer to what the user selected}
-  PickSOListQuickReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  PickSOListQuickReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   PickSOListQuickReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }

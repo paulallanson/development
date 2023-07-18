@@ -168,8 +168,8 @@ begin
   rGroupUsage := rGroupUsage + qryReport.fieldbyname('Despatches').asfloat;
   rGroupWastage := rGroupWastage + qryReport.fieldbyname('Wastage').asfloat;
 
-  qrlblOpeningValue.caption := formatfloat('£0.00',rValue);
-//  qrlblOpeningStock.caption := formatfloat('£0.00',rValue);
+  qrlblOpeningValue.caption := formatfloat('?0.00',rValue);
+//  qrlblOpeningStock.caption := formatfloat('?0.00',rValue);
 
   if exporting then
   begin
@@ -221,7 +221,7 @@ var
    Duplex: Boolean;
 begin
   {set the printer to what the user selected}
-  qrpDetails.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  qrpDetails.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   qrpDetails.PrinterSettings.OutputBin := Bin;   {set the output bin the }
@@ -324,11 +324,11 @@ begin
   rTotalUsage := rTotalUsage + rGroupUsage;
   rTotalWastage := rTotalWastage + rGroupWastage;
 
-  qrlblGroupClosing.caption := formatfloat('£0.00',rGroupClosing);
-  qrlblGroupReceipts.caption := formatfloat('£0.00',rGroupReceipts);
-  qrlblGroupUsage.caption := formatfloat('£0.00',rGroupUsage);
-  qrlblGroupWastage.caption := formatfloat('£0.00',rGroupWastage);
-  qrlblGroupOpening.caption := formatfloat('£0.00',(rGroupClosing-rGroupReceipts+rGroupUsage+rGroupWastage));
+  qrlblGroupClosing.caption := formatfloat('?0.00',rGroupClosing);
+  qrlblGroupReceipts.caption := formatfloat('?0.00',rGroupReceipts);
+  qrlblGroupUsage.caption := formatfloat('?0.00',rGroupUsage);
+  qrlblGroupWastage.caption := formatfloat('?0.00',rGroupWastage);
+  qrlblGroupOpening.caption := formatfloat('?0.00',(rGroupClosing-rGroupReceipts+rGroupUsage+rGroupWastage));
 end;
 
 procedure TSTRPStockValfrm.qrpGroupFooterAfterPrint(Sender: TQRCustomBand;
@@ -343,11 +343,11 @@ end;
 procedure TSTRPStockValfrm.QRBand2Beforeprint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  qrlblTotalClosing.caption := formatfloat('£0.00',rTotalClosing);
-  qrlblTotalReceipts.caption := formatfloat('£0.00',rTotalReceipts);
-  qrlblTotalUsage.caption := formatfloat('£0.00',rTotalUsage);
-  qrlblTotalWastage.caption := formatfloat('£0.00',rTotalWastage);
-  qrlblTotalOpening.caption := formatfloat('£0.00',(rTotalClosing-rTotalReceipts+rTotalUsage+rTotalWastage));
+  qrlblTotalClosing.caption := formatfloat('?0.00',rTotalClosing);
+  qrlblTotalReceipts.caption := formatfloat('?0.00',rTotalReceipts);
+  qrlblTotalUsage.caption := formatfloat('?0.00',rTotalUsage);
+  qrlblTotalWastage.caption := formatfloat('?0.00',rTotalWastage);
+  qrlblTotalOpening.caption := formatfloat('?0.00',(rTotalClosing-rTotalReceipts+rTotalUsage+rTotalWastage));
 end;
 
 end.

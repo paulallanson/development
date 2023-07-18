@@ -218,7 +218,7 @@ begin
 *)
 
   {set the printer to what the user selected}
-  InvoiceReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  InvoiceReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   InvoiceReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }

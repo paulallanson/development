@@ -254,11 +254,11 @@ begin
     if not FPrinted and not Preview then
       begin
       {Find the default printer in the list of printers }
-      Printer.PrinterIndex := -1;
+      Printers.Printer.PrinterIndex := -1;
       for icount := 0 to pred(Printer.Printers.count) do
         begin
           if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-            Printer.PrinterIndex := icount;
+            Printers.Printer.PrinterIndex := icount;
         end;
       if DefaultPrinter <> '' then
         begin
@@ -315,7 +315,7 @@ begin
       else
         PBRPJobBagLabelsFrm.PBLabelsQuickReport.Print;
     finally
-      printer.printerindex := -1;
+      Printers.Printer.PrinterIndex := -1;
       FPrinted := false;
       PrinterSettings.Free;
     end;
@@ -338,11 +338,11 @@ begin
     if not FPrinted and not Preview then
       begin
       {Find the default printer in the list of printers }
-      Printer.PrinterIndex := -1;
+      Printers.Printer.PrinterIndex := -1;
       for icount := 0 to pred(Printer.Printers.count) do
         begin
           if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-            Printer.PrinterIndex := icount;
+            Printers.Printer.PrinterIndex := icount;
         end;
       if DefaultPrinter <> '' then
         begin
@@ -399,7 +399,7 @@ begin
       else
         PBRPJobBagLabelsReelsFrm.PBLabelsQuickReport.Print;
     finally
-      printer.printerindex := -1;
+      Printers.Printer.PrinterIndex := -1;
       FPrinted := false;
       PrinterSettings.Free;
     end;
@@ -459,11 +459,11 @@ begin
   sFormat := TempArray;
 
 (*  {Find the default printer in the list of printers }
-  Printer.PrinterIndex := -1;
+  Printers.Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
       if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-        Printer.PrinterIndex := icount;
+        Printers.Printer.PrinterIndex := icount;
     end;
   if DefaultPrinter <> '' then
     begin
@@ -564,7 +564,7 @@ begin
       Free;
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TPBRSJobBagBoxLabelsfrm.SetDefaultPrinter(const Value: string);

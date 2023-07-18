@@ -175,7 +175,7 @@ $History: PBRSPOrd.pas $
  * *****************  Version 5  *****************
  * User: Roddym       Date: 16/12/99   Time: 16:17
  * Updated in $/PBL D5
- * Use Printer.PrinterIndex in new PrinterSettings object rather than hold
+ * Use Printers.Printer.PrinterIndex in new PrinterSettings object rather than hold
  * internal local value which gets out of sync.
  *
  * *****************  Version 4  *****************
@@ -412,7 +412,7 @@ begin
     FaxReport(Self);
   finally
     FFaxing := False;
-    Printer.PrinterIndex := -1;  { Set printer back to default }
+    Printers.Printer.PrinterIndex := -1;  { Set printer back to default }
   end;
 end;
 
@@ -1100,11 +1100,11 @@ begin
         begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
-        Printer.PrinterIndex := -1;
+        Printers.Printer.PrinterIndex := -1;
         for icount := 0 to pred(Printer.Printers.count) do
           begin
             if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-              Printer.PrinterIndex := icount;
+              Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
           begin
@@ -1134,7 +1134,7 @@ begin
     end;
   finally
     Application.ProcessMessages;
-    printer.printerindex := -1;
+    Printers.Printer.PrinterIndex := -1;
     FPrinted := false;
     PrintingPress.Free;
   end;
@@ -1629,7 +1629,7 @@ begin
         end
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TPBRSPOrdFrm.SetPrinterBin(BinCode : integer );

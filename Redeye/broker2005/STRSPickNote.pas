@@ -90,11 +90,11 @@ begin
     if not FPrinted and not Preview then
       begin
       {Find the default printer in the list of printers }
-      Printer.PrinterIndex := -1;
+      Printers.Printer.PrinterIndex := -1;
       for icount := 0 to pred(Printer.Printers.count) do
         begin
           if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-            Printer.PrinterIndex := icount;
+            Printers.Printer.PrinterIndex := icount;
         end;
       if DefaultPrinter <> '' then
         begin
@@ -132,7 +132,7 @@ begin
         STRPPickFrm.PickSoListQuickReport.Print;
       end;
     finally
-      printer.printerindex := -1;
+      Printers.Printer.PrinterIndex := -1;
       FPrinted := false;
       PrinterSettings.Free;
     end;
@@ -290,11 +290,11 @@ begin
   DefaultPrinter := TempArray;
 
 (*  {Find the default printer in the list of printers }
-  Printer.PrinterIndex := -1;
+  Printers.Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
       if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-        Printer.PrinterIndex := icount;
+        Printers.Printer.PrinterIndex := icount;
     end;
 *)
   GetPrivateProfileString('Centrereed Broker', 'Picking Note Bin', '', TempArray,
@@ -322,7 +322,7 @@ begin
       Free;
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TSTRSPickNotefrm.SetDefaultPrinter(const Value: string);

@@ -95,7 +95,7 @@ begin
   begin
     if Pos('PRINTFAX', Printer.Printers[TempLoop]) > 0 then
     begin
-      Printer.PrinterIndex := TempLoop;
+      Printers.Printer.PrinterIndex := TempLoop;
       FaxFound := True;
       Break;
     end;

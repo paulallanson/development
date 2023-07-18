@@ -65,7 +65,7 @@ $History: CCSPress.pas $
  * *****************  Version 6  *****************
  * User: Roddym       Date: 16/12/99   Time: 16:16
  * Updated in $/CCSCommon
- * Use Printer.PrinterIndex in new PrinterSettings object rather than hold
+ * Use Printers.Printer.PrinterIndex in new PrinterSettings object rather than hold
  * internal local value which gets out of sync.
  *
  * *****************  Version 5  *****************
@@ -85,7 +85,7 @@ $History: CCSPress.pas $
  * User: Roddym       Date: 13/12/99   Time: 13:07
  * Updated in $/CCSCommon
  * Set QuickReport's PrintSettings.PrinterIndex to the global
- * Printer.PrinterIndex (used to happen automatically in QR 1).
+ * Printers.Printer.PrinterIndex (used to happen automatically in QR 1).
  *
  * *****************  Version 2  *****************
  * User: Roddym       Date: 8/12/99    Time: 16:16
@@ -455,7 +455,7 @@ var
 begin
 (*
   {set the printer to what the user selected}
-  QuickR.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  QuickR.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   QuickR.PrinterSettings.OutputBin := Bin;   {set the output bin the }

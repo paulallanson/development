@@ -227,7 +227,7 @@ begin
 *)
 
   {set the printer to what the user selected}
-  InvoiceReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  InvoiceReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   InvoiceReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }
@@ -318,11 +318,11 @@ begin
 (*  sGoods := formatfloat('0.00', iGoods);
   sVat := formatfloat('0.00', iVat);
 
-  GoodsValueLbl.Caption := formatfloat('£0.00', iGoods);
-  VatValueLbl.Caption := formatfloat('£0.00', ivat);
+  GoodsValueLbl.Caption := formatfloat('?0.00', iGoods);
+  VatValueLbl.Caption := formatfloat('?0.00', ivat);
 
   itotal := strtofloat(sGoods) + strtofloat(sVat);
-  TotalValueLbl.Caption := formatfloat('£0.00', iTotal);
+  TotalValueLbl.Caption := formatfloat('?0.00', iTotal);
 *)
   if bInvoice then
   begin

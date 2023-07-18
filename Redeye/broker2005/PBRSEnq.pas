@@ -686,7 +686,7 @@ begin
     FaxReport(Self);
   finally
     FFaxing := False;
-    Printer.PrinterIndex := -1;  { Set printer back to default }
+    Printers.Printer.PrinterIndex := -1;  { Set printer back to default }
   end;
 end;
 
@@ -872,11 +872,11 @@ begin
         begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
-        Printer.PrinterIndex := -1;
+        Printers.Printer.PrinterIndex := -1;
         for icount := 0 to pred(Printer.Printers.count) do
           begin
             if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-              Printer.PrinterIndex := icount;
+              Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
           begin
@@ -906,7 +906,7 @@ begin
       end;
   finally
     Application.ProcessMessages;
-    printer.printerindex := -1;
+    Printers.Printer.PrinterIndex := -1;
     FPrinted := false;
     PrintingPress.Free;
   end;
@@ -1102,7 +1102,7 @@ begin
     EmailReport(Self);
   finally
     FFaxing := False;
-    Printer.PrinterIndex := -1;  { Set printer back to default }
+    Printers.Printer.PrinterIndex := -1;  { Set printer back to default }
   end;
 end;
 
@@ -1345,7 +1345,7 @@ begin
       Free;
     end;
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TPBRSEnqFrm.SetPrinterBin(BinCode : integer );

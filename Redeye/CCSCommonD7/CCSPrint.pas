@@ -369,7 +369,7 @@ begin
     Result := PSDialog.Execute;
     if Result then
     begin
-      PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+      PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
       PrinterSettings.Copies := PSDialog.Copies;
 
       if PSDialog.PrintRange = prPageNums then
@@ -1070,7 +1070,7 @@ end;
 
 function TPrinterSettings.GetPrinterIndex: integer;
 begin
-  Result := Printer.PrinterIndex;
+  Result := Printers.Printer.PrinterIndex;
 end;
 
 procedure TPrinterSettings.SetCopies(const Value: integer);

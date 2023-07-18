@@ -232,7 +232,7 @@ begin
   rJobBagCostTotal := 0.00;
 
   {set the printer to what the user selected}
-  QuickReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;
+  QuickReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);
   QuickReport.PrinterSettings.OutputBin := Bin;   {set the output bin the }

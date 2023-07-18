@@ -542,7 +542,7 @@ begin
         StrPCopy(sFilename, FEmailAttachment.strings[i]);
         deletefile(sFilename);
       end;
-    Printer.PrinterIndex := -1;  { Set printer back to default }
+    Printers.Printer.PrinterIndex := -1;  { Set printer back to default }
     if (frmPBMainMenu.EmailApplication = 'GENERIC') and dmBroker.bEmailSent then
       begin
         messagedlg('Emails have been added to your Email Server and will be sent shortly.', mtInformation, [mbOk], 0);

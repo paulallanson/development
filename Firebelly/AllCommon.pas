@@ -2167,7 +2167,7 @@ end;
 
 function TPrinterSettings.GetPrinterIndex: integer;
 begin
-  Result := Printer.PrinterIndex;
+  Result := Printers.Printer.PrinterIndex;
 end;
 
 procedure TPrinterSettings.SetCopies(const Value: integer);

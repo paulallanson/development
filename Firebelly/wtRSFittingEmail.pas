@@ -199,7 +199,7 @@ begin
       else
         PrintDocuments;
     end;
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmWTRSTemplateSheet.btnPreviewClick(Sender: TObject);
@@ -225,11 +225,11 @@ begin
           try
 //            Changed 16 July 2014 to test why documents not printing!!!!!!
 
-            Printer.PrinterIndex := -1;
+            Printers.Printer.PrinterIndex := -1;
             for icount := 0 to pred(Printer.Printers.count) do
               begin
                 if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-                  Printer.PrinterIndex := icount;
+                  Printers.Printer.PrinterIndex := icount;
               end;
 
             if DefaultPrinter <> '' then
@@ -395,7 +395,7 @@ var
   hDeviceMode: THandle;
 begin
 
-(*  if Printer.PrinterIndex = cboPrinter.ItemIndex then
+(*  if Printers.Printer.PrinterIndex = cboPrinter.ItemIndex then
     begin
       printCommand := 'print';
       printerInfo := '';
@@ -403,7 +403,7 @@ begin
   else
     begin
       printCommand := 'printto';
-      Printer.PrinterIndex := cboPrinter.ItemIndex;
+      Printers.Printer.PrinterIndex := cboPrinter.ItemIndex;
       Printer.GetPrinter(Device, Driver, Port, hDeviceMode) ;
       printerInfo := Format('"%s" "%s" "%s"', [Device, Driver, Port]) ;
     end;
@@ -622,7 +622,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;
@@ -844,7 +844,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;
@@ -986,7 +986,7 @@ begin
                     begin
                       frmwtRPQuote := TfrmwtRPQuote.create(self);
                       try
-                        Printer.PrinterIndex := -1;
+                        Printers.Printer.PrinterIndex := -1;
 
                         frmwtRPQuote.Quote := qryGetSOQuotesEmails.fieldbyname('Quote').asinteger;
                         frmwtRPQuote.bPrintLogo := false;

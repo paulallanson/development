@@ -80,13 +80,12 @@ type
     procedure BuildEmailDetails;
     // ToDo GDK: remove after testing
     // procedure PrintToAttachment(frmWTRRJobFitting: TfrmwtRPJobFitting; tempCode: string);
+    // procedure PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure GetSiteDocuments(tempOrder: integer);
     function GetKitchenPlan(tmpOrder: integer): string;
     procedure SetDefaultDocumentFolder(const Value: string);
     procedure RunRemedialReport(const bPreview: boolean);
-    procedure PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode,
-      tmpOrder: string);
     procedure GetCustomerDetails(iOrder: integer);
   private
     CustomerName: string;
@@ -334,7 +333,7 @@ var
   hDeviceMode: THandle;
 begin
 
-(*  if Printer.PrinterIndex = cboPrinter.ItemIndex then
+(*  if Printers.Printer.PrinterIndex = cboPrinter.ItemIndex then
     begin
       printCommand := 'print';
       printerInfo := '';
@@ -342,7 +341,7 @@ begin
   else
     begin
       printCommand := 'printto';
-      Printer.PrinterIndex := cboPrinter.ItemIndex;
+      Printers.Printer.PrinterIndex := cboPrinter.ItemIndex;
       Printer.GetPrinter(Device, Driver, Port, hDeviceMode) ;
       printerInfo := Format('"%s" "%s" "%s"', [Device, Driver, Port]) ;
     end;
@@ -580,7 +579,7 @@ begin
                         else
                           begin
                             frmWTRPJobRemedialSheet.bPreview := false;
-                            PrintRemedialtoAttachment(frmWTRPJobRemedialSheet, inttostr(qryGetSORemedialsEmails.fieldbyname('Job').asinteger)+ 'L' + inttostr(iRow), EmailArray[irow,1]);
+                            PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, sFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                           end;
                       finally
                         frmWTRPJobRemedialSheet.Free;
@@ -792,7 +791,7 @@ begin
                       begin
                         frmWTRPJobRemedialSheet := TfrmWTRPJobRemedialSheet.create(self);
                         try
-                          Printer.PrinterIndex := -1;
+                          Printers.Printer.PrinterIndex := -1;
 
                           frmWTRPJobRemedialSheet.Job := qryGetSORemedialsEmails.fieldbyname('Job').asinteger;
                           frmWTRPJobRemedialSheet.RemedialNo := 0;
@@ -805,7 +804,7 @@ begin
                           else
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
-                              PrintRemedialtoAttachment(frmWTRPJobRemedialSheet, inttostr(qryGetSORemedialsEmails.fieldbyname('Job').asinteger)+ 'L' + inttostr(iRow), EmailArray[irow,1]);
+                              PrinterTools.New.PrinttoAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, sFileName + qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                             end;
                         finally
                           frmWTRPJobRemedialSheet.Free;
@@ -908,7 +907,7 @@ begin
                           else
                             begin
                               frmWTRPJobRemedialSheet.bPreview := false;
-                              PrintRemedialtoAttachment(frmWTRPJobRemedialSheet, inttostr(qryGetSORemedialsEmails.fieldbyname('Job').asinteger)+ 'L' + inttostr(iRow), EmailArray[irow,1]);
+                              PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, FEmailAttachment, qryGetSORemedialsEmails.fieldbyname('Job').AsString + 'L' + iRow.ToString, EmailArray[irow,1]);
                             end;
                         finally
                           frmWTRPJobRemedialSheet.Free;
@@ -1384,12 +1383,12 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSFittingSheet.memSelectionChange(Sender: TObject);
 begin
   enableRun(self);
 end;
-*)
 
 procedure TfrmWTRSFittingSheet.chkbxAllDocumentsClick(Sender: TObject);
 var
@@ -1519,11 +1518,11 @@ begin
           try
 //            Changed 16 July 2014 to test why documents not printing!!!!!!
 
-            Printer.PrinterIndex := -1;
-            for icount := 0 to pred(Printer.Printers.count) do
+            Printers.Printer.PrinterIndex := -1;
+            for icount := 0 to pred(Printers.Printer.Printers.count) do
               begin
-                if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-                  Printer.PrinterIndex := icount;
+                if pos(DefaultPrinter,Printers.Printer.printers[icount]) > 0 then
+                  Printers.Printer.PrinterIndex := icount;
               end;
 
             if DefaultPrinter <> '' then
@@ -1553,6 +1552,7 @@ begin
     end;
 end;
 
+(*
 procedure TfrmWTRSFittingSheet.PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
 var
   i: integer;
@@ -1681,6 +1681,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmWTRSFittingSheet.chkbxAllSiteDocumentsClick(Sender: TObject);
 var

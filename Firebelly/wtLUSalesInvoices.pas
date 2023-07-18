@@ -652,7 +652,7 @@ begin
     end;
 
 
-  printer.printerindex := -1;
+  Printers.Printer.PrinterIndex := -1;
 end;
 
 procedure TfrmWTLUSalesInvoices.BitBtn1Click(Sender: TObject);
@@ -824,11 +824,11 @@ var
   TempArray: array[0..255] of Char;
 begin
   {Find the default printer in the list of printers }
-  Printer.PrinterIndex := -1;
+  Printers.Printer.PrinterIndex := -1;
   for icount := 0 to pred(Printer.Printers.count) do
     begin
       if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
-        Printer.PrinterIndex := icount;
+        Printers.Printer.PrinterIndex := icount;
     end;
 end;
 

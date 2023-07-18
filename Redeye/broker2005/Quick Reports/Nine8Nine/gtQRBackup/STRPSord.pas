@@ -455,7 +455,7 @@ var
    irow: integer;
    sAddress: string;
 begin
-  SalesOrdQuickReport.PrinterSettings.PrinterIndex := Printer.PrinterIndex;   {set
+  SalesOrdQuickReport.PrinterSettings.PrinterIndex := Printers.Printer.PrinterIndex;   {set
 the printer to what the user selected}
   GetPrinterMargins(TopMar, BottomMar, LeftMar, RightMar);
   GetPrinterValues(Copies, Bin, Size, Duplex);

@@ -11,12 +11,10 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
     247
     268)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 8
@@ -65,8 +63,6 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
       Top = 22
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -81,6 +77,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnDatefromClick
     end
   end
   object btnOK: TBitBtn
@@ -93,9 +91,9 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 128
@@ -106,8 +104,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object prgbrRecords: TProgressBar
     Left = 8
