@@ -1,7 +1,4 @@
-﻿object dtmdlNotes: TdtmdlNotes
-  OldCreateOrder = True
-  Left = 200
-  Top = 106
+object dtmdlNotes: TdtmdlNotes
   Height = 413
   Width = 409
   object qryReserveslot: TFDQuery
@@ -15,9 +12,7 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetReservedSlot: TFDQuery
@@ -35,9 +30,7 @@
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -53,9 +46,7 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdateLine1: TFDQuery
@@ -70,19 +61,13 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes_Line_Updated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes_code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddLine: TFDQuery
@@ -96,24 +81,16 @@
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes_Line_Updated'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextSlot: TFDQuery
@@ -136,8 +113,8 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -150,9 +127,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
 end

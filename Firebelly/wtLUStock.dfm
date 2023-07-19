@@ -2,8 +2,8 @@ object frmWTLUStock: TfrmWTLUStock
   Left = 147
   Top = 140
   Caption = 'Products'
-  ClientHeight = 415
-  ClientWidth = 730
+  ClientHeight = 414
+  ClientWidth = 726
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -21,15 +21,16 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 730
+    Width = 726
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 724
+        Width = 728
       end>
+    ExplicitWidth = 730
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -90,15 +91,16 @@ object frmWTLUStock: TfrmWTLUStock
   object CoolBar2: TCoolBar
     Left = 0
     Top = 45
-    Width = 730
+    Width = 726
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 724
+        Width = 728
       end>
+    ExplicitWidth = 730
     object Panel3: TPanel
       Left = 11
       Top = 0
@@ -127,8 +129,8 @@ object frmWTLUStock: TfrmWTLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 730
-    Height = 278
+    Width = 726
+    Height = 277
     Align = alClient
     DataSource = dtmdlStock.dtsAllStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -164,14 +166,16 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 355
-    Width = 730
+    Top = 354
+    Width = 726
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 355
+    ExplicitWidth = 730
     DesignSize = (
-      730
+      726
       41)
     object Label1: TLabel
       Left = 56
@@ -181,7 +185,7 @@ object frmWTLUStock: TfrmWTLUStock
       Caption = 'Product'
     end
     object Button1: TButton
-      Left = 655
+      Left = 647
       Top = 8
       Width = 75
       Height = 25
@@ -189,6 +193,7 @@ object frmWTLUStock: TfrmWTLUStock
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
+      ExplicitLeft = 655
     end
     object edtSearch: TEdit
       Left = 104
@@ -201,8 +206,8 @@ object frmWTLUStock: TfrmWTLUStock
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 396
-    Width = 730
+    Top = 395
+    Width = 726
     Height = 19
     Panels = <
       item
@@ -214,6 +219,8 @@ object frmWTLUStock: TfrmWTLUStock
       item
         Width = 50
       end>
+    ExplicitTop = 396
+    ExplicitWidth = 730
   end
   object imgLstHot: TImageList
     Left = 176

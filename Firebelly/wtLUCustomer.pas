@@ -10,10 +10,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, System.ImageList, Vcl.Buttons,
   wtluCustQuotes, wtLuCustJobs, wtluCustInvoices, AllCommon,
-  Buttons, QrCtrls, Inifiles, System.ImageList,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  QrCtrls, Inifiles;
 
 type
   TfrmWTLUCustomer = class(TForm)

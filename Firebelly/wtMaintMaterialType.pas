@@ -9,11 +9,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
   FireDAC.Comp.Client, System.ImageList, Vcl.ImgList, Vcl.Grids,
-  Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin,
-  ImgList, ComCtrls, ToolWin, Grids, DBGrids, DB, System.ImageList,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin;
 
 type
   TfrmWtMaintMaterialType = class(TForm)

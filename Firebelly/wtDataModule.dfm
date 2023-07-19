@@ -1,17 +1,12 @@
 object dtmdlWorktops: TdtmdlWorktops
-  OldCreateOrder = False
-  Left = 134
-  Top = 68
   Height = 589
   Width = 1036
   object dtbsWorktops: TFDConnection
-    ConnectionDefName = 'Worktop'
     ConnectionName = 'WT'
     Params.Strings = (
-      'USER NAME=admin')
-
-    AfterConnect = dtbsWorktopsAfterConnect
+      'DriverID=MSSQL')
     OnLogin = dtbsWorktopsLogin
+    AfterConnect = dtbsWorktopsAfterConnect
     Left = 24
     Top = 24
   end
@@ -52,44 +47,28 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Basis'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Change'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'by'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPointer: TFDQuery
@@ -102,14 +81,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPrice: TFDQuery
@@ -121,9 +96,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPricePointer: TFDQuery
@@ -135,9 +108,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -169,9 +140,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 305
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWork: TFDQuery
@@ -188,14 +157,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 305
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object qryAddIntSel: TFDQuery
@@ -220,19 +185,15 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 305
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryUpCompany: TFDQuery
@@ -245,9 +206,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Software_CheckSum'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWorkStation: TFDQuery
@@ -265,29 +224,19 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'WorkStation_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Software_Version'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Logged_in'
-        ParamType = ptUnknown
       end>
   end
   object qryGetWorkStation: TFDQuery
@@ -299,9 +248,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteWorkStations: TFDQuery
@@ -315,14 +262,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Descr'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteWorkStation: TFDQuery
@@ -335,9 +278,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end>
   end
   object qryGetAddress: TFDQuery
@@ -350,9 +291,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'address'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckWSLock: TFDQuery
@@ -376,39 +315,27 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Table_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Workstation'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryGetLastWSLock: TFDQuery
@@ -421,9 +348,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWSLock: TFDQuery
@@ -455,49 +380,31 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Lock_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Table_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Title'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteWSLock: TFDQuery
@@ -515,39 +422,25 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Table_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetOperator: TFDQuery
@@ -559,9 +452,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomer: TFDQuery
@@ -610,9 +501,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCurrentPromo: TFDQuery
@@ -632,19 +521,13 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Current_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Current_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Current_Date'
-        ParamType = ptUnknown
       end>
   end
   object qryComp: TFDQuery
@@ -679,44 +562,35 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 305
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftFloat
         Name = 'Sel2'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftFloat
         Name = 'Sel3'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
         Name = 'Sel4'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Sel5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Tag'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryCheckSOLock: TFDQuery
@@ -731,14 +605,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'User'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLastSOLock: TFDQuery
@@ -751,9 +621,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'User'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSOLock: TFDQuery
@@ -773,24 +641,16 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Opened'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteSOLock: TFDQuery
@@ -803,14 +663,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
   object qryGetDocumentNames: TFDQuery
@@ -823,9 +679,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Module_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryGetRevenueCentre: TFDQuery
@@ -838,9 +692,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProduct: TFDQuery
@@ -853,9 +705,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerBranch: TFDQuery
@@ -871,14 +721,10 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetBranches: TFDQuery
@@ -891,9 +737,7 @@ object dtmdlWorktops: TdtmdlWorktops
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -9,13 +9,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait, OoMisc, AdFaxCtl,
   Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Vcl.ExtCtrls,
-  Vcl.StdCtrls,
-  StdCtrls, ExtCtrls, printers, ShellAPI, DB, Inifiles,
-  AdFaxCtl, syncobjs, QrCtrls, OoMisc,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
-  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
-  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  Vcl.StdCtrls, printers, ShellAPI, Inifiles, syncobjs, QrCtrls;
 
 type
   TfrmWTSendFax = class(TForm)

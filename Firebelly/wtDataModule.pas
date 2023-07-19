@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef;
 
 type
   TdtmdlWorktops = class(TDataModule)
@@ -54,8 +55,8 @@ type
     qryGetCustomerBranch: TFDQuery;
     qryGetBranches: TFDQuery;
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
-    procedure dtbsWorktopsLogin(Database: TFDConnection;
-      LoginParams: TStrings);
+    procedure dtbsWorktopsLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
   private
     FIsSQL: Boolean;
     FUserName: string;
@@ -769,26 +770,25 @@ var
   DriverName : string;
 begin
   { Find out what kind of database this is, Access or SQL Server }
-  DriverName := FDManager.GetAliasDriverName(dtbsWorktops.ConnectionDefName);
+  DriverName := FDManager.FindConnection(dtbsWorktops.ConnectionDefName).DriverName;
+
   if DriverName = 'MSSQL' then
     FIsSQL := true;
 end;
 
-procedure TdtmdlWorktops.dtbsWorktopsLogin(Database: TFDConnection;
-  LoginParams: TStrings);
+procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
 begin
 {$IFDEF DEMO}
-  LoginParams.Values['USER NAME'] := 'admin';
-  LoginParams.Values['PASSWORD'] := '';
   UserName := 'admin';
   Password := '';
+  AParams.UserName := Username;
+  AParams.Password := Password;
 {$ELSE}
-  LoginParams.Values['USER NAME'] := frmWTLogin.UserEdit.Text;
-  LoginParams.Values['PASSWORD'] := Trim(frmWTLogin.PasswordEdit.Text);
   UserName := frmWTLogin.UserEdit.Text;
   Password := Trim(frmWTLogin.PasswordEdit.Text);
+  AParams.UserName := Username;
+  AParams.Password := Password;
 {$ENDIF}
-
 end;
 
 function TdtmdlWorktops.UseRemedialsAsOrders: boolean;

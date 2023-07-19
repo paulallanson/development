@@ -9,12 +9,7 @@ uses
   FireDAC.Stan.Async, FireDAC.DApt, System.ImageList, Vcl.ImgList,
   Vcl.ExtDlgs, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ComCtrls,
   Vcl.Grids, Vcl.DBGrids, Vcl.ToolWin, Vcl.StdCtrls, Vcl.Imaging.jpeg,
-  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons,
-  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, jpeg,
-  ExtDlgs, ComCtrls, ImgList, Grids, DBGrids, ToolWin, wtNotesDM, System.ImageList,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons, Mask, QrCtrls, wtNotesDM;
 
 type
   TfrmWtMaintMatType = class(TForm)

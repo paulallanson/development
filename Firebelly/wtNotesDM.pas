@@ -172,13 +172,12 @@ begin
     DbKey := ReserveASlot;
 
 //    DbKey := GetNextSlot;
-    with dtmdlNotes.qryUpdateLine1 do
-    begin
-      ParamByName('Notes_code').AsInteger := DbKey;
-      ParamByName('Notes_Text').AsString := Copy(Data, 1, Data_Lump_Length);
-      ParamByname('Notes_Line_Updated').AsString := upChar;
-      ExecSQL;
-    end;
+
+    dtmdlNotes.qryUpdateLine1.ParamByName('Notes_code').AsInteger := DbKey;
+    dtmdlNotes.qryUpdateLine1.ParamByName('Notes_Text').AsString := Copy(Data, 1, Data_Lump_Length);
+    dtmdlNotes.qryUpdateLine1.ParamByname('Notes_Line_Updated').AsString := upChar;
+    dtmdlNotes.qryUpdateLine1.ExecSQL;
+
     if Length(Data) > Data_Lump_Length then
     begin
       i := 2;
