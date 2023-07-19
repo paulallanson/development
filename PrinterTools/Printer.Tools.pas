@@ -25,6 +25,7 @@ type
     constructor Create;
     class function New: IPrinterToAttachment;
     procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
+    procedure QuotePrintToFile(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
   end;
 
@@ -85,6 +86,38 @@ begin
   FEmailAttachment.Clear;
   FEmailAttachment.Add(targetFileName);
 end;
+
+procedure TPrinterTools.QuotePrintToFile(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
+var
+  fileType: TPrinterFileType;
+  Location,
+  targetFileName: string;
+begin
+  SetFileType(attachmentType.ToUpper, fileType);
+
+  case fileType of
+    pftHTML : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftPDF : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftBMP : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftRTF : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftGIF : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftJPEG : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    else raise Exception.Create('Invalid file type.');
+  end;
+
+  Location := AllCommon.GetWinTempDir;
+  targetFileName := Location + 'Q' + ReferenceNo.ToString + '.' + attachmentType;
+
+  IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := targetFileName;
+  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.UseImagesAsResources := True;
+  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ProcessAfterEachPage := True;
+  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.OpenAfterCreate := False;
+  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ShowSetupDialog := False;
+  gtQRExportInterface1.RenderDocument(Report, True);
+
+  ListFiles.Add(targetFileName);
+end;
+
 
 procedure TPrinterTools.SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
 begin
