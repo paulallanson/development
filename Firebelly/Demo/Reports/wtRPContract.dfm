@@ -89,7 +89,7 @@ object frmWTRPContract: TfrmWTRPContract
         1108.604166666667000000
         1942.041666666667000000)
       BandType = rbPageHeader
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 8
         Top = 320
         Width = 701
@@ -107,7 +107,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblQuoteCaption: TgtQRLabel
+      object qrlblQuoteCaption: TQRLabel
         Left = 544
         Top = 8
         Width = 161
@@ -138,7 +138,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 28
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 100
         Top = 328
         Width = 57
@@ -170,7 +170,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 13
         Top = 328
         Width = 57
@@ -201,7 +201,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 100
         Top = 387
         Width = 600
@@ -233,7 +233,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 13
         Top = 387
         Width = 64
@@ -264,7 +264,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 8
         Top = 346
         Width = 701
@@ -282,7 +282,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 496
         Top = 71
         Width = 217
@@ -300,7 +300,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 503
         Top = 108
         Width = 30
@@ -331,7 +331,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 627
         Top = 108
         Width = 80
@@ -363,7 +363,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 620
         Top = 77
         Width = 87
@@ -395,7 +395,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 567
         Top = 139
         Width = 140
@@ -427,7 +427,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 574
         Top = 168
         Width = 133
@@ -459,7 +459,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 503
         Top = 168
         Width = 40
@@ -490,7 +490,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 503
         Top = 139
         Width = 46
@@ -521,7 +521,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 503
         Top = 77
         Width = 69
@@ -552,7 +552,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 83
         Top = 320
         Width = 9
@@ -570,7 +570,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 496
         Top = 128
         Width = 217
@@ -588,7 +588,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape9: TgtQRShape
+      object gtQRShape9: TQRShape
         Left = 496
         Top = 101
         Width = 217
@@ -606,7 +606,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 8
         Top = 373
         Width = 701
@@ -624,7 +624,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 13
         Top = 356
         Width = 48
@@ -655,7 +655,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 100
         Top = 356
         Width = 76
@@ -687,7 +687,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 12
         Top = 6
         Width = 300
@@ -704,7 +704,7 @@ object frmWTRPContract: TfrmWTRPContract
           793.750000000000000000)
         Stretch = True
       end
-      object memAddress: TgtQRMemo
+      object memAddress: TQRMemo
         Left = 315
         Top = 6
         Width = 166
@@ -734,7 +734,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 6
       end
-      object gtQRShape12: TgtQRShape
+      object gtQRShape12: TQRShape
         Left = 496
         Top = 159
         Width = 217
@@ -752,7 +752,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape13: TgtQRShape
+      object gtQRShape13: TQRShape
         Left = 575
         Top = 71
         Width = 9
@@ -770,7 +770,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 8
         Top = 166
         Width = 353
@@ -788,7 +788,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrmAddress: TgtQRMemo
+      object qrmAddress: TQRMemo
         Left = 40
         Top = 180
         Width = 225
@@ -866,7 +866,7 @@ object frmWTRPContract: TfrmWTRPContract
       HeaderBand = qrbContractLineHeader
       PrintBefore = False
       PrintIfEmpty = True
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 2
         Top = 0
         Width = 150
@@ -884,7 +884,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblDrawingNumber: TgtQRLabel
+      object qrlblDrawingNumber: TQRLabel
         Left = 6
         Top = 6
         Width = 116
@@ -915,7 +915,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShapeOption5: TgtQRShape
+      object gtQRShapeOption5: TQRShape
         Left = 727
         Top = 0
         Width = 145
@@ -933,7 +933,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeOption1: TgtQRShape
+      object gtQRShapeOption1: TQRShape
         Left = 151
         Top = 0
         Width = 145
@@ -951,7 +951,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeOption2: TgtQRShape
+      object gtQRShapeOption2: TQRShape
         Left = 295
         Top = 0
         Width = 145
@@ -969,7 +969,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeOption3: TgtQRShape
+      object gtQRShapeOption3: TQRShape
         Left = 439
         Top = 0
         Width = 145
@@ -987,7 +987,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeOption4: TgtQRShape
+      object gtQRShapeOption4: TQRShape
         Left = 583
         Top = 0
         Width = 145
@@ -1005,7 +1005,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblOption1: TgtQRLabel
+      object qrlblOption1: TQRLabel
         Left = 226
         Top = 6
         Width = 32
@@ -1036,7 +1036,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOption2: TgtQRLabel
+      object qrlblOption2: TQRLabel
         Left = 370
         Top = 6
         Width = 32
@@ -1067,7 +1067,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOption3: TgtQRLabel
+      object qrlblOption3: TQRLabel
         Left = 511
         Top = 6
         Width = 32
@@ -1098,7 +1098,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOption4: TgtQRLabel
+      object qrlblOption4: TQRLabel
         Left = 650
         Top = 6
         Width = 32
@@ -1129,7 +1129,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShapeOption6: TgtQRShape
+      object gtQRShapeOption6: TQRShape
         Left = 871
         Top = 0
         Width = 145
@@ -1147,7 +1147,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblOption5: TgtQRLabel
+      object qrlblOption5: TQRLabel
         Left = 794
         Top = 6
         Width = 32
@@ -1178,7 +1178,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOption6: TgtQRLabel
+      object qrlblOption6: TQRLabel
         Left = 936
         Top = 6
         Width = 32
@@ -1230,7 +1230,7 @@ object frmWTRPContract: TfrmWTRPContract
         63.500000000000000000
         1942.041666666667000000)
       BandType = rbGroupHeader
-      object gtQRShape15: TgtQRShape
+      object gtQRShape15: TQRShape
         Left = 2
         Top = 0
         Width = 150
@@ -1248,7 +1248,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeHead1: TgtQRShape
+      object gtQRShapeHead1: TQRShape
         Left = 151
         Top = 0
         Width = 145
@@ -1266,7 +1266,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeHead2: TgtQRShape
+      object gtQRShapeHead2: TQRShape
         Left = 295
         Top = 0
         Width = 145
@@ -1284,7 +1284,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeHead3: TgtQRShape
+      object gtQRShapeHead3: TQRShape
         Left = 439
         Top = 0
         Width = 145
@@ -1302,7 +1302,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeHead4: TgtQRShape
+      object gtQRShapeHead4: TQRShape
         Left = 583
         Top = 0
         Width = 145
@@ -1320,7 +1320,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblDrawing: TgtQRLabel
+      object qrlblDrawing: TQRLabel
         Left = 6
         Top = 6
         Width = 70
@@ -1351,7 +1351,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOptionHead1: TgtQRLabel
+      object qrlblOptionHead1: TQRLabel
         Left = 198
         Top = 6
         Width = 48
@@ -1382,7 +1382,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOptionHead2: TgtQRLabel
+      object qrlblOptionHead2: TQRLabel
         Left = 341
         Top = 6
         Width = 48
@@ -1413,7 +1413,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOptionHead3: TgtQRLabel
+      object qrlblOptionHead3: TQRLabel
         Left = 484
         Top = 6
         Width = 48
@@ -1444,7 +1444,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOptionHead4: TgtQRLabel
+      object qrlblOptionHead4: TQRLabel
         Left = 628
         Top = 6
         Width = 48
@@ -1475,7 +1475,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShapeHead5: TgtQRShape
+      object gtQRShapeHead5: TQRShape
         Left = 727
         Top = 0
         Width = 145
@@ -1493,7 +1493,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShapeHead6: TgtQRShape
+      object gtQRShapeHead6: TQRShape
         Left = 871
         Top = 0
         Width = 145
@@ -1511,7 +1511,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblOptionHead5: TgtQRLabel
+      object qrlblOptionHead5: TQRLabel
         Left = 773
         Top = 6
         Width = 48
@@ -1542,7 +1542,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblOptionHead6: TgtQRLabel
+      object qrlblOptionHead6: TQRLabel
         Left = 917
         Top = 6
         Width = 48
@@ -1593,7 +1593,7 @@ object frmWTRPContract: TfrmWTRPContract
         132.291666666666700000
         1942.041666666667000000)
       ParentBand = qrgQuote
-      object qrlNotes: TgtQRLabel
+      object qrlNotes: TQRLabel
         Left = 12
         Top = 8
         Width = 45
@@ -1624,7 +1624,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextNotes: TgtQRRichText
+      object qrrchTextNotes: TQRRichText
         Left = 12
         Top = 26
         Width = 701
@@ -1669,7 +1669,7 @@ object frmWTRPContract: TfrmWTRPContract
         89.958333333333330000
         1942.041666666667000000)
       BandType = rbGroupFooter
-      object gtQRShape10: TgtQRShape
+      object gtQRShape10: TQRShape
         Left = 2
         Top = -1
         Width = 150
@@ -1687,7 +1687,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape11: TgtQRShape
+      object gtQRShape11: TQRShape
         Left = 151
         Top = -1
         Width = 145
@@ -1705,7 +1705,7 @@ object frmWTRPContract: TfrmWTRPContract
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 7
         Top = 5
         Width = 141
@@ -1736,7 +1736,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 9
       end
-      object qrlblTemplatePrice: TgtQRLabel
+      object qrlblTemplatePrice: TQRLabel
         Left = 226
         Top = 5
         Width = 32
@@ -1786,7 +1786,7 @@ object frmWTRPContract: TfrmWTRPContract
         153.458333333333300000
         1942.041666666667000000)
       ParentBand = qrbTemplateFitting
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 9
         Top = 24
         Width = 160
@@ -1837,7 +1837,7 @@ object frmWTRPContract: TfrmWTRPContract
         137.583333333333300000
         1942.041666666667000000)
       ParentBand = qrbContractLineFooter
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 12
         Top = 7
         Width = 83
@@ -1868,7 +1868,7 @@ object frmWTRPContract: TfrmWTRPContract
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextAvailability: TgtQRRichText
+      object qrrchTextAvailability: TQRRichText
         Left = 12
         Top = 26
         Width = 689

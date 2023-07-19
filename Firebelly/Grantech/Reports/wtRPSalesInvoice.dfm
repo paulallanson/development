@@ -97,7 +97,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         58.208333333333330000
         2000.250000000000000000)
       BandType = rbGroupFooter
-      object qrlblReverseCharge: TgtQRLabel
+      object qrlblReverseCharge: TQRLabel
         Left = 14
         Top = 1
         Width = 125
@@ -171,7 +171,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         76.729166666666670000
         2000.250000000000000000)
       BandType = rbGroupFooter
-      object memoNotes: TgtQRMemo
+      object memoNotes: TQRMemo
         Left = 18
         Top = 3
         Width = 471
@@ -226,7 +226,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       FooterBand = AddChargesFooter
       PrintBefore = False
       PrintIfEmpty = True
-      object Dummy06: TgtQRLabel
+      object Dummy06: TQRLabel
         Left = 565
         Top = 2
         Width = 59
@@ -257,7 +257,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object VatTotalLbl: TgtQRLabel
+      object VatTotalLbl: TQRLabel
         Left = 624
         Top = 2
         Width = 88
@@ -289,7 +289,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QtyInvoicedLbl: TgtQRLabel
+      object QtyInvoicedLbl: TQRLabel
         Left = 396
         Top = 3
         Width = 83
@@ -321,7 +321,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object lblDescription: TgtQRLabel
+      object lblDescription: TQRLabel
         Left = 17
         Top = 2
         Width = 504
@@ -353,7 +353,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object GoodsLbl: TgtQRLabel
+      object GoodsLbl: TQRLabel
         Left = 567
         Top = 2
         Width = 55
@@ -405,7 +405,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         1000.125000000000000000
         2000.250000000000000000)
       BandType = rbPageHeader
-      object QRShape7: TgtQRShape
+      object QRShape7: TQRShape
         Left = 8
         Top = 346
         Width = 714
@@ -423,7 +423,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape8: TgtQRShape
+      object QRShape8: TQRShape
         Left = 528
         Top = 346
         Width = 100
@@ -441,7 +441,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 360
         Top = 163
         Width = 361
@@ -459,7 +459,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 9
         Top = 163
         Width = 304
@@ -477,7 +477,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object CustomerAddMemo: TgtQRMemo
+      object CustomerAddMemo: TQRMemo
         Left = 24
         Top = 180
         Width = 273
@@ -515,7 +515,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object InvoiceNumberLbl: TgtQRLabel
+      object InvoiceNumberLbl: TQRLabel
         Left = 604
         Top = 168
         Width = 110
@@ -547,7 +547,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object InvoiceDateLbl: TgtQRLabel
+      object InvoiceDateLbl: TQRLabel
         Left = 630
         Top = 196
         Width = 84
@@ -579,7 +579,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object lblCustOrderNo: TgtQRLabel
+      object lblCustOrderNo: TQRLabel
         Left = 536
         Top = 255
         Width = 178
@@ -610,7 +610,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblInvoice: TgtQRLabel
+      object qrlblInvoice: TQRLabel
         Left = 376
         Top = 1
         Width = 342
@@ -641,7 +641,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 36
       end
-      object qrlblInvoiceLabel: TgtQRLabel
+      object qrlblInvoiceLabel: TQRLabel
         Left = 461
         Top = 168
         Width = 62
@@ -672,7 +672,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 440
         Top = 196
         Width = 83
@@ -703,7 +703,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 442
         Top = 254
         Width = 81
@@ -734,7 +734,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 360
         Top = 186
         Width = 361
@@ -752,7 +752,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape4: TgtQRShape
+      object QRShape4: TQRShape
         Left = 360
         Top = 217
         Width = 361
@@ -770,7 +770,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape5: TgtQRShape
+      object QRShape5: TQRShape
         Left = 360
         Top = 244
         Width = 361
@@ -788,7 +788,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 525
         Top = 163
         Width = 9
@@ -806,7 +806,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 18
         Top = 350
         Width = 115
@@ -837,7 +837,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object qrlblVatAmountLabel: TgtQRLabel
+      object qrlblVatAmountLabel: TQRLabel
         Left = 639
         Top = 350
         Width = 75
@@ -868,7 +868,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object qrlblVatReg: TgtQRLabel
+      object qrlblVatReg: TQRLabel
         Left = 557
         Top = 136
         Width = 162
@@ -899,7 +899,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 547
         Top = 350
         Width = 70
@@ -930,7 +930,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 360
         Top = 274
         Width = 361
@@ -948,7 +948,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object memAddress: TgtQRRichText
+      object memAddress: TQRRichText
         Left = 10
         Top = 71
         Width = 353
@@ -972,7 +972,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Font.Name = 'Arial'
         Font.Style = []
       end
-      object qrlblCompanyName: TgtQRLabel
+      object qrlblCompanyName: TQRLabel
         Left = 543
         Top = 112
         Width = 173
@@ -1003,7 +1003,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 8
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 10
         Top = 3
         Width = 300
@@ -1020,7 +1020,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
           793.750000000000000000)
         Stretch = True
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 447
         Top = 226
         Width = 76
@@ -1051,7 +1051,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblReference: TgtQRLabel
+      object qrlblReference: TQRLabel
         Left = 536
         Top = 226
         Width = 178
@@ -1082,7 +1082,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 434
         Top = 283
         Width = 89
@@ -1113,7 +1113,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblCustReference: TgtQRLabel
+      object qrlblCustReference: TQRLabel
         Left = 536
         Top = 283
         Width = 178
@@ -1144,7 +1144,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 40
         Top = 315
         Width = 77
@@ -1175,7 +1175,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 10
       end
-      object qrlblAccountCode: TgtQRLabel
+      object qrlblAccountCode: TQRLabel
         Left = 123
         Top = 315
         Width = 103
@@ -1225,7 +1225,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         587.375000000000000000
         2000.250000000000000000)
       BandType = rbPageFooter
-      object QRShape10: TgtQRShape
+      object QRShape10: TQRShape
         Left = 528
         Top = 10
         Width = 194
@@ -1243,7 +1243,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape15: TgtQRShape
+      object QRShape15: TQRShape
         Left = 529
         Top = 94
         Width = 192
@@ -1261,7 +1261,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape14: TgtQRShape
+      object QRShape14: TQRShape
         Left = 529
         Top = 64
         Width = 192
@@ -1279,7 +1279,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape13: TgtQRShape
+      object QRShape13: TQRShape
         Left = 529
         Top = 33
         Width = 192
@@ -1297,7 +1297,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object lblReference: TgtQRLabel
+      object lblReference: TQRLabel
         Left = 16
         Top = 177
         Width = 71
@@ -1328,7 +1328,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblTotalNettLabel: TgtQRLabel
+      object qrlblTotalNettLabel: TQRLabel
         Left = 436
         Top = 14
         Width = 53
@@ -1360,7 +1360,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object GoodsValueLbl: TgtQRLabel
+      object GoodsValueLbl: TQRLabel
         Left = 537
         Top = 15
         Width = 86
@@ -1392,7 +1392,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object VATValueLbl: TgtQRLabel
+      object VATValueLbl: TQRLabel
         Left = 553
         Top = 44
         Width = 70
@@ -1424,7 +1424,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblTotalVatLabel: TgtQRLabel
+      object qrlblTotalVatLabel: TQRLabel
         Left = 436
         Top = 43
         Width = 52
@@ -1456,7 +1456,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object QRShape9: TgtQRShape
+      object QRShape9: TQRShape
         Left = 8
         Top = 7
         Width = 521
@@ -1474,7 +1474,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblDepositPaid: TgtQRLabel
+      object qrlblDepositPaid: TQRLabel
         Left = 436
         Top = 105
         Width = 72
@@ -1506,7 +1506,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object DepositLbl: TgtQRLabel
+      object DepositLbl: TQRLabel
         Left = 562
         Top = 105
         Width = 61
@@ -1538,7 +1538,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object TotalValueLbl: TgtQRLabel
+      object TotalValueLbl: TQRLabel
         Left = 545
         Top = 76
         Width = 78
@@ -1570,7 +1570,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblInvoiceTotal: TgtQRLabel
+      object qrlblInvoiceTotal: TQRLabel
         Left = 436
         Top = 76
         Width = 72
@@ -1602,7 +1602,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrshpPayment: TgtQRShape
+      object qrshpPayment: TQRShape
         Left = 8
         Top = 58
         Width = 409
@@ -1620,7 +1620,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object memPayment: TgtQRMemo
+      object memPayment: TQRMemo
         Left = 16
         Top = 68
         Width = 393
@@ -1652,7 +1652,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 529
         Top = 124
         Width = 192
@@ -1670,7 +1670,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblToPay: TgtQRLabel
+      object qrlblToPay: TQRLabel
         Left = 436
         Top = 135
         Width = 38
@@ -1702,7 +1702,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object ToPayLbl: TgtQRLabel
+      object ToPayLbl: TQRLabel
         Left = 571
         Top = 135
         Width = 52
@@ -1734,7 +1734,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblPaymentTerms: TgtQRLabel
+      object qrlblPaymentTerms: TQRLabel
         Left = 12
         Top = 35
         Width = 97
@@ -1789,7 +1789,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       PrintCount = 0
       PrintBefore = False
     end
-    object gtQRShape1: TgtQRShape
+    object gtQRShape1: TQRShape
       Left = 756
       Top = 403
       Width = 6
@@ -1807,7 +1807,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Shape = qrsVertLine
       VertAdjust = 0
     end
-    object gtQRShape2: TgtQRShape
+    object gtQRShape2: TQRShape
       Left = 664
       Top = 403
       Width = 2
@@ -1825,7 +1825,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Shape = qrsVertLine
       VertAdjust = 0
     end
-    object gtQRShape3: TgtQRShape
+    object gtQRShape3: TQRShape
       Left = 563
       Top = 403
       Width = 6
@@ -1843,7 +1843,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Shape = qrsVertLine
       VertAdjust = 0
     end
-    object gtQRShape4: TgtQRShape
+    object gtQRShape4: TQRShape
       Left = 43
       Top = 403
       Width = 6
@@ -1884,7 +1884,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       DataSet = qryQElements
       PrintBefore = False
       PrintIfEmpty = True
-      object lblWorktopArea: TgtQRLabel
+      object lblWorktopArea: TQRLabel
         Left = 438
         Top = 2
         Width = 84
@@ -1915,7 +1915,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object lblWorktopSize: TgtQRLabel
+      object lblWorktopSize: TQRLabel
         Left = 16
         Top = 2
         Width = 441
@@ -1970,7 +1970,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       DataSet = qryQEdges
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblEdgeDescription: TgtQRLabel
+      object qrlblEdgeDescription: TQRLabel
         Left = 16
         Top = 3
         Width = 441
@@ -2001,7 +2001,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLength: TgtQRLabel
+      object qrlblLength: TQRLabel
         Left = 459
         Top = 2
         Width = 63
@@ -2056,7 +2056,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       DataSet = qryQCutOuts
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblCutOut: TgtQRLabel
+      object qrlblCutOut: TQRLabel
         Left = 16
         Top = 3
         Width = 441
@@ -2087,7 +2087,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblQuantity: TgtQRLabel
+      object qrlblQuantity: TQRLabel
         Left = 453
         Top = 3
         Width = 69
@@ -2142,7 +2142,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       DataSet = qryQExtras
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblExtraQuantity: TgtQRDBText
+      object qrlblExtraQuantity: TQRDBText
         Left = 476
         Top = 4
         Width = 45
@@ -2174,7 +2174,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblExtraDescription: TgtQRLabel
+      object qrlblExtraDescription: TQRLabel
         Left = 16
         Top = 3
         Width = 441
@@ -2228,7 +2228,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       Master = InvoiceLine
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblLabourVAT: TgtQRLabel
+      object qrlblLabourVAT: TQRLabel
         Left = 620
         Top = 5
         Width = 92
@@ -2259,7 +2259,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLabourUTR: TgtQRLabel
+      object qrlblLabourUTR: TQRLabel
         Left = 386
         Top = 5
         Width = 135
@@ -2290,7 +2290,7 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         WordWrap = True
         FontSize = 9
       end
-      object qrlblLabourCharge: TgtQRLabel
+      object qrlblLabourCharge: TQRLabel
         Left = 513
         Top = 5
         Width = 108

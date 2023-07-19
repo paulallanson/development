@@ -117,7 +117,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       DataSet = qryJElements
       PrintBefore = False
       PrintIfEmpty = True
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 416
         Top = 0
         Width = 313
@@ -149,7 +149,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 317
         Top = 0
         Width = 89
@@ -181,7 +181,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 315
         Top = 0
         Width = 35
@@ -213,7 +213,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 255
         Top = 0
         Width = 40
@@ -245,7 +245,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 186
         Top = 0
         Width = 50
@@ -277,7 +277,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 38
         Top = 0
         Width = 2
@@ -296,7 +296,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 242
         Top = 0
         Width = 6
@@ -315,7 +315,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 204
         Top = 0
         Width = 6
@@ -334,7 +334,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape4: TgtQRShape
+      object QRShape4: TQRShape
         Left = 299
         Top = 0
         Width = 6
@@ -353,7 +353,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 356
         Top = 0
         Width = 6
@@ -372,7 +372,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRShape8: TgtQRShape
+      object QRShape8: TQRShape
         Left = 408
         Top = 0
         Width = 6
@@ -391,7 +391,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object qrlblCount: TgtQRLabel
+      object qrlblCount: TQRLabel
         Left = -26
         Top = 0
         Width = 59
@@ -422,7 +422,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object qrlblDescription: TgtQRLabel
+      object qrlblDescription: TQRLabel
         Left = 48
         Top = 0
         Width = 145
@@ -473,7 +473,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         1299.104166666667000000
         1957.916666666667000000)
       BandType = rbPageHeader
-      object gtQRShape4: TgtQRShape
+      object gtQRShape4: TQRShape
         Left = 12
         Top = 143
         Width = 725
@@ -491,7 +491,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 571
         Top = 8
         Width = 166
@@ -522,7 +522,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 28
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 4
         Top = 469
         Width = 34
@@ -553,7 +553,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 48
         Top = 469
         Width = 66
@@ -584,7 +584,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 214
         Top = 469
         Width = 22
@@ -615,7 +615,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 256
         Top = 469
         Width = 40
@@ -646,7 +646,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 315
         Top = 469
         Width = 35
@@ -677,7 +677,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 368
         Top = 469
         Width = 32
@@ -708,7 +708,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 416
         Top = 469
         Width = 47
@@ -739,7 +739,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText7: TgtQRDBText
+      object QRDBText7: TQRDBText
         Left = 120
         Top = 377
         Width = 585
@@ -771,7 +771,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText8: TgtQRDBText
+      object QRDBText8: TQRDBText
         Left = 120
         Top = 319
         Width = 59
@@ -803,7 +803,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRShape35: TgtQRShape
+      object QRShape35: TQRShape
         Left = -8
         Top = 433
         Width = 745
@@ -822,7 +822,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrrchTextInstallAddress: TgtQRRichText
+      object qrrchTextInstallAddress: TQRRichText
         Left = 376
         Top = 174
         Width = 325
@@ -846,7 +846,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Name = 'Arial'
         Font.Style = []
       end
-      object QRLabel75: TgtQRLabel
+      object QRLabel75: TQRLabel
         Left = 376
         Top = 291
         Width = 86
@@ -877,7 +877,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 480
         Top = 291
         Width = 225
@@ -909,7 +909,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 480
         Top = 318
         Width = 225
@@ -941,7 +941,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 4
         Top = 444
         Width = 131
@@ -972,7 +972,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 4
         Top = 4
         Width = 245
@@ -989,7 +989,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
           648.229166666666700000)
         Stretch = True
       end
-      object qrmemCompanyAdd: TgtQRMemo
+      object qrmemCompanyAdd: TQRMemo
         Left = 256
         Top = 6
         Width = 115
@@ -1019,7 +1019,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 520
         Top = 57
         Width = 217
@@ -1037,7 +1037,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 520
         Top = 79
         Width = 217
@@ -1055,7 +1055,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 520
         Top = 108
         Width = 217
@@ -1073,7 +1073,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 529
         Top = 61
         Width = 72
@@ -1104,7 +1104,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 700
         Top = 61
         Width = 22
@@ -1136,7 +1136,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 529
         Top = 88
         Width = 30
@@ -1167,7 +1167,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 648
         Top = 88
         Width = 74
@@ -1199,7 +1199,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 529
         Top = 115
         Width = 70
@@ -1230,7 +1230,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 651
         Top = 115
         Width = 71
@@ -1262,7 +1262,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 17
         Top = 152
         Width = 57
@@ -1293,7 +1293,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 12
         Top = 312
         Width = 726
@@ -1311,7 +1311,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrmAddress: TgtQRMemo
+      object qrmAddress: TQRMemo
         Left = 17
         Top = 172
         Width = 328
@@ -1341,7 +1341,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 17
         Top = 319
         Width = 61
@@ -1372,7 +1372,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 17
         Top = 377
         Width = 64
@@ -1403,7 +1403,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 376
         Top = 152
         Width = 63
@@ -1434,7 +1434,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 12
         Top = 282
         Width = 726
@@ -1452,7 +1452,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 12
         Top = 336
         Width = 726
@@ -1470,7 +1470,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 12
         Top = 364
         Width = 726
@@ -1488,7 +1488,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape9: TgtQRShape
+      object gtQRShape9: TQRShape
         Left = 362
         Top = 144
         Width = 9
@@ -1506,7 +1506,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 17
         Top = 346
         Width = 83
@@ -1537,7 +1537,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText6: TgtQRDBText
+      object gtQRDBText6: TQRDBText
         Left = 120
         Top = 346
         Width = 81
@@ -1569,7 +1569,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object qrlblShowroomLabel: TgtQRLabel
+      object qrlblShowroomLabel: TQRLabel
         Left = 16
         Top = 292
         Width = 64
@@ -1600,7 +1600,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object qrlblShowroom: TgtQRLabel
+      object qrlblShowroom: TQRLabel
         Left = 120
         Top = 292
         Width = 85
@@ -1631,7 +1631,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object qrlblFitterNumber: TgtQRLabel
+      object qrlblFitterNumber: TQRLabel
         Left = 376
         Top = 319
         Width = 49
@@ -1662,7 +1662,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 376
         Top = 346
         Width = 66
@@ -1693,7 +1693,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 9
       end
-      object gtQRDBText8: TgtQRDBText
+      object gtQRDBText8: TQRDBText
         Left = 480
         Top = 346
         Width = 65

@@ -116,7 +116,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         918.104166666666700000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object qrmemCompanyAdd: TgtQRMemo
+      object qrmemCompanyAdd: TQRMemo
         Left = 192
         Top = 18
         Width = 87
@@ -146,7 +146,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 7
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 8
         Top = 176
         Width = 353
@@ -164,7 +164,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblQuoteCaption: TgtQRLabel
+      object qrlblQuoteCaption: TQRLabel
         Left = 496
         Top = 8
         Width = 222
@@ -195,7 +195,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 28
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 8
         Top = 327
         Width = 697
@@ -227,7 +227,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 10
       end
-      object qrmAddress: TgtQRMemo
+      object qrmAddress: TQRMemo
         Left = 40
         Top = 185
         Width = 233
@@ -257,7 +257,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 416
         Top = 71
         Width = 297
@@ -275,7 +275,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape9: TgtQRShape
+      object gtQRShape9: TQRShape
         Left = 416
         Top = 101
         Width = 297
@@ -293,7 +293,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 416
         Top = 128
         Width = 297
@@ -311,7 +311,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape12: TgtQRShape
+      object gtQRShape12: TQRShape
         Left = 416
         Top = 159
         Width = 297
@@ -329,7 +329,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 421
         Top = 108
         Width = 30
@@ -354,7 +354,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 421
         Top = 79
         Width = 56
@@ -379,7 +379,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 421
         Top = 140
         Width = 46
@@ -404,7 +404,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 421
         Top = 172
         Width = 40
@@ -429,7 +429,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 634
         Top = 108
         Width = 74
@@ -461,7 +461,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 674
         Top = 76
         Width = 34
@@ -493,7 +493,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 568
         Top = 140
         Width = 140
@@ -525,7 +525,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 575
         Top = 172
         Width = 133
@@ -557,7 +557,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape13: TgtQRShape
+      object gtQRShape13: TQRShape
         Left = 507
         Top = 71
         Width = 9
@@ -575,7 +575,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 416
         Top = 191
         Width = 297
@@ -593,7 +593,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 421
         Top = 233
         Width = 89
@@ -618,7 +618,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape4: TgtQRShape
+      object gtQRShape4: TQRShape
         Left = 416
         Top = 223
         Width = 297
@@ -636,7 +636,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 421
         Top = 203
         Width = 36
@@ -661,7 +661,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblAMEmail: TgtQRLabel
+      object qrlblAMEmail: TQRLabel
         Left = 672
         Top = 203
         Width = 36
@@ -686,7 +686,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 416
         Top = 281
         Width = 297
@@ -704,7 +704,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRMemo1: TgtQRMemo
+      object gtQRMemo1: TQRMemo
         Left = 421
         Top = 289
         Width = 285
@@ -736,7 +736,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 10
       end
-      object qrlblReference: TgtQRLabel
+      object qrlblReference: TQRLabel
         Left = 650
         Top = 233
         Width = 58
@@ -761,7 +761,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 8
         Top = 0
         Width = 166
@@ -820,7 +820,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       DataSet = qryQElements
       PrintBefore = False
       PrintIfEmpty = True
-      object lblWorktopSize: TgtQRLabel
+      object lblWorktopSize: TQRLabel
         Left = 327
         Top = 4
         Width = 82
@@ -845,7 +845,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object lblWorktopArea: TgtQRLabel
+      object lblWorktopArea: TQRLabel
         Left = 478
         Top = 4
         Width = 84
@@ -893,7 +893,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       DataSet = qryQCutOuts
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblQuantity: TgtQRLabel
+      object qrlblQuantity: TQRLabel
         Left = 493
         Top = 4
         Width = 69
@@ -918,7 +918,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblCutOut: TgtQRLabel
+      object qrlblCutOut: TQRLabel
         Left = 347
         Top = 4
         Width = 63
@@ -972,7 +972,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       DataSet = qryQEdges
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblLength: TgtQRLabel
+      object qrlblLength: TQRLabel
         Left = 499
         Top = 4
         Width = 63
@@ -997,7 +997,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblEdgeDescription: TgtQRLabel
+      object qrlblEdgeDescription: TQRLabel
         Left = 293
         Top = 4
         Width = 117
@@ -1051,7 +1051,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       DataSet = qryQExtras
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblExtraDescription: TgtQRLabel
+      object qrlblExtraDescription: TQRLabel
         Left = 295
         Top = 4
         Width = 115
@@ -1082,7 +1082,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblExtraQuantity: TgtQRLabel
+      object qrlblExtraQuantity: TQRLabel
         Left = 466
         Top = 4
         Width = 96
@@ -1134,7 +1134,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         89.958333333333330000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 172
         Top = 8
         Width = 68
@@ -1159,7 +1159,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 345
         Top = 8
         Width = 119
@@ -1184,7 +1184,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 580
         Top = 8
         Width = 44
@@ -1209,7 +1209,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblInstallation: TgtQRLabel
+      object qrlblInstallation: TQRLabel
         Left = 249
         Top = 8
         Width = 85
@@ -1234,7 +1234,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblSurvey: TgtQRLabel
+      object qrlblSurvey: TQRLabel
         Left = 473
         Top = 8
         Width = 61
@@ -1259,7 +1259,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object qrlblDelivery: TgtQRLabel
+      object qrlblDelivery: TQRLabel
         Left = 634
         Top = 8
         Width = 68
@@ -1284,7 +1284,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 9
         Top = 8
         Width = 96
@@ -1335,7 +1335,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         137.583333333333300000
         1899.708333333333000000)
       ParentBand = qrcbNotes
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 8
         Top = 7
         Width = 85
@@ -1366,7 +1366,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextAvailability: TgtQRRichText
+      object qrrchTextAvailability: TQRRichText
         Left = 8
         Top = 26
         Width = 697
@@ -1410,7 +1410,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         137.583333333333300000
         1899.708333333333000000)
       ParentBand = qrcbAvailability
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 8
         Top = 6
         Width = 141
@@ -1441,7 +1441,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 10
       end
-      object qrrchtextTerms: TgtQRRichText
+      object qrrchtextTerms: TQRRichText
         Left = 8
         Top = 26
         Width = 697
@@ -1485,7 +1485,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         137.583333333333300000
         1899.708333333333000000)
       ParentBand = qrbQFooter
-      object qrlNotes: TgtQRLabel
+      object qrlNotes: TQRLabel
         Left = 8
         Top = 8
         Width = 45
@@ -1516,7 +1516,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextNotes: TgtQRRichText
+      object qrrchTextNotes: TQRRichText
         Left = 8
         Top = 26
         Width = 697
@@ -1564,7 +1564,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
       HeaderBand = qrcbDiscount
       PrintBefore = False
       PrintIfEmpty = True
-      object lblOptionDescription: TgtQRLabel
+      object lblOptionDescription: TQRLabel
         Left = 296
         Top = 4
         Width = 113
@@ -1589,7 +1589,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object lblQuoteOption: TgtQRLabel
+      object lblQuoteOption: TQRLabel
         Left = 7
         Top = 4
         Width = 82
@@ -1614,7 +1614,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object lblOptionComplete: TgtQRLabel
+      object lblOptionComplete: TQRLabel
         Left = 448
         Top = 4
         Width = 104
@@ -1639,7 +1639,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object lblOptionVAT: TgtQRLabel
+      object lblOptionVAT: TQRLabel
         Left = 553
         Top = 4
         Width = 71
@@ -1664,7 +1664,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object lblOptionTotal: TgtQRLabel
+      object lblOptionTotal: TQRLabel
         Left = 624
         Top = 4
         Width = 77
@@ -1708,7 +1708,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         95.250000000000000000
         1899.708333333333000000)
       BandType = rbGroupHeader
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 8
         Top = 17
         Width = 81
@@ -1739,7 +1739,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 360
         Top = 17
         Width = 47
@@ -1770,7 +1770,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 671
         Top = 17
         Width = 29
@@ -1801,7 +1801,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 529
         Top = 17
         Width = 24
@@ -1832,7 +1832,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 599
         Top = 17
         Width = 24

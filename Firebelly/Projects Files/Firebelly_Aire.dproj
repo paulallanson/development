@@ -67,7 +67,7 @@
         <VerInfo_Locale>2057</VerInfo_Locale>
         <VerInfo_Keys>FileVersion=1.0.0.0</VerInfo_Keys>
         <DCC_ExeOutput>..\Aire\$(Platform)\$(Config)</DCC_ExeOutput>
-        <DCC_UnitSearchPath>..\;..\..\Components\Quasidata\Transfer@Once\BDS2006;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>

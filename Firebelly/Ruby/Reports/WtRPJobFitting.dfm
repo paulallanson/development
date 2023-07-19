@@ -95,7 +95,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       Expression = 'quote'
       Master = qrpJobSheet
       ReprintOnNewPage = False
-      object qrlblSOCaption: TgtQRLabel
+      object qrlblSOCaption: TQRLabel
         Left = 450
         Top = 1
         Width = 265
@@ -126,7 +126,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 28
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 417
         Top = 57
         Width = 297
@@ -144,7 +144,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 613
         Top = 90
         Width = 79
@@ -176,7 +176,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 428
         Top = 90
         Width = 62
@@ -207,7 +207,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 542
         Top = 56
         Width = 9
@@ -225,7 +225,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 417
         Top = 83
         Width = 297
@@ -243,7 +243,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 3
         Top = 816
         Width = 713
@@ -263,7 +263,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel24: TgtQRLabel
+      object QRLabel24: TQRLabel
         Left = 8
         Top = 820
         Width = 91
@@ -294,7 +294,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 3
         Top = 613
         Width = 713
@@ -313,7 +313,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 8
         Top = 617
         Width = 108
@@ -344,7 +344,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 208
         Top = 617
         Width = 62
@@ -375,7 +375,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 320
         Top = 617
         Width = 57
@@ -406,7 +406,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape23: TgtQRShape
+      object gtQRShape23: TQRShape
         Left = 184
         Top = 618
         Width = 15
@@ -425,7 +425,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 296
         Top = 618
         Width = 15
@@ -444,7 +444,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape9: TgtQRShape
+      object gtQRShape9: TQRShape
         Left = 3
         Top = 416
         Width = 713
@@ -463,7 +463,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape10: TgtQRShape
+      object gtQRShape10: TQRShape
         Left = 3
         Top = 488
         Width = 713
@@ -482,7 +482,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape11: TgtQRShape
+      object gtQRShape11: TQRShape
         Left = 3
         Top = 512
         Width = 713
@@ -501,7 +501,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape12: TgtQRShape
+      object gtQRShape12: TQRShape
         Left = 3
         Top = 536
         Width = 713
@@ -520,7 +520,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape13: TgtQRShape
+      object gtQRShape13: TQRShape
         Left = 3
         Top = 560
         Width = 713
@@ -539,7 +539,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape14: TgtQRShape
+      object gtQRShape14: TQRShape
         Left = 3
         Top = 584
         Width = 713
@@ -558,7 +558,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape35: TgtQRShape
+      object QRShape35: TQRShape
         Left = 129
         Top = 417
         Width = 7
@@ -576,7 +576,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRLabel22: TgtQRLabel
+      object QRLabel22: TQRLabel
         Left = 9
         Top = 420
         Width = 70
@@ -607,7 +607,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 141
         Top = 420
         Width = 569
@@ -639,7 +639,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 9
         Top = 492
         Width = 114
@@ -670,7 +670,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 9
         Top = 516
         Width = 75
@@ -701,7 +701,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblUpstandLabel: TgtQRLabel
+      object qrlblUpstandLabel: TQRLabel
         Left = 9
         Top = 540
         Width = 60
@@ -732,7 +732,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblCillsLabel: TgtQRLabel
+      object qrlblCillsLabel: TQRLabel
         Left = 9
         Top = 564
         Width = 80
@@ -763,7 +763,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblSlashbackLabel: TgtQRLabel
+      object qrlblSlashbackLabel: TQRLabel
         Left = 9
         Top = 588
         Width = 80
@@ -794,7 +794,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape15: TgtQRShape
+      object gtQRShape15: TQRShape
         Left = 3
         Top = 160
         Width = 713
@@ -813,7 +813,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape16: TgtQRShape
+      object gtQRShape16: TQRShape
         Left = 3
         Top = 184
         Width = 713
@@ -832,7 +832,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape17: TgtQRShape
+      object gtQRShape17: TQRShape
         Left = 3
         Top = 208
         Width = 713
@@ -851,7 +851,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 9
         Top = 164
         Width = 164
@@ -882,7 +882,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText8: TgtQRDBText
+      object QRDBText8: TQRDBText
         Left = 200
         Top = 164
         Width = 98
@@ -914,7 +914,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape19: TgtQRShape
+      object gtQRShape19: TQRShape
         Left = 3
         Top = 232
         Width = 713
@@ -933,7 +933,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel16: TgtQRLabel
+      object gtQRLabel16: TQRLabel
         Left = 9
         Top = 236
         Width = 72
@@ -964,7 +964,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape18: TgtQRShape
+      object gtQRShape18: TQRShape
         Left = 177
         Top = 161
         Width = 7
@@ -982,7 +982,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape20: TgtQRShape
+      object gtQRShape20: TQRShape
         Left = 3
         Top = 272
         Width = 713
@@ -1001,7 +1001,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrrchTextInstallAddress: TgtQRRichText
+      object qrrchTextInstallAddress: TQRRichText
         Left = 144
         Top = 280
         Width = 241
@@ -1027,7 +1027,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Lines.Strings = (
           'InstallAddress')
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 8
         Top = 280
         Width = 80
@@ -1058,7 +1058,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 428
         Top = 64
         Width = 49
@@ -1089,7 +1089,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape22: TgtQRShape
+      object gtQRShape22: TQRShape
         Left = 3
         Top = 384
         Width = 713
@@ -1108,7 +1108,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape21: TgtQRShape
+      object gtQRShape21: TQRShape
         Left = 129
         Top = 273
         Width = 7
@@ -1126,7 +1126,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel14: TgtQRLabel
+      object gtQRLabel14: TQRLabel
         Left = 9
         Top = 388
         Width = 115
@@ -1157,7 +1157,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 144
         Top = 387
         Width = 241
@@ -1189,7 +1189,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 9
         Top = 187
         Width = 50
@@ -1220,7 +1220,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel15: TgtQRLabel
+      object gtQRLabel15: TQRLabel
         Left = 393
         Top = 388
         Width = 99
@@ -1251,7 +1251,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 512
         Top = 388
         Width = 201
@@ -1283,7 +1283,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblContact: TgtQRLabel
+      object qrlblContact: TQRLabel
         Left = 200
         Top = 187
         Width = 201
@@ -1314,7 +1314,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 9
         Top = 212
         Width = 100
@@ -1345,7 +1345,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 200
         Top = 212
         Width = 59
@@ -1377,7 +1377,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape24: TgtQRShape
+      object gtQRShape24: TQRShape
         Left = 385
         Top = 385
         Width = 7
@@ -1395,7 +1395,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape25: TgtQRShape
+      object gtQRShape25: TQRShape
         Left = 497
         Top = 385
         Width = 7
@@ -1413,7 +1413,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 200
         Top = 236
         Width = 86
@@ -1445,7 +1445,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRRichText1: TgtQRRichText
+      object gtQRRichText1: TQRRichText
         Left = 4
         Top = 936
         Width = 707
@@ -1474,7 +1474,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
             'Please ensure this form is '
           'returned to the office with the completed sign off form.')
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 668
         Top = 64
         Width = 24
@@ -1506,7 +1506,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape4: TgtQRShape
+      object gtQRShape4: TQRShape
         Left = 417
         Top = 121
         Width = 297
@@ -1524,7 +1524,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape26: TgtQRShape
+      object gtQRShape26: TQRShape
         Left = 542
         Top = 121
         Width = 9
@@ -1542,7 +1542,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 428
         Top = 129
         Width = 83
@@ -1573,7 +1573,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblEdgeDetail: TgtQRLabel
+      object qrlblEdgeDetail: TQRLabel
         Left = 142
         Top = 515
         Width = 563
@@ -1598,7 +1598,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblThickness: TgtQRLabel
+      object qrlblThickness: TQRLabel
         Left = 142
         Top = 492
         Width = 563
@@ -1623,7 +1623,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblUpstand: TgtQRLabel
+      object qrlblUpstand: TQRLabel
         Left = 142
         Top = 539
         Width = 563
@@ -1648,7 +1648,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblWindowCill: TgtQRLabel
+      object qrlblWindowCill: TQRLabel
         Left = 142
         Top = 563
         Width = 17
@@ -1673,7 +1673,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrlblSplashback: TgtQRLabel
+      object qrlblSplashback: TQRLabel
         Left = 142
         Top = 587
         Width = 17
@@ -1698,7 +1698,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object memAddress: TgtQRMemo
+      object memAddress: TQRMemo
         Left = 171
         Top = 14
         Width = 126
@@ -1728,7 +1728,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 6
       end
-      object qriHeadLogo: TgtQRImage
+      object qriHeadLogo: TQRImage
         Left = 4
         Top = -2
         Width = 156
@@ -1745,7 +1745,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           412.750000000000000000)
         Stretch = True
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 596
         Top = 129
         Width = 85
@@ -1776,7 +1776,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 3
         Top = 646
         Width = 352
@@ -1795,7 +1795,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 8
         Top = 649
         Width = 106
@@ -1826,7 +1826,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object memApplianceDetails: TgtQRRichText
+      object memApplianceDetails: TQRRichText
         Left = 8
         Top = 670
         Width = 341
@@ -1852,7 +1852,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Lines.Strings = (
           'Special Instuctions')
       end
-      object gtQRShape40: TgtQRShape
+      object gtQRShape40: TQRShape
         Left = 361
         Top = 646
         Width = 355
@@ -1871,7 +1871,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrrchTextNotes: TgtQRRichText
+      object qrrchTextNotes: TQRRichText
         Left = 364
         Top = 670
         Width = 345
@@ -1897,7 +1897,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Lines.Strings = (
           'Special Instuctions')
       end
-      object gtQRLabel24: TgtQRLabel
+      object gtQRLabel24: TQRLabel
         Left = 364
         Top = 649
         Width = 39
@@ -1948,7 +1948,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         2632.604166666667000000
         1899.708333333333000000)
       ParentBand = qrgQuote
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 16
         Top = 568
         Width = 673
@@ -1967,7 +1967,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape27: TgtQRShape
+      object gtQRShape27: TQRShape
         Left = 17
         Top = 569
         Width = 671
@@ -1986,7 +1986,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape30: TgtQRShape
+      object gtQRShape30: TQRShape
         Left = 528
         Top = 569
         Width = 81
@@ -2005,7 +2005,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 415
         Top = 4
         Width = 306
@@ -2036,7 +2036,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 28
       end
-      object QRLabel17: TgtQRLabel
+      object QRLabel17: TQRLabel
         Left = 544
         Top = 960
         Width = 143
@@ -2067,7 +2067,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 16
         Top = 336
         Width = 125
@@ -2092,7 +2092,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRMemo1: TgtQRMemo
+      object QRMemo1: TQRMemo
         Left = 40
         Top = 368
         Width = 660
@@ -2120,7 +2120,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel23: TgtQRLabel
+      object QRLabel23: TQRLabel
         Left = 16
         Top = 368
         Width = 12
@@ -2145,7 +2145,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel25: TgtQRLabel
+      object QRLabel25: TQRLabel
         Left = 16
         Top = 416
         Width = 12
@@ -2170,7 +2170,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRMemo2: TgtQRMemo
+      object QRMemo2: TQRMemo
         Left = 40
         Top = 416
         Width = 662
@@ -2201,7 +2201,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel48: TgtQRLabel
+      object QRLabel48: TQRLabel
         Left = 16
         Top = 464
         Width = 12
@@ -2226,7 +2226,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRMemo3: TgtQRMemo
+      object QRMemo3: TQRMemo
         Left = 40
         Top = 464
         Width = 391
@@ -2254,7 +2254,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel49: TgtQRLabel
+      object QRLabel49: TQRLabel
         Left = 16
         Top = 504
         Width = 12
@@ -2279,7 +2279,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRMemo4: TgtQRMemo
+      object QRMemo4: TQRMemo
         Left = 40
         Top = 504
         Width = 543
@@ -2307,7 +2307,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel50: TgtQRLabel
+      object QRLabel50: TQRLabel
         Left = 16
         Top = 960
         Width = 360
@@ -2334,7 +2334,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel52: TgtQRLabel
+      object QRLabel52: TQRLabel
         Left = 16
         Top = 544
         Width = 58
@@ -2365,7 +2365,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel51: TgtQRLabel
+      object QRLabel51: TQRLabel
         Left = 16
         Top = 920
         Width = 359
@@ -2398,7 +2398,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel70: TgtQRLabel
+      object QRLabel70: TQRLabel
         Left = 456
         Top = 200
         Width = 45
@@ -2429,7 +2429,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 660
         Top = 200
         Width = 21
@@ -2461,7 +2461,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 456
         Top = 231
         Width = 57
@@ -2492,7 +2492,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Left = 608
         Top = 231
         Width = 73
@@ -2524,7 +2524,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel18: TgtQRLabel
+      object gtQRLabel18: TQRLabel
         Left = 456
         Top = 263
         Width = 94
@@ -2555,7 +2555,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 599
         Top = 263
         Width = 82
@@ -2587,7 +2587,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 16
         Top = 172
         Width = 106
@@ -2618,7 +2618,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText6: TgtQRDBText
+      object gtQRDBText6: TQRDBText
         Left = 132
         Top = 172
         Width = 98
@@ -2650,7 +2650,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrrchTextInstallAddress1: TgtQRRichText
+      object qrrchTextInstallAddress1: TQRRichText
         Left = 16
         Top = 224
         Width = 417
@@ -2676,7 +2676,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Lines.Strings = (
           'InstallAddress')
       end
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 16
         Top = 201
         Width = 84
@@ -2707,7 +2707,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qriHeadLogo1: TgtQRImage
+      object qriHeadLogo1: TQRImage
         Left = 12
         Top = 6
         Width = 156
@@ -2724,7 +2724,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           412.750000000000000000)
         Stretch = True
       end
-      object memAddress1: TgtQRMemo
+      object memAddress1: TQRMemo
         Left = 187
         Top = 22
         Width = 49
@@ -2754,7 +2754,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 6
       end
-      object gtQRLabel19: TgtQRLabel
+      object gtQRLabel19: TQRLabel
         Left = 25
         Top = 573
         Width = 38
@@ -2785,7 +2785,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel20: TgtQRLabel
+      object gtQRLabel20: TQRLabel
         Left = 545
         Top = 573
         Width = 34
@@ -2816,7 +2816,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel21: TgtQRLabel
+      object gtQRLabel21: TQRLabel
         Left = 617
         Top = 573
         Width = 61
@@ -2847,7 +2847,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape28: TgtQRShape
+      object gtQRShape28: TQRShape
         Left = 528
         Top = 545
         Width = 160
@@ -2866,7 +2866,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel22: TgtQRLabel
+      object gtQRLabel22: TQRLabel
         Left = 569
         Top = 549
         Width = 75
@@ -2897,7 +2897,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape31: TgtQRShape
+      object gtQRShape31: TQRShape
         Left = 17
         Top = 592
         Width = 671
@@ -2915,7 +2915,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape33: TgtQRShape
+      object gtQRShape33: TQRShape
         Left = 17
         Top = 592
         Width = 671
@@ -2933,7 +2933,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape32: TgtQRShape
+      object gtQRShape32: TQRShape
         Left = 17
         Top = 727
         Width = 671
@@ -2951,7 +2951,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape34: TgtQRShape
+      object gtQRShape34: TQRShape
         Left = 17
         Top = 619
         Width = 671
@@ -2969,7 +2969,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape35: TgtQRShape
+      object gtQRShape35: TQRShape
         Left = 17
         Top = 646
         Width = 671
@@ -2987,7 +2987,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape36: TgtQRShape
+      object gtQRShape36: TQRShape
         Left = 17
         Top = 673
         Width = 671
@@ -3005,7 +3005,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape37: TgtQRShape
+      object gtQRShape37: TQRShape
         Left = 17
         Top = 700
         Width = 671
@@ -3023,7 +3023,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRMemo1: TgtQRMemo
+      object gtQRMemo1: TQRMemo
         Left = 24
         Top = 598
         Width = 84
@@ -3049,7 +3049,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape29: TgtQRShape
+      object gtQRShape29: TQRShape
         Left = 528
         Top = 568
         Width = 1
@@ -3067,7 +3067,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRMemo2: TgtQRMemo
+      object gtQRMemo2: TQRMemo
         Left = 24
         Top = 625
         Width = 234
@@ -3093,7 +3093,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRMemo3: TgtQRMemo
+      object gtQRMemo3: TQRMemo
         Left = 24
         Top = 652
         Width = 199
@@ -3119,7 +3119,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRMemo4: TgtQRMemo
+      object gtQRMemo4: TQRMemo
         Left = 24
         Top = 680
         Width = 70
@@ -3145,7 +3145,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRMemo5: TgtQRMemo
+      object gtQRMemo5: TQRMemo
         Left = 24
         Top = 706
         Width = 335
@@ -3171,7 +3171,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRMemo6: TgtQRMemo
+      object gtQRMemo6: TQRMemo
         Left = 24
         Top = 733
         Width = 446
@@ -3199,7 +3199,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape38: TgtQRShape
+      object gtQRShape38: TQRShape
         Left = 608
         Top = 568
         Width = 1
@@ -3217,7 +3217,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRMemo7: TgtQRMemo
+      object gtQRMemo7: TQRMemo
         Left = 574
         Top = 733
         Width = 69
@@ -3249,7 +3249,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel23: TgtQRLabel
+      object gtQRLabel23: TQRLabel
         Left = 16
         Top = 768
         Width = 105
@@ -3280,7 +3280,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape39: TgtQRShape
+      object gtQRShape39: TQRShape
         Left = 16
         Top = 792
         Width = 673
@@ -3319,7 +3319,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         1029.229166666667000000
         1899.708333333333000000)
       ParentBand = qrchdSatisfaction
-      object QRLabel53: TgtQRLabel
+      object QRLabel53: TQRLabel
         Left = 504
         Top = 4
         Width = 209
@@ -3350,7 +3350,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 28
       end
-      object QRLabel54: TgtQRLabel
+      object QRLabel54: TQRLabel
         Left = 16
         Top = 200
         Width = 61
@@ -3375,7 +3375,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel55: TgtQRLabel
+      object QRLabel55: TQRLabel
         Left = 16
         Top = 229
         Width = 72
@@ -3400,7 +3400,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel56: TgtQRLabel
+      object QRLabel56: TQRLabel
         Left = 16
         Top = 258
         Width = 80
@@ -3425,7 +3425,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel57: TgtQRLabel
+      object QRLabel57: TQRLabel
         Left = 16
         Top = 288
         Width = 70
@@ -3450,7 +3450,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 112
         Top = 200
         Width = 98
@@ -3476,7 +3476,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText7: TgtQRDBText
+      object QRDBText7: TQRDBText
         Left = 112
         Top = 288
         Width = 593
@@ -3502,7 +3502,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRShape8: TgtQRShape
+      object QRShape8: TQRShape
         Left = -1
         Top = 357
         Width = 718
@@ -3522,7 +3522,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape10: TgtQRShape
+      object QRShape10: TQRShape
         Left = 360
         Top = 358
         Width = 9
@@ -3541,7 +3541,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object QRLabel58: TgtQRLabel
+      object QRLabel58: TQRLabel
         Left = 8
         Top = 366
         Width = 199
@@ -3566,7 +3566,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel59: TgtQRLabel
+      object QRLabel59: TQRLabel
         Left = 374
         Top = 366
         Width = 97
@@ -3591,7 +3591,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel69: TgtQRLabel
+      object QRLabel69: TQRLabel
         Left = 638
         Top = 366
         Width = 56
@@ -3616,7 +3616,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel71: TgtQRLabel
+      object QRLabel71: TQRLabel
         Left = 504
         Top = 196
         Width = 45
@@ -3647,7 +3647,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText11: TgtQRDBText
+      object QRDBText11: TQRDBText
         Left = 660
         Top = 196
         Width = 21
@@ -3679,7 +3679,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel72: TgtQRLabel
+      object QRLabel72: TQRLabel
         Left = 112
         Top = 229
         Width = 265
@@ -3706,7 +3706,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel73: TgtQRLabel
+      object QRLabel73: TQRLabel
         Left = 112
         Top = 258
         Width = 265
@@ -3733,7 +3733,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel17: TgtQRLabel
+      object gtQRLabel17: TQRLabel
         Left = 504
         Top = 228
         Width = 57
@@ -3764,7 +3764,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText5: TgtQRDBText
+      object gtQRDBText5: TQRDBText
         Left = 608
         Top = 228
         Width = 73
@@ -3796,7 +3796,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qriHeadLogo2: TgtQRImage
+      object qriHeadLogo2: TQRImage
         Left = 12
         Top = 6
         Width = 156
@@ -3813,7 +3813,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
           412.750000000000000000)
         Stretch = True
       end
-      object memAddress2: TgtQRMemo
+      object memAddress2: TQRMemo
         Left = 187
         Top = 22
         Width = 49
@@ -3866,7 +3866,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       DataSet = qryJRemedials
       PrintBefore = False
       PrintIfEmpty = True
-      object qrmRemedials: TgtQRMemo
+      object qrmRemedials: TQRMemo
         Left = 8
         Top = 7
         Width = 337
@@ -3890,7 +3890,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 374
         Top = 7
         Width = 315
@@ -3916,7 +3916,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object qrshpRemedialLine: TgtQRShape
+      object qrshpRemedialLine: TQRShape
         Left = 360
         Top = 1
         Width = 9
@@ -3953,7 +3953,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         486.833333333333300000
         1899.708333333333000000)
       BandType = rbSummary
-      object QRLabel60: TgtQRLabel
+      object QRLabel60: TQRLabel
         Left = 16
         Top = 10
         Width = 242
@@ -3984,7 +3984,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel61: TgtQRLabel
+      object QRLabel61: TQRLabel
         Left = 16
         Top = 49
         Width = 120
@@ -4009,7 +4009,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel62: TgtQRLabel
+      object QRLabel62: TQRLabel
         Left = 16
         Top = 81
         Width = 98
@@ -4034,7 +4034,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel63: TgtQRLabel
+      object QRLabel63: TQRLabel
         Left = 16
         Top = 113
         Width = 126
@@ -4059,7 +4059,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel64: TgtQRLabel
+      object QRLabel64: TQRLabel
         Left = 16
         Top = 145
         Width = 94
@@ -4084,7 +4084,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel65: TgtQRLabel
+      object QRLabel65: TQRLabel
         Left = 208
         Top = 81
         Width = 465
@@ -4111,7 +4111,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel66: TgtQRLabel
+      object QRLabel66: TQRLabel
         Left = 208
         Top = 113
         Width = 465
@@ -4138,7 +4138,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel67: TgtQRLabel
+      object QRLabel67: TQRLabel
         Left = 208
         Top = 145
         Width = 465
@@ -4165,7 +4165,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel68: TgtQRLabel
+      object QRLabel68: TQRLabel
         Left = 208
         Top = 49
         Width = 465
