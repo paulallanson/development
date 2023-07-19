@@ -127,8 +127,7 @@ type
     bOnlyGrandTotal: boolean;
     bShowOffer: boolean;
     function Getdetails: integer;
-    // GDK ToDo: Guess this function is never called anywhere!
-    // function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+    function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
   end;
 
 var
@@ -136,7 +135,8 @@ var
 
 implementation
 
-uses AllCommon;
+uses
+  AllCommon, Printer.Tools;
 
 var
   rGrossTotal: real;
@@ -477,7 +477,12 @@ begin
   qrlblExtraDescription.caption := qryQExtras.fieldbyname('Description').asstring;
 end;
 
-(*
+function TfrmwtRPQuoteSummary.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.QuotePrintToFile(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: Remove after tests
 function TfrmwtRPQuoteSummary.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;

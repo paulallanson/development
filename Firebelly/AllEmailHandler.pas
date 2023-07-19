@@ -30,7 +30,6 @@ type
     fileName: string;
     function populateRecipientList(customer, branch: integer): boolean;
 //    GDK ToDo: Remove after tests
-//    procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
 //    procedure PrintToAttachment(const Report: TQuickRep; const attachmentType: string);
 //    procedure PrintToHTM(report: TQuickRep);
 //    procedure PrintToPDF(report: TQuickRep);

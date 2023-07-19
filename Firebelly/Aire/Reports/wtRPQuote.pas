@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, StdCtrls, QrExport, QrCtrls, QrPDFfilt;
+  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, StdCtrls, QrExport, QrCtrls;
 
 type
   TfrmwtRPQuote = class(TForm)
@@ -179,8 +179,7 @@ type
     bShowOffer: boolean;
     bApplyEndUserMarkup: boolean;
     function Getdetails: integer;
-    // GDK ToDo: Guess this function is never called anywhere!
-    // function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+    function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
   end;
 
 var
@@ -188,7 +187,8 @@ var
 
 implementation
 
-uses AllCommon;
+uses
+  AllCommon, Printer.Tools;
 
 var
   rGrossTotal: real;
@@ -603,7 +603,12 @@ begin
   PrintBand := (qryReport.FieldByName('Discount_Value').Asfloat <> 0);
 end;
 
-(*
+function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.QuotePrintToFile(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: Remove after tests
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
