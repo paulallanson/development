@@ -1888,9 +1888,8 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 94
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -1908,9 +1907,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 99
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -1930,9 +1927,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 190
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -1957,9 +1952,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJStatus: TFDQuery
@@ -1974,19 +1967,13 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Date_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery

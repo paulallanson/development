@@ -3467,9 +3467,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 46
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
@@ -3487,9 +3486,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -3508,9 +3506,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
@@ -3525,9 +3522,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 23
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
@@ -3541,9 +3537,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 26
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -3556,9 +3551,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 99
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -3578,9 +3571,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 23
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -3605,9 +3596,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJStatus: TFDQuery
@@ -3622,19 +3611,13 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 81
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Date_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery
@@ -3653,8 +3636,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 249
   end
   object qryJRemedials: TFDQuery
-    ConnectionName = 'Wt'
     MasterSource = dtsReport
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
       'from Job_Remedial, Fitter'
@@ -3665,9 +3648,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Top = 299
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
 end

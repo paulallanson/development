@@ -2591,9 +2591,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 46
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
@@ -2611,9 +2610,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -2632,9 +2630,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
@@ -2649,9 +2646,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 126
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
@@ -2665,9 +2661,8 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 169
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -2680,9 +2675,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 123
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -2702,9 +2695,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 174
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -2729,9 +2720,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery

@@ -2543,9 +2543,8 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 182
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -2563,9 +2562,7 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 51
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -2587,9 +2584,8 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 51
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsAddress: TDataSource
@@ -2615,9 +2611,7 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryEndUser: TFDQuery
@@ -2637,14 +2631,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 110
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end>
   end
   object qryJElements: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -2667,14 +2659,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJCutOuts: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Job_CutOut.*, CutOut.Description'
       'from Job_CutOut, CutOut'
@@ -2684,14 +2674,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJEdges: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job_Edge.*, Edge_Profile.Description'
       'from Job_Edge, Edge_Profile'
@@ -2702,14 +2690,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 46
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJExtras: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Job_Extra.*, Extra_Charge.Description'
       'from Job_Extra, Extra_Charge'
@@ -2719,14 +2705,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 33
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJRemedials: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
       'from Job_Remedial, Fitter'
@@ -2737,14 +2721,12 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 270
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJEvents: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Job_Internal_Note.*'
       'from Job_Internal_Note'
@@ -2754,9 +2736,7 @@ object frmwtRPJob: TfrmwtRPJob
     Top = 358
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
 end

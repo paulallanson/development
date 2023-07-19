@@ -32,7 +32,7 @@ object frmWTMain: TfrmWTMain
         MinHeight = 36
         Width = 1495
       end>
-    ExplicitWidth = 120
+    ExplicitWidth = 1497
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -169,8 +169,8 @@ object frmWTMain: TfrmWTMain
       item
         Width = 50
       end>
-    ExplicitTop = -19
-    ExplicitWidth = 120
+    ExplicitTop = 674
+    ExplicitWidth = 1497
   end
   object imgLstHot: TImageList
     DrawingStyle = dsSelected

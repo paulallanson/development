@@ -737,9 +737,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 46
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
@@ -757,9 +756,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -778,9 +776,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
@@ -795,9 +792,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 126
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
@@ -811,9 +807,8 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 169
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -826,9 +821,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 123
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -849,9 +842,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 174
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -876,9 +867,7 @@ object frmwtRPJobAccSheet: TfrmwtRPJobAccSheet
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
 end

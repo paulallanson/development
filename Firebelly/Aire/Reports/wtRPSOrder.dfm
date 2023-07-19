@@ -1510,9 +1510,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 110
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -1530,9 +1529,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 51
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -1558,9 +1555,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuote: TFDQuery
@@ -1573,14 +1568,10 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 293
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryEndUser: TFDQuery
@@ -1600,14 +1591,12 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 158
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end>
   end
   object qrySOLine: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Line.Sales_Order,'
       '  Sales_Order_Line.Sales_order_Line_no,'
@@ -1637,96 +1626,77 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 288
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qrySOLineSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-
     end
     object qrySOLineSales_order_Line_no: TIntegerField
       FieldName = 'Sales_order_Line_no'
-
     end
     object qrySOLineJob: TFloatField
       FieldName = 'Job'
-
     end
     object qrySOLineUnit_price: TFloatField
       FieldName = 'Unit_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineQuantity: TIntegerField
       FieldName = 'Quantity'
-
     end
     object qrySOLineSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
-
     end
     object qrySOLineTotal_Price: TFloatField
       FieldName = 'Total_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineNett_Price: TFloatField
       FieldName = 'Nett_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineInstallation_price: TFloatField
       FieldName = 'Installation_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineSurvey_price: TFloatField
       FieldName = 'Survey_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDescription: TStringField
       FieldName = 'Description'
-
       Size = 50
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'
-
     end
     object qrySOLineVat: TIntegerField
       FieldName = 'Vat'
-
     end
     object qrySOLineVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineVAT_Description: TStringField
       FieldName = 'VAT_Description'
-
       Size = 40
     end
     object qrySOLineQuote: TIntegerField
       FieldName = 'Quote'
-
     end
   end
   object qryQElements: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsSOLine
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -1751,14 +1721,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsSOLine
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -1769,14 +1738,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 22
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQCutOuts: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsSOLine
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -1786,14 +1754,13 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 22
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsSOLine
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -1803,9 +1770,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 25
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryCompanyAddress: TFDQuery
@@ -1835,9 +1801,7 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 21
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -1860,9 +1824,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Top = 38
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsSOLine: TDataSource

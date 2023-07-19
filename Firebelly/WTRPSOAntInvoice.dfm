@@ -1482,59 +1482,37 @@ object frmwtRPSOAntInvoice: TfrmwtRPSOAntInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
 end

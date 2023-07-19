@@ -1,12 +1,9 @@
 object dtmdlCustInvoices: TdtmdlCustInvoices
-  OldCreateOrder = False
-  Left = 51
-  Top = 106
   Height = 467
   Width = 742
   object dtsInvoices: TDataSource
     DataSet = qryInvoices
-    Left = 80
+    Left = 128
     Top = 24
   end
   object qryInvoices: TFDQuery
@@ -17,18 +14,16 @@ object dtmdlCustInvoices: TdtmdlCustInvoices
       'where Customer = :Customer and'
       'Description LIKE :Description'
       'order by Invoice desc')
-    Left = 24
+    Left = 40
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
 end

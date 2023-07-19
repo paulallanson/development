@@ -1428,49 +1428,35 @@ object frmwtRPOutQuote: TfrmwtRPOutQuote
     Top = 184
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryReQuote: TFDQuery
@@ -1492,19 +1478,13 @@ object frmwtRPOutQuote: TfrmwtRPOutQuote
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryEvent: TFDQuery

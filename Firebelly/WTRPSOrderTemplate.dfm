@@ -1411,59 +1411,41 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
     Top = 304
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsTemplateInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
     object qrySalesOrdersSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -1582,9 +1564,7 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
     Top = 309
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object OLDqrySalesOrders: TFDQuery
@@ -1662,54 +1642,38 @@ object frmwtRPSOrderTemplate: TfrmwtRPSOrderTemplate
     Top = 312
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'IsTemplateInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
       end>
     object IntegerField1: TIntegerField
       FieldName = 'Sales_Order'

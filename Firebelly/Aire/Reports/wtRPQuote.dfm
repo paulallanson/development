@@ -2,8 +2,8 @@ object frmwtRPQuote: TfrmwtRPQuote
   Left = 2
   Top = 0
   Caption = 'frmwtRPQuote'
-  ClientHeight = 696
-  ClientWidth = 1128
+  ClientHeight = 695
+  ClientWidth = 1124
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

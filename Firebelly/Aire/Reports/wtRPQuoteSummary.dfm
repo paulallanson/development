@@ -1568,14 +1568,13 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 110
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -1600,9 +1599,8 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -1611,8 +1609,8 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 16
   end
   object qryQCutOuts: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -1622,14 +1620,13 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -1640,14 +1637,13 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 126
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -1657,9 +1653,8 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 161
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -1672,9 +1667,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 51
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -1695,9 +1688,8 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsAddress: TDataSource
@@ -1723,9 +1715,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 61
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuote: TFDQuery
@@ -1738,14 +1728,10 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 293
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryEndUser: TFDQuery
@@ -1765,14 +1751,12 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 158
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end>
   end
   object qryQOptions: TFDQuery
-    ConnectionName = 'Wt'
     MasterSource = dtsReport
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '  Quote.Quote,'
@@ -1807,9 +1791,7 @@ object frmwtRPQuoteSummary: TfrmwtRPQuoteSummary
     Top = 171
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end>
   end
 end

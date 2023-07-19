@@ -1161,24 +1161,16 @@ object frmwtRPOutJobs: TfrmwtRPOutJobs
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
 end
