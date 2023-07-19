@@ -114,8 +114,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Left = 328
     Top = 3
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Colour_Group'
       'SET'
@@ -154,8 +154,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Colour_Group'
       '        (Colour_Group,'
@@ -173,8 +173,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Colour_Group'
       'From Colour_Group'
@@ -188,8 +188,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

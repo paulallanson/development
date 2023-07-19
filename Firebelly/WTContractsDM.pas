@@ -3,7 +3,10 @@ unit WTContractsDM;
 interface
 
 uses
-  SysUtils, Classes, DB, wtNotesDM, wtQuotesDM, DBTables, ComObj, ActiveX;
+  SysUtils, Classes, DB, wtNotesDM, wtQuotesDM, ComObj, ActiveX,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TcqMode   = (cqAdd, cqChange, cqDelete, cqCopy, cqView, cqRequote);
@@ -11,57 +14,57 @@ type
   TcqevMode   = (cqevAdd, cqevChange, cqevDelete, cqevView);
 
   TdtmdlContract = class(TDataModule)
-    qryZero: TQuery;
-    qryCQHeader: TQuery;
-    qryCQAddHeader: TQuery;
-    qryCQUpHeader: TQuery;
-    qryCQGetLast: TQuery;
-    qryAllContracts: TQuery;
+    qryZero: TFDQuery;
+    qryCQHeader: TFDQuery;
+    qryCQAddHeader: TFDQuery;
+    qryCQUpHeader: TFDQuery;
+    qryCQGetLast: TFDQuery;
+    qryAllContracts: TFDQuery;
     dtsAllContracts: TDataSource;
-    qrydummy: TQuery;
-    qryCustContracts: TQuery;
+    qrydummy: TFDQuery;
+    qryCustContracts: TFDQuery;
     dtsContracts: TDataSource;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
-    qryUpCompany: TQuery;
-    qryCQAddLine: TQuery;
-    qryCQAllLines: TQuery;
-    qryGetCQLOptions: TQuery;
-    qryCQLAddOption: TQuery;
+    qryUpCompany: TFDQuery;
+    qryCQAddLine: TFDQuery;
+    qryCQAllLines: TFDQuery;
+    qryGetCQLOptions: TFDQuery;
+    qryCQLAddOption: TFDQuery;
     dsCustQuotes: TDataSource;
-    qryCustQuotes: TQuery;
+    qryCustQuotes: TFDQuery;
     dsDummy: TDataSource;
-    qryGetCustomerWorktop: TQuery;
-    qryGetCustomerPrice: TQuery;
-    qryCQAllEvents: TQuery;
-    qryCQAddEvent: TQuery;
-    qryGetCutOutPrice: TQuery;
-    qryGetEdgePrice: TQuery;
-    qryGetAddress: TQuery;
-    qryGetNextAdd: TQuery;
-    qryAddAddress: TQuery;
-    qryUpAddress: TQuery;
-    qryDelAddress: TQuery;
-    qryUpQuoteAddress: TQuery;
-    qryUpContractAddress: TQuery;
-    qryGetCustomerWG: TQuery;
-    qryAddCustomerWG: TQuery;
-    qryGetCustomerWT: TQuery;
-    qryAddCustomerWT: TQuery;
-    qryGetCustomerTH: TQuery;
-    qryAddCustomerTH: TQuery;
-    qryGetCustGroupWorktop: TQuery;
-    qryGetCustGroupThickness: TQuery;
-    qryReQuoteCount: TQuery;
-    GetLastSQL: TQuery;
-    DelSQL: TQuery;
-    AddSQL: TQuery;
-    qryCQUpdateHeader: TQuery;
-    qryGetCustomerSupplier: TQuery;
-    qryGetCustomerCutOutPrice: TQuery;
-    qryGetCustomerEdgePrice: TQuery;
-    qryGetMaterialSlab: TQuery;
-    qryRevenueCentre: TQuery;
+    qryGetCustomerWorktop: TFDQuery;
+    qryGetCustomerPrice: TFDQuery;
+    qryCQAllEvents: TFDQuery;
+    qryCQAddEvent: TFDQuery;
+    qryGetCutOutPrice: TFDQuery;
+    qryGetEdgePrice: TFDQuery;
+    qryGetAddress: TFDQuery;
+    qryGetNextAdd: TFDQuery;
+    qryAddAddress: TFDQuery;
+    qryUpAddress: TFDQuery;
+    qryDelAddress: TFDQuery;
+    qryUpQuoteAddress: TFDQuery;
+    qryUpContractAddress: TFDQuery;
+    qryGetCustomerWG: TFDQuery;
+    qryAddCustomerWG: TFDQuery;
+    qryGetCustomerWT: TFDQuery;
+    qryAddCustomerWT: TFDQuery;
+    qryGetCustomerTH: TFDQuery;
+    qryAddCustomerTH: TFDQuery;
+    qryGetCustGroupWorktop: TFDQuery;
+    qryGetCustGroupThickness: TFDQuery;
+    qryReQuoteCount: TFDQuery;
+    GetLastSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    qryCQUpdateHeader: TFDQuery;
+    qryGetCustomerSupplier: TFDQuery;
+    qryGetCustomerCutOutPrice: TFDQuery;
+    qryGetCustomerEdgePrice: TFDQuery;
+    qryGetMaterialSlab: TFDQuery;
+    qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
   private
     function GetNextContractID: integer;

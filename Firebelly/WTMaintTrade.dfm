@@ -218,8 +218,8 @@ object frmWTMaintTrade: TfrmWTMaintTrade
     Left = 312
     Top = 144
   end
-  object tblTrade: TTable
-    DatabaseName = 'wt'
+  object tblTrade: TFDTable
+    ConnectionName = 'wt'
     TableName = 'Trade_Address'
     Left = 256
     Top = 144

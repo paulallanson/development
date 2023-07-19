@@ -46,8 +46,8 @@ object frmWTRunScripts: TfrmWTRunScripts
     TabOrder = 2
     OnClick = Button4Click
   end
-  object qryRun: TQuery
-    DatabaseName = 'WT'
+  object qryRun: TFDQuery
+    ConnectionName = 'WT'
     Left = 200
     Top = 48
   end

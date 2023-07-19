@@ -703,8 +703,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Height = 19
     Panels = <>
   end
-  object qryFitter: TQuery
-    DatabaseName = 'wt'
+  object qryFitter: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT * '
       'FROM Fitter'
@@ -724,8 +724,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Left = 352
     Top = 224
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Operator'
       'order by Operator_Name')
@@ -736,8 +736,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     DataSet = qryOperator
     Left = 320
   end
-  object qryRemedialType: TQuery
-    DatabaseName = 'WT'
+  object qryRemedialType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Remedial_Type'
@@ -745,8 +745,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Left = 240
     Top = 81
   end
-  object qryRemedialCategory: TQuery
-    DatabaseName = 'WT'
+  object qryRemedialCategory: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Remedial_Category'
@@ -754,8 +754,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Left = 240
     Top = 129
   end
-  object qryRemedialDept: TQuery
-    DatabaseName = 'WT'
+  object qryRemedialDept: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Remedial_Dept'

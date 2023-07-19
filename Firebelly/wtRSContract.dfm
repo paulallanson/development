@@ -203,8 +203,8 @@ object frmWTRSContract: TfrmWTRSContract
     Caption = 'Value document based on Units per Drawing'
     TabOrder = 11
   end
-  object qryGetQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryGetQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'
@@ -234,8 +234,8 @@ object frmWTRSContract: TfrmWTRSContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetRange: TQuery
-    DatabaseName = 'WT'
+  object qryGetRange: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT distinct Quote.Quote'
       'FROM Quote'
@@ -256,8 +256,8 @@ object frmWTRSContract: TfrmWTRSContract
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  TOP 1'
       '        Quote_Element.Quote,'

@@ -4,9 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, DBTables, jpeg,
-  ExtDlgs, ComCtrls, ImgList, Grids, DBGrids, ToolWin, wtNotesDM,
-  System.ImageList;
+  Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, System.ImageList, Vcl.ImgList,
+  Vcl.ExtDlgs, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ComCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ToolWin, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.Buttons,
+  StdCtrls, Buttons, Mask, DBCtrls, ExtCtrls, QrCtrls, DB, jpeg,
+  ExtDlgs, ComCtrls, ImgList, Grids, DBGrids, ToolWin, wtNotesDM, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtMaintMatType = class(TForm)
@@ -25,7 +33,7 @@ type
     Button3: TButton;
     Panel1: TPanel;
     imgWorktop: TImage;
-    lkpWorktopType: TQuery;
+    lkpWorktopType: TFDQuery;
     srclkpWorktopType: TDataSource;
     OpenPictureDialog1: TOpenPictureDialog;
     Label3: TLabel;
@@ -45,17 +53,17 @@ type
     dbgSlabs: TDBGrid;
     imglstButtons: TImageList;
     Label5: TLabel;
-    qrySlabs: TQuery;
+    qrySlabs: TFDQuery;
     dtsSlabs: TDataSource;
     dblkpSupplier: TDBLookupComboBox;
-    qrySuppliers: TQuery;
+    qrySuppliers: TFDQuery;
     dtsSuppliers: TDataSource;
-    qryDelSlabSize: TQuery;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryDelSlabSize: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     edtSalesNominal: TEdit;
     edtPurchaseNominal: TEdit;
     edtShortDescription: TEdit;

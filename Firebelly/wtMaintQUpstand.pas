@@ -4,18 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB,
-  DBTables, Spin, ExtCtrls, QrCtrls;
+  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintQUpstand = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     pnlDetails: TPanel;
     Label1: TLabel;
     dblkpWorktop: TDBLookupComboBox;
@@ -36,25 +38,25 @@ type
     edtPolishPrice: TCREditMoney;
     Label9: TLabel;
     dblkpMaterial: TDBLookupComboBox;
-    qryMaterial: TQuery;
+    qryMaterial: TFDQuery;
     dtsMaterial: TDataSource;
     Label10: TLabel;
     dblkpMaterialUse: TDBLookupComboBox;
-    qryMaterialUse: TQuery;
+    qryMaterialUse: TFDQuery;
     dtsMaterialUse: TDataSource;
     SpeedButton1: TSpeedButton;
     Label11: TLabel;
     edtPolishCost: TCREditMoney;
-    qryContractWorktops: TQuery;
-    qryContractPrice: TQuery;
+    qryContractWorktops: TFDQuery;
+    qryContractPrice: TFDQuery;
     spnNoOfDepths: TSpinEdit;
     Label12: TLabel;
     Label13: TLabel;
     spnNoOfLengths: TSpinEdit;
     Label14: TLabel;
     spnNoOfPieces: TSpinEdit;
-    qryCustomerWorktops: TQuery;
-    qryCustomerPrice: TQuery;
+    qryCustomerWorktops: TFDQuery;
+    qryCustomerPrice: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure dblkpWorktopClick(Sender: TObject);

@@ -5,8 +5,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 416
     Top = 336
   end
-  object qryPEnd: TQuery
-    DatabaseName = 'wt'
+  object qryPEnd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Sales_Profit'
@@ -20,8 +20,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOUpLine: TQuery
-    DatabaseName = 'wt'
+  object qryPOUpLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Purch_Ord_Line_Status = :Purch_Ord_Line_Status,'
@@ -53,8 +53,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySIHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Sales_Invoice,'
       #9'Sales_Invoice.Invoice_Date,'
@@ -110,8 +110,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAllLines: TQuery
-    DatabaseName = 'wt'
+  object qrySIAllLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice_line.*,'
       '          VAT.VAT_Rate,'
@@ -129,8 +129,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySILine: TQuery
-    DatabaseName = 'wt'
+  object qrySILine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice_line.*,'
       '          Price_Unit.Description as Price_Unit_Description,'
@@ -159,8 +159,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAddLine: TQuery
-    DatabaseName = 'wt'
+  object qrySIAddLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sales_Invoice_Line'
       '  (Sales_Invoice,'
@@ -281,16 +281,16 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIGetLast: TQuery
-    DatabaseName = 'wt'
+  object qrySIGetLast: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select max(Sales_Invoice) as Last_Sales_invoice'
       'from Sales_invoice')
     Left = 176
     Top = 8
   end
-  object qrySIAddHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySIAddHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert into Sales_invoice'
       '     (Sales_Invoice,'
@@ -480,13 +480,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'wt'
+  object qryZero: TFDQuery
+    ConnectionName = 'wt'
     Left = 304
     Top = 64
   end
-  object qrySICharges: TQuery
-    DatabaseName = 'wt'
+  object qrySICharges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice_Add_Charge.*,'
       '          Vat_Code.Vat_Rate'
@@ -508,8 +508,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAddCharge: TQuery
-    DatabaseName = 'wt'
+  object qrySIAddCharge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sales_Invoice_Add_Charge'
       '    (Sales_Invoice,'
@@ -569,8 +569,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySILineChgs: TQuery
-    DatabaseName = 'wt'
+  object qrySILineChgs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  sales_inv_line_add_chg.Additional_Charge,'
       '        sales_inv_line_add_chg.Sales_Invoice,'
@@ -612,8 +612,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAddLineChg: TQuery
-    DatabaseName = 'wt'
+  object qrySIAddLineChg: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'insert into Sales_Inv_Line_Add_Chg'
       '    (Sales_Invoice,'
@@ -677,8 +677,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAllCharges: TQuery
-    DatabaseName = 'wt'
+  object qrySIAllCharges: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_invoice_Add_Charge.*,'
       '          Vat_Code.Vat_Rate'
@@ -699,9 +699,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 376
     Top = 8
   end
-  object qrySIHeaderGrid: TQuery
+  object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    DatabaseName = 'wt'
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -896,8 +896,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       FieldName = 'Date_Required'
     end
   end
-  object qryOperator: TQuery
-    DatabaseName = 'wt'
+  object qryOperator: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Operator'
       'Order By Operator_Name')
@@ -909,8 +909,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 584
     Top = 8
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Name,'
       '          Street,'
@@ -930,8 +930,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'wt'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Purchase_orderLine.Customers_Desc'
       'from Purchase_orderLine'
@@ -951,8 +951,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'wt'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Order_Line.Product,'
       '      Product.Product_Code,'
@@ -976,8 +976,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'wt'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job_Bag_Line_Dets.Job_Bag_Line_Descr'
       'from Job_Bag_Line_Dets'
@@ -997,8 +997,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIUpHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySIUpHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Sales_invoice'
       'SET Goods_Value = :Goods_Value, '
@@ -1161,8 +1161,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCustReps: TQuery
-    DatabaseName = 'wt'
+  object qryCustReps: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Rep.Name, Rep.Rep'
       'from Reps_Branches, Rep'
@@ -1183,8 +1183,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAllLineChgs: TQuery
-    DatabaseName = 'wt'
+  object qrySIAllLineChgs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  sales_inv_line_add_chg.Additional_Charge,'
       '        sales_inv_line_add_chg.Sales_Invoice,'
@@ -1216,8 +1216,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'wt'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from VAT'
@@ -1231,8 +1231,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'wt'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -1246,15 +1246,15 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company')
     Left = 448
     Top = 232
   end
-  object qryPOAllLines: TQuery
-    DatabaseName = 'wt'
+  object qryPOAllLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -1346,8 +1346,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 360
     Top = 336
   end
-  object qryPOAll: TQuery
-    DatabaseName = 'wt'
+  object qryPOAll: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -1407,8 +1407,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 472
     Top = 336
   end
-  object qryPODeliv: TQuery
-    DatabaseName = 'wt'
+  object qryPODeliv: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -1482,8 +1482,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 528
     Top = 336
   end
-  object oldqryPOLine: TQuery
-    DatabaseName = 'wt'
+  object oldqryPOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -1558,8 +1558,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvStatus: TQuery
-    DatabaseName = 'wt'
+  object qryGetInvStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Sales_invoice_Status'
@@ -1578,8 +1578,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 96
     Top = 152
   end
-  object qryJBAll: TQuery
-    DatabaseName = 'wt'
+  object qryJBAll: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job_Bag.*,'
       '          Customer.Name as Customer_Name,'
@@ -1610,8 +1610,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 64
     Top = 264
   end
-  object qrySOHeader: TQuery
-    DatabaseName = 'wt'
+  object qrySOHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order.*,'
       
@@ -1643,8 +1643,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOLines: TQuery
-    DatabaseName = 'wt'
+  object qrySOLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Line.Sales_Order,'
       '        Sales_Order_Line.Sales_order_Line_no,'
@@ -1702,8 +1702,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBHeader: TQuery
-    DatabaseName = 'wt'
+  object qryJBHeader: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Job_Bag.*,'
       #9'Customer.Name as Customer_Name,'
@@ -1742,8 +1742,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBLines: TQuery
-    DatabaseName = 'wt'
+  object qryJBLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -1805,8 +1805,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPType: TQuery
-    DatabaseName = 'wt'
+  object qryGetPType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from Product_Type'
@@ -1820,8 +1820,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOChkStatus: TQuery
-    DatabaseName = 'wt'
+  object qryPOChkStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Purchase_Order, Line'
       'from Purchase_Orderline'
@@ -1841,8 +1841,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOUpHead: TQuery
-    DatabaseName = 'wt'
+  object qryPOUpHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Purchase_Order'
       'set Purch_Ord_Head_Status = :Purch_Ord_Head_Status'
@@ -1861,8 +1861,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order_Line'
       'Set Quantity_Invoiced = Quantity_Invoiced + :Quantity_Invoiced'
@@ -1891,8 +1891,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOChkStatus: TQuery
-    DatabaseName = 'wt'
+  object qrySOChkStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Sales_Order.Sales_Order_Status,'
       '       (Select Sum(Quantity - Quantity_Invoiced)'
@@ -1926,8 +1926,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOUpHead: TQuery
-    DatabaseName = 'wt'
+  object qrySOUpHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order_Status = :Sales_Order_Status'
@@ -1946,8 +1946,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBUpLine: TQuery
-    DatabaseName = 'wt'
+  object qryJBUpLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job_Bag_Line_Dets'
       'set Job_Bag_Line_Invoiced = :Job_Bag_Line_Invoiced'
@@ -1972,8 +1972,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryRep: TQuery
-    DatabaseName = 'wt'
+  object qryRep: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Rep')
     Left = 16
@@ -1984,8 +1984,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 56
     Top = 368
   end
-  object qryJBChkStatus: TQuery
-    DatabaseName = 'wt'
+  object qryJBChkStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -2018,8 +2018,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBUpHead: TQuery
-    DatabaseName = 'wt'
+  object qryJBUpHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
@@ -2038,8 +2038,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Line.Sales_Order,'
       '        Sales_Order_Line.Sales_order_Line_no,'
@@ -2070,8 +2070,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'wt'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Job_Bag_Line_Dets.Job_Bag_Line_Descr, '
       'Job_Bag_Quantity as Qty_Outstanding,'
@@ -2093,8 +2093,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOLineChgs: TQuery
-    DatabaseName = 'wt'
+  object qryPOLineChgs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Purch_Ord_Line_Add_Chg.Purchase_Order,'
@@ -2137,8 +2137,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCustInvTo: TQuery
-    DatabaseName = 'wt'
+  object qryCustInvTo: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Branch.Inv_To_Customer,'
       '           Customer_Branch.Inv_To_Branch,'
@@ -2170,8 +2170,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'wt'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -2256,8 +2256,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'wt'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -2271,8 +2271,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBLineChgs: TQuery
-    DatabaseName = 'wt'
+  object qryJBLineChgs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Line_Dets.Job_Bag,'
       #9'Purchase_OrderLine.Purchase_Order, '
@@ -2320,9 +2320,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 232
     Top = 264
   end
-  object qrySCHeaderGrid: TQuery
+  object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    DatabaseName = 'wt'
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,'
       '        Sales_Invoice.Customer,'
@@ -2505,8 +2505,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 80
     Top = 424
   end
-  object qrySOChgs: TQuery
-    DatabaseName = 'wt'
+  object qrySOChgs: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Sales_Order,'
       '        Additional_Charge,'
@@ -2527,8 +2527,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'wt'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select sales_order, '
       '          Replenish_source'
@@ -2543,8 +2543,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPO2bInvoiced: TQuery
-    DatabaseName = 'wt'
+  object qryPO2bInvoiced: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -2644,8 +2644,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 232
     Top = 336
   end
-  object qryPeriodEnd: TQuery
-    DatabaseName = 'wt'
+  object qryPeriodEnd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from period'
@@ -2653,8 +2653,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 96
     Top = 8
   end
-  object qrySOAll: TQuery
-    DatabaseName = 'WT'
+  object qrySOAll: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Date_Raised,'
@@ -2699,8 +2699,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddress: TQuery
-    DatabaseName = 'wt'
+  object qryGetAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Address_Name,'
       '          Street,'
@@ -2719,8 +2719,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOQuote: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOQuote: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Sales_order_Line_no,'
       '        Sales_Order_Line.Sales_Order,'
@@ -2759,8 +2759,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPaymentTerms: TQuery
-    DatabaseName = 'wt'
+  object qryPaymentTerms: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from Payment_Terms'
@@ -2773,8 +2773,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 760
     Top = 8
   end
-  object qryGetCustTypeNominal: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustTypeNominal: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Customer_type,'
@@ -2793,8 +2793,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCheckInvoice: TQuery
-    DatabaseName = 'wt'
+  object qryCheckInvoice: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Sales_Invoice, invoice_No'
       'from Sales_Invoice'
@@ -2816,8 +2816,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLines: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOLines: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select count(Sales_order) as total_lines,'
       '(select sum(quantity)'
@@ -2937,8 +2937,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerVat: TQuery
-    DatabaseName = 'wt'
+  object qryGetCustomerVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Vat,'
@@ -2957,7 +2957,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIHeaderBase: TQuery
+  object qrySIHeaderBase: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3053,7 +3053,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySCHeaderBase: TQuery
+  object qrySCHeaderBase: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -3134,8 +3134,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'WT'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Revenue_Centre'
@@ -3148,7 +3148,7 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     Left = 944
     Top = 8
   end
-  object qrySIHeaderBaseOld: TQuery
+  object qrySIHeaderBaseOld: TFDQuery
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'

@@ -726,8 +726,8 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       end
     end
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Date_Raised,'

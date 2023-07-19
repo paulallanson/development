@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Buttons, Mask, ComCtrls, StdCtrls, CRControls, ExtCtrls, DBCtrls,
-  DB, DBTables, DateUtils;
+  DB, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTProductPriceChange = class(TForm)
@@ -26,10 +29,10 @@ type
     btnOK: TBitBtn;
     Label4: TLabel;
     dblkpProductGroup: TDBLookupComboBox;
-    qryProductGroup: TQuery;
+    qryProductGroup: TFDQuery;
     dtsProductGroup: TDataSource;
-    qryProducts: TQuery;
-    qryPrice: TQuery;
+    qryProducts: TFDQuery;
+    qryPrice: TFDQuery;
     procedure EnableOK(sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnProductsClick(Sender: TObject);

@@ -232,8 +232,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
       end
     end
   end
-  object qryGetSORemedials: TQuery
-    DatabaseName = 'wt'
+  object qryGetSORemedials: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Job,'
       '        Int_Sel.Int_Sel_Code'
@@ -250,8 +250,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmailsOld: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOld: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'
@@ -308,8 +308,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSORemedialsEmails: TQuery
-    DatabaseName = 'wt'
+  object qryGetSORemedialsEmails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Job'
       'FROM Sales_Order_Line'
@@ -324,8 +324,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Location_Plan_Document,'
@@ -348,8 +348,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryDocumentStructure: TQuery
-    DatabaseName = 'WT'
+  object qryDocumentStructure: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Folder_Name'
       'FROM Document_Structure'
@@ -358,8 +358,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Left = 336
     Top = 304
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Job.Job_Status,'
@@ -397,8 +397,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrdersOlder: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrdersOlder: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'
@@ -443,8 +443,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmailsOlder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOlder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'
@@ -502,8 +502,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qrySalesOrdersOld: TQuery
-    DatabaseName = 'Wt'
+  object qrySalesOrdersOld: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'
@@ -558,8 +558,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'
@@ -614,8 +614,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmails: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmails: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Job.*,'

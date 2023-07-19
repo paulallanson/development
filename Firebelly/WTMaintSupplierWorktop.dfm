@@ -174,8 +174,8 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
   end
-  object qryUpdSupplierWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSupplierWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Supplier_Worktop'
       'Set Adhesive_Product_Code = :Adhesive_Product_Code, '
@@ -206,8 +206,8 @@ object frmWTMaintSupplierWorktop: TfrmWTMaintSupplierWorktop
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryGetSupplierWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Supplier_Worktop.Supplier,'
       '        Supplier_Worktop.Worktop,'

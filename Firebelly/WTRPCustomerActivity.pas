@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPCustomerActivity = class(TForm)
@@ -12,7 +15,7 @@ type
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
     QRSysData1: TQRSysData;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrgCustomerHead: TQRGroup;
     qrsbDetails: TQRSubDetail;
     QRLabel2: TQRLabel;
@@ -30,9 +33,9 @@ type
     QRSysData2: TQRSysData;
     qrlblTotalOrderCount: TQRLabel;
     gtQRLabel1: TQRLabel;
-    qryActivity: TQuery;
-    qryQuotes: TQuery;
-    qrySOrders: TQuery;
+    qryActivity: TFDQuery;
+    qryQuotes: TFDQuery;
+    qrySOrders: TFDQuery;
     gtQRLabel2: TQRLabel;
     qrlblLastActivity: TQRLabel;
     qrlblQuoteCount: TQRLabel;
@@ -44,7 +47,7 @@ type
     qrlblSInvoiceValue: TQRLabel;
     gtQRLabel7: TQRLabel;
     gtQRLabel8: TQRLabel;
-    qrySInvoices: TQuery;
+    qrySInvoices: TFDQuery;
     gtQRLabel5: TQRLabel;
     qrlblCustomerCount: TQRLabel;
     qrlblGrpQuoteCount: TQRLabel;
@@ -61,7 +64,7 @@ type
     gtQRLabel6: TQRLabel;
     gtQRDBText1: TQRDBText;
     qrsbActivity: TQRSubDetail;
-    qryActivityDetails: TQuery;
+    qryActivityDetails: TFDQuery;
     qrlblActivity: TQRLabel;
     qrlblNotes: TQRLabel;
     qrlblContactName: TQRLabel;

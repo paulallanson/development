@@ -1475,8 +1475,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '      Customer.Customer,'
@@ -1531,8 +1531,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParamType = ptUnknown
       end>
   end
-  object qryActivity: TQuery
-    DatabaseName = 'wt'
+  object qryActivity: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Top 1 Customer_Event.Date_Time_Entered'
       'from Customer_Event'
@@ -1547,8 +1547,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParamType = ptUnknown
       end>
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select count(Quote) as Quote_Count'
       'from Quote'
@@ -1575,8 +1575,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParamType = ptUnknown
       end>
   end
-  object qrySOrders: TQuery
-    DatabaseName = 'wt'
+  object qrySOrders: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select count(sales_order) as Order_Count, sum(Goods_Value) as To' +
@@ -1605,8 +1605,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParamType = ptUnknown
       end>
   end
-  object qrySInvoices: TQuery
-    DatabaseName = 'wt'
+  object qrySInvoices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select count(sales_Invoice) as Invoice_Count, sum(Goods_Value) a' +
@@ -1635,8 +1635,8 @@ object frmwtRPCustomerActivity: TfrmwtRPCustomerActivity
         ParamType = ptUnknown
       end>
   end
-  object qryActivityDetails: TQuery
-    DatabaseName = 'wt'
+  object qryActivityDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Event.Date_Time_Entered,'
       '        Operator.Operator_Name,'

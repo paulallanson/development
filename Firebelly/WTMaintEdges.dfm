@@ -1170,8 +1170,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
     Left = 616
     Top = 56
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Edge_Profile'
       'SET'
@@ -1210,8 +1210,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Edge_Profile'
       '        (Edge_Profile,'
@@ -1228,8 +1228,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Edge_Profile'
       'From Edge_Profile'
@@ -1243,8 +1243,8 @@ object frmWTMaintEdges: TfrmWTMaintEdges
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBCtrls, StdCtrls, Mask, Buttons, CRControls, DB, DBTables, QrCtrls;
+  DBCtrls, StdCtrls, Mask, Buttons, CRControls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintWTThickness = class(TForm)
@@ -19,12 +22,12 @@ type
     edtmnySell: TCREditMoney;
     Label5: TLabel;
     Label6: TLabel;
-    lkpThickness: TQuery;
+    lkpThickness: TFDQuery;
     srclkpThickness: TDataSource;
     lblWorktop: TLabel;
     chkbxInactive: TCheckBox;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure EnableOK(Sender: TObject);

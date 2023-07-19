@@ -3,17 +3,19 @@ unit WTReps;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBTables, QuickRpt, DB, StdCtrls, ExtCtrls, QrCtrls;
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, QuickRpt, DB, StdCtrls, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TWTRepsFrm = class(TForm)
     QuickReport1: TQuickRep;
     PageHeadBand: TQRBand;
     ListLbl: TQRLabel;
-    WorktopSQL: TQuery;
+    WorktopSQL: TFDQuery;
     WorktopSRC: TDataSource;
-    Thickness: TQuery;
+    Thickness: TFDQuery;
     QRBand3: TQRBand;
     QRDBText2: TQRDBText;
     ThicknessSRC: TDataSource;
@@ -32,7 +34,7 @@ type
     MaterialHeader: TQRBand;
     QRLabel7: TQRLabel;
     QRDetailLink3: TQRSubDetail;
-    MaterialSQL: TQuery;
+    MaterialSQL: TFDQuery;
     MaterialSRC: TDataSource;
     MaterialSQLMaterial_Type: TIntegerField;
     MaterialSQLDescription: TStringField;
@@ -44,9 +46,9 @@ type
     CustLbl: TQRLabel;
     Discount: TQRLabel;
     DiscountLbl: TQRLabel;
-    CustSQL: TQuery;
-    PBandSQL: TQuery;
-    ThicknessCostSQL: TQuery;
+    CustSQL: TFDQuery;
+    PBandSQL: TFDQuery;
+    ThicknessCostSQL: TFDQuery;
     Image2: TImage;
     QRSysData2: TQRSysData;
     QRLabel1: TQRLabel;

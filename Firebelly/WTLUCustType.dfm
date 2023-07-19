@@ -132,8 +132,8 @@ object frmWTLUCustType: TfrmWTLUCustType
     Left = 160
     Top = 72
   end
-  object qryCustTypes: TQuery
-    DatabaseName = 'WT'
+  object qryCustTypes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Type'
@@ -151,8 +151,8 @@ object frmWTLUCustType: TfrmWTLUCustType
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 224
     Top = 72
   end

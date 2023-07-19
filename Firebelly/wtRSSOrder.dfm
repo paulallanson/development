@@ -128,8 +128,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Caption = 'Attach Sales Terms && Conditions document'
     TabOrder = 9
   end
-  object qryGetQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryGetQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'
@@ -159,8 +159,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetRange: TQuery
-    DatabaseName = 'WT'
+  object qryGetRange: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT distinct Quote.Quote'
       'FROM Quote'
@@ -181,8 +181,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOQuote: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select top 1 Quote'
       'from Sales_Order_Line'
@@ -196,8 +196,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Quote'
       'from Sales_Order_Line'

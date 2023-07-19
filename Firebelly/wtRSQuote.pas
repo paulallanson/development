@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, DB, DBTables, IniFiles, wtRPQuote,
-  QrExport, StrUtils, ShellAPI, wtRPQuoteSummary;
+  Dialogs, StdCtrls, ExtCtrls, DB, IniFiles, wtRPQuote,
+  QrExport, StrUtils, ShellAPI, wtRPQuoteSummary,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSQuote = class(TForm)
@@ -13,19 +16,19 @@ type
     Button4: TButton;
     chkbxprintLogo: TCheckBox;
     SelectLst: TListBox;
-    qryGetQuotes: TQuery;
+    qryGetQuotes: TFDQuery;
     chkbxShowDetail: TCheckBox;
     btnPreview: TButton;
     btnEmail: TButton;
     chkbxOnlyShowGrandTotal: TCheckBox;
-    qryQuoteMaterial: TQuery;
-    OldqryReport: TQuery;
+    qryQuoteMaterial: TFDQuery;
+    OldqryReport: TFDQuery;
     selectionGrp: TGroupBox;
     Label2: TLabel;
     memSelection: TMemo;
     chkbxIncludeConfirm: TCheckBox;
     chkbxExcludeTemplate: TCheckBox;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     chkbxShowDiscount: TCheckBox;
     chkbxPrintTemplate: TCheckBox;
     chkbxPrintAvailability: TCheckBox;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, DBCtrls, CRControls;
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls, CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintMaterialTypeWeight = class(TForm)
@@ -12,10 +15,10 @@ type
     BitBtn2: TBitBtn;
     Label1: TLabel;
     Label2: TLabel;
-    qryThickness: TQuery;
+    qryThickness: TFDQuery;
     dtsThickness: TDataSource;
-    qryAdd: TQuery;
-    qryUpdate: TQuery;
+    qryAdd: TFDQuery;
+    qryUpdate: TFDQuery;
     dblkpThickness: TDBLookupComboBox;
     edtWeight: TCREditMoney;
     procedure FormActivate(Sender: TObject);

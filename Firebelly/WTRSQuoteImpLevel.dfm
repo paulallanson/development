@@ -310,8 +310,8 @@ object frmWTRSQuoteImpLevel: TfrmWTRSQuoteImpLevel
       'Commercial')
     TabOrder = 13
   end
-  object qryContacts: TQuery
-    DatabaseName = 'WT'
+  object qryContacts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Operator'

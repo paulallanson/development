@@ -303,8 +303,8 @@ object frmWTRSQuoteSalesLead: TfrmWTRSQuoteSalesLead
       'Commercial')
     TabOrder = 12
   end
-  object qryLeadSource: TQuery
-    DatabaseName = 'WT'
+  object qryLeadSource: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Sales_Lead_Source'

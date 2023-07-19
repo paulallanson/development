@@ -106,8 +106,8 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
     TabOrder = 4
     Text = 'edtSlabSizeDescription'
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Material_Type_Slab_Size'
       'SET'
@@ -140,8 +140,8 @@ object frmWTMaintMatTypeSlabs: TfrmWTMaintMatTypeSlabs
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Material_Type_Slab_Size'
       '( Slab_Size_Description,'

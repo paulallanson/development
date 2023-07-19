@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
-  wtRPSODeliveryNote, QrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls;
+  Dialogs, StdCtrls, ShellAPI, DB, CheckLst, printers, IniFiles,
+  wtRPSODeliveryNote, QrExport, wtRPQuote, AllCommon, ComObj, DBCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSODeliveryNote = class(TForm)
     SelectLst: TListBox;
-    qryGetSalesOrderEmailsOlder: TQuery;
-    qryGetSalesOrderEmailsOld: TQuery;
+    qryGetSalesOrderEmailsOlder: TFDQuery;
+    qryGetSalesOrderEmailsOld: TFDQuery;
     pnlFooter: TPanel;
     btnPrint: TButton;
     btnPreview: TButton;
@@ -21,9 +24,9 @@ type
     selectionGrp: TGroupBox;
     Label3: TLabel;
     memSelection: TMemo;
-    qryGetSalesOrders: TQuery;
-    qryGetSalesOrderEmails: TQuery;
-    qryGetSalesOrderEmail: TQuery;
+    qryGetSalesOrders: TFDQuery;
+    qryGetSalesOrderEmails: TFDQuery;
+    qryGetSalesOrderEmail: TFDQuery;
     procedure EnableRun(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);

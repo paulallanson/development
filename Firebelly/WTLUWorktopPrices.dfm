@@ -101,8 +101,8 @@ object frmWTLUWorktopPrices: TfrmWTLUWorktopPrices
         Visible = True
       end>
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Worktop_thickness.Worktop,'

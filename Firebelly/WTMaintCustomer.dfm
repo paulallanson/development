@@ -2134,8 +2134,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 408
     Top = 168
   end
-  object qryCompany: TQuery
-    DatabaseName = 'WT'
+  object qryCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from company')
@@ -2442,8 +2442,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 272
     Top = 368
   end
-  object qryUpdNotesOnly: TQuery
-    DatabaseName = 'wt'
+  object qryUpdNotesOnly: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Customer'
       'Set     Narrative = :Narrative'
@@ -2487,8 +2487,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       OnClick = pmnuSelectAllClick
     end
   end
-  object qryOneCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryOneCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer'
@@ -2502,8 +2502,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer'
       'SET'
@@ -2796,8 +2796,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer'
       '        (Customer, Customer_Type, Vat, Date_Created,'
@@ -2814,8 +2814,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Customer'
       'Where'
@@ -2829,8 +2829,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Customer'
       'From Customer'
@@ -2844,13 +2844,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 752
     Top = 432
   end
-  object qryGetAccountCodes: TQuery
-    DatabaseName = 'WT'
+  object qryGetAccountCodes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  Customer.Account_Code,'
       '        Customer.Customer_Name'
@@ -2878,8 +2878,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ParamType = ptUnknown
       end>
   end
-  object qryCheckCustAccExists: TQuery
-    DatabaseName = 'WT'
+  object qryCheckCustAccExists: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Customer_Name'
       'From Customer'

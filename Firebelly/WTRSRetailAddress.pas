@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, Spin, ComCtrls, OleCtnrs, AllCommon;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, Spin, ComCtrls, OleCtnrs, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSRetailAddress = class(TForm)
@@ -20,8 +23,8 @@ type
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
-    stdSQL: TQuery;
-    qryCurrentContStatus: TQuery;
+    stdSQL: TFDQuery;
+    qryCurrentContStatus: TFDQuery;
     pnlSearch: TPanel;
     Label1: TLabel;
     edtName: TEdit;
@@ -43,7 +46,7 @@ type
     Label7: TLabel;
     edtDateFrom: TEdit;
     btnDatefrom: TBitBtn;
-    qryOrdered: TQuery;
+    qryOrdered: TFDQuery;
     btnClearDate: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxContStatusChange(Sender: TObject);

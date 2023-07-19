@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBTables, DB,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUProductGroups = class(TForm)
@@ -19,8 +22,8 @@ type
     btnDelete: TBitBtn;
     btnExcel: TBitBtn;
     BitBtn4: TBitBtn;
-    qryProductGroup: TQuery;
-    qryDelete: TQuery;
+    qryProductGroup: TFDQuery;
+    qryDelete: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);

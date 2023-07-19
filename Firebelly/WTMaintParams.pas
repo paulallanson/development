@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DBTables, DB,
-  Spin, CRControls;
+  ExtCtrls, DBCtrls, StdCtrls, Mask, ComCtrls, Buttons, DB,
+  Spin, CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintParams = class(TForm)
@@ -31,14 +34,14 @@ type
     Label10: TLabel;
     Label22: TLabel;
     srcParams: TDataSource;
-    qryUpParams: TQuery;
-    lkpThickness: TQuery;
+    qryUpParams: TFDQuery;
+    lkpThickness: TFDQuery;
     srclkpThickness: TDataSource;
     Label8: TLabel;
     Label7: TLabel;
     Label25: TLabel;
     dblkpAccountsPackage: TDBLookupComboBox;
-    qryAccounts: TQuery;
+    qryAccounts: TFDQuery;
     dtsAccounts: TDataSource;
     Label26: TLabel;
     Label27: TLabel;
@@ -59,7 +62,7 @@ type
     Label36: TLabel;
     Label40: TLabel;
     dblkpDefaultVat: TDBLookupComboBox;
-    qryVat: TQuery;
+    qryVat: TFDQuery;
     dtsVat: TDataSource;
     Label9: TLabel;
     dblkpUpstand: TDBLookupComboBox;
@@ -93,7 +96,7 @@ type
     BitBtn2: TBitBtn;
     Label52: TLabel;
     memRetailTerms: TMemo;
-    qryScheduling: TQuery;
+    qryScheduling: TFDQuery;
     dtsScheduling: TDataSource;
     Label54: TLabel;
     Button8: TButton;
@@ -108,11 +111,11 @@ type
     dblkpAccountManager: TDBLookupComboBox;
     dblkpSalesLeadSource: TDBLookupComboBox;
     btnSalesLead: TBitBtn;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
-    qryAccountManager: TQuery;
+    qryAccountManager: TFDQuery;
     dtsAccountManager: TDataSource;
-    qrySalesSource: TQuery;
+    qrySalesSource: TFDQuery;
     dtsSalesSource: TDataSource;
     Label61: TLabel;
     Button9: TButton;
@@ -160,8 +163,8 @@ type
     Label74: TLabel;
     spnQuoteFollowUpDays: TSpinEdit;
     Label75: TLabel;
-    qryCompany: TQuery;
-    qryUpCompany: TQuery;
+    qryCompany: TFDQuery;
+    qryUpCompany: TFDQuery;
     edtStreet: TEdit;
     edtLocale: TEdit;
     edtTownCity: TEdit;
@@ -206,7 +209,7 @@ type
     edtCompanyName: TEdit;
     Label76: TLabel;
     dblkpCustSalesLeadSource: TDBLookupComboBox;
-    qryCustSalesSource: TQuery;
+    qryCustSalesSource: TFDQuery;
     dtsCustSalesSource: TDataSource;
     SpeedButton2: TSpeedButton;
     Button11: TButton;
@@ -218,12 +221,12 @@ type
     Label77: TLabel;
     edtDrawingFolderName: TEdit;
     Label4: TLabel;
-    qryInactiveReason: TQuery;
+    qryInactiveReason: TFDQuery;
     dtsInactiveReason: TDataSource;
     dblkpInactiveContract: TDBLookupComboBox;
     memEmailPurchaseOrder: TRichEdit;
     chkbxUseRevenueCentres: TCheckBox;
-    qryGetProduct: TQuery;
+    qryGetProduct: TFDQuery;
     Label19: TLabel;
     edtTemplateDocsOut: TEdit;
     Label21: TLabel;

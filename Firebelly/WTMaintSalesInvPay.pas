@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, ExtCtrls;
+  StdCtrls, Buttons, Db, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintSalesInvPay = class(TForm)
@@ -26,16 +29,16 @@ type
     Label10: TLabel;
     edtDatePaid: TEdit;
     btnDate: TSpeedButton;
-    qryGetInvoice: TQuery;
-    qryUpInvoice: TQuery;
+    qryGetInvoice: TFDQuery;
+    qryUpInvoice: TFDQuery;
     memTotalPaid: TMemo;
     chkbxPaid: TCheckBox;
-    qryGetSILines: TQuery;
-    qryGetJobBag: TQuery;
-    qryUpdJobBag: TQuery;
-    qryGetPOdelivLines: TQuery;
-    qryUpdPODeliv: TQuery;
-    qryUpdPO: TQuery;
+    qryGetSILines: TFDQuery;
+    qryGetJobBag: TFDQuery;
+    qryUpdJobBag: TFDQuery;
+    qryGetPOdelivLines: TFDQuery;
+    qryUpdPODeliv: TFDQuery;
+    qryUpdPO: TFDQuery;
     GroupBox3: TGroupBox;
     Label7: TLabel;
     memDepositPaid: TMemo;

@@ -62,8 +62,8 @@ object frmWTMaintReason: TfrmWTMaintReason
     Text = 'edtInactiveReasonDescr'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Inactive_Reason'
       'SET'
@@ -90,8 +90,8 @@ object frmWTMaintReason: TfrmWTMaintReason
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Inactive_Reason'
       '        (Inactive_Reason,'
@@ -109,8 +109,8 @@ object frmWTMaintReason: TfrmWTMaintReason
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Inactive_Reason'
       'From Inactive_Reason'
@@ -124,8 +124,8 @@ object frmWTMaintReason: TfrmWTMaintReason
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

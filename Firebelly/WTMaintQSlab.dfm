@@ -619,8 +619,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       NumGlyphs = 2
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -643,9 +643,9 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -673,8 +673,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Left = 520
     Top = 112
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -715,8 +715,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Material_Type.*'
       'from Material_Type'
@@ -730,8 +730,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Left = 440
     Top = 8
   end
-  object qrySupplier: TQuery
-    DatabaseName = 'wt'
+  object qrySupplier: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier.*'
       'from Supplier'
@@ -757,8 +757,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Left = 368
     Top = 32
   end
-  object qrySlabSize: TQuery
-    DatabaseName = 'wt'
+  object qrySlabSize: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Slab_Size.*'
       'from Slab_Size'
@@ -772,8 +772,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Left = 352
     Top = 160
   end
-  object qryMTSlabSize: TQuery
-    DatabaseName = 'wt'
+  object qryMTSlabSize: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Material_Type_Slab_Size.Slab_Size,'
       '       Material_Type_Slab_Size.Length,'
@@ -795,8 +795,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryContractWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryContractWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
@@ -841,8 +841,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryContractPrice: TQuery
-    DatabaseName = 'WT'
+  object qryContractPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'
@@ -899,8 +899,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryGetContractSupplier: TQuery
-    DatabaseName = 'WT'
+  object qryGetContractSupplier: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Supplier'
       'FROM  Customer_Worktop_Group'
@@ -920,8 +920,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierWorktop: TQuery
-    DatabaseName = 'WT'
+  object qryGetSupplierWorktop: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Worktop.Supplier,'

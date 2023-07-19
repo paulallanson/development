@@ -126,8 +126,8 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     TabOrder = 5
     NumGlyphs = 2
   end
-  object lkpCutOuts: TQuery
-    DatabaseName = 'WT'
+  object lkpCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from cutout'
       'where cutout not in'
@@ -154,8 +154,8 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     Left = 344
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_CutOut'
       '('

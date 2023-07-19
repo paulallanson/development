@@ -123,8 +123,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
     TabOrder = 3
     Text = 'edtEmailAddress'
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Fitter'
       'SET'
@@ -175,8 +175,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Fitter'
       '        (Fitter,'
@@ -194,8 +194,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Fitter'
       'From Fitter'
@@ -209,8 +209,8 @@ object frmWTMaintFitters: TfrmWTMaintFitters
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

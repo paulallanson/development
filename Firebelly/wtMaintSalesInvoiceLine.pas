@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, wtSalesInvoiceDM, DBCtrls, Db, DBTables, allCommon, QrCtrls;
+  StdCtrls, Buttons, ExtCtrls, wtSalesInvoiceDM, DBCtrls, Db, allCommon, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintSalesInvoiceLine = class(TForm)
@@ -15,7 +18,7 @@ type
     lblOrderType: TLabel;
     lblOrderNumber: TLabel;
     Label1: TLabel;
-    qryVAT: TQuery;
+    qryVAT: TFDQuery;
     dsVAT: TDataSource;
     pnlDetails: TPanel;
     Label2: TLabel;

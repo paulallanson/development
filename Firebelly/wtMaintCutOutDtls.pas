@@ -4,12 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtMaintEdgeDetails, DBCtrls, StdCtrls, Buttons, CRControls, DB,
-  DBTables, QrCtrls;
+  Dialogs, wtMaintEdgeDetails, DBCtrls, StdCtrls, Buttons, CRControls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCutOutDtls = class(TfrmWTMaintEdgeDetails)
-    lkpCutOuts: TQuery;
+    lkpCutOuts: TFDQuery;
     srclkpCutOuts: TDataSource;
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

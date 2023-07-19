@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Grids, DBGrids, StdCtrls, ExtCtrls, ComCtrls;
+  Dialogs, DB, Grids, DBGrids, StdCtrls, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintLogins = class(TForm)
@@ -13,9 +16,9 @@ type
     btnRefresh: TButton;
     btnClose: TButton;
     dbgDetails: TDBGrid;
-    qryWorkstation: TQuery;
+    qryWorkstation: TFDQuery;
     dtsWorkstation: TDataSource;
-    qryDeleteWS: TQuery;
+    qryDeleteWS: TFDQuery;
     stsbrDetails: TStatusBar;
     procedure FormActivate(Sender: TObject);
     procedure btnRefreshClick(Sender: TObject);

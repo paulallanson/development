@@ -271,8 +271,8 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
       TabOrder = 0
     end
   end
-  object qryAction: TQuery
-    DatabaseName = 'WT'
+  object qryAction: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Prospect_Action'
@@ -285,8 +285,8 @@ object frmWTRSCustomerAction: TfrmWTRSCustomerAction
     Left = 240
     Top = 16
   end
-  object qryOperators: TQuery
-    DatabaseName = 'WT'
+  object qryOperators: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Operator'

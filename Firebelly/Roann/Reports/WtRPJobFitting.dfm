@@ -3803,8 +3803,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Job.*,'
       '        Operator.Operator_Name,'
@@ -3895,8 +3895,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Left = 1152
     Top = 8
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -3910,8 +3910,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -3936,16 +3936,16 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Left = 1110
     Top = 331
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 1149
     Top = 522
   end
-  object qryGetNotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -3959,8 +3959,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryUpJStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpJStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       
@@ -3986,8 +3986,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Company_Name,'
       'Street,'
@@ -4001,9 +4001,9 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
     Left = 1048
     Top = 521
   end
-  object qryJRemedials: TQuery
-    DatabaseName = 'Wt'
-    DataSource = dtsReport
+  object qryJRemedials: TFDQuery
+    ConnectionName = 'Wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
       'from Job_Remedial, Fitter'
@@ -4019,8 +4019,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobEdge: TQuery
-    DatabaseName = 'wt'
+  object qryJobEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Edge.Job,'
       '        Job_Edge.Edge_number,'
@@ -4040,8 +4040,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobThickness: TQuery
-    DatabaseName = 'wt'
+  object qryJobThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Element.Job,'
       '        Job_Element.Element_Number,'
@@ -4061,8 +4061,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryJobUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'SELECT DISTINCT Material_Use.Use_Description, sum(Job_Element.Qu' +
@@ -4085,8 +4085,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobWorktop: TQuery
-    DatabaseName = 'wt'
+  object qryJobWorktop: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Worktop.Worktop,'
       '                Worktop.Description as Worktop_Description,'
@@ -4110,8 +4110,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobWorktopCount: TQuery
-    DatabaseName = 'wt'
+  object qryJobWorktopCount: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sum(Job_Element.Quantity) AS Total_Pieces'
       
@@ -4130,9 +4130,9 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryQElements: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryQElements: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -4166,8 +4166,8 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         ParamType = ptUnknown
       end>
   end
-  object qryJobWorktopWeight: TQuery
-    DatabaseName = 'wt'
+  object qryJobWorktopWeight: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'SELECT Sum((((Job_Element.Length * Job_Element.Depth)/1000000.00' +

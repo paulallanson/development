@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, DBCtrls, Mask, DB,
-  DBTables, QrCtrls, ComCtrls, ExtDlgs, jpeg;
+  Dialogs, Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, DBCtrls, Mask, DB, QrCtrls, ComCtrls, ExtDlgs, jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintWT = class(TForm)
@@ -13,12 +15,12 @@ type
     chkbxInactive: TCheckBox;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryWTGPrices: TQuery;
-    qryAddWTThickness: TQuery;
+    qryWTGPrices: TFDQuery;
+    qryAddWTThickness: TFDQuery;
     srclkpWTThickness: TDataSource;
-    lkpWTThickness: TQuery;
+    lkpWTThickness: TFDQuery;
     lkpWTThicknessWorktop: TIntegerField;
     lkpWTThicknessThickness: TIntegerField;
     lkpWTThicknessThickness_mm: TStringField;
@@ -26,7 +28,7 @@ type
     lkpWTThicknessUnit_Cost: TFloatField;
     lkpWTThicknessPrice_unit_description: TStringField;
     lkpWTThicknessPrice_Pointer: TIntegerField;
-    qryDelWTThick: TQuery;
+    qryDelWTThick: TFDQuery;
     pgDetails: TPageControl;
     tbDetails: TTabSheet;
     tbColourGroups: TTabSheet;
@@ -40,9 +42,9 @@ type
     dblkpWorktopFinish: TDBLookupComboBox;
     Button2: TButton;
     chkbxShowOnline: TCheckBox;
-    lkpWorktopFinish: TQuery;
+    lkpWorktopFinish: TFDQuery;
     srclkpWorktopFinsih: TDataSource;
-    qryCheckWTThickness: TQuery;
+    qryCheckWTThickness: TFDQuery;
     lstbxMembers: TListBox;
     lstbxMembersCodes: TListBox;
     btnAdd: TBitBtn;
@@ -51,12 +53,12 @@ type
     lstbxNonMembersCodes: TListBox;
     Label4: TLabel;
     Label6: TLabel;
-    qryDeleteColour: TQuery;
-    qryAddColour: TQuery;
-    qryDummy: TQuery;
-    qryNonMembers: TQuery;
+    qryDeleteColour: TFDQuery;
+    qryAddColour: TFDQuery;
+    qryDummy: TFDQuery;
+    qryNonMembers: TFDQuery;
     dtsNonMembers: TDataSource;
-    qryMembers: TQuery;
+    qryMembers: TFDQuery;
     Button1: TButton;
     Label7: TLabel;
     Button3: TButton;
@@ -67,7 +69,7 @@ type
     Label8: TLabel;
     dblkpDiscount: TDBLookupComboBox;
     btnDiscounts: TButton;
-    lkpDiscounts: TQuery;
+    lkpDiscounts: TFDQuery;
     scrlkpDiscounts: TDataSource;
     btnClearDiscount: TBitBtn;
     TabSheet1: TTabSheet;
@@ -76,15 +78,15 @@ type
     edtDescription: TEdit;
     edtShortDescription: TEdit;
     memLongDescription: TMemo;
-    qryWorktop: TQuery;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
-    lkpGroup: TQuery;
+    qryWorktop: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
+    lkpGroup: TFDQuery;
     dtsGroup: TDataSource;
-    qryAddColourSQL: TQuery;
+    qryAddColourSQL: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure btnWorktopGroupClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

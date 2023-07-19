@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtLULevelofImportance = class(TForm)
@@ -18,8 +21,8 @@ type
     BitBtn4: TBitBtn;
     chkbxShowInactive: TCheckBox;
     btnExcel: TBitBtn;
-    qryLevelofImportance: TQuery;
-    qryDelete: TQuery;
+    qryLevelofImportance: TFDQuery;
+    qryDelete: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);

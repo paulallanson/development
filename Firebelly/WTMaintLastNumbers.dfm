@@ -145,8 +145,8 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
     TabOrder = 8
     NumGlyphs = 2
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'WT'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Company'
       'SET'
@@ -197,8 +197,8 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'WT'
+  object qryCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * FROM Company'
       'WHERE Company = 1')

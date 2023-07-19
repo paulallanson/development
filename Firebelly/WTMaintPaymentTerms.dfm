@@ -97,8 +97,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Text = 'edtPaymentTermsDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Payment_Terms'
       'SET'
@@ -125,8 +125,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Payment_Terms'
       '        (Payment_Terms,'
@@ -143,8 +143,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Payment_Terms'
       'From Payment_Terms'
@@ -158,8 +158,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 312
     Top = 40
   end

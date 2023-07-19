@@ -160,8 +160,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     Left = 176
     Top = 72
   end
-  object qryInstallationArea: TQuery
-    DatabaseName = 'WT'
+  object qryInstallationArea: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Installation_Area'
@@ -185,8 +185,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 256
     Top = 72
   end

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, ComCtrls,
-  AllCommon, Math;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, ComCtrls,
+  AllCommon, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtLUPayments = class(TForm)
@@ -18,15 +21,15 @@ type
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     btnExcel: TBitBtn;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     Panel2: TPanel;
     Label1: TLabel;
     lblTotalPayments: TLabel;
-    qryPayments: TQuery;
-    qryGetSOPayments: TQuery;
-    qryUpSOPayments: TQuery;
-    qryUpSINVPayments: TQuery;
-    qryGetTotalPayments: TQuery;
+    qryPayments: TFDQuery;
+    qryGetSOPayments: TFDQuery;
+    qryUpSOPayments: TFDQuery;
+    qryUpSINVPayments: TFDQuery;
+    qryGetTotalPayments: TFDQuery;
     qryPaymentsPayment: TIntegerField;
     qryPaymentsPayment_date: TDateTimeField;
     qryPaymentsPaid_Amount: TFloatField;
@@ -53,7 +56,7 @@ type
     dbgCredits: TDBGrid;
     pnlCreditNotes: TPanel;
     lblCreditNotes: TLabel;
-    qryCreditNotes: TQuery;
+    qryCreditNotes: TFDQuery;
     srcCreditNotes: TDataSource;
     qryCreditNotesInvoice_No: TStringField;
     qryCreditNotesTotal_Value: TFloatField;
@@ -61,9 +64,9 @@ type
     qryCreditNotesReference: TStringField;
     lblCredits: TLabel;
     lblTotalCredits: TLabel;
-    qryGetTotalCredits: TQuery;
+    qryGetTotalCredits: TFDQuery;
     qryCreditNotesInvoice_Date: TDateTimeField;
-    qryGetTotalSICredits: TQuery;
+    qryGetTotalSICredits: TFDQuery;
     lblAccountCode: TLabel;
     procedure btnAddClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

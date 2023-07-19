@@ -157,8 +157,8 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
     Left = 136
     Top = 120
   end
-  object qryRemedialDept: TQuery
-    DatabaseName = 'WT'
+  object qryRemedialDept: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Remedial_Dept'
@@ -182,8 +182,8 @@ object frmWTLURemedialDept: TfrmWTLURemedialDept
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 208
     Top = 120
   end

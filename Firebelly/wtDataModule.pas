@@ -4,53 +4,57 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ActiveX, Outlook_TLB;
+  Db, ActiveX, Outlook_TLB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TdtmdlWorktops = class(TDataModule)
-    dtbsWorktops: TDatabase;
-    qryNewPrice: TQuery;
-    lkpPriceBasis: TTable;
+    dtbsWorktops: TFDConnection;
+    qryNewPrice: TFDQuery;
+    lkpPriceBasis: TFDTable;
     lkpPriceBasisPrice_Basis: TStringField;
     lkpPriceBasisDescription: TStringField;
     lkpPriceBasisQty_Basis_Required: TStringField;
-    qryAddPrice: TQuery;
-    qryAddPointer: TQuery;
-    qryDelPrice: TQuery;
-    qryDelPricePointer: TQuery;
-    qryCompany: TQuery;
-    qryGetLastIntSel: TQuery;
-    qryDelWork: TQuery;
-    qryAddWork: TQuery;
-    qryAddIntSel: TQuery;
-    qryUpCompany: TQuery;
-    qryAddWorkStation: TQuery;
-    qryGetWorkStation: TQuery;
-    qryDeleteWorkStations: TQuery;
-    qryDeleteWorkStation: TQuery;
-    qryGetAddress: TQuery;
-    qryCheckWSLock: TQuery;
-    qryGetLastWSLock: TQuery;
-    qryAddWSLock: TQuery;
-    qryDeleteWSLock: TQuery;
-    qryGetOperator: TQuery;
-    qryGetCustomer: TQuery;
-    qryCompanyNew: TQuery;
-    qryGetOneCustomer: TQuery;
-    qryGetCurrentPromo: TQuery;
-    qryComp: TQuery;
-    qryAddIntSelFull: TQuery;
-    qryCheckSOLock: TQuery;
-    qryGetLastSOLock: TQuery;
-    qryAddSOLock: TQuery;
-    qryDeleteSOLock: TQuery;
-    qryGetDocumentNames: TQuery;
-    qryGetRevenueCentre: TQuery;
-    qryGetProduct: TQuery;
-    qryGetCustomerBranch: TQuery;
-    qryGetBranches: TQuery;
+    qryAddPrice: TFDQuery;
+    qryAddPointer: TFDQuery;
+    qryDelPrice: TFDQuery;
+    qryDelPricePointer: TFDQuery;
+    qryCompany: TFDQuery;
+    qryGetLastIntSel: TFDQuery;
+    qryDelWork: TFDQuery;
+    qryAddWork: TFDQuery;
+    qryAddIntSel: TFDQuery;
+    qryUpCompany: TFDQuery;
+    qryAddWorkStation: TFDQuery;
+    qryGetWorkStation: TFDQuery;
+    qryDeleteWorkStations: TFDQuery;
+    qryDeleteWorkStation: TFDQuery;
+    qryGetAddress: TFDQuery;
+    qryCheckWSLock: TFDQuery;
+    qryGetLastWSLock: TFDQuery;
+    qryAddWSLock: TFDQuery;
+    qryDeleteWSLock: TFDQuery;
+    qryGetOperator: TFDQuery;
+    qryGetCustomer: TFDQuery;
+    qryCompanyNew: TFDQuery;
+    qryGetOneCustomer: TFDQuery;
+    qryGetCurrentPromo: TFDQuery;
+    qryComp: TFDQuery;
+    qryAddIntSelFull: TFDQuery;
+    qryCheckSOLock: TFDQuery;
+    qryGetLastSOLock: TFDQuery;
+    qryAddSOLock: TFDQuery;
+    qryDeleteSOLock: TFDQuery;
+    qryGetDocumentNames: TFDQuery;
+    qryGetRevenueCentre: TFDQuery;
+    qryGetProduct: TFDQuery;
+    qryGetCustomerBranch: TFDQuery;
+    qryGetBranches: TFDQuery;
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
-    procedure dtbsWorktopsLogin(Database: TDatabase;
+    procedure dtbsWorktopsLogin(Database: TFDConnection;
       LoginParams: TStrings);
   private
     FIsSQL: Boolean;
@@ -765,12 +769,12 @@ var
   DriverName : string;
 begin
   { Find out what kind of database this is, Access or SQL Server }
-  DriverName := Session.GetAliasDriverName(dtbsWorktops.AliasName);
+  DriverName := FDManager.GetAliasDriverName(dtbsWorktops.ConnectionDefName);
   if DriverName = 'MSSQL' then
     FIsSQL := true;
 end;
 
-procedure TdtmdlWorktops.dtbsWorktopsLogin(Database: TDatabase;
+procedure TdtmdlWorktops.dtbsWorktopsLogin(Database: TFDConnection;
   LoginParams: TStrings);
 begin
 {$IFDEF DEMO}

@@ -79,8 +79,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
     Text = 'edtThicknessmm'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Thickness'
       'SET'
@@ -113,8 +113,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Thickness'
       '        (Thickness,'
@@ -132,8 +132,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Thickness'
       'From Thickness'
@@ -147,8 +147,8 @@ object frmWtMaintThickness: TfrmWtMaintThickness
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 248
     Top = 72
   end

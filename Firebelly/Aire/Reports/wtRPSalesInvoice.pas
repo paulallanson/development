@@ -4,36 +4,39 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, AllCommon, Math,
-  QrExport, qrprntr, printers;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, ExtCtrls, AllCommon, Math,
+  QrExport, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSalesInvoice = class(TForm)
     InvoiceReport: TQuickRep;
     InvHeadSRC: TDataSource;
-    InvLineSQL: TQuery;
+    InvLineSQL: TFDQuery;
     InvLineSRC: TDataSource;
     InvoiceFooter: TQRBand;
-    qryComp: TQuery;
+    qryComp: TFDQuery;
     qrsdQElements: TQRSubDetail;
     qrsdQEdges: TQRSubDetail;
     qrsdQExtras: TQRSubDetail;
     qrsdQCutOuts: TQRSubDetail;
-    UpInvHeadSQL: TQuery;
-    UpInvLineSQL: TQuery;
-    NotesSQL: TQuery;
+    UpInvHeadSQL: TFDQuery;
+    UpInvLineSQL: TFDQuery;
+    NotesSQL: TFDQuery;
     InvoiceGroupHeader: TQRGroup;
     VatTotalLbl: TQRLabel;
     Dummy06: TQRLabel;
-    CreditHeadSQL: TQuery;
+    CreditHeadSQL: TFDQuery;
     QtyInvoicedLbl: TQRLabel;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     AddChargesFooter: TQRBand;
     memoNotes: TQRMemo;
     lblDescription: TQRLabel;
-    qrySOLine: TQuery;
+    qrySOLine: TFDQuery;
     InvoiceLine: TQRSubDetail;
-    qrySOHead: TQuery;
+    qrySOHead: TFDQuery;
     QRBand1: TQRBand;
     CustomerAddMemo: TQRMemo;
     InvoiceNumberLbl: TQRLabel;
@@ -43,9 +46,9 @@ type
     GoodsValueLbl: TQRLabel;
     VATValueLbl: TQRLabel;
     lblReference: TQRLabel;
-    qrySIHead: TQuery;
-    CustomerSQL: TQuery;
-    qryAddress: TQuery;
+    qrySIHead: TFDQuery;
+    CustomerSQL: TFDQuery;
+    qryAddress: TFDQuery;
     qrlblInvoice: TQRLabel;
     qrlblCompanyName: TQRLabel;
     QRShape1: TQRShape;
@@ -64,7 +67,7 @@ type
     QRLabel9: TQRLabel;
     QRLabel10: TQRLabel;
     GoodsLbl: TQRLabel;
-    qryCompanyAddress: TQuery;
+    qryCompanyAddress: TFDQuery;
     QRLabel11: TQRLabel;
     QRLabel12: TQRLabel;
     QRShape10: TQRShape;
@@ -89,20 +92,20 @@ type
     ToPayLbl: TQRLabel;
     lblWorktopSize: TQRLabel;
     lblWorktopArea: TQRLabel;
-    qryQCutOuts: TQuery;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
+    qryQCutOuts: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
     qrlblQuantity: TQRLabel;
     qrlblLength: TQRLabel;
     qrlblExtraQuantity: TQRDBText;
     qrlblCutOut: TQRLabel;
     qrlblEdgeDescription: TQRLabel;
     qrlblExtraDescription: TQRLabel;
-    qryQElements: TQuery;
+    qryQElements: TFDQuery;
     qrlblPaymentTerms: TQRLabel;
-    InvOneHeadSQL: TQuery;
-    InvRHeadSQL: TQuery;
-    InvHeadSQL: TQuery;
+    InvOneHeadSQL: TFDQuery;
+    InvRHeadSQL: TFDQuery;
+    InvHeadSQL: TFDQuery;
     memAddress: TQRRichText;
     qrlblVatReg: TQRLabel;
     gtQRLabel1: TQRLabel;
@@ -168,7 +171,7 @@ type
     function  GetLastCreditNoteNo : integer;
     procedure UpdateInvoiceNumber(const iNo : integer);
     procedure UpdateCreditNoteNumber(const iNo : integer);
-    procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildInvoiceNotes(aQuery : TFDQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
     procedure GetAddressDetails(tempCode: integer);
@@ -331,7 +334,7 @@ begin
   ToPayLbl.Caption := formatfloat('0.00', iToPay);
 end;
 
-procedure TfrmWTRPSalesInvoice.BuildInvoiceNotes(aQuery: TQuery;
+procedure TfrmWTRPSalesInvoice.BuildInvoiceNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -447,7 +450,7 @@ begin
 
   ivat := ivat + rVatValue;
 
-  BuildInvoiceNotes((InvoiceReport.DataSet as TQuery),InvoiceReport.DataSet.fieldbyname('Notes').asinteger);
+  BuildInvoiceNotes((InvoiceReport.DataSet as TFDQuery),InvoiceReport.DataSet.fieldbyname('Notes').asinteger);
 
   if memoNotes.lines.text = '' then
     AddChargesFooter.enabled := false

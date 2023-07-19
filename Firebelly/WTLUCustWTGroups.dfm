@@ -221,8 +221,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Left = 136
     Top = 120
   end
-  object qryCustWTGroup: TQuery
-    DatabaseName = 'WT'
+  object qryCustWTGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Worktop_Group'
@@ -253,8 +253,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 208
     Top = 120
   end

@@ -179,8 +179,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     Left = 112
     Top = 160
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -195,8 +195,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     Left = 312
     Top = 144
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'WT'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Worktop_Group'
@@ -220,8 +220,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 176
     Top = 160
   end

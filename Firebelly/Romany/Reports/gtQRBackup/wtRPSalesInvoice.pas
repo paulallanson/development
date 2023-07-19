@@ -4,97 +4,100 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, AllCommon, Math, gtQrCtrls;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, ExtCtrls, AllCommon, Math, gtQrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSalesInvoice = class(TForm)
     InvoiceReport: TQuickRep;
-    InvHeadSQL: TQuery;
+    InvHeadSQL: TFDQuery;
     InvHeadSRC: TDataSource;
-    InvLineSQL: TQuery;
+    InvLineSQL: TFDQuery;
     InvLineSRC: TDataSource;
     InvoiceFooter: TQRBand;
-    qryComp: TQuery;
-    InvOneHeadSQL: TQuery;
-    UpInvHeadSQL: TQuery;
-    UpInvLineSQL: TQuery;
-    InvRHeadSQL: TQuery;
-    NotesSQL: TQuery;
+    qryComp: TFDQuery;
+    InvOneHeadSQL: TFDQuery;
+    UpInvHeadSQL: TFDQuery;
+    UpInvLineSQL: TFDQuery;
+    InvRHeadSQL: TFDQuery;
+    NotesSQL: TFDQuery;
     InvoiceGroupHeader: TQRGroup;
-    VatTotalLbl: TQRLabel;
-    Dummy06: TQRLabel;
-    CreditHeadSQL: TQuery;
-    QtyInvoicedLbl: TQRLabel;
-    GetNarrSQL: TQuery;
+    VatTotalLbl: TgtQRLabel;
+    Dummy06: TgtQRLabel;
+    CreditHeadSQL: TFDQuery;
+    QtyInvoicedLbl: TgtQRLabel;
+    GetNarrSQL: TFDQuery;
     AddChargesFooter: TQRBand;
-    memoNotes: TQRMemo;
-    lblDescription: TQRLabel;
-    qrySOLine: TQuery;
+    memoNotes: TgtQRMemo;
+    lblDescription: TgtQRLabel;
+    qrySOLine: TFDQuery;
     InvoiceLine: TQRSubDetail;
-    qrySOHead: TQuery;
+    qrySOHead: TFDQuery;
     QRBand1: TQRBand;
-    CustomerAddMemo: TQRMemo;
-    InvoiceNumberLbl: TQRLabel;
-    InvoiceDateLbl: TQRLabel;
-    lblCustOrderNo: TQRLabel;
+    CustomerAddMemo: TgtQRMemo;
+    InvoiceNumberLbl: TgtQRLabel;
+    InvoiceDateLbl: TgtQRLabel;
+    lblCustOrderNo: TgtQRLabel;
     QRBand2: TQRBand;
-    GoodsValueLbl: TQRLabel;
-    VATValueLbl: TQRLabel;
-    TotalValueLbl: TQRLabel;
-    lblReference: TQRLabel;
-    qrySIHead: TQuery;
-    CustomerSQL: TQuery;
-    qryAddress: TQuery;
-    qrlblInvoice: TQRLabel;
-    QRLabel1: TQRLabel;
-    qrlblCompanyName: TQRLabel;
-    qriHeadLogo: TQRImage;
-    QRShape1: TQRShape;
-    QRLabel4: TQRLabel;
-    QRLabel5: TQRLabel;
-    QRLabel7: TQRLabel;
-    QRLabel6: TQRLabel;
-    QRShape2: TQRShape;
-    QRShape3: TQRShape;
-    QRShape4: TQRShape;
-    QRShape5: TQRShape;
-    QRShape6: TQRShape;
-    QRShape7: TQRShape;
-    QRShape8: TQRShape;
-    QRLabel8: TQRLabel;
-    QRLabel9: TQRLabel;
-    QRLabel10: TQRLabel;
-    GoodsLbl: TQRLabel;
-    qryCompanyAddress: TQuery;
-    memAddress: TQRRichText;
-    QRLabel11: TQRLabel;
-    QRLabel12: TQRLabel;
-    QRLabel14: TQRLabel;
-    QRShape10: TQRShape;
-    QRShape12: TQRShape;
-    QRShape13: TQRShape;
-    QRShape14: TQRShape;
-    QRShape15: TQRShape;
-    QRShape9: TQRShape;
+    GoodsValueLbl: TgtQRLabel;
+    VATValueLbl: TgtQRLabel;
+    TotalValueLbl: TgtQRLabel;
+    lblReference: TgtQRLabel;
+    qrySIHead: TFDQuery;
+    CustomerSQL: TFDQuery;
+    qryAddress: TFDQuery;
+    qrlblInvoice: TgtQRLabel;
+    QRLabel1: TgtQRLabel;
+    qrlblCompanyName: TgtQRLabel;
+    qriHeadLogo: TgtQRImage;
+    QRShape1: TgtQRShape;
+    QRLabel4: TgtQRLabel;
+    QRLabel5: TgtQRLabel;
+    QRLabel7: TgtQRLabel;
+    QRLabel6: TgtQRLabel;
+    QRShape2: TgtQRShape;
+    QRShape3: TgtQRShape;
+    QRShape4: TgtQRShape;
+    QRShape5: TgtQRShape;
+    QRShape6: TgtQRShape;
+    QRShape7: TgtQRShape;
+    QRShape8: TgtQRShape;
+    QRLabel8: TgtQRLabel;
+    QRLabel9: TgtQRLabel;
+    QRLabel10: TgtQRLabel;
+    GoodsLbl: TgtQRLabel;
+    qryCompanyAddress: TFDQuery;
+    memAddress: TgtQRRichText;
+    QRLabel11: TgtQRLabel;
+    QRLabel12: TgtQRLabel;
+    QRLabel14: TgtQRLabel;
+    QRShape10: TgtQRShape;
+    QRShape12: TgtQRShape;
+    QRShape13: TgtQRShape;
+    QRShape14: TgtQRShape;
+    QRShape15: TgtQRShape;
+    QRShape9: TgtQRShape;
     qrLoopB: TQRLoopBand;
-    QRShape11: TQRShape;
-    QRShape17: TQRShape;
-    QRShape16: TQRShape;
-    QRShape18: TQRShape;
-    qrshpLeft: TQRShape;
-    qrshpRight: TQRShape;
-    qrLineLeft: TQRShape;
-    qrLineRight: TQRShape;
-    qrLine1: TQRShape;
-    qrLine2: TQRShape;
-    QRShape23: TQRShape;
-    QRShape24: TQRShape;
-    qrshp1: TQRShape;
-    qrshp2: TQRShape;
-    QRShape25: TQRShape;
-    QRShape26: TQRShape;
-    qrlblAccountCode: TQRLabel;
-    qrlblVatReg: TQRLabel;
+    QRShape11: TgtQRShape;
+    QRShape17: TgtQRShape;
+    QRShape16: TgtQRShape;
+    QRShape18: TgtQRShape;
+    qrshpLeft: TgtQRShape;
+    qrshpRight: TgtQRShape;
+    qrLineLeft: TgtQRShape;
+    qrLineRight: TgtQRShape;
+    qrLine1: TgtQRShape;
+    qrLine2: TgtQRShape;
+    QRShape23: TgtQRShape;
+    QRShape24: TgtQRShape;
+    qrshp1: TgtQRShape;
+    qrshp2: TgtQRShape;
+    QRShape25: TgtQRShape;
+    QRShape26: TgtQRShape;
+    qrlblAccountCode: TgtQRLabel;
+    qrlblVatReg: TgtQRLabel;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -147,7 +150,7 @@ type
     function  GetLastCreditNoteNo : integer;
     procedure UpdateInvoiceNumber(const iNo : integer);
     procedure UpdateCreditNoteNumber(const iNo : integer);
-    procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildInvoiceNotes(aQuery : TFDQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
     procedure GetAddressDetails(tempCode: integer);
@@ -257,7 +260,7 @@ begin
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 end;
 
-procedure TfrmWTRPSalesInvoice.BuildInvoiceNotes(aQuery: TQuery;
+procedure TfrmWTRPSalesInvoice.BuildInvoiceNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -365,7 +368,7 @@ begin
 
   ivat := ivat + rVatValue;
 
-  BuildInvoiceNotes((InvoiceReport.DataSet as TQuery),InvoiceReport.DataSet.fieldbyname('Notes').asinteger);
+  BuildInvoiceNotes((InvoiceReport.DataSet as TFDQuery),InvoiceReport.DataSet.fieldbyname('Notes').asinteger);
 
   if memoNotes.lines.text = '' then
     AddChargesFooter.enabled := false

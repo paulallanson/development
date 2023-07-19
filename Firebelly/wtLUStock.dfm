@@ -629,7 +629,7 @@ object frmWTLUStock: TfrmWTLUStock
     Left = 352
     Top = 112
   end
-  object Query1: TQuery
+  object Query1: TFDQuery
     Left = 496
     Top = 160
   end

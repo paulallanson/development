@@ -4,25 +4,28 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJobFitting = class(TForm)
     qrpJobSheet: TQuickRep;
     qrgQuote: TQRGroup;
-    qryReport: TQuery;
-    qryQElements: TQuery;
+    qryReport: TFDQuery;
+    qryQElements: TFDQuery;
     dtsReport: TDataSource;
-    qryQCutOuts: TQuery;
-    qryQEdges: TQuery;
-    qryQExtras: TQuery;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryQCutOuts: TFDQuery;
+    qryQEdges: TFDQuery;
+    qryQExtras: TFDQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
-    qryUpJStatus: TQuery;
-    qryCompanyAddress: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
+    qryUpJStatus: TFDQuery;
+    qryCompanyAddress: TFDQuery;
     QRShape26: TQRShape;
     QRShape27: TQRShape;
     QRShape28: TQRShape;
@@ -146,7 +149,7 @@ type
     QRShape10: TQRShape;
     QRLabel58: TQRLabel;
     QRLabel59: TQRLabel;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrsubRemedial: TQRSubDetail;
     qrmRemedials: TQRMemo;
     QRDBText9: TQRDBText;

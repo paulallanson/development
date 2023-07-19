@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, CRControls, ComCtrls, DBCtrls, Buttons, wtJobsDM, QrCtrls,
-  ExtCtrls;
+  Dialogs, DB, StdCtrls, CRControls, ComCtrls, DBCtrls, Buttons, wtJobsDM, QrCtrls,
+  ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJRemedial = class(TForm)
-    qryFitter: TQuery;
+    qryFitter: TFDQuery;
     srcFitter: TDataSource;
     SpeedButton1: TSpeedButton;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     srcOperator: TDataSource;
     pnlbottom: TPanel;
     pnlTop: TPanel;
@@ -57,9 +60,9 @@ type
     BitBtn1: TBitBtn;
     BitBtn3: TBitBtn;
     BitBtn4: TBitBtn;
-    qryRemedialType: TQuery;
-    qryRemedialCategory: TQuery;
-    qryRemedialDept: TQuery;
+    qryRemedialType: TFDQuery;
+    qryRemedialCategory: TFDQuery;
+    qryRemedialDept: TFDQuery;
     dtsRemedialType: TDataSource;
     dtsRemedialCategory: TDataSource;
     dtsRemedailDept: TDataSource;

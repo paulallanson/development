@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, QuickRpt, ExtCtrls, Printers;
+  Dialogs, DB, QRCtrls, QuickRpt, ExtCtrls, Printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPContract = class(TForm)
@@ -34,14 +37,14 @@ type
     gtQRShape8: TQRShape;
     gtQRShape9: TQRShape;
     qrlblCompanyAdd: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     qrgQuote: TQRGroup;
-    qryCompany: TQuery;
-    qryCustomer: TQuery;
+    qryCompany: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryAddress: TQuery;
-    qrygetNotes: TQuery;
+    qryAddress: TFDQuery;
+    qrygetNotes: TFDQuery;
     gtQRShape1: TQRShape;
     gtQRLabel1: TQRLabel;
     gtQRDBText1: TQRDBText;
@@ -49,8 +52,8 @@ type
     gtQRShapeDrawing: TQRShape;
     qrlblDrawingNumber: TQRLabel;
     gtQRShapeOption5: TQRShape;
-    qryContractLine: TQuery;
-    qryContractOption: TQuery;
+    qryContractLine: TFDQuery;
+    qryContractOption: TFDQuery;
     qrbContractLineHeader: TQRBand;
     gtQRShapeHead0: TQRShape;
     gtQRShapeHead1: TQRShape;
@@ -71,7 +74,7 @@ type
     qrlblOption3: TQRLabel;
     qrlblOption4: TQRLabel;
     dtsContractLine: TDataSource;
-    qryOptionHeaders: TQuery;
+    qryOptionHeaders: TFDQuery;
     gtQRShapeOption6: TQRShape;
     gtQRShapeHead5: TQRShape;
     gtQRShapeHead6: TQRShape;
@@ -84,7 +87,7 @@ type
     qrrchTextNotes: TQRRichText;
     qrlblDrawingNumberMemo: TQRRichText;
     qrlblOptionHead0: TQRRichText;
-    qryOptionHeadersHeight: TQuery;
+    qryOptionHeadersHeight: TFDQuery;
     qrbTemplateFitting: TQRBand;
     gtQRShape10: TQRShape;
     gtQRShapeTemplate: TQRShape;

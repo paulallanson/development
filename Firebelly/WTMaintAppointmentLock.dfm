@@ -91,8 +91,8 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
         Visible = True
       end>
   end
-  object qryApptStatus: TQuery
-    DatabaseName = 'WT'
+  object qryApptStatus: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  *'
       'FROM AppointmentStatus')
@@ -104,8 +104,8 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
     Left = 208
     Top = 88
   end
-  object qryDeleteApptStatus: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteApptStatus: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM AppointmentStatus'
       'WHERE ID = :ID')

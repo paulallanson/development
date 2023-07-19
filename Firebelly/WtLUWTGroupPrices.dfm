@@ -208,8 +208,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       OnClick = Button1Click
     end
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -224,8 +224,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Left = 352
     Top = 16
   end
-  object qryDelWTGPrices: TQuery
-    DatabaseName = 'wt'
+  object qryDelWTGPrices: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from worktop_group_prices'
       'where price_pointer = :price_pointer')
@@ -244,8 +244,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Left = 208
     Top = 128
   end
-  object lkpWTGPrices: TQuery
-    DatabaseName = 'WT'
+  object lkpWTGPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Worktop_Group_Prices.*,'

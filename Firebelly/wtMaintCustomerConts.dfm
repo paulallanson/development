@@ -254,8 +254,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
       Text = 'edtEmailAddress'
     end
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer_Contact'
       'SET'
@@ -330,8 +330,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer_Contact'
       '        (Customer, Contact_no,'
@@ -358,8 +358,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Customer_Contact'
       'Where'
@@ -378,8 +378,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Contact_No'
       'From Customer_Contact'
@@ -398,8 +398,8 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

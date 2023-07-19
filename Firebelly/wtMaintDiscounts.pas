@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, CRControls, DB, DBTables;
+  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, CRControls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtMaintDiscounts = class(TForm)
@@ -16,9 +19,9 @@ type
     Label2: TLabel;
     edtDiscountLabel: TEdit;
     edtAmount: TCREditFloat;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
     dblkpDiscountType: TComboBox;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

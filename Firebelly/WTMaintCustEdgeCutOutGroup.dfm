@@ -187,8 +187,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     Caption = 'Use for General Quoting'
     TabOrder = 9
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Customer_Cutout_Edge_Group'
       '('
@@ -242,8 +242,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
         ParamType = ptUnknown
       end>
   end
-  object qryUpd: TQuery
-    DatabaseName = 'WT'
+  object qryUpd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer_Cutout_Edge_Group'
       'SET Group_Description = :Group_Description,'
@@ -292,8 +292,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
         ParamType = ptUnknown
       end>
   end
-  object qryMaterialType: TQuery
-    DatabaseName = 'wt'
+  object qryMaterialType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Type'
@@ -312,8 +312,8 @@ object frmWTMaintCustEdgeCutOutGroup: TfrmWTMaintCustEdgeCutOutGroup
     DataSet = qryMaterialType
     Left = 320
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT max(Group_Id) as Max_Group_Id'
       'FROM Customer_Cutout_Edge_Group')

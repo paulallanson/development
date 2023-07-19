@@ -104,8 +104,8 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     TabOrder = 6
     OnClick = btnDeleteClick
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Supplier, Contact_no, Contact_Name'
       'from Supplier_contact'
@@ -137,9 +137,9 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     Left = 96
     Top = 168
   end
-  object tblContacts: TTable
+  object tblContacts: TFDTable
     OnNewRecord = tblContactsNewRecord
-    DatabaseName = 'WT'
+    ConnectionName = 'WT'
     Filtered = True
     FilterOptions = [foNoPartialCompare]
     TableName = 'Supplier_contact'
@@ -151,8 +151,8 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
     Left = 144
     Top = 112
   end
-  object qryNewContact: TQuery
-    DatabaseName = 'WT'
+  object qryNewContact: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Contact_no) '
       'from Supplier_Contact'
@@ -166,8 +166,8 @@ object frmWTSrchSuppContacts: TfrmWTSrchSuppContacts
         ParamType = ptUnknown
       end>
   end
-  object qryContactType: TQuery
-    DatabaseName = 'WT'
+  object qryContactType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Contact_Type'
       'Order by Contact_Type_description')

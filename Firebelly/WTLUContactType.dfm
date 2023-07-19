@@ -130,8 +130,8 @@ object frmWTLUContactType: TfrmWTLUContactType
     Left = 152
     Top = 120
   end
-  object qryContactType: TQuery
-    DatabaseName = 'WT'
+  object qryContactType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Contact_Type'
@@ -140,8 +140,8 @@ object frmWTLUContactType: TfrmWTLUContactType
     Left = 72
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

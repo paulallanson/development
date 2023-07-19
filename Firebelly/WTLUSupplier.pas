@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, ImgList, ComCtrls, Grids, DBGrids,
-  ToolWin, DB, DBTables, AllCommon;
+  ToolWin, DB, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUSupplier = class(TForm)
@@ -30,10 +33,10 @@ type
     edtSearch: TEdit;
     chkbxShowInactive: TCheckBox;
     btnSearch: TBitBtn;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     dtsSuppliers: TDataSource;
-    qrySuppliers: TQuery;
-    qryDelete: TQuery;
+    qrySuppliers: TFDQuery;
+    qryDelete: TFDQuery;
     Panel4: TPanel;
     Button1: TButton;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

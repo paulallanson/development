@@ -5,8 +5,15 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ImgList, ComCtrls, ExtCtrls, ToolWin, Grids, DBGrids, Menus, StdCtrls, Db,
-  wtluCustQuotes, wtLuCustJobs, wtluCustInvoices, DBTables, AllCommon,
-  Buttons, QrCtrls, Inifiles, System.ImageList;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, System.ImageList, Vcl.Buttons,
+  wtluCustQuotes, wtLuCustJobs, wtluCustInvoices, AllCommon,
+  Buttons, QrCtrls, Inifiles, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustomer = class(TForm)
@@ -30,7 +37,7 @@ type
     tmrSearch: TTimer;
     Delete1: TMenuItem;
     btnContacts: TToolButton;
-    qryCustomers: TQuery;
+    qryCustomers: TFDQuery;
     dtsCustomers: TDataSource;
     dbgDetails: TDBGrid;
     Panel2: TPanel;
@@ -42,8 +49,8 @@ type
     CoolBar2: TCoolBar;
     Panel3: TPanel;
     Label2: TLabel;
-    qryDelete: TQuery;
-    qryDummy: TQuery;
+    qryDelete: TFDQuery;
+    qryDummy: TFDQuery;
     btnSearch: TBitBtn;
     chkbxShowProspects: TCheckBox;
     ToolButton1: TToolButton;

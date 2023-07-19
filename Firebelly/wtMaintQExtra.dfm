@@ -191,8 +191,8 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
       TabOrder = 6
     end
   end
-  object qryExtras: TQuery
-    DatabaseName = 'wt'
+  object qryExtras: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Extra_Charge'
@@ -214,8 +214,8 @@ object frmWTMaintQExtra: TfrmWTMaintQExtra
     Left = 288
     Top = 16
   end
-  object qryOneExtra: TQuery
-    DatabaseName = 'wt'
+  object qryOneExtra: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Extra_Charge, Do_Not_Discount, Price_pointer,'
       '(select top 1 Unit_Cost'

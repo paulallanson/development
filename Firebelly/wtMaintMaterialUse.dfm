@@ -83,8 +83,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
       'Splashbacks etc')
     TabOrder = 4
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Material_Use'
       'SET'
@@ -117,8 +117,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Material_Use'
       '        (Material_Use,'
@@ -136,8 +136,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Material_Use'
       'From Material_Use'
@@ -151,8 +151,8 @@ object frmWtMaintMaterialUse: TfrmWtMaintMaterialUse
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

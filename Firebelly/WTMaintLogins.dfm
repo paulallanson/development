@@ -121,8 +121,8 @@ object frmWTMaintLogins: TfrmWTMaintLogins
         Width = 50
       end>
   end
-  object qryWorkstation: TQuery
-    DatabaseName = 'WT'
+  object qryWorkstation: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'#9'Workstation.Workstation,'
       #9#9'Workstation.Workstation_Name, '
@@ -142,8 +142,8 @@ object frmWTMaintLogins: TfrmWTMaintLogins
     Left = 264
     Top = 88
   end
-  object qryDeleteWS: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteWS: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Workstation'
       'WHERE Workstation = :Workstation')

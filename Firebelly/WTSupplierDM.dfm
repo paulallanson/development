@@ -4,8 +4,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   Top = 107
   Height = 632
   Width = 706
-  object qryMaterialType: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Material_Type.*'
       'FROM Material_Type'
@@ -13,9 +13,9 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 32
     Top = 40
   end
-  object qryGetMaterialGroups: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsMaterialType
+  object qryGetMaterialGroups: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsMaterialType
     SQL.Strings = (
       'SELECT  Worktop_Group.Worktop_Group,'
       '        Worktop_Group.Worktop_Group_Description,'
@@ -50,8 +50,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 136
     Top = 96
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description as Worktop_Description,'
@@ -133,8 +133,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 464
     Top = 40
   end
-  object qryGetWTThickness: TQuery
-    DatabaseName = 'WT'
+  object qryGetWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Worktop_Thickness'
@@ -148,8 +148,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryAddSupplierWT: TQuery
-    DatabaseName = 'WT'
+  object qryAddSupplierWT: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop (Supplier, Worktop, inactive)'
       'VALUES (:Supplier, :Worktop, '#39'N'#39')')
@@ -167,8 +167,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryAddSupplierWTThickness: TQuery
-    DatabaseName = 'WT'
+  object qryAddSupplierWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop_Thickness'
       'VALUES (:Supplier, :Worktop, :Thickness, :Price_Pointer)')
@@ -196,8 +196,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryWorktopPrices: TQuery
-    DatabaseName = 'WT'
+  object qryWorktopPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Worktop_Thickness.Worktop,'
@@ -285,8 +285,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 104
     Top = 336
   end
-  object qryDummyPrices: TQuery
-    DatabaseName = 'WT'
+  object qryDummyPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Worktop_Thickness.Worktop,'
@@ -381,8 +381,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryChkSupplierWT: TQuery
-    DatabaseName = 'WT'
+  object qryChkSupplierWT: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Supplier'
       'FROM Supplier_Worktop'
@@ -401,8 +401,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryChkSupplierWTThickness: TQuery
-    DatabaseName = 'WT'
+  object qryChkSupplierWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Worktop_Thickness.Supplier,'
@@ -439,8 +439,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qrySupplierWTInactive: TQuery
-    DatabaseName = 'WT'
+  object qrySupplierWTInactive: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Supplier_Worktop'
       'SET Inactive = :Inactive'
@@ -464,8 +464,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qrySupplierWTDelete: TQuery
-    DatabaseName = 'WT'
+  object qrySupplierWTDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
@@ -483,8 +483,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qrySupplierWTThickDelete: TQuery
-    DatabaseName = 'WT'
+  object qrySupplierWTThickDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop_Thickness'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
@@ -502,8 +502,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryChkSupplierProd: TQuery
-    DatabaseName = 'WT'
+  object qryChkSupplierProd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -535,8 +535,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryAddSupplierProd: TQuery
-    DatabaseName = 'WT'
+  object qryAddSupplierProd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Supplier_Product'
       '('
@@ -597,8 +597,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSupplierProd: TQuery
-    DatabaseName = 'WT'
+  object qryUpdSupplierProd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Supplier_Product'
       'SET Supplier_Product_Code = :Supplier_Product_Code,'
@@ -641,8 +641,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryProductPrices: TQuery
-    DatabaseName = 'WT'
+  object qryProductPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -714,8 +714,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 104
     Top = 408
   end
-  object qryDummyProductPrices: TQuery
-    DatabaseName = 'WT'
+  object qryDummyProductPrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -781,8 +781,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierProd: TQuery
-    DatabaseName = 'WT'
+  object qryGetSupplierProd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -842,13 +842,13 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 320
     Top = 464
   end
-  object qryDeletePrices: TQuery
-    DatabaseName = 'WT'
+  object qryDeletePrices: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Prices'
       'WHERE Price_Pointer = :Price_Pointer')
@@ -861,8 +861,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qrySupplierWorktops: TQuery
-    DatabaseName = 'WT'
+  object qrySupplierWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Description AS Worktop_Description,'
       '        Worktop.Material_Type,'
@@ -905,8 +905,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 104
     Top = 480
   end
-  object qryDummySupplierWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryDummySupplierWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop.Description AS Worktop_Description,'
       '        Worktop.Material_Type,'

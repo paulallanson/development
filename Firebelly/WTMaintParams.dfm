@@ -1914,8 +1914,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 568
     Top = 296
   end
-  object qryUpParams: TQuery
-    DatabaseName = 'wt'
+  object qryUpParams: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update company'
       'set Payment_Terms = :Terms,'
@@ -2009,8 +2009,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParamType = ptUnknown
       end>
   end
-  object lkpThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Thickness'
@@ -2023,8 +2023,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 496
     Top = 280
   end
-  object qryAccounts: TQuery
-    DatabaseName = 'wt'
+  object qryAccounts: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from Accounts_Package'
@@ -2037,8 +2037,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 596
     Top = 592
   end
-  object qryVat: TQuery
-    DatabaseName = 'wt'
+  object qryVat: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from VAT'
       'order by Vat_Rate')
@@ -2061,8 +2061,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 652
     Top = 400
   end
-  object qryScheduling: TQuery
-    DatabaseName = 'wt'
+  object qryScheduling: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from Schedule_Package'
@@ -2075,8 +2075,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 472
     Top = 296
   end
-  object qryOperator: TQuery
-    DatabaseName = 'WT'
+  object qryOperator: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Operator,'
       '        Operator_Name'
@@ -2097,8 +2097,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 556
     Top = 336
   end
-  object qryAccountManager: TQuery
-    DatabaseName = 'WT'
+  object qryAccountManager: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Operator,'
       '        Operator_Name'
@@ -2119,8 +2119,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 628
     Top = 536
   end
-  object qrySalesSource: TQuery
-    DatabaseName = 'WT'
+  object qrySalesSource: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Lead_Source,'
       '        Sales_Lead_Source_Descr'
@@ -2143,8 +2143,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 588
     Top = 400
   end
-  object qryCompany: TQuery
-    DatabaseName = 'WT'
+  object qryCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Company'
@@ -2152,8 +2152,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 612
     Top = 280
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'WT'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Company'
       'SET'
@@ -2698,8 +2698,8 @@ object frmWTMaintParams: TfrmWTMaintParams
         ParamType = ptUnknown
       end>
   end
-  object qryCustSalesSource: TQuery
-    DatabaseName = 'WT'
+  object qryCustSalesSource: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Lead_Source,'
       '        Sales_Lead_Source_Descr'
@@ -2722,8 +2722,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 588
     Top = 448
   end
-  object qryInactiveReason: TQuery
-    DatabaseName = 'WT'
+  object qryInactiveReason: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Inactive_Reason'
@@ -2736,8 +2736,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     Left = 660
     Top = 216
   end
-  object qryGetProduct: TQuery
-    DatabaseName = 'WT'
+  object qryGetProduct: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Product'

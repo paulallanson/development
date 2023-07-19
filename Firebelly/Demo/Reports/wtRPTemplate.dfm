@@ -2167,8 +2167,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       FontSize = 8
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  sales_order_line.quote,'
       '        sales_order_line.description,'
@@ -2211,8 +2211,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 1024
     Top = 62
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -2226,8 +2226,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -2255,16 +2255,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 1030
     Top = 233
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 1030
     Top = 157
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -2279,8 +2279,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TQuery
-    DatabaseName = 'WT'
+  object qryEndUser: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -2315,8 +2315,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 1030
     Top = 46
   end
-  object qryQuote: TQuery
-    DatabaseName = 'wt'
+  object qryQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.description,'
@@ -2345,8 +2345,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteEdge: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Edge.Quote,'
       '        Quote_Edge.Edge_number,'
@@ -2366,8 +2366,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteThickness: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2387,8 +2387,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -2408,8 +2408,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteElement: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  TOP 1'
       '        Quote_Element.Worktop,'

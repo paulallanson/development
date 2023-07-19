@@ -176,8 +176,9 @@ resourcestring
 
 implementation
 
-uses UITypes, 
-  Dialogs;
+uses
+  Dialogs, System.UITypes,
+  FireDAC.Comp.Client;
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
 
@@ -354,7 +355,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
     end;
 
 *)
@@ -431,7 +432,7 @@ begin
 (*  if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') or (EmailApplication = 'OUT2016') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.FDManager.accounts.item(EmailAccount);
     end;
 *)
   MI.Bodyformat := olFormatHTML;

@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, QrCtrls, DB,
-  DBTables, Spin, Menus, IniFiles;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, OleCtnrs, QrCtrls, DB, Spin, Menus, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSMaterialAnalysis = class(TForm)
@@ -29,7 +31,7 @@ type
     grpbxReps: TGroupBox;
     Label3: TLabel;
     cmbReps: TComboBox;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     rdgrpSortBy1: TRadioGroup;
     chkbxPageBreak: TCheckBox;
@@ -39,13 +41,13 @@ type
     grpbxContacts: TGroupBox;
     Label6: TLabel;
     cmbContacts: TComboBox;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     rdgrpSortBy2: TRadioGroup;
     rdgrpDetailed: TRadioGroup;
     rdgrpCategory: TRadioGroup;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
-    qrySOReport: TQuery;
+    qrySOReport: TFDQuery;
     grpbxCustomer: TGroupBox;
     Label4: TLabel;
     btnCustomer: TButton;
@@ -54,7 +56,7 @@ type
     pmnCustomers: TPopupMenu;
     Delete1: TMenuItem;
     rdgrpValueBy: TRadioGroup;
-    qrySIReport: TQuery;
+    qrySIReport: TFDQuery;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);

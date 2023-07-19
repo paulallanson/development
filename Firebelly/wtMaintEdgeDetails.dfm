@@ -106,8 +106,8 @@ object frmWTMaintEdgeDetails: TfrmWTMaintEdgeDetails
     TabOrder = 5
     OnClick = btnEdgesClick
   end
-  object lkpEdges: TQuery
-    DatabaseName = 'WT'
+  object lkpEdges: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from edge_profile'
       'where edge_profile not in'
@@ -136,8 +136,8 @@ object frmWTMaintEdgeDetails: TfrmWTMaintEdgeDetails
     Left = 272
     Top = 56
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'INSERT INTO Edge_Thickness'
       '('

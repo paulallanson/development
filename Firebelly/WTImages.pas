@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Buttons, DBTables, CCSCommon, jpeg;
+  StdCtrls, ExtCtrls, Buttons, CCSCommon, jpeg;
 
 type
   TPBImagesFrm = class(TForm)
@@ -41,7 +41,10 @@ type
 var
   PBImagesFrm: TPBImagesFrm;
 
-implementation
+implementation
+
+uses
+  FireDAC.Comp.Client;
 
 {$R *.DFM}
 
@@ -64,7 +67,7 @@ begin
 
   sgList := TStringList.Create;
   try
-    session.GetAliasParams(TempArray,sgList);
+    FDManager.GetConnectionDefParams(TempArray,sgList);
     sDatabase := sgList.Values['DATABASE NAME'];
   finally
     sgList.free;

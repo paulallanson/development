@@ -172,8 +172,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     ExplicitTop = 432
     ExplicitWidth = 418
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer, Customer_Name, Is_retail_customer, Vat,'
       '           Discount_Rate, '
@@ -218,8 +218,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     Left = 96
     Top = 128
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'delete '
       'from customer'

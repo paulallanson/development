@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
-  ComCtrls;
+  Dialogs, ExtCtrls, DB, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTSrchSupplier = class(TForm)
     dbgDetails: TDBGrid;
-    qryDetails: TQuery;
+    qryDetails: TFDQuery;
     dtsDetails: TDataSource;
     tmrSearch: TTimer;
     pnlFunctions: TPanel;

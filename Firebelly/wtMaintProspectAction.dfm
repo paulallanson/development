@@ -60,8 +60,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
     Text = 'edtProspectActionDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Prospect_Action'
       'SET'
@@ -82,8 +82,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Prospect_Action'
       '        (Prospect_Action,'
@@ -100,8 +100,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Prospect_Action'
       'From Prospect_Action'
@@ -115,8 +115,8 @@ object frmWTMaintProspectAction: TfrmWTMaintProspectAction
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

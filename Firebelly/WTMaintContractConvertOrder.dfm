@@ -547,8 +547,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       end
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
@@ -591,8 +591,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Left = 408
     Top = 112
   end
-  object qryGetQElement: TQuery
-    DatabaseName = 'WT'
+  object qryGetQElement: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1 Quote_Element.Thickness'
       'FROM Quote_Element'
@@ -606,8 +606,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetWTThickness: TQuery
-    DatabaseName = 'WT'
+  object qryGetWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Price_Pointer'
       'FROM Worktop_Thickness'
@@ -627,8 +627,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         ParamType = ptUnknown
       end>
   end
-  object qryThickness: TQuery
-    DatabaseName = 'WT'
+  object qryThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'
@@ -682,8 +682,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Left = 256
     Top = 217
   end
-  object qrySalesOrders: TQuery
-    DatabaseName = 'WT'
+  object qrySalesOrders: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Sales_Order'
@@ -698,8 +698,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetMaterialSlabSize: TQuery
-    DatabaseName = 'WT'
+  object qryGetMaterialSlabSize: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select top 1 Length, Depth'
       'from Material_Type_Slab_Size'
@@ -713,8 +713,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetQSlab: TQuery
-    DatabaseName = 'WT'
+  object qryGetQSlab: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1 Quote_Slab.Thickness'
       'FROM Quote_Slab'

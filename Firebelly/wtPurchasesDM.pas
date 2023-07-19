@@ -3,7 +3,10 @@ unit wtPurchasesDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, Math, Forms, wtNotesDM, wtSupplierDM;
+  SysUtils, Classes, DB, Math, Forms, wtNotesDM, wtSupplierDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TpopMode   = (popAdd, popChange, popDelete, popCopy, popRaise, popView);
@@ -11,44 +14,44 @@ type
   TpoevMode   = (poevAdd, poevChange, poevDelete, poevView);
 
   TdtmdlPurchaseOrder = class(TDataModule)
-    qryAllPurchases: TQuery;
+    qryAllPurchases: TFDQuery;
     dtsAllPurchases: TDataSource;
-    qryPOHeader: TQuery;
-    qryOperator: TQuery;
+    qryPOHeader: TFDQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
-    qryZero: TQuery;
-    qryGetSupplier: TQuery;
-    qryPOAddHeader: TQuery;
-    qryPOUpHeader: TQuery;
-    qryPOGetLast: TQuery;
-    qryUpCompany: TQuery;
-    qryPOUpStatus: TQuery;
-    qryVAT: TQuery;
+    qryZero: TFDQuery;
+    qryGetSupplier: TFDQuery;
+    qryPOAddHeader: TFDQuery;
+    qryPOUpHeader: TFDQuery;
+    qryPOGetLast: TFDQuery;
+    qryUpCompany: TFDQuery;
+    qryPOUpStatus: TFDQuery;
+    qryVAT: TFDQuery;
     qryVATVat: TIntegerField;
     qryVATVat_Rate: TFloatField;
     qryVATDescription: TStringField;
     qryVATVat_Code: TStringField;
     dtsVAT: TDataSource;
-    qryGetContacts: TQuery;
+    qryGetContacts: TFDQuery;
     dtsMaterial: TDataSource;
-    qryMaterial: TQuery;
-    qryWTThickness: TQuery;
+    qryMaterial: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryWorktops: TQuery;
-    qryPOAllLines: TQuery;
-    qryMaterialSlab: TQuery;
+    qryWorktops: TFDQuery;
+    qryPOAllLines: TFDQuery;
+    qryMaterialSlab: TFDQuery;
     dtsMaterialSlab: TDataSource;
-    qryOneWTThickness: TQuery;
-    qryPOAddLine: TQuery;
-    qryPOUpdLine: TQuery;
-    qryQHeader: TQuery;
-    qryGetSupplierContact: TQuery;
-    qryQSlab: TQuery;
-    qryQuoteLines: TQuery;
-    qrySupplierWorktopCost: TQuery;
-    qryMaterialSlabs: TQuery;
-    qryQuoteSlabs: TQuery;
+    qryOneWTThickness: TFDQuery;
+    qryPOAddLine: TFDQuery;
+    qryPOUpdLine: TFDQuery;
+    qryQHeader: TFDQuery;
+    qryGetSupplierContact: TFDQuery;
+    qryQSlab: TFDQuery;
+    qryQuoteLines: TFDQuery;
+    qrySupplierWorktopCost: TFDQuery;
+    qryMaterialSlabs: TFDQuery;
+    qryQuoteSlabs: TFDQuery;
     qryAllPurchasesPurchase_Order: TIntegerField;
     qryAllPurchasesSupplier: TIntegerField;
     qryAllPurchasesDescriptive_Reference: TStringField;
@@ -68,23 +71,23 @@ type
     qryAllPurchasesContact_No: TIntegerField;
     qryAllPurchasesContact_name: TStringField;
     qryAllPurchasesOffice_Contact_Name: TStringField;
-    qryUpPOStatus: TQuery;
-    qryUpPOLines: TQuery;
-    qryGetProducts: TQuery;
+    qryUpPOStatus: TFDQuery;
+    qryUpPOLines: TFDQuery;
+    qryGetProducts: TFDQuery;
     dtsGetProducts: TDataSource;
-    qryGetProduct: TQuery;
-    qryDummy: TQuery;
-    qryGetSOLines: TQuery;
+    qryGetProduct: TFDQuery;
+    qryDummy: TFDQuery;
+    qryGetSOLines: TFDQuery;
     dtsGetSOLines: TDataSource;
-    qryQuoteSlab: TQuery;
-    qryDummy_old: TQuery;
-    qryGetPOLines: TQuery;
-    qryGetSOStatus: TQuery;
-    qryUpSOStatus: TQuery;
-    qryQuoteAdhesives: TQuery;
-    qryPOAllEvents: TQuery;
-    qryPOEvent: TQuery;
-    qryPOAddEvent: TQuery;
+    qryQuoteSlab: TFDQuery;
+    qryDummy_old: TFDQuery;
+    qryGetPOLines: TFDQuery;
+    qryGetSOStatus: TFDQuery;
+    qryUpSOStatus: TFDQuery;
+    qryQuoteAdhesives: TFDQuery;
+    qryPOAllEvents: TFDQuery;
+    qryPOEvent: TFDQuery;
+    qryPOAddEvent: TFDQuery;
   private
     function GetCurrentPOrder: integer;
     function GetNextPONumber: integer;

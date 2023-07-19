@@ -99,8 +99,8 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Text = 'edtRetailMultiplier'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer_Material_Type'
       'SET'
@@ -127,13 +127,13 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 400
     Top = 104
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer_Material_Type'
       '('
@@ -174,16 +174,16 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(ID) as ID'
       'From Customer_Material_Type')
     Left = 312
     Top = 104
   end
-  object qryMaterialType: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Type'
@@ -197,8 +197,8 @@ object frmWTMaintCustMaterialType: TfrmWTMaintCustMaterialType
     Left = 384
     Top = 16
   end
-  object qryGetMaterialType: TQuery
-    DatabaseName = 'WT'
+  object qryGetMaterialType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Customer_Material_Type'

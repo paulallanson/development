@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, DBTables, QrCtrls,
-  ExtCtrls, ComCtrls;
+  StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUAddChgs = class(TForm)
     dbgDetails: TDBGrid;
     srclkpExtras: TDataSource;
-    lkpExtras: TQuery;
+    lkpExtras: TFDQuery;
     lkpExtrasExtra_Charge: TIntegerField;
     lkpExtrasDescription: TStringField;
     lkpExtrasPrice_pointer: TIntegerField;
@@ -28,7 +31,7 @@ type
     BitBtn4: TBitBtn;
     btnExcel: TBitBtn;
     lkpExtrasDo_Not_Discount: TStringField;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     edtName: TEdit;
     tmrRefresh: TTimer;

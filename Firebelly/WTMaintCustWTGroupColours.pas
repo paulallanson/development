@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustWTGroupColours = class(TForm)
@@ -25,12 +28,12 @@ type
     btnCancel: TBitBtn;
     Label2: TLabel;
     lblMaterialType: TLabel;
-    qryDelete: TQuery;
-    qryAdd: TQuery;
-    qryMembers: TQuery;
-    qryNonMembers: TQuery;
+    qryDelete: TFDQuery;
+    qryAdd: TFDQuery;
+    qryMembers: TFDQuery;
+    qryNonMembers: TFDQuery;
     dtsNonMembers: TDataSource;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);

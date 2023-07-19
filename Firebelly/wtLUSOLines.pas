@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, DBGrids, ExtCtrls, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, Grids, DBGrids, ExtCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUSOLines = class(TForm)
@@ -12,7 +15,7 @@ type
     dbgDetails: TDBGrid;
     btnSelect: TButton;
     btnCancel: TButton;
-    qrySOLines: TQuery;
+    qrySOLines: TFDQuery;
     dtsSOLines: TDataSource;
     Panel2: TPanel;
     Label1: TLabel;

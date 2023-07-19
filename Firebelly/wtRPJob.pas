@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, StdCtrls;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPJob = class(TForm)
     qrpDetails: TQuickRep;
     qrgJob: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     dtsReport: TDataSource;
-    qryAddress: TQuery;
-    qryCustomer: TQuery;
+    qryAddress: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbJobFooter: TQRBand;
     lblGrossSupply: TQRLabel;
@@ -25,8 +28,8 @@ type
     qrlblInstallation: TQRLabel;
     qrlblSurvey: TQRLabel;
     qrlblDelivery: TQRLabel;
-    qryCompany: TQuery;
-    qrygetNotes: TQuery;
+    qryCompany: TFDQuery;
+    qrygetNotes: TFDQuery;
     qrlblSOCaption: TQRLabel;
     qrmAddress: TQRMemo;
     QRLabel2: TQRLabel;
@@ -41,7 +44,7 @@ type
     qrlblGross: TQRLabel;
     QRShape4: TQRShape;
     qrlblNett: TQRLabel;
-    qryEndUser: TQuery;
+    qryEndUser: TFDQuery;
     QRShape1: TQRShape;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
@@ -62,10 +65,10 @@ type
     qrlblEdgeDescription: TQRDBText;
     qrsdJExtras: TQRSubDetail;
     qrlblExtraDescription: TQRDBText;
-    qryJElements: TQuery;
-    qryJCutOuts: TQuery;
-    qryJEdges: TQuery;
-    qryJExtras: TQuery;
+    qryJElements: TFDQuery;
+    qryJCutOuts: TFDQuery;
+    qryJEdges: TFDQuery;
+    qryJExtras: TFDQuery;
     lblWTPrice: TQRLabel;
     lblWTTotal: TQRLabel;
     lblCOPrice: TQRLabel;
@@ -79,13 +82,13 @@ type
     qrlblExtraCharges: TQRLabel;
     qrmRemedials: TQRMemo;
     lblRemTotal: TQRLabel;
-    qryJRemedials: TQuery;
+    qryJRemedials: TFDQuery;
     qrsdJEvents: TQRSubDetail;
     qrmEventNotes: TQRMemo;
     lblExtraTotal: TQRLabel;
     QRDBText3: TQRDBText;
     lblExtraPrice: TQRLabel;
-    qryJEvents: TQuery;
+    qryJEvents: TFDQuery;
     lblDiscount: TQRLabel;
     qrlblDiscountValue: TQRLabel;
     QRDBText5: TQRDBText;

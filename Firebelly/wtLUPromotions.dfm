@@ -141,8 +141,8 @@ object frmwtLUPromotions: TfrmwtLUPromotions
     Left = 192
     Top = 64
   end
-  object qryPromotions: TQuery
-    DatabaseName = 'WT'
+  object qryPromotions: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Promotion'
@@ -160,8 +160,8 @@ object frmwtLUPromotions: TfrmwtLUPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 272
     Top = 64
   end

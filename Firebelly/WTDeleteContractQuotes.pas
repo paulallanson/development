@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, ComCtrls;
+  Dialogs, DB, StdCtrls, Buttons, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTDeleteContractQuotes = class(TForm)
@@ -15,13 +18,13 @@ type
     Label1: TLabel;
     edtDateTo: TEdit;
     btnDateRequired: TBitBtn;
-    qryQuotes: TQuery;
-    qryQintNotes: TQuery;
-    qryJSOL: TQuery;
-    qryJIntNotes: TQuery;
-    qrySIL: TQuery;
-    qryDelete: TQuery;
-    qryGetCQOption: TQuery;
+    qryQuotes: TFDQuery;
+    qryQintNotes: TFDQuery;
+    qryJSOL: TFDQuery;
+    qryJIntNotes: TFDQuery;
+    qrySIL: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetCQOption: TFDQuery;
     lblnoRecords: TLabel;
     Label3: TLabel;
     edtDateFrom: TEdit;

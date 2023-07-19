@@ -1180,8 +1180,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
     Left = 616
     Top = 49
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE CutOut'
       'SET'
@@ -1226,8 +1226,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into CutOut'
       '        (CutOut,'
@@ -1244,8 +1244,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select CutOut'
       'From CutOut'
@@ -1259,8 +1259,8 @@ object frmWTMaintCutOuts: TfrmWTMaintCutOuts
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

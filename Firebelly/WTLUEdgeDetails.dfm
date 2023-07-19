@@ -324,8 +324,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = btnGoClick
     end
   end
-  object qryDelEdgeThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelEdgeThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from edge_thickness'
       'where price_pointer = :price_pointer')
@@ -338,8 +338,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
         ParamType = ptUnknown
       end>
   end
-  object lkpEdgeThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '  Edge_thickness.Edge_profile,'
@@ -479,8 +479,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Left = 112
     Top = 216
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -494,8 +494,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Left = 280
     Top = 168
   end
-  object lkpEdgeType: TQuery
-    DatabaseName = 'WT'
+  object lkpEdgeType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Edge_Type'
@@ -511,8 +511,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Left = 440
     Top = 112
   end
-  object qryGetEdgeThickness: TQuery
-    DatabaseName = 'wt'
+  object qryGetEdgeThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Edge_thickness.Material_Type,'
@@ -559,8 +559,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
         ParamType = ptUnknown
       end>
   end
-  object qryAddEdgeThickness: TQuery
-    DatabaseName = 'WT'
+  object qryAddEdgeThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'Insert into Edge_Thickness (Edge_Profile, Edge_Type, Material_Ty' +
@@ -592,8 +592,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteEdgeThickness: TQuery
-    DatabaseName = 'WT'
+  object qryDeleteEdgeThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Edge_Thickness'
       'WHERE Material_Type = :Material_type AND'

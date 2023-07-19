@@ -69,8 +69,8 @@ object frmWTExpiryDate: TfrmWTExpiryDate
     TabOrder = 3
     Text = 'edtoldExpiryDate'
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'Wt'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Update Company'
       'Set Software_CheckSum = :Software_CheckSum'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, ExtCtrls, IniFiles;
+  StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLogin = class(TForm)
@@ -14,7 +17,7 @@ type
     Label2: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetOperatorSQL: TQuery;
+    GetOperatorSQL: TFDQuery;
     Edit1: TEdit;
     Label3: TLabel;
     Label4: TLabel;
@@ -77,7 +80,7 @@ begin
   cmbAliasList.clear;
   sgList := TStringList.Create;
   try
-    Session.GetAliasNames(sgList);
+    FDManager.GetConnectionDefNames(sgList);
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if (pos('Worktop',sgList[iAliasList]) > 0) or (pos('worktop',sgList[iAliasList]) > 0) then
@@ -108,16 +111,16 @@ end;
 procedure TfrmWTLogin.OKBitBtnClick(Sender: TObject);
 begin
 (*  if sDBase = 'L' then
-    dtmdlWorktops.dtbsWorktops.AliasName := 'Worktop'
+    dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'Worktop'
   else
   if sDBase = 'T' then
-    dtmdlWorktops.dtbsWorktops.AliasName := 'Worktop';
+    dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'Worktop';
 *)
   dtmdlWorktops.dtbsWorktops.Connected := false;
   if cmbAliasList.Text = '' then
-    dtmdlWorktops.dtbsWorktops.AliasName := 'Worktop'
+    dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'Worktop'
   else
-    dtmdlWorktops.dtbsWorktops.AliasName := cmbAliasList.Text;
+    dtmdlWorktops.dtbsWorktops.ConnectionDefName := cmbAliasList.Text;
 
   try
     with GetOperatorSQL do

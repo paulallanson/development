@@ -141,8 +141,8 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
     Left = 152
     Top = 56
   end
-  object qryEdgeType: TQuery
-    DatabaseName = 'WT'
+  object qryEdgeType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Edge_Type'
@@ -160,8 +160,8 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 56
   end

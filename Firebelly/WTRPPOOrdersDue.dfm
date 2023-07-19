@@ -1174,8 +1174,8 @@ object frmWTRPPOOrdersDue: TfrmWTRPPOOrdersDue
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Purchase_Order.Purchase_Order,'
       '        Purchase_Order.Supplier,'

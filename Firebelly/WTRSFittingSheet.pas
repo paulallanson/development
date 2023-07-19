@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, DB, DBTables, CheckLst, printers, IniFiles,
+  Dialogs, StdCtrls, ShellAPI, DB, CheckLst, printers, IniFiles,
   wtRPJobFitting, QrExport, AllCommon, ComObj, DBCtrls, ExtCtrls,
-  WTRPJobRemedialSheet, ComCtrls;
+  WTRPJobRemedialSheet, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSFittingSheet = class(TForm)
     SelectLst: TListBox;
-    qryGetSORemedials: TQuery;
-    qryGetSalesOrderEmailsOld: TQuery;
-    qryGetSORemedialsEmails: TQuery;
-    qryGetSalesOrder: TQuery;
+    qryGetSORemedials: TFDQuery;
+    qryGetSalesOrderEmailsOld: TFDQuery;
+    qryGetSORemedialsEmails: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
     pnlFooter: TPanel;
     btnPrint: TButton;
     btnPreview: TButton;
@@ -27,12 +30,12 @@ type
     Label3: TLabel;
     memSelection: TMemo;
     cmbDocuments: TComboBox;
-    qryDocumentStructure: TQuery;
+    qryDocumentStructure: TFDQuery;
     chkbxMerge: TCheckBox;
     chkbxPrint: TCheckBox;
-    qryReport: TQuery;
-    qryGetSalesOrdersOlder: TQuery;
-    qryGetSalesOrderEmailsOlder: TQuery;
+    qryReport: TFDQuery;
+    qryGetSalesOrdersOlder: TFDQuery;
+    qryGetSalesOrderEmailsOlder: TFDQuery;
     pnlDocumentDetails: TPanel;
     pcDocumentDetails: TPageControl;
     TabSheet1: TTabSheet;
@@ -42,9 +45,9 @@ type
     TabSheet2: TTabSheet;
     lstbxSiteDocuments: TListBox;
     chkbxIncludeVoucher: TCheckBox;
-    qrySalesOrdersOld: TQuery;
-    qryGetSalesOrders: TQuery;
-    qryGetSalesOrderEmails: TQuery;
+    qrySalesOrdersOld: TFDQuery;
+    qryGetSalesOrders: TFDQuery;
+    qryGetSalesOrderEmails: TFDQuery;
     procedure EnableRun(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);

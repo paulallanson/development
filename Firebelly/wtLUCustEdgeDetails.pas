@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, DBTables, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustEdgeDetails = class(TForm)
     dbgDetails: TDBGrid;
     dtsCustEdge: TDataSource;
-    qryCustEdge: TQuery;
+    qryCustEdge: TFDQuery;
     qryCustEdgeEdge_Type: TIntegerField;
     qryCustEdgePrice_pointer: TIntegerField;
     qryCustEdgeDescription: TStringField;
@@ -19,10 +22,10 @@ type
     qryCustEdgeUnit_Cost: TFloatField;
     qryCustEdgePrice_Unit_Description: TStringField;
     qryCustEdgeinactive: TStringField;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryGetCustEdges: TQuery;
-    qryAddCustEdge: TQuery;
+    qryGetCustEdges: TFDQuery;
+    qryAddCustEdge: TFDQuery;
     tmrRefresh: TTimer;
     Panel1: TPanel;
     stsbrDetails: TStatusBar;
@@ -41,15 +44,15 @@ type
     dblkpEdgeType: TDBLookupComboBox;
     dblkpCopyGroup: TDBLookupComboBox;
     btnGo: TButton;
-    lkpEdgeType: TQuery;
+    lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
     btnExcel: TBitBtn;
     qryCustEdgeEdge_Type_Description: TStringField;
     qryCustEdgeGroup_Id: TIntegerField;
-    qryDelCustEdge: TQuery;
-    lkpCustEdgeGroup: TQuery;
+    qryDelCustEdge: TFDQuery;
+    lkpCustEdgeGroup: TFDQuery;
     dtsCustEdgeGroup: TDataSource;
-    qryDelAllCustEdges: TQuery;
+    qryDelAllCustEdges: TFDQuery;
     qryCustEdgeEdge_Profile: TIntegerField;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

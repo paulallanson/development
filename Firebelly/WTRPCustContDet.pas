@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, Db, DBTables, ExtCtrls, AllCommon;
+  Qrctrls, QuickRpt, Db, ExtCtrls, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPCustContDet = class(TForm)
     QRPCustStat: TQuickRep;
-    GetDetsQry: TQuery;
+    GetDetsQry: TFDQuery;
     QRBand1: TQRBand;
     QRCustGroup: TQRGroup;
     QRFootBand: TQRBand;

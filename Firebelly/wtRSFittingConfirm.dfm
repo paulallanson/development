@@ -198,8 +198,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
       TabOrder = 2
     end
   end
-  object qryGetSOQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Quote,'
       '        Int_Sel.Int_Sel_Code'
@@ -216,8 +216,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order.*,'
       '        Operator.Operator_Name,'
@@ -251,8 +251,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmails: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmails: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.*,'
       '        Operator.Operator_Name,'
@@ -293,8 +293,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOQuotesEmails: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuotesEmails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Quote'
       'FROM Sales_Order_Line'
@@ -309,8 +309,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Location_Plan_Document'
       'FROM Sales_Order'
@@ -324,8 +324,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
         ParamType = ptUnknown
       end>
   end
-  object qryDocumentStructure: TQuery
-    DatabaseName = 'WT'
+  object qryDocumentStructure: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Folder_Name'
       'FROM Document_Structure'
@@ -334,8 +334,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Left = 48
     Top = 88
   end
-  object qryGetMaterialDescription: TQuery
-    DatabaseName = 'WT'
+  object qryGetMaterialDescription: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT TOP 1  Quote_Element.Quote,'
       '              Thickness.Thickness_mm,'

@@ -115,8 +115,8 @@ object frmWTMaintOption: TfrmWTMaintOption
     Left = 312
     Top = 8
   end
-  object qryOptions: TQuery
-    DatabaseName = 'WT'
+  object qryOptions: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select *'
       'from Customer_Worktop_Group'

@@ -264,8 +264,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
       NumGlyphs = 2
     end
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Supplier_Contact'
       'SET'
@@ -334,8 +334,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Supplier_Contact'
       '        (Supplier, Contact_no,'
@@ -362,8 +362,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Supplier_Contact'
       'Where'
@@ -382,8 +382,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Contact_No'
       'From Supplier_Contact'
@@ -402,8 +402,8 @@ object frmWTMaintSupplierContact: TfrmWTMaintSupplierContact
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'

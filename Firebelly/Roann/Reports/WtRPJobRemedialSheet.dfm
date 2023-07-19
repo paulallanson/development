@@ -2093,8 +2093,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
       FontSize = 8
     end
   end
-  object OldqryReport: TQuery
-    DatabaseName = 'wt'
+  object OldqryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job.Job,'
       '        Job_Remedial.Remedial_Number,'
@@ -2164,8 +2164,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Left = 1088
     Top = 64
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -2179,8 +2179,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -2205,16 +2205,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Left = 1230
     Top = 267
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 1165
     Top = 322
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -2229,8 +2229,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryUpJStatus: TQuery
-    DatabaseName = 'wt'
+  object qryUpJStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Job'
       
@@ -2256,8 +2256,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Company_Name,'
       'Street,'
@@ -2271,9 +2271,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Left = 1080
     Top = 329
   end
-  object qryJRemedials: TQuery
-    DatabaseName = 'Wt'
-    DataSource = dtsReport
+  object qryJRemedials: TFDQuery
+    ConnectionName = 'Wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job_Remedial.Remedial_Number,'
@@ -2305,8 +2305,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryJobEdge: TQuery
-    DatabaseName = 'wt'
+  object qryJobEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Edge.Job,'
       '        Job_Edge.Edge_number,'
@@ -2326,9 +2326,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryJobWorktops: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryJobWorktops: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT TOP 1 Job_Element.Job,'
       '        Job_Element.Element_Number,'
@@ -2359,8 +2359,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job.Job_Status,'
@@ -2428,8 +2428,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetVersionNumber: TQuery
-    DatabaseName = 'wt'
+  object qryGetVersionNumber: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Number'
       'FROM Sales_Order'

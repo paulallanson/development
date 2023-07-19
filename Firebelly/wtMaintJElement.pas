@@ -4,18 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB,
-  DBTables, Spin, ExtCtrls, QrCtrls;
+  Dialogs, wtJobsDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJElement = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     lblDelete: TLabel;
     pnlDetails: TPanel;
     Label1: TLabel;
@@ -38,12 +40,12 @@ type
     Label9: TLabel;
     dblkpWTGroup: TDBLookupComboBox;
     SpeedButton2: TSpeedButton;
-    qryWTGroup: TQuery;
+    qryWTGroup: TFDQuery;
     dtsWTGroup: TDataSource;
     Label10: TLabel;
     cmbMaterialUse: TComboBox;
     btnMaterialUse: TSpeedButton;
-    qryMaterialUse: TQuery;
+    qryMaterialUse: TFDQuery;
     dtsMaterialUse: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure EnableOK(Sender: TObject);

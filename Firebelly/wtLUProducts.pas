@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBTables, DB, ExtCtrls,
-  ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUProducts = class(TForm)
     dbgDetails: TDBGrid;
-    lkpProducts: TQuery;
+    lkpProducts: TFDQuery;
     srcLkpProducts: TDataSource;
-    qryDelProduct: TQuery;
+    qryDelProduct: TFDQuery;
     lkpProductsProduct: TIntegerField;
     lkpProductsProduct_Description: TStringField;
     lkpProductsProduct_code: TStringField;

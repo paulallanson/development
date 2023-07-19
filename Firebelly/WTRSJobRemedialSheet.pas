@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ComCtrls, ExtCtrls, DB,
-  DBTables, DBCtrls;
+  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ComCtrls, ExtCtrls, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSJobRemedialSheet = class(TForm)
@@ -14,7 +16,7 @@ type
     StatusBar1: TStatusBar;
     Panel3: TPanel;
     dbgDetails: TDBGrid;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     Label1: TLabel;
     Label2: TLabel;
@@ -28,10 +30,10 @@ type
     btnPreview: TButton;
     btnEmail: TButton;
     Button4: TButton;
-    qryJob: TQuery;
+    qryJob: TFDQuery;
     dtsJob: TDataSource;
     chkbxSelectAll: TCheckBox;
-    qryReportDummy: TQuery;
+    qryReportDummy: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure btnPreviewClick(Sender: TObject);

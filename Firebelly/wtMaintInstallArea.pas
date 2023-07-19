@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables, CRControls;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, DB, CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintInstallArea = class(TForm)
@@ -17,14 +20,14 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    qryCountry: TQuery;
+    qryCountry: TFDQuery;
     dtsCountry: TDataSource;
     edtDescription: TEdit;
     edtTemplatingPrice: TCREditMoney;
     edtFittingPrice: TCREditMoney;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

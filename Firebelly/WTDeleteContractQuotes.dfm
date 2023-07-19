@@ -148,8 +148,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Install_address,'
@@ -178,8 +178,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ParamType = ptUnknown
       end>
   end
-  object qryQintNotes: TQuery
-    DatabaseName = 'WT'
+  object qryQintNotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Quote_Internal_Note'
@@ -193,8 +193,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ParamType = ptUnknown
       end>
   end
-  object qryJSOL: TQuery
-    DatabaseName = 'WT'
+  object qryJSOL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select sales_order_line.sales_order, sales_order.extra_notes'
       'from Sales_Order_Line, Sales_Order'
@@ -209,8 +209,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ParamType = ptUnknown
       end>
   end
-  object qryJIntNotes: TQuery
-    DatabaseName = 'WT'
+  object qryJIntNotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Job_Internal_Note'
@@ -224,8 +224,8 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ParamType = ptUnknown
       end>
   end
-  object qrySIL: TQuery
-    DatabaseName = 'WT'
+  object qrySIL: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'select Sales_Invoice_Line.Sales_invoice, Sales_Invoice.Notes, Sa' +
@@ -242,13 +242,13 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'Wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'Wt'
     Left = 80
     Top = 136
   end
-  object qryGetCQOption: TQuery
-    DatabaseName = 'Wt'
+  object qryGetCQOption: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT Quote'
       'FROM Contract_Quote_Line_Option'

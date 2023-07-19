@@ -221,8 +221,8 @@ object frmWTRSQuote: TfrmWTRSQuote
     TabOrder = 8
     OnClick = chkbxHideAllPricesClick
   end
-  object qryGetQuotes: TQuery
-    DatabaseName = 'WT'
+  object qryGetQuotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'
@@ -262,8 +262,8 @@ object frmWTRSQuote: TfrmWTRSQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  TOP 1'
       '        Quote_Element.Quote,'
@@ -298,8 +298,8 @@ object frmWTRSQuote: TfrmWTRSQuote
         ParamType = ptUnknown
       end>
   end
-  object OldqryReport: TQuery
-    DatabaseName = 'wt'
+  object OldqryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Quote.*,'
       '        Operator.Operator_Name,'
@@ -336,8 +336,8 @@ object frmWTRSQuote: TfrmWTRSQuote
         ParamType = ptUnknown
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.*,'
       '        Operator.Operator_Name,'

@@ -73,8 +73,8 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Text = '0.00'
     OnChange = EnableOK
   end
-  object qryThickness: TQuery
-    DatabaseName = 'WT'
+  object qryThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Thickness'
@@ -105,8 +105,8 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Left = 288
     Top = 24
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'INSERT INTO Worktop_Type_Thickness'
       '('
@@ -139,8 +139,8 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop_Type_Thickness'
       'SET Weight_Kg = :Weight_kg'

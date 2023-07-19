@@ -423,8 +423,8 @@ object frmwtLUPayments: TfrmwtLUPayments
     Left = 192
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Payment'
       'where Payment = :Payment')
@@ -437,8 +437,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryPayments: TQuery
-    DatabaseName = 'WT'
+  object qryPayments: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Payment.Payment,'
       '        Payment.Payment_date,'
@@ -477,62 +477,62 @@ object frmwtLUPayments: TfrmwtLUPayments
       end>
     object qryPaymentsPayment: TIntegerField
       FieldName = 'Payment'
-      Origin = 'WT.Payment.Payment'
+
     end
     object qryPaymentsPayment_date: TDateTimeField
       FieldName = 'Payment_date'
-      Origin = 'WT.Payment.Payment_date'
+
     end
     object qryPaymentsPaid_Amount: TFloatField
       FieldName = 'Paid_Amount'
-      Origin = 'WT.Payment.Paid_Amount'
+
       DisplayFormat = '0.00'
     end
     object qryPaymentsPayment_Method: TIntegerField
       FieldName = 'Payment_Method'
-      Origin = 'WT.Payment.Payment_Method'
+
     end
     object qryPaymentsPayment_Description: TStringField
       FieldName = 'Payment_Description'
-      Origin = 'WT.Payment.Payment_Description'
+
       Size = 255
     end
     object qryPaymentsPayment_Method_Description: TStringField
       FieldName = 'Payment_Method_Description'
-      Origin = 'WT.Payment_Method.Payment_Method_Description'
+
       Size = 30
     end
     object qryPaymentsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'WT.Payment.Sales_Order'
+
     end
     object qryPaymentsSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
-      Origin = 'WT.Payment.Sales_Invoice'
+
     end
     object qryPaymentsAccount_Number: TStringField
       FieldName = 'Account_Number'
-      Origin = 'WT.Payment.Account_Number'
+
       Size = 30
     end
     object qryPaymentsAccount_Month: TStringField
       FieldName = 'Account_Month'
-      Origin = 'WT.Payment.Account_Month'
+
       Size = 2
     end
     object qryPaymentsAccount_Year: TStringField
       FieldName = 'Account_Year'
-      Origin = 'WT.Payment.Account_Year'
+
       Size = 4
     end
     object qryPaymentsInvoice_no: TStringField
       FieldName = 'Invoice_no'
-      Origin = 'WT.Sales_invoice.Invoice_no'
+
       Size = 10
     end
   end
-  object qryGetSOPayments: TQuery
-    DatabaseName = 'WT'
+  object qryGetSOPayments: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  SUM(Payment.Paid_Amount) AS Total_Payments'
       'FROM Payment'
@@ -546,8 +546,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryUpSOPayments: TQuery
-    DatabaseName = 'WT'
+  object qryUpSOPayments: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_order'
       'Set Deposit_Amount = :Deposit_Amount'
@@ -566,8 +566,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryUpSINVPayments: TQuery
-    DatabaseName = 'WT'
+  object qryUpSINVPayments: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Invoice'
       'Set Paid_Amount = :Paid_Amount,'
@@ -598,8 +598,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryGetTotalPayments: TQuery
-    DatabaseName = 'WT'
+  object qryGetTotalPayments: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  SUM(Payment.Paid_Amount) AS Total_Payments'
       'FROM Payment'
@@ -620,8 +620,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryCreditNotes: TQuery
-    DatabaseName = 'WT'
+  object qryCreditNotes: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Sales_invoice.Invoice_no,'
       '  Sales_invoice.Invoice_date,'
@@ -681,8 +681,8 @@ object frmwtLUPayments: TfrmwtLUPayments
     Left = 352
     Top = 312
   end
-  object qryGetTotalCredits: TQuery
-    DatabaseName = 'WT'
+  object qryGetTotalCredits: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'SELECT  (SUM(Sales_Invoice.Goods_Value + Sales_Invoice.VAT_Value' +
@@ -713,8 +713,8 @@ object frmwtLUPayments: TfrmwtLUPayments
         ParamType = ptUnknown
       end>
   end
-  object qryGetTotalSICredits: TQuery
-    DatabaseName = 'WT'
+  object qryGetTotalSICredits: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'SELECT  (SUM(Sales_Invoice.Goods_Value + Sales_Invoice.VAT_Value' +

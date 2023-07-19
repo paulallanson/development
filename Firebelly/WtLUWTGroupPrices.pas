@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBTables, DB, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtLUWTGroupPrices = class(TForm)
     dbgDetails: TDBGrid;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryDelWTGPrices: TQuery;
+    qryDelWTGPrices: TFDQuery;
     srclkpWTGPrices: TDataSource;
-    lkpWTGPrices: TQuery;
+    lkpWTGPrices: TFDQuery;
     lkpWTGPricesWorktop_group: TIntegerField;
     lkpWTGPricesMaterial_Type: TIntegerField;
     lkpWTGPricesThickness: TIntegerField;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, CRControls, Buttons, DBCtrls, QrCtrls;
+  Dialogs, DB, StdCtrls, CRControls, Buttons, DBCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCutOutDetails = class(TForm)
@@ -17,9 +20,9 @@ type
     edtmnySell: TCREditMoney;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    lkpCutOuts: TQuery;
+    lkpCutOuts: TFDQuery;
     srclkpCutOuts: TDataSource;
-    qryAdd: TQuery;
+    qryAdd: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure btnCutOutsClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

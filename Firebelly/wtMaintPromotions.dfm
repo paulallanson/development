@@ -264,8 +264,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       TabOrder = 2
     end
   end
-  object qryDeleteWT: TQuery
-    DatabaseName = 'wt'
+  object qryDeleteWT: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Promotion_Worktops'
       'where Promotion_Code = :Promotion_Code')
@@ -278,8 +278,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryAddWT: TQuery
-    DatabaseName = 'wt'
+  object qryAddWT: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Insert into Promotion_Worktops'
       '(Promotion_Code,'
@@ -311,8 +311,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryMembers: TQuery
-    DatabaseName = 'wt'
+  object qryMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Promotion_Worktops.Promotion_Code,'
       '        Promotion_Worktops.Entry_Number,'
@@ -336,8 +336,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryNonMembers: TQuery
-    DatabaseName = 'wt'
+  object qryNonMembers: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description as Worktop_Description,'
@@ -364,8 +364,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Left = 304
     Top = 344
   end
-  object qryDummy: TQuery
-    DatabaseName = 'wt'
+  object qryDummy: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Worktop.Worktop,'
       '        Worktop.Description AS Worktop_Description,'
@@ -402,8 +402,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Left = 528
     Top = 40
   end
-  object qryMaterialType: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Type'
@@ -421,8 +421,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Left = 160
     Top = 336
   end
-  object qryUpdActive: TQuery
-    DatabaseName = 'WT'
+  object qryUpdActive: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Promotion'
       'SET inactive = '#39'Y'#39
@@ -436,8 +436,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Promotion'
       'SET'
@@ -470,8 +470,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Promotion'
       '('
@@ -505,8 +505,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Promotion_Code) as Promotion_Code'
       'From Promotion')

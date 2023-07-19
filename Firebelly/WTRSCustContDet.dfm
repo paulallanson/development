@@ -490,9 +490,9 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Left = 232
     Top = 160
   end
-  object qryCustType: TQuery
+  object qryCustType: TFDQuery
     AutoRefresh = True
-    DatabaseName = 'wt'
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Customer_Type, Customer_Type.description'
       'from Customer_Type'
@@ -504,8 +504,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Size = 100
     end
   end
-  object qryContType: TQuery
-    DatabaseName = 'wt'
+  object qryContType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Contact_Type'
       'order by Contact_Type_Description')
@@ -516,8 +516,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Size = 100
     end
   end
-  object QryRep: TQuery
-    DatabaseName = 'wt'
+  object QryRep: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Rep, Rep_Name'
       'from Rep'
@@ -529,13 +529,13 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
       Size = 100
     end
   end
-  object qryExcel: TQuery
-    DatabaseName = 'wt'
+  object qryExcel: TFDQuery
+    ConnectionName = 'wt'
     Left = 664
     Top = 200
   end
-  object stdSQL: TQuery
-    DatabaseName = 'wt'
+  object stdSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Customer_Contact.Contact_Name,'
@@ -575,8 +575,8 @@ object frmWTRSCustContDet: TfrmWTRSCustContDet
     Left = 24
     Top = 216
   end
-  object qryCurrentContStatus: TQuery
-    DatabaseName = 'wt'
+  object qryCurrentContStatus: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Customer_Contact.Contact_Name,'

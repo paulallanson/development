@@ -302,8 +302,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
       OnChange = spnQuantityChange
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -317,9 +317,9 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
         ParamType = ptUnknown
       end>
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -346,8 +346,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
     Left = 496
     Top = 16
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -382,8 +382,8 @@ object frmWTMaintJUpstand: TfrmWTMaintJUpstand
         ParamType = ptUnknown
       end>
   end
-  object qryMaterialUse: TQuery
-    DatabaseName = 'wt'
+  object qryMaterialUse: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Material_Use.*'
       'from Material_Use'

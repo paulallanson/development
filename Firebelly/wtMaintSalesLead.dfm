@@ -70,8 +70,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
     Text = 'edtSalesleadSourceDescr'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Sales_Lead_Source'
       'SET'
@@ -98,8 +98,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Sales_Lead_Source'
       '        (Sales_Lead_Source,'
@@ -117,8 +117,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Sales_Lead_Source'
       'From Sales_Lead_Source'
@@ -132,8 +132,8 @@ object frmWTMaintSalesLead: TfrmWTMaintSalesLead
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')

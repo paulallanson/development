@@ -4,20 +4,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables;
+  DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlNotes = class(TDataModule)
-    qryReserveslot: TQuery;
-    qryGetReservedSlot: TQuery;
-    qryReadNotes: TQuery;
-    qryZero: TQuery;
-    qryDelete: TQuery;
-    qryUpdateLine1: TQuery;
-    qryAddLine: TQuery;
-    qryGetNextSlot: TQuery;
-    qryReserveNotesSlot: TQuery;
-    qryGetReservedNotesSlot: TQuery;
+    qryReserveslot: TFDQuery;
+    qryGetReservedSlot: TFDQuery;
+    qryReadNotes: TFDQuery;
+    qryZero: TFDQuery;
+    qryDelete: TFDQuery;
+    qryUpdateLine1: TFDQuery;
+    qryAddLine: TFDQuery;
+    qryGetNextSlot: TFDQuery;
+    qryReserveNotesSlot: TFDQuery;
+    qryGetReservedNotesSlot: TFDQuery;
   end;
 
   TNotes        = class

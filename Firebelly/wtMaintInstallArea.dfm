@@ -149,8 +149,8 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     TabOrder = 4
     Text = 'edtFittingPrice'
   end
-  object qryCountry: TQuery
-    DatabaseName = 'WT'
+  object qryCountry: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Country, '
       '               Description'
@@ -164,8 +164,8 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
     Left = 312
     Top = 96
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Installation_Area'
       'SET'
@@ -210,8 +210,8 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Installation_Area'
       '('
@@ -259,8 +259,8 @@ object frmWTMaintInstallArea: TfrmWTMaintInstallArea
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Installation_Area) as Installation_Area'
       'From Installation_Area')

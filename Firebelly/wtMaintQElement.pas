@@ -4,18 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB,
-  DBTables, Spin, ExtCtrls, QrCtrls;
+  Dialogs, wtQuotesDM, StdCtrls, Buttons, CRControls, DBCtrls, DB, Spin, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintQElement = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWorktops: TQuery;
-    qryWTThickness: TQuery;
+    qryWorktops: TFDQuery;
+    qryWTThickness: TFDQuery;
     dtsWorktops: TDataSource;
     dtsWTThickness: TDataSource;
-    qryOneWTThickness: TQuery;
+    qryOneWTThickness: TFDQuery;
     lblDelete: TLabel;
     pnlDetails: TPanel;
     Label1: TLabel;
@@ -36,18 +38,18 @@ type
     btnWorktops: TSpeedButton;
     dblkpWTGroup: TDBLookupComboBox;
     Label9: TLabel;
-    qryWTGroup: TQuery;
+    qryWTGroup: TFDQuery;
     dtsWTGroup: TDataSource;
     btnPriceGroup: TSpeedButton;
     dblkpMaterial: TDBLookupComboBox;
-    qryMaterial: TQuery;
+    qryMaterial: TFDQuery;
     dtsMaterial: TDataSource;
-    qryContractWorktops: TQuery;
-    qryContractPrice: TQuery;
-    qryCustomerWorktops: TQuery;
-    qryCustomerPrice: TQuery;
+    qryContractWorktops: TFDQuery;
+    qryContractPrice: TFDQuery;
+    qryCustomerWorktops: TFDQuery;
+    qryCustomerPrice: TFDQuery;
     Label10: TLabel;
-    qryMaterialUse: TQuery;
+    qryMaterialUse: TFDQuery;
     dtsMaterialUse: TDataSource;
     cmbMaterialUse: TComboBox;
     SpeedButton1: TSpeedButton;

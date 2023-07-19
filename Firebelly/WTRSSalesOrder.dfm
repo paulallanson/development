@@ -322,8 +322,8 @@ object frmWTRSSalesOrder: TfrmWTRSSalesOrder
         'All Reps')
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'WT'
+  object qryReps: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Rep'

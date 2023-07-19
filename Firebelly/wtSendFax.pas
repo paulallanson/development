@@ -4,23 +4,33 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, printers, ShellAPI, DB, DBTables, Inifiles,
-  AdFaxCtl, syncobjs, QrCtrls, OoMisc;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.VCLUI.Wait, OoMisc, AdFaxCtl,
+  Data.DB, FireDAC.Comp.Client, FireDAC.Comp.DataSet, Vcl.ExtCtrls,
+  Vcl.StdCtrls,
+  StdCtrls, ExtCtrls, printers, ShellAPI, DB, Inifiles,
+  AdFaxCtl, syncobjs, QrCtrls, OoMisc,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmWTSendFax = class(TForm)
     Label1: TLabel;
     WaitForFaxFinishTimer: TTimer;
-    AddFaxSQL: TQuery;
-    GetOldFaxesQuery: TQuery;
-    DelFaxQuery: TQuery;
-    FaxDatabase: TDatabase;
+    AddFaxSQL: TFDQuery;
+    GetOldFaxesQuery: TFDQuery;
+    DelFaxQuery: TFDQuery;
+    FaxDatabase: TFDConnection;
     ApdFaxDriverInterface1: TApdFaxDriverInterface;
     function OutToFax(FaxNo, FaxDescr, TempFaxTime: string): integer;
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
-    procedure FaxDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure WaitForFaxFinish(Sender: TObject);
     procedure SendFax(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -324,7 +334,7 @@ begin
   end;
 end;
 
-procedure TfrmWTSendFax.FaxDatabaseLogin(Database: TDatabase;
+procedure TfrmWTSendFax.FaxDatabaseLogin(Database: TFDConnection;
   LoginParams: TStrings);
 begin
   {Get user and password from login screen};

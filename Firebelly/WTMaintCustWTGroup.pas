@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB, DBTables,
-  CRControls;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB, CRControls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustWTGroup = class(TForm)
@@ -15,11 +17,11 @@ type
     chkbxInactive: TCheckBox;
     Label2: TLabel;
     dblkpMaterialType: TDBLookupComboBox;
-    qryMaterialType: TQuery;
+    qryMaterialType: TFDQuery;
     srcMaterialtype: TDataSource;
     Label3: TLabel;
     dblkpSupplier: TDBLookupComboBox;
-    qrySupplier: TQuery;
+    qrySupplier: TFDQuery;
     srcSupplier: TDataSource;
     SpeedButton4: TSpeedButton;
     btnSupplier: TBitBtn;
@@ -31,13 +33,13 @@ type
     edtDateInEffective: TEdit;
     btnDateInEffective: TBitBtn;
     edtGroupDescription: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     lblGroupID: TLabel;
     edtID: TCREditInt;
-    qryPatch: TQuery;
+    qryPatch: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure EnableOK(Sender: TObject);

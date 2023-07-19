@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Mask, DBCtrls, QrCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintRemedialType = class(TForm)
@@ -13,10 +16,10 @@ type
     BitBtn2: TBitBtn;
     chkbxInactive: TCheckBox;
     edtDescription: TEdit;
-    qryUpdate: TQuery;
-    qryZero: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
+    qryUpdate: TFDQuery;
+    qryZero: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

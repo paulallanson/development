@@ -1604,8 +1604,8 @@ object frmwtRPQuotePerf: TfrmwtRPQuotePerf
       end
     end
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'Wt'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Raised,'
@@ -1712,8 +1712,8 @@ object frmwtRPQuotePerf: TfrmwtRPQuotePerf
         ParamType = ptUnknown
       end>
   end
-  object qryReQuote: TQuery
-    DatabaseName = 'wt'
+  object qryReQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'SELECT Sum(Quote.Nett_Price - Quote.Discount_Value + Quote.Marku' +

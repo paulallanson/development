@@ -104,8 +104,8 @@ object frmwtLUAppointmentDateType: TfrmwtLUAppointmentDateType
     Left = 216
     Top = 64
   end
-  object qryAppointmentDateType: TQuery
-    DatabaseName = 'WT'
+  object qryAppointmentDateType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM AppointmentDateType'

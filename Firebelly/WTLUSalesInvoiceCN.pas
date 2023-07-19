@@ -4,7 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, Inifiles,
+  Data.DB, Vcl.Menus, System.ImageList, Vcl.ImgList, Vcl.ExtCtrls,
+  Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids,
+  StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, Inifiles,
   ComCtrls, ImgList, ToolWin, Menus, wtSalesInvoiceDM, QrCtrls,
   System.ImageList;
 

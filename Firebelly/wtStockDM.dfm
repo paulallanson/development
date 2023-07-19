@@ -1,8 +1,8 @@
 object dtmdlStock: TdtmdlStock
   Height = 467
   Width = 572
-  object qryAllStock: TQuery
-    DatabaseName = 'wt'
+  object qryAllStock: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *, product_group.product_group_description'
       'from Product, product_group'
@@ -15,12 +15,12 @@ object dtmdlStock: TdtmdlStock
     Left = 104
     Top = 16
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     Left = 168
     Top = 16
   end
-  object qryProduct: TQuery
-    DatabaseName = 'wt'
+  object qryProduct: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Product.*,'
       ' (select top 1 Unit_price'

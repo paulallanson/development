@@ -69,8 +69,8 @@ object frmWTMaintRemedialDept: TfrmWTMaintRemedialDept
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Remedial_Dept'
       'SET'
@@ -97,13 +97,13 @@ object frmWTMaintRemedialDept: TfrmWTMaintRemedialDept
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 296
     Top = 24
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Remedial_Dept'
       '('
@@ -130,8 +130,8 @@ object frmWTMaintRemedialDept: TfrmWTMaintRemedialDept
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select max(Remedial_Dept) as Remedial_Dept'
       'From Remedial_Dept')

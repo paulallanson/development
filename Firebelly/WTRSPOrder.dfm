@@ -90,8 +90,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     TabOrder = 6
     OnClick = Button4Click
   end
-  object qryGetRange: TQuery
-    DatabaseName = 'WT'
+  object qryGetRange: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT distinct Purchase_Order.Purchase_Order'
       'FROM Purchase_Order'
@@ -112,8 +112,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierEmailCCs: TQuery
-    DatabaseName = 'WT'
+  object qryGetSupplierEmailCCs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Email_Address'
       'FROM Supplier_Contact'

@@ -145,8 +145,8 @@ object frmWTLUFitters: TfrmWTLUFitters
     Left = 136
     Top = 120
   end
-  object qryFitters: TQuery
-    DatabaseName = 'WT'
+  object qryFitters: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Fitter'
@@ -164,8 +164,8 @@ object frmWTLUFitters: TfrmWTLUFitters
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

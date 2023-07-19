@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, QuickRpt, ExtCtrls, AllCommon;
+  Dialogs, DB, QRCtrls, QuickRpt, ExtCtrls, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPSODeliveryNote = class(TForm)
     qrpDetails: TQuickRep;
     qrbdetails: TQRSubDetail;
     QRGroup1: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
-    qryGetNotes: TQuery;
+    qryGetNotes: TFDQuery;
     gtQRDBText8: TQRDBText;
     gtQRDBText9: TQRDBText;
     qrbSignature: TQRBand;

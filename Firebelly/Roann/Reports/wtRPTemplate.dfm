@@ -1,24 +1,31 @@
 object frmwtRPTemplate: TfrmwtRPTemplate
   Left = 1
   Top = 1
+  Width = 1364
+  Height = 722
+  VertScrollBar.Position = 768
   Caption = 'Template Check List'
-  ClientHeight = 684
-  ClientWidth = 1352
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 248
-    Top = 768
+    Top = 0
     Width = 794
     Height = 1123
-    ShowingPreview = False
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = ANSI_CHARSET
@@ -40,7 +47,6 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
-    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -54,17 +60,13 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
-    PrinterSettings.MemoryLimit = 1000000
-    PrinterSettings.PrintQuality = 0
-    PrinterSettings.Collate = 0
-    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Template Check List'
     SnapToGrid = True
@@ -72,27 +74,24 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
-    PreviewWidth = 500
-    PreviewHeight = 500
-    PrevInitialZoom = qrZoomToFit
-    PreviewDefaultSaveType = stPDF
-    PreviewLeft = 0
-    PreviewTop = 0
     object qrgQuote: TQRGroup
       Left = 38
       Top = 1081
       Width = 718
       Height = 2
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
-      TransparentBand = False
+      Color = clWhite
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         5.291666666666667000
         1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpDetails
       ReprintOnNewPage = False
@@ -102,96 +101,111 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       Top = 38
       Width = 718
       Height = 1043
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbPageHeaderBeforePrint
-      TransparentBand = False
+      Color = clWhite
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         2759.604166666667000000
         1899.708333333333000000)
-      PreCaluculateBandHeight = False
-      KeepOnOnePage = False
       BandType = rbPageHeader
-      object gtQRShape14: TQRShape
+      object gtQRShape14: TgtQRShape
         Left = 0
         Top = 45
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           119.062500000000000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape47: TQRShape
+      object gtQRShape47: TgtQRShape
         Left = 359
         Top = 644
         Width = 359
         Height = 85
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           224.895833333333300000
           949.854166666666800000
           1703.916666666667000000
           949.854166666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape17: TQRShape
+      object gtQRShape17: TgtQRShape
         Left = 359
         Top = 241
         Width = 359
         Height = 190
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           502.708333333333300000
           949.854166666666700000
           637.645833333333300000
           949.854166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape13: TQRShape
+      object gtQRShape13: TgtQRShape
         Left = 359
         Top = 169
         Width = 359
         Height = 35
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           92.604166666666670000
           949.854166666666700000
           447.145833333333300000
           949.854166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblTemplate: TQRLabel
+      object qrlblTemplate: TgtQRLabel
         Left = 96
         Top = 0
         Width = 529
         Height = 43
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           254.000000000000000000
           0.000000000000000000
           1399.645833333333000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Roann Ltd -Template Check List'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -201,27 +215,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 28
       end
-      object qrmSiteAddress: TQRMemo
+      object qrmSiteAddress: TgtQRMemo
         Left = 367
         Top = 265
         Width = 340
         Height = 112
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           296.333333333333300000
           971.020833333333300000
           701.145833333333300000
           899.583333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         Lines.Strings = (
           'Plot 11'
@@ -231,25 +246,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
           'LS'
           'WY')
         Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TQRLabel
+      object gtQRLabel6: TgtQRLabel
         Left = 367
         Top = 382
         Width = 61
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1010.708333333333000000
           161.395833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Contact:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -259,53 +277,54 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText2: TQRDBText
+      object gtQRDBText2: TgtQRDBText
         Left = 430
         Top = 382
         Width = 280
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1137.708333333333000000
           1010.708333333333000000
           740.833333333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Name'
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TQRLabel
+      object gtQRLabel7: TgtQRLabel
         Left = 367
         Top = 406
         Width = 45
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1074.208333333333000000
           119.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Phone:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -315,370 +334,400 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText3: TQRDBText
+      object gtQRDBText3: TgtQRDBText
         Left = 430
         Top = 406
         Width = 280
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1137.708333333333000000
           1074.208333333333000000
           740.833333333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Phone'
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape3: TQRShape
+      object gtQRShape3: TgtQRShape
         Left = 0
         Top = 314
         Width = 360
         Height = 51
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           134.937500000000000000
           0.000000000000000000
           830.791666666666800000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape4: TQRShape
+      object gtQRShape4: TgtQRShape
         Left = 0
         Top = 107
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           283.104166666666700000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape5: TQRShape
+      object gtQRShape5: TgtQRShape
         Left = 0
         Top = 169
         Width = 360
         Height = 73
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           193.145833333333300000
           0.000000000000000000
           447.145833333333400000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape6: TQRShape
+      object gtQRShape6: TgtQRShape
         Left = 0
         Top = 241
         Width = 360
         Height = 74
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           195.791666666666700000
           0.000000000000000000
           637.645833333333400000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel1: TQRLabel
+      object gtQRLabel1: TgtQRLabel
         Left = 8
         Top = 172
         Width = 48
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           455.083333333333300000
           127.000000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Colour:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel3: TQRLabel
+      object gtQRLabel3: TgtQRLabel
         Left = 7
         Top = 322
         Width = 76
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           851.958333333333300000
           201.083333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Edge Detail:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape7: TQRShape
+      object gtQRShape7: TgtQRShape
         Left = 0
         Top = 364
         Width = 360
         Height = 67
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           177.270833333333300000
           0.000000000000000000
           963.083333333333200000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel9: TQRLabel
+      object gtQRLabel9: TgtQRLabel
         Left = 7
         Top = 377
         Width = 64
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           997.479166666666700000
           169.333333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Upstands:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel10: TQRLabel
+      object gtQRLabel10: TgtQRLabel
         Left = 7
         Top = 406
         Width = 46
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           1074.208333333333000000
           121.708333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Height:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object QRShape7: TQRShape
+      object QRShape7: TgtQRShape
         Left = 206
         Top = 415
         Width = 115
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           545.041666666666700000
           1098.020833333333000000
           304.270833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel11: TQRLabel
+      object gtQRLabel11: TgtQRLabel
         Left = 330
         Top = 406
         Width = 23
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           873.125000000000000000
           1074.208333333333000000
           60.854166666666670000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'mm'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape9: TQRShape
+      object gtQRShape9: TgtQRShape
         Left = 359
         Top = 45
         Width = 359
         Height = 125
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           330.729166666666700000
           949.854166666666700000
           119.062500000000000000
           949.854166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel2: TQRLabel
+      object gtQRLabel2: TgtQRLabel
         Left = 367
         Top = 54
         Width = 67
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           142.875000000000000000
           177.270833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object QRLabel5: TQRLabel
+      object QRLabel5: TgtQRLabel
         Left = 368
         Top = 179
         Width = 70
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           973.666666666666700000
           473.604166666666700000
           185.208333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Reference:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object QRDBText4: TQRDBText
+      object QRDBText4: TgtQRDBText
         Left = 439
         Top = 179
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1161.520833333333000000
           473.604166666666700000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape10: TQRShape
+      object gtQRShape10: TgtQRShape
         Left = 0
         Top = 624
         Width = 717
         Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           1651.000000000000000000
           1897.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = clBtnFace
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel14: TQRLabel
+      object gtQRLabel14: TgtQRLabel
         Left = 7
         Top = 627
         Width = 222
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           18.520833333333330000
           1658.937500000000000000
           587.375000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Access to site - tick as required.'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -688,218 +737,240 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape22: TQRShape
+      object gtQRShape22: TgtQRShape
         Left = 0
         Top = 644
         Width = 360
         Height = 85
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           224.895833333333300000
           0.000000000000000000
           1703.916666666667000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape23: TQRShape
+      object gtQRShape23: TgtQRShape
         Left = 8
         Top = 656
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           1735.666666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape24: TQRShape
+      object gtQRShape24: TgtQRShape
         Left = 8
         Top = 680
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           1799.166666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape25: TQRShape
+      object gtQRShape25: TgtQRShape
         Left = 8
         Top = 704
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           1862.666666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape26: TQRShape
+      object gtQRShape26: TgtQRShape
         Left = 184
         Top = 656
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           486.833333333333300000
           1735.666666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel22: TQRLabel
+      object gtQRLabel22: TgtQRLabel
         Left = 40
         Top = 656
         Width = 36
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           105.833333333333300000
           1735.666666666667000000
           95.250000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Stairs'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel23: TQRLabel
+      object gtQRLabel23: TgtQRLabel
         Left = 40
         Top = 680
         Width = 78
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           105.833333333333300000
           1799.166666666667000000
           206.375000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Building Site'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel24: TQRLabel
+      object gtQRLabel24: TgtQRLabel
         Left = 40
         Top = 704
         Width = 88
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           105.833333333333300000
           1862.666666666667000000
           232.833333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'PPE Required?'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel25: TQRLabel
+      object gtQRLabel25: TgtQRLabel
         Left = 208
         Top = 656
         Width = 47
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           550.333333333333300000
           1735.666666666667000000
           124.354166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Parking'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape35: TQRShape
+      object gtQRShape35: TgtQRShape
         Left = 359
         Top = 203
         Width = 359
         Height = 39
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           103.187500000000000000
           949.854166666666700000
           537.104166666666700000
           949.854166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel36: TQRLabel
+      object gtQRLabel36: TgtQRLabel
         Left = 367
         Top = 219
         Width = 89
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           971.020833333333300000
           579.437500000000000000
           235.479166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Sales Person:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -909,48 +980,52 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrmAddress: TQRMemo
+      object qrmAddress: TgtQRMemo
         Left = 439
         Top = 54
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1161.520833333333000000
           142.875000000000000000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblQuoteLabel: TQRLabel
+      object qrlblQuoteLabel: TgtQRLabel
         Left = 9
         Top = 51
         Width = 85
         Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           23.812500000000000000
           134.937500000000000000
           224.895833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Quote No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -960,26 +1035,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 12
       end
-      object qrlblQuote: TQRDBText
+      object qrlblQuote: TgtQRDBText
         Left = 104
         Top = 51
         Width = 52
         Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           275.166666666666700000
           134.937500000000000000
           137.583333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Quote'
@@ -990,26 +1067,24 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 12
       end
-      object qrlblEdgeDetail: TQRLabel
+      object qrlblEdgeDetail: TgtQRLabel
         Left = 94
         Top = 322
         Width = 259
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           248.708333333333300000
           851.958333333333400000
           685.270833333333400000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1017,123 +1092,133 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Caption = 'qrlblEdgeDetail'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblUpstand: TQRLabel
+      object qrlblUpstand: TgtQRLabel
         Left = 78
         Top = 377
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           206.375000000000000000
           997.479166666666700000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblUpstand'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblOfficeContact: TQRLabel
+      object qrlblOfficeContact: TgtQRLabel
         Left = 461
         Top = 219
         Width = 255
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1219.729166666667000000
           579.437500000000000000
           674.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblOfficeContact'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape45: TQRShape
+      object gtQRShape45: TgtQRShape
         Left = 0
         Top = 450
         Width = 360
         Height = 175
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           463.020833333333300000
           0.000000000000000000
           1190.625000000000000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape2: TQRShape
+      object gtQRShape2: TgtQRShape
         Left = 0
         Top = 728
         Width = 717
         Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           1926.166666666667000000
           1897.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = clBtnFace
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape11: TQRShape
+      object gtQRShape11: TgtQRShape
         Left = 359
         Top = 748
         Width = 359
         Height = 187
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           494.770833333333300000
           949.854166666666800000
           1979.083333333333000000
           949.854166666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel12: TQRLabel
+      object gtQRLabel12: TgtQRLabel
         Left = 369
         Top = 731
         Width = 46
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           976.312500000000000000
           1934.104166666667000000
           121.708333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Notes:'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -1143,176 +1228,189 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblColour: TQRLabel
+      object qrlblColour: TgtQRLabel
         Left = 63
         Top = 172
         Width = 290
         Height = 46
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           121.708333333333300000
           166.687500000000000000
           455.083333333333300000
           767.291666666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblColour'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel13: TQRLabel
+      object gtQRLabel13: TgtQRLabel
         Left = 367
         Top = 123
         Width = 45
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           325.437500000000000000
           119.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Phone:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel15: TQRLabel
+      object gtQRLabel15: TgtQRLabel
         Left = 367
         Top = 147
         Width = 36
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           971.020833333333300000
           388.937500000000000000
           95.250000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Email:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblCustomerPhone: TQRLabel
+      object qrlblCustomerPhone: TgtQRLabel
         Left = 439
         Top = 123
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1161.520833333333000000
           325.437500000000000000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblCustomerPhone'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblCustomerEmail: TQRLabel
+      object qrlblCustomerEmail: TgtQRLabel
         Left = 439
         Top = 147
         Width = 275
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1161.520833333333000000
           388.937500000000000000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblCustomerEmail'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape15: TQRShape
+      object gtQRShape15: TgtQRShape
         Left = 0
         Top = 76
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           201.083333333333300000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape16: TQRShape
+      object gtQRShape16: TgtQRShape
         Left = 0
         Top = 138
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           0.000000000000000000
           365.125000000000000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblSalesOrder: TQRLabel
+      object qrlblSalesOrder: TgtQRLabel
         Left = 8
         Top = 83
         Width = 127
         Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           219.604166666666700000
           336.020833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Sales Order No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1322,26 +1420,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 12
       end
-      object qrlblSalesOrderNo: TQRDBText
+      object qrlblSalesOrderNo: TgtQRDBText
         Left = 149
         Top = 83
         Width = 97
         Height = 19
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           394.229166666666700000
           219.604166666666700000
           256.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
@@ -1352,28 +1452,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        FullJustify = False
-        MaxBreakChars = 0
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel4: TQRLabel
+      object gtQRLabel4: TgtQRLabel
         Left = 367
         Top = 246
         Width = 142
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           650.875000000000000000
           375.708333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Installation Address:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1383,618 +1483,680 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel17: TQRLabel
+      object gtQRLabel17: TgtQRLabel
         Left = 7
         Top = 462
         Width = 39
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           18.520833333333330000
           1222.375000000000000000
           103.187500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Make:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel18: TQRLabel
+      object gtQRLabel18: TgtQRLabel
         Left = 7
         Top = 521
         Width = 79
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           1378.479166666667000000
           209.020833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Dimensions:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel19: TQRLabel
+      object gtQRLabel19: TgtQRLabel
         Left = 39
         Top = 551
         Width = 199
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           103.187500000000000000
           1457.854166666667000000
           526.520833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Taken from site, to be returned'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape19: TQRShape
+      object gtQRShape19: TgtQRShape
         Left = 8
         Top = 551
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           1457.854166666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel20: TQRLabel
+      object gtQRLabel20: TgtQRLabel
         Left = 7
         Top = 489
         Width = 44
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           1293.812500000000000000
           116.416666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Model:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel38: TQRLabel
+      object gtQRLabel38: TgtQRLabel
         Left = 7
         Top = 597
         Width = 109
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           1579.562500000000000000
           288.395833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Drainer Grooves:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape21: TQRShape
+      object gtQRShape21: TgtQRShape
         Left = 128
         Top = 598
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           338.666666666666700000
           1582.208333333333000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape40: TQRShape
+      object gtQRShape40: TgtQRShape
         Left = 192
         Top = 598
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           508.000000000000000000
           1582.208333333333000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape41: TQRShape
+      object gtQRShape41: TgtQRShape
         Left = 264
         Top = 598
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           698.500000000000000000
           1582.208333333333000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel39: TQRLabel
+      object gtQRLabel39: TgtQRLabel
         Left = 147
         Top = 597
         Width = 25
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           388.937500000000000000
           1579.562500000000000000
           66.145833333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Left'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel40: TQRLabel
+      object gtQRLabel40: TgtQRLabel
         Left = 211
         Top = 597
         Width = 34
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           558.270833333333300000
           1579.562500000000000000
           89.958333333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Right'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel41: TQRLabel
+      object gtQRLabel41: TgtQRLabel
         Left = 283
         Top = 597
         Width = 31
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           748.770833333333300000
           1579.562500000000000000
           82.020833333333330000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Both'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape42: TQRShape
+      object gtQRShape42: TgtQRShape
         Left = 359
         Top = 450
         Width = 359
         Height = 175
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           463.020833333333300000
           949.854166666666800000
           1190.625000000000000000
           949.854166666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel43: TQRLabel
+      object gtQRLabel43: TgtQRLabel
         Left = 367
         Top = 462
         Width = 35
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           971.020833333333300000
           1222.375000000000000000
           92.604166666666670000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Make'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel44: TQRLabel
+      object gtQRLabel44: TgtQRLabel
         Left = 367
         Top = 489
         Width = 44
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1293.812500000000000000
           116.416666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Model:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel45: TQRLabel
+      object gtQRLabel45: TgtQRLabel
         Left = 367
         Top = 521
         Width = 79
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1378.479166666667000000
           209.020833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Dimensions:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape43: TQRShape
+      object gtQRShape43: TgtQRShape
         Left = 368
         Top = 551
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           973.666666666666800000
           1457.854166666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape44: TQRShape
+      object gtQRShape44: TgtQRShape
         Left = 368
         Top = 574
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           973.666666666666800000
           1518.708333333333000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel46: TQRLabel
+      object gtQRLabel46: TgtQRLabel
         Left = 399
         Top = 574
         Width = 100
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1055.687500000000000000
           1518.708333333333000000
           264.583333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Pop Up Socket?'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel47: TQRLabel
+      object gtQRLabel47: TgtQRLabel
         Left = 367
         Top = 598
         Width = 128
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1582.208333333333000000
           338.666666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Pop Up Dimensions:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape12: TQRShape
+      object gtQRShape12: TgtQRShape
         Left = 184
         Top = 680
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           486.833333333333300000
           1799.166666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel16: TQRLabel
+      object gtQRLabel16: TgtQRLabel
         Left = 208
         Top = 680
         Width = 139
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           550.333333333333300000
           1799.166666666667000000
           367.770833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Parking Ticket Issued?'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape18: TQRShape
+      object gtQRShape18: TgtQRShape
         Left = 70
         Top = 473
         Width = 283
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           185.208333333333300000
           1251.479166666667000000
           748.770833333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape33: TQRShape
+      object gtQRShape33: TgtQRShape
         Left = 70
         Top = 505
         Width = 283
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           185.208333333333300000
           1336.145833333333000000
           748.770833333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape34: TQRShape
+      object gtQRShape34: TgtQRShape
         Left = 96
         Top = 537
         Width = 257
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           254.000000000000000000
           1420.812500000000000000
           679.979166666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape36: TQRShape
+      object gtQRShape36: TgtQRShape
         Left = 430
         Top = 473
         Width = 283
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1137.708333333333000000
           1251.479166666667000000
           748.770833333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape37: TQRShape
+      object gtQRShape37: TgtQRShape
         Left = 430
         Top = 505
         Width = 283
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1137.708333333333000000
           1336.145833333333000000
           748.770833333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape38: TQRShape
+      object gtQRShape38: TgtQRShape
         Left = 456
         Top = 537
         Width = 257
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1206.500000000000000000
           1420.812500000000000000
           679.979166666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape39: TQRShape
+      object gtQRShape39: TgtQRShape
         Left = 512
         Top = 609
         Width = 200
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1354.666666666667000000
           1611.312500000000000000
           529.166666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel32: TQRLabel
+      object gtQRLabel32: TgtQRLabel
         Left = 400
         Top = 656
         Width = 147
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1058.333333333333000000
           1735.666666666667000000
           388.937500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Extra Labour Required?'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel34: TQRLabel
+      object gtQRLabel34: TgtQRLabel
         Left = 367
         Top = 626
         Width = 206
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           1656.291666666667000000
           545.041666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Additional Fitting Information'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -2004,43 +2166,47 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape1: TQRShape
+      object gtQRShape1: TgtQRShape
         Left = 0
         Top = 430
         Width = 717
         Height = 21
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           55.562500000000000000
           0.000000000000000000
           1137.708333333333000000
           1897.062500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = clBtnFace
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel33: TQRLabel
+      object gtQRLabel33: TgtQRLabel
         Left = 366
         Top = 433
         Width = 138
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           968.375000000000000000
           1145.645833333333000000
           365.125000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Appliance Info - Hob'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -2050,26 +2216,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel5: TQRLabel
+      object gtQRLabel5: TgtQRLabel
         Left = 6
         Top = 433
         Width = 138
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           15.875000000000000000
           1145.645833333333000000
           365.125000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Appliance Info - Sink'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -2079,100 +2247,110 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape46: TQRShape
+      object gtQRShape46: TgtQRShape
         Left = 368
         Top = 656
         Width = 15
         Height = 15
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           973.666666666666800000
           1735.666666666667000000
           39.687500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel35: TQRLabel
+      object gtQRLabel35: TgtQRLabel
         Left = 399
         Top = 551
         Width = 199
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1055.687500000000000000
           1457.854166666667000000
           526.520833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Taken from site, to be returned'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape8: TQRShape
+      object gtQRShape8: TgtQRShape
         Left = 0
         Top = 748
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           1979.083333333333000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape20: TQRShape
+      object gtQRShape20: TgtQRShape
         Left = 0
         Top = 779
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           2061.104166666667000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel21: TQRLabel
+      object gtQRLabel21: TgtQRLabel
         Left = 9
         Top = 731
         Width = 179
         Height = 16
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           23.812500000000000000
           1934.104166666667000000
           473.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Office Use Only - Material:'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -2182,232 +2360,254 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel26: TQRLabel
+      object gtQRLabel26: TgtQRLabel
         Left = 8
         Top = 757
         Width = 35
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2002.895833333333000000
           92.604166666666670000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Date:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel27: TQRLabel
+      object gtQRLabel27: TgtQRLabel
         Left = 8
         Top = 788
         Width = 56
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2084.916666666667000000
           148.166666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Supplier:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRShape27: TQRShape
+      object gtQRShape27: TgtQRShape
         Left = 0
         Top = 810
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           2143.125000000000000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape28: TQRShape
+      object gtQRShape28: TgtQRShape
         Left = 0
         Top = 841
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           2225.145833333333000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape29: TQRShape
+      object gtQRShape29: TgtQRShape
         Left = 0
         Top = 872
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           2307.166666666667000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape30: TQRShape
+      object gtQRShape30: TgtQRShape
         Left = 0
         Top = 903
         Width = 360
         Height = 32
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           84.666666666666680000
           0.000000000000000000
           2389.187500000000000000
           952.500000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Brush.Color = 14671839
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel28: TQRLabel
+      object gtQRLabel28: TgtQRLabel
         Left = 8
         Top = 821
         Width = 90
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2172.229166666667000000
           238.125000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Delivery Date:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel29: TQRLabel
+      object gtQRLabel29: TgtQRLabel
         Left = 8
         Top = 852
         Width = 88
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2254.250000000000000000
           232.833333333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'No of Sheets:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel30: TQRLabel
+      object gtQRLabel30: TgtQRLabel
         Left = 8
         Top = 881
         Width = 101
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2330.979166666667000000
           267.229166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Size/Import No:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel31: TQRLabel
+      object gtQRLabel31: TgtQRLabel
         Left = 8
         Top = 912
         Width = 135
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           2413.000000000000000000
           357.187500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Colour Match Silicon:'
         Color = 14671839
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel37: TQRLabel
+      object gtQRLabel37: TgtQRLabel
         Left = 0
         Top = 993
         Width = 91
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           2627.312500000000000000
           240.770833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Client Signature:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2417,42 +2617,46 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 8
       end
-      object gtQRShape31: TQRShape
+      object gtQRShape31: TgtQRShape
         Left = 104
         Top = 1001
         Width = 265
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           275.166666666666700000
           2648.479166666667000000
           701.145833333333200000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel42: TQRLabel
+      object gtQRLabel42: TgtQRLabel
         Left = 0
         Top = 1022
         Width = 29
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           2704.041666666667000000
           76.729166666666670000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Date:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2462,43 +2666,46 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 8
       end
-      object gtQRShape32: TQRShape
+      object gtQRShape32: TgtQRShape
         Left = 464
         Top = 1001
         Width = 249
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1227.666666666667000000
           2648.479166666667000000
           658.812500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRMemo1: TQRMemo
+      object gtQRMemo1: TgtQRMemo
         Left = 0
         Top = 939
         Width = 718
         Height = 41
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           108.479166666666700000
           0.000000000000000000
           2484.437500000000000000
           1899.708333333333000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -2516,25 +2723,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
             'ranged and paid for.')
         ParentFont = False
         Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
+        WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel48: TQRLabel
+      object gtQRLabel48: TgtQRLabel
         Left = 400
         Top = 993
         Width = 61
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1058.333333333333000000
           2627.312500000000000000
           161.395833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Print Name:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2544,415 +2754,445 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 8
       end
-      object gtQRShape48: TQRShape
+      object gtQRShape48: TgtQRShape
         Left = 104
         Top = 1033
         Width = 145
         Height = 8
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           275.166666666666700000
           2733.145833333333000000
           383.645833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel49: TQRLabel
+      object gtQRLabel49: TgtQRLabel
         Left = 8
         Top = 115
         Width = 96
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           304.270833333333300000
           254.000000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Template Date:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel50: TQRLabel
+      object gtQRLabel50: TgtQRLabel
         Left = 8
         Top = 145
         Width = 78
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           383.645833333333300000
           206.375000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Fitting Date:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblTemplateDate: TQRLabel
+      object qrlblTemplateDate: TgtQRLabel
         Left = 111
         Top = 115
         Width = 234
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           293.687500000000000000
           304.270833333333400000
           619.125000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlbltemplateDate'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblFittingDate: TQRLabel
+      object qrlblFittingDate: TgtQRLabel
         Left = 111
         Top = 145
         Width = 234
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           293.687500000000000000
           383.645833333333400000
           619.125000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblFittingDate'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel8: TQRLabel
+      object gtQRLabel8: TgtQRLabel
         Left = 7
         Top = 222
         Width = 81
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           587.375000000000000000
           214.312500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'No. of Slabs:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel51: TQRLabel
+      object gtQRLabel51: TgtQRLabel
         Left = 8
         Top = 245
         Width = 48
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           648.229166666666700000
           127.000000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Colour:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblColour2: TQRLabel
+      object qrlblColour2: TgtQRLabel
         Left = 63
         Top = 245
         Width = 290
         Height = 46
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           121.708333333333300000
           166.687500000000000000
           648.229166666666800000
           767.291666666666800000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblColour2'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel53: TQRLabel
+      object gtQRLabel53: TgtQRLabel
         Left = 7
         Top = 295
         Width = 81
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           780.520833333333300000
           214.312500000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'No. of Slabs:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblSlab: TQRLabel
+      object qrlblSlab: TgtQRLabel
         Left = 95
         Top = 222
         Width = 54
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           251.354166666666700000
           587.375000000000000000
           142.875000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'qrlblSlab'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblSlab2: TQRLabel
+      object qrlblSlab2: TgtQRLabel
         Left = 95
         Top = 295
         Width = 54
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           251.354166666666700000
           780.520833333333300000
           142.875000000000000000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'qrlblSlab'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblUpstandHeight: TQRLabel
+      object qrlblUpstandHeight: TgtQRLabel
         Left = 78
         Top = 406
         Width = 121
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           206.375000000000000000
           1074.208333333333000000
           320.145833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'qrlblUpstandHeight'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel52: TQRLabel
+      object gtQRLabel52: TgtQRLabel
         Left = 367
         Top = 77
         Width = 55
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           203.729166666666700000
           145.520833333333300000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Contact:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel54: TQRLabel
+      object gtQRLabel54: TgtQRLabel
         Left = 367
         Top = 100
         Width = 47
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           971.020833333333300000
           264.583333333333300000
           124.354166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
         Caption = 'Mobile:'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblCustomerName: TQRLabel
+      object qrlblCustomerName: TgtQRLabel
         Left = 439
         Top = 77
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1161.520833333333000000
           203.729166666666700000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblCustomerName'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrlblCustomerMobile: TQRLabel
+      object qrlblCustomerMobile: TgtQRLabel
         Left = 439
         Top = 100
         Width = 275
         Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1161.520833333333000000
           264.583333333333300000
           727.604166666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Caption = 'qrlblCustomerMobile'
         Color = clWhite
         Transparent = False
-        ExportAs = exptText
-        WrapStyle = BreakOnSpaces
-        VerticalAlignment = tlTop
+        WordWrap = True
         FontSize = 10
       end
-      object qrrchTextNotes: TQRMemo
+      object qrrchTextNotes: TgtQRMemo
         Left = 368
         Top = 752
         Width = 344
         Height = 178
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
         Size.Values = (
           470.958333333333300000
           973.666666666666700000
           1989.666666666667000000
           910.166666666666700000)
-        XLColumn = 0
-        XLNumFormat = nfGeneral
-        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
+        AutoStretch = False
         Color = clWhite
         Transparent = False
-        FullJustify = False
-        MaxBreakChars = 0
+        WordWrap = True
         FontSize = 10
       end
     end
-    object gtQRSysData1: TQRSysData
+    object gtQRSysData1: TgtQRSysData
       Left = 647
       Top = 1088
       Width = 108
       Height = 16
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
       Size.Values = (
         42.333333333333330000
         1711.854166666667000000
         2878.666666666667000000
         285.750000000000000000)
-      XLColumn = 0
-      XLNumFormat = nfGeneral
-      ActiveInPreview = False
       Alignment = taRightJustify
       AlignToBand = False
+      AutoSize = True
       Color = clWhite
       Data = qrsDateTime
       Font.Charset = ANSI_CHARSET
@@ -2963,13 +3203,11 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       ParentFont = False
       Text = 'Printed: '
       Transparent = False
-      ExportAs = exptText
-      VerticalAlignment = tlTop
       FontSize = 8
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  sales_order_line.quote,'
       '        sales_order_line.description,'
@@ -3015,8 +3253,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 1024
     Top = 62
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -3030,8 +3268,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -3059,16 +3297,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Left = 1030
     Top = 233
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 1030
     Top = 157
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -3083,8 +3321,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TQuery
-    DatabaseName = 'WT'
+  object qryEndUser: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -3105,8 +3343,22 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuote: TQuery
-    DatabaseName = 'wt'
+  object gtQRFilters1: TgtQRFilters
+    HTML.Author = 'Pragnaan'
+    HTML.Keywords = 'gtQrFilters'
+    HTML.ImageDir = 'Images'
+    PDF.Author = 'Pragnaan'
+    PDF.Keywords = 'QuickReport, Export, Filters'
+    RTF.Author = 'Pragnaan'
+    RTF.Keywords = 'QuickReport, Export, Filters'
+    RTF.ExportImageFormat = ifBMP
+    Text.XScaleFactor = 1.000000000000000000
+    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkGIF, fkJPEG, fkBMP]
+    Left = 1022
+    Top = 6
+  end
+  object qryQuote: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.description,'
@@ -3139,8 +3391,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteEdge: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteEdge: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Edge.Quote,'
       '        Quote_Edge.Edge_number,'
@@ -3160,8 +3412,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteThickness: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -3181,8 +3433,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Quote_Element.Quote,'
       '        Quote_Element.Element_Number,'
@@ -3204,8 +3456,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteElement: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteElement: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  TOP 1'
       '        Quote_Element.Worktop,'
@@ -3230,8 +3482,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'select Template_date,'
       '        Date_Required'
@@ -3246,8 +3498,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryQuoteMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '        Quote_Element.Quote,'
@@ -3291,8 +3543,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryQuoteSlabs: TQuery
-    DatabaseName = 'WT'
+  object qryQuoteSlabs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '  Quote_Slab.Worktop,'
@@ -3329,8 +3581,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerContact: TQuery
-    DatabaseName = 'WT'
+  object qryCustomerContact: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select  Customer,'
       '        Contact_No,'

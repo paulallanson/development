@@ -84,8 +84,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
     TabOrder = 1
     Text = 'edtSalesNominal'
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer_Type'
       'SET'
@@ -118,8 +118,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer_Type'
       '        (Customer_Type,'
@@ -137,8 +137,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Customer_Type'
       'From Customer_Type'
@@ -152,8 +152,8 @@ object frmWTMaintCustTypes: TfrmWTMaintCustTypes
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     Left = 312
     Top = 40
   end

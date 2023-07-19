@@ -126,8 +126,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
     Left = 136
     Top = 120
   end
-  object qryPaymentTerms: TQuery
-    DatabaseName = 'WT'
+  object qryPaymentTerms: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Payment_Terms'
@@ -136,8 +136,8 @@ object frmWTLUPaymentTerms: TfrmWTLUPaymentTerms
     Left = 64
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 200
     Top = 120
   end

@@ -165,8 +165,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
         Width = 50
       end>
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select    Supplier,'
       '          Supplier_Name,'

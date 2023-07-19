@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, DBCtrls;
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCustEdgeCutOutGroup = class(TForm)
@@ -13,11 +16,11 @@ type
     BitBtn2: TBitBtn;
     Label1: TLabel;
     edtDescription: TEdit;
-    qryAdd: TQuery;
-    qryUpd: TQuery;
+    qryAdd: TFDQuery;
+    qryUpd: TFDQuery;
     Label2: TLabel;
     dblkpMaterialType: TDBLookupComboBox;
-    qryMaterialType: TQuery;
+    qryMaterialType: TFDQuery;
     srcMaterialtype: TDataSource;
     Label4: TLabel;
     Label5: TLabel;
@@ -25,7 +28,7 @@ type
     btnDateEffective: TBitBtn;
     edtDateInEffective: TEdit;
     btnDateInEffective: TBitBtn;
-    qryGetLast: TQuery;
+    qryGetLast: TFDQuery;
     chkbxUseForGeneralQuoting: TCheckBox;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

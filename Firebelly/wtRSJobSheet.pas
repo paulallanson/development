@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles, DB,
-  DBTables, QrExport, AllCommon, ComObj, WTRPJobRemedialSheet;
+  Dialogs, StdCtrls, ShellAPI, ExtCtrls, QrCtrls, printers, Inifiles, DB, QrExport, AllCommon, ComObj, WTRPJobRemedialSheet,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSJobSheet = class(TForm)
@@ -24,13 +26,13 @@ type
     Panel3: TPanel;
     lstbxDocuments: TListBox;
     chkbxIncludeVoucher: TCheckBox;
-    qryDocumentStructure: TQuery;
+    qryDocumentStructure: TFDQuery;
     Label2: TLabel;
     memSOrderNumber: TMemo;
     chkbxAllDocuments: TCheckBox;
     chkbxMerge: TCheckBox;
     chkbxPrint: TCheckBox;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     procedure Button4Click(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
     procedure EnableRun(Sender: TObject);

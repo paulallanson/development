@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, DBTables, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustCutOutDetails = class(TForm)
     dbgDetails: TDBGrid;
     dtsCustCutOut: TDataSource;
-    qryCustCutOut: TQuery;
+    qryCustCutOut: TFDQuery;
     qryCustCutOutCutout: TIntegerField;
     qryCustCutOutEdge_Type: TIntegerField;
     qryCustCutOutPrice_pointer: TIntegerField;
@@ -20,10 +23,10 @@ type
     qryCustCutOutUnit_Cost: TFloatField;
     qryCustCutOutPrice_Unit_Description: TStringField;
     qryCustCutOutinactive: TStringField;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryGetCustCutOuts: TQuery;
-    qryAddCustCutOut: TQuery;
+    qryGetCustCutOuts: TFDQuery;
+    qryAddCustCutOut: TFDQuery;
     tmrRefresh: TTimer;
     Panel1: TPanel;
     stsbrDetails: TStatusBar;
@@ -42,15 +45,15 @@ type
     dblkpEdgeType: TDBLookupComboBox;
     dblkpCopyGroup: TDBLookupComboBox;
     btnGo: TButton;
-    lkpEdgeType: TQuery;
+    lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
     btnExcel: TBitBtn;
     qryCustCutOutEdge_Type_Description: TStringField;
     qryCustCutOutGroup_Id: TIntegerField;
-    qryDelCustCutOut: TQuery;
-    lkpCustEdgeGroup: TQuery;
+    qryDelCustCutOut: TFDQuery;
+    lkpCustEdgeGroup: TFDQuery;
     dtsCustEdgeGroup: TDataSource;
-    qryDelAllCustCutOut: TQuery;
+    qryDelAllCustCutOut: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);

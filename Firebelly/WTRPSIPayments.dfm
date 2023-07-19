@@ -1059,8 +1059,8 @@ object frmwtRPSIPayments: TfrmwtRPSIPayments
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Payment.Payment,'
       '        Payment.Payment_date,'

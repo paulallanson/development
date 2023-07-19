@@ -88,8 +88,8 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
       OnClick = mnuDeleteClick
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Document_Structure'
       'WHERE Module_ID = :Module_ID')
@@ -102,8 +102,8 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'INSERT INTO Document_Structure (Module_Id, Folder_Name, Creation' +
@@ -123,8 +123,8 @@ object frmWTMaintCompanyDocStructure: TfrmWTMaintCompanyDocStructure
         ParamType = ptUnknown
       end>
   end
-  object qryGetNames: TQuery
-    DatabaseName = 'WT'
+  object qryGetNames: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT * '
       'FROM Document_Structure'

@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUDataSource = class(TForm)
     dbgDetails: TDBGrid;
     srcDataSource: TDataSource;
-    qryDataSource: TQuery;
-    qryDelete: TQuery;
+    qryDataSource: TFDQuery;
+    qryDelete: TFDQuery;
     stsbrDetails: TStatusBar;
     Panel1: TPanel;
     chkbxShowInactive: TCheckBox;

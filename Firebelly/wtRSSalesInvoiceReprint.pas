@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, StdCtrls, DBTables, Buttons, Printers, ExtCtrls, QrCtrls, IniFiles,
-  wtRPSalesInvoice, QrExport, AllCommon;
+  DB, StdCtrls, Buttons, Printers, ExtCtrls, QrCtrls, IniFiles,
+  wtRPSalesInvoice, QrExport, AllCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSalesInvoiceReprint = class(TForm)
@@ -18,15 +21,15 @@ type
     btnEmail: TBitBtn;
     rdgrpType: TRadioGroup;
     Label1: TLabel;
-    InvRPrintSQL: TQuery;
-    qryInvPrint: TQuery;
-    qryCreditPrint: TQuery;
-    qryGetCustomers: TQuery;
-    GetInvCustSQL: TQuery;
-    GetCreditCustSQL: TQuery;
-    qryInvEmail: TQuery;
-    qryCreditEmail: TQuery;
-    qryAddress: TQuery;
+    InvRPrintSQL: TFDQuery;
+    qryInvPrint: TFDQuery;
+    qryCreditPrint: TFDQuery;
+    qryGetCustomers: TFDQuery;
+    GetInvCustSQL: TFDQuery;
+    GetCreditCustSQL: TFDQuery;
+    qryInvEmail: TFDQuery;
+    qryCreditEmail: TFDQuery;
+    qryAddress: TFDQuery;
     procedure EnablePrint(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure PrintBtnClick(Sender: TObject);

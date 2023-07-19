@@ -143,8 +143,8 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     Left = 144
     Top = 120
   end
-  object qrySalesLeads: TQuery
-    DatabaseName = 'WT'
+  object qrySalesLeads: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Sales_Lead_Source'
@@ -162,8 +162,8 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

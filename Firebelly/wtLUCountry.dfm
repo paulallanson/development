@@ -122,8 +122,8 @@ object frmWTLUCountry: TfrmWTLUCountry
     Left = 160
     Top = 72
   end
-  object qryCountry: TQuery
-    DatabaseName = 'WT'
+  object qryCountry: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Country'
@@ -132,8 +132,8 @@ object frmWTLUCountry: TfrmWTLUCountry
     Left = 88
     Top = 72
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 224
     Top = 72
   end

@@ -9,8 +9,8 @@ object dtmdlCustJobs: TdtmdlCustJobs
     Left = 80
     Top = 24
   end
-  object qryJobs: TQuery
-    DatabaseName = 'WT'
+  object qryJobs: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Job'

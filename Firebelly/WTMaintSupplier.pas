@@ -4,10 +4,12 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, ExtCtrls, ComCtrls, DB, ShellAPI,
-  DBTables, ImgList, ToolWin, Grids, DBGrids, wtSupplierDM, Spin, Inifiles, DateSelV5,
+  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, ExtCtrls, ComCtrls, DB, ShellAPI, ImgList, ToolWin, Grids, DBGrids, wtSupplierDM, Spin, Inifiles, DateSelV5,
   taoMapi, Activex, AxCtrls, Clipbrd, ComObj, Menus,
-  CRControls, System.ImageList;
+  CRControls, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintSupplier = class(TForm)
@@ -19,9 +21,9 @@ type
     chkbxInactive: TCheckBox;
     pnlDetails: TPanel;
     Label1: TLabel;
-    tblOneSupplier: TTable;
+    tblOneSupplier: TFDTable;
     dtsOneSupplier: TDataSource;
-    qryNewSupplier: TQuery;
+    qryNewSupplier: TFDQuery;
     pgDetails: TPageControl;
     tsDetails: TTabSheet;
     Label2: TLabel;
@@ -128,12 +130,12 @@ type
     edtSupplierName: TEdit;
     edtDiscountPercentage: TCREditFloat;
     edtAccountCode: TEdit;
-    qryOneSupplier: TQuery;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryOneSupplier: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     procedure tblOneSupplierNewRecord(DataSet: TDataSet);
     procedure btnOKClick(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);

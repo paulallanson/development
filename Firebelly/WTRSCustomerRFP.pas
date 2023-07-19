@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, Spin, QuickRpt,
-  QrCtrls, OleCtnrs, ComCtrls, allCommon;
+  StdCtrls, Buttons, ExtCtrls, DB, Spin, QuickRpt,
+  QrCtrls, OleCtnrs, ComCtrls, allCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSCustomerRFP = class(TForm)
@@ -28,8 +31,8 @@ type
     OleContainer1: TOleContainer;
     Label6: TLabel;
     edtSiteName: TEdit;
-    qryGetStatement: TQuery;
-    qrySetStatement: TQuery;
+    qryGetStatement: TFDQuery;
+    qrySetStatement: TFDQuery;
     pnlLabourValue: TPanel;
     Label7: TLabel;
     memValue: TMemo;

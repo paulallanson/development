@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, QrCtrls, OleCtnrs, DB,
-  DBTables, IniFiles;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, QrCtrls, OleCtnrs, DB, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRSSalesInvoicePayments = class(TForm)
@@ -36,7 +38,7 @@ type
     grpbxReps: TGroupBox;
     Label3: TLabel;
     cmbReps: TComboBox;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     chkbxOnlyShowUnpaid: TCheckBox;
     procedure Button4Click(Sender: TObject);

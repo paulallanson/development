@@ -162,8 +162,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     Left = 136
     Top = 168
   end
-  object qryCutOut: TQuery
-    DatabaseName = 'WT'
+  object qryCutOut: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM CutOut'
@@ -187,8 +187,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 224
     Top = 168
   end

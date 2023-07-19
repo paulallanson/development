@@ -177,8 +177,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     TabOrder = 2
     NumGlyphs = 2
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'wt'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Worktop_Group.*'
       'from Worktop_Group'
@@ -200,8 +200,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     Left = 296
     Top = 8
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -241,8 +241,8 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
     Left = 424
     Top = 72
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -268,9 +268,9 @@ object frmWTMaintJElementM: TfrmWTMaintJElementM
         ParamType = ptUnknown
       end>
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'

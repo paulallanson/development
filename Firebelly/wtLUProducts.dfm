@@ -205,8 +205,8 @@ object frmWTLUProducts: TfrmWTLUProducts
       OnClick = btnExcelClick
     end
   end
-  object lkpProducts: TQuery
-    DatabaseName = 'WT'
+  object lkpProducts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Product.*,'
       ' (select top 1 Unit_price'
@@ -320,8 +320,8 @@ object frmWTLUProducts: TfrmWTLUProducts
     Left = 192
     Top = 128
   end
-  object qryDelProduct: TQuery
-    DatabaseName = 'wt'
+  object qryDelProduct: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from product'
       'where price_pointer = :price_pointer')

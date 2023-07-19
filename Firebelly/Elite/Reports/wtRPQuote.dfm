@@ -2929,8 +2929,8 @@ object frmwtRPQuote: TfrmwtRPQuote
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Quote.*,'
       '        Operator.Operator_Name,'
@@ -2956,9 +2956,9 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQElements: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryQElements: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -2993,9 +2993,9 @@ object frmwtRPQuote: TfrmwtRPQuote
     Left = 160
     Top = 16
   end
-  object qryQCutOuts: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryQCutOuts: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -3010,9 +3010,9 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQEdges: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsReport
+  object qryQEdges: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -3028,9 +3028,9 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryQExtras: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsReport
+  object qryQExtras: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -3045,8 +3045,8 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -3060,8 +3060,8 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'
@@ -3087,16 +3087,16 @@ object frmwtRPQuote: TfrmwtRPQuote
     Left = 526
     Top = 11
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 574
     Top = 199
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -3111,8 +3111,8 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuote: TQuery
-    DatabaseName = 'wT'
+  object qryUpQuote: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Quote'
       'set Quote_Status = :Quote_Status'
@@ -3131,8 +3131,8 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TQuery
-    DatabaseName = 'WT'
+  object qryEndUser: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -3167,8 +3167,8 @@ object frmwtRPQuote: TfrmwtRPQuote
     Left = 526
     Top = 56
   end
-  object qryAccountManager: TQuery
-    DatabaseName = 'WT'
+  object qryAccountManager: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Email_Address'
       'FROM Operator'

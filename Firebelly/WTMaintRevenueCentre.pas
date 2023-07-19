@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, jpeg, ExtCtrls, ExtDlgs,
-  ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, jpeg, ExtCtrls, ExtDlgs,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintRevenueCentre = class(TForm)
@@ -13,12 +16,12 @@ type
     Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryGetLast: TQuery;
-    qryUpdate: TQuery;
-    qryDelete: TQuery;
+    qryGetLast: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryDelete: TFDQuery;
     DescrEdit: TEdit;
     DetsSRC: TDataSource;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     Label2: TLabel;
     edtColor: TEdit;
     Button1: TButton;
@@ -36,11 +39,11 @@ type
     memPayment: TMemo;
     Label5: TLabel;
     edtVATRegistrationNo: TEdit;
-    qryAdd: TQuery;
+    qryAdd: TFDQuery;
     Label25: TLabel;
     dblkpAccountsPackage: TDBLookupComboBox;
     chkbxInActive: TCheckBox;
-    qryAccounts: TQuery;
+    qryAccounts: TFDQuery;
     dtsAccounts: TDataSource;
     Label6: TLabel;
     edtCompanyRegNo: TEdit;

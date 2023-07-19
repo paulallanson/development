@@ -157,8 +157,8 @@ object frmwtLUEdges: TfrmwtLUEdges
     Left = 136
     Top = 120
   end
-  object qryEdgeProfile: TQuery
-    DatabaseName = 'WT'
+  object qryEdgeProfile: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Edge_Profile'
@@ -182,8 +182,8 @@ object frmwtLUEdges: TfrmwtLUEdges
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

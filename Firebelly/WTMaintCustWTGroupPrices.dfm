@@ -116,8 +116,8 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     OnEnter = edtMarkupPercentageEnter
     OnExit = edtMarkupPercentageExit
   end
-  object lkpThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Thickness'
@@ -154,8 +154,8 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Left = 264
     Top = 64
   end
-  object qryAdd: TQuery
-    DatabaseName = 'wt'
+  object qryAdd: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'INSERT INTO Customer_Worktop_Group_Thick'
       '('
@@ -203,8 +203,8 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'wt'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Customer_Worktop_Group_Thick'
       'SET Markup_Percentage = :Markup_Percentage'

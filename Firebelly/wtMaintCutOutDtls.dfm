@@ -9,8 +9,8 @@ inherited frmWTMaintCutOutDtls: TfrmWTMaintCutOutDtls
     KeyField = 'CutOut'
     ListSource = srclkpCutOuts
   end
-  object lkpCutOuts: TQuery
-    DatabaseName = 'WT'
+  object lkpCutOuts: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from cutout'
       'where cutout not in'

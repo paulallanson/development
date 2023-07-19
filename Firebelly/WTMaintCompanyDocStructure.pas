@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Menus, ComCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Menus, ComCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintCompanyDocStructure = class(TForm)
@@ -17,9 +20,9 @@ type
     mnuRename: TMenuItem;
     mnuDelete: TMenuItem;
     lstCodes: TListBox;
-    qryDelete: TQuery;
-    qryAdd: TQuery;
-    qryGetNames: TQuery;
+    qryDelete: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetNames: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure mnuAddClick(Sender: TObject);
     procedure mnuRenameClick(Sender: TObject);

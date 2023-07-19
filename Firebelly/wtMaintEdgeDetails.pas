@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Buttons, CRControls, DB, DBTables, QrCtrls;
+  Dialogs, DBCtrls, StdCtrls, Buttons, CRControls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintEdgeDetails = class(TForm)
@@ -16,10 +19,10 @@ type
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     dblkpDescription: TDBLookupComboBox;
-    lkpEdges: TQuery;
+    lkpEdges: TFDQuery;
     srclkpEdges: TDataSource;
     btnEdges: TBitBtn;
-    qryAdd: TQuery;
+    qryAdd: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure btnEdgesClick(Sender: TObject);

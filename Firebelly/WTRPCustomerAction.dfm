@@ -762,8 +762,8 @@ object frmwtRPCustomerAction: TfrmwtRPCustomerAction
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'Wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Customer_type,'

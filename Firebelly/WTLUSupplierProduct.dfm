@@ -158,8 +158,8 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
         Width = 50
       end>
   end
-  object qryDetails: TQuery
-    DatabaseName = 'wt'
+  object qryDetails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product,'
@@ -250,8 +250,8 @@ object frmWTLUSupplierProduct: TfrmWTLUSupplierProduct
     Left = 96
     Top = 128
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 216
     Top = 64
   end

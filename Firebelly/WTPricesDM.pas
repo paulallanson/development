@@ -3,14 +3,17 @@ unit WTPricesDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables;
+  SysUtils, Classes, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlPrices = class(TDataModule)
-    qryAllPrices: TQuery;
+    qryAllPrices: TFDQuery;
     dtsAllPrices: TDataSource;
-    qryDummyCurrent: TQuery;
-    qryDummyFuture: TQuery;
+    qryDummyCurrent: TFDQuery;
+    qryDummyFuture: TFDQuery;
     qryAllPricesWorktop: TIntegerField;
     qryAllPricesWorktop_Description: TStringField;
     qryAllPricesThickness: TIntegerField;
@@ -26,7 +29,7 @@ type
     qryAllPricesUnit_Cost: TFloatField;
     qryAllPricesPrice_Unit_Description: TStringField;
     qryAllPricesOperator_Name: TStringField;
-    qryDeletePrices: TQuery;
+    qryDeletePrices: TFDQuery;
     qryAllPricesinactive: TStringField;
   private
     function GetHeaderCountAll: integer;

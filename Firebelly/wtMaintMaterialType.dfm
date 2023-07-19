@@ -1898,8 +1898,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Left = 672
     Top = 64
   end
-  object qryUpstands: TQuery
-    DatabaseName = 'Wt'
+  object qryUpstands: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'Select'
       '  Worktop_Type_Upstand,'
@@ -1937,9 +1937,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsUpstands: TDataSource
@@ -1947,8 +1945,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Left = 464
     Top = 88
   end
-  object qryDelUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryDelUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Worktop_Type_Upstand'
       'where price_pointer = :price_pointer')
@@ -1956,13 +1954,11 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
-  object qryweights: TQuery
-    DatabaseName = 'Wt'
+  object qryweights: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Worktop_Type_Thickness.ID,'
       '        Worktop_Type_Thickness.Worktop_Type,'
@@ -1980,9 +1976,7 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsWeights: TDataSource
@@ -1990,8 +1984,8 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Left = 464
     Top = 152
   end
-  object qryDelWeight: TQuery
-    DatabaseName = 'wt'
+  object qryDelWeight: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Worktop_Type_Thickness'
       'where ID = :ID')
@@ -1999,13 +1993,11 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Worktop_Type'
       'SET'
@@ -2025,63 +2017,42 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Nominal_Retail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Nominal_Retail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Long_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Worktop_Type'
       '        (Worktop_Type,'
@@ -2093,13 +2064,13 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 328
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Delete From Category'
       'Where'
@@ -2108,13 +2079,11 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Worktop_Type'
       'From Worktop_Type'
@@ -2123,13 +2092,13 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 328
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Category'
       'Set     Description = :Description,'
@@ -2145,39 +2114,25 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Immediately'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cleared_Funds_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Separate_Invoice_Seq'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
 end

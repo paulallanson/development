@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtRPQuoteReason = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
     qrlblCaption: TQRLabel;
-    qryQuotes: TQuery;
+    qryQuotes: TFDQuery;
     qrgCustomerHead: TQRGroup;
     qrsbDetails: TQRSubDetail;
     QRLabel2: TQRLabel;

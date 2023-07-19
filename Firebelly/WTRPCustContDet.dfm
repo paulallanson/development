@@ -1081,8 +1081,8 @@ object frmWTRPCustContDet: TfrmWTRPCustContDet
       end
     end
   end
-  object GetDetsQry: TQuery
-    DatabaseName = 'wt'
+  object GetDetsQry: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT'
       '  Customer_Contact.Contact_Name,'

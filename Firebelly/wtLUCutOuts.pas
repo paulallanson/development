@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBTables, DB, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls,
-  ComCtrls;
+  Dialogs, DB, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCutOuts = class(TForm)
@@ -20,8 +23,8 @@ type
     dbgDetails: TDBGrid;
     srcCutOuts: TDataSource;
     chkbxShowOnline: TCheckBox;
-    qryCutOut: TQuery;
-    qryDelete: TQuery;
+    qryCutOut: TFDQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     edtName: TEdit;
     tmrRefresh: TTimer;

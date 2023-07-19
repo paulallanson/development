@@ -1591,12 +1591,12 @@ object frmWTRPRemedialType: TfrmWTRPRemedialType
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     Left = 47
     Top = 8
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT  Job_Remedial.Job,'
       '        Job_Remedial.Remedial_Number,'

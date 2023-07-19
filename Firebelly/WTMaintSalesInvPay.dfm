@@ -270,8 +270,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       OnExit = ValidateMoney
     end
   end
-  object qryGetInvoice: TQuery
-    DatabaseName = 'WT'
+  object qryGetInvoice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT distinct'
       'Sales_Invoice.Customer,'
@@ -307,8 +307,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryUpInvoice: TQuery
-    DatabaseName = 'WT'
+  object qryUpInvoice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update sales_invoice'
       'Set Paid_Amount = :Paid_Amount,'
@@ -345,8 +345,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryGetSILines: TQuery
-    DatabaseName = 'WT'
+  object qryGetSILines: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Sales_invoice_Line'
@@ -360,8 +360,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'WT'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Job_bag_Line_Dets'
@@ -381,8 +381,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJobBag: TQuery
-    DatabaseName = 'WT'
+  object qryUpdJobBag: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Job_Bag'
       'set On_Hold = :On_Hold'
@@ -401,8 +401,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOdelivLines: TQuery
-    DatabaseName = 'WT'
+  object qryGetPOdelivLines: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Delivery_Detail'
@@ -423,8 +423,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPODeliv: TQuery
-    DatabaseName = 'WT'
+  object qryUpdPODeliv: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Delivery_Detail'
       'set Qty_Delivered = Qty_to_Deliver,'
@@ -456,8 +456,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPO: TQuery
-    DatabaseName = 'WT'
+  object qryUpdPO: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set ready_to_invoice = '#39'N'#39

@@ -4,128 +4,131 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers;
+  Dialogs, DB, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, Printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTRPContract = class(TForm)
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
-    gtQRShape3: TQRShape;
-    QRDBText4: TQRDBText;
-    QRLabel5: TQRLabel;
-    QRDBText5: TQRDBText;
-    qriHeadLogo: TQRImage;
-    qrmAddress: TQRMemo;
-    gtQRLabel6: TQRLabel;
-    gtQRLabel7: TQRLabel;
-    gtQRShape5: TQRShape;
-    gtQRShape6: TQRShape;
-    QRLabel2: TQRLabel;
-    QRDBText1: TQRDBText;
-    QRDBText2: TQRDBText;
-    QRDBText3: TQRDBText;
-    QRDBText6: TQRDBText;
-    QRLabel16: TQRLabel;
-    QRLabel4: TQRLabel;
-    QRLabel3: TQRLabel;
-    gtQRShape4: TQRShape;
-    gtQRShape7: TQRShape;
-    gtQRShape8: TQRShape;
-    gtQRShape9: TQRShape;
-    qryReport: TQuery;
+    gtQRShape3: TgtQRShape;
+    QRDBText4: TgtQRDBText;
+    QRLabel5: TgtQRLabel;
+    QRDBText5: TgtQRDBText;
+    qriHeadLogo: TgtQRImage;
+    qrmAddress: TgtQRMemo;
+    gtQRLabel6: TgtQRLabel;
+    gtQRLabel7: TgtQRLabel;
+    gtQRShape5: TgtQRShape;
+    gtQRShape6: TgtQRShape;
+    QRLabel2: TgtQRLabel;
+    QRDBText1: TgtQRDBText;
+    QRDBText2: TgtQRDBText;
+    QRDBText3: TgtQRDBText;
+    QRDBText6: TgtQRDBText;
+    QRLabel16: TgtQRLabel;
+    QRLabel4: TgtQRLabel;
+    QRLabel3: TgtQRLabel;
+    gtQRShape4: TgtQRShape;
+    gtQRShape7: TgtQRShape;
+    gtQRShape8: TgtQRShape;
+    gtQRShape9: TgtQRShape;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     qrgQuote: TQRGroup;
-    qryCompany: TQuery;
-    qryCustomer: TQuery;
+    qryCompany: TFDQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryAddress: TQuery;
-    qrygetNotes: TQuery;
-    gtQRShape1: TQRShape;
-    gtQRLabel1: TQRLabel;
-    gtQRDBText1: TQRDBText;
+    qryAddress: TFDQuery;
+    qrygetNotes: TFDQuery;
+    gtQRShape1: TgtQRShape;
+    gtQRLabel1: TgtQRLabel;
+    gtQRDBText1: TgtQRDBText;
     qrsdContractLine: TQRSubDetail;
-    gtQRShapeDrawing: TQRShape;
-    qrlblDrawingNumber: TQRLabel;
-    gtQRShapeOption5: TQRShape;
-    qryContractLine: TQuery;
-    qryContractOption: TQuery;
+    gtQRShapeDrawing: TgtQRShape;
+    qrlblDrawingNumber: TgtQRLabel;
+    gtQRShapeOption5: TgtQRShape;
+    qryContractLine: TFDQuery;
+    qryContractOption: TFDQuery;
     qrbContractLineHeader: TQRBand;
-    gtQRShapeHead0: TQRShape;
-    gtQRShapeHead1: TQRShape;
-    gtQRShapeHead2: TQRShape;
-    gtQRShapeHead3: TQRShape;
-    gtQRShapeHead4: TQRShape;
-    qrlblDrawing: TQRLabel;
-    qrlblOptionHead1: TQRLabel;
-    qrlblOptionHead2: TQRLabel;
-    qrlblOptionHead3: TQRLabel;
-    qrlblOptionHead4: TQRLabel;
-    gtQRShapeOption1: TQRShape;
-    gtQRShapeOption2: TQRShape;
-    gtQRShapeOption3: TQRShape;
-    gtQRShapeOption4: TQRShape;
-    qrlblOption1: TQRLabel;
-    qrlblOption2: TQRLabel;
-    qrlblOption3: TQRLabel;
-    qrlblOption4: TQRLabel;
+    gtQRShapeHead0: TgtQRShape;
+    gtQRShapeHead1: TgtQRShape;
+    gtQRShapeHead2: TgtQRShape;
+    gtQRShapeHead3: TgtQRShape;
+    gtQRShapeHead4: TgtQRShape;
+    qrlblDrawing: TgtQRLabel;
+    qrlblOptionHead1: TgtQRLabel;
+    qrlblOptionHead2: TgtQRLabel;
+    qrlblOptionHead3: TgtQRLabel;
+    qrlblOptionHead4: TgtQRLabel;
+    gtQRShapeOption1: TgtQRShape;
+    gtQRShapeOption2: TgtQRShape;
+    gtQRShapeOption3: TgtQRShape;
+    gtQRShapeOption4: TgtQRShape;
+    qrlblOption1: TgtQRLabel;
+    qrlblOption2: TgtQRLabel;
+    qrlblOption3: TgtQRLabel;
+    qrlblOption4: TgtQRLabel;
     dtsContractLine: TDataSource;
-    qryOptionHeaders: TQuery;
-    gtQRShapeOption6: TQRShape;
-    gtQRShapeHead5: TQRShape;
-    gtQRShapeHead6: TQRShape;
-    qrlblOptionHead5: TQRLabel;
-    qrlblOptionHead6: TQRLabel;
-    qrlblOption5: TQRLabel;
-    qrlblOption6: TQRLabel;
+    qryOptionHeaders: TFDQuery;
+    gtQRShapeOption6: TgtQRShape;
+    gtQRShapeHead5: TgtQRShape;
+    gtQRShapeHead6: TgtQRShape;
+    qrlblOptionHead5: TgtQRLabel;
+    qrlblOptionHead6: TgtQRLabel;
+    qrlblOption5: TgtQRLabel;
+    qrlblOption6: TgtQRLabel;
     qrcbNotes: TQRChildBand;
-    qrlNotes: TQRLabel;
-    qrrchTextNotes: TQRRichText;
-    qrlblDrawingNumberMemo: TQRRichText;
-    qrlblOptionHead0: TQRRichText;
-    qryOptionHeadersHeight: TQuery;
+    qrlNotes: TgtQRLabel;
+    qrrchTextNotes: TgtQRRichText;
+    qrlblDrawingNumberMemo: TgtQRRichText;
+    qrlblOptionHead0: TgtQRRichText;
+    qryOptionHeadersHeight: TFDQuery;
     qrbTotals: TQRBand;
     qrbContractLineFooter: TQRChildBand;
-    gtQRLabel2: TQRLabel;
+    gtQRLabel2: TgtQRLabel;
     qrcbAvailability: TQRChildBand;
-    QRLabel9: TQRLabel;
-    qrrchTextAvailability: TQRRichText;
+    QRLabel9: TgtQRLabel;
+    qrrchTextAvailability: TgtQRRichText;
     qrbOptionSummary: TQRChildBand;
-    qrlblColourOptions: TQRLabel;
-    qrtxtOptionColours1: TQRRichText;
-    qrtxtOptionColours2: TQRRichText;
-    qrtxtOptionColours3: TQRRichText;
-    qrtxtOptionColours4: TQRRichText;
-    qrtxtOptionColours5: TQRRichText;
-    qrtxtOptionColours6: TQRRichText;
-    qryOptionColours: TQuery;
+    qrlblColourOptions: TgtQRLabel;
+    qrtxtOptionColours1: TgtQRRichText;
+    qrtxtOptionColours2: TgtQRRichText;
+    qrtxtOptionColours3: TgtQRRichText;
+    qrtxtOptionColours4: TgtQRRichText;
+    qrtxtOptionColours5: TgtQRRichText;
+    qrtxtOptionColours6: TgtQRRichText;
+    qryOptionColours: TFDQuery;
     qrbPageFooter: TQRBand;
-    qrlblCompanyAdd: TQRLabel;
-    gtQRShapeHead7: TQRShape;
-    qrlblOptionHead7: TQRLabel;
-    gtQRShapeOption7: TQRShape;
-    qrlblOption7: TQRLabel;
-    qrtxtOptionColours7: TQRRichText;
-    qrlblQuoteCaption: TQRLabel;
+    qrlblCompanyAdd: TgtQRLabel;
+    gtQRShapeHead7: TgtQRShape;
+    qrlblOptionHead7: TgtQRLabel;
+    gtQRShapeOption7: TgtQRShape;
+    qrlblOption7: TgtQRLabel;
+    qrtxtOptionColours7: TgtQRRichText;
+    qrlblQuoteCaption: TgtQRLabel;
     qrbTemplateFitting: TQRChildBand;
-    gtQRShape10: TQRShape;
-    gtQRShapeTemplate: TQRShape;
-    gtQRLabel3: TQRLabel;
-    qrlblTemplatePrice: TQRLabel;
-    gtQRLabel4: TQRLabel;
-    gtQRShapeTotal1: TQRShape;
-    gtQRShapeTotal2: TQRShape;
-    gtQRShapeTotal3: TQRShape;
-    gtQRShapeTotal4: TQRShape;
-    gtQRShapeTotal5: TQRShape;
-    gtQRShapeTotal6: TQRShape;
-    gtQRShapeTotal7: TQRShape;
-    qrlblOptionTotal1: TQRLabel;
-    qrlblOptionTotal2: TQRLabel;
-    qrlblOptionTotal3: TQRLabel;
-    qrlblOptionTotal4: TQRLabel;
-    qrlblOptionTotal5: TQRLabel;
-    qrlblOptionTotal6: TQRLabel;
-    qrlblOptionTotal7: TQRLabel;
+    gtQRShape10: TgtQRShape;
+    gtQRShapeTemplate: TgtQRShape;
+    gtQRLabel3: TgtQRLabel;
+    qrlblTemplatePrice: TgtQRLabel;
+    gtQRLabel4: TgtQRLabel;
+    gtQRShapeTotal1: TgtQRShape;
+    gtQRShapeTotal2: TgtQRShape;
+    gtQRShapeTotal3: TgtQRShape;
+    gtQRShapeTotal4: TgtQRShape;
+    gtQRShapeTotal5: TgtQRShape;
+    gtQRShapeTotal6: TgtQRShape;
+    gtQRShapeTotal7: TgtQRShape;
+    qrlblOptionTotal1: TgtQRLabel;
+    qrlblOptionTotal2: TgtQRLabel;
+    qrlblOptionTotal3: TgtQRLabel;
+    qrlblOptionTotal4: TgtQRLabel;
+    qrlblOptionTotal5: TgtQRLabel;
+    qrlblOptionTotal6: TgtQRLabel;
+    qrlblOptionTotal7: TgtQRLabel;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -332,8 +335,8 @@ end;
 procedure TfrmWTRPContract.qrsdContractLineBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 var
-  tmpLabel: TQRLabel;
-  tmpShape: TQRShape;
+  tmpLabel: TgtQRLabel;
+  tmpShape: TgtQRShape;
   iCount: integer;
   rTotal: double;
 begin
@@ -361,7 +364,7 @@ begin
           if bValuebyUnits then
             rTotal := (rTotal * qryContractLine.fieldbyname('Number_of_units').asinteger);
 
-          tmpLabel := self.FindComponent('qrlblOption' + IntToStr(icount)) as TQRLabel;
+          tmpLabel := self.FindComponent('qrlblOption' + IntToStr(icount)) as TgtQRLabel;
           try
             tmpLabel.Caption := formatfloat('£#,##0.00',rTotal);
           except
@@ -369,7 +372,7 @@ begin
 
           OptionTotals[iCount] := OptionTotals[iCount] + rTotal;
           
-          tmpShape := self.findcomponent('gtQRShapeOption' + inttostr(icount)) as TQRShape;
+          tmpShape := self.findcomponent('gtQRShapeOption' + inttostr(icount)) as TgtQRShape;
 
           try
             tmpShape.enabled := true;
@@ -387,9 +390,9 @@ end;
 procedure TfrmWTRPContract.qrbContractLineHeaderBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 var
-  tmpLabel: TQRLabel;
-  tmpShape: TQRShape;
-  tmpRichText: TQRRichText;
+  tmpLabel: TgtQRLabel;
+  tmpShape: TgtQRShape;
+  tmpRichText: TgtQRRichText;
   icount, iGroup, iOption: integer;
   iHeight, iBoxHeight: integer;
 begin
@@ -401,49 +404,49 @@ begin
   {Clear all the Option headers}
   for icount := 1 to 7 do
     begin
-      tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TQRLabel;
+      tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TgtQRLabel;
 
       try
         tmpLabel.Caption := '';
       except
       end;
 
-      tmpLabel := self.findcomponent('qrlblOption' + inttostr(icount)) as TQRLabel;
+      tmpLabel := self.findcomponent('qrlblOption' + inttostr(icount)) as TgtQRLabel;
 
       try
         tmpLabel.Caption := '';
       except
       end;
 
-      tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TQRLabel;
+      tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TgtQRLabel;
 
       try
         tmpLabel.Caption := '';
       except
       end;
 
-      tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TQRShape;
+      tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TgtQRShape;
 
       try
         tmpShape.enabled := false;
       except
       end;
 
-      tmpShape := self.findcomponent('gtQRShapeOption' + inttostr(icount)) as TQRShape;
+      tmpShape := self.findcomponent('gtQRShapeOption' + inttostr(icount)) as TgtQRShape;
 
       try
         tmpShape.enabled := false;
       except
       end;
 
-      tmpShape := self.findcomponent('gtQRShapeTotal' + inttostr(icount)) as TQRShape;
+      tmpShape := self.findcomponent('gtQRShapeTotal' + inttostr(icount)) as TgtQRShape;
 
       try
         tmpShape.enabled := false;
       except
       end;
 
-      tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TQRRichText;
+      tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TgtQRRichText;
 
       try
         tmpRichText.lines.clear;
@@ -463,7 +466,7 @@ begin
       first;
       while eof <> true do
         begin
-          tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TQRLabel;
+          tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TgtQRLabel;
 
           try
             tmpLabel.Caption := qryOptionHeaders.fieldbyname('Option_Description').asstring;
@@ -477,7 +480,7 @@ begin
           except
           end;
 
-          tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TQRShape;
+          tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TgtQRShape;
 
           try
             tmpShape.enabled := true;
@@ -485,14 +488,14 @@ begin
           end;
 
           {Clear the Total values and Shape}
-          tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TQRLabel;
+          tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TgtQRLabel;
 
           try
             tmpLabel.Caption := '';
           except
           end;
 
-          tmpShape := self.findcomponent('gtQRShapeTotal' + inttostr(icount)) as TQRShape;
+          tmpShape := self.findcomponent('gtQRShapeTotal' + inttostr(icount)) as TgtQRShape;
 
           try
             tmpShape.enabled := true;
@@ -510,7 +513,7 @@ begin
   {Set the height of the shapes}
   for icount := 0 to 7 do
     begin
-      tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TQRShape;
+      tmpShape := self.findcomponent('gtQRShapeHead' + inttostr(icount)) as TgtQRShape;
 
       try
         tmpShape.Height := iBoxHeight;
@@ -537,7 +540,7 @@ begin
               iGroup := fieldbyname('Group_Number').asinteger;
               iOption := fieldbyname('Option_Number').asinteger;
 
-              tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TQRRichText;
+              tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TgtQRRichText;
 
               try
                 tmpRichText.Lines.Add(fieldbyname('Worktop_Description').asstring);
@@ -642,7 +645,7 @@ procedure TfrmWTRPContract.qrbContractLineHeaderAfterPrint(
   Sender: TQRCustomBand; BandPrinted: Boolean);
 var
   tempStr: string;
-  tmpLabel: TQRLabel;
+  tmpLabel: TgtQRLabel;
   iCount: integer;
 begin
   if self.exporting then
@@ -655,7 +658,7 @@ begin
       {Get all the Option headers}
       for icount := 1 to 7 do
         begin
-          tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TQRLabel;
+          tmpLabel := self.findcomponent('qrlblOptionHead' + inttostr(icount)) as TgtQRLabel;
 
           try
             if tmpLabel.Caption <> '' then
@@ -671,7 +674,7 @@ procedure TfrmWTRPContract.qrsdContractLineAfterPrint(
   Sender: TQRCustomBand; BandPrinted: Boolean);
 var
   tempStr: string;
-  tmpLabel: TQRLabel;
+  tmpLabel: TgtQRLabel;
   iCount: integer;
 begin
   if self.exporting then
@@ -685,7 +688,7 @@ begin
       {Get all the Option prices}
       for icount := 1 to 7 do
         begin
-          tmpLabel := self.findcomponent('qrlblOption' + inttostr(icount)) as TQRLabel;
+          tmpLabel := self.findcomponent('qrlblOption' + inttostr(icount)) as TgtQRLabel;
 
           try
             if tmpLabel.Caption <> '' then
@@ -730,7 +733,7 @@ procedure TfrmWTRPContract.qrbOptionSummaryAfterPrint(
 var
   iCount: integer;
   tempStr: string;
-  tmpRichText: TQRRichText;
+  tmpRichText: TgtQRRichText;
 begin
   if self.exporting then
     begin
@@ -749,7 +752,7 @@ begin
       {Get all the Option prices}
       for icount := 1 to 7 do
         begin
-          tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TQRRichText;
+          tmpRichText := self.findcomponent('qrtxtOptionColours' + inttostr(icount)) as TgtQRRichText;
 
           try
             if tmpRichText.Lines.text <> '' then
@@ -796,8 +799,8 @@ end;
 procedure TfrmWTRPContract.qrbTotalsBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 var
-  tmpLabel: TQRLabel;
-  tmpShape: TQRShape;
+  tmpLabel: TgtQRLabel;
+  tmpShape: TgtQRShape;
   iCount: integer;
 begin
   for icount := 1 to 7 do
@@ -805,7 +808,7 @@ begin
       if iCount > OptionCount then
         exit;           {We've got to the end of the options so don't show the rest}
 
-      tmpLabel := self.FindComponent('qrlblOptionTotal' + IntToStr(icount)) as TQRLabel;
+      tmpLabel := self.FindComponent('qrlblOptionTotal' + IntToStr(icount)) as TgtQRLabel;
 
       try
         tmpLabel.Caption := formatfloat('£#,##0.00',OptionTotals[icount]);
@@ -818,7 +821,7 @@ procedure TfrmWTRPContract.qrbTotalsAfterPrint(Sender: TQRCustomBand;
   BandPrinted: Boolean);
 var
   tempStr: string;
-  tmpLabel: TQRLabel;
+  tmpLabel: TgtQRLabel;
   iCount: integer;
 begin
   if self.exporting and self.bValuebyUnits then
@@ -832,7 +835,7 @@ begin
       {Get all the Option Totals}
       for icount := 1 to 7 do
         begin
-          tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TQRLabel;
+          tmpLabel := self.findcomponent('qrlblOptionTotal' + inttostr(icount)) as TgtQRLabel;
 
           try
             if tmpLabel.Caption <> '' then

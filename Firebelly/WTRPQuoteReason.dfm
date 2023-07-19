@@ -1220,8 +1220,8 @@ object frmwtRPQuoteReason: TfrmwtRPQuoteReason
       end
     end
   end
-  object qryQuotes: TQuery
-    DatabaseName = 'Wt'
+  object qryQuotes: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'select Quote.*,'
       '  Customer.Customer_Name as Customer_Name_Actual,'

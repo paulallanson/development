@@ -1497,8 +1497,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       
         'select Sales_Order.*, Operator.Operator_Name, Operator.Telephone' +
@@ -1520,8 +1520,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Left = 296
     Top = 56
   end
-  object qryAddress: TQuery
-    DatabaseName = 'WT'
+  object qryAddress: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from Address'
@@ -1539,16 +1539,16 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Left = 406
     Top = 51
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 502
     Top = 111
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1563,8 +1563,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpQuote: TQuery
-    DatabaseName = 'wT'
+  object qryUpQuote: TFDQuery
+    ConnectionName = 'wT'
     SQL.Strings = (
       'update Quote'
       'set Quote_Status = :Quote_Status'
@@ -1583,8 +1583,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryEndUser: TQuery
-    DatabaseName = 'WT'
+  object qryEndUser: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select End_User, End_User_name,'
       'Street,'
@@ -1605,9 +1605,9 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsReport
+  object qrySOLine: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT Sales_Order_Line.Sales_Order,'
       '  Sales_Order_Line.Sales_order_Line_no,'
@@ -1643,90 +1643,90 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       end>
     object qrySOLineSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'WT.Sales_Order_Line.Sales_Order'
+
     end
     object qrySOLineSales_order_Line_no: TIntegerField
       FieldName = 'Sales_order_Line_no'
-      Origin = 'WT.Sales_Order_Line.Sales_order_Line_no'
+
     end
     object qrySOLineJob: TFloatField
       FieldName = 'Job'
-      Origin = 'WT.Sales_Order_Line.Job'
+
     end
     object qrySOLineUnit_price: TFloatField
       FieldName = 'Unit_price'
-      Origin = 'WT.Sales_Order_Line.Unit_price'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineQuantity: TIntegerField
       FieldName = 'Quantity'
-      Origin = 'WT.Sales_Order_Line.Quantity'
+
     end
     object qrySOLineSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
-      Origin = 'WT.Sales_Order_Line.Sell_Unit'
+
     end
     object qrySOLineTotal_Price: TFloatField
       FieldName = 'Total_Price'
-      Origin = 'WT.Sales_Order_Line.Quantity'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineNett_Price: TFloatField
       FieldName = 'Nett_Price'
-      Origin = 'WT.Sales_Order_Line.Nett_Price'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-      Origin = 'WT.Sales_Order_Line.Discount_Value'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineInstallation_price: TFloatField
       FieldName = 'Installation_price'
-      Origin = 'WT.Sales_Order_Line.Installation_price'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineSurvey_price: TFloatField
       FieldName = 'Survey_price'
-      Origin = 'WT.Sales_Order_Line.Survey_price'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-      Origin = 'WT.Sales_Order_Line.Delivery_Price'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineDescription: TStringField
       FieldName = 'Description'
-      Origin = 'WT.Sales_Order_Line.Description'
+
       Size = 50
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'
-      Origin = 'WT.Sales_Order_Line.Product'
+
     end
     object qrySOLineVat: TIntegerField
       FieldName = 'Vat'
-      Origin = 'WT.Sales_Order_Line.Vat'
+
     end
     object qrySOLineVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      Origin = 'WT.Vat.Vat_Rate'
+
       DisplayFormat = '0.00'
     end
     object qrySOLineVAT_Description: TStringField
       FieldName = 'VAT_Description'
-      Origin = 'WT.Vat.Description'
+
       Size = 40
     end
     object qrySOLineQuote: TIntegerField
       FieldName = 'Quote'
-      Origin = 'WT.Sales_Order_Line.Quote'
+
     end
   end
-  object qryQElements: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsSOLine
+  object qryQElements: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsSOLine
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -1756,9 +1756,9 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQEdges: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsSOLine
+  object qryQEdges: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsSOLine
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -1774,9 +1774,9 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQCutOuts: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsSOLine
+  object qryQCutOuts: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsSOLine
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -1791,9 +1791,9 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryQExtras: TQuery
-    DatabaseName = 'WT'
-    DataSource = dtsSOLine
+  object qryQExtras: TFDQuery
+    ConnectionName = 'WT'
+    MasterSource = dtsSOLine
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -1808,8 +1808,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Street,'
       'Locale,'
@@ -1824,8 +1824,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
     Left = 464
     Top = 249
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'wt'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Notes_Text'
       'From Notes'
@@ -1840,8 +1840,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'WT'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Customer, Customer_name,'
       'Street,'

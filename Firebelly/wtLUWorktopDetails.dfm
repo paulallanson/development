@@ -245,8 +245,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
         Visible = True
       end>
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       
@@ -260,8 +260,8 @@ object frmWTLUWorktopDetails: TfrmWTLUWorktopDetails
     Left = 280
     Top = 168
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Worktop_thickness.Worktop,'

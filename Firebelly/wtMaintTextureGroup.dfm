@@ -1169,8 +1169,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
     Left = 680
     Top = 56
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Texture_Group'
       'SET'
@@ -1209,8 +1209,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Texture_Group'
       '        (Texture_Group,'
@@ -1227,8 +1227,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
         ParamType = ptInput
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Texture_Group'
       'From Texture_Group'
@@ -1242,8 +1242,8 @@ object frmWtMaintTextureGroup: TfrmWtMaintTextureGroup
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ' '
       '')

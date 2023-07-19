@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, Db, DBTables, ExtCtrls, DateSelV5, PBPOObjects, Printers, CCSPrint,
-  ComCtrls, Spin, OleCtnrs;
+  Buttons, StdCtrls, Db, ExtCtrls, DateSelV5, PBPOObjects, Printers, CCSPrint,
+  ComCtrls, Spin, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCustTurnFrm = class(TForm)
@@ -20,11 +23,11 @@ type
     TotByRadioGroup: TRadioGroup;
     Label3: TLabel;
     cbSort1: TComboBox;
-    GetLastIntSelSQL: TQuery;
-    DelWorkSQL: TQuery;
-    AddWorkSQL: TQuery;
-    AddIntSelQuery: TQuery;
-    qrySalesByInv: TQuery;
+    GetLastIntSelSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    AddIntSelQuery: TFDQuery;
+    qrySalesByInv: TFDQuery;
     qrySalesByInvCustomer: TIntegerField;
     qrySalesByInvSales_Invoice: TIntegerField;
     qrySalesByInvGoods_Value: TCurrencyField;
@@ -33,13 +36,13 @@ type
     qrySalesByInvReference: TStringField;
     PreviewReportBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetCostsQuery: TQuery;
-    AddCostsQuery: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
-    qryGetJBCosts: TQuery;
-    SQLUpdIntSel: TQuery;
+    GetCostsQuery: TFDQuery;
+    AddCostsQuery: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    qryGetJBCosts: TFDQuery;
+    SQLUpdIntSel: TFDQuery;
     qrySalesByInvBranch_No: TIntegerField;
     NoofCustSpin: TSpinEdit;
     GroupBox1: TGroupBox;
@@ -49,18 +52,18 @@ type
     lblCustBran: TLabel;
     edtRep: TEdit;
     btnRep: TButton;
-    qryCreditLines: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetInvAddChrg: TQuery;
+    qryCreditLines: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetInvAddChrg: TFDQuery;
     btnExcel: TBitBtn;
     OleContainer1: TOleContainer;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
-    SQLRep: TQuery;
+    SQLRep: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     Function GetNextIntSelCode(Sender: TObject): Integer;

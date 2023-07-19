@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, wtJobsDM, StdCtrls, Buttons, DB, DBTables, CRControls, Spin,
-  DBCtrls, ExtCtrls, QrCtrls;
+  Dialogs, wtJobsDM, StdCtrls, Buttons, DB, CRControls, Spin,
+  DBCtrls, ExtCtrls, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintJExtra = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryExtras: TQuery;
+    qryExtras: TFDQuery;
     dtsExtra: TDataSource;
-    qryOneExtra: TQuery;
+    qryOneExtra: TFDQuery;
     pnlDetails: TPanel;
     dblkpExtras: TDBLookupComboBox;
     Label3: TLabel;

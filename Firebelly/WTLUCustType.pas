@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBTables, DB, ComCtrls, StdCtrls, Buttons, ExtCtrls, Grids,
-  DBGrids;
+  Dialogs, DB, ComCtrls, StdCtrls, Buttons, ExtCtrls, Grids,
+  DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustType = class(TForm)
@@ -19,8 +22,8 @@ type
     btnExcel: TBitBtn;
     stsbrDetails: TStatusBar;
     dtsCustTypes: TDataSource;
-    qryCustTypes: TQuery;
-    qryDelete: TQuery;
+    qryCustTypes: TFDQuery;
+    qryDelete: TFDQuery;
     procedure btnDeleteClick(Sender: TObject);
     procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);

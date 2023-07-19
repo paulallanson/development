@@ -207,8 +207,8 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
       OnChange = CheckOK
     end
   end
-  object qryCheckProduct: TQuery
-    DatabaseName = 'WT'
+  object qryCheckProduct: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Supplier_Product_Code'
       'FROM Supplier_Product'

@@ -132,8 +132,8 @@ object frmwtLULevelofImportance: TfrmwtLULevelofImportance
     Left = 168
     Top = 56
   end
-  object qryLevelofImportance: TQuery
-    DatabaseName = 'WT'
+  object qryLevelofImportance: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Level_of_Importance'
@@ -151,8 +151,8 @@ object frmwtLULevelofImportance: TfrmwtLULevelofImportance
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 240
     Top = 56
   end

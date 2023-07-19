@@ -185,8 +185,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
     TabOrder = 9
     Text = '0.00'
   end
-  object tblWorktops: TTable
-    DatabaseName = 'WT'
+  object tblWorktops: TFDTable
+    ConnectionName = 'WT'
     Filtered = True
     IndexFieldNames = 'Description'
     TableName = 'Worktop'
@@ -223,16 +223,16 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
       Size = 1
     end
   end
-  object qryNewWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryNewWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(val(worktop))+1'
       'from worktop')
     Left = 72
     Top = 224
   end
-  object lkpGroup: TQuery
-    DatabaseName = 'WT'
+  object lkpGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select *'
       'from worktop_group'
@@ -254,8 +254,8 @@ object frmWTMaintWorktopDetails: TfrmWTMaintWorktopDetails
         ParamType = ptUnknown
       end>
   end
-  object lkpMatType: TQuery
-    DatabaseName = 'WT'
+  object lkpMatType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select * from Material_Type'
       

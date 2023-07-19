@@ -140,8 +140,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Left = 80
     Top = 16
   end
-  object lkpWTThickness: TQuery
-    DatabaseName = 'WT'
+  object lkpWTThickness: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Worktop_thickness.Worktop,'
       '      Worktop_thickness.Thickness,'
@@ -223,8 +223,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
       Size = 1
     end
   end
-  object qryDelWTThick: TQuery
-    DatabaseName = 'wt'
+  object qryDelWTThick: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from worktop_thickness'
       'where price_pointer = :price_pointer')
@@ -237,8 +237,8 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'wt'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'UPDATE Worktop_Thickness'
       'SET inactive = :inactive'

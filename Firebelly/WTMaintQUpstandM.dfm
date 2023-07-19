@@ -177,8 +177,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     TabOrder = 2
     NumGlyphs = 2
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'wt'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Worktop_Group.*'
       'from Worktop_Group'
@@ -208,8 +208,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     Left = 296
     Top = 56
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -249,9 +249,9 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     Left = 424
     Top = 72
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -274,8 +274,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     Left = 144
     Top = 104
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -309,8 +309,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         ParamType = ptUnknown
       end>
   end
-  object qryMaterial: TQuery
-    DatabaseName = 'wt'
+  object qryMaterial: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Material_Type.*'
       'from Material_Type'
@@ -332,8 +332,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
     Left = 320
     Top = 8
   end
-  object qryContractWorktops: TQuery
-    DatabaseName = 'WT'
+  object qryContractWorktops: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group.Customer,'
       '        Customer_Worktop_Group.Group_Number,'
@@ -378,8 +378,8 @@ object frmWTMaintQUpstandM: TfrmWTMaintQUpstandM
         ParamType = ptUnknown
       end>
   end
-  object qryContractPrice: TQuery
-    DatabaseName = 'WT'
+  object qryContractPrice: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Worktop_Group_Thick.Customer,'
       '        Customer_Worktop_Group_Thick.Group_Number,'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables, Spin, Mask, DBCtrls;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, Spin, Mask, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintPromotions = class(TForm)
@@ -22,12 +25,12 @@ type
     Panel2: TPanel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryDeleteWT: TQuery;
-    qryAddWT: TQuery;
-    qryMembers: TQuery;
-    qryNonMembers: TQuery;
+    qryDeleteWT: TFDQuery;
+    qryAddWT: TFDQuery;
+    qryMembers: TFDQuery;
+    qryNonMembers: TFDQuery;
     dtsNonMembers: TDataSource;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     spnMaxEntries: TSpinEdit;
     Label2: TLabel;
     chkbxInactive: TCheckBox;
@@ -35,14 +38,14 @@ type
     Label5: TLabel;
     dblkpMaterialType: TDBLookupComboBox;
     dtsMaterialType: TDataSource;
-    qryMaterialType: TQuery;
+    qryMaterialType: TFDQuery;
     Label6: TLabel;
     edtSearch: TEdit;
     tmrRefresh: TTimer;
-    qryUpdActive: TQuery;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
+    qryUpdActive: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

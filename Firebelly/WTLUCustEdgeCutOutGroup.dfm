@@ -201,8 +201,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
         Visible = False
       end>
   end
-  object qryGetGroups: TQuery
-    DatabaseName = 'WT'
+  object qryGetGroups: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Material_Type.Description as Material_Description,'
       '        Customer_Cutout_Edge_Group.*'
@@ -237,8 +237,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Left = 128
     Top = 120
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Customer_Cutout_Edge_Group'
       'WHERE Group_Id = :Group_Id')

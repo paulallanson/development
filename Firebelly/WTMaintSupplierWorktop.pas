@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, CRControls, Buttons, Spin, DB, DBTables;
+  Dialogs, StdCtrls, CRControls, Buttons, Spin, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintSupplierWorktop = class(TForm)
@@ -22,8 +25,8 @@ type
     edtAdhesiveDescription: TEdit;
     btnLUProducts: TSpeedButton;
     btnClear: TBitBtn;
-    qryUpdSupplierWorktop: TQuery;
-    qryGetSupplierWorktop: TQuery;
+    qryUpdSupplierWorktop: TFDQuery;
+    qryGetSupplierWorktop: TFDQuery;
     procedure BitBtn2Click(Sender: TObject);
     procedure btnLUProductsClick(Sender: TObject);
     procedure btnClearClick(Sender: TObject);

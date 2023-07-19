@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, DBTables, QrCtrls;
+  StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUWTThickness = class(TForm)
@@ -16,7 +19,7 @@ type
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     srclkpWTThickness: TDataSource;
-    lkpWTThickness: TQuery;
+    lkpWTThickness: TFDQuery;
     lkpWTThicknessWorktop: TIntegerField;
     lkpWTThicknessThickness: TIntegerField;
     lkpWTThicknessThickness_mm: TStringField;
@@ -24,10 +27,10 @@ type
     lkpWTThicknessUnit_Cost: TFloatField;
     lkpWTThicknessPrice_unit_description: TStringField;
     lkpWTThicknessPrice_Pointer: TIntegerField;
-    qryDelWTThick: TQuery;
+    qryDelWTThick: TFDQuery;
     chkbxShowInactive: TCheckBox;
     lkpWTThicknessinactive: TStringField;
-    qryUpdate: TQuery;
+    qryUpdate: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

@@ -4,16 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, Mask, ComCtrls, Grids, DBGrids, DB, ExtCtrls,
-  DBTables, wtCustomerDM, Variants, WTQuotesDM, WTJobsDM, WTSalesOrderDM,
+  StdCtrls, Buttons, DBCtrls, Mask, ComCtrls, Grids, DBGrids, DB, ExtCtrls, wtCustomerDM, Variants, WTQuotesDM, WTJobsDM, WTSalesOrderDM,
   WTSalesInvoiceDM, ImgList, ShellAPI, ToolWin, Inifiles,
   Activex, AxCtrls, Clipbrd, ComObj, Menus, taoMAPI,
-  CRControls, System.ImageList;
+  CRControls, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWtMaintCustomer = class(TForm)
     dtsOneCustomer: TDataSource;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     Panel1: TPanel;
     lblDelete: TLabel;
     btnOK: TBitBtn;
@@ -139,7 +141,7 @@ type
     cmbCustomerCategory: TComboBox;
     NotesBitBtn: TBitBtn;
     tmrNotes: TTimer;
-    qryUpdNotesOnly: TQuery;
+    qryUpdNotesOnly: TFDQuery;
     TabSheet1: TTabSheet;
     Panel14: TPanel;
     Label31: TLabel;
@@ -164,7 +166,7 @@ type
     N2: TMenuItem;
     pmnuSelectAll: TMenuItem;
     Label36: TLabel;
-    qryOneCustomer: TQuery;
+    qryOneCustomer: TFDQuery;
     edtCustomerName: TEdit;
     edtStreet: TEdit;
     edtLocale: TEdit;
@@ -182,11 +184,11 @@ type
     edtInvoiceLabel: TEdit;
     edtNoOfEmployees: TCREditInt;
     edtEndUserMarkup: TCREditFloat;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
-    qryGetLast: TQuery;
-    qryZero: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryZero: TFDQuery;
     edtCutoutDiscount: TCREditFloat;
     edtEdgeDiscount: TCREditFloat;
     edtWorktopDiscount: TCREditFloat;
@@ -194,8 +196,8 @@ type
     edtInstallationPrice: TCREditMoney;
     edtDeliveryPrice: TCREditMoney;
     dbgAccountCodes: TDBGrid;
-    qryGetAccountCodes: TQuery;
-    qryCheckCustAccExists: TQuery;
+    qryGetAccountCodes: TFDQuery;
+    qryCheckCustAccExists: TFDQuery;
     dtsGetAccountCodes: TDataSource;
     cmbbxEndUserPriceFactor: TComboBox;
     Label37: TLabel;

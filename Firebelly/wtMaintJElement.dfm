@@ -286,8 +286,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       Text = 'cmbMaterialUse'
     end
   end
-  object qryWorktops: TQuery
-    DatabaseName = 'wt'
+  object qryWorktops: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * '
       'from worktop'
@@ -313,9 +313,9 @@ object frmWTMaintJElement: TfrmWTMaintJElement
         ParamType = ptUnknown
       end>
   end
-  object qryWTThickness: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsWorktops
+  object qryWTThickness: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsWorktops
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -343,8 +343,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Left = 184
     Top = 104
   end
-  object qryOneWTThickness: TQuery
-    DatabaseName = 'wt'
+  object qryOneWTThickness: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select  Worktop,'
       '        Thickness,'
@@ -379,8 +379,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
         ParamType = ptUnknown
       end>
   end
-  object qryWTGroup: TQuery
-    DatabaseName = 'wt'
+  object qryWTGroup: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Worktop_Group.*'
       'from Worktop_Group'
@@ -402,8 +402,8 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Left = 328
     Top = 32
   end
-  object qryMaterialUse: TQuery
-    DatabaseName = 'WT'
+  object qryMaterialUse: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Use'

@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, StdCtrls, Buttons, DBCtrls, ExtCtrls, ComCtrls,
-  DB, DBTables;
+  DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUWorktopDetails = class(TForm)
@@ -23,9 +26,9 @@ type
     chkbxShowInactive: TCheckBox;
     edtName: TEdit;
     dbgDetails: TDBGrid;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryWorktops: TQuery;
+    qryWorktops: TFDQuery;
     srcLUWorktops: TDataSource;
     SpeedButton2: TSpeedButton;
     btnExcel: TBitBtn;

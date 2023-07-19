@@ -161,7 +161,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, Grids, DBGrids, ComCtrls, Inifiles;
+  StdCtrls, Buttons, DB, Grids, DBGrids, ComCtrls, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTAccExport3 = class(TForm)
@@ -197,12 +200,12 @@ type
     procedure CreateAccExportFile;
     procedure CreateInvExportFile;
     procedure CreateSageMMSHeader;
-    procedure GetCustomers(CustomerDataSQL: TQuery);
-    procedure GetSuppliers(SupplierDataSQL: TQuery);
-    procedure LinkerCustomers(CustomerDataSQL: TQuery);
-    procedure Sage50Customers(CustomerDataSQL: TQuery);
-    procedure LinkerSuppliers(SupplierDataSQL: TQuery);
-    procedure Sage50Suppliers(SupplierDataSQL: TQuery);
+    procedure GetCustomers(CustomerDataSQL: TFDQuery);
+    procedure GetSuppliers(SupplierDataSQL: TFDQuery);
+    procedure LinkerCustomers(CustomerDataSQL: TFDQuery);
+    procedure Sage50Customers(CustomerDataSQL: TFDQuery);
+    procedure LinkerSuppliers(SupplierDataSQL: TFDQuery);
+    procedure Sage50Suppliers(SupplierDataSQL: TFDQuery);
     procedure GetSalesInvoices;
     procedure GetPurchaseInvoices;
     procedure CloseAccExportFiles;
@@ -224,8 +227,8 @@ type
     function Sage50Format(sFieldText: string; bNeedQuotes: boolean; bNeedComma: boolean): string;
     procedure LinkerSalesInvoices;
     procedure LinkerPurchaseInvoices;
-    procedure QBooksCustomers(CustomerDataSQL: TQuery);
-    procedure QBooksSuppliers(SupplierDataSQL: TQuery);
+    procedure QBooksCustomers(CustomerDataSQL: TFDQuery);
+    procedure QBooksSuppliers(SupplierDataSQL: TFDQuery);
     procedure QBooksGetPurchaseInvoices;
     procedure QBooksGetSalesInvoices;
     procedure QBooksCreateExportFile;
@@ -235,7 +238,7 @@ type
     procedure SageMMSGetPurchaseInvoices;
     procedure SageMMSGetSalesInvoices;
     procedure SageMMSCreateExportFile;
-    procedure XeroCustomers(CustomerDataSQL: TQuery);
+    procedure XeroCustomers(CustomerDataSQL: TFDQuery);
     procedure XeroCreateCustomerExportHeader;
     procedure XeroCreateExportHeader;
     procedure XeroCreateExportFile;
@@ -253,10 +256,10 @@ type
   public
     { Public declarations }
     sLastForm: TForm;
-    procedure UpdateCustomers(UpCustomerDataSQL: TQuery; sStatusFrom: string; sStatusTo: string);
-    procedure UpdateSuppliers(UpSupplierDataSQL: TQuery; sStatusFrom: string; sStatusTo: string);
-    procedure UpdateSalesStatus(UpSalesInvSQL: TQuery; iStatusFrom: integer; iStatusTo: integer);
-    procedure UpdatePurchStatus(UpSupplierInvSQL: TQuery; iStatusFrom: integer; iStatusTo: integer);
+    procedure UpdateCustomers(UpCustomerDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
+    procedure UpdateSuppliers(UpSupplierDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
+    procedure UpdateSalesStatus(UpSalesInvSQL: TFDQuery; iStatusFrom: integer; iStatusTo: integer);
+    procedure UpdatePurchStatus(UpSupplierInvSQL: TFDQuery; iStatusFrom: integer; iStatusTo: integer);
   end;
 
 var
@@ -862,7 +865,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.LinkerSuppliers(SupplierDataSQL: TQuery);
+procedure TfrmWTAccExport3.LinkerSuppliers(SupplierDataSQL: TFDQuery);
 begin
 
   with SupplierDataSQL do
@@ -922,7 +925,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.GetCustomers(CustomerDataSQL: TQuery);
+procedure TfrmWTAccExport3.GetCustomers(CustomerDataSQL: TFDQuery);
 begin
   with dmAccExport.CompanySQl do
     begin
@@ -946,7 +949,7 @@ begin
     end;
 end;
 
-procedure TfrmWTAccExport3.GetSuppliers(SupplierDataSQL: TQuery);
+procedure TfrmWTAccExport3.GetSuppliers(SupplierDataSQL: TFDQuery);
 begin
   with dmAccExport.CompanySQl do
     begin
@@ -964,7 +967,7 @@ begin
     end;
 end;
 
-procedure TfrmWTAccExport3.LinkerCustomers(CustomerDataSQL: TQuery);
+procedure TfrmWTAccExport3.LinkerCustomers(CustomerDataSQL: TFDQuery);
 begin
   with CustomerDataSQL do
   begin
@@ -1022,7 +1025,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.Sage50Customers(CustomerDataSQL: TQuery);
+procedure TfrmWTAccExport3.Sage50Customers(CustomerDataSQL: TFDQuery);
 var
   sSage50Text: string;
 begin
@@ -1118,7 +1121,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.Sage50Suppliers(SupplierDataSQL: TQuery);
+procedure TfrmWTAccExport3.Sage50Suppliers(SupplierDataSQL: TFDQuery);
 var
   sSage50Text: string;
 begin
@@ -1206,7 +1209,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.XeroCustomers(CustomerDataSQL: TQuery);
+procedure TfrmWTAccExport3.XeroCustomers(CustomerDataSQL: TFDQuery);
 var
   sXeroText: string;
   iCount: integer;
@@ -1329,7 +1332,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.QBooksCustomers(CustomerDataSQL: TQuery);
+procedure TfrmWTAccExport3.QBooksCustomers(CustomerDataSQL: TFDQuery);
 var
   sQBooksText: string;
   sCType: string;
@@ -1412,7 +1415,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.QBooksSuppliers(SupplierDataSQL: TQuery);
+procedure TfrmWTAccExport3.QBooksSuppliers(SupplierDataSQL: TFDQuery);
 var
   sQBooksText: string;
 begin
@@ -2958,7 +2961,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.UpdateCustomers(UpCustomerDataSQL: TQuery; sStatusFrom: string; sStatusTo: string);
+procedure TfrmWTAccExport3.UpdateCustomers(UpCustomerDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
 begin
   {Update those Customer which are pending}
   with UpCustomerDataSQL do
@@ -2970,7 +2973,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.UpdateSuppliers(UpSupplierDataSQL: TQuery; sStatusFrom: string; sStatusTo: string);
+procedure TfrmWTAccExport3.UpdateSuppliers(UpSupplierDataSQL: TFDQuery; sStatusFrom: string; sStatusTo: string);
 begin
   {Update those Suppliers which are pending}
   with UpSupplierDataSQL do
@@ -2982,7 +2985,7 @@ begin
   end;
 end;
 
-procedure TfrmWTAccExport3.UpdateSalesStatus(UpSalesInvSQL: TQuery; iStatusFrom: integer; iStatusTo: integer);
+procedure TfrmWTAccExport3.UpdateSalesStatus(UpSalesInvSQL: TFDQuery; iStatusFrom: integer; iStatusTo: integer);
 begin
     {Check for Sales Invoice Header}
     with dmAccExport.UpSalesInvHeadSQL do
@@ -2994,7 +2997,7 @@ begin
     end;
 end;
 
-procedure TfrmWTAccExport3.UpdatePurchStatus(UpSupplierInvSQL: TQuery; iStatusFrom: integer; iStatusTo: integer);
+procedure TfrmWTAccExport3.UpdatePurchStatus(UpSupplierInvSQL: TFDQuery; iStatusFrom: integer; iStatusTo: integer);
 begin
     {Check for Sales Invoice Header}
     with dmAccExport.UpSupplierInvHeadSQL do
@@ -3355,7 +3358,7 @@ end;
 
 procedure TfrmWTAccExport3.FormCreate(Sender: TObject);
 begin
-  Session.GetAliasNames(cbSource.Items);
+  FDManager.GetConnectionDefNames(cbSource.Items);
   GetDataSource;
   icustomers := 0;
   isuppliers := 0;

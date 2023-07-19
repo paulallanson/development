@@ -160,9 +160,9 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     Left = 168
     Top = 56
   end
-  object qryMaterialUse: TQuery
+  object qryMaterialUse: TFDQuery
     OnCalcFields = qryMaterialUseCalcFields
-    DatabaseName = 'WT'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Use'
@@ -206,8 +206,8 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       FieldName = 'Use_Type'
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 240
     Top = 56
   end

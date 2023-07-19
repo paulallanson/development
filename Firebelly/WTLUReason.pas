@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
-  ComCtrls, ExtCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Grids, DBGrids, QrCtrls,
+  ComCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUReason = class(TForm)
@@ -18,8 +21,8 @@ type
     BitBtn4: TBitBtn;
     stsbrDetails: TStatusBar;
     btnExcel: TBitBtn;
-    qryReason: TQuery;
-    qryDelete: TQuery;
+    qryReason: TFDQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     edtName: TEdit;
     tmrRefresh: TTimer;

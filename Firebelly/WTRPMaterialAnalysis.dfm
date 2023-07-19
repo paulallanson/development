@@ -1266,8 +1266,8 @@ object frmWTRPMaterialAnalysis: TfrmWTRPMaterialAnalysis
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'WT'
+  object qryReport: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       '')
     Left = 136

@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBTables, DB, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustWTGroupPrices = class(TForm)
     dbgDetails: TDBGrid;
-    qryDelCustWTGroupPrices: TQuery;
+    qryDelCustWTGroupPrices: TFDQuery;
     srclkpCustWTGroupPrices: TDataSource;
-    lkpCustWTGroupPrices: TQuery;
+    lkpCustWTGroupPrices: TFDQuery;
     stsbrDetails: TStatusBar;
     Panel1: TPanel;
     BitBtn1: TBitBtn;

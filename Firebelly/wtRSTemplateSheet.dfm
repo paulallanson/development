@@ -238,8 +238,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
       end
     end
   end
-  object qryGetSOQuotes: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Quote,'
       '        Int_Sel.Int_Sel_Code'
@@ -256,8 +256,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrders: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT DISTINCT'
       '        (SELECT TOP 1 SOL.Quote'
@@ -306,8 +306,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmails: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmails: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT DISTINCT'
       '        Sales_Order_Line.sales_order,'
@@ -358,8 +358,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOQuotesEmails: TQuery
-    DatabaseName = 'wt'
+  object qryGetSOQuotesEmails: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.Quote'
       'FROM Sales_Order_Line'
@@ -374,8 +374,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmailsOlder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOlder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.quote,'
       '        Sales_Order_Line.description,'
@@ -422,8 +422,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderEmailsOld: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrderEmailsOld: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Sales_Order_Line.quote,'
       '        Sales_Order_Line.description,'
@@ -475,8 +475,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryDocumentStructure: TQuery
-    DatabaseName = 'WT'
+  object qryDocumentStructure: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Folder_Name'
       'FROM Document_Structure'
@@ -485,8 +485,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Left = 48
     Top = 88
   end
-  object qryGetSalesOrdersOld: TQuery
-    DatabaseName = 'Wt'
+  object qryGetSalesOrdersOld: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'SELECT  Sales_Order_Line.quote,'
       '        Sales_Order_Line.description,'
@@ -531,8 +531,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'WT'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Location_Plan_Document,'

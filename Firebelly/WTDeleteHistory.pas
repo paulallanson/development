@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ComCtrls, DB, DBTables, QrCtrls;
+  Dialogs, StdCtrls, Buttons, ComCtrls, DB, QrCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTDeleteHistory = class(TForm)
@@ -12,15 +15,15 @@ type
     BitBtn2: TBitBtn;
     Label1: TLabel;
     prgbrRecords: TProgressBar;
-    qryQuotes: TQuery;
+    qryQuotes: TFDQuery;
     lblnoRecords: TLabel;
-    qrySOL: TQuery;
-    qrySIL: TQuery;
-    qryDelete: TQuery;
-    qryJobs: TQuery;
-    qryQintNotes: TQuery;
-    qryJSOL: TQuery;
-    qryJIntNotes: TQuery;
+    qrySOL: TFDQuery;
+    qrySIL: TFDQuery;
+    qryDelete: TFDQuery;
+    qryJobs: TFDQuery;
+    qryQintNotes: TFDQuery;
+    qryJSOL: TFDQuery;
+    qryJIntNotes: TFDQuery;
     chkbxIncludeConfirmed: TCheckBox;
     chkbxDeleteOrders: TCheckBox;
     edtDateRequired: TEdit;

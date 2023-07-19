@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Spin, StdCtrls, Buttons, DB, DBTables, QrExport, ShellAPI, QRPDFFilt,
-  ComCtrls;
+  Dialogs, Spin, StdCtrls, Buttons, DB, QrExport, ShellAPI, QRPDFFilt,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTUSSetDocuments = class(TForm)
@@ -15,7 +18,7 @@ type
     btnDatefrom: TBitBtn;
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryGetOrders: TQuery;
+    qryGetOrders: TFDQuery;
     Label3: TLabel;
     prgbrRecords: TProgressBar;
     lblnoRecords: TLabel;

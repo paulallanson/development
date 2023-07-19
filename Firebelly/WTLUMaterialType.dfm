@@ -135,8 +135,8 @@ object frmWTLUMaterialType: TfrmWTLUMaterialType
     Left = 168
     Top = 56
   end
-  object qryWorktopType: TQuery
-    DatabaseName = 'WT'
+  object qryWorktopType: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Worktop_Type'
@@ -153,8 +153,8 @@ object frmWTLUMaterialType: TfrmWTLUMaterialType
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 304
     Top = 56
   end

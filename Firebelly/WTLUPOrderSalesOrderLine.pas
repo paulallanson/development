@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, Buttons, Grids, ExtCtrls, DBGrids, wtPurchasesDM,
-  DB, DBTables;
+  DB;
 
 type
   TfrmWTLUPOrderSalesOrderLine = class(TForm)

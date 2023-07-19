@@ -86,8 +86,8 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     Text = 'edtDescription'
     OnChange = EnableOK
   end
-  object qryUpdUpstand: TQuery
-    DatabaseName = 'wt'
+  object qryUpdUpstand: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Update Worktop_Type_Upstand'
       'Set Description = :Description'
@@ -106,8 +106,8 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
         ParamType = ptUnknown
       end>
   end
-  object qryAddUpstand: TQuery
-    DatabaseName = 'WT'
+  object qryAddUpstand: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       
         'INSERT INTO Worktop_Type_Upstand (Description, Worktop_Type, ina' +

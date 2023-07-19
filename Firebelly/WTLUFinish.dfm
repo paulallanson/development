@@ -134,8 +134,8 @@ object frmWTLUFinish: TfrmWTLUFinish
     Left = 160
     Top = 120
   end
-  object qryWorktopFinish: TQuery
-    DatabaseName = 'WT'
+  object qryWorktopFinish: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Worktop_Finish'
@@ -153,8 +153,8 @@ object frmWTLUFinish: TfrmWTLUFinish
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

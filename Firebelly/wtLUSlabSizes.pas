@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmwtLUSlabSizes = class(TForm)
     dbgDetails: TDBGrid;
-    tblSlabSize: TTable;
+    tblSlabSize: TFDTable;
     srcSlabSize: TDataSource;
-    qryNewSlabSize: TQuery;
+    qryNewSlabSize: TFDQuery;
     stsbrDetails: TStatusBar;
     Panel1: TPanel;
     BitBtn1: TBitBtn;

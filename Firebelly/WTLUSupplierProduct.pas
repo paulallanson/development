@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, DB, DBTables, ComCtrls, StdCtrls, Grids, DBGrids,
-  Buttons, WTSupplierDM;
+  Dialogs, ExtCtrls, DB, ComCtrls, StdCtrls, Grids, DBGrids,
+  Buttons, WTSupplierDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUSupplierProduct = class(TForm)
@@ -21,10 +24,10 @@ type
     btnSelect: TBitBtn;
     BitBtn2: TBitBtn;
     stbrDetails: TStatusBar;
-    qryDetails: TQuery;
+    qryDetails: TFDQuery;
     dtsDetails: TDataSource;
     tmrSearch: TTimer;
-    qryDelete: TQuery;
+    qryDelete: TFDQuery;
     procedure tmrSearchTimer(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure chkbxShowInactiveClick(Sender: TObject);

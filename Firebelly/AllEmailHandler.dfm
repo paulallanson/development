@@ -3,8 +3,8 @@ object emailHandler: TemailHandler
   OnDestroy = DataModuleDestroy
   Height = 304
   Width = 730
-  object qrySelCustomerContacts: TQuery
-    DatabaseName = 'Wt'
+  object qrySelCustomerContacts: TFDQuery
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'select customer_contact.*,'
       '  contact_type.Description as contact_type_desc,'
@@ -30,8 +30,8 @@ object emailHandler: TemailHandler
         ParamType = ptUnknown
       end>
   end
-  object qryEmailList: TQuery
-    DatabaseName = 'Wt'
+  object qryEmailList: TFDQuery
+    ConnectionName = 'Wt'
     Left = 192
     Top = 16
   end

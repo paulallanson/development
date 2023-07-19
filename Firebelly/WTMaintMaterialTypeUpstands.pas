@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Mask, DBCtrls, StdCtrls, Buttons, CRControls, DB, DBTables;
+  Dialogs, Mask, DBCtrls, StdCtrls, Buttons, CRControls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTMaintMaterialTypeUpstands = class(TForm)
@@ -15,9 +18,9 @@ type
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     Label1: TLabel;
-    qryUpdUpstand: TQuery;
+    qryUpdUpstand: TFDQuery;
     edtDescription: TEdit;
-    qryAddUpstand: TQuery;
+    qryAddUpstand: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

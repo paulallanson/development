@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, DBCtrls, QrCtrls,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DB, DBCtrls, QrCtrls,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUWTGroup = class(TForm)
     dbgDetails: TDBGrid;
     srcWTGroup: TDataSource;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
     stsbrDetails: TStatusBar;
     Panel1: TPanel;
@@ -25,8 +28,8 @@ type
     Label1: TLabel;
     dblkpMaterialType: TDBLookupComboBox;
     btnLUMatType: TBitBtn;
-    qryWTGroup: TQuery;
-    qryDelete: TQuery;
+    qryWTGroup: TFDQuery;
+    qryDelete: TFDQuery;
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);

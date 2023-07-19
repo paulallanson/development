@@ -3,16 +3,19 @@ unit wtStockDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables;
+  SysUtils, Classes, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TstkMode   = (stkAdd, stkChange, stkDelete, stkCopy, stkView);
 
   TdtmdlStock = class(TDataModule)
-    qryAllStock: TQuery;
+    qryAllStock: TFDQuery;
     dtsAllStock: TDataSource;
-    qryDummy: TQuery;
-    qryProduct: TQuery;
+    qryDummy: TFDQuery;
+    qryProduct: TFDQuery;
   private
     function GetHeaderCountAll: integer;
     { Private declarations }

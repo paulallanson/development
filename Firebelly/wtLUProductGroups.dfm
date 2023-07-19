@@ -141,8 +141,8 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
     Left = 152
     Top = 120
   end
-  object qryProductGroup: TQuery
-    DatabaseName = 'WT'
+  object qryProductGroup: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT *'
       'FROM Product_Group'
@@ -160,8 +160,8 @@ object frmWTLUProductGroups: TfrmWTLUProductGroups
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'WT'
+  object qryDelete: TFDQuery
+    ConnectionName = 'WT'
     Left = 232
     Top = 120
   end

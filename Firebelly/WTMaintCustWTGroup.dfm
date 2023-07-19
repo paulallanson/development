@@ -267,8 +267,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     TabOrder = 12
     Text = 'edtID'
   end
-  object qryMaterialType: TQuery
-    DatabaseName = 'wt'
+  object qryMaterialType: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Type'
@@ -287,8 +287,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     DataSet = qryMaterialType
     Left = 320
   end
-  object qrySupplier: TQuery
-    DatabaseName = 'wt'
+  object qrySupplier: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT *'
       'FROM Supplier'
@@ -309,8 +309,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
     Left = 328
     Top = 48
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'WT'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'UPDATE Customer_Worktop_Group'
       'SET'
@@ -373,8 +373,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'WT'
+  object qryAdd: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer_Worktop_Group'
       '        (Customer,'
@@ -403,8 +403,8 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'WT'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Select Group_Number'
       'From Customer_Worktop_Group'
@@ -423,16 +423,16 @@ object frmWTMaintCustWTGroup: TfrmWTMaintCustWTGroup
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'WT'
+  object qryZero: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       ''
       '')
     Left = 304
     Top = 200
   end
-  object qryPatch: TQuery
-    DatabaseName = 'WT'
+  object qryPatch: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'Insert Into Customer_Worktop_Group'
       '        (Customer,'

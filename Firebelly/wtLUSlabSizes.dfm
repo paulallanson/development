@@ -146,9 +146,9 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
       OnClick = btnExcelClick
     end
   end
-  object tblSlabSize: TTable
+  object tblSlabSize: TFDTable
     OnNewRecord = tblSlabSizeNewRecord
-    DatabaseName = 'wt'
+    ConnectionName = 'wt'
     Filtered = True
     IndexFieldNames = 'Slab_Size'
     TableName = 'Slab_Size'
@@ -177,8 +177,8 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
     Left = 192
     Top = 64
   end
-  object qryNewSlabSize: TQuery
-    DatabaseName = 'WT'
+  object qryNewSlabSize: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select max(Slab_Size)'
       'from Slab_Size')

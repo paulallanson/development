@@ -4,62 +4,65 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Math;
+  Db, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmAccExport = class(TDataModule)
-    SalesInvNarrSQL: TQuery;
-    SalesInvAddSQL: TQuery;
-    UpCompanyAccSQL: TQuery;
-    oldPurchaseInvSQL: TQuery;
-    UpSupplierInvSQL: TQuery;
-    UpCustomerSQL: TQuery;
-    POCustomerSQL: TQuery;
-    POSupplierSQL: TQuery;
-    UpSupplierSQL: TQuery;
-    UpSalesInvHeadSQL: TQuery;
-    UpSupplierInvHeadSQL: TQuery;
-    UpInvSupplierSQL: TQuery;
-    UpPOCustomerSQL: TQuery;
-    UpPOSupplierSQL: TQuery;
-    BranchSQL: TQuery;
-    UpStockSQL: TQuery;
-    UpCurrSQL: TQuery;
-    CurrencySQL: TQuery;
-    UpCustSQL: TQuery;
-    StockSQL: TQuery;
-    MaxStockSQL: TQuery;
-    UpCompanyInvSQL: TQuery;
-    UpCompanySQL: TQuery;
-    PurchaseInvAddSQL: TQuery;
-    GetFormRefSQL: TQuery;
-    UpCompanyExpSQL: TQuery;
-    InvSupplierSQL: TQuery;
-    qryDelSageInvs: TQuery;
-    qryUpSageInvs: TQuery;
-    SalesInvChgsSQL: TQuery;
-    qryGetSageImport: TQuery;
-    PurchaseInvSQL: TQuery;
-    PurchaseInvChgsSQL: TQuery;
-    qryGetSalesInvoice: TQuery;
-    qryGetSupplierInvoice: TQuery;
-    qryVATCode: TQuery;
-    qryUpdPendingSI: TQuery;
-    qryUpdPendingPI: TQuery;
-    CompanySQL: TQuery;
-    CustPendingSQL: TQuery;
-    SuppPendingSQL: TQuery;
-    SalesPendingSQl: TQuery;
-    PurchPendingSQL: TQuery;
-    UpInvCustomerSQL: TQuery;
-    customerSQL: TQuery;
-    SupplierSQL: TQuery;
-    InvCustomerSQL: TQuery;
-    SalesInvSQL: TQuery;
-    qrySOHead: TQuery;
-    qryDelXeroInvs: TQuery;
-    qryUpXeroInvs: TQuery;
-    qryGetXeroImport: TQuery;
+    SalesInvNarrSQL: TFDQuery;
+    SalesInvAddSQL: TFDQuery;
+    UpCompanyAccSQL: TFDQuery;
+    oldPurchaseInvSQL: TFDQuery;
+    UpSupplierInvSQL: TFDQuery;
+    UpCustomerSQL: TFDQuery;
+    POCustomerSQL: TFDQuery;
+    POSupplierSQL: TFDQuery;
+    UpSupplierSQL: TFDQuery;
+    UpSalesInvHeadSQL: TFDQuery;
+    UpSupplierInvHeadSQL: TFDQuery;
+    UpInvSupplierSQL: TFDQuery;
+    UpPOCustomerSQL: TFDQuery;
+    UpPOSupplierSQL: TFDQuery;
+    BranchSQL: TFDQuery;
+    UpStockSQL: TFDQuery;
+    UpCurrSQL: TFDQuery;
+    CurrencySQL: TFDQuery;
+    UpCustSQL: TFDQuery;
+    StockSQL: TFDQuery;
+    MaxStockSQL: TFDQuery;
+    UpCompanyInvSQL: TFDQuery;
+    UpCompanySQL: TFDQuery;
+    PurchaseInvAddSQL: TFDQuery;
+    GetFormRefSQL: TFDQuery;
+    UpCompanyExpSQL: TFDQuery;
+    InvSupplierSQL: TFDQuery;
+    qryDelSageInvs: TFDQuery;
+    qryUpSageInvs: TFDQuery;
+    SalesInvChgsSQL: TFDQuery;
+    qryGetSageImport: TFDQuery;
+    PurchaseInvSQL: TFDQuery;
+    PurchaseInvChgsSQL: TFDQuery;
+    qryGetSalesInvoice: TFDQuery;
+    qryGetSupplierInvoice: TFDQuery;
+    qryVATCode: TFDQuery;
+    qryUpdPendingSI: TFDQuery;
+    qryUpdPendingPI: TFDQuery;
+    CompanySQL: TFDQuery;
+    CustPendingSQL: TFDQuery;
+    SuppPendingSQL: TFDQuery;
+    SalesPendingSQl: TFDQuery;
+    PurchPendingSQL: TFDQuery;
+    UpInvCustomerSQL: TFDQuery;
+    customerSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    InvCustomerSQL: TFDQuery;
+    SalesInvSQL: TFDQuery;
+    qrySOHead: TFDQuery;
+    qryDelXeroInvs: TFDQuery;
+    qryUpXeroInvs: TFDQuery;
+    qryGetXeroImport: TFDQuery;
   private
     { Private declarations }
   public

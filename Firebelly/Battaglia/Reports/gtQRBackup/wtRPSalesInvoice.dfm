@@ -1758,8 +1758,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
       end
     end
   end
-  object InvHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object InvHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Customer_Name,'
@@ -1787,9 +1787,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Left = 408
     Top = 271
   end
-  object InvLineSQL: TQuery
-    DatabaseName = 'wt'
-    DataSource = InvHeadSRC
+  object InvLineSQL: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.*,'
       '        Vat.Vat_Rate,'
@@ -1824,16 +1824,16 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Left = 376
     Top = 160
   end
-  object qryComp: TQuery
-    DatabaseName = 'wt'
+  object qryComp: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from'
       'Company')
     Left = 464
     Top = 321
   end
-  object InvOneHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object InvOneHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Customer_Name,'
@@ -1857,8 +1857,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object UpInvHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object UpInvHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Sales_Invoice'
       'set Sales_Invoice_Status = :Status,'
@@ -1889,8 +1889,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object UpInvLineSQL: TQuery
-    DatabaseName = 'wt'
+  object UpInvLineSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'update Sales_Invoice_Line'
       'set Sales_Invoice_Status = :Status'
@@ -1915,8 +1915,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object InvRHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object InvRHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Customer_Name,'
@@ -1935,8 +1935,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Left = 456
     Top = 25
   end
-  object NotesSQL: TQuery
-    DatabaseName = 'wt'
+  object NotesSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Notes_Text'
       'From Notes'
@@ -1951,8 +1951,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object CreditHeadSQL: TQuery
-    DatabaseName = 'wt'
+  object CreditHeadSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Customer_Name,'
@@ -1974,8 +1974,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
     Left = 312
     Top = 21
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'wt'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Notes_Text'
       'From Notes'
@@ -1990,8 +1990,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'wt'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Product.Product_Code, '
       '          Sales_order_line.Description,'
@@ -2015,8 +2015,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'wt'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Sales_order, Order_Ref_no, Customer, Install_address'
       'from Sales_order'
@@ -2030,8 +2030,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIHead: TQuery
-    DatabaseName = 'wt'
+  object qrySIHead: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Sales_invoice'
@@ -2045,9 +2045,9 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'wt'
-    DataSource = InvHeadSRC
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'select Sales_Invoice.Customer,'
       '           Customer.Customer_Name,'
@@ -2071,8 +2071,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryAddress: TQuery
-    DatabaseName = 'wt'
+  object qryAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Address.Address_Name,'
       '          Address.Street,'
@@ -2092,8 +2092,8 @@ object frmWTRPSalesInvoice: TfrmWTRPSalesInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Street,'
       'Locale,'
