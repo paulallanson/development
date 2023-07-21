@@ -75,9 +75,12 @@ modules/
 # Access databases
 *.mdb
 
-#Components
+# Components
 Components/Quasidata/
+
+# Other files
 Client_Files_NDA/
 Data/
 
-
+# DCU folders
+Firebelly/Aire/Win32
