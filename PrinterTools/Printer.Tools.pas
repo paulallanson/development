@@ -74,7 +74,7 @@ begin
   end;
 
   Location := AllCommon.GetWinTempDir;
-  targetFileName := Location + fileName + attachmentType;
+  targetFileName := Location + fileName + '.' + attachmentType;
 
   IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := targetFileName;
   IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.UseImagesAsResources := True;
