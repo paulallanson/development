@@ -3769,6 +3769,11 @@ begin
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  try
+
+  finally
+    IniFile.Free;
+  end;
 
   sBody := '';
   sfilePath := docdir;

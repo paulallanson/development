@@ -38,7 +38,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
   FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TfrmAllFaxStatus = class(TForm)
@@ -67,8 +67,9 @@ type
     procedure ReFreshBitBtnClick(Sender: TObject);
     function GetFaxStatus(TempFax: string): string;
     procedure BitBtn1Click(Sender: TObject);
-    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure Timer1Timer(Sender: TObject);
+    procedure FaxDatabaseLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
   private
     { Private declarations }
   public
@@ -82,6 +83,13 @@ var
 implementation
 
 {$R *.DFM}
+
+procedure TfrmAllFaxStatus.FaxDatabaseLogin(
+  AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
+begin
+  AParams.UserName := 'faxes';
+  AParams.Password:= 'rabbit';
+end;
 
 procedure TfrmAllFaxStatus.FormActivate(Sender: TObject);
 begin
@@ -112,8 +120,8 @@ var
   Status: string[1];
 begin
   {User has selected a fax};
-  Status := GetFaxStatus(ShowFaxesDBGrid.Fields[ShowFaxesDBGrid.SelectedIndex +
-    7].AsString);
+  Status := Shortstring(GetFaxStatus(ShowFaxesDBGrid.Fields[ShowFaxesDBGrid.SelectedIndex +
+    7].AsString));
   if Status = '' then Exit;
   DisableButtons(Self);
   {Check the status};
@@ -200,14 +208,6 @@ end;
 procedure TfrmAllFaxStatus.BitBtn1Click(Sender: TObject);
 begin
   close;
-end;
-
-procedure TfrmAllFaxStatus.FaxDatabaseLogin(Database: TFDConnection;
-  LoginParams: TStrings);
-begin
-  {Get user and password from login screen};
-  LoginParams.Values['USER NAME'] := 'faxes';
-  LoginParams.Values['PASSWORD'] := 'rabbit';
 end;
 
 procedure TfrmAllFaxStatus.Timer1Timer(Sender: TObject);

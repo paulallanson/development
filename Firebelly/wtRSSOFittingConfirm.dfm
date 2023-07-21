@@ -3,24 +3,22 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
   Top = 175
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
-  ClientHeight = 236
-  ClientWidth = 372
+  ClientHeight = 235
+  ClientWidth = 368
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    372
-    236)
-  PixelsPerInch = 96
+    368
+    235)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -40,7 +38,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
   end
   object btnPrint: TButton
     Left = 8
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,16 +46,18 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
+    ExplicitTop = 200
   end
   object Button4: TButton
     Left = 283
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 200
   end
   object SelectLst: TListBox
     Left = 200
@@ -71,7 +71,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
   end
   object btnPreview: TButton
     Left = 99
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -79,10 +79,11 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 200
   end
   object btnEmail: TButton
     Left = 191
-    Top = 200
+    Top = 199
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,6 +91,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 200
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -153,9 +155,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Top = 34
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetRange: TFDQuery
@@ -170,14 +170,10 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuote: TFDQuery
@@ -190,9 +186,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuotes: TFDQuery
@@ -205,9 +199,7 @@ object frmWTRSSOFittingConfirm: TfrmWTRSSOFittingConfirm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

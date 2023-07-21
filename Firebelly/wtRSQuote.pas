@@ -1395,7 +1395,8 @@ begin
   var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxPrintLogo.checked then
         WriteString('Quote', 'Print Logo', 'Y')
@@ -1457,9 +1458,11 @@ begin
         WriteString('Quote', 'Apply End User Markup', 'Y')
       else
         WriteString('Quote', 'Apply End User Markup', 'N');
-
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
 end;
 

@@ -102,7 +102,7 @@ begin
   IniFile := TIniFile.Create(fileName);
 
   try
-  with IniFile do
+    with IniFile do
     begin
       if (ReadString('Contract', 'Customer Filter', '0') = '0') then
         cmbCustomerFilter.itemindex := 0

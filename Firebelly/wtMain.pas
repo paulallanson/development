@@ -442,20 +442,23 @@ begin
   SWVersion := '22.4.';
   SWSubVersion := '23.07.06a';
 
-  IniFile := TIniFile.create(
-             ChangeFileExt( Application.ExeName, '.INI' ) );
-  with IniFile do
-  begin
-    Top     := ReadInteger( 'Form', 'Top',    100 );
-    Left    := ReadInteger( 'Form', 'Left',   100 );
-    if ReadBool( 'Form', 'InitMax', false ) then
+  IniFile := TIniFile.create(ChangeFileExt(Application.ExeName, '.INI' ) );
+  try
+    with IniFile do
     begin
-      WindowState := wsMaximized
-    end
-    else
-      WindowState := wsNormal;
-  end; //with
-  IniFile.free;
+      Top     := ReadInteger( 'Form', 'Top',    100 );
+      Left    := ReadInteger( 'Form', 'Left',   100 );
+      if ReadBool( 'Form', 'InitMax', false ) then
+      begin
+        WindowState := wsMaximized
+      end
+      else
+        WindowState := wsNormal;
+    end; //with
+  finally
+    IniFile.free;
+  end;
+
   with Application do
   begin
     HintPause := 200;
@@ -1381,14 +1384,17 @@ begin
   {Search the INI file for Email Application}
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       EmailApplication := ReadString('Email', 'Application', 'None');
       EmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
 //      EmailAccount := ReadString('Email', pchar(dtmdlWorktops.dtbsWorktops.ConnectionDefName + ' Email Account'), 'None');
       EmailAccount := ReadString('Email', dtmdlWorktops.dtbsWorktops.ConnectionDefName + ' Email Account', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTMain.UpdateDatabase;

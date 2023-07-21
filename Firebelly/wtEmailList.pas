@@ -32,8 +32,8 @@ type
     UpSalesOrderTemplaterSQL: TFDQuery;
     UpSalesOrderFitterSQL: TFDQuery;
     procedure FormCreate(Sender: TObject);
-    procedure EmailListGridSelectCell(Sender: TObject; Col, Row: Longint;
-      var CanSelect: Boolean);
+//    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Longint;
+//      var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbExportFilterClick(Sender: TObject);
@@ -43,6 +43,8 @@ type
     procedure cmbContactsClick(Sender: TObject);
     procedure cmbContactsEnter(Sender: TObject);
     procedure btnEmailClick(Sender: TObject);
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
   private
     FCodeType: string;
     { Private declarations }
@@ -82,15 +84,6 @@ begin
   begin
     self.UseBranchAddr[inx] := false;
   end;
-end;
-
-procedure TfrmWTEmailList.EmailListGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
-begin
-	if (Col = 2) or (Col = 3) or (Col = 4) then
-    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
-  else
-    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
 procedure TfrmWTEmailList.EmailListGridClick(Sender: TObject);
@@ -148,10 +141,10 @@ begin
   //check for email attachment type default
   //if none set rtf as default.
   IniFile := TIniFile.Create(frmwtMain.AppIniFile);
-  with IniFile do
-  begin
-    defAttach := ReadString('Email', 'Def Attach Type', 'RTF');
-    Free;
+  try
+    defAttach := IniFile.ReadString('Email', 'Def Attach Type', 'RTF');
+  finally
+    IniFile.Free;
   end;
 
   cmbExportFilter.keyvalue := defAttach;
@@ -209,6 +202,15 @@ begin
   cmbExportFilter.width := EmailListGrid.colwidths[Acol];
 
   cmbContacts.width := EmailListGrid.colwidths[Acol];
+end;
+
+procedure TfrmWTEmailList.EmailListGridSelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
+begin
+	if (ACol = 2) or (ACol = 3) or (ACol = 4) then
+    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+  else
+    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
 procedure TfrmWTEmailList.BitBtn1Click(Sender: TObject);

@@ -11,18 +11,16 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 164
     Width = 515
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnExport: TButton
       Left = 320
@@ -44,20 +42,20 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     end
   end
   object pnlRight: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 515
     Height = 119
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object pnlNumberRange: TPanel
-      ParentBackground = False
       Left = 274
       Top = 0
       Width = 241
       Height = 119
+      ParentBackground = False
       TabOrder = 0
       object lblInvNumber: TLabel
         Left = 9
@@ -102,11 +100,11 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       end
     end
     object pnlDateRange: TPanel
-      ParentBackground = False
       Left = 274
       Top = 0
       Width = 241
       Height = 119
+      ParentBackground = False
       TabOrder = 1
       object btnDateFrom: TSpeedButton
         Left = 200
@@ -184,15 +182,14 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
       end
     end
     object pnlInvOrCred: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 137
       Height = 119
       Align = alLeft
+      ParentBackground = False
       TabOrder = 2
       object rdgrpInvOrCred: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 121
@@ -202,20 +199,20 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
         Items.Strings = (
           'Invoices'
           'Credits')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpInvOrCredClick
       end
     end
     object pnleft: TPanel
-      ParentBackground = False
       Left = 137
       Top = 0
       Width = 137
       Height = 119
       Align = alLeft
+      ParentBackground = False
       TabOrder = 3
       object rdgrpExportBy: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 121
@@ -225,18 +222,19 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
         Items.Strings = (
           'Date Range'
           'Invoice Number')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpExportByClick
       end
     end
   end
   object pnlExpFile: TPanel
-    ParentBackground = False
     Left = 0
     Top = 119
     Width = 515
     Height = 45
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object lblExpTo: TLabel
       Left = 72
@@ -298,19 +296,13 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'DateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InvOrCred'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvByNumber: TFDQuery
@@ -347,14 +339,10 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'IntSel'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InvOrCred'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvs: TFDQuery
@@ -389,14 +377,10 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_InvNum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_InvNum'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -409,9 +393,7 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -436,19 +418,15 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -465,14 +443,10 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -496,19 +470,13 @@ object frmWTAccExportFactInvs: TfrmWTAccExportFactInvs
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Factoring_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Factoring_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
 end

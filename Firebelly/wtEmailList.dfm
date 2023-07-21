@@ -1,34 +1,34 @@
-﻿object frmWTEmailList: TfrmWTEmailList
+object frmWTEmailList: TfrmWTEmailList
   Left = 67
   Top = 99
-  Width = 705
-  Height = 298
   Caption = 'frmWTEmailList'
+  ClientHeight = 259
+  ClientWidth = 689
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 697
-    Height = 226
+    Width = 689
+    Height = 218
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 685
+    ExplicitHeight = 217
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 695
-      Height = 224
+      Width = 687
+      Height = 216
       Align = alClient
       ColCount = 6
       DefaultRowHeight = 20
@@ -39,6 +39,8 @@
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
+      ExplicitWidth = 683
+      ExplicitHeight = 215
       ColWidths = (
         64
         186
@@ -75,27 +77,31 @@
   end
   object Panel2: TPanel
     Left = 0
-    Top = 226
-    Width = 697
+    Top = 218
+    Width = 689
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 217
+    ExplicitWidth = 685
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = BitBtn1Click
-      Kind = bkOK
     end
     object BitBtn2: TBitBtn
       Left = 605
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btnEmail: TButton
       Left = 16
@@ -131,19 +137,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object UpCustSQL: TFDQuery
@@ -157,19 +157,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qryContacts: TFDQuery
@@ -185,9 +179,7 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsContacts: TDataSource
@@ -208,9 +200,7 @@
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object UpInvoiceSQL: TFDQuery
@@ -226,14 +216,10 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_No'
-        ParamType = ptUnknown
       end>
   end
   object qryFitters: TFDQuery
@@ -263,14 +249,10 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Templater'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object UpSalesOrderFitterSQL: TFDQuery
@@ -283,14 +265,10 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Fitter'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

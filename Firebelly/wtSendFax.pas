@@ -132,13 +132,17 @@ begin
   var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       sFaxDir := ReadString('Fax', 'Def Fax Directory', 'Z:');
       if trim(sFaxDir) = '' then sFaxDir := 'Z:';
       strPCopy(zFaxDir, sFaxDir);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   sJunk := FaxFileName;
   If frmWTMain.FaxSystem = 'S' then
      begin

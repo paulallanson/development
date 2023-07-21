@@ -1096,7 +1096,8 @@ begin
   var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxAccounts.checked then
         WriteString('Job', 'Client Copy', 'Y')
@@ -1149,8 +1150,10 @@ begin
 
           WriteString('Job Sheet', 'Document Folder', cmbDocuments.Text);
         end;
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTRSJobSheet.FormActivate(Sender: TObject);
@@ -1190,7 +1193,6 @@ begin
                 DefaultDocumentFolder := ReadString('Job Sheet', 'Document Folder', '<All>');
                 chkbxAllDocuments.Checked := (ReadString('Job Sheet', 'Select All Documents', 'N') = 'Y');
               end;
-
           end;
       finally
         IniFile.Free;

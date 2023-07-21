@@ -1,23 +1,21 @@
-﻿object frmAllFaxStatus: TfrmAllFaxStatus
+object frmAllFaxStatus: TfrmAllFaxStatus
   Left = 74
   Top = 110
-  Width = 651
-  Height = 383
   Caption = 'Maintain Faxes'
+  ClientHeight = 345
+  ClientWidth = 639
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 200
     Top = 64
-    Width = 251
+    Width = 250
     Height = 24
     Caption = 'Belling After Sales Division'
     Font.Charset = DEFAULT_CHARSET
@@ -29,12 +27,14 @@
   end
   object Panel1: TPanel
     Left = 0
-    Top = 305
-    Width = 643
+    Top = 301
+    Width = 639
     Height = 44
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 300
+    ExplicitWidth = 635
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -49,8 +49,6 @@
         Width = 75
         Height = 25
         Caption = 'Cancel'
-        TabOrder = 0
-        OnClick = CancelFaxBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -65,6 +63,8 @@
           0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
           3333333337FFF7F3333333333000003333333333377777333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = CancelFaxBitBtnClick
       end
       object ReQueFaxBitBtn: TBitBtn
         Left = 88
@@ -72,8 +72,6 @@
         Width = 75
         Height = 25
         Caption = 'Re-Que'
-        TabOrder = 1
-        OnClick = ReQueFaxBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -88,6 +86,8 @@
           33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = ReQueFaxBitBtnClick
       end
       object ReFreshBitBtn: TBitBtn
         Left = 168
@@ -95,8 +95,6 @@
         Width = 75
         Height = 25
         Caption = 'Refresh'
-        TabOrder = 2
-        OnClick = ReFreshBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -111,40 +109,46 @@
           C8807FF7777777777FF700000000000000007777777777777777333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = ReFreshBitBtnClick
       end
     end
     object Panel3: TPanel
-      Left = 553
+      Left = 549
       Top = 0
       Width = 90
       Height = 44
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 545
       object BitBtn1: TBitBtn
         Left = 6
         Top = 8
         Width = 75
         Height = 25
+        Kind = bkCancel
+        NumGlyphs = 2
         TabOrder = 0
         OnClick = BitBtn1Click
-        Kind = bkCancel
       end
     end
   end
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 643
-    Height = 305
+    Width = 639
+    Height = 301
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 1
+    ExplicitWidth = 635
+    ExplicitHeight = 300
     object ShowFaxesDBGrid: TDBGrid
       Left = 1
       Top = 1
-      Width = 641
-      Height = 303
+      Width = 637
+      Height = 299
       Align = alClient
       DataSource = GetFaxesDataSource
       Font.Charset = DEFAULT_CHARSET
@@ -181,9 +185,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start_Date'
-        ParamType = ptUnknown
       end>
   end
   object GetFaxesDataSource: TDataSource
@@ -201,9 +203,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end>
   end
   object UpdFaxQuery: TFDQuery
@@ -218,25 +218,19 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'NoOfRetries'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FileName'
-        ParamType = ptUnknown
       end>
   end
   object FaxDatabase: TFDConnection
-    ConnectionDefName = 'faxes'
     ConnectionName = 'faxesSQL'
-
+    Params.Strings = (
+      'ConnectionDef=faxes')
     OnLogin = FaxDatabaseLogin
     Left = 144
     Top = 24

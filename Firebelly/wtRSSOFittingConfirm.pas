@@ -580,7 +580,8 @@ var
 begin
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxPrintLogo.checked then
         WriteString('Sales Order', 'Print Logo', 'Y')
@@ -601,8 +602,10 @@ begin
         WriteString('Sales Order', 'Detailed Print', 'Y')
       else
         WriteString('Sales Order', 'Detailed Print', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTRSSOFittingConfirm.FormCreate(Sender: TObject);

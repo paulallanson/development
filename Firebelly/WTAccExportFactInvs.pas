@@ -537,10 +537,10 @@ begin
   tempStr := edtExpFile.text;
 
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
-  with IniFile do
-  begin
-    WriteString('Invoice Factoring', 'File Path', tempStr);
-    Free;
+  try
+    IniFile.WriteString('Invoice Factoring', 'File Path', tempStr);
+  finally
+    IniFile.Free;
   end;
 end;
 
@@ -549,10 +549,10 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
-  with IniFile do
-  begin
-    Result := ReadString('Invoice Factoring', 'File Path', '');
-    Free;
+  try
+    Result := IniFile.ReadString('Invoice Factoring', 'File Path', '');
+  finally
+    IniFile.Free;
   end;
 end;
 

@@ -3386,12 +3386,11 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
-
-  with IniFile do
-    begin
-      cbSource.itemindex := cbsource.Items.Indexof(ReadString('Centrereed Broker', 'DataSource', 'None'));
-      Free;
-    end;
+  try
+    cbSource.itemindex := cbsource.Items.Indexof(IniFile .ReadString('Centrereed Broker', 'DataSource', 'None'));
+  finally
+    IniFile.Free;
+  end;
 (*  GetPrivateProfileString('Email', 'Application', '', TempArray,
     sizeof(TempArray), frmWTMain.AppIniFile);
 
@@ -3419,11 +3418,11 @@ var
 begin
   IniFile := TIniFile.Create(frmWTMain.AppIniFile);
 
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'DataSource',cbSource.text);
-      Free;
-    end;
+  try
+    IniFile.WriteString('Centrereed Broker', 'DataSource',cbSource.text);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTAccExport3.FormDestroy(Sender: TObject);

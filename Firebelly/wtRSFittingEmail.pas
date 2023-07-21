@@ -424,7 +424,8 @@ var
 begin
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxPrint.checked then
         WriteString('Template Print', 'Print Quote Details', 'Y')
@@ -447,9 +448,11 @@ begin
         WriteString('Template Print', 'Select All Documents', 'N');
 
       WriteString('Template Print', 'Document Folder', cmbDocuments.Text);
-
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   Obj:= Unassigned;
   FEmailAttachment.Free;
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);

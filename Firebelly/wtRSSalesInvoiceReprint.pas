@@ -734,14 +734,18 @@ begin
   var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if rdgrpType.itemindex = 1 then
         WriteString('Sales Invoice', 'Detailed Print', 'Y')
       else
         WriteString('Sales Invoice', 'Detailed Print', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
   FEmailAttachment.Free;
 end;

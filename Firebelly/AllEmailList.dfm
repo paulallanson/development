@@ -1,34 +1,32 @@
-﻿object AllEmailListFrm: TAllEmailListFrm
+object AllEmailListFrm: TAllEmailListFrm
   Left = 41
   Top = 205
-  Width = 757
-  Height = 298
   Caption = 'AllEmailListFrm'
+  ClientHeight = 259
+  ClientWidth = 741
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 749
-    Height = 223
+    Width = 741
+    Height = 218
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 747
-      Height = 221
+      Width = 739
+      Height = 216
       Align = alClient
       ColCount = 4
       DefaultRowHeight = 20
@@ -60,8 +58,8 @@
   end
   object Panel2: TPanel
     Left = 0
-    Top = 223
-    Width = 749
+    Top = 218
+    Width = 741
     Height = 41
     Align = alBottom
     TabOrder = 1
@@ -77,16 +75,18 @@
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 0
       Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object BitBtn2: TBitBtn
       Left = 525
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object ExFilterSQL: TFDQuery

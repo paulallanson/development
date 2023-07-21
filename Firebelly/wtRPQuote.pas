@@ -108,7 +108,6 @@ type
     qryEndUser: TFDQuery;
     QRLabel11: TQRLabel;
     QRShape11: TQRShape;
-    gtQRFilters1: TgtQRFilters;
     lblWorktopTotal: TQRLabel;
     lblCutOutTotal: TQRLabel;
     lblEdgeTotal: TQRLabel;
