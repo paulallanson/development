@@ -553,7 +553,7 @@
         <DCCReference Include="..\wtLUFitters.pas">
             <Form>frmWTLUFitters</Form>
         </DCCReference>
-        <DCCReference Include="..\WTMaintJRemedial.pas">
+        <DCCReference Include="..\wtMaintJRemedial.pas">
             <Form>frmWTMaintJRemedial</Form>
         </DCCReference>
         <DCCReference Include="..\wtMaintSalesLead.pas">
