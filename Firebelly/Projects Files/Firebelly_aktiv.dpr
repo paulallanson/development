@@ -163,7 +163,7 @@ uses
   WTMaintContactEvents in '..\WTMaintContactEvents.pas' {frmWTMaintContactEvents},
   WTEventsDM in '..\WTEventsDM.pas' {dtmdlEvents: TDataModule},
   wtDBMemo in '..\wtDBMemo.pas' {frmwtDBMemo},
-  WTAccImportDM in '..\WtAccImportDM.pas' {dmAccImport: TDataModule},
+  WtAccImportDM in '..\WtAccImportDM.pas' {dmAccImport: TDataModule},
   WTFileImport in '..\WTFileImport.pas' {frmWTFileImport},
   wtLUDataSource in '..\wtLUDataSource.pas' {frmWTLUDataSource},
   wtMaintDataSource in '..\wtMaintDataSource.pas' {frmWTMaintDataSource},
@@ -196,7 +196,7 @@ uses
   wtRPSalesInvoice in '..\Aktiv\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},
   WTRPQuoteImpLevel in '..\WTRPQuoteImpLevel.pas' {frmWTRPQuoteImpLevel},
   WTRSQuoteImpLevel in '..\WTRSQuoteImpLevel.pas' {frmWTRSQuoteImpLevel},
-  wtRSQuoteDecline in '..\WTRSQuoteDecline.pas' {frmWTRSQuoteDecline},
+  WTRSQuoteDecline in '..\WTRSQuoteDecline.pas' {frmWTRSQuoteDecline},
   WTRPQuoteDecline in '..\WTRPQuoteDecline.pas' {frmwtRPQuoteDecline},
   WTParamsHelp in '..\WTParamsHelp.pas' {frmWTParamsHelp},
   wtRPQuote in '..\Aktiv\Reports\wtRPQuote.pas' {frmwtRPQuote},
@@ -221,11 +221,17 @@ uses
   wtRSMaterialAnalysis in '..\wtRSMaterialAnalysis.pas' {frmWTRSMaterialAnalysis},
   WTRPSalesbyInvoice in '..\WTRPSalesbyInvoice.pas' {frmwtRPSalesbyInvoice},
   WTRPSIPayments in '..\WTRPSIPayments.pas' {frmwtRPSIPayments},
-  WTRPSalesInvoicePayments in '..\WTRPSalesInvoicePayments.pas' {frmWTRPSalesInvoicePayments};
+  WTRPSalesInvoicePayments in '..\WTRPSalesInvoicePayments.pas' {frmWTRPSalesInvoicePayments},
+  Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
+  Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
+  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas';
 
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   frmWTSplash := TfrmWTSplash.Create( Application );
   frmWTSplash.Show;

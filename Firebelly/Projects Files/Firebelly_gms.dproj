@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{9161C5B0-4D92-4372-96A4-B39D7502050A}</ProjectGuid>
-        <MainSource>Firebelly_aktiv.dpr</MainSource>
+        <ProjectGuid>{05478047-A82A-400C-A08C-235A03CB5993}</ProjectGuid>
+        <MainSource>Firebelly_gms.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
@@ -52,13 +52,13 @@
         <DCC_N>false</DCC_N>
         <DCC_S>false</DCC_S>
         <DCC_ImageBase>00400000</DCC_ImageBase>
-        <SanitizedProjectName>Firebelly_aktiv</SanitizedProjectName>
+        <SanitizedProjectName>Firebelly_gms</SanitizedProjectName>
         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
-        <DCC_ExeOutput>..\Aktiv\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_ExeOutput>..\GMS\$(Platform)\$(Config)</DCC_ExeOutput>
+        <DCC_DcuOutput>..\GMS\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <DCC_DcuOutput>..\Aktiv\$(Platform)\$(Config)</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
@@ -67,12 +67,12 @@
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <Icon_MainIcon>Firebelly_aktiv_Icon.ico</Icon_MainIcon>
+        <Icon_MainIcon>Firebelly_gms_Icon.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <Icon_MainIcon>Firebelly_aktiv_Icon.ico</Icon_MainIcon>
+        <Icon_MainIcon>Firebelly_gms_Icon.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
     </PropertyGroup>
@@ -159,8 +159,15 @@
         <DCCReference Include="..\wtLUCustQuotes.pas">
             <Form>frmwtLUCustQuotes</Form>
         </DCCReference>
+        <DCCReference Include="..\wtLUCustJobs.pas">
+            <Form>frmwtLUCustJobs</Form>
+        </DCCReference>
         <DCCReference Include="..\wtLUCustInvoices.pas">
             <Form>frmwtLUCustInvoices</Form>
+        </DCCReference>
+        <DCCReference Include="..\WTCustJobsDM.pas">
+            <Form>dtmdlCustJobs</Form>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\WTCustInvoicesDM.pas">
             <Form>dtmdlCustInvoices</Form>
@@ -273,9 +280,6 @@
         <DCCReference Include="..\wtRSQuote.pas">
             <Form>frmWTRSQuote</Form>
         </DCCReference>
-        <DCCReference Include="..\wtRPQuoteTrade.pas">
-            <Form>frmwtRPQuoteTrade</Form>
-        </DCCReference>
         <DCCReference Include="..\wtLUWTGroup.pas">
             <Form>frmWTLUWTGroup</Form>
         </DCCReference>
@@ -312,8 +316,8 @@
         <DCCReference Include="..\WTRPJobMasonRpt.pas">
             <Form>frmWTRPJobMasonRpt</Form>
         </DCCReference>
-        <DCCReference Include="..\WTCustomerSearch.pas">
-            <Form>frmWTCustomerSearch</Form>
+        <DCCReference Include="..\WTQuoteSearch.pas">
+            <Form>frmWTQuoteSearch</Form>
         </DCCReference>
         <DCCReference Include="..\WTJobSearch.pas">
             <Form>frmWTJobSearch</Form>
@@ -349,9 +353,6 @@
         <DCCReference Include="..\wtRSJobSheet.pas">
             <Form>frmWTRSJobSheet</Form>
         </DCCReference>
-        <DCCReference Include="..\WtRPJobSheet.pas">
-            <Form>frmWtRPJobSheet</Form>
-        </DCCReference>
         <DCCReference Include="..\wtRPJobAccSheet.pas">
             <Form>frmwtRPJobAccSheet</Form>
         </DCCReference>
@@ -369,9 +370,6 @@
         </DCCReference>
         <DCCReference Include="..\wtRSQuotePerf.pas">
             <Form>frmWTRSQuotePerf</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtSendFax.pas">
-            <Form>frmWTSendFax</Form>
         </DCCReference>
         <DCCReference Include="..\wtFaxList.pas">
             <Form>frmWTFaxList</Form>
@@ -452,17 +450,14 @@
         <DCCReference Include="..\WTLUSOrderRpts.pas">
             <Form>frmWTLUSOrderRpts</Form>
         </DCCReference>
-        <DCCReference Include="..\WTRPSOrderSchedule.pas">
-            <Form>frmwtRPSOrderSchedule</Form>
+        <DCCReference Include="..\WTRPSOrderTemplate.pas">
+            <Form>frmwtRPSOrderTemplate</Form>
         </DCCReference>
-        <DCCReference Include="..\WTRSSOrderSchedule.pas">
-            <Form>frmWTRSSOrderSchedule</Form>
+        <DCCReference Include="..\WTRSSOrderTemplate.pas">
+            <Form>frmWTRSSOrderTemplate</Form>
         </DCCReference>
         <DCCReference Include="..\WTSOrderSearch.pas">
             <Form>frmWTSOrderSearch</Form>
-        </DCCReference>
-        <DCCReference Include="..\WtRPJobFittingTrade.pas">
-            <Form>frmwtRPJobFittingTrade</Form>
         </DCCReference>
         <DCCReference Include="..\wtMaintJobComplete.pas">
             <Form>frmWTMaintJobComplete</Form>
@@ -519,9 +514,6 @@
         <DCCReference Include="..\wtRSSOAntInvoice.pas">
             <Form>frmWTRSSOAntInvoice</Form>
         </DCCReference>
-        <DCCReference Include="..\wtRPTemplate.pas">
-            <Form>frmwtRPTemplate</Form>
-        </DCCReference>
         <DCCReference Include="..\WTDeleteHistory.pas">
             <Form>frmWTDeleteHistory</Form>
         </DCCReference>
@@ -538,238 +530,62 @@
         <DCCReference Include="..\wtMaintFitters.pas">
             <Form>frmWTMaintFitters</Form>
         </DCCReference>
-        <DCCReference Include="..\WTLUDesigner.pas">
-            <Form>frmWTLUDesigner</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintBranch.pas">
-            <Form>frmWTMaintBranch</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintDesigner.pas">
-            <Form>frmWTMaintDesigner</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRSJobValue.pas">
-            <Form>frmWTRSJobValue</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPJobValue.pas">
-            <Form>frmWTRPJobValue</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtRSQuoteSalesLead.pas">
-            <Form>frmWTRSQuoteSalesLead</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPQuoteSalesLead.pas">
-            <Form>frmwtRPQuoteSalesLead</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtLUCutOutDetails.pas">
-            <Form>frmWTLUCutOutDetails</Form>
+        <DCCReference Include="..\WTSendtoExcel.pas">
+            <Form>frmWTSendtoExcel</Form>
         </DCCReference>
         <DCCReference Include="..\WTLUEdgeDetails.pas">
             <Form>frmWTLUEdgeDetails</Form>
         </DCCReference>
-        <DCCReference Include="..\wtMaintWT.pas">
-            <Form>frmWTMaintWT</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtRPJob.pas">
-            <Form>frmwtRPJob</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUManageMentRpts.pas">
-            <Form>frmWTLUManagementRpts</Form>
+        <DCCReference Include="..\wtLUCutOutDetails.pas">
+            <Form>frmWTLUCutOutDetails</Form>
         </DCCReference>
         <DCCReference Include="..\wtMaintCutOutDetails.pas">
             <Form>frmWTMaintCutOutDetails</Form>
         </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\WtRPJobFitting.pas">
-            <Form>frmwtRPJobFitting</Form>
+        <DCCReference Include="..\GMS\Reports\wtRPContract.pas">
+            <Form>frmWTRPContract</Form>
         </DCCReference>
-        <DCCReference Include="..\WTQuoteSearch.pas">
-            <Form>frmWTQuoteSearch</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintContactEvents.pas">
-            <Form>frmWTMaintContactEvents</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTEventsDM.pas">
-            <Form>dtmdlEvents</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="..\wtDBMemo.pas">
-            <Form>frmwtDBMemo</Form>
-        </DCCReference>
-        <DCCReference Include="..\WtAccImportDM.pas">
-            <Form>dmAccImport</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="..\WTFileImport.pas">
-            <Form>frmWTFileImport</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtLUDataSource.pas">
-            <Form>frmWTLUDataSource</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtMaintDataSource.pas">
-            <Form>frmWTMaintDataSource</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUContactType.pas">
-            <Form>frmWTLUContactType</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintContactType.pas">
-            <Form>frmWTMaintContactType</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtMaintProspectAction.pas">
-            <Form>frmWTMaintProspectAction</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtLUProspectAction.pas">
-            <Form>frmWTLUProspectAction</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUCustomerRpts.pas">
-            <Form>frmWTLUCustomerRpts</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRSCustomerAction.pas">
-            <Form>frmWTRSCustomerAction</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPCustomerAction.pas">
-            <Form>frmwtRPCustomerAction</Form>
-        </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\WTRPJobCutSched.pas">
+        <DCCReference Include="..\GMS\Reports\WTRPJobCutSched.pas">
             <Form>frmWTRPJobCutSched</Form>
         </DCCReference>
-        <DCCReference Include="..\WTRPSalesOrder.pas">
-            <Form>frmwtRPSalesOrder</Form>
+        <DCCReference Include="..\GMS\Reports\WtRPJobRemedialSheet.pas">
+            <Form>frmwtRPJobRemedialSheet</Form>
         </DCCReference>
-        <DCCReference Include="..\WTRSSalesOrder.pas">
-            <Form>frmWTRSSalesOrder</Form>
+        <DCCReference Include="..\GMS\Reports\WtRPJobSheetClient.pas">
+            <Form>frmWTRPJobSheetClient</Form>
         </DCCReference>
-        <DCCReference Include="..\wtRSQuoteEvent.pas">
-            <Form>frmWTRSQuoteEvent</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPQuoteEvent.pas">
-            <Form>frmWTRPQuoteEvent</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRSCustContDet.pas">
-            <Form>frmWTRSCustContDet</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPCustContDet.pas">
-            <Form>frmWTRPCustContDet</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtRSTemplateSheet.pas">
-            <Form>frmWTRSTemplateSheet</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtLUMaterialUse.pas">
-            <Form>frmWTLUMaterialUse</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtLUWorktopDetails.pas">
-            <Form>frmWTLUWorktopDetails</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintWorktopDetails.pas">
-            <Form>frmWTMaintWorktopDetails</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUWorktopPrices.pas">
-            <Form>frmWTLUWorktopPrices</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUSupplier.pas">
-            <Form>frmWTLUSupplier</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintSupplier.pas">
-            <Form>frmWTMaintSupplier</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTSupplierSearch.pas">
-            <Form>frmWTSupplierSearch</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTMaintSupplierContact.pas">
-            <Form>frmWTMaintSupplierContact</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUSupplierContacts.pas">
-            <Form>frmWTLUSupplierContacts</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtMaintQSlab.pas">
-            <Form>frmWTMaintQSlab</Form>
-        </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\wtRPSOrder.pas">
-            <Form>frmwtRPSOrder</Form>
-        </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\wtRPSalesInvoice.pas">
-            <Form>frmWTRPSalesInvoice</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPQuoteImpLevel.pas">
-            <Form>frmWTRPQuoteImpLevel</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRSQuoteImpLevel.pas">
-            <Form>frmWTRSQuoteImpLevel</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRSQuoteDecline.pas">
-            <Form>frmWTRSQuoteDecline</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPQuoteDecline.pas">
-            <Form>frmwtRPQuoteDecline</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTParamsHelp.pas">
-            <Form>frmWTParamsHelp</Form>
-        </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\wtRPQuote.pas">
-            <Form>frmwtRPQuote</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTLUPrices.pas">
-            <Form>frmWTLUPrices</Form>
-        </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\WTRPSOrderAllocation.pas">
+        <DCCReference Include="..\GMS\Reports\WTRPSOrderAllocation.pas">
             <Form>frmWTRPSOrderAllocation</Form>
         </DCCReference>
-        <DCCReference Include="..\wtRPJobSheetClient.pas">
-            <Form>frmwtRPJobSheetClient</Form>
+        <DCCReference Include="..\GMS\Reports\WtRPJobFitting.pas">
+            <Form>frmwtRPJobFitting</Form>
         </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\wtRPPOrder.pas">
-            <Form>frmwtRPPOrder</Form>
+        <DCCReference Include="..\GMS\Reports\wtRPQuote.pas">
+            <Form>frmwtRPQuote</Form>
         </DCCReference>
-        <DCCReference Include="..\WTLUPOrderSalesOrderLine.pas">
-            <Form>frmWTLUPOrderSalesOrderLine</Form>
+        <DCCReference Include="..\GMS\Reports\WtRPJobSheet.pas">
+            <Form>frmwtRPJobSheet</Form>
         </DCCReference>
-        <DCCReference Include="..\WTMaintPurchaseOrder.pas">
-            <Form>frmWTMaintPurchaseOrder</Form>
+        <DCCReference Include="..\GMS\Reports\wtRPSalesInvoice.pas">
+            <Form>frmWTRPSalesInvoice</Form>
         </DCCReference>
-        <DCCReference Include="..\WTMaintPurchaseOrderLine.pas">
-            <Form>frmWTMaintPurchaseOrderLine</Form>
+        <DCCReference Include="..\GMS\Reports\wtRPSOrder.pas">
+            <Form>frmwtRPSOrder</Form>
         </DCCReference>
-        <DCCReference Include="..\WTMaintPurchaseOrderLineProd.pas">
-            <Form>frmWTMaintPurchaseOrderLineProd</Form>
+        <DCCReference Include="..\GMS\Reports\wtRPTemplate.pas">
+            <Form>frmwtRPTemplate</Form>
         </DCCReference>
-        <DCCReference Include="..\wtMaintSOEvents.pas">
-            <Form>frmWTMaintSOEvents</Form>
+        <DCCReference Include="..\wtMaintFinish.pas">
+            <Form>frmWtMaintFinish</Form>
         </DCCReference>
-        <DCCReference Include="..\wtMaintPOEvents.pas">
-            <Form>frmWTMaintPOEvents</Form>
+        <DCCReference Include="..\WTLUFinish.pas">
+            <Form>frmWTLUFinish</Form>
         </DCCReference>
-        <DCCReference Include="..\Aktiv\Reports\wtRPQuoteSummary.pas">
+        <DCCReference Include="..\wtMaintMaterialType.pas">
+            <Form>frmWtMaintMaterialType</Form>
+        </DCCReference>
+        <DCCReference Include="..\GMS\Reports\wtRPQuoteSummary.pas">
             <Form>frmwtRPQuoteSummary</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPContractDetails.pas">
-            <Form>frmwtRPContractDetails</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPContractOrders.pas">
-            <Form>frmwtRPContractOrders</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSOCostAnalysis.pas">
-            <Form>frmWTRPSOCostAnalysis</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSOrderTemplate.pas">
-            <Form>frmwtRPSOrderTemplate</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSOProduction.pas">
-            <Form>frmWTRPSOProduction</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSalesOrderInvoice.pas">
-            <Form>frmWTRPSalesOrderInvoice</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPMaterialAnalysis.pas">
-            <Form>frmWTRPMaterialAnalysis</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtRSMaterialAnalysis.pas">
-            <Form>frmWTRSMaterialAnalysis</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSalesbyInvoice.pas">
-            <Form>frmwtRPSalesbyInvoice</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSIPayments.pas">
-            <Form>frmwtRPSIPayments</Form>
-        </DCCReference>
-        <DCCReference Include="..\WTRPSalesInvoicePayments.pas">
-            <Form>frmWTRPSalesInvoicePayments</Form>
         </DCCReference>
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
@@ -792,7 +608,7 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">Firebelly_aktiv.dpr</Source>
+                    <Source Name="MainSource">Firebelly_gms.dpr</Source>
                 </Source>
             </Delphi.Personality>
             <Platforms>
@@ -800,9 +616,9 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="..\Aktiv\Win32\Debug\Firebelly_aktiv.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\GMS\Win32\Debug\Firebelly_gms.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>Firebelly_aktiv.exe</RemoteName>
+                        <RemoteName>Firebelly_gms.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

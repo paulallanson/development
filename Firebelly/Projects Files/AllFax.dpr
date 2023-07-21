@@ -2,11 +2,14 @@ program AllFax;
 
 uses
   Forms,
-  AllFaxStatus in 'AllFaxStatus.pas' {frmAllFaxStatus};
+  AllFaxStatus in '..\AllFaxStatus.pas' {frmAllFaxStatus};
 
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Worktops Fax Manager';
   Application.CreateForm(TfrmAllFaxStatus, frmAllFaxStatus);
