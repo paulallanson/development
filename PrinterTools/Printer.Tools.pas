@@ -25,7 +25,7 @@ type
     constructor Create;
     class function New: IPrinterToAttachment;
     procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
-    procedure QuotePrintToFile(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
+    procedure PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
   end;
 
@@ -87,7 +87,7 @@ begin
   FEmailAttachment.Add(targetFileName);
 end;
 
-procedure TPrinterTools.QuotePrintToFile(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
+procedure TPrinterTools.PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
 var
   fileType: TPrinterFileType;
   Location,
