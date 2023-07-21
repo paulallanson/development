@@ -609,7 +609,7 @@ end;
 
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 begin
-  PrinterTools.New.QuotePrintToFile(qrpDetails, Result, QuoteNo, attachmentType);
+  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
 end;
 
 (* GDK ToDo: Remove after tests

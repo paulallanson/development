@@ -3443,18 +3443,4 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    HTML.Author = 'Pragnaan'
-    HTML.Keywords = 'gtQrFilters'
-    HTML.ImageDir = 'Images'
-    PDF.Author = 'Pragnaan'
-    PDF.Keywords = 'QuickReport, Export, Filters'
-    RTF.Author = 'Pragnaan'
-    RTF.Keywords = 'QuickReport, Export, Filters'
-    RTF.ExportImageFormat = ifBMP
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkGIF, fkJPEG, fkBMP]
-    Left = 774
-    Top = 96
-  end
 end

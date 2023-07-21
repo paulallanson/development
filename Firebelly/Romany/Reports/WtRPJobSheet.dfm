@@ -1426,7 +1426,7 @@ object frmwtRPJobSheet: TfrmwtRPJobSheet
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 568
         Top = 247
         Width = 40

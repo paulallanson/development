@@ -878,7 +878,7 @@ object frmwtRPJobFittingTrade: TfrmwtRPJobFittingTrade
         WordWrap = True
         FontSize = 10
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 640
         Top = 79
         Width = 51

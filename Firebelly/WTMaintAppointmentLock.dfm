@@ -1,31 +1,31 @@
 object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
   Left = 293
   Top = 124
-  Width = 878
-  Height = 417
   Caption = 'Maintain Appointment Locked Records'
+  ClientHeight = 378
+  ClientWidth = 862
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 870
+    Top = 337
+    Width = 862
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 345
+    ExplicitWidth = 870
     DesignSize = (
-      870
+      862
       41)
     object btnUnlock: TButton
       Left = 8
@@ -46,7 +46,7 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 782
+      Left = 774
       Top = 8
       Width = 75
       Height = 25
@@ -54,13 +54,14 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 782
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 870
-    Height = 345
+    Width = 862
+    Height = 337
     Align = alClient
     DataSource = dtsApptStatus
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -113,9 +114,7 @@ object frmWTMaintAppointmentLock: TfrmWTMaintAppointmentLock
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
 end

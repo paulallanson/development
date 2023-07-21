@@ -1708,7 +1708,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         FontSize = 6
       end
     end
-    object gtQRSysData1: TgtQRSysData
+    object gtQRSysData1: TQRSysData
       Left = 647
       Top = 1088
       Width = 108

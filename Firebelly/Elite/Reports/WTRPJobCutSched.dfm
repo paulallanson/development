@@ -781,7 +781,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         WordWrap = True
         FontSize = 10
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 639
         Top = 8
         Width = 99

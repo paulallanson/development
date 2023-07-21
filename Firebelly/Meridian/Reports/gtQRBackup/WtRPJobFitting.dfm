@@ -2162,7 +2162,7 @@ object frmwtRPJobFitting: TfrmwtRPJobFitting
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 568
         Top = 279
         Width = 40

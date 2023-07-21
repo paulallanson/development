@@ -1219,7 +1219,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
@@ -1291,7 +1291,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
@@ -1363,7 +1363,7 @@ object frmwtRPQuote: TfrmwtRPQuote
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
@@ -2543,14 +2543,13 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 254
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQElements: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Quote_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -2575,9 +2574,8 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -2586,8 +2584,8 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 16
   end
   object qryQCutOuts: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_CutOut.*, CutOut.Description'
       'from Quote_CutOut, CutOut'
@@ -2597,14 +2595,13 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 86
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQEdges: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Quote_Edge.*, Edge_Profile.Description'
       'from Quote_Edge, Edge_Profile'
@@ -2615,14 +2612,13 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 126
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryQExtras: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'select Quote_Extra.*, Extra_Charge.Description'
       'from Quote_Extra, Extra_Charge'
@@ -2632,9 +2628,8 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 89
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddress: TFDQuery
@@ -2647,9 +2642,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 179
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -2670,9 +2663,8 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 286
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsAddress: TDataSource
@@ -2698,9 +2690,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 165
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuote: TFDQuery
@@ -2713,14 +2703,10 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 293
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryEndUser: TFDQuery
@@ -2740,9 +2726,7 @@ object frmwtRPQuote: TfrmwtRPQuote
     Top = 158
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end>
   end
 end

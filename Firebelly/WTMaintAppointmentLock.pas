@@ -92,8 +92,13 @@ begin
 end;
 
 procedure TfrmWTMaintAppointmentLock.FormDestroy(Sender: TObject);
+var
+  fileName: string;
 begin
-  AllCommon.SaveFormLayout(frmWTMain.AppIniFile, self);
+  if Pos('\', frmwtMain.AppIniFile) > 0 then
+    fileName := frmwtMain.AppIniFile else
+    fileName := ExtractFilePath(Application.ExeName) + frmwtMain.AppIniFile;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 end.

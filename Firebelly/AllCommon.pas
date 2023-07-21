@@ -1823,8 +1823,11 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create (iniFileName);
-  IniFile.EraseSection(sectionName);
-  IniFile.Free;
+  try
+    IniFile.EraseSection(sectionName);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure SaveFormLayout(iniFileName: string; theForm: TForm);
@@ -1832,13 +1835,14 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create (iniFileName);
-
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Top', theForm.Top);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Left', theForm.Left);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Height', theForm.Height);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Width', theForm.Width);
-
-  IniFile.Free;
+  try
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Top', theForm.Top);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Left', theForm.Left);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Height', theForm.Height);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Width', theForm.Width);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure LoadFormLayout(iniFileName: string; theForm: TForm);
@@ -1847,15 +1851,18 @@ var
 begin
   IniFile := TIniFile.Create(iniFileName);
 
-  if IniFile.ReadInteger('FormPositions', theForm.Name+'Top', -1) <> -1 then
-  begin
-    theForm.Position := poDesigned;
-    theForm.Top := IniFile.ReadInteger('FormPositions', theForm.Name+'Top', theForm.Top);
-    theForm.Left := IniFile.ReadInteger('FormPositions', theForm.Name+'Left', theForm.Left);
-    theForm.Height := IniFile.ReadInteger('FormPositions', theForm.Name+'Height', theForm.Height);
-    theForm.Width := IniFile.ReadInteger('FormPositions', theForm.Name+'Width', theForm.Width);
+  try
+    if IniFile.ReadInteger('FormPositions', theForm.Name+'Top', -1) <> -1 then
+    begin
+      theForm.Position := poDesigned;
+      theForm.Top := IniFile.ReadInteger('FormPositions', theForm.Name+'Top', theForm.Top);
+      theForm.Left := IniFile.ReadInteger('FormPositions', theForm.Name+'Left', theForm.Left);
+      theForm.Height := IniFile.ReadInteger('FormPositions', theForm.Name+'Height', theForm.Height);
+      theForm.Width := IniFile.ReadInteger('FormPositions', theForm.Name+'Width', theForm.Width);
+    end;
+  finally
+    IniFile.Free;
   end;
-  IniFile.Free;
 end;
 
 function GetComputerNetName: string;

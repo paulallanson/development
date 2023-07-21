@@ -1,29 +1,23 @@
 object frmWTRPJobCutSched: TfrmWTRPJobCutSched
   Left = 223
   Top = 106
-  Width = 897
-  Height = 718
   Caption = 'frmWTRPJobCutSched'
+  ClientHeight = 679
+  ClientWidth = 881
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpCutSchedule: TQuickRep
     Left = 24
     Top = 8
     Width = 816
     Height = 1056
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpCutScheduleBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = Letter
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2794.000000000000000000
@@ -56,13 +51,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Cutting Schedule'
     SnapToGrid = True
@@ -70,25 +69,29 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrgJob: TQRGroup
       Left = 38
       Top = 345
       Width = 740
       Height = 0
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrgJobAfterPrint
       AlignToBottom = False
       BeforePrint = qrgJobBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         0.000000000000000000
         1957.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'Job'
       Master = qrpCutSchedule
       ReprintOnNewPage = False
@@ -98,19 +101,19 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       Top = 345
       Width = 740
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
       Frame.DrawLeft = True
       Frame.DrawRight = True
       AlignToBottom = False
       BeforePrint = qrsdElementBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         55.562500000000000000
         1957.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpCutSchedule
       DataSet = qryJElements
       PrintBefore = False
@@ -120,20 +123,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 313
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1100.666666666667000000
           0.000000000000000000
           828.145833333333200000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryJElements
         DataField = 'description'
@@ -144,7 +144,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText5: TQRDBText
@@ -152,20 +156,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 81
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           859.895833333333400000
           0.000000000000000000
           214.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryJElements
         DataField = 'Thickness_mm'
@@ -176,7 +176,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText4: TQRDBText
@@ -184,20 +188,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 35
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           833.437500000000000000
           0.000000000000000000
           92.604166666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryJElements
         DataField = 'Depth'
@@ -208,7 +208,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText3: TQRDBText
@@ -216,20 +220,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 37
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           677.333333333333400000
           0.000000000000000000
           97.895833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryJElements
         DataField = 'Length'
@@ -240,7 +240,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText2: TQRDBText
@@ -248,20 +252,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 49
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           494.770833333333400000
           0.000000000000000000
           129.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryJElements
         DataField = 'Quantity'
@@ -272,7 +272,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape1: TQRShape
@@ -280,16 +284,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 2
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           100.541666666666700000
           0.000000000000000000
           5.291666666666667000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -299,16 +301,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 6
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           640.291666666666800000
           0.000000000000000000
           15.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -318,16 +318,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 6
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           539.750000000000000000
           0.000000000000000000
           15.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -337,16 +335,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 6
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           791.104166666666800000
           0.000000000000000000
           15.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -356,16 +352,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 6
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           941.916666666666800000
           0.000000000000000000
           15.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -375,16 +369,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 6
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1079.500000000000000000
           0.000000000000000000
           15.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsVertLine
         VertAdjust = 0
@@ -394,20 +386,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 60
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           -71.437500000000000000
           0.000000000000000000
           158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCount'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -417,7 +405,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblDescription: TQRLabel
@@ -425,20 +415,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 0
         Width = 145
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           127.000000000000000000
           0.000000000000000000
           383.645833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblDescription'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -448,7 +435,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -457,38 +446,32 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
       Top = 38
       Width = 740
       Height = 307
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        812.270833333333400000
+        812.270833333333300000
         1957.916666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel1: TQRLabel
         Left = 215
         Top = 0
         Width = 284
         Height = 35
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           92.604166666666680000
           568.854166666666700000
           0.000000000000000000
           751.416666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PRODUCTION SCHEDULE'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -498,7 +481,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 18
       end
       object QRLabel2: TQRLabel
@@ -506,20 +491,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 51
         Width = 83
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           134.937500000000000000
           219.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUSTOMER:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -529,7 +510,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText1: TQRDBText
@@ -537,20 +520,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 51
         Width = 107
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           243.416666666666700000
           134.937500000000000000
           283.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -561,7 +540,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
@@ -569,20 +552,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 30
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           10.583333333333330000
           754.062500000000000000
           79.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Panel'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -592,7 +571,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel4: TQRLabel
@@ -600,20 +581,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 64
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           127.000000000000000000
           754.062500000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -623,7 +600,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel5: TQRLabel
@@ -631,20 +610,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 22
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           566.208333333333400000
           754.062500000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Qty'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -654,7 +629,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel6: TQRLabel
@@ -662,20 +639,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 37
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           677.333333333333400000
           754.062500000000000000
           97.895833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Length'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -685,7 +658,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel8: TQRLabel
@@ -693,20 +668,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 35
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           833.437500000000000000
           754.062500000000000000
           92.604166666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Depth'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -716,7 +687,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel10: TQRLabel
@@ -724,20 +697,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 31
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           973.666666666666900000
           754.062500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Thick'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -747,7 +716,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel11: TQRLabel
@@ -755,20 +726,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 285
         Width = 44
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1100.666666666667000000
           754.062500000000000000
           116.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Material'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -778,27 +745,26 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 643
         Top = 8
         Width = 95
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1701.270833333333000000
           21.166666666666670000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -809,6 +775,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         ParentFont = False
         Text = 'Date:'
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblDateRequired: TQRLabel
@@ -816,20 +784,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 76
         Width = 101
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1685.395833333333000000
           201.083333333333300000
           267.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblDateRequired'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -839,7 +803,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblJobNumber: TQRLabel
@@ -847,20 +813,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 51
         Width = 103
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1680.104166666667000000
           134.937500000000000000
           272.520833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblJobNumber'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -870,7 +832,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblSalesOrder: TQRLabel
@@ -878,20 +842,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 104
         Width = 86
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1725.083333333334000000
           275.166666666666700000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblSalesOrder'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -901,7 +861,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel22: TQRLabel
@@ -909,20 +871,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 76
         Width = 86
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           201.083333333333300000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'DESCRIPTION:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -932,7 +890,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText7: TQRDBText
@@ -940,20 +900,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 76
         Width = 510
         Height = 37
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           97.895833333333320000
           243.416666666666700000
           201.083333333333300000
           1349.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Description'
@@ -964,7 +921,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel7: TQRLabel
@@ -972,20 +933,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 125
         Width = 73
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           330.729166666666700000
           193.145833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'REFERENCE:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -995,7 +952,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText8: TQRDBText
@@ -1003,20 +962,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 125
         Width = 54
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333340000
           243.416666666666700000
           330.729166666666700000
           142.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
@@ -1027,7 +982,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel9: TQRLabel
@@ -1035,20 +994,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 152
         Width = 88
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           0.000000000000000000
           402.166666666666700000
           232.833333333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'SITE ADDRESS:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1058,7 +1013,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRShape35: TQRShape
@@ -1066,16 +1023,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 249
         Width = 745
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           -21.166666666666670000
           658.812500000000000000
           1971.145833333334000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsHorLine
         VertAdjust = 0
@@ -1085,16 +1040,14 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 152
         Width = 193
         Height = 89
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           235.479166666666700000
           243.416666666666700000
           402.166666666666700000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
@@ -1103,26 +1056,25 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Height = -13
         Font.Name = 'Gill Sans MT'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
       object QRLabel75: TQRLabel
         Left = 376
         Top = 160
         Width = 108
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           994.833333333333400000
           423.333333333333300000
           285.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CONTACT NAME:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1132,7 +1084,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText9: TQRDBText
@@ -1140,20 +1094,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 160
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1291.166666666667000000
           423.333333333333300000
           489.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Name'
@@ -1164,7 +1115,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel76: TQRLabel
@@ -1172,20 +1127,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 196
         Width = 103
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           994.833333333333400000
           518.583333333333400000
           272.520833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PHONE NUMBER:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1195,7 +1146,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText10: TQRDBText
@@ -1203,20 +1156,17 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 196
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1291.166666666667000000
           518.583333333333300000
           489.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Phone'
@@ -1227,7 +1177,11 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel13: TQRLabel
@@ -1235,20 +1189,16 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Top = 260
         Width = 70
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           687.916666666666800000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'CUTTING '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1258,7 +1208,9 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1278,9 +1230,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -1289,8 +1239,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Top = 16
   end
   object qryJElements: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsReport
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Job_Element.*,'
       '        Thickness.Thickness_mm,'
@@ -1313,9 +1263,8 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpJStatus: TFDQuery
@@ -1328,14 +1277,10 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSOStatus: TFDQuery
@@ -1353,9 +1298,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
     Top = 13
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
 end

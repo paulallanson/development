@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QRCtrls, gtQrCtrls, QuickRpt, ExtCtrls, DB, gtQrExport, qrprntr, printers, AllCommon,
+  Dialogs, QRCtrls, QuickRpt, ExtCtrls, DB, QrExport, qrprntr, printers, AllCommon,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -13,57 +13,57 @@ type
   TfrmWTRPSOrderAllocation = class(TForm)
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
-    memAddress: TgtQRMemo;
+    memAddress: TQRMemo;
     qrsdFitterDateTimes: TQRSubDetail;
     qrgFitter: TQRGroup;
-    qrlblSOCaption: TgtQRLabel;
-    gtQRShape3: TgtQRShape;
-    QRDBText4: TgtQRDBText;
-    QRLabel5: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    qrlblFitDateLabel: TgtQRLabel;
-    qrlblTemplateDateLabel: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    qrmAddress: TgtQRMemo;
-    gtQRShape2: TgtQRShape;
-    qrmSiteAddress: TgtQRMemo;
-    gtQRShape4: TgtQRShape;
-    gtQRShape5: TgtQRShape;
-    gtQRShape6: TgtQRShape;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    qrlblTemplateDate: TgtQRLabel;
-    qrlblDateRequired: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
+    qrlblSOCaption: TQRLabel;
+    gtQRShape3: TQRShape;
+    QRDBText4: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRLabel1: TQRLabel;
+    qrlblFitDateLabel: TQRLabel;
+    qrlblTemplateDateLabel: TQRLabel;
+    QRShape1: TQRShape;
+    qrmAddress: TQRMemo;
+    gtQRShape2: TQRShape;
+    qrmSiteAddress: TQRMemo;
+    gtQRShape4: TQRShape;
+    gtQRShape5: TQRShape;
+    gtQRShape6: TQRShape;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    qrlblTemplateDate: TQRLabel;
+    qrlblDateRequired: TQRLabel;
+    gtQRShape1: TQRShape;
     qryReport: TFDQuery;
     dtsAddress: TDataSource;
-    gtQRDBText2: TgtQRDBText;
+    gtQRDBText2: TQRDBText;
     qryAddress: TFDQuery;
     qryCustomer: TFDQuery;
     qryCompanyAddress: TFDQuery;
     qryCompany: TFDQuery;
     qrygetNotes: TFDQuery;
     grpDate: TQRGroup;
-    gtQRShape11: TgtQRShape;
-    gtQRShape12: TgtQRShape;
-    gtQRShape13: TgtQRShape;
-    gtQRShape14: TgtQRShape;
-    qrlblJobType: TgtQRLabel;
-    gtQRDBText4: TgtQRDBText;
-    gtQRLabel5: TgtQRLabel;
-    gtQRDBText5: TgtQRDBText;
-    gtQRShape7: TgtQRShape;
-    gtQRLabel1: TgtQRLabel;
-    gtQRDBText1: TgtQRDBText;
+    gtQRShape11: TQRShape;
+    gtQRShape12: TQRShape;
+    gtQRShape13: TQRShape;
+    gtQRShape14: TQRShape;
+    qrlblJobType: TQRLabel;
+    gtQRDBText4: TQRDBText;
+    gtQRLabel5: TQRLabel;
+    gtQRDBText5: TQRDBText;
+    gtQRShape7: TQRShape;
+    gtQRLabel1: TQRLabel;
+    gtQRDBText1: TQRDBText;
     QRBand1: TQRBand;
-    gtQRShape8: TgtQRShape;
-    gtQRMemo1: TgtQRMemo;
-    gtQRSysData1: TgtQRSysData;
-    gtQRShape9: TgtQRShape;
-    gtQRShape10: TgtQRShape;
-    gtQRLabel6: TgtQRLabel;
-    gtQRDBText3: TgtQRDBText;
-    qriHeadLogo: TgtQRImage;
+    gtQRShape8: TQRShape;
+    gtQRMemo1: TQRMemo;
+    gtQRSysData1: TQRSysData;
+    gtQRShape9: TQRShape;
+    gtQRShape10: TQRShape;
+    gtQRLabel6: TQRLabel;
+    gtQRDBText3: TQRDBText;
+    qriHeadLogo: TQRImage;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsdFitterDateTimesBeforePrint(Sender: TQRCustomBand;

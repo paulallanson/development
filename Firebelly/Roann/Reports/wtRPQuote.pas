@@ -4,9 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -19,13 +19,13 @@ type
     qryQElements: TFDQuery;
     dtsReport: TDataSource;
     qrsdQElements: TQRSubDetail;
-    lblWorktopSize: TgtQRLabel;
-    lblWorktopArea: TgtQRLabel;
+    lblWorktopSize: TQRLabel;
+    lblWorktopArea: TQRLabel;
     qrsdQCutOuts: TQRSubDetail;
     qryQCutOuts: TFDQuery;
-    qrlblQuantity: TgtQRLabel;
+    qrlblQuantity: TQRLabel;
     qrsdQEdges: TQRSubDetail;
-    qrlblLength: TgtQRLabel;
+    qrlblLength: TQRLabel;
     qrsdQExtras: TQRSubDetail;
     qryQEdges: TFDQuery;
     qryQExtras: TFDQuery;
@@ -33,106 +33,105 @@ type
     qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     qrbQFooter: TQRBand;
-    lblGrossSupply: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    qrlblGrossPrice: TgtQRLabel;
-    qrlblInstallation: TgtQRLabel;
-    qrlblSurvey: TgtQRLabel;
-    qrlblDelivery: TgtQRLabel;
+    lblGrossSupply: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    qrlblGrossPrice: TQRLabel;
+    qrlblInstallation: TQRLabel;
+    qrlblSurvey: TQRLabel;
+    qrlblDelivery: TQRLabel;
     qrcbAvailability: TQRChildBand;
-    QRLabel9: TgtQRLabel;
+    QRLabel9: TQRLabel;
     qrcbTerms: TQRChildBand;
-    QRLabel10: TgtQRLabel;
+    QRLabel10: TQRLabel;
     qryCompany: TFDQuery;
     qrygetNotes: TFDQuery;
-    qrlblCompanyAdd: TgtQRLabel;
+    qrlblCompanyAdd: TQRLabel;
     qryUpQuote: TFDQuery;
     qrcbNotes: TQRChildBand;
-    qrlNotes: TgtQRLabel;
+    qrlNotes: TQRLabel;
     qrcbSignature: TQRChildBand;
-    QRLabel13: TgtQRLabel;
-    QRLabel14: TgtQRLabel;
-    QRLabel15: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    QRShape2: TgtQRShape;
-    QRShape3: TgtQRShape;
-    qrlblQuoteCaption: TgtQRLabel;
-    qrmAddress: TgtQRMemo;
-    QRLabel2: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
-    QRDBText2: TgtQRDBText;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRDBText3: TgtQRDBText;
-    QRDBText4: TgtQRDBText;
-    QRLabel5: TgtQRLabel;
-    QRLabel12: TgtQRLabel;
-    qrrchTextNotes: TgtQRRichText;
-    qrrchTextAvailability: TgtQRRichText;
-    qrrchtextTerms: TgtQRRichText;
-    QRLabel16: TgtQRLabel;
-    QRDBText6: TgtQRDBText;
-    QRShape5: TgtQRShape;
-    QRLabel1: TgtQRLabel;
-    QRLabel19: TgtQRLabel;
-    QRLabel20: TgtQRLabel;
-    QRLabel21: TgtQRLabel;
-    qrlblDepositReqd: TgtQRLabel;
-    qrlblBalanceDue: TgtQRLabel;
-    qrlblNettAcc: TgtQRLabel;
-    qrlblVatAcc: TgtQRLabel;
-    qrlblGrossAcc: TgtQRLabel;
-    qrlblDeposit: TgtQRLabel;
-    qrlblBalance: TgtQRLabel;
-    QRLabel24: TgtQRLabel;
-    QRShape6: TgtQRShape;
-    QRShape7: TgtQRShape;
-    QRLabel25: TgtQRLabel;
+    QRLabel13: TQRLabel;
+    QRLabel14: TQRLabel;
+    QRLabel15: TQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    qrlblQuoteCaption: TQRLabel;
+    qrmAddress: TQRMemo;
+    QRLabel2: TQRLabel;
+    QRDBText1: TQRDBText;
+    QRDBText2: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRLabel5: TQRLabel;
+    QRLabel12: TQRLabel;
+    qrrchTextNotes: TQRRichText;
+    qrrchTextAvailability: TQRRichText;
+    qrrchtextTerms: TQRRichText;
+    QRLabel16: TQRLabel;
+    QRDBText6: TQRDBText;
+    QRShape5: TQRShape;
+    QRLabel1: TQRLabel;
+    QRLabel19: TQRLabel;
+    QRLabel20: TQRLabel;
+    QRLabel21: TQRLabel;
+    qrlblDepositReqd: TQRLabel;
+    qrlblBalanceDue: TQRLabel;
+    qrlblNettAcc: TQRLabel;
+    qrlblVatAcc: TQRLabel;
+    qrlblGrossAcc: TQRLabel;
+    qrlblDeposit: TQRLabel;
+    qrlblBalance: TQRLabel;
+    QRLabel24: TQRLabel;
+    QRShape6: TQRShape;
+    QRShape7: TQRShape;
+    QRLabel25: TQRLabel;
     qrcbAcceptanceHeader: TQRChildBand;
-    QRLabel26: TgtQRLabel;
-    QRLabel27: TgtQRLabel;
-    QRDBText7: TgtQRDBText;
-    QRDBText8: TgtQRDBText;
-    QRShape8: TgtQRShape;
-    QRShape9: TgtQRShape;
-    QRLabel28: TgtQRLabel;
-    QRShape10: TgtQRShape;
-    QRLabel29: TgtQRLabel;
-    QRDBText9: TgtQRDBText;
-    QRLabel30: TgtQRLabel;
-    QRDBText10: TgtQRDBText;
+    QRLabel26: TQRLabel;
+    QRLabel27: TQRLabel;
+    QRDBText7: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRShape8: TQRShape;
+    QRShape9: TQRShape;
+    QRLabel28: TQRLabel;
+    QRShape10: TQRShape;
+    QRLabel29: TQRLabel;
+    QRDBText9: TQRDBText;
+    QRLabel30: TQRLabel;
+    QRDBText10: TQRDBText;
     qryEndUser: TFDQuery;
-    QRLabel11: TgtQRLabel;
-    QRShape11: TgtQRShape;
-    gtQRFilters1: TgtQRFilters;
-    lblWorktopTotal: TgtQRLabel;
-    lblCutOutTotal: TgtQRLabel;
-    lblEdgeTotal: TgtQRLabel;
-    lblExtraTotal: TgtQRLabel;
-    qriHeadLogo: TgtQRImage;
+    QRLabel11: TQRLabel;
+    QRShape11: TQRShape;
+    lblWorktopTotal: TQRLabel;
+    lblCutOutTotal: TQRLabel;
+    lblEdgeTotal: TQRLabel;
+    lblExtraTotal: TQRLabel;
+    qriHeadLogo: TQRImage;
     qrcbDiscount: TQRBand;
-    lblDiscount: TgtQRLabel;
-    qrlblDiscountValue: TgtQRLabel;
+    lblDiscount: TQRLabel;
+    qrlblDiscountValue: TQRLabel;
     qrcbTotal: TQRChildBand;
-    QRShape4: TgtQRShape;
-    QRLabel18: TgtQRLabel;
-    qrlblGross: TgtQRLabel;
-    qrlblCutOut: TgtQRLabel;
-    qrlblEdgeDescription: TgtQRLabel;
-    qrlblExtraDescription: TgtQRLabel;
-    qrlblExtraQuantity: TgtQRLabel;
+    QRShape4: TQRShape;
+    QRLabel18: TQRLabel;
+    qrlblGross: TQRLabel;
+    qrlblCutOut: TQRLabel;
+    qrlblEdgeDescription: TQRLabel;
+    qrlblExtraDescription: TQRLabel;
+    qrlblExtraQuantity: TQRLabel;
     qrcbSubTotal: TQRChildBand;
-    qrlblVatRate: TgtQRLabel;
-    qrlblVAT: TgtQRLabel;
-    qrlblNett: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
-    gtQRLabel1: TgtQRLabel;
-    qrlblExpiryDate: TgtQRLabel;
-    qrdbtExpiryDate: TgtQRDBText;
-    imgPromotion: TgtQRImage;
-    qrdbDescription: TgtQRDBText;
+    qrlblVatRate: TQRLabel;
+    qrlblVAT: TQRLabel;
+    qrlblNett: TQRLabel;
+    gtQRShape1: TQRShape;
+    gtQRLabel1: TQRLabel;
+    qrlblExpiryDate: TQRLabel;
+    qrdbtExpiryDate: TQRDBText;
+    imgPromotion: TQRImage;
+    qrdbDescription: TQRDBText;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure FormCreate(Sender: TObject);
@@ -196,7 +195,8 @@ var
 
 implementation
 
-uses AllCommon, wtDataModule;
+uses
+  AllCommon, wtDataModule, Printer.Tools;
 
 var
   rGrossTotal: real;
@@ -642,6 +642,12 @@ begin
 end;
 
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
   AFilters: TGtQRFilters;
@@ -658,7 +664,7 @@ begin
   self.bPreview := false;
   if self.GetDetails = 0 then
     exit;
-    
+
   qrpDetails.Prepare;
 
   fileLocation := GetWinTempDir;
@@ -756,6 +762,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmwtRPQuote.qrcbSubTotalBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

@@ -127,7 +127,12 @@ begin
 end;
 
 procedure TfrmWTMaintLogins.FormDestroy(Sender: TObject);
+var
+  fileName: string;
 begin
+  if Pos('\', frmwtMain.AppIniFile) > 0 then
+    fileName := frmwtMain.AppIniFile else
+    fileName := ExtractFilePath(Application.ExeName) + frmwtMain.AppIniFile;
   AllCommon.SaveFormLayout(frmWTMain.AppIniFile, self);
 end;
 

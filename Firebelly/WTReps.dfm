@@ -30,7 +30,7 @@
     Frame.DrawLeft = False
     Frame.DrawRight = False
     Ruler = qrrNone
-    object ListLbl: TgtQRLabel
+    object ListLbl: TQRLabel
       Left = 272
       Top = 96
       Width = 213
@@ -43,7 +43,7 @@
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object QRSysData1: TgtQRSysData
+    object QRSysData1: TQRSysData
       Left = 616
       Top = 16
       Width = 97
@@ -56,7 +56,7 @@
       Font.Style = []
       ParentFont = False
     end
-    object Customer: TgtQRLabel
+    object Customer: TQRLabel
       Left = 32
       Top = 134
       Width = 75
@@ -69,7 +69,7 @@
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object CustLbl: TgtQRLabel
+    object CustLbl: TQRLabel
       Left = 120
       Top = 134
       Width = 60
@@ -82,7 +82,7 @@
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object Discount: TgtQRLabel
+    object Discount: TQRLabel
       Left = 32
       Top = 166
       Width = 69
@@ -95,7 +95,7 @@
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object DiscountLbl: TgtQRLabel
+    object DiscountLbl: TQRLabel
       Left = 128
       Top = 166
       Width = 93
@@ -2849,7 +2849,7 @@
     Frame.DrawRight = False
     ParentFont = False
     Ruler = qrrNone
-    object QRDBText2: TgtQRDBText
+    object QRDBText2: TQRDBText
       Left = 312
       Top = 0
       Width = 121
@@ -2860,7 +2860,7 @@
       DataSource = ThicknessSRC
       DataField = 'Thickness_mm'
     end
-    object RetailText: TgtQRDBText
+    object RetailText: TQRDBText
       Left = 464
       Top = 0
       Width = 89
@@ -2870,7 +2870,7 @@
       AutoStretch = False
       DataSource = ThicknessSRC
     end
-    object QRDBText6: TgtQRDBText
+    object QRDBText6: TQRDBText
       Left = 72
       Top = 0
       Width = 225
@@ -2906,7 +2906,7 @@
     Frame.DrawRight = False
     ParentFont = False
     Ruler = qrrNone
-    object QRLabel2: TgtQRLabel
+    object QRLabel2: TQRLabel
       Left = 72
       Top = 16
       Width = 65
@@ -2914,7 +2914,7 @@
       Caption = 'Worktop'
       AlignToBand = False
     end
-    object QRLabel3: TgtQRLabel
+    object QRLabel3: TQRLabel
       Left = 354
       Top = 16
       Width = 79
@@ -2922,7 +2922,7 @@
       Caption = 'Thickness'
       AlignToBand = False
     end
-    object RetailLbl: TgtQRLabel
+    object RetailLbl: TQRLabel
       Left = 506
       Top = 16
       Width = 39
@@ -2930,7 +2930,7 @@
       Caption = 'Price'
       AlignToBand = False
     end
-    object QRLabel8: TgtQRLabel
+    object QRLabel8: TQRLabel
       Left = 496
       Top = 32
       Width = 52
@@ -2953,7 +2953,7 @@
     Frame.DrawLeft = False
     Frame.DrawRight = False
     Ruler = qrrNone
-    object QRSysData2: TgtQRSysData
+    object QRSysData2: TQRSysData
       Left = 560
       Top = 15
       Width = 65
@@ -2961,7 +2961,7 @@
       AlignToBand = False
       Data = qrsPageNumber
     end
-    object QRLabel1: TgtQRLabel
+    object QRLabel1: TQRLabel
       Left = 512
       Top = 15
       Width = 34
@@ -2984,7 +2984,7 @@
     Frame.DrawLeft = False
     Frame.DrawRight = False
     Ruler = qrrNone
-    object QRLabel7: TgtQRLabel
+    object QRLabel7: TQRLabel
       Left = 24
       Top = 16
       Width = 107
@@ -2997,7 +2997,7 @@
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object QRDBText1: TgtQRDBText
+    object QRDBText1: TQRDBText
       Left = 152
       Top = 16
       Width = 65

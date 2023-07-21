@@ -1975,7 +1975,7 @@ object frmwtRPJobSheetClient: TfrmwtRPJobSheetClient
         63.500000000000000000
         2000.250000000000000000)
       BandType = rbPageFooter
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 615
         Top = -3
         Width = 108

@@ -2509,10 +2509,4 @@ object frmwtRPQuote: TfrmwtRPQuote
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkGIF, fkJPEG, fkBMP]
-    Left = 638
-    Top = 72
-  end
 end

@@ -1288,7 +1288,7 @@ object frmWTRPSOrderAllocation: TfrmWTRPSOrderAllocation
         WordWrap = True
         FontSize = 9
       end
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 607
         Top = 64
         Width = 108

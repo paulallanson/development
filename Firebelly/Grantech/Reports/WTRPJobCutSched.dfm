@@ -1470,7 +1470,7 @@ object frmWTRPJobCutSched: TfrmWTRPJobCutSched
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRSysData1: TgtQRSysData
+      object QRSysData1: TQRSysData
         Left = 594
         Top = 218
         Width = 120

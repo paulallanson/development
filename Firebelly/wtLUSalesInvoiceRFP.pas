@@ -8,7 +8,7 @@ uses
   ExtCtrls, DB, Menus,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TfrmWTLUSalesInvoiceRFP = class(TForm)
@@ -378,9 +378,14 @@ begin
 end;
 
 procedure TfrmWTLUSalesInvoiceRFP.FormDestroy(Sender: TObject);
+var
+  fileName: string;
 begin
   ApplicationList.Free;
-  allCommon.SaveFormLayout(frmwtMain.AppIniFile, self);
+  if Pos('\', frmwtMain.AppIniFile) > 0 then
+    fileName := frmwtMain.AppIniFile else
+    fileName := ExtractFilePath(Application.ExeName) + frmwtMain.AppIniFile;
+  allCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTLUSalesInvoiceRFP.btnClearClick(Sender: TObject);
