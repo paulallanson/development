@@ -243,7 +243,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -349,16 +350,19 @@ procedure TfrmWTRSSOProduction.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  with IniFile do
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
+  try
+    with IniFile do
     begin
       if chkbxSplitByMaterialType.checked then
         WriteString('Sales Order Production Report', 'Split by Material Type', 'Y')
       else
         WriteString('Sales Order Production Report', 'Split by Material Type', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

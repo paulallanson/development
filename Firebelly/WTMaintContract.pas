@@ -409,7 +409,8 @@ begin
   pcDetails.ActivePage := tsQuotes;
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
 
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintContract.SetGridHeaders;
@@ -850,7 +851,8 @@ end;
 procedure TfrmWTMaintContract.FormDestroy(Sender: TObject);
 begin
   dtmdlAllQuote.free;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintContract.mnuEditOptionClick(Sender: TObject);

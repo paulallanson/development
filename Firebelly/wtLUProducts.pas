@@ -288,20 +288,22 @@ end;
 
 procedure TfrmWTLUProducts.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
-  AllCommon.SetDBGridCols('', 'ProductsLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.SetDBGridCols('', 'ProductsLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmWTLUProducts.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTLUProducts.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'ProductsLU Col Order', 'myWorktops.ini', self.dbgDetails);
-
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'ProductsLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmWTLUProducts.BitBtn2Click(Sender: TObject);

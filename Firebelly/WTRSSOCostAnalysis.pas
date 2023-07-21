@@ -267,7 +267,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -433,13 +434,14 @@ procedure TfrmWTRSSOCostAnalysis.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
-    begin
-      WriteString('Sales Order Cost Analysis Report', 'Select By', inttostr(rdgrpSelectBy.itemindex));
-      Free;
-    end;
+  try
+    IniFile.WriteString('Sales Order Cost Analysis Report', 'Select By', inttostr(rdgrpSelectBy.itemindex));
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

@@ -1,9 +1,9 @@
 object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
   Left = 236
   Top = 50
-  Width = 935
-  Height = 661
   Caption = 'Sales Invoice Details'
+  ClientHeight = 622
+  ClientWidth = 919
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 875
@@ -12,17 +12,15 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 611
-    Width = 927
+    Top = 603
+    Width = 919
     Height = 19
     Panels = <
       item
@@ -31,15 +29,19 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       item
         Width = 50
       end>
+    ExplicitTop = 611
+    ExplicitWidth = 927
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 570
-    Width = 927
+    Top = 562
+    Width = 919
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 570
+    ExplicitWidth = 927
     object btnNotes: TBitBtn
       Left = 8
       Top = 8
@@ -51,9 +53,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -68,6 +67,9 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnNotesClick
     end
     object btnInternalNotes: TBitBtn
       Left = 101
@@ -80,9 +82,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = btnInternalNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -97,15 +96,18 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnInternalNotesClick
     end
     object Panel1: TPanel
-      ParentBackground = False
       Left = 491
       Top = 1
       Width = 435
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       DesignSize = (
         435
@@ -132,8 +134,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         Anchors = [akRight, akBottom]
         Caption = 'OK'
         Default = True
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -152,6 +152,8 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object BitBtn2: TBitBtn
         Left = 352
@@ -159,21 +161,23 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 927
+    Width = 919
     Height = 36
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 927
     DesignSize = (
-      927
+      919
       36)
     object Label1: TLabel
       Left = 8
@@ -236,8 +240,6 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnInvDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -252,6 +254,8 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnInvDateClick
     end
     object dblkpOperator: TDBLookupComboBox
       Left = 757
@@ -267,15 +271,17 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 444
-    Width = 927
+    Top = 436
+    Width = 919
     Height = 126
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 444
+    ExplicitWidth = 927
     DesignSize = (
-      927
+      919
       126)
     object lblDepositLabel: TLabel
       Left = 555
@@ -301,14 +307,15 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       Caption = 'Total Paid'
     end
     object Panel5: TPanel
-      ParentBackground = False
-      Left = 741
+      Left = 733
       Top = 1
       Width = 185
       Height = 124
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 741
       DesignSize = (
         185
         124)
@@ -454,15 +461,16 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 36
-    Width = 927
+    Width = 919
     Height = 221
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 927
     DesignSize = (
-      927
+      919
       221)
     object Label6: TLabel
       Left = 525
@@ -624,12 +632,12 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       OnChange = edtDescriptionChange
     end
     object pnlRevenueCentre: TPanel
-      ParentBackground = False
       Left = -2
       Top = 160
       Width = 419
       Height = 27
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 8
       DesignSize = (
         419
@@ -690,12 +698,12 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
       end
     end
     object pnlCustomerBranch: TPanel
-      ParentBackground = False
       Left = 0
       Top = 104
       Width = 449
       Height = 27
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 9
       DesignSize = (
         449
@@ -773,14 +781,16 @@ object frmWTMaintSalesInvoice: TfrmWTMaintSalesInvoice
     end
   end
   object Panel6: TPanel
-    ParentBackground = False
     Left = 0
     Top = 257
-    Width = 927
-    Height = 187
+    Width = 919
+    Height = 179
     Align = alClient
     Caption = 'Panel6'
+    ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 927
+    ExplicitHeight = 187
     object sgLines: TStringGrid
       Left = 1
       Top = 1

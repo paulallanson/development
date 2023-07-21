@@ -216,6 +216,7 @@ var
   i, icount, irow, iQuoteCount: integer;
   iPosStart,iPosEnd: integer;
   sFilename: array[0..255] of Char;
+  printFileName: string;
 begin
   GetSelection;
 
@@ -318,7 +319,8 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
+              printFileName := 'Q' + sAttachmentType;
+              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, EmailArray[irow,1]);
 
               if iQuoteCount = 1 then
                 begin
@@ -403,7 +405,8 @@ begin
 
               frmwtRPQuote.GetDetails;
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
+              printFileName := 'Q' + sAttachmentType;
+              PrinterTools.New.PrintToAttachment(frmwtRPQuote.qrpDetails, FEMailAttachment, printFileName, EmailArray[irow,1]);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1] + ' - ' + frmwtRPQuote.qryReport.fieldbyname('Reference').asstring;
 
@@ -510,6 +513,7 @@ var
   i, icount, irow, iQuoteCount: integer;
   iPosStart,iPosEnd: integer;
   sFilename: array[0..255] of Char;
+  printFileName: string;
 begin
   GetSelection;
 
@@ -611,7 +615,8 @@ begin
     	          end;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
+              printFileName := 'Q' + sAttachmentType;
+              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, EmailArray[irow,1]);
 
               if iQuoteCount = 1 then
                 begin
@@ -708,9 +713,10 @@ begin
               frmwtRPQuoteSummary.qrpDetails.ShowProgress := false;
 
               frmwtRPQuoteSummary.GetDetails;
-              sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
 
-              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, sFileName, EmailArray[irow,1]);
+              sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
+              printFileName := 'Q' + sAttachmentType;
+              PrinterTools.New.PrintToAttachment(frmwtRPQuoteSummary.qrpDetails, FEMailAttachment, printFileName, EmailArray[irow,1]);
 
               sSubject := sSubject + ', ' + EmailArray[irow,1];
 
@@ -1386,7 +1392,8 @@ procedure TfrmWTRSQuote.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   with IniFile do
     begin
@@ -1460,7 +1467,8 @@ procedure TfrmWTRSQuote.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do

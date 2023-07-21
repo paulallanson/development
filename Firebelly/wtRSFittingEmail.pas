@@ -422,7 +422,7 @@ procedure TfrmWTRSTemplateSheet.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(fileName);
 
   with IniFile do
     begin
@@ -459,7 +459,7 @@ procedure TfrmWTRSTemplateSheet.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do

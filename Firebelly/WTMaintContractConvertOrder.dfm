@@ -1,9 +1,9 @@
 object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   Left = 425
   Top = 59
-  Width = 620
-  Height = 670
   Caption = 'Convert to Order'
+  ClientHeight = 631
+  ClientWidth = 604
   Color = clBtnFace
   Constraints.MinWidth = 560
   Font.Charset = DEFAULT_CHARSET
@@ -11,23 +11,23 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 594
-    Width = 612
+    Top = 586
+    Width = 604
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 4
+    ExplicitTop = 594
+    ExplicitWidth = 612
     DesignSize = (
-      612
+      604
       45)
     object btnOK: TBitBtn
       Left = 395
@@ -38,8 +38,6 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -58,6 +56,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 483
@@ -65,19 +65,22 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      Kind = bkCancel
     end
   end
   object pnlReference: TPanel
     Left = 0
-    Top = 532
-    Width = 612
+    Top = 524
+    Width = 604
     Height = 62
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 532
+    ExplicitWidth = 612
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -126,11 +129,12 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 612
+    Width = 604
     Height = 129
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 612
     object Label2: TLabel
       Left = 16
       Top = 16
@@ -271,8 +275,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object dbgDetails: TDBGrid
     Left = 0
     Top = 393
-    Width = 612
-    Height = 139
+    Width = 604
+    Height = 131
     Align = alClient
     DataSource = dtsSalesOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -313,11 +317,12 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlSiteLocation: TPanel
     Left = 0
     Top = 129
-    Width = 612
+    Width = 604
     Height = 264
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 612
     object Label4: TLabel
       Left = 16
       Top = 8
@@ -576,14 +581,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktops: TDataSource
@@ -601,9 +602,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetWTThickness: TFDQuery
@@ -617,14 +616,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryThickness: TFDQuery
@@ -662,14 +657,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsThickness: TDataSource
@@ -693,9 +684,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 233
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetMaterialSlabSize: TFDQuery
@@ -708,9 +697,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryGetQSlab: TFDQuery
@@ -723,9 +710,7 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
 end

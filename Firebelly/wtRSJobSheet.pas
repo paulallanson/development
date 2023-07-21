@@ -469,8 +469,8 @@ begin
                   begin
                     frmWTRPJobRemedialSheet.bPreview := false;
                     sAttachmentType := 'PDF';
-                    sFileName := 'RS' + memSelection.text + '-J' + memSOrderNumber.text;
-                    PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, AttachmentList, sFileName, sAttachmentType);
+                    var printFileName := 'RS' + memSelection.text + '-J' + memSOrderNumber.text;
+                    PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, AttachmentList, printFileName, sAttachmentType);
                   end;
               finally
                 frmWTRPJobRemedialSheet.Free;
@@ -1093,7 +1093,8 @@ procedure TfrmWTRSJobSheet.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   with IniFile do
     begin
@@ -1158,7 +1159,8 @@ var
 begin
   if not FActivated then
     begin
-      IniFile := TIniFile.Create('myWorktops.ini');
+      var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+      IniFile := TIniFile.Create(fileName);
       try
         with IniFile do
           begin

@@ -3,8 +3,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   Top = 211
   BorderStyle = bsDialog
   Caption = 'Print Purchase Order'
-  ClientHeight = 176
-  ClientWidth = 375
+  ClientHeight = 174
+  ClientWidth = 367
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    375
-    176)
+    367
+    174)
   TextHeight = 13
   object memSelection: TMemo
     Left = 8
@@ -49,7 +49,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 137
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -57,10 +57,11 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 3
     OnClick = btnPrintClick
+    ExplicitTop = 137
   end
   object btnPreview: TButton
     Left = 99
-    Top = 137
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -68,10 +69,11 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 137
   end
   object btnEmail: TButton
     Left = 191
-    Top = 137
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -79,16 +81,18 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 137
   end
   object Button4: TButton
     Left = 283
-    Top = 137
+    Top = 135
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 6
     OnClick = Button4Click
+    ExplicitTop = 137
   end
   object qryGetRange: TFDQuery
     ConnectionName = 'WT'
@@ -102,14 +106,10 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierEmailCCs: TFDQuery
@@ -124,14 +124,10 @@ object frmWTRSPOrder: TfrmWTRSPOrder
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
 end

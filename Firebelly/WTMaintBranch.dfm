@@ -244,15 +244,16 @@ object frmWTMaintBranch: TfrmWTMaintBranch
   end
   object pgDetails: TPageControl
     Left = 0
-    Top = 260
+    Top = 261
     Width = 514
-    Height = 231
+    Height = 230
     ActivePage = TabSheet1
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 8
     ExplicitTop = 268
     ExplicitWidth = 522
+    ExplicitHeight = 231
     object TabSheet1: TTabSheet
       Caption = 'Installation Notes'
       object memInstallationNotes: TMemo
@@ -395,9 +396,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -425,39 +424,28 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Installation_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Site_QS_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Special_Instructions'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpd: TFDQuery
@@ -474,39 +462,28 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Branch_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Installation_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Site_QS_Contact'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Special_Instructions'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -518,14 +495,10 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetBranch: TFDQuery
@@ -539,14 +512,10 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetAddress: TFDQuery
@@ -559,9 +528,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryAddAddress: TFDQuery
@@ -593,54 +560,35 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address_name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_city'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_state'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Installation_Address'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryUpAddress: TFDQuery
@@ -661,49 +609,31 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_City'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_State'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextAdd: TFDQuery
@@ -726,9 +656,7 @@ object frmWTMaintBranch: TfrmWTMaintBranch
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsContacts: TDataSource

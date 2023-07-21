@@ -257,7 +257,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -408,16 +409,20 @@ procedure TfrmWTRSSalesOrderInvoice.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxOnlyShowDiff.checked then
         WriteString('Sales Order Invoice Comparison', 'Only Show Difference', 'Y')
       else
         WriteString('Sales Order Invoice Comparison', 'Only Show Difference', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

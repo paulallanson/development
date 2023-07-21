@@ -423,9 +423,11 @@ procedure TfrmWTRSContract.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxPrintLogo.checked then
         WriteString('Contract Quote', 'Print Logo', 'Y')
@@ -441,15 +443,18 @@ begin
         WriteString('Contract Quote', 'Value based on units', 'Y')
       else
         WriteString('Contract Quote', 'Value based on units', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTRSContract.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do

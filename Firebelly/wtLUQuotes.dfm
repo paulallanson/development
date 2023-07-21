@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 563
-  ClientWidth = 1359
+  ClientHeight = 562
+  ClientWidth = 1355
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 544
-    Width = 1359
+    Top = 543
+    Width = 1355
     Height = 19
     Panels = <
       item
@@ -40,14 +40,12 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 503
-    Width = 1359
+    Top = 502
+    Width = 1355
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 511
-    ExplicitWidth = 1367
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -64,7 +62,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1076
+      Left = 1064
       Top = 1
       Width = 290
       Height = 39
@@ -127,7 +125,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1359
+    Width = 1355
     Height = 45
     Bands = <
       item
@@ -256,8 +254,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1359
-    Height = 426
+    Width = 1355
+    Height = 425
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
@@ -396,20 +394,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1359
+    Width = 1355
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1363
+        Width = 1349
       end>
-    ExplicitWidth = 1367
     object Panel3: TPanel
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1350
+      Width = 1340
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -417,7 +414,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1344
+        1340
         28)
       object Label2: TLabel
         Left = 0
@@ -448,7 +445,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1100
+        Left = 1080
         Top = 7
         Width = 69
         Height = 13
@@ -463,7 +460,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1112
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1180
+        Left = 1160
         Top = 3
         Width = 145
         Height = 21

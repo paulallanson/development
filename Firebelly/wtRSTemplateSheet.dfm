@@ -3,8 +3,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
-  ClientHeight = 454
-  ClientWidth = 525
+  ClientHeight = 452
+  ClientWidth = 517
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,8 +28,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 374
-    Width = 525
+    Top = 372
+    Width = 517
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
@@ -37,7 +37,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     ExplicitTop = 375
     ExplicitWidth = 529
     DesignSize = (
-      525
+      517
       80)
     object btnPrint: TButton
       Left = 8
@@ -94,7 +94,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 525
+    Width = 517
     Height = 62
     Align = alTop
     BevelOuter = bvNone
@@ -124,7 +124,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 525
+    Width = 517
     Height = 138
     Align = alTop
     TabOrder = 3
@@ -176,8 +176,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 200
-    Width = 525
-    Height = 174
+    Width = 517
+    Height = 172
     Align = alClient
     Caption = 'pnlDocumentDetails'
     TabOrder = 4
@@ -186,11 +186,13 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
-      Width = 527
-      Height = 173
+      Width = 519
+      Height = 171
       ActivePage = TabSheet2
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 527
+      ExplicitHeight = 173
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox
@@ -251,9 +253,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrders: TFDQuery
@@ -301,9 +301,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmails: TFDQuery
@@ -353,9 +351,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuotesEmails: TFDQuery
@@ -369,9 +365,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmailsOlder: TFDQuery
@@ -417,9 +411,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmailsOld: TFDQuery
@@ -470,9 +462,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryDocumentStructure: TFDQuery
@@ -526,9 +516,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -550,9 +538,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

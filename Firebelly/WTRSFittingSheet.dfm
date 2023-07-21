@@ -3,8 +3,8 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   Top = 139
   BorderStyle = bsDialog
   Caption = 'Fitting Sheet Print'
-  ClientHeight = 453
-  ClientWidth = 530
+  ClientHeight = 452
+  ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,14 +28,16 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 373
-    Width = 530
+    Top = 372
+    Width = 526
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 373
+    ExplicitWidth = 530
     DesignSize = (
-      530
+      526
       80)
     object btnPrint: TButton
       Left = 8
@@ -92,11 +94,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 530
+    Width = 526
     Height = 63
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 530
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -121,10 +124,11 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 530
+    Width = 526
     Height = 138
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 530
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -173,10 +177,12 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 201
-    Width = 530
-    Height = 172
+    Width = 526
+    Height = 171
     Align = alClient
     TabOrder = 4
+    ExplicitWidth = 530
+    ExplicitHeight = 172
     object pcDocumentDetails: TPageControl
       Left = 1
       Top = 1
@@ -245,9 +251,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmailsOld: TFDQuery
@@ -303,9 +307,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSORemedialsEmails: TFDQuery
@@ -319,9 +321,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -343,9 +343,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDocumentStructure: TFDQuery
@@ -387,14 +385,10 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrdersOlder: TFDQuery
@@ -438,9 +432,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmailsOlder: TFDQuery
@@ -497,9 +489,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesOrdersOld: TFDQuery
@@ -553,9 +543,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrders: TFDQuery
@@ -609,9 +597,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmails: TFDQuery
@@ -669,9 +655,7 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
 end

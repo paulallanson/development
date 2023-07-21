@@ -425,9 +425,9 @@ begin
 	LocalDir := extractfilepath(application.ExeName);
 
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+'myWorktops.ini')
+    StrPCopy(AppIniFile,LocalDir+myWorktops_INIFILE)
   else
-    StrPCopy(AppIniFile,'myWorktops.ini');
+    StrPCopy(AppIniFile,myWorktops_INIFILE);
 
 {$IFDEF DEMO}
 //  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
@@ -1504,7 +1504,8 @@ begin
   if messagedlg('Reset your Firebelly screen settings?',
     mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
-    IniFile := TIniFile.Create('myWorktops.ini');
+    var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+    IniFile := TIniFile.Create(fileName);
 
     try
       IniFile.EraseSection('FormPositions');

@@ -74,7 +74,7 @@ begin
 
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, fileName, Self.attachmentTypeList[inx]);
     self.EmailViaOutlook(self.recipientList[inx], 'Test Email', self.FEmailAttachment, self.CCList[inx]);
   end;
 end;
@@ -88,7 +88,7 @@ begin
 
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, fileName, Self.attachmentTypeList[inx]);
 
     try
       for icount := 0 to pred(AttachmentList.Count) do
@@ -107,7 +107,7 @@ var
 begin
   for inx := 0 to (self.recipientList.count - 1) do
   begin
-    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[inx]);
+    PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, fileName, Self.attachmentTypeList[inx]);
     self.EmailViaOutlook(self.recipientList[inx], Subject, self.FEmailAttachment, self.CCList[inx]);
   end;
 end;
@@ -127,7 +127,7 @@ begin
   for inx := 0 to (self.recipientList.count - 1) do
     recipientList := recipientList + self.recipientList[inx] + ';';
 
-  PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, FileName, Self.attachmentTypeList[0]);
+  PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, fileName, Self.attachmentTypeList[0]);
   self.EmailViaOutlook(recipientList, Subject, self.FEmailAttachment, self.CCList[0]);
 end;
 

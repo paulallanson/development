@@ -82,17 +82,20 @@ procedure TfrmWTMaintPurchaseOrderReceipts.FormClose(Sender: TObject;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-  with IniFile do
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
+  try
+    with IniFile do
     begin
 (*      try
         WriteString('Centrereed Broker', 'Bench Stock Area', inttostr(dblkpProductionlocation.KeyValue));
       except
         WriteString('Centrereed Broker', 'Bench Stock Area', '0');
       end;
-      free;
-*)
-    end;
+*)  end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTMaintPurchaseOrderReceipts.FormCreate(Sender: TObject);
@@ -100,7 +103,8 @@ begin
   bOK := false;
   SetGridHeaders;
 
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintPurchaseOrderReceipts.FormActivate(Sender: TObject);

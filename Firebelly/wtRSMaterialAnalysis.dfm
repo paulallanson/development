@@ -3,8 +3,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   Top = 91
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Material Analysis'
-  ClientHeight = 419
-  ClientWidth = 639
+  ClientHeight = 418
+  ClientWidth = 635
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    639
-    419)
+    635
+    418)
   TextHeight = 13
   object btnPrint: TButton
     Left = 16
-    Top = 380
+    Top = 379
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -31,7 +31,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object Button4: TButton
     Left = 534
-    Top = 380
+    Top = 379
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -163,7 +163,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnExcel: TBitBtn
     Left = 198
-    Top = 380
+    Top = 379
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -217,7 +217,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnPreview: TButton
     Left = 104
-    Top = 380
+    Top = 379
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -547,14 +547,10 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object pmnCustomers: TPopupMenu
@@ -617,14 +613,10 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
 end

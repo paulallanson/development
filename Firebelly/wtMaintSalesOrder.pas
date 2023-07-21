@@ -683,11 +683,11 @@ begin
   tbPurchases.TabVisible := dtmdlWorktops.UsePurchaseOrdering;
   btnGenerateDocs.Visible := dtmdlWorktops.UseDocumentTransfer;
 
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 
   lblNotes.left := memNotes.Left;
   lblApplianceDetails.left := edtApplianceDetails.Left;
-
 end;
 
 procedure TfrmWTMaintSalesOrder.SetGridHeaders;
@@ -1425,9 +1425,9 @@ begin
         cells[4,i+1] := SOrder.Purchases[i].SupplierName;
         cells[5,i+1] := SOrder.Purchases[i].LineDescription;
         cells[6,i+1] := inttostr(SOrder.Purchases[i].SlabLength) + ' x ' + inttostr(SOrder.Purchases[i].SlabDepth) + ' ' + SOrder.Purchases[i].SlabDescription;
-        cells[7,i+1] := formatfloat('£0.00',SOrder.Purchases[i].UnitCost);
+        cells[7,i+1] := formatfloat('?0.00',SOrder.Purchases[i].UnitCost);
         cells[8,i+1] := inttostr(SOrder.Purchases[i].Quantity);
-        cells[9,i+1] := formatfloat('£0.00',SOrder.Purchases[i].TotalCost);
+        cells[9,i+1] := formatfloat('?0.00',SOrder.Purchases[i].TotalCost);
         cells[10,i+1] := SOrder.Purchases[i].StatusDescription;
         cells[11,i+1] := SOrder.Purchases[i].GRNNumber;
         icount := icount + 1;
@@ -2572,8 +2572,9 @@ begin
 //    dtmdlAllJobs.free;
   except
   end;
-  
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintSalesOrder.chkbxMaterialRequiredClick(
@@ -4086,7 +4087,7 @@ begin
 
 //  rTotalSI := SOrder.DataModule.GetJobBagTotalSalesInvoiced(SOrder.dbKey);
   rTotalSI := 0.00;
-  memTotalSI.text := formatfloat('£#,###,##0.00',rTotalSI);
+  memTotalSI.text := formatfloat('?#,###,##0.00',rTotalSI);
 end;
 
 procedure TfrmWTMaintSalesOrder.dbgSalesInvoicesDblClick(Sender: TObject);
@@ -4147,7 +4148,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('?#,###,##0.00',strtofloat(Column.field.asstring))
         except
           sValue := ''
         end

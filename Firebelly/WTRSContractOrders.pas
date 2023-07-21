@@ -256,7 +256,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -404,15 +405,20 @@ procedure TfrmWTRSContractOrders.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxShowOnlyScheduled.checked then
         WriteString('Contract Order Report', 'Only Show Scheduled', 'Y')
       else
         WriteString('Contract Order Report', 'Only Show Scheduled', 'N');
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

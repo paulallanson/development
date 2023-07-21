@@ -43,7 +43,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       1004
       42)
     object lblDelete: TLabel
-      Left = 655
+      Left = 651
       Top = 15
       Width = 163
       Height = 13
@@ -55,9 +55,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 655
     end
     object btnOK: TBitBtn
-      Left = 834
+      Left = 830
       Top = 9
       Width = 75
       Height = 25
@@ -68,9 +69,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
+      ExplicitLeft = 834
     end
     object BitBtn2: TBitBtn
-      Left = 920
+      Left = 916
       Top = 9
       Width = 75
       Height = 25
@@ -80,6 +82,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtn2Click
+      ExplicitLeft = 920
     end
     object chkbxInactive: TCheckBox
       Left = 13
@@ -342,12 +345,14 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ImageIndex = 2
       OnShow = tsMaterialsShow
       object Panel3: TPanel
-        Left = 911
+        Left = 903
         Top = 0
         Width = 93
-        Height = 324
+        Height = 316
         Align = alRight
         TabOrder = 0
+        ExplicitLeft = 911
+        ExplicitHeight = 324
         object btnChange: TBitBtn
           Left = 10
           Top = 40
@@ -406,8 +411,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object dbgDetails: TDBGrid
         Left = 0
         Top = 0
-        Width = 911
-        Height = 324
+        Width = 903
+        Height = 316
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 1
@@ -477,8 +482,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       end
       object pnlMaterialsFooter: TPanel
         Left = 0
-        Top = 324
-        Width = 1004
+        Top = 316
+        Width = 996
         Height = 62
         Align = alBottom
         TabOrder = 2
@@ -626,7 +631,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnClick = BitBtn5Click
         end
         object btnSweep: TBitBtn
-          Left = 896
+          Left = 888
           Top = 6
           Width = 75
           Height = 25
@@ -654,8 +659,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       OnShow = tsWorktopsShow
       object Panel2: TPanel
         Left = 0
-        Top = 324
-        Width = 1004
+        Top = 316
+        Width = 996
         Height = 62
         Align = alBottom
         TabOrder = 0
@@ -1103,8 +1108,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
   end
   object tblOneSupplier: TFDTable
     OnNewRecord = tblOneSupplierNewRecord
-    ConnectionName = 'wt'
     Filtered = True
+    ConnectionName = 'wt'
     TableName = 'Supplier'
     Left = 376
     Top = 336
@@ -1464,9 +1469,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -1493,74 +1496,55 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Street'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Locale'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Town_City'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Postcode'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'County_State'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Fax_Number'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Web_Address'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Email_Address'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InActive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1576,8 +1560,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 400
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1591,9 +1575,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -1606,8 +1588,8 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 400
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

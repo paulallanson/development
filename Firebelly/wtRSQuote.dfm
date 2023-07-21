@@ -3,8 +3,8 @@ object frmWTRSQuote: TfrmWTRSQuote
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Quote'
-  ClientHeight = 356
-  ClientWidth = 444
+  ClientHeight = 355
+  ClientWidth = 440
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSQuote: TfrmWTRSQuote
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    444
-    356)
+    440
+    355)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 319
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -28,18 +28,18 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 14
     OnClick = btnPrintClick
-    ExplicitTop = 318
+    ExplicitTop = 317
   end
   object Button4: TButton
     Left = 368
-    Top = 319
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 17
     OnClick = Button4Click
-    ExplicitTop = 318
+    ExplicitTop = 317
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -70,7 +70,7 @@ object frmWTRSQuote: TfrmWTRSQuote
   end
   object btnPreview: TButton
     Left = 96
-    Top = 319
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -78,11 +78,11 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 15
     OnClick = btnPreviewClick
-    ExplicitTop = 318
+    ExplicitTop = 317
   end
   object btnEmail: TButton
     Left = 184
-    Top = 319
+    Top = 318
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,7 +90,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Enabled = False
     TabOrder = 16
     OnClick = btnEmailClick
-    ExplicitTop = 318
+    ExplicitTop = 317
   end
   object chkbxOnlyShowGrandTotal: TCheckBox
     Left = 8
@@ -257,9 +257,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteMaterial: TFDQuery
@@ -293,9 +291,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Top = 62
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object OldqryReport: TFDQuery
@@ -331,9 +327,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Top = 6
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryReport: TFDQuery
@@ -372,9 +366,7 @@ object frmWTRSQuote: TfrmWTRSQuote
     Top = 6
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
 end

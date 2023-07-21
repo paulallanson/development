@@ -116,7 +116,8 @@ uses AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice,
 procedure TfrmWTLUSalesCredits.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  allCommon.SaveDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  allCommon.SaveDBGridCols('', 'SalesCreditsLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -129,7 +130,8 @@ procedure TfrmWTLUSalesCredits.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -158,7 +160,7 @@ begin
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSCredits.dsSCHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', 'myworktops.ini', self.dbgDetails);
+  allCommon.SetDBGridCols('', 'SalesCreditsLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesCredits.SetButtons(Sender: TObject; Field: TField);
@@ -643,13 +645,14 @@ procedure TfrmWTLUSalesCredits.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
-    begin
-      WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
-      Free;
-    end;
+  try
+    IniFile.WriteString('Sales Credits', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTLUSalesCredits.BitBtn1Click(Sender: TObject);

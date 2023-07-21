@@ -3,24 +3,22 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   Top = 243
   BorderStyle = bsDialog
   Caption = 'Print Sales Order'
-  ClientHeight = 212
-  ClientWidth = 372
+  ClientHeight = 211
+  ClientWidth = 368
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    372
-    212)
-  PixelsPerInch = 96
+    368
+    211)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -40,7 +38,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 176
+    Top = 175
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,16 +46,18 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
+    ExplicitTop = 176
   end
   object Button4: TButton
     Left = 283
-    Top = 176
+    Top = 175
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 176
   end
   object SelectLst: TListBox
     Left = 200
@@ -71,7 +71,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPreview: TButton
     Left = 99
-    Top = 176
+    Top = 175
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -79,10 +79,11 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 4
     OnClick = btnPreviewClick
+    ExplicitTop = 176
   end
   object btnEmail: TButton
     Left = 191
-    Top = 176
+    Top = 175
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -90,6 +91,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Enabled = False
     TabOrder = 5
     OnClick = btnEmailClick
+    ExplicitTop = 176
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -100,7 +102,6 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     TabOrder = 6
   end
   object rdgrpType: TRadioGroup
-    ParentBackground = False
     Left = 248
     Top = 21
     Width = 113
@@ -110,6 +111,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Items.Strings = (
       'Summary'
       'Detailed')
+    ParentBackground = False
     TabOrder = 7
   end
   object chkbxAttachTemplate: TCheckBox
@@ -154,9 +156,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Top = 34
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetRange: TFDQuery
@@ -171,14 +171,10 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuote: TFDQuery
@@ -191,9 +187,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuotes: TFDQuery
@@ -206,9 +200,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

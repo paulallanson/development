@@ -177,7 +177,8 @@ const
 
 implementation
 
-uses WTLogin, wtNotesDM, wtMain;
+uses
+  WTLogin, wtNotesDM, wtMain;
 
 {$R *.DFM}
 
@@ -770,7 +771,7 @@ var
   DriverName : string;
 begin
   { Find out what kind of database this is, Access or SQL Server }
-  DriverName := FDManager.FindConnection(dtbsWorktops.ConnectionDefName).DriverName;
+  DriverName := dtbsWorktops.DriverName;
 
   if DriverName = 'MSSQL' then
     FIsSQL := true;

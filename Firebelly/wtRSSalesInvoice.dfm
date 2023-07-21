@@ -3,19 +3,17 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
   Top = 138
   BorderStyle = bsDialog
   Caption = 'Print Sales Invoices'
-  ClientHeight = 145
-  ClientWidth = 313
+  ClientHeight = 144
+  ClientWidth = 309
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
@@ -36,7 +34,6 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     OnClick = Button4Click
   end
   object SelectionGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 10
     Width = 161
@@ -46,6 +43,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     Items.Strings = (
       'Print selected'
       'Print ALL unprinted')
+    ParentBackground = False
     TabOrder = 2
   end
   object btnPreview: TButton
@@ -58,7 +56,6 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     OnClick = btnPreviewClick
   end
   object rdgrpType: TRadioGroup
-    ParentBackground = False
     Left = 184
     Top = 10
     Width = 113
@@ -68,6 +65,7 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
     Items.Strings = (
       'Summary'
       'Detailed')
+    ParentBackground = False
     TabOrder = 4
   end
 end

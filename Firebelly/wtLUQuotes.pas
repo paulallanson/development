@@ -106,7 +106,8 @@ end;
 procedure TfrmwtLUQuotes.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'QuotesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'QuotesLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -120,7 +121,8 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   dtmdlAllQuote := TdtmdlQuote.create(Application);
   dtmdlAllQuote.dtsAllQuotes.OnDataChange := SetButtons;
@@ -128,7 +130,7 @@ begin
   dbgDetails.DataSource := dtmdlAllQuote.dtsAllQuotes;
 
   try
-  with IniFile do
+    with IniFile do
     begin
       if (ReadString('Quote', 'Customer Filter', '0') = '0') then
         cmbCustomerFilter.itemindex := 0
@@ -156,7 +158,7 @@ begin
   else
     dtmdlAllQuote.ShowLive := true;
 
-  AllCommon.SetDBGridCols('', 'QuotesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'QuotesLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmwtLUQuotes.FormDestroy(Sender: TObject);
@@ -169,9 +171,10 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  with IniFile do
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
+  try
+    with IniFile do
     begin
       WriteString('Quote', 'Show Live Quotes', sShowLive);
       WriteString('Quote', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
@@ -180,6 +183,9 @@ begin
       WriteString('Quote', 'Show From Date', paDateStr(dtmdlAllQuote.QuoteDate));
       Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllQuote.free;
 end;

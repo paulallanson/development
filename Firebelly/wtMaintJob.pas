@@ -1077,7 +1077,8 @@ begin
   bOK := false;
   pgDetails.ActivePage := tbCustomer;
 
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintJob.btnOKClick(Sender: TObject);
@@ -1892,7 +1893,8 @@ end;
 procedure TfrmWTMaintJob.FormDestroy(Sender: TObject);
 begin
   dtmdlNotes.free;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintJob.edtContactChange(Sender: TObject);

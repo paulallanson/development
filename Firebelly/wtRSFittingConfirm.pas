@@ -304,9 +304,11 @@ procedure TfrmWTRSFittingConfirm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxMerge.checked then
         WriteString('Order Confirmation', 'Merge to PDF', 'Y')
@@ -329,8 +331,11 @@ begin
         WriteString('Order Confirmation', 'Attach Colour', 'Y')
       else
         WriteString('Order Confirmation', 'Attach Colour', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   Obj:= Unassigned;
   FEmailAttachment.Free;
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
@@ -340,7 +345,8 @@ procedure TfrmWTRSFittingConfirm.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -603,7 +609,8 @@ begin
             end;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          PrinterTools.New.Printtoattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, sFileName, EmailArray[irow,1]);
+          var printFileName := 'OC' + sAttachmentType;
+          PrinterTools.New.Printtoattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
           {Create the Terms and Conditions as an attachment}
           if self.chkbxAttachTerms.checked and (sTermsAndConditionsFile <> '') then

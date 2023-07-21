@@ -4,7 +4,8 @@ object dtmdlWorktops: TdtmdlWorktops
   object dtbsWorktops: TFDConnection
     ConnectionName = 'WT'
     Params.Strings = (
-      'DriverID=MSSQL')
+      'ConnectionDef=Worktop')
+    LoginPrompt = False
     OnLogin = dtbsWorktopsLogin
     AfterConnect = dtbsWorktopsAfterConnect
     Left = 24

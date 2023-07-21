@@ -230,7 +230,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -353,16 +354,20 @@ procedure TfrmWTRSSalesInvoicePayments.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxOnlyShowUnPaid.checked then
         WriteString('Sales Invoice Payment Comparison', 'Only Show Paid', 'Y')
       else
         WriteString('Sales Invoice Payment Comparison', 'Only Show Paid', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

@@ -198,35 +198,15 @@ begin
 end;
 
 procedure TfrmWTRSSODeliveryNote.FormDestroy(Sender: TObject);
-var
-  IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  with IniFile do
-    begin
-      Free;
-    end;
-  FEmailAttachment.Free;
+  if Assigned(FEmailAttachment) then FEmailAttachment.Free;
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
 end;
 
 procedure TfrmWTRSSODeliveryNote.FormCreate(Sender: TObject);
-var
-  IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  try
-  with IniFile do
-    begin
-    end;
-  finally
-    IniFile.Free;
-  end;
-
-  FEmailAttachment := TStringList.create;
-  iIntSelCode := dtmdlWorktops.GetNextIntSelCode(Self) ;
+  FEmailAttachment := TStringList.Create;
+  iIntSelCode := dtmdlWorktops.GetNextIntSelCode(Self);
 end;
 
 procedure TfrmWTRSSODeliveryNote.SetDefaultPrinter(const Value: string);
@@ -330,7 +310,8 @@ begin
           sBodyText := 'Please find attached Delivery Note.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          PrinterTools.New.Printtoattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, sfilename, EmailArray[irow,1]);
+          var printFileName := 'TS' + sAttachmentType;
+          PrinterTools.New.Printtoattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
         finally

@@ -493,7 +493,8 @@ procedure TfrmWTMaintSalesInvoice.FormCreate(Sender: TObject);
 begin
   SetLineHeaders;
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintSalesInvoice.SetLineHeaders;
@@ -1029,7 +1030,8 @@ end;
 
 procedure TfrmWTMaintSalesInvoice.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintSalesInvoice.memDepositChange(Sender: TObject);

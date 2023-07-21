@@ -3,8 +3,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Delivery Note'
-  ClientHeight = 217
-  ClientWidth = 365
+  ClientHeight = 216
+  ClientWidth = 361
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,14 +28,16 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 137
-    Width = 365
+    Top = 136
+    Width = 361
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 137
+    ExplicitWidth = 365
     DesignSize = (
-      365
+      361
       80)
     object btnPrint: TButton
       Left = 8
@@ -84,11 +86,12 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 365
+    Width = 361
     Height = 138
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitWidth = 365
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -160,9 +163,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmailsOld: TFDQuery
@@ -213,9 +214,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrders: TFDQuery
@@ -264,9 +263,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmails: TFDQuery
@@ -302,9 +299,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmail: TFDQuery
@@ -353,14 +348,10 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     Top = 79
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end>
   end
 end

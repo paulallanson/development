@@ -640,7 +640,8 @@ end;
 
 procedure TfrmWTMaintPurchaseOrder.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintPurchaseOrder.edtDescriptionChange(Sender: TObject);
@@ -721,7 +722,8 @@ begin
   SetGridHeaders;
 
   pcDetails.ActivePage := tbDetails;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintPurchaseOrder.SetGridHeaders;

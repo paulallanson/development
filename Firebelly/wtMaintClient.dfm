@@ -3,21 +3,19 @@ object frmWTMaintClient: TfrmWTMaintClient
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Maintain Client Parameters'
-  ClientHeight = 238
-  ClientWidth = 458
+  ClientHeight = 237
+  ClientWidth = 454
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    458
-    238)
-  PixelsPerInch = 96
+    454
+    237)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -102,7 +100,7 @@ object frmWTMaintClient: TfrmWTMaintClient
   end
   object BitBtn2: TBitBtn
     Left = 176
-    Top = 201
+    Top = 200
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -114,14 +112,15 @@ object frmWTMaintClient: TfrmWTMaintClient
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ModalResult = 1
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
     OnClick = BitBtn2Click
-    NumGlyphs = 2
+    ExplicitTop = 201
   end
   object CancelBitBtn: TBitBtn
     Left = 256
-    Top = 201
+    Top = 200
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -133,9 +132,10 @@ object frmWTMaintClient: TfrmWTMaintClient
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ModalResult = 2
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    NumGlyphs = 2
+    ExplicitTop = 201
   end
   object ApplicDBLCB: TDBLookupComboBox
     Left = 16
@@ -182,9 +182,6 @@ object frmWTMaintClient: TfrmWTMaintClient
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 6
-    OnClick = ApplicClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -199,6 +196,9 @@ object frmWTMaintClient: TfrmWTMaintClient
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 6
+    OnClick = ApplicClrBitBtnClick
   end
   object AttachClrBitBtn: TBitBtn
     Left = 270
@@ -211,9 +211,6 @@ object frmWTMaintClient: TfrmWTMaintClient
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 7
-    OnClick = AttachClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -228,6 +225,9 @@ object frmWTMaintClient: TfrmWTMaintClient
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 7
+    OnClick = AttachClrBitBtnClick
   end
   object DirectClrBitBtn: TBitBtn
     Left = 326
@@ -240,9 +240,6 @@ object frmWTMaintClient: TfrmWTMaintClient
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 8
-    OnClick = DirectClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -257,6 +254,9 @@ object frmWTMaintClient: TfrmWTMaintClient
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 8
+    OnClick = DirectClrBitBtnClick
   end
   object edtEMailAccount: TEdit
     Left = 16

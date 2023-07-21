@@ -1,7 +1,4 @@
 object dtmdlCustomers: TdtmdlCustomers
-  OldCreateOrder = False
-  Left = 36
-  Top = 104
   Height = 555
   Width = 725
   object qryBranches: TFDQuery
@@ -15,9 +12,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsBranches: TDataSource
@@ -77,7 +72,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 200
   end
   object qryQuotes: TFDQuery
-    ConnectionName = 'wt'
+    ConnectionName = 'Worktop'
     SQL.Strings = (
       'SELECT  Quote.Quote,'
       '        Quote.Date_Required,'
@@ -132,129 +127,167 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 320
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
       end>
     object qryQuotesQuote: TIntegerField
       FieldName = 'Quote'
+      Origin = 'Quote'
+      Required = True
     end
-    object qryQuotesDate_Required: TDateTimeField
+    object qryQuotesDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
+      Origin = 'Date_Required'
+      Required = True
     end
-    object qryQuotesDate_Raised: TDateTimeField
+    object qryQuotesDate_Raised: TSQLTimeStampField
       FieldName = 'Date_Raised'
+      Origin = 'Date_Raised'
+      Required = True
     end
     object qryQuotesCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qryQuotesDescription: TStringField
+    object qryQuotesDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 255
     end
     object qryQuotesOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      Required = True
     end
-    object qryQuotesInstallation_price: TFloatField
+    object qryQuotesInstallation_price: TCurrencyField
       FieldName = 'Installation_price'
-      DisplayFormat = '#0.00'
+      Origin = 'Installation_price'
+      Required = True
     end
-    object qryQuotesDelivery_Price: TFloatField
+    object qryQuotesDelivery_Price: TCurrencyField
       FieldName = 'Delivery_Price'
-      DisplayFormat = '#0.00'
+      Origin = 'Delivery_Price'
+      Required = True
     end
-    object qryQuotesSurvey_price: TFloatField
+    object qryQuotesSurvey_price: TCurrencyField
       FieldName = 'Survey_price'
-      DisplayFormat = '#0.00'
+      Origin = 'Survey_price'
+      Required = True
     end
     object qryQuotesExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
+      Origin = 'Extra_Notes'
     end
     object qryQuotesAvailability: TIntegerField
       FieldName = 'Availability'
+      Origin = 'Availability'
     end
     object qryQuotesPayment_terms: TIntegerField
       FieldName = 'Payment_terms'
+      Origin = 'Payment_terms'
     end
-    object qryQuotesReference: TStringField
+    object qryQuotesReference: TWideStringField
       FieldName = 'Reference'
-      Size = 30
+      Origin = 'Reference'
+      Size = 50
     end
     object qryQuotesQuote_Status: TIntegerField
       FieldName = 'Quote_Status'
+      Origin = 'Quote_Status'
+      Required = True
     end
-    object qryQuotesNett_Price: TFloatField
+    object qryQuotesNett_Price: TCurrencyField
       FieldName = 'Nett_Price'
-      DisplayFormat = '#0.00'
+      Origin = 'Nett_Price'
+      Required = True
     end
-    object qryQuotesInactive: TStringField
+    object qryQuotesInactive: TWideStringField
       FieldName = 'Inactive'
+      Origin = 'Inactive'
       Size = 1
     end
     object qryQuotesInactive_reason: TIntegerField
       FieldName = 'Inactive_reason'
+      Origin = 'Inactive_reason'
     end
-    object qryQuotesOperator_Name: TStringField
+    object qryQuotesOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
       Size = 30
     end
-    object qryQuotesStatus_Description: TStringField
+    object qryQuotesStatus_Description: TWideStringField
       FieldName = 'Status_Description'
+      Origin = 'Status_Description'
+      Required = True
       Size = 50
     end
-    object qryQuotesCustomer_name: TStringField
+    object qryQuotesCustomer_name: TWideStringField
       FieldName = 'Customer_name'
+      Origin = 'Customer_name'
       Size = 50
     end
-    object qryQuotesContact_Name: TStringField
+    object qryQuotesContact_Name: TWideStringField
       FieldName = 'Contact_Name'
+      Origin = 'Contact_Name'
       Size = 50
     end
     object qryQuotesMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryQuotesMaterial_Description: TStringField
+    object qryQuotesMaterial_Description: TWideStringField
       FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
     end
     object qryQuotesAddress: TIntegerField
       FieldName = 'Address'
+      Origin = 'Address'
     end
     object qryQuotesGross_Price: TFloatField
       FieldName = 'Gross_Price'
-      DisplayFormat = '#0.00'
+      Origin = 'Gross_Price'
+      ReadOnly = True
     end
-    object qryQuotesIs_Retail_Customer: TStringField
+    object qryQuotesIs_Retail_Customer: TWideStringField
       FieldName = 'Is_Retail_Customer'
+      Origin = 'Is_Retail_Customer'
       Size = 1
     end
   end
@@ -289,9 +322,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsEvents: TDataSource
@@ -331,34 +362,23 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 384
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end>
     object qrySOrdersSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -497,206 +517,153 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end>
     object qryJobsJob: TFloatField
       FieldName = 'Job'
-
     end
     object qryJobsJob_Status: TIntegerField
       FieldName = 'Job_Status'
-
     end
     object qryJobsQuote: TIntegerField
       FieldName = 'Quote'
-
     end
     object qryJobsCustomer: TIntegerField
       FieldName = 'Customer'
-
     end
     object qryJobsContact_name: TStringField
       FieldName = 'Contact_name'
-
       Size = 50
     end
     object qryJobsOrder_ref_no: TStringField
       FieldName = 'Order_ref_no'
-
       Size = 30
     end
     object qryJobsDate_Raised: TDateTimeField
       FieldName = 'Date_Raised'
-
     end
     object qryJobsDate_Required: TDateTimeField
       FieldName = 'Date_Required'
-
     end
     object qryJobsPayment_due: TDateTimeField
       FieldName = 'Payment_due'
-
     end
     object qryJobsProduction_date: TDateTimeField
       FieldName = 'Production_date'
-
     end
     object qryJobsTemplate_date: TDateTimeField
       FieldName = 'Template_date'
-
     end
     object qryJobsInstallation_date: TDateTimeField
       FieldName = 'Installation_date'
-
     end
     object qryJobsDeposit_amount: TFloatField
       FieldName = 'Deposit_amount'
-
       currency = True
     end
     object qryJobsDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-
       currency = True
     end
     object qryJobsInstallation_price: TFloatField
       FieldName = 'Installation_price'
-
       currency = True
     end
     object qryJobsSurvey_price: TFloatField
       FieldName = 'Survey_price'
-
       currency = True
     end
     object qryJobsOperator: TIntegerField
       FieldName = 'Operator'
-
     end
     object qryJobsProduction_date_Actual: TDateTimeField
       FieldName = 'Production_date_Actual'
-
     end
     object qryJobsTemplate_date_actual: TDateTimeField
       FieldName = 'Template_date_actual'
-
     end
     object qryJobsInstallation_date_actual: TDateTimeField
       FieldName = 'Installation_date_actual'
-
     end
     object qryJobsDescription: TStringField
       FieldName = 'Description'
-
       Size = 50
     end
     object qryJobsMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
-
     end
     object qryJobsExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
-
     end
     object qryJobsAvailability: TIntegerField
       FieldName = 'Availability'
-
     end
     object qryJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
-
     end
     object qryJobsReference: TStringField
       FieldName = 'Reference'
-
       Size = 50
     end
     object qryJobsNett_Price: TFloatField
       FieldName = 'Nett_Price'
-
       currency = True
     end
     object qryJobsInactive: TStringField
       FieldName = 'Inactive'
-
       Size = 1
     end
     object qryJobsInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
-
     end
     object qryJobsAddress: TIntegerField
       FieldName = 'Address'
-
     end
     object qryJobsDiscount_Rate: TFloatField
       FieldName = 'Discount_Rate'
-
     end
     object qryJobsDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-
       currency = True
     end
     object qryJobsCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-
       Size = 50
     end
     object qryJobsMaterial_Description: TStringField
       FieldName = 'Material_Description'
-
     end
     object qryJobsStatus_Description: TStringField
       FieldName = 'Status_Description'
-
       Size = 50
     end
     object qryJobsOperator_Name: TStringField
       FieldName = 'Operator_Name'
-
       Size = 30
     end
     object qryJobsGross_Price: TFloatField
       FieldName = 'Gross_Price'
-
       currency = True
     end
     object qryJobsInstall_Address: TIntegerField
@@ -767,34 +734,24 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qryInvoicesInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -894,9 +851,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsCustContact: TDataSource
@@ -940,9 +895,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetAddress: TFDQuery
@@ -954,9 +907,7 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryLevelofImportance: TFDQuery
@@ -999,14 +950,10 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object dtsMaterialTypes: TDataSource

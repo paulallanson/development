@@ -481,7 +481,9 @@ begin
   pgdetails.Pages[4].TabVisible := pgdetails.Pages[2].TabVisible;
   pgdetails.Pages[5].TabVisible := pgdetails.Pages[2].TabVisible;
   pgdetails.Pages[6].TabVisible := pgdetails.Pages[2].TabVisible;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWtMaintCustomer.ShowDetails;
@@ -988,7 +990,8 @@ end;
 procedure TfrmWtMaintCustomer.FormDestroy(Sender: TObject);
 begin
   frmWTDBMemo.Free;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWtMaintCustomer.btnAddEvClick(Sender: TObject);

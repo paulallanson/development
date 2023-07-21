@@ -3,36 +3,35 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   Top = 143
   BorderStyle = bsDialog
   Caption = 'Sales Order templating report'
-  ClientHeight = 326
-  ClientWidth = 464
+  ClientHeight = 325
+  ClientWidth = 460
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    464
-    326)
-  PixelsPerInch = 96
+    460
+    325)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 289
   end
   object Button4: TButton
     Left = 376
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,9 +39,9 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 289
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 105
@@ -52,16 +51,17 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 209
     Height = 73
     Caption = 'Template date'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
@@ -100,8 +100,6 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -116,14 +114,14 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -138,15 +136,17 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 72
     Width = 219
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
@@ -183,7 +183,6 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     end
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 344
     Top = 8
     Width = 113
@@ -196,6 +195,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
       'Customer'
       'Status'
       'Reps')
+    ParentBackground = False
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
@@ -208,23 +208,25 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   end
   object btnPreview: TButton
     Left = 96
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 7
     OnClick = btnPreviewClick
+    ExplicitTop = 289
   end
   object btnExcel: TButton
     Left = 184
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 8
     OnClick = btnExcelClick
+    ExplicitTop = 289
   end
   object OleContainer1: TOleContainer
     Left = 196
@@ -237,7 +239,6 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     Visible = False
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 232
     Top = 136
     Width = 105
@@ -249,14 +250,15 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
       'Trade'
       'Retail'
       'Commercial')
+    ParentBackground = False
     TabOrder = 11
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 60
     Top = 111
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 10
     Visible = False
     object lblExporting: TLabel
@@ -276,7 +278,6 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     end
   end
   object rdgrpReps: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -286,15 +287,16 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
     Items.Strings = (
       'All'
       'One Rep')
+    ParentBackground = False
     TabOrder = 12
     OnClick = rdgrpRepsClick
   end
   object grpbxReps: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 219
     Height = 57
+    ParentBackground = False
     TabOrder = 13
     object Label3: TLabel
       Left = 8
@@ -311,7 +313,6 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reps'

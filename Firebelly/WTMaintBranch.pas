@@ -515,12 +515,14 @@ end;
 
 procedure TfrmWTMaintBranch.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintBranch.FormDestroy(Sender: TObject);
 begin
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintBranch.ParseMessage(const AFileName: string; var ATo, AFrom,

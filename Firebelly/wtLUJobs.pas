@@ -110,7 +110,8 @@ end;
 procedure TfrmwtLUJobs.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'JobsLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'JobsLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -128,9 +129,11 @@ begin
   dtmdlAllJobs.dtsAllJobs.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllJobs.dtsAllJobs;
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if (ReadString('Jobs', 'Customer Filter', '0') = '0') then
         cmbCustomerFilter.itemindex := 0
@@ -146,15 +149,17 @@ begin
 
       sShowLive := ReadString('Jobs', 'Show WIP', 'None');
       dtmdlAllJobs.ShowRecords := strtoint(ReadString('Jobs', 'Show Records', '0'));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   if sShowLive = 'None' then
     dtmdlAllJobs.ShowWIP := false
   else
     dtmdlAllJobs.ShowWIP := true;
 
-  AllCommon.SetDBGridCols('', 'JobsLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'JobsLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmwtLUJobs.FormDestroy(Sender: TObject);
@@ -167,15 +172,19 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       WriteString('Jobs', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
       WriteString('Jobs', 'Show WIP', sShowLive);
       WriteString('Jobs', 'Show Records', inttostr(dtmdlAllJobs.ShowRecords));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllJobs.free;
 end;

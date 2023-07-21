@@ -1518,10 +1518,11 @@ begin
   pcDetails.Pages[11].TabVisible := pcDetails.Pages[6].TabVisible;
 
   pcDetails.ActivePage := tbCustomer;
-  AllCommon.LoadFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.LoadFormLayout(fileName, self);
 
   GetPrivateProfileString('Email', 'Application', '', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
 
   EmailApplication := TempArray;
 end;
@@ -2529,7 +2530,8 @@ end;
 procedure TfrmWTMaintQuote.FormDestroy(Sender: TObject);
 begin
   dtmdlNotes.free;
-  AllCommon.SaveFormLayout('myWorktops.ini', self);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintQuote.edtContactChange(Sender: TObject);

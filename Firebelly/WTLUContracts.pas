@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ImgList, ComCtrls, StdCtrls, Buttons, Grids, DBGrids,
-  ToolWin, WTContractsDM, DB, IniFiles;
+  ToolWin, WTContractsDM, DB, IniFiles, System.ImageList;
 
 type
   TfrmWTLUContracts = class(TForm)
@@ -98,7 +98,8 @@ procedure TfrmWTLUContracts.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -123,7 +124,7 @@ begin
   dtmdlAllContract.dtsAllContracts.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllContract.dtsAllContracts;
 
-  AllCommon.SetDBGridCols('', 'ContractsLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'ContractsLU Col Order', fileName, self.dbgDetails);
 
 end;
 
@@ -131,13 +132,14 @@ procedure TfrmWTLUContracts.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
-    begin
-      WriteString('Contract', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
-      Free;
-    end;
+  try
+    IniFile.WriteString('Contract', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllContract.free;
 end;
@@ -420,7 +422,8 @@ end;
 procedure TfrmWTLUContracts.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'ContractsLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'ContractsLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 

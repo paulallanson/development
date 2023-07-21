@@ -578,9 +578,10 @@ procedure TfrmWTRSSOrder.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  with IniFile do
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
+  try
+    with IniFile do
     begin
       if chkbxPrintLogo.checked then
         WriteString('Sales Order', 'Print Logo', 'Y')
@@ -601,18 +602,20 @@ begin
         WriteString('Sales Order', 'Detailed Print', 'Y')
       else
         WriteString('Sales Order', 'Detailed Print', 'N');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTRSSOrder.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
   try
-  with IniFile do
+    with IniFile do
     begin
       chkbxPrintLogo.Checked := (ReadString('Sales Order', 'Print Logo', 'N') = 'Y');
       chkbxAttachTemplate.Checked := (ReadString('Sales Order', 'Attach Template', 'N') = 'Y');

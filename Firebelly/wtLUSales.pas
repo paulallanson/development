@@ -105,7 +105,8 @@ end;
 procedure TfrmwtLUSales.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SalesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'SalesLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -119,7 +120,8 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   dtmdlAllSales := TdtmdlSalesOrder.create(Application);
   dtmdlAllSales.dtsAllSales.OnDataChange := SetButtons;
@@ -152,7 +154,7 @@ begin
   else
     dtmdlAllSales.ShowLive := true;
 
-  AllCommon.SetDBGridCols('', 'SalesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmwtLUSales.FormDestroy(Sender: TObject);
@@ -165,7 +167,8 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
     with IniFile do

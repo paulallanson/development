@@ -173,6 +173,8 @@ resourcestring
 
   BDE_KEY = 'Software\Borland\Database Engine'; { path to BDE settings }
 
+const
+  myWorktops_INIFILE = 'myWorktops.ini';
 
 implementation
 
@@ -1789,29 +1791,31 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create (iniFileName);
-  IniFile.EraseSection(sectionName);
-  IniFile.WriteBool(sectionName, 'UserPrefs', true);
-  for colInx := 0 to Pred(dbGrid.columns.count) do
-  begin
-    colOrder := 'Col' + IntToStr(colInx);
-    colName := dbGrid.columns[colInx].fieldname;
-    colCaption := dbGrid.columns[colInx].Title.caption;
-    colWidth :=  dbGrid.columns[colInx].width;
-      
-    if dbGrid.columns[colInx].Alignment = taLeftJustify then
-      colAlignment := 'left'
-    else if dbGrid.columns[colInx].Alignment = taRightJustify then
-      colAlignment := 'right'
-    else
-      colAlignment := 'center';
+  try
+    IniFile.EraseSection(sectionName);
+    IniFile.WriteBool(sectionName, 'UserPrefs', true);
+    for colInx := 0 to Pred(dbGrid.columns.count) do
+    begin
+      colOrder := 'Col' + IntToStr(colInx);
+      colName := dbGrid.columns[colInx].fieldname;
+      colCaption := dbGrid.columns[colInx].Title.caption;
+      colWidth :=  dbGrid.columns[colInx].width;
 
-    IniFile.WriteString(sectionName, colOrder + 'Field', colName);
-    IniFile.WriteString(sectionName, colOrder + 'Caption', colCaption);
-    IniFile.WriteInteger(sectionName, colOrder + 'Width', colWidth);
-    IniFile.WriteString(sectionName, colOrder + 'Alignment', colAlignment);
+      if dbGrid.columns[colInx].Alignment = taLeftJustify then
+        colAlignment := 'left'
+      else if dbGrid.columns[colInx].Alignment = taRightJustify then
+        colAlignment := 'right'
+      else
+        colAlignment := 'center';
+
+      IniFile.WriteString(sectionName, colOrder + 'Field', colName);
+      IniFile.WriteString(sectionName, colOrder + 'Caption', colCaption);
+      IniFile.WriteInteger(sectionName, colOrder + 'Width', colWidth);
+      IniFile.WriteString(sectionName, colOrder + 'Alignment', colAlignment);
+    end;
+  finally
+    IniFile.Free;
   end;
-
-  IniFile.Free;
 end;
 
 procedure DeleteColSettings(sectionName, iniFileName: string);

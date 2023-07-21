@@ -20,14 +20,10 @@ object emailHandler: TemailHandler
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'branch'
-        ParamType = ptUnknown
       end>
   end
   object qryEmailList: TFDQuery

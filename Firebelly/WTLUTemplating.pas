@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, ComCtrls, ImgList, Buttons, StdCtrls, ExtCtrls,
-  ToolWin, DB, wtSalesOrderDM, AllCommon, IniFiles, DateUtils, DateSelV5;
+  ToolWin, DB, wtSalesOrderDM, AllCommon, IniFiles, DateUtils, DateSelV5,
+  System.ImageList;
 
 type
   TfrmWTLUTemplating = class(TForm)
@@ -104,7 +105,8 @@ end;
 procedure TfrmWTLUTemplating.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'TemplatingLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'TemplatingLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -118,7 +120,8 @@ var
   IniFile : TIniFile;
   sShowLive, sShowOnSchedule: string;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   dtmdlTemplating := TdtmdlSalesOrder.create(Application);
   dtmdlTemplating.dtsAllSales.OnDataChange := SetButtons;
@@ -186,7 +189,7 @@ begin
 
   chkbxShowOnlyScheduled.checked := dtmdlTemplating.ShowOnSchedule;
 
-  AllCommon.SetDBGridCols('', 'TemplatingLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'TemplatingLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmWTLUTemplating.FormDestroy(Sender: TObject);
@@ -204,7 +207,8 @@ begin
   else
     sShowOnSchedule := 'None';
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
     with IniFile do

@@ -3,8 +3,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   Top = 172
   BorderStyle = bsDialog
   Caption = 'Print Job Sheet'
-  ClientHeight = 336
-  ClientWidth = 536
+  ClientHeight = 334
+  ClientWidth = 528
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 247
-    Width = 536
+    Top = 245
+    Width = 528
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
@@ -28,7 +28,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     ExplicitTop = 246
     ExplicitWidth = 532
     DesignSize = (
-      536
+      528
       89)
     object btnPrint: TButton
       Left = 8
@@ -93,14 +93,14 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 536
+    Width = 528
     Height = 49
     Align = alTop
     ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 532
     DesignSize = (
-      536
+      528
       49)
     object Label1: TLabel
       Left = 8
@@ -110,7 +110,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Caption = 'Job No.'
     end
     object Label2: TLabel
-      Left = 380
+      Left = 364
       Top = 8
       Width = 75
       Height = 13
@@ -128,7 +128,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       OnChange = EnableRun
     end
     object memSOrderNumber: TMemo
-      Left = 380
+      Left = 364
       Top = 24
       Width = 130
       Height = 21
@@ -142,8 +142,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 49
-    Width = 536
-    Height = 48
+    Width = 528
+    Height = 46
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
@@ -173,8 +173,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   end
   object Panel3: TPanel
     Left = 0
-    Top = 97
-    Width = 536
+    Top = 95
+    Width = 528
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
@@ -258,14 +258,10 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end>
   end
 end

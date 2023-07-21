@@ -99,16 +99,16 @@ var
   sAliasName: string;
 begin
   GetPrivateProfileString('Email', 'Application', '', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
 
   Applic := TempArray;
 
   GetPrivateProfileString('Email', 'DEF Attachment Type', '', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
 
   AttachType := TempArray;
   GetPrivateProfileString('Fax', 'DEF Fax Directory', '', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
 
   Direc := TempArray;
 
@@ -132,18 +132,21 @@ var
 begin
   sAliasName := dtmdlWorktops.dtbsWorktops.ConnectionDefName;
 
-  IniFile := TIniFile.Create('myworktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       WriteString('Email', 'Application',Applic);
       WriteString('Email', 'Def Attachment Type',AttachType);
       WriteString('Fax', 'Def Fax Directory',Direc);
       WriteString('Email', pchar(sAliasName + ' Email Account'), AccountName);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
-
 
 procedure TfrmWTMaintClient.BitBtn2Click(Sender: TObject);
 begin

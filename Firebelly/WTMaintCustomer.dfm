@@ -2,8 +2,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Left = 322
   Top = 35
   Caption = 'Customer details'
-  ClientHeight = 626
-  ClientWidth = 837
+  ClientHeight = 624
+  ClientWidth = 834
   Color = clBtnFace
   Constraints.MinHeight = 459
   Constraints.MinWidth = 850
@@ -21,17 +21,19 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 565
-    Width = 837
+    Top = 563
+    Width = 834
     Height = 42
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 565
+    ExplicitWidth = 837
     DesignSize = (
-      837
+      834
       42)
     object lblDelete: TLabel
-      Left = 484
+      Left = 473
       Top = 15
       Width = 163
       Height = 13
@@ -46,7 +48,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ExplicitLeft = 488
     end
     object btnOK: TBitBtn
-      Left = 663
+      Left = 652
       Top = 9
       Width = 75
       Height = 25
@@ -60,7 +62,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ExplicitLeft = 667
     end
     object BitBtn2: TBitBtn
-      Left = 749
+      Left = 738
       Top = 9
       Width = 75
       Height = 25
@@ -113,26 +115,28 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 837
-    Height = 565
+    Width = 834
+    Height = 563
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 837
+    ExplicitHeight = 565
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
         Left = 0
         Top = 0
-        Width = 833
-        Height = 538
+        Width = 830
+        Height = 536
         Align = alClient
         ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 829
         ExplicitHeight = 537
         DesignSize = (
-          829
-          537)
+          826
+          535)
         object Label1: TLabel
           Left = 8
           Top = 12
@@ -721,7 +725,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Tag = 200
           Left = 383
           Top = 213
-          Width = 438
+          Width = 427
           Height = 111
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
@@ -1716,10 +1720,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       Caption = 'Activity'
       ImageIndex = 6
       object Panel3: TPanel
-        Left = 740
+        Left = 737
         Top = 0
         Width = 93
-        Height = 405
+        Height = 403
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -1756,8 +1760,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       object dbgEvents: TDBGrid
         Left = 0
         Top = 0
-        Width = 740
-        Height = 405
+        Width = 737
+        Height = 403
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
@@ -1806,8 +1810,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object TPanel
         Left = 0
-        Top = 405
-        Width = 833
+        Top = 403
+        Width = 830
         Height = 133
         Align = alBottom
         TabOrder = 2
@@ -2118,8 +2122,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 607
-    Width = 837
+    Top = 605
+    Width = 834
     Height = 19
     Panels = <
       item
@@ -2128,6 +2132,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
+    ExplicitTop = 607
+    ExplicitWidth = 837
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer
@@ -2453,14 +2459,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 168
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object pmnuDocuments: TPopupMenu
@@ -2497,9 +2500,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -2561,239 +2562,170 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 432
     ParamData = <
       item
-        DataType = ftString
         Name = 'Customer_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Street'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Locale'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Town_City'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Postcode'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'County_State'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Fax_Number'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Web_Address'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Email_Address'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Level_Of_Importance'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Payment_Terms'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Credit_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Credit_Limit'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Credit_Limit'
+      end
+      item
         Name = 'Invoice_Label'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'No_Of_Employees'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'End_User_Markup_percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Online_Ordering'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_For_General_Quoting'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Separate_Labour_Invoice_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Is_Factored'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_is_Speculative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Prospect'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Prospect_Action_Next_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'CutOut_Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Survey_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Prospect_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Prospect_Action'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Prospect_Action_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'End_User_Price_Factor'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -2809,8 +2741,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 432
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -2824,9 +2756,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -2839,8 +2769,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 432
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -2863,19 +2793,13 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckCustAccExists: TFDQuery
@@ -2889,14 +2813,10 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Top = 276
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetAccountCodes: TDataSource

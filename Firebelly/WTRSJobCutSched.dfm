@@ -1,7 +1,7 @@
 inherited frmWTRSJobCutSched: TfrmWTRSJobCutSched
   Caption = 'Print Cutting schedule'
-  ClientHeight = 353
-  ClientWidth = 432
+  ClientHeight = 352
+  ClientWidth = 428
   ExplicitWidth = 444
   ExplicitHeight = 391
   TextHeight = 13
@@ -13,20 +13,20 @@ inherited frmWTRSJobCutSched: TfrmWTRSJobCutSched
     Caption = 'Job No'#39's'
   end
   inherited btnPrint: TButton
-    Top = 316
+    Top = 315
     ExplicitTop = 315
   end
   inherited Button4: TButton
-    Top = 316
+    Top = 315
     ExplicitTop = 315
   end
   inherited btnPreview: TButton
-    Top = 316
+    Top = 315
     ExplicitTop = 315
   end
   object Button1: TButton [7]
     Left = 96
-    Top = 158
+    Top = 157
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -34,10 +34,9 @@ inherited frmWTRSJobCutSched: TfrmWTRSJobCutSched
     Enabled = False
     TabOrder = 19
     OnClick = Button1Click
-    ExplicitTop = 157
   end
   inherited btnEmail: TButton
-    Top = 316
+    Top = 315
     ExplicitTop = 315
   end
   inherited selectionGrp: TGroupBox

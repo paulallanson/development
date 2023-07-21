@@ -95,7 +95,8 @@ end;
 procedure TfrmwtLUPurchases.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'PurchasesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'PurchasesLU Col Order', fileName, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -109,7 +110,8 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
     with IniFile do
@@ -129,7 +131,7 @@ begin
   else
     dtmdlAllPurchases.ShowLive := true;
 
-  AllCommon.SetDBGridCols('', 'PurchasesLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'PurchasesLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmwtLUPurchases.FormDestroy(Sender: TObject);
@@ -142,7 +144,8 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
     with IniFile do

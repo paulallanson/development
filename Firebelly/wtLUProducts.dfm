@@ -1,28 +1,26 @@
 object frmWTLUProducts: TfrmWTLUProducts
   Left = 298
   Top = 121
-  Width = 857
-  Height = 543
   Caption = 'Products'
+  ClientHeight = 505
+  ClientWidth = 845
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 759
-    Height = 425
+    Width = 755
+    Height = 418
     Align = alClient
     DataSource = srcLkpProducts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -76,8 +74,8 @@ object frmWTLUProducts: TfrmWTLUProducts
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 493
-    Width = 849
+    Top = 486
+    Width = 845
     Height = 19
     Panels = <
       item
@@ -86,17 +84,21 @@ object frmWTLUProducts: TfrmWTLUProducts
       item
         Width = 50
       end>
+    ExplicitTop = 485
+    ExplicitWidth = 841
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 425
-    Width = 849
+    Top = 418
+    Width = 845
     Height = 68
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 417
+    ExplicitWidth = 841
     DesignSize = (
-      849
+      845
       68)
     object Label1: TLabel
       Left = 8
@@ -123,15 +125,16 @@ object frmWTLUProducts: TfrmWTLUProducts
       OnClick = chkbxShowInactiveClick
     end
     object BitBtn4: TBitBtn
-      Left = 767
+      Left = 771
       Top = 11
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 2
       NumGlyphs = 2
+      TabOrder = 2
+      ExplicitLeft = 767
     end
     object BitBtn2: TBitBtn
       Left = 264
@@ -144,16 +147,18 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
-    Left = 759
+    Left = 755
     Top = 0
     Width = 90
-    Height = 425
+    Height = 418
     Align = alRight
+    ParentBackground = False
     TabOrder = 3
+    ExplicitLeft = 751
+    ExplicitHeight = 417
     DesignSize = (
       90
-      425)
+      418)
     object BitBtn1: TBitBtn
       Left = 7
       Top = 16
@@ -175,7 +180,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
     object btnSelect: TBitBtn
       Left = 7
-      Top = 387
+      Top = 388
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -183,6 +188,7 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitTop = 387
     end
     object btnDelete: TBitBtn
       Left = 7
@@ -246,19 +252,13 @@ object frmWTLUProducts: TfrmWTLUProducts
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
     object lkpProductsProduct: TIntegerField
       FieldName = 'Product'
@@ -329,9 +329,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object tmrSearch: TTimer

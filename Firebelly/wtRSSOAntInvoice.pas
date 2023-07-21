@@ -240,7 +240,8 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -370,9 +371,11 @@ procedure TfrmWTRSSOAntInvoice.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
+  try
+    with IniFile do
     begin
       if chkbxIncludeInvoiced.Checked then
         WriteString('Sales Order Anticipated Invoicing Report', 'Include Invoiced Orders', 'Y')
@@ -384,6 +387,9 @@ begin
       else
         WriteString('Sales Order Anticipated Invoicing Report', 'Only Show Scheduled', 'N');
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

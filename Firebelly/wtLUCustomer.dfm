@@ -2,8 +2,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 357
-  ClientWidth = 706
+  ClientHeight = 355
+  ClientWidth = 704
   Color = clBtnFace
   Constraints.MinHeight = 390
   Constraints.MinWidth = 720
@@ -25,7 +25,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 706
+    Width = 704
     Height = 43
     Bands = <
       item
@@ -124,8 +124,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 338
-    Width = 706
+    Top = 336
+    Width = 704
     Height = 19
     Panels = <
       item
@@ -140,8 +140,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 706
-    Height = 224
+    Width = 704
+    Height = 222
     Align = alClient
     DataSource = dtsCustomers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -268,8 +268,8 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object Panel2: TPanel
     Left = 0
-    Top = 297
-    Width = 706
+    Top = 295
+    Width = 704
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -277,7 +277,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     ExplicitTop = 298
     ExplicitWidth = 710
     DesignSize = (
-      706
+      704
       41)
     object Label1: TLabel
       Left = 8
@@ -322,7 +322,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 624
+      Left = 614
       Top = 8
       Width = 75
       Height = 25
@@ -336,7 +336,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 706
+    Width = 704
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -348,7 +348,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 708
+      Width = 706
       Height = 75
       Bands = <
         item
@@ -357,6 +357,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           MinHeight = 28
           Width = 706
         end>
+      ExplicitWidth = 708
       object Panel3: TPanel
         Left = 11
         Top = 0
@@ -368,7 +369,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          689
+          687
           28)
         object Label2: TLabel
           Left = 0
@@ -384,7 +385,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 454
+          Left = 442
           Top = 7
           Width = 69
           Height = 13
@@ -399,7 +400,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           ExplicitLeft = 464
         end
         object cmbCustomerFilter: TComboBox
-          Left = 534
+          Left = 522
           Top = 3
           Width = 145
           Height = 21

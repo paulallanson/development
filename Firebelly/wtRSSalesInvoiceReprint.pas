@@ -511,6 +511,7 @@ var
   sEmail, sTemp, sSubject, sTo, sBodyText: string;
   i, icount, irow, iInvoiceCount: integer;
   sFilename: array[0..255] of Char;
+  printFileName: string;
 begin
   GetSelection;
 
@@ -611,7 +612,8 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, sFileName, EmailArray[irow,1]);
+                  printFileName := 'SI' + sAttachmentType;
+                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
                   if iInvoiceCount = 1 then
                     begin
@@ -678,7 +680,8 @@ begin
                   frmWTRPSalesInvoice.InvHeadSRC.dataset := InvRPrintSQL;
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, sFileName, EmailArray[irow,1]);
+                  printFileName := 'SI' + sAttachmentType;
+                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];
 
@@ -728,7 +731,8 @@ procedure TfrmWTRSSalesInvoiceReprint.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   with IniFile do
     begin
@@ -746,7 +750,8 @@ procedure TfrmWTRSSalesInvoiceReprint.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do

@@ -3,24 +3,22 @@ object frmWTRSContract: TfrmWTRSContract
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Contract Quotes'
-  ClientHeight = 221
-  ClientWidth = 441
+  ClientHeight = 220
+  ClientWidth = 437
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    441
-    221)
-  PixelsPerInch = 96
+    437
+    220)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -40,7 +38,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPrint: TButton
     Left = 8
-    Top = 184
+    Top = 183
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -48,16 +46,18 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
+    ExplicitTop = 184
   end
   object Button4: TButton
     Left = 360
-    Top = 184
+    Top = 183
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
+    ExplicitTop = 184
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -79,7 +79,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPreview: TButton
     Left = 96
-    Top = 184
+    Top = 183
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -87,10 +87,11 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 5
     OnClick = btnPreviewClick
+    ExplicitTop = 184
   end
   object btnEmail: TButton
     Left = 184
-    Top = 184
+    Top = 183
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -98,6 +99,7 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 6
     OnClick = btnEmailClick
+    ExplicitTop = 184
   end
   object chkbxIncludeTemplating: TCheckBox
     Left = 8
@@ -110,14 +112,12 @@ object frmWTRSContract: TfrmWTRSContract
     TabOrder = 7
   end
   object btnExcel: TBitBtn
-    Left = 274
-    Top = 184
+    Left = 266
+    Top = 183
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Excel'
-    TabOrder = 8
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -161,6 +161,10 @@ object frmWTRSContract: TfrmWTRSContract
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 8
+    OnClick = btnExcelClick
+    ExplicitLeft = 274
+    ExplicitTop = 184
   end
   object pnlExportPrgrss: TPanel
     Left = 84
@@ -229,9 +233,7 @@ object frmWTRSContract: TfrmWTRSContract
     Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetRange: TFDQuery
@@ -246,14 +248,10 @@ object frmWTRSContract: TfrmWTRSContract
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteMaterial: TFDQuery
@@ -287,9 +285,7 @@ object frmWTRSContract: TfrmWTRSContract
     Top = 38
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -24,12 +24,13 @@ type
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
-    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure WaitForFaxFinish(Sender: TObject);
     procedure SendFax(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure ApdFaxDriverInterface1DocEnd(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FaxDatabaseLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
   private
     { Private declarations }
    FaxFinishedEvent: TEvent;
@@ -45,7 +46,8 @@ var
 
 implementation
 
-uses UITypes, wtMain;
+uses
+  UITypes, wtMain, AllCommon;
 
 {$R *.DFM}
 
@@ -127,7 +129,8 @@ var
   zFaxDir: array[0..255] of char;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create('myworktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   with IniFile do
     begin
@@ -328,19 +331,11 @@ begin
   end;
 end;
 
-procedure TfrmWTSendFax.FaxDatabaseLogin(Database: TFDConnection;
-  LoginParams: TStrings);
-begin
-  {Get user and password from login screen};
-  LoginParams.Values['USER NAME'] := 'faxes';
-  LoginParams.Values['PASSWORD'] := 'rabbit';
-end;
-
 procedure TfrmWTSendFax.WaitForFaxFinish(Sender: TObject);
 begin
 {Wait for the FaxFinishEvent to trigger - happens in the ApdFaxDriverInterfaceDocEnd procedure} ;
 {Wait for 1 second} ;
-While (FaxFinishedEvent.WaitFor(1000) <> wrSignaled) do
+  While (FaxFinishedEvent.WaitFor(1000) <> wrSignaled) do
         begin
         {If the event does not trigger, try to take a message from the message que and wait again} ;
         Application.HandleMessage ;
@@ -359,6 +354,14 @@ begin
 FaxFinishedEvent.SetEvent;
 {Move the fax onto the server and trigger the finished event} ;
 SendFax(Self) ;
+end;
+
+procedure TfrmWTSendFax.FaxDatabaseLogin(AConnection: TFDCustomConnection;
+  AParams: TFDConnectionDefParams);
+begin
+  {Get user and password from login screen};
+  AParams.UserName := 'faxes';
+  AParams.Password := 'rabbit';
 end;
 
 procedure TfrmWTSendFax.FormCreate(Sender: TObject);

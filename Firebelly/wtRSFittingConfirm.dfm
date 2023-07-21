@@ -3,8 +3,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   Top = 115
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
-  ClientHeight = 426
-  ClientWidth = 548
+  ClientHeight = 424
+  ClientWidth = 540
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,14 +28,16 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 346
-    Width = 548
+    Top = 344
+    Width = 540
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 346
+    ExplicitWidth = 548
     DesignSize = (
-      548
+      540
       80)
     object btnPrint: TButton
       Left = 8
@@ -91,12 +93,14 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 196
-    Width = 548
+    Top = 194
+    Width = 540
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 196
+    ExplicitWidth = 548
     object lstbxDocuments: TListBox
       Left = 8
       Top = 15
@@ -120,11 +124,13 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 548
-    Height = 58
+    Width = 540
+    Height = 56
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 548
+    ExplicitHeight = 58
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -149,7 +155,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 548
+    Width = 540
     Height = 138
     Align = alTop
     TabOrder = 4
@@ -211,9 +217,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrders: TFDQuery
@@ -246,9 +250,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderEmails: TFDQuery
@@ -288,9 +290,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOQuotesEmails: TFDQuery
@@ -304,9 +304,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrder: TFDQuery
@@ -319,9 +317,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDocumentStructure: TFDQuery
@@ -364,9 +360,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     Top = 269
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

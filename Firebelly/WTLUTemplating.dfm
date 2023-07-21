@@ -1,9 +1,9 @@
 object frmWTLUTemplating: TfrmWTLUTemplating
   Left = 186
   Top = 121
-  Width = 1298
-  Height = 436
   Caption = 'Templating Details'
+  ClientHeight = 396
+  ClientWidth = 1278
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
   OnActivate = FormActivate
@@ -20,12 +19,11 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1290
+    Width = 1278
     Height = 32
     Bands = <
       item
@@ -34,6 +32,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         MinHeight = 28
         Width = 1286
       end>
+    ExplicitWidth = 1290
     object Panel3: TPanel
       Left = 9
       Top = 0
@@ -44,7 +43,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Color = clSilver
       TabOrder = 0
       DesignSize = (
-        1273
+        1263
         28)
       object Label2: TLabel
         Left = 0
@@ -60,7 +59,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1036
+        Left = 1020
         Top = 7
         Width = 69
         Height = 13
@@ -72,6 +71,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 1036
       end
       object lblWorkinProgress: TLabel
         Left = 120
@@ -89,13 +89,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1116
+        Left = 1100
         Top = 3
         Width = 145
         Height = 21
         Style = csDropDownList
         Anchors = [akTop, akRight]
-        ItemHeight = 13
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
         Items.Strings = (
@@ -103,13 +102,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
           'Trade'
           'Retail'
           'Commercial')
+        ExplicitLeft = 1110
       end
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 386
-    Width = 1290
+    Top = 377
+    Width = 1278
     Height = 19
     Panels = <
       item
@@ -121,16 +121,20 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Width = 50
       end>
+    ExplicitTop = 386
+    ExplicitWidth = 1290
   end
   object Panel1: TPanel
     Left = 0
-    Top = 345
-    Width = 1290
+    Top = 336
+    Width = 1278
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 345
+    ExplicitWidth = 1290
     DesignSize = (
-      1290
+      1278
       41)
     object Label1: TLabel
       Left = 8
@@ -140,13 +144,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1047
+      Left = 1039
       Top = 15
       Width = 55
       Height = 13
       Alignment = taRightJustify
       Anchors = [akRight, akBottom]
       Caption = 'Sales Order'
+      ExplicitLeft = 1047
     end
     object Label6: TLabel
       Left = 528
@@ -156,7 +161,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1207
+      Left = 1199
       Top = 9
       Width = 75
       Height = 25
@@ -164,6 +169,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 1207
     end
     object edtSearch: TEdit
       Left = 56
@@ -174,13 +180,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1108
+      Left = 1100
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 1108
     end
     object cmbActionDate: TComboBox
       Left = 608
@@ -251,8 +258,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Top = 9
         Width = 25
         Height = 25
-        TabOrder = 1
-        OnClick = btnTempDateClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -267,13 +272,15 @@ object frmWTLUTemplating: TfrmWTLUTemplating
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnTempDateClick
       end
     end
   end
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1290
+    Width = 1278
     Height = 45
     Bands = <
       item
@@ -282,6 +289,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         MinHeight = 41
         Width = 1286
       end>
+    ExplicitWidth = 1290
     object btnDocuments: TToolBar
       Left = 9
       Top = 0
@@ -290,7 +298,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       ButtonHeight = 36
       ButtonWidth = 62
       Caption = 'btnDocuments'
-      Flat = True
       Images = imgLstHot
       ShowCaptions = True
       TabOrder = 0
@@ -357,8 +364,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1290
-    Height = 268
+    Width = 1278
+    Height = 259
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -402,7 +409,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Expanded = False
         FieldName = 'Reference'
-        Width = 64
         Visible = True
       end
       item

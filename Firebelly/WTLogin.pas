@@ -5,8 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -64,7 +64,8 @@ var
 
 implementation
 
-uses UITypes, wtDataModule, WTEnvSel;
+uses
+  UITypes, wtDataModule, WTEnvSel, AllCommon;
 
 {$R *.DFM}
 
@@ -75,7 +76,7 @@ var
   sgList: TStringList;
 begin
   GetPrivateProfileString('Quaystone', 'LoginAlias', 'myWorktops', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
 
   cmbAliasList.clear;
   sgList := TStringList.Create;
@@ -100,7 +101,7 @@ begin
   sDBase := Edit1.Text;
   ShowDataBAse(Self);
   GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray,
-    sizeof(TempArray), 'myworktops.ini');
+    sizeof(TempArray), myWorktops_INIFILE);
   Edit1.Text := TempArray;
   FsFaxSystem := Edit1.Text;
   OK := False;
@@ -229,7 +230,7 @@ begin
     sDBase := Edit1.Text;
     ShowDataBase(Self);
     WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias,
-      'myworktops.ini');
+      myWorktops_INIFILE);
     case frmWTEnvSel.FaxSystemRadioGroup.ItemIndex of
       0: TempAlias := 'S';
       1: TempAlias := 'W';
@@ -237,7 +238,7 @@ begin
     Edit1.Text := TempAlias;
     FsFaxSystem := Edit1.Text;
     WritePrivateProfileString('Quaystone', 'Fax System', TempAlias,
-      'myworktops.ini');
+      myWorktops_INIFILE);
   end;
   finally
     frmWTEnvSel.Free;
@@ -282,13 +283,13 @@ procedure TfrmWTLogin.FormDeactivate(Sender: TObject);
 var
   IniFile: TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
-
-  with IniFile do
-    begin
-      WriteString('Quaystone', 'LoginAlias', cmbAliasList.text);
-    end;
-
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
+  try
+    IniFile.WriteString('Quaystone', 'LoginAlias', cmbAliasList.text);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmWTLogin.SetEndUser(const Value: boolean);

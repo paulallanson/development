@@ -28,7 +28,8 @@ var
 
 implementation
 
-uses WTRPJobCutSched;
+uses
+  WTRPJobCutSched, System.UITypes;
 
 {$R *.dfm}
 

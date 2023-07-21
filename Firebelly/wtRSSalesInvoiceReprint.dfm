@@ -1,10 +1,10 @@
-﻿object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
+object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   Left = 499
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Invoice Re-Print Selection'
-  ClientHeight = 190
-  ClientWidth = 376
+  ClientHeight = 188
+  ClientWidth = 368
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,8 +17,8 @@
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    376
-    190)
+    368
+    188)
   TextHeight = 13
   object selectionGrp: TGroupBox
     Left = 8
@@ -49,7 +49,7 @@
   end
   object btnClose: TBitBtn
     Left = 273
-    Top = 153
+    Top = 151
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -71,7 +71,7 @@
   end
   object btnPrint: TBitBtn
     Left = 9
-    Top = 153
+    Top = 151
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -83,7 +83,7 @@
   end
   object btnPreview: TBitBtn
     Left = 97
-    Top = 153
+    Top = 151
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -95,7 +95,7 @@
   end
   object btnEmail: TBitBtn
     Left = 185
-    Top = 153
+    Top = 151
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -165,9 +165,8 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryCreditPrint: TFDQuery
@@ -210,9 +209,8 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetCustomers: TFDQuery
@@ -257,9 +255,7 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object GetCreditCustSQL: TFDQuery
@@ -298,9 +294,7 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryInvEmail: TFDQuery
@@ -346,19 +340,14 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditEmail: TFDQuery
@@ -403,19 +392,14 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryAddress: TFDQuery
@@ -428,9 +412,7 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
 end

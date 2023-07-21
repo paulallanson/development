@@ -8,7 +8,7 @@ uses
   ToolWin, DB, AllCommon,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TfrmWTLUSupplier = class(TForm)
@@ -88,7 +88,8 @@ uses wtDataModule, WTMaintSupplier, WTSupplierSearch, WTLUSupplierContacts;
 procedure TfrmWTLUSupplier.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  AllCommon.SaveDBGridCols('', 'SupplierLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SaveDBGridCols('', 'SupplierLU Col Order', fileName, self.dbgDetails);
   Action := caFree
 end;
 
@@ -97,7 +98,8 @@ begin
   dtsSuppliers.OnDataChange := SetButtons;
   FChildLeft := -1;
   FChildTop := -1;
-  AllCommon.SetDBGridCols('', 'SupplierLU Col Order', 'myWorktops.ini', self.dbgDetails);
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  AllCommon.SetDBGridCols('', 'SupplierLU Col Order', fileName, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSupplier.FormShow(Sender: TObject);

@@ -161,9 +161,10 @@ procedure TfrmWTMaintContractConvertOrder.FormActivate(Sender: TObject);
 var
   sText: string;
 begin
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   if FMode = 'C' then
     begin
-      AllCommon.LoadFormLayout('myWorktops.ini', self);
+      AllCommon.LoadFormLayout(fileName, self);
       self.Caption := 'Convert to Order';
       dbgDetails.visible := false;
       self.Height := 532;
@@ -172,7 +173,7 @@ begin
     end
   else
     begin
-      AllCommon.LoadFormLayout('myWorktops.ini', self);
+      AllCommon.LoadFormLayout(fileName, self);
       self.Caption := 'Add to Order';
       dbgDetails.visible := true;
       pnlReference.Visible := false;
@@ -368,8 +369,9 @@ end;
 
 procedure TfrmWTMaintContractConvertOrder.FormDestroy(Sender: TObject);
 begin
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
 //  if Mode = 'A' then
-    AllCommon.SaveFormLayout('myWorktops.ini', self);
+    AllCommon.SaveFormLayout(fileName, self);
 end;
 
 procedure TfrmWTMaintContractConvertOrder.SetSalesOrder(

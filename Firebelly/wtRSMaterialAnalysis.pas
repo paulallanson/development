@@ -577,7 +577,8 @@ procedure TfrmWTRSMaterialAnalysis.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
   try
   with IniFile do
@@ -720,12 +721,14 @@ procedure TfrmWTRSMaterialAnalysis.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('myWorktops.ini');
+  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
+  IniFile := TIniFile.Create(fileName);
 
-  with IniFile do
-    begin
-      WriteString('Material Analysis Report', 'Value By', inttostr(rdgrpValueBy.itemindex))
-    end;
+  try
+    IniFile.WriteString('Material Analysis Report', 'Value By', inttostr(rdgrpValueBy.itemindex))
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlWorktops.DelIntSelCode(iIntSelCode, True);
 end;
