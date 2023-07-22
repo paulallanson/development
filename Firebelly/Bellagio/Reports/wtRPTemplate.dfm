@@ -1,30 +1,24 @@
 object frmwtRPTemplate: TfrmwtRPTemplate
   Left = 106
   Top = 118
-  Width = 1365
-  Height = 646
   Caption = 'Template Check List'
+  ClientHeight = 607
+  ClientWidth = 1349
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 312
     Top = -1038
     Width = 794
-    Height = 1623
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Height = 1123
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qryReport
     Font.Charset = ANSI_CHARSET
@@ -46,6 +40,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -59,13 +54,17 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Template Check List'
     SnapToGrid = True
@@ -73,25 +72,28 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrgQuote: TQRGroup
       Left = 38
       Top = 38
       Width = 718
       Height = 1028
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrgQuoteAfterPrint
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
         2719.916666666667000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpDetails
       ReprintOnNewPage = False
@@ -100,16 +102,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 156
         Width = 336
         Height = 125
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           330.729166666666700000
           1008.062500000000000000
           412.750000000000000000
           889.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -120,16 +120,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 123
         Width = 336
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           1008.062500000000000000
           325.437500000000000000
           889.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -140,16 +138,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 156
         Width = 377
         Height = 125
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           330.729166666666700000
           0.000000000000000000
           412.750000000000000000
           997.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -160,20 +156,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 8
         Width = 269
         Height = 43
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           973.666666666666700000
           21.166666666666670000
           711.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Template Checklist'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -183,7 +175,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 24
       end
       object gtQRLabel4: TQRLabel
@@ -191,20 +185,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 243
         Width = 330
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           1016.000000000000000000
           642.937500000000000000
           873.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Please contact customer 30 mins before arrival'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -214,7 +204,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold, fsItalic, fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object qrmSiteAddress: TQRMemo
@@ -222,20 +214,17 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 174
         Width = 364
         Height = 104
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           275.166666666666700000
           13.229166666666670000
           460.375000000000000000
           963.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Lines.Strings = (
           '1'
@@ -245,7 +234,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
           '5'
           '6')
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRLabel6: TQRLabel
@@ -253,20 +243,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 159
         Width = 94
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1031.875000000000000000
           420.687500000000000000
           248.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact Name:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -276,7 +262,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText2: TQRDBText
@@ -284,25 +272,26 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 159
         Width = 211
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1328.208333333333000000
           420.687500000000000000
           558.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Name'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel7: TQRLabel
@@ -310,20 +299,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 184
         Width = 107
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1031.875000000000000000
           486.833333333333300000
           283.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact Number:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -333,7 +318,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText3: TQRDBText
@@ -341,25 +328,26 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 184
         Width = 211
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1328.208333333333000000
           486.833333333333300000
           558.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Phone'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qriHeadLogo: TQRImage
@@ -367,16 +355,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 0
         Width = 180
         Height = 120
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           317.500000000000000000
           0.000000000000000000
           0.000000000000000000
           476.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object gtQRShape9: TQRShape
@@ -384,16 +370,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 123
         Width = 377
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           0.000000000000000000
           325.437500000000000000
           997.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -404,20 +388,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 130
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1031.875000000000000000
           343.958333333333300000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Reference:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -427,7 +407,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText4: TQRDBText
@@ -435,25 +417,26 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 131
         Width = 250
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1222.375000000000000000
           346.604166666666700000
           661.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrmAddress: TQRMemo
@@ -461,23 +444,21 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 130
         Width = 290
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           203.729166666666700000
           343.958333333333300000
           767.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRShape73: TQRShape
@@ -485,16 +466,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 10
         Width = 129
         Height = 101
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           267.229166666666700000
           484.187500000000000000
           26.458333333333330000
           341.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -505,20 +484,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 16
         Width = 148
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           60.854166666666670000
           457.729166666666700000
           42.333333333333330000
           391.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Order No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -528,7 +503,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrlblSalesOrderNo: TQRDBText
@@ -536,20 +513,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 48
         Width = 117
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           60.854166666666670000
           497.416666666666700000
           127.000000000000000000
           309.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
@@ -560,7 +533,11 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object gtQRRichText1: TQRRichText
@@ -568,24 +545,25 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 59
         Width = 395
         Height = 37
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           97.895833333333330000
           849.312500000000000000
           156.104166666666700000
           1045.104166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clRed
         Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = [fsItalic]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'Bellagio '
           'templater to '
@@ -601,20 +579,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 95
         Width = 221
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           849.312500000000000000
           251.354166666666700000
           584.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'templates@bellagiostone.co.uk'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -624,7 +598,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object gtQRLabel2: TQRLabel
@@ -632,20 +608,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 130
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           343.958333333333300000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -655,7 +627,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel5: TQRLabel
@@ -663,20 +637,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 157
         Width = 55
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           415.395833333333300000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Address:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -686,7 +656,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape3: TQRShape
@@ -694,16 +666,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 349
         Width = 454
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           685.270833333333300000
           923.395833333333300000
           1201.208333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -714,16 +684,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 285
         Width = 717
         Height = 60
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           158.750000000000000000
           0.000000000000000000
           754.062500000000000000
           1897.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -734,16 +702,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 349
         Width = 257
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           0.000000000000000000
           923.395833333333300000
           679.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -755,20 +721,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Width = 367
         Height = 17
         HelpType = htKeyword
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           18.520833333333330000
           759.354166666666700000
           971.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Description (see spec page for quoted requirements): '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -778,7 +740,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText5: TQRDBText
@@ -786,20 +750,17 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 303
         Width = 697
         Height = 38
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           100.541666666666700000
           18.520833333333330000
           801.687500000000000000
           1844.145833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Description'
@@ -810,7 +771,11 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
@@ -818,20 +783,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 351
         Width = 78
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           928.687500000000000000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Edge Detail:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -841,7 +802,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel8: TQRLabel
@@ -849,20 +812,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 351
         Width = 58
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           693.208333333333300000
           928.687500000000000000
           153.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Worktop:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -872,7 +831,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel15: TQRLabel
@@ -880,20 +841,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 612
         Width = 207
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           18.520833333333330000
           1619.250000000000000000
           547.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Additional Template Information'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -903,7 +860,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape13: TQRShape
@@ -911,16 +870,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 375
         Width = 714
         Height = 147
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           388.937500000000000000
           0.000000000000000000
           992.187500000000000000
           1889.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -931,16 +888,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 351
         Width = 163
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           227.541666666666700000
           928.687500000000000000
           431.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -948,7 +903,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Caption = 'qrlblEdgeDetail'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblColour: TQRLabel
@@ -956,24 +913,23 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 351
         Width = 379
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           862.541666666666700000
           928.687500000000000000
           1002.770833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblColour'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape8: TQRShape
@@ -981,16 +937,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 525
         Width = 714
         Height = 269
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           711.729166666666700000
           0.000000000000000000
           1389.062500000000000000
           1889.125000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1001,20 +955,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 377
         Width = 244
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           997.479166666666700000
           645.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Cut Out Details (e.g. sink, hob, popup):'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1024,7 +974,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel10: TQRLabel
@@ -1032,20 +984,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 527
         Width = 162
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           13.229166666666670000
           1394.354166666667000000
           428.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Additional Template Info:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1055,7 +1003,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRRichText2: TQRRichText
@@ -1063,24 +1013,25 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 797
         Width = 712
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           5.291666666666667000
           2108.729166666667000000
           1883.833333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clRed
         Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = [fsItalic]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'Templater - '
           'Please '
@@ -1096,16 +1047,15 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Width = 716
         Height = 181
         Frame.Color = clRed
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Frame.Width = 3
         Size.Values = (
           478.895833333333300000
           0.000000000000000000
           2233.083333333333000000
           1894.416666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clRed
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1116,17 +1066,15 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 822
         Width = 713
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Frame.Style = psClear
         Size.Values = (
           52.916666666666670000
           5.291666666666667000
           2174.875000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Brush.Color = clBtnFace
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1136,20 +1084,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 824
         Width = 199
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           2180.166666666667000000
           526.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Templates as per quoted spec?'
         Color = clBtnFace
         Font.Charset = ANSI_CHARSET
@@ -1159,7 +1103,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel13: TQRLabel
@@ -1167,20 +1113,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 824
         Width = 432
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           732.895833333333300000
           2180.166666666667000000
           1143.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 
           'Yes               No               (Please note alterations on t' +
           'emplate notes)'
@@ -1192,7 +1134,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrrchApplianceDetails: TQRMemo
@@ -1200,23 +1144,21 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 395
         Width = 705
         Height = 123
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           325.437500000000000000
           13.229166666666670000
           1045.104166666667000000
           1865.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object qrrchTextNotes: TQRMemo
@@ -1224,23 +1166,21 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 545
         Width = 705
         Height = 245
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           648.229166666666700000
           13.229166666666670000
           1441.979166666667000000
           1865.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRLabel40: TQRLabel
@@ -1248,20 +1188,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 209
         Width = 93
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1031.875000000000000000
           552.979166666666700000
           246.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact Email:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1271,7 +1207,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblInstallEmail: TQRLabel
@@ -1279,20 +1217,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 209
         Width = 87
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1328.208333333333000000
           552.979166666666700000
           230.187500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact Email:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1302,7 +1236,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRRichText9: TQRRichText
@@ -1310,24 +1246,25 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 951
         Width = 132
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           13.229166666666670000
           2516.187500000000000000
           349.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'Signed '
           '(Customer):')
@@ -1337,50 +1274,53 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 995
         Width = 132
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           13.229166666666670000
           2632.604166666667000000
           349.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
-          'Templater Name:')
+          'Templater '
+          'Name:')
       end
       object gtQRRichText10: TQRRichText
         Left = 333
         Top = 951
         Width = 132
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           881.062500000000000000
           2516.187500000000000000
           349.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'Name:')
       end
@@ -1389,20 +1329,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 952
         Width = 34
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1539.875000000000000000
           2518.833333333333000000
           89.958333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1412,7 +1348,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRMemo4: TQRMemo
@@ -1420,20 +1358,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 851
         Width = 126
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           2251.604166666667000000
           333.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1444,7 +1378,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
           'Customer Approval:')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object gtQRMemo5: TQRMemo
@@ -1452,20 +1387,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 875
         Width = 622
         Height = 54
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           142.875000000000000000
           13.229166666666670000
           2315.104166666667000000
           1645.708333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         Lines.Strings = (
           
@@ -1478,7 +1409,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
             'No further alterations will be made to the kitchen units, walls ' +
             'or floors prior to installation of the worksurface.')
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
     end
@@ -1487,37 +1419,31 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       Top = 1321
       Width = 718
       Height = 20
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         52.916666666666670000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageFooter
       object gtQRSysData1: TQRSysData
         Left = 612
         Top = 2
         Width = 95
         Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           42.333333333333330000
           1619.250000000000000000
           5.291666666666667000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
@@ -1528,6 +1454,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         ParentFont = False
         Text = 'Printed: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1536,18 +1464,15 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       Top = 1259
       Width = 718
       Height = 31
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         82.020833333333330000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qrySOLine
       FooterBand = qrbAdditionalItemsFooter
@@ -1559,25 +1484,25 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 7
         Width = 50
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1518.708333333333000000
           18.520833333333330000
           132.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySOLine
         DataField = 'Quantity'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText6: TQRDBText
@@ -1585,16 +1510,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 7
         Width = 555
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           15.875000000000000000
           18.520833333333330000
           1468.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1603,7 +1526,11 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         DataSet = qrySOLine
         DataField = 'Description'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1612,35 +1539,31 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       Top = 1066
       Width = 718
       Height = 193
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbAdditionalItemsHeaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         510.645833333333300000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
       object gtQRShape44: TQRShape
         Left = 381
         Top = 127
         Width = 336
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           1008.062500000000000000
           336.020833333333300000
           889.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1651,16 +1574,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 127
         Width = 377
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           0.000000000000000000
           336.020833333333300000
           997.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1671,16 +1592,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 10
         Width = 129
         Height = 101
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           267.229166666666700000
           484.187500000000000000
           26.458333333333330000
           341.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Color = clMedGray
         Pen.Width = 3
         Shape = qrsRectangle
@@ -1691,16 +1610,14 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 0
         Width = 180
         Height = 120
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           317.500000000000000000
           0.000000000000000000
           0.000000000000000000
           476.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object gtQRLabel33: TQRLabel
@@ -1708,20 +1625,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 16
         Width = 111
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           60.854166666666670000
           505.354166666666700000
           42.333333333333330000
           293.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sales Order'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1731,7 +1644,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object gtQRDBText1: TQRDBText
@@ -1739,20 +1654,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 48
         Width = 117
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           60.854166666666670000
           497.416666666666700000
           127.000000000000000000
           309.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
@@ -1763,7 +1674,11 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object gtQRLabel34: TQRLabel
@@ -1771,20 +1686,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 134
         Width = 65
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           354.541666666666700000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1794,7 +1705,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel35: TQRLabel
@@ -1802,20 +1715,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 134
         Width = 70
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1031.875000000000000000
           354.541666666666700000
           185.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Reference:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1825,7 +1734,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRDBText4: TQRDBText
@@ -1833,25 +1744,26 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 134
         Width = 250
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1222.375000000000000000
           354.541666666666700000
           661.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel36: TQRLabel
@@ -1859,20 +1771,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 8
         Width = 225
         Height = 43
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           113.770833333333300000
           1121.833333333333000000
           21.166666666666670000
           595.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Additional Items'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1882,7 +1790,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 24
       end
       object gtQRLabel37: TQRLabel
@@ -1890,20 +1800,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 170
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           13.229166666666670000
           449.791666666666700000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1913,7 +1819,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel38: TQRLabel
@@ -1921,20 +1829,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 170
         Width = 54
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1516.062500000000000000
           449.791666666666700000
           142.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Quantity'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1944,7 +1848,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblCustomerName: TQRLabel
@@ -1952,20 +1858,17 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 134
         Width = 292
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           203.729166666666700000
           354.541666666666700000
           772.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblCustomerName'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1975,7 +1878,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRMemo6: TQRMemo
@@ -1983,20 +1888,16 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Top = 64
         Width = 393
         Height = 49
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           129.645833333333300000
           846.666666666666700000
           169.333333333333300000
           1039.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
@@ -2008,7 +1909,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
           'those stated within the standard spec sheet.')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 11
       end
     end
@@ -2017,40 +1919,34 @@ object frmwtRPTemplate: TfrmwtRPTemplate
       Top = 1290
       Width = 718
       Height = 31
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = False
       BeforePrint = qrbAdditionalItemsFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         82.020833333333330000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblAdditionalItems: TQRLabel
         Left = 5
         Top = 2
         Width = 219
         Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           47.625000000000000000
           13.229166666666670000
           5.291666666666667000
           579.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'No additional items to be supplied'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -2060,7 +1956,9 @@ object frmwtRPTemplate: TfrmwtRPTemplate
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
     end
@@ -2103,9 +2001,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 118
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -2123,9 +2019,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 299
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -2147,9 +2041,8 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 334
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsAddress: TDataSource
@@ -2175,9 +2068,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 53
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryEndUser: TFDQuery
@@ -2197,9 +2088,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'End_User'
-        ParamType = ptUnknown
       end>
   end
   object qryQuote: TFDQuery
@@ -2231,9 +2120,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 238
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteEdge: TFDQuery
@@ -2252,9 +2139,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 302
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteThickness: TFDQuery
@@ -2273,9 +2158,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 366
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteUpstand: TFDQuery
@@ -2294,9 +2177,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 438
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesOrder: TFDQuery
@@ -2309,14 +2190,12 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 458
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOLine: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsReport
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Sales_Order_Line.Sales_Order,'
       '  Sales_Order_Line.Sales_order_Line_no,'
@@ -2349,91 +2228,72 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 296
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qrySOLineSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-
     end
     object qrySOLineSales_order_Line_no: TIntegerField
       FieldName = 'Sales_order_Line_no'
-
     end
     object qrySOLineJob: TFloatField
       FieldName = 'Job'
-
     end
     object qrySOLineUnit_price: TFloatField
       FieldName = 'Unit_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineQuantity: TIntegerField
       FieldName = 'Quantity'
-
     end
     object qrySOLineSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
-
     end
     object qrySOLineTotal_Price: TFloatField
       FieldName = 'Total_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineNett_Price: TFloatField
       FieldName = 'Nett_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDiscount_Value: TFloatField
       FieldName = 'Discount_Value'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineInstallation_price: TFloatField
       FieldName = 'Installation_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineSurvey_price: TFloatField
       FieldName = 'Survey_price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDelivery_Price: TFloatField
       FieldName = 'Delivery_Price'
-
       DisplayFormat = '0.00'
     end
     object qrySOLineDescription: TStringField
       FieldName = 'Description'
-
       Size = 50
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'
-
     end
     object qrySOLineVat: TIntegerField
       FieldName = 'Vat'
-
     end
     object qrySOLineVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
       DisplayFormat = '0.00%'
     end
     object qrySOLineVAT_Description: TStringField
       FieldName = 'VAT_Description'
-
       Size = 40
     end
     object qrySOLineQuote: TIntegerField
       FieldName = 'Quote'
-
     end
     object qrySOLineMarkup_Value: TFloatField
       FieldName = 'Markup_Value'
@@ -2471,9 +2331,7 @@ object frmwtRPTemplate: TfrmwtRPTemplate
     Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
 end

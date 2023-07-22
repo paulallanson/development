@@ -1,30 +1,24 @@
 object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
   Left = 41
   Top = 104
-  Width = 1298
-  Height = 759
   Caption = 'frmwtRPJobRemedialSheet'
+  ClientHeight = 720
+  ClientWidth = 1282
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpJobSheet: TQuickRep
     Left = 224
     Top = -38
     Width = 794
     Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpJobSheetBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -46,6 +40,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -59,13 +54,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Job Fitting Sheet'
     SnapToGrid = True
@@ -73,25 +72,28 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrgQuote: TQRGroup
       Left = 38
       Top = 38
       Width = 718
       Height = 1035
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrgQuoteAfterPrint
       AlignToBottom = False
       BeforePrint = qrgQuoteBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         2738.437500000000000000
         1899.708333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'quote'
       Master = qrpJobSheet
       ReprintOnNewPage = False
@@ -100,16 +102,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 185
         Width = 713
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           7.937500000000000000
           489.479166666666700000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -118,20 +118,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = -5
         Width = 294
         Height = 86
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           227.541666666666700000
           1121.833333333333000000
           -13.229166666666670000
           777.875000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'REMEDIAL SHEET'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -141,7 +138,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 28
       end
       object gtQRShape1: TQRShape
@@ -149,16 +148,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 81
         Width = 212
         Height = 56
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           148.166666666666700000
           1333.500000000000000000
           214.312500000000000000
           560.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
@@ -167,20 +164,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 114
         Width = 79
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1664.229166666667000000
           301.625000000000000000
           209.020833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Sales_Order'
@@ -191,7 +184,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel2: TQRLabel
@@ -199,20 +196,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 114
         Width = 62
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1386.416666666667000000
           301.625000000000000000
           164.041666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -222,7 +215,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape2: TQRShape
@@ -230,16 +225,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 80
         Width = 9
         Height = 56
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           148.166666666666700000
           1561.041666666667000000
           211.666666666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -248,16 +241,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 107
         Width = 212
         Height = 5
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           13.229166666666670000
           1333.500000000000000000
           283.104166666666700000
           560.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -266,16 +257,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 656
         Width = 713
         Height = 145
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           383.645833333333300000
           7.937500000000000000
           1735.666666666667000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -285,20 +274,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 636
         Width = 185
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           1682.750000000000000000
           489.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Remedial Action to be taken:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -308,7 +293,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape6: TQRShape
@@ -316,16 +303,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 488
         Width = 713
         Height = 145
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           383.645833333333300000
           7.937500000000000000
           1291.166666666667000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -335,20 +320,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 467
         Width = 166
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           1235.604166666667000000
           439.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Details of Remedial Work:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -358,7 +339,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape15: TQRShape
@@ -366,16 +349,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 216
         Width = 713
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           7.937500000000000000
           571.500000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -385,16 +366,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 246
         Width = 713
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           7.937500000000000000
           650.875000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -404,16 +383,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 276
         Width = 713
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           7.937500000000000000
           730.250000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -423,20 +400,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 224
         Width = 106
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           592.666666666666700000
           280.458333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer Name:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -446,7 +419,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText8: TQRDBText
@@ -454,20 +429,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 224
         Width = 98
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           529.166666666666700000
           592.666666666666700000
           259.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -478,7 +449,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape18: TQRShape
@@ -486,16 +461,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 184
         Width = 7
         Height = 122
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           322.791666666666700000
           468.312500000000000000
           486.833333333333300000
           18.520833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -504,16 +477,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 312
         Width = 713
         Height = 137
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           362.479166666666700000
           7.937500000000000000
           825.500000000000000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -523,16 +494,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 320
         Width = 241
         Height = 97
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           256.645833333333300000
           381.000000000000000000
           846.666666666666700000
           637.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
@@ -541,6 +510,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
         Lines.Strings = (
           'InstallAddress')
       end
@@ -549,20 +521,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 320
         Width = 84
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           846.666666666666700000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Site Address:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -572,7 +540,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
@@ -580,20 +550,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 88
         Width = 49
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1386.416666666667000000
           232.833333333333300000
           129.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job No.'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -603,7 +569,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape22: TQRShape
@@ -611,16 +579,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 424
         Width = 713
         Height = 25
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           66.145833333333330000
           7.937500000000000000
           1121.833333333333000000
           1886.479166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -630,16 +596,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 313
         Width = 7
         Height = 136
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           359.833333333333300000
           341.312500000000000000
           828.145833333333300000
           18.520833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -648,20 +612,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 428
         Width = 123
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           23.812500000000000000
           1132.416666666667000000
           325.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Site Contact Name:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -671,7 +631,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText3: TQRDBText
@@ -679,20 +641,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 427
         Width = 241
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           381.000000000000000000
           1129.770833333333000000
           637.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Name'
@@ -703,7 +662,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel15: TQRLabel
@@ -711,20 +674,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 252
         Width = 53
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           666.750000000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -734,7 +693,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel15: TQRLabel
@@ -742,20 +703,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 428
         Width = 107
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1039.812500000000000000
           1132.416666666667000000
           283.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Contact Number:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -765,7 +722,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText6: TQRDBText
@@ -773,20 +732,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 428
         Width = 201
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1354.666666666667000000
           1132.416666666667000000
           531.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Install_Phone'
@@ -797,7 +753,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblContact: TQRLabel
@@ -805,20 +765,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 252
         Width = 201
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           529.166666666666700000
           666.750000000000000000
           531.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblContact'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -828,7 +785,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel5: TQRLabel
@@ -836,20 +795,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 282
         Width = 111
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           746.125000000000000000
           293.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Client Reference:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -859,7 +814,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText4: TQRDBText
@@ -867,20 +824,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 282
         Width = 59
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           529.166666666666700000
           746.125000000000000000
           156.104166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reference'
@@ -891,7 +844,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape24: TQRShape
@@ -899,16 +856,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 425
         Width = 7
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1018.645833333333000000
           1124.479166666667000000
           18.520833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -917,16 +872,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 425
         Width = 7
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1314.979166666667000000
           1124.479166666667000000
           18.520833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -935,20 +888,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 88
         Width = 24
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1809.750000000000000000
           232.833333333333300000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Job'
@@ -959,7 +908,11 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape26: TQRShape
@@ -967,16 +920,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 185
         Width = 9
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           1434.041666666667000000
           489.479166666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -985,20 +936,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 193
         Width = 97
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1132.416666666667000000
           510.645833333333300000
           256.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Arranged:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1008,7 +955,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel3: TQRLabel
@@ -1016,20 +965,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 854
         Width = 101
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2259.541666666667000000
           267.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Revisit Required?'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1039,7 +984,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel5: TQRLabel
@@ -1047,20 +994,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 820
         Width = 262
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2169.583333333333000000
           693.208333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Remedial completed to customer satisfaction'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1070,7 +1013,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel6: TQRLabel
@@ -1078,20 +1023,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 900
         Width = 41
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2381.250000000000000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Signed'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1101,7 +1042,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel7: TQRLabel
@@ -1109,20 +1052,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 964
         Width = 41
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2550.583333333333000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Signed'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1132,7 +1071,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel8: TQRLabel
@@ -1140,20 +1081,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 900
         Width = 28
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1058.333333333333000000
           2381.250000000000000000
           74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1163,7 +1100,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel9: TQRLabel
@@ -1171,20 +1110,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 964
         Width = 28
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1058.333333333333000000
           2550.583333333333000000
           74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1194,7 +1129,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel10: TQRLabel
@@ -1202,20 +1139,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 854
         Width = 84
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           1058.333333333333000000
           2259.541666666667000000
           222.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Arranged'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1225,7 +1158,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape32: TQRShape
@@ -1233,16 +1168,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 910
         Width = 265
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           275.166666666666700000
           2407.708333333333000000
           701.145833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1251,16 +1184,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 974
         Width = 265
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           275.166666666666700000
           2577.041666666667000000
           701.145833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1269,16 +1200,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 910
         Width = 187
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1354.666666666667000000
           2407.708333333333000000
           494.770833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1287,16 +1216,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 974
         Width = 187
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1354.666666666667000000
           2577.041666666667000000
           494.770833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1305,16 +1232,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 867
         Width = 187
         Height = 8
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           21.166666666666670000
           1354.666666666667000000
           2293.937500000000000000
           494.770833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
@@ -1323,16 +1248,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 856
         Width = 15
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           486.833333333333400000
           2264.833333333333000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1342,16 +1265,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 856
         Width = 15
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           677.333333333333400000
           2264.833333333333000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1361,20 +1282,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 854
         Width = 24
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           402.166666666666700000
           2259.541666666667000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Yes'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1384,7 +1301,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel12: TQRLabel
@@ -1392,20 +1311,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 854
         Width = 17
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           592.666666666666700000
           2259.541666666667000000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'No'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1415,7 +1330,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel16: TQRLabel
@@ -1423,20 +1340,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 924
         Width = 125
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2444.750000000000000000
           330.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'on behalf of customer'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1446,7 +1359,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel17: TQRLabel
@@ -1454,20 +1369,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 988
         Width = 71
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           21.166666666666670000
           2614.083333333333000000
           187.854166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'on behalf of '
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1477,7 +1388,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblCompany: TQRLabel
@@ -1485,20 +1398,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 988
         Width = 56
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           211.666666666666700000
           2614.083333333333000000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Company'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1508,7 +1417,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape12: TQRShape
@@ -1516,16 +1427,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 185
         Width = 9
         Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           84.666666666666670000
           1095.375000000000000000
           489.479166666666700000
           23.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsVertLine
         VertAdjust = 0
       end
@@ -1534,20 +1443,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 193
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           510.645833333333300000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Logged by:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1557,7 +1462,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRShape13: TQRShape
@@ -1565,16 +1472,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 824
         Width = 15
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           867.833333333333500000
           2180.166666666667000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1584,16 +1489,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 824
         Width = 15
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1037.166666666667000000
           2180.166666666667000000
           39.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Pen.Width = 2
         Shape = qrsRectangle
         VertAdjust = 0
@@ -1603,20 +1506,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 822
         Width = 24
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           783.166666666666700000
           2174.875000000000000000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Yes'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1626,7 +1525,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel20: TQRLabel
@@ -1634,20 +1535,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 822
         Width = 17
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           952.500000000000000000
           2174.875000000000000000
           44.979166666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'No'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -1657,7 +1554,9 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qriHeadLogo: TQRImage
@@ -1665,16 +1564,14 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 6
         Width = 156
         Height = 156
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           412.750000000000000000
           10.583333333333330000
           15.875000000000000000
           412.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
       object memAddress: TQRMemo
@@ -1682,20 +1579,17 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Top = 22
         Width = 134
         Height = 123
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           325.437500000000000000
           452.437500000000000000
           58.208333333333330000
           354.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -1704,7 +1598,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 6
       end
     end
@@ -1713,19 +1608,16 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
       Top = 1088
       Width = 108
       Height = 16
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Size.Values = (
         42.333333333333330000
         1711.854166666667000000
         2878.666666666667000000
         285.750000000000000000)
+      XLColumn = 0
+      XLNumFormat = nfGeneral
+      ActiveInPreview = False
       Alignment = taRightJustify
       AlignToBand = False
-      AutoSize = True
       Color = clWhite
       Data = qrsDateTime
       Font.Charset = ANSI_CHARSET
@@ -1736,6 +1628,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
       ParentFont = False
       Text = 'Printed: '
       Transparent = False
+      ExportAs = exptText
+      VerticalAlignment = tlTop
       FontSize = 8
     end
   end
@@ -1760,9 +1654,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 54
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -1780,9 +1673,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 331
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryCustomer: TFDQuery
@@ -1802,9 +1693,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 390
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
@@ -1829,9 +1718,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 213
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJStatus: TFDQuery
@@ -1846,19 +1733,13 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Date_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryCompanyAddress: TFDQuery
@@ -1879,8 +1760,8 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 521
   end
   object qryJRemedials: TFDQuery
-    ConnectionName = 'Wt'
     MasterSource = dtsReport
+    ConnectionName = 'Wt'
     SQL.Strings = (
       'select Job_Remedial.*, Fitter.Fitter_Name'
       'from Job_Remedial, Fitter'
@@ -1891,9 +1772,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 450
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJobEdge: TFDQuery
@@ -1912,9 +1791,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 118
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJobThickness: TFDQuery
@@ -1933,9 +1810,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 182
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJobUpstand: TFDQuery
@@ -1954,9 +1829,7 @@ object frmwtRPJobRemedialSheet: TfrmwtRPJobRemedialSheet
     Top = 254
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
 end

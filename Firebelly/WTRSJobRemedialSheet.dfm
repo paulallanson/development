@@ -1,27 +1,26 @@
 object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
   Left = 676
   Top = 190
-  Width = 644
-  Height = 405
   Caption = 'Remedial Print'
+  ClientHeight = 366
+  ClientWidth = 628
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHead: TPanel
     Left = 0
     Top = 0
-    Width = 636
+    Width = 628
     Height = 113
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 636
     object Label1: TLabel
       Left = 24
       Top = 16
@@ -133,16 +132,16 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
   end
   object Panel2: TPanel
     Left = 0
-    Top = 314
-    Width = 636
+    Top = 306
+    Width = 628
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      636
+      628
       41)
     object Panel3: TPanel
-      Left = 333
+      Left = 325
       Top = 1
       Width = 302
       Height = 39
@@ -207,16 +206,18 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 355
-    Width = 636
+    Top = 347
+    Width = 628
     Height = 19
     Panels = <>
+    ExplicitTop = 355
+    ExplicitWidth = 636
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 636
-    Height = 201
+    Width = 628
+    Height = 193
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -289,9 +290,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object dtsReport: TDataSource
@@ -313,9 +312,7 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object dtsJob: TDataSource
@@ -376,19 +373,13 @@ object frmWTRSJobRemedialSheet: TfrmWTRSJobRemedialSheet
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end>
   end
 end

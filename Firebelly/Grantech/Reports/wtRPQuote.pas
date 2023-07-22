@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport, 
   jpeg,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
@@ -51,7 +51,6 @@ type
     qrrchTextAvailability: TQRRichText;
     QRDBText5: TQRDBText;
     qryEndUser: TFDQuery;
-    gtQRFilters1: TgtQRFilters;
     lblWorktopTotal: TQRLabel;
     lblExtraTotal: TQRLabel;
     qriHeadLogo: TQRImage;
@@ -223,7 +222,8 @@ var
 
 implementation
 
-uses AllCommon, wtDataModule;
+uses
+  AllCommon, wtDataModule, Printer.Tools;
 
 var
   rGrossTotal, rTotalArea: real;
@@ -745,6 +745,12 @@ begin
 end;
 
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
   AFilters: TGtQRFilters;
@@ -859,6 +865,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmwtRPQuote.qrcbPriceMatchBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

@@ -135,9 +135,6 @@
         <DCCReference Include="..\wtMaintThickness.pas">
             <Form>frmWtMaintThickness</Form>
         </DCCReference>
-        <DCCReference Include="..\wtMaintworktops.pas">
-            <Form>frmWtMaintWorktops</Form>
-        </DCCReference>
         <DCCReference Include="..\wtLUWTThickness.pas">
             <Form>frmWTLUWTThickness</Form>
         </DCCReference>

@@ -4,8 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
@@ -189,7 +190,8 @@ var
 
 implementation
 
-uses AllCommon;
+uses
+  AllCommon, Printer.Tools;
 
 var
   rGrossTotal: real;
@@ -605,6 +607,12 @@ begin
 end;
 
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
   AFilters: TGtQRFilters;
@@ -719,6 +727,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmwtRPQuote.qrcbSubTotalBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

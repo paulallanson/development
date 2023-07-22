@@ -59,6 +59,7 @@
         <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>..\MegaMarble\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>..\MegaMarble\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_Define>MEGAMARBLE;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
@@ -70,6 +71,7 @@
         <Icon_MainIcon>Firebelly_Mega_Icon.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <Icon_MainIcon>Firebelly_Mega_Icon.ico</Icon_MainIcon>
@@ -134,9 +136,6 @@
         </DCCReference>
         <DCCReference Include="..\wtMaintThickness.pas">
             <Form>frmWtMaintThickness</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtMaintworktops.pas">
-            <Form>frmWtMaintWorktops</Form>
         </DCCReference>
         <DCCReference Include="..\wtLUWTThickness.pas">
             <Form>frmWTLUWTThickness</Form>

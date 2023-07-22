@@ -4,25 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, Variants, QrCtrls, Outlook12_TLB,
-  gtClasses3, gtXportIntf, gtQRXportIntf, Printer.Enums, gtCstDocEng,
-  gtCstPlnEng, gtCstHTMLEng, gtExHTMLEng, gtHTMLEng, gtCstGfxEng, gtBMPEng,
-  gtCstPDFEng, gtExPDFEng, gtPDFEng, gtJPEGEng, gtGIFEng, gtRTFEng,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
-  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, Variants, QrCtrls,
+  Outlook12_TLB, Printer.Enums,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TemailHandler = class(TDataModule)
     qrySelCustomerContacts: TFDQuery;
     qryEmailList: TFDQuery;
-    gtQRExportInterface1: TgtQRExportInterface;
-    gtHTMLEngine1: TgtHTMLEngine;
-    gtPDFEngine1: TgtPDFEngine;
-    gtBMPEngine1: TgtBMPEngine;
-    gtRTFEngine1: TgtRTFEngine;
-    gtGIFEngine1: TgtGIFEngine;
-    gtJPEGEngine1: TgtJPEGEngine;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -32,8 +23,8 @@ type
     CCList: TStringList;
     fileName: string;
     function populateRecipientList(customer, branch: integer): boolean;
-//    GDK ToDo: Remove after tests
 //    procedure PrintToAttachment(const Report: TQuickRep; const attachmentType: string);
+//    GDK ToDo: Remove after tests
 //    procedure PrintToHTM(report: TQuickRep);
 //    procedure PrintToPDF(report: TQuickRep);
 //    procedure PrintToBMP(report: TQuickRep);

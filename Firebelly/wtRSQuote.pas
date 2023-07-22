@@ -308,7 +308,9 @@ begin
               frmwtRPQuote.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
               frmwtRPQuote.bExcludeTemplate := chkbxExcludeTemplate.checked;
               frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
+              {$IFNDEF MEGAMARBLE}
               frmwtRPQuote.bHideAllPrices := chkbxHideAllPrices.checked;
+              {$ENDIF}
 
               frmwtRPQuote.qrpDetails.ShowProgress := false;
 
@@ -845,9 +847,11 @@ begin
     frmwtRPQuote.bPrintDetail := chkbxShowDetail.checked;
     frmwtRPQuote.bExcludeTemplate := chkbxExcludeTemplate.checked;
     frmwtRPQuote.bOnlyGrandTotal := chkbxOnlyShowGrandTotal.checked;
+    {$IFNDEF MEGAMARBLE}
     frmwtRPQuote.bHideAllPrices := chkbxHideAllPrices.checked;
-    frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
     frmwtRPQuote.bApplyEndUserMarkup := chkbxEndUserMarkup.checked;
+    {$ENDIF}
+    frmwtRPQuote.bPrintAcceptance := chkbxIncludeConfirm.checked;
 
     if printType = 'T' then
       begin

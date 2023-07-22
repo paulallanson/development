@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrExport, gtQrCtrls,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, QrExport, 
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -96,7 +96,6 @@ type
     qryEndUser: TFDQuery;
     QRLabel11: TQRLabel;
     QRShape11: TQRShape;
-    gtQRFilters1: TgtQRFilters;
     lblWorktopTotal: TQRLabel;
     lblCutOutTotal: TQRLabel;
     lblEdgeTotal: TQRLabel;
@@ -180,6 +179,8 @@ type
     bOnlyGrandTotal: boolean;
     bShowOffer: boolean;
     bApplyEndUserMarkup: boolean;
+    {bHideAllPrices was added by GDK }
+    bHideAllPrices: boolean;
     function Getdetails: integer;
     function PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
   end;
@@ -189,7 +190,8 @@ var
 
 implementation
 
-uses AllCommon;
+uses
+  AllCommon, Printer.Tools;
 
 var
   rGrossTotal: real;
@@ -614,6 +616,12 @@ begin
 end;
 
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;
   AFilters: TGtQRFilters;
@@ -728,6 +736,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TfrmwtRPQuote.qrcbSubTotalBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

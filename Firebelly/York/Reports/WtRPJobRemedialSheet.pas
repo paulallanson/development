@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, gtQrCtrls,
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, StdCtrls, 
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -105,6 +105,10 @@ type
     bPreview: boolean;
     bPrintLogo: boolean;
     bAccountsCopy: boolean;
+    { RemedialNo, bRemedialTemplate, RemedialOrder was added by GDK }
+    RemedialNo: integer;
+    bRemedialTemplate: boolean;
+    RemedialOrder: integer;
     function Getdetails: integer;
   end;
 
