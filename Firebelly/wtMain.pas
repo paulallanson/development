@@ -1041,6 +1041,8 @@ begin
           Factivated := true;
 {$ENDIF}
 
+          // GDK ToDo: if LocalDir and DataBase are empty to search for the image, the except instruction will raise in the function and
+          // the code ahead will not run. Except instruction should not simulate a if condition!
           frmAllImages.LoadReportLogo(Self);
 
           with dtmdlWorktops.qryDeleteWorkStations do
