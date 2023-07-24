@@ -95,7 +95,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         968.375000000000000000
         2870.729166666667000000)
       BandType = rbPageHeader
-      object PreviewQRLabel: TgtQRLabel
+      object PreviewQRLabel: TQRLabel
         Left = 320
         Top = 96
         Width = 80
@@ -126,7 +126,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLblAccnt: TgtQRLabel
+      object QRLblAccnt: TQRLabel
         Left = 16
         Top = 299
         Width = 108
@@ -157,7 +157,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object CustRefQRDBText: TgtQRDBText
+      object CustRefQRDBText: TQRDBText
         Left = 136
         Top = 299
         Width = 257
@@ -189,7 +189,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object DelNoQRLabel: TgtQRLabel
+      object DelNoQRLabel: TQRLabel
         Left = 400
         Top = 299
         Width = 150
@@ -220,7 +220,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object DespDtQRLbl: TgtQRLabel
+      object DespDtQRLbl: TQRLabel
         Left = 568
         Top = 299
         Width = 105
@@ -251,7 +251,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = False
         FontSize = 11
       end
-      object SoNumQRDBText: TgtQRDBText
+      object SoNumQRDBText: TQRDBText
         Left = 696
         Top = 299
         Width = 111
@@ -283,7 +283,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 968
         Top = 341
         Width = 99
@@ -314,7 +314,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 104
         Top = 341
         Width = 345
@@ -345,7 +345,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLblDelQtyHead: TgtQRLabel
+      object QRLblDelQtyHead: TQRLabel
         Left = 816
         Top = 341
         Width = 104
@@ -376,7 +376,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object AccNoQRLabel: TgtQRLabel
+      object AccNoQRLabel: TQRLabel
         Left = 16
         Top = 275
         Width = 100
@@ -407,7 +407,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object CustRefQRLabel: TgtQRLabel
+      object CustRefQRLabel: TQRLabel
         Left = 136
         Top = 275
         Width = 257
@@ -438,7 +438,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object TciketQRLabel: TgtQRLabel
+      object TciketQRLabel: TQRLabel
         Left = 400
         Top = 275
         Width = 150
@@ -469,7 +469,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 568
         Top = 275
         Width = 105
@@ -500,7 +500,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object SONOQRLabel: TgtQRLabel
+      object SONOQRLabel: TQRLabel
         Left = 696
         Top = 275
         Width = 111
@@ -531,7 +531,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 341
         Width = 71
@@ -562,7 +562,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object NotesQRMemo: TgtQRMemo
+      object NotesQRMemo: TQRMemo
         Left = 16
         Top = 143
         Width = 272
@@ -598,7 +598,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 16
         Top = 112
         Width = 122
@@ -629,7 +629,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 464
         Top = 341
         Width = 343
@@ -660,7 +660,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 428
         Top = 3
         Width = 645
@@ -677,7 +677,7 @@ object STRPDelivfrm: TSTRPDelivfrm
           1706.562500000000000000)
         Stretch = True
       end
-      object qrlblDeliveryNotes: TgtQRLabel
+      object qrlblDeliveryNotes: TQRLabel
         Left = 433
         Top = 112
         Width = 106
@@ -708,7 +708,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object DelInstructMemo: TgtQRMemo
+      object DelInstructMemo: TQRMemo
         Left = 433
         Top = 135
         Width = 335
@@ -790,7 +790,7 @@ object STRPDelivfrm: TSTRPDelivfrm
       DataSet = GetAllocDetQuery
       PrintBefore = False
       PrintIfEmpty = True
-      object DescQRDBText: TgtQRDBText
+      object DescQRDBText: TQRDBText
         Left = 104
         Top = 2
         Width = 345
@@ -822,7 +822,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabelDlvrd: TgtQRLabel
+      object QRLabelDlvrd: TQRLabel
         Left = 968
         Top = 2
         Width = 99
@@ -853,7 +853,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabelQty: TgtQRLabel
+      object QRLabelQty: TQRLabel
         Left = 816
         Top = 2
         Width = 104
@@ -884,7 +884,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 24
         Top = 353
         Width = 57
@@ -915,7 +915,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object QROrdLblqty: TgtQRLabel
+      object QROrdLblqty: TQRLabel
         Left = 3
         Top = 2
         Width = 66
@@ -946,7 +946,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 464
         Top = 2
         Width = 343
@@ -1003,7 +1003,7 @@ object STRPDelivfrm: TSTRPDelivfrm
       DataSet = GetAllocSerialNoSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object lblSerialCaption: TgtQRLabel
+      object lblSerialCaption: TQRLabel
         Left = 104
         Top = 0
         Width = 106
@@ -1034,7 +1034,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object lblSerialRange: TgtQRLabel
+      object lblSerialRange: TQRLabel
         Left = 216
         Top = 0
         Width = 95
@@ -1111,7 +1111,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         370.416666666666700000
         2870.729166666667000000)
       ParentBand = QRPageFoot
-      object QRShape5: TgtQRShape
+      object QRShape5: TQRShape
         Left = 32
         Top = 1
         Width = 377
@@ -1129,7 +1129,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel21: TgtQRLabel
+      object QRLabel21: TQRLabel
         Left = 40
         Top = 9
         Width = 47
@@ -1160,7 +1160,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel22: TgtQRLabel
+      object QRLabel22: TQRLabel
         Left = 40
         Top = 33
         Width = 100
@@ -1191,7 +1191,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel23: TgtQRLabel
+      object QRLabel23: TQRLabel
         Left = 40
         Top = 57
         Width = 136
@@ -1222,7 +1222,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel24: TgtQRLabel
+      object QRLabel24: TQRLabel
         Left = 40
         Top = 81
         Width = 99
@@ -1253,7 +1253,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel25: TgtQRLabel
+      object QRLabel25: TQRLabel
         Left = 40
         Top = 105
         Width = 107
@@ -1284,7 +1284,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText9: TgtQRDBText
+      object QRDBText9: TQRDBText
         Left = 184
         Top = 105
         Width = 220
@@ -1316,7 +1316,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText10: TgtQRDBText
+      object QRDBText10: TQRDBText
         Left = 184
         Top = 81
         Width = 220
@@ -1348,7 +1348,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText11: TgtQRDBText
+      object QRDBText11: TQRDBText
         Left = 184
         Top = 57
         Width = 220
@@ -1380,7 +1380,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText12: TgtQRDBText
+      object QRDBText12: TQRDBText
         Left = 184
         Top = 33
         Width = 220
@@ -1412,7 +1412,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText13: TgtQRDBText
+      object QRDBText13: TQRDBText
         Left = 184
         Top = 9
         Width = 220
@@ -1482,7 +1482,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         317.500000000000000000
         2870.729166666667000000)
       ParentBand = QRPageFoot
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 16
         Top = 8
         Width = 349
@@ -1513,7 +1513,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 16
         Top = 40
         Width = 1025
@@ -1531,7 +1531,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel17: TgtQRLabel
+      object QRLabel17: TQRLabel
         Left = 24
         Top = 64
         Width = 363
@@ -1562,7 +1562,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 459
         Top = 66
         Width = 326
@@ -1593,7 +1593,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 828
         Top = 64
         Width = 188

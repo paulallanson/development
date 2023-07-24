@@ -81,6 +81,7 @@ object frmPBLUReps: TfrmPBLUReps
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 287
     Width = 534

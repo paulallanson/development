@@ -190,6 +190,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 493
     Width = 811
@@ -422,6 +423,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 811
@@ -431,6 +433,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     Color = clSilver
     TabOrder = 4
     object Panel2: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409

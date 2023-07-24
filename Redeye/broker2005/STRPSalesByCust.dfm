@@ -88,7 +88,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         224.895833333333300000
         2860.145833333333000000)
       BandType = rbPageHeader
-      object qrlblTitle: TgtQRLabel
+      object qrlblTitle: TQRLabel
         Left = 382
         Top = 8
         Width = 317
@@ -167,7 +167,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object qrlblDateRange: TgtQRLabel
+      object qrlblDateRange: TQRLabel
         Left = 485
         Top = 32
         Width = 111
@@ -192,7 +192,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 10
       end
-      object PsQRLabel1: TgtQRLabel
+      object PsQRLabel1: TQRLabel
         Left = 80
         Top = 64
         Width = 60
@@ -223,7 +223,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel4: TgtQRLabel
+      object PsQRLabel4: TQRLabel
         Left = 430
         Top = 64
         Width = 74
@@ -254,7 +254,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel10: TgtQRLabel
+      object PsQRLabel10: TQRLabel
         Left = 13
         Top = 64
         Width = 50
@@ -285,7 +285,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel3: TgtQRLabel
+      object PsQRLabel3: TQRLabel
         Left = 151
         Top = 64
         Width = 64
@@ -316,7 +316,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel2: TgtQRLabel
+      object PsQRLabel2: TQRLabel
         Left = 563
         Top = 64
         Width = 42
@@ -347,7 +347,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel5: TgtQRLabel
+      object PsQRLabel5: TQRLabel
         Left = 512
         Top = 64
         Width = 35
@@ -378,7 +378,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGoodsValue: TgtQRLabel
+      object qrlblGoodsValue: TQRLabel
         Left = 707
         Top = 64
         Width = 71
@@ -409,7 +409,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblGoodsTotal: TgtQRLabel
+      object qrlblGoodsTotal: TQRLabel
         Left = 816
         Top = 64
         Width = 28
@@ -440,7 +440,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRLabel12: TgtQRLabel
+      object PsQRLabel12: TQRLabel
         Left = 621
         Top = 64
         Width = 80
@@ -471,7 +471,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDelivery: TgtQRLabel
+      object qrlblDelivery: TQRLabel
         Left = 854
         Top = 64
         Width = 70
@@ -522,7 +522,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         76.729166666666680000
         2860.145833333333000000)
       BandType = rbGroupFooter
-      object PsQRLabel8: TgtQRLabel
+      object PsQRLabel8: TQRLabel
         Left = 646
         Top = 5
         Width = 98
@@ -553,7 +553,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object psqrlblCustTotal: TgtQRLabel
+      object psqrlblCustTotal: TQRLabel
         Left = 766
         Top = 5
         Width = 78
@@ -584,7 +584,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRShape2: TgtQRShape
+      object PsQRShape2: TQRShape
         Left = 649
         Top = 22
         Width = 196
@@ -602,7 +602,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object PsQRShape4: TgtQRShape
+      object PsQRShape4: TQRShape
         Left = 649
         Top = 0
         Width = 194
@@ -640,7 +640,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         84.666666666666680000
         2860.145833333333000000)
       BandType = rbSummary
-      object PsQRLabel9: TgtQRLabel
+      object PsQRLabel9: TQRLabel
         Left = 613
         Top = 6
         Width = 131
@@ -671,7 +671,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object psqrlblSalesTotal: TgtQRLabel
+      object psqrlblSalesTotal: TQRLabel
         Left = 766
         Top = 6
         Width = 78
@@ -702,7 +702,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRShape3: TgtQRShape
+      object PsQRShape3: TQRShape
         Left = 613
         Top = 23
         Width = 232
@@ -746,7 +746,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
       DataSet = DmLookupSOrd.qryProdSalesbyCust
       PrintBefore = False
       PrintIfEmpty = True
-      object PsQRDBText11: TgtQRDBText
+      object PsQRDBText11: TQRDBText
         Left = 14
         Top = 1
         Width = 49
@@ -778,7 +778,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRDBText10: TgtQRDBText
+      object PsQRDBText10: TQRDBText
         Left = 71
         Top = 1
         Width = 66
@@ -810,7 +810,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = False
         FontSize = 8
       end
-      object PsQRDBText2: TgtQRDBText
+      object PsQRDBText2: TQRDBText
         Left = 151
         Top = 1
         Width = 73
@@ -842,7 +842,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRDBText3: TgtQRDBText
+      object PsQRDBText3: TQRDBText
         Left = 227
         Top = 1
         Width = 205
@@ -874,7 +874,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRDBText8: TgtQRDBText
+      object PsQRDBText8: TQRDBText
         Left = 445
         Top = 1
         Width = 59
@@ -937,7 +937,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRDBText4: TgtQRDBText
+      object PsQRDBText4: TQRDBText
         Left = 556
         Top = 1
         Width = 49
@@ -969,7 +969,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRDBText13: TgtQRDBText
+      object PsQRDBText13: TQRDBText
         Left = 629
         Top = 1
         Width = 68
@@ -1001,7 +1001,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrdbGoodsValue: TgtQRDBText
+      object qrdbGoodsValue: TQRDBText
         Left = 717
         Top = 1
         Width = 62
@@ -1033,7 +1033,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrdbGoodsTotal: TgtQRDBText
+      object qrdbGoodsTotal: TQRDBText
         Left = 782
         Top = 1
         Width = 62
@@ -1202,7 +1202,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         82.020833333333340000
         2860.145833333333000000)
       BandType = rbGroupFooter
-      object PsQRLabel7: TgtQRLabel
+      object PsQRLabel7: TQRLabel
         Left = 646
         Top = 5
         Width = 98
@@ -1233,7 +1233,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object psqrlblRepTotal: TgtQRLabel
+      object psqrlblRepTotal: TQRLabel
         Left = 769
         Top = 5
         Width = 75
@@ -1264,7 +1264,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object PsQRShape1: TgtQRShape
+      object PsQRShape1: TQRShape
         Left = 649
         Top = 22
         Width = 196
@@ -1302,7 +1302,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         76.729166666666680000
         2860.145833333333000000)
       BandType = rbGroupFooter
-      object PsQRShape5: TgtQRShape
+      object PsQRShape5: TQRShape
         Left = 649
         Top = 22
         Width = 196
@@ -1320,7 +1320,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object PsQRShape6: TgtQRShape
+      object PsQRShape6: TQRShape
         Left = 649
         Top = 0
         Width = 194
@@ -1338,7 +1338,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object PsQRLabel14: TgtQRLabel
+      object PsQRLabel14: TQRLabel
         Left = 646
         Top = 5
         Width = 98
@@ -1369,7 +1369,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object psqrlblCust2Total: TgtQRLabel
+      object psqrlblCust2Total: TQRLabel
         Left = 766
         Top = 5
         Width = 78
@@ -1424,7 +1424,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
       FooterBand = qrbRepGroupFtr
       Master = QRSubDetail1
       ReprintOnNewPage = True
-      object PsQRLabel6: TgtQRLabel
+      object PsQRLabel6: TQRLabel
         Left = 8
         Top = 4
         Width = 25
@@ -1512,7 +1512,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
       FooterBand = qrbGroupFooter
       Master = QRSubDetail1
       ReprintOnNewPage = True
-      object PsQRLabel13: TgtQRLabel
+      object PsQRLabel13: TQRLabel
         Left = 8
         Top = 4
         Width = 101
@@ -1597,7 +1597,7 @@ object STRPSalesByCustFrm: TSTRPSalesByCustFrm
       FooterBand = qrDelToFooter
       Master = QRSubDetail1
       ReprintOnNewPage = False
-      object PsQRLabel11: TgtQRLabel
+      object PsQRLabel11: TQRLabel
         Left = 8
         Top = 4
         Width = 101

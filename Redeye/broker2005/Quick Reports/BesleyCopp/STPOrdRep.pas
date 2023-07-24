@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPRint, gtQrCtrls;
+  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPRint;
 
 type
   TSTPOrdRepFrm = class(TForm)
@@ -72,9 +72,9 @@ type
     qrPolDetails: TQRSubDetail;
     ReportImage: TQRImage;
     SupplierAddmemo: TQRMemo;
-    SpecialNotesMemo: TgtQRMemo;
+    SpecialNotesMemo: TQRMemo;
     GetNarrSQL: TQuery;
-    lblSpecialNotes: TgtQRLabel;
+    lblSpecialNotes: TQRLabel;
     SuppSQL: TQuery;
     AddressSRC: TDataSource;
     DellAddmemo: TQRMemo;

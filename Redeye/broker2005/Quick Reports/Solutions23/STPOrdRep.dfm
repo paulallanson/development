@@ -324,7 +324,7 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         WordWrap = False
         FontSize = 9
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 13
         Top = 6
         Width = 255

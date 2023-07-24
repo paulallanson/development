@@ -24,6 +24,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Panels = <>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 1056
     Top = 33
     Width = 170
@@ -85,6 +86,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 298
     Width = 1226
@@ -94,6 +96,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Caption = 'Panel3'
     TabOrder = 2
     object Panel5: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 89
@@ -103,6 +106,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       TabOrder = 0
     end
     object Panel6: TPanel
+      ParentBackground = False
       Left = 1056
       Top = 0
       Width = 170
@@ -208,6 +212,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     end
   end
   object Panel4: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1226
@@ -217,6 +222,7 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     TabOrder = 3
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 33
     Width = 89

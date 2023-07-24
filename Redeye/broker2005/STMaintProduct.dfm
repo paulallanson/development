@@ -308,6 +308,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           OnClick = btnCustomerClick
         end
         object rdgrpClass: TRadioGroup
+          ParentBackground = False
           Left = 112
           Top = 138
           Width = 129
@@ -704,6 +705,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           TabOrder = 36
         end
         object pnlFSCClaim: TPanel
+          ParentBackground = False
           Left = 1
           Top = 264
           Width = 506
@@ -791,6 +793,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Caption = 'Bill of Materials'
       ImageIndex = 1
       object pnlComponents: TPanel
+        ParentBackground = False
         Left = 432
         Top = 0
         Width = 95
@@ -900,6 +903,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 561
     Width = 535

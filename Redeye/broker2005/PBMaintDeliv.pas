@@ -362,7 +362,9 @@ var
 
 implementation
 
-uses PBPODataMod, pbMainMenu, pbDatabase, pbStockMoveDm,
+uses
+  System.Types, System.UITypes,
+  PBPODataMod, pbMainMenu, pbDatabase, pbStockMoveDm,
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, DateSelV5,
   PBMaintDelivBin, PBMntPrtBin, PBDelivStock, PBImages, PBLUDeliveriesDM,
   PBLUCConta, CCSCommon, PBLUProductRef, pbLUCompBranch;

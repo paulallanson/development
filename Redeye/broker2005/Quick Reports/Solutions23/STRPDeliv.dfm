@@ -444,7 +444,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 0
         Top = 194
         Width = 115
@@ -475,7 +475,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object qrlblInstructions: TgtQRLabel
+      object qrlblInstructions: TQRLabel
         Left = 386
         Top = 194
         Width = 142
@@ -506,7 +506,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 0
         Top = 127
         Width = 86
@@ -537,7 +537,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 0
         Top = 160
         Width = 94
@@ -599,7 +599,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 0
         Top = 359
         Width = 721
@@ -713,7 +713,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 28
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 0
         Top = 94
         Width = 70
@@ -806,7 +806,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 2
         Top = 1
         Width = 255
@@ -1168,7 +1168,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         402.166666666666700000
         1899.708333333333000000)
       BandType = rbPageFooter
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 0
         Top = 62
         Width = 80
@@ -1199,7 +1199,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 88
         Top = 64
         Width = 193
@@ -1217,7 +1217,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 384
         Top = 64
         Width = 193
@@ -1235,7 +1235,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 300
         Top = 62
         Width = 73
@@ -1266,7 +1266,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 598
         Top = 62
         Width = 32
@@ -1297,7 +1297,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 632
         Top = 64
         Width = 81

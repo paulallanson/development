@@ -5,37 +5,37 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, DBTables, CCSCommon, PBPOObjects,
-  gtQrCtrls, gtQrExport, qrprntr, printers, QRCtrls, jpeg;
+  QrExport, qrprntr, printers, QRCtrls, jpeg;
 type
   TPBRPCustCreditTermsFrm = class(TForm)
     qrpDetails: TQuickRep;
     qryDetails: TQuery;
     QRBand1: TQRBand;
-    QRLabel3: TgtQRLabel;
-    imgReport: TgtQRImage;
-    CustomerAddMemo: TgtQRMemo;
+    QRLabel3: TQRLabel;
+    imgReport: TQRImage;
+    CustomerAddMemo: TQRMemo;
     CompSQL: TQuery;
-    gtQRSysData1: TgtQRSysData;
-    gtQRLabel1: TgtQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    qrlblAccountCode: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
-    gtQRLabel5: TgtQRLabel;
-    qrlblCreditTerms: TgtQRLabel;
-    qrlblCreditLimit: TgtQRLabel;
+    gtQRSysData1: TQRSysData;
+    gtQRLabel1: TQRLabel;
+    gtQRLabel2: TQRLabel;
+    qrlblAccountCode: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRLabel5: TQRLabel;
+    qrlblCreditTerms: TQRLabel;
+    qrlblCreditLimit: TQRLabel;
     QRBand2: TQRBand;
-    gtQRLabel6: TgtQRLabel;
-    qrmCompanyDetails: TgtQRMemo;
-    memCreditTerms: TgtQRMemo;
+    gtQRLabel6: TQRLabel;
+    qrmCompanyDetails: TQRMemo;
+    memCreditTerms: TQRMemo;
     GetNarrSQL: TQuery;
-    qrlblOperatorName: TgtQRLabel;
-    qrlblOperatorPosition: TgtQRLabel;
-    qrlblOperatorSignature: TgtQRLabel;
-    gtQRImage2: TgtQRImage;
+    qrlblOperatorName: TQRLabel;
+    qrlblOperatorPosition: TQRLabel;
+    qrlblOperatorSignature: TQRLabel;
+    gtQRImage2: TQRImage;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
-    imgISO: TgtQRImage;
+    imgISO: TQRImage;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
   private

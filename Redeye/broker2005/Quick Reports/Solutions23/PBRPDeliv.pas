@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
-  gtQrExport, gtQrCtrls;
+  QrExport, gtQrCtrls;
 
 type
   TPBRPDelivFrm = class(TForm)
@@ -13,54 +13,54 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    DeliveryMemo: TgtQRMemo;
+    PONumberLbl: TQRLabel;
+    AddressMemo: TQRMemo;
+    DeliveryMemo: TQRMemo;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     AddressSRC: TDataSource;
     SupplierSQL: TQuery;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
     GetNarrSQL: TQuery;
     CompSQL: TQuery;
-    Account: TgtQRDBText;
+    Account: TQRDBText;
     CustDetsSQL: TQuery;
-    DelInstructMemo: TgtQRMemo;
-    FormRefLbl: TgtQRLabel;
-    FormRefDescLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
+    DelInstructMemo: TQRMemo;
+    FormRefLbl: TQRLabel;
+    FormRefDescLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
     gtQRFilters1: TgtQRFilters;
     OrderLbl: TQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    qrlblInstructions: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
-    gtQRLabel5: TgtQRLabel;
+    gtQRLabel1: TQRLabel;
+    qrlblInstructions: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    gtQRLabel4: TQRLabel;
+    gtQRLabel5: TQRLabel;
     QRBand3: TQRBand;
-    gtQRLabel11: TgtQRLabel;
-    gtQRShape6: TgtQRShape;
-    gtQRShape7: TgtQRShape;
-    gtQRLabel12: TgtQRLabel;
-    gtQRLabel13: TgtQRLabel;
-    gtQRShape8: TgtQRShape;
+    gtQRLabel11: TQRLabel;
+    gtQRShape6: TQRShape;
+    gtQRShape7: TQRShape;
+    gtQRLabel12: TQRLabel;
+    gtQRLabel13: TQRLabel;
+    gtQRShape8: TQRShape;
     labCompanyAddress: TQRMemo;
-    gtQRLabel6: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
-    gtQRDBText1: TgtQRDBText;
+    gtQRLabel6: TQRLabel;
+    gtQRShape1: TQRShape;
+    gtQRDBText1: TQRDBText;
     qryGetComp: TQuery;
-    gtQRDBText2: TgtQRDBText;
+    gtQRDBText2: TQRDBText;
     QRMemo1: TQRMemo;
-    gtQRLabel2: TgtQRLabel;
-    gtQRDBText3: TgtQRDBText;
-    DeliveryDateLbl: TgtQRLabel;
-    ReportImage: TgtQRImage;
+    gtQRLabel2: TQRLabel;
+    gtQRDBText3: TQRDBText;
+    DeliveryDateLbl: TQRLabel;
+    ReportImage: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

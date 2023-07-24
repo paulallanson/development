@@ -624,7 +624,7 @@ object STRPLabelsFrm: TSTRPLabelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 16
         Top = 314
         Width = 63

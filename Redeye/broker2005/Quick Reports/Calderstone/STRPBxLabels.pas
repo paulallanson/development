@@ -17,33 +17,33 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, gtQrCtrls;
+  CCSPrint;
 
 type
   TSTRPBxLabelsFrm = class(TForm)
     STLabelsQuickReport: TQuickRep;
     QRBand1: TQRSubDetail;
-    QRDBCustOrderRef: TgtQRDBText;
+    QRDBCustOrderRef: TQRDBText;
     RepSQL: TQuery;
-    FromLbl: TgtQRLabel;
-    lblBoxNo: TgtQRLabel;
-    NumberedLbl: TgtQRLabel;
-    BoxQtyCaptionlbl: TgtQRLabel;
-    lblDate: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
-    lblCust: TgtQRLabel;
-    lblDesc: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRDBTxtdesc: TgtQRDBText;
-    QRDBTxtPrt: TgtQRDBText;
+    FromLbl: TQRLabel;
+    lblBoxNo: TQRLabel;
+    NumberedLbl: TQRLabel;
+    BoxQtyCaptionlbl: TQRLabel;
+    lblDate: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
+    lblCust: TQRLabel;
+    lblDesc: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRDBTxtdesc: TQRDBText;
+    QRDBTxtPrt: TQRDBText;
     SRCRep: TDataSource;
-    QRLblBxqty: TgtQRLabel;
-    QRLblBoxNo: TgtQRLabel;
+    QRLblBxqty: TQRLabel;
+    QRLblBoxNo: TQRLabel;
     FormRefSQL: TQuery;
-    lblFormRefID: TgtQRLabel;
-    lblFormRefDesc: TgtQRLabel;
+    lblFormRefID: TQRLabel;
+    lblFormRefDesc: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

@@ -19,6 +19,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
   PixelsPerInch = 96
   TextHeight = 15
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 169
     Width = 720
@@ -47,6 +48,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 720
@@ -93,6 +95,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       ParentFont = False
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 6
       Top = 65
       Width = 113
@@ -112,6 +115,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 126
       Top = 66
       Width = 329
@@ -156,6 +160,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       end
     end
     object pnlStatusSelect: TPanel
+      ParentBackground = False
       Left = 542
       Top = 4
       Width = 161
@@ -241,6 +246,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         'Supplier')
     end
     object rgSupplier: TRadioGroup
+      ParentBackground = False
       Left = 6
       Top = 4
       Width = 113
@@ -260,6 +266,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       OnClick = rgSupplierClick
     end
     object pnlSuppSearch: TPanel
+      ParentBackground = False
       Left = 126
       Top = 4
       Width = 329
@@ -305,6 +312,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 467
     Width = 720
@@ -331,6 +339,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 487
       Top = 1
       Width = 232

@@ -773,7 +773,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 488
         Top = 48
         Width = 257
@@ -791,7 +791,7 @@ object STRPDelivfrm: TSTRPDelivfrm
           679.979166666666800000)
         Stretch = True
       end
-      object lblDelNote: TgtQRLabel
+      object lblDelNote: TQRLabel
         Left = 27
         Top = 53
         Width = 138
@@ -1768,7 +1768,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrmCompany: TgtQRMemo
+      object qrmCompany: TQRMemo
         Left = 136
         Top = 284
         Width = 609
@@ -1799,7 +1799,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblVatNo: TgtQRMemo
+      object qrlblVatNo: TQRMemo
         Left = 451
         Top = 338
         Width = 294
@@ -2078,7 +2078,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 12
       end
-      object qrmCompany1: TgtQRMemo
+      object qrmCompany1: TQRMemo
         Left = 136
         Top = 180
         Width = 609
@@ -2109,7 +2109,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblVatNo1: TgtQRMemo
+      object qrlblVatNo1: TQRMemo
         Left = 451
         Top = 234
         Width = 294
@@ -2162,7 +2162,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         55.562500000000000000
         2000.250000000000000000)
       ParentBand = QRSubDetail1
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 88
         Top = 3
         Width = 58

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, CCSPrint,
-  CCSCommon, PBPOObjects, qrprntr, printers, gtQrCtrls, PBDatabase;
+  CCSCommon, PBPOObjects, qrprntr, printers, PBDatabase;
 
 type
   TPBRPSalesInvFrm = class(TForm)
@@ -25,9 +25,9 @@ type
     InvoiceGroupHeader: TQRGroup;
     InvAddChgSQL: TQuery;
     OldInvLineSQL: TQuery;
-    GoodsTotalLbl: TgtQRLabel;
-    Dummy03: TgtQRLabel;
-    Dummy05: TgtQRLabel;
+    GoodsTotalLbl: TQRLabel;
+    Dummy03: TQRLabel;
+    Dummy05: TQRLabel;
     DeliverySQL: TQuery;
     DeliverySRC: TDataSource;
     AddressSRC: TDataSource;
@@ -37,68 +37,68 @@ type
     CompSQL: TQuery;
     CustSQL: TQuery;
     CreditHeadSQL: TQuery;
-    GoodsLbl: TgtQRLabel;
-    QtyInvoicedLbl: TgtQRLabel;
+    GoodsLbl: TQRLabel;
+    QtyInvoicedLbl: TQRLabel;
     GetNarrSQL: TQuery;
     AddChargesFooter: TQRBand;
-    memoNotes: TgtQRMemo;
-    GoodsVatLbl: TgtQRLabel;
-    lblDescription: TgtQRLabel;
+    memoNotes: TQRMemo;
+    GoodsVatLbl: TQRLabel;
+    lblDescription: TQRLabel;
     qryPOLine: TQuery;
     qrySOLine: TQuery;
     qryJBLine: TQuery;
     qryInvCharges: TQuery;
-    ExtrasVatLbl: TgtQRLabel;
-    QRDBText3: TgtQRDBText;
-    lblAmount: TgtQRLabel;
-    lblPriceUnit: TgtQRLabel;
+    ExtrasVatLbl: TQRLabel;
+    QRDBText3: TQRDBText;
+    lblAmount: TQRLabel;
+    lblPriceUnit: TQRLabel;
     InvoiceLine: TQRSubDetail;
     InvoiceCharges: TQRSubDetail;
     qryJBHead: TQuery;
     qrySOHead: TQuery;
     qrySIHead: TQuery;
     QRBand1: TQRBand;
-    QRLabel2: TgtQRLabel;
-    CustomerAddMemo: TgtQRMemo;
-    QRLabel12: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    InvoiceDateLbl: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    lblCustOrderNo: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
-    CustAccount: TgtQRDBText;
-    lblJobNo: TgtQRLabel;
-    OurJobLbl: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    InvoiceNumberLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel15: TgtQRLabel;
-    QRLabel14: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    QRShape2: TgtQRShape;
+    QRLabel2: TQRLabel;
+    CustomerAddMemo: TQRMemo;
+    QRLabel12: TQRLabel;
+    QRLabel6: TQRLabel;
+    InvoiceDateLbl: TQRLabel;
+    QRLabel11: TQRLabel;
+    lblCustOrderNo: TQRLabel;
+    QRLabel10: TQRLabel;
+    CustAccount: TQRDBText;
+    lblJobNo: TQRLabel;
+    OurJobLbl: TQRLabel;
+    QRLabel4: TQRLabel;
+    InvoiceNumberLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel15: TQRLabel;
+    QRLabel14: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRShape2: TQRShape;
     QRBand2: TQRBand;
-    QRShape1: TgtQRShape;
-    lblReference: TgtQRLabel;
-    QRLabel13: TgtQRLabel;
-    QRLabel16: TgtQRLabel;
-    QRLabel17: TgtQRLabel;
-    GoodsValueLbl: TgtQRLabel;
-    VATValueLbl: TgtQRLabel;
-    TotalValueLbl: TgtQRLabel;
+    QRShape1: TQRShape;
+    lblReference: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRLabel16: TQRLabel;
+    QRLabel17: TQRLabel;
+    GoodsValueLbl: TQRLabel;
+    VATValueLbl: TQRLabel;
+    TotalValueLbl: TQRLabel;
     ChldBndFormRef: TQRChildBand;
-    lblFormRef: TgtQRLabel;
-    imgReport: TgtQRImage;
+    lblFormRef: TQRLabel;
+    imgReport: TQRImage;
     chldbndFSCClaim: TQRChildBand;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
-    QRMemoCmpnyNm: TgtQRMemo;
-    QRLabel3: TgtQRLabel;
-    memPayment: TgtQRMemo;
-    qrlblVatRate: TgtQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    BranchAddMemo: TgtQRMemo;
-    imgReportFooter: TgtQRImage;
+    QRMemoCmpnyNm: TQRMemo;
+    QRLabel3: TQRLabel;
+    memPayment: TQRMemo;
+    qrlblVatRate: TQRLabel;
+    gtQRLabel1: TQRLabel;
+    BranchAddMemo: TQRMemo;
+    imgReportFooter: TQRImage;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -218,25 +218,25 @@ begin
       {Determine if we show the boxes and labels for emailing}
       for iCount := 0 to ComponentCount-1 do
         begin
-          if Components[icount] is TgtQRShape then
+          if Components[icount] is TQRShape then
             begin
-              TgtQRShape(Components[icount]).pen.color := clRed;
+              TQRShape(Components[icount]).pen.color := clRed;
             end
           else
-          if Components[icount] is TgtQRLabel then
+          if Components[icount] is TQRLabel then
             begin
-              TgtQRLabel(Components[icount]).font.color := clRed;
+              TQRLabel(Components[icount]).font.color := clRed;
             end
           else
-          if Components[icount] is TgtQRMemo then
+          if Components[icount] is TQRMemo then
             begin
-              if TgtQRMemo(Components[icount]).Name <> 'QRMemoCmpnyNm' then
-                TgtQRMemo(Components[icount]).font.color := clRed;
+              if TQRMemo(Components[icount]).Name <> 'QRMemoCmpnyNm' then
+                TQRMemo(Components[icount]).font.color := clRed;
             end
           else
-          if Components[icount] is TgtQRDBText then
+          if Components[icount] is TQRDBText then
             begin
-              TgtQRDBText(Components[icount]).font.color := clRed;
+              TQRDBText(Components[icount]).font.color := clRed;
             end;
         end;
       InvoiceReport.Font.Color := clred ;

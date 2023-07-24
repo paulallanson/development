@@ -106,28 +106,27 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, StdCtrls, CCSDataBroker, QuickRpt, Qrctrls, CCSDevil, Compositor,
-  CCSPrint, gtQrExport, gtQrCtrls, PDLetter, qrprntr, CCSCommon;
+  CCSPrint, QrExport, PDLetter, qrprntr, CCSCommon;
 
 type
   TfrmPrintingPress = class(TForm)
     ReportImage: TImage;
     QuickR: TQuickRep;
     LineToPrint: TQRBand;
-    Column1: TgtQRLabel;
-    Column2: TgtQRLabel;
-    Column3: TgtQRLabel;
+    Column1: TQRLabel;
+    Column2: TQRLabel;
+    Column3: TQRLabel;
     PageHeader: TQRBand;
     PageFooter: TQRBand;
-    imgLogo: TgtQRImage;
-    MyAddress: TgtQRMemo;
+    imgLogo: TQRImage;
+    MyAddress: TQRMemo;
     PageContinued: TQRChildBand;
-    labContinued: TgtQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    labContinued: TQRLabel;
     qrlblAuthorised: TQRLabel;
-    imgLogo1: TgtQRImage;
-    imgLogo2: TgtQRImage;
-    imgLogo3: TgtQRImage;
-    MyRegAddress: TgtQRMemo;
+    imgLogo1: TQRImage;
+    imgLogo2: TQRImage;
+    imgLogo3: TQRImage;
+    MyRegAddress: TQRMemo;
     procedure FormCreate(Sender: TObject);
     procedure QuickRNeedData(Sender: TObject; var MoreData: Boolean);
     procedure LineToPrintBeforePrint(Sender: TQRCustomBand;

@@ -17,6 +17,7 @@ object frmPBLUStockRpts: TfrmPBLUStockRpts
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 413
@@ -86,6 +87,7 @@ object frmPBLUStockRpts: TfrmPBLUStockRpts
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 309
     Width = 413

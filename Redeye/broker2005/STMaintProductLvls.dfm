@@ -106,6 +106,7 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       OnKeyPress = MinMemoKeyPress
     end
     object rdgrpReplenishType: TRadioGroup
+      ParentBackground = False
       Left = 32
       Top = 128
       Width = 121

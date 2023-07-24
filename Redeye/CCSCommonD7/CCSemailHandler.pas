@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook8, ActiveX, COMobj, gtQrExport, Db, DBTables, Variants,
+  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, DBTables, Variants,
   shFolder, Outlook12_TLB;
 
 type
@@ -21,12 +21,14 @@ type
     fileName: string;
     function populateRecipientList(customer, branch: integer): boolean;
     procedure PrintToAttachment(report: TQuickRep; attachmentType: string);
+    (* GDK ToDo: remove after tests
     procedure PrintToHTM(report: TQuickRep);
     procedure PrintToPDF(report: TQuickRep);
     procedure PrintToBMP(report: TQuickRep);
     procedure PrintToRTF(report: TQuickRep);
     procedure PrintToGIF(report: TQuickRep);
     procedure PrintToJPG(report: TQuickRep);
+    *)
     function GetRecipientList(sQueryString: string): boolean;
   public
     body: String;
@@ -44,7 +46,8 @@ var
 
 implementation
 
-uses CCSCommon, CCSEmailList, pbMainMenu, pbDatabase;
+uses
+  CCSCommon, CCSEmailList, pbMainMenu, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -179,6 +182,12 @@ end;
 
 procedure TemailHandler.PrintToAttachment(report: TQuickRep; attachmentType: string);
 begin
+  PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, Self.fileName, attachmentType);
+end;
+
+(*
+procedure TemailHandler.PrintToAttachment(report: TQuickRep; attachmentType: string);
+begin
   if attachmentType = 'BMP' then
     self.PrintToBMP(report)
   else if attachmentType = 'GIF' then
@@ -191,8 +200,9 @@ begin
     self.PrintToPDF(report)
   else if attachmentType = 'RTF' then
     self.PrintToRTF(report);
-    
 end;
+
+*)
 
 procedure TemailHandler.DataModuleCreate(Sender: TObject);
 begin
@@ -328,6 +338,7 @@ begin
 
 end;
 
+(*
 procedure TemailHandler.PrintToBMP(report: TQuickRep);
 var
   i: integer;
@@ -507,5 +518,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

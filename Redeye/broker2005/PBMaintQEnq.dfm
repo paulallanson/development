@@ -125,6 +125,7 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Caption = 'lblEnqNo'
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 0
     Top = 112
     Width = 697

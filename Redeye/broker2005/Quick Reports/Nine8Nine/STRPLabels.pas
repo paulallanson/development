@@ -117,7 +117,7 @@ type
     lblBoxNo: TQRLabel;
     BoxQtyCaptionlbl: TQRLabel;
     QRLabel5: TQRLabel;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

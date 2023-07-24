@@ -20,6 +20,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
+    ParentBackground = False
     Left = 24
     Top = 2
     Width = 353
@@ -99,6 +100,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 24
     Top = 88
     Width = 353
@@ -169,6 +171,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 24
     Top = 272
     Width = 353
@@ -282,6 +285,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     NumGlyphs = 2
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 24
     Top = 177
     Width = 209
@@ -430,6 +434,7 @@ object STRSCustProdUsageFrm: TSTRSCustProdUsageFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 76
     Top = 132
     Width = 289

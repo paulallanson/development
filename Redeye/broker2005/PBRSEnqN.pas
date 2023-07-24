@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, gtQrExport,
+  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, QrExport,
   CCSCommon, Inifiles, Menus, ComCtrls, DateUtils, PBActivityDM;
 
 type
@@ -96,8 +96,9 @@ var
 
 implementation
 
-uses PBFaxList, LetterDM, PBEmailList, PBSendFax, PBDBEnqLtr, pbMainMenu, printers,
-      CCSPrint, PDLetter, pbDatabase;
+uses
+  PBFaxList, LetterDM, PBEmailList, PBSendFax, PBDBEnqLtr, pbMainMenu, printers,
+  CCSPrint, PDLetter, pbDatabase, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -599,9 +600,9 @@ begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
         Printers.Printer.PrinterIndex := -1;
-        for icount := 0 to pred(Printer.Printers.count) do
+        for icount := 0 to pred(Printers.Printer.Printers.count) do
           begin
-            if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+            if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
               Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
@@ -611,7 +612,7 @@ begin
         if SetupPrinter(aBroker.PrinterSettings) then
           begin
             PrintingPress.QuickR.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
             DefaultBin := GetBinSelection;
             SaveDefaultPrinter;
             FPrinted := true;
@@ -637,6 +638,13 @@ begin
   end;
 end;
 
+procedure TPBRSEnqNFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
+begin
+  var fileName := 'ENQ' + FEnquiry.ToString;
+  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 procedure TPBRSEnqNFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
 var
   i: integer;
@@ -778,6 +786,7 @@ begin
   FPrinted := true;
   AFilters.free;
 end;
+*)
 
 procedure TPBRSEnqNFrm.LoadCombos;
 begin
@@ -959,7 +968,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -976,7 +985,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin

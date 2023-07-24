@@ -560,7 +560,7 @@ object STRPLabelsFrm: TSTRPLabelsFrm
         WordWrap = True
         FontSize = 11
       end
-      object qrmCompany: TgtQRMemo
+      object qrmCompany: TQRMemo
         Left = 8
         Top = 303
         Width = 441
@@ -658,7 +658,7 @@ object STRPLabelsFrm: TSTRPLabelsFrm
         WordWrap = True
         FontSize = 10
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 0
         Top = 0
         Width = 255

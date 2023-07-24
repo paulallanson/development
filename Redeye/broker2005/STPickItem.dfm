@@ -119,6 +119,7 @@ object STPickItemFrm: TSTPickItemFrm
     TabOrder = 5
   end
   object AllocGroupBox: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 96
     Width = 201
@@ -180,6 +181,7 @@ object STPickItemFrm: TSTPickItemFrm
     end
   end
   object PickGroupBox: TGroupBox
+    ParentBackground = False
     Left = 232
     Top = 96
     Width = 217

@@ -1,9 +1,6 @@
 object emailHandler: TemailHandler
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Left = 226
-  Top = 153
   Height = 304
   Width = 674
   object qrySelCustomerContacts: TQuery

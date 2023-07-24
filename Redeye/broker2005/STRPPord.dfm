@@ -1211,7 +1211,7 @@ object STRPPordfrm: TSTRPPordfrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblRetail: TgtQRLabel
+      object qrlblRetail: TQRLabel
         Left = 992
         Top = 0
         Width = 47
@@ -1635,7 +1635,7 @@ object STRPPordfrm: TSTRPPordfrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object DelAddmemo: TgtQRMemo
+      object DelAddmemo: TQRMemo
         Left = 60
         Top = 9
         Width = 301

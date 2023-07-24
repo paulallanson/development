@@ -172,6 +172,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 356
     Width = 808
@@ -327,6 +328,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 808
@@ -336,6 +338,7 @@ object frmpbluCustEnquiries: TfrmpbluCustEnquiries
     Color = clSilver
     TabOrder = 4
     object Panel2: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409

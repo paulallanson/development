@@ -303,6 +303,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 324
     Width = 1212
@@ -325,6 +326,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 938
       Top = 1
       Width = 273
@@ -373,6 +375,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnClick = btnSearchClick
     end
     object rdgrpShowComplete: TGroupBox
+      ParentBackground = False
       Left = 440
       Top = 4
       Width = 369
@@ -427,6 +430,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1212

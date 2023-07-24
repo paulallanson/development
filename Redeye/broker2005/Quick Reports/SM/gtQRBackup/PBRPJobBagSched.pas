@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, gtQrCtrls, gtQrExport, Printers,
+  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
   CCSPrint, qrprntr, CCSCommon;
 
 type
@@ -12,19 +12,19 @@ type
     qryReport: TQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
-    qrlblQuoteCaption: TgtQRLabel;
-    QRDBText2: TgtQRDBText;
-    QRLabel3: TgtQRLabel;
-    QRDBText5: TgtQRDBText;
+    qrlblQuoteCaption: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRLabel3: TQRLabel;
+    QRDBText5: TQRDBText;
     qrgJobBag: TQRGroup;
     QRLabel1: TQRLabel;
     dtsReport: TDataSource;
     gtQRFilters1: TgtQRFilters;
     QRLabel6: TQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRDBText3: TgtQRDBText;
+    QRLabel4: TQRLabel;
+    QRDBText3: TQRDBText;
     QRBand1: TQRBand;
-    gtQRDBText9: TgtQRDBText;
+    gtQRDBText9: TQRDBText;
     QRShape1: TQRShape;
     QRShape2: TQRShape;
     QRLabel2: TQRLabel;
@@ -32,8 +32,8 @@ type
     QRShape4: TQRShape;
     QRLabel5: TQRLabel;
     QRLabel7: TQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    gtQRDBText1: TgtQRDBText;
+    gtQRLabel1: TQRLabel;
+    gtQRDBText1: TQRDBText;
     ReportImage: TQRImage;
     QRShape5: TQRShape;
     QRLabel8: TQRLabel;

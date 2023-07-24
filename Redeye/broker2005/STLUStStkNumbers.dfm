@@ -18,6 +18,7 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 468
@@ -62,6 +63,7 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 305
     Width = 468
@@ -107,6 +109,7 @@ object STLUStStkNumbersFrm: TSTLUStStkNumbersFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 65
     Width = 468

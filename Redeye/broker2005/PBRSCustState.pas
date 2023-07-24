@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBPOObjects, Spin, QuickRpt,
-  gtQrCtrls, OleCtnrs, ComCtrls, CCSCommon;
+  OleCtnrs, ComCtrls, CCSCommon;
 
 type
   TPBRSCustStateFrm = class(TForm)

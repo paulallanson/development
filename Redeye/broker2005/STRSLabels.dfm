@@ -21,6 +21,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
   PixelsPerInch = 96
   TextHeight = 13
   object POGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
@@ -57,6 +58,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 126
     Width = 209
@@ -129,6 +131,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     end
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 126
     Width = 177
@@ -210,6 +213,7 @@ object STRSLabelsfrm: TSTRSLabelsfrm
     NumGlyphs = 2
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 393

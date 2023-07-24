@@ -91,7 +91,7 @@ type
     QRShape3: TQRShape;
     PurchOrdDescrQRLabel: TQRLabel;
     QRMemoAddress: TQRMemo;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

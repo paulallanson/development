@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPrint, gtQrCtrls;
+  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPrint;
 
 type
   TSTRPPODelivNoteFrm = class(TForm)
@@ -13,15 +13,15 @@ type
     FooterQRBand: TQRBand;
     GetDetsDataSource: TDataSource;
     pogroupheader: TQRGroup;
-    LineQrLabel: TgtQRLabel;
-    PartQRLabel: TgtQRLabel;
-    DescQRLabel: TgtQRLabel;
-    OrdQtyQRLabel: TgtQRLabel;
+    LineQrLabel: TQRLabel;
+    PartQRLabel: TQRLabel;
+    DescQRLabel: TQRLabel;
+    OrdQtyQRLabel: TQRLabel;
     GetOrdDetQuery: TQuery;
     GetDelFromSuppQuery: TQuery;
     GetDetsQuery: TQuery;
     GetOrdHedQuery: TQuery;
-    PackqtyQRLabel: TgtQRLabel;
+    PackqtyQRLabel: TQRLabel;
     GetDelFromSuppQuerySuppNam: TStringField;
     GetDelFromSuppQueryName: TStringField;
     GetDelFromSuppQueryBuilding_No_Name: TStringField;
@@ -32,36 +32,36 @@ type
     GetDelFromSuppQueryPhone: TStringField;
     GetDelFromSuppQueryFax_Number: TStringField;
     GetDelFromSuppQueryemail: TStringField;
-    POrdLineNoQRLabel: TgtQRLabel;
-    PartCodeQRLabel: TgtQRLabel;
-    PartDescrQRLabel: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    PackSizeQRLabel: TgtQRLabel;
+    POrdLineNoQRLabel: TQRLabel;
+    PartCodeQRLabel: TQRLabel;
+    PartDescrQRLabel: TQRLabel;
+    QRLabel3: TQRLabel;
+    PackSizeQRLabel: TQRLabel;
     GetSODelAddQuery: TQuery;
     CompSRC: TDataSource;
     GetCompSQL: TQuery;
     qryExtraCharges: TQuery;
-    ReportImage: TgtQRImage;
-    ReportTitleQRLabel: TgtQRLabel;
-    lblSpecialNotes: TgtQRLabel;
-    SpecialNotesMemo: TgtQRMemo;
+    ReportImage: TQRImage;
+    ReportTitleQRLabel: TQRLabel;
+    lblSpecialNotes: TQRLabel;
+    SpecialNotesMemo: TQRMemo;
     GetNarrSQL: TQuery;
-    gtQRShape1: TgtQRShape;
+    gtQRShape1: TQRShape;
     AddressSRC: TDataSource;
-    gtQRLabel2: TgtQRLabel;
-    DateRequiredLabel: TgtQRLabel;
+    gtQRLabel2: TQRLabel;
+    DateRequiredLabel: TQRLabel;
     GetDelivAddQuery: TQuery;
-    QRLabel2: TgtQRLabel;
-    qrlblContact: TgtQRLabel;
-    QRShape2: TgtQRShape;
-    DellAddmemo: TgtQRMemo;
-    qrlblReferencelabel: TgtQRLabel;
-    qrlblreference: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    DPhoneQRLabel: TgtQRLabel;
-    DFaxQRLabel: TgtQRLabel;
-    qrlDelNumber: TgtQRLabel;
+    QRLabel2: TQRLabel;
+    qrlblContact: TQRLabel;
+    QRShape2: TQRShape;
+    DellAddmemo: TQRMemo;
+    qrlblReferencelabel: TQRLabel;
+    qrlblreference: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    DPhoneQRLabel: TQRLabel;
+    DFaxQRLabel: TQRLabel;
+    qrlDelNumber: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

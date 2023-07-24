@@ -19,6 +19,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 409
     Width = 842
@@ -30,6 +31,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       842
       41)
     object pnlRightControl: TPanel
+      ParentBackground = False
       Left = 511
       Top = 0
       Width = 331
@@ -152,6 +154,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     end
   end
   object pnlSelections: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 842
@@ -160,6 +163,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     BevelOuter = bvNone
     TabOrder = 1
     object pnlDates: TPanel
+      ParentBackground = False
       Left = 664
       Top = 0
       Width = 178
@@ -177,6 +181,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         TabOrder = 0
       end
       object TotByRadioGroup: TRadioGroup
+        ParentBackground = False
         Left = 17
         Top = 4
         Width = 136
@@ -211,6 +216,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 467
       Top = 0
       Width = 197
@@ -342,6 +348,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 467
@@ -371,6 +378,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Caption = 'and finally sort by'
       end
       object rgSupplier: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 1
         Width = 100
@@ -384,6 +392,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         OnClick = rgSupplierClick
       end
       object rgCustomer: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 63
         Width = 100
@@ -397,6 +406,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         OnClick = rgCustomerClick
       end
       object SupplierPanel: TPanel
+        ParentBackground = False
         Left = 113
         Top = 6
         Width = 336
@@ -434,6 +444,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         end
       end
       object CustomerPanel: TPanel
+        ParentBackground = False
         Left = 115
         Top = 68
         Width = 334
@@ -614,6 +625,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end>
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 250
     Top = 212
     Width = 289

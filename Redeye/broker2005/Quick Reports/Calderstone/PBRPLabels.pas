@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, gtQrCtrls, qrprntr,  gtQRExport, printers;
+  CCSPrint, PBPOObjects, qrprntr,  QrExport, printers;
 
 type
   TPBRPLabelsFrm = class(TForm)
@@ -19,27 +19,27 @@ type
     SupplierSQL: TQuery;
     AddressSRC: TDataSource;
     CompSQL: TQuery;
-    FormRefLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    lblCustomer: TgtQRLabel;
+    FormRefLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    AddressMemo: TQRMemo;
+    lblCustomer: TQRLabel;
     CustSQL: TQuery;
-    QRLabel7: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    CompNameQRLabel: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    QRShape2: TgtQRShape;
-    DeliveryDateLbl: TgtQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel3: TQRLabel;
+    CompNameQRLabel: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    DeliveryDateLbl: TQRLabel;
     GetFAOSQL: TQuery;
-    FAOQRLabel: TgtQRLabel;
-    DescrQRLabel: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    CompAddrQRLabel: TgtQRLabel;
-    QRShape3: TgtQRShape;
-    QRShape4: TgtQRShape;
-    gtQRLabel1: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
+    FAOQRLabel: TQRLabel;
+    DescrQRLabel: TQRLabel;
+    QRLabel4: TQRLabel;
+    CompAddrQRLabel: TQRLabel;
+    QRShape3: TQRShape;
+    QRShape4: TQRShape;
+    gtQRLabel1: TQRLabel;
+    gtQRShape1: TQRShape;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

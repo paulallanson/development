@@ -128,6 +128,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 324
     Width = 717
@@ -150,6 +151,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 531
       Top = 1
       Width = 185
@@ -310,6 +312,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 717

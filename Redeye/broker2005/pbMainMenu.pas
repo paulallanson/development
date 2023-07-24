@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ToolWin, ComCtrls, Menus, StdActns, ActnList, Grids,
   DBGrids, ExtCtrls, ImgList, ShellAPI, CCSCommon, DB, DBTables, OleCtnrs,
-  IniFiles, PBActivityDM;
+  IniFiles, PBActivityDM, System.Actions, System.ImageList;
 
 type
   TfrmpbMainMenu = class(TForm)                                                                                

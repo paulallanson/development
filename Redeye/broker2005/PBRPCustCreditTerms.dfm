@@ -87,7 +87,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         2315.104166666667000000
         1852.083333333333000000)
       BandType = rbTitle
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 0
         Top = 40
         Width = 211
@@ -118,7 +118,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 16
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 432
         Top = 8
         Width = 265
@@ -135,7 +135,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
           701.145833333333400000)
         Stretch = True
       end
-      object CustomerAddMemo: TgtQRMemo
+      object CustomerAddMemo: TQRMemo
         Left = 0
         Top = 138
         Width = 337
@@ -196,7 +196,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Transparent = False
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 0
         Top = 296
         Width = 116
@@ -221,7 +221,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 0
         Top = 336
         Width = 83
@@ -246,7 +246,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblAccountCode: TgtQRLabel
+      object qrlblAccountCode: TQRLabel
         Left = 88
         Top = 336
         Width = 83
@@ -271,7 +271,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 0
         Top = 376
         Width = 525
@@ -298,7 +298,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 0
         Top = 408
         Width = 99
@@ -323,7 +323,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 0
         Top = 440
         Width = 107
@@ -348,7 +348,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblCreditTerms: TgtQRLabel
+      object qrlblCreditTerms: TQRLabel
         Left = 112
         Top = 440
         Width = 105
@@ -373,7 +373,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblCreditLimit: TgtQRLabel
+      object qrlblCreditLimit: TQRLabel
         Left = 112
         Top = 408
         Width = 97
@@ -398,7 +398,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrmCompanyDetails: TgtQRMemo
+      object qrmCompanyDetails: TQRMemo
         Left = 480
         Top = 116
         Width = 217
@@ -428,7 +428,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 8
       end
-      object memCreditTerms: TgtQRMemo
+      object memCreditTerms: TQRMemo
         Left = 2
         Top = 486
         Width = 689
@@ -481,7 +481,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         899.583333333333300000
         1852.083333333333000000)
       BandType = rbPageFooter
-      object qrlblForCompany: TgtQRLabel
+      object qrlblForCompany: TQRLabel
         Left = 0
         Top = 10
         Width = 78
@@ -506,7 +506,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblForCustomer: TgtQRLabel
+      object qrlblForCustomer: TQRLabel
         Left = 336
         Top = 10
         Width = 81
@@ -531,7 +531,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 0
         Top = 58
         Width = 28
@@ -556,7 +556,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 0
         Top = 106
         Width = 30
@@ -581,7 +581,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 0
         Top = 154
         Width = 48
@@ -606,7 +606,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 336
         Top = 58
         Width = 28
@@ -631,7 +631,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 336
         Top = 106
         Width = 30
@@ -656,7 +656,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 336
         Top = 154
         Width = 48
@@ -681,7 +681,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape4: TgtQRShape
+      object gtQRShape4: TQRShape
         Left = 408
         Top = 66
         Width = 257
@@ -699,7 +699,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 408
         Top = 114
         Width = 257
@@ -717,7 +717,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 408
         Top = 162
         Width = 257
@@ -735,7 +735,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object qrlblOperatorName: TgtQRLabel
+      object qrlblOperatorName: TQRLabel
         Left = 72
         Top = 106
         Width = 118
@@ -760,7 +760,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblOperatorPosition: TgtQRLabel
+      object qrlblOperatorPosition: TQRLabel
         Left = 72
         Top = 154
         Width = 132
@@ -785,7 +785,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 0
         Top = 194
         Width = 63
@@ -810,7 +810,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblOperatorPhone: TgtQRLabel
+      object qrlblOperatorPhone: TQRLabel
         Left = 72
         Top = 194
         Width = 120
@@ -835,7 +835,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblOperatorSignature: TgtQRLabel
+      object qrlblOperatorSignature: TQRLabel
         Left = 72
         Top = 58
         Width = 207

@@ -593,7 +593,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 16
         Top = 352
         Width = 58
@@ -624,7 +624,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 8
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 232
         Top = 0
         Width = 97

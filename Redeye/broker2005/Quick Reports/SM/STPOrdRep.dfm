@@ -964,7 +964,7 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         WordWrap = True
         FontSize = 9
       end
-      object SpecialNotesMemo: TgtQRMemo
+      object SpecialNotesMemo: TQRMemo
         Left = 25
         Top = 44
         Width = 400
@@ -1001,7 +1001,7 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblSpecialNotes: TgtQRLabel
+      object lblSpecialNotes: TQRLabel
         Left = 25
         Top = 22
         Width = 79

@@ -19,6 +19,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 225
     Width = 893
@@ -140,6 +141,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 893
@@ -224,6 +226,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = DateFromButtonClick
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 80
       Width = 100
@@ -237,6 +240,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 120
       Top = 83
       Width = 305
@@ -326,6 +330,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnExit = DateFromEditExit
     end
     object TotByRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 584
       Top = 8
       Width = 145
@@ -385,6 +390,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnExit = DateToEditExit
     end
     object rgRep: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 100
@@ -398,6 +404,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = rgRepClick
     end
     object RepPanel: TPanel
+      ParentBackground = False
       Left = 121
       Top = 14
       Width = 304
@@ -436,6 +443,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       end
     end
     object RdGrpRepTyp: TRadioGroup
+      ParentBackground = False
       Left = 760
       Top = 8
       Width = 75
@@ -476,6 +484,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 437
     Width = 893
@@ -486,6 +495,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       893
       41)
     object Panel1: TPanel
+      ParentBackground = False
       Left = 660
       Top = 1
       Width = 232
@@ -604,6 +614,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 300
     Top = 292
     Width = 289

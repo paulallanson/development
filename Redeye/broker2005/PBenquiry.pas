@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, StdCtrls, Buttons, ComCtrls, Grids, Spin, DB, DBTables, PBPOObjects,
   OleCtnrs, PBEnqObjects, PBMaintEnquiryDoc, ShellAPI, PBMaintPOEmail,
-  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, taoCntrr, taoFrmts, ActiveX;
+  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX;
 
 type
   TPBEnquiryFrm = class(TForm)
@@ -58,8 +58,6 @@ type
     svDlgOfficeDoc: TSaveDialog;
     qryGetLooseEnqLineQtys: TQuery;
     qryDelEnqLineParts: TQuery;
-    taoWinControl1: TtaoWinControl;
-    taoWinControl1In1: TtaoInFileContents;
     qryGetActiveCustomerContact: TQuery;
     stsbrDetails: TStatusBar;
     pnlFooter: TPanel;
@@ -269,12 +267,6 @@ type
     procedure btbtnWordDocClick(Sender: TObject);
     procedure btbtnExcelSheetClick(Sender: TObject);
     procedure strgrdDocsDblClick(Sender: TObject);
-    procedure taoWinControl1SetDataTarget(Sender: TObject;
-      Data: IInterface; X, Y: Integer);
-    procedure taoWinControl1SetDataPaste(Sender: TObject;
-      Data: IInterface);
-    procedure taoWinControl1UpdateAction(Sender: TObject;
-      Action: TtaoUpdateAction; var Enable: Boolean);
     procedure rdgTypeClick(Sender: TObject);
   private
     { Private declarations }
@@ -352,7 +344,6 @@ type
     function ProductTypeMinSuppliers(ProdType: integer): integer;
     procedure ParseMessage(const AFileName: string; var ATo, AFrom,
       ASubject, ADate, ABody: string);
-    procedure MyWinControlSetData(const Data: IInterface);
     procedure AddDocumentToEnquiry;
     function GetActiveCustomerContact(tempCust, tempBranch,
       tempCode: integer): integer;
@@ -4895,26 +4886,6 @@ begin
   btbtnOpenClick(self);
 end;
 
-procedure TPBEnquiryFrm.taoWinControl1SetDataTarget(Sender: TObject;
-  Data: IInterface; X, Y: Integer);
-begin
-{ Ignore the drop point. So we can handle drag-and-drop and clipboard operations in uniform way. }
-  MyWinControlSetData(Data);
-end;
-
-procedure TPBEnquiryFrm.taoWinControl1SetDataPaste(Sender: TObject;
-  Data: IInterface);
-begin
-  MyWinControlSetData(Data);
-end;
-
-procedure TPBEnquiryFrm.taoWinControl1UpdateAction(Sender: TObject;
-  Action: TtaoUpdateAction; var Enable: Boolean);
-begin
- { The Paste sub-item in the Edit menu is linked to an Action object. Enable is False on enter. }
-  Enable := True;
-end;
-
 procedure TPBEnquiryFrm.ParseMessage(const AFileName: string; var ATo, AFrom,
   ASubject, ADate, ABody: string);
 var
@@ -5052,73 +5023,6 @@ begin
     end;
 end;
 
-procedure TPBEnquiryFrm.MyWinControlSetData(const Data: IUnknown);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'The file comes not from MS Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  MyData: ItaoCells;
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  icount: integer;
-  Document: TDocument;
-begin
-  if Supports(Data, ItaoCells, MyData) then begin
-//    MyPath := ExtractFilePath(Application.ExeName);
-    MyPath := dmBroker.GetCompanyEnquiryDirectory + '\' + inttostr(iEnqNumber)+'\';
-
-    for i := 0 to MyData.RowCount - 1 do begin
-      MyFileName := MyData[0, i];
-      MyExtension := LowerCase(ExtractFileExt(MyFileName));
-      if MyExtension = cExtensionOutlook then begin
-
-{ Store the contents as a file on the disk. }
-        MyFilePath := MyPath + MyFileName;
-
-{If the file name already exists then increase the number}
-        icount := 0;
-        NewFilePath := MyFilePath;
-        while FileExists(NewFilePath) = true do
-          begin
-            inc(icount);
-            NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-          end;
-        MyFilePath := NewFilePath;
-
-        MyFileStream := TFileStream.Create(MyFilePath, fmCreate or fmShareDenyWrite);
-        try
-          TextToStream(MyData[1, i], MyFileStream);
-        finally
-          MyFileStream.Free;
-        end;
-{ GUI }
-//  This is where we add the data into the grid and to the document component
-//        ListView1.Items.Add.Caption := MyFilePath;
-        Document := TDocument.Create;
-        Document.Title := Copy(MyFileName, 1, Length(MyFileName)-4);
-        Document.Path := Copy(MyFilePath, length(dmBroker.GetCompanyEnquiryDirectory)+1,255);
-
-        if assigned(document) then
-          begin
-            Enquiry.Lines[EnquiryLineGrid.Row - 1].DocumentList.add(document);
-            self.DisplayDocumentList;
-          end;
-      end
-      else begin
-        MyWarning := cNotOutlookWarning;
-        if MyExtension = cExtensionOutlookExpress then
-          MyWarning := MyWarning + cOutlookExpressWarning;
-        MessageDlg(MyWarning, mtWarning, [mbOK], 0);
-      end;
-    end;
-  end;
-end;
-
 function TPBEnquiryFrm.GetActiveCustomerContact(tempCust, tempBranch,
   tempCode: integer): integer;
 begin
@@ -5132,7 +5036,6 @@ begin
       open;
       result := fieldbyname('Contact_no').asinteger;
     end;
-
 end;
 
 procedure TPBEnquiryFrm.rdgTypeClick(Sender: TObject);

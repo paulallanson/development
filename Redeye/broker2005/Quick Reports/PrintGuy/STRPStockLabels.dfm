@@ -679,7 +679,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 312
         Top = 1
         Width = 128

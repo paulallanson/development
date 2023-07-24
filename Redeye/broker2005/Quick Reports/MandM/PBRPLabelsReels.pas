@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, gtQrCtrls, gtQRExport;
+  CCSPrint, PBPOObjects, qrprntr, printers, QrExport;
 
 type
   TPBRPLabelsReelsFrm = class(TForm)
@@ -13,34 +13,34 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
+    PONumberLbl: TQRLabel;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     SupplierSQL: TQuery;
     AddressSRC: TDataSource;
-    BoxQuantityLbl: TgtQRLabel;
-    Memodescription: TgtQRMemo;
-    DeliveryDateLbl: TgtQRLabel;
-    FormRefLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRDBCustOrderRef: TgtQRDBText;
-    lblCustomer: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    NumberedLbl: TgtQRLabel;
-    FromLbl: TgtQRLabel;
-    ReportImage: TgtQRImage;
-    gtQRLabel2: TgtQRLabel;
-    qrlblTelephone: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    qrlblFax: TgtQRLabel;
-    qrlblWebsite: TgtQRLabel;
-    gtQRLabel1: TgtQRLabel;
+    BoxQuantityLbl: TQRLabel;
+    Memodescription: TQRMemo;
+    DeliveryDateLbl: TQRLabel;
+    FormRefLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRDBCustOrderRef: TQRDBText;
+    lblCustomer: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    NumberedLbl: TQRLabel;
+    FromLbl: TQRLabel;
+    ReportImage: TQRImage;
+    gtQRLabel2: TQRLabel;
+    qrlblTelephone: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    qrlblFax: TQRLabel;
+    qrlblWebsite: TQRLabel;
+    gtQRLabel1: TQRLabel;
     CompSQL: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

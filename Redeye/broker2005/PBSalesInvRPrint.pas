@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, StdCtrls, DBTables, Buttons, Printers, PBRPSalesInv, gtQrExport,
+  DB, StdCtrls, DBTables, Buttons, Printers, PBRPSalesInv, QrExport,
   IniFiles, OleCtnrs;
 
 type
@@ -101,7 +101,8 @@ var
 
 implementation
 
-uses CCSPrint, pbDatabase, PBEmailList, CCSCommon, pbMainMenu;
+uses
+  CCSPrint, pbDatabase, PBEmailList, CCSCommon, pbMainMenu, Printer.Tools;
 
 {$R *.DFM}
 
@@ -797,6 +798,17 @@ end;
 
 procedure TPBSalesInvRPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
 var
+  fileName: string;
+begin
+  if self.CreditNotePrint then
+    fileName := 'SC' + tempcode else
+    fileName := 'SI' + tempcode;
+  PrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+end;
+
+(*
+procedure TPBSalesInvRPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+var
   i: integer;
   sLocation, sFileName: string;
   zLocation, zFileName: array[0..255] of char;
@@ -940,6 +952,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBSalesInvRPrintFrm.FormDestroy(Sender: TObject);
 var
@@ -1060,19 +1073,23 @@ begin
             rResellerLineTotal := (fieldbyname('Qty_Invoiced').asinteger/fieldbyname('Price_Unit_Factor').asinteger) * fieldbyname('Reseller_Price').asfloat;
           end;
 
-        if fieldbyname('Purchase_Order').asfloat <> 0 then
-          begin
-            sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
-          end
-        else
-        if fieldbyname('Sales_Order').asinteger <> 0 then
-          begin
-            sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
-          end
-        else
-          begin
-            sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
-          end;
+        sDescription := '';
+        if Assigned(PBRPSalesInvFrm) then
+        begin
+          if fieldbyname('Purchase_Order').asfloat <> 0 then
+            begin
+              sDescription := PBRPSalesInvFrm.GetPOLineDesc(fieldbyname('Purchase_Order').asfloat, fieldbyname('Line').asinteger);
+            end
+          else
+          if fieldbyname('Sales_Order').asinteger <> 0 then
+            begin
+              sDescription := PBRPSalesInvFrm.GetSOLineDesc(fieldbyname('Sales_Order').asinteger, fieldbyname('Sales_order_Line_no').asinteger);
+            end
+          else
+            begin
+              sDescription := PBRPSalesInvFrm.GetJBLineDesc(fieldbyname('Job_Bag').asinteger, fieldbyname('Job_Bag_Line').asinteger);
+            end;
+        end;
 
         rLineMargin := rResellerLineTotal - rLineTotal;
         try

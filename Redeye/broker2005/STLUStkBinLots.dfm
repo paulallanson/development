@@ -20,6 +20,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 544
@@ -104,6 +105,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
         end>
     end
     object pnlPart: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 542
@@ -170,6 +172,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 185
     Width = 544
@@ -177,6 +180,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
     Align = alBottom
     TabOrder = 0
     object Panel3: TPanel
+      ParentBackground = False
       Left = 440
       Top = 1
       Width = 103

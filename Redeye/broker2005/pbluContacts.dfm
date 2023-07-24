@@ -90,6 +90,7 @@ object frmpbluContacts: TfrmpbluContacts
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 287
     Width = 717
@@ -145,6 +146,7 @@ object frmpbluContacts: TfrmpbluContacts
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 617
     Top = 0
     Width = 100

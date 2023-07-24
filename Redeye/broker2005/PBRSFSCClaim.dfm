@@ -16,6 +16,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 166
     Width = 723
@@ -27,6 +28,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       723
       41)
     object Panel1: TPanel
+      ParentBackground = False
       Left = 491
       Top = 0
       Width = 232
@@ -145,6 +147,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 723
@@ -209,6 +212,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Caption = 'To Delivery Date:'
     end
     object rgFSC: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 121
@@ -222,6 +226,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       OnClick = rgFSCClick
     end
     object FSCPanel: TPanel
+      ParentBackground = False
       Left = 137
       Top = 14
       Width = 304
@@ -261,6 +266,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       end
     end
     object rgProductType: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 88
       Width = 121
@@ -274,6 +280,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       OnClick = rgProductTypeClick
     end
     object pnlPTSearch: TPanel
+      ParentBackground = False
       Left = 136
       Top = 91
       Width = 305
@@ -330,6 +337,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       OnExit = DateToEditExit
     end
     object RdGrpRepType: TRadioGroup
+      ParentBackground = False
       Left = 612
       Top = 11
       Width = 93
@@ -361,6 +369,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       Visible = False
     end
     object pnlExportPrgrss: TPanel
+      ParentBackground = False
       Left = 212
       Top = 55
       Width = 289
@@ -384,6 +393,7 @@ object PBRSFSCClaimFrm: TPBRSFSCClaimFrm
       end
     end
     object rdgrpClaimType: TRadioGroup
+      ParentBackground = False
       Left = 612
       Top = 83
       Width = 93

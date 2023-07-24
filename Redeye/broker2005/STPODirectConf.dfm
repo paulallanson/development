@@ -19,6 +19,7 @@ object STPODirectConfFrm: TSTPODirectConfFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 405
     Width = 730
@@ -98,6 +99,7 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 730

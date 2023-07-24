@@ -163,6 +163,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       end>
   end
   object pnlCustProd: TPanel
+    ParentBackground = False
     Left = 0
     Top = 410
     Width = 731
@@ -333,6 +334,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 731
@@ -444,6 +446,7 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 200
     Top = 171
     Width = 289

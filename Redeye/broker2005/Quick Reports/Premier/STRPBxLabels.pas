@@ -31,8 +31,8 @@ type
     lblFormRefID: TQRLabel;
     lblFormRefDesc: TQRLabel;
     qryGetFSCClaim: TQuery;
-    ReportImage: TgtQRImage;
-    qrmCompany: TgtQRMemo;
+    ReportImage: TQRImage;
+    qrmCompany: TQRMemo;
     CompSQL: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

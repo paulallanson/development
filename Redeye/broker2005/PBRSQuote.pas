@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables, Inifiles, PBRPQuote,
-  CCSCommon, gtQrExport;
+  CCSCommon, QrExport;
 
 type
   TfrmPBRSQuote = class(TForm)

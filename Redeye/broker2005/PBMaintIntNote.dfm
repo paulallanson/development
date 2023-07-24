@@ -19,6 +19,7 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
   PixelsPerInch = 96
   TextHeight = 13
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 346
@@ -97,6 +98,7 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     end
   end
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 401
     Width = 346

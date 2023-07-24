@@ -28,6 +28,7 @@ object STProdImportFrm: TSTProdImportFrm
     TabOrder = 0
   end
   object pnlImportFile: TPanel
+    ParentBackground = False
     Left = 0
     Top = 65
     Width = 386
@@ -60,6 +61,7 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlProgress: TPanel
+    ParentBackground = False
     Left = 0
     Top = 177
     Width = 386
@@ -105,6 +107,7 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlSupplier: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 386
@@ -142,6 +145,7 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlImport: TPanel
+    ParentBackground = False
     Left = 0
     Top = 121
     Width = 386
@@ -177,6 +181,7 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlCancel: TPanel
+    ParentBackground = False
     Left = 0
     Top = 353
     Width = 386

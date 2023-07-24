@@ -176,9 +176,9 @@ type
     CustomerSQL: TQuery;
     AddressSRC: TDataSource;
     CompSQL: TQuery;
-    AddressMemo: TgtQRMemo;
+    AddressMemo: TQRMemo;
     SupplierSQL: TQuery;
-    FAOQRLabel: TgtQRLabel;
+    FAOQRLabel: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

@@ -28,6 +28,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 46
     Width = 289
@@ -124,6 +125,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 96
     Width = 89
@@ -142,6 +144,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     TabOrder = 0
   end
   object CostRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 8
     Width = 89
@@ -160,6 +163,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     TabOrder = 1
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 353

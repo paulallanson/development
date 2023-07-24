@@ -11,11 +11,9 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object OrderGroupBox: TGroupBox
     Left = 7
@@ -23,6 +21,7 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Width = 346
     Height = 73
     Caption = 'Details for Order: '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 24
@@ -64,9 +63,10 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 1
-    Kind = bkCancel
   end
   object Previewbitbtn: TBitBtn
     Left = 94
@@ -79,9 +79,6 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PreviewbitbtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -96,6 +93,9 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PreviewbitbtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 183
@@ -109,9 +109,6 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -126,6 +123,9 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PrintBitBtnClick
   end
   object ChkBxLogo: TCheckBox
     Left = 8
@@ -146,9 +146,6 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -163,6 +160,9 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 5
+    OnClick = EmailBitBtnClick
   end
   object qryGetSOs: TQuery
     DatabaseName = 'PB'

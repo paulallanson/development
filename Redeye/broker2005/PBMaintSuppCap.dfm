@@ -21,6 +21,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Height = 465
     TabOrder = 0
     object Panel1: TPanel
+      ParentBackground = False
       Left = 2
       Top = 15
       Width = 191
@@ -56,6 +57,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       end
     end
     object UnSelPanel: TPanel
+      ParentBackground = False
       Left = 198
       Top = 15
       Width = 257
@@ -64,6 +66,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 1
       object UnSelCapsPanel: TPanel
+        ParentBackground = False
         Left = 1
         Top = 232
         Width = 255
@@ -148,6 +151,7 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         end
       end
       object UnSelPTsPanel: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 255

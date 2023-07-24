@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, gtQrCtrls, qrprntr,
+  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, qrprntr,
   printers;
 
 type
@@ -44,8 +44,8 @@ type
     QRLabel16: TQRLabel;
     VatQRLabel: TQRLabel;
     GetContactSQL: TQuery;
-    lblSpecialNotes: TgtQRLabel;
-    SpecialNotesMemo: TgtQRMemo;
+    lblSpecialNotes: TQRLabel;
+    SpecialNotesMemo: TQRMemo;
     GetNarrSQL: TQuery;
     ReportTitleQRLabel: TQRLabel;
     OrdNumQRLabel: TQRLabel;

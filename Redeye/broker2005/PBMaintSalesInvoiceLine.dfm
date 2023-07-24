@@ -17,6 +17,7 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 305
     Width = 572
@@ -61,6 +62,7 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 572
@@ -151,6 +153,7 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 137
     Width = 572

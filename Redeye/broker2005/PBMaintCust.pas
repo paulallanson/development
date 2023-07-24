@@ -7,7 +7,7 @@ uses
   StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls, pbCustomerDM,
   Grids, DBGrids, IdBaseComponent, IdComponent, IdTCPConnection,
   IdTCPClient, IdHTTP, Menus, ShellAPI, IniFiles, StrUtils, Spin, printers,
-  ImgList, ToolWin, taoCntrr, taoFrmts, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
+  ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
   pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes;
 
@@ -91,34 +91,6 @@ type
     BitBtn2: TBitBtn;
     btnCountryClear: TBitBtn;
     BitBtn7: TBitBtn;
-    taoWinControl1: TtaoWinControl;
-    taoWinControl1In1: TtaoInFileContents;
-    taoWinControl1In2: TtaoInCells;
-    taoWinControl1In3: TtaoInBiff8;
-    taoWinControl1In4: TtaoInBiff5;
-    taoWinControl1In5: TtaoInUnicodeText;
-    taoWinControl1In6: TtaoInText;
-    taoWinControl1In7: TtaoInHDrop;
-    taoWinControl1In8: TtaoInShellIDList;
-    taoWinControl1In9: TtaoInFileContentsW;
-    taoWinControl1In10: TtaoInOEMessage;
-    taoWinControl1In11: TtaoInURL;
-    taoWinControl1In12: TtaoInURLNetscape4;
-    taoWinControl1Out1: TtaoOutBiff8;
-    taoWinControl1Out2: TtaoOutRtf;
-    taoWinControl1Out3: TtaoOutUnicodeText;
-    taoWinControl1Out4: TtaoOutText;
-    taoWinControl1Out5: TtaoOutCells;
-    taoWinControl1Out6: TtaoOutHDrop;
-    taoWinControl1Out7: TtaoOutFileNameMap;
-    taoWinControl1Out8: TtaoOutShellIDList;
-    taoWinControl1Out9: TtaoOutFileDescriptor;
-    taoWinControl1Out10: TtaoOutFileDescriptorW;
-    taoWinControl1Out11: TtaoOutFileContents;
-    taoWinControl1Out12: TtaoOutPreferredEffect;
-    taoWinControl1Out13: TtaoOutURL;
-    taoWinControl1Out14: TtaoOutURLShortcut;
-    taoWinControl1Out15: TtaoOutURLShortcutTitle;
     CreateWordDocument1: TMenuItem;
     CreateExcelDocument1: TMenuItem;
     pmnuDelete: TMenuItem;
@@ -563,12 +535,6 @@ type
     procedure btnLevelOfImportanceClick(Sender: TObject);
     procedure BitBtn7Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
-    procedure taoWinControl1SetDataPaste(Sender: TObject;
-      Data: IInterface);
-    procedure taoWinControl1SetDataTarget(Sender: TObject;
-      Data: IInterface; X, Y: Integer);
-    procedure taoWinControl1UpdateAction(Sender: TObject;
-      Action: TtaoUpdateAction; var Enable: Boolean);
     procedure pmnuPasteClick(Sender: TObject);
     procedure pmnuDeleteClick(Sender: TObject);
     procedure pmnuSelectAllClick(Sender: TObject);
@@ -810,7 +776,6 @@ type
     procedure DisableInvoicingDetails;
     procedure EnableCreditDetails;
     procedure EnableInvoicingDetails;
-    procedure MyWinControlSetData(const Data: IInterface);
     procedure ParseMessage(const AFileName: string; var ATo, AFrom,
       ASubject, ADate, ABody: string);
     function FormatDateasDateTime(sDate: string): TDateTime;
@@ -4192,118 +4157,6 @@ begin
           else
           if Components[iCount] is TDBLookupComboBox then
             TDBLookupComboBox(Components[iCount]).enabled := true;
-        end;
-    end;
-end;
-
-procedure TPBMaintCustFrm.taoWinControl1SetDataPaste(Sender: TObject;
-  Data: IInterface);
-begin
-  MyWinControlSetData(Data);
-end;
-
-procedure TPBMaintCustFrm.taoWinControl1SetDataTarget(Sender: TObject;
-  Data: IInterface; X, Y: Integer);
-begin
-{ Ignore the drop point. So we can handle drag-and-drop and clipboard operations in uniform way. }
-  MyWinControlSetData(Data);
-end;
-
-procedure TPBMaintCustFrm.taoWinControl1UpdateAction(Sender: TObject;
-  Action: TtaoUpdateAction; var Enable: Boolean);
-begin
- { The Paste sub-item in the Edit menu is linked to an Action object. Enable is False on enter. }
-  Enable := True;
-end;
-
-procedure TPBMaintCustFrm.MyWinControlSetData(const Data: IUnknown);
-const
-  cExtensionOutlook = '.msg';
-  cExtensionOutlookExpress = '.eml';
-  cNotOutlookWarning = 'This file doesn''t come from Microsoft Outlook.';
-  cOutlookExpressWarning = #13#10'Apparently the file comes from MS Outlook Express.';
-var
-  MyData: ItaoCells;
-  i: Integer;
-  MyPath, MyFileName, MyFilePath, MyExtension, MyWarning: string;
-  MyTo, MyFrom, MySubject, MyDate, MyBody: string;
-  myNewDate: TDateTime;
-  MyFileStream: TStream;
-  NewFilePath: string;
-  sFile, sFullFile: string;
-  iLength, iPos, icount: integer;
-begin
-  if Supports(Data, ItaoCells, MyData) then
-    begin
-      MyPath := dmBroker.GetCompanyCustomerDirectory + '\' + NameEdit.text +'\';
-
-      if not DirectoryExists(MyPath) then
-  	    begin
-     	    CreateDirectory(MyPath);
-  	    end;
-
-      for i := 0 to MyData.RowCount - 1 do
-        begin
-          MyFileName := MyData[0, i];
-          MyExtension := LowerCase(ExtractFileExt(MyFileName));
-          if MyExtension = cExtensionOutlook then
-            begin
-
-{ Store the contents as a file on the disk. }
-              MyFilePath := MyPath + MyFileName;
-
-{If the file name already exists then increase the number}
-              icount := 0;
-              NewFilePath := MyFilePath;
-              while FileExists(NewFilePath) = true do
-                begin
-                  inc(icount);
-                  NewFilePath := copy(MyFilePath, 1, length(MyFilePath)-4) + '(' + inttostr(icount) + ')' + MyExtension;
-                end;
-
-              MyFilePath := NewFilePath;
-
-              MyFileStream := TFileStream.Create(MyFilePath, fmCreate or fmShareDenyWrite);
-              try
-                TextToStream(MyData[1, i], MyFileStream);
-              finally
-                MyFileStream.Free;
-              end;
-{ GUI }
-              try
-                ParseMessage((MyPath+MyFileName), MyTo, MyFrom, MySubject, MyDate, MyBody);
-                if trim(MyDate) = '' then
-                  myNewDate := date
-                else
-                  myNewDate := FormatDateasDateTime(MyDate);
-              except
-                myNewdate := date
-              end;
-//  This is where we add the data into the grid and to the document component
-
-              ShowDocuments;
-            end
-          else
-            begin
-              sFullFile := myFileName;
-              iLength := length(sFullFile);
-
-              iCount := 1;
-
-              while iCount <> 0 do
-                begin
-                  ipos := pos('\',sFullFile);
-
-                  sFullFile := stringreplace(sFullFile, '\', '!', []);
-
-                  iCount := pos('\',sFullFile);
-                end;
-
-              sFile := copy(myFileName, ipos+1, (iLength - ipos));
-
-              FileCopy(myFileName, myPath + sfile) ;
-              ShowDocuments;
-            end;
         end;
     end;
 end;

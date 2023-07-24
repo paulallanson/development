@@ -93,7 +93,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
       DataSet = RepSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 1
         Top = 168
         Width = 755
@@ -113,7 +113,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRDBCustOrderRef: TgtQRDBText
+      object QRDBCustOrderRef: TQRDBText
         Left = 152
         Top = 197
         Width = 593
@@ -145,7 +145,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object lblCust: TgtQRLabel
+      object lblCust: TQRLabel
         Left = 8
         Top = 198
         Width = 126
@@ -176,7 +176,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object lblDesc: TgtQRLabel
+      object lblDesc: TQRLabel
         Left = 8
         Top = 467
         Width = 109
@@ -207,7 +207,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object lblDate: TgtQRLabel
+      object lblDate: TQRLabel
         Left = 8
         Top = 974
         Width = 103
@@ -238,7 +238,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object DeliveryDateLbl: TgtQRLabel
+      object DeliveryDateLbl: TQRLabel
         Left = 152
         Top = 974
         Width = 318
@@ -269,7 +269,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 8
         Top = 290
         Width = 113
@@ -300,7 +300,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRDBTxtdesc: TgtQRDBText
+      object QRDBTxtdesc: TQRDBText
         Left = 152
         Top = 467
         Width = 593
@@ -332,7 +332,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRDBTxtPrt: TgtQRDBText
+      object QRDBTxtPrt: TQRDBText
         Left = 152
         Top = 290
         Width = 593
@@ -364,7 +364,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object lblFormRefID: TgtQRLabel
+      object lblFormRefID: TQRLabel
         Left = 152
         Top = 377
         Width = 593
@@ -395,7 +395,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object qrImage: TgtQRImage
+      object qrImage: TQRImage
         Left = 118
         Top = 3
         Width = 520
@@ -413,7 +413,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Center = True
         Stretch = True
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 152
         Top = 768
         Width = 345
@@ -445,7 +445,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 8
         Top = 768
         Width = 80
@@ -476,7 +476,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 9
         Top = 857
         Width = 81
@@ -507,7 +507,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 152
         Top = 856
         Width = 377
@@ -539,7 +539,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 3
         Top = 273
         Width = 752
@@ -558,7 +558,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 0
         Top = 450
         Width = 755
@@ -577,7 +577,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape4: TgtQRShape
+      object QRShape4: TQRShape
         Left = 0
         Top = 738
         Width = 755
@@ -596,7 +596,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape5: TgtQRShape
+      object QRShape5: TQRShape
         Left = 0
         Top = 946
         Width = 755
@@ -615,7 +615,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 0
         Top = 602
         Width = 755
@@ -634,7 +634,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 8
         Top = 643
         Width = 83
@@ -665,7 +665,7 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
         WordWrap = True
         FontSize = 36
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 152
         Top = 643
         Width = 288

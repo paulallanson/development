@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint, gtQrCtrls;
+  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks,
+  CCSPrint;
 
 type
   TSTRPPickfrm = class(TForm)
@@ -15,42 +16,42 @@ type
     GetAllocDetQuery: TQuery;
     oldGetAllocMasterQuery: TQuery;
     QRSubDetail1: TQRSubDetail;
-    PartQRDBText: TgtQRDBText;
-    DescQRDBText: TgtQRDBText;
-    BinQRDBText: TgtQRDBText;
-    PreviewQRLabel: TgtQRLabel;
+    PartQRDBText: TQRDBText;
+    DescQRDBText: TQRDBText;
+    BinQRDBText: TQRDBText;
+    PreviewQRLabel: TQRLabel;
     UpdAllocDetQuery: TQuery;
     GetAllAllocDetQuery: TQuery;
     UpdRefQuery: TQuery;
-    NotesQRMemo: TgtQRMemo;
+    NotesQRMemo: TQRMemo;
     GetCustSQL: TQuery;
-    AccNoQRLabel: TgtQRLabel;
-    CustRefQRLabel: TgtQRLabel;
-    SONOQRLabel: TgtQRLabel;
-    CustRefQRDBText: TgtQRDBText;
-    SoNumQRDBText: TgtQRDBText;
+    AccNoQRLabel: TQRLabel;
+    CustRefQRLabel: TQRLabel;
+    SONOQRLabel: TQRLabel;
+    CustRefQRDBText: TQRDBText;
+    SoNumQRDBText: TQRDBText;
     UpdSOHeadSQL: TQuery;
     GetDelivNarrSQL: TQuery;
     GetDelivCountSQL: TQuery;
     GetNextSODelivSQL: TQuery;
-    QRLabel1: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
     GetAllocMasterQuery: TQuery;
-    QRLabel7: TgtQRLabel;
-    QRDBText4: TgtQRDBText;
-    QRLabel8: TgtQRLabel;
+    QRLabel7: TQRLabel;
+    QRDBText4: TQRDBText;
+    QRLabel8: TQRLabel;
     DummySQL: TQuery;
-    TciketQRLabel: TgtQRLabel;
-    DelNoQRLabel: TgtQRLabel;
-    DespDtQRLbl: TgtQRLabel;
-    DelInstructMemo: TgtQRMemo;
-    QRLabel6: TgtQRLabel;
-    QRLabel9: TgtQRLabel;
-    QRLabelQty: TgtQRLabel;
-    QRLabelDlvrd: TgtQRLabel;
-    QRLblAccnt: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
+    TciketQRLabel: TQRLabel;
+    DelNoQRLabel: TQRLabel;
+    DespDtQRLbl: TQRLabel;
+    DelInstructMemo: TQRMemo;
+    QRLabel6: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabelQty: TQRLabel;
+    QRLabelDlvrd: TQRLabel;
+    QRLblAccnt: TQRLabel;
+    QRLabel10: TQRLabel;
     AdhocSQL: TQuery;
     AddressSRC: TDataSource;
     GetAccountSQL: TQuery;
@@ -58,8 +59,8 @@ type
     AddDelivLineDetSQL: TQuery;
     CheckDelivSQL: TQuery;
     qrdetailSerialNos: TQRSubDetail;
-    lblSerialCaption: TgtQRLabel;
-    lblSerialRange: TgtQRLabel;
+    lblSerialCaption: TQRLabel;
+    lblSerialRange: TQRLabel;
     GetAllocSerialNoSQL: TQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;

@@ -23,6 +23,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 637
     Width = 822
@@ -30,6 +31,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alBottom
     TabOrder = 5
     object Panel4: TPanel
+      ParentBackground = False
       Left = 488
       Top = 1
       Width = 333
@@ -95,6 +97,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
   end
   object pnlJobBag: TPanel
+    ParentBackground = False
     Left = 0
     Top = 97
     Width = 822
@@ -237,6 +240,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
   end
   object pnlNotes: TPanel
+    ParentBackground = False
     Left = 0
     Top = 266
     Width = 822
@@ -244,6 +248,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Align = alClient
     TabOrder = 3
     object pnlNCADetails: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 820
@@ -252,6 +257,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Caption = 'pnlNCADetails'
       TabOrder = 0
       object Panel5: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -273,6 +279,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end
     end
     object pnlResponse: TPanel
+      ParentBackground = False
       Left = 1
       Top = 86
       Width = 820
@@ -281,6 +288,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Caption = 'pnlResponse'
       TabOrder = 1
       object Panel6: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -301,6 +309,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end
     end
     object pnlAction: TPanel
+      ParentBackground = False
       Left = 1
       Top = 119
       Width = 820
@@ -309,6 +318,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Caption = 'pnlAction'
       TabOrder = 2
       object pnlActionLabel: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -328,6 +338,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end
     end
     object pnlPrevent: TPanel
+      ParentBackground = False
       Left = 1
       Top = 204
       Width = 820
@@ -336,6 +347,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Caption = 'pnlPrevent'
       TabOrder = 3
       object Panel3: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -356,6 +368,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
   end
   object pnlQASignOff: TPanel
+    ParentBackground = False
     Left = 0
     Top = 556
     Width = 822
@@ -422,6 +435,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object rdgrpJobRePrinted: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 3
       Width = 145
@@ -434,6 +448,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       TabOrder = 2
     end
     object rdgrpSamples: TRadioGroup
+      ParentBackground = False
       Left = 168
       Top = 3
       Width = 145
@@ -525,6 +540,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
   end
   object pnlNCAHead: TPanel
+    ParentBackground = False
     Left = 0
     Top = 194
     Width = 822
@@ -749,6 +765,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end>
   end
   object pnlPO: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 822

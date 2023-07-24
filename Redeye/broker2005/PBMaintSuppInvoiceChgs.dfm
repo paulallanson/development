@@ -68,6 +68,7 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
     Kind = bkCancel
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 475

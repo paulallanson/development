@@ -19,6 +19,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCust: TPanel
+    ParentBackground = False
     Left = 288
     Top = 0
     Width = 273
@@ -56,12 +57,14 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     end
   end
   object pnlRep: TPanel
+    ParentBackground = False
     Left = 284
     Top = 0
     Width = 276
     Height = 193
     TabOrder = 2
     object rdgrpReps: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 129
@@ -75,6 +78,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       OnClick = rdgrpRepsClick
     end
     object pnlRepSearch: TPanel
+      ParentBackground = False
       Left = 8
       Top = 80
       Width = 257
@@ -114,6 +118,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     end
   end
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 193
     Width = 560
@@ -178,6 +183,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     end
   end
   object pnlReportSelect: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 288
@@ -198,6 +204,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Caption = 'Period'
     end
     object rdgrpReportType: TRadioGroup
+      ParentBackground = False
       Left = 16
       Top = 8
       Width = 225

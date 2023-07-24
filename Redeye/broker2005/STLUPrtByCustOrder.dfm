@@ -16,6 +16,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 682
@@ -75,6 +76,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 367
     Width = 682
@@ -130,6 +132,7 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 46
     Width = 682

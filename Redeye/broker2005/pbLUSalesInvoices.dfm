@@ -360,6 +360,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 320
     Width = 1174
@@ -382,6 +383,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 890
       Top = 1
       Width = 283
@@ -452,6 +454,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnClick = btnSearchClick
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 460
       Top = 5
       Width = 253
@@ -521,6 +524,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1174

@@ -7,7 +7,7 @@ uses
   ComCtrls, ToolWin, Grids, DBGrids, ImgList, ExtCtrls, StdCtrls, Buttons,
   pbluCustOrders, pbluCustStock, pbluCustEnquiries, pbluCustJobs, pbluCustEvents,
   pbluCustSalesInvoices, pbluCustQuotes, Db, DBTables, Menus, IdBaseComponent, IdComponent,
-  IdTCPConnection, IdTCPClient, IdHTTP, Inifiles;
+  IdTCPConnection, IdTCPClient, IdHTTP, Inifiles, System.ImageList;
 
 type
   TfrmpbluCustomers = class(TForm)

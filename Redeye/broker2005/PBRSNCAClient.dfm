@@ -36,6 +36,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Caption = 'No of Periods'
   end
   object rdgrpReportType: TRadioGroup
+    ParentBackground = False
     Left = 288
     Top = 11
     Width = 119
@@ -59,6 +60,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Visible = False
   end
   object rgSelection: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 88
     Width = 121
@@ -72,6 +74,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     OnClick = rgSelectionClick
   end
   object pnlSelection: TPanel
+    ParentBackground = False
     Left = 140
     Top = 88
     Width = 267
@@ -245,6 +248,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 75
     Top = 67
     Width = 289

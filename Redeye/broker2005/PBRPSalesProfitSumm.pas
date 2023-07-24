@@ -39,8 +39,8 @@ type
     QRDBText3: TQRDBText;
     qrdbName: TQRDBText;
     qrlblName: TQRLabel;
-    gtQRSysData1: TgtQRSysData;
-    gtQRSysData2: TgtQRSysData;
+    gtQRSysData1: TQRSysData;
+    gtQRSysData2: TQRSysData;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;

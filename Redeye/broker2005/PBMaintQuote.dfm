@@ -21,6 +21,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1135
@@ -160,6 +161,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 41
     Width = 1135
@@ -167,6 +169,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Align = alTop
     TabOrder = 1
     object Panel9: TPanel
+      ParentBackground = False
       Left = 918
       Top = 1
       Width = 216
@@ -281,6 +284,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
     end
     object Panel10: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 96
@@ -289,6 +293,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       BevelOuter = bvNone
       TabOrder = 1
       object rdgType: TRadioGroup
+        ParentBackground = False
         Left = 9
         Top = 2
         Width = 78
@@ -303,6 +308,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
     end
     object Panel11: TPanel
+      ParentBackground = False
       Left = 97
       Top = 1
       Width = 821
@@ -311,6 +317,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       BevelOuter = bvNone
       TabOrder = 2
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 821
@@ -430,6 +437,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
       end
       object Panel13: TPanel
+        ParentBackground = False
         Left = 0
         Top = 78
         Width = 821
@@ -489,6 +497,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           TabOrder = 2
         end
         object pnlSubReps: TPanel
+          ParentBackground = False
           Left = 0
           Top = 29
           Width = 608
@@ -534,6 +543,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
       end
       object pnlEndUSer: TPanel
+        ParentBackground = False
         Left = 0
         Top = 158
         Width = 821
@@ -592,6 +602,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     object tsCharges: TTabSheet
       Caption = 'Charges'
       object Panel3: TPanel
+        ParentBackground = False
         Left = 1042
         Top = 0
         Width = 85
@@ -643,6 +654,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1042
@@ -650,6 +662,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Align = alClient
         TabOrder = 1
         object Panel4: TPanel
+          ParentBackground = False
           Left = 1
           Top = 198
           Width = 1040
@@ -767,6 +780,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           70)
       end
       object Panel18: TPanel
+        ParentBackground = False
         Left = 969
         Top = 0
         Width = 85
@@ -820,6 +834,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Documents'
       ImageIndex = 2
       object Panel6: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1127
@@ -828,6 +843,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Caption = 'Panel6'
         TabOrder = 0
         object Panel7: TPanel
+          ParentBackground = False
           Left = 1
           Top = 210
           Width = 1125
@@ -943,6 +959,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Specification'
       ImageIndex = 3
       object Panel8: TPanel
+        ParentBackground = False
         Left = 1042
         Top = 0
         Width = 85
@@ -975,6 +992,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Specification'
       ImageIndex = 4
       object Panel15: TPanel
+        ParentBackground = False
         Left = 969
         Top = 0
         Width = 85
@@ -995,6 +1013,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 496
     Width = 1135
@@ -1093,6 +1112,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       NumGlyphs = 2
     end
     object pnlOurTotals: TPanel
+      ParentBackground = False
       Left = 896
       Top = 0
       Width = 239
@@ -1187,6 +1207,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         ParentFont = False
       end
       object pnlPackPrice: TPanel
+        ParentBackground = False
         Left = 0
         Top = 115
         Width = 239
@@ -1253,6 +1274,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end
     end
     object Panel5: TPanel
+      ParentBackground = False
       Left = 875
       Top = 0
       Width = 21
@@ -1262,6 +1284,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       TabOrder = 6
     end
     object pnlReseller: TPanel
+      ParentBackground = False
       Left = 667
       Top = 0
       Width = 208
@@ -1373,6 +1396,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 641
     Width = 1135
@@ -1394,6 +1418,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Visible = False
     end
     object pnlBottom: TPanel
+      ParentBackground = False
       Left = 758
       Top = 1
       Width = 376
@@ -1971,81 +1996,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     object pmnuSelectAll: TMenuItem
       Caption = 'Select All'
       OnClick = pmnuSelectAllClick
-    end
-  end
-  object taoWinControl1: TtaoWinControl
-    Control = pgDetails
-    Options = [coCopy, coDelete, coPaste, coSource, coSourceOleCopy, coSourceOleLink, coSourceVclCopy, coSourceVclMove, coTarget, coTargetOleCopy, coTargetVclCopy, coTargetVclMove, coTargetScroll, coTargetFeedback]
-    OnSetDataPaste = taoWinControl1SetDataPaste
-    OnSetDataTarget = taoWinControl1SetDataTarget
-    OnUpdateAction = taoWinControl1UpdateAction
-    Left = 111
-    Top = 224
-    object taoWinControl1In1: TtaoInFileContents
-    end
-    object taoWinControl1In2: TtaoInCells
-      FormatName = 'TaoCells'
-      PasteSpecialName = 'Cells'
-      PasteSpecialResult = 'tabular cells'
-      PasteSpecialFlags = [psfPasteOnly]
-    end
-    object taoWinControl1In3: TtaoInBiff8
-    end
-    object taoWinControl1In4: TtaoInBiff5
-    end
-    object taoWinControl1In5: TtaoInUnicodeText
-    end
-    object taoWinControl1In6: TtaoInText
-    end
-    object taoWinControl1In7: TtaoInHDrop
-    end
-    object taoWinControl1In8: TtaoInShellIDList
-    end
-    object taoWinControl1In9: TtaoInFileContentsW
-    end
-    object taoWinControl1In10: TtaoInOEMessage
-    end
-    object taoWinControl1In11: TtaoInURL
-    end
-    object taoWinControl1In12: TtaoInURLNetscape4
-    end
-    object taoWinControl1Out1: TtaoOutBiff8
-      DisplayStyle = 'Biff8'
-    end
-    object taoWinControl1Out2: TtaoOutRtf
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out3: TtaoOutUnicodeText
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out4: TtaoOutText
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out5: TtaoOutCells
-      FormatName = 'TaoCells'
-    end
-    object taoWinControl1Out6: TtaoOutHDrop
-    end
-    object taoWinControl1Out7: TtaoOutFileNameMap
-    end
-    object taoWinControl1Out8: TtaoOutShellIDList
-    end
-    object taoWinControl1Out9: TtaoOutFileDescriptor
-    end
-    object taoWinControl1Out10: TtaoOutFileDescriptorW
-    end
-    object taoWinControl1Out11: TtaoOutFileContents
-    end
-    object taoWinControl1Out12: TtaoOutPreferredEffect
-    end
-    object taoWinControl1Out13: TtaoOutURL
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out14: TtaoOutURLShortcut
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out15: TtaoOutURLShortcutTitle
-      DisplayStyle = 'Text'
     end
   end
 end

@@ -15,6 +15,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 488
     Width = 1334
@@ -79,6 +80,7 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     end
     object pnlButton: TPanel
+      ParentBackground = False
       Left = 1229
       Top = 1
       Width = 104

@@ -90,7 +90,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         1828.270833333333000000
         2000.250000000000000000)
       BandType = rbPageHeader
-      object qrlblQuoteCaption: TgtQRLabel
+      object qrlblQuoteCaption: TQRLabel
         Left = 8
         Top = 4
         Width = 158
@@ -121,7 +121,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 22
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 120
         Top = 108
         Width = 63
@@ -153,7 +153,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 17
         Top = 108
         Width = 55
@@ -184,7 +184,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 120
         Top = 174
         Width = 345
@@ -278,7 +278,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 16
         Top = 209
         Width = 92
@@ -309,7 +309,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 120
         Top = 209
         Width = 156
@@ -341,7 +341,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText9: TgtQRDBText
+      object gtQRDBText9: TQRDBText
         Left = 120
         Top = 142
         Width = 345
@@ -392,7 +392,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 595
         Top = 108
         Width = 92
@@ -1382,7 +1382,7 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 553
         Top = 108
         Width = 83

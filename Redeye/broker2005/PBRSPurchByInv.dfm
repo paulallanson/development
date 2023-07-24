@@ -18,6 +18,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 145
     Width = 737
@@ -101,6 +102,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 737
@@ -185,6 +187,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Caption = 'Invoices to include'
     end
     object rgSupplier: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 100
@@ -198,6 +201,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       OnClick = rgSupplierClick
     end
     object pnlSuppSearch: TPanel
+      ParentBackground = False
       Left = 120
       Top = 11
       Width = 305
@@ -310,6 +314,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       OnExit = DateToEditExit
     end
     object rdgrpType: TRadioGroup
+      ParentBackground = False
       Left = 600
       Top = 8
       Width = 113
@@ -339,6 +344,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 396
     Width = 737
@@ -362,6 +368,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 504
       Top = 1
       Width = 232
@@ -480,6 +487,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 260
     Top = 252
     Width = 289

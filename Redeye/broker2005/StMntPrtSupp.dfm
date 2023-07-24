@@ -98,6 +98,7 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
     Kind = bkCancel
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 384
     Width = 249

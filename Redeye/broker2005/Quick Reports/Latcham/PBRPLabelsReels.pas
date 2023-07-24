@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, gtQrCtrls;
+  CCSPrint, PBPOObjects, qrprntr, printers;
 
 type
   TPBRPLabelsReelsFrm = class(TForm)
@@ -37,7 +37,7 @@ type
     FromLbl: TQRLabel;
     qrmCompany: TQRMemo;
     ReportImage: TQRImage;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

@@ -23,6 +23,7 @@ object frmCCSProgressBar: TfrmCCSProgressBar
     Caption = 'Please wait ............................................'
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 289

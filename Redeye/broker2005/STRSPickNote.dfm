@@ -18,6 +18,7 @@ object STRSPickNotefrm: TSTRSPickNotefrm
   PixelsPerInch = 96
   TextHeight = 13
   object OrderGroupBox: TGroupBox
+    ParentBackground = False
     Left = 7
     Top = 8
     Width = 346
@@ -54,6 +55,7 @@ object STRSPickNotefrm: TSTRSPickNotefrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 7
     Top = 81
     Width = 346

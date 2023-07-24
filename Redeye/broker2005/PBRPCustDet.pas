@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, CCSCommon, qrprntr,
-  printers, CCSPrint, gtQrCtrls;
+  printers, CCSPrint;
 
 type
   TPBRPCustDetFrm = class(TForm)
@@ -48,7 +48,7 @@ type
     QRChildBand1: TQRChildBand;
     QRLabel12: TQRLabel;
     QRDBText11: TQRDBText;
-    memoNotes: TgtQRMemo;
+    memoNotes: TQRMemo;
     GetNarrSQL: TQuery;
     QRLabel6: TQRLabel;
     QRDBText9: TQRDBText;

@@ -23,6 +23,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 789
@@ -410,6 +411,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     object tsOrders: TTabSheet
       Caption = 'Orders'
       object Panel1: TPanel
+        ParentBackground = False
         Left = 681
         Top = 0
         Width = 100
@@ -418,6 +420,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         BevelOuter = bvNone
         TabOrder = 0
         object FuncGrpBox: TGroupBox
+          ParentBackground = False
           Left = 6
           Top = -5
           Width = 83
@@ -606,6 +609,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         end
       end
       object Panel5: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 681
@@ -695,6 +699,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         end
       end
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 227
         Width = 781
@@ -837,6 +842,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 495
     Width = 789
@@ -844,6 +850,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
     Align = alBottom
     TabOrder = 2
     object Panel4: TPanel
+      ParentBackground = False
       Left = 397
       Top = 1
       Width = 391

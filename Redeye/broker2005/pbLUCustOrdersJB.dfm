@@ -139,6 +139,7 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 306
     Width = 817

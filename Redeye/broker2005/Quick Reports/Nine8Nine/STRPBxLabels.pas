@@ -32,7 +32,7 @@ type
     FormRefSQL: TQuery;
     lblFormRefID: TQRLabel;
     lblFormRefDesc: TQRLabel;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

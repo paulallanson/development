@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, ComCtrls, Db, DBTables, Grids, DBGrids, Buttons, StdCtrls,
-  CCSPrint, DateSelV5, PBPOObjects, gtQrExport, OleCtnrs, CCSCommon;
+  CCSPrint, DateSelV5, PBPOObjects, QrExport, OleCtnrs, CCSCommon;
 
 type
   TPBRSSalesByProdFrm = class(TForm)

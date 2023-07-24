@@ -19,6 +19,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 185
     Width = 782
@@ -121,6 +122,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 782
@@ -278,6 +280,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       OnExit = DateToEditExit
     end
     object rgPrdCat: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 137
@@ -291,6 +294,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       OnClick = rgPrdCatClick
     end
     object RepPanel: TPanel
+      ParentBackground = False
       Left = 168
       Top = 14
       Width = 321
@@ -329,6 +333,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       end
     end
     object RdGrpRepTyp: TRadioGroup
+      ParentBackground = False
       Left = 656
       Top = 8
       Width = 115
@@ -350,6 +355,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       TabOrder = 9
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 80
       Width = 137
@@ -363,6 +369,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 168
       Top = 83
       Width = 321
@@ -412,6 +419,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 485
     Width = 782
@@ -435,6 +443,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 549
       Top = 1
       Width = 232
@@ -553,6 +562,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 260
     Top = 252
     Width = 289

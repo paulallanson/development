@@ -88,7 +88,7 @@ object STRPSordFrm: TSTRPSordFrm
         388.937500000000000000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 304
         Top = 1
         Width = 115

@@ -18,6 +18,7 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 640
@@ -139,6 +140,7 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
         end>
     end
     object pnlPart: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 638
@@ -170,6 +172,7 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 269
     Width = 640
@@ -180,6 +183,7 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
       640
       41)
     object pnlButton: TPanel
+      ParentBackground = False
       Left = 535
       Top = 1
       Width = 104

@@ -59,6 +59,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end>
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 370
     Width = 757
@@ -143,6 +144,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 757
@@ -150,6 +152,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Align = alTop
     TabOrder = 3
     object POGroupBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 393
@@ -172,6 +175,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 66
       Width = 393
@@ -226,6 +230,7 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
     end
     object GroupBox5: TGroupBox
+      ParentBackground = False
       Left = 408
       Top = 66
       Width = 329

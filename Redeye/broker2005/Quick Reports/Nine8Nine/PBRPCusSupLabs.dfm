@@ -261,7 +261,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         WordWrap = True
         FontSize = 10
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 272
         Top = 8
         Width = 257

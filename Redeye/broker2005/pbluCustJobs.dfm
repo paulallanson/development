@@ -40,6 +40,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 493
     Width = 814
@@ -62,6 +63,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 540
       Top = 1
       Width = 273
@@ -304,6 +306,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 814
@@ -313,6 +316,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     Color = clSilver
     TabOrder = 4
     object Panel4: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409

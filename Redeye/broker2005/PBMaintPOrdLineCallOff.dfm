@@ -58,6 +58,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Caption = 'Delivery Date'
     end
     object AddrTypeRadGrp: TRadioGroup
+      ParentBackground = False
       Left = 216
       Top = 13
       Width = 105
@@ -72,6 +73,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       OnClick = AddrTypeRadGrpClick
     end
     object AddrGrpBox: TGroupBox
+      ParentBackground = False
       Left = 336
       Top = 13
       Width = 385
@@ -235,6 +237,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       end
     end
     object QtysGrpBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 13
       Width = 193
@@ -352,6 +355,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       OnExit = DatePointEditExit
     end
     object DelInstructPanel: TPanel
+      ParentBackground = False
       Left = 2
       Top = 224
       Width = 723
@@ -379,6 +383,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         TabOrder = 0
       end
       object GroupBox3: TGroupBox
+        ParentBackground = False
         Left = 2
         Top = 2
         Width = 329
@@ -523,6 +528,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 2
     Top = 1
     Width = 727
@@ -647,6 +653,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 2
     Top = 72
     Width = 727

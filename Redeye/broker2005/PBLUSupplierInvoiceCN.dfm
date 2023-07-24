@@ -19,6 +19,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
   PixelsPerInch = 96
   TextHeight = 15
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 432
     Width = 781
@@ -36,6 +37,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       781
       84)
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 26
       Width = 297
@@ -52,6 +54,7 @@ object PBLUSupplierInvoiceCNFrm: TPBLUSupplierInvoiceCNFrm
       end
     end
     object GroupBox2: TGroupBox
+      ParentBackground = False
       Left = 668
       Top = 3
       Width = 105

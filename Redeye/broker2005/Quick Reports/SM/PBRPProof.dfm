@@ -437,7 +437,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 354
         Top = 24
         Width = 363
@@ -1730,7 +1730,7 @@ object PBRPProofFrm: TPBRPProofFrm
         359.833333333333300000
         1920.875000000000000000)
       BandType = rbPageFooter
-      object gtQRImage2: TgtQRImage
+      object gtQRImage2: TQRImage
         Left = -1
         Top = 71
         Width = 270

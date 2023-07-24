@@ -198,6 +198,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 621
     Width = 1157
@@ -205,6 +206,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Align = alBottom
     TabOrder = 3
     object Panel1: TPanel
+      ParentBackground = False
       Left = 899
       Top = 1
       Width = 257

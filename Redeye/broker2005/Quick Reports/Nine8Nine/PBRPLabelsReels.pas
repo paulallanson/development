@@ -35,9 +35,9 @@ type
     NumberedLbl: TQRLabel;
     FromLbl: TQRLabel;
     qrmCompany: TQRMemo;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     DeliveryDateLbl: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

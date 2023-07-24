@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, gtQrCtrls, qrprntr,
+  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, qrprntr,
   printers, CCSPrint;
 
 type
@@ -43,8 +43,8 @@ type
     QRLabel16: TQRLabel;
     VatQRLabel: TQRLabel;
     GetContactSQL: TQuery;
-    lblSpecialNotes: TgtQRLabel;
-    SpecialNotesMemo: TgtQRMemo;
+    lblSpecialNotes: TQRLabel;
+    SpecialNotesMemo: TQRMemo;
     GetNarrSQL: TQuery;
     ReportTitleQRLabel: TQRLabel;
     OrdNumQRLabel: TQRLabel;
@@ -78,9 +78,9 @@ type
     QRLabel1: TQRLabel;
     qryGetJobBagReq: TQuery;
     QRMemoAddress: TQRMemo;
-    qrlblVatNo: TgtQRMemo;
+    qrlblVatNo: TQRMemo;
     chldbndFSCClaim: TQRChildBand;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;

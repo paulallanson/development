@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, QuickRpt, Qrctrls, Db, DBTables, CCSPrint, CCSCommon, Math,
-  gtQrExport;
+  QrExport;
 
 type
   TPBRPStkBalfrm = class(TForm)

@@ -2529,7 +2529,7 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         WordWrap = True
         FontSize = 6
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 8
         Top = 0
         Width = 89

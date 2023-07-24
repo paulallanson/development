@@ -20,6 +20,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 121
     Width = 915
@@ -41,6 +42,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       TitleFont.Style = []
     end
     object pnlPrintControl: TPanel
+      ParentBackground = False
       Left = 1
       Top = 244
       Width = 913
@@ -54,6 +56,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Height = 13
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 648
         Top = 1
         Width = 264
@@ -177,6 +180,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 915
@@ -210,6 +214,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ParentFont = False
     end
     object pnlStatusSelect: TPanel
+      ParentBackground = False
       Left = 174
       Top = 12
       Width = 161
@@ -277,6 +282,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         'Customer')
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 6
       Top = 12
       Width = 161
@@ -307,6 +313,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       end
     end
     object Panel3: TPanel
+      ParentBackground = False
       Left = 518
       Top = 12
       Width = 161
@@ -337,6 +344,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       end
     end
     object RadioGroup1: TRadioGroup
+      ParentBackground = False
       Left = 808
       Top = 8
       Width = 97
@@ -359,6 +367,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       OnClick = chkbxCustomersClick
     end
     object pnlLevelofImp: TPanel
+      ParentBackground = False
       Left = 345
       Top = 12
       Width = 161
@@ -390,6 +399,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 228
     Top = 148
     Width = 289

@@ -1681,7 +1681,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 16
         Top = 58
         Width = 53
@@ -1763,7 +1763,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblVatNo: TgtQRMemo
+      object qrlblVatNo: TQRMemo
         Left = 411
         Top = 58
         Width = 294

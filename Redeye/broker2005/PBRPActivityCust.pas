@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, gtQrCtrls, DateUtils;
+  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, DateUtils;
 
 type
   TPBRPActivityCustFrm = class(TForm)
@@ -47,8 +47,8 @@ type
     QRLabel6: TQRLabel;
     QRDBText9: TQRDBText;
     QRLabel7: TQRLabel;
-    qrlblDueDate: TgtQRLabel;
-    qrlblEnteredDate: TgtQRLabel;
+    qrlblDueDate: TQRLabel;
+    qrlblEnteredDate: TQRLabel;
     procedure qrReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbDetailsAfterPrint(Sender: TQRCustomBand;

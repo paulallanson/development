@@ -64,6 +64,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     NumGlyphs = 2
   end
   object pnlRepSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 16
     Width = 329
@@ -110,6 +111,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Kind = bkCancel
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 5
     Top = 141
     Width = 180
@@ -192,6 +194,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     end
   end
   object rdgrpRep: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -205,6 +208,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     OnClick = rdgrpRepClick
   end
   object pnlCustSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 82
     Width = 329
@@ -243,6 +247,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     end
   end
   object rdgrpCust: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 74
     Width = 129
@@ -280,6 +285,7 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     TabOrder = 10
   end
   object TotByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 480
     Top = 8
     Width = 105

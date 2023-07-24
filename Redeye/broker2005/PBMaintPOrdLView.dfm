@@ -16,6 +16,7 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlLines: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 594
@@ -45,6 +46,7 @@ object PBMaintPOrdLViewFrm: TPBMaintPOrdLViewFrm
     end
   end
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 350
     Width = 594

@@ -88,7 +88,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         960.437499999999900000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 504
         Top = -12
         Width = 209
@@ -4997,7 +4997,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
           FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000}
         Stretch = True
       end
-      object ReportTitleQRLabel: TgtQRLabel
+      object ReportTitleQRLabel: TQRLabel
         Left = 16
         Top = 6
         Width = 309
@@ -5028,7 +5028,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = False
         FontSize = 36
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 14
         Top = 107
         Width = 108
@@ -5059,7 +5059,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object DateRequiredLabel: TgtQRLabel
+      object DateRequiredLabel: TQRLabel
         Left = 126
         Top = 107
         Width = 89
@@ -5090,7 +5090,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 14
         Top = 149
         Width = 84
@@ -5121,7 +5121,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object qrlblContact: TgtQRLabel
+      object qrlblContact: TQRLabel
         Left = 112
         Top = 149
         Width = 95
@@ -5152,7 +5152,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 14
         Top = 168
         Width = 395
@@ -5170,7 +5170,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object DellAddmemo: TgtQRMemo
+      object DellAddmemo: TQRMemo
         Left = 24
         Top = 177
         Width = 324
@@ -5200,7 +5200,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = False
         FontSize = 10
       end
-      object qrlblReferencelabel: TgtQRLabel
+      object qrlblReferencelabel: TQRLabel
         Left = 23
         Top = 285
         Width = 70
@@ -5231,7 +5231,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlblreference: TgtQRLabel
+      object qrlblreference: TQRLabel
         Left = 98
         Top = 285
         Width = 305
@@ -5262,7 +5262,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 24
         Top = 313
         Width = 46
@@ -5293,7 +5293,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 24
         Top = 333
         Width = 29
@@ -5324,7 +5324,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object DPhoneQRLabel: TgtQRLabel
+      object DPhoneQRLabel: TQRLabel
         Left = 80
         Top = 313
         Width = 281
@@ -5355,7 +5355,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object DFaxQRLabel: TgtQRLabel
+      object DFaxQRLabel: TQRLabel
         Left = 80
         Top = 333
         Width = 281
@@ -5386,7 +5386,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object qrlDelNumber: TgtQRLabel
+      object qrlDelNumber: TQRLabel
         Left = 14
         Top = 75
         Width = 134
@@ -5436,7 +5436,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         359.833333333333400000
         1899.708333333333000000)
       BandType = rbGroupFooter
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 8
         Top = 24
         Width = 409
@@ -5454,7 +5454,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object lblSpecialNotes: TgtQRLabel
+      object lblSpecialNotes: TQRLabel
         Left = 9
         Top = 6
         Width = 82
@@ -5485,7 +5485,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object SpecialNotesMemo: TgtQRMemo
+      object SpecialNotesMemo: TQRMemo
         Left = 17
         Top = 34
         Width = 392
@@ -5545,7 +5545,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       FooterBand = FooterQRBand
       Master = qrpDetails
       ReprintOnNewPage = True
-      object LineQrLabel: TgtQRLabel
+      object LineQrLabel: TQRLabel
         Left = 8
         Top = 23
         Width = 29
@@ -5576,7 +5576,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object PartQRLabel: TgtQRLabel
+      object PartQRLabel: TQRLabel
         Left = 42
         Top = 23
         Width = 50
@@ -5607,7 +5607,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object DescQRLabel: TgtQRLabel
+      object DescQRLabel: TQRLabel
         Left = 160
         Top = 23
         Width = 72
@@ -5638,7 +5638,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object OrdQtyQRLabel: TgtQRLabel
+      object OrdQtyQRLabel: TQRLabel
         Left = 664
         Top = 8
         Width = 52
@@ -5669,7 +5669,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 614
         Top = 23
         Width = 38
@@ -5729,7 +5729,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       DataSet = GetDetsQuery
       PrintBefore = False
       PrintIfEmpty = True
-      object PackqtyQRLabel: TgtQRLabel
+      object PackqtyQRLabel: TQRLabel
         Left = 594
         Top = 3
         Width = 57
@@ -5760,7 +5760,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object POrdLineNoQRLabel: TgtQRLabel
+      object POrdLineNoQRLabel: TQRLabel
         Left = 0
         Top = 3
         Width = 33
@@ -5791,7 +5791,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object PartCodeQRLabel: TgtQRLabel
+      object PartCodeQRLabel: TQRLabel
         Left = 42
         Top = 3
         Width = 111
@@ -5822,7 +5822,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object PartDescrQRLabel: TgtQRLabel
+      object PartDescrQRLabel: TQRLabel
         Left = 160
         Top = 3
         Width = 433
@@ -5853,7 +5853,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object PackSizeQRLabel: TgtQRLabel
+      object PackSizeQRLabel: TQRLabel
         Left = 654
         Top = 3
         Width = 49

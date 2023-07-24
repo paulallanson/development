@@ -23,6 +23,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
   PixelsPerInch = 96
   TextHeight = 13
   object POGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
@@ -100,6 +101,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 122
     Width = 393
@@ -259,6 +261,7 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
     NumGlyphs = 2
   end
   object GroupBox5: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 208
     Width = 393

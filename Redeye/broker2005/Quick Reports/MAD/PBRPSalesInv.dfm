@@ -136,7 +136,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         214.312500000000000000
         2100.791666666667000000)
       BandType = rbGroupFooter
-      object gtNotesShape: TgtQRShape
+      object gtNotesShape: TQRShape
         Left = 104
         Top = 8
         Width = 561
@@ -155,7 +155,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object RichmemoNotes: TgtQRRichText
+      object RichmemoNotes: TQRRichText
         Left = 136
         Top = 19
         Width = 529
@@ -182,7 +182,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         Lines.Strings = (
           'memoNotes')
       end
-      object memoNotes: TgtQRMemo
+      object memoNotes: TQRMemo
         Left = 120
         Top = 17
         Width = 537
@@ -212,7 +212,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 11
       end
-      object gtlblPackPriceUnit: TgtQRLabel
+      object gtlblPackPriceUnit: TQRLabel
         Left = 75
         Top = 53
         Width = 101
@@ -243,7 +243,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblPackUnitPrice: TgtQRLabel
+      object gtlblPackUnitPrice: TQRLabel
         Left = 159
         Top = 53
         Width = 101
@@ -274,7 +274,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblPackPriceVat: TgtQRLabel
+      object gtlblPackPriceVat: TQRLabel
         Left = 274
         Top = 53
         Width = 22
@@ -305,7 +305,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblPackVat: TgtQRLabel
+      object gtlblPackVat: TQRLabel
         Left = 293
         Top = 53
         Width = 68
@@ -336,7 +336,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblPackPriceGross: TgtQRLabel
+      object gtlblPackPriceGross: TQRLabel
         Left = 367
         Top = 53
         Width = 65
@@ -367,7 +367,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtlblPackTotalGross: TgtQRLabel
+      object gtlblPackTotalGross: TQRLabel
         Left = 401
         Top = 53
         Width = 112
@@ -444,7 +444,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       DataSet = InvLineSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object GoodsVatLbl: TgtQRLabel
+      object GoodsVatLbl: TQRLabel
         Left = 706
         Top = 2
         Width = 60
@@ -476,7 +476,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object GoodsTotalLbl: TgtQRLabel
+      object GoodsTotalLbl: TQRLabel
         Left = 623
         Top = 2
         Width = 88
@@ -508,7 +508,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object VatPerclbl: TgtQRLabel
+      object VatPerclbl: TQRLabel
         Left = 582
         Top = 2
         Width = 56
@@ -540,7 +540,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QtyInvoicedLbl: TgtQRLabel
+      object QtyInvoicedLbl: TQRLabel
         Left = 41
         Top = 2
         Width = 57
@@ -572,7 +572,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblPriceUnit: TgtQRLabel
+      object lblPriceUnit: TQRLabel
         Left = 526
         Top = 2
         Width = 64
@@ -603,7 +603,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object GoodsLbl: TgtQRLabel
+      object GoodsLbl: TQRLabel
         Left = 466
         Top = 2
         Width = 55
@@ -635,7 +635,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblProduct: TgtQRLabel
+      object lblProduct: TQRLabel
         Left = 104
         Top = 2
         Width = 145
@@ -666,7 +666,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblDescription: TgtQRLabel
+      object lblDescription: TQRLabel
         Left = 255
         Top = 2
         Width = 202
@@ -721,7 +721,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       FooterBand = AddChargesFooter
       PrintBefore = False
       PrintIfEmpty = True
-      object ExtrasVatLbl: TgtQRLabel
+      object ExtrasVatLbl: TQRLabel
         Left = 698
         Top = 1
         Width = 69
@@ -752,7 +752,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 104
         Top = 1
         Width = 377
@@ -784,7 +784,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblAmount: TgtQRLabel
+      object lblAmount: TQRLabel
         Left = 655
         Top = 1
         Width = 56
@@ -836,7 +836,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         1280.583333333333000000
         2100.791666666667000000)
       BandType = rbPageHeader
-      object memDefPayment: TgtQRMemo
+      object memDefPayment: TQRMemo
         Left = 32
         Top = 334
         Width = 369
@@ -871,7 +871,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = False
         FontSize = 8
       end
-      object CustomerAddMemo: TgtQRMemo
+      object CustomerAddMemo: TQRMemo
         Left = 72
         Top = 194
         Width = 337
@@ -909,7 +909,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object InvoiceNumberLbl: TgtQRLabel
+      object InvoiceNumberLbl: TQRLabel
         Left = 609
         Top = 264
         Width = 110
@@ -941,7 +941,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object InvoiceDateLbl: TgtQRLabel
+      object InvoiceDateLbl: TQRLabel
         Left = 609
         Top = 291
         Width = 82
@@ -973,7 +973,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object OurJobLbl: TgtQRLabel
+      object OurJobLbl: TQRLabel
         Left = 609
         Top = 370
         Width = 58
@@ -1005,7 +1005,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblCustOrderNo: TgtQRLabel
+      object lblCustOrderNo: TQRLabel
         Left = 609
         Top = 319
         Width = 87
@@ -1036,7 +1036,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object CustAccount: TgtQRDBText
+      object CustAccount: TQRDBText
         Left = 609
         Top = 346
         Width = 81
@@ -1069,7 +1069,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrlblInvoiceLabel: TgtQRLabel
+      object qrlblInvoiceLabel: TQRLabel
         Left = 76
         Top = 41
         Width = 128
@@ -1100,7 +1100,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 22
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 504
         Top = 264
         Width = 62
@@ -1131,7 +1131,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 504
         Top = 291
         Width = 70
@@ -1162,7 +1162,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 504
         Top = 319
         Width = 49
@@ -1193,7 +1193,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 504
         Top = 346
         Width = 52
@@ -1224,7 +1224,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblJobNumber: TgtQRLabel
+      object lblJobNumber: TQRLabel
         Left = 504
         Top = 370
         Width = 70
@@ -1255,7 +1255,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 72
         Top = 467
         Width = 20
@@ -1286,7 +1286,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 104
         Top = 467
         Width = 66
@@ -1317,7 +1317,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 463
         Top = 467
         Width = 56
@@ -1348,7 +1348,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 535
         Top = 467
         Width = 55
@@ -1379,7 +1379,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 680
         Top = 467
         Width = 29
@@ -1410,7 +1410,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrshpPayment: TgtQRShape
+      object qrshpPayment: TQRShape
         Left = 72
         Top = 344
         Width = 393
@@ -1428,7 +1428,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object memPayment: TgtQRMemo
+      object memPayment: TQRMemo
         Left = 80
         Top = 350
         Width = 369
@@ -1462,7 +1462,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = False
         FontSize = 8
       end
-      object QRMemoCmpnyNm: TgtQRMemo
+      object QRMemoCmpnyNm: TQRMemo
         Left = 568
         Top = 116
         Width = 108
@@ -1492,7 +1492,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 8
       end
-      object lblInvoiceDescription: TgtQRLabel
+      object lblInvoiceDescription: TQRLabel
         Left = 136
         Top = 424
         Width = 633
@@ -1523,7 +1523,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 72
         Top = 424
         Width = 45
@@ -1554,7 +1554,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblReference: TgtQRLabel
+      object lblReference: TQRLabel
         Left = 504
         Top = 398
         Width = 73
@@ -1585,7 +1585,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 745
         Top = 467
         Width = 20
@@ -1616,7 +1616,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 544
         Top = 32
         Width = 201
@@ -1633,7 +1633,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
           531.812500000000000000)
         Stretch = True
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 605
         Top = 467
         Width = 33
@@ -1664,7 +1664,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrlblInvoiceNumber: TgtQRLabel
+      object qrlblInvoiceNumber: TQRLabel
         Left = 217
         Top = 41
         Width = 256
@@ -1715,7 +1715,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         650.875000000000000000
         2100.791666666667000000)
       BandType = rbPageFooter
-      object imgISO: TgtQRImage
+      object imgISO: TQRImage
         Left = 240
         Top = 121
         Width = 124
@@ -13704,7 +13704,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 7
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 74
         Top = 7
         Width = 97
@@ -13735,7 +13735,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object BranchAddMemo: TgtQRMemo
+      object BranchAddMemo: TQRMemo
         Left = 74
         Top = 23
         Width = 257
@@ -13772,7 +13772,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object GoodsValueLbl: TgtQRLabel
+      object GoodsValueLbl: TQRLabel
         Left = 681
         Top = 7
         Width = 86
@@ -13804,7 +13804,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object TotalValueLbl: TgtQRLabel
+      object TotalValueLbl: TQRLabel
         Left = 691
         Top = 61
         Width = 76
@@ -13836,7 +13836,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 635
         Top = 7
         Width = 51
@@ -13867,7 +13867,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 662
         Top = 34
         Width = 24
@@ -13898,7 +13898,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 614
         Top = 61
         Width = 72
@@ -13929,7 +13929,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object VATValueLbl: TgtQRLabel
+      object VATValueLbl: TQRLabel
         Left = 697
         Top = 34
         Width = 70
@@ -13961,7 +13961,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRImage1: TgtQRImage
+      object gtQRImage1: TQRImage
         Left = 676
         Top = 107
         Width = 92
@@ -16320,7 +16320,7 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
           FFFFFF000000}
         Stretch = True
       end
-      object gtQRImage2: TgtQRImage
+      object gtQRImage2: TQRImage
         Left = 43
         Top = 219
         Width = 166

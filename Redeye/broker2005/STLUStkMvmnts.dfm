@@ -19,6 +19,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 685
@@ -116,6 +117,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
         end>
     end
     object pnlPart: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 683
@@ -204,6 +206,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 289
     Width = 685
@@ -214,6 +217,7 @@ object STLUStkMvmntsFrm: TSTLUStkMvmntsFrm
       685
       41)
     object pnlButton: TPanel
+      ParentBackground = False
       Left = 580
       Top = 1
       Width = 104

@@ -22,7 +22,7 @@ type
     FAOQRLabel: TQRLabel;
     SupplierSQL: TQuery;
     qrmCompany: TQRMemo;
-    imgReport: TgtQRImage;
+    imgReport: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

@@ -23,6 +23,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
   PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 815
@@ -32,6 +33,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     Color = clSilver
     TabOrder = 0
     object Panel4: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409
@@ -252,6 +254,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 493
     Width = 815
@@ -282,6 +285,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       TabOrder = 1
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 541
       Top = 1
       Width = 273
@@ -317,6 +321,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
       end>
   end
   object Panel5: TPanel
+    ParentBackground = False
     Left = 475
     Top = 75
     Width = 340
@@ -326,6 +331,7 @@ object frmPBLUCustEvents: TfrmPBLUCustEvents
     Caption = 'Panel5'
     TabOrder = 5
     object Panel6: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 340

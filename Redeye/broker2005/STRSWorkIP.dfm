@@ -19,6 +19,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 448
     Width = 760
@@ -27,6 +28,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     BevelOuter = bvNone
     TabOrder = 0
     object pnlRightControl: TPanel
+      ParentBackground = False
       Left = 429
       Top = 0
       Width = 331
@@ -148,6 +150,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
   end
   object pnlDetail: TPanel
+    ParentBackground = False
     Left = 0
     Top = 177
     Width = 760
@@ -235,6 +238,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
         end>
     end
     object pnlExportPrgrss: TPanel
+      ParentBackground = False
       Left = 228
       Top = 36
       Width = 289
@@ -269,6 +273,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
     end
   end
   object pnlSelections: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 760
@@ -354,6 +359,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       OnClick = DateToButtonClick
     end
     object rgRep: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 1
       Width = 100
@@ -367,6 +373,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       OnClick = rgRepClick
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 63
       Width = 100
@@ -380,6 +387,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       OnClick = rgCustomerClick
     end
     object RepPanel: TPanel
+      ParentBackground = False
       Left = 113
       Top = 6
       Width = 281
@@ -417,6 +425,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
       end
     end
     object CustomerPanel: TPanel
+      ParentBackground = False
       Left = 115
       Top = 68
       Width = 281
@@ -502,6 +511,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
         ' ')
     end
     object pnlDates: TPanel
+      ParentBackground = False
       Left = 582
       Top = 0
       Width = 178
@@ -520,6 +530,7 @@ object STRSWorkIPfrm: TSTRSWorkIPfrm
         OnClick = chkbxPageBreakClick
       end
       object TotByRadioGroup: TRadioGroup
+        ParentBackground = False
         Left = 33
         Top = 8
         Width = 105

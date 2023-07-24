@@ -88,7 +88,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, gtQrCtrls;
+  CCSPrint;
 
 type
   TSTRPLabelsDelivFrm = class(TForm)
@@ -99,24 +99,24 @@ type
     AdhocSQL: TQuery;
     CustomerSQL: TQuery;
     SODelivSQL: TQuery;
-    QRShape3: TgtQRShape;
-    CompNameQRLabel: TgtQRLabel;
-    CompAddrQRLabel: TgtQRLabel;
-    QRShape4: TgtQRShape;
+    QRShape3: TQRShape;
+    CompNameQRLabel: TQRLabel;
+    CompAddrQRLabel: TQRLabel;
+    QRShape4: TQRShape;
     CompSQL: TQuery;
-    QRLabel7: TgtQRLabel;
-    DescrQRLabel: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    FormRefLbl: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRShape1: TgtQRShape;
-    QRLabel4: TgtQRLabel;
-    QRShape2: TgtQRShape;
-    QRLabel3: TgtQRLabel;
-    FAOQRLabel: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    lblCustomer: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
+    QRLabel7: TQRLabel;
+    DescrQRLabel: TQRLabel;
+    QRLabel1: TQRLabel;
+    FormRefLbl: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRShape1: TQRShape;
+    QRLabel4: TQRLabel;
+    QRShape2: TQRShape;
+    QRLabel3: TQRLabel;
+    FAOQRLabel: TQRLabel;
+    AddressMemo: TQRMemo;
+    lblCustomer: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

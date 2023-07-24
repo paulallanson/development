@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon, gtQrCtrls, gtQrExport, qrprntr, printers;
+  PBPOObjects, CCSCommon, QrExport, qrprntr, printers;
 
 type
   TPBRPCustStateFrm = class(TForm)

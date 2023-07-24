@@ -17,6 +17,7 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
   PixelsPerInch = 96
   TextHeight = 13
   object OrderGroupBox: TGroupBox
+    ParentBackground = False
     Left = 7
     Top = 8
     Width = 370

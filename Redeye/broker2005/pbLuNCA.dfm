@@ -216,6 +216,7 @@ object frmPBluNCA: TfrmPBluNCA
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 323
     Width = 691
@@ -238,6 +239,7 @@ object frmPBluNCA: TfrmPBluNCA
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 417
       Top = 1
       Width = 273
@@ -302,6 +304,7 @@ object frmPBluNCA: TfrmPBluNCA
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 691

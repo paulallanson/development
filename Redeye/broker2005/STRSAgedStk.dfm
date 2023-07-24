@@ -43,6 +43,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 120
     Width = 289
@@ -66,6 +67,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 296
     Width = 289
@@ -213,6 +215,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Kind = bkCancel
   end
   object RadioGroupCst: TRadioGroup
+    ParentBackground = False
     Left = 448
     Top = 80
     Width = 129
@@ -226,6 +229,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = RadioGroupCstClick
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 121
@@ -244,6 +248,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = AllOrOneRadioGroupClick
   end
   object RepGrpBox: TGroupBox
+    ParentBackground = False
     Left = 136
     Top = 8
     Width = 297
@@ -290,6 +295,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object CustRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 121
@@ -308,6 +314,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
+    ParentBackground = False
     Left = 136
     Top = 80
     Width = 297
@@ -472,6 +479,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
   object rdgrpReportType: TRadioGroup
+    ParentBackground = False
     Left = 448
     Top = 8
     Width = 129
@@ -485,6 +493,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = rdgrpReportTypeClick
   end
   object RadioGroup1: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 151
     Width = 121
@@ -503,6 +512,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = RadioGroup1Click
   end
   object StoresGrpBox: TGroupBox
+    ParentBackground = False
     Left = 137
     Top = 151
     Width = 296
@@ -549,6 +559,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object rdgBins: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 219
     Width = 121
@@ -568,6 +579,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     OnClick = rdgBinsClick
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 137
     Top = 219
     Width = 296

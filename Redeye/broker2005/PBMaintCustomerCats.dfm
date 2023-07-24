@@ -69,6 +69,7 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     OnClick = btnOperatorsClick
   end
   object radType: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 56
     Width = 161
@@ -81,6 +82,7 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     TabOrder = 4
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 176
     Top = 56
     Width = 145

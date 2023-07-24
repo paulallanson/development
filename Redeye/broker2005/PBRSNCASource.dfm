@@ -53,6 +53,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Kind = bkCancel
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 16
     Width = 217
@@ -78,6 +79,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 240
     Top = 16
     Width = 217
@@ -103,6 +105,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 88
     Width = 217
@@ -128,6 +131,7 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     end
   end
   object GroupBox4: TGroupBox
+    ParentBackground = False
     Left = 240
     Top = 88
     Width = 217

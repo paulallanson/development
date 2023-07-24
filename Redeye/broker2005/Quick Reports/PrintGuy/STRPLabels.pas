@@ -115,8 +115,8 @@ type
     QRLabel5: TQRLabel;
     qryGetFSCClaim: TQuery;
     DeliveryDateLbl: TQRLabel;
-    ReportImage: TgtQRImage;
-    qrmCompany: TgtQRMemo;
+    ReportImage: TQRImage;
+    qrmCompany: TQRMemo;
     CompSQL: TQuery;
     lblCustomer: TQRLabel;
     AddressMemo: TQRMemo;

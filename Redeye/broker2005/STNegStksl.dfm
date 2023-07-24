@@ -89,6 +89,7 @@ object STNegStkSlfrm: TSTNegStkSlfrm
     Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 113

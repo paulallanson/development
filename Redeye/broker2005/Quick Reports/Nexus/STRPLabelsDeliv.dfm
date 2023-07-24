@@ -93,7 +93,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
       DataSet = PODelivSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object AddressMemo: TgtQRMemo
+      object AddressMemo: TQRMemo
         Left = 133
         Top = 115
         Width = 321
@@ -129,7 +129,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object PONumberLbl: TgtQRLabel
+      object PONumberLbl: TQRLabel
         Left = 375
         Top = 305
         Width = 78
@@ -160,7 +160,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBCustOrderRef: TgtQRDBText
+      object QRDBCustOrderRef: TQRDBText
         Left = 133
         Top = 266
         Width = 146
@@ -192,7 +192,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object lblCustomer: TgtQRLabel
+      object lblCustomer: TQRLabel
         Left = 133
         Top = 94
         Width = 84
@@ -223,7 +223,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 16
         Top = 94
         Width = 82
@@ -254,7 +254,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 16
         Top = 266
         Width = 75
@@ -285,7 +285,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 280
         Top = 304
         Width = 88
@@ -316,7 +316,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 280
         Top = 266
         Width = 83
@@ -347,7 +347,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object AddQRLabel: TgtQRLabel
+      object AddQRLabel: TQRLabel
         Left = 16
         Top = 115
         Width = 76
@@ -378,7 +378,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object BoxNoQRLbl: TgtQRLabel
+      object BoxNoQRLbl: TQRLabel
         Left = 16
         Top = 304
         Width = 64
@@ -410,7 +410,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object BoxQRLbl: TgtQRLabel
+      object BoxQRLbl: TQRLabel
         Left = 133
         Top = 305
         Width = 72
@@ -442,7 +442,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object DeliveryDateLbl: TgtQRLabel
+      object DeliveryDateLbl: TQRLabel
         Left = 375
         Top = 267
         Width = 90

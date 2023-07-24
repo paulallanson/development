@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, STSOObjects, IniFiles, CCSPrint, DB, DBTables, STRPSord,
-  gtQrExport;
+  QrExport;
 
 type
   TSTRSSalesOrdfrm = class(TForm)
@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses pbDatabase, PBEmailList, printers, CCSCommon, pbMainMenu;
+uses
+  pbDatabase, PBEmailList, printers, CCSCommon, pbMainMenu,
+  Printer.Tools;
 
 {$R *.DFM}
 
@@ -282,9 +284,15 @@ begin
     PrinterSettings.Free;
     Application.ProcessMessages;
   end;
-
 end;
 
+procedure TSTRSSalesOrdfrm.PrintToAttachment(STRPSordFrm: TSTRPSordFrm);
+begin
+  var fileName := 'SO' + SONumber.ToString;
+  PrinterTools.New.PrintToAttachment(STRPSordFrm.SalesOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 procedure TSTRSSalesOrdfrm.PrintToAttachment(STRPSordFrm: TSTRPSordFrm);
 var
   i: integer;
@@ -410,9 +418,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTRSSalesOrdfrm.FormDestroy(Sender: TObject);
 begin

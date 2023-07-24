@@ -4,20 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QuickRpt, QRCtrls, gtQrCtrls, ExtCtrls;
+  Dialogs, DB, DBTables, QuickRpt, QRCtrls, ExtCtrls;
 
 type
   TSTRPSalesHistoryLocFrm = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
-    gtQRLabel1: TgtQRLabel;
+    gtQRLabel1: TQRLabel;
     QRSysData2: TQRSysData;
-    qrlblDateSelection: TgtQRLabel;
-    qrlblDelivery: TgtQRLabel;
+    qrlblDateSelection: TQRLabel;
+    qrlblDelivery: TQRLabel;
     QRSysData1: TQRSysData;
-    gtQRLabel4: TgtQRLabel;
+    gtQRLabel4: TQRLabel;
     qryReport: TQuery;
-    qrlblSelection: TgtQRLabel;
+    qrlblSelection: TQRLabel;
     qrbCustHeader: TQRGroup;
     QRDBText1: TQRDBText;
     qrbPartHeader: TQRGroup;
@@ -28,8 +28,8 @@ type
     QRDBText4: TQRDBText;
     qrpPartFooter: TQRBand;
     qrlblTotalUsage: TQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel3: TQRLabel;
     qrshpBottom: TQRShape;
     qrshpTop: TQRShape;
     qrdbPart: TQRDBText;
@@ -37,7 +37,7 @@ type
     qrlblTotalUsageLabel: TQRLabel;
     qrdbLocation: TQRDBText;
     QRDBText3: TQRDBText;
-    gtQRLabel5: TgtQRLabel;
+    gtQRLabel5: TQRLabel;
     qrlblInactive: TQRLabel;
     procedure QRSubDetail2BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

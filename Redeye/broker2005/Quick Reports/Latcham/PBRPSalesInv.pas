@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, CCSPrint,
-  CCSCommon, PBPOObjects, gtQrCtrls, gtQrExport, qrprntr, printers;
+  CCSCommon, PBPOObjects, QrExport, qrprntr, printers;
 
 type
   TPBRPSalesInvFrm = class(TForm)
@@ -25,10 +25,10 @@ type
     InvoiceGroupHeader: TQRGroup;
     InvAddChgSQL: TQuery;
     OldInvLineSQL: TQuery;
-    GoodsTotalLbl: TgtQRLabel;
-    Dummy03: TgtQRLabel;
-    Dummy05: TgtQRLabel;
-    Dummy06: TgtQRLabel;
+    GoodsTotalLbl: TQRLabel;
+    Dummy03: TQRLabel;
+    Dummy05: TQRLabel;
+    Dummy06: TQRLabel;
     DeliverySQL: TQuery;
     DeliverySRC: TDataSource;
     AddressSRC: TDataSource;
@@ -38,75 +38,75 @@ type
     CompSQL: TQuery;
     CustSQL: TQuery;
     CreditHeadSQL: TQuery;
-    GoodsLbl: TgtQRLabel;
-    QtyInvoicedLbl: TgtQRLabel;
+    GoodsLbl: TQRLabel;
+    QtyInvoicedLbl: TQRLabel;
     GetNarrSQL: TQuery;
     AddChargesFooter: TQRBand;
-    lblDescription: TgtQRLabel;
+    lblDescription: TQRLabel;
     qryPOLine: TQuery;
     qrySOLine: TQuery;
     qryJBLine: TQuery;
     qryInvCharges: TQuery;
-    QRDBText3: TgtQRDBText;
-    lblAmount: TgtQRLabel;
-    lblPriceUnit: TgtQRLabel;
+    QRDBText3: TQRDBText;
+    lblAmount: TQRLabel;
+    lblPriceUnit: TQRLabel;
     InvoiceLine: TQRSubDetail;
     InvoiceCharges: TQRSubDetail;
     qryJBHead: TQuery;
     qrySOHead: TQuery;
-    lblProduct: TgtQRLabel;
+    lblProduct: TQRLabel;
     QRBand1: TQRBand;
-    CustomerAddMemo: TgtQRMemo;
-    InvoiceNumberLbl: TgtQRLabel;
-    InvoiceDateLbl: TgtQRLabel;
-    OurJobLbl: TgtQRLabel;
-    lblCustOrderNo: TgtQRLabel;
-    CustAccount: TgtQRDBText;
+    CustomerAddMemo: TQRMemo;
+    InvoiceNumberLbl: TQRLabel;
+    InvoiceDateLbl: TQRLabel;
+    OurJobLbl: TQRLabel;
+    lblCustOrderNo: TQRLabel;
+    CustAccount: TQRDBText;
     QRBand2: TQRBand;
-    ExtrasVatLbl: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    lblJobNumber: TgtQRLabel;
-    QRLabel9: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    QRLabel12: TgtQRLabel;
-    QRLabel13: TgtQRLabel;
-    QRMemo2: TgtQRMemo;
-    QRMemoCmpnyNm: TgtQRMemo;
-    lblInvoiceDescription: TgtQRLabel;
-    QRLabel18: TgtQRLabel;
-    lblReference: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    GoodsVatLbl: TgtQRLabel;
+    ExtrasVatLbl: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    lblJobNumber: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRMemo2: TQRMemo;
+    QRMemoCmpnyNm: TQRMemo;
+    lblInvoiceDescription: TQRLabel;
+    QRLabel18: TQRLabel;
+    lblReference: TQRLabel;
+    QRLabel8: TQRLabel;
+    GoodsVatLbl: TQRLabel;
     qryCompCat: TQuery;
     qryUniqueInv: TQuery;
     qryCategory: TQuery;
     gtQRFilters1: TgtQRFilters;
-    imgReport: TgtQRImage;
-    gtNotesShape: TgtQRShape;
-    RichmemoNotes: TgtQRRichText;
-    memoNotes: TgtQRMemo;
-    gtQRMemo1: TgtQRMemo;
+    imgReport: TQRImage;
+    gtNotesShape: TQRShape;
+    RichmemoNotes: TQRRichText;
+    memoNotes: TQRMemo;
+    gtQRMemo1: TQRMemo;
     chldbndFSCClaim: TQRChildBand;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
-    qrlblFSC: TgtQRLabel;
-    qrlblcostCentreLabel: TgtQRLabel;
-    qrlblCostCentre: TgtQRLabel;
-    qrshpPayment: TgtQRShape;
-    GoodsValueLbl: TgtQRLabel;
-    VATValueLbl: TgtQRLabel;
-    TotalValueLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel14: TgtQRLabel;
-    QRLabel15: TgtQRLabel;
-    memDefPayment: TgtQRMemo;
-    memPayment: TgtQRRichText;
+    qrlblFSC: TQRLabel;
+    qrlblcostCentreLabel: TQRLabel;
+    qrlblCostCentre: TQRLabel;
+    qrshpPayment: TQRShape;
+    GoodsValueLbl: TQRLabel;
+    VATValueLbl: TQRLabel;
+    TotalValueLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel14: TQRLabel;
+    QRLabel15: TQRLabel;
+    memDefPayment: TQRMemo;
+    memPayment: TQRRichText;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -325,11 +325,11 @@ begin
 (*  sGoods := formatfloat('0.00', iGoods);
   sVat := formatfloat('0.00', iVat);
 
-  GoodsValueLbl.Caption := formatfloat('£0.00', iGoods);
-  VatValueLbl.Caption := formatfloat('£0.00', ivat);
+  GoodsValueLbl.Caption := formatfloat('?0.00', iGoods);
+  VatValueLbl.Caption := formatfloat('?0.00', ivat);
 
   itotal := strtofloat(sGoods) + strtofloat(sVat);
-  TotalValueLbl.Caption := formatfloat('£0.00', iTotal);
+  TotalValueLbl.Caption := formatfloat('?0.00', iTotal);
 *)
   if bInvoice then
   begin

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
-  gtQrCtrls, ccsCommon, qrprntr, printers;
+  ccsCommon, qrprntr, printers;
 
 type
   TSTRPDelivfrm = class(TForm)
@@ -93,14 +93,14 @@ type
     qrlblDeliveryNotes: TQRLabel;
     DelInstructMemo: TQRMemo;
     qryGetHO: TQuery;
-    ReportImage: TgtQRImage;
-    lblDelNote: TgtQRLabel;
-    qrmCompany: TgtQRMemo;
-    qrlblVatNo: TgtQRMemo;
-    qrmCompany1: TgtQRMemo;
-    qrlblVatNo1: TgtQRMemo;
+    ReportImage: TQRImage;
+    lblDelNote: TQRLabel;
+    qrmCompany: TQRMemo;
+    qrlblVatNo: TQRMemo;
+    qrmCompany1: TQRMemo;
+    qrlblVatNo1: TQRMemo;
     chldbndFSCClaim: TQRChildBand;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;

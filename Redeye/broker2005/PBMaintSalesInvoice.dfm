@@ -34,6 +34,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       end>
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 521
     Width = 908
@@ -155,6 +156,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       NumGlyphs = 2
     end
     object pnlCreditReason: TPanel
+      ParentBackground = False
       Left = 168
       Top = 8
       Width = 432
@@ -208,6 +210,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 908
@@ -331,6 +334,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 401
     Width = 908
@@ -341,6 +345,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       908
       120)
     object Panel5: TPanel
+      ParentBackground = False
       Left = 448
       Top = 1
       Width = 459
@@ -414,6 +419,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         TabOrder = 2
       end
       object pnlPackPrice: TPanel
+        ParentBackground = False
         Left = 0
         Top = 89
         Width = 459
@@ -493,6 +499,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       end
     end
     object Panel7: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 440
@@ -522,6 +529,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           80)
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 438
@@ -590,6 +598,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 36
     Width = 908
@@ -868,6 +877,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       OnClick = chkbxCashSaleClick
     end
     object pnlSubReps: TPanel
+      ParentBackground = False
       Left = 0
       Top = 138
       Width = 329
@@ -972,6 +982,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       98)
   end
   object pnlHeaderDesc: TPanel
+    ParentBackground = False
     Left = 0
     Top = 233
     Width = 908
@@ -1057,6 +1068,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     NumGlyphs = 2
   end
   object pnlEndUser: TPanel
+    ParentBackground = False
     Left = 0
     Top = 260
     Width = 908

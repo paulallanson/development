@@ -26,6 +26,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     Caption = 'Default Courier'
   end
   object SeqNoGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 273
@@ -85,6 +86,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object ReplGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 136
     Width = 273
@@ -195,6 +197,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 288
     Top = 8
     Width = 289
@@ -221,6 +224,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object ProdLUGridGroupBox: TGroupBox
+    ParentBackground = False
     Left = 288
     Top = 72
     Width = 289
@@ -297,6 +301,7 @@ object STMaintParamFrm: TSTMaintParamFrm
     Kind = bkCancel
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 288
     Top = 184
     Width = 289

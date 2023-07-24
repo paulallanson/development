@@ -93,7 +93,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       DataSet = GetDetsSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object AddressMemo: TgtQRMemo
+      object AddressMemo: TQRMemo
         Left = 69
         Top = 113
         Width = 308
@@ -129,7 +129,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         WordWrap = True
         FontSize = 12
       end
-      object FAOQRLabel: TgtQRLabel
+      object FAOQRLabel: TQRLabel
         Left = 69
         Top = 95
         Width = 96

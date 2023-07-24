@@ -611,7 +611,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Center = True
         Stretch = True
       end
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 16
         Top = 312
         Width = 58

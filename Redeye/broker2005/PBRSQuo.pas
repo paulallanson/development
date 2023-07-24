@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, PBDBQuoLtr, PBDBQuoSumLtr,
-  gtQrExport, CCSCommon, CCSPress, Inifiles;
+  QrExport, CCSCommon, CCSPress, Inifiles;
 
 type
   TQuoLetterClass = class of TdbQuoLtr;
@@ -107,8 +107,9 @@ var
   EnqArrayCount: integer;
 implementation
 
-uses PBFaxList, PBEmailList, PBSendFax, LetterDM, printers, CCSPrint, PDLetter,
-  pbMainMenu, pbDatabase;
+uses
+  PBFaxList, PBEmailList, PBSendFax, LetterDM, printers, CCSPrint, PDLetter,
+  pbMainMenu, pbDatabase, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -641,9 +642,9 @@ begin
           GetDefaultPrinter;
           {Find the default printer in the list of printers }
           Printers.Printer.PrinterIndex := -1;
-          for icount := 0 to pred(Printer.Printers.count) do
+          for icount := 0 to pred(Printers.Printer.Printers.count) do
             begin
-              if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+              if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
                 Printers.Printer.PrinterIndex := icount;
             end;
           if DefaultPrinter <> '' then
@@ -653,7 +654,7 @@ begin
           if SetupPrinter(aBroker.PrinterSettings) then
             begin
               PrintingPress.QuickR.Print;
-              DefaultPrinter := printer.Printers[printer.printerindex];
+              DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
               DefaultBin := GetBinSelection;
               SaveDefaultPrinter;
               FPrinted := true;
@@ -668,6 +669,17 @@ begin
   end;
 end;
 
+procedure TPBRSQuoFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress; EnqNumber: integer);
+begin
+  var fileName := 'QTE' + EnqNumber.ToString;
+  {$IFDEF PMS}
+  sFileName := 'EST' + EnqNumber.ToString;
+  {$ENDIF}
+
+  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 procedure TPBRSQuoFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress; EnqNumber: integer);
 var
   i: integer;
@@ -684,13 +696,13 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
 
-  sFileName := 'QTE' + inttostr(EnqNumber);
-*)
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+//
+//  sFileName := 'QTE' + inttostr(EnqNumber);
 
   {Code used to generate a unique filename}
   strPCopy(zLocation, sLocation);
@@ -817,6 +829,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBRSQuoFrm.LoadCombos;
 begin
@@ -1172,7 +1185,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1189,7 +1202,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin

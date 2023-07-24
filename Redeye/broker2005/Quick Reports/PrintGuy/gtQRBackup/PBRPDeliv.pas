@@ -112,7 +112,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
-  gtQrExport, gtQrCtrls;
+  QrExport, gtQrCtrls;
 
 type
   TPBRPDelivFrm = class(TForm)
@@ -120,39 +120,39 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    DeliveryMemo: TgtQRMemo;
-    BoxesLbl: TgtQRLabel;
+    PONumberLbl: TQRLabel;
+    AddressMemo: TQRMemo;
+    DeliveryMemo: TQRMemo;
+    BoxesLbl: TQRLabel;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     AddressSRC: TDataSource;
     SupplierSQL: TQuery;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText4: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    YourRefLbl: TgtQRLabel;
-    DescLbl: TgtQRLabel;
-    DateLbl: TgtQRLabel;
-    QuantityLbl: TgtQRLabel;
-    OrderRefLbl: TgtQRLabel;
-    QtyOrderedLbl: TgtQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    YourRefLbl: TQRLabel;
+    DescLbl: TQRLabel;
+    DateLbl: TQRLabel;
+    QuantityLbl: TQRLabel;
+    OrderRefLbl: TQRLabel;
+    QtyOrderedLbl: TQRLabel;
     GetNarrSQL: TQuery;
     CompSQL: TQuery;
-    Account: TgtQRDBText;
+    Account: TQRDBText;
     CustDetsSQL: TQuery;
-    Accountlbl: TgtQRLabel;
-    DelInstructMemo: TgtQRMemo;
-    FormRefLbl: TgtQRLabel;
-    FormRefDescLbl: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
+    Accountlbl: TQRLabel;
+    DelInstructMemo: TQRMemo;
+    FormRefLbl: TQRLabel;
+    FormRefDescLbl: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

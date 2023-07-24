@@ -653,7 +653,7 @@ object PBRPActivityCustFrm: TPBRPActivityCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblDueDate: TgtQRLabel
+      object qrlblDueDate: TQRLabel
         Left = 8
         Top = 2
         Width = 62
@@ -684,7 +684,7 @@ object PBRPActivityCustFrm: TPBRPActivityCustFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblEnteredDate: TgtQRLabel
+      object qrlblEnteredDate: TQRLabel
         Left = 896
         Top = 2
         Width = 62

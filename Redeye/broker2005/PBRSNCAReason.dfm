@@ -69,6 +69,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     NumGlyphs = 2
   end
   object pnlReasonSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 88
     Width = 329
@@ -116,6 +117,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Kind = bkCancel
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 5
     Top = 219
     Width = 180
@@ -198,6 +200,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     end
   end
   object rdgrpReason: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 80
     Width = 129
@@ -211,6 +214,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     OnClick = rdgrpReasonClick
   end
   object pnlDeptSearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 157
     Width = 329
@@ -249,6 +253,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     end
   end
   object rdgrpDept: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 149
     Width = 129
@@ -262,6 +267,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     OnClick = rdgrpDeptClick
   end
   object TotByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 480
     Top = 8
     Width = 137
@@ -290,6 +296,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 180
     Top = 132
     Width = 289
@@ -376,6 +383,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
   object rdgrpCategory: TRadioGroup
+    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -389,6 +397,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     OnClick = rdgrpCategoryClick
   end
   object pnlCategorySearch: TPanel
+    ParentBackground = False
     Left = 139
     Top = 16
     Width = 329

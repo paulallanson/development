@@ -188,6 +188,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 340
     Width = 944
@@ -210,6 +211,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 677
       Top = 1
       Width = 266
@@ -291,6 +293,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 944

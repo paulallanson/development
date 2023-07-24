@@ -92,7 +92,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         1934.104166666667000000
         2770.187500000000000000)
       BandType = rbTitle
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 0
         Top = 112
         Width = 1046
@@ -110,7 +110,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape5: TgtQRShape
+      object gtQRShape5: TQRShape
         Left = 0
         Top = 112
         Width = 1046
@@ -128,7 +128,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape10: TgtQRShape
+      object gtQRShape10: TQRShape
         Left = 0
         Top = 160
         Width = 1046
@@ -147,7 +147,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 881
         Top = 8
         Width = 158
@@ -179,7 +179,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object qrlblQuoteCaption: TgtQRLabel
+      object qrlblQuoteCaption: TQRLabel
         Left = 0
         Top = 0
         Width = 437
@@ -210,7 +210,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 22
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 80
         Top = 52
         Width = 665
@@ -242,7 +242,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 801
         Top = 8
         Width = 120
@@ -273,7 +273,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel14: TgtQRLabel
+      object gtQRLabel14: TQRLabel
         Left = 801
         Top = 36
         Width = 76
@@ -304,7 +304,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 965
         Top = 36
         Width = 74
@@ -336,7 +336,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel15: TgtQRLabel
+      object gtQRLabel15: TQRLabel
         Left = 801
         Top = 59
         Width = 94
@@ -367,7 +367,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Left = 935
         Top = 59
         Width = 104
@@ -399,7 +399,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape4: TgtQRShape
+      object gtQRShape4: TQRShape
         Left = 0
         Top = 96
         Width = 1049
@@ -417,7 +417,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 0
         Top = 112
         Width = 1046
@@ -436,7 +436,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 8
         Top = 115
         Width = 104
@@ -467,7 +467,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 840
         Top = 115
         Width = 82
@@ -498,7 +498,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 941
         Top = 115
         Width = 97
@@ -529,7 +529,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 8
         Top = 164
         Width = 67
@@ -560,7 +560,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 8
         Top = 188
         Width = 38
@@ -591,7 +591,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape11: TgtQRShape
+      object gtQRShape11: TQRShape
         Left = 0
         Top = 232
         Width = 1046
@@ -610,7 +610,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape12: TgtQRShape
+      object gtQRShape12: TQRShape
         Left = 0
         Top = 256
         Width = 1046
@@ -629,7 +629,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape13: TgtQRShape
+      object gtQRShape13: TQRShape
         Left = 0
         Top = 280
         Width = 1046
@@ -648,7 +648,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape14: TgtQRShape
+      object gtQRShape14: TQRShape
         Left = 0
         Top = 304
         Width = 1046
@@ -667,7 +667,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape15: TgtQRShape
+      object gtQRShape15: TQRShape
         Left = 0
         Top = 328
         Width = 1046
@@ -686,7 +686,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape16: TgtQRShape
+      object gtQRShape16: TQRShape
         Left = 0
         Top = 352
         Width = 1046
@@ -705,7 +705,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape17: TgtQRShape
+      object gtQRShape17: TQRShape
         Left = 0
         Top = 400
         Width = 1046
@@ -724,7 +724,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape18: TgtQRShape
+      object gtQRShape18: TQRShape
         Left = 0
         Top = 424
         Width = 1046
@@ -743,7 +743,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape19: TgtQRShape
+      object gtQRShape19: TQRShape
         Left = 0
         Top = 448
         Width = 1046
@@ -762,7 +762,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape20: TgtQRShape
+      object gtQRShape20: TQRShape
         Left = 0
         Top = 472
         Width = 1046
@@ -781,7 +781,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape21: TgtQRShape
+      object gtQRShape21: TQRShape
         Left = 0
         Top = 496
         Width = 1046
@@ -800,7 +800,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape22: TgtQRShape
+      object gtQRShape22: TQRShape
         Left = 0
         Top = 520
         Width = 1046
@@ -819,7 +819,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape23: TgtQRShape
+      object gtQRShape23: TQRShape
         Left = 0
         Top = 664
         Width = 1046
@@ -838,7 +838,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape26: TgtQRShape
+      object gtQRShape26: TQRShape
         Left = 0
         Top = 208
         Width = 1046
@@ -857,7 +857,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 8
         Top = 211
         Width = 125
@@ -888,7 +888,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 192
         Top = 211
         Width = 31
@@ -919,7 +919,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 8
         Top = 140
         Width = 30
@@ -950,7 +950,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel17: TgtQRLabel
+      object QRLabel17: TQRLabel
         Left = 8
         Top = 236
         Width = 61
@@ -981,7 +981,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 8
         Top = 260
         Width = 61
@@ -1012,7 +1012,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel19: TgtQRLabel
+      object QRLabel19: TQRLabel
         Left = 8
         Top = 284
         Width = 61
@@ -1043,7 +1043,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel20: TgtQRLabel
+      object QRLabel20: TQRLabel
         Left = 8
         Top = 308
         Width = 61
@@ -1074,7 +1074,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel21: TgtQRLabel
+      object QRLabel21: TQRLabel
         Left = 8
         Top = 332
         Width = 61
@@ -1105,7 +1105,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel22: TgtQRLabel
+      object QRLabel22: TQRLabel
         Left = 8
         Top = 356
         Width = 61
@@ -1136,7 +1136,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel23: TgtQRLabel
+      object QRLabel23: TQRLabel
         Left = 8
         Top = 476
         Width = 53
@@ -1167,7 +1167,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel24: TgtQRLabel
+      object QRLabel24: TQRLabel
         Left = 8
         Top = 500
         Width = 53
@@ -1198,7 +1198,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel25: TgtQRLabel
+      object QRLabel25: TQRLabel
         Left = 8
         Top = 524
         Width = 53
@@ -1229,7 +1229,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel26: TgtQRLabel
+      object QRLabel26: TQRLabel
         Left = 8
         Top = 404
         Width = 67
@@ -1260,7 +1260,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel27: TgtQRLabel
+      object QRLabel27: TQRLabel
         Left = 8
         Top = 428
         Width = 67
@@ -1291,7 +1291,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel28: TgtQRLabel
+      object QRLabel28: TQRLabel
         Left = 8
         Top = 452
         Width = 67
@@ -1322,7 +1322,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel29: TgtQRLabel
+      object QRLabel29: TQRLabel
         Left = 8
         Top = 668
         Width = 63
@@ -1353,7 +1353,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel30: TgtQRLabel
+      object QRLabel30: TQRLabel
         Left = 8
         Top = 693
         Width = 63
@@ -1384,7 +1384,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 0
         Top = 544
         Width = 1046
@@ -1403,7 +1403,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel32: TgtQRLabel
+      object QRLabel32: TQRLabel
         Left = 8
         Top = 547
         Width = 99
@@ -1434,7 +1434,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel33: TgtQRLabel
+      object QRLabel33: TQRLabel
         Left = 840
         Top = 547
         Width = 82
@@ -1465,7 +1465,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel34: TgtQRLabel
+      object QRLabel34: TQRLabel
         Left = 941
         Top = 547
         Width = 97
@@ -1496,7 +1496,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape24: TgtQRShape
+      object gtQRShape24: TQRShape
         Left = 0
         Top = 592
         Width = 1046
@@ -1515,7 +1515,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel35: TgtQRLabel
+      object QRLabel35: TQRLabel
         Left = 8
         Top = 572
         Width = 105
@@ -1546,7 +1546,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel36: TgtQRLabel
+      object QRLabel36: TQRLabel
         Left = 8
         Top = 596
         Width = 105
@@ -1577,7 +1577,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel37: TgtQRLabel
+      object QRLabel37: TQRLabel
         Left = 8
         Top = 620
         Width = 105
@@ -1608,7 +1608,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel38: TgtQRLabel
+      object QRLabel38: TQRLabel
         Left = 192
         Top = 547
         Width = 28
@@ -1639,7 +1639,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 1
         Top = 52
         Width = 64
@@ -1670,7 +1670,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 192
         Top = 115
         Width = 44
@@ -1701,7 +1701,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 192
         Top = 211
         Width = 28
@@ -1732,7 +1732,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 632
         Top = 211
         Width = 51
@@ -1763,7 +1763,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 840
         Top = 211
         Width = 82
@@ -1794,7 +1794,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 941
         Top = 211
         Width = 97
@@ -1825,7 +1825,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 0
         Top = 640
         Width = 1046
@@ -1844,7 +1844,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 8
         Top = 643
         Width = 61
@@ -1875,7 +1875,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 192
         Top = 643
         Width = 28
@@ -1906,7 +1906,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 632
         Top = 643
         Width = 51
@@ -1937,7 +1937,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 840
         Top = 643
         Width = 82
@@ -1968,7 +1968,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 941
         Top = 643
         Width = 97
@@ -1999,7 +1999,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 0
         Top = 376
         Width = 1046
@@ -2018,7 +2018,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 8
         Top = 379
         Width = 128
@@ -2049,7 +2049,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 192
         Top = 379
         Width = 28
@@ -2080,7 +2080,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel16: TgtQRLabel
+      object gtQRLabel16: TQRLabel
         Left = 632
         Top = 379
         Width = 51
@@ -2111,7 +2111,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel17: TgtQRLabel
+      object gtQRLabel17: TQRLabel
         Left = 840
         Top = 379
         Width = 82
@@ -2142,7 +2142,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel18: TgtQRLabel
+      object gtQRLabel18: TQRLabel
         Left = 941
         Top = 379
         Width = 97
@@ -2173,7 +2173,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape27: TgtQRShape
+      object gtQRShape27: TQRShape
         Left = 184
         Top = 112
         Width = 2
@@ -2191,7 +2191,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape29: TgtQRShape
+      object gtQRShape29: TQRShape
         Left = 414
         Top = 185
         Width = 3
@@ -2209,7 +2209,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape28: TgtQRShape
+      object gtQRShape28: TQRShape
         Left = 829
         Top = 112
         Width = 2
@@ -2227,7 +2227,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 933
         Top = 112
         Width = 2
@@ -2245,7 +2245,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRLabel19: TgtQRLabel
+      object gtQRLabel19: TQRLabel
         Left = 192
         Top = 140
         Width = 81
@@ -2276,7 +2276,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel20: TgtQRLabel
+      object gtQRLabel20: TQRLabel
         Left = 424
         Top = 140
         Width = 62
@@ -2307,7 +2307,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel21: TgtQRLabel
+      object gtQRLabel21: TQRLabel
         Left = 632
         Top = 140
         Width = 52
@@ -2338,7 +2338,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel22: TgtQRLabel
+      object gtQRLabel22: TQRLabel
         Left = 192
         Top = 188
         Width = 55
@@ -2369,7 +2369,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel23: TgtQRLabel
+      object gtQRLabel23: TQRLabel
         Left = 288
         Top = 188
         Width = 33
@@ -2400,7 +2400,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel24: TgtQRLabel
+      object gtQRLabel24: TQRLabel
         Left = 424
         Top = 188
         Width = 60
@@ -2431,7 +2431,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel25: TgtQRLabel
+      object gtQRLabel25: TQRLabel
         Left = 553
         Top = 188
         Width = 39
@@ -2462,7 +2462,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 632
         Top = 547
         Width = 51
@@ -2493,7 +2493,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel26: TgtQRLabel
+      object gtQRLabel26: TQRLabel
         Left = 552
         Top = 211
         Width = 65
@@ -2524,7 +2524,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel27: TgtQRLabel
+      object gtQRLabel27: TQRLabel
         Left = 492
         Top = 211
         Width = 44
@@ -2555,7 +2555,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel28: TgtQRLabel
+      object gtQRLabel28: TQRLabel
         Left = 426
         Top = 211
         Width = 45
@@ -2586,7 +2586,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel29: TgtQRLabel
+      object gtQRLabel29: TQRLabel
         Left = 424
         Top = 643
         Width = 45
@@ -2617,7 +2617,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel30: TgtQRLabel
+      object gtQRLabel30: TQRLabel
         Left = 492
         Top = 643
         Width = 51
@@ -2648,7 +2648,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel31: TgtQRLabel
+      object gtQRLabel31: TQRLabel
         Left = 563
         Top = 643
         Width = 44
@@ -2679,7 +2679,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape9: TgtQRShape
+      object gtQRShape9: TQRShape
         Left = 482
         Top = 209
         Width = 3
@@ -2697,7 +2697,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape25: TgtQRShape
+      object gtQRShape25: TQRShape
         Left = 548
         Top = 184
         Width = 3
@@ -2715,7 +2715,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape30: TgtQRShape
+      object gtQRShape30: TQRShape
         Left = 622
         Top = 209
         Width = 3
@@ -2733,7 +2733,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape31: TgtQRShape
+      object gtQRShape31: TQRShape
         Left = 622
         Top = 137
         Width = 3
@@ -2751,7 +2751,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape32: TgtQRShape
+      object gtQRShape32: TQRShape
         Left = 414
         Top = 137
         Width = 3
@@ -2769,7 +2769,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape33: TgtQRShape
+      object gtQRShape33: TQRShape
         Left = 414
         Top = 640
         Width = 3
@@ -2787,7 +2787,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape34: TgtQRShape
+      object gtQRShape34: TQRShape
         Left = 486
         Top = 640
         Width = 3
@@ -2805,7 +2805,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape35: TgtQRShape
+      object gtQRShape35: TQRShape
         Left = 550
         Top = 640
         Width = 3
@@ -2823,7 +2823,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsVertLine
         VertAdjust = 0
       end
-      object gtQRShape36: TgtQRShape
+      object gtQRShape36: TQRShape
         Left = 260
         Top = 189
         Width = 16
@@ -2841,7 +2841,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape37: TgtQRShape
+      object gtQRShape37: TQRShape
         Left = 492
         Top = 189
         Width = 16
@@ -2859,7 +2859,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape38: TgtQRShape
+      object gtQRShape38: TQRShape
         Left = 442
         Top = 237
         Width = 16
@@ -2877,7 +2877,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape39: TgtQRShape
+      object gtQRShape39: TQRShape
         Left = 442
         Top = 261
         Width = 16
@@ -2895,7 +2895,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape40: TgtQRShape
+      object gtQRShape40: TQRShape
         Left = 442
         Top = 285
         Width = 16
@@ -2913,7 +2913,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape41: TgtQRShape
+      object gtQRShape41: TQRShape
         Left = 442
         Top = 309
         Width = 16
@@ -2931,7 +2931,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape42: TgtQRShape
+      object gtQRShape42: TQRShape
         Left = 442
         Top = 333
         Width = 16
@@ -2949,7 +2949,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape43: TgtQRShape
+      object gtQRShape43: TQRShape
         Left = 442
         Top = 357
         Width = 16
@@ -2967,7 +2967,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape44: TgtQRShape
+      object gtQRShape44: TQRShape
         Left = 578
         Top = 237
         Width = 16
@@ -2985,7 +2985,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape45: TgtQRShape
+      object gtQRShape45: TQRShape
         Left = 578
         Top = 261
         Width = 16
@@ -3003,7 +3003,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape46: TgtQRShape
+      object gtQRShape46: TQRShape
         Left = 578
         Top = 285
         Width = 16
@@ -3021,7 +3021,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape47: TgtQRShape
+      object gtQRShape47: TQRShape
         Left = 578
         Top = 309
         Width = 16
@@ -3039,7 +3039,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape48: TgtQRShape
+      object gtQRShape48: TQRShape
         Left = 578
         Top = 333
         Width = 16
@@ -3057,7 +3057,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape49: TgtQRShape
+      object gtQRShape49: TQRShape
         Left = 578
         Top = 357
         Width = 16
@@ -3075,7 +3075,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape50: TgtQRShape
+      object gtQRShape50: TQRShape
         Left = 508
         Top = 237
         Width = 16
@@ -3093,7 +3093,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape51: TgtQRShape
+      object gtQRShape51: TQRShape
         Left = 508
         Top = 261
         Width = 16
@@ -3111,7 +3111,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape52: TgtQRShape
+      object gtQRShape52: TQRShape
         Left = 508
         Top = 285
         Width = 16
@@ -3129,7 +3129,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape53: TgtQRShape
+      object gtQRShape53: TQRShape
         Left = 508
         Top = 309
         Width = 16
@@ -3147,7 +3147,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape54: TgtQRShape
+      object gtQRShape54: TQRShape
         Left = 508
         Top = 333
         Width = 16
@@ -3165,7 +3165,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape55: TgtQRShape
+      object gtQRShape55: TQRShape
         Left = 508
         Top = 357
         Width = 16
@@ -3183,7 +3183,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape56: TgtQRShape
+      object gtQRShape56: TQRShape
         Left = 442
         Top = 669
         Width = 16
@@ -3201,7 +3201,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape58: TgtQRShape
+      object gtQRShape58: TQRShape
         Left = 578
         Top = 669
         Width = 16
@@ -3219,7 +3219,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape59: TgtQRShape
+      object gtQRShape59: TQRShape
         Left = 442
         Top = 695
         Width = 16
@@ -3237,7 +3237,7 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRShape61: TgtQRShape
+      object gtQRShape61: TQRShape
         Left = 578
         Top = 695
         Width = 16

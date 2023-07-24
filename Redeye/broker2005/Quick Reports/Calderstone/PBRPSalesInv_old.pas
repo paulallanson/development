@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, CCSPrint,
-  CCSCommon, PBPOObjects, qrprntr, printers, gtQrCtrls, PBDatabase;
+  CCSCommon, PBPOObjects, qrprntr, printers, PBDatabase;
 
 type
   TPBRPSalesInvFrm = class(TForm)
@@ -25,10 +25,10 @@ type
     InvoiceGroupHeader: TQRGroup;
     InvAddChgSQL: TQuery;
     OldInvLineSQL: TQuery;
-    GoodsTotalLbl: TgtQRLabel;
-    Dummy03: TgtQRLabel;
-    Dummy05: TgtQRLabel;
-    Dummy06: TgtQRLabel;
+    GoodsTotalLbl: TQRLabel;
+    Dummy03: TQRLabel;
+    Dummy05: TQRLabel;
+    Dummy06: TQRLabel;
     DeliverySQL: TQuery;
     DeliverySRC: TDataSource;
     AddressSRC: TDataSource;
@@ -38,76 +38,76 @@ type
     CompSQL: TQuery;
     CustSQL: TQuery;
     CreditHeadSQL: TQuery;
-    GoodsLbl: TgtQRLabel;
-    QtyInvoicedLbl: TgtQRLabel;
+    GoodsLbl: TQRLabel;
+    QtyInvoicedLbl: TQRLabel;
     GetNarrSQL: TQuery;
-    GoodsVatLbl: TgtQRLabel;
-    lblDescription: TgtQRLabel;
+    GoodsVatLbl: TQRLabel;
+    lblDescription: TQRLabel;
     qryPOLine: TQuery;
     qrySOLine: TQuery;
     qryJBLine: TQuery;
     qryInvCharges: TQuery;
-    lblPriceUnit: TgtQRLabel;
+    lblPriceUnit: TQRLabel;
     InvoiceLine: TQRSubDetail;
     qryJBHead: TQuery;
     qrySOHead: TQuery;
     qrySIHead: TQuery;
     chldbndFormRef: TQRChildBand;
-    lblFormRef: TgtQRLabel;
+    lblFormRef: TQRLabel;
     QRBand1: TQRBand;
-    QRLabel3: TgtQRLabel;
-    InvoiceNumberLbl: TgtQRLabel;
-    InvoiceDateLbl: TgtQRLabel;
-    OurJobLbl: TgtQRLabel;
-    lblCustOrderNo: TgtQRLabel;
-    CustAccount: TgtQRDBText;
-    QRLabel10: TgtQRLabel;
-    CustomerAddMemo: TgtQRMemo;
-    qrlblQuantity: TgtQRLabel;
-    qrlblDescription: TgtQRLabel;
-    qrlblUniTSize: TgtQRLabel;
-    qrlblUnitPrice: TgtQRLabel;
-    qrlblValue: TgtQRLabel;
-    qrlblVat: TgtQRLabel;
-    imgReport: TgtQRImage;
-    gtQRShape2: TgtQRShape;
-    gtQRShape1: TgtQRShape;
-    gtQRShape3: TgtQRShape;
-    qrHeadersShape: TgtQRShape;
-    qrHeadShape: TgtQRShape;
-    gtQRShape13: TgtQRShape;
-    gtQRShape14: TgtQRShape;
-    gtQRShape15: TgtQRShape;
-    qrlblInvoiceNo: TgtQRLabel;
-    qrlblInvoiceDate: TgtQRLabel;
-    qrlblJobNumber: TgtQRLabel;
-    qrlblOrdernumber: TgtQRLabel;
+    QRLabel3: TQRLabel;
+    InvoiceNumberLbl: TQRLabel;
+    InvoiceDateLbl: TQRLabel;
+    OurJobLbl: TQRLabel;
+    lblCustOrderNo: TQRLabel;
+    CustAccount: TQRDBText;
+    QRLabel10: TQRLabel;
+    CustomerAddMemo: TQRMemo;
+    qrlblQuantity: TQRLabel;
+    qrlblDescription: TQRLabel;
+    qrlblUniTSize: TQRLabel;
+    qrlblUnitPrice: TQRLabel;
+    qrlblValue: TQRLabel;
+    qrlblVat: TQRLabel;
+    imgReport: TQRImage;
+    gtQRShape2: TQRShape;
+    gtQRShape1: TQRShape;
+    gtQRShape3: TQRShape;
+    qrHeadersShape: TQRShape;
+    qrHeadShape: TQRShape;
+    gtQRShape13: TQRShape;
+    gtQRShape14: TQRShape;
+    gtQRShape15: TQRShape;
+    qrlblInvoiceNo: TQRLabel;
+    qrlblInvoiceDate: TQRLabel;
+    qrlblJobNumber: TQRLabel;
+    qrlblOrdernumber: TQRLabel;
     qryInvLineCharges: TQuery;
     LineCharges: TQRSubDetail;
     qrlblDetails: TQRLabel;
-    qrlblAmount: TgtQRLabel;
-    qrlblExtrasVat: TgtQRLabel;
+    qrlblAmount: TQRLabel;
+    qrlblExtrasVat: TQRLabel;
     qryInvLocation: TQuery;
     AddChargesFooter: TQRBand;
-    memoNotes: TgtQRMemo;
-    gtQRShape4: TgtQRShape;
-    qrFootShape: TgtQRShape;
-    gtQRShape5: TgtQRShape;
-    qrlblTotalGoods: TgtQRLabel;
-    GoodsValueLbl: TgtQRLabel;
-    VATValueLbl: TgtQRLabel;
-    qrlblTotalVat: TgtQRLabel;
-    qrlblInvoiceTotal: TgtQRLabel;
-    TotalValueLbl: TgtQRLabel;
-    lblReference: TgtQRLabel;
-    qrshpPaymentNotes: TgtQRShape;
-    gtQRShape9: TgtQRShape;
-    gtQRShape10: TgtQRShape;
-    gtQRShape11: TgtQRShape;
-    memPayment: TgtQRMemo;
-    qrlblCompanyReg: TgtQRMemo;
-    qrlblVatNo: TgtQRLabel;
-    qrlblCompanyPort: TgtQRMemo;
+    memoNotes: TQRMemo;
+    gtQRShape4: TQRShape;
+    qrFootShape: TQRShape;
+    gtQRShape5: TQRShape;
+    qrlblTotalGoods: TQRLabel;
+    GoodsValueLbl: TQRLabel;
+    VATValueLbl: TQRLabel;
+    qrlblTotalVat: TQRLabel;
+    qrlblInvoiceTotal: TQRLabel;
+    TotalValueLbl: TQRLabel;
+    lblReference: TQRLabel;
+    qrshpPaymentNotes: TQRShape;
+    gtQRShape9: TQRShape;
+    gtQRShape10: TQRShape;
+    gtQRShape11: TQRShape;
+    memPayment: TQRMemo;
+    qrlblCompanyReg: TQRMemo;
+    qrlblVatNo: TQRLabel;
+    qrlblCompanyPort: TQRMemo;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:
@@ -1125,17 +1125,17 @@ begin
     begin
       for iCount := 0 to ComponentCount-1 do
         begin
-          if Components[icount] is TgtQRShape then
+          if Components[icount] is TQRShape then
             begin
-              if TgtQRShape(Components[icount]).tag = 1 then
-                TgtQRShape(Components[icount]).brush.color := $00E8E3E4;
+              if TQRShape(Components[icount]).tag = 1 then
+                TQRShape(Components[icount]).brush.color := $00E8E3E4;
             end
           else
-          if Components[icount] is TgtQRLabel then
+          if Components[icount] is TQRLabel then
             begin
-              if (TgtQRLabel(Components[icount]).tag = 1) or (TgtQRLabel(Components[icount]).tag = 3) then
+              if (TQRLabel(Components[icount]).tag = 1) or (TQRLabel(Components[icount]).tag = 3) then
                 begin
-                  TgtQRLabel(Components[icount]).color := $00E8E3E4;
+                  TQRLabel(Components[icount]).color := $00E8E3E4;
                 end;
             end;
         end;

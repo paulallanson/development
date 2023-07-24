@@ -1,7 +1,6 @@
 object PBMaintJobBagFrm: TPBMaintJobBagFrm
   Left = 142
   Top = 3
-  AutoScroll = False
   Caption = 'Job Bag Details'
   ClientHeight = 733
   ClientWidth = 1076
@@ -13,7 +12,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -21,7 +19,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
   OnDestroy = FormDestroy
   OnResize = FormResize
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
     Left = 0
@@ -30,7 +27,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Height = 143
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1072
     DesignSize = (
       1076
       143)
@@ -102,6 +101,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
+      ExplicitWidth = 373
     end
     object btnCustomer: TBitBtn
       Left = 467
@@ -118,6 +118,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       ParentFont = False
       TabOrder = 1
       OnClick = btnCustomerClick
+      ExplicitLeft = 463
     end
     object BitBtn4: TBitBtn
       Left = 280
@@ -148,6 +149,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       ParentFont = False
       TabOrder = 7
       OnChange = CheckOK
+      ExplicitWidth = 597
     end
     object dblkpCustomerContact: TDBLookupComboBox
       Left = 80
@@ -168,6 +170,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Anchors = [akTop, akRight]
       TabOrder = 9
       OnChange = edtCustOrderNoChange
+      ExplicitLeft = 904
     end
     object memQuantity: TMemo
       Left = 908
@@ -180,6 +183,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       OnEnter = memQuantityEnter
       OnExit = ValidateQty
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 904
     end
     object btnRep: TBitBtn
       Left = 280
@@ -204,6 +208,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Anchors = [akTop, akRight]
       TabOrder = 8
       OnChange = CheckOK
+      ExplicitLeft = 868
     end
     object edtRep: TEdit
       Left = 80
@@ -220,11 +225,11 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 21
       Style = csDropDownList
       Anchors = [akTop, akRight]
-      ItemHeight = 13
       TabOrder = 11
       Items.Strings = (
         'Job ON HOLD'
         'Postage Pay Reqd')
+      ExplicitLeft = 904
     end
     object BitBtn3: TBitBtn
       Left = 1040
@@ -238,11 +243,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Height = -12
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 12
-      OnClick = BitBtn3Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -257,6 +257,12 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 12
+      OnClick = BitBtn3Click
+      ExplicitLeft = 1036
     end
     object pnlCostCentre: TPanel
       Left = 496
@@ -265,8 +271,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 29
       Anchors = [akTop, akRight]
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 6
       Visible = False
+      ExplicitLeft = 492
       object Label35: TLabel
         Left = 8
         Top = 8
@@ -312,6 +320,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Width = 330
       Height = 27
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 14
       object Label52: TLabel
         Left = 24
@@ -353,6 +362,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     ActivePage = tsOrders
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1072
+    ExplicitHeight = 228
     object tsOrders: TTabSheet
       Caption = 'Charges'
       object pnlCharges: TPanel
@@ -361,7 +372,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 201
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 979
+        ExplicitHeight = 200
         object btnAddPO: TBitBtn
           Left = 4
           Top = 7
@@ -369,10 +383,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Insert an existing purchase order'
           Caption = '&Insert'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 0
-          OnClick = btnAddPOClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -387,6 +397,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             555577F7F7F7F7F75F5550707070700B055557F7F7F7F7757FF5507070707050
             9055575757575757775505050505055505557575757575557555}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          OnClick = btnAddPOClick
         end
         object btnNew: TBitBtn
           Left = 4
@@ -395,10 +409,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Create a new purchase order'
           Caption = '&New'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
-          OnClick = btnNewClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000130B0000130B00001000000000000000000000000000
@@ -413,6 +423,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
             3BB33773333773333773B333333B3333333B7333333733333337}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          OnClick = btnNewClick
         end
         object btnChange: TBitBtn
           Left = 4
@@ -421,10 +435,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Change the selected job bag item'
           Caption = '&Change'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 2
-          OnClick = btnChangeClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -439,6 +449,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
             00333377737FFFFF773333303300000003333337337777777333}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+          OnClick = btnChangeClick
         end
         object btnProduction: TBitBtn
           Left = 4
@@ -447,10 +461,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Maintain Production Costs'
           Caption = '&Costs'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 3
-          OnClick = btnProductionClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -465,6 +475,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             3330737F3F7F777F333778080707770333333F7F737F3F7F3333080787070003
             33337F73FF737773333307800077033333337337773373333333}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 3
+          OnClick = btnProductionClick
         end
         object btnExtras: TBitBtn
           Left = 4
@@ -473,10 +487,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Add DMS charges'
           Caption = 'DMS'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 4
-          OnClick = btnExtrasClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -491,6 +501,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             0005555555575FF7777555555555000555555555555577755555555555555555
             5555555555555555555555555555555555555555555555555555}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          OnClick = btnExtrasClick
         end
         object btnAdd: TBitBtn
           Left = 4
@@ -499,10 +513,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Add a new sundry item'
           Caption = 'Sundries'
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 5
-          OnClick = btnAddClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -517,6 +527,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             05555575FF5555777F55555003B3B3B00555555775FF55577FF55555500B3B3B
             005555555775FFFF77F555555570000000555555555777777755}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+          OnClick = btnAddClick
         end
         object btnDelete: TBitBtn
           Left = 4
@@ -525,8 +539,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 25
           Hint = 'Delete the selected job bag item'
           Caption = '&Delete'
-          TabOrder = 6
-          OnClick = btnDeleteClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -541,6 +553,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
             3333333337FFF7F3333333333000003333333333377777333333}
           NumGlyphs = 2
+          TabOrder = 6
+          OnClick = btnDeleteClick
         end
       end
       object sgLines: TStringGrid
@@ -562,6 +576,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         OnMouseUp = sgLinesMouseUp
         OnRowMoved = sgLinesRowMoved
         OnTopLeftChanged = sgLinesTopLeftChanged
+        ExplicitWidth = 979
+        ExplicitHeight = 200
         ColWidths = (
           40
           96
@@ -622,6 +638,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 216
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object btnAddRequest: TBitBtn
           Left = 8
@@ -677,6 +694,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 265
         Height = 201
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         object Panel15: TPanel
           Left = 1
@@ -684,6 +702,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 263
           Height = 20
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           object chkbxArtRequired: TCheckBox
             Left = 8
@@ -744,8 +763,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 1
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -760,6 +777,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 1
+            OnClick = btnArtDueInDateClick
           end
           object btnArtProofReqDate: TBitBtn
             Tag = 10
@@ -768,8 +787,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 3
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -784,6 +801,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 3
+            OnClick = btnArtDueInDateClick
           end
           object edtArtProofReqDate: TEdit
             Tag = 10
@@ -812,8 +831,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 5
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -828,6 +845,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 5
+            OnClick = btnArtDueInDateClick
           end
           object chkbxArtDueInDate: TCheckBox
             Left = 231
@@ -867,6 +886,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 20
           Align = alTop
           Caption = 'Other Information'
+          ParentBackground = False
           TabOrder = 2
         end
         object memScheduleNotes: TMemo
@@ -884,6 +904,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 263
         Height = 201
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object Panel17: TPanel
           Left = 1
@@ -891,6 +912,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 261
           Height = 20
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           object chkbxSamples: TCheckBox
             Left = 8
@@ -944,8 +966,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 1
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -960,6 +980,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 1
+            OnClick = btnArtDueInDateClick
           end
           object btnSEPApprovalDate: TBitBtn
             Tag = 30
@@ -968,8 +990,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 3
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -984,6 +1004,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 3
+            OnClick = btnArtDueInDateClick
           end
           object edtSEPApprovalDate: TEdit
             Tag = 30
@@ -1023,6 +1045,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 107
           Align = alBottom
           BevelInner = bvLowered
+          ParentBackground = False
           TabOrder = 2
           DesignSize = (
             261
@@ -1086,7 +1109,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Height = 21
             Style = csDropDownList
             Anchors = [akRight, akBottom]
-            ItemHeight = 13
             ItemIndex = 0
             TabOrder = 2
             Text = 'Estimated'
@@ -1103,6 +1125,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 540
         Height = 201
         Align = alClient
+        ParentBackground = False
         TabOrder = 2
         object Panel16: TPanel
           Left = 1
@@ -1110,6 +1133,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 464
           Height = 20
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           object chkbxDSRequired: TCheckBox
             Left = 8
@@ -1233,8 +1257,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 1
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1249,6 +1271,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 1
+            OnClick = btnArtDueInDateClick
           end
           object btnClientBriefInDate: TBitBtn
             Tag = 20
@@ -1257,8 +1281,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 3
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1273,6 +1295,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 3
+            OnClick = btnArtDueInDateClick
           end
           object edtClientBriefInDate: TEdit
             Tag = 20
@@ -1301,8 +1325,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 5
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1317,6 +1339,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 5
+            OnClick = btnArtDueInDateClick
           end
           object btnBriefToDSDate: TBitBtn
             Tag = 20
@@ -1325,8 +1349,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 7
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1341,6 +1363,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 7
+            OnClick = btnArtDueInDateClick
           end
           object edtBriefToDSDate: TEdit
             Tag = 20
@@ -1369,8 +1393,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 11
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1385,6 +1407,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 11
+            OnClick = btnArtDueInDateClick
           end
           object btnTextProofReqDate: TBitBtn
             Tag = 20
@@ -1393,8 +1417,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 13
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1409,6 +1431,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 13
+            OnClick = btnArtDueInDateClick
           end
           object edtTextProofReqDate: TEdit
             Tag = 20
@@ -1437,8 +1461,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 21
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1453,6 +1475,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 21
+            OnClick = btnArtDueInDateClick
           end
           object btnLiveProofAppDate: TBitBtn
             Tag = 20
@@ -1461,8 +1485,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 23
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1477,6 +1499,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 23
+            OnClick = btnArtDueInDateClick
           end
           object edtLiveProofAppDate: TEdit
             Tag = 20
@@ -1585,8 +1609,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 9
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1601,6 +1623,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 9
+            OnClick = btnArtDueInDateClick
           end
           object chkbxDataToDSDate: TCheckBox
             Left = 239
@@ -1629,8 +1653,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 17
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1645,6 +1667,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 17
+            OnClick = btnArtDueInDateClick
           end
           object chkbxPDFProofReqDate: TCheckBox
             Left = 238
@@ -1673,8 +1697,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 19
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1689,6 +1711,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 19
+            OnClick = btnArtDueInDateClick
           end
           object edtPDFProofAppDate: TEdit
             Tag = 20
@@ -1717,8 +1741,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             Width = 25
             Height = 25
             Enabled = False
-            TabOrder = 15
-            OnClick = btnArtDueInDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1733,6 +1755,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 15
+            OnClick = btnArtDueInDateClick
           end
           object chkbxPDFProofArtDate: TCheckBox
             Left = 238
@@ -1885,6 +1909,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 216
         Align = alClient
         Caption = 'Panel10'
+        ParentBackground = False
         TabOrder = 1
         object Panel13: TPanel
           Left = 1
@@ -1900,6 +1925,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
+          ParentBackground = False
           ParentFont = False
           TabOrder = 0
         end
@@ -1934,6 +1960,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 85
           Height = 196
           Align = alRight
+          ParentBackground = False
           TabOrder = 2
           object btnAddWorks: TBitBtn
             Left = 8
@@ -2033,6 +2060,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 201
         Align = alClient
         Caption = 'Panel6'
+        ParentBackground = False
         TabOrder = 0
         object Panel7: TPanel
           Left = 1
@@ -2041,6 +2069,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 0
           object lblDocumentDir: TLabel
             Left = 8
@@ -2161,7 +2190,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 176
           Height = 175
           Align = alLeft
-          ItemHeight = 16
           TabOrder = 3
           OnChange = dirlstJobDocumentsChange
         end
@@ -2171,6 +2199,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 48
           Height = 175
           Align = alLeft
+          ParentBackground = False
           TabOrder = 4
         end
       end
@@ -2185,6 +2214,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 93
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           1068
@@ -2269,6 +2299,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 85
           Height = 40
           Align = alRight
+          ParentBackground = False
           TabOrder = 1
           object btnViewSI: TBitBtn
             Left = 8
@@ -2296,6 +2327,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 1068
           Height = 25
           Align = alTop
+          ParentBackground = False
           TabOrder = 2
           object Label36: TLabel
             Left = 13
@@ -2311,6 +2343,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 1068
           Height = 28
           Align = alBottom
+          ParentBackground = False
           TabOrder = 3
           DesignSize = (
             1068
@@ -2344,6 +2377,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 108
         Align = alBottom
         Caption = 'pnlPInvoices'
+        ParentBackground = False
         TabOrder = 1
         object dbgPurchaseInvoices: TDBGrid
           Left = 1
@@ -2420,6 +2454,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 85
           Height = 53
           Align = alRight
+          ParentBackground = False
           TabOrder = 1
           object btnViewPI: TBitBtn
             Left = 8
@@ -2437,6 +2472,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 1066
           Height = 25
           Align = alTop
+          ParentBackground = False
           TabOrder = 2
           object Label37: TLabel
             Left = 13
@@ -2452,6 +2488,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 1066
           Height = 28
           Align = alBottom
+          ParentBackground = False
           TabOrder = 3
           DesignSize = (
             1066
@@ -2488,6 +2525,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 216
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnConvertSupply: TBitBtn
           Left = 6
@@ -2531,6 +2569,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 1068
         Height = 33
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
         object Label39: TLabel
           Left = 13
@@ -2545,7 +2584,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           ItemIndex = 0
           TabOrder = 0
           Text = 'All'
@@ -2671,6 +2709,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 32
         Align = alBottom
         Alignment = taRightJustify
+        ParentBackground = False
         TabOrder = 2
         DesignSize = (
           1068
@@ -2724,6 +2763,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 201
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnAddNCA: TBitBtn
           Left = 8
@@ -2776,6 +2816,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 201
         Align = alClient
         Caption = 'Panel25'
+        ParentBackground = False
         TabOrder = 1
         object sgNCADetails: TStringGrid
           Left = 1
@@ -2810,6 +2851,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Width = 981
           Height = 24
           Align = alTop
+          ParentBackground = False
           TabOrder = 1
           object Label40: TLabel
             Left = 9
@@ -2842,6 +2884,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 216
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnAddDelivery: TBitBtn
           Left = 8
@@ -2932,6 +2975,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 22
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object Label43: TLabel
           Left = 13
@@ -2982,6 +3026,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 108
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
         object Label45: TLabel
           Left = 32
@@ -3145,6 +3190,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 86
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
         object Panel28: TPanel
           Left = 0
@@ -3153,6 +3199,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 26
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 0
           object Label44: TLabel
             Left = 32
@@ -3266,6 +3313,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 85
         Height = 216
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object BitBtn1: TBitBtn
           Left = 8
@@ -3287,7 +3335,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Height = 108
     Align = alBottom
     BevelOuter = bvLowered
+    ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 605
+    ExplicitWidth = 1072
     object imgChkbxGreyed: TImage
       Left = 640
       Top = 48
@@ -3478,7 +3529,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 59
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 867
       DesignSize = (
         204
         59)
@@ -3491,8 +3544,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Caption = 'OK'
         Default = True
         Enabled = False
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -3511,6 +3562,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 113
@@ -3518,9 +3571,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
+        Kind = bkCancel
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnCancelClick
-        Kind = bkCancel
       end
     end
     object pnlProduction: TPanel
@@ -3530,7 +3584,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 47
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 1070
       object lblCompleteBy: TLabel
         Left = 482
         Top = 26
@@ -3587,8 +3643,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Top = 22
         Width = 25
         Height = 25
-        TabOrder = 2
-        OnClick = btnDateCompleteClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -3603,6 +3657,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnDateCompleteClick
       end
       object chkbxInvoiceThisWeek: TCheckBox
         Left = 10
@@ -3663,8 +3719,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Top = 77
       Width = 25
       Height = 25
-      TabOrder = 6
-      OnClick = btnDateCopiesReceivedClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -3679,6 +3733,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnDateCopiesReceivedClick
     end
   end
   object stsbrDetails: TStatusBar
@@ -3699,6 +3755,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       item
         Width = 50
       end>
+    ExplicitTop = 713
+    ExplicitWidth = 1072
   end
   object pnlFooter: TPanel
     Left = 0
@@ -3707,7 +3765,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Height = 145
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 460
+    ExplicitWidth = 1072
     object btnNotes: TBitBtn
       Left = 11
       Top = 112
@@ -3719,9 +3780,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = btnNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -3736,6 +3794,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnNotesClick
     end
     object Button1: TButton
       Left = 96
@@ -3761,7 +3822,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 833
       DesignSize = (
         239
         145)
@@ -3855,6 +3918,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         Height = 30
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           239
@@ -3893,9 +3957,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           Height = 23
           Hint = 'Clear'
           Anchors = [akRight, akBottom]
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -3910,6 +3971,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
         end
       end
     end
@@ -3920,7 +3984,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 4
+      ExplicitLeft = 604
     end
     object pnlReseller: TPanel
       Left = 629
@@ -3929,8 +3995,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 5
       Visible = False
+      ExplicitLeft = 625
       DesignSize = (
         208
         145)
@@ -4023,6 +4091,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Width = 377
       Height = 109
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 6
       object Label59: TLabel
         Left = 16
@@ -4069,6 +4138,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
           'Hand'
           'Machine'
           'Poly')
+        ParentBackground = False
         TabOrder = 2
         OnClick = rdgrpEnclosingTypeClick
       end
@@ -4080,7 +4150,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Width = 1076
     Height = 66
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1072
     DesignSize = (
       1076
       66)
@@ -4151,8 +4223,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Top = 9
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -4167,6 +4237,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateClick
     end
     object edtDateReq: TEdit
       Left = 694
@@ -4177,6 +4249,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       TabOrder = 5
       OnChange = CheckOK
       OnExit = edtDateReqExit
+      ExplicitLeft = 690
     end
     object BitBtn2: TBitBtn
       Left = 780
@@ -4184,8 +4257,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 6
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -4200,6 +4271,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = BitBtn2Click
+      ExplicitLeft = 776
     end
     object edtStartDate: TEdit
       Left = 496
@@ -4209,6 +4283,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Anchors = [akTop, akRight]
       TabOrder = 3
       OnExit = edtDateExit
+      ExplicitLeft = 492
     end
     object BitBtn6: TBitBtn
       Left = 582
@@ -4216,8 +4291,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 4
-      OnClick = BitBtn6Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -4232,6 +4305,9 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = BitBtn6Click
+      ExplicitLeft = 578
     end
     object edtAccountManager: TEdit
       Left = 908
@@ -4243,6 +4319,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 7
+      ExplicitLeft = 904
     end
     object btnAccountManager: TBitBtn
       Left = 1031
@@ -4259,6 +4336,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       ParentFont = False
       TabOrder = 8
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 1027
     end
     object edtAccountTeam: TEdit
       Left = 908
@@ -4269,6 +4347,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 9
+      ExplicitLeft = 904
     end
   end
   object pnlEndUser: TPanel
@@ -4278,8 +4357,10 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Height = 23
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 6
     Visible = False
+    ExplicitWidth = 1072
     DesignSize = (
       1076
       23)
@@ -4298,6 +4379,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 0
+      ExplicitWidth = 501
     end
     object btnEndUser: TBitBtn
       Left = 597
@@ -4314,6 +4396,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       ParentFont = False
       TabOrder = 1
       OnClick = btnEndUserClick
+      ExplicitLeft = 593
     end
   end
   object PrinterSetupDialog1: TPrinterSetupDialog
@@ -4587,135 +4670,7 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     Top = 276
     Bitmap = {
       494C010105000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -4973,12 +4928,8 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
-      000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000080000000000000000000000000000000
+      2800000040000000200000000100010000000000000100000000000000000000
+      000000000000000000000000FFFFFF0080000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000008000000000000000
       C000000000000000F000000000000000FC00000000000000FC01000000000000
@@ -5028,81 +4979,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
     end
     object pmnuSelectAll: TMenuItem
       Caption = 'Select All'
-    end
-  end
-  object taoWinControl1: TtaoWinControl
-    Control = pgDetails
-    Options = [coCopy, coDelete, coPaste, coSource, coSourceOleCopy, coSourceOleLink, coSourceVclCopy, coSourceVclMove, coTarget, coTargetOleCopy, coTargetVclCopy, coTargetVclMove, coTargetScroll, coTargetFeedback]
-    OnSetDataPaste = taoWinControl1SetDataPaste
-    OnSetDataTarget = taoWinControl1SetDataTarget
-    OnUpdateAction = taoWinControl1UpdateAction
-    Left = 383
-    Top = 192
-    object taoWinControl1In1: TtaoInFileContents
-    end
-    object taoWinControl1In2: TtaoInCells
-      FormatName = 'TaoCells'
-      PasteSpecialName = 'Cells'
-      PasteSpecialResult = 'tabular cells'
-      PasteSpecialFlags = [psfPasteOnly]
-    end
-    object taoWinControl1In3: TtaoInBiff8
-    end
-    object taoWinControl1In4: TtaoInBiff5
-    end
-    object taoWinControl1In5: TtaoInUnicodeText
-    end
-    object taoWinControl1In6: TtaoInText
-    end
-    object taoWinControl1In7: TtaoInHDrop
-    end
-    object taoWinControl1In8: TtaoInShellIDList
-    end
-    object taoWinControl1In9: TtaoInFileContentsW
-    end
-    object taoWinControl1In10: TtaoInOEMessage
-    end
-    object taoWinControl1In11: TtaoInURL
-    end
-    object taoWinControl1In12: TtaoInURLNetscape4
-    end
-    object taoWinControl1Out1: TtaoOutBiff8
-      DisplayStyle = 'Biff8'
-    end
-    object taoWinControl1Out2: TtaoOutRtf
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out3: TtaoOutUnicodeText
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out4: TtaoOutText
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out5: TtaoOutCells
-      FormatName = 'TaoCells'
-    end
-    object taoWinControl1Out6: TtaoOutHDrop
-    end
-    object taoWinControl1Out7: TtaoOutFileNameMap
-    end
-    object taoWinControl1Out8: TtaoOutShellIDList
-    end
-    object taoWinControl1Out9: TtaoOutFileDescriptor
-    end
-    object taoWinControl1Out10: TtaoOutFileDescriptorW
-    end
-    object taoWinControl1Out11: TtaoOutFileContents
-    end
-    object taoWinControl1Out12: TtaoOutPreferredEffect
-    end
-    object taoWinControl1Out13: TtaoOutURL
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out14: TtaoOutURLShortcut
-      DisplayStyle = 'Text'
-    end
-    object taoWinControl1Out15: TtaoOutURLShortcutTitle
-      DisplayStyle = 'Text'
     end
   end
   object imgDocuments: TImageList

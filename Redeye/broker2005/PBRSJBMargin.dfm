@@ -32,6 +32,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 450
     Width = 815
@@ -153,6 +154,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 815
@@ -246,6 +248,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       OnClick = btnDateToClick
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 1
       Width = 113
@@ -265,6 +268,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       OnClick = rgCustomerClick
     end
     object CustomerPanel: TPanel
+      ParentBackground = False
       Left = 129
       Top = 12
       Width = 281
@@ -314,6 +318,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object rgSupplier: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 67
       Width = 113
@@ -333,6 +338,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       OnClick = rgSupplierClick
     end
     object SupplierPanel: TPanel
+      ParentBackground = False
       Left = 129
       Top = 72
       Width = 281
@@ -376,6 +382,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       end
     end
     object Panel3: TPanel
+      ParentBackground = False
       Left = 546
       Top = 1
       Width = 268
@@ -394,6 +401,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         WordWrap = True
       end
       object RdGrpRepType: TRadioGroup
+        ParentBackground = False
         Left = 140
         Top = 8
         Width = 101
@@ -406,6 +414,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
         TabOrder = 1
       end
       object TotByRadioGroup: TRadioGroup
+        ParentBackground = False
         Left = 1
         Top = 8
         Width = 132
@@ -605,6 +614,7 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 276
     Top = 228
     Width = 289

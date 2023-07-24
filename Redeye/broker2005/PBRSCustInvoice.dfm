@@ -54,6 +54,7 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     OnClick = ContTypeMaintBitBtnClick
   end
   object RadioGroup1: TRadioGroup
+    ParentBackground = False
     Left = 24
     Top = 56
     Width = 185
@@ -67,6 +68,7 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     TabOrder = 2
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 56
     Width = 209

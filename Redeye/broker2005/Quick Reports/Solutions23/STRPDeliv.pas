@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
-  gtQrCtrls, ccsCommon, qrprntr, printers;
+  ccsCommon, qrprntr, printers;
 
 type
   TSTRPDelivfrm = class(TForm)
@@ -42,12 +42,12 @@ type
     qrdetailSerialNos: TQRSubDetail;
     lblSerialCaption: TQRLabel;
     lblSerialRange: TQRLabel;
-    gtQRLabel1: TgtQRLabel;
-    qrlblInstructions: TgtQRLabel;
-    gtQRLabel3: TgtQRLabel;
-    gtQRLabel4: TgtQRLabel;
+    gtQRLabel1: TQRLabel;
+    qrlblInstructions: TQRLabel;
+    gtQRLabel3: TQRLabel;
+    gtQRLabel4: TQRLabel;
     QRLabel2: TQRLabel;
-    gtQRShape1: TgtQRShape;
+    gtQRShape1: TQRShape;
     QRLabel3: TQRLabel;
     qrlblDespatched: TQRLabel;
     QRBand3: TQRBand;
@@ -55,18 +55,18 @@ type
     QRLabel4: TQRLabel;
     qrlblLineNo: TQRLabel;
     OrderLbl: TQRLabel;
-    gtQRLabel2: TgtQRLabel;
-    gtQRLabel11: TgtQRLabel;
-    gtQRShape6: TgtQRShape;
-    gtQRShape7: TgtQRShape;
-    gtQRLabel12: TgtQRLabel;
-    gtQRLabel13: TgtQRLabel;
-    gtQRShape8: TgtQRShape;
+    gtQRLabel2: TQRLabel;
+    gtQRLabel11: TQRLabel;
+    gtQRShape6: TQRShape;
+    gtQRShape7: TQRShape;
+    gtQRLabel12: TQRLabel;
+    gtQRLabel13: TQRLabel;
+    gtQRShape8: TQRShape;
     labCompanyAddress: TQRMemo;
     QRMemo1: TQRMemo;
     DespDtQRLbl: TQRLabel;
     qrlblCustomerName: TQRLabel;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     function GetDetails(Sender: TObject): Integer;
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

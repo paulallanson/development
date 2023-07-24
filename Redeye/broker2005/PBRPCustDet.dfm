@@ -1301,7 +1301,7 @@ object PBRPCustDetFrm: TPBRPCustDetFrm
         WordWrap = True
         FontSize = 9
       end
-      object memoNotes: TgtQRMemo
+      object memoNotes: TQRMemo
         Left = 326
         Top = 4
         Width = 715

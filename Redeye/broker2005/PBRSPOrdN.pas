@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, gtQrExport,
+  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, QrExport,
   OleServer, CCSCommon, CCSPress, IniFiles, ComCtrls, PBActivityDM, DBCtrls;
 
 type
@@ -119,9 +119,10 @@ var
 
 implementation
 
-uses PBFaxList, PBDBPOrdLtr, LetterDM, PBSendFax, PBEmailList, printers,
+uses
+  PBFaxList, PBDBPOrdLtr, LetterDM, PBSendFax, PBEmailList, printers,
   pbMainMenu, PDLetter, CCSPrint, PBRPDeliv, PBRPLabels, pbDatabase,
-  PBRPLabelsReels;
+  PBRPLabelsReels, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -951,9 +952,9 @@ begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
         Printers.Printer.PrinterIndex := -1;
-        for icount := 0 to pred(Printer.Printers.count) do
+        for icount := 0 to pred(Printers.Printer.Printers.count) do
           begin
-            if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+            if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
               Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
@@ -963,7 +964,7 @@ begin
         if SetupPrinter(aBroker.PrinterSettings) then
           begin
             PrintingPress.QuickR.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
             DefaultBin := GetBinSelection;
             SaveDefaultPrinter;
             FPrinted := true;
@@ -986,6 +987,17 @@ end;
 
 procedure TPBRSPOrdNFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
 var
+  fileName: string;
+begin
+  if TypeRadioGroup.ItemIndex = 0 then
+    fileName := 'PO' + FloatToStr(dbPOrdLtr.PONumber) else
+    fileName := 'ACK' + FloatToStr(dbPOrdLtr.PONumber);
+  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TPBRSPOrdNFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
+var
   i: integer;
   sLocation, sFileName: string;
   zLocation, zFileName: array[0..255] of char;
@@ -999,17 +1011,16 @@ var
 begin
   FEmailAttachment.clear;
 
-(*  sLocation := GetWinTempDir;
-  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-
-  if TypeRadioGroup.ItemIndex = 0 then
-    sFileName := 'PO' + floattostr(dbPOrdLtr.PONumber)
-  else
-    sFileName := 'Ack' + floattostr(dbPOrdLtr.PONumber) ;
-*)
+//  sLocation := GetWinTempDir;
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+//
+//  if TypeRadioGroup.ItemIndex = 0 then
+//    sFileName := 'PO' + floattostr(dbPOrdLtr.PONumber)
+//  else
+//    sFileName := 'Ack' + floattostr(dbPOrdLtr.PONumber) ;
 
   sLocation := GetWinTempDir;
 
@@ -1138,6 +1149,7 @@ begin
   FPrinted := true;
   AFilters.free;
 end;
+*)
 
 procedure TPBRSPOrdNFrm.LoadCombos;
 begin
@@ -1399,7 +1411,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1416,7 +1428,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin

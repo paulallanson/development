@@ -30,6 +30,7 @@ object PBMaintAddChrgsFrm: TPBMaintAddChrgsFrm
     ParentFont = False
   end
   object grpbxDetails: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 377

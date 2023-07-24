@@ -80,6 +80,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Caption = 'Customer'
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 96
     Top = 84
     Width = 289
@@ -113,6 +114,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     Visible = False
   end
   object rgPrdCat: TRadioGroup
+    ParentBackground = False
     Left = 24
     Top = 64
     Width = 105
@@ -127,6 +129,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
     OnClick = rgPrdCatClick
   end
   object RepPanel: TPanel
+    ParentBackground = False
     Left = 136
     Top = 70
     Width = 321
@@ -245,6 +248,7 @@ object PBRSCustCatKPIfrm: TPBRSCustCatKPIfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
   object RdGrpRepType: TRadioGroup
+    ParentBackground = False
     Left = 356
     Top = 152
     Width = 101

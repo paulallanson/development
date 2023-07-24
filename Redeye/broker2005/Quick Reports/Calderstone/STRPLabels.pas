@@ -88,7 +88,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, gtQrCtrls;
+  CCSPrint;
 
 type
   TSTRPLabelsFrm = class(TForm)
@@ -97,40 +97,40 @@ type
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     AddressSRC: TDataSource;
-    BoxQuantityLbl: TgtQRLabel;
-    QRDBCustOrderRef: TgtQRDBText;
-    lblCustomer: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    DescripLbl: TgtQRLabel;
-    DescLbl: TgtQRLabel;
-    BoxQRLbl: TgtQRLabel;
+    BoxQuantityLbl: TQRLabel;
+    QRDBCustOrderRef: TQRDBText;
+    lblCustomer: TQRLabel;
+    QRLabel2: TQRLabel;
+    DescripLbl: TQRLabel;
+    DescLbl: TQRLabel;
+    BoxQRLbl: TQRLabel;
     AdhocSQL: TQuery;
     CustomerSQL: TQuery;
-    QRLabel7: TgtQRLabel;
-    qrdbPart: TgtQRDBText;
-    lblCustOrderRef: TgtQRLabel;
-    lblDate: TgtQRLabel;
-    lblDeliveryNo: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    FromQRLbl: TgtQRLabel;
-    BoxQtyCaptionlbl: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRShape3: TgtQRShape;
-    CompNameQRLabel: TgtQRLabel;
-    CompAddrQRLabel: TgtQRLabel;
-    QRShape4: TgtQRShape;
+    QRLabel7: TQRLabel;
+    qrdbPart: TQRDBText;
+    lblCustOrderRef: TQRLabel;
+    lblDate: TQRLabel;
+    lblDeliveryNo: TQRLabel;
+    QRLabel1: TQRLabel;
+    FromQRLbl: TQRLabel;
+    BoxQtyCaptionlbl: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRShape3: TQRShape;
+    CompNameQRLabel: TQRLabel;
+    CompAddrQRLabel: TQRLabel;
+    QRShape4: TQRShape;
     CompSQL: TQuery;
-    lblBoxNo: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
+    lblBoxNo: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
     QRSubDetAddress: TQRSubDetail;
-    QRShape1: TgtQRShape;
-    QRShape2: TgtQRShape;
-    QRLblCoAdd: TgtQRLabel;
-    QRLblCoNm: TgtQRLabel;
-    QRLblCust: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    QRLabel8: TgtQRLabel;
-    FAOQRLabel: TgtQRLabel;
+    QRShape1: TQRShape;
+    QRShape2: TQRShape;
+    QRLblCoAdd: TQRLabel;
+    QRLblCoNm: TQRLabel;
+    QRLblCust: TQRLabel;
+    AddressMemo: TQRMemo;
+    QRLabel8: TQRLabel;
+    FAOQRLabel: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

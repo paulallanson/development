@@ -98,7 +98,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, PBPOObjects, ExtCtrls, DB, DBTables, inifiles, gtQrExport,
+  StdCtrls, Buttons, PBPOObjects, ExtCtrls, DB, DBTables, inifiles, QrExport,
   CCSCommon;
 
 type

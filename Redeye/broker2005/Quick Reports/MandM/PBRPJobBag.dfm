@@ -88,7 +88,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         748.770833333333400000
         2000.250000000000000000)
       BandType = rbPageHeader
-      object qrlblQuoteCaption: TgtQRLabel
+      object qrlblQuoteCaption: TQRLabel
         Left = 8
         Top = 0
         Width = 124
@@ -119,7 +119,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 24
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 533
         Top = 62
         Width = 87
@@ -150,7 +150,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText1: TgtQRDBText
+      object QRDBText1: TQRDBText
         Left = 635
         Top = 62
         Width = 97
@@ -182,7 +182,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 660
         Top = 3
         Width = 89
@@ -214,7 +214,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 16
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 497
         Top = 4
         Width = 125
@@ -245,7 +245,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 16
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 80
         Top = 46
         Width = 401
@@ -277,7 +277,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 8
         Top = 46
         Width = 53
@@ -308,7 +308,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 8
         Top = 205
         Width = 54
@@ -339,7 +339,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 8
         Top = 229
         Width = 90
@@ -370,7 +370,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 115
         Top = 204
         Width = 50
@@ -402,7 +402,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText6: TgtQRDBText
+      object gtQRDBText6: TQRDBText
         Left = 115
         Top = 228
         Width = 88
@@ -434,7 +434,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 8
         Top = 94
         Width = 65
@@ -465,7 +465,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object qrmAddress: TgtQRMemo
+      object qrmAddress: TQRMemo
         Left = 115
         Top = 94
         Width = 262
@@ -495,7 +495,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 496
         Top = 94
         Width = 53
@@ -526,7 +526,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 496
         Top = 115
         Width = 73
@@ -557,7 +557,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 496
         Top = 136
         Width = 29
@@ -588,7 +588,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 496
         Top = 157
         Width = 41
@@ -619,7 +619,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 496
         Top = 177
         Width = 88
@@ -650,7 +650,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object qrlblContactName: TgtQRLabel
+      object qrlblContactName: TQRLabel
         Left = 600
         Top = 94
         Width = 104
@@ -681,7 +681,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object qrlblTelephone: TgtQRLabel
+      object qrlblTelephone: TQRLabel
         Left = 600
         Top = 115
         Width = 84
@@ -712,7 +712,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object qrlblFax: TgtQRLabel
+      object qrlblFax: TQRLabel
         Left = 600
         Top = 136
         Width = 47
@@ -743,7 +743,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object qrlblEmail: TgtQRLabel
+      object qrlblEmail: TQRLabel
         Left = 600
         Top = 157
         Width = 58
@@ -774,7 +774,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 600
         Top = 177
         Width = 127
@@ -806,7 +806,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 8
         Top = 261
         Width = 26
@@ -837,7 +837,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 128
         Top = 261
         Width = 66
@@ -868,7 +868,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 568
         Top = 261
         Width = 50
@@ -899,7 +899,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 656
         Top = 261
         Width = 28
@@ -930,7 +930,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 728
         Top = 261
         Width = 23
@@ -961,7 +961,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 48
         Top = 261
         Width = 59
@@ -992,7 +992,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 556
         Top = 38
         Width = 64
@@ -1023,7 +1023,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText8: TgtQRDBText
+      object gtQRDBText8: TQRDBText
         Left = 635
         Top = 38
         Width = 63
@@ -1101,7 +1101,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
       FooterBand = qrgfJobBag
       PrintBefore = False
       PrintIfEmpty = True
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 128
         Top = 2
         Width = 409
@@ -1133,7 +1133,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 555
         Top = 2
         Width = 63
@@ -1165,7 +1165,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText4: TgtQRDBText
+      object gtQRDBText4: TQRDBText
         Left = 621
         Top = 2
         Width = 63
@@ -1197,7 +1197,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText5: TgtQRDBText
+      object gtQRDBText5: TQRDBText
         Left = 686
         Top = 2
         Width = 63
@@ -1229,7 +1229,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object gtQRDBText7: TgtQRDBText
+      object gtQRDBText7: TQRDBText
         Left = 7
         Top = 2
         Width = 63
@@ -1261,7 +1261,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object gtlblOrderType: TgtQRLabel
+      object gtlblOrderType: TQRLabel
         Left = 48
         Top = 2
         Width = 72
@@ -1312,7 +1312,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         238.125000000000000000
         2000.250000000000000000)
       BandType = rbPageFooter
-      object gtQRLabel9: TgtQRLabel
+      object gtQRLabel9: TQRLabel
         Left = 576
         Top = 13
         Width = 64
@@ -1343,7 +1343,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel10: TgtQRLabel
+      object gtQRLabel10: TQRLabel
         Left = 568
         Top = 37
         Width = 72
@@ -1374,7 +1374,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 595
         Top = 61
         Width = 45
@@ -1405,7 +1405,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtlblTotalCost: TgtQRLabel
+      object gtlblTotalCost: TQRLabel
         Left = 661
         Top = 13
         Width = 88
@@ -1436,7 +1436,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtlblTotalSales: TgtQRLabel
+      object gtlblTotalSales: TQRLabel
         Left = 653
         Top = 37
         Width = 96
@@ -1467,7 +1467,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 10
       end
-      object gtlblTotalMargin: TgtQRLabel
+      object gtlblTotalMargin: TQRLabel
         Left = 644
         Top = 61
         Width = 105
@@ -1518,7 +1518,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         89.958333333333340000
         2000.250000000000000000)
       BandType = rbGroupFooter
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 8
         Top = 17
         Width = 32
@@ -1549,7 +1549,7 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         WordWrap = True
         FontSize = 8
       end
-      object memoNotes: TgtQRMemo
+      object memoNotes: TQRMemo
         Left = 48
         Top = 17
         Width = 489

@@ -31,6 +31,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Caption = 'Product:'
   end
   object FuncRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 224
     Top = 0
     Width = 305
@@ -80,6 +81,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     TabOrder = 3
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 352
     Width = 313

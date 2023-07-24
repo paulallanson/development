@@ -21,6 +21,7 @@ object STRSStkValfrm: TSTRSStkValfrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 136
     Width = 289
@@ -117,6 +118,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 355
     Width = 115
@@ -136,6 +138,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 0
   end
   object CostRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 195
     Width = 115
@@ -154,6 +157,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 1
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 270
     Width = 289
@@ -243,6 +247,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     TabOrder = 6
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 1
     Width = 121
@@ -261,6 +266,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     OnClick = AllOrOneRadioGroupClick
   end
   object CustRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 68
     Width = 121
@@ -279,6 +285,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
+    ParentBackground = False
     Left = 137
     Top = 68
     Width = 288
@@ -325,6 +332,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RepGrpBox: TGroupBox
+    ParentBackground = False
     Left = 136
     Top = 1
     Width = 289
@@ -377,6 +385,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RadioGroup1: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 129
     Width = 121
@@ -395,6 +404,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     OnClick = RadioGroup1Click
   end
   object StoresGrpBox: TGroupBox
+    ParentBackground = False
     Left = 137
     Top = 129
     Width = 288
@@ -442,6 +452,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RadioGroup2: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 195
     Width = 121
@@ -460,6 +471,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     OnClick = RadioGroup2Click
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 137
     Top = 195
     Width = 224
@@ -538,6 +550,7 @@ object STRSStkValfrm: TSTRSStkValfrm
     end
   end
   object RDGrpPdFor: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 270
     Width = 115

@@ -17,6 +17,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
   PixelsPerInch = 96
   TextHeight = 13
   object PnlActn: TPanel
+    ParentBackground = False
     Left = 0
     Top = 353
     Width = 342
@@ -61,6 +62,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     end
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 329
@@ -174,6 +176,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 177
     Width = 329
@@ -268,6 +271,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     end
   end
   object pnlJobNumber: TPanel
+    ParentBackground = False
     Left = 0
     Top = 315
     Width = 342
@@ -276,6 +280,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     BevelOuter = bvNone
     TabOrder = 3
     object grpbxJobNumber: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = -2
       Width = 329

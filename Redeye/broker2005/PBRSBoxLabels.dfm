@@ -24,6 +24,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   PixelsPerInch = 96
   TextHeight = 13
   object POGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
@@ -74,6 +75,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 142
     Width = 209
@@ -166,6 +168,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox3: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 142
     Width = 177
@@ -249,6 +252,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     NumGlyphs = 2
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 90
     Width = 393
@@ -327,6 +331,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     NumGlyphs = 2
   end
   object GroupBox4: TGroupBox
+    ParentBackground = False
     Left = 224
     Top = 219
     Width = 177
@@ -361,6 +366,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox5: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 306
     Width = 393

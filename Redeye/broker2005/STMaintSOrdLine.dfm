@@ -17,6 +17,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 334
     Width = 725
@@ -94,6 +95,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     end
   end
   object pnlproduct: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 725
@@ -185,6 +187,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     end
   end
   object pnlSales: TPanel
+    ParentBackground = False
     Left = 214
     Top = 73
     Width = 511
@@ -194,6 +197,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     TabOrder = 1
     TabStop = True
     object GroupBox2: TGroupBox
+      ParentBackground = False
       Left = 0
       Top = 4
       Width = 201
@@ -302,6 +306,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       end
     end
     object GroupBox3: TGroupBox
+      ParentBackground = False
       Left = 206
       Top = 4
       Width = 299
@@ -522,6 +527,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       end
     end
     object GroupBox4: TGroupBox
+      ParentBackground = False
       Left = 0
       Top = 201
       Width = 201
@@ -556,6 +562,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     end
   end
   object pnlcosts: TPanel
+    ParentBackground = False
     Left = 0
     Top = 73
     Width = 214
@@ -564,6 +571,7 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     BevelOuter = bvNone
     TabOrder = 3
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 4
       Width = 201

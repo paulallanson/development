@@ -32,6 +32,7 @@ object StMovSlfrm: TStMovSlfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 120
     Width = 289
@@ -137,6 +138,7 @@ object StMovSlfrm: TStMovSlfrm
       OnClick = PartFromBitBtnClick
     end
     object SeqByRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 368
       Top = 8
       Width = 113
@@ -336,6 +338,7 @@ object StMovSlfrm: TStMovSlfrm
     Kind = bkCancel
   end
   object DtRangeGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 168
     Width = 273
@@ -461,6 +464,7 @@ object StMovSlfrm: TStMovSlfrm
     end
   end
   object GroupBox2: TGroupBox
+    ParentBackground = False
     Left = 312
     Top = 168
     Width = 201

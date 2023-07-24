@@ -159,6 +159,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 493
     Width = 814
@@ -187,6 +188,7 @@ object frmpbluCustStock: TfrmpbluCustStock
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 628
       Top = 1
       Width = 185
@@ -348,6 +350,7 @@ object frmpbluCustStock: TfrmpbluCustStock
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 814
@@ -357,6 +360,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     Color = clSilver
     TabOrder = 4
     object Panel4: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409

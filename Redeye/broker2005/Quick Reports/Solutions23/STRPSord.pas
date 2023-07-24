@@ -74,7 +74,7 @@ type
     SOrdLineNoQRLabel: TQRLabel;
     QRBand1: TQRBand;
     QRMemoAddress: TQRMemo;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

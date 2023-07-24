@@ -504,7 +504,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         1190.625000000000000000
         2100.791666666667000000)
       BandType = rbPageHeader
-      object memDefPayment: TgtQRMemo
+      object memDefPayment: TQRMemo
         Left = 16
         Top = 318
         Width = 369
@@ -1187,7 +1187,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 10
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 360
         Top = 24
         Width = 363
@@ -1324,7 +1324,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = False
         FontSize = 9
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 612
         Top = 7
         Width = 51
@@ -1355,7 +1355,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 639
         Top = 39
         Width = 24
@@ -1386,7 +1386,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 572
         Top = 71
         Width = 91
@@ -1417,7 +1417,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRImage2: TgtQRImage
+      object gtQRImage2: TQRImage
         Left = 43
         Top = 184
         Width = 270

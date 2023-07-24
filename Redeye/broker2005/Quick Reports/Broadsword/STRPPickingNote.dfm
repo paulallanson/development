@@ -95,7 +95,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         889.000000000000000000
         2000.250000000000000000)
       BandType = rbPageHeader
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 14
         Top = 294
         Width = 50
@@ -126,7 +126,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object PreviewQRLabel: TgtQRLabel
+      object PreviewQRLabel: TQRLabel
         Left = 664
         Top = 16
         Width = 80
@@ -151,7 +151,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object NotesQRMemo: TgtQRMemo
+      object NotesQRMemo: TQRMemo
         Left = 16
         Top = 129
         Width = 272
@@ -187,7 +187,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object DelInstructMemo: TgtQRMemo
+      object DelInstructMemo: TQRMemo
         Left = 433
         Top = 127
         Width = 272
@@ -217,7 +217,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLblAccnt: TgtQRLabel
+      object QRLblAccnt: TQRLabel
         Left = 16
         Top = 256
         Width = 93
@@ -248,7 +248,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object CustRefQRDBText: TgtQRDBText
+      object CustRefQRDBText: TQRDBText
         Left = 216
         Top = 256
         Width = 91
@@ -280,7 +280,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object SoNumQRDBText: TgtQRDBText
+      object SoNumQRDBText: TQRDBText
         Left = 400
         Top = 256
         Width = 68
@@ -312,7 +312,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 638
         Top = 311
         Width = 32
@@ -343,7 +343,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 562
         Top = 310
         Width = 49
@@ -374,7 +374,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 296
         Top = 310
         Width = 63
@@ -405,7 +405,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 78
         Top = 310
         Width = 47
@@ -436,7 +436,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 684
         Top = 310
         Width = 16
@@ -467,7 +467,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblAccountLabel: TgtQRLabel
+      object qrlblAccountLabel: TQRLabel
         Left = 17
         Top = 237
         Width = 110
@@ -498,7 +498,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 217
         Top = 237
         Width = 91
@@ -529,7 +529,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 401
         Top = 237
         Width = 66
@@ -560,7 +560,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 545
         Top = 237
         Width = 80
@@ -591,7 +591,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 665
         Top = 237
         Width = 90
@@ -622,7 +622,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 433
         Top = 108
         Width = 132
@@ -653,7 +653,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 17
         Top = 108
         Width = 71
@@ -684,7 +684,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 305
         Top = 16
         Width = 146
@@ -715,7 +715,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 16
       end
-      object qrlblWarehouse: TgtQRLabel
+      object qrlblWarehouse: TQRLabel
         Left = 321
         Top = 48
         Width = 108
@@ -746,7 +746,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 17
         Top = 4
         Width = 67
@@ -778,7 +778,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object CustomerAddMemo: TgtQRMemo
+      object CustomerAddMemo: TQRMemo
         Left = 16
         Top = 25
         Width = 272
@@ -815,7 +815,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 544
         Top = 256
         Width = 69
@@ -847,7 +847,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 655
         Top = 256
         Width = 88
@@ -929,7 +929,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       Master = qrDetails
       PrintBefore = False
       PrintIfEmpty = True
-      object PartQRDBText: TgtQRDBText
+      object PartQRDBText: TQRDBText
         Left = 78
         Top = 3
         Width = 211
@@ -961,7 +961,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object DescQRDBText: TgtQRDBText
+      object DescQRDBText: TQRDBText
         Left = 296
         Top = 3
         Width = 249
@@ -993,7 +993,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object BinQRDBText: TgtQRDBText
+      object BinQRDBText: TQRDBText
         Left = 684
         Top = 3
         Width = 73
@@ -1026,7 +1026,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText4: TgtQRDBText
+      object QRDBText4: TQRDBText
         Left = 550
         Top = 3
         Width = 64
@@ -1058,7 +1058,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabelDlvrd: TgtQRLabel
+      object QRLabelDlvrd: TQRLabel
         Left = 623
         Top = 3
         Width = 50
@@ -1089,7 +1089,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabelQty: TgtQRLabel
+      object QRLabelQty: TQRLabel
         Left = -4
         Top = 3
         Width = 66
@@ -1145,7 +1145,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       DataSet = qryGetSerialNos
       PrintBefore = False
       PrintIfEmpty = True
-      object lblSerialCaption: TgtQRLabel
+      object lblSerialCaption: TQRLabel
         Left = 296
         Top = 0
         Width = 89
@@ -1176,7 +1176,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object lblSerialRange: TgtQRLabel
+      object lblSerialRange: TQRLabel
         Left = 400
         Top = 0
         Width = 84
@@ -1227,7 +1227,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         148.166666666666700000
         2000.250000000000000000)
       BandType = rbPageFooter
-      object QRLabel17: TgtQRLabel
+      object QRLabel17: TQRLabel
         Left = 1
         Top = 29
         Width = 89
@@ -1258,7 +1258,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 96
         Top = 29
         Width = 100
@@ -1290,7 +1290,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel19: TgtQRLabel
+      object QRLabel19: TQRLabel
         Left = 225
         Top = 29
         Width = 66
@@ -1321,7 +1321,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 304
         Top = 16
         Width = 177
@@ -1340,7 +1340,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 501
         Top = 29
         Width = 78
@@ -1371,7 +1371,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 576
         Top = 16
         Width = 177
@@ -1390,7 +1390,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 377
         Top = 29
         Width = 34
@@ -1421,7 +1421,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 649
         Top = 29
         Width = 34
@@ -1471,7 +1471,7 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         47.625000000000000000
         2000.250000000000000000)
       ParentBand = QRSubDetail1
-      object gtlblFSCClaim: TgtQRLabel
+      object gtlblFSCClaim: TQRLabel
         Left = 78
         Top = 1
         Width = 49

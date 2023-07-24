@@ -115,9 +115,9 @@ type
     QRDBText1: TQRDBText;
     DeliveryDateLbl: TQRLabel;
     AddressMemo: TQRMemo;
-    qrmCompany: TgtQRMemo;
+    qrmCompany: TQRMemo;
     CompSQL: TQuery;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

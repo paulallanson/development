@@ -85,7 +85,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         261.937500000000000000
         1899.708333333333000000)
       BandType = rbPageHeader
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 236
         Top = 8
         Width = 246
@@ -146,7 +146,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Transparent = False
         FontSize = 8
       end
-      object qrlblDateSelection: TgtQRLabel
+      object qrlblDateSelection: TQRLabel
         Left = 306
         Top = 48
         Width = 105
@@ -177,7 +177,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrlblDelivery: TgtQRLabel
+      object qrlblDelivery: TQRLabel
         Left = 390
         Top = 81
         Width = 70
@@ -237,7 +237,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         Transparent = False
         FontSize = 8
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 620
         Top = 80
         Width = 35
@@ -268,7 +268,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSelection: TgtQRLabel
+      object qrlblSelection: TQRLabel
         Left = 304
         Top = 31
         Width = 110
@@ -299,7 +299,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 6
         Top = 81
         Width = 44
@@ -330,7 +330,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 150
         Top = 81
         Width = 64
@@ -361,7 +361,7 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         WordWrap = True
         FontSize = 8
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 669
         Top = 80
         Width = 43

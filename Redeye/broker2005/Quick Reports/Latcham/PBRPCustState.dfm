@@ -1037,7 +1037,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 10
       end
-      object imgReport: TgtQRImage
+      object imgReport: TQRImage
         Left = 40
         Top = 16
         Width = 260
@@ -4679,7 +4679,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         746.125000000000000000
         2100.791666666667000000)
       BandType = rbGroupFooter
-      object memDefPayment: TgtQRMemo
+      object memDefPayment: TQRMemo
         Left = 8
         Top = 8
         Width = 441
@@ -4915,7 +4915,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = False
         FontSize = 10
       end
-      object QRMemo2: TgtQRMemo
+      object QRMemo2: TQRMemo
         Left = 137
         Top = 232
         Width = 560
@@ -4949,7 +4949,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRMemo1: TgtQRMemo
+      object gtQRMemo1: TQRMemo
         Left = 137
         Top = 248
         Width = 560
@@ -4981,7 +4981,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrshpPayment: TgtQRShape
+      object qrshpPayment: TQRShape
         Left = 16
         Top = 3
         Width = 457
@@ -4999,7 +4999,7 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object memPayment: TgtQRRichText
+      object memPayment: TQRRichText
         Left = 24
         Top = 8
         Width = 441

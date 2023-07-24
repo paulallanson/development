@@ -23,6 +23,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 795
@@ -163,6 +164,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Despatch Details'
       ImageIndex = 4
       object Panel7: TPanel
+        ParentBackground = False
         Left = 701
         Top = 0
         Width = 86
@@ -225,6 +227,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Return Address'
       ImageIndex = 3
       object rdgrpAddressType: TRadioGroup
+        ParentBackground = False
         Left = 24
         Top = 8
         Width = 105
@@ -239,6 +242,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         OnClick = rdgrpAddressTypeClick
       end
       object AddrGrpBox: TGroupBox
+        ParentBackground = False
         Left = 160
         Top = 8
         Width = 393
@@ -406,6 +410,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Events'
       ImageIndex = 7
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 17
         Width = 305
@@ -432,6 +437,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 422
         Top = 17
         Width = 365
@@ -450,6 +456,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         end
       end
       object Panel9: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 787
@@ -458,6 +465,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         TabOrder = 2
       end
       object Panel18: TPanel
+        ParentBackground = False
         Left = 305
         Top = 17
         Width = 117
@@ -500,6 +508,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ImageIndex = 2
       OnEnter = tbProcessesEnter
       object pnlprocess: TPanel
+        ParentBackground = False
         Left = 401
         Top = 0
         Width = 386
@@ -508,6 +517,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         BevelInner = bvLowered
         TabOrder = 0
         object pnlprMachine: TPanel
+          ParentBackground = False
           Left = 2
           Top = 174
           Width = 382
@@ -585,6 +595,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprNotes: TPanel
+          ParentBackground = False
           Left = 2
           Top = 169
           Width = 382
@@ -603,6 +614,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprTop: TPanel
+          ParentBackground = False
           Left = 2
           Top = 2
           Width = 382
@@ -688,6 +700,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             Value = 1
           end
           object rdgrpFormat: TRadioGroup
+            ParentBackground = False
             Left = 240
             Top = 72
             Width = 113
@@ -701,6 +714,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             TabOrder = 4
           end
           object grpbxPaper: TGroupBox
+            ParentBackground = False
             Left = 8
             Top = 72
             Width = 225
@@ -742,6 +756,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprNotesHead: TPanel
+          ParentBackground = False
           Left = 2
           Top = 153
           Width = 382
@@ -770,6 +785,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
     end
   end
   object pnlFoot: TPanel
+    ParentBackground = False
     Left = 0
     Top = 490
     Width = 795
@@ -787,6 +803,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Release No:'
     end
     object pnlOK: TPanel
+      ParentBackground = False
       Left = 430
       Top = 1
       Width = 364
@@ -912,6 +929,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       end>
   end
   object pnlCustomer: TPanel
+    ParentBackground = False
     Left = 0
     Top = 38
     Width = 795
@@ -1112,6 +1130,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 153
     Width = 795

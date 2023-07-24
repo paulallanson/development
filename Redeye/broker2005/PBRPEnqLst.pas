@@ -17,7 +17,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  gtQrExport;
+  QrExport;
 
 type
   TPBRPEnqLstFrm = class(TForm)

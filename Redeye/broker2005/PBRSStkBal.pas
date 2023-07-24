@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, CCSCommon, PBRPStkBal,
-  gtQrExport, CCSPress, IniFiles;
+  QrExport, CCSPress, IniFiles;
 
 type
   TPBRSStkBalFrm = class(TForm)

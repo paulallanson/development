@@ -1,6 +1,6 @@
 unit GIFImage;
-////////////////////////////////////////////////////////////////////////////////
-//                                                                            //
+/// /////////////////////////////////////////////////////////////////////////////
+// //
 // Project:	GIF Graphics Object                                           //
 // Module:	gifimage                                                      //
 // Description:	TGraphic implementation of the GIF89a graphics format         //
@@ -9,34 +9,157 @@ unit GIFImage;
 // Date:	23-MAY-1999                                                   //
 // Target:	Win32, Delphi 2, 3, 4 & 5, C++ Builder 3 & 4                  //
 // Author(s):	anme: Anders Melander, anders@melander.dk                     //
-//		fila: Filip Larsen                                            //
-//		rps: Reinier Sterkenburg                                      //
+// fila: Filip Larsen                                            //
+// rps: Reinier Sterkenburg                                      //
 // Copyright:	(c) 1997-99 Anders Melander.                                  //
-//		All rights reserved.                                          //
+// All rights reserved.                                          //
 // Formatting:	2 space indent, 8 space tabs, 80 columns.                     //
-//                                                                            //
-////////////////////////////////////////////////////////////////////////////////
-//                                                                            //
+// //
+/// /////////////////////////////////////////////////////////////////////////////
+// Changed 2001.07.23 by Finn Tolderlund:                                     //
+// Changed according to e-mail from "Rolf Frei" <rolf@eicom.ch>               //
+// on 2001.07.23 so that it works in Delphi 6.                              //
+// //
+// Changed 2002.07.07 by Finn Tolderlund:                                     //
+// Incorporated additional modifications by Alexey Barkovoy (clootie@reactor.ru)
+// found in his Delphi 6 GifImage.pas (from 22-Dec-2001).                     //
+// Alexey Barkovoy's Delphi 6 gifimage.pas can be downloaded from             //
+// http://clootie.narod.ru/delphi/download_vcl.html                         //
+// These changes made showing of animated gif files more stable. The code     //
+// from 2001.07.23 could crash sometimes with an Execption EAccessViolation.  //
+// //
+// Changed 2002.10.06 by Finn Tolderlund:                                     //
+// Delphi 7 compatible.                                                       //
+// //
+// Changed 2003-03-06 by Finn Tolderlund:                                     //
+// Changes made as a result of postings in borland.public.delphi.graphics     //
+// from 2003-02-28 to 2003-03-05 where white (255,255,255) in a bitmap        //
+// was converted to (254,254,254) in the gif.                                 //
+// The doCreateOptimizedPaletteFromSingleBitmap function and                  //
+// the CreateOptimizedPaletteFromManyBitmaps function is changed so that      //
+// the correct offset 246 is used instead of 245.                             //
+// The ReduceColors function is changed according to Anders Melander's post   //
+// so that a colour get converted to the precise colour if that colour is     //
+// present in the palette when using ColorReduction rmQuantize.               //
+// //
+// Changed 2003-03-09 by Finn Tolderlund:                                     //
+// Delphi 7 version is now assumed if unknown compiler version is unknown     //
+// for better compatibility with future Delphi versions.                      //
+// Hopefully this code is now compatible with future Delphi versions,         //
+// unless Borland makes some changes that breaks existing code.               //
+// //
+// Changed 2003-08-04 by Finn Tolderlund:                                     //
+// Changed procedure AddMaskOnly so that it doesn't leak a GDI HBitmap-object //
+// and it doesn't release the handle of the source bitmap which               //
+// is used to assign to the GIF object as in gif.assign(bm);                  //
+// These changes were made as a result of a news post made by Renate Schaaf   //
+// with the subject "TGifImage HBitmap leak on assign?"                       //
+// in borland.public.delphi.graphics on Mon 28 Jul 2003 and Sun 03 Aug 2003.  //
+// //
+// Changed 2004.03.09 by Finn Tolderlund:                                     //
+// Added a ForceFrame property to the TGIFImage class.                        //
+// The ForceFrame property can be used to make TGIFImage display a apecific   //
+// sub frame from an animated gif.                                            //
+// How to use: Set the Animate property to False and set the ForceFrame       //
+// property to a desired frame number (0-N)                                   //
+// Normal display: Set the ForceFrame property to -1 and set Animate to True. //
+// If ForceFrame is negative TGIFImage behaves just as before this change.    //
+// Note that if the sub frame in the gif only contains part of the image      //
+// (i.e. only the changes from previous frames) the result is unpredictable.  //
+// The result is best if each sub frame contains a whole image.               //
+// If the sub frame is transparent the background is not automatically        //
+// restored, you must do so yourself if you want that.                        //
+// If you are using a TImage to display the gif you can use                   //
+// Image.Parent.Invalidate or Image.Parent.Refresh to restore the background. //
+// This change was made as a result of a email correspondance with            //
+// Tineke Kosmis (http://www.classe.nl/) which requested such a property.     //
+// //
+// Changed 2006.07.09 by Finn Tolderlund:                                     //
+// Added conditional switch as default: FIXHEADER_WIDTHHEIGHT_SILENT          //
+// When the switch is defined:                                                //
+// When loading a gif all frames are examined. If a frame has a larger        //
+// Width/Height than the header values then the header values are updated     //
+// with the larger values from the frame.                                     //
+// I had a MANTA.GIF where the header said 120x89 but the frames said 200x148 //
+// and the frames got clipped. MSIE didn't clip it.                           //
+// http://www.graphcomp.com/info/specs/ani_gif.html :                         //
+// Do not assume all of your images are the same size. Read through their     //
+// sizes and set the logical screen to the largest width & height included    //
+// in the file.                                                               //
+// By removing the define FIXHEADER_WIDTHHEIGHT_SILENT                        //
+// the header is not altered. This makes the unit work as before.             //
+// //
+// Changed 2006.07.10 by Finn Tolderlund:                                     //
+// Added conditional switch as default: DEFAULT_GOCLEARLOOP                   //
+// When the switch is defined:                                                //
+// When loading a gif default DrawOptions include goClearLoop                 //
+// Same as adding goClearLoop manually to DrawOptions.                        //
+// This will clear an animated gif before first frame on each loop.           //
+// Someone sent me a 'conductor.gif' where some of the last frame was retaind //
+// when beginning a new loop and that was visually incorrect.                 //
+// Without glClearLoop the first frame may look different on the second loop  //
+// because some part of the last frame could still be present.                //
+// With goClearLoop the first frame will always look the same on each loop.   //
+// I think the last is better.                                                //
+// //
+// Changed 2006.07.29 by Finn Tolderlund:                                     //
+// Added a check in procedure TGIFSubImage.Decompress to make sure that       //
+// the InitialBitsPerCode variable never exeeds the value 15.                 //
+// Someone sent an animated iup110296.gif (corrupt I think) which caused      //
+// this unit to crash in function NextLZW because InitialBitsPerCode was 20.  //
+// This fix prevents the crash and should not cause problems with other gifs. //
+// Not sure that the fix is the correct way to handle it. It seems to work.   //
+// //
+// Changed 2006.10.09 by Finn Tolderlund:                                     //
+// Received a mail from Michael Thomas Greer with a fix that allows           //
+// the TGIFSubImage.Pixels[] property to be writeable. The help file states   //
+// that the Pixels property can be written, but it was read-only.             //
+// Help file: "Write Pixels to change the color index of individual pixels".  //
+// //
+// Changed 2006.10.16 by Finn Tolderlund:                                     //
+// Received a mail from Maurizio Lotauro who was using Delphi 5 and FastMM4.  //
+// FastMM4 complains about a memory leak when using Delphi 5.                 //
+// I don't have Delphi 5 installed so I can't test if there really is a       //
+// memory leak or if it's just FastMM4 which can't detect it correctly.       //
+// The problem and fix only applies to Delphi 5 or older.                     //
+// Added a fix to keep FastMM4 happy. See more at this link:                  //
+// http://sourceforge.net/forum/forum.php?thread_id=1559584&forum_id=443400   //
+// //
+// Changed 2007.01.18 by Finn Tolderlund:                                     //
+// The ReduceColors function is changed so that it's now possible to use      //
+// the TFastColorLookup class if you use ColorReduction rmQuantize.           //
+// The TFastColorLookup class was removed 2003-03-06, but is introduced again //
+// because Paul Lopez needed speed when adding images to a gif.               //
+// This changes how rmQuantize works: It's now fast but less precise.         //
+// This means:                                                                //
+// Use rmQuantizeWindows to get precision, use rmQuantize if you need speed.  //
+// //
+// Changed 2008.10.19 by Finn Tolderlund:                                     //
+// Now compatible with Delphi 2009.                                           //
+// Generally changed use of Char/PChar to AnsiChar/PAnsiChar.                 //
+// //
+/// /////////////////////////////////////////////////////////////////////////////
+// //
 // Please read the "Conditions of use" in the release notes.                  //
-//                                                                            //
-////////////////////////////////////////////////////////////////////////////////
+// //
+/// /////////////////////////////////////////////////////////////////////////////
 // Known problems:
 //
 // * The combination of buffered, tiled and transparent draw will display the
-//   background incorrectly (scaled).
-//   If this is a problem for you, use non-buffered (goDirectDraw) drawing
-//   instead.
+// background incorrectly (scaled).
+// If this is a problem for you, use non-buffered (goDirectDraw) drawing
+// instead.
 //
 // * The combination of non-buffered, transparent and stretched draw is
-//   sometimes distorted with a pattern effect when the image is displayed
-//   smaller than the real size (shrinked).
+// sometimes distorted with a pattern effect when the image is displayed
+// smaller than the real size (shrinked).
 //
 // * Buffered display flickers when TGIFImage is used by a transparent TImage
-//   component.
-//   This is a problem with TImage caused by the fact that TImage was designed
-//   with static images in mind. Not much I can do about it.
+// component.
+// This is a problem with TImage caused by the fact that TImage was designed
+// with static images in mind. Not much I can do about it.
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 // To do (in rough order of priority):
 // { TODO -oanme -cFeature : TImage hook for destroy notification. }
 // { TODO -oanme -cFeature : TBitmap pool to limit resource consumption on Win95/98. }
@@ -48,299 +171,356 @@ unit GIFImage;
 // { TODO -oanme -cFeature : Add TGIFImage.Persistent property. Should save published properties in application extension when this options is set. }
 // { TODO -oanme -cBugFix : Solution for background buffering in scrollbox. }
 //
-//////////////////////////////////////////////////////////////////////////////////
+/// ///////////////////////////////////////////////////////////////////////////////
 {$ifdef BCB}
 {$ObjExportAll On}
 {$endif}
 
 interface
-////////////////////////////////////////////////////////////////////////////////
+
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		Conditional Compiler Symbols
+// Conditional Compiler Symbols
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 (*
   DEBUG				Must be defined if any of the DEBUG_xxx
-  				symbols are defined.
-                                If the symbol is defined the source will not be
-                                optimized and overflow- and range checks will be
-                                enabled.
+  symbols are defined.
+  If the symbol is defined the source will not be
+  optimized and overflow- and range checks will be
+  enabled.
 
   DEBUG_HASHPERFORMANCE		Calculates hash table performance data.
   DEBUG_HASHFILLFACTOR		Calculates fill factor of hash table -
-  				Interferes with DEBUG_HASHPERFORMANCE.
+  Interferes with DEBUG_HASHPERFORMANCE.
   DEBUG_COMPRESSPERFORMANCE	Calculates LZW compressor performance data.
   DEBUG_DECOMPRESSPERFORMANCE	Calculates LZW decompressor performance data.
   DEBUG_DITHERPERFORMANCE	Calculates color reduction performance data.
   DEBUG_DRAWPERFORMANCE		Calculates low level drawing performance data.
-  				The performance data for DEBUG_DRAWPERFORMANCE
-                                will be displayed when you press the Ctrl key.
+  The performance data for DEBUG_DRAWPERFORMANCE
+  will be displayed when you press the Ctrl key.
   DEBUG_RENDERPERFORMANCE	Calculates performance data for the GIF to
-  				bitmap converter.
-  				The performance data for DEBUG_DRAWPERFORMANCE
-                                will be displayed when you press the Ctrl key.
+  bitmap converter.
+  The performance data for DEBUG_DRAWPERFORMANCE
+  will be displayed when you press the Ctrl key.
 
   GIF_NOSAFETY			Define this symbol to disable overflow- and
-				range checks.
-                                Ignored if the DEBUG symbol is defined.
+  range checks.
+  Ignored if the DEBUG symbol is defined.
 
   STRICT_MOZILLA		Define to mimic Mozilla as closely as possible.
-  				If not defined, a slightly more "optimal"
-                                implementation is used (IMHO).
+  If not defined, a slightly more "optimal"
+  implementation is used (IMHO).
 
   FAST_AS_HELL			Define this symbol to use strictly GIF compliant
-  				(but too fast) animation timing.
-                                Since our paint routines are much faster and
-                                more precise timed than Mozilla's, the standard
-                                GIF and Mozilla values causes animations to loop
-                                faster than they would in Mozilla.
-                                If the symbol is _not_ defined, an alternative
-                                set of tweaked timing values will be used.
-                                The tweaked values are not optimal but are based
-                                on tests performed on my reference system:
-                                - Windows 95
-                                - 133 MHz Pentium
-                                - 64Mb RAM
-                                - Diamond Stealth64/V3000
-                                - 1600*1200 in 256 colors
-                                The alternate values can be modified if you are
-                                not satisfied with my defaults (they can be
-                                found a few pages down).
+  (but too fast) animation timing.
+  Since our paint routines are much faster and
+  more precise timed than Mozilla's, the standard
+  GIF and Mozilla values causes animations to loop
+  faster than they would in Mozilla.
+  If the symbol is _not_ defined, an alternative
+  set of tweaked timing values will be used.
+  The tweaked values are not optimal but are based
+  on tests performed on my reference system:
+  - Windows 95
+  - 133 MHz Pentium
+  - 64Mb RAM
+  - Diamond Stealth64/V3000
+  - 1600*1200 in 256 colors
+  The alternate values can be modified if you are
+  not satisfied with my defaults (they can be
+  found a few pages down).
 
   REGISTER_TGIFIMAGE            Define this symbol to register TGIFImage with
-  				the TPicture class and integrate with TImage.
-                                This is required to be able to display GIFs in
-                                the TImage component.
-                                The symbol is defined by default.
-                                Undefine if you use another GIF library to
-                                provide GIF support for TImage.
+  the TPicture class and integrate with TImage.
+  This is required to be able to display GIFs in
+  the TImage component.
+  The symbol is defined by default.
+  Undefine if you use another GIF library to
+  provide GIF support for TImage.
 
   PIXELFORMAT_TOO_SLOW		When this symbol is defined, the internal
-  				PixelFormat routines are used in some places
-                                instead of TBitmap.PixelFormat.
-                                The current implementation (Delphi4, Builder 3)
-                                of TBitmap.PixelFormat can in some situation
-                                degrade performance.
-                                The symbol is defined by default.
+  PixelFormat routines are used in some places
+  instead of TBitmap.PixelFormat.
+  The current implementation (Delphi4, Builder 3)
+  of TBitmap.PixelFormat can in some situation
+  degrade performance.
+  The symbol is defined by default.
 
   CREATEDIBSECTION_SLOW		If this symbol is defined, TDIBWriter will
-  				use global memory as scanline storage, instead
-                                of a DIB section.
-                                Benchmarks have shown that a DIB section is
-                                twice as slow as global memory.
-                                The symbol is defined by default.
-                                The symbol requires that PIXELFORMAT_TOO_SLOW
-                                is defined.
+  use global memory as scanline storage, instead
+  of a DIB section.
+  Benchmarks have shown that a DIB section is
+  twice as slow as global memory.
+  The symbol is defined by default.
+  The symbol requires that PIXELFORMAT_TOO_SLOW
+  is defined.
 
   SERIALIZE_RENDER		Define this symbol to serialize threaded
-  				GIF to bitmap rendering.
-                                When a GIF is displayed with the goAsync option
-                                (the default), the GIF to bitmap rendering is
-                                executed in the context of the draw thread.
-                                If more than one thread is drawing the same GIF
-                                or the GIF is being modified while it is
-                                animating, the GIF to bitmap rendering should be
-                                serialized to guarantee that the bitmap isn't
-                                modified by more than one thread at a time. If
-                                SERIALIZE_RENDER is defined, the draw threads
-                                uses TThread.Synchronize to serialize GIF to
-                                bitmap rendering.
+  GIF to bitmap rendering.
+  When a GIF is displayed with the goAsync option
+  (the default), the GIF to bitmap rendering is
+  executed in the context of the draw thread.
+  If more than one thread is drawing the same GIF
+  or the GIF is being modified while it is
+  animating, the GIF to bitmap rendering should be
+  serialized to guarantee that the bitmap isn't
+  modified by more than one thread at a time. If
+  SERIALIZE_RENDER is defined, the draw threads
+  uses TThread.Synchronize to serialize GIF to
+  bitmap rendering.
+
+  FIXHEADER_WIDTHHEIGHT_SILENT  Define this symbol to adjust Width and Height
+  in the header if any of the frames has a larger
+  Width or Height.
+
+  DEFAULT_GOCLEARLOOP           Define this symbol to clear animation on each
+  loop before first frame.
+  Same as adding goClearLoop to DrawOptions.
+  STRICT_MOZILLA does the same,
+  but STRICT_MOZILLA does something more.
+
 *)
 
 {$DEFINE REGISTER_TGIFIMAGE}
 {$DEFINE PIXELFORMAT_TOO_SLOW}
 {$DEFINE CREATEDIBSECTION_SLOW}
-
-////////////////////////////////////////////////////////////////////////////////
+{$DEFINE FIXHEADER_WIDTHHEIGHT_SILENT}
+{$DEFINE DEFAULT_GOCLEARLOOP}
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		Determine Delphi and C++ Builder version
+// Determine Delphi and C++ Builder version
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 
 // Delphi 1.x
 {$IFDEF VER80}
   'Error: TGIFImage does not support Delphi 1.x'
 {$ENDIF}
-
 // Delphi 2.x
 {$IFDEF VER90}
-  {$DEFINE VER9x}
+{$DEFINE VER9x}
 {$ENDIF}
-
 // C++ Builder 1.x
 {$IFDEF VER93}
-  // Good luck...
-  {$DEFINE VER9x}
+// Good luck...
+{$DEFINE VER9x}
 {$ENDIF}
-
 // Delphi 3.x
 {$IFDEF VER100}
-  {$DEFINE VER10_PLUS}
-  {$DEFINE D3_BCB3}
+{$DEFINE VER10_PLUS}
+{$DEFINE D3_BCB3}
 {$ENDIF}
-
 // C++ Builder 3.x
 {$IFDEF VER110}
-  {$DEFINE VER10_PLUS}
-  {$DEFINE VER11_PLUS}
-  {$DEFINE D3_BCB3}
-  {$DEFINE BAD_STACK_ALIGNMENT}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE D3_BCB3}
+{$DEFINE BAD_STACK_ALIGNMENT}
 {$ENDIF}
-
 // Delphi 4.x
 {$IFDEF VER120}
-  {$DEFINE VER10_PLUS}
-  {$DEFINE VER11_PLUS}
-  {$DEFINE VER12_PLUS}
-  {$DEFINE BAD_STACK_ALIGNMENT}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
 {$ENDIF}
-
 // C++ Builder 4.x
 {$IFDEF VER125}
-  {$DEFINE VER10_PLUS}
-  {$DEFINE VER11_PLUS}
-  {$DEFINE VER12_PLUS}
-  {$DEFINE VER125_PLUS}
-  {$DEFINE BAD_STACK_ALIGNMENT}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
 {$ENDIF}
-
 // Delphi 5.x
 {$IFDEF VER130}
-  {$DEFINE VER10_PLUS}
-  {$DEFINE VER11_PLUS}
-  {$DEFINE VER12_PLUS}
-  {$DEFINE VER125_PLUS}
-  {$DEFINE VER13_PLUS}
-  {$DEFINE BAD_STACK_ALIGNMENT}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE VER13_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
 {$ENDIF}
-
+// Delphi 6.x
+{$IFDEF VER140}
+{$WARN SYMBOL_PLATFORM OFF}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE VER13_PLUS}
+{$DEFINE VER14_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
+{$ENDIF}
+// Delphi 7.x
+{$IFDEF VER150}
+{$WARN SYMBOL_PLATFORM OFF}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE VER13_PLUS}
+{$DEFINE VER14_PLUS}
+{$DEFINE VER15_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
+{$ENDIF}
+// 2003.03.09 ->
 // Unknown compiler version - assume D4 compatible
-{$IFNDEF VER9x}
-  {$IFNDEF VER10_PLUS}
-    {$DEFINE VER10_PLUS}
-    {$DEFINE VER11_PLUS}
-    {$DEFINE VER12_PLUS}
-    {$DEFINE BAD_STACK_ALIGNMENT}
-  {$ENDIF}
+// {$IFNDEF VER9x}
+// {$IFNDEF VER10_PLUS}
+// {$DEFINE VER10_PLUS}
+// {$DEFINE VER11_PLUS}
+// {$DEFINE VER12_PLUS}
+// {$DEFINE BAD_STACK_ALIGNMENT}
+// {$ENDIF}
+// {$ENDIF}
+// 2003.03.09 <-
+
+// 2008.10.19 ->
+// Delphi 2009
+{$IFDEF VER200}
+{$WARN SYMBOL_PLATFORM OFF}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE VER13_PLUS}
+{$DEFINE VER14_PLUS}
+{$DEFINE VER15_PLUS}
+{$DEFINE VER20_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
 {$ENDIF}
+// 2008.10.19 <-
 
-////////////////////////////////////////////////////////////////////////////////
+// 2003.03.09 ->
+// Unknown compiler version - assume D7 compatible
+{$IFNDEF VER9x}
+{$IFNDEF VER10_PLUS}
+{$WARN SYMBOL_PLATFORM OFF}
+{$DEFINE VER10_PLUS}
+{$DEFINE VER11_PLUS}
+{$DEFINE VER12_PLUS}
+{$DEFINE VER125_PLUS}
+{$DEFINE VER13_PLUS}
+{$DEFINE VER14_PLUS}
+{$DEFINE VER15_PLUS}
+{$DEFINE BAD_STACK_ALIGNMENT}
+{$ENDIF}
+{$ENDIF}
+// 2003.03.09 <-
+
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		Compiler Options required to compile this library
+// Compiler Options required to compile this library
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 {$A+,B-,H+,J+,K-,M-,T-,X+}
-
 // Debug control - You can safely change these settings
 {$IFDEF DEBUG}
-  {$C+}	// ASSERTIONS
-  {$O-}	// OPTIMIZATION
-  {$Q+}	// OVERFLOWCHECKS
-  {$R+}	// RANGECHECKS
+{$C+}	// ASSERTIONS
+{$O-}	// OPTIMIZATION
+{$Q+}	// OVERFLOWCHECKS
+{$R+}	// RANGECHECKS
 {$ELSE}
-  {$C-}	// ASSERTIONS
-  {$IFDEF GIF_NOSAFETY}
-    {$Q-}// OVERFLOWCHECKS
-    {$R-}// RANGECHECKS
-  {$ENDIF}
+{$C-}	// ASSERTIONS
+{$IFDEF GIF_NOSAFETY}
+{$Q-}// OVERFLOWCHECKS
+{$R-}// RANGECHECKS
 {$ENDIF}
-
+{$ENDIF}
 // Special options for Time2Help parser
-{$ifdef TIME2HELP}
+{$IFDEF TIME2HELP}
 {$UNDEF PIXELFORMAT_TOO_SLOW}
-{$endif}
+{$ENDIF}
+/// /////////////////////////////////////////////////////////////////////////////
+//
+// External dependecies
+//
+/// /////////////////////////////////////////////////////////////////////////////
+  uses sysutils, Windows, Graphics, Classes;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			External dependecies
+// TGIFImage library version
 //
-////////////////////////////////////////////////////////////////////////////////
-uses
-  sysutils,
-  Windows,
-  Graphics,
-  Classes;
-
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFImage library version
-//
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
-  GIFVersion		= $0202;
-  GIFVersionMajor	= 2;
-  GIFVersionMinor	= 2;
-  GIFVersionRelease	= 5;
+  GIFVersion = $0202;
+  GIFVersionMajor = 2;
+  GIFVersionMinor = 2;
+  GIFVersionRelease = 5;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			Misc constants and support types
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Misc constants and support types
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
 const
-  GIFMaxColors	= 256;			// Max number of colors supported by GIF
-  					// Don't bother changing this value!
+  GIFMaxColors = 256; // Max number of colors supported by GIF
+  // Don't bother changing this value!
 
-  BitmapAllocationThreshold = 500000;	// Bitmap pixel count limit at which
-  					// a newly allocated bitmap will be
-                                        // converted to 1 bit format before
-                                        // being resized and converted to 8 bit.
+  BitmapAllocationThreshold = 500000; // Bitmap pixel count limit at which
+  // a newly allocated bitmap will be
+  // converted to 1 bit format before
+  // being resized and converted to 8 bit.
 
 var
-{$IFDEF FAST_AS_HELL}
-  GIFDelayExp: integer = 10;		// Delay multiplier in mS.
-{$ELSE}
-  GIFDelayExp: integer = 12;		// Delay multiplier in mS. Tweaked.
-{$ENDIF}
-					// * GIFDelayExp:
-  					// The following delay values should all
-                                        // be multiplied by this value to
-                                        // calculate the effective time (in mS).
-                                        // According to the GIF specs, this
-                                        // value should be 10.
-                                        // Since our paint routines are much
-                                        // faster than Mozilla's, you might need
-                                        // to increase this value if your
-                                        // animations loops too fast. The
-                                        // optimal value is impossible to
-                                        // determine since it depends on the
-                                        // speed of the CPU, the viceo card,
-                                        // memory and many other factors.
-
-  GIFDefaultDelay: integer = 10;	// * GIFDefaultDelay:
-  					// Default animation delay.
-  					// This value is used if no GCE is
-                                        // defined.
-                                        // (10 = 100 mS)
 
 {$IFDEF FAST_AS_HELL}
-  GIFMinimumDelay: integer = 1;		// Minimum delay (from Mozilla source).
-  					// (1 = 10 mS)
+  GIFDelayExp: integer = 10; // Delay multiplier in mS.
 {$ELSE}
-  GIFMinimumDelay: integer = 3;		// Minimum delay - Tweaked.
+  GIFDelayExp: integer = 12; // Delay multiplier in mS. Tweaked.
 {$ENDIF}
-					// * GIFMinimumDelay:
-					// The minumum delay used in the Mozilla
-                                        // source is 10mS. This corresponds to a
-                                        // value of 1. However, since our paint
-                                        // routines are much faster than
-                                        // Mozilla's, a value of 3 or 4 gives
-                                        // better results.
+  // * GIFDelayExp:
+  // The following delay values should all
+  // be multiplied by this value to
+  // calculate the effective time (in mS).
+  // According to the GIF specs, this
+  // value should be 10.
+  // Since our paint routines are much
+  // faster than Mozilla's, you might need
+  // to increase this value if your
+  // animations loops too fast. The
+  // optimal value is impossible to
+  // determine since it depends on the
+  // speed of the CPU, the viceo card,
+  // memory and many other factors.
 
-  GIFMaximumDelay: integer = 1000;	// * GIFMaximumDelay:
-  					// Maximum delay when painter is running
-  					// in main thread (goAsync is not set).
-                                        // This value guarantees that a very
-                                        // long and slow GIF does not hang the
-                                        // system.
-                                        // (1000 = 10000 mS = 10 Seconds)
+  GIFDefaultDelay: integer = 10; // * GIFDefaultDelay:
+  // Default animation delay.
+  // This value is used if no GCE is
+  // defined.
+  // (10 = 100 mS)
+
+{$IFDEF FAST_AS_HELL}
+  GIFMinimumDelay: integer = 1; // Minimum delay (from Mozilla source).
+  // (1 = 10 mS)
+{$ELSE}
+  GIFMinimumDelay: integer = 3; // Minimum delay - Tweaked.
+{$ENDIF}
+  // * GIFMinimumDelay:
+  // The minumum delay used in the Mozilla
+  // source is 10mS. This corresponds to a
+  // value of 1. However, since our paint
+  // routines are much faster than
+  // Mozilla's, a value of 3 or 4 gives
+  // better results.
+
+  GIFMaximumDelay: integer = 1000; // * GIFMaximumDelay:
+  // Maximum delay when painter is running
+  // in main thread (goAsync is not set).
+  // This value guarantees that a very
+  // long and slow GIF does not hang the
+  // system.
+  // (1000 = 10000 mS = 10 Seconds)
 
 type
   TGIFVersion = (gvUnknown, gv87a, gv89a);
-  TGIFVersionRec = array[0..2] of char;
+  TGIFVersionRec = array [0 .. 2] of AnsiChar;
 
 const
-  GIFVersions : array[gv87a..gv89a] of TGIFVersionRec = ('87a', '89a');
+  GIFVersions: array [gv87a .. gv89a] of TGIFVersionRec = ('87a', '89a');
 
 type
   // TGIFImage mostly throws exceptions of type GIFException
@@ -349,14 +529,15 @@ type
   // Severity level as indicated in the Warning methods and the OnWarning event
   TGIFSeverity = (gsInfo, gsWarning, gsError);
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			Delphi 2.x support
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Delphi 2.x support
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
 {$IFDEF VER9x}
-// Delphi 2 doesn't support TBitmap.PixelFormat
+  // Delphi 2 doesn't support TBitmap.PixelFormat
 {$DEFINE PIXELFORMAT_TOO_SLOW}
+
 type
   // TThreadList from Delphi 3 classes.pas
   TThreadList = class
@@ -368,7 +549,7 @@ type
     destructor Destroy; override;
     procedure Add(Item: Pointer);
     procedure Clear;
-    function  LockList: TList;
+    function LockList: TList;
     procedure Remove(Item: Pointer);
     procedure UnlockList;
   end;
@@ -381,6 +562,7 @@ type
 
   // From Delphi 3 windows.pas
   PMaxLogPalette = ^TMaxLogPalette;
+
   TMaxLogPalette = packed record
     palVersion: Word;
     palNumEntries: Word;
@@ -389,27 +571,27 @@ type
 
   // From Delphi 3 graphics.pas. Used by the D3 TGraphic class.
   TProgressStage = (psStarting, psRunning, psEnding);
-  TProgressEvent = procedure (Sender: TObject; Stage: TProgressStage;
-    PercentDone: Byte; RedrawNow: Boolean; const R: TRect; const Msg: string) of object;
+  TProgressEvent = procedure(Sender: TObject; Stage: TProgressStage; PercentDone: Byte; RedrawNow: Boolean; const R: TRect;
+    const Msg: string) of object;
 
   // From Delphi 3 windows.pas
   PRGBTriple = ^TRGBTriple;
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			Forward declarations
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Forward declarations
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFImage = class;
   TGIFSubImage = class;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFItem
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFItem
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFItem = class(TPersistent)
   private
     FGIFImage: TGIFImage;
@@ -427,79 +609,80 @@ type
     property Image: TGIFImage read FGIFImage;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFList
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFList
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFList = class(TPersistent)
   private
     FItems: TList;
     FImage: TGIFImage;
   protected
-    function GetItem(Index: Integer): TGIFItem;
-    procedure SetItem(Index: Integer; Item: TGIFItem);
-    function GetCount: Integer;
+    function GetItem(Index: integer): TGIFItem;
+    procedure SetItem(Index: integer; Item: TGIFItem);
+    function GetCount: integer;
     procedure Warning(Severity: TGIFSeverity; Message: string); virtual;
   public
     constructor Create(Image: TGIFImage);
     destructor Destroy; override;
 
-    function Add(Item: TGIFItem): Integer;
+    function Add(Item: TGIFItem): integer;
     procedure Clear;
-    procedure Delete(Index: Integer);
-    procedure Exchange(Index1, Index2: Integer);
+    procedure Delete(Index: integer);
+    procedure Exchange(Index1, Index2: integer);
     function First: TGIFItem;
-    function IndexOf(Item: TGIFItem): Integer;
-    procedure Insert(Index: Integer; Item: TGIFItem);
+    function IndexOf(Item: TGIFItem): integer;
+    procedure Insert(Index: integer; Item: TGIFItem);
     function Last: TGIFItem;
-    procedure Move(CurIndex, NewIndex: Integer);
-    function Remove(Item: TGIFItem): Integer;
+    procedure Move(CurIndex, NewIndex: integer);
+    function Remove(Item: TGIFItem): integer;
     procedure SaveToStream(Stream: TStream); virtual;
     procedure LoadFromStream(Stream: TStream; Parent: TObject); virtual; abstract;
 
-    property Items[Index: Integer]: TGIFItem read GetItem write SetItem; default;
-    property Count: Integer read GetCount;
+    property Items[index: integer]: TGIFItem read GetItem write SetItem; default;
+    property Count: integer read GetCount;
     property List: TList read FItems;
     property Image: TGIFImage read FImage;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFColorMap
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFColorMap
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   // One way to do it:
-  //  TBaseColor = (bcRed, bcGreen, bcBlue);
-  //  TGIFColor = array[bcRed..bcBlue] of BYTE;
+  // TBaseColor = (bcRed, bcGreen, bcBlue);
+  // TGIFColor = array[bcRed..bcBlue] of BYTE;
   // Another way:
   TGIFColor = packed record
-    Red: byte;
-    Green: byte;
-    Blue: byte;
+    Red: Byte;
+    Green: Byte;
+    Blue: Byte;
   end;
 
-  TColorMap = packed array[0..GIFMaxColors-1] of TGIFColor;
+  TColorMap = packed array [0 .. GIFMaxColors - 1] of TGIFColor;
   PColorMap = ^TColorMap;
 
   TUsageCount = record
-    Count		: integer;	// # of pixels using color index
-    Index		: integer;	// Color index
+    Count: integer; // # of pixels using color index
+    Index: integer; // Color index
   end;
-  TColormapHistogram = array[0..255] of TUsageCount;
-  TColormapReverse = array[0..255] of byte;
+
+  TColormapHistogram = array [0 .. 255] of TUsageCount;
+  TColormapReverse = array [0 .. 255] of Byte;
 
   TGIFColorMap = class(TPersistent)
   private
-    FColorMap		: PColorMap;
-    FCount		: integer;
-    FCapacity		: integer;
-    FOptimized		: boolean;
+    FColorMap: PColorMap;
+    FCount: integer;
+    FCapacity: integer;
+    FOptimized: Boolean;
   protected
     function GetColor(Index: integer): TColor;
     procedure SetColor(Index: integer; Value: TColor);
     function GetBitsPerPixel: integer;
-    function DoOptimize: boolean;
+    function DoOptimize: Boolean;
     procedure SetCapacity(Size: integer);
     procedure Warning(Severity: TGIFSeverity; Message: string); virtual; abstract;
     procedure BuildHistogram(var Histogram: TColormapHistogram); virtual; abstract;
@@ -518,43 +701,43 @@ type
     function AddUnique(Color: TColor): integer;
     procedure Delete(Index: integer);
     procedure Clear;
-    function Optimize: boolean; virtual; abstract;
+    function Optimize: Boolean; virtual; abstract;
     procedure Changed; virtual; abstract;
     procedure ImportPalette(Palette: HPalette);
-    procedure ImportColorTable(Pal: pointer; Count: integer);
+    procedure ImportColorTable(Pal: Pointer; Count: integer);
     procedure ImportDIBColors(Handle: HDC);
     procedure ImportColorMap(Map: TColorMap; Count: integer);
     function ExportPalette: HPalette;
-    property Colors[Index: integer]: TColor read GetColor write SetColor; default;
+    property Colors[index: integer]: TColor read GetColor write SetColor; default;
     property Data: PColorMap read FColorMap;
     property Count: integer read FCount;
-    property Optimized: boolean read FOptimized write FOptimized;
+    property Optimized: Boolean read FOptimized write FOptimized;
     property BitsPerPixel: integer read GetBitsPerPixel;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFHeader
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFHeader
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TLogicalScreenDescriptor = packed record
-    ScreenWidth: word;              { logical screen width }
-    ScreenHeight: word;             { logical screen height }
-    PackedFields: byte;             { packed fields }
-    BackgroundColorIndex: byte;     { index to global color table }
-    AspectRatio: byte;              { actual ratio = (AspectRatio + 15) / 64 }
+    ScreenWidth: Word; { logical screen width }
+    ScreenHeight: Word; { logical screen height }
+    PackedFields: Byte; { packed fields }
+    BackgroundColorIndex: Byte; { index to global color table }
+    AspectRatio: Byte; { actual ratio = (AspectRatio + 15) / 64 }
   end;
 
   TGIFHeader = class(TGIFItem)
   private
     FLogicalScreenDescriptor: TLogicalScreenDescriptor;
-    FColorMap		: TGIFColorMap;
+    FColorMap: TGIFColorMap;
     procedure Prepare;
   protected
     function GetVersion: TGIFVersion; override;
     function GetBackgroundColor: TColor;
     procedure SetBackgroundColor(Color: TColor);
-    procedure SetBackgroundColorIndex(Index: BYTE);
+    procedure SetBackgroundColorIndex(Index: Byte);
     function GetBitsPerPixel: integer;
     function GetColorResolution: integer;
   public
@@ -565,27 +748,22 @@ type
     procedure LoadFromStream(Stream: TStream); override;
     procedure Clear;
     property Version: TGIFVersion read GetVersion;
-    property Width: WORD read FLogicalScreenDescriptor.ScreenWidth
-                         write FLogicalScreenDescriptor.ScreenWidth;
-    property Height: WORD read FLogicalScreenDescriptor.ScreenHeight
-                          write FLogicalScreenDescriptor.Screenheight;
-    property BackgroundColorIndex: BYTE read FLogicalScreenDescriptor.BackgroundColorIndex
-                                        write SetBackgroundColorIndex;
-    property BackgroundColor: TColor read GetBackgroundColor
-                                     write SetBackgroundColor;
-    property AspectRatio: BYTE read FLogicalScreenDescriptor.AspectRatio
-                               write FLogicalScreenDescriptor.AspectRatio;
+    property Width: Word read FLogicalScreenDescriptor.ScreenWidth write FLogicalScreenDescriptor.ScreenWidth;
+    property Height: Word read FLogicalScreenDescriptor.ScreenHeight write FLogicalScreenDescriptor.ScreenHeight;
+    property BackgroundColorIndex: Byte read FLogicalScreenDescriptor.BackgroundColorIndex write SetBackgroundColorIndex;
+    property BackgroundColor: TColor read GetBackgroundColor write SetBackgroundColor;
+    property AspectRatio: Byte read FLogicalScreenDescriptor.AspectRatio write FLogicalScreenDescriptor.AspectRatio;
     property ColorMap: TGIFColorMap read FColorMap;
     property BitsPerPixel: integer read GetBitsPerPixel;
     property ColorResolution: integer read GetColorResolution;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFExtension
-//
-////////////////////////////////////////////////////////////////////////////////
-  TGIFExtensionType = BYTE;
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
+  TGIFExtensionType = Byte;
   TGIFExtension = class;
   TGIFExtensionClass = class of TGIFExtension;
 
@@ -598,12 +776,13 @@ type
     function GetExtensionType: TGIFExtensionType; virtual; abstract;
     function GetVersion: TGIFVersion; override;
     function DoReadFromStream(Stream: TStream): TGIFExtensionType;
-    class procedure RegisterExtension(elabel: BYTE; eClass: TGIFExtensionClass);
+    class procedure RegisterExtension(elabel: Byte; eClass: TGIFExtensionClass);
     class function FindExtension(Stream: TStream): TGIFExtensionClass;
     class function FindSubExtension(Stream: TStream): TGIFExtensionClass; virtual;
   public
-     // Ignore compiler warning about hiding base class constructor
-    constructor Create(ASubImage: TGIFSubImage); {$IFDEF VER12_PLUS} reintroduce; {$ENDIF} virtual;
+    // Ignore compiler warning about hiding base class constructor
+    constructor Create(ASubImage: TGIFSubImage);
+{$IFDEF VER12_PLUS} reintroduce; {$ENDIF} virtual;
     destructor Destroy; override;
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
@@ -611,49 +790,49 @@ type
     property SubImage: TGIFSubImage read FSubImage;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//			TGIFSubImage
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFSubImage
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFExtensionList = class(TGIFList)
   protected
-    function GetExtension(Index: Integer): TGIFExtension;
-    procedure SetExtension(Index: Integer; Extension: TGIFExtension);
+    function GetExtension(Index: integer): TGIFExtension;
+    procedure SetExtension(Index: integer; Extension: TGIFExtension);
   public
     procedure LoadFromStream(Stream: TStream; Parent: TObject); override;
-    property Extensions[Index: Integer]: TGIFExtension read GetExtension write SetExtension; default;
+    property Extensions[index: integer]: TGIFExtension read GetExtension write SetExtension; default;
   end;
 
   TImageDescriptor = packed record
-    Separator: byte;	{ fixed value of ImageSeparator }
-    Left: word;		{ Column in pixels in respect to left edge of logical screen }
-    Top: word;		{ row in pixels in respect to top of logical screen }
-    Width: word;	{ width of image in pixels }
-    Height: word;	{ height of image in pixels }
-    PackedFields: byte;	{ Bit fields }
+    Separator: Byte; { fixed value of ImageSeparator }
+    Left: Word; { Column in pixels in respect to left edge of logical screen }
+    Top: Word; { row in pixels in respect to top of logical screen }
+    Width: Word; { width of image in pixels }
+    Height: Word; { height of image in pixels }
+    PackedFields: Byte; { Bit fields }
   end;
 
   TGIFSubImage = class(TGIFItem)
   private
-    FBitmap		: TBitmap;
-    FMask		: HBitmap;
-    FNeedMask		: boolean;
-    FLocalPalette	: HPalette;
-    FData		: PChar;
-    FDataSize		: integer;
-    FColorMap		: TGIFColorMap;
-    FImageDescriptor	: TImageDescriptor;
-    FExtensions		: TGIFExtensionList;
-    FTransparent	: boolean;
-    FGCE		: TGIFGraphicControlExtension;
+    FBitmap: TBitmap;
+    FMask: HBitmap;
+    FNeedMask: Boolean;
+    FLocalPalette: HPalette;
+    FData: PAnsiChar;
+    FDataSize: integer;
+    FColorMap: TGIFColorMap;
+    FImageDescriptor: TImageDescriptor;
+    FExtensions: TGIFExtensionList;
+    FTransparent: Boolean;
+    FGCE: TGIFGraphicControlExtension;
     procedure Prepare;
     procedure Compress(Stream: TStream);
     procedure Decompress(Stream: TStream);
   protected
     function GetVersion: TGIFVersion; override;
-    function GetInterlaced: boolean;
-    procedure SetInterlaced(Value: boolean);
+    function GetInterlaced: Boolean;
+    procedure SetInterlaced(Value: Boolean);
     function GetColorResolution: integer;
     function GetBitsPerPixel: integer;
     procedure AssignTo(Dest: TPersistent); override;
@@ -663,26 +842,29 @@ type
     procedure SetBitmap(Value: TBitmap);
     procedure FreeMask;
     function GetEmpty: Boolean;
-    function GetPalette: HPALETTE;
+    function GetPalette: HPalette;
     procedure SetPalette(Value: HPalette);
     function GetActiveColorMap: TGIFColorMap;
     function GetBoundsRect: TRect;
     procedure SetBoundsRect(const Value: TRect);
     procedure DoSetBounds(ALeft, ATop, AWidth, AHeight: integer);
     function GetClientRect: TRect;
-    function GetPixel(x, y: integer): BYTE;
-    function GetScanline(y: integer): pointer;
+    function GetPixel(x, y: integer): Byte;
+    // 2006.10.09 ->
+    procedure SetPixel(x, y: integer; Value: Byte);
+    // 2006.10.09 <-
+    function GetScanline(y: integer): Pointer;
     procedure NewBitmap;
     procedure FreeBitmap;
     procedure NewImage;
     procedure FreeImage;
     procedure NeedImage;
     function ScaleRect(DestRect: TRect): TRect;
-    function HasMask: boolean;
-    function GetBounds(Index: integer): WORD;
-    procedure SetBounds(Index: integer; Value: WORD);
-    function GetHasBitmap: boolean;
-    procedure SetHasBitmap(Value: boolean);
+    function HasMask: Boolean;
+    function GetBounds(Index: integer): Word;
+    procedure SetBounds(Index: integer; Value: Word);
+    function GetHasBitmap: Boolean;
+    procedure SetHasBitmap(Value: Boolean);
   public
     constructor Create(GIFImage: TGIFImage); override;
     destructor Destroy; override;
@@ -690,23 +872,21 @@ type
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
     procedure Assign(Source: TPersistent); override;
-    procedure Draw(ACanvas: TCanvas; const Rect: TRect;
-      DoTransparent, DoTile: boolean);
-    procedure StretchDraw(ACanvas: TCanvas; const Rect: TRect;
-      DoTransparent, DoTile: boolean);
+    procedure Draw(ACanvas: TCanvas; const Rect: TRect; DoTransparent, DoTile: Boolean);
+    procedure StretchDraw(ACanvas: TCanvas; const Rect: TRect; DoTransparent, DoTile: Boolean);
     procedure Crop;
     procedure Merge(Previous: TGIFSubImage);
-    property HasBitmap: boolean read GetHasBitmap write SetHasBitmap;
-    property Left: WORD index 1 read GetBounds write SetBounds;
-    property Top: WORD index 2 read GetBounds write SetBounds;
-    property Width: WORD index 3 read GetBounds write SetBounds;
-    property Height: WORD index 4 read GetBounds write SetBounds;
+    property HasBitmap: Boolean read GetHasBitmap write SetHasBitmap;
+    property Left: Word index 1 read GetBounds write SetBounds;
+    property Top: Word index 2 read GetBounds write SetBounds;
+    property Width: Word index 3 read GetBounds write SetBounds;
+    property Height: Word index 4 read GetBounds write SetBounds;
     property BoundsRect: TRect read GetBoundsRect write SetBoundsRect;
     property ClientRect: TRect read GetClientRect;
-    property Interlaced: boolean read GetInterlaced write SetInterlaced;
+    property Interlaced: Boolean read GetInterlaced write SetInterlaced;
     property ColorMap: TGIFColorMap read FColorMap;
     property ActiveColorMap: TGIFColorMap read GetActiveColorMap;
-    property Data: PChar read FData;
+    property Data: PAnsiChar read FData;
     property DataSize: integer read FDataSize;
     property Extensions: TGIFExtensionList read FExtensions;
     property Version: TGIFVersion read GetVersion;
@@ -714,34 +894,37 @@ type
     property BitsPerPixel: integer read GetBitsPerPixel;
     property Bitmap: TBitmap read GetBitmap write SetBitmap;
     property Mask: HBitmap read FMask;
-    property Palette: HPALETTE read GetPalette write SetPalette;
-    property Empty: boolean read GetEmpty;
-    property Transparent: boolean read FTransparent;
+    property Palette: HPalette read GetPalette write SetPalette;
+    property Empty: Boolean read GetEmpty;
+    property Transparent: Boolean read FTransparent;
     property GraphicControlExtension: TGIFGraphicControlExtension read FGCE;
-    property Pixels[x, y: integer]: BYTE read GetPixel;
-    property Scanline[y: integer]: pointer read GetScanline;
+    // 2006.10.09 ->
+    // property Pixels[x, y: integer]: BYTE read GetPixel;
+    property Pixels[x, y: integer]: Byte read GetPixel write SetPixel;
+    // 2006.10.09 <-
+    property Scanline[y: integer]: Pointer read GetScanline;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFTrailer
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFTrailer
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFTrailer = class(TGIFItem)
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFGraphicControlExtension
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFGraphicControlExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   // Graphic Control Extension block a.k.a GCE
   TGIFGCERec = packed record
-    BlockSize: byte;         { should be 4 }
+    BlockSize: Byte; { should be 4 }
     PackedFields: Byte;
-    DelayTime: Word;         { in centiseconds }
+    DelayTime: Word; { in centiseconds }
     TransparentColorIndex: Byte;
     Terminator: Byte;
   end;
@@ -753,16 +936,16 @@ type
     FGCExtension: TGIFGCERec;
   protected
     function GetExtensionType: TGIFExtensionType; override;
-    function GetTransparent: boolean;
-    procedure SetTransparent(Value: boolean);
+    function GetTransparent: Boolean;
+    procedure SetTransparent(Value: Boolean);
     function GetTransparentColor: TColor;
     procedure SetTransparentColor(Color: TColor);
-    function GetTransparentColorIndex: BYTE;
-    procedure SetTransparentColorIndex(Value: BYTE);
-    function GetDelay: WORD;
-    procedure SetDelay(Value: WORD);
-    function GetUserInput: boolean;
-    procedure SetUserInput(Value: boolean);
+    function GetTransparentColorIndex: Byte;
+    procedure SetTransparentColorIndex(Value: Byte);
+    function GetDelay: Word;
+    procedure SetDelay(Value: Word);
+    function GetUserInput: Boolean;
+    procedure SetUserInput(Value: Boolean);
     function GetDisposal: TDisposalMethod;
     procedure SetDisposal(Value: TDisposalMethod);
 
@@ -771,70 +954,68 @@ type
     destructor Destroy; override;
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
-    property Delay: WORD read GetDelay write SetDelay;
-    property Transparent: boolean read GetTransparent write SetTransparent;
-    property TransparentColorIndex: BYTE read GetTransparentColorIndex
-                                            write SetTransparentColorIndex;
+    property Delay: Word read GetDelay write SetDelay;
+    property Transparent: Boolean read GetTransparent write SetTransparent;
+    property TransparentColorIndex: Byte read GetTransparentColorIndex write SetTransparentColorIndex;
     property TransparentColor: TColor read GetTransparentColor write SetTransparentColor;
-    property UserInput: boolean read GetUserInput write SetUserInput;
+    property UserInput: Boolean read GetUserInput write SetUserInput;
     property Disposal: TDisposalMethod read GetDisposal write SetDisposal;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFTextExtension
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFTextExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFPlainTextExtensionRec = packed record
-    BlockSize: byte;         { should be 12 }
+    BlockSize: Byte; { should be 12 }
     Left, Top, Width, Height: Word;
     CellWidth, CellHeight: Byte;
-    TextFGColorIndex,
-    TextBGColorIndex: Byte;
+    TextFGColorIndex, TextBGColorIndex: Byte;
   end;
 
   TGIFTextExtension = class(TGIFExtension)
   private
-    FText		: TStrings;
-    FPlainTextExtension	: TGIFPlainTextExtensionRec;
+    FText: TStrings;
+    FPlainTextExtension: TGIFPlainTextExtensionRec;
   protected
     function GetExtensionType: TGIFExtensionType; override;
     function GetForegroundColor: TColor;
     procedure SetForegroundColor(Color: TColor);
     function GetBackgroundColor: TColor;
     procedure SetBackgroundColor(Color: TColor);
-    function GetBounds(Index: integer): WORD;
-    procedure SetBounds(Index: integer; Value: WORD);
-    function GetCharWidthHeight(Index: integer): BYTE;
-    procedure SetCharWidthHeight(Index: integer; Value: BYTE);
-    function GetColorIndex(Index: integer): BYTE;
-    procedure SetColorIndex(Index: integer; Value: BYTE);
+    function GetBounds(Index: integer): Word;
+    procedure SetBounds(Index: integer; Value: Word);
+    function GetCharWidthHeight(Index: integer): Byte;
+    procedure SetCharWidthHeight(Index: integer; Value: Byte);
+    function GetColorIndex(Index: integer): Byte;
+    procedure SetColorIndex(Index: integer; Value: Byte);
   public
     constructor Create(ASubImage: TGIFSubImage); override;
     destructor Destroy; override;
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
-    property Left: WORD index 1 read GetBounds write SetBounds;
-    property Top: WORD index 2 read GetBounds write SetBounds;
-    property GridWidth: WORD index 3 read GetBounds write SetBounds;
-    property GridHeight: WORD index 4 read GetBounds write SetBounds;
-    property CharWidth: BYTE index 1 read GetCharWidthHeight write SetCharWidthHeight;
-    property CharHeight: BYTE index 2 read GetCharWidthHeight write SetCharWidthHeight;
-    property ForegroundColorIndex: BYTE index 1 read GetColorIndex write SetColorIndex;
+    property Left: Word index 1 read GetBounds write SetBounds;
+    property Top: Word index 2 read GetBounds write SetBounds;
+    property GridWidth: Word index 3 read GetBounds write SetBounds;
+    property GridHeight: Word index 4 read GetBounds write SetBounds;
+    property CharWidth: Byte index 1 read GetCharWidthHeight write SetCharWidthHeight;
+    property CharHeight: Byte index 2 read GetCharWidthHeight write SetCharWidthHeight;
+    property ForegroundColorIndex: Byte index 1 read GetColorIndex write SetColorIndex;
     property ForegroundColor: TColor read GetForegroundColor;
-    property BackgroundColorIndex: BYTE  index 2 read GetColorIndex write SetColorIndex;
+    property BackgroundColorIndex: Byte index 2 read GetColorIndex write SetColorIndex;
     property BackgroundColor: TColor read GetBackgroundColor;
     property Text: TStrings read FText write FText;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFCommentExtension
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFCommentExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFCommentExtension = class(TGIFExtension)
   private
-    FText		: TStrings;
+    FText: TStrings;
   protected
     function GetExtensionType: TGIFExtensionType; override;
   public
@@ -845,16 +1026,17 @@ type
     property Text: TStrings read FText;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFApplicationExtension
-//
-////////////////////////////////////////////////////////////////////////////////
-  TGIFIdentifierCode = array[0..7] of char;
-  TGIFAuthenticationCode = array[0..2] of char;
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFApplicationExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
+  TGIFIdentifierCode = array [0 .. 7] of AnsiChar;
+  TGIFAuthenticationCode = array [0 .. 2] of AnsiChar;
+
   TGIFApplicationRec = packed record
-    Identifier		: TGIFIdentifierCode;
-    Authentication	: TGIFAuthenticationCode;
+    Identifier: TGIFIdentifierCode;
+    Authentication: TGIFAuthenticationCode;
   end;
 
   TGIFApplicationExtension = class;
@@ -862,13 +1044,13 @@ type
 
   TGIFApplicationExtension = class(TGIFExtension)
   private
-    FIdent		: TGIFApplicationRec;
-    function GetAuthentication: string;
-    function GetIdentifier: string;
+    FIdent: TGIFApplicationRec;
+    function GetAuthentication: AnsiString;
+    function GetIdentifier: AnsiString;
   protected
     function GetExtensionType: TGIFExtensionType; override;
-    procedure SetAuthentication(const Value: string);
-    procedure SetIdentifier(const Value: string);
+    procedure SetAuthentication(const Value: AnsiString);
+    procedure SetIdentifier(const Value: AnsiString);
     procedure SaveData(Stream: TStream); virtual; abstract;
     procedure LoadData(Stream: TStream); virtual; abstract;
   public
@@ -878,31 +1060,31 @@ type
     procedure LoadFromStream(Stream: TStream); override;
     class procedure RegisterExtension(eIdent: TGIFApplicationRec; eClass: TGIFAppExtensionClass);
     class function FindSubExtension(Stream: TStream): TGIFExtensionClass; override;
-    property Identifier: string read GetIdentifier write SetIdentifier;
-    property Authentication: string read GetAuthentication write SetAuthentication;
+    property Identifier: AnsiString read GetIdentifier write SetIdentifier;
+    property Authentication: AnsiString read GetAuthentication write SetAuthentication;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFUnknownAppExtension
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFUnknownAppExtension
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFBlock = class(TObject)
   private
-    FSize		: BYTE;
-    FData		: pointer;
+    FSize: Byte;
+    FData: Pointer;
   public
     constructor Create(ASize: integer);
     destructor Destroy; override;
     procedure SaveToStream(Stream: TStream);
     procedure LoadFromStream(Stream: TStream);
-    property Size: BYTE read FSize;
-    property Data: pointer read FData;
+    property Size: Byte read FSize;
+    property Data: Pointer read FData;
   end;
 
   TGIFUnknownAppExtension = class(TGIFApplicationExtension)
   private
-    FBlocks		: TList;
+    FBlocks: TList;
   protected
     procedure SaveData(Stream: TStream); override;
     procedure LoadData(Stream: TStream); override;
@@ -912,91 +1094,87 @@ type
     property Blocks: TList read FBlocks;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFAppExtNSLoop
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFAppExtNSLoop
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFAppExtNSLoop = class(TGIFApplicationExtension)
   private
-    FLoops		: WORD;
-    FBufferSize		: DWORD;
+    FLoops: Word;
+    FBufferSize: DWORD;
   protected
     procedure SaveData(Stream: TStream); override;
     procedure LoadData(Stream: TStream); override;
   public
     constructor Create(ASubImage: TGIFSubImage); override;
-    property Loops: WORD read FLoops write FLoops;
+    property Loops: Word read FLoops write FLoops;
     property BufferSize: DWORD read FBufferSize write FBufferSize;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      TGIFImage
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // TGIFImage
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   TGIFImageList = class(TGIFList)
   protected
-    function GetImage(Index: Integer): TGIFSubImage;
-    procedure SetImage(Index: Integer; SubImage: TGIFSubImage);
+    function GetImage(Index: integer): TGIFSubImage;
+    procedure SetImage(Index: integer; SubImage: TGIFSubImage);
   public
     procedure LoadFromStream(Stream: TStream; Parent: TObject); override;
     procedure SaveToStream(Stream: TStream); override;
-    property SubImages[Index: Integer]: TGIFSubImage read GetImage write SetImage; default;
+    property SubImages[index: integer]: TGIFSubImage read GetImage write SetImage; default;
   end;
 
   // Compression algorithms
-  TGIFCompression =
-    (gcLZW,			// Normal LZW compression
-     gcRLE			// GIF compatible RLE compression
+  TGIFCompression = (gcLZW, // Normal LZW compression
+    gcRLE // GIF compatible RLE compression
     );
 
   // Color reduction methods
-  TColorReduction =
-    (rmNone,			// Do not perform color reduction
-     rmWindows20,		// Reduce to the Windows 20 color system palette
-     rmWindows256,		// Reduce to the Windows 256 color halftone palette (Only works in 256 color display mode)
-     rmWindowsGray,		// Reduce to the Windows 4 grayscale colors
-     rmMonochrome,		// Reduce to a black/white monochrome palette
-     rmGrayScale,		// Reduce to a uniform 256 shade grayscale palette
-     rmNetscape,		// Reduce to the Netscape 216 color palette
-     rmQuantize,		// Reduce to optimal 2^n color palette
-     rmQuantizeWindows,		// Reduce to optimal 256 color windows palette
-     rmPalette			// Reduce to custom palette
+  TColorReduction = (rmNone, // Do not perform color reduction
+    rmWindows20, // Reduce to the Windows 20 color system palette
+    rmWindows256,
+    // Reduce to the Windows 256 color halftone palette (Only works in 256 color display mode)
+    rmWindowsGray, // Reduce to the Windows 4 grayscale colors
+    rmMonochrome, // Reduce to a black/white monochrome palette
+    rmGrayScale, // Reduce to a uniform 256 shade grayscale palette
+    rmNetscape, // Reduce to the Netscape 216 color palette
+    rmQuantize, // Reduce to optimal 2^n color palette
+    rmQuantizeWindows, // Reduce to optimal 256 color windows palette
+    rmPalette // Reduce to custom palette
     );
-  TDitherMode =
-    (dmNearest,			// Nearest color matching w/o error correction
-     dmFloydSteinberg,		// Floyd Steinberg Error Diffusion dithering
-     dmStucki,			// Stucki Error Diffusion dithering
-     dmSierra,			// Sierra Error Diffusion dithering
-     dmJaJuNI,			// Jarvis, Judice & Ninke Error Diffusion dithering
-     dmSteveArche,		// Stevenson & Arche Error Diffusion dithering
-     dmBurkes			// Burkes Error Diffusion dithering
-     // dmOrdered,		// Ordered dither
+  TDitherMode = (dmNearest, // Nearest color matching w/o error correction
+    dmFloydSteinberg, // Floyd Steinberg Error Diffusion dithering
+    dmStucki, // Stucki Error Diffusion dithering
+    dmSierra, // Sierra Error Diffusion dithering
+    dmJaJuNI, // Jarvis, Judice & Ninke Error Diffusion dithering
+    dmSteveArche, // Stevenson & Arche Error Diffusion dithering
+    dmBurkes // Burkes Error Diffusion dithering
+    // dmOrdered,		// Ordered dither
     );
 
   // Optimization options
-  TGIFOptimizeOption =
-    (ooCrop,			// Crop animated GIF frames
-     ooMerge,			// Merge pixels of same color
-     ooCleanup,			// Remove comments and application extensions
-     ooColorMap,		// Sort color map by usage and remove unused entries
-     ooReduceColors		// Reduce color depth ***NOT IMPLEMENTED***
+  TGIFOptimizeOption = (ooCrop, // Crop animated GIF frames
+    ooMerge, // Merge pixels of same color
+    ooCleanup, // Remove comments and application extensions
+    ooColorMap, // Sort color map by usage and remove unused entries
+    ooReduceColors // Reduce color depth ***NOT IMPLEMENTED***
     );
   TGIFOptimizeOptions = set of TGIFOptimizeOption;
 
-  TGIFDrawOption =
-    (goAsync,			// Asyncronous draws (paint in thread)
-     goTransparent,		// Transparent draws
-     goAnimate,			// Animate draws
-     goLoop,			// Loop animations
-     goLoopContinously,		// Ignore loop count and loop forever
-     goValidateCanvas,		// Validate canvas in threaded paint ***NOT IMPLEMENTED***
-     goDirectDraw,		// Draw() directly on canvas
-     goClearOnLoop,		// Clear animation on loop
-     goTile,			// Tiled display
-     goDither,			// Dither to Netscape palette
-     goAutoDither		// Only dither on 256 color systems
+  TGIFDrawOption = (goAsync, // Asyncronous draws (paint in thread)
+    goTransparent, // Transparent draws
+    goAnimate, // Animate draws
+    goLoop, // Loop animations
+    goLoopContinously, // Ignore loop count and loop forever
+    goValidateCanvas, // Validate canvas in threaded paint ***NOT IMPLEMENTED***
+    goDirectDraw, // Draw() directly on canvas
+    goClearOnLoop, // Clear animation on loop
+    goTile, // Tiled display
+    goDither, // Dither to Netscape palette
+    goAutoDither // Only dither on 256 color systems
     );
   TGIFDrawOptions = set of TGIFDrawOption;
   // Note: if goAsync is not set then goDirectDraw should be set. Otherwise
@@ -1006,47 +1184,45 @@ type
 
   TGIFPainter = class(TThread)
   private
-    FImage		: TGIFImage;	// The TGIFImage that owns this painter
-    FCanvas		: TCanvas;	// Destination canvas
-    FRect		: TRect;	// Destination rect
-    FDrawOptions	: TGIFDrawOptions;// Paint options
-    FAnimationSpeed	: integer;	// Animation speed %
-    FActiveImage	: integer;	// Current frame
-    Disposal		,		// Used by synchronized paint
-    OldDisposal		: TDisposalMethod;// Used by synchronized paint
-    BackupBuffer	: TBitmap;	// Used by synchronized paint
-    FrameBuffer		: TBitmap;	// Used by synchronized paint
-    Background		: TBitmap;	// Used by synchronized paint
-    ValidateDC		: HDC;
-    DoRestart		: boolean;	// Flag used to restart animation
-    FStarted		: boolean;	// Flag used to signal start of paint
-    PainterRef		: PGIFPainter;	// Pointer to var referencing painter
-    FEventHandle	: THandle;	// Animation delay event
-    ExceptObject	: Exception;	// Eaten exception
-    ExceptAddress	: pointer;	// Eaten exceptions address
-    FEvent		: TNotifyEvent;	// Used by synchronized events
-    FOnStartPaint	: TNotifyEvent;
-    FOnPaint		: TNotifyEvent;
-    FOnAfterPaint	: TNotifyEvent;
-    FOnLoop		: TNotifyEvent;
-    FOnEndPaint		: TNotifyEvent;
-    procedure DoOnTerminate(Sender: TObject);// Sync. shutdown procedure
-    procedure DoSynchronize(Method: TThreadMethod);// Conditional sync stub
-{$ifdef SERIALIZE_RENDER}
-    procedure PrefetchBitmap;		// Sync. bitmap prefetch
-{$endif}
-    procedure DoPaintFrame;		// Sync. buffered paint procedure
-    procedure DoPaint;			// Sync. paint procedure
+    FImage: TGIFImage; // The TGIFImage that owns this painter
+    FCanvas: TCanvas; // Destination canvas
+    FRect: TRect; // Destination rect
+    FDrawOptions: TGIFDrawOptions; // Paint options
+    FAnimationSpeed: integer; // Animation speed %
+    FActiveImage: integer; // Current frame
+    Disposal, // Used by synchronized paint
+    OldDisposal: TDisposalMethod; // Used by synchronized paint
+    BackupBuffer: TBitmap; // Used by synchronized paint
+    FrameBuffer: TBitmap; // Used by synchronized paint
+    Background: TBitmap; // Used by synchronized paint
+    ValidateDC: HDC;
+    DoRestart: Boolean; // Flag used to restart animation
+    FStarted: Boolean; // Flag used to signal start of paint
+    PainterRef: PGIFPainter; // Pointer to var referencing painter
+    FEventHandle: THandle; // Animation delay event
+    ExceptObject: Exception; // Eaten exception
+    ExceptAddress: Pointer; // Eaten exceptions address
+    FEvent: TNotifyEvent; // Used by synchronized events
+    FOnStartPaint: TNotifyEvent;
+    FOnPaint: TNotifyEvent;
+    FOnAfterPaint: TNotifyEvent;
+    FOnLoop: TNotifyEvent;
+    FOnEndPaint: TNotifyEvent;
+    procedure DoOnTerminate(Sender: TObject); // Sync. shutdown procedure
+    procedure DoSynchronize(Method: TThreadMethod); // Conditional sync stub
+{$IFDEF SERIALIZE_RENDER}
+    procedure PrefetchBitmap; // Sync. bitmap prefetch
+{$ENDIF}
+    procedure DoPaintFrame; // Sync. buffered paint procedure
+    procedure DoPaint; // Sync. paint procedure
     procedure DoEvent;
-    procedure SetActiveImage(const Value: integer);// Sync. event procedure
+    procedure SetActiveImage(const Value: integer); // Sync. event procedure
   protected
     procedure Execute; override;
     procedure SetAnimationSpeed(Value: integer);
   public
-    constructor Create(AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect;
-      Options: TGIFDrawOptions);
-    constructor CreateRef(Painter: PGIFPainter; AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect;
-      Options: TGIFDrawOptions);
+    constructor Create(AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect; Options: TGIFDrawOptions);
+    constructor CreateRef(Painter: PGIFPainter; AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect; Options: TGIFDrawOptions);
     destructor Destroy; override;
     procedure Start;
     procedure Stop;
@@ -1056,13 +1232,13 @@ type
     property Rect: TRect read FRect write FRect;
     property DrawOptions: TGIFDrawOptions read FDrawOptions write FDrawOptions;
     property AnimationSpeed: integer read FAnimationSpeed write SetAnimationSpeed;
-    property Started: boolean read FStarted;
+    property Started: Boolean read FStarted;
     property ActiveImage: integer read FActiveImage write SetActiveImage;
     property OnStartPaint: TNotifyEvent read FOnStartPaint write FOnStartPaint;
     property OnPaint: TNotifyEvent read FOnPaint write FOnPaint;
     property OnAfterPaint: TNotifyEvent read FOnAfterPaint write FOnAfterPaint;
     property OnLoop: TNotifyEvent read FOnLoop write FOnLoop;
-    property OnEndPaint	: TNotifyEvent read FOnEndPaint	 write FOnEndPaint	;
+    property OnEndPaint: TNotifyEvent read FOnEndPaint write FOnEndPaint;
     property EventHandle: THandle read FEventHandle;
   end;
 
@@ -1070,56 +1246,62 @@ type
 
   TGIFImage = class(TGraphic)
   private
-    IsDrawing		: Boolean;
-    IsInsideGetPalette	: boolean;
-    FImages		: TGIFImageList;
-    FHeader		: TGIFHeader;
-    FGlobalPalette	: HPalette;
-    FPainters		: TThreadList;
-    FDrawOptions	: TGIFDrawOptions;
-    FColorReduction	: TColorReduction;
-    FReductionBits	: integer;
-    FDitherMode		: TDitherMode;
-    FCompression	: TGIFCompression;
-    FOnWarning		: TGIFWarning;
-    FBitmap		: TBitmap;
-    FDrawPainter	: TGIFPainter;
-    FThreadPriority	: TThreadPriority;
-    FAnimationSpeed	: integer;
+    IsDrawing: Boolean;
+    IsInsideGetPalette: Boolean;
+    FImages: TGIFImageList;
+    FHeader: TGIFHeader;
+    FGlobalPalette: HPalette;
+    FPainters: TThreadList;
+    FDrawOptions: TGIFDrawOptions;
+    FColorReduction: TColorReduction;
+    FReductionBits: integer;
+    FDitherMode: TDitherMode;
+    FCompression: TGIFCompression;
+    FOnWarning: TGIFWarning;
+    FBitmap: TBitmap;
+    FDrawPainter: TGIFPainter;
+    FThreadPriority: TThreadPriority;
+    FAnimationSpeed: integer;
+    FForceFrame: integer; // 2004.03.09
     FDrawBackgroundColor: TColor;
-    FOnStartPaint	: TNotifyEvent;
-    FOnPaint		: TNotifyEvent;
-    FOnAfterPaint	: TNotifyEvent;
-    FOnLoop		: TNotifyEvent;
-    FOnEndPaint		: TNotifyEvent;
+    FOnStartPaint: TNotifyEvent;
+    FOnPaint: TNotifyEvent;
+    FOnAfterPaint: TNotifyEvent;
+    FOnLoop: TNotifyEvent;
+    FOnEndPaint: TNotifyEvent;
 {$IFDEF VER9x}
-    FPaletteModified	: Boolean;
-    FOnProgress		: TProgressEvent;
+    FPaletteModified: Boolean;
+    FOnProgress: TProgressEvent;
 {$ENDIF}
+    function GetAnimate: Boolean; // 2002.07.07
+    procedure SetAnimate(const Value: Boolean); // 2002.07.07
+    procedure SetForceFrame(const Value: integer); // 2004.03.09
   protected
     // Obsolete: procedure Changed(Sender: TObject); {$IFDEF VER9x} virtual; {$ELSE} override; {$ENDIF}
-    function GetHeight: Integer; override;
-    procedure SetHeight(Value: Integer); override;
-    function GetWidth: Integer; override;
-    procedure SetWidth(Value: Integer); override;
+    function GetHeight: integer; override;
+    procedure SetHeight(Value: integer); override;
+    function GetWidth: integer; override;
+    procedure SetWidth(Value: integer); override;
     procedure AssignTo(Dest: TPersistent); override;
     function InternalPaint(Painter: PGIFPainter; ACanvas: TCanvas; const Rect: TRect; Options: TGIFDrawOptions): TGIFPainter;
     procedure Draw(ACanvas: TCanvas; const Rect: TRect); override;
     function Equals(Graphic: TGraphic): Boolean; override;
-    function GetPalette: HPALETTE; {$IFDEF VER9x} virtual; {$ELSE} override; {$ENDIF}
-    procedure SetPalette(Value: HPalette); {$IFDEF VER9x} virtual; {$ELSE} override; {$ENDIF}
+    function GetPalette: HPalette; {$IFDEF VER9x} virtual; {$ELSE} override;
+{$ENDIF}
+    procedure SetPalette(Value: HPalette); {$IFDEF VER9x} virtual;
+{$ELSE} override; {$ENDIF}
     function GetEmpty: Boolean; override;
     procedure WriteData(Stream: TStream); override;
     function GetIsTransparent: Boolean;
     function GetVersion: TGIFVersion;
     function GetColorResolution: integer;
     function GetBitsPerPixel: integer;
-    function GetBackgroundColorIndex: BYTE;
-    procedure SetBackgroundColorIndex(const Value: BYTE);
+    function GetBackgroundColorIndex: Byte;
+    procedure SetBackgroundColorIndex(const Value: Byte);
     function GetBackgroundColor: TColor;
     procedure SetBackgroundColor(const Value: TColor);
-    function GetAspectRatio: BYTE;
-    procedure SetAspectRatio(const Value: BYTE);
+    function GetAspectRatio: Byte;
+    procedure SetAspectRatio(const Value: Byte);
     procedure SetDrawOptions(Value: TGIFDrawOptions);
     procedure SetAnimationSpeed(Value: integer);
     procedure SetReductionBits(Value: integer);
@@ -1128,23 +1310,27 @@ type
     function NewBitmap: TBitmap;
     procedure FreeBitmap;
     function GetColorMap: TGIFColorMap;
-    function GetDoDither: boolean;
+    function GetDoDither: Boolean;
     property DrawPainter: TGIFPainter read FDrawPainter; // Extremely volatile
-    property DoDither: boolean read GetDoDither;
+    property DoDither: Boolean read GetDoDither;
 {$IFDEF VER9x}
-    procedure Progress(Sender: TObject; Stage: TProgressStage;
-      PercentDone: Byte;  RedrawNow: Boolean; const R: TRect; const Msg: string); dynamic;
+    procedure Progress(Sender: TObject; Stage: TProgressStage; PercentDone: Byte; RedrawNow: Boolean; const R: TRect;
+      const Msg: string); dynamic;
+{$ENDIF}
+{$IFDEF FIXHEADER_WIDTHHEIGHT_SILENT}
+    procedure FixHeaderWidthHeight; // 2006.07.09
 {$ENDIF}
   public
     constructor Create; override;
     destructor Destroy; override;
     procedure SaveToStream(Stream: TStream); override;
     procedure LoadFromStream(Stream: TStream); override;
+    procedure LoadFromResourceName(Instance: THandle; const ResName: string);
+    // 2002.07.07
     function Add(Source: TPersistent): integer;
     procedure Pack;
     procedure OptimizeColorMap;
-    procedure Optimize(Options: TGIFOptimizeOptions;
-      ColorReduction: TColorReduction; DitherMode: TDitherMode;
+    procedure Optimize(Options: TGIFOptimizeOptions; ColorReduction: TColorReduction; DitherMode: TDitherMode;
       ReductionBits: integer);
     procedure Clear;
     procedure StopDraw;
@@ -1156,20 +1342,18 @@ type
     procedure PaintRestart;
     procedure Warning(Sender: TObject; Severity: TGIFSeverity; Message: string); virtual;
     procedure Assign(Source: TPersistent); override;
-    procedure LoadFromClipboardFormat(AFormat: Word; AData: THandle;
-      APalette: HPALETTE); override;
-    procedure SaveToClipboardFormat(var AFormat: Word; var AData: THandle;
-      var APalette: HPALETTE); override;
+    procedure LoadFromClipboardFormat(AFormat: Word; AData: THandle; APalette: HPalette); override;
+    procedure SaveToClipboardFormat(var AFormat: Word; var AData: THandle; var APalette: HPalette); override;
     property GlobalColorMap: TGIFColorMap read GetColorMap;
     property Version: TGIFVersion read GetVersion;
     property Images: TGIFImageList read FImages;
     property ColorResolution: integer read GetColorResolution;
     property BitsPerPixel: integer read GetBitsPerPixel;
-    property BackgroundColorIndex: BYTE read GetBackgroundColorIndex write SetBackgroundColorIndex;
+    property BackgroundColorIndex: Byte read GetBackgroundColorIndex write SetBackgroundColorIndex;
     property BackgroundColor: TColor read GetBackgroundColor write SetBackgroundColor;
-    property AspectRatio: BYTE read GetAspectRatio write SetAspectRatio;
+    property AspectRatio: Byte read GetAspectRatio write SetAspectRatio;
     property Header: TGIFHeader read FHeader; // ***OBSOLETE***
-    property IsTransparent: boolean read GetIsTransparent;
+    property IsTransparent: Boolean read GetIsTransparent;
     property DrawOptions: TGIFDrawOptions read FDrawOptions write SetDrawOptions;
     property DrawBackgroundColor: TColor read FDrawBackgroundColor write FDrawBackgroundColor;
     property ColorReduction: TColorReduction read FColorReduction write FColorReduction;
@@ -1177,6 +1361,9 @@ type
     property DitherMode: TDitherMode read FDitherMode write FDitherMode;
     property Compression: TGIFCompression read FCompression write FCompression;
     property AnimationSpeed: integer read FAnimationSpeed write SetAnimationSpeed;
+    property Animate: Boolean read GetAnimate write SetAnimate; // 2002.07.07
+    property ForceFrame: integer read FForceFrame write SetForceFrame;
+    // 2004.03.09
     property Painters: TThreadList read FPainters;
     property ThreadPriority: TThreadPriority read FThreadPriority write FThreadPriority;
     property Bitmap: TBitmap read GetBitmap; // Volatile - beware!
@@ -1185,70 +1372,69 @@ type
     property OnPaint: TNotifyEvent read FOnPaint write FOnPaint;
     property OnAfterPaint: TNotifyEvent read FOnAfterPaint write FOnAfterPaint;
     property OnLoop: TNotifyEvent read FOnLoop write FOnLoop;
-    property OnEndPaint	: TNotifyEvent read FOnEndPaint	 write FOnEndPaint	;
+    property OnEndPaint: TNotifyEvent read FOnEndPaint write FOnEndPaint;
 {$IFDEF VER9x}
-    property Palette: HPALETTE read GetPalette write SetPalette;
+    property Palette: HPalette read GetPalette write SetPalette;
     property PaletteModified: Boolean read FPaletteModified write FPaletteModified;
     property OnProgress: TProgressEvent read FOnProgress write FOnProgress;
 {$ENDIF}
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      Utility routines
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Utility routines
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   // WebPalette creates a 216 color uniform palette a.k.a. the Netscape Palette
-  function WebPalette: HPalette;
+function WebPalette: HPalette;
 
-  // ReduceColors
-  // Map colors in a bitmap to their nearest representation in a palette using
-  // the methods specified by the ColorReduction and DitherMode parameters.
-  // The ReductionBits parameter specifies the desired number of colors (bits
-  // per pixel) when the reduction method is rmQuantize. The CustomPalette
-  // specifies the palette when the rmPalette reduction method is used.
-  function ReduceColors(Bitmap: TBitmap; ColorReduction: TColorReduction;
-    DitherMode: TDitherMode; ReductionBits: integer; CustomPalette: hPalette): TBitmap;
+// ReduceColors
+// Map colors in a bitmap to their nearest representation in a palette using
+// the methods specified by the ColorReduction and DitherMode parameters.
+// The ReductionBits parameter specifies the desired number of colors (bits
+// per pixel) when the reduction method is rmQuantize. The CustomPalette
+// specifies the palette when the rmPalette reduction method is used.
+function ReduceColors(Bitmap: TBitmap; ColorReduction: TColorReduction; DitherMode: TDitherMode; ReductionBits: integer;
+  CustomPalette: HPalette): TBitmap;
 
-  // CreateOptimizedPaletteFromManyBitmaps
-  //: Performs Color Quantization on multiple bitmaps.
-  // The Bitmaps parameter is a list of bitmaps. Returns an optimized palette.
-  function CreateOptimizedPaletteFromManyBitmaps(Bitmaps: TList; Colors, ColorBits: integer;
-    Windows: boolean): hPalette;
+// CreateOptimizedPaletteFromManyBitmaps
+// : Performs Color Quantization on multiple bitmaps.
+// The Bitmaps parameter is a list of bitmaps. Returns an optimized palette.
+function CreateOptimizedPaletteFromManyBitmaps(Bitmaps: TList; Colors, ColorBits: integer; Windows: Boolean): HPalette;
 
 {$IFDEF VER9x}
-  // From Delphi 3 graphics.pas
+
+// From Delphi 3 graphics.pas
 type
   TPixelFormat = (pfDevice, pf1bit, pf4bit, pf8bit, pf15bit, pf16bit, pf24bit, pf32bit, pfCustom);
 {$ENDIF}
+procedure InternalGetDIBSizes(Bitmap: HBitmap; var InfoHeaderSize: integer; var ImageSize: longInt; PixelFormat: TPixelFormat);
+function InternalGetDIB(Bitmap: HBitmap; Palette: HPalette; var BitmapInfo; var Bits; PixelFormat: TPixelFormat): Boolean;
 
-  procedure InternalGetDIBSizes(Bitmap: HBITMAP; var InfoHeaderSize: Integer;
-    var ImageSize: longInt; PixelFormat: TPixelFormat);
-  function InternalGetDIB(Bitmap: HBITMAP; Palette: HPALETTE;
-   var BitmapInfo; var Bits; PixelFormat: TPixelFormat): Boolean;
-
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//                      Global variables
+// Global variables
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 // GIF Clipboard format identifier for use by LoadFromClipboardFormat and
 // SaveToClipboardFormat.
 // Set in Initialization section.
 var
-  CF_GIF: WORD;
+  CF_GIF: Word;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      Library defaults
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Library defaults
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
 var
-  //: Default options for TGIFImage.DrawOptions.
-  GIFImageDefaultDrawOptions : TGIFDrawOptions =
-    [goAsync, goLoop, goTransparent, goAnimate, goDither, goAutoDither
+  // : Default options for TGIFImage.DrawOptions.
+  GIFImageDefaultDrawOptions: TGIFDrawOptions = [goAsync, goLoop, goTransparent, goAnimate, goDither, goAutoDither
 {$IFDEF STRICT_MOZILLA}
-     ,goClearOnLoop
+    , goClearOnLoop
+{$ENDIF}
+{$IFDEF DEFAULT_GOCLEARLOOP} // 2006.07.10
+    , goClearOnLoop
 {$ENDIF}
     ];
 
@@ -1258,204 +1444,201 @@ var
   // been deleted, unless *you* prevent it.
   // The goValidateCanvas option will fix this problem if it is ever implemented.
 
-  //: Default color reduction methods for bitmap import.
+  // : Default color reduction methods for bitmap import.
   // These are the fastest settings, but also the ones that gives the
   // worst result (in most cases).
   GIFImageDefaultColorReduction: TColorReduction = rmNetscape;
   GIFImageDefaultColorReductionBits: integer = 8; // Range 3 - 8
   GIFImageDefaultDitherMode: TDitherMode = dmNearest;
 
-  //: Default encoder compression method.
+  // : Default encoder compression method.
   GIFImageDefaultCompression: TGIFCompression = gcLZW;
 
-  //: Default painter thread priority
+  // : Default painter thread priority
   GIFImageDefaultThreadPriority: TThreadPriority = tpNormal;
 
-  //: Default animation speed in % of normal speed (range 0 - 1000)
+  // : Default animation speed in % of normal speed (range 0 - 1000)
   GIFImageDefaultAnimationSpeed: integer = 100;
 
   // DoAutoDither is set to True in the initializaion section if the desktop DC
   // supports 256 colors or less.
   // It can be modified in your application to disable/enable Auto Dithering
-  DoAutoDither: boolean = False;
+  DoAutoDither: Boolean = False;
 
   // Palette is set to True in the initialization section if the desktop DC
   // supports 256 colors or less.
   // You should NOT modify it.
-  PaletteDevice: boolean = False;
+  PaletteDevice: Boolean = False;
 
   // Set GIFImageRenderOnLoad to True to render (convert to bitmap) the
   // GIF frames as they are loaded instead of rendering them on-demand.
   // This might increase resource consumption and will increase load time,
   // but will cause animated GIFs to display more smoothly.
-  GIFImageRenderOnLoad: boolean = False;
+  GIFImageRenderOnLoad: Boolean = False;
 
   // If GIFImageOptimizeOnStream is true, the GIF will be optimized
   // before it is streamed to the DFM file.
   // This will not affect TGIFImage.SaveToStream or SaveToFile.
-  GIFImageOptimizeOnStream: boolean = False;
+  GIFImageOptimizeOnStream: Boolean = False;
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      Design Time support
-//
-////////////////////////////////////////////////////////////////////////////////
-// Dummy component registration for design time support of GIFs in TImage
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Design Time support
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
+  // Dummy component registration for design time support of GIFs in TImage
 procedure Register;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//                      Error messages
+// Error messages
 //
-////////////////////////////////////////////////////////////////////////////////
-{$ifndef VER9x}
+/// /////////////////////////////////////////////////////////////////////////////
+{$IFNDEF VER9x}
+
 resourcestring
-{$else}
-const
-{$endif}
-  // GIF Error messages
-  sOutOfData		= 'Premature end of data';
-  sTooManyColors	= 'Color table overflow';
-  sBadColorIndex	= 'Invalid color index';
-  sBadVersion		= 'Unsupported GIF version';
-  sBadSignature		= 'Invalid GIF signature';
-  sScreenBadColorSize	= 'Invalid number of colors specified in Screen Descriptor';
-  sImageBadColorSize	= 'Invalid number of colors specified in Image Descriptor';
-  sUnknownExtension	= 'Unknown extension type';
-  sBadExtensionLabel	= 'Invalid extension introducer';
-  sOutOfMemDIB		= 'Failed to allocate memory for GIF DIB';
-  sDIBCreate		= 'Failed to create DIB from Bitmap';
-  sDecodeTooFewBits	= 'Decoder bit buffer under-run';
-  sDecodeCircular	= 'Circular decoder table entry';
-  sBadTrailer		= 'Invalid Image trailer';
-  sBadExtensionInstance	= 'Internal error: Extension Instance does not match Extension Label';
-  sBadBlockSize		= 'Unsupported Application Extension block size';
-  sBadBlock		= 'Unknown GIF block type';
-  sUnsupportedClass	= 'Object type not supported for operation';
-  sInvalidData		= 'Invalid GIF data';
-  sBadHeight		= 'Image height too small for contained frames';
-  sBadWidth		= 'Image width too small for contained frames';
-{$IFNDEF REGISTER_TGIFIMAGE}
-  sGIFToClipboard	= 'Clipboard operations not supported for GIF objects';
 {$ELSE}
-  sFailedPaste		= 'Failed to store GIF on clipboard';
+const
+{$ENDIF}
+  // GIF Error messages
+  sOutOfData = 'Premature end of data';
+  sTooManyColors = 'Color table overflow';
+  sBadColorIndex = 'Invalid color index';
+  sBadVersion = 'Unsupported GIF version';
+  sBadSignature = 'Invalid GIF signature';
+  sScreenBadColorSize = 'Invalid number of colors specified in Screen Descriptor';
+  sImageBadColorSize = 'Invalid number of colors specified in Image Descriptor';
+  sUnknownExtension = 'Unknown extension type';
+  sBadExtensionLabel = 'Invalid extension introducer';
+  sOutOfMemDIB = 'Failed to allocate memory for GIF DIB';
+  sDIBCreate = 'Failed to create DIB from Bitmap';
+  sDecodeTooFewBits = 'Decoder bit buffer under-run';
+  sDecodeCircular = 'Circular decoder table entry';
+  sBadTrailer = 'Invalid Image trailer';
+  sBadExtensionInstance = 'Internal error: Extension Instance does not match Extension Label';
+  sBadBlockSize = 'Unsupported Application Extension block size';
+  sBadBlock = 'Unknown GIF block type';
+  sUnsupportedClass = 'Object type not supported for operation';
+  sInvalidData = 'Invalid GIF data';
+  sBadHeight = 'Image height too small for contained frames';
+  sBadWidth = 'Image width too small for contained frames';
+{$IFNDEF REGISTER_TGIFIMAGE}
+  sGIFToClipboard = 'Clipboard operations not supported for GIF objects';
+{$ELSE}
+  sFailedPaste = 'Failed to store GIF on clipboard';
 {$IFDEF VER9x}
-  sUnknownClipboardFormat= 'Unsupported clipboard format';
+  sUnknownClipboardFormat = 'Unsupported clipboard format';
 {$ENDIF}
 {$ENDIF}
-  sScreenSizeExceeded	= 'Image exceeds Logical Screen size';
-  sNoColorTable		= 'No global or local color table defined';
-  sBadPixelCoordinates	= 'Invalid pixel coordinates';
-  sUnsupportedBitmap	= 'Unsupported bitmap format';
-  sInvalidPixelFormat	= 'Unsupported PixelFormat';
-  sBadDimension		= 'Invalid image dimensions';
-  sNoDIB		= 'Image has no DIB';
-  sInvalidStream	= 'Invalid stream operation';
-  sInvalidColor		= 'Color not in color table';
-  sInvalidBitSize	= 'Invalid Bits Per Pixel value';
-  sEmptyColorMap	= 'Color table is empty';
-  sEmptyImage		= 'Image is empty';
-  sInvalidBitmapList	= 'Invalid bitmap list';
-  sInvalidReduction	= 'Invalid reduction method';
+  sScreenSizeExceeded = 'Image exceeds Logical Screen size';
+  sNoColorTable = 'No global or local color table defined';
+  sBadPixelCoordinates = 'Invalid pixel coordinates';
+  sUnsupportedBitmap = 'Unsupported bitmap format';
+  sInvalidPixelFormat = 'Unsupported PixelFormat';
+  sBadDimension = 'Invalid image dimensions';
+  sNoDIB = 'Image has no DIB';
+  sInvalidStream = 'Invalid stream operation';
+  sInvalidColor = 'Color not in color table';
+  sInvalidBitSize = 'Invalid Bits Per Pixel value';
+  sEmptyColorMap = 'Color table is empty';
+  sEmptyImage = 'Image is empty';
+  sInvalidBitmapList = 'Invalid bitmap list';
+  sInvalidReduction = 'Invalid reduction method';
 {$IFDEF VER9x}
   // From Delphi 3 consts.pas
-  SOutOfResources	= 'Out of system resources';
-  SInvalidBitmap	= 'Bitmap image is not valid';
-  SScanLine		= 'Scan line index out of range';
+  SOutOfResources = 'Out of system resources';
+  SInvalidBitmap = 'Bitmap image is not valid';
+  SScanLine = 'Scan line index out of range';
 {$ENDIF}
-
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      Misc texts
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Misc texts
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
   // File filter name
-  sGIFImageFile		= 'GIF Image';
+  sGIFImageFile = 'GIF Image';
 
   // Progress messages
-  sProgressLoading	= 'Loading...';
-  sProgressSaving	= 'Saving...';
-  sProgressConverting	= 'Converting...';
-  sProgressRendering	= 'Rendering...';
-  sProgressCopying	= 'Copying...';
-  sProgressOptimizing	= 'Optimizing...';
+  sProgressLoading = 'Loading...';
+  sProgressSaving = 'Saving...';
+  sProgressConverting = 'Converting...';
+  sProgressRendering = 'Rendering...';
+  sProgressCopying = 'Copying...';
+  sProgressOptimizing = 'Optimizing...';
 
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//
-//			Implementation
-//
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Implementation
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
 implementation
 
 { This makes me long for the C preprocessor... }
-{$ifdef DEBUG}
-  {$ifdef DEBUG_COMPRESSPERFORMANCE}
-    {$define DEBUG_PERFORMANCE}
-  {$else}
-    {$ifdef DEBUG_DECOMPRESSPERFORMANCE}
-      {$define DEBUG_PERFORMANCE}
-    {$else}
-      {$ifdef DEBUG_DITHERPERFORMANCE}
-        {$define DEBUG_PERFORMANCE}
-      {$else}
-        {$ifdef DEBUG_DITHERPERFORMANCE}
-          {$define DEBUG_PERFORMANCE}
-        {$else}
-          {$ifdef DEBUG_DRAWPERFORMANCE}
-            {$define DEBUG_PERFORMANCE}
-          {$else}
-            {$ifdef DEBUG_RENDERPERFORMANCE}
-              {$define DEBUG_PERFORMANCE}
-            {$endif}
-          {$endif}
-        {$endif}
-      {$endif}
-    {$endif}
-  {$endif}
-{$endif}
+{$IFDEF DEBUG}
+{$IFDEF DEBUG_COMPRESSPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ELSE}
+{$IFDEF DEBUG_DECOMPRESSPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ELSE}
+{$IFDEF DEBUG_DITHERPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ELSE}
+{$IFDEF DEBUG_DITHERPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ELSE}
+{$IFDEF DEBUG_DRAWPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ELSE}
+{$IFDEF DEBUG_RENDERPERFORMANCE}
+{$DEFINE DEBUG_PERFORMANCE}
+{$ENDIF}
+{$ENDIF}
+{$ENDIF}
+{$ENDIF}
+{$ENDIF}
+{$ENDIF}
+{$ENDIF}
 
 uses
-{$ifdef DEBUG}
-  dialogs,
-{$endif}
+{$IFDEF DEBUG}
+    dialogs,
+{$ENDIF}
   mmsystem, // timeGetTime()
   messages,
   Consts;
 
-
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Misc consts
+// Misc consts
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
   { Extension/block label values }
-  bsPlainTextExtension		= $01;
-  bsGraphicControlExtension	= $F9;
-  bsCommentExtension		= $FE;
-  bsApplicationExtension	= $FF;
+  bsPlainTextExtension = $01;
+  bsGraphicControlExtension = $F9;
+  bsCommentExtension = $FE;
+  bsApplicationExtension = $FF;
 
-  bsImageDescriptor		= Ord(',');
-  bsExtensionIntroducer		= Ord('!');
-  bsTrailer			= ord(';');
+  bsImageDescriptor = Ord(',');
+  bsExtensionIntroducer = Ord('!');
+  bsTrailer = Ord(';');
 
   // Thread messages - Used by TThread.Synchronize()
-  CM_DESTROYWINDOW	= $8FFE; // Defined in classes.pas
-  CM_EXECPROC 		= $8FFF; // Defined in classes.pas
+  CM_DESTROYWINDOW = $8FFE; // Defined in classes.pas
+  CM_EXECPROC = $8FFF; // Defined in classes.pas
 
-
-////////////////////////////////////////////////////////////////////////////////
-//
-//                      Design Time support
-//
-////////////////////////////////////////////////////////////////////////////////
-//: Dummy component registration to add design-time support of GIFs to TImage.
-// Since TGIFImage isn't a component there's nothing to register here, but
-// since Register is only called at design time we can set the design time
-// GIF paint options here (modify as you please):
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Design Time support
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
+  // : Dummy component registration to add design-time support of GIFs to TImage.
+  // Since TGIFImage isn't a component there's nothing to register here, but
+  // since Register is only called at design time we can set the design time
+  // GIF paint options here (modify as you please):
 procedure Register;
 begin
   // Don't loop animations at design-time. Animated GIFs will animate once and
@@ -1463,60 +1646,65 @@ begin
   Exclude(GIFImageDefaultDrawOptions, goLoop);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Utilities
+// Utilities
 //
-////////////////////////////////////////////////////////////////////////////////
-//: Creates a 216 color uniform non-dithering Netscape palette.
+/// /////////////////////////////////////////////////////////////////////////////
+// : Creates a 216 color uniform non-dithering Netscape palette.
 function WebPalette: HPalette;
 type
-  TLogWebPalette	= packed record
-    palVersion		: word;
-    palNumEntries	: word;
-    PalEntries		: array[0..5,0..5,0..5] of TPaletteEntry;
+  TLogWebPalette = packed record
+    palVersion: Word;
+    palNumEntries: Word;
+    PalEntries: array [0 .. 5, 0 .. 5, 0 .. 5] of TPaletteEntry;
   end;
 var
-  r, g, b		: byte;
-  LogWebPalette		: TLogWebPalette;
-  LogPalette		: TLogpalette absolute LogWebPalette; // Stupid typecast
+  R, g, b: Byte;
+  LogWebPalette: TLogWebPalette;
+  LogPalette: TLogpalette absolute LogWebPalette; // Stupid typecast
 begin
-  with LogWebPalette do
-  begin
-    palVersion:= $0300;
-    palNumEntries:= 216;
-    for r:=0 to 5 do
-      for g:=0 to 5 do
-        for b:=0 to 5 do
-        begin
-          with PalEntries[r,g,b] do
-          begin
-            peRed := 51 * r;
+  with LogWebPalette do begin
+    palVersion := $0300;
+    palNumEntries := 216;
+    for R := 0 to 5 do
+      for g := 0 to 5 do
+        for b := 0 to 5 do begin
+          with PalEntries[R, g, b] do begin
+            peRed := 51 * R;
             peGreen := 51 * g;
             peBlue := 51 * b;
             peFlags := 0;
           end;
         end;
   end;
-  Result := CreatePalette(Logpalette);
+  Result := CreatePalette(LogPalette);
 end;
 
 (*
-**  GDI Error handling
-**  Adapted from graphics.pas
+  **  GDI Error handling
+  **  Adapted from graphics.pas
 *)
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-{$ifdef D3_BCB3}
-function GDICheck(Value: Integer): Integer;
-{$else}
+{$IFDEF D3_BCB3}
+
+function GDICheck(Value: integer): integer;
+{$ELSE}
+
 function GDICheck(Value: Cardinal): Cardinal;
-{$endif}
+{$ENDIF}
 var
-  ErrorCode		: integer;
-  Buf			: array [byte] of char;
+  ErrorCode: integer;
+  // 2008.10.19 ->
+{$IFDEF VER20_PLUS}
+  Buf: array [Byte] of WideChar;
+{$ELSE}
+  Buf: array [Byte] of AnsiChar;
+{$ENDIF}
+  // 2008.10.19 <-
 
   function ReturnAddr: Pointer;
   // From classes.pas
@@ -1524,110 +1712,111 @@ var
     MOV		EAX,[EBP+4] // sysutils.pas says [EBP-4], but this works !
   end;
 
-begin
-  if (Value = 0) then
   begin
-    ErrorCode := GetLastError;
-    if (ErrorCode <> 0) and (FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, nil,
-      ErrorCode, LOCALE_USER_DEFAULT, Buf, sizeof(Buf), nil) <> 0) then
-      raise EOutOfResources.Create(Buf) at ReturnAddr
-    else
-      raise EOutOfResources.Create(SOutOfResources) at ReturnAddr;
+    if (Value = 0) then begin
+      ErrorCode := GetLastError;
+      if (ErrorCode <> 0) then
+        // marmota and (FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, nil,
+        // marmota       ErrorCode, LOCALE_USER_DEFAULT, Buf, sizeof(Buf), nil) <> 0) then
+        raise EOutOfResources.Create(Buf)at ReturnAddr
+      else
+        raise EOutOfResources.Create(SOutOfResources)at ReturnAddr;
+    end;
+    Result := Value;
   end;
-  Result := Value;
-end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
 (*
-**  Raise error condition
+  **  Raise error condition
 *)
-procedure Error(msg: string);
+procedure Error(Msg: string);
   function ReturnAddr: Pointer;
   // From classes.pas
   asm
     MOV		EAX,[EBP+4] // sysutils.pas says [EBP-4] !
   end;
-begin
-  raise GIFException.Create(msg) at ReturnAddr;
-end;
+  begin
+    raise GIFException.Create(Msg)at ReturnAddr;
+  end;
 
 (*
-**  Return number bytes required to
-**  hold a given number of bits.
+  **  Return number bytes required to
+  **  hold a given number of bits.
 *)
 function ByteAlignBit(Bits: Cardinal): Cardinal;
 begin
-  Result := (Bits+7) SHR 3;
+  Result := (Bits + 7) shr 3;
 end;
+
 // Rounded up to nearest 2
 function WordAlignBit(Bits: Cardinal): Cardinal;
 begin
-  Result := ((Bits+15) SHR 4) SHL 1;
+  Result := ((Bits + 15) shr 4) shl 1;
 end;
+
 // Rounded up to nearest 4
 function DWordAlignBit(Bits: Cardinal): Cardinal;
 begin
-  Result := ((Bits+31) SHR 5) SHL 2;
+  Result := ((Bits + 31) shr 5) shl 2;
 end;
+
 // Round to arbitrary number of bits
 function AlignBit(Bits, BitsPerPixel, Alignment: Cardinal): Cardinal;
 begin
   Dec(Alignment);
   Result := ((Bits * BitsPerPixel) + Alignment) and not Alignment;
-  Result := Result SHR 3;
+  Result := Result shr 3;
 end;
 
 (*
-**  Compute Bits per Pixel from Number of Colors
-**  (Return the ceiling log of n)
+  **  Compute Bits per Pixel from Number of Colors
+  **  (Return the ceiling log of n)
 *)
 function Colors2bpp(Colors: integer): integer;
 var
-  MaxColor		: integer;
+  MaxColor: integer;
 begin
   (*
-  ** This might be faster computed by multiple if then else statements
+    ** This might be faster computed by multiple if then else statements
   *)
 
   if (Colors = 0) then
     Result := 0
-  else
-  begin
+  else begin
     Result := 1;
     MaxColor := 2;
-    while (Colors > MaxColor) do
-    begin
+    while (Colors > MaxColor) do begin
       inc(Result);
-      MaxColor := MaxColor SHL 1;
+      MaxColor := MaxColor shl 1;
     end;
   end;
 end;
 
 (*
-**  Write an ordinal byte value to a stream
+  **  Write an ordinal byte value to a stream
 *)
-procedure WriteByte(Stream: TStream; b: BYTE);
+procedure WriteByte(Stream: TStream; b: Byte);
 begin
   Stream.Write(b, 1);
 end;
 
 (*
-**  Read an ordinal byte value from a stream
+  **  Read an ordinal byte value from a stream
 *)
-function ReadByte(Stream: TStream): BYTE;
+function ReadByte(Stream: TStream): Byte;
 begin
   Stream.Read(Result, 1);
 end;
 
 (*
-**  Read data from stream and raise exception of EOF
+  **  Read data from stream and raise exception of EOF
 *)
-procedure ReadCheck(Stream: TStream; var Buffer; Size: LongInt);
+procedure ReadCheck(Stream: TStream; var Buffer; Size: longInt);
 var
-  ReadSize		: integer;
+  ReadSize: integer;
 begin
   ReadSize := Stream.Read(Buffer, Size);
   if (ReadSize <> Size) then
@@ -1635,69 +1824,71 @@ begin
 end;
 
 (*
-**  Write a string list to a stream as multiple blocks
-**  of max 255 characters in each.
+  **  Write a string list to a stream as multiple blocks
+  **  of max 255 characters in each.
 *)
 procedure WriteStrings(Stream: TStream; Text: TStrings);
 var
-  i			: integer;
-  b			: BYTE;
-  size			: integer;
-  s			: string;
+  i: integer;
+  b: Byte;
+  Size: integer;
+  s: AnsiString;
 begin
-  for i := 0 to Text.Count-1 do
-  begin
-    s := Text[i];
-    size := length(s);
-    if (size > 255) then
+  for i := 0 to Text.Count - 1 do begin
+    s := AnsiString(Text[i]);
+    Size := length(s);
+    if (Size > 255) then
       b := 255
     else
-      b := size;
-    while (size > 0) do
-    begin
-      dec(size, b);
+      b := Size;
+    while (Size > 0) do begin
+      Dec(Size, b);
       WriteByte(Stream, b);
-      Stream.Write(PChar(s)^, b);
-      delete(s, 1, b);
-      if (b > size) then
-        b := size;
+      // 2008.10.19 ->
+      // Stream.Write(PChar(s)^, b);
+      Stream.Write(PByte(s)^, b);
+      // 2008.10.19 <-
+      Delete(s, 1, b);
+      if (b > Size) then
+        b := Size;
     end;
   end;
   // Terminating zero (length = 0)
   WriteByte(Stream, 0);
 end;
 
-
 (*
-**  Read a string list from a stream as multiple blocks
-**  of max 255 characters in each.
+  **  Read a string list from a stream as multiple blocks
+  **  of max 255 characters in each.
 *)
 { TODO -oanme -cImprovement : Replace ReadStrings with TGIFReader. }
 procedure ReadStrings(Stream: TStream; Text: TStrings);
 var
-  size			: BYTE;
-  buf			: array[0..255] of char;
+  Size: Byte;
+  Buf: array [0 .. 255] of AnsiChar;
 begin
   Text.Clear;
-  if (Stream.Read(size, 1) <> 1) then
+  if (Stream.Read(Size, 1) <> 1) then
     exit;
-  while (size > 0) do
-  begin
-    ReadCheck(Stream, buf, size);
-    buf[size] := #0;
-    Text.Add(Buf);
-    if (Stream.Read(size, 1) <> 1) then
+  while (Size > 0) do begin
+    ReadCheck(Stream, Buf, Size);
+    Buf[Size] := #0;
+    // 2008.10.19 ->
+    // Text.Add(Buf);
+    Text.Add(string(Buf));
+    // 2008.10.19 <-
+    if (Stream.Read(Size, 1) <> 1) then
       exit;
   end;
 end;
 
-
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		Delphi 2.x / C++ Builder 1.x support
+// Delphi 2.x / C++ Builder 1.x support
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 {$IFDEF VER9x}
+
 var
   // From Delphi 3 graphics.pas
   SystemPalette16: HPalette; // 16 color palette that maps to the system palette
@@ -1710,67 +1901,66 @@ const
   // with palettes
   SupportedPixelformats: TPixelFormats = [pf1bit, pf4bit, pf8bit];
 {$ENDIF}
-
-
-// --------------------------
-// InitializeBitmapInfoHeader
-// --------------------------
-// Fills a TBitmapInfoHeader with the values of a bitmap when converted to a
-// DIB of a specified PixelFormat.
-//
-// Parameters:
-// Bitmap	The handle of the source bitmap.
-// Info		The TBitmapInfoHeader buffer that will receive the values.
-// PixelFormat	The pixel format of the destination DIB.
-//
+  // --------------------------
+  // InitializeBitmapInfoHeader
+  // --------------------------
+  // Fills a TBitmapInfoHeader with the values of a bitmap when converted to a
+  // DIB of a specified PixelFormat.
+  //
+  // Parameters:
+  // Bitmap	The handle of the source bitmap.
+  // Info		The TBitmapInfoHeader buffer that will receive the values.
+  // PixelFormat	The pixel format of the destination DIB.
+  //
 {$IFDEF BAD_STACK_ALIGNMENT}
   // Disable optimization to circumvent optimizer bug...
-  {$IFOPT O+}
-    {$DEFINE O_PLUS}
-    {$O-}
-  {$ENDIF}
+{$IFOPT O+}
+{$DEFINE O_PLUS}
+{$O-}
 {$ENDIF}
-procedure InitializeBitmapInfoHeader(Bitmap: HBITMAP; var Info: TBitmapInfoHeader;
-  PixelFormat: TPixelFormat);
+{$ENDIF}
+
+procedure InitializeBitmapInfoHeader(Bitmap: HBitmap; var Info: TBitmapInfoHeader; PixelFormat: TPixelFormat);
 // From graphics.pas, "optimized" for our use
 var
-  DIB		: TDIBSection;
-  Bytes		: Integer;
+  DIB: TDIBSection;
+  Bytes: integer;
 begin
   DIB.dsbmih.biSize := 0;
   Bytes := GetObject(Bitmap, SizeOf(DIB), @DIB);
   if (Bytes = 0) then
-    Error(sInvalidBitmap);
+    Error(SInvalidBitmap);
 
-  if (Bytes >= (sizeof(DIB.dsbm) + sizeof(DIB.dsbmih))) and
-    (DIB.dsbmih.biSize >= sizeof(DIB.dsbmih)) then
+  if (Bytes >= (SizeOf(DIB.dsbm) + SizeOf(DIB.dsbmih))) and (DIB.dsbmih.biSize >= SizeOf(DIB.dsbmih)) then
     Info := DIB.dsbmih
-  else
-  begin
-    FillChar(Info, sizeof(Info), 0);
-    with Info, DIB.dsbm do
-    begin
+  else begin
+    FillChar(Info, SizeOf(Info), 0);
+    with Info, DIB.dsbm do begin
       biSize := SizeOf(Info);
       biWidth := bmWidth;
       biHeight := bmHeight;
     end;
   end;
   case PixelFormat of
-    pf1bit: Info.biBitCount := 1;
-    pf4bit: Info.biBitCount := 4;
-    pf8bit: Info.biBitCount := 8;
-    pf24bit: Info.biBitCount := 24;
-  else
-    Error(sInvalidPixelFormat);
-    // Info.biBitCount := DIB.dsbm.bmBitsPixel * DIB.dsbm.bmPlanes;
+    pf1bit:
+      Info.biBitCount := 1;
+    pf4bit:
+      Info.biBitCount := 4;
+    pf8bit:
+      Info.biBitCount := 8;
+    pf24bit:
+      Info.biBitCount := 24;
+    else
+      Error(sInvalidPixelFormat);
+      // Info.biBitCount := DIB.dsbm.bmBitsPixel * DIB.dsbm.bmPlanes;
   end;
   Info.biPlanes := 1;
   Info.biCompression := BI_RGB; // Always return data in RGB format
   Info.biSizeImage := AlignBit(Info.biWidth, Info.biBitCount, 32) * Cardinal(abs(Info.biHeight));
 end;
 {$IFDEF O_PLUS}
-  {$O+}
-  {$UNDEF O_PLUS}
+{$O+}
+{$UNDEF O_PLUS}
 {$ENDIF}
 
 // -------------------
@@ -1783,27 +1973,26 @@ end;
 // Parameters:
 // Bitmap	The handle of the source bitmap.
 // InfoHeaderSize
-//		The returned size of a buffer that will receive the DIB's
-//		TBitmapInfo structure.
+// The returned size of a buffer that will receive the DIB's
+// TBitmapInfo structure.
 // ImageSize	The returned size of a buffer that will receive the DIB's
-//		pixel data.
+// pixel data.
 // PixelFormat	The pixel format of the destination DIB.
 //
-procedure InternalGetDIBSizes(Bitmap: HBITMAP; var InfoHeaderSize: Integer;
-  var ImageSize: longInt; PixelFormat: TPixelFormat);
+procedure InternalGetDIBSizes(Bitmap: HBitmap; var InfoHeaderSize: integer; var ImageSize: longInt; PixelFormat: TPixelFormat);
 // From graphics.pas, "optimized" for our use
 var
-  Info		: TBitmapInfoHeader;
+  Info: TBitmapInfoHeader;
 begin
   InitializeBitmapInfoHeader(Bitmap, Info, PixelFormat);
   // Check for palette device format
-  if (Info.biBitCount > 8) then
-  begin
+  if (Info.biBitCount > 8) then begin
     // Header but no palette
     InfoHeaderSize := SizeOf(TBitmapInfoHeader);
     if ((Info.biCompression and BI_BITFIELDS) <> 0) then
-      Inc(InfoHeaderSize, 12);
-  end else
+      inc(InfoHeaderSize, 12);
+  end
+  else
     // Header and palette
     InfoHeaderSize := SizeOf(TBitmapInfoHeader) + SizeOf(TRGBQuad) * (1 shl Info.biBitCount);
   ImageSize := Info.biSizeImage;
@@ -1818,11 +2007,11 @@ end;
 // Bitmap	The handle of the source bitmap.
 // Pal		The handle of the source palette.
 // BitmapInfo	The buffer that will receive the DIB's TBitmapInfo structure.
-//		A buffer of sufficient size must have been allocated prior to
-//		calling this function.
+// A buffer of sufficient size must have been allocated prior to
+// calling this function.
 // Bits		The buffer that will receive the DIB's pixel data.
-//		A buffer of sufficient size must have been allocated prior to
-//		calling this function.
+// A buffer of sufficient size must have been allocated prior to
+// calling this function.
 // PixelFormat	The pixel format of the destination DIB.
 //
 // Returns:
@@ -1831,24 +2020,22 @@ end;
 // Note: The InternalGetDIBSizes function can be used to calculate the
 // nescessary sizes of the BitmapInfo and Bits buffers.
 //
-function InternalGetDIB(Bitmap: HBITMAP; Palette: HPALETTE;
-  var BitmapInfo; var Bits; PixelFormat: TPixelFormat): Boolean;
+function InternalGetDIB(Bitmap: HBitmap; Palette: HPalette; var BitmapInfo; var Bits; PixelFormat: TPixelFormat): Boolean;
 // From graphics.pas, "optimized" for our use
 var
-  OldPal	: HPALETTE;
-  DC		: HDC;
+  OldPal: HPalette;
+  DC: HDC;
 begin
   InitializeBitmapInfoHeader(Bitmap, TBitmapInfoHeader(BitmapInfo), PixelFormat);
   OldPal := 0;
   DC := CreateCompatibleDC(0);
   try
-    if (Palette <> 0) then
-    begin
+    if (Palette <> 0) then begin
       OldPal := SelectPalette(DC, Palette, False);
       RealizePalette(DC);
     end;
-    Result := (GetDIBits(DC, Bitmap, 0, abs(TBitmapInfoHeader(BitmapInfo).biHeight),
-      @Bits, TBitmapInfo(BitmapInfo), DIB_RGB_COLORS) <> 0);
+    Result := (GetDIBits(DC, Bitmap, 0, abs(TBitmapInfoHeader(BitmapInfo).biHeight), @Bits, TBitmapInfo(BitmapInfo),
+      DIB_RGB_COLORS) <> 0);
   finally
     if (OldPal <> 0) then
       SelectPalette(DC, OldPal, False);
@@ -1867,47 +2054,46 @@ end;
 //
 // Parameters:
 // Stream	The TMemoryStream used to store the bitmap data.
-//		The stream must be allocated and freed by the caller prior to
-//		calling this function.
+// The stream must be allocated and freed by the caller prior to
+// calling this function.
 // Src		The handle of the source bitmap.
 // Pal		The handle of the source palette.
 // PixelFormat	The pixel format of the destination DIB.
 // DIBHeader	A pointer to the DIB's TBitmapInfo (or TBitmapInfoHeader)
-//		structure in the memory stream.
-//		The size of the structure can either be deduced from the
-//		pixel format (i.e. number of colors) or calculated by
-//		subtracting the DIBHeader pointer from the DIBBits pointer.
+// structure in the memory stream.
+// The size of the structure can either be deduced from the
+// pixel format (i.e. number of colors) or calculated by
+// subtracting the DIBHeader pointer from the DIBBits pointer.
 // DIBBits	A pointer to the DIB's pixel data in the memory stream.
 //
-procedure DIBFromBit(Stream: TMemoryStream; Src: HBITMAP;
-  Pal: HPALETTE; PixelFormat: TPixelFormat; var DIBHeader, DIBBits: Pointer);
+procedure DIBFromBit(Stream: TMemoryStream; Src: HBitmap; Pal: HPalette; PixelFormat: TPixelFormat;
+  var DIBHeader, DIBBits: Pointer);
 // (From D2 graphics.pas, "optimized" for our use)
 var
-  HeaderSize		: integer;
-  FileSize		: longInt;
-  ImageSize		: longInt;
-  BitmapFileHeader	: PBitmapFileHeader;
+  HeaderSize: integer;
+  FileSize: longInt;
+  ImageSize: longInt;
+  BitmapFileHeader: PBitmapFileHeader;
 begin
   if (Src = 0) then
-    Error(sInvalidBitmap);
+    Error(SInvalidBitmap);
   // Get header- and pixel data size for new pixel format
   InternalGetDIBSizes(Src, HeaderSize, ImageSize, PixelFormat);
   // Make room in stream for a TBitmapInfo and pixel data
-  FileSize := sizeof(TBitmapFileHeader) + HeaderSize + ImageSize;
+  FileSize := SizeOf(TBitmapFileHeader) + HeaderSize + ImageSize;
   Stream.SetSize(FileSize);
   // Get pointer to TBitmapFileHeader
   BitmapFileHeader := Stream.Memory;
   // Get pointer to TBitmapInfo
-  DIBHeader := Pointer(Longint(BitmapFileHeader) + sizeof(TBitmapFileHeader));
+  DIBHeader := Pointer(longInt(BitmapFileHeader) + SizeOf(TBitmapFileHeader));
   // Get pointer to pixel data
-  DIBBits := Pointer(Longint(DIBHeader) + HeaderSize);
+  DIBBits := Pointer(longInt(DIBHeader) + HeaderSize);
   // Initialize file header
-  FillChar(BitmapFileHeader^, sizeof(TBitmapFileHeader), 0);
-  with BitmapFileHeader^ do
-  begin
+  FillChar(BitmapFileHeader^, SizeOf(TBitmapFileHeader), 0);
+  with BitmapFileHeader^ do begin
     bfType := $4D42; // 'BM' = Windows BMP signature
     bfSize := FileSize; // File size (not needed)
-    bfOffBits := sizeof(TBitmapFileHeader) + HeaderSize; // Offset of pixel data
+    bfOffBits := SizeOf(TBitmapFileHeader) + HeaderSize; // Offset of pixel data
   end;
   // Get pixel data in new pixel format
   InternalGetDIB(Src, Pal, DIBHeader^, DIBBits^, PixelFormat);
@@ -1930,52 +2116,59 @@ function GetPixelFormat(Bitmap: TBitmap): TPixelFormat;
 {$IFDEF VER9x}
 // From graphics.pas, "optimized" for our use
 var
-  DIBSection		: TDIBSection;
-  Bytes			: Integer;
-  Handle		: HBitmap;
+  DIBSection: TDIBSection;
+  Bytes: integer;
+  Handle: HBitmap;
 begin
   Result := pfCustom; // This value is never returned
-  // BAD_STACK_ALIGNMENT 
+  // BAD_STACK_ALIGNMENT
   // Note: To work around an optimizer bug, we do not use Bitmap.Handle
   // directly. Instead we store the value and use it indirectly. Unless we do
   // this, the register containing Bitmap.Handle will be overwritten!
   Handle := Bitmap.Handle;
-  if (Handle <> 0) then
-  begin
+  if (Handle <> 0) then begin
     Bytes := GetObject(Handle, SizeOf(DIBSection), @DIBSection);
     if (Bytes = 0) then
-      Error(sInvalidBitmap);
+      Error(SInvalidBitmap);
 
-    with (DIBSection) do
-    begin
+    with (DIBSection) do begin
       // Check for NT bitmap
       if (Bytes < (SizeOf(dsbm) + SizeOf(dsbmih))) or (dsbmih.biSize < SizeOf(dsbmih)) then
-        DIBSection.dsBmih.biBitCount := dsbm.bmBitsPixel * dsbm.bmPlanes;
+        DIBSection.dsbmih.biBitCount := dsbm.bmBitsPixel * dsbm.bmPlanes;
 
-      case (dsBmih.biBitCount) of
-        0: Result := pfDevice;
-        1: Result := pf1bit;
-        4: Result := pf4bit;
-        8: Result := pf8bit;
-        16: case (dsBmih.biCompression) of
-              BI_RGB:
-                Result := pf15Bit;
-              BI_BITFIELDS:
-                if (dsBitFields[1] = $07E0) then
-                  Result := pf16Bit;
-            end;
-        24: Result := pf24Bit;
-        32: if (dsBmih.biCompression = BI_RGB) then
-              Result := pf32Bit;
-      else
-        Error(sUnsupportedBitmap);
+      case (dsbmih.biBitCount) of
+        0:
+          Result := pfDevice;
+        1:
+          Result := pf1bit;
+        4:
+          Result := pf4bit;
+        8:
+          Result := pf8bit;
+        16:
+          case (dsbmih.biCompression) of
+            BI_RGB:
+              Result := pf15bit;
+            BI_BITFIELDS:
+              if (dsBitFields[1] = $07E0) then
+                Result := pf16bit;
+          end;
+        24:
+          Result := pf24bit;
+        32:
+          if (dsbmih.biCompression = BI_RGB) then
+            Result := pf32bit;
+        else
+          Error(sUnsupportedBitmap);
       end;
     end;
-  end else
-//    Result := pfDevice;
+  end
+  else
+    // Result := pfDevice;
     Error(sUnsupportedBitmap);
 end;
 {$ELSE}
+
 begin
   Result := Bitmap.PixelFormat;
 end;
@@ -1990,8 +2183,8 @@ end;
 // The returned TBitmap will always be a DIB.
 //
 // Note: Under Delphi 3.x this function will leak a palette handle each time it
-//       converts a TBitmap to pf8bit format!
-//       If possible, use SafeSetPixelFormat instead to avoid this.
+// converts a TBitmap to pf8bit format!
+// If possible, use SafeSetPixelFormat instead to avoid this.
 //
 // Parameters:
 // Bitmap	The bitmap to modify.
@@ -2000,13 +2193,12 @@ end;
 procedure SetPixelFormat(Bitmap: TBitmap; PixelFormat: TPixelFormat);
 {$IFDEF VER9x}
 var
-  Stream	: TMemoryStream;
-  Header	,
-  Bits		: Pointer;
+  Stream: TMemoryStream;
+  Header, Bits: Pointer;
 begin
   // Can't change anything without a handle
   if (Bitmap.Handle = 0) then
-    Error(sInvalidBitmap);
+    Error(SInvalidBitmap);
 
   // Only convert to supported formats
   if not(PixelFormat in SupportedPixelformats) then
@@ -2023,37 +2215,37 @@ begin
     // Load DIB from stream
     Stream.Position := 0;
     Bitmap.LoadFromStream(Stream);
-  finally
-    Stream.Free;
+  finally Stream.Free;
   end;
 end;
 {$ELSE}
+
 begin
   Bitmap.PixelFormat := PixelFormat;
 end;
 {$ENDIF}
-
 {$IFDEF VER100}
+
 var
   pf8BitBitmap: TBitmap = nil;
 {$ENDIF}
 
-// ------------------
-// SafeSetPixelFormat
-// ------------------
-// Changes the pixel format of a TBitmap but doesn't preserve the contents.
-//
-// Replacement for Delphi 3 TBitmap.PixelFormat setter.
-// The returned TBitmap will always be an empty DIB of the same size as the
-// original bitmap.
-//
-// This function is used to avoid the palette handle leak that Delphi 3's
-// SetPixelFormat and TBitmap.PixelFormat suffers from.
-//
-// Parameters:
-// Bitmap	The bitmap to modify.
-// PixelFormat	The pixel format to convert to.
-//
+  // ------------------
+  // SafeSetPixelFormat
+  // ------------------
+  // Changes the pixel format of a TBitmap but doesn't preserve the contents.
+  //
+  // Replacement for Delphi 3 TBitmap.PixelFormat setter.
+  // The returned TBitmap will always be an empty DIB of the same size as the
+  // original bitmap.
+  //
+  // This function is used to avoid the palette handle leak that Delphi 3's
+  // SetPixelFormat and TBitmap.PixelFormat suffers from.
+  //
+  // Parameters:
+  // Bitmap	The bitmap to modify.
+  // PixelFormat	The pixel format to convert to.
+  //
 procedure SafeSetPixelFormat(Bitmap: TBitmap; PixelFormat: TPixelFormat);
 {$IFDEF VER9x}
 begin
@@ -2061,8 +2253,9 @@ begin
 end;
 {$ELSE}
 {$IFNDEF VER100}
+
 var
-  Palette		: hPalette;
+  Palette: HPalette;
 begin
   Bitmap.PixelFormat := PixelFormat;
 
@@ -2071,8 +2264,7 @@ begin
   // will be a half tone palette (which only contains the 20 system colors).
   // Unfortunately this is not the palette used to render the bitmap and it
   // is also not the palette saved with the bitmap.
-  if (PixelFormat = pf8bit) then
-  begin
+  if (PixelFormat = pf8bit) then begin
     // Disassociate the wrong palette from the bitmap (without affecting
     // the DIB color table)
     Palette := Bitmap.ReleasePalette;
@@ -2083,22 +2275,20 @@ begin
   end;
 end;
 {$ELSE}
+
 var
-  Width			,
-  Height		: integer;
+  Width, Height: integer;
 begin
-  if (PixelFormat = pf8bit) then
-  begin
+  if (PixelFormat = pf8bit) then begin
     // Partial solution to "TBitmap.PixelFormat := pf8bit" leak
     // by Greg Chapman <glc@well.com>
-    if (pf8BitBitmap = nil) then
-    begin
+    if (pf8BitBitmap = nil) then begin
       // Create a "template" bitmap
       // The bitmap is deleted in the finalization section of the unit.
-      pf8BitBitmap:= TBitmap.Create;
+      pf8BitBitmap := TBitmap.Create;
       // Convert template to pf8bit format
       // This will leak 1 palette handle, but only once
-      pf8BitBitmap.PixelFormat:= pf8Bit;
+      pf8BitBitmap.PixelFormat := pf8bit;
     end;
     // Store the size of the original bitmap
     Width := Bitmap.Width;
@@ -2108,14 +2298,13 @@ begin
     // Restore the original size
     Bitmap.Width := Width;
     Bitmap.Height := Height;
-  end else
+  end
+  else
     // This is safe since only pf8bit leaks
     Bitmap.PixelFormat := PixelFormat;
 end;
 {$ENDIF}
 {$ENDIF}
-
-
 {$IFDEF VER9x}
 
 // -----------
@@ -2133,25 +2322,26 @@ end;
 // Returns:
 // The handle to a new palette.
 //
-function CopyPalette(Palette: HPALETTE): HPALETTE;
+function CopyPalette(Palette: HPalette): HPalette;
 var
-  PaletteSize: Integer;
+  PaletteSize: integer;
   LogPal: TMaxLogPalette;
 begin
   Result := 0;
-  if Palette = 0 then Exit;
+  if Palette = 0 then
+    exit;
   PaletteSize := 0;
-  if GetObject(Palette, SizeOf(PaletteSize), @PaletteSize) = 0 then Exit;
-  if PaletteSize = 0 then Exit;
-  with LogPal do
-  begin
+  if GetObject(Palette, SizeOf(PaletteSize), @PaletteSize) = 0 then
+    exit;
+  if PaletteSize = 0 then
+    exit;
+  with LogPal do begin
     palVersion := $0300;
     palNumEntries := PaletteSize;
     GetPaletteEntries(Palette, 0, PaletteSize, palPalEntry);
   end;
   Result := CreatePalette(PLogPalette(@LogPal)^);
 end;
-
 
 // TThreadList implementation from Delphi 3 classes.pas
 constructor TThreadList.Create;
@@ -2163,7 +2353,7 @@ end;
 
 destructor TThreadList.Destroy;
 begin
-  LockList;    // Make sure nobody else is inside the list.
+  LockList; // Make sure nobody else is inside the list.
   try
     FList.Free;
     inherited Destroy;
@@ -2179,22 +2369,19 @@ begin
   try
     if FList.IndexOf(Item) = -1 then
       FList.Add(Item);
-  finally
-    UnlockList;
+  finally UnlockList;
   end;
 end;
 
 procedure TThreadList.Clear;
 begin
   LockList;
-  try
-    FList.Clear;
-  finally
-    UnlockList;
+  try FList.Clear;
+  finally UnlockList;
   end;
 end;
 
-function  TThreadList.LockList: TList;
+function TThreadList.LockList: TList;
 begin
   EnterCriticalSection(FLock);
   Result := FList;
@@ -2203,10 +2390,8 @@ end;
 procedure TThreadList.Remove(Item: Pointer);
 begin
   LockList;
-  try
-    FList.Remove(Item);
-  finally
-    UnlockList;
+  try FList.Remove(Item);
+  finally UnlockList;
   end;
 end;
 
@@ -2220,68 +2405,68 @@ end;
 { CompareMem performs a binary compare of Length bytes of memory referenced
   by P1 to that of P2.  CompareMem returns True if the memory referenced by
   P1 is identical to that of P2. }
-function CompareMem(P1, P2: Pointer; Length: Integer): Boolean; assembler;
+function CompareMem(P1, P2: Pointer; length: integer): Boolean; assembler;
 asm
-        PUSH    ESI
-        PUSH    EDI
-        MOV     ESI,P1
-        MOV     EDI,P2
-        MOV     EDX,ECX
-        XOR     EAX,EAX
-        AND     EDX,3
-        SHR     ECX,1
-        SHR     ECX,1
-        REPE    CMPSD
-        JNE     @@2
-        MOV     ECX,EDX
-        REPE    CMPSB
-        JNE     @@2
+  PUSH    ESI
+  PUSH    EDI
+  MOV     ESI,P1
+  MOV     EDI,P2
+  MOV     EDX,ECX
+  XOR     EAX,EAX
+  AND     EDX,3
+  SHR     ECX,1
+  SHR     ECX,1
+  REPE    CMPSD
+  JNE     @@2
+  MOV     ECX,EDX
+  REPE    CMPSB
+  JNE     @@2
 @@1:    INC     EAX
 @@2:    POP     EDI
-        POP     ESI
+  POP     ESI
 end;
 
 // Dummy ASSERT procedure since ASSERT does not exist in Delphi 2.x
-procedure ASSERT(Condition: boolean; Message: string);
+procedure ASSERT(Condition: Boolean; Message: string);
 begin
 end;
 
 {$ENDIF} // Delphi 2.x stuff
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TDIB Classes
+// TDIB Classes
 //
-//  These classes gives read and write access to TBitmap's pixel data
-//  independently of the Delphi version used.
+// These classes gives read and write access to TBitmap's pixel data
+// independently of the Delphi version used.
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TDIB = class(TObject)
   private
-    FBitmap		: TBitmap;
-    FPixelFormat	: TPixelFormat;
+    FBitmap: TBitmap;
+    FPixelFormat: TPixelFormat;
   protected
-    function GetScanline(Row: integer): pointer; virtual; abstract;
+    function GetScanline(Row: integer): Pointer; virtual; abstract;
     constructor Create(ABitmap: TBitmap; APixelFormat: TPixelFormat);
   public
-    property Scanline[Row: integer]: pointer read GetScanline;
+    property Scanline[Row: integer]: Pointer read GetScanline;
     property Bitmap: TBitmap read FBitmap;
     property PixelFormat: TPixelFormat read FPixelFormat;
   end;
 
   TDIBReader = class(TDIB)
   private
-{$ifdef VER9x}
-    FDIB		: TDIBSection;
-    FDC			: HDC;
-    FScanLine		: pointer;
-    FLastRow		: integer;
-    FInfo		: PBitmapInfo;
-    FBytes		: integer;
-{$endif}
+{$IFDEF VER9x}
+    FDIB: TDIBSection;
+    FDC: HDC;
+    FScanLine: Pointer;
+    FLastRow: integer;
+    FInfo: PBitmapInfo;
+    FBytes: integer;
+{$ENDIF}
   protected
-    function GetScanline(Row: integer): pointer; override;
+    function GetScanline(Row: integer): Pointer; override;
   public
     constructor Create(ABitmap: TBitmap; APixelFormat: TPixelFormat);
     destructor Destroy; override;
@@ -2289,26 +2474,25 @@ type
 
   TDIBWriter = class(TDIB)
   private
-{$ifdef PIXELFORMAT_TOO_SLOW}
-    FDIBInfo		: PBitmapInfo;
-    FDIBBits		: pointer;
-    FDIBInfoSize	: integer;
-    FDIBBitsSize	: longInt;
-{$ifndef CREATEDIBSECTION_SLOW}
-    FDIB		: HBITMAP;
-{$endif}
-{$endif}
-    FPalette		: HPalette;
-    FHeight		: integer;
-    FWidth		: integer;
+{$IFDEF PIXELFORMAT_TOO_SLOW}
+    FDIBInfo: PBitmapInfo;
+    FDIBBits: Pointer;
+    FDIBInfoSize: integer;
+    FDIBBitsSize: longInt;
+{$IFNDEF CREATEDIBSECTION_SLOW}
+    FDIB: HBitmap;
+{$ENDIF}
+{$ENDIF}
+    FPalette: HPalette;
+    FHeight: integer;
+    FWidth: integer;
   protected
     procedure CreateDIB;
     procedure FreeDIB;
     procedure NeedDIB;
-    function GetScanline(Row: integer): pointer; override;
+    function GetScanline(Row: integer): Pointer; override;
   public
-    constructor Create(ABitmap: TBitmap; APixelFormat: TPixelFormat;
-      AWidth, AHeight: integer; APalette: HPalette);
+    constructor Create(ABitmap: TBitmap; APixelFormat: TPixelFormat; AWidth, AHeight: integer; APalette: HPalette);
     destructor Destroy; override;
     procedure UpdateBitmap;
     property Width: integer read FWidth;
@@ -2316,7 +2500,7 @@ type
     property Palette: HPalette read FPalette;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
 constructor TDIB.Create(ABitmap: TBitmap; APixelFormat: TPixelFormat);
 begin
   inherited Create;
@@ -2324,18 +2508,18 @@ begin
   FPixelFormat := APixelFormat;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TDIBReader.Create(ABitmap: TBitmap; APixelFormat: TPixelFormat);
-{$ifdef VER9x}
+{$IFDEF VER9x}
 var
-  InfoHeaderSize	: integer;
-  ImageSize		: longInt;
-{$endif}
+  InfoHeaderSize: integer;
+  ImageSize: longInt;
+{$ENDIF}
 begin
   inherited Create(ABitmap, APixelFormat);
-{$ifndef VER9x}
+{$IFNDEF VER9x}
   SetPixelFormat(FBitmap, FPixelFormat);
-{$else}
+{$ELSE}
   FDC := CreateCompatibleDC(0);
   SelectPalette(FDC, FBitmap.Palette, False);
 
@@ -2346,25 +2530,25 @@ begin
   InitializeBitmapInfoHeader(ABitmap.Handle, FInfo^.bmiHeader, APixelFormat);
 
   // Allocate scan line buffer
-  GetMem(FScanLine, ImageSize DIV abs(FInfo^.bmiHeader.biHeight));
+  GetMem(FScanLine, ImageSize div abs(FInfo^.bmiHeader.biHeight));
 
   FLastRow := -1;
-{$endif}
+{$ENDIF}
 end;
 
 destructor TDIBReader.Destroy;
 begin
-{$ifdef VER9x}
+{$IFDEF VER9x}
   DeleteDC(FDC);
   FreeMem(FScanLine);
   FreeMem(FInfo);
-{$endif}
+{$ENDIF}
   inherited Destroy;
 end;
 
-function TDIBReader.GetScanline(Row: integer): pointer;
+function TDIBReader.GetScanline(Row: integer): Pointer;
 begin
-{$ifdef VER9x}
+{$IFDEF VER9x}
   if (Row < 0) or (Row >= FBitmap.Height) then
     raise EInvalidGraphicOperation.Create(SScanLine);
   GDIFlush;
@@ -2374,18 +2558,17 @@ begin
     exit;
   FLastRow := Row;
 
-  if (FInfo^.bmiHeader.biHeight > 0) then  // bottom-up DIB
+  if (FInfo^.bmiHeader.biHeight > 0) then // bottom-up DIB
     Row := FInfo^.bmiHeader.biHeight - Row - 1;
   GetDIBits(FDC, FBitmap.Handle, Row, 1, FScanLine, FInfo^, DIB_RGB_COLORS);
 
-{$else}
-  Result := FBitmap.ScanLine[Row];
-{$endif}
+{$ELSE}
+  Result := FBitmap.Scanline[Row];
+{$ENDIF}
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-constructor TDIBWriter.Create(ABitmap: TBitmap; APixelFormat: TPixelFormat;
-  AWidth, AHeight: integer; APalette: HPalette);
+/// /////////////////////////////////////////////////////////////////////////////
+constructor TDIBWriter.Create(ABitmap: TBitmap; APixelFormat: TPixelFormat; AWidth, AHeight: integer; APalette: HPalette);
 begin
   inherited Create(ABitmap, APixelFormat);
 
@@ -2397,21 +2580,21 @@ begin
 
   FHeight := AHeight;
   FWidth := AWidth;
-{$ifndef PIXELFORMAT_TOO_SLOW}
+{$IFNDEF PIXELFORMAT_TOO_SLOW}
   FBitmap.Palette := 0;
   FBitmap.Height := FHeight;
   FBitmap.Width := FWidth;
   SafeSetPixelFormat(FBitmap, FPixelFormat);
   FPalette := CopyPalette(APalette);
   FBitmap.Palette := FPalette;
-{$else}
+{$ELSE}
   FPalette := APalette;
   FDIBInfo := nil;
   FDIBBits := nil;
-{$ifndef CREATEDIBSECTION_SLOW}
+{$IFNDEF CREATEDIBSECTION_SLOW}
   FDIB := 0;
-{$endif}
-{$endif}
+{$ENDIF}
+{$ENDIF}
 end;
 
 destructor TDIBWriter.Destroy;
@@ -2421,75 +2604,75 @@ begin
   inherited Destroy;
 end;
 
-function TDIBWriter.GetScanline(Row: integer): pointer;
+function TDIBWriter.GetScanline(Row: integer): Pointer;
 begin
-{$ifdef PIXELFORMAT_TOO_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
   NeedDIB;
 
   if (FDIBBits = nil) then
     Error(sNoDIB);
-  with FDIBInfo^.bmiHeader do
-  begin
+  with FDIBInfo^.bmiHeader do begin
     if (Row < 0) or (Row >= Height) then
       raise EInvalidGraphicOperation.Create(SScanLine);
     GDIFlush;
 
-    if biHeight > 0 then  // bottom-up DIB
+    if biHeight > 0 then // bottom-up DIB
       Row := biHeight - Row - 1;
-    Result := PChar(Cardinal(FDIBBits) + Cardinal(Row) * AlignBit(biWidth, biBitCount, 32));
+    Result := PAnsiChar(Cardinal(FDIBBits) + Cardinal(Row) * AlignBit(biWidth, biBitCount, 32));
   end;
-{$else}
-  Result := FBitmap.ScanLine[Row];
-{$endif}
+{$ELSE}
+  Result := FBitmap.Scanline[Row];
+{$ENDIF}
 end;
 
 procedure TDIBWriter.CreateDIB;
 {$IFDEF PIXELFORMAT_TOO_SLOW}
 var
-  SrcColors		: WORD;
-//  ScreenDC		: HDC;
+  SrcColors: Word;
+  // ScreenDC		: HDC;
 
   // From Delphi 3.02 graphics.pas
   // There is a bug in the ByteSwapColors from Delphi 3.0!
-  procedure ByteSwapColors(var Colors; Count: Integer);
-  var   // convert RGB to BGR and vice-versa.  TRGBQuad <-> TPaletteEntry
+  procedure ByteSwapColors(var Colors; Count: integer);
+  var // convert RGB to BGR and vice-versa.  TRGBQuad <-> TPaletteEntry
     SysInfo: TSystemInfo;
   begin
     GetSystemInfo(SysInfo);
     asm
-          MOV   EDX, Colors
-          MOV   ECX, Count
-          DEC   ECX
-          JS    @@END
-          LEA   EAX, SysInfo
-          CMP   [EAX].TSystemInfo.wProcessorLevel, 3
-          JE    @@386
+      MOV   EDX, Colors
+      MOV   ECX, Count
+      DEC   ECX
+      JS    @@END
+      LEA   EAX, SysInfo
+      CMP   [EAX].TSystemInfo.wProcessorLevel, 3
+      JE    @@386
     @@1:  MOV   EAX, [EDX+ECX*4]
-          BSWAP EAX
-          SHR   EAX,8
-          MOV   [EDX+ECX*4],EAX
-          DEC   ECX
-          JNS   @@1
-          JMP   @@END
+      BSWAP EAX
+      SHR   EAX,8
+      MOV   [EDX+ECX*4],EAX
+      DEC   ECX
+      JNS   @@1
+      JMP   @@END
     @@386:
-          PUSH  EBX
+      PUSH  EBX
     @@2:  XOR   EBX,EBX
-          MOV   EAX, [EDX+ECX*4]
-          MOV   BH, AL
-          MOV   BL, AH
-          SHR   EAX,16
-          SHL   EBX,8
-          MOV   BL, AL
-          MOV   [EDX+ECX*4],EBX
-          DEC   ECX
-          JNS   @@2
-          POP   EBX
-      @@END:
+      MOV   EAX, [EDX+ECX*4]
+      MOV   BH, AL
+      MOV   BL, AH
+      SHR   EAX,16
+      SHL   EBX,8
+      MOV   BL, AL
+      MOV   [EDX+ECX*4],EBX
+      DEC   ECX
+      JNS   @@2
+      POP   EBX
+    @@END:
     end;
   end;
 {$ENDIF}
+
 begin
-{$ifdef PIXELFORMAT_TOO_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
   FreeDIB;
 
   if (PixelFormat = pf8bit) then
@@ -2509,138 +2692,130 @@ begin
     FDIBInfo^.bmiHeader.biSizeImage := 0;
     FDIBInfo^.bmiHeader.biCompression := BI_RGB;
 
-    if (PixelFormat = pf8bit) then
-    begin
+    if (PixelFormat = pf8bit) then begin
       FDIBInfo^.bmiHeader.biBitCount := 8;
       // Find number of colors defined by palette
-      if (Palette <> 0) and
-        (GetObject(Palette, sizeof(SrcColors), @SrcColors) <> 0) and
-        (SrcColors <> 0) then
-      begin
+      if (Palette <> 0) and (GetObject(Palette, SizeOf(SrcColors), @SrcColors) <> 0) and (SrcColors <> 0) then begin
         // Copy all colors...
         GetPaletteEntries(Palette, 0, SrcColors, FDIBInfo^.bmiColors[0]);
         // ...and convert BGR to RGB
         ByteSwapColors(FDIBInfo^.bmiColors[0], SrcColors);
-      end else
+      end
+      else
         SrcColors := 0;
 
       // Finally zero any unused entried
       if (SrcColors < 256) then
-        FillChar(pointer(LongInt(@FDIBInfo^.bmiColors)+SizeOf(TRGBQuad)*SrcColors)^,
-          256 - SrcColors, 0);
+        FillChar(Pointer(longInt(@FDIBInfo^.bmiColors) + SizeOf(TRGBQuad) * SrcColors)^, 256 - SrcColors, 0);
       FDIBInfo^.bmiHeader.biClrUsed := 256;
       FDIBInfo^.bmiHeader.biClrImportant := SrcColors;
-    end else
-    begin
+    end else begin
       FDIBInfo^.bmiHeader.biBitCount := 24;
       FDIBInfo^.bmiHeader.biClrUsed := 0;
       FDIBInfo^.bmiHeader.biClrImportant := 0;
     end;
     FDIBBitsSize := AlignBit(Width, FDIBInfo^.bmiHeader.biBitCount, 32) * Cardinal(abs(Height));
 
-{$ifdef CREATEDIBSECTION_SLOW}
+{$IFDEF CREATEDIBSECTION_SLOW}
     FDIBBits := GlobalAllocPtr(GMEM_MOVEABLE, FDIBBitsSize);
     if (FDIBBits = nil) then
       raise EOutOfMemory.Create(sOutOfMemDIB);
-{$else}
-//    ScreenDC := GDICheck(GetDC(0));
+{$ELSE}
+    // ScreenDC := GDICheck(GetDC(0));
     try
       // Allocate DIB section
       // Note: You can ignore warnings about the HDC parameter being 0. The
       // parameter is not used for 24 bit bitmaps
-      FDIB := GDICheck(CreateDIBSection(0 {ScreenDC}, FDIBInfo^, DIB_RGB_COLORS,
-        FDIBBits,
-        {$IFDEF VER9x} nil, {$ELSE} 0, {$ENDIF}
+        FDIB := GDICheck(CreateDIBSection(0 { ScreenDC } , FDIBInfo^, DIB_RGB_COLORS, FDIBBits,
+{$IFDEF VER9x} nil, {$ELSE} 0, {$ENDIF}
         0));
     finally
-//      ReleaseDC(0, ScreenDC);
+      // ReleaseDC(0, ScreenDC);
     end;
-{$endif}
-
+{$ENDIF}
   except
     FreeDIB;
     raise;
   end;
-{$endif}
+{$ENDIF}
 end;
 
 procedure TDIBWriter.FreeDIB;
 begin
-{$ifdef PIXELFORMAT_TOO_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
   if (FDIBInfo <> nil) then
     FreeMem(FDIBInfo);
-{$ifdef CREATEDIBSECTION_SLOW}
+{$IFDEF CREATEDIBSECTION_SLOW}
   if (FDIBBits <> nil) then
     GlobalFreePtr(FDIBBits);
-{$else}
+{$ELSE}
   if (FDIB <> 0) then
     DeleteObject(FDIB);
   FDIB := 0;
-{$endif}
+{$ENDIF}
   FDIBInfo := nil;
   FDIBBits := nil;
-{$endif}
+{$ENDIF}
 end;
 
 procedure TDIBWriter.NeedDIB;
 begin
-{$ifdef PIXELFORMAT_TOO_SLOW}
-{$ifdef CREATEDIBSECTION_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
+{$IFDEF CREATEDIBSECTION_SLOW}
   if (FDIBBits = nil) then
-{$else}
+{$ELSE}
   if (FDIB = 0) then
-{$endif}
+{$ENDIF}
     CreateDIB;
-{$endif}
+{$ENDIF}
 end;
 
 // Convert the DIB created by CreateDIB back to a TBitmap
 procedure TDIBWriter.UpdateBitmap;
-{$ifdef PIXELFORMAT_TOO_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
 var
-  Stream		: TMemoryStream;
-  FileSize		: longInt;
-  BitmapFileHeader	: TBitmapFileHeader;
-{$endif}
+  Stream: TMemoryStream;
+  FileSize: longInt;
+  BitmapFileHeader: TBitmapFileHeader;
+{$ENDIF}
 begin
-{$ifdef PIXELFORMAT_TOO_SLOW}
-
-{$ifdef CREATEDIBSECTION_SLOW}
+{$IFDEF PIXELFORMAT_TOO_SLOW}
+{$IFDEF CREATEDIBSECTION_SLOW}
   if (FDIBBits = nil) then
-{$else}
+{$ELSE}
   if (FDIB = 0) then
-{$endif}
+{$ENDIF}
     exit;
 
   // Win95 and NT differs in what solution performs best
-{$ifndef CREATEDIBSECTION_SLOW}
-{$ifdef VER10_PLUS}
-  if (Win32Platform = VER_PLATFORM_WIN32_NT) then
-  begin
+{$IFNDEF CREATEDIBSECTION_SLOW}
+{$IFDEF VER10_PLUS}
+  if (Win32Platform = VER_PLATFORM_WIN32_NT) then begin
     // Assign DIB to bitmap
     FBitmap.Handle := FDIB;
     FDIB := 0;
     FBitmap.Palette := CopyPalette(Palette);
-  end else
-{$endif}
-{$endif}
+  end
+  else
+{$ENDIF}
+{$ENDIF}
   begin
     // Write DIB to a stream in the BMP file format
     Stream := TMemoryStream.Create;
     try
       // Make room in stream for a TBitmapInfo and pixel data
-      FileSize := sizeof(TBitmapFileHeader) + FDIBInfoSize + FDIBBitsSize;
+      FileSize := SizeOf(TBitmapFileHeader) + FDIBInfoSize + FDIBBitsSize;
       Stream.SetSize(FileSize);
       // Initialize file header
-      FillChar(BitmapFileHeader, sizeof(TBitmapFileHeader), 0);
-      with BitmapFileHeader do
-      begin
+      FillChar(BitmapFileHeader, SizeOf(TBitmapFileHeader), 0);
+      with BitmapFileHeader do begin
         bfType := $4D42; // 'BM' = Windows BMP signature
         bfSize := FileSize; // File size (not needed)
-        bfOffBits := sizeof(TBitmapFileHeader) + FDIBInfoSize; // Offset of pixel data
+        bfOffBits := SizeOf(TBitmapFileHeader) + FDIBInfoSize;
+        // Offset of pixel data
       end;
       // Save file header
-      Stream.Write(BitmapFileHeader, sizeof(TBitmapFileHeader));
+      Stream.Write(BitmapFileHeader, SizeOf(TBitmapFileHeader));
       // Save TBitmapInfo structure
       Stream.Write(FDIBInfo^, FDIBInfoSize);
       // Save pixel data
@@ -2649,35 +2824,34 @@ begin
       // Rewind and load bitmap from stream
       Stream.Position := 0;
       FBitmap.LoadFromStream(Stream);
-    finally
-      Stream.Free;
+    finally Stream.Free;
     end;
   end;
-{$endif}
+{$ENDIF}
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Color Mapping
+// Color Mapping
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TColorLookup = class(TObject)
   private
-    FColors		: integer;
+    FColors: integer;
   public
-    constructor Create(Palette: hPalette); virtual;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; virtual; abstract;
+    constructor Create(Palette: HPalette); virtual;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; virtual; abstract;
     property Colors: integer read FColors;
   end;
 
-  PRGBQuadArray = ^TRGBQuadArray;		// From Delphi 3 graphics.pas
-  TRGBQuadArray = array[Byte] of TRGBQuad;	// From Delphi 3 graphics.pas
+  PRGBQuadArray = ^TRGBQuadArray; // From Delphi 3 graphics.pas
+  TRGBQuadArray = array [Byte] of TRGBQuad; // From Delphi 3 graphics.pas
 
-  BGRArray = array[0..0] of TRGBTriple;
+  BGRArray = array [0 .. 0] of TRGBTriple;
   PBGRArray = ^BGRArray;
 
-  PalArray =  array[byte] of TPaletteEntry;
+  PalArray = array [Byte] of TPaletteEntry;
   PPalArray = ^PalArray;
 
   // TFastColorLookup implements a simple but reasonably fast generic color
@@ -2687,17 +2861,17 @@ type
   // approx. 15% but reduces the complexity of the color reduction routines that
   // uses it. If bitmap to GIF conversion speed is really important to you, the
   // implementation can easily be inlined again.
-  TInverseLookup = array[0..1 SHL 15-1] of SmallInt;
+  TInverseLookup = array [0 .. 1 shl 15 - 1] of SmallInt;
   PInverseLookup = ^TInverseLookup;
 
   TFastColorLookup = class(TColorLookup)
   private
-    FPaletteEntries	: PPalArray;
-    FInverseLookup	: PInverseLookup;
+    FPaletteEntries: PPalArray;
+    FInverseLookup: PInverseLookup;
   public
-    constructor Create(Palette: hPalette); override;
+    constructor Create(Palette: HPalette); override;
     destructor Destroy; override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
   // TSlowColorLookup implements a precise but very slow generic color mapper.
@@ -2706,55 +2880,55 @@ type
   // TSlowColorLookup in many cases. I can't explain why...
   TSlowColorLookup = class(TColorLookup)
   private
-    FPaletteEntries	: PPalArray;
-    FPalette		: hPalette;
+    FPaletteEntries: PPalArray;
+    FPalette: HPalette;
   public
-    constructor Create(Palette: hPalette); override;
+    constructor Create(Palette: HPalette); override;
     destructor Destroy; override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
   // TNetscapeColorLookup maps colors to the netscape 6*6*6 color cube.
   TNetscapeColorLookup = class(TColorLookup)
   public
-    constructor Create(Palette: hPalette); override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    constructor Create(Palette: HPalette); override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
   // TGrayWindowsLookup maps colors to 4 shade palette.
   TGrayWindowsLookup = class(TSlowColorLookup)
   public
-    constructor Create(Palette: hPalette); override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    constructor Create(Palette: HPalette); override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
   // TGrayScaleLookup maps colors to a uniform 256 shade palette.
   TGrayScaleLookup = class(TColorLookup)
   public
-    constructor Create(Palette: hPalette); override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    constructor Create(Palette: HPalette); override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
   // TMonochromeLookup maps colors to a black/white palette.
   TMonochromeLookup = class(TColorLookup)
   public
-    constructor Create(Palette: hPalette); override;
-    function Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    constructor Create(Palette: HPalette); override;
+    function Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
   end;
 
-constructor TColorLookup.Create(Palette: hPalette);
+constructor TColorLookup.Create(Palette: HPalette);
 begin
   inherited Create;
 end;
 
-constructor TFastColorLookup.Create(Palette: hPalette);
+constructor TFastColorLookup.Create(Palette: HPalette);
 var
-  i			: integer;
-  InverseIndex		: integer;
+  i: integer;
+  InverseIndex: integer;
 begin
   inherited Create(Palette);
 
-  GetMem(FPaletteEntries, sizeof(TPaletteEntry) * 256);
+  GetMem(FPaletteEntries, SizeOf(TPaletteEntry) * 256);
   FColors := GetPaletteEntries(Palette, 0, 256, FPaletteEntries^);
 
   New(FInverseLookup);
@@ -2763,10 +2937,9 @@ begin
 
   // Premap palette colors
   if (FColors > 0) then
-    for i := 0 to FColors-1 do
-      with FPaletteEntries^[i] do
-      begin
-        InverseIndex := (peRed SHR 3) OR ((peGreen AND $F8) SHL 2) OR ((peBlue AND $F8) SHL 7);
+    for i := 0 to FColors - 1 do
+      with FPaletteEntries^[i] do begin
+        InverseIndex := (peRed shr 3) or ((peGreen and $F8) shl 2) or ((peBlue and $F8) shl 7);
         if (FInverseLookup^[InverseIndex] = -1) then
           FInverseLookup^[InverseIndex] := i;
       end;
@@ -2783,54 +2956,47 @@ begin
 end;
 
 // Map color to arbitrary palette
-function TFastColorLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TFastColorLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 var
-  i			: integer;
-  InverseIndex		: integer;
-  Delta			,
-  MinDelta		,
-  MinColor		: integer;
+  i: integer;
+  InverseIndex: integer;
+  Delta, MinDelta, MinColor: integer;
 begin
   // Reduce color space with 3 bits in each dimension
-  InverseIndex := (Red SHR 3) OR ((Green AND $F8) SHL 2) OR ((Blue AND $F8) SHL 7);
+  InverseIndex := (Red shr 3) or ((Green and $F8) shl 2) or ((Blue and $F8) shl 7);
 
   if (FInverseLookup^[InverseIndex] <> -1) then
-    Result := char(FInverseLookup^[InverseIndex])
-  else
-  begin
+    Result := AnsiChar(FInverseLookup^[InverseIndex])
+  else begin
     // Sequential scan for nearest color to minimize euclidian distance
     MinDelta := 3 * (256 * 256);
     MinColor := 0;
-    for i := 0 to FColors-1 do
-      with FPaletteEntries[i] do
-      begin
-        Delta := ABS(peRed - Red) + ABS(peGreen - Green) + ABS(peBlue - Blue);
-        if (Delta < MinDelta) then
-        begin
+    for i := 0 to FColors - 1 do
+      with FPaletteEntries[i] do begin
+        Delta := abs(peRed - Red) + abs(peGreen - Green) + abs(peBlue - Blue);
+        if (Delta < MinDelta) then begin
           MinDelta := Delta;
           MinColor := i;
         end;
       end;
-    Result := char(MinColor);
+    Result := AnsiChar(MinColor);
     FInverseLookup^[InverseIndex] := MinColor;
   end;
 
-  with FPaletteEntries^[ord(Result)] do
-  begin
+  with FPaletteEntries^[Ord(Result)] do begin
     R := peRed;
-    G := peGreen;
-    B := peBlue;
+    g := peGreen;
+    b := peBlue;
   end;
 end;
 
-constructor TSlowColorLookup.Create(Palette: hPalette);
+constructor TSlowColorLookup.Create(Palette: HPalette);
 begin
   inherited Create(Palette);
   FPalette := Palette;
   FColors := GetPaletteEntries(Palette, 0, 256, nil^);
-  if (FColors > 0) then
-  begin
-    GetMem(FPaletteEntries, sizeof(TPaletteEntry) * FColors);
+  if (FColors > 0) then begin
+    GetMem(FPaletteEntries, SizeOf(TPaletteEntry) * FColors);
     FColors := GetPaletteEntries(Palette, 0, 256, FPaletteEntries^);
   end;
 end;
@@ -2844,104 +3010,100 @@ begin
 end;
 
 // Map color to arbitrary palette
-function TSlowColorLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TSlowColorLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
-  Result := char(GetNearestPaletteIndex(FPalette, Red OR (Green SHL 8) OR (Blue SHL 16)));
+  Result := AnsiChar(GetNearestPaletteIndex(FPalette, Red or (Green shl 8) or (Blue shl 16)));
   if (FPaletteEntries <> nil) then
-    with FPaletteEntries^[ord(Result)] do
-    begin
+    with FPaletteEntries^[Ord(Result)] do begin
       R := peRed;
-      G := peGreen;
-      B := peBlue;
+      g := peGreen;
+      b := peBlue;
     end;
 end;
 
-constructor TNetscapeColorLookup.Create(Palette: hPalette);
+constructor TNetscapeColorLookup.Create(Palette: HPalette);
 begin
   inherited Create(Palette);
-  FColors := 6*6*6; // This better be true or something is wrong
+  FColors := 6 * 6 * 6; // This better be true or something is wrong
 end;
 
 // Map color to netscape 6*6*6 color cube
-function TNetscapeColorLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TNetscapeColorLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
-  R := (Red+3) DIV 51;
-  G := (Green+3) DIV 51;
-  B := (Blue+3) DIV 51;
-  Result := char(B + 6*G + 36*R);
+  R := (Red + 3) div 51;
+  g := (Green + 3) div 51;
+  b := (Blue + 3) div 51;
+  Result := AnsiChar(b + 6 * g + 36 * R);
   R := R * 51;
-  G := G * 51;
-  B := B * 51;
+  g := g * 51;
+  b := b * 51;
 end;
 
-constructor TGrayWindowsLookup.Create(Palette: hPalette);
+constructor TGrayWindowsLookup.Create(Palette: HPalette);
 begin
   inherited Create(Palette);
   FColors := 4;
 end;
 
 // Convert color to windows grays
-function TGrayWindowsLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TGrayWindowsLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
-  Result := inherited Lookup(MulDiv(Red, 77, 256),
-    MulDiv(Green, 150, 256), MulDiv(Blue, 29, 256), R, G, B);
+  Result := inherited Lookup(MulDiv(Red, 77, 256), MulDiv(Green, 150, 256), MulDiv(Blue, 29, 256), R, g, b);
 end;
 
-constructor TGrayScaleLookup.Create(Palette: hPalette);
+constructor TGrayScaleLookup.Create(Palette: HPalette);
 begin
   inherited Create(Palette);
   FColors := 256;
 end;
 
 // Convert color to grayscale
-function TGrayScaleLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TGrayScaleLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
-  Result := char((Blue*29 + Green*150 + Red*77) DIV 256);
-  R := ord(Result);
-  G := ord(Result);
-  B := ord(Result);
+  Result := AnsiChar((Blue * 29 + Green * 150 + Red * 77) div 256);
+  R := Ord(Result);
+  g := Ord(Result);
+  b := Ord(Result);
 end;
 
-constructor TMonochromeLookup.Create(Palette: hPalette);
+constructor TMonochromeLookup.Create(Palette: HPalette);
 begin
   inherited Create(Palette);
   FColors := 2;
 end;
 
 // Convert color to black/white
-function TMonochromeLookup.Lookup(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TMonochromeLookup.Lookup(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
-  if ((Blue*29 + Green*150 + Red*77) > 32512) then
-  begin
+  if ((Blue * 29 + Green * 150 + Red * 77) > 32512) then begin
     Result := #1;
     R := 255;
-    G := 255;
-    B := 255;
-  end else
-  begin
+    g := 255;
+    b := 255;
+  end else begin
     Result := #0;
     R := 0;
-    G := 0;
-    B := 0;
+    g := 0;
+    b := 0;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Dithering engine
+// Dithering engine
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TDitherEngine = class
   private
   protected
-    FDirection		: integer;
-    FColumn		: integer;
-    FLookup		: TColorLookup;
-    Width		: integer;
+    FDirection: integer;
+    FColumn: integer;
+    FLookup: TColorLookup;
+    Width: integer;
   public
     constructor Create(AWidth: integer; Lookup: TColorLookup); virtual;
-    function Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; virtual;
+    function Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; virtual;
     procedure NextLine; virtual;
     procedure NextColumn;
 
@@ -2952,62 +3114,38 @@ type
   // Note: TErrorTerm does only *need* to be 16 bits wide, but since
   // it is *much* faster to use native machine words (32 bit), we sacrifice
   // some bytes (a lot actually) to improve performance.
-  TErrorTerm		= Integer;
-  TErrors		= array[0..0] of TErrorTerm;
-  PErrors		= ^TErrors;
+  TErrorTerm = integer;
+  TErrors = array [0 .. 0] of TErrorTerm;
+  PErrors = ^TErrors;
 
   TFloydSteinbergDitherer = class(TDitherEngine)
   private
-    ErrorsR		,
-    ErrorsG		,
-    ErrorsB		: PErrors;
-    ErrorR		,
-    ErrorG		,
-    ErrorB		: PErrors;
-    CurrentErrorR	,		// Current error or pixel value
-    CurrentErrorG	,
-    CurrentErrorB	,
-    BelowErrorR		,		// Error for pixel below current
-    BelowErrorG		,
-    BelowErrorB		,
-    BelowPrevErrorR	,		// Error for pixel below previous pixel
-    BelowPrevErrorG	,
-    BelowPrevErrorB	: TErrorTerm;
+    ErrorsR, ErrorsG, ErrorsB: PErrors;
+    ErrorR, ErrorG, ErrorB: PErrors;
+    CurrentErrorR, // Current error or pixel value
+    CurrentErrorG, CurrentErrorB, BelowErrorR, // Error for pixel below current
+    BelowErrorG, BelowErrorB, BelowPrevErrorR,
+    // Error for pixel below previous pixel
+    BelowPrevErrorG, BelowPrevErrorB: TErrorTerm;
   public
     constructor Create(AWidth: integer; Lookup: TColorLookup); override;
     destructor Destroy; override;
-    function Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
     procedure NextLine; override;
   end;
 
   T5by3Ditherer = class(TDitherEngine)
   private
-    ErrorsR0		,
-    ErrorsG0		,
-    ErrorsB0		,
-    ErrorsR1		,
-    ErrorsG1		,
-    ErrorsB1		,
-    ErrorsR2		,
-    ErrorsG2		,
-    ErrorsB2		: PErrors;
-    ErrorR0		,
-    ErrorG0		,
-    ErrorB0		,
-    ErrorR1		,
-    ErrorG1		,
-    ErrorB1		,
-    ErrorR2		,
-    ErrorG2		,
-    ErrorB2		: PErrors;
-    FDirection2		: integer;
+    ErrorsR0, ErrorsG0, ErrorsB0, ErrorsR1, ErrorsG1, ErrorsB1, ErrorsR2, ErrorsG2, ErrorsB2: PErrors;
+    ErrorR0, ErrorG0, ErrorB0, ErrorR1, ErrorG1, ErrorB1, ErrorR2, ErrorG2, ErrorB2: PErrors;
+    FDirection2: integer;
   protected
-    FDivisor		: integer;
+    FDivisor: integer;
     procedure Propagate(Errors0, Errors1, Errors2: PErrors; Error: integer); virtual; abstract;
   public
     constructor Create(AWidth: integer; Lookup: TColorLookup); override;
     destructor Destroy; override;
-    function Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
     procedure NextLine; override;
   end;
 
@@ -3034,63 +3172,31 @@ type
 
   TSteveArcheDitherer = class(TDitherEngine)
   private
-    ErrorsR0		,
-    ErrorsG0		,
-    ErrorsB0		,
-    ErrorsR1		,
-    ErrorsG1		,
-    ErrorsB1		,
-    ErrorsR2		,
-    ErrorsG2		,
-    ErrorsB2		,
-    ErrorsR3		,
-    ErrorsG3		,
-    ErrorsB3		: PErrors;
-    ErrorR0		,
-    ErrorG0		,
-    ErrorB0		,
-    ErrorR1		,
-    ErrorG1		,
-    ErrorB1		,
-    ErrorR2		,
-    ErrorG2		,
-    ErrorB2		,
-    ErrorR3		,
-    ErrorG3		,
-    ErrorB3		: PErrors;
-    FDirection2		,
-    FDirection3		: integer;
+    ErrorsR0, ErrorsG0, ErrorsB0, ErrorsR1, ErrorsG1, ErrorsB1, ErrorsR2, ErrorsG2, ErrorsB2, ErrorsR3, ErrorsG3,
+      ErrorsB3: PErrors;
+    ErrorR0, ErrorG0, ErrorB0, ErrorR1, ErrorG1, ErrorB1, ErrorR2, ErrorG2, ErrorB2, ErrorR3, ErrorG3, ErrorB3: PErrors;
+    FDirection2, FDirection3: integer;
   public
     constructor Create(AWidth: integer; Lookup: TColorLookup); override;
     destructor Destroy; override;
-    function Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
     procedure NextLine; override;
   end;
 
   TBurkesDitherer = class(TDitherEngine)
   private
-    ErrorsR0		,
-    ErrorsG0		,
-    ErrorsB0		,
-    ErrorsR1		,
-    ErrorsG1		,
-    ErrorsB1		: PErrors;
-    ErrorR0		,
-    ErrorG0		,
-    ErrorB0		,
-    ErrorR1		,
-    ErrorG1		,
-    ErrorB1		: PErrors;
-    FDirection2		: integer;
+    ErrorsR0, ErrorsG0, ErrorsB0, ErrorsR1, ErrorsG1, ErrorsB1: PErrors;
+    ErrorR0, ErrorG0, ErrorB0, ErrorR1, ErrorG1, ErrorB1: PErrors;
+    FDirection2: integer;
   public
     constructor Create(AWidth: integer; Lookup: TColorLookup); override;
     destructor Destroy; override;
-    function Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char; override;
+    function Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar; override;
     procedure NextLine; override;
   end;
 
-////////////////////////////////////////////////////////////////////////////////
-//	TDitherEngine
+  /// /////////////////////////////////////////////////////////////////////////////
+  // TDitherEngine
 constructor TDitherEngine.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create;
@@ -3102,10 +3208,10 @@ begin
   FColumn := 0;
 end;
 
-function TDitherEngine.Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+function TDitherEngine.Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 begin
   // Map color to palette
-  Result := FLookup.Lookup(Red, Green, Blue, R, G, B);
+  Result := FLookup.Lookup(Red, Green, Blue, R, g, b);
   NextColumn;
 end;
 
@@ -3115,7 +3221,7 @@ begin
   if (FDirection = 1) then
     FColumn := 0
   else
-    FColumn := Width-1;
+    FColumn := Width - 1;
 end;
 
 procedure TDitherEngine.NextColumn;
@@ -3123,8 +3229,8 @@ begin
   inc(FColumn, FDirection);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//	TFloydSteinbergDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TFloydSteinbergDitherer
 constructor TFloydSteinbergDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
@@ -3137,12 +3243,12 @@ begin
   // need only a few extra variables to hold the errors immediately around the
   // current column.  (If we are lucky, those variables are in registers, but
   // even if not, they're probably cheaper to access than array elements are.)
-  GetMem(ErrorsR, sizeof(TErrorTerm)*(Width+2));
-  GetMem(ErrorsG, sizeof(TErrorTerm)*(Width+2));
-  GetMem(ErrorsB, sizeof(TErrorTerm)*(Width+2));
-  FillChar(ErrorsR^, sizeof(TErrorTerm)*(Width+2), 0);
-  FillChar(ErrorsG^, sizeof(TErrorTerm)*(Width+2), 0);
-  FillChar(ErrorsB^, sizeof(TErrorTerm)*(Width+2), 0);
+  GetMem(ErrorsR, SizeOf(TErrorTerm) * (Width + 2));
+  GetMem(ErrorsG, SizeOf(TErrorTerm) * (Width + 2));
+  GetMem(ErrorsB, SizeOf(TErrorTerm) * (Width + 2));
+  FillChar(ErrorsR^, SizeOf(TErrorTerm) * (Width + 2), 0);
+  FillChar(ErrorsG^, SizeOf(TErrorTerm) * (Width + 2), 0);
+  FillChar(ErrorsB^, SizeOf(TErrorTerm) * (Width + 2), 0);
   ErrorR := ErrorsR;
   ErrorG := ErrorsG;
   ErrorB := ErrorsB;
@@ -3166,122 +3272,118 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-function TFloydSteinbergDitherer.Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+
+function TFloydSteinbergDitherer.Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 var
-  BelowNextError	: TErrorTerm;
-  Delta			: TErrorTerm;
+  BelowNextError: TErrorTerm;
+  Delta: TErrorTerm;
 begin
-  CurrentErrorR := Red + (CurrentErrorR + ErrorR[0] + 8) DIV 16;
-//  CurrentErrorR := Red + (CurrentErrorR + ErrorR[Direction] + 8) DIV 16;
+  CurrentErrorR := Red + (CurrentErrorR + ErrorR[0] + 8) div 16;
+  // CurrentErrorR := Red + (CurrentErrorR + ErrorR[Direction] + 8) DIV 16;
   if (CurrentErrorR < 0) then
     CurrentErrorR := 0
   else if (CurrentErrorR > 255) then
     CurrentErrorR := 255;
 
-  CurrentErrorG := Green + (CurrentErrorG + ErrorG[0] + 8) DIV 16;
-//  CurrentErrorG := Green + (CurrentErrorG + ErrorG[Direction] + 8) DIV 16;
+  CurrentErrorG := Green + (CurrentErrorG + ErrorG[0] + 8) div 16;
+  // CurrentErrorG := Green + (CurrentErrorG + ErrorG[Direction] + 8) DIV 16;
   if (CurrentErrorG < 0) then
     CurrentErrorG := 0
   else if (CurrentErrorG > 255) then
     CurrentErrorG := 255;
 
-  CurrentErrorB := Blue + (CurrentErrorB + ErrorB[0] + 8) DIV 16;
-//  CurrentErrorB := Blue + (CurrentErrorB + ErrorB[Direction] + 8) DIV 16;
+  CurrentErrorB := Blue + (CurrentErrorB + ErrorB[0] + 8) div 16;
+  // CurrentErrorB := Blue + (CurrentErrorB + ErrorB[Direction] + 8) DIV 16;
   if (CurrentErrorB < 0) then
     CurrentErrorB := 0
   else if (CurrentErrorB > 255) then
     CurrentErrorB := 255;
 
   // Map color to palette
-  Result := inherited Dither(CurrentErrorR, CurrentErrorG, CurrentErrorB, R, G, B);
+  Result := inherited Dither(CurrentErrorR, CurrentErrorG, CurrentErrorB, R, g, b);
 
   // Propagate Floyd-Steinberg error terms.
   // Errors are accumulated into the error arrays, at a resolution of
   // 1/16th of a pixel count.  The error at a given pixel is propagated
   // to its not-yet-processed neighbors using the standard F-S fractions,
-  //		...	(here)	7/16
-  //		3/16	5/16	1/16
+  // ...	(here)	7/16
+  // 3/16	5/16	1/16
   // We work left-to-right on even rows, right-to-left on odd rows.
 
   // Red component
   CurrentErrorR := CurrentErrorR - R;
-  if (CurrentErrorR <> 0) then
-  begin
-    BelowNextError := CurrentErrorR;			// Error * 1
+  if (CurrentErrorR <> 0) then begin
+    BelowNextError := CurrentErrorR; // Error * 1
 
     Delta := CurrentErrorR * 2;
     inc(CurrentErrorR, Delta);
-    ErrorR[0] := BelowPrevErrorR + CurrentErrorR;	// Error * 3
+    ErrorR[0] := BelowPrevErrorR + CurrentErrorR; // Error * 3
 
     inc(CurrentErrorR, Delta);
-    BelowPrevErrorR := BelowErrorR + CurrentErrorR;	// Error * 5
+    BelowPrevErrorR := BelowErrorR + CurrentErrorR; // Error * 5
 
-    BelowErrorR := BelowNextError;			// Error * 1
+    BelowErrorR := BelowNextError; // Error * 1
 
-    inc(CurrentErrorR, Delta);				// Error * 7
+    inc(CurrentErrorR, Delta); // Error * 7
   end;
 
   // Green component
-  CurrentErrorG := CurrentErrorG - G;
-  if (CurrentErrorG <> 0) then
-  begin
-    BelowNextError := CurrentErrorG;			// Error * 1
+  CurrentErrorG := CurrentErrorG - g;
+  if (CurrentErrorG <> 0) then begin
+    BelowNextError := CurrentErrorG; // Error * 1
 
     Delta := CurrentErrorG * 2;
     inc(CurrentErrorG, Delta);
-    ErrorG[0] := BelowPrevErrorG + CurrentErrorG;	// Error * 3
+    ErrorG[0] := BelowPrevErrorG + CurrentErrorG; // Error * 3
 
     inc(CurrentErrorG, Delta);
-    BelowPrevErrorG := BelowErrorG + CurrentErrorG;	// Error * 5
+    BelowPrevErrorG := BelowErrorG + CurrentErrorG; // Error * 5
 
-    BelowErrorG := BelowNextError;			// Error * 1
+    BelowErrorG := BelowNextError; // Error * 1
 
-    inc(CurrentErrorG, Delta);				// Error * 7
+    inc(CurrentErrorG, Delta); // Error * 7
   end;
 
   // Blue component
-  CurrentErrorB := CurrentErrorB - B;
-  if (CurrentErrorB <> 0) then
-  begin
-    BelowNextError := CurrentErrorB;			// Error * 1
+  CurrentErrorB := CurrentErrorB - b;
+  if (CurrentErrorB <> 0) then begin
+    BelowNextError := CurrentErrorB; // Error * 1
 
     Delta := CurrentErrorB * 2;
     inc(CurrentErrorB, Delta);
-    ErrorB[0] := BelowPrevErrorB + CurrentErrorB;	// Error * 3
+    ErrorB[0] := BelowPrevErrorB + CurrentErrorB; // Error * 3
 
     inc(CurrentErrorB, Delta);
-    BelowPrevErrorB := BelowErrorB + CurrentErrorB;	// Error * 5
+    BelowPrevErrorB := BelowErrorB + CurrentErrorB; // Error * 5
 
-    BelowErrorB := BelowNextError;			// Error * 1
+    BelowErrorB := BelowNextError; // Error * 1
 
-    inc(CurrentErrorB, Delta);				// Error * 7
+    inc(CurrentErrorB, Delta); // Error * 7
   end;
 
   // Move on to next column
-  if (Direction = 1) then
-  begin
-    inc(longInt(ErrorR), sizeof(TErrorTerm));
-    inc(longInt(ErrorG), sizeof(TErrorTerm));
-    inc(longInt(ErrorB), sizeof(TErrorTerm));
-  end else
-  begin
-    dec(longInt(ErrorR), sizeof(TErrorTerm));
-    dec(longInt(ErrorG), sizeof(TErrorTerm));
-    dec(longInt(ErrorB), sizeof(TErrorTerm));
+  if (Direction = 1) then begin
+    inc(longInt(ErrorR), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB), SizeOf(TErrorTerm));
+  end else begin
+    Dec(longInt(ErrorR), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB), SizeOf(TErrorTerm));
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
+{$ENDIF}
+{$IFOPT R+}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
 
-{$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
-{$ENDIF}
 procedure TFloydSteinbergDitherer.NextLine;
 begin
   ErrorR[0] := BelowPrevErrorR;
@@ -3289,9 +3391,9 @@ begin
   ErrorB[0] := BelowPrevErrorB;
 
   // Note: The optimizer produces better code for this construct:
-  //   a := 0; b := a; c := a;
+  // a := 0; b := a; c := a;
   // compared to this construct:
-  //   a := 0; b := 0; c := 0;
+  // a := 0; b := 0; c := 0;
   CurrentErrorR := 0;
   CurrentErrorG := CurrentErrorR;
   CurrentErrorB := CurrentErrorG;
@@ -3304,59 +3406,57 @@ begin
 
   inherited NextLine;
 
-  if (Direction = 1) then
-  begin
+  if (Direction = 1) then begin
     ErrorR := ErrorsR;
     ErrorG := ErrorsG;
     ErrorB := ErrorsB;
-  end else
-  begin
-    ErrorR := @ErrorsR[Width+1];
-    ErrorG := @ErrorsG[Width+1];
-    ErrorB := @ErrorsB[Width+1];
+  end else begin
+    ErrorR := @ErrorsR[Width + 1];
+    ErrorG := @ErrorsG[Width + 1];
+    ErrorB := @ErrorsB[Width + 1];
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	T5by3Ditherer
+/// /////////////////////////////////////////////////////////////////////////////
+// T5by3Ditherer
 constructor T5by3Ditherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
 
-  GetMem(ErrorsR0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsG0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsB0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsR1, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsG1, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsB1, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsR2, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsG2, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsB2, sizeof(TErrorTerm)*(Width+4));
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsR1^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG1^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB1^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsR2^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG2^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB2^, sizeof(TErrorTerm)*(Width+4), 0);
+  GetMem(ErrorsR0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsG0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsB0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsR1, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsG1, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsB1, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsR2, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsG2, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsB2, SizeOf(TErrorTerm) * (Width + 4));
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsR1^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG1^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB1^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsR2^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG2^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB2^, SizeOf(TErrorTerm) * (Width + 4), 0);
 
   FDivisor := 1;
   FDirection2 := 2 * Direction;
-  ErrorR0 := PErrors(longInt(ErrorsR0)+2*sizeof(TErrorTerm));
-  ErrorG0 := PErrors(longInt(ErrorsG0)+2*sizeof(TErrorTerm));
-  ErrorB0 := PErrors(longInt(ErrorsB0)+2*sizeof(TErrorTerm));
-  ErrorR1 := PErrors(longInt(ErrorsR1)+2*sizeof(TErrorTerm));
-  ErrorG1 := PErrors(longInt(ErrorsG1)+2*sizeof(TErrorTerm));
-  ErrorB1 := PErrors(longInt(ErrorsB1)+2*sizeof(TErrorTerm));
-  ErrorR2 := PErrors(longInt(ErrorsR2)+2*sizeof(TErrorTerm));
-  ErrorG2 := PErrors(longInt(ErrorsG2)+2*sizeof(TErrorTerm));
-  ErrorB2 := PErrors(longInt(ErrorsB2)+2*sizeof(TErrorTerm));
+  ErrorR0 := PErrors(longInt(ErrorsR0) + 2 * SizeOf(TErrorTerm));
+  ErrorG0 := PErrors(longInt(ErrorsG0) + 2 * SizeOf(TErrorTerm));
+  ErrorB0 := PErrors(longInt(ErrorsB0) + 2 * SizeOf(TErrorTerm));
+  ErrorR1 := PErrors(longInt(ErrorsR1) + 2 * SizeOf(TErrorTerm));
+  ErrorG1 := PErrors(longInt(ErrorsG1) + 2 * SizeOf(TErrorTerm));
+  ErrorB1 := PErrors(longInt(ErrorsB1) + 2 * SizeOf(TErrorTerm));
+  ErrorR2 := PErrors(longInt(ErrorsR2) + 2 * SizeOf(TErrorTerm));
+  ErrorG2 := PErrors(longInt(ErrorsG2) + 2 * SizeOf(TErrorTerm));
+  ErrorB2 := PErrors(longInt(ErrorsB2) + 2 * SizeOf(TErrorTerm));
 end;
 
 destructor T5by3Ditherer.Destroy;
@@ -3374,87 +3474,84 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-function T5by3Ditherer.Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+
+function T5by3Ditherer.Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 var
-  ColorR		,
-  ColorG		,
-  ColorB		: integer; // Error for current pixel
+  ColorR, ColorG, ColorB: integer; // Error for current pixel
 begin
   // Apply red component error correction
-  ColorR := Red + (ErrorR0[0] + FDivisor DIV 2) DIV FDivisor;
+  ColorR := Red + (ErrorR0[0] + FDivisor div 2) div FDivisor;
   if (ColorR < 0) then
     ColorR := 0
   else if (ColorR > 255) then
     ColorR := 255;
 
   // Apply green component error correction
-  ColorG := Green + (ErrorG0[0] + FDivisor DIV 2) DIV FDivisor;
+  ColorG := Green + (ErrorG0[0] + FDivisor div 2) div FDivisor;
   if (ColorG < 0) then
     ColorG := 0
   else if (ColorG > 255) then
     ColorG := 255;
 
   // Apply blue component error correction
-  ColorB := Blue + (ErrorB0[0] + FDivisor DIV 2) DIV FDivisor;
+  ColorB := Blue + (ErrorB0[0] + FDivisor div 2) div FDivisor;
   if (ColorB < 0) then
     ColorB := 0
   else if (ColorB > 255) then
     ColorB := 255;
 
   // Map color to palette
-  Result := inherited Dither(ColorR, ColorG, ColorB, R, G, B);
+  Result := inherited Dither(ColorR, ColorG, ColorB, R, g, b);
 
   // Propagate red component error
   Propagate(ErrorR0, ErrorR1, ErrorR2, ColorR - R);
   // Propagate green component error
-  Propagate(ErrorG0, ErrorG1, ErrorG2, ColorG - G);
+  Propagate(ErrorG0, ErrorG1, ErrorG2, ColorG - g);
   // Propagate blue component error
-  Propagate(ErrorB0, ErrorB1, ErrorB2, ColorB - B);
+  Propagate(ErrorB0, ErrorB1, ErrorB2, ColorB - b);
 
   // Move on to next column
-  if (Direction = 1) then
-  begin
-    inc(longInt(ErrorR0), sizeof(TErrorTerm));
-    inc(longInt(ErrorG0), sizeof(TErrorTerm));
-    inc(longInt(ErrorB0), sizeof(TErrorTerm));
-    inc(longInt(ErrorR1), sizeof(TErrorTerm));
-    inc(longInt(ErrorG1), sizeof(TErrorTerm));
-    inc(longInt(ErrorB1), sizeof(TErrorTerm));
-    inc(longInt(ErrorR2), sizeof(TErrorTerm));
-    inc(longInt(ErrorG2), sizeof(TErrorTerm));
-    inc(longInt(ErrorB2), sizeof(TErrorTerm));
-  end else
-  begin
-    dec(longInt(ErrorR0), sizeof(TErrorTerm));
-    dec(longInt(ErrorG0), sizeof(TErrorTerm));
-    dec(longInt(ErrorB0), sizeof(TErrorTerm));
-    dec(longInt(ErrorR1), sizeof(TErrorTerm));
-    dec(longInt(ErrorG1), sizeof(TErrorTerm));
-    dec(longInt(ErrorB1), sizeof(TErrorTerm));
-    dec(longInt(ErrorR2), sizeof(TErrorTerm));
-    dec(longInt(ErrorG2), sizeof(TErrorTerm));
-    dec(longInt(ErrorB2), sizeof(TErrorTerm));
+  if (Direction = 1) then begin
+    inc(longInt(ErrorR0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR2), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG2), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB2), SizeOf(TErrorTerm));
+  end else begin
+    Dec(longInt(ErrorR0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR2), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG2), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB2), SizeOf(TErrorTerm));
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
+{$ENDIF}
+{$IFOPT R+}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
 
-{$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
-{$ENDIF}
 procedure T5by3Ditherer.NextLine;
 var
-  TempErrors		: PErrors;
+  TempErrors: PErrors;
 begin
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+4), 0);
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 4), 0);
 
   // Swap lines
   TempErrors := ErrorsR0;
@@ -3475,39 +3572,37 @@ begin
   inherited NextLine;
 
   FDirection2 := 2 * Direction;
-  if (Direction = 1) then
-  begin
+  if (Direction = 1) then begin
     // ErrorsR0[1] gives compiler error, so we
     // use PErrors(longInt(ErrorsR0)+sizeof(TErrorTerm)) instead...
-    ErrorR0 := PErrors(longInt(ErrorsR0)+2*sizeof(TErrorTerm));
-    ErrorG0 := PErrors(longInt(ErrorsG0)+2*sizeof(TErrorTerm));
-    ErrorB0 := PErrors(longInt(ErrorsB0)+2*sizeof(TErrorTerm));
-    ErrorR1 := PErrors(longInt(ErrorsR1)+2*sizeof(TErrorTerm));
-    ErrorG1 := PErrors(longInt(ErrorsG1)+2*sizeof(TErrorTerm));
-    ErrorB1 := PErrors(longInt(ErrorsB1)+2*sizeof(TErrorTerm));
-    ErrorR2 := PErrors(longInt(ErrorsR2)+2*sizeof(TErrorTerm));
-    ErrorG2 := PErrors(longInt(ErrorsG2)+2*sizeof(TErrorTerm));
-    ErrorB2 := PErrors(longInt(ErrorsB2)+2*sizeof(TErrorTerm));
-  end else
-  begin
-    ErrorR0 := @ErrorsR0[Width+1];
-    ErrorG0 := @ErrorsG0[Width+1];
-    ErrorB0 := @ErrorsB0[Width+1];
-    ErrorR1 := @ErrorsR1[Width+1];
-    ErrorG1 := @ErrorsG1[Width+1];
-    ErrorB1 := @ErrorsB1[Width+1];
-    ErrorR2 := @ErrorsR2[Width+1];
-    ErrorG2 := @ErrorsG2[Width+1];
-    ErrorB2 := @ErrorsB2[Width+1];
+    ErrorR0 := PErrors(longInt(ErrorsR0) + 2 * SizeOf(TErrorTerm));
+    ErrorG0 := PErrors(longInt(ErrorsG0) + 2 * SizeOf(TErrorTerm));
+    ErrorB0 := PErrors(longInt(ErrorsB0) + 2 * SizeOf(TErrorTerm));
+    ErrorR1 := PErrors(longInt(ErrorsR1) + 2 * SizeOf(TErrorTerm));
+    ErrorG1 := PErrors(longInt(ErrorsG1) + 2 * SizeOf(TErrorTerm));
+    ErrorB1 := PErrors(longInt(ErrorsB1) + 2 * SizeOf(TErrorTerm));
+    ErrorR2 := PErrors(longInt(ErrorsR2) + 2 * SizeOf(TErrorTerm));
+    ErrorG2 := PErrors(longInt(ErrorsG2) + 2 * SizeOf(TErrorTerm));
+    ErrorB2 := PErrors(longInt(ErrorsB2) + 2 * SizeOf(TErrorTerm));
+  end else begin
+    ErrorR0 := @ErrorsR0[Width + 1];
+    ErrorG0 := @ErrorsG0[Width + 1];
+    ErrorB0 := @ErrorsB0[Width + 1];
+    ErrorR1 := @ErrorsR1[Width + 1];
+    ErrorG1 := @ErrorsG1[Width + 1];
+    ErrorB1 := @ErrorsB1[Width + 1];
+    ErrorR2 := @ErrorsR2[Width + 1];
+    ErrorG2 := @ErrorsG2[Width + 1];
+    ErrorB2 := @ErrorsB2[Width + 1];
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	TStuckiDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TStuckiDitherer
 constructor TStuckiDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
@@ -3515,43 +3610,44 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
+
 procedure TStuckiDitherer.Propagate(Errors0, Errors1, Errors2: PErrors; Error: integer);
 begin
   if (Error = 0) then
     exit;
   // Propagate Stucki error terms:
-  //	...	...	(here)	8/42	4/42
-  //	2/42	4/42	8/42	4/42	2/42
-  //	1/42	2/42	4/42	2/42	1/42
-  inc(Errors2[FDirection2], Error);	// Error * 1
-  inc(Errors2[-FDirection2], Error);	// Error * 1
+  // ...	...	(here)	8/42	4/42
+  // 2/42	4/42	8/42	4/42	2/42
+  // 1/42	2/42	4/42	2/42	1/42
+  inc(Errors2[FDirection2], Error); // Error * 1
+  inc(Errors2[-FDirection2], Error); // Error * 1
 
   Error := Error + Error;
-  inc(Errors1[FDirection2], Error);	// Error * 2
-  inc(Errors1[-FDirection2], Error);	// Error * 2
-  inc(Errors2[Direction], Error);	// Error * 2
-  inc(Errors2[-Direction], Error);	// Error * 2
+  inc(Errors1[FDirection2], Error); // Error * 2
+  inc(Errors1[-FDirection2], Error); // Error * 2
+  inc(Errors2[Direction], Error); // Error * 2
+  inc(Errors2[-Direction], Error); // Error * 2
 
   Error := Error + Error;
-  inc(Errors0[FDirection2], Error);	// Error * 4
-  inc(Errors1[-Direction], Error);	// Error * 4
-  inc(Errors1[Direction], Error);	// Error * 4
-  inc(Errors2[0], Error);		// Error * 4
+  inc(Errors0[FDirection2], Error); // Error * 4
+  inc(Errors1[-Direction], Error); // Error * 4
+  inc(Errors1[Direction], Error); // Error * 4
+  inc(Errors2[0], Error); // Error * 4
 
   Error := Error + Error;
-  inc(Errors0[Direction], Error);	// Error * 8
-  inc(Errors1[0], Error);		// Error * 8
+  inc(Errors0[Direction], Error); // Error * 8
+  inc(Errors1[0], Error); // Error * 8
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	TSierraDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TSierraDitherer
 constructor TSierraDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
@@ -3559,44 +3655,45 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
+
 procedure TSierraDitherer.Propagate(Errors0, Errors1, Errors2: PErrors; Error: integer);
 var
-  TempError		: integer;
+  TempError: integer;
 begin
   if (Error = 0) then
     exit;
   // Propagate Sierra error terms:
-  //	...	...	(here)	5/32	3/32
-  //	2/32	4/32	5/32	4/32	2/32
-  //	...	2/32	3/32	2/32	...
+  // ...	...	(here)	5/32	3/32
+  // 2/32	4/32	5/32	4/32	2/32
+  // ...	2/32	3/32	2/32	...
   TempError := Error + Error;
-  inc(Errors1[FDirection2], TempError);	// Error * 2
-  inc(Errors1[-FDirection2], TempError);// Error * 2
-  inc(Errors2[Direction], TempError);	// Error * 2
-  inc(Errors2[-Direction], TempError);	// Error * 2
+  inc(Errors1[FDirection2], TempError); // Error * 2
+  inc(Errors1[-FDirection2], TempError); // Error * 2
+  inc(Errors2[Direction], TempError); // Error * 2
+  inc(Errors2[-Direction], TempError); // Error * 2
 
   inc(TempError, Error);
-  inc(Errors0[FDirection2], TempError);	// Error * 3
-  inc(Errors2[0], TempError);		// Error * 3
+  inc(Errors0[FDirection2], TempError); // Error * 3
+  inc(Errors2[0], TempError); // Error * 3
 
   inc(TempError, Error);
-  inc(Errors1[-Direction], TempError);	// Error * 4
-  inc(Errors1[Direction], TempError);	// Error * 4
+  inc(Errors1[-Direction], TempError); // Error * 4
+  inc(Errors1[Direction], TempError); // Error * 4
 
   inc(TempError, Error);
-  inc(Errors0[Direction], TempError);	// Error * 5
-  inc(Errors1[0], TempError);		// Error * 5
+  inc(Errors0[Direction], TempError); // Error * 5
+  inc(Errors1[0], TempError); // Error * 5
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	TJaJuNiDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TJaJuNiDitherer
 constructor TJaJuNiDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
@@ -3604,90 +3701,91 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
+
 procedure TJaJuNiDitherer.Propagate(Errors0, Errors1, Errors2: PErrors; Error: integer);
 var
-  TempError		: integer;
+  TempError: integer;
 begin
   if (Error = 0) then
     exit;
   // Propagate Jarvis, Judice and Ninke error terms:
-  //	...	...	(here)	8/38	4/38
-  //	2/38	4/38	8/38	4/38	2/38
-  //	1/38	2/38	4/38	2/38	1/38
-  inc(Errors2[FDirection2], Error);	// Error * 1
-  inc(Errors2[-FDirection2], Error);	// Error * 1
+  // ...	...	(here)	8/38	4/38
+  // 2/38	4/38	8/38	4/38	2/38
+  // 1/38	2/38	4/38	2/38	1/38
+  inc(Errors2[FDirection2], Error); // Error * 1
+  inc(Errors2[-FDirection2], Error); // Error * 1
 
   TempError := Error + Error;
   inc(Error, TempError);
-  inc(Errors1[FDirection2], Error);	// Error * 3
-  inc(Errors1[-FDirection2], Error);	// Error * 3
-  inc(Errors2[Direction], Error);	// Error * 3
-  inc(Errors2[-Direction], Error);	// Error * 3
+  inc(Errors1[FDirection2], Error); // Error * 3
+  inc(Errors1[-FDirection2], Error); // Error * 3
+  inc(Errors2[Direction], Error); // Error * 3
+  inc(Errors2[-Direction], Error); // Error * 3
 
   inc(Error, TempError);
-  inc(Errors0[FDirection2], Error);	// Error * 5
-  inc(Errors1[-Direction], Error);	// Error * 5
-  inc(Errors1[Direction], Error);	// Error * 5
-  inc(Errors2[0], Error);		// Error * 5
+  inc(Errors0[FDirection2], Error); // Error * 5
+  inc(Errors1[-Direction], Error); // Error * 5
+  inc(Errors1[Direction], Error); // Error * 5
+  inc(Errors2[0], Error); // Error * 5
 
   inc(Error, TempError);
-  inc(Errors0[Direction], Error);	// Error * 7
-  inc(Errors1[0], Error);		// Error * 7
+  inc(Errors0[Direction], Error); // Error * 7
+  inc(Errors1[0], Error); // Error * 7
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	TSteveArcheDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TSteveArcheDitherer
 constructor TSteveArcheDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
 
-  GetMem(ErrorsR0, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsG0, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsB0, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsR1, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsG1, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsB1, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsR2, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsG2, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsB2, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsR3, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsG3, sizeof(TErrorTerm)*(Width+6));
-  GetMem(ErrorsB3, sizeof(TErrorTerm)*(Width+6));
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsR1^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsG1^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsB1^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsR2^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsG2^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsB2^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsR3^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsG3^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsB3^, sizeof(TErrorTerm)*(Width+6), 0);
+  GetMem(ErrorsR0, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsG0, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsB0, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsR1, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsG1, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsB1, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsR2, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsG2, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsB2, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsR3, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsG3, SizeOf(TErrorTerm) * (Width + 6));
+  GetMem(ErrorsB3, SizeOf(TErrorTerm) * (Width + 6));
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsR1^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsG1^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsB1^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsR2^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsG2^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsB2^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsR3^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsG3^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsB3^, SizeOf(TErrorTerm) * (Width + 6), 0);
 
   FDirection2 := 2 * Direction;
   FDirection3 := 3 * Direction;
 
-  ErrorR0 := PErrors(longInt(ErrorsR0)+3*sizeof(TErrorTerm));
-  ErrorG0 := PErrors(longInt(ErrorsG0)+3*sizeof(TErrorTerm));
-  ErrorB0 := PErrors(longInt(ErrorsB0)+3*sizeof(TErrorTerm));
-  ErrorR1 := PErrors(longInt(ErrorsR1)+3*sizeof(TErrorTerm));
-  ErrorG1 := PErrors(longInt(ErrorsG1)+3*sizeof(TErrorTerm));
-  ErrorB1 := PErrors(longInt(ErrorsB1)+3*sizeof(TErrorTerm));
-  ErrorR2 := PErrors(longInt(ErrorsR2)+3*sizeof(TErrorTerm));
-  ErrorG2 := PErrors(longInt(ErrorsG2)+3*sizeof(TErrorTerm));
-  ErrorB2 := PErrors(longInt(ErrorsB2)+3*sizeof(TErrorTerm));
-  ErrorR3 := PErrors(longInt(ErrorsR3)+3*sizeof(TErrorTerm));
-  ErrorG3 := PErrors(longInt(ErrorsG3)+3*sizeof(TErrorTerm));
-  ErrorB3 := PErrors(longInt(ErrorsB3)+3*sizeof(TErrorTerm));
+  ErrorR0 := PErrors(longInt(ErrorsR0) + 3 * SizeOf(TErrorTerm));
+  ErrorG0 := PErrors(longInt(ErrorsG0) + 3 * SizeOf(TErrorTerm));
+  ErrorB0 := PErrors(longInt(ErrorsB0) + 3 * SizeOf(TErrorTerm));
+  ErrorR1 := PErrors(longInt(ErrorsR1) + 3 * SizeOf(TErrorTerm));
+  ErrorG1 := PErrors(longInt(ErrorsG1) + 3 * SizeOf(TErrorTerm));
+  ErrorB1 := PErrors(longInt(ErrorsB1) + 3 * SizeOf(TErrorTerm));
+  ErrorR2 := PErrors(longInt(ErrorsR2) + 3 * SizeOf(TErrorTerm));
+  ErrorG2 := PErrors(longInt(ErrorsG2) + 3 * SizeOf(TErrorTerm));
+  ErrorB2 := PErrors(longInt(ErrorsB2) + 3 * SizeOf(TErrorTerm));
+  ErrorR3 := PErrors(longInt(ErrorsR3) + 3 * SizeOf(TErrorTerm));
+  ErrorG3 := PErrors(longInt(ErrorsG3) + 3 * SizeOf(TErrorTerm));
+  ErrorB3 := PErrors(longInt(ErrorsB3) + 3 * SizeOf(TErrorTerm));
 end;
 
 destructor TSteveArcheDitherer.Destroy;
@@ -3708,127 +3806,124 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-function TSteveArcheDitherer.Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+
+function TSteveArcheDitherer.Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 var
-  ColorR		,
-  ColorG		,
-  ColorB		: integer; // Error for current pixel
+  ColorR, ColorG, ColorB: integer; // Error for current pixel
 
   // Propagate Stevenson & Arche error terms:
-  //	...	...	...	(here)	...	32/200	...
-  //    12/200	...	26/200	...	30/200	...	16/200
-  //	...	12/200	...	26/200	...	12/200	...
-  //	5/200	...	12/200	...	12/200	...	5/200
+  // ...	...	...	(here)	...	32/200	...
+  // 12/200	...	26/200	...	30/200	...	16/200
+  // ...	12/200	...	26/200	...	12/200	...
+  // 5/200	...	12/200	...	12/200	...	5/200
   procedure Propagate(Errors0, Errors1, Errors2, Errors3: PErrors; Error: integer);
   var
-    TempError		: integer;
+    TempError: integer;
   begin
     if (Error = 0) then
       exit;
     TempError := 5 * Error;
-    inc(Errors3[FDirection3], TempError);	// Error * 5
-    inc(Errors3[-FDirection3], TempError);	// Error * 5
+    inc(Errors3[FDirection3], TempError); // Error * 5
+    inc(Errors3[-FDirection3], TempError); // Error * 5
 
     TempError := 12 * Error;
-    inc(Errors1[-FDirection3], TempError);	// Error * 12
-    inc(Errors2[-FDirection2], TempError);	// Error * 12
-    inc(Errors2[FDirection2], TempError);	// Error * 12
-    inc(Errors3[-Direction], TempError);	// Error * 12
-    inc(Errors3[Direction], TempError);		// Error * 12
+    inc(Errors1[-FDirection3], TempError); // Error * 12
+    inc(Errors2[-FDirection2], TempError); // Error * 12
+    inc(Errors2[FDirection2], TempError); // Error * 12
+    inc(Errors3[-Direction], TempError); // Error * 12
+    inc(Errors3[Direction], TempError); // Error * 12
 
-    inc(Errors1[FDirection3], 16 * TempError);	// Error * 16
+    inc(Errors1[FDirection3], 16 * TempError); // Error * 16
 
     TempError := 26 * Error;
-    inc(Errors1[-Direction], TempError);	// Error * 26
-    inc(Errors2[0], TempError);			// Error * 26
+    inc(Errors1[-Direction], TempError); // Error * 26
+    inc(Errors2[0], TempError); // Error * 26
 
-    inc(Errors1[Direction], 30 * Error);	// Error * 30
+    inc(Errors1[Direction], 30 * Error); // Error * 30
 
-    inc(Errors0[FDirection2], 32 * Error);	// Error * 32
+    inc(Errors0[FDirection2], 32 * Error); // Error * 32
   end;
 
 begin
   // Apply red component error correction
-  ColorR := Red + (ErrorR0[0] + 100) DIV 200;
+  ColorR := Red + (ErrorR0[0] + 100) div 200;
   if (ColorR < 0) then
     ColorR := 0
   else if (ColorR > 255) then
     ColorR := 255;
 
   // Apply green component error correction
-  ColorG := Green + (ErrorG0[0] + 100) DIV 200;
+  ColorG := Green + (ErrorG0[0] + 100) div 200;
   if (ColorG < 0) then
     ColorG := 0
   else if (ColorG > 255) then
     ColorG := 255;
 
   // Apply blue component error correction
-  ColorB := Blue + (ErrorB0[0] + 100) DIV 200;
+  ColorB := Blue + (ErrorB0[0] + 100) div 200;
   if (ColorB < 0) then
     ColorB := 0
   else if (ColorB > 255) then
     ColorB := 255;
 
   // Map color to palette
-  Result := inherited Dither(ColorR, ColorG, ColorB, R, G, B);
+  Result := inherited Dither(ColorR, ColorG, ColorB, R, g, b);
 
   // Propagate red component error
   Propagate(ErrorR0, ErrorR1, ErrorR2, ErrorR3, ColorR - R);
   // Propagate green component error
-  Propagate(ErrorG0, ErrorG1, ErrorG2, ErrorG3, ColorG - G);
+  Propagate(ErrorG0, ErrorG1, ErrorG2, ErrorG3, ColorG - g);
   // Propagate blue component error
-  Propagate(ErrorB0, ErrorB1, ErrorB2, ErrorB3, ColorB - B);
+  Propagate(ErrorB0, ErrorB1, ErrorB2, ErrorB3, ColorB - b);
 
   // Move on to next column
-  if (Direction = 1) then
-  begin
-    inc(longInt(ErrorR0), sizeof(TErrorTerm));
-    inc(longInt(ErrorG0), sizeof(TErrorTerm));
-    inc(longInt(ErrorB0), sizeof(TErrorTerm));
-    inc(longInt(ErrorR1), sizeof(TErrorTerm));
-    inc(longInt(ErrorG1), sizeof(TErrorTerm));
-    inc(longInt(ErrorB1), sizeof(TErrorTerm));
-    inc(longInt(ErrorR2), sizeof(TErrorTerm));
-    inc(longInt(ErrorG2), sizeof(TErrorTerm));
-    inc(longInt(ErrorB2), sizeof(TErrorTerm));
-    inc(longInt(ErrorR3), sizeof(TErrorTerm));
-    inc(longInt(ErrorG3), sizeof(TErrorTerm));
-    inc(longInt(ErrorB3), sizeof(TErrorTerm));
-  end else
-  begin
-    dec(longInt(ErrorR0), sizeof(TErrorTerm));
-    dec(longInt(ErrorG0), sizeof(TErrorTerm));
-    dec(longInt(ErrorB0), sizeof(TErrorTerm));
-    dec(longInt(ErrorR1), sizeof(TErrorTerm));
-    dec(longInt(ErrorG1), sizeof(TErrorTerm));
-    dec(longInt(ErrorB1), sizeof(TErrorTerm));
-    dec(longInt(ErrorR2), sizeof(TErrorTerm));
-    dec(longInt(ErrorG2), sizeof(TErrorTerm));
-    dec(longInt(ErrorB2), sizeof(TErrorTerm));
-    dec(longInt(ErrorR3), sizeof(TErrorTerm));
-    dec(longInt(ErrorG3), sizeof(TErrorTerm));
-    dec(longInt(ErrorB3), sizeof(TErrorTerm));
+  if (Direction = 1) then begin
+    inc(longInt(ErrorR0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR2), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG2), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB2), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR3), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG3), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB3), SizeOf(TErrorTerm));
+  end else begin
+    Dec(longInt(ErrorR0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR2), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG2), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB2), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR3), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG3), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB3), SizeOf(TErrorTerm));
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
+{$ENDIF}
+{$IFOPT R+}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
 
-{$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
-{$ENDIF}
 procedure TSteveArcheDitherer.NextLine;
 var
-  TempErrors		: PErrors;
+  TempErrors: PErrors;
 begin
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+6), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+6), 0);
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 6), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 6), 0);
 
   // Swap lines
   TempErrors := ErrorsR0;
@@ -3854,69 +3949,67 @@ begin
   FDirection2 := 2 * Direction;
   FDirection3 := 3 * Direction;
 
-  if (Direction = 1) then
-  begin
+  if (Direction = 1) then begin
     // ErrorsR0[1] gives compiler error, so we
     // use PErrors(longInt(ErrorsR0)+sizeof(TErrorTerm)) instead...
-    ErrorR0 := PErrors(longInt(ErrorsR0)+3*sizeof(TErrorTerm));
-    ErrorG0 := PErrors(longInt(ErrorsG0)+3*sizeof(TErrorTerm));
-    ErrorB0 := PErrors(longInt(ErrorsB0)+3*sizeof(TErrorTerm));
-    ErrorR1 := PErrors(longInt(ErrorsR1)+3*sizeof(TErrorTerm));
-    ErrorG1 := PErrors(longInt(ErrorsG1)+3*sizeof(TErrorTerm));
-    ErrorB1 := PErrors(longInt(ErrorsB1)+3*sizeof(TErrorTerm));
-    ErrorR2 := PErrors(longInt(ErrorsR2)+3*sizeof(TErrorTerm));
-    ErrorG2 := PErrors(longInt(ErrorsG2)+3*sizeof(TErrorTerm));
-    ErrorB2 := PErrors(longInt(ErrorsB2)+3*sizeof(TErrorTerm));
-    ErrorR3 := PErrors(longInt(ErrorsR3)+3*sizeof(TErrorTerm));
-    ErrorG3 := PErrors(longInt(ErrorsG3)+3*sizeof(TErrorTerm));
-    ErrorB3 := PErrors(longInt(ErrorsB3)+3*sizeof(TErrorTerm));
-  end else
-  begin
-    ErrorR0 := @ErrorsR0[Width+2];
-    ErrorG0 := @ErrorsG0[Width+2];
-    ErrorB0 := @ErrorsB0[Width+2];
-    ErrorR1 := @ErrorsR1[Width+2];
-    ErrorG1 := @ErrorsG1[Width+2];
-    ErrorB1 := @ErrorsB1[Width+2];
-    ErrorR2 := @ErrorsR2[Width+2];
-    ErrorG2 := @ErrorsG2[Width+2];
-    ErrorB2 := @ErrorsB2[Width+2];
-    ErrorR3 := @ErrorsR2[Width+2];
-    ErrorG3 := @ErrorsG2[Width+2];
-    ErrorB3 := @ErrorsB2[Width+2];
+    ErrorR0 := PErrors(longInt(ErrorsR0) + 3 * SizeOf(TErrorTerm));
+    ErrorG0 := PErrors(longInt(ErrorsG0) + 3 * SizeOf(TErrorTerm));
+    ErrorB0 := PErrors(longInt(ErrorsB0) + 3 * SizeOf(TErrorTerm));
+    ErrorR1 := PErrors(longInt(ErrorsR1) + 3 * SizeOf(TErrorTerm));
+    ErrorG1 := PErrors(longInt(ErrorsG1) + 3 * SizeOf(TErrorTerm));
+    ErrorB1 := PErrors(longInt(ErrorsB1) + 3 * SizeOf(TErrorTerm));
+    ErrorR2 := PErrors(longInt(ErrorsR2) + 3 * SizeOf(TErrorTerm));
+    ErrorG2 := PErrors(longInt(ErrorsG2) + 3 * SizeOf(TErrorTerm));
+    ErrorB2 := PErrors(longInt(ErrorsB2) + 3 * SizeOf(TErrorTerm));
+    ErrorR3 := PErrors(longInt(ErrorsR3) + 3 * SizeOf(TErrorTerm));
+    ErrorG3 := PErrors(longInt(ErrorsG3) + 3 * SizeOf(TErrorTerm));
+    ErrorB3 := PErrors(longInt(ErrorsB3) + 3 * SizeOf(TErrorTerm));
+  end else begin
+    ErrorR0 := @ErrorsR0[Width + 2];
+    ErrorG0 := @ErrorsG0[Width + 2];
+    ErrorB0 := @ErrorsB0[Width + 2];
+    ErrorR1 := @ErrorsR1[Width + 2];
+    ErrorG1 := @ErrorsG1[Width + 2];
+    ErrorB1 := @ErrorsB1[Width + 2];
+    ErrorR2 := @ErrorsR2[Width + 2];
+    ErrorG2 := @ErrorsG2[Width + 2];
+    ErrorB2 := @ErrorsB2[Width + 2];
+    ErrorR3 := @ErrorsR2[Width + 2];
+    ErrorG3 := @ErrorsG2[Width + 2];
+    ErrorB3 := @ErrorsB2[Width + 2];
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
-//	TBurkesDitherer
+/// /////////////////////////////////////////////////////////////////////////////
+// TBurkesDitherer
 constructor TBurkesDitherer.Create(AWidth: integer; Lookup: TColorLookup);
 begin
   inherited Create(AWidth, Lookup);
 
-  GetMem(ErrorsR0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsG0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsB0, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsR1, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsG1, sizeof(TErrorTerm)*(Width+4));
-  GetMem(ErrorsB1, sizeof(TErrorTerm)*(Width+4));
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsR1^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG1^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB1^, sizeof(TErrorTerm)*(Width+4), 0);
+  GetMem(ErrorsR0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsG0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsB0, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsR1, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsG1, SizeOf(TErrorTerm) * (Width + 4));
+  GetMem(ErrorsB1, SizeOf(TErrorTerm) * (Width + 4));
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsR1^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG1^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB1^, SizeOf(TErrorTerm) * (Width + 4), 0);
 
   FDirection2 := 2 * Direction;
-  ErrorR0 := PErrors(longInt(ErrorsR0)+2*sizeof(TErrorTerm));
-  ErrorG0 := PErrors(longInt(ErrorsG0)+2*sizeof(TErrorTerm));
-  ErrorB0 := PErrors(longInt(ErrorsB0)+2*sizeof(TErrorTerm));
-  ErrorR1 := PErrors(longInt(ErrorsR1)+2*sizeof(TErrorTerm));
-  ErrorG1 := PErrors(longInt(ErrorsG1)+2*sizeof(TErrorTerm));
-  ErrorB1 := PErrors(longInt(ErrorsB1)+2*sizeof(TErrorTerm));
+  ErrorR0 := PErrors(longInt(ErrorsR0) + 2 * SizeOf(TErrorTerm));
+  ErrorG0 := PErrors(longInt(ErrorsG0) + 2 * SizeOf(TErrorTerm));
+  ErrorB0 := PErrors(longInt(ErrorsB0) + 2 * SizeOf(TErrorTerm));
+  ErrorR1 := PErrors(longInt(ErrorsR1) + 2 * SizeOf(TErrorTerm));
+  ErrorG1 := PErrors(longInt(ErrorsG1) + 2 * SizeOf(TErrorTerm));
+  ErrorB1 := PErrors(longInt(ErrorsB1) + 2 * SizeOf(TErrorTerm));
 end;
 
 destructor TBurkesDitherer.Destroy;
@@ -3931,103 +4024,100 @@ begin
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-function TBurkesDitherer.Dither(Red, Green, Blue: BYTE; var R, G, B: BYTE): char;
+
+function TBurkesDitherer.Dither(Red, Green, Blue: Byte; var R, g, b: Byte): AnsiChar;
 var
-  ErrorR		,
-  ErrorG		,
-  ErrorB		: integer; // Error for current pixel
+  ErrorR, ErrorG, ErrorB: integer; // Error for current pixel
 
   // Propagate Burkes error terms:
-  //	...	...	(here)	8/32	4/32
-  //	2/32	4/32	8/32	4/32	2/32
+  // ...	...	(here)	8/32	4/32
+  // 2/32	4/32	8/32	4/32	2/32
   procedure Propagate(Errors0, Errors1: PErrors; Error: integer);
   begin
     if (Error = 0) then
       exit;
     inc(Error, Error);
-    inc(Errors1[FDirection2], Error);	// Error * 2
-    inc(Errors1[-FDirection2], Error);	// Error * 2
+    inc(Errors1[FDirection2], Error); // Error * 2
+    inc(Errors1[-FDirection2], Error); // Error * 2
 
     inc(Error, Error);
-    inc(Errors0[FDirection2], Error);	// Error * 4
-    inc(Errors1[-Direction], Error);	// Error * 4
-    inc(Errors1[Direction], Error);	// Error * 4
+    inc(Errors0[FDirection2], Error); // Error * 4
+    inc(Errors1[-Direction], Error); // Error * 4
+    inc(Errors1[Direction], Error); // Error * 4
 
     inc(Error, Error);
-    inc(Errors0[Direction], Error);	// Error * 8
-    inc(Errors1[0], Error);		// Error * 8
+    inc(Errors0[Direction], Error); // Error * 8
+    inc(Errors1[0], Error); // Error * 8
   end;
 
 begin
   // Apply red component error correction
-  ErrorR := Red + (ErrorR0[0] + 16) DIV 32;
+  ErrorR := Red + (ErrorR0[0] + 16) div 32;
   if (ErrorR < 0) then
     ErrorR := 0
   else if (ErrorR > 255) then
     ErrorR := 255;
 
   // Apply green component error correction
-  ErrorG := Green + (ErrorG0[0] + 16) DIV 32;
+  ErrorG := Green + (ErrorG0[0] + 16) div 32;
   if (ErrorG < 0) then
     ErrorG := 0
   else if (ErrorG > 255) then
     ErrorG := 255;
 
   // Apply blue component error correction
-  ErrorB := Blue + (ErrorB0[0] + 16) DIV 32;
+  ErrorB := Blue + (ErrorB0[0] + 16) div 32;
   if (ErrorB < 0) then
     ErrorB := 0
   else if (ErrorB > 255) then
     ErrorB := 255;
 
   // Map color to palette
-  Result := inherited Dither(ErrorR, ErrorG, ErrorB, R, G, B);
+  Result := inherited Dither(ErrorR, ErrorG, ErrorB, R, g, b);
 
   // Propagate red component error
   Propagate(ErrorR0, ErrorR1, ErrorR - R);
   // Propagate green component error
-  Propagate(ErrorG0, ErrorG1, ErrorG - G);
+  Propagate(ErrorG0, ErrorG1, ErrorG - g);
   // Propagate blue component error
-  Propagate(ErrorB0, ErrorB1, ErrorB - B);
+  Propagate(ErrorB0, ErrorB1, ErrorB - b);
 
   // Move on to next column
-  if (Direction = 1) then
-  begin
-    inc(longInt(ErrorR0), sizeof(TErrorTerm));
-    inc(longInt(ErrorG0), sizeof(TErrorTerm));
-    inc(longInt(ErrorB0), sizeof(TErrorTerm));
-    inc(longInt(ErrorR1), sizeof(TErrorTerm));
-    inc(longInt(ErrorG1), sizeof(TErrorTerm));
-    inc(longInt(ErrorB1), sizeof(TErrorTerm));
-  end else
-  begin
-    dec(longInt(ErrorR0), sizeof(TErrorTerm));
-    dec(longInt(ErrorG0), sizeof(TErrorTerm));
-    dec(longInt(ErrorB0), sizeof(TErrorTerm));
-    dec(longInt(ErrorR1), sizeof(TErrorTerm));
-    dec(longInt(ErrorG1), sizeof(TErrorTerm));
-    dec(longInt(ErrorB1), sizeof(TErrorTerm));
+  if (Direction = 1) then begin
+    inc(longInt(ErrorR0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB0), SizeOf(TErrorTerm));
+    inc(longInt(ErrorR1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorG1), SizeOf(TErrorTerm));
+    inc(longInt(ErrorB1), SizeOf(TErrorTerm));
+  end else begin
+    Dec(longInt(ErrorR0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB0), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorR1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorG1), SizeOf(TErrorTerm));
+    Dec(longInt(ErrorB1), SizeOf(TErrorTerm));
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
+{$ENDIF}
+{$IFOPT R+}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
 
-{$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
-{$ENDIF}
 procedure TBurkesDitherer.NextLine;
 var
-  TempErrors		: PErrors;
+  TempErrors: PErrors;
 begin
-  FillChar(ErrorsR0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsG0^, sizeof(TErrorTerm)*(Width+4), 0);
-  FillChar(ErrorsB0^, sizeof(TErrorTerm)*(Width+4), 0);
+  FillChar(ErrorsR0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsG0^, SizeOf(TErrorTerm) * (Width + 4), 0);
+  FillChar(ErrorsB0^, SizeOf(TErrorTerm) * (Width + 4), 0);
 
   // Swap lines
   TempErrors := ErrorsR0;
@@ -4045,104 +4135,96 @@ begin
   inherited NextLine;
 
   FDirection2 := 2 * Direction;
-  if (Direction = 1) then
-  begin
+  if (Direction = 1) then begin
     // ErrorsR0[1] gives compiler error, so we
     // use PErrors(longInt(ErrorsR0)+sizeof(TErrorTerm)) instead...
-    ErrorR0 := PErrors(longInt(ErrorsR0)+2*sizeof(TErrorTerm));
-    ErrorG0 := PErrors(longInt(ErrorsG0)+2*sizeof(TErrorTerm));
-    ErrorB0 := PErrors(longInt(ErrorsB0)+2*sizeof(TErrorTerm));
-    ErrorR1 := PErrors(longInt(ErrorsR1)+2*sizeof(TErrorTerm));
-    ErrorG1 := PErrors(longInt(ErrorsG1)+2*sizeof(TErrorTerm));
-    ErrorB1 := PErrors(longInt(ErrorsB1)+2*sizeof(TErrorTerm));
-  end else
-  begin
-    ErrorR0 := @ErrorsR0[Width+1];
-    ErrorG0 := @ErrorsG0[Width+1];
-    ErrorB0 := @ErrorsB0[Width+1];
-    ErrorR1 := @ErrorsR1[Width+1];
-    ErrorG1 := @ErrorsG1[Width+1];
-    ErrorB1 := @ErrorsB1[Width+1];
+    ErrorR0 := PErrors(longInt(ErrorsR0) + 2 * SizeOf(TErrorTerm));
+    ErrorG0 := PErrors(longInt(ErrorsG0) + 2 * SizeOf(TErrorTerm));
+    ErrorB0 := PErrors(longInt(ErrorsB0) + 2 * SizeOf(TErrorTerm));
+    ErrorR1 := PErrors(longInt(ErrorsR1) + 2 * SizeOf(TErrorTerm));
+    ErrorG1 := PErrors(longInt(ErrorsG1) + 2 * SizeOf(TErrorTerm));
+    ErrorB1 := PErrors(longInt(ErrorsB1) + 2 * SizeOf(TErrorTerm));
+  end else begin
+    ErrorR0 := @ErrorsR0[Width + 1];
+    ErrorG0 := @ErrorsG0[Width + 1];
+    ErrorB0 := @ErrorsB0[Width + 1];
+    ErrorR1 := @ErrorsR1[Width + 1];
+    ErrorG1 := @ErrorsG1[Width + 1];
+    ErrorB1 := @ErrorsB1[Width + 1];
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Octree Color Quantization Engine
+// Octree Color Quantization Engine
 //
-////////////////////////////////////////////////////////////////////////////////
-//  Adapted from Earl F. Glynn's ColorQuantizationLibrary, March 1998
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// Adapted from Earl F. Glynn's ColorQuantizationLibrary, March 1998
+/// /////////////////////////////////////////////////////////////////////////////
 type
-  TOctreeNode = class;	// Forward definition so TReducibleNodes can be declared
+  TOctreeNode = class; // Forward definition so TReducibleNodes can be declared
 
-  TReducibleNodes = array[0..7] of TOctreeNode;
+  TReducibleNodes = array [0 .. 7] of TOctreeNode;
 
-  TOctreeNode = Class(TObject)
+  TOctreeNode = class(TObject)
   public
-    IsLeaf		: Boolean;
-    PixelCount		: integer;
-    RedSum		: integer;
-    GreenSum		: integer;
-    BlueSum		: integer;
-    Next		: TOctreeNode;
-    Child		: TReducibleNodes;
+    IsLeaf: Boolean;
+    PixelCount: integer;
+    RedSum: integer;
+    GreenSum: integer;
+    BlueSum: integer;
+    Next: TOctreeNode;
+    Child: TReducibleNodes;
 
-    constructor Create(Level: integer; ColorBits: integer; var LeafCount: integer;
-      var ReducibleNodes: TReducibleNodes);
+    constructor Create(Level: integer; ColorBits: integer; var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
     destructor Destroy; override;
   end;
 
   TColorQuantizer = class(TObject)
   private
-    FTree		: TOctreeNode;
-    FLeafCount		: integer;
-    FReducibleNodes	: TReducibleNodes;
-    FMaxColors		: integer;
-    FColorBits		: integer;
+    FTree: TOctreeNode;
+    FLeafCount: integer;
+    FReducibleNodes: TReducibleNodes;
+    FMaxColors: integer;
+    FColorBits: integer;
 
   protected
-    procedure AddColor(var Node: TOctreeNode; r, g, b: byte; ColorBits: integer;
-      Level: integer; var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
-    procedure DeleteTree(var Node: TOctreeNode);
-    procedure GetPaletteColors(const Node: TOctreeNode;
-      var RGBQuadArray: TRGBQuadArray; var Index: integer);
-    procedure ReduceTree(ColorBits: integer; var LeafCount: integer;
+    procedure AddColor(var Node: TOctreeNode; R, g, b: Byte; ColorBits: integer; Level: integer; var LeafCount: integer;
       var ReducibleNodes: TReducibleNodes);
+    procedure DeleteTree(var Node: TOctreeNode);
+    procedure GetPaletteColors(const Node: TOctreeNode; var RGBQuadArray: TRGBQuadArray; var Index: integer);
+    procedure ReduceTree(ColorBits: integer; var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
 
   public
     constructor Create(MaxColors: integer; ColorBits: integer);
     destructor Destroy; override;
 
     procedure GetColorTable(var RGBQuadArray: TRGBQuadArray);
-    function ProcessImage(const DIB: TDIBReader): boolean;
+    function ProcessImage(const DIB: TDIBReader): Boolean;
 
     property ColorCount: integer read FLeafCount;
   end;
 
-constructor TOctreeNode.Create(Level: integer; ColorBits: integer;
-  var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
+constructor TOctreeNode.Create(Level: integer; ColorBits: integer; var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
 var
-  i			: integer;
+  i: integer;
 begin
   PixelCount := 0;
   RedSum := 0;
   GreenSum := 0;
   BlueSum := 0;
-  for i := Low(Child) to High(Child) do
+  for i := low(Child) to high(Child) do
     Child[i] := nil;
 
   IsLeaf := (Level = ColorBits);
-  if (IsLeaf) then
-  begin
+  if (IsLeaf) then begin
     Next := nil;
     inc(LeafCount);
-  end else
-  begin
+  end else begin
     Next := ReducibleNodes[Level];
     ReducibleNodes[Level] := self;
   end;
@@ -4150,15 +4232,15 @@ end;
 
 destructor TOctreeNode.Destroy;
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := High(Child) downto Low(Child) do
+  for i := high(Child) downto low(Child) do
     Child[i].Free;
 end;
 
 constructor TColorQuantizer.Create(MaxColors: integer; ColorBits: integer);
 var
-  i			: integer;
+  i: integer;
 begin
   ASSERT(ColorBits <= 8, 'ColorBits must be 8 or less');
 
@@ -4166,7 +4248,7 @@ begin
   FLeafCount := 0;
 
   // Initialize all nodes even though only ColorBits+1 of them are needed
-  for i := Low(FReducibleNodes) to High(FReducibleNodes) do
+  for i := low(FReducibleNodes) to high(FReducibleNodes) do
     FReducibleNodes[i] := nil;
 
   FMaxColors := MaxColors;
@@ -4181,10 +4263,10 @@ end;
 
 procedure TColorQuantizer.GetColorTable(var RGBQuadArray: TRGBQuadArray);
 var
-  Index			: integer;
+  Index: integer;
 begin
-  Index := 0;
-  GetPaletteColors(FTree, RGBQuadArray, Index);
+  index := 0;
+  GetPaletteColors(FTree, RGBQuadArray, index);
 end;
 
 // Handles passed to ProcessImage should refer to DIB sections, not DDBs.
@@ -4192,68 +4274,60 @@ end;
 // 8-bit per pixel images on systems with palettized display adapters,
 // ProcessImage can produce incorrect results if it's passed a handle to a
 // DDB.
-function TColorQuantizer.ProcessImage(const DIB: TDIBReader): boolean;
+function TColorQuantizer.ProcessImage(const DIB: TDIBReader): Boolean;
 var
-  i			,
-  j			: integer;
-  ScanLine		: pointer;
-  Pixel			: PRGBTriple;
+  i, j: integer;
+  Scanline: Pointer;
+  Pixel: PRGBTriple;
 begin
   Result := True;
 
-  for j := 0 to DIB.Bitmap.Height-1 do
-  begin
+  for j := 0 to DIB.Bitmap.Height - 1 do begin
     Scanline := DIB.Scanline[j];
-    Pixel := ScanLine;
-    for i := 0 to DIB.Bitmap.Width-1 do
-    begin
+    Pixel := Scanline;
+    for i := 0 to DIB.Bitmap.Width - 1 do begin
       with Pixel^ do
-        AddColor(FTree, rgbtRed, rgbtGreen, rgbtBlue,
-                 FColorBits, 0, FLeafCount, FReducibleNodes);
+        AddColor(FTree, rgbtRed, rgbtGreen, rgbtBlue, FColorBits, 0, FLeafCount, FReducibleNodes);
 
       while FLeafCount > FMaxColors do
-        ReduceTree(FColorbits, FLeafCount, FReducibleNodes);
+        ReduceTree(FColorBits, FLeafCount, FReducibleNodes);
       inc(Pixel);
     end;
   end;
 end;
 
-procedure TColorQuantizer.AddColor(var Node: TOctreeNode; r,g,b: byte;
-  ColorBits: integer; Level: integer; var LeafCount: integer;
-  var ReducibleNodes: TReducibleNodes);
+procedure TColorQuantizer.AddColor(var Node: TOctreeNode; R, g, b: Byte; ColorBits: integer; Level: integer;
+  var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
 const
-  Mask:  array[0..7] of BYTE = ($80, $40, $20, $10, $08, $04, $02, $01);
+  Mask: array [0 .. 7] of Byte = ($80, $40, $20, $10, $08, $04, $02, $01);
 var
-  Index			: integer;
-  Shift			: integer;
+  Index: integer;
+  Shift: integer;
 begin
   // If the node doesn't exist, create it.
   if (Node = nil) then
     Node := TOctreeNode.Create(Level, ColorBits, LeafCount, ReducibleNodes);
 
-  if (Node.IsLeaf) then
-  begin
+  if (Node.IsLeaf) then begin
     inc(Node.PixelCount);
-    inc(Node.RedSum, r);
+    inc(Node.RedSum, R);
     inc(Node.GreenSum, g);
     inc(Node.BlueSum, b);
-  end else
-  begin
+  end else begin
     // Recurse a level deeper if the node is not a leaf.
     Shift := 7 - Level;
 
-    Index := (((r and mask[Level]) SHR Shift) SHL 2)  or
-             (((g and mask[Level]) SHR Shift) SHL 1)  or
-              ((b and mask[Level]) SHR Shift);
-    AddColor(Node.Child[Index], r, g, b, ColorBits, Level+1, LeafCount, ReducibleNodes);
+    index := (((R and Mask[Level]) shr Shift) shl 2) or (((g and Mask[Level]) shr Shift) shl 1) or
+      ((b and Mask[Level]) shr Shift);
+    AddColor(Node.Child[index], R, g, b, ColorBits, Level + 1, LeafCount, ReducibleNodes);
   end;
 end;
 
 procedure TColorQuantizer.DeleteTree(var Node: TOctreeNode);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := High(TReducibleNodes) downto Low(TReducibleNodes) do
+  for i := high(TReducibleNodes) downto low(TReducibleNodes) do
     if (Node.Child[i] <> nil) then
       DeleteTree(Node.Child[i]);
 
@@ -4261,64 +4335,54 @@ begin
   Node := nil;
 end;
 
-procedure TColorQuantizer.GetPaletteColors(const Node: TOctreeNode;
-  var RGBQuadArray: TRGBQuadArray; var Index: integer);
+procedure TColorQuantizer.GetPaletteColors(const Node: TOctreeNode; var RGBQuadArray: TRGBQuadArray; var Index: integer);
 var
-  i			: integer;
+  i: integer;
 begin
-  if (Node.IsLeaf) then
-  begin
-    with RGBQuadArray[Index] do
-    begin
-      if (Node.PixelCount <> 0) then
-      begin
-        rgbRed   := BYTE(Node.RedSum   DIV Node.PixelCount);
-        rgbGreen := BYTE(Node.GreenSum DIV Node.PixelCount);
-        rgbBlue  := BYTE(Node.BlueSum  DIV Node.PixelCount);
-      end else
-      begin
+  if (Node.IsLeaf) then begin
+    with RGBQuadArray[index] do begin
+      if (Node.PixelCount <> 0) then begin
+        rgbRed := Byte(Node.RedSum div Node.PixelCount);
+        rgbGreen := Byte(Node.GreenSum div Node.PixelCount);
+        rgbBlue := Byte(Node.BlueSum div Node.PixelCount);
+      end else begin
         rgbRed := 0;
         rgbGreen := 0;
         rgbBlue := 0;
       end;
       rgbReserved := 0;
     end;
-    inc(Index);
-  end else
-  begin
-    for i := Low(Node.Child) to High(Node.Child) do
+    inc(index);
+  end else begin
+    for i := low(Node.Child) to high(Node.Child) do
       if (Node.Child[i] <> nil) then
-        GetPaletteColors(Node.Child[i], RGBQuadArray, Index);
+        GetPaletteColors(Node.Child[i], RGBQuadArray, index);
   end;
 end;
 
-procedure TColorQuantizer.ReduceTree(ColorBits: integer; var LeafCount: integer;
-  var ReducibleNodes: TReducibleNodes);
+procedure TColorQuantizer.ReduceTree(ColorBits: integer; var LeafCount: integer; var ReducibleNodes: TReducibleNodes);
 var
-  RedSum		,
-  GreenSum		,
-  BlueSum 		: integer;
-  Children		: integer;
-  i			: integer;
-  Node			: TOctreeNode;
+  RedSum, GreenSum, BlueSum: integer;
+  Children: integer;
+  i: integer;
+  Node: TOctreeNode;
 begin
   // Find the deepest level containing at least one reducible node
-  i := Colorbits - 1;
+  i := ColorBits - 1;
   while (i > 0) and (ReducibleNodes[i] = nil) do
-    dec(i);
+    Dec(i);
 
   // Reduce the node most recently added to the list at level i.
   Node := ReducibleNodes[i];
   ReducibleNodes[i] := Node.Next;
 
-  RedSum   := 0;
+  RedSum := 0;
   GreenSum := 0;
-  BlueSum  := 0;
+  BlueSum := 0;
   Children := 0;
 
-  for i := Low(ReducibleNodes) to High(ReducibleNodes) do
-    if (Node.Child[i] <> nil) then
-    begin
+  for i := low(ReducibleNodes) to high(ReducibleNodes) do
+    if (Node.Child[i] <> nil) then begin
       inc(RedSum, Node.Child[i].RedSum);
       inc(GreenSum, Node.Child[i].GreenSum);
       inc(BlueSum, Node.Child[i].BlueSum);
@@ -4328,45 +4392,64 @@ begin
       inc(Children);
     end;
 
-  Node.IsLeaf := TRUE;
+  Node.IsLeaf := True;
   Node.RedSum := RedSum;
   Node.GreenSum := GreenSum;
   Node.BlueSum := BlueSum;
-  dec(LeafCount, Children-1);
+  Dec(LeafCount, Children - 1);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Octree Color Quantization Wrapper
+// Octree Color Quantization Wrapper
 //
-////////////////////////////////////////////////////////////////////////////////
-//	Adapted from Earl F. Glynn's PaletteLibrary, March 1998
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// Adapted from Earl F. Glynn's PaletteLibrary, March 1998
+/// /////////////////////////////////////////////////////////////////////////////
 
 // Wrapper for internal use - uses TDIBReader for bitmap access
-function doCreateOptimizedPaletteFromSingleBitmap(const DIB: TDIBReader;
-  Colors, ColorBits: integer; Windows: boolean): hPalette;
+function doCreateOptimizedPaletteFromSingleBitmap(const DIB: TDIBReader; Colors, ColorBits: integer; Windows: Boolean)
+  : HPalette;
 var
-  SystemPalette		: HPalette;
-  ColorQuantizer	: TColorQuantizer;
-  i			: integer;
-  LogicalPalette	: TMaxLogPalette;
-  RGBQuadArray		: TRGBQuadArray;
-  Offset		: integer;
+  SystemPalette: HPalette;
+  ColorQuantizer: TColorQuantizer;
+  i: integer;
+  LogicalPalette: TMaxLogPalette;
+  RGBQuadArray: TRGBQuadArray;
+  Offset: integer;
 begin
   LogicalPalette.palVersion := $0300;
   LogicalPalette.palNumEntries := Colors;
+  // 2003.03.06 ->
+  { reset palette to black }
+  FillChar(LogicalPalette.palPalEntry, SizeOf(LogicalPalette.palPalEntry), 0);
+  for i := 0 to 255 do
+    LogicalPalette.palPalEntry[i].peFlags := PC_NOCOLLAPSE;
+  // 2003.03.06 <-
 
-  if (Windows) then
-  begin
+  if (Windows) then begin
     // Get the windows 20 color system palette
     SystemPalette := GetStockObject(DEFAULT_PALETTE);
     GetPaletteEntries(SystemPalette, 0, 10, LogicalPalette.palPalEntry[0]);
-    GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[245]);
+    // GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[245]);  // wrong offset
+    GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[246]);
+    // 2003.03.06
     Colors := 236;
     Offset := 10;
     LogicalPalette.palNumEntries := 256;
-  end else
+    { Test code
+      // 2003.03.06 ->
+      // Get the windows 20 color system palette
+      SystemPalette := GetStockObject(DEFAULT_PALETTE);
+      GetPaletteEntries(SystemPalette, 0, 10, LogicalPalette.palPalEntry[0]);
+      GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[10]);
+      Colors := 236;
+      Offset := 20;
+      LogicalPalette.palNumEntries := 256;
+      // 2003.03.06 <-
+    }
+  end
+  else
     Offset := 0;
 
   // Normally for 24-bit images, use ColorBits of 5 or 6.  For 8-bit images
@@ -4375,222 +4458,216 @@ begin
   try
     ColorQuantizer.ProcessImage(DIB);
     ColorQuantizer.GetColorTable(RGBQuadArray);
-  finally
-    ColorQuantizer.Free;
+  finally ColorQuantizer.Free;
   end;
 
-  for i := 0 to Colors-1 do
-    with LogicalPalette.palPalEntry[i+Offset] do
-    begin
-      peRed   := RGBQuadArray[i].rgbRed;
+  for i := 0 to Colors - 1 do
+    with LogicalPalette.palPalEntry[i + Offset] do begin
+      peRed := RGBQuadArray[i].rgbRed;
       peGreen := RGBQuadArray[i].rgbGreen;
-      peBlue  := RGBQuadArray[i].rgbBlue;
+      peBlue := RGBQuadArray[i].rgbBlue;
       peFlags := RGBQuadArray[i].rgbReserved;
     end;
-  Result := CreatePalette(pLogPalette(@LogicalPalette)^);
+  Result := CreatePalette(PLogPalette(@LogicalPalette)^);
 end;
 
-function CreateOptimizedPaletteFromSingleBitmap(const Bitmap: TBitmap;
-  Colors, ColorBits: integer; Windows: boolean): hPalette;
+function CreateOptimizedPaletteFromSingleBitmap(const Bitmap: TBitmap; Colors, ColorBits: integer; Windows: Boolean): HPalette;
 var
-  DIB			: TDIBReader;
+  DIB: TDIBReader;
 begin
   DIB := TDIBReader.Create(Bitmap, pf24bit);
-  try
-    Result := doCreateOptimizedPaletteFromSingleBitmap(DIB, Colors, ColorBits, Windows);
-  finally
-    DIB.Free;
+  try Result := doCreateOptimizedPaletteFromSingleBitmap(DIB, Colors, ColorBits, Windows);
+  finally DIB.Free;
   end;
 end;
 
-function CreateOptimizedPaletteFromManyBitmaps(Bitmaps: TList; Colors, ColorBits: integer;
-  Windows: boolean): hPalette;
+function CreateOptimizedPaletteFromManyBitmaps(Bitmaps: TList; Colors, ColorBits: integer; Windows: Boolean): HPalette;
 var
-  SystemPalette		: HPalette;
-  ColorQuantizer	: TColorQuantizer;
-  i			: integer;
-  LogicalPalette	: TMaxLogPalette;
-  RGBQuadArray		: TRGBQuadArray;
-  Offset		: integer;
-  DIB			: TDIBReader;
+  SystemPalette: HPalette;
+  ColorQuantizer: TColorQuantizer;
+  i: integer;
+  LogicalPalette: TMaxLogPalette;
+  RGBQuadArray: TRGBQuadArray;
+  Offset: integer;
+  DIB: TDIBReader;
 begin
   if (Bitmaps = nil) or (Bitmaps.Count = 0) then
     Error(sInvalidBitmapList);
 
   LogicalPalette.palVersion := $0300;
   LogicalPalette.palNumEntries := Colors;
+  // 2003.03.06 ->
+  { reset palette to black }
+  FillChar(LogicalPalette.palPalEntry, SizeOf(LogicalPalette.palPalEntry), 0);
+  for i := 0 to 255 do
+    LogicalPalette.palPalEntry[i].peFlags := PC_NOCOLLAPSE;
+  // 2003.03.06 <-
 
-  if (Windows) then
-  begin
+  if (Windows) then begin
     // Get the windows 20 color system palette
     SystemPalette := GetStockObject(DEFAULT_PALETTE);
     GetPaletteEntries(SystemPalette, 0, 10, LogicalPalette.palPalEntry[0]);
-    GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[245]);
+    // GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[245]);  // wrong offset
+    GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[246]);
+    // 2003.03.06
     Colors := 236;
     Offset := 10;
     LogicalPalette.palNumEntries := 256;
-  end else
+    { Test code
+      // 2003.03.06 ->
+      // Get the windows 20 color system palette
+      SystemPalette := GetStockObject(DEFAULT_PALETTE);
+      GetPaletteEntries(SystemPalette, 0, 10, LogicalPalette.palPalEntry[0]);
+      GetPaletteEntries(SystemPalette, 10, 10, LogicalPalette.palPalEntry[10]);
+      Colors := 236;
+      Offset := 20;
+      LogicalPalette.palNumEntries := 256;
+      // 2003.03.06 <-
+    }
+  end
+  else
     Offset := 0;
 
   // Normally for 24-bit images, use ColorBits of 5 or 6.  For 8-bit images
   // use ColorBits = 8.
   ColorQuantizer := TColorQuantizer.Create(Colors, ColorBits);
   try
-    for i := 0 to Bitmaps.Count-1 do
-    begin
+    for i := 0 to Bitmaps.Count - 1 do begin
       DIB := TDIBReader.Create(TBitmap(Bitmaps[i]), pf24bit);
-      try
-        ColorQuantizer.ProcessImage(DIB);
-      finally
-        DIB.Free;
+      try ColorQuantizer.ProcessImage(DIB);
+      finally DIB.Free;
       end;
     end;
     ColorQuantizer.GetColorTable(RGBQuadArray);
-  finally
-    ColorQuantizer.Free;
+  finally ColorQuantizer.Free;
   end;
 
-  for i := 0 to Colors-1 do
-    with LogicalPalette.palPalEntry[i+Offset] do
-    begin
-      peRed   := RGBQuadArray[i].rgbRed;
+  for i := 0 to Colors - 1 do
+    with LogicalPalette.palPalEntry[i + Offset] do begin
+      peRed := RGBQuadArray[i].rgbRed;
       peGreen := RGBQuadArray[i].rgbGreen;
-      peBlue  := RGBQuadArray[i].rgbBlue;
+      peBlue := RGBQuadArray[i].rgbBlue;
       peFlags := RGBQuadArray[i].rgbReserved;
     end;
-  Result := CreatePalette(pLogPalette(@LogicalPalette)^);
+  Result := CreatePalette(PLogPalette(@LogicalPalette)^);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Color reduction
+// Color reduction
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
-//: Reduces the color depth of a bitmap using color quantization and dithering.
-function ReduceColors(Bitmap: TBitmap; ColorReduction: TColorReduction;
-  DitherMode: TDitherMode; ReductionBits: integer; CustomPalette: hPalette): TBitmap;
-var
-  Palette		: hPalette;
-  ColorLookup		: TColorLookup;
-  Ditherer		: TDitherEngine;
-  Row			: Integer;
-  DIBResult		: TDIBWriter;
-  DIBSource		: TDIBReader;
-  SrcScanLine		,
-  Src			: PRGBTriple;
-  DstScanLine		,
-  Dst			: PChar;
-  BGR			: TRGBTriple;
-{$ifdef DEBUG_DITHERPERFORMANCE}
-  TimeStart		,
-  TimeStop		: DWORD;
-{$endif}
 
-  function GrayScalePalette: hPalette;
+// : Reduces the color depth of a bitmap using color quantization and dithering.
+function ReduceColors(Bitmap: TBitmap; ColorReduction: TColorReduction; DitherMode: TDitherMode; ReductionBits: integer;
+  CustomPalette: HPalette): TBitmap;
+var
+  Palette: HPalette;
+  ColorLookup: TColorLookup;
+  Ditherer: TDitherEngine;
+  Row: integer;
+  DIBResult: TDIBWriter;
+  DIBSource: TDIBReader;
+  SrcScanLine, Src: PRGBTriple;
+  DstScanLine, Dst: PAnsiChar;
+  BGR: TRGBTriple;
+{$IFDEF DEBUG_DITHERPERFORMANCE}
+  TimeStart, TimeStop: DWORD;
+{$ENDIF}
+  function GrayScalePalette: HPalette;
   var
-    i			: integer;
-    Pal			: TMaxLogPalette;
+    i: integer;
+    Pal: TMaxLogPalette;
+
   begin
     Pal.palVersion := $0300;
     Pal.palNumEntries := 256;
-    for i := 0 to 255 do
-    begin
-      with (Pal.palPalEntry[i]) do
-      begin
-        peRed := i;
-        peGreen := i;
-        peBlue  := i;
-        peFlags := PC_NOCOLLAPSE;
-      end;
+    for i := 0 to 255 do begin
+      Pal.palPalEntry[i].peRed := i;
+      Pal.palPalEntry[i].peRed := i;
+      Pal.palPalEntry[i].peGreen := i;
+      Pal.palPalEntry[i].peBlue := i;
+      Pal.palPalEntry[i].peFlags := PC_NOCOLLAPSE;
+
     end;
-    Result := CreatePalette(pLogPalette(@Pal)^);
+    Result := CreatePalette(PLogPalette(@Pal)^);
   end;
 
-  function MonochromePalette: hPalette;
+  function MonochromePalette: HPalette;
   var
-    i			: integer;
-    Pal			: TMaxLogPalette;
+    i: integer;
+    Pal: TMaxLogPalette;
   const
-    Values		: array[0..1] of byte
-    			= (0, 255);
+    Values: array [0 .. 1] of Byte = (0, 255);
   begin
     Pal.palVersion := $0300;
     Pal.palNumEntries := 2;
-    for i := 0 to 1 do
-    begin
-      with (Pal.palPalEntry[i]) do
-      begin
-        peRed := Values[i];
-        peGreen := Values[i];
-        peBlue  := Values[i];
-        peFlags := PC_NOCOLLAPSE;
+    for i := 0 to 1 do begin
+      with (Pal.palPalEntry[i]) do begin
+        Pal.palPalEntry[i].peRed := Values[i];
+        Pal.palPalEntry[i].peGreen := Values[i];
+        Pal.palPalEntry[i].peBlue := Values[i];
+        Pal.palPalEntry[i].peFlags := PC_NOCOLLAPSE;
       end;
     end;
-    Result := CreatePalette(pLogPalette(@Pal)^);
+    Result := CreatePalette(PLogPalette(@Pal)^);
   end;
 
-  function WindowsGrayScalePalette: hPalette;
+  function WindowsGrayScalePalette: HPalette;
   var
-    i			: integer;
-    Pal			: TMaxLogPalette;
+    i: integer;
+    Pal: TMaxLogPalette;
   const
-    Values		: array[0..3] of byte
-    			= (0, 128, 192, 255);
+    Values: array [0 .. 3] of Byte = (0, 128, 192, 255);
   begin
     Pal.palVersion := $0300;
     Pal.palNumEntries := 4;
-    for i := 0 to 3 do
-    begin
-      with (Pal.palPalEntry[i]) do
-      begin
-        peRed := Values[i];
-        peGreen := Values[i];
-        peBlue  := Values[i];
-        peFlags := PC_NOCOLLAPSE;
+    for i := 0 to 3 do begin
+      with (Pal.palPalEntry[i]) do begin
+        Pal.palPalEntry[i].peRed := Values[i];
+        Pal.palPalEntry[i].peGreen := Values[i];
+        Pal.palPalEntry[i].peBlue := Values[i];
+        Pal.palPalEntry[i].peFlags := PC_NOCOLLAPSE;
       end;
     end;
-    Result := CreatePalette(pLogPalette(@Pal)^);
+    Result := CreatePalette(PLogPalette(@Pal)^);
   end;
 
-  function WindowsHalftonePalette: hPalette;
+  function WindowsHalftonePalette: HPalette;
   var
-    DC			: HDC;
+    DC: HDC;
   begin
     DC := GDICheck(GetDC(0));
-    try
-      Result := CreateHalfTonePalette(DC);
-    finally
-      ReleaseDC(0, DC);
+    try Result := CreateHalfTonePalette(DC);
+    finally ReleaseDC(0, DC);
     end;
   end;
 
 begin
-{$ifdef DEBUG_DITHERPERFORMANCE}
+{$IFDEF DEBUG_DITHERPERFORMANCE}
   timeBeginPeriod(5);
   TimeStart := timeGetTime;
-{$endif}
-
+{$ENDIF}
   Result := TBitmap.Create;
   try
 
-    if (ColorReduction = rmNone) then
-    begin
+    if (ColorReduction = rmNone) then begin
       Result.Assign(Bitmap);
-{$ifndef VER9x}
+{$IFNDEF VER9x}
       SetPixelFormat(Result, pf24bit);
-{$endif}
+{$ENDIF}
       exit;
     end;
 
 {$IFNDEF VER9x}
-    if (Bitmap.Width*Bitmap.Height > BitmapAllocationThreshold) then
-      SetPixelFormat(Result, pf1bit); // To reduce resource consumption of resize
+    if (Bitmap.Width * Bitmap.Height > BitmapAllocationThreshold) then
+      SetPixelFormat(Result, pf1bit);
+    // To reduce resource consumption of resize
 {$ENDIF}
-
     ColorLookup := nil;
     Ditherer := nil;
     DIBResult := nil;
@@ -4605,7 +4682,7 @@ begin
       // Create a palette based on current options
       case (ColorReduction) of
         rmQuantize:
-          Palette := doCreateOptimizedPaletteFromSingleBitmap(DIBSource, 1 SHL ReductionBits, 8, False);
+          Palette := doCreateOptimizedPaletteFromSingleBitmap(DIBSource, 1 shl ReductionBits, 8, False);
         rmQuantizeWindows:
           Palette := CreateOptimizedPaletteFromSingleBitmap(Bitmap, 256, 8, True);
         rmNetscape:
@@ -4622,8 +4699,8 @@ begin
           Palette := WindowsHalftonePalette;
         rmPalette:
           Palette := CopyPalette(CustomPalette);
-      else
-        exit;
+        else
+          exit;
       end;
 
       { TODO -oanme -cImprovement : Gray scale conversion should be done prior to dithering/mapping. Otherwise corrected values will be converted multiple times. }
@@ -4633,19 +4710,23 @@ begin
         // For some strange reason my fast and dirty color lookup
         // is more precise that Windows GetNearestPaletteIndex...
         // rmWindows20:
-        //  ColorLookup := TSlowColorLookup.Create(Palette);
+        // ColorLookup := TSlowColorLookup.Create(Palette);
         // rmWindowsGray:
-        //  ColorLookup := TGrayWindowsLookup.Create(Palette);
+        // ColorLookup := TGrayWindowsLookup.Create(Palette);
         rmQuantize:
+          // 2007.01.18 ->  // switch back to TFastColorLookup
           ColorLookup := TFastColorLookup.Create(Palette);
+        // ColorLookup := TSlowColorLookup.Create(Palette);  // 2003-03-06
+        // 2007.01.18 <-
         rmNetscape:
           ColorLookup := TNetscapeColorLookup.Create(Palette);
         rmGrayScale:
           ColorLookup := TGrayScaleLookup.Create(Palette);
         rmMonochrome:
           ColorLookup := TMonochromeLookup.Create(Palette);
-      else
-        ColorLookup := TFastColorLookup.Create(Palette);
+        else
+          // ColorLookup := TFastColorLookup.Create(Palette);
+          ColorLookup := TSlowColorLookup.Create(Palette); // 2003-03-06
       end;
 
       // Nothing to do if palette doesn't contain any colors
@@ -4663,40 +4744,36 @@ begin
         dmSierra:
           Ditherer := TSierraDitherer.Create(Bitmap.Width, ColorLookup);
         dmJaJuNI:
-          Ditherer := TJaJuNIDitherer.Create(Bitmap.Width, ColorLookup);
+          Ditherer := TJaJuNiDitherer.Create(Bitmap.Width, ColorLookup);
         dmSteveArche:
           Ditherer := TSteveArcheDitherer.Create(Bitmap.Width, ColorLookup);
         dmBurkes:
           Ditherer := TBurkesDitherer.Create(Bitmap.Width, ColorLookup);
-      else
-        exit;
+        else
+          exit;
       end;
 
       // The processed bitmap is returned in pf8bit format
-      DIBResult := TDIBWriter.Create(Result, pf8bit, Bitmap.Width, Bitmap.Height,
-        Palette);
+      DIBResult := TDIBWriter.Create(Result, pf8bit, Bitmap.Width, Bitmap.Height, Palette);
 
       // Process the image
       Row := 0;
-      while (Row < Bitmap.Height) do
-      begin
-        SrcScanline := DIBSource.ScanLine[Row];
-        DstScanline := DIBResult.ScanLine[Row];
-        Src := pointer(longInt(SrcScanLine) + Ditherer.Column*sizeof(TRGBTriple));
-        Dst := pointer(longInt(DstScanLine) + Ditherer.Column);
+      while (Row < Bitmap.Height) do begin
+        SrcScanLine := DIBSource.Scanline[Row];
+        DstScanLine := DIBResult.Scanline[Row];
+        Src := Pointer(longInt(SrcScanLine) + Ditherer.Column * SizeOf(TRGBTriple));
+        Dst := Pointer(longInt(DstScanLine) + Ditherer.Column);
 
-        while (Ditherer.Column < Ditherer.Width) and (Ditherer.Column >= 0) do
-        begin
+        while (Ditherer.Column < Ditherer.Width) and (Ditherer.Column >= 0) do begin
           BGR := Src^;
           // Dither and map a single pixel
-          Dst^ := Ditherer.Dither(BGR.rgbtRed, BGR.rgbtGreen, BGR.rgbtBlue,
-            BGR.rgbtRed, BGR.rgbtGreen, BGR.rgbtBlue);
+          Dst^ := Ditherer.Dither(BGR.rgbtRed, BGR.rgbtGreen, BGR.rgbtBlue, BGR.rgbtRed, BGR.rgbtGreen, BGR.rgbtBlue);
 
           inc(Src, Ditherer.Direction);
           inc(Dst, Ditherer.Direction);
         end;
 
-        Inc(Row);
+        inc(Row);
         Ditherer.NextLine;
       end;
     finally
@@ -4708,7 +4785,7 @@ begin
         DIBResult.Free;
       if (DIBSource <> nil) then
         DIBSource.Free;
-      // Must delete palette after TDIBWriter since TDIBWriter uses palette 
+      // Must delete palette after TDIBWriter since TDIBWriter uses palette
       if (Palette <> 0) then
         DeleteObject(Palette);
     end;
@@ -4717,30 +4794,29 @@ begin
     raise;
   end;
 
-{$ifdef DEBUG_DITHERPERFORMANCE}
+{$IFDEF DEBUG_DITHERPERFORMANCE}
   TimeStop := timeGetTime;
-  ShowMessage(format('Dithered %d pixels in %d mS, Rate %d pixels/mS (%d pixels/S)',
-    [Bitmap.Height*Bitmap.Width, TimeStop-TimeStart,
-    MulDiv(Bitmap.Height, Bitmap.Width, TimeStop-TimeStart+1),
-    MulDiv(Bitmap.Height, Bitmap.Width * 1000, TimeStop-TimeStart+1)]));
+  ShowMessage(format('Dithered %d pixels in %d mS, Rate %d pixels/mS (%d pixels/S)', [Bitmap.Height * Bitmap.Width,
+    TimeStop - TimeStart, MulDiv(Bitmap.Height, Bitmap.Width, TimeStop - TimeStart + 1), MulDiv(Bitmap.Height,
+    Bitmap.Width * 1000, TimeStop - TimeStart + 1)]));
   timeEndPeriod(5);
-{$endif}
+{$ENDIF}
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFColorMap
+// TGIFColorMap
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
   InitColorMapSize = 16;
   DeltaColorMapSize = 32;
 
-//: Creates an instance of a TGIFColorMap object.
+  // : Creates an instance of a TGIFColorMap object.
 constructor TGIFColorMap.Create;
 begin
   inherited Create;
@@ -4750,7 +4826,7 @@ begin
   FOptimized := False;
 end;
 
-//: Destroys an instance of a TGIFColorMap object.
+// : Destroys an instance of a TGIFColorMap object.
 destructor TGIFColorMap.Destroy;
 begin
   Clear;
@@ -4758,7 +4834,7 @@ begin
   inherited Destroy;
 end;
 
-//: Empties the color map.
+// : Empties the color map.
 procedure TGIFColorMap.Clear;
 begin
   if (FColorMap <> nil) then
@@ -4769,75 +4845,70 @@ begin
   FOptimized := False;
 end;
 
-//: Converts a Windows color value to a RGB value.
+// : Converts a Windows color value to a RGB value.
 class function TGIFColorMap.Color2RGB(Color: TColor): TGIFColor;
 begin
   Result.Blue := (Color shr 16) and $FF;
   Result.Green := (Color shr 8) and $FF;
-  Result.Red  := Color and $FF;
+  Result.Red := Color and $FF;
 end;
 
-//: Converts a RGB value to a Windows color value.
+// : Converts a RGB value to a Windows color value.
 class function TGIFColorMap.RGB2Color(Color: TGIFColor): TColor;
 begin
-  Result := (Color.Blue SHL 16) OR (Color.Green SHL 8) OR Color.Red;
+  Result := (Color.Blue shl 16) or (Color.Green shl 8) or Color.Red;
 end;
 
-//: Saves the color map to a stream.
+// : Saves the color map to a stream.
 procedure TGIFColorMap.SaveToStream(Stream: TStream);
 var
-  Dummies		: integer;
-  Dummy			: TGIFColor;
+  Dummies: integer;
+  Dummy: TGIFColor;
 begin
   if (FCount = 0) then
     exit;
-  Stream.WriteBuffer(FColorMap^, FCount*sizeof(TGIFColor));
-  Dummies := (1 SHL BitsPerPixel)-FCount;
+  Stream.WriteBuffer(FColorMap^, FCount * SizeOf(TGIFColor));
+  Dummies := (1 shl BitsPerPixel) - FCount;
   Dummy.Red := 0;
   Dummy.Green := 0;
   Dummy.Blue := 0;
-  while (Dummies > 0) do
-  begin
-    Stream.WriteBuffer(Dummy, sizeof(TGIFColor));
-    dec(Dummies);
+  while (Dummies > 0) do begin
+    Stream.WriteBuffer(Dummy, SizeOf(TGIFColor));
+    Dec(Dummies);
   end;
 end;
 
-//: Loads the color map from a stream.
+// : Loads the color map from a stream.
 procedure TGIFColorMap.LoadFromStream(Stream: TStream; Count: integer);
 begin
   Clear;
   SetCapacity(Count);
-  ReadCheck(Stream, FColorMap^, Count*sizeof(TGIFColor));
+  ReadCheck(Stream, FColorMap^, Count * SizeOf(TGIFColor));
   FCount := Count;
 end;
 
-//: Returns the position of a color in the color map.
+// : Returns the position of a color in the color map.
 function TGIFColorMap.IndexOf(Color: TColor): integer;
 var
-  RGB			: TGIFColor;
+  RGB: TGIFColor;
 begin
   RGB := Color2RGB(Color);
-  if (FOptimized) then
-  begin
+  if (FOptimized) then begin
     // Optimized palette has most frequently occuring entries first
     Result := 0;
     // Reverse search to (hopefully) check latest colors first
     while (Result < FCount) do
-      with (FColorMap^[Result]) do
-      begin
+      with (FColorMap^[Result]) do begin
         if (RGB.Red = Red) and (RGB.Green = Green) and (RGB.Blue = Blue) then
           exit;
-        Inc(Result);
+        inc(Result);
       end;
     Result := -1;
-  end else
-  begin
-    Result := FCount-1;
+  end else begin
+    Result := FCount - 1;
     // Reverse search to (hopefully) check latest colors first
     while (Result >= 0) do
-      with (FColorMap^[Result]) do
-      begin
+      with (FColorMap^[Result]) do begin
         if (RGB.Red = Red) and (RGB.Green = Green) and (RGB.Blue = Blue) then
           exit;
         Dec(Result);
@@ -4847,35 +4918,33 @@ end;
 
 procedure TGIFColorMap.SetCapacity(Size: integer);
 begin
-  if (Size >= FCapacity) then
-  begin
+  if (Size >= FCapacity) then begin
     if (Size <= InitColorMapSize) then
       FCapacity := InitColorMapSize
     else
-      FCapacity := (Size + DeltaColorMapSize - 1) DIV DeltaColorMapSize * DeltaColorMapSize;
+      FCapacity := (Size + DeltaColorMapSize - 1) div DeltaColorMapSize * DeltaColorMapSize;
     if (FCapacity > GIFMaxColors) then
       FCapacity := GIFMaxColors;
-    ReallocMem(FColorMap, FCapacity * sizeof(TGIFColor));
+    ReallocMem(FColorMap, FCapacity * SizeOf(TGIFColor));
   end;
 end;
 
-//: Imports a Windows palette into the color map.
+// : Imports a Windows palette into the color map.
 procedure TGIFColorMap.ImportPalette(Palette: HPalette);
 type
-  PalArray =  array[byte] of TPaletteEntry;
+  PalArray = array [Byte] of TPaletteEntry;
 var
-  Pal			: PalArray;
-  NewCount		: integer;
-  i			: integer;
+  Pal: PalArray;
+  NewCount: integer;
+  i: integer;
 begin
   Clear;
-  NewCount := GetPaletteEntries(Palette, 0, 256, pal);
+  NewCount := GetPaletteEntries(Palette, 0, 256, Pal);
   if (NewCount = 0) then
     exit;
   SetCapacity(NewCount);
-  for i := 0 to NewCount-1 do
-    with FColorMap[i], Pal[i] do
-    begin
+  for i := 0 to NewCount - 1 do
+    with FColorMap[i], Pal[i] do begin
       Red := peRed;
       Green := peGreen;
       Blue := peBlue;
@@ -4884,7 +4953,7 @@ begin
   Changed;
 end;
 
-//: Imports a color map structure into the color map.
+// : Imports a color map structure into the color map.
 procedure TGIFColorMap.ImportColorMap(Map: TColorMap; Count: integer);
 begin
   Clear;
@@ -4893,23 +4962,22 @@ begin
   SetCapacity(Count);
   FCount := Count;
 
-  System.Move(Map, FColorMap^, FCount * sizeof(TGIFColor));
+  System.Move(Map, FColorMap^, FCount * SizeOf(TGIFColor));
 
   Changed;
 end;
 
-//: Imports a Windows palette structure into the color map.
-procedure TGIFColorMap.ImportColorTable(Pal: pointer; Count: integer);
+// : Imports a Windows palette structure into the color map.
+procedure TGIFColorMap.ImportColorTable(Pal: Pointer; Count: integer);
 var
-  i			: integer;
+  i: integer;
 begin
   Clear;
   if (Count = 0) then
     exit;
   SetCapacity(Count);
-  for i := 0 to Count-1 do
-    with FColorMap[i], PRGBQuadArray(Pal)[i] do
-    begin
+  for i := 0 to Count - 1 do
+    with FColorMap[i], PRGBQuadArray(Pal)[i] do begin
       Red := rgbRed;
       Green := rgbGreen;
       Blue := rgbBlue;
@@ -4918,48 +4986,46 @@ begin
   Changed;
 end;
 
-//: Imports the color table of a DIB into the color map.
+// : Imports the color table of a DIB into the color map.
 procedure TGIFColorMap.ImportDIBColors(Handle: HDC);
 var
-  Pal			: Pointer;
-  NewCount		: integer;
+  Pal: Pointer;
+  NewCount: integer;
 begin
   Clear;
-  GetMem(Pal, sizeof(TRGBQuad) * 256);
+  GetMem(Pal, SizeOf(TRGBQuad) * 256);
   try
     NewCount := GetDIBColorTable(Handle, 0, 256, Pal^);
     ImportColorTable(Pal, NewCount);
-  finally
-    FreeMem(Pal);
+  finally FreeMem(Pal);
   end;
   Changed;
 end;
 
-//: Creates a Windows palette from the color map.
+// : Creates a Windows palette from the color map.
 function TGIFColorMap.ExportPalette: HPalette;
 var
-  Pal			: TMaxLogPalette;
-  i			: Integer;
+  Pal: TMaxLogPalette;
+  i: integer;
 begin
-  if (Count = 0) then
-  begin
+  if (Count = 0) then begin
     Result := 0;
     exit;
   end;
   Pal.palVersion := $300;
   Pal.palNumEntries := Count;
-  for i := 0 to Count-1 do
-    with FColorMap[i], Pal.palPalEntry[i] do
-    begin
+  for i := 0 to Count - 1 do
+    with FColorMap[i], Pal.palPalEntry[i] do begin
       peRed := Red;
       peGreen := Green;
       peBlue := Blue;
-      peFlags := PC_NOCOLLAPSE; { TODO -oanme -cImprovement : Verify that PC_NOCOLLAPSE is the correct value to use. }
+      peFlags := PC_NOCOLLAPSE;
+      { TODO -oanme -cImprovement : Verify that PC_NOCOLLAPSE is the correct value to use. }
     end;
   Result := CreatePalette(PLogPalette(@Pal)^);
 end;
 
-//: Adds a color to the color map.
+// : Adds a color to the color map.
 function TGIFColorMap.Add(Color: TColor): integer;
 begin
   if (FCount >= GIFMaxColors) then
@@ -4968,7 +5034,7 @@ begin
 
   Result := FCount;
   if (Result >= FCapacity) then
-    SetCapacity(FCount+1);
+    SetCapacity(FCount + 1);
   FColorMap^[FCount] := Color2RGB(Color);
   inc(FCount);
   FOptimized := False;
@@ -4986,72 +5052,72 @@ begin
   Result := Add(Color);
 end;
 
-//: Removes a color from the color map.
+// : Removes a color from the color map.
 procedure TGIFColorMap.Delete(Index: integer);
 begin
-  if (Index < 0) or (Index >= FCount) then
+  if (index < 0) or (index >= FCount) then
     // Color index out of range
     Error(sBadColorIndex);
-  dec(FCount);
-  if (Index < FCount) then
-    System.Move(FColorMap^[Index + 1], FColorMap^[Index], (FCount - Index)* sizeof(TGIFColor));
+  Dec(FCount);
+  if (index < FCount) then
+    System.Move(FColorMap^[index + 1], FColorMap^[index], (FCount - index) * SizeOf(TGIFColor));
   FOptimized := False;
   Changed;
 end;
 
 function TGIFColorMap.GetColor(Index: integer): TColor;
 begin
-  if (Index < 0) or (Index >= FCount) then
-  begin
+  if (index < 0) or (index >= FCount) then begin
     // Color index out of range
     Warning(gsWarning, sBadColorIndex);
     // Raise an exception if the color map is empty
     if (FCount = 0) then
       Error(sEmptyColorMap);
     // Default to color index 0
-    Index := 0;
+    index := 0;
   end;
-  Result := RGB2Color(FColorMap^[Index]);
+  Result := RGB2Color(FColorMap^[index]);
 end;
 
 procedure TGIFColorMap.SetColor(Index: integer; Value: TColor);
 begin
-  if (Index < 0) or (Index >= FCount) then
+  if (index < 0) or (index >= FCount) then
     // Color index out of range
     Error(sBadColorIndex);
-  FColorMap^[Index] := Color2RGB(Value);
+  FColorMap^[index] := Color2RGB(Value);
   Changed;
 end;
 
-function TGIFColorMap.DoOptimize: boolean;
+function TGIFColorMap.DoOptimize: Boolean;
 var
-  Usage			: TColormapHistogram;
-  TempMap		: array[0..255] of TGIFColor;
-  ReverseMap		: TColormapReverse;
-  i			: integer;
-  LastFound		: boolean;
-  NewCount		: integer;
-  T			: TUsageCount;
-  Pivot			: integer;
+  Usage: TColormapHistogram;
+  TempMap: array [0 .. 255] of TGIFColor;
+  ReverseMap: TColormapReverse;
+  i: integer;
+  LastFound: Boolean;
+  NewCount: integer;
+  T: TUsageCount;
+  Pivot: integer;
 
-  procedure QuickSort(iLo, iHi: Integer);
+  procedure QuickSort(iLo, iHi: integer);
   var
-    Lo, Hi: Integer;
+    Lo, Hi: integer;
   begin
     repeat
       Lo := iLo;
       Hi := iHi;
-      Pivot := Usage[(iLo + iHi) SHR 1].Count;
+      Pivot := Usage[(iLo + iHi) shr 1].Count;
       repeat
-        while (Usage[Lo].Count - Pivot > 0) do inc(Lo);
-        while (Usage[Hi].Count - Pivot < 0) do dec(Hi);
-        if (Lo <= Hi) then
-        begin
+        while (Usage[Lo].Count - Pivot > 0) do
+          inc(Lo);
+        while (Usage[Hi].Count - Pivot < 0) do
+          Dec(Hi);
+        if (Lo <= Hi) then begin
           T := Usage[Lo];
           Usage[Lo] := Usage[Hi];
           Usage[Hi] := T;
           inc(Lo);
-          dec(Hi);
+          Dec(Hi);
         end;
       until (Lo > Hi);
       if (iLo < Hi) then
@@ -5061,8 +5127,7 @@ var
   end;
 
 begin
-  if (FCount <= 1) then
-  begin
+  if (FCount <= 1) then begin
     Result := False;
     exit;
   end;
@@ -5073,40 +5138,37 @@ begin
   BuildHistogram(Usage);
 
   (*
-  **  Sort according to usage count
+    **  Sort according to usage count
   *)
-  QuickSort(0, FCount-1);
+  QuickSort(0, FCount - 1);
 
   (*
-  ** Test for table already sorted
+    ** Test for table already sorted
   *)
-  for i := 0 to FCount-1 do
+  for i := 0 to FCount - 1 do
     if (Usage[i].Index <> i) then
       break;
   if (i = FCount) then
     exit;
 
   (*
-  ** Build old to new map
+    ** Build old to new map
   *)
-  for i := 0 to FCount-1 do
+  for i := 0 to FCount - 1 do
     ReverseMap[Usage[i].Index] := i;
-
 
   MapImages(ReverseMap);
 
   (*
-  **  Reorder colormap
+    **  Reorder colormap
   *)
   LastFound := False;
   NewCount := FCount;
-  Move(FColorMap^, TempMap, FCount * sizeof(TGIFColor));
-  for i := 0 to FCount-1 do
-  begin
+  Move(FColorMap^, TempMap, FCount * SizeOf(TGIFColor));
+  for i := 0 to FCount - 1 do begin
     FColorMap^[ReverseMap[i]] := TempMap[i];
     // Find last used color index
-    if (Usage[i].Count = 0) and not(LastFound) then
-    begin
+    if (Usage[i].Count = 0) and not(LastFound) then begin
       LastFound := True;
       NewCount := i;
     end;
@@ -5122,27 +5184,27 @@ begin
   Result := Colors2bpp(FCount);
 end;
 
-//: Copies one color map to another.
+// : Copies one color map to another.
 procedure TGIFColorMap.Assign(Source: TPersistent);
 begin
-  if (Source is TGIFColorMap) then
-  begin
+  if (Source is TGIFColorMap) then begin
     Clear;
     FCapacity := TGIFColorMap(Source).FCapacity;
     FCount := TGIFColorMap(Source).FCount;
     FOptimized := TGIFColorMap(Source).FOptimized;
-    FColorMap := AllocMem(FCapacity * sizeof(TGIFColor));
-    System.Move(TGIFColorMap(Source).FColorMap^, FColorMap^, FCount * sizeof(TGIFColor));
+    FColorMap := AllocMem(FCapacity * SizeOf(TGIFColor));
+    System.Move(TGIFColorMap(Source).FColorMap^, FColorMap^, FCount * SizeOf(TGIFColor));
     Changed;
-  end else
+  end
+  else
     inherited Assign(Source);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFItem
+// TGIFItem
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFItem.Create(GIFImage: TGIFImage);
 begin
   inherited Create;
@@ -5152,7 +5214,7 @@ end;
 
 procedure TGIFItem.Warning(Severity: TGIFSeverity; Message: string);
 begin
-  FGIFImage.Warning(self, Severity, Message);
+  FGIFImage.Warning(self, Severity, message);
 end;
 
 function TGIFItem.GetVersion: TGIFVersion;
@@ -5164,11 +5226,9 @@ procedure TGIFItem.LoadFromFile(const Filename: string);
 var
   Stream: TStream;
 begin
-  Stream := TFileStream.Create(Filename, fmOpenRead OR fmShareDenyWrite);
-  try
-    LoadFromStream(Stream);
-  finally
-    Stream.Free;
+  Stream := TFileStream.Create(Filename, fmOpenRead or fmShareDenyWrite);
+  try LoadFromStream(Stream);
+  finally Stream.Free;
   end;
 end;
 
@@ -5177,18 +5237,16 @@ var
   Stream: TStream;
 begin
   Stream := TFileStream.Create(Filename, fmCreate);
-  try
-    SaveToStream(Stream);
-  finally
-    Stream.Free;
+  try SaveToStream(Stream);
+  finally Stream.Free;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFList
+// TGIFList
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFList.Create(Image: TGIFImage);
 begin
   inherited Create;
@@ -5203,22 +5261,22 @@ begin
   inherited Destroy;
 end;
 
-function TGIFList.GetItem(Index: Integer): TGIFItem;
+function TGIFList.GetItem(Index: integer): TGIFItem;
 begin
-  Result := TGIFItem(FItems[Index]);
+  Result := TGIFItem(FItems[index]);
 end;
 
-procedure TGIFList.SetItem(Index: Integer; Item: TGIFItem);
+procedure TGIFList.SetItem(Index: integer; Item: TGIFItem);
 begin
-  FItems[Index] := Item;
+  FItems[index] := Item;
 end;
 
-function TGIFList.GetCount: Integer;
+function TGIFList.GetCount: integer;
 begin
   Result := FItems.Count;
 end;
 
-function TGIFList.Add(Item: TGIFItem): Integer;
+function TGIFList.Add(Item: TGIFItem): integer;
 begin
   Result := FItems.Add(Item);
 end;
@@ -5229,17 +5287,17 @@ begin
     Delete(0);
 end;
 
-procedure TGIFList.Delete(Index: Integer);
+procedure TGIFList.Delete(Index: integer);
 var
-  Item			: TGIFItem;
+  Item: TGIFItem;
 begin
-  Item := TGIFItem(FItems[Index]);
+  Item := TGIFItem(FItems[index]);
   // Delete before item is destroyed to avoid recursion
-  FItems.Delete(Index);
+  FItems.Delete(index);
   Item.Free;
 end;
 
-procedure TGIFList.Exchange(Index1, Index2: Integer);
+procedure TGIFList.Exchange(Index1, Index2: integer);
 begin
   FItems.Exchange(Index1, Index2);
 end;
@@ -5249,14 +5307,14 @@ begin
   Result := TGIFItem(FItems.First);
 end;
 
-function TGIFList.IndexOf(Item: TGIFItem): Integer;
+function TGIFList.IndexOf(Item: TGIFItem): integer;
 begin
   Result := FItems.IndexOf(Item);
 end;
 
-procedure TGIFList.Insert(Index: Integer; Item: TGIFItem);
+procedure TGIFList.Insert(Index: integer; Item: TGIFItem);
 begin
-  FItems.Insert(Index, Item);
+  FItems.Insert(index, Item);
 end;
 
 function TGIFList.Last: TGIFItem;
@@ -5264,12 +5322,12 @@ begin
   Result := TGIFItem(FItems.Last);
 end;
 
-procedure TGIFList.Move(CurIndex, NewIndex: Integer);
+procedure TGIFList.Move(CurIndex, NewIndex: integer);
 begin
   FItems.Move(CurIndex, NewIndex);
 end;
 
-function TGIFList.Remove(Item: TGIFItem): Integer;
+function TGIFList.Remove(Item: TGIFItem): integer;
 begin
   // Note: TGIFList.Remove must not destroy item
   Result := FItems.Remove(Item);
@@ -5277,74 +5335,70 @@ end;
 
 procedure TGIFList.SaveToStream(Stream: TStream);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to FItems.Count-1 do
+  for i := 0 to FItems.Count - 1 do
     TGIFItem(FItems[i]).SaveToStream(Stream);
 end;
 
 procedure TGIFList.Warning(Severity: TGIFSeverity; Message: string);
 begin
-  Image.Warning(self, Severity, Message);
+  Image.Warning(self, Severity, message);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFGlobalColorMap
+// TGIFGlobalColorMap
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFGlobalColorMap = class(TGIFColorMap)
   private
-    FHeader	: TGIFHeader;
+    FHeader: TGIFHeader;
   protected
     procedure Warning(Severity: TGIFSeverity; Message: string); override;
     procedure BuildHistogram(var Histogram: TColormapHistogram); override;
     procedure MapImages(var Map: TColormapReverse); override;
   public
     constructor Create(HeaderItem: TGIFHeader);
-    function Optimize: boolean; override;
+    function Optimize: Boolean; override;
     procedure Changed; override;
   end;
 
 constructor TGIFGlobalColorMap.Create(HeaderItem: TGIFHeader);
 begin
-  Inherited Create;
+  inherited Create;
   FHeader := HeaderItem;
 end;
 
 procedure TGIFGlobalColorMap.Warning(Severity: TGIFSeverity; Message: string);
 begin
-  FHeader.Image.Warning(self, Severity, Message);
+  FHeader.Image.Warning(self, Severity, message);
 end;
 
 procedure TGIFGlobalColorMap.BuildHistogram(var Histogram: TColormapHistogram);
 var
-  Pixel			,
-  LastPixel		: PChar;
-  i			: integer;
+  Pixel, LastPixel: PAnsiChar;
+  i: integer;
 begin
   (*
-  ** Init histogram
+    ** Init histogram
   *)
-  for i := 0 to Count-1 do
-  begin
+  for i := 0 to Count - 1 do begin
     Histogram[i].Index := i;
     Histogram[i].Count := 0;
   end;
 
-  for i := 0 to FHeader.Image.Images.Count-1 do
-    if (FHeader.Image.Images[i].ActiveColorMap = self) then
-    begin
+  for i := 0 to FHeader.Image.Images.Count - 1 do
+    if (FHeader.Image.Images[i].ActiveColorMap = self) then begin
       Pixel := FHeader.Image.Images[i].Data;
       LastPixel := Pixel + FHeader.Image.Images[i].Width * FHeader.Image.Images[i].Height;
 
       (*
-      ** Sum up usage count for each color
+        ** Sum up usage count for each color
       *)
-      while (Pixel < LastPixel) do
-      begin
-        inc(Histogram[ord(Pixel^)].Count);
+      while (Pixel < LastPixel) do begin
+        inc(Histogram[Ord(Pixel^)].Count);
         inc(Pixel);
       end;
     end;
@@ -5352,27 +5406,27 @@ end;
 
 procedure TGIFGlobalColorMap.MapImages(var Map: TColormapReverse);
 var
-  Pixel			,
-  LastPixel		: PChar;
-  i			: integer;
+  Pixel, LastPixel: PAnsiChar;
+  i: integer;
 begin
-  for i := 0 to FHeader.Image.Images.Count-1 do
-    if (FHeader.Image.Images[i].ActiveColorMap = self) then
-    begin
+  for i := 0 to FHeader.Image.Images.Count - 1 do
+    if (FHeader.Image.Images[i].ActiveColorMap = self) then begin
       Pixel := FHeader.Image.Images[i].Data;
       LastPixel := Pixel + FHeader.Image.Images[i].Width * FHeader.Image.Images[i].Height;
 
       (*
-      **  Reorder all pixel to new map
+        **  Reorder all pixel to new map
       *)
-      while (Pixel < LastPixel) do
-      begin
-        Pixel^ := chr(Map[ord(Pixel^)]);
+      while (Pixel < LastPixel) do begin
+        // 2008.10.19 ->
+        // Pixel^ := chr(Map[ord(Pixel^)]);
+        Pixel^ := AnsiChar(Map[Ord(Pixel^)]);
+        // 2008.10.19 <-
         inc(Pixel);
       end;
 
       (*
-      **  Reorder transparent colors
+        **  Reorder transparent colors
       *)
       if (FHeader.Image.Images[i].Transparent) then
         FHeader.Image.Images[i].GraphicControlExtension.TransparentColorIndex :=
@@ -5380,7 +5434,7 @@ begin
     end;
 end;
 
-function TGIFGlobalColorMap.Optimize: boolean;
+function TGIFGlobalColorMap.Optimize: Boolean;
 begin
   { Optimize with first image, Remove unused colors if only one image }
   if (FHeader.Image.Images.Count > 0) then
@@ -5394,11 +5448,11 @@ begin
   FHeader.Image.Palette := 0;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFHeader
+// TGIFHeader
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFHeader.Create(GIFImage: TGIFImage);
 begin
   inherited Create(GIFImage);
@@ -5424,53 +5478,51 @@ end;
 
 procedure TGIFHeader.Assign(Source: TPersistent);
 begin
-  if (Source is TGIFHeader) then
-  begin
+  if (Source is TGIFHeader) then begin
     ColorMap.Assign(TGIFHeader(Source).ColorMap);
     FLogicalScreenDescriptor := TGIFHeader(Source).FLogicalScreenDescriptor;
-  end else
-  if (Source is TGIFColorMap) then
-  begin
+  end else if (Source is TGIFColorMap) then begin
     Clear;
     ColorMap.Assign(TGIFColorMap(Source));
-  end else
+  end
+  else
     inherited Assign(Source);
 end;
 
 type
   TGIFHeaderRec = packed record
-    Signature: array[0..2] of char; { contains 'GIF' }
-    Version: TGIFVersionRec;   { '87a' or '89a' }
+    Signature: array [0 .. 2] of AnsiChar; { contains 'GIF' }
+    Version: TGIFVersionRec; { '87a' or '89a' }
   end;
 
 const
   { logical screen descriptor packed field masks }
-  lsdGlobalColorTable	= $80;		{ set if global color table follows L.S.D. }
-  lsdColorResolution	= $70;		{ Color resolution - 3 bits }
-  lsdSort		= $08;		{ set if global color table is sorted - 1 bit }
-  lsdColorTableSize	= $07;		{ size of global color table - 3 bits }
-  					{ Actual size = 2^value+1    - value is 3 bits }
+  lsdGlobalColorTable = $80; { set if global color table follows L.S.D. }
+  lsdColorResolution = $70; { Color resolution - 3 bits }
+  lsdSort = $08; { set if global color table is sorted - 1 bit }
+  lsdColorTableSize = $07; { size of global color table - 3 bits }
+
+  { Actual size = 2^value+1    - value is 3 bits }
 procedure TGIFHeader.Prepare;
 var
-  pack			: BYTE;
+  Pack: Byte;
 begin
   Pack := $00;
-  if (ColorMap.Count > 0) then
-  begin
+  if (ColorMap.Count > 0) then begin
     Pack := lsdGlobalColorTable;
     if (ColorMap.Optimized) then
-      Pack := Pack OR lsdSort;
+      Pack := Pack or lsdSort;
   end;
   // Note: The SHL below was SHL 5 in the original source, but that looks wrong
-  Pack := Pack OR ((Image.ColorResolution SHL 4) AND lsdColorResolution);
-  Pack := Pack OR ((Image.BitsPerPixel-1) AND lsdColorTableSize);
+  Pack := Pack or ((Image.ColorResolution shl 4) and lsdColorResolution);
+  Pack := Pack or ((Image.BitsPerPixel - 1) and lsdColorTableSize);
   FLogicalScreenDescriptor.PackedFields := Pack;
 end;
 
 procedure TGIFHeader.SaveToStream(Stream: TStream);
 var
-  GifHeader		: TGIFHeaderRec;
-  v			: TGIFVersion;
+  GifHeader: TGIFHeaderRec;
+  v: TGIFVersion;
 begin
   v := Image.Version;
   if (v = gvUnknown) then
@@ -5480,42 +5532,48 @@ begin
   GifHeader.Version := GIFVersions[v];
 
   Prepare;
-  Stream.Write(GifHeader, sizeof(GifHeader));
-  Stream.Write(FLogicalScreenDescriptor, sizeof(FLogicalScreenDescriptor));
-  if (FLogicalScreenDescriptor.PackedFields AND lsdGlobalColorTable = lsdGlobalColorTable) then
+  Stream.Write(GifHeader, SizeOf(GifHeader));
+  Stream.Write(FLogicalScreenDescriptor, SizeOf(FLogicalScreenDescriptor));
+  if (FLogicalScreenDescriptor.PackedFields and lsdGlobalColorTable = lsdGlobalColorTable) then
     ColorMap.SaveToStream(Stream);
 end;
 
 procedure TGIFHeader.LoadFromStream(Stream: TStream);
 var
-  GifHeader		: TGIFHeaderRec;
-  ColorCount		: integer;
-  Position		: integer;
+  GifHeader: TGIFHeaderRec;
+  ColorCount: integer;
+  Position: integer;
 begin
   Position := Stream.Position;
 
-  ReadCheck(Stream, GifHeader, sizeof(GifHeader));
-  if (uppercase(GifHeader.Signature) <> 'GIF') then
+  ReadCheck(Stream, GifHeader, SizeOf(GifHeader));
+  // 2008.10.19 ->
+  // if (uppercase(GifHeader.Signature) <> 'GIF') then
+  if (uppercase(string(GifHeader.Signature)) <> 'GIF') then
+  // 2008.10.19 <-
   begin
     // Attempt recovery in case we are reading a GIF stored in a form by rxLib
     Stream.Position := Position;
     // Seek past size stored in stream
-    Stream.Seek(sizeof(longInt), soFromCurrent);
+    Stream.Seek(SizeOf(longInt), soFromCurrent);
     // Attempt to read signature again
-    ReadCheck(Stream, GifHeader, sizeof(GifHeader));
-    if (uppercase(GifHeader.Signature) <> 'GIF') then
+    ReadCheck(Stream, GifHeader, SizeOf(GifHeader));
+    // 2008.10.19 ->
+    // if (uppercase(GifHeader.Signature) <> 'GIF') then
+    if (uppercase(string(GifHeader.Signature)) <> 'GIF') then
+      // 2008.10.19 <-
       Error(sBadSignature);
   end;
 
-  ReadCheck(Stream, FLogicalScreenDescriptor, sizeof(FLogicalScreenDescriptor));
+  ReadCheck(Stream, FLogicalScreenDescriptor, SizeOf(FLogicalScreenDescriptor));
 
-  if (FLogicalScreenDescriptor.PackedFields AND lsdGlobalColorTable = lsdGlobalColorTable) then
-  begin
-    ColorCount := 2 SHL (FLogicalScreenDescriptor.PackedFields AND lsdColorTableSize);
+  if (FLogicalScreenDescriptor.PackedFields and lsdGlobalColorTable = lsdGlobalColorTable) then begin
+    ColorCount := 2 shl (FLogicalScreenDescriptor.PackedFields and lsdColorTableSize);
     if (ColorCount < 2) or (ColorCount > 256) then
       Error(sScreenBadColorSize);
     ColorMap.LoadFromStream(Stream, ColorCount)
-  end else
+  end
+  else
     ColorMap.Clear;
 end;
 
@@ -5537,14 +5595,13 @@ begin
   BackgroundColorIndex := FColorMap.AddUnique(Color);
 end;
 
-procedure TGIFHeader.SetBackgroundColorIndex(Index: BYTE);
+procedure TGIFHeader.SetBackgroundColorIndex(Index: Byte);
 begin
-  if ((Index >= FColorMap.Count) and (FColorMap.Count > 0)) then
-  begin
+  if ((index >= FColorMap.Count) and (FColorMap.Count > 0)) then begin
     Warning(gsWarning, sBadColorIndex);
-    Index := 0;
+    index := 0;
   end;
-  FLogicalScreenDescriptor.BackgroundColorIndex := Index;
+  FLogicalScreenDescriptor.BackgroundColorIndex := index;
 end;
 
 function TGIFHeader.GetBitsPerPixel: integer;
@@ -5554,93 +5611,90 @@ end;
 
 function TGIFHeader.GetColorResolution: integer;
 begin
-  Result := FColorMap.BitsPerPixel-1;
+  Result := FColorMap.BitsPerPixel - 1;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFLocalColorMap
+// TGIFLocalColorMap
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFLocalColorMap = class(TGIFColorMap)
   private
-    FSubImage		: TGIFSubImage;
+    FSubImage: TGIFSubImage;
   protected
     procedure Warning(Severity: TGIFSeverity; Message: string); override;
     procedure BuildHistogram(var Histogram: TColormapHistogram); override;
     procedure MapImages(var Map: TColormapReverse); override;
   public
     constructor Create(SubImage: TGIFSubImage);
-    function Optimize: boolean; override;
+    function Optimize: Boolean; override;
     procedure Changed; override;
   end;
 
 constructor TGIFLocalColorMap.Create(SubImage: TGIFSubImage);
 begin
-  Inherited Create;
+  inherited Create;
   FSubImage := SubImage;
 end;
 
 procedure TGIFLocalColorMap.Warning(Severity: TGIFSeverity; Message: string);
 begin
-  FSubImage.Image.Warning(self, Severity, Message);
+  FSubImage.Image.Warning(self, Severity, message);
 end;
 
 procedure TGIFLocalColorMap.BuildHistogram(var Histogram: TColormapHistogram);
 var
-  Pixel			,
-  LastPixel		: PChar;
-  i			: integer;
+  Pixel, LastPixel: PAnsiChar;
+  i: integer;
 begin
   Pixel := FSubImage.Data;
   LastPixel := Pixel + FSubImage.Width * FSubImage.Height;
 
   (*
-  ** Init histogram
+    ** Init histogram
   *)
-  for i := 0 to Count-1 do
-  begin
+  for i := 0 to Count - 1 do begin
     Histogram[i].Index := i;
     Histogram[i].Count := 0;
   end;
 
   (*
-  ** Sum up usage count for each color
+    ** Sum up usage count for each color
   *)
-  while (Pixel < LastPixel) do
-  begin
-    inc(Histogram[ord(Pixel^)].Count);
+  while (Pixel < LastPixel) do begin
+    inc(Histogram[Ord(Pixel^)].Count);
     inc(Pixel);
   end;
 end;
 
 procedure TGIFLocalColorMap.MapImages(var Map: TColormapReverse);
 var
-  Pixel			,
-  LastPixel		: PChar;
+  Pixel, LastPixel: PAnsiChar;
 begin
   Pixel := FSubImage.Data;
   LastPixel := Pixel + FSubImage.Width * FSubImage.Height;
 
   (*
-  **  Reorder all pixel to new map
+    **  Reorder all pixel to new map
   *)
-  while (Pixel < LastPixel) do
-  begin
-    Pixel^ := chr(Map[ord(Pixel^)]);
+  while (Pixel < LastPixel) do begin
+    // 2008.10.19 ->
+    // Pixel^ := chr(Map[ord(Pixel^)]);
+    Pixel^ := AnsiChar(Map[Ord(Pixel^)]);
+    // 2008.10.19 <-
     inc(Pixel);
   end;
 
   (*
-  **  Reorder transparent colors
+    **  Reorder transparent colors
   *)
   if (FSubImage.Transparent) then
-    FSubImage.GraphicControlExtension.TransparentColorIndex :=
-      Map[FSubImage.GraphicControlExtension.TransparentColorIndex];
+    FSubImage.GraphicControlExtension.TransparentColorIndex := Map[FSubImage.GraphicControlExtension.TransparentColorIndex];
 end;
 
-function TGIFLocalColorMap.Optimize: boolean;
+function TGIFLocalColorMap.Optimize: Boolean;
 begin
   Result := DoOptimize;
 end;
@@ -5650,69 +5704,59 @@ begin
   FSubImage.Palette := 0;
 end;
 
-
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			LZW Decoder
+// LZW Decoder
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
-  GIFCodeBits		= 12;			// Max number of bits per GIF token code
-  GIFCodeMax		= (1 SHL GIFCodeBits)-1;// Max GIF token code
-  						// 12 bits = 4095
-  StackSize		= (2 SHL GIFCodeBits);	// Size of decompression stack
-  TableSize		= (1 SHL GIFCodeBits);	// Size of decompression table
+  GIFCodeBits = 12; // Max number of bits per GIF token code
+  GIFCodeMax = (1 shl GIFCodeBits) - 1; // Max GIF token code
+  // 12 bits = 4095
+  StackSize = (2 shl GIFCodeBits); // Size of decompression stack
+  TableSize = (1 shl GIFCodeBits); // Size of decompression table
 
 procedure TGIFSubImage.Decompress(Stream: TStream);
 var
-  table0		: array[0..TableSize-1] of integer;
-  table1		: array[0..TableSize-1] of integer;
-  firstcode, oldcode	: integer;
-  buf			: array[0..257] of BYTE;
+  table0: array [0 .. TableSize - 1] of integer;
+  table1: array [0 .. TableSize - 1] of integer;
+  firstcode, oldcode: integer;
+  Buf: array [0 .. 257] of Byte;
 
-  Dest			: PChar;
-  v			,
-  xpos, ypos, pass	: integer;
+  Dest: PAnsiChar;
+  v, xpos, ypos, pass: integer;
 
-  stack			: array[0..StackSize-1] of integer;
-  Source			: ^integer;
-  BitsPerCode		: integer;		// number of CodeTableBits/code
-  InitialBitsPerCode	: BYTE;
+  stack: array [0 .. StackSize - 1] of integer;
+  Source: ^integer;
+  BitsPerCode: integer; // number of CodeTableBits/code
+  InitialBitsPerCode: Byte;
 
-  MaxCode		: integer;		// maximum code, given BitsPerCode
-  MaxCodeSize		: integer;
-  ClearCode		: integer;		// Special code to signal "Clear table"
-  EOFCode		: integer;		// Special code to signal EOF
-  step			: integer;
-  i			: integer;
+  MaxCode: integer; // maximum code, given BitsPerCode
+  MaxCodeSize: integer;
+  ClearCode: integer; // Special code to signal "Clear table"
+  EOFCode: integer; // Special code to signal EOF
+  step: integer;
+  i: integer;
 
-  StartBit		,			// Index of bit buffer start
-  LastBit		,			// Index of last bit in buffer
-  LastByte		: integer;		// Index of last byte in buffer
-  get_done		,
-  return_clear		,
-  ZeroBlock		: boolean;
-  ClearValue		: BYTE;
-{$ifdef DEBUG_DECOMPRESSPERFORMANCE}
-  TimeStartDecompress	,
-  TimeStopDecompress	: DWORD;
-{$endif}
-
+  StartBit, // Index of bit buffer start
+  LastBit, // Index of last bit in buffer
+  LastByte: integer; // Index of last byte in buffer
+  get_done, return_clear, ZeroBlock: Boolean;
+  ClearValue: Byte;
+{$IFDEF DEBUG_DECOMPRESSPERFORMANCE}
+  TimeStartDecompress, TimeStopDecompress: DWORD;
+{$ENDIF}
   function nextCode(BitsPerCode: integer): integer;
   const
-    masks: array[0..15] of integer =
-      ($0000, $0001, $0003, $0007,
-       $000f, $001f, $003f, $007f,
-       $00ff, $01ff, $03ff, $07ff,
-       $0fff, $1fff, $3fff, $7fff);
+    masks: array [0 .. 15] of integer = ($0000, $0001, $0003, $0007, $000F, $001F, $003F, $007F, $00FF, $01FF, $03FF, $07FF,
+      $0FFF, $1FFF, $3FFF, $7FFF);
   var
-    StartIndex, EndIndex		: integer;
-    ret			: integer;
-    EndBit		: integer;
-    count		: BYTE;
+    StartIndex, EndIndex: integer;
+    ret: integer;
+    EndBit: integer;
+    Count: Byte;
   begin
-    if (return_clear) then
-    begin
+    if (return_clear) then begin
       return_clear := False;
       Result := ClearCode;
       exit;
@@ -5720,32 +5764,26 @@ var
 
     EndBit := StartBit + BitsPerCode;
 
-    if (EndBit >= LastBit) then
-    begin
-      if (get_done) then
-      begin
+    if (EndBit >= LastBit) then begin
+      if (get_done) then begin
         if (StartBit >= LastBit) then
           Warning(gsWarning, sDecodeTooFewBits);
         Result := -1;
         exit;
       end;
-      buf[0] := buf[LastByte-2];
-      buf[1] := buf[LastByte-1];
+      Buf[0] := Buf[LastByte - 2];
+      Buf[1] := Buf[LastByte - 1];
 
-      if (Stream.Read(count, 1) <> 1) then
-      begin
+      if (Stream.Read(Count, 1) <> 1) then begin
         Result := -1;
         exit;
       end;
-      if (count = 0) then
-      begin
+      if (Count = 0) then begin
         ZeroBlock := True;
-        get_done := TRUE;
-      end else
-      begin
+        get_done := True;
+      end else begin
         // Handle premature end of file
-        if (Stream.Size - Stream.Position < Count) then
-        begin
+        if (Stream.Size - Stream.Position < Count) then begin
           Warning(gsWarning, sOutOfData);
           // Not enough data left - Just read as much as we can get
           Count := Stream.Size - Stream.Position;
@@ -5754,55 +5792,50 @@ var
           ReadCheck(Stream, Buf[2], Count);
       end;
 
-      LastByte := 2 + count;
+      LastByte := 2 + Count;
       StartBit := (StartBit - LastBit) + 16;
       LastBit := LastByte * 8;
 
       EndBit := StartBit + BitsPerCode;
     end;
 
-    EndIndex := EndBit DIV 8;
-    StartIndex := StartBit DIV 8;
+    EndIndex := EndBit div 8;
+    StartIndex := StartBit div 8;
 
-    ASSERT(StartIndex <= high(buf), 'StartIndex too large');
+    ASSERT(StartIndex <= high(Buf), 'StartIndex too large');
     if (StartIndex = EndIndex) then
-      ret := buf[StartIndex]
+      ret := Buf[StartIndex]
+    else if (StartIndex + 1 = EndIndex) then
+      ret := Buf[StartIndex] or (Buf[StartIndex + 1] shl 8)
     else
-      if (StartIndex + 1 = EndIndex) then
-        ret := buf[StartIndex] OR (buf[StartIndex+1] SHL 8)
-      else
-        ret := buf[StartIndex] OR (buf[StartIndex+1] SHL 8) OR (buf[StartIndex+2] SHL 16);
+      ret := Buf[StartIndex] or (Buf[StartIndex + 1] shl 8) or (Buf[StartIndex + 2] shl 16);
 
-    ret := (ret SHR (StartBit AND $0007)) AND masks[BitsPerCode];
+    ret := (ret shr (StartBit and $0007)) and masks[BitsPerCode];
 
-    Inc(StartBit, BitsPerCode);
+    inc(StartBit, BitsPerCode);
 
     Result := ret;
   end;
 
   function NextLZW: integer;
   var
-    code, incode	: integer;
-    i			: integer;
-    b			: BYTE;
+    code, incode: integer;
+    i: integer;
+    b: Byte;
   begin
     code := nextCode(BitsPerCode);
-    while (code >= 0) do
-    begin
-      if (code = ClearCode) then
-      begin
+    while (code >= 0) do begin
+      if (code = ClearCode) then begin
         ASSERT(ClearCode < TableSize, 'ClearCode too large');
-        for i := 0 to ClearCode-1 do
-        begin
+        for i := 0 to ClearCode - 1 do begin
           table0[i] := 0;
           table1[i] := i;
         end;
-        for i := ClearCode to TableSize-1 do
-        begin
+        for i := ClearCode to TableSize - 1 do begin
           table0[i] := 0;
           table1[i] := 0;
         end;
-        BitsPerCode := InitialBitsPerCode+1;
+        BitsPerCode := InitialBitsPerCode + 1;
         MaxCodeSize := 2 * ClearCode;
         MaxCode := ClearCode + 2;
         Source := @stack;
@@ -5814,16 +5847,14 @@ var
         Result := firstcode;
         exit;
       end;
-      if (code = EOFCode) then
-      begin
+      if (code = EOFCode) then begin
         Result := -2;
         if (ZeroBlock) then
           exit;
         // Eat rest of data blocks
         if (Stream.Read(b, 1) <> 1) then
           exit;
-        while (b <> 0) do
-        begin
+        while (b <> 0) do begin
           Stream.Seek(b, soFromCurrent);
           if (Stream.Read(b, 1) <> 1) then
             exit;
@@ -5833,45 +5864,40 @@ var
 
       incode := code;
 
-      if (code >= MaxCode) then
-      begin
+      if (code >= MaxCode) then begin
         Source^ := firstcode;
-        Inc(Source);
+        inc(Source);
         code := oldcode;
       end;
 
-      ASSERT(Code < TableSize, 'Code too large');
-      while (code >= ClearCode) do
-      begin
+      ASSERT(code < TableSize, 'Code too large');
+      while (code >= ClearCode) do begin
         Source^ := table1[code];
-        Inc(Source);
+        inc(Source);
         if (code = table0[code]) then
           Error(sDecodeCircular);
         code := table0[code];
-        ASSERT(Code < TableSize, 'Code too large');
+        ASSERT(code < TableSize, 'Code too large');
       end;
 
       firstcode := table1[code];
       Source^ := firstcode;
-      Inc(Source);
+      inc(Source);
 
       code := MaxCode;
-      if (code <= GIFCodeMax) then
-      begin
+      if (code <= GIFCodeMax) then begin
         table0[code] := oldcode;
         table1[code] := firstcode;
-        Inc(MaxCode);
-        if ((MaxCode >= MaxCodeSize) and (MaxCodeSize <= GIFCodeMax)) then
-        begin
+        inc(MaxCode);
+        if ((MaxCode >= MaxCodeSize) and (MaxCodeSize <= GIFCodeMax)) then begin
           MaxCodeSize := MaxCodeSize * 2;
-          Inc(BitsPerCode);
+          inc(BitsPerCode);
         end;
       end;
 
       oldcode := incode;
 
-      if (longInt(Source) > longInt(@stack)) then
-      begin
+      if (longInt(Source) > longInt(@stack)) then begin
         Dec(Source);
         Result := Source^;
         exit;
@@ -5882,11 +5908,11 @@ var
 
   function readLZW: integer;
   begin
-    if (longInt(Source) > longInt(@stack)) then
-    begin
+    if (longInt(Source) > longInt(@stack)) then begin
       Dec(Source);
       Result := Source^;
-    end else
+    end
+    else
       Result := NextLZW;
   end;
 
@@ -5903,21 +5929,23 @@ begin
 
   FillChar(FData^, FDataSize, ClearValue);
 
-{$ifdef DEBUG_DECOMPRESSPERFORMANCE}
+{$IFDEF DEBUG_DECOMPRESSPERFORMANCE}
   TimeStartDecompress := timeGetTime;
-{$endif}
-
+{$ENDIF}
   (*
-  ** Read initial code size in bits from stream
+    ** Read initial code size in bits from stream
   *)
   if (Stream.Read(InitialBitsPerCode, 1) <> 1) then
     exit;
-
+  // 2006.07.29 ->
+  if InitialBitsPerCode > 8 then
+    InitialBitsPerCode := 8;
+  // 2006.07.29 <-
   (*
-  **  Initialize the Compression routines
+    **  Initialize the Compression routines
   *)
   BitsPerCode := InitialBitsPerCode + 1;
-  ClearCode := 1 SHL InitialBitsPerCode;
+  ClearCode := 1 shl InitialBitsPerCode;
   EOFCode := ClearCode + 1;
   MaxCodeSize := 2 * ClearCode;
   MaxCode := ClearCode + 2;
@@ -5928,274 +5956,260 @@ begin
 
   ZeroBlock := False;
   get_done := False;
-  return_clear := TRUE;
+  return_clear := True;
 
   Source := @stack;
 
   try
-    if (Interlaced) then
-    begin
+    if (Interlaced) then begin
       ypos := 0;
       pass := 0;
       step := 8;
 
-      for i := 0 to Height-1 do
-      begin
+      for i := 0 to Height - 1 do begin
         Dest := FData + Width * ypos;
-        for xpos := 0 to width-1 do
-        begin
+        for xpos := 0 to Width - 1 do begin
           v := readLZW;
           if (v < 0) then
             exit;
-          Dest^ := char(v);
-          Inc(Dest);
+          Dest^ := AnsiChar(v);
+          inc(Dest);
         end;
-        Inc(ypos, step);
-        if (ypos >= height) then
+        inc(ypos, step);
+        if (ypos >= Height) then
           repeat
             if (pass > 0) then
-              step := step DIV 2;
-            Inc(pass);
-            ypos := step DIV 2;
-          until (ypos < height);
+              step := step div 2;
+            inc(pass);
+            ypos := step div 2;
+          until (ypos < Height);
       end;
-    end else
-    begin
+    end else begin
       Dest := FData;
-      for ypos := 0 to (height * width)-1 do
-      begin
+      for ypos := 0 to (Height * Width) - 1 do begin
         v := readLZW;
         if (v < 0) then
           exit;
-        Dest^ := char(v);
-        Inc(Dest);
+        Dest^ := AnsiChar(v);
+        inc(Dest);
       end;
     end;
   finally
-    if (readLZW >= 0) then
-      ;
-//      raise GIFException.Create('Too much input data, ignoring extra...');
+    if (readLZW >= 0) then;
+    // raise GIFException.Create('Too much input data, ignoring extra...');
   end;
-{$ifdef DEBUG_DECOMPRESSPERFORMANCE}
+{$IFDEF DEBUG_DECOMPRESSPERFORMANCE}
   TimeStopDecompress := timeGetTime;
   ShowMessage(format('Decompressed %d pixels in %d mS, Rate %d pixels/mS',
-    [Height*Width, TimeStopDecompress-TimeStartDecompress,
-    (Height*Width) DIV (TimeStopDecompress-TimeStartDecompress+1)]));
-{$endif}
+    [Height * Width, TimeStopDecompress - TimeStartDecompress,
+    (Height * Width) div (TimeStopDecompress - TimeStartDecompress + 1)]));
+{$ENDIF}
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			LZW Encoder stuff
+// LZW Encoder stuff
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
-//			LZW Encoder THashTable
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// LZW Encoder THashTable
+/// /////////////////////////////////////////////////////////////////////////////
 const
-  HashKeyBits		= 13;			// Max number of bits per Hash Key
+  HashKeyBits = 13; // Max number of bits per Hash Key
 
-  HashSize		= 8009;			// Size of hash table
-  						// Must be prime
-                                                // Must be > than HashMaxCode
-                                                // Must be < than HashMaxKey
+  HashSize = 8009; // Size of hash table
+  // Must be prime
+  // Must be > than HashMaxCode
+  // Must be < than HashMaxKey
 
-  HashKeyMax		= (1 SHL HashKeyBits)-1;// Max hash key value
-  						// 13 bits = 8191
+  HashKeyMax = (1 shl HashKeyBits) - 1; // Max hash key value
+  // 13 bits = 8191
 
-  HashKeyMask		= HashKeyMax;		// $1FFF
-  GIFCodeMask		= GIFCodeMax;		// $0FFF
+  HashKeyMask = HashKeyMax; // $1FFF
+  GIFCodeMask = GIFCodeMax; // $0FFF
 
-  HashEmpty		= $000FFFFF;		// 20 bits
+  HashEmpty = $000FFFFF; // 20 bits
 
 type
   // A Hash Key is 20 bits wide.
   // - The lower 8 bits are the postfix character (the new pixel).
   // - The upper 12 bits are the prefix code (the GIF token).
   // A KeyInt must be able to represent the integer values -1..(2^20)-1
-  KeyInt = longInt;	// 32 bits
-  CodeInt = SmallInt;	// 16 bits
+  KeyInt = longInt; // 32 bits
+  CodeInt = SmallInt; // 16 bits
 
-  THashArray = array[0..HashSize-1] of KeyInt;
+  THashArray = array [0 .. HashSize - 1] of KeyInt;
   PHashArray = ^THashArray;
 
   THashTable = class
-{$ifdef DEBUG_HASHPERFORMANCE}
-    CountLookupFound	: longInt;
-    CountMissFound	: longInt;
-    CountLookupNotFound	: longInt;
-    CountMissNotFound	: longInt;
-{$endif}
+{$IFDEF DEBUG_HASHPERFORMANCE}
+    CountLookupFound: longInt;
+    CountMissFound: longInt;
+    CountLookupNotFound: longInt;
+    CountMissNotFound: longInt;
+{$ENDIF}
     HashTable: PHashArray;
   public
     constructor Create;
     destructor Destroy; override;
     procedure Clear;
-    procedure Insert(Key: KeyInt; Code: CodeInt);
+    procedure Insert(Key: KeyInt; code: CodeInt);
     function Lookup(Key: KeyInt): CodeInt;
   end;
 
 function HashKey(Key: KeyInt): CodeInt;
 begin
-  Result := ((Key SHR (GIFCodeBits-8)) XOR Key) MOD HashSize;
+  Result := ((Key shr (GIFCodeBits - 8)) xor Key) mod HashSize;
 end;
 
 function NextHashKey(HKey: CodeInt): CodeInt;
 var
-  disp		: CodeInt;
+  disp: CodeInt;
 begin
   (*
-  ** secondary hash (after G. Knott)
+    ** secondary hash (after G. Knott)
   *)
   disp := HashSize - HKey;
   if (HKey = 0) then
     disp := 1;
-//  disp := 13;		// disp should be prime relative to HashSize, but
-			// it doesn't seem to matter here...
-  dec(HKey, disp);
+  // disp := 13;		// disp should be prime relative to HashSize, but
+  // it doesn't seem to matter here...
+  Dec(HKey, disp);
   if (HKey < 0) then
     inc(HKey, HashSize);
   Result := HKey;
 end;
-
 
 constructor THashTable.Create;
 begin
   ASSERT(longInt($FFFFFFFF) = -1, 'TGIFImage implementation assumes $FFFFFFFF = -1');
 
   inherited Create;
-  GetMem(HashTable, sizeof(THashArray));
+  GetMem(HashTable, SizeOf(THashArray));
   Clear;
-{$ifdef DEBUG_HASHPERFORMANCE}
+{$IFDEF DEBUG_HASHPERFORMANCE}
   CountLookupFound := 0;
   CountMissFound := 0;
   CountLookupNotFound := 0;
   CountMissNotFound := 0;
-{$endif}
+{$ENDIF}
 end;
 
 destructor THashTable.Destroy;
 begin
-{$ifdef DEBUG_HASHPERFORMANCE}
-  ShowMessage(
-    Format('Found: %d  HitRate: %.2f',
-      [CountLookupFound, (CountLookupFound+1)/(CountMissFound+1)])+#13+
-    Format('Not found: %d  HitRate: %.2f',
-      [CountLookupNotFound, (CountLookupNotFound+1)/(CountMissNotFound+1)]));
-{$endif}
+{$IFDEF DEBUG_HASHPERFORMANCE}
+  ShowMessage(format('Found: %d  HitRate: %.2f', [CountLookupFound, (CountLookupFound + 1) / (CountMissFound + 1)]) + #13 +
+    format('Not found: %d  HitRate: %.2f', [CountLookupNotFound, (CountLookupNotFound + 1) / (CountMissNotFound + 1)]));
+{$ENDIF}
   FreeMem(HashTable);
   inherited Destroy;
 end;
 
 // Clear hash table and fill with empty slots (doh!)
 procedure THashTable.Clear;
-{$ifdef DEBUG_HASHFILLFACTOR}
+{$IFDEF DEBUG_HASHFILLFACTOR}
 var
-  i			,
-  Count			: longInt;
-{$endif}
+  i, Count: longInt;
+{$ENDIF}
 begin
-{$ifdef DEBUG_HASHFILLFACTOR}
+{$IFDEF DEBUG_HASHFILLFACTOR}
   Count := 0;
-  for i := 0 to HashSize-1 do
-    if (HashTable[i] SHR GIFCodeBits <> HashEmpty) then
+  for i := 0 to HashSize - 1 do
+    if (HashTable[i] shr GIFCodeBits <> HashEmpty) then
       inc(Count);
-  ShowMessage(format('Size: %d, Filled: %d, Rate %.4f',
-    [HashSize, Count, Count/HashSize]));
-{$endif}
-
-  FillChar(HashTable^, sizeof(THashArray), $FF);
+  ShowMessage(format('Size: %d, Filled: %d, Rate %.4f', [HashSize, Count, Count / HashSize]));
+{$ENDIF}
+  FillChar(HashTable^, SizeOf(THashArray), $FF);
 end;
 
 // Insert new key/value pair into hash table
-procedure THashTable.Insert(Key: KeyInt; Code: CodeInt);
+procedure THashTable.Insert(Key: KeyInt; code: CodeInt);
 var
-  HKey			: CodeInt;
+  HKey: CodeInt;
 begin
   // Create hash key from prefix string
   HKey := HashKey(Key);
 
   // Scan for empty slot
   // while (HashTable[HKey] SHR GIFCodeBits <> HashEmpty) do { Unoptimized }
-  while (HashTable[HKey] AND (HashEmpty SHL GIFCodeBits) <> (HashEmpty SHL GIFCodeBits)) do { Optimized }
+  while (HashTable[HKey] and (HashEmpty shl GIFCodeBits) <> (HashEmpty shl GIFCodeBits)) do { Optimized }
     HKey := NextHashKey(HKey);
   // Fill slot with key/value pair
-  HashTable[HKey] := (Key SHL GIFCodeBits) OR (Code AND GIFCodeMask);
+  HashTable[HKey] := (Key shl GIFCodeBits) or (code and GIFCodeMask);
 end;
 
 // Search for key in hash table.
 // Returns value if found or -1 if not
 function THashTable.Lookup(Key: KeyInt): CodeInt;
 var
-  HKey			: CodeInt;
-  HTKey			: KeyInt;
-{$ifdef DEBUG_HASHPERFORMANCE}
-  n			: LongInt;
-{$endif}
+  HKey: CodeInt;
+  HTKey: KeyInt;
+{$IFDEF DEBUG_HASHPERFORMANCE}
+  n: longInt;
+{$ENDIF}
 begin
   // Create hash key from prefix string
   HKey := HashKey(Key);
 
-{$ifdef DEBUG_HASHPERFORMANCE}
+{$IFDEF DEBUG_HASHPERFORMANCE}
   n := 0;
-{$endif}
+{$ENDIF}
   // Scan table for key
   // HTKey := HashTable[HKey] SHR GIFCodeBits; { Unoptimized }
-  Key := Key SHL GIFCodeBits; { Optimized }
-  HTKey := HashTable[HKey] AND (HashEmpty SHL GIFCodeBits); { Optimized }
+  Key := Key shl GIFCodeBits; { Optimized }
+  HTKey := HashTable[HKey] and (HashEmpty shl GIFCodeBits); { Optimized }
   // while (HTKey <> HashEmpty) do { Unoptimized }
-  while (HTKey <> HashEmpty SHL GIFCodeBits) do { Optimized }
+  while (HTKey <> HashEmpty shl GIFCodeBits) do { Optimized }
   begin
-    if (Key = HTKey) then
-    begin
+    if (Key = HTKey) then begin
       // Extract and return value
-      Result := HashTable[HKey] AND GIFCodeMask;
-{$ifdef DEBUG_HASHPERFORMANCE}
+      Result := HashTable[HKey] and GIFCodeMask;
+{$IFDEF DEBUG_HASHPERFORMANCE}
       inc(CountLookupFound);
       inc(CountMissFound, n);
-{$endif}
+{$ENDIF}
       exit;
     end;
-{$ifdef DEBUG_HASHPERFORMANCE}
+{$IFDEF DEBUG_HASHPERFORMANCE}
     inc(n);
-{$endif}
+{$ENDIF}
     // Try next slot
     HKey := NextHashKey(HKey);
     // HTKey := HashTable[HKey] SHR GIFCodeBits; { Unoptimized }
-    HTKey := HashTable[HKey] AND (HashEmpty SHL GIFCodeBits); { Optimized }
+    HTKey := HashTable[HKey] and (HashEmpty shl GIFCodeBits); { Optimized }
   end;
   // Found empty slot - key doesn't exist
   Result := -1;
-{$ifdef DEBUG_HASHPERFORMANCE}
+{$IFDEF DEBUG_HASHPERFORMANCE}
   inc(CountLookupNotFound);
   inc(CountMissNotFound, n);
-{$endif}
+{$ENDIF}
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TGIFStream - Abstract GIF block stream
+/// /////////////////////////////////////////////////////////////////////////////
+// TGIFStream - Abstract GIF block stream
 //
 // Descendants from TGIFStream either reads or writes data in blocks
 // of up to 255 bytes. These blocks are organized as a leading byte
 // containing the number of bytes in the block (exclusing the count
 // byte itself), followed by the data (up to 254 bytes of data).
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFStream = class(TStream)
   private
-    FOnWarning		: TGIFWarning;
-    FStream		: TStream;
-    FOnProgress		: TNotifyEvent;
-    FBuffer		: array [BYTE] of Char;
-    FBufferCount	: integer;
+    FOnWarning: TGIFWarning;
+    FStream: TStream;
+    FOnProgress: TNotifyEvent;
+    FBuffer: array [Byte] of AnsiChar;
+    FBufferCount: integer;
 
   protected
     constructor Create(Stream: TStream);
 
-    function Read(var Buffer; Count: Longint): Longint; override;
-    function Write(const Buffer; Count: Longint): Longint; override;
-    function Seek(Offset: Longint; Origin: Word): Longint; override;
+    function Read(var Buffer; Count: longInt): longInt; override;
+    function Write(const Buffer; Count: longInt): longInt; override;
+    function Seek(Offset: longInt; Origin: Word): longInt; override;
 
     procedure Progress(Sender: TObject); dynamic;
     property OnProgress: TNotifyEvent read FOnProgress write FOnProgress;
@@ -6216,30 +6230,30 @@ begin
     FOnProgress(Sender);
 end;
 
-function TGIFStream.Write(const Buffer; Count: Longint): Longint;
+function TGIFStream.Write(const Buffer; Count: longInt): longInt;
 begin
   raise Exception.Create(sInvalidStream);
 end;
 
-function TGIFStream.Read(var Buffer; Count: Longint): Longint;
+function TGIFStream.Read(var Buffer; Count: longInt): longInt;
 begin
   raise Exception.Create(sInvalidStream);
 end;
 
-function TGIFStream.Seek(Offset: Longint; Origin: Word): Longint;
+function TGIFStream.Seek(Offset: longInt; Origin: Word): longInt;
 begin
   raise Exception.Create(sInvalidStream);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TGIFReader - GIF block reader
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// TGIFReader - GIF block reader
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFReader = class(TGIFStream)
   public
     constructor Create(Stream: TStream);
 
-    function Read(var Buffer; Count: Longint): Longint; override;
+    function Read(var Buffer; Count: longInt): longInt; override;
   end;
 
 constructor TGIFReader.Create(Stream: TStream);
@@ -6248,60 +6262,56 @@ begin
   FBufferCount := 0;
 end;
 
-function TGIFReader.Read(var Buffer; Count: Longint): Longint;
+function TGIFReader.Read(var Buffer; Count: longInt): longInt;
 var
-  n			: integer;
-  Dst			: PChar;
-  size			: BYTE;
+  n: integer;
+  Dst: PAnsiChar;
+  Size: Byte;
 begin
   Dst := @Buffer;
   Result := 0;
 
-  while (Count > 0) do
-  begin
+  while (Count > 0) do begin
     // Get data from buffer
-    while (FBufferCount > 0) and (Count > 0) do
-    begin
+    while (FBufferCount > 0) and (Count > 0) do begin
       if (FBufferCount > Count) then
         n := Count
       else
         n := FBufferCount;
       Move(FBuffer, Dst^, n);
-      dec(FBufferCount, n);
-      dec(Count, n);
+      Dec(FBufferCount, n);
+      Dec(Count, n);
       inc(Result, n);
       inc(Dst, n);
     end;
 
     // Refill buffer when it becomes empty
-    if (FBufferCount <= 0) then
-    begin
-      FStream.Read(size, 1);
+    if (FBufferCount <= 0) then begin
+      FStream.Read(Size, 1);
       { TODO -oanme -cImprovement : Should be handled as a warning instead of an error. }
-      if (size >= 255) then
+      if (Size >= 255) then
         Error('GIF block too large');
-      FBufferCount := size;
-      if (FBufferCount > 0) then
-      begin
-        n := FStream.Read(FBuffer, size);
-        if (n = FBufferCount) then
-        begin
+      FBufferCount := Size;
+      if (FBufferCount > 0) then begin
+        n := FStream.Read(FBuffer, Size);
+        if (n = FBufferCount) then begin
           Warning(self, gsWarning, sOutOfData);
           break;
         end;
-      end else
+      end
+      else
         break;
     end;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TGIFWriter - GIF block writer
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// TGIFWriter - GIF block writer
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFWriter = class(TGIFStream)
   private
-    FOutputDirty	: boolean;
+    FOutputDirty: Boolean;
 
   protected
     procedure FlushBuffer;
@@ -6310,8 +6320,8 @@ type
     constructor Create(Stream: TStream);
     destructor Destroy; override;
 
-    function Write(const Buffer; Count: Longint): Longint; override;
-    function WriteByte(Value: BYTE): Longint;
+    function Write(const Buffer; Count: longInt): longInt; override;
+    function WriteByte(Value: Byte): longInt;
   end;
 
 constructor TGIFWriter.Create(Stream: TStream);
@@ -6333,131 +6343,121 @@ begin
   if (FBufferCount <= 0) then
     exit;
 
-  FBuffer[0] := char(FBufferCount-1); // Block size excluding the count
+  FBuffer[0] := AnsiChar(FBufferCount - 1); // Block size excluding the count
   FStream.WriteBuffer(FBuffer, FBufferCount);
   FBufferCount := 1; // Reserve first byte of buffer for length
   FOutputDirty := False;
 end;
 
-function TGIFWriter.Write(const Buffer; Count: Longint): Longint;
+function TGIFWriter.Write(const Buffer; Count: longInt): longInt;
 var
-  n			: integer;
-  Src			: PChar;
+  n: integer;
+  Src: PAnsiChar;
 begin
   Result := Count;
   FOutputDirty := True;
   Src := @Buffer;
-  while (Count > 0) do
-  begin
+  while (Count > 0) do begin
     // Move data to the internal buffer in 255 byte chunks
-    while (FBufferCount < sizeof(FBuffer)) and (Count > 0) do
-    begin
-      n := sizeof(FBuffer) - FBufferCount;
+    while (FBufferCount < SizeOf(FBuffer)) and (Count > 0) do begin
+      n := SizeOf(FBuffer) - FBufferCount;
       if (n > Count) then
         n := Count;
       Move(Src^, FBuffer[FBufferCount], n);
       inc(Src, n);
       inc(FBufferCount, n);
-      dec(Count, n);
+      Dec(Count, n);
     end;
 
     // Flush the buffer when it is full
-    if (FBufferCount >= sizeof(FBuffer)) then
+    if (FBufferCount >= SizeOf(FBuffer)) then
       FlushBuffer;
   end;
 end;
 
-function TGIFWriter.WriteByte(Value: BYTE): Longint;
+function TGIFWriter.WriteByte(Value: Byte): longInt;
 begin
-  Result := Write(Value, 1);
+  Result := write(Value, 1);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TGIFEncoder - Abstract encoder
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// TGIFEncoder - Abstract encoder
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TGIFEncoder = class(TObject)
   protected
-    FOnWarning		: TGIFWarning;
-    MaxColor		: integer;
-    BitsPerPixel	: BYTE;		// Bits per pixel of image
-    Stream		: TStream;	// Output stream
-    Width		,		// Width of image in pixels
-    Height		: integer;	// height of image in pixels
-    Interlace		: boolean;	// Interlace flag (True = interlaced image)
-    Data		: PChar;	// Pointer to pixel data
-    GIFStream		: TGIFWriter;	// Output buffer
+    FOnWarning: TGIFWarning;
+    MaxColor: integer;
+    BitsPerPixel: Byte; // Bits per pixel of image
+    Stream: TStream; // Output stream
+    Width, // Width of image in pixels
+    Height: integer; // height of image in pixels
+    Interlace: Boolean; // Interlace flag (True = interlaced image)
+    Data: PAnsiChar; // Pointer to pixel data
+    GIFStream: TGIFWriter; // Output buffer
 
-    OutputBucket	: longInt;	// Output bit bucket
-    OutputBits		: integer;	// Current # of bits in bucket
+    OutputBucket: longInt; // Output bit bucket
+    OutputBits: integer; // Current # of bits in bucket
 
-    ClearFlag		: Boolean;	// True if dictionary has just been cleared
-    BitsPerCode		,		// Current # of bits per code
-    InitialBitsPerCode	: integer;	// Initial # of bits per code after
-  					// dictionary has been cleared
-    MaxCode		: CodeInt;	// maximum code, given BitsPerCode
-    ClearCode		: CodeInt;	// Special output code to signal "Clear table"
-    EOFCode		: CodeInt;	// Special output code to signal EOF
-    BaseCode		: CodeInt;	// ...
+    ClearFlag: Boolean; // True if dictionary has just been cleared
+    BitsPerCode, // Current # of bits per code
+    InitialBitsPerCode: integer; // Initial # of bits per code after
+    // dictionary has been cleared
+    MaxCode: CodeInt; // maximum code, given BitsPerCode
+    ClearCode: CodeInt; // Special output code to signal "Clear table"
+    EOFCode: CodeInt; // Special output code to signal EOF
+    BaseCode: CodeInt; // ...
 
-    Pixel		: PChar;	// Pointer to current pixel
+    Pixel: PAnsiChar; // Pointer to current pixel
 
-    cX			,		// Current X counter (Width - X)
-    Y			: integer;	// Current Y
-    Pass		: integer;	// Interlace pass
+    cX, // Current X counter (Width - X)
+    y: integer; // Current Y
+    pass: integer; // Interlace pass
 
     function MaxCodesFromBits(Bits: integer): CodeInt;
     procedure Output(Value: integer); virtual;
     procedure Clear; virtual;
-    function BumpPixel: boolean;
+    function BumpPixel: Boolean;
     procedure DoCompress; virtual; abstract;
   public
-    procedure Compress(AStream: TStream; ABitsPerPixel: integer;
-      AWidth, AHeight: integer; AInterlace: boolean; AData: PChar; AMaxColor: integer);
+    procedure Compress(AStream: TStream; ABitsPerPixel: integer; AWidth, AHeight: integer; AInterlace: Boolean;
+      AData: PAnsiChar; AMaxColor: integer);
     property Warning: TGIFWarning read FOnWarning write FOnWarning;
   end;
 
-// Calculate the maximum number of codes that a given number of bits can represent
-// MaxCodes := (1^bits)-1
+  // Calculate the maximum number of codes that a given number of bits can represent
+  // MaxCodes := (1^bits)-1
 function TGIFEncoder.MaxCodesFromBits(Bits: integer): CodeInt;
 begin
-  Result := (CodeInt(1) SHL Bits) - 1;
+  Result := (CodeInt(1) shl Bits) - 1;
 end;
 
 // Stuff bits (variable sized codes) into a buffer and output them
 // a byte at a time
 procedure TGIFEncoder.Output(Value: integer);
 const
-  BitBucketMask: array[0..16] of longInt =
-    ($0000,
-     $0001, $0003, $0007, $000F,
-     $001F, $003F, $007F, $00FF,
-     $01FF, $03FF, $07FF, $0FFF,
-     $1FFF, $3FFF, $7FFF, $FFFF);
+  BitBucketMask: array [0 .. 16] of longInt = ($0000, $0001, $0003, $0007, $000F, $001F, $003F, $007F, $00FF, $01FF, $03FF,
+    $07FF, $0FFF, $1FFF, $3FFF, $7FFF, $FFFF);
 begin
   if (OutputBits > 0) then
-    OutputBucket :=
-      (OutputBucket AND BitBucketMask[OutputBits]) OR (longInt(Value) SHL OutputBits)
+    OutputBucket := (OutputBucket and BitBucketMask[OutputBits]) or (longInt(Value) shl OutputBits)
   else
     OutputBucket := Value;
 
   inc(OutputBits, BitsPerCode);
 
-  while (OutputBits >= 8) do
-  begin
-    GIFStream.WriteByte(OutputBucket AND $FF);
-    OutputBucket := OutputBucket SHR 8;
-    dec(OutputBits, 8);
+  while (OutputBits >= 8) do begin
+    GIFStream.WriteByte(OutputBucket and $FF);
+    OutputBucket := OutputBucket shr 8;
+    Dec(OutputBits, 8);
   end;
 
-  if (Value = EOFCode) then
-  begin
+  if (Value = EOFCode) then begin
     // At EOF, write the rest of the buffer.
-    while (OutputBits > 0) do
-    begin
-      GIFStream.WriteByte(OutputBucket AND $FF);
-      OutputBucket := OutputBucket SHR 8;
-      dec(OutputBits, 8);
+    while (OutputBits > 0) do begin
+      GIFStream.WriteByte(OutputBucket and $FF);
+      OutputBucket := OutputBucket shr 8;
+      Dec(OutputBits, 8);
     end;
   end;
 end;
@@ -6465,83 +6465,72 @@ end;
 procedure TGIFEncoder.Clear;
 begin
   // just_cleared = 1;
-  ClearFlag := TRUE;
+  ClearFlag := True;
   Output(ClearCode);
 end;
 
 // Bump (X,Y) and data pointer to point to the next pixel
-function TGIFEncoder.BumpPixel: boolean;
+function TGIFEncoder.BumpPixel: Boolean;
 begin
   // Bump the current X position
-  dec(cX);
+  Dec(cX);
 
   // If we are at the end of a scan line, set cX back to the beginning
   // If we are interlaced, bump Y to the appropriate spot, otherwise,
   // just increment it.
-  if (cX <= 0) then
-  begin
+  if (cX <= 0) then begin
 
-    if not(Interlace) then
-    begin
+    if not(Interlace) then begin
       // Done - no more data
       Result := False;
       exit;
     end;
 
     cX := Width;
-    case (Pass) of
-      0:
-        begin
-          inc(Y, 8);
-          if (Y >= Height) then
-          begin
-            inc(Pass);
-            Y := 4;
+    case (pass) of
+      0: begin
+          inc(y, 8);
+          if (y >= Height) then begin
+            inc(pass);
+            y := 4;
           end;
         end;
-      1:
-        begin
-          inc(Y, 8);
-          if (Y >= Height) then
-          begin
-            inc(Pass);
-            Y := 2;
+      1: begin
+          inc(y, 8);
+          if (y >= Height) then begin
+            inc(pass);
+            y := 2;
           end;
         end;
-      2:
-        begin
-          inc(Y, 4);
-          if (Y >= Height) then
-          begin
-            inc(Pass);
-            Y := 1;
+      2: begin
+          inc(y, 4);
+          if (y >= Height) then begin
+            inc(pass);
+            y := 1;
           end;
         end;
       3:
-        inc(Y, 2);
+        inc(y, 2);
     end;
 
-    if (Y >= height) then
-    begin
+    if (y >= Height) then begin
       // Done - No more data
       Result := False;
       exit;
     end;
-    Pixel := Data + (Y * Width);
+    Pixel := Data + (y * Width);
   end;
   Result := True;
 end;
 
-
-procedure TGIFEncoder.Compress(AStream: TStream; ABitsPerPixel: integer;
-  AWidth, AHeight: integer; AInterlace: boolean; AData: PChar; AMaxColor: integer);
+procedure TGIFEncoder.Compress(AStream: TStream; ABitsPerPixel: integer; AWidth, AHeight: integer; AInterlace: Boolean;
+  AData: PAnsiChar; AMaxColor: integer);
 const
-  EndBlockByte		= $00;			// End of block marker
-{$ifdef DEBUG_COMPRESSPERFORMANCE}
+  EndBlockByte = $00; // End of block marker
+{$IFDEF DEBUG_COMPRESSPERFORMANCE}
 var
-  TimeStartCompress	,
-  TimeStopCompress	: DWORD;
-{$endif}
+  TimeStartCompress, TimeStopCompress: DWORD;
+{$ENDIF}
 begin
   MaxColor := AMaxColor;
   Stream := AStream;
@@ -6561,70 +6550,63 @@ begin
   BitsPerCode := InitialBitsPerCode;
   MaxCode := MaxCodesFromBits(BitsPerCode);
 
-  ClearCode := (1 SHL (InitialBitsPerCode - 1));
+  ClearCode := (1 shl (InitialBitsPerCode - 1));
   EOFCode := ClearCode + 1;
   BaseCode := EOFCode + 1;
 
   // Clear bit bucket
   OutputBucket := 0;
-  OutputBits  := 0;
+  OutputBits := 0;
 
   // Reset pixel counter
   if (Interlace) then
     cX := Width
   else
-    cX := Width*Height;
+    cX := Width * Height;
   // Reset row counter
-  Y := 0;
-  Pass := 0;
+  y := 0;
+  pass := 0;
 
   GIFStream := TGIFWriter.Create(AStream);
   try
     GIFStream.Warning := Warning;
-    if (Data <> nil) and (Height > 0) and (Width > 0) then
-    begin
-{$ifdef DEBUG_COMPRESSPERFORMANCE}
+    if (Data <> nil) and (Height > 0) and (Width > 0) then begin
+{$IFDEF DEBUG_COMPRESSPERFORMANCE}
       TimeStartCompress := timeGetTime;
-{$endif}
-
+{$ENDIF}
       // Call compress implementation
       DoCompress;
 
-{$ifdef DEBUG_COMPRESSPERFORMANCE}
+{$IFDEF DEBUG_COMPRESSPERFORMANCE}
       TimeStopCompress := timeGetTime;
       ShowMessage(format('Compressed %d pixels in %d mS, Rate %d pixels/mS',
-        [Height*Width, TimeStopCompress-TimeStartCompress,
-        DWORD(Height*Width) DIV (TimeStopCompress-TimeStartCompress+1)]));
-{$endif}
+        [Height * Width, TimeStopCompress - TimeStartCompress,
+        DWORD(Height * Width) div (TimeStopCompress - TimeStartCompress + 1)]));
+{$ENDIF}
       // Output the final code.
       Output(EOFCode);
-    end else
+    end
+    else
       // Output the final code (and nothing else).
       TGIFEncoder(self).Output(EOFCode);
-  finally
-    GIFStream.Free;
+  finally GIFStream.Free;
   end;
 
   WriteByte(Stream, EndBlockByte);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TRLEEncoder - RLE encoder
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// TRLEEncoder - RLE encoder
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TRLEEncoder = class(TGIFEncoder)
   private
-    MaxCodes		: integer;
-    OutBumpInit		,
-    OutClearInit	: integer;
-    Prefix		: integer;	// Current run color
-    RunLengthTableMax	,
-    RunLengthTablePixel	,
-    OutCount		,
-    OutClear		,
-    OutBump		: integer;
+    MaxCodes: integer;
+    OutBumpInit, OutClearInit: integer;
+    Prefix: integer; // Current run color
+    RunLengthTableMax, RunLengthTablePixel, OutCount, OutClear, OutBump: integer;
   protected
-    function ComputeTriangleCount(count: integer; nrepcodes: integer): integer;
+    function ComputeTriangleCount(Count: integer; nrepcodes: integer): integer;
     procedure MaxOutClear;
     procedure ResetOutClear;
     procedure FlushFromClear(Count: integer);
@@ -6635,7 +6617,6 @@ type
     procedure Clear; override;
     procedure DoCompress; override;
   end;
-
 
 procedure TRLEEncoder.Clear;
 begin
@@ -6655,68 +6636,60 @@ begin
   Output(Value);
   inc(OutCount);
 
-  if (OutCount >= OutBump) then
-  begin
+  if (OutCount >= OutBump) then begin
     inc(BitsPerCode);
-    inc(OutBump, 1 SHL (BitsPerCode - 1));
+    inc(OutBump, 1 shl (BitsPerCode - 1));
   end;
 
   if (OutCount >= OutClear) then
     Clear;
 end;
 
-function TRLEEncoder.ComputeTriangleCount(count: integer; nrepcodes: integer): integer;
+function TRLEEncoder.ComputeTriangleCount(Count: integer; nrepcodes: integer): integer;
 var
-  PerRepeat		: integer;
-  n			: integer;
+  PerRepeat: integer;
+  n: integer;
 
   function iSqrt(x: integer): integer;
   var
-    r, v		: integer;
+    R, v: integer;
   begin
-    if (x < 2) then
-    begin
+    if (x < 2) then begin
       Result := x;
       exit;
-    end else
-    begin
+    end else begin
       v := x;
-      r := 1;
-      while (v > 0) do
-      begin
-        v := v DIV 4;
-        r := r * 2;
+      R := 1;
+      while (v > 0) do begin
+        v := v div 4;
+        R := R * 2;
       end;
     end;
 
-    while (True) do
-    begin
-      v := ((x DIV r) + r) DIV 2;
-      if ((v = r) or (v = r+1)) then
-      begin
-        Result := r;
+    while (True) do begin
+      v := ((x div R) + R) div 2;
+      if ((v = R) or (v = R + 1)) then begin
+        Result := R;
         exit;
       end;
-      r := v;
+      R := v;
     end;
   end;
 
 begin
   Result := 0;
-  PerRepeat := (nrepcodes * (nrepcodes+1)) DIV 2;
+  PerRepeat := (nrepcodes * (nrepcodes + 1)) div 2;
 
-  while (Count >= PerRepeat) do
-  begin
+  while (Count >= PerRepeat) do begin
     inc(Result, nrepcodes);
-    dec(Count, PerRepeat);
+    Dec(Count, PerRepeat);
   end;
 
-  if (Count > 0) then
-  begin
+  if (Count > 0) then begin
     n := iSqrt(Count);
-    while ((n * (n+1)) >= 2*Count) do
-      dec(n);
-    while ((n * (n+1)) < 2*Count) do
+    while ((n * (n + 1)) >= 2 * Count) do
+      Dec(n);
+    while ((n * (n + 1)) < 2 * Count) do
       inc(n);
     inc(Result, n);
   end;
@@ -6736,32 +6709,25 @@ end;
 
 procedure TRLEEncoder.FlushFromClear(Count: integer);
 var
-  n			: integer;
+  n: integer;
 begin
   MaxOutClear;
   RunLengthTablePixel := Prefix;
   n := 1;
-  while (Count > 0) do
-  begin
-    if (n = 1) then
-    begin
+  while (Count > 0) do begin
+    if (n = 1) then begin
       RunLengthTableMax := 1;
       OutputPlain(Prefix);
-      dec(Count);
-    end else
-    if (Count >= n) then
-    begin
+      Dec(Count);
+    end else if (Count >= n) then begin
       RunLengthTableMax := n;
       OutputPlain(BaseCode + n - 2);
-      dec(Count, n);
-    end else
-    if (Count = 1) then
-    begin
+      Dec(Count, n);
+    end else if (Count = 1) then begin
       inc(RunLengthTableMax);
       OutputPlain(Prefix);
       break;
-    end else
-    begin
+    end else begin
       inc(RunLengthTableMax);
       OutputPlain(BaseCode + Count - 2);
       break;
@@ -6777,72 +6743,64 @@ end;
 
 procedure TRLEEncoder.FlushClearOrRepeat(Count: integer);
 var
-  WithClear		: integer;
+  WithClear: integer;
 begin
   WithClear := 1 + ComputeTriangleCount(Count, MaxCodes);
 
-  if (WithClear < Count) then
-  begin
+  if (WithClear < Count) then begin
     Clear;
     FlushFromClear(Count);
-  end else
-    while (Count > 0) do
-    begin
+  end
+  else
+    while (Count > 0) do begin
       OutputPlain(Prefix);
-      dec(Count);
+      Dec(Count);
     end;
 end;
 
 procedure TRLEEncoder.FlushWithTable(Count: integer);
 var
-  RepeatMax		,
-  RepeatLeft		,
-  LeftOver		: integer;
+  RepeatMax, RepeatLeft, LeftOver: integer;
 begin
-  RepeatMax := Count DIV RunLengthTableMax;
-  LeftOver := Count MOD RunLengthTableMax;
+  RepeatMax := Count div RunLengthTableMax;
+  LeftOver := Count mod RunLengthTableMax;
   if (LeftOver <> 0) then
     RepeatLeft := 1
   else
     RepeatLeft := 0;
 
-  if (OutCount + RepeatMax + RepeatLeft > MaxCodes) then
-  begin
+  if (OutCount + RepeatMax + RepeatLeft > MaxCodes) then begin
     RepeatMax := MaxCodes - OutCount;
     LeftOver := Count - (RepeatMax * RunLengthTableMax);
     RepeatLeft := 1 + ComputeTriangleCount(LeftOver, MaxCodes);
   end;
 
-  if (1 + ComputeTriangleCount(Count, MaxCodes) < RepeatMax + RepeatLeft) then
-  begin
+  if (1 + ComputeTriangleCount(Count, MaxCodes) < RepeatMax + RepeatLeft) then begin
     Clear;
     FlushFromClear(Count);
     exit;
   end;
   MaxOutClear;
 
-  while (RepeatMax > 0) do
-  begin
-    OutputPlain(BaseCode + RunLengthTableMax-2);
-    dec(RepeatMax);
+  while (RepeatMax > 0) do begin
+    OutputPlain(BaseCode + RunLengthTableMax - 2);
+    Dec(RepeatMax);
   end;
 
-  if (LeftOver > 0) then
-  begin
+  if (LeftOver > 0) then begin
     if (ClearFlag) then
       FlushFromClear(LeftOver)
     else if (LeftOver = 1) then
       OutputPlain(Prefix)
     else
-      OutputPlain(BaseCode +  LeftOver - 2);
+      OutputPlain(BaseCode + LeftOver - 2);
   end;
   ResetOutClear;
 end;
 
 procedure TRLEEncoder.Flush(RunLengthCount: integer);
 begin
-  if (RunLengthCount = 1) then
-  begin
+  if (RunLengthCount = 1) then begin
     OutputPlain(Prefix);
     exit;
   end;
@@ -6857,8 +6815,8 @@ end;
 
 procedure TRLEEncoder.DoCompress;
 var
-  Color			: CodeInt;
-  RunLengthCount	: integer;
+  Color: CodeInt;
+  RunLengthCount: integer;
 
 begin
   OutBumpInit := ClearCode - 1;
@@ -6892,8 +6850,7 @@ begin
     if (Color >= MaxColor) then
       Error(sInvalidColor);
 
-    if (RunLengthCount > 0) and (Color <> Prefix) then
-    begin
+    if (RunLengthCount > 0) and (Color <> Prefix) then begin
       // End of current run
       Flush(RunLengthCount);
       RunLengthCount := 0;
@@ -6902,8 +6859,7 @@ begin
     if (Color = Prefix) then
       // Increment run length
       inc(RunLengthCount)
-    else
-    begin
+    else begin
       // Start new run
       Prefix := Color;
       RunLengthCount := 1;
@@ -6912,26 +6868,26 @@ begin
   Flush(RunLengthCount);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
-//		TLZWEncoder - LZW encoder
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
+// TLZWEncoder - LZW encoder
+/// /////////////////////////////////////////////////////////////////////////////
 const
-  TableMaxMaxCode	= (1 SHL GIFCodeBits);	//
-  TableMaxFill		= TableMaxMaxCode-1;	// Clear table when it fills to
-  						// this point.
-  						// Note: Must be <= GIFCodeMax
+  TableMaxMaxCode = (1 shl GIFCodeBits); //
+  TableMaxFill = TableMaxMaxCode - 1; // Clear table when it fills to
+
+  // this point.
+  // Note: Must be <= GIFCodeMax
 type
   TLZWEncoder = class(TGIFEncoder)
   private
-    Prefix		: CodeInt;	// Current run color
-    FreeEntry		: CodeInt;	// next unused code in table
-    HashTable		: THashTable;
+    Prefix: CodeInt; // Current run color
+    FreeEntry: CodeInt; // next unused code in table
+    HashTable: THashTable;
   protected
     procedure Output(Value: integer); override;
     procedure Clear; override;
     procedure DoCompress; override;
   end;
-
 
 procedure TLZWEncoder.Output(Value: integer);
 begin
@@ -6939,15 +6895,12 @@ begin
 
   // If the next entry is going to be too big for the code size,
   // then increase it, if possible.
-  if (FreeEntry > MaxCode) or (ClearFlag) then
-  begin
-    if (ClearFlag) then
-    begin
+  if (FreeEntry > MaxCode) or (ClearFlag) then begin
+    if (ClearFlag) then begin
       BitsPerCode := InitialBitsPerCode;
       MaxCode := MaxCodesFromBits(BitsPerCode);
       ClearFlag := False;
-    end else
-    begin
+    end else begin
       inc(BitsPerCode);
       if (BitsPerCode = GIFCodeBits) then
         MaxCode := TableMaxMaxCode
@@ -6964,12 +6917,11 @@ begin
   FreeEntry := ClearCode + 2;
 end;
 
-
 procedure TLZWEncoder.DoCompress;
 var
-  Color			: char;
-  NewKey		: KeyInt;
-  NewCode		: CodeInt;
+  Color: AnsiChar;
+  NewKey: KeyInt;
+  NewCode: CodeInt;
 
 begin
   HashTable := THashTable.Create;
@@ -6982,19 +6934,17 @@ begin
     inc(Pixel);
     if (Prefix >= MaxColor) then
       Error(sInvalidColor);
-    while (BumpPixel) do
-    begin
+    while (BumpPixel) do begin
       // Fetch the next pixel
       Color := Pixel^;
       inc(Pixel);
-      if (ord(Color) >= MaxColor) then
+      if (Ord(Color) >= MaxColor) then
         Error(sInvalidColor);
 
       // Append Postfix to Prefix and lookup in table...
-      NewKey := (KeyInt(Prefix) SHL 8) OR ord(Color);
+      NewKey := (KeyInt(Prefix) shl 8) or Ord(Color);
       NewCode := HashTable.Lookup(NewKey);
-      if (NewCode >= 0) then
-      begin
+      if (NewCode >= 0) then begin
         // ...if found, get next pixel
         Prefix := NewCode;
         continue;
@@ -7004,42 +6954,39 @@ begin
       Output(Prefix);
       Prefix := CodeInt(Color);
 
-      if (FreeEntry < TableMaxFill) then
-      begin
+      if (FreeEntry < TableMaxFill) then begin
         HashTable.Insert(NewKey, FreeEntry);
         inc(FreeEntry);
-      end else
+      end
+      else
         Clear;
     end;
     Output(Prefix);
-  finally
-    HashTable.Free;
+  finally HashTable.Free;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFSubImage
+// TGIFSubImage
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////////////////
-//		TGIFSubImage.Compress
-/////////////////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////////////////////////////
+// TGIFSubImage.Compress
+/// //////////////////////////////////////////////////////////////////////
 procedure TGIFSubImage.Compress(Stream: TStream);
 var
-  Encoder		: TGIFEncoder;
-  BitsPerPixel		: BYTE;
-  MaxColors		: integer;
+  Encoder: TGIFEncoder;
+  BitsPerPixel: Byte;
+  MaxColors: integer;
 begin
-  if (ColorMap.Count > 0) then
-  begin
+  if (ColorMap.Count > 0) then begin
     MaxColors := ColorMap.Count;
     BitsPerPixel := ColorMap.BitsPerPixel
-  end else
-  begin
+  end else begin
     BitsPerPixel := Image.BitsPerPixel;
-    MaxColors := 1 SHL BitsPerPixel;
+    MaxColors := 1 shl BitsPerPixel;
   end;
 
   // Create a RLE or LZW GIF encoder
@@ -7050,34 +6997,31 @@ begin
   try
     Encoder.Warning := Image.Warning;
     Encoder.Compress(Stream, BitsPerPixel, Width, Height, Interlaced, FData, MaxColors);
-  finally
-    Encoder.Free;
+  finally Encoder.Free;
   end;
 end;
 
-function TGIFExtensionList.GetExtension(Index: Integer): TGIFExtension;
+function TGIFExtensionList.GetExtension(Index: integer): TGIFExtension;
 begin
-  Result := TGIFExtension(Items[Index]);
+  Result := TGIFExtension(Items[index]);
 end;
 
-procedure TGIFExtensionList.SetExtension(Index: Integer; Extension: TGIFExtension);
+procedure TGIFExtensionList.SetExtension(Index: integer; Extension: TGIFExtension);
 begin
-  Items[Index] := Extension;
+  Items[index] := Extension;
 end;
 
 procedure TGIFExtensionList.LoadFromStream(Stream: TStream; Parent: TObject);
 var
-  b			: BYTE;
-  Extension		: TGIFExtension;
-  ExtensionClass	: TGIFExtensionClass;
+  b: Byte;
+  Extension: TGIFExtension;
+  ExtensionClass: TGIFExtensionClass;
 begin
   // Peek ahead to determine block type
   if (Stream.Read(b, 1) <> 1) then
     exit;
-  while not(b in [bsTrailer, bsImageDescriptor]) do
-  begin
-    if (b = bsExtensionIntroducer) then
-    begin
+  while not(b in [bsTrailer, bsImageDescriptor]) do begin
+    if (b = bsExtensionIntroducer) then begin
       ExtensionClass := TGIFExtension.FindExtension(Stream);
       if (ExtensionClass = nil) then
         Error(sUnknownExtension);
@@ -7090,8 +7034,7 @@ begin
         Extension.Free;
         raise;
       end;
-    end else
-    begin
+    end else begin
       Warning(gsWarning, sBadExtensionLabel);
       break;
     end;
@@ -7103,11 +7046,11 @@ end;
 
 const
   { image descriptor bit masks }
-  idLocalColorTable	= $80;    { set if a local color table follows }
-  idInterlaced		= $40;    { set if image is interlaced }
-  idSort		= $20;    { set if color table is sorted }
-  idReserved		= $0C;    { reserved - must be set to $00 }
-  idColorTableSize	= $07;    { size of color table as above }
+  idLocalColorTable = $80; { set if a local color table follows }
+  idInterlaced = $40; { set if image is interlaced }
+  idSort = $20; { set if color table is sorted }
+  idReserved = $0C; { reserved - must be set to $00 }
+  idColorTableSize = $07; { size of color table as above }
 
 constructor TGIFSubImage.Create(GIFImage: TGIFImage);
 begin
@@ -7161,7 +7104,7 @@ begin
   Result := ((FData = nil) or (FDataSize = 0) or (Height = 0) or (Width = 0));
 end;
 
-function TGIFSubImage.GetPalette: HPALETTE;
+function TGIFSubImage.GetPalette: HPalette;
 begin
   if (FBitmap <> nil) and (FBitmap.Palette <> 0) then
     // Use bitmaps own palette if possible
@@ -7169,28 +7112,25 @@ begin
   else if (FLocalPalette <> 0) then
     // Or a previously exported local palette
     Result := FLocalPalette
-  else if (Image.DoDither) then
-  begin
+  else if (Image.DoDither) then begin
     // or create a new dither palette
     FLocalPalette := WebPalette;
     Result := FLocalPalette;
-  end
-  else if (ColorMap.Count > 0) then
-  begin
+  end else if (ColorMap.Count > 0) then begin
     // or create a new if first time
     FLocalPalette := ColorMap.ExportPalette;
     Result := FLocalPalette;
-  end else
+  end
+  else
     // Use global palette if everything else fails
     Result := Image.Palette;
 end;
 
 procedure TGIFSubImage.SetPalette(Value: HPalette);
 var
-  NeedNewBitmap		: boolean;
+  NeedNewBitmap: Boolean;
 begin
-  if (Value <> FLocalPalette) then
-  begin
+  if (Value <> FLocalPalette) then begin
     // Zap old palette
     if (FLocalPalette <> 0) then
       DeleteObject(FLocalPalette);
@@ -7199,12 +7139,11 @@ begin
 
     // Use new palette
     FLocalPalette := Value;
-    if (NeedNewBitmap) then
-    begin
+    if (NeedNewBitmap) then begin
       // Need to create new bitmap and repaint
       FreeBitmap;
       Image.PaletteModified := True;
-      Image.Changed(Self);
+      Image.Changed(self);
     end;
   end;
 end;
@@ -7219,15 +7158,15 @@ end;
 
 procedure TGIFSubImage.NewImage;
 var
-  NewSize		: longInt;
+  NewSize: longInt;
 begin
   FreeImage;
   NewSize := Height * Width;
-  if (NewSize <> 0) then
-  begin
+  if (NewSize <> 0) then begin
     GetMem(FData, NewSize);
     FillChar(FData^, NewSize, 0);
-  end else
+  end
+  else
     FData := nil;
   FDataSize := NewSize;
 end;
@@ -7240,15 +7179,14 @@ begin
   FData := nil;
 end;
 
-function TGIFSubImage.GetHasBitmap: boolean;
+function TGIFSubImage.GetHasBitmap: Boolean;
 begin
   Result := (FBitmap <> nil);
 end;
 
-procedure TGIFSubImage.SetHasBitmap(Value: boolean);
+procedure TGIFSubImage.SetHasBitmap(Value: Boolean);
 begin
-  if (Value <> (FBitmap <> nil)) then
-  begin
+  if (Value <> (FBitmap <> nil)) then begin
     if (Value) then
       Bitmap // Referencing Bitmap will automatically create it
     else
@@ -7264,8 +7202,7 @@ end;
 
 procedure TGIFSubImage.FreeBitmap;
 begin
-  if (FBitmap <> nil) then
-  begin
+  if (FBitmap <> nil) then begin
     FBitmap.Free;
     FBitmap := nil;
   end;
@@ -7273,18 +7210,16 @@ end;
 
 procedure TGIFSubImage.FreeMask;
 begin
-  if (FMask <> 0) then
-  begin
+  if (FMask <> 0) then begin
     DeleteObject(FMask);
     FMask := 0;
   end;
   FNeedMask := True;
 end;
 
-function TGIFSubImage.HasMask: boolean;
+function TGIFSubImage.HasMask: Boolean;
 begin
-  if (FNeedMask) and (Transparent) then
-  begin
+  if (FNeedMask) and (Transparent) then begin
     // Zap old bitmap
     FreeBitmap;
     // Create new bitmap and mask
@@ -7293,68 +7228,74 @@ begin
   Result := (FMask <> 0);
 end;
 
-function TGIFSubImage.GetBounds(Index: integer): WORD;
+function TGIFSubImage.GetBounds(Index: integer): Word;
 begin
-  case (Index) of
-    1: Result := FImageDescriptor.Left;
-    2: Result := FImageDescriptor.Top;
-    3: Result := FImageDescriptor.Width;
-    4: Result := FImageDescriptor.Height;
-  else
-    Result := 0; // To avoid compiler warnings
+  case (index) of
+    1:
+      Result := FImageDescriptor.Left;
+    2:
+      Result := FImageDescriptor.Top;
+    3:
+      Result := FImageDescriptor.Width;
+    4:
+      Result := FImageDescriptor.Height;
+    else
+      Result := 0; // To avoid compiler warnings
   end;
 end;
 
-procedure TGIFSubImage.SetBounds(Index: integer; Value: WORD);
+procedure TGIFSubImage.SetBounds(Index: integer; Value: Word);
 begin
-  case (Index) of
-    1: DoSetBounds(Value, FImageDescriptor.Top, FImageDescriptor.Width, FImageDescriptor.Height);
-    2: DoSetBounds(FImageDescriptor.Left, Value, FImageDescriptor.Width, FImageDescriptor.Height);
-    3: DoSetBounds(FImageDescriptor.Left, FImageDescriptor.Top, Value, FImageDescriptor.Height);
-    4: DoSetBounds(FImageDescriptor.Left, FImageDescriptor.Top, FImageDescriptor.Width, Value);
+  case (index) of
+    1:
+      DoSetBounds(Value, FImageDescriptor.Top, FImageDescriptor.Width, FImageDescriptor.Height);
+    2:
+      DoSetBounds(FImageDescriptor.Left, Value, FImageDescriptor.Width, FImageDescriptor.Height);
+    3:
+      DoSetBounds(FImageDescriptor.Left, FImageDescriptor.Top, Value, FImageDescriptor.Height);
+    4:
+      DoSetBounds(FImageDescriptor.Left, FImageDescriptor.Top, FImageDescriptor.Width, Value);
   end;
 end;
 
 {$IFOPT R+}
-  {$DEFINE R_PLUS}
-  {$RANGECHECKS OFF}
+{$DEFINE R_PLUS}
+{$RANGECHECKS OFF}
 {$ENDIF}
+
 function TGIFSubImage.DoGetDitherBitmap: TBitmap;
 var
-  ColorLookup		: TColorLookup;
-  Ditherer		: TDitherEngine;
-  DIBResult		: TDIB;
-  Src			: PChar;
-  Dst			: PChar;
+  ColorLookup: TColorLookup;
+  Ditherer: TDitherEngine;
+  DIBResult: TDIB;
+  Src: PAnsiChar;
+  Dst: PAnsiChar;
 
-  Row			: integer;
-  Color			: TGIFColor;
-  ColMap		: PColorMap;
-  Index			: byte;
-  TransparentIndex	: byte;
-  IsTransparent		: boolean;
-  WasTransparent	: boolean;
-  MappedTransparentIndex: char;
+  Row: integer;
+  Color: TGIFColor;
+  ColMap: PColorMap;
+  Index: Byte;
+  TransparentIndex: Byte;
+  IsTransparent: Boolean;
+  WasTransparent: Boolean;
+  MappedTransparentIndex: AnsiChar;
 
-  MaskBits		: PChar;
-  MaskDest		: PChar;
-  MaskRow		: PChar;
-  MaskRowWidth		,
-  MaskRowBitWidth	: integer;
-  Bit			,
-  RightBit		: BYTE;
+  MaskBits: PAnsiChar;
+  MaskDest: PAnsiChar;
+  MaskRow: PAnsiChar;
+  MaskRowWidth, MaskRowBitWidth: integer;
+  Bit, RightBit: Byte;
 
 begin
   Result := TBitmap.Create;
   try
 
 {$IFNDEF VER9x}
-    if (Width*Height > BitmapAllocationThreshold) then
-      SetPixelFormat(Result, pf1bit); // To reduce resource consumption of resize
+    if (Width * Height > BitmapAllocationThreshold) then
+      SetPixelFormat(Result, pf1bit);
+    // To reduce resource consumption of resize
 {$ENDIF}
-
-    if (Empty) then
-    begin
+    if (Empty) then begin
       // Set bitmap width and height
       Result.Width := Width;
       Result.Height := Height;
@@ -7382,27 +7323,23 @@ begin
       FNeedMask := False;
       TransparentIndex := 0;
       MappedTransparentIndex := #0;
-      if (FMask = 0) and (IsTransparent) then
-      begin
+      if (FMask = 0) and (IsTransparent) then begin
         IsTransparent := True;
         TransparentIndex := GraphicControlExtension.TransparentColorIndex;
-        Color := ColMap[ord(TransparentIndex)];
-        MappedTransparentIndex := char(Color.Blue DIV 51 +
-          MulDiv(6, Color.Green, 51) + MulDiv(36, Color.Red, 51)+1);
+        Color := ColMap[Ord(TransparentIndex)];
+        MappedTransparentIndex := AnsiChar(Color.Blue div 51 + MulDiv(6, Color.Green, 51) + MulDiv(36, Color.Red, 51) + 1);
       end;
 
       // Allocate bit buffer for transparency mask
       MaskDest := nil;
       Bit := $00;
-      if (IsTransparent) then
-      begin
-        MaskRowWidth := ((Width+15) DIV 16) * 2;
-        MaskRowBitWidth := (Width+7) DIV 8;
-        RightBit := $01 SHL ((8 - (Width AND $0007)) AND $0007);
+      if (IsTransparent) then begin
+        MaskRowWidth := ((Width + 15) div 16) * 2;
+        MaskRowBitWidth := (Width + 7) div 8;
+        RightBit := $01 shl ((8 - (Width and $0007)) and $0007);
         GetMem(MaskBits, MaskRowWidth * Height);
         FillChar(MaskBits^, MaskRowWidth * Height, 0);
-      end else
-      begin
+      end else begin
         MaskBits := nil;
         MaskRowWidth := 0;
         MaskRowBitWidth := 0;
@@ -7414,63 +7351,49 @@ begin
         Row := 0;
         MaskRow := MaskBits;
         Src := FData;
-        while (Row < Height) do
-        begin
-          if ((Row AND $1F) = 0) then
-            Image.Progress(Self, psRunning, MulDiv(Row, 100, Height),
-              False, Rect(0,0,0,0), sProgressRendering);
+        while (Row < Height) do begin
+          if ((Row and $1F) = 0) then
+            Image.Progress(self, psRunning, MulDiv(Row, 100, Height), False, Rect(0, 0, 0, 0), sProgressRendering);
 
-          Dst := DIBResult.ScanLine[Row];
-          if (IsTransparent) then
-          begin
+          Dst := DIBResult.Scanline[Row];
+          if (IsTransparent) then begin
             // Preset all pixels to transparent
-            FillChar(Dst^, Width, ord(MappedTransparentIndex));
-            if (Ditherer.Direction = 1) then
-            begin
+            FillChar(Dst^, Width, Ord(MappedTransparentIndex));
+            if (Ditherer.Direction = 1) then begin
               MaskDest := MaskRow;
               Bit := $80;
-            end else
-            begin
-              MaskDest := MaskRow + MaskRowBitWidth-1;
+            end else begin
+              MaskDest := MaskRow + MaskRowBitWidth - 1;
               Bit := RightBit;
             end;
           end;
           inc(Dst, Ditherer.Column);
 
-          while (Ditherer.Column < Ditherer.Width) and (Ditherer.Column >= 0) do
-          begin
-            Index := ord(Src^);
-            Color := ColMap[ord(Index)];
+          while (Ditherer.Column < Ditherer.Width) and (Ditherer.Column >= 0) do begin
+            index := Ord(Src^);
+            Color := ColMap[Ord(index)];
 
-            if (IsTransparent) and (Index = TransparentIndex) then
-            begin
-              MaskDest^ := char(byte(MaskDest^) OR Bit);
+            if (IsTransparent) and (index = TransparentIndex) then begin
+              MaskDest^ := AnsiChar(Byte(MaskDest^) or Bit);
               WasTransparent := True;
               Ditherer.NextColumn;
-            end else
-            begin
+            end else begin
               // Dither and map a single pixel
-              Dst^ := Ditherer.Dither(Color.Red, Color.Green, Color.Blue,
-                Color.Red, Color.Green, Color.Blue);
+              Dst^ := Ditherer.Dither(Color.Red, Color.Green, Color.Blue, Color.Red, Color.Green, Color.Blue);
             end;
 
-            if (IsTransparent) then
-            begin
-              if (Ditherer.Direction = 1) then
-              begin
-                Bit := Bit SHR 1;
-                if (Bit = $00) then
-                begin
+            if (IsTransparent) then begin
+              if (Ditherer.Direction = 1) then begin
+                Bit := Bit shr 1;
+                if (Bit = $00) then begin
                   Bit := $80;
                   inc(MaskDest, 1);
                 end;
-              end else
-              begin
-                Bit := Bit SHL 1;
-                if (Bit = $00) then
-                begin
+              end else begin
+                Bit := Bit shl 1;
+                if (Bit = $00) then begin
                   Bit := $01;
-                  dec(MaskDest, 1);
+                  Dec(MaskDest, 1);
                 end;
               end;
             end;
@@ -7480,9 +7403,9 @@ begin
           end;
 
           if (IsTransparent) then
-            Inc(MaskRow, MaskRowWidth);
-          Inc(Row);
-          inc(Src, Width-Ditherer.Direction);
+            inc(MaskRow, MaskRowWidth);
+          inc(Row);
+          inc(Src, Width - Ditherer.Direction);
           Ditherer.NextLine;
         end;
 
@@ -7507,38 +7430,36 @@ begin
   end;
 end;
 {$IFDEF R_PLUS}
-  {$RANGECHECKS ON}
-  {$UNDEF R_PLUS}
+{$RANGECHECKS ON}
+{$UNDEF R_PLUS}
 {$ENDIF}
 
 function TGIFSubImage.DoGetBitmap: TBitmap;
 var
-  ScanLineRow		: Integer;
-  DIBResult		: TDIB;
-  DestScanLine		,
-  Src			: PChar;
-  TransparentIndex	: byte;
-  IsTransparent		: boolean;
-  WasTransparent	: boolean;
+  ScanLineRow: integer;
+  DIBResult: TDIB;
+  DestScanLine, Src: PAnsiChar;
+  TransparentIndex: Byte;
+  IsTransparent: Boolean;
+  WasTransparent: Boolean;
 
-  MaskBits		: PChar;
-  MaskDest		: PChar;
-  MaskRow		: PChar;
-  MaskRowWidth		: integer;
-  Col			: integer;
-  MaskByte		: byte;
-  Bit			: byte;
+  MaskBits: PAnsiChar;
+  MaskDest: PAnsiChar;
+  MaskRow: PAnsiChar;
+  MaskRowWidth: integer;
+  Col: integer;
+  MaskByte: Byte;
+  Bit: Byte;
 begin
   Result := TBitmap.Create;
   try
 
 {$IFNDEF VER9x}
-    if (Width*Height > BitmapAllocationThreshold) then
-      SetPixelFormat(Result, pf1bit); // To reduce resource consumption of resize
+    if (Width * Height > BitmapAllocationThreshold) then
+      SetPixelFormat(Result, pf1bit);
+    // To reduce resource consumption of resize
 {$ENDIF}
-
-    if (Empty) then
-    begin
+    if (Empty) then begin
       // Set bitmap width and height
       Result.Width := Width;
       Result.Height := Height;
@@ -7558,20 +7479,17 @@ begin
       WasTransparent := False;
       FNeedMask := False;
       TransparentIndex := 0;
-      if (FMask = 0) and (IsTransparent) then
-      begin
+      if (FMask = 0) and (IsTransparent) then begin
         IsTransparent := True;
         TransparentIndex := GraphicControlExtension.TransparentColorIndex;
       end;
       // Allocate bit buffer for transparency mask
-      if (IsTransparent) then
-      begin
-        MaskRowWidth := ((Width+15) DIV 16) * 2;
+      if (IsTransparent) then begin
+        MaskRowWidth := ((Width + 15) div 16) * 2;
         GetMem(MaskBits, MaskRowWidth * Height);
         FillChar(MaskBits^, MaskRowWidth * Height, 0);
         IsTransparent := (MaskBits <> nil);
-      end else
-      begin
+      end else begin
         MaskBits := nil;
         MaskRowWidth := 0;
       end;
@@ -7580,49 +7498,44 @@ begin
         ScanLineRow := 0;
         Src := FData;
         MaskRow := MaskBits;
-        while (ScanLineRow < Height) do
-        begin
-          DestScanline := DIBResult.ScanLine[ScanLineRow];
+        while (ScanLineRow < Height) do begin
+          DestScanLine := DIBResult.Scanline[ScanLineRow];
 
-          if ((ScanLineRow AND $1F) = 0) then
-            Image.Progress(Self, psRunning, MulDiv(ScanLineRow, 100, Height),
-              False, Rect(0,0,0,0), sProgressRendering);
+          if ((ScanLineRow and $1F) = 0) then
+            Image.Progress(self, psRunning, MulDiv(ScanLineRow, 100, Height), False, Rect(0, 0, 0, 0), sProgressRendering);
 
-          Move(Src^, DestScanline^, Width);
-          Inc(ScanLineRow);
+          Move(Src^, DestScanLine^, Width);
+          inc(ScanLineRow);
 
-          if (IsTransparent) then
-          begin
+          if (IsTransparent) then begin
             Bit := $80;
             MaskDest := MaskRow;
             MaskByte := 0;
-            for Col := 0 to Width-1 do
-            begin
+            for Col := 0 to Width - 1 do begin
               // Set a bit in the mask if the pixel is transparent
-              if (Src^ = char(TransparentIndex)) then
-                MaskByte := MaskByte OR Bit;
+              if (Src^ = AnsiChar(TransparentIndex)) then
+                MaskByte := MaskByte or Bit;
 
-              Bit := Bit SHR 1;
-              if (Bit = $00) then
-              begin
+              Bit := Bit shr 1;
+              if (Bit = $00) then begin
                 // Store a mask byte for each 8 pixels
                 Bit := $80;
                 WasTransparent := WasTransparent or (MaskByte <> 0);
-                MaskDest^ := char(MaskByte);
+                MaskDest^ := AnsiChar(MaskByte);
                 inc(MaskDest);
                 MaskByte := 0;
               end;
-              Inc(Src);
+              inc(Src);
             end;
             // Save the last mask byte in case the width isn't divisable by 8
-            if (MaskByte <> 0) then
-            begin
+            if (MaskByte <> 0) then begin
               WasTransparent := True;
-              MaskDest^ := char(MaskByte);
+              MaskDest^ := AnsiChar(MaskByte);
             end;
-            Inc(MaskRow, MaskRowWidth);
-          end else
-            Inc(Src, Width);
+            inc(MaskRow, MaskRowWidth);
+          end
+          else
+            inc(Src, Width);
         end;
 
         // Transparent paint needs a mask bitmap
@@ -7634,7 +7547,7 @@ begin
       end;
     finally
       // Free DIB buffer used for scanline operations
-      DIBResult.Free;
+        DIBResult.Free;
     end;
   except
     Result.Free;
@@ -7642,37 +7555,36 @@ begin
   end;
 end;
 
-{$ifdef DEBUG_RENDERPERFORMANCE}
+{$IFDEF DEBUG_RENDERPERFORMANCE}
+
 var
-  ImageCount		: DWORD = 0;
-  RenderTime		: DWORD = 0;
-{$endif}
+  ImageCount: DWORD = 0;
+  RenderTime: DWORD = 0;
+{$ENDIF}
+
 function TGIFSubImage.GetBitmap: TBitmap;
 var
-  n			: integer;
-{$ifdef DEBUG_RENDERPERFORMANCE}
-  RenderStartTime	: DWORD;
-{$endif}
+  n: integer;
+{$IFDEF DEBUG_RENDERPERFORMANCE}
+  RenderStartTime: DWORD;
+{$ENDIF}
 begin
-{$ifdef DEBUG_RENDERPERFORMANCE}
-  if (GetAsyncKeyState(VK_CONTROL) <> 0) then
-  begin
+{$IFDEF DEBUG_RENDERPERFORMANCE}
+  if (GetAsyncKeyState(VK_CONTROL) <> 0) then begin
     ShowMessage(format('Render %d images in %d mS, Rate %d mS/image (%d images/S)',
-      [ImageCount, RenderTime,
-       RenderTime DIV (ImageCount+1),
-       MulDiv(ImageCount, 1000, RenderTime+1)]));
+      [ImageCount, RenderTime, RenderTime div (ImageCount + 1), MulDiv(ImageCount, 1000, RenderTime + 1)]));
   end;
-{$endif}
+{$ENDIF}
   Result := FBitmap;
   if (Result <> nil) or (Empty) then
-    Exit;
+    exit;
 
-{$ifdef DEBUG_RENDERPERFORMANCE}
+{$IFDEF DEBUG_RENDERPERFORMANCE}
   inc(ImageCount);
   RenderStartTime := timeGetTime;
-{$endif}
+{$ENDIF}
   try
-    Image.Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressRendering);
+    Image.Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressRendering);
     try
 
       if (Image.DoDither) then
@@ -7689,18 +7601,17 @@ begin
         n := 100
       else
         n := 0;
-      Image.Progress(Self, psEnding, n, Image.PaletteModified, Rect(0,0,0,0),
-        sProgressRendering);
+      Image.Progress(self, psEnding, n, Image.PaletteModified, Rect(0, 0, 0, 0), sProgressRendering);
       // Make sure new palette gets realized, in case OnProgress event didn't.
       if Image.PaletteModified then
-        Image.Changed(Self);
+        Image.Changed(self);
     end;
   except
-    on EAbort do ;   // OnProgress can raise EAbort to cancel image load
+    on EAbort do; // OnProgress can raise EAbort to cancel image load
   end;
-{$ifdef DEBUG_RENDERPERFORMANCE}
-  inc(RenderTime, timeGetTime-RenderStartTime);
-{$endif}
+{$IFDEF DEBUG_RENDERPERFORMANCE}
+  inc(RenderTime, timeGetTime - RenderStartTime);
+{$ENDIF}
 end;
 
 procedure TGIFSubImage.SetBitmap(Value: TBitmap);
@@ -7718,31 +7629,30 @@ begin
     Result := Image.GlobalColorMap;
 end;
 
-function TGIFSubImage.GetInterlaced: boolean;
+function TGIFSubImage.GetInterlaced: Boolean;
 begin
-  Result := (FImageDescriptor.PackedFields AND idInterlaced) <> 0;
+  Result := (FImageDescriptor.PackedFields and idInterlaced) <> 0;
 end;
 
-procedure TGIFSubImage.SetInterlaced(Value: boolean);
+procedure TGIFSubImage.SetInterlaced(Value: Boolean);
 begin
   if (Value) then
-    FImageDescriptor.PackedFields := FImageDescriptor.PackedFields OR idInterlaced
+    FImageDescriptor.PackedFields := FImageDescriptor.PackedFields or idInterlaced
   else
-    FImageDescriptor.PackedFields := FImageDescriptor.PackedFields AND NOT(idInterlaced);
+    FImageDescriptor.PackedFields := FImageDescriptor.PackedFields and not(idInterlaced);
 end;
 
 function TGIFSubImage.GetVersion: TGIFVersion;
 var
-  v			: TGIFVersion;
-  i			: integer;
+  v: TGIFVersion;
+  i: integer;
 begin
   if (ColorMap.Optimized) then
     Result := gv89a
   else
     Result := inherited GetVersion;
   i := 0;
-  while (Result < high(TGIFVersion)) and (i < FExtensions.Count) do
-  begin
+  while (Result < high(TGIFVersion)) and (i < FExtensions.Count) do begin
     v := FExtensions[i].Version;
     if (v > Result) then
       Result := v;
@@ -7751,7 +7661,7 @@ end;
 
 function TGIFSubImage.GetColorResolution: integer;
 begin
-  Result := ColorMap.BitsPerPixel-1;
+  Result := ColorMap.BitsPerPixel - 1;
 end;
 
 function TGIFSubImage.GetBitsPerPixel: integer;
@@ -7761,16 +7671,14 @@ end;
 
 function TGIFSubImage.GetBoundsRect: TRect;
 begin
-  Result := Rect(FImageDescriptor.Left,
-    FImageDescriptor.Top,
-    FImageDescriptor.Left+FImageDescriptor.Width,
-    FImageDescriptor.Top+FImageDescriptor.Height);
+  Result := Rect(FImageDescriptor.Left, FImageDescriptor.Top, FImageDescriptor.Left + FImageDescriptor.Width,
+    FImageDescriptor.Top + FImageDescriptor.Height);
 end;
 
 procedure TGIFSubImage.DoSetBounds(ALeft, ATop, AWidth, AHeight: integer);
 var
-  TooLarge		: boolean;
-  Zap			: boolean;
+  TooLarge: Boolean;
+  Zap: Boolean;
 begin
   Zap := (FImageDescriptor.Width <> Width) or (FImageDescriptor.Height <> AHeight);
   FImageDescriptor.Left := ALeft;
@@ -7779,8 +7687,7 @@ begin
   FImageDescriptor.Height := AHeight;
 
   // Delete existing image and bitmaps if size has changed
-  if (Zap) then
-  begin
+  if (Zap) then begin
     FreeBitmap;
     FreeMask;
     FreeImage;
@@ -7794,8 +7701,7 @@ begin
   // From Mozilla source:
   // Work around broken GIF files where the logical screen
   // size has weird width or height. [...]
-  if (Image.Width < AWidth) or (Image.Height < AHeight) then
-  begin
+  if (Image.Width < AWidth) or (Image.Height < AHeight) then begin
     TooLarge := True;
     Image.Width := AWidth;
     Image.Height := AHeight;
@@ -7803,33 +7709,28 @@ begin
     Top := 0;
   end;
 {$ELSE}
-  if (Image.Width < ALeft+AWidth) then
-  begin
-    if (Image.Width > 0) then
-    begin
+  if (Image.Width < ALeft + AWidth) then begin
+    if (Image.Width > 0) then begin
       TooLarge := True;
       Warning(gsWarning, sBadWidth)
     end;
-    Image.Width := ALeft+AWidth;
+    Image.Width := ALeft + AWidth;
   end;
-  if (Image.Height < ATop+AHeight) then
-  begin
-    if (Image.Height > 0) then
-    begin
+  if (Image.Height < ATop + AHeight) then begin
+    if (Image.Height > 0) then begin
       TooLarge := True;
       Warning(gsWarning, sBadHeight)
     end;
-    Image.Height := ATop+AHeight;
+    Image.Height := ATop + AHeight;
   end;
 {$ENDIF}
-
   if (TooLarge) then
     Warning(gsWarning, sScreenSizeExceeded);
 end;
 
 procedure TGIFSubImage.SetBoundsRect(const Value: TRect);
 begin
-  DoSetBounds(Value.Left, Value.Top, Value.Right-Value.Left+1, Value.Bottom-Value.Top+1);
+  DoSetBounds(Value.Left, Value.Top, Value.Right - Value.Left + 1, Value.Bottom - Value.Top + 1);
 end;
 
 function TGIFSubImage.GetClientRect: TRect;
@@ -7837,34 +7738,48 @@ begin
   Result := Rect(0, 0, FImageDescriptor.Width, FImageDescriptor.Height);
 end;
 
-function TGIFSubImage.GetPixel(x, y: integer): BYTE;
+function TGIFSubImage.GetPixel(x, y: integer): Byte;
 begin
-  if (x < 0) or (x > Width-1) then
+  if (x < 0) or (x > Width - 1) then
     Error(sBadPixelCoordinates);
-  Result := BYTE(PChar(longInt(Scanline[y]) + x)^);
+  Result := Byte(PAnsiChar(longInt(Scanline[y]) + x)^);
 end;
 
-function TGIFSubImage.GetScanline(y: integer): pointer;
+// 2006.10.09 ->
+procedure TGIFSubImage.SetPixel(x, y: integer; Value: Byte);
 begin
-  if (y < 0) or (y > Height-1) then
+  if (x < 0) or (x > Width - 1) or (y < 0) or (y > Height - 1) then
+    Error(sBadPixelCoordinates);
+  if Value >= ActiveColorMap.FCount then
+    Error(sBadColorIndex);
+  // 2008.10.19 ->
+  // BYTE(PChar(longInt(Scanline[y]) + x)^) := Value;
+  PByte(longInt(Scanline[y]) + x)^ := Value;
+  // 2008.10.19 <-
+end;
+// 2006.10.09 <-
+
+function TGIFSubImage.GetScanline(y: integer): Pointer;
+begin
+  if (y < 0) or (y > Height - 1) then
     Error(sBadPixelCoordinates);
   NeedImage;
-  Result := pointer(longInt(FData) + y * Width);
+  Result := Pointer(longInt(FData) + y * Width);
 end;
 
 procedure TGIFSubImage.Prepare;
 var
-  Pack			: BYTE;
+  Pack: Byte;
 begin
   Pack := FImageDescriptor.PackedFields;
-  if (ColorMap.Count > 0) then
-  begin
+  if (ColorMap.Count > 0) then begin
     Pack := idLocalColorTable;
     if (ColorMap.Optimized) then
-      Pack := Pack OR idSort;
-    Pack := (Pack AND NOT(idColorTableSize)) OR (ColorResolution AND idColorTableSize);
-  end else
-    Pack := Pack AND NOT(idLocalColorTable OR idSort OR idColorTableSize);
+      Pack := Pack or idSort;
+    Pack := (Pack and not(idColorTableSize)) or (ColorResolution and idColorTableSize);
+  end
+  else
+    Pack := Pack and not(idLocalColorTable or idSort or idColorTableSize);
   FImageDescriptor.PackedFields := Pack;
 end;
 
@@ -7874,15 +7789,15 @@ begin
   if (Empty) then
     exit;
   Prepare;
-  Stream.Write(FImageDescriptor, sizeof(TImageDescriptor));
+  Stream.Write(FImageDescriptor, SizeOf(TImageDescriptor));
   ColorMap.SaveToStream(Stream);
   Compress(Stream);
 end;
 
 procedure TGIFSubImage.LoadFromStream(Stream: TStream);
 var
-  ColorCount		: integer;
-  b			: BYTE;
+  ColorCount: integer;
+  b: Byte;
 begin
   Clear;
   FExtensions.LoadFromStream(Stream, self);
@@ -7893,21 +7808,19 @@ begin
   if (b = bsTrailer) or (b = 0) then
     exit;
 
-  ReadCheck(Stream, FImageDescriptor, sizeof(TImageDescriptor));
+  ReadCheck(Stream, FImageDescriptor, SizeOf(TImageDescriptor));
 
   // From Mozilla source:
   // Work around more broken GIF files that have zero image
   // width or height
-  if (FImageDescriptor.Height = 0) or (FImageDescriptor.Width = 0) then
-  begin
+  if (FImageDescriptor.Height = 0) or (FImageDescriptor.Width = 0) then begin
     FImageDescriptor.Height := Image.Height;
     FImageDescriptor.Width := Image.Width;
     Warning(gsWarning, sScreenSizeExceeded);
   end;
 
-  if (FImageDescriptor.PackedFields AND idLocalColorTable = idLocalColorTable) then
-  begin
-    ColorCount := 2 SHL (FImageDescriptor.PackedFields AND idColorTableSize);
+  if (FImageDescriptor.PackedFields and idLocalColorTable = idLocalColorTable) then begin
+    ColorCount := 2 shl (FImageDescriptor.PackedFields and idColorTableSize);
     if (ColorCount < 2) or (ColorCount > 256) then
       Error(sImageBadColorSize);
     ColorMap.LoadFromStream(Stream, ColorCount);
@@ -7931,100 +7844,102 @@ end;
 
 procedure TGIFSubImage.Assign(Source: TPersistent);
 var
-  MemoryStream		: TMemoryStream;
-  i			: integer;
-  PixelFormat		: TPixelFormat;
-  DIBSource		: TDIB;
-  ABitmap		: TBitmap;
+  MemoryStream: TMemoryStream;
+  i: integer;
+  PixelFormat: TPixelFormat;
+  DIBSource: TDIB;
+  ABitmap: TBitmap;
 
-  procedure Import8Bit(Dest: PChar);
+  procedure Import8Bit(Dest: PAnsiChar);
   var
-    y			: integer;
+    y: integer;
   begin
     // Copy colormap
-{$ifdef VER10_PLUS}
+{$IFDEF VER10_PLUS}
     if (FBitmap.HandleType = bmDIB) then
       FColorMap.ImportDIBColors(FBitmap.Canvas.Handle)
     else
 {$ENDIF}
       FColorMap.ImportPalette(FBitmap.Palette);
     // Copy pixels
-    for y := 0 to Height-1 do
-    begin
-      if ((y AND $1F) = 0) then
-        Image.Progress(Self, psRunning, MulDiv(y, 100, Height), False, Rect(0,0,0,0), sProgressConverting);
+    for y := 0 to Height - 1 do begin
+      if ((y and $1F) = 0) then
+        Image.Progress(self, psRunning, MulDiv(y, 100, Height), False, Rect(0, 0, 0, 0), sProgressConverting);
       Move(DIBSource.Scanline[y]^, Dest^, Width);
       inc(Dest, Width);
     end;
   end;
 
-  procedure Import4Bit(Dest: PChar);
+  procedure Import4Bit(Dest: PAnsiChar);
   var
-    x, y		: integer;
-    Scanline		: PChar;
+    x, y: integer;
+    Scanline: PAnsiChar;
   begin
     // Copy colormap
     FColorMap.ImportPalette(FBitmap.Palette);
     // Copy pixels
-    for y := 0 to Height-1 do
-    begin
-      if ((y AND $1F) = 0) then
-        Image.Progress(Self, psRunning, MulDiv(y, 100, Height), False, Rect(0,0,0,0), sProgressConverting);
-      ScanLine := DIBSource.Scanline[y];
-      for x := 0 to Width-1 do
-      begin
-        if (x AND $01 = 0) then
-          Dest^ := chr(ord(ScanLine^) SHR 4)
-        else
-        begin
-          Dest^ := chr(ord(ScanLine^) AND $0F);
-          inc(ScanLine);
+    for y := 0 to Height - 1 do begin
+      if ((y and $1F) = 0) then
+        Image.Progress(self, psRunning, MulDiv(y, 100, Height), False, Rect(0, 0, 0, 0), sProgressConverting);
+      Scanline := DIBSource.Scanline[y];
+      for x := 0 to Width - 1 do begin
+        if (x and $01 = 0) then
+          // 2008.10.19 ->
+          // Dest^ := chr(ord(ScanLine^) SHR 4)
+          Dest^ := AnsiChar(Ord(Scanline^) shr 4)
+          // 2008.10.19 <-
+        else begin
+          // 2008.10.19 ->
+          // Dest^ := chr(ord(ScanLine^) AND $0F);
+          Dest^ := AnsiChar(Ord(Scanline^) and $0F);
+          // 2008.10.19 <-
+          inc(Scanline);
         end;
         inc(Dest);
       end;
     end;
   end;
 
-  procedure Import1Bit(Dest: PChar);
+  procedure Import1Bit(Dest: PAnsiChar);
   var
-    x, y		: integer;
-    Scanline		: PChar;
-    Bit			: integer;
-    Byte		: integer;
+    x, y: integer;
+    Scanline: PAnsiChar;
+    Bit: integer;
+    Byte: integer;
   begin
     // Copy colormap
     FColorMap.ImportPalette(FBitmap.Palette);
     // Copy pixels
-    for y := 0 to Height-1 do
-    begin
-      if ((y AND $1F) = 0) then
-        Image.Progress(Self, psRunning, MulDiv(y, 100, Height), False, Rect(0,0,0,0), sProgressConverting);
-      ScanLine := DIBSource.Scanline[y];
+    for y := 0 to Height - 1 do begin
+      if ((y and $1F) = 0) then
+        Image.Progress(self, psRunning, MulDiv(y, 100, Height), False, Rect(0, 0, 0, 0), sProgressConverting);
+      Scanline := DIBSource.Scanline[y];
       x := Width;
       Bit := 0;
       Byte := 0; // To avoid compiler warning
-      while (x > 0) do
-      begin
-        if (Bit = 0) then
-        begin
+      while (x > 0) do begin
+        if (Bit = 0) then begin
           Bit := 8;
-          Byte := ord(ScanLine^);
+          Byte := Ord(Scanline^);
           inc(Scanline);
         end;
-        Dest^ := chr((Byte AND $80) SHR 7);
-        Byte := Byte SHL 1;
+        // 2008.10.19 ->
+        // Dest^ := chr((Byte AND $80) SHR 7);
+        Dest^ := AnsiChar((Byte and $80) shr 7);
+        // 2008.10.19 <-
+        Byte := Byte shl 1;
         inc(Dest);
-        dec(Bit);
-        dec(x);
+        Dec(Bit);
+        Dec(x);
       end;
     end;
   end;
 
-  procedure Import24Bit(Dest: PChar);
+  procedure Import24Bit(Dest: PAnsiChar);
   type
     TCacheEntry = record
-      Color		: TColor;
-      Index		: integer;
+      Color: TColor;
+      Index: integer;
     end;
   const
     // Size of palette cache. Must be 2^n.
@@ -8033,32 +7948,29 @@ var
     // testing shows that this is indeed the case at least for non-dithered
     // bitmaps.
     // All the same, a small hash table would probably be much better.
-    CacheSize		= 8;
+    CacheSize = 8;
   var
-    i			: integer;
-    Cache		: array[0..CacheSize-1] of TCacheEntry;
-    LastEntry		: integer;
-    Scanline		: PRGBTriple;
-    Pixel		: TColor;
-    RGBTriple		: TRGBTriple absolute Pixel;
-    x, y		: integer;
-    ColorMap		: PColorMap;
-    t			: byte;
-  label
-    NextPixel;
+    i: integer;
+    Cache: array [0 .. CacheSize - 1] of TCacheEntry;
+    LastEntry: integer;
+    Scanline: PRGBTriple;
+    Pixel: TColor;
+    RGBTriple: TRGBTriple absolute Pixel;
+    x, y: integer;
+    ColorMap: PColorMap;
+    T: Byte;
+  label NextPixel;
   begin
-    for i := 0 to CacheSize-1 do
+    for i := 0 to CacheSize - 1 do
       Cache[i].Index := -1;
     LastEntry := 0;
 
     // Copy all pixels and build colormap
-    for y := 0 to Height-1 do
-    begin
-      if ((y AND $1F) = 0) then
-        Image.Progress(Self, psRunning, MulDiv(y, 100, Height), False, Rect(0,0,0,0), sProgressConverting);
-      ScanLine := DIBSource.Scanline[y];
-      for x := 0 to Width-1 do
-      begin
+    for y := 0 to Height - 1 do begin
+      if ((y and $1F) = 0) then
+        Image.Progress(self, psRunning, MulDiv(y, 100, Height), False, Rect(0, 0, 0, 0), sProgressConverting);
+      Scanline := DIBSource.Scanline[y];
+      for x := 0 to Width - 1 do begin
         Pixel := 0;
         RGBTriple := Scanline^;
         // Scan cache for color from most recently processed color to last
@@ -8067,39 +7979,43 @@ var
         repeat
           if (Cache[i].Index = -1) then
             break;
-          if (Cache[i].Color = Pixel) then
-          begin
-            Dest^ := chr(Cache[i].Index);
+          if (Cache[i].Color = Pixel) then begin
+            // 2008.10.19 ->
+            // Dest^ := chr(Cache[i].Index);
+            Dest^ := AnsiChar(Cache[i].Index);
+            // 2008.10.19 <-
             LastEntry := i;
             goto NextPixel;
           end;
           if (i = 0) then
-            i := CacheSize-1
+            i := CacheSize - 1
           else
-            dec(i);
+            Dec(i);
         until (i = LastEntry);
         // Color not found in cache, do it the slow way instead
-        Dest^ := chr(FColorMap.AddUnique(Pixel));
+        // 2008.10.19 ->
+        // Dest^ := chr(FColorMap.AddUnique(Pixel));
+        Dest^ := AnsiChar(FColorMap.AddUnique(Pixel));
+        // 2008.10.19 <-
         // Add color and index to cache
-        LastEntry := (LastEntry + 1) AND (CacheSize-1);
+        LastEntry := (LastEntry + 1) and (CacheSize - 1);
         Cache[LastEntry].Color := Pixel;
-        Cache[LastEntry].Index := ord(Dest^);
+        Cache[LastEntry].Index := Ord(Dest^);
 
-        NextPixel:
-        Inc(Dest);
-        Inc(Scanline);
+      NextPixel:
+        inc(Dest);
+        inc(Scanline);
       end;
     end;
     // Convert colors in colormap from BGR to RGB
     ColorMap := FColorMap.Data;
     i := FColorMap.Count;
-    while (i > 0) do
-    begin
-      t := ColorMap^[0].Red;
+    while (i > 0) do begin
+      T := ColorMap^[0].Red;
       ColorMap^[0].Red := ColorMap^[0].Blue;
-      ColorMap^[0].Blue := t;
-      inc(integer(ColorMap), sizeof(TGIFColor));
-      dec(i);
+      ColorMap^[0].Blue := T;
+      inc(integer(ColorMap), SizeOf(TGIFColor));
+      Dec(i);
     end;
   end;
 
@@ -8114,26 +8030,24 @@ var
 
     // Make things a little easier for TGIFSubImage.Assign by converting
     // pfDevice to a more import friendly format
-{$ifdef SLOW_BUT_SAFE}
+{$IFDEF SLOW_BUT_SAFE}
     SafeSetPixelFormat(ABitmap, pf8bit);
-{$else}
-{$ifndef VER9x}
+{$ELSE}
+{$IFNDEF VER9x}
     SetPixelFormat(ABitmap, pf24bit);
-{$endif}
-{$endif}
+{$ENDIF}
+{$ENDIF}
     ABitmap.Canvas.Draw(0, 0, Graphic);
   end;
 
   procedure AddMask(Mask: TBitmap);
   var
-    DIBReader		: TDIBReader;
-    TransparentIndex	: integer;
-    i			,
-    j			: integer;
-    GIFPixel		,
-    MaskPixel		: PChar;
-    WasTransparent	: boolean;
-    GCE			: TGIFGraphicControlExtension;
+    DIBReader: TDIBReader;
+    TransparentIndex: integer;
+    i, j: integer;
+    GIFPixel, MaskPixel: PAnsiChar;
+    WasTransparent: Boolean;
+    GCE: TGIFGraphicControlExtension;
   begin
     // Optimize colormap to make room for transparent color
     ColorMap.Optimize;
@@ -8147,41 +8061,40 @@ var
 
     DIBReader := TDIBReader.Create(Mask, pf8bit);
     try
-      for i := 0 to Height-1 do
-      begin
+      for i := 0 to Height - 1 do begin
         MaskPixel := DIBReader.Scanline[i];
         GIFPixel := Scanline[i];
-        for j := 0 to Width-1 do
-        begin
+        for j := 0 to Width - 1 do begin
           // Change all unmasked pixels to transparent
-          if (MaskPixel^ <> #0) then
-          begin
-            GIFPixel^ := chr(TransparentIndex);
+          if (MaskPixel^ <> #0) then begin
+            // 2008.10.19 ->
+            // GIFPixel^ := chr(TransparentIndex);
+            GIFPixel^ := AnsiChar(TransparentIndex);
+            // 2008.10.19 <-
             WasTransparent := True;
           end;
           inc(MaskPixel);
           inc(GIFPixel);
         end;
       end;
-    finally
-      DIBReader.Free;
+    finally DIBReader.Free;
     end;
 
     // Add a Graphic Control Extension if any part of the mask was transparent
-    if (WasTransparent) then
-    begin
+    if (WasTransparent) then begin
       GCE := TGIFGraphicControlExtension.Create(self);
       GCE.Transparent := True;
       GCE.TransparentColorIndex := TransparentIndex;
       Extensions.Add(GCE);
-    end else
+    end
+    else
       // Otherwise removed the transparency color since it wasn't used
       ColorMap.Delete(TransparentIndex);
   end;
 
-  procedure AddMaskOnly(hMask: hBitmap);
+  procedure AddMaskOnly(hMask: HBitmap);
   var
-    Mask		: TBitmap;
+    Mask: TBitmap;
   begin
     if (hMask = 0) then
       exit;
@@ -8189,17 +8102,18 @@ var
     // Encapsulate the mask
     Mask := TBitmap.Create;
     try
-      Mask.Handle := hMask;
+      // Mask.Handle := hMask;  // 2003.08.04
+      Mask.Handle := Windows.CopyImage(hMask, IMAGE_BITMAP, 0, 0, LR_COPYRETURNORG); // 2003.08.04
       AddMask(Mask);
     finally
-      Mask.ReleaseHandle;
-      Mask.Free;
+      // Mask.ReleaseHandle;  // 2003.08.04
+        Mask.Free;
     end;
   end;
 
   procedure AddIconMask(Icon: TIcon);
   var
-    IconInfo		: TIconInfo;
+    IconInfo: TIconInfo;
   begin
     if (not GetIconInfo(Icon.Handle, IconInfo)) then
       exit;
@@ -8210,20 +8124,19 @@ var
 
   procedure AddMetafileMask(Metafile: TMetaFile);
   var
-    Mask1		,
-    Mask2		: TBitmap;
+    Mask1, Mask2: TBitmap;
 
     procedure DrawMetafile(ABitmap: TBitmap; Background: TColor);
     begin
       ABitmap.Width := Metafile.Width;
       ABitmap.Height := Metafile.Height;
-{$ifndef VER9x}
+{$IFNDEF VER9x}
       SetPixelFormat(ABitmap, pf24bit);
-{$endif}
+{$ENDIF}
       ABitmap.Canvas.Brush.Color := Background;
       ABitmap.Canvas.Brush.Style := bsSolid;
       ABitmap.Canvas.FillRect(ABitmap.Canvas.ClipRect);
-      ABitmap.Canvas.Draw(0,0, Metafile);
+      ABitmap.Canvas.Draw(0, 0, Metafile);
     end;
 
   begin
@@ -8235,226 +8148,209 @@ var
         DrawMetafile(Mask1, clWhite);
         DrawMetafile(Mask2, clBlack);
         Mask1.Canvas.CopyMode := cmSrcInvert;
-        Mask1.Canvas.Draw(0,0, Mask2);
+        Mask1.Canvas.Draw(0, 0, Mask2);
         AddMask(Mask1);
-      finally
-        Mask2.Free;
+      finally Mask2.Free;
       end;
-    finally
-      Mask1.Free;
+    finally Mask1.Free;
     end;
   end;
 
 begin
   if (Source = self) then
     exit;
-  if (Source = nil) then
-  begin
+  if (Source = nil) then begin
     Clear;
-  end else
-  //
-  // TGIFSubImage import
-  //
-  if (Source is TGIFSubImage) then
-  begin
-    // Zap existing colormap, extensions and bitmap
-    Clear;
-    if (TGIFSubImage(Source).Empty) then
-      exit;
-    // Copy source data
-    FImageDescriptor := TGIFSubImage(Source).FImageDescriptor;
-    FTransparent := TGIFSubImage(Source).Transparent;
-    // Copy image data
-    NewImage;
-    if (FData <> nil) and (TGIFSubImage(Source).Data <> nil) then
-      Move(TGIFSubImage(Source).Data^, FData^, FDataSize);
-    // Copy palette
-    FColorMap.Assign(TGIFSubImage(Source).ColorMap);
-    // Copy extensions
-    if (TGIFSubImage(Source).Extensions.Count > 0) then
-    begin
-      MemoryStream := TMemoryStream.Create;
-      try
-        TGIFSubImage(Source).Extensions.SaveToStream(MemoryStream);
-        MemoryStream.Seek(0, soFromBeginning);
-        Extensions.LoadFromStream(MemoryStream, Self);
-      finally
-        MemoryStream.Free;
+  end
+  else
+    //
+    // TGIFSubImage import
+    //
+    if (Source is TGIFSubImage) then begin
+      // Zap existing colormap, extensions and bitmap
+      Clear;
+      if (TGIFSubImage(Source).Empty) then
+        exit;
+      // Copy source data
+      FImageDescriptor := TGIFSubImage(Source).FImageDescriptor;
+      FTransparent := TGIFSubImage(Source).Transparent;
+      // Copy image data
+      NewImage;
+      if (FData <> nil) and (TGIFSubImage(Source).Data <> nil) then
+        Move(TGIFSubImage(Source).Data^, FData^, FDataSize);
+      // Copy palette
+      FColorMap.Assign(TGIFSubImage(Source).ColorMap);
+      // Copy extensions
+      if (TGIFSubImage(Source).Extensions.Count > 0) then begin
+        MemoryStream := TMemoryStream.Create;
+        try
+          TGIFSubImage(Source).Extensions.SaveToStream(MemoryStream);
+          MemoryStream.Seek(0, soFromBeginning);
+          Extensions.LoadFromStream(MemoryStream, self);
+        finally MemoryStream.Free;
+        end;
       end;
-    end;
 
-    // Copy bitmap representation
-    // (Not really nescessary but improves performance if the bitmap is needed
-    // later on)
-    if (TGIFSubImage(Source).HasBitmap) then
-    begin
-      NewBitmap;
-      FBitmap.Assign(TGIFSubImage(Source).Bitmap);
-    end;
-  end else
-  //
-  // Bitmap import
-  //
-  if (Source is TBitmap) then
-  begin
-    // Zap existing colormap, extensions and bitmap
-    Clear;
-    if (TBitmap(Source).Empty) then
-      exit;
+      // Copy bitmap representation
+      // (Not really nescessary but improves performance if the bitmap is needed
+      // later on)
+      if (TGIFSubImage(Source).HasBitmap) then begin
+        NewBitmap;
+        FBitmap.Assign(TGIFSubImage(Source).Bitmap);
+      end;
+    end
+    else
+      //
+      // Bitmap import
+      //
+      if (Source is TBitmap) then begin
+        // Zap existing colormap, extensions and bitmap
+        Clear;
+        if (TBitmap(Source).Empty) then
+          exit;
 
-    Width := TBitmap(Source).Width;
-    Height := TBitmap(Source).Height;
+        Width := TBitmap(Source).Width;
+        Height := TBitmap(Source).Height;
 
-    PixelFormat := GetPixelFormat(TBitmap(Source));
-{$ifdef VER9x}
-    // Delphi 2 TBitmaps are always DDBs. This means that if a 24 bit
-    // bitmap is loaded in 8 bit device mode, TBitmap.PixelFormat will
-    // be pf8bit, but TBitmap.Palette will be 0!
-    if (TBitmap(Source).Palette = 0) then
-      PixelFormat := pfDevice;
-{$endif}
-    if (PixelFormat > pf8bit) or (PixelFormat = pfDevice) then
-    begin
-      // Convert image to 8 bits/pixel or less
-      FBitmap := ReduceColors(TBitmap(Source), Image.ColorReduction,
-        Image.DitherMode, Image.ReductionBits, 0);
-      PixelFormat := GetPixelFormat(FBitmap);
-    end else
-    begin
-      // Create new bitmap and copy
-      NewBitmap;
-      FBitmap.Assign(TBitmap(Source));
-    end;
-
-    // Allocate new buffer
-    NewImage;
-
-    Image.Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressConverting);
-    try
-{$ifdef VER9x}
-      // This shouldn't happen, but better safe...
-      if (FBitmap.Palette = 0) then
-        PixelFormat := pf24bit;
-{$endif}
-      if (not(PixelFormat in [pf1bit, pf4bit, pf8bit, pf24bit])) then
-        PixelFormat := pf24bit;
-      DIBSource := TDIBReader.Create(FBitmap, PixelFormat);
-      try
-        // Copy pixels
-        case (PixelFormat) of
-          pf8bit: Import8Bit(Fdata);
-          pf4bit: Import4Bit(Fdata);
-          pf1bit: Import1Bit(Fdata);
-        else
-//        Error(sUnsupportedBitmap);
-          Import24Bit(Fdata);
+        PixelFormat := GetPixelFormat(TBitmap(Source));
+{$IFDEF VER9x}
+        // Delphi 2 TBitmaps are always DDBs. This means that if a 24 bit
+        // bitmap is loaded in 8 bit device mode, TBitmap.PixelFormat will
+        // be pf8bit, but TBitmap.Palette will be 0!
+        if (TBitmap(Source).Palette = 0) then
+          PixelFormat := pfDevice;
+{$ENDIF}
+        if (PixelFormat > pf8bit) or (PixelFormat = pfDevice) then begin
+          // Convert image to 8 bits/pixel or less
+          FBitmap := ReduceColors(TBitmap(Source), Image.ColorReduction, Image.DitherMode, Image.ReductionBits, 0);
+          PixelFormat := GetPixelFormat(FBitmap);
+        end else begin
+          // Create new bitmap and copy
+          NewBitmap;
+          FBitmap.Assign(TBitmap(Source));
         end;
 
-      finally
-        DIBSource.Free;
-      end;
+        // Allocate new buffer
+        NewImage;
 
-{$ifdef VER10_PLUS}
-      // Add mask for transparent bitmaps
-      if (TBitmap(Source).Transparent) then
-        AddMaskOnly(TBitmap(Source).MaskHandle);
-{$endif}
+        Image.Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressConverting);
+        try
+{$IFDEF VER9x}
+          // This shouldn't happen, but better safe...
+          if (FBitmap.Palette = 0) then
+            PixelFormat := pf24bit;
+{$ENDIF}
+          if (not(PixelFormat in [pf1bit, pf4bit, pf8bit, pf24bit])) then
+            PixelFormat := pf24bit;
+          DIBSource := TDIBReader.Create(FBitmap, PixelFormat);
+          try
+            // Copy pixels
+            case (PixelFormat) of
+              pf8bit:
+                Import8Bit(FData);
+              pf4bit:
+                Import4Bit(FData);
+              pf1bit:
+                Import1Bit(FData);
+              else
+                // Error(sUnsupportedBitmap);
+                Import24Bit(FData);
+            end;
 
-    finally
-      if ExceptObject = nil then
-        i := 100
+          finally DIBSource.Free;
+          end;
+
+{$IFDEF VER10_PLUS}
+          // Add mask for transparent bitmaps
+          if (TBitmap(Source).Transparent) then
+            AddMaskOnly(TBitmap(Source).MaskHandle);
+{$ENDIF}
+        finally
+          if ExceptObject = nil then
+            i := 100
+          else
+            i := 0;
+          Image.Progress(self, psEnding, i, Image.PaletteModified, Rect(0, 0, 0, 0), sProgressConverting);
+        end;
+      end
       else
-        i := 0;
-      Image.Progress(Self, psEnding, i, Image.PaletteModified, Rect(0,0,0,0), sProgressConverting);
-    end;
-  end else
-  //
-  // TGraphic import
-  //
-  if (Source is TGraphic) then
-  begin
-    // Zap existing colormap, extensions and bitmap
-    Clear;
-    if (TGraphic(Source).Empty) then
-      exit;
+        //
+        // TGraphic import
+        //
+        if (Source is TGraphic) then begin
+          // Zap existing colormap, extensions and bitmap
+          Clear;
+          if (TGraphic(Source).Empty) then
+            exit;
 
-    ABitmap := TBitmap.Create;
-    try
-      // Import TIcon and TMetafile by drawing them onto a bitmap...
-      // ...and then importing the bitmap recursively
-      if (Source is TIcon) or (Source is TMetafile) then
-      begin
-        try
-          ImportViaDraw(ABitmap, TGraphic(Source))
-        except
-          // If import via TCanvas.Draw fails (which it shouldn't), we try the
-          // Assign mechanism instead
-          ABitmap.Assign(Source);
-        end;
-      end else
-        try
-          ABitmap.Assign(Source);
-        except
-          // If automatic conversion to bitmap fails, we try and draw the
-          // graphic on the bitmap instead
-          ImportViaDraw(ABitmap, TGraphic(Source));
-        end;
-      // Convert the bitmap to a GIF frame recursively
-      Assign(ABitmap);
-    finally
-      ABitmap.Free;
-    end;
+          ABitmap := TBitmap.Create;
+          try
+            // Import TIcon and TMetafile by drawing them onto a bitmap...
+            // ...and then importing the bitmap recursively
+            if (Source is TIcon) or (Source is TMetaFile) then begin
+              try ImportViaDraw(ABitmap, TGraphic(Source))
+              except
+                // If import via TCanvas.Draw fails (which it shouldn't), we try the
+                // Assign mechanism instead
+                  ABitmap.Assign(Source);
+              end;
+            end
+            else
+              try ABitmap.Assign(Source);
+              except
+                // If automatic conversion to bitmap fails, we try and draw the
+                // graphic on the bitmap instead
+                  ImportViaDraw(ABitmap, TGraphic(Source));
+              end;
+            // Convert the bitmap to a GIF frame recursively
+            Assign(ABitmap);
+          finally ABitmap.Free;
+          end;
 
-    // Import transparency mask
-    if (Source is TIcon) then
-      AddIconMask(TIcon(Source));
-    if (Source is TMetaFile) then
-      AddMetafileMask(TMetaFile(Source));
+          // Import transparency mask
+          if (Source is TIcon) then
+            AddIconMask(TIcon(Source));
+          if (Source is TMetaFile) then
+            AddMetafileMask(TMetaFile(Source));
 
-  end else
-  //
-  // TPicture import
-  //
-  if (Source is TPicture) then
-  begin
-    // Recursively import TGraphic
-    Assign(TPicture(Source).Graphic);
-  end else
-    // Unsupported format - fall back to Source.AssignTo
-    inherited Assign(Source);
+        end
+        else
+          //
+          // TPicture import
+          //
+          if (Source is TPicture) then begin
+            // Recursively import TGraphic
+            Assign(TPicture(Source).Graphic);
+          end
+          else
+            // Unsupported format - fall back to Source.AssignTo
+            inherited Assign(Source);
 end;
 
 // Copied from D3 graphics.pas
 // Fixed by Brian Lowe of Acro Technology Inc. 30Jan98
-function TransparentStretchBlt(DstDC: HDC; DstX, DstY, DstW, DstH: Integer;
-  SrcDC: HDC; SrcX, SrcY, SrcW, SrcH: Integer; MaskDC: HDC; MaskX,
-  MaskY: Integer): Boolean;
+function TransparentStretchBlt(DstDC: HDC; DstX, DstY, DstW, DstH: integer; SrcDC: HDC; SrcX, SrcY, SrcW, SrcH: integer;
+  MaskDC: HDC; MaskX, MaskY: integer): Boolean;
 const
-  ROP_DstCopy		= $00AA0029;
+  ROP_DstCopy = $00AA0029;
 var
-  MemDC			,
-  OrMaskDC		: HDC;
-  MemBmp		,
-  OrMaskBmp		: HBITMAP;
-  Save			,
-  OrMaskSave		: THandle;
-  crText, crBack	: TColorRef;
-  SavePal		: HPALETTE;
+  MemDC, OrMaskDC: HDC;
+  MemBmp, OrMaskBmp: HBitmap;
+  Save, OrMaskSave: THandle;
+  crText, crBack: TColorRef;
+  SavePal: HPalette;
 
 begin
   Result := True;
-  if (Win32Platform = VER_PLATFORM_WIN32_NT) and (SrcW = DstW) and (SrcH = DstH) then
-  begin
+  if (Win32Platform = VER_PLATFORM_WIN32_NT) and (SrcW = DstW) and (SrcH = DstH) then begin
     MemBmp := GDICheck(CreateCompatibleBitmap(SrcDC, 1, 1));
     MemBmp := SelectObject(MaskDC, MemBmp);
-    try
-      MaskBlt(DstDC, DstX, DstY, DstW, DstH, SrcDC, SrcX, SrcY, MemBmp, MaskX,
-        MaskY, MakeRop4(ROP_DstCopy, SrcCopy));
+    try MaskBlt(DstDC, DstX, DstY, DstW, DstH, SrcDC, SrcX, SrcY, MemBmp, MaskX, MaskY, MakeRop4(ROP_DstCopy, SrcCopy));
     finally
       MemBmp := SelectObject(MaskDC, MemBmp);
       DeleteObject(MemBmp);
     end;
-    Exit;
+    exit;
   end;
 
   SavePal := 0;
@@ -8499,19 +8395,17 @@ begin
 {$IFNDEF GIF_TESTMASK} // Define GIF_TESTMASK if you want to know what it does...
               BitBlt(MemDC, SrcX, SrcY, SrcW, SrcH, SrcDC, SrcX, SrcY, SrcAnd);
 {$ELSE}
-              StretchBlt(DstDC, DstX, DstY, DstW DIV 2, DstH, MemDC, SrcX, SrcY, SrcW, SrcH, SrcCopy);
-              StretchBlt(DstDC, DstX+DstW DIV 2, DstY, DstW DIV 2, DstH, SrcDC, SrcX, SrcY, SrcW, SrcH, SrcCopy);
+              StretchBlt(DstDC, DstX, DstY, DstW div 2, DstH, MemDC, SrcX, SrcY, SrcW, SrcH, SrcCopy);
+              StretchBlt(DstDC, DstX + DstW div 2, DstY, DstW div 2, DstH, SrcDC, SrcX, SrcY, SrcW, SrcH, SrcCopy);
               exit;
 {$ENDIF}
             finally
               if (OrMaskSave <> 0) then
                 SelectObject(OrMaskDC, OrMaskSave);
             end;
-          finally
-            DeleteObject(OrMaskBmp);
+          finally DeleteObject(OrMaskBmp);
           end;
-        finally
-          DeleteDC(OrMaskDC);
+        finally DeleteDC(OrMaskDC);
         end;
 
         crText := SetTextColor(DstDC, $00000000);
@@ -8532,8 +8426,7 @@ begin
         if (Save <> 0) then
           SelectObject(MemDC, Save);
       end;
-    finally
-      DeleteObject(MemBmp);
+    finally DeleteObject(MemBmp);
     end;
   finally
     if (SavePal <> 0) then
@@ -8542,8 +8435,7 @@ begin
   end;
 end;
 
-procedure TGIFSubImage.Draw(ACanvas: TCanvas; const Rect: TRect;
-  DoTransparent, DoTile: boolean);
+procedure TGIFSubImage.Draw(ACanvas: TCanvas; const Rect: TRect; DoTransparent, DoTile: Boolean);
 begin
   if (DoTile) then
     StretchDraw(ACanvas, Rect, DoTransparent, DoTile)
@@ -8556,25 +8448,20 @@ type
   TChangableCanvas = class(TCanvas)
   end;
 
-procedure TGIFSubImage.StretchDraw(ACanvas: TCanvas; const Rect: TRect;
-  DoTransparent, DoTile: boolean);
+procedure TGIFSubImage.StretchDraw(ACanvas: TCanvas; const Rect: TRect; DoTransparent, DoTile: Boolean);
 var
-  MaskDC		: HDC;
-  Save			: THandle;
-  Tile			: TRect;
-{$ifdef DEBUG_DRAWPERFORMANCE}
-  ImageCount		,
-  TimeStart		,
-  TimeStop		: DWORD;
-{$endif}
-
+  MaskDC: HDC;
+  Save: THandle;
+  Tile: TRect;
+{$IFDEF DEBUG_DRAWPERFORMANCE}
+  ImageCount, TimeStart, TimeStop: DWORD;
+{$ENDIF}
 begin
-{$ifdef DEBUG_DRAWPERFORMANCE}
+{$IFDEF DEBUG_DRAWPERFORMANCE}
   TimeStart := timeGetTime;
   ImageCount := 0;
-{$endif}
-  if (DoTransparent) and (Transparent) and (HasMask) then
-  begin
+{$ENDIF}
+  if (DoTransparent) and (Transparent) and (HasMask) then begin
     // Draw transparent using mask
     Save := 0;
     MaskDC := 0;
@@ -8582,30 +8469,27 @@ begin
       MaskDC := GDICheck(CreateCompatibleDC(0));
       Save := SelectObject(MaskDC, FMask);
 
-      if (DoTile) then
-      begin
-        Tile.Left := Rect.Left+Left;
+      if (DoTile) then begin
+        Tile.Left := Rect.Left + Left;
         Tile.Right := Tile.Left + Width;
-        while (Tile.Left < Rect.Right) do
-        begin
-          Tile.Top := Rect.Top+Top;
+        while (Tile.Left < Rect.Right) do begin
+          Tile.Top := Rect.Top + Top;
           Tile.Bottom := Tile.Top + Height;
-          while (Tile.Top < Rect.Bottom) do
-          begin
-            TransparentStretchBlt(ACanvas.Handle, Tile.Left, Tile.Top, Width, Height,
-              Bitmap.Canvas.Handle, 0, 0, Width, Height, MaskDC, 0, 0);
+          while (Tile.Top < Rect.Bottom) do begin
+            TransparentStretchBlt(ACanvas.Handle, Tile.Left, Tile.Top, Width, Height, Bitmap.Canvas.Handle, 0, 0, Width, Height,
+              MaskDC, 0, 0);
             Tile.Top := Tile.Top + Image.Height;
             Tile.Bottom := Tile.Bottom + Image.Height;
-{$ifdef DEBUG_DRAWPERFORMANCE}
+{$IFDEF DEBUG_DRAWPERFORMANCE}
             inc(ImageCount);
-{$endif}
+{$ENDIF}
           end;
           Tile.Left := Tile.Left + Image.Width;
           Tile.Right := Tile.Right + Image.Width;
         end;
-      end else
-        TransparentStretchBlt(ACanvas.Handle, Rect.Left, Rect.Top,
-          Rect.Right - Rect.Left, Rect.Bottom - Rect.Top,
+      end
+      else
+        TransparentStretchBlt(ACanvas.Handle, Rect.Left, Rect.Top, Rect.Right - Rect.Left, Rect.Bottom - Rect.Top,
           Bitmap.Canvas.Handle, 0, 0, Width, Height, MaskDC, 0, 0);
 
       // Since we are not using any of the TCanvas functions (only handle)
@@ -8618,78 +8502,65 @@ begin
       if (MaskDC <> 0) then
         DeleteDC(MaskDC);
     end;
-  end else
-  begin
-    if (DoTile) then
-    begin
-      Tile.Left := Rect.Left+Left;
+  end else begin
+    if (DoTile) then begin
+      Tile.Left := Rect.Left + Left;
       Tile.Right := Tile.Left + Width;
-      while (Tile.Left < Rect.Right) do
-      begin
-        Tile.Top := Rect.Top+Top;
+      while (Tile.Left < Rect.Right) do begin
+        Tile.Top := Rect.Top + Top;
         Tile.Bottom := Tile.Top + Height;
-        while (Tile.Top < Rect.Bottom) do
-        begin
+        while (Tile.Top < Rect.Bottom) do begin
           ACanvas.StretchDraw(Tile, Bitmap);
           Tile.Top := Tile.Top + Image.Height;
           Tile.Bottom := Tile.Bottom + Image.Height;
-{$ifdef DEBUG_DRAWPERFORMANCE}
+{$IFDEF DEBUG_DRAWPERFORMANCE}
           inc(ImageCount);
-{$endif}
+{$ENDIF}
         end;
         Tile.Left := Tile.Left + Image.Width;
         Tile.Right := Tile.Right + Image.Width;
       end;
-    end else
+    end
+    else
       ACanvas.StretchDraw(Rect, Bitmap);
   end;
-{$ifdef DEBUG_DRAWPERFORMANCE}
-  if (GetAsyncKeyState(VK_CONTROL) <> 0) then
-  begin
+{$IFDEF DEBUG_DRAWPERFORMANCE}
+  if (GetAsyncKeyState(VK_CONTROL) <> 0) then begin
     TimeStop := timeGetTime;
-    ShowMessage(format('Draw %d images in %d mS, Rate %d images/mS (%d images/S)',
-      [ImageCount, TimeStop-TimeStart,
-      ImageCount DIV (TimeStop-TimeStart+1),
-      MulDiv(ImageCount, 1000, TimeStop-TimeStart+1)]));
+    ShowMessage(format('Draw %d images in %d mS, Rate %d images/mS (%d images/S)', [ImageCount, TimeStop - TimeStart,
+      ImageCount div (TimeStop - TimeStart + 1), MulDiv(ImageCount, 1000, TimeStop - TimeStart + 1)]));
   end;
-{$endif}
+{$ENDIF}
 end;
 
 // Given a destination rect (DestRect) calculates the
 // area covered by this sub image
 function TGIFSubImage.ScaleRect(DestRect: TRect): TRect;
 var
-  HeightMul		,
-  HeightDiv		: integer;
-  WidthMul		,
-  WidthDiv		: integer;
+  HeightMul, HeightDiv: integer;
+  WidthMul, WidthDiv: integer;
 begin
   HeightDiv := Image.Height;
-  HeightMul := DestRect.Bottom-DestRect.Top;
+  HeightMul := DestRect.Bottom - DestRect.Top;
   WidthDiv := Image.Width;
-  WidthMul := DestRect.Right-DestRect.Left;
+  WidthMul := DestRect.Right - DestRect.Left;
 
-  Result.Left := DestRect.Left + muldiv(Left, WidthMul, WidthDiv);
-  Result.Top := DestRect.Top + muldiv(Top, HeightMul, HeightDiv);
-  Result.Right := DestRect.Left + muldiv(Left+Width, WidthMul, WidthDiv);
-  Result.Bottom := DestRect.Top + muldiv(Top+Height, HeightMul, HeightDiv);
+  Result.Left := DestRect.Left + MulDiv(Left, WidthMul, WidthDiv);
+  Result.Top := DestRect.Top + MulDiv(Top, HeightMul, HeightDiv);
+  Result.Right := DestRect.Left + MulDiv(Left + Width, WidthMul, WidthDiv);
+  Result.Bottom := DestRect.Top + MulDiv(Top + Height, HeightMul, HeightDiv);
 end;
 
 procedure TGIFSubImage.Crop;
 var
-  TransparentColorIndex	: byte;
-  CropLeft		,
-  CropTop		,
-  CropRight		,
-  CropBottom		: integer;
-  WasTransparent	: boolean;
-  i			: integer;
-  NewSize		: integer;
-  NewData		: PChar;
-  NewWidth		,
-  NewHeight		: integer;
-  pSource		,
-  pDest			: PChar;
+  TransparentColorIndex: Byte;
+  CropLeft, CropTop, CropRight, CropBottom: integer;
+  WasTransparent: Boolean;
+  i: integer;
+  NewSize: integer;
+  NewData: PAnsiChar;
+  NewWidth, NewHeight: integer;
+  pSource, pDest: PAnsiChar;
 begin
   if (Empty) or (not Transparent) then
     exit;
@@ -8700,11 +8571,9 @@ begin
   CropBottom := Height - 1;
   // Find left edge
   WasTransparent := True;
-  while (CropLeft <= CropRight) and (WasTransparent) do
-  begin
+  while (CropLeft <= CropRight) and (WasTransparent) do begin
     for i := CropTop to CropBottom do
-      if (Pixels[CropLeft, i] <> TransparentColorIndex) then
-      begin
+      if (Pixels[CropLeft, i] <> TransparentColorIndex) then begin
         WasTransparent := False;
         break;
       end;
@@ -8713,26 +8582,21 @@ begin
   end;
   // Find right edge
   WasTransparent := True;
-  while (CropLeft <= CropRight) and (WasTransparent) do
-  begin
+  while (CropLeft <= CropRight) and (WasTransparent) do begin
     for i := CropTop to CropBottom do
-      if (pixels[CropRight, i] <> TransparentColorIndex) then
-      begin
+      if (Pixels[CropRight, i] <> TransparentColorIndex) then begin
         WasTransparent := False;
         break;
       end;
     if (WasTransparent) then
-      dec(CropRight);
+      Dec(CropRight);
   end;
-  if (CropLeft <= CropRight) then
-  begin
+  if (CropLeft <= CropRight) then begin
     // Find top edge
     WasTransparent := True;
-    while (CropTop <= CropBottom) and (WasTransparent) do
-    begin
+    while (CropTop <= CropBottom) and (WasTransparent) do begin
       for i := CropLeft to CropRight do
-        if (pixels[i, CropTop] <> TransparentColorIndex) then
-        begin
+        if (Pixels[i, CropTop] <> TransparentColorIndex) then begin
           WasTransparent := False;
           break;
         end;
@@ -8741,34 +8605,29 @@ begin
     end;
     // Find bottom edge
     WasTransparent := True;
-    while (CropTop <= CropBottom) and (WasTransparent) do
-    begin
+    while (CropTop <= CropBottom) and (WasTransparent) do begin
       for i := CropLeft to CropRight do
-        if (pixels[i, CropBottom] <> TransparentColorIndex) then
-        begin
+        if (Pixels[i, CropBottom] <> TransparentColorIndex) then begin
           WasTransparent := False;
           break;
         end;
       if (WasTransparent) then
-        dec(CropBottom);
+        Dec(CropBottom);
     end;
   end;
 
-  if (CropLeft > CropRight) or (CropTop > CropBottom) then
-  begin
+  if (CropLeft > CropRight) or (CropTop > CropBottom) then begin
     // Cropped to nothing - frame is invisible
     Clear;
-  end else
-  begin
+  end else begin
     // Crop frame - move data
     NewWidth := CropRight - CropLeft + 1;
-    Newheight := CropBottom - CropTop + 1;
+    NewHeight := CropBottom - CropTop + 1;
     NewSize := NewWidth * NewHeight;
     GetMem(NewData, NewSize);
-    pSource := PChar(integer(FData) + CropTop * Width + CropLeft);
+    pSource := PAnsiChar(integer(FData) + CropTop * Width + CropLeft);
     pDest := NewData;
-    for i := 0 to NewHeight-1 do
-    begin
+    for i := 0 to NewHeight - 1 do begin
       Move(pSource^, pDest^, NewWidth);
       inc(pSource, Width);
       inc(pDest, NewWidth);
@@ -8787,29 +8646,22 @@ end;
 
 procedure TGIFSubImage.Merge(Previous: TGIFSubImage);
 var
-  SourceIndex		,
-  DestIndex		: byte;
-  SourceTransparent	: boolean;
-  NeedTransparentColorIndex: boolean;
-  PreviousRect		,
-  ThisRect		,
-  MergeRect		: TRect;
-  PreviousY		,
-  X			,
-  Y			: integer;
-  pSource		,
-  pDest			: PChar;
-  pSourceMap		,
-  pDestMap		: PColorMap;
-  GCE			: TGIFGraphicControlExtension;
+  SourceIndex, DestIndex: Byte;
+  SourceTransparent: Boolean;
+  NeedTransparentColorIndex: Boolean;
+  PreviousRect, ThisRect, MergeRect: TRect;
+  PreviousY, x, y: integer;
+  pSource, pDest: PAnsiChar;
+  pSourceMap, pDestMap: PColorMap;
+  GCE: TGIFGraphicControlExtension;
 
-  function CanMakeTransparent: boolean;
+  function CanMakeTransparent: Boolean;
   begin
     // Is there a local color map...
     if (ColorMap.Count > 0) then
       // ...and is there room in it?
       Result := (ColorMap.Count < 256)
-    // Is there a global color map...
+      // Is there a global color map...
     else if (Image.GlobalColorMap.Count > 0) then
       // ...and is there room in it?
       Result := (Image.GlobalColorMap.Count < 256)
@@ -8817,21 +8669,17 @@ var
       Result := False;
   end;
 
-  function GetTransparentColorIndex: byte;
+  function GetTransparentColorIndex: Byte;
   var
-    i			: integer;
+    i: integer;
   begin
-    if (ColorMap.Count > 0) then
-    begin
+    if (ColorMap.Count > 0) then begin
       // Get the transparent color from the local color map
       Result := ColorMap.Add(TColor(0));
-    end else
-    begin
+    end else begin
       // Are any other frames using the global color map for transparency
-      for i := 0 to Image.Images.Count-1 do
-        if (Image.Images[i] <> self) and (Image.Images[i].Transparent) and
-          (Image.Images[i].ColorMap.Count = 0) then
-        begin
+      for i := 0 to Image.Images.Count - 1 do
+        if (Image.Images[i] <> self) and (Image.Images[i].Transparent) and (Image.Images[i].ColorMap.Count = 0) then begin
           // Use the same transparency color as the other frame
           Result := Image.Images[i].GraphicControlExtension.TransparentColorIndex;
           exit;
@@ -8844,8 +8692,8 @@ var
 begin
   // Determine if it is possible to merge this frame
   if (Empty) or (Previous = nil) or (Previous.Empty) or
-    ((Previous.GraphicControlExtension <> nil) and
-     (Previous.GraphicControlExtension.Disposal in [dmBackground, dmPrevious])) then
+    ((Previous.GraphicControlExtension <> nil) and (Previous.GraphicControlExtension.Disposal in [dmBackground, dmPrevious]))
+  then
     exit;
 
   PreviousRect := Previous.BoundsRect;
@@ -8857,12 +8705,10 @@ begin
 
   // If the frame isn't already transparent, determine
   // if it is possible to make it so
-  if (Transparent) then
-  begin
+  if (Transparent) then begin
     DestIndex := GraphicControlExtension.TransparentColorIndex;
     NeedTransparentColorIndex := False;
-  end else
-  begin
+  end else begin
     if (not CanMakeTransparent) then
       exit;
     DestIndex := 0; // To avoid compiler warning
@@ -8880,31 +8726,22 @@ begin
   pSourceMap := Previous.ActiveColorMap.Data;
   pDestMap := ActiveColorMap.Data;
 
-  for Y := MergeRect.Top - Top to MergeRect.Bottom - Top-1 do
-  begin
-    pSource := PChar(integer(Previous.Scanline[PreviousY]) + MergeRect.Left - Previous.Left);
-    pDest := PChar(integer(Scanline[Y]) + MergeRect.Left - Left);
+  for y := MergeRect.Top - Top to MergeRect.Bottom - Top - 1 do begin
+    pSource := PAnsiChar(integer(Previous.Scanline[PreviousY]) + MergeRect.Left - Previous.Left);
+    pDest := PAnsiChar(integer(Scanline[y]) + MergeRect.Left - Left);
 
-    for X := MergeRect.Left to MergeRect.Right-1 do
-    begin
+    for x := MergeRect.Left to MergeRect.Right - 1 do begin
       // Ignore pixels if either this frame's or the previous frame's pixel is transparent
-      if (
-            not(
-              ((not NeedTransparentColorIndex) and (pDest^ = char(DestIndex))) or
-              ((SourceTransparent) and (pSource^ = char(SourceIndex)))
-            )
-          ) and (
-            // Replace same colored pixels with transparency
-            ((pDestMap = pSourceMap) and (pDest^ = pSource^)) or
-            (CompareMem(@(pDestMap^[ord(pDest^)]), @(pSourceMap^[ord(pSource^)]), sizeof(TGIFColor)))
-          ) then
-      begin
-        if (NeedTransparentColorIndex) then
-        begin
+      if (not(((not NeedTransparentColorIndex) and (pDest^ = AnsiChar(DestIndex))) or
+        ((SourceTransparent) and (pSource^ = AnsiChar(SourceIndex))))) and (
+        // Replace same colored pixels with transparency
+        ((pDestMap = pSourceMap) and (pDest^ = pSource^)) or (CompareMem(@(pDestMap^[Ord(pDest^)]),
+        @(pSourceMap^[Ord(pSource^)]), SizeOf(TGIFColor)))) then begin
+        if (NeedTransparentColorIndex) then begin
           NeedTransparentColorIndex := False;
           DestIndex := GetTransparentColorIndex;
         end;
-        pDest^ := char(DestIndex);
+        pDest^ := AnsiChar(DestIndex);
       end;
       inc(pDest);
       inc(pSource);
@@ -8913,16 +8750,15 @@ begin
   end;
 
   (*
-  ** Create a GCE if the frame wasn't already transparent and any
-  ** pixels were made transparent
+    ** Create a GCE if the frame wasn't already transparent and any
+    ** pixels were made transparent
   *)
-  if (not Transparent) and (not NeedTransparentColorIndex) then
-  begin
-    if (GraphicControlExtension = nil) then
-    begin
+  if (not Transparent) and (not NeedTransparentColorIndex) then begin
+    if (GraphicControlExtension = nil) then begin
       GCE := TGIFGraphicControlExtension.Create(self);
       Extensions.Add(GCE);
-    end else
+    end
+    else
       GCE := GraphicControlExtension;
     GCE.Transparent := True;
     GCE.TransparentColorIndex := DestIndex;
@@ -8932,11 +8768,11 @@ begin
   FreeMask
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFTrailer
+// TGIFTrailer
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 procedure TGIFTrailer.SaveToStream(Stream: TStream);
 begin
   WriteByte(Stream, bsTrailer);
@@ -8944,7 +8780,7 @@ end;
 
 procedure TGIFTrailer.LoadFromStream(Stream: TStream);
 var
-  b			: BYTE;
+  b: Byte;
 begin
   if (Stream.Read(b, 1) <> 1) then
     exit;
@@ -8952,29 +8788,30 @@ begin
     Warning(gsWarning, sBadTrailer);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		TGIFExtension registration database
+// TGIFExtension registration database
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   TExtensionLeadIn = packed record
-    Introducer: byte;      { always $21 }
-    ExtensionLabel: byte;
+    Introducer: Byte; { always $21 }
+    ExtensionLabel: Byte;
   end;
 
   PExtRec = ^TExtRec;
+
   TExtRec = record
     ExtClass: TGIFExtensionClass;
-    ExtLabel: BYTE;
+    ExtLabel: Byte;
   end;
 
   TExtensionList = class(TList)
   public
     constructor Create;
     destructor Destroy; override;
-    procedure Add(eLabel: BYTE; eClass: TGIFExtensionClass);
-    function FindExt(eLabel: BYTE): TGIFExtensionClass;
+    procedure Add(elabel: Byte; eClass: TGIFExtensionClass);
+    function FindExt(elabel: Byte): TGIFExtensionClass;
     procedure Remove(eClass: TGIFExtensionClass);
   end;
 
@@ -8989,52 +8826,48 @@ end;
 
 destructor TExtensionList.Destroy;
 var
-  I: Integer;
+  i: integer;
 begin
-  for I := 0 to Count-1 do
-    Dispose(PExtRec(Items[I]));
+  for i := 0 to Count - 1 do
+    Dispose(PExtRec(Items[i]));
   inherited Destroy;
 end;
 
-procedure TExtensionList.Add(eLabel: BYTE; eClass: TGIFExtensionClass);
+procedure TExtensionList.Add(elabel: Byte; eClass: TGIFExtensionClass);
 var
   NewRec: PExtRec;
 begin
   New(NewRec);
-  with NewRec^ do
-  begin
-    ExtLabel := eLabel;
+  with NewRec^ do begin
+    ExtLabel := elabel;
     ExtClass := eClass;
   end;
   inherited Add(NewRec);
 end;
 
-function TExtensionList.FindExt(eLabel: BYTE): TGIFExtensionClass;
+function TExtensionList.FindExt(elabel: Byte): TGIFExtensionClass;
 var
-  I: Integer;
+  i: integer;
 begin
-  for I := Count-1 downto 0 do
-    with PExtRec(Items[I])^ do
-      if ExtLabel = eLabel then
-      begin
+  for i := Count - 1 downto 0 do
+    with PExtRec(Items[i])^ do
+      if ExtLabel = elabel then begin
         Result := ExtClass;
-        Exit;
+        exit;
       end;
   Result := nil;
 end;
 
 procedure TExtensionList.Remove(eClass: TGIFExtensionClass);
 var
-  I: Integer;
+  i: integer;
   P: PExtRec;
 begin
-  for I := Count-1 downto 0 do
-  begin
-    P := PExtRec(Items[I]);
-    if P^.ExtClass.InheritsFrom(eClass) then
-    begin
+  for i := Count - 1 downto 0 do begin
+    P := PExtRec(Items[i]);
+    if P^.ExtClass.InheritsFrom(eClass) then begin
       Dispose(P);
-      Delete(I);
+      Delete(i);
     end;
   end;
 end;
@@ -9049,36 +8882,34 @@ begin
   Result := ExtensionList;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFExtension
+// TGIFExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 function TGIFExtension.GetVersion: TGIFVersion;
 begin
   Result := gv89a;
 end;
 
-class procedure TGIFExtension.RegisterExtension(eLabel: BYTE; eClass: TGIFExtensionClass);
+class procedure TGIFExtension.RegisterExtension(elabel: Byte; eClass: TGIFExtensionClass);
 begin
-  GetExtensionList.Add(eLabel, eClass);
+  GetExtensionList.Add(elabel, eClass);
 end;
 
 class function TGIFExtension.FindExtension(Stream: TStream): TGIFExtensionClass;
 var
-  eLabel		: BYTE;
-  SubClass		: TGIFExtensionClass;
-  Pos			: LongInt;
+  elabel: Byte;
+  SubClass: TGIFExtensionClass;
+  Pos: longInt;
 begin
   Pos := Stream.Position;
-  if (Stream.Read(eLabel, 1) <> 1) then
-  begin
+  if (Stream.Read(elabel, 1) <> 1) then begin
     Result := nil;
     exit;
   end;
-  Result := GetExtensionList.FindExt(eLabel);
-  while (Result <> nil) do
-  begin
+  Result := GetExtensionList.FindExt(elabel);
+  while (Result <> nil) do begin
     SubClass := Result.FindSubExtension(Stream);
     if (SubClass = Result) then
       break;
@@ -9107,18 +8938,18 @@ end;
 
 procedure TGIFExtension.SaveToStream(Stream: TStream);
 var
-  ExtensionLeadIn	: TExtensionLeadIn;
+  ExtensionLeadIn: TExtensionLeadIn;
 begin
   ExtensionLeadIn.Introducer := bsExtensionIntroducer;
   ExtensionLeadIn.ExtensionLabel := ExtensionType;
-  Stream.Write(ExtensionLeadIn, sizeof(ExtensionLeadIn));
+  Stream.Write(ExtensionLeadIn, SizeOf(ExtensionLeadIn));
 end;
 
 function TGIFExtension.DoReadFromStream(Stream: TStream): TGIFExtensionType;
 var
-  ExtensionLeadIn	: TExtensionLeadIn;
+  ExtensionLeadIn: TExtensionLeadIn;
 begin
-  ReadCheck(Stream, ExtensionLeadIn, sizeof(ExtensionLeadIn));
+  ReadCheck(Stream, ExtensionLeadIn, SizeOf(ExtensionLeadIn));
   if (ExtensionLeadIn.Introducer <> bsExtensionIntroducer) then
     Error(sBadExtensionLabel);
   Result := ExtensionLeadIn.ExtensionLabel;
@@ -9132,17 +8963,17 @@ begin
     Error(sBadExtensionInstance);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFGraphicControlExtension
+// TGIFGraphicControlExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
   { Extension flag bit masks }
-  efInputFlag		= $02;		{ 00000010 }
-  efDisposal		= $1C;		{ 00011100 }
-  efTransparent		= $01;		{ 00000001 }
-  efReserved		= $E0;		{ 11100000 }
+  efInputFlag = $02; { 00000010 }
+  efDisposal = $1C; { 00011100 }
+  efTransparent = $01; { 00000001 }
+  efReserved = $E0; { 11100000 }
 
 constructor TGIFGraphicControlExtension.Create(ASubImage: TGIFSubImage);
 begin
@@ -9174,19 +9005,19 @@ begin
   Result := bsGraphicControlExtension;
 end;
 
-function TGIFGraphicControlExtension.GetTransparent: boolean;
+function TGIFGraphicControlExtension.GetTransparent: Boolean;
 begin
-  Result := (FGCExtension.PackedFields AND efTransparent) <> 0;
+  Result := (FGCExtension.PackedFields and efTransparent) <> 0;
 end;
 
-procedure TGIFGraphicControlExtension.SetTransparent(Value: boolean);
+procedure TGIFGraphicControlExtension.SetTransparent(Value: Boolean);
 begin
   // Set transparent flag in sub image
   SubImage.FTransparent := Value;
   if (Value) then
-    FGCExtension.PackedFields := FGCExtension.PackedFields OR efTransparent
+    FGCExtension.PackedFields := FGCExtension.PackedFields or efTransparent
   else
-    FGCExtension.PackedFields := FGCExtension.PackedFields AND NOT(efTransparent);
+    FGCExtension.PackedFields := FGCExtension.PackedFields and not(efTransparent);
 end;
 
 function TGIFGraphicControlExtension.GetTransparentColor: TColor;
@@ -9196,68 +9027,66 @@ end;
 
 procedure TGIFGraphicControlExtension.SetTransparentColor(Color: TColor);
 begin
-  FGCExtension.TransparentColorIndex := Subimage.ActiveColorMap.AddUnique(Color);
+  FGCExtension.TransparentColorIndex := SubImage.ActiveColorMap.AddUnique(Color);
 end;
 
-function TGIFGraphicControlExtension.GetTransparentColorIndex: BYTE;
+function TGIFGraphicControlExtension.GetTransparentColorIndex: Byte;
 begin
   Result := FGCExtension.TransparentColorIndex;
 end;
 
-procedure TGIFGraphicControlExtension.SetTransparentColorIndex(Value: BYTE);
+procedure TGIFGraphicControlExtension.SetTransparentColorIndex(Value: Byte);
 begin
-  if ((Value >= SubImage.ActiveColorMap.Count) and (SubImage.ActiveColorMap.Count > 0)) then
-  begin
+  if ((Value >= SubImage.ActiveColorMap.Count) and (SubImage.ActiveColorMap.Count > 0)) then begin
     Warning(gsWarning, sBadColorIndex);
     Value := 0;
   end;
   FGCExtension.TransparentColorIndex := Value;
 end;
 
-function TGIFGraphicControlExtension.GetDelay: WORD;
+function TGIFGraphicControlExtension.GetDelay: Word;
 begin
   Result := FGCExtension.DelayTime;
 end;
-procedure TGIFGraphicControlExtension.SetDelay(Value: WORD);
+
+procedure TGIFGraphicControlExtension.SetDelay(Value: Word);
 begin
   FGCExtension.DelayTime := Value;
 end;
 
-function TGIFGraphicControlExtension.GetUserInput: boolean;
+function TGIFGraphicControlExtension.GetUserInput: Boolean;
 begin
-  Result := (FGCExtension.PackedFields AND efInputFlag) <> 0;
+  Result := (FGCExtension.PackedFields and efInputFlag) <> 0;
 end;
 
-procedure TGIFGraphicControlExtension.SetUserInput(Value: boolean);
+procedure TGIFGraphicControlExtension.SetUserInput(Value: Boolean);
 begin
   if (Value) then
-    FGCExtension.PackedFields := FGCExtension.PackedFields OR efInputFlag
+    FGCExtension.PackedFields := FGCExtension.PackedFields or efInputFlag
   else
-    FGCExtension.PackedFields := FGCExtension.PackedFields AND NOT(efInputFlag);
+    FGCExtension.PackedFields := FGCExtension.PackedFields and not(efInputFlag);
 end;
 
 function TGIFGraphicControlExtension.GetDisposal: TDisposalMethod;
 begin
-  Result := TDisposalMethod((FGCExtension.PackedFields AND efDisposal) SHR 2);
+  Result := TDisposalMethod((FGCExtension.PackedFields and efDisposal) shr 2);
 end;
 
 procedure TGIFGraphicControlExtension.SetDisposal(Value: TDisposalMethod);
 begin
-  FGCExtension.PackedFields := FGCExtension.PackedFields AND NOT(efDisposal)
-    OR ((ord(Value) SHL 2) AND efDisposal);
+  FGCExtension.PackedFields := FGCExtension.PackedFields and not(efDisposal) or ((Ord(Value) shl 2) and efDisposal);
 end;
 
 procedure TGIFGraphicControlExtension.SaveToStream(Stream: TStream);
 begin
   inherited SaveToStream(Stream);
-  Stream.Write(FGCExtension, sizeof(FGCExtension));
+  Stream.Write(FGCExtension, SizeOf(FGCExtension));
 end;
 
 procedure TGIFGraphicControlExtension.LoadFromStream(Stream: TStream);
 begin
   inherited LoadFromStream(Stream);
-  if (Stream.Read(FGCExtension, sizeof(FGCExtension)) <> sizeof(FGCExtension)) then
-  begin
+  if (Stream.Read(FGCExtension, SizeOf(FGCExtension)) <> SizeOf(FGCExtension)) then begin
     Warning(gsWarning, sOutOfData);
     exit;
   end;
@@ -9266,11 +9095,11 @@ begin
     SubImage.FTransparent := True;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFTextExtension
+// TGIFTextExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFTextExtension.Create(ASubImage: TGIFSubImage);
 begin
   inherited Create(ASubImage);
@@ -9317,83 +9146,99 @@ begin
   BackgroundColorIndex := SubImage.ColorMap.AddUnique(Color);
 end;
 
-function TGIFTextExtension.GetBounds(Index: integer): WORD;
+function TGIFTextExtension.GetBounds(Index: integer): Word;
 begin
-  case (Index) of
-    1: Result := FPlainTextExtension.Left;
-    2: Result := FPlainTextExtension.Top;
-    3: Result := FPlainTextExtension.Width;
-    4: Result := FPlainTextExtension.Height;
-  else
-    Result := 0; // To avoid compiler warnings
+  case (index) of
+    1:
+      Result := FPlainTextExtension.Left;
+    2:
+      Result := FPlainTextExtension.Top;
+    3:
+      Result := FPlainTextExtension.Width;
+    4:
+      Result := FPlainTextExtension.Height;
+    else
+      Result := 0; // To avoid compiler warnings
   end;
 end;
 
-procedure TGIFTextExtension.SetBounds(Index: integer; Value: WORD);
+procedure TGIFTextExtension.SetBounds(Index: integer; Value: Word);
 begin
-  case (Index) of
-    1: FPlainTextExtension.Left := Value;
-    2: FPlainTextExtension.Top := Value;
-    3: FPlainTextExtension.Width := Value;
-    4: FPlainTextExtension.Height := Value;
+  case (index) of
+    1:
+      FPlainTextExtension.Left := Value;
+    2:
+      FPlainTextExtension.Top := Value;
+    3:
+      FPlainTextExtension.Width := Value;
+    4:
+      FPlainTextExtension.Height := Value;
   end;
 end;
 
-function TGIFTextExtension.GetCharWidthHeight(Index: integer): BYTE;
+function TGIFTextExtension.GetCharWidthHeight(Index: integer): Byte;
 begin
-  case (Index) of
-    1: Result := FPlainTextExtension.CellWidth;
-    2: Result := FPlainTextExtension.CellHeight;
-  else
-    Result := 0; // To avoid compiler warnings
+  case (index) of
+    1:
+      Result := FPlainTextExtension.CellWidth;
+    2:
+      Result := FPlainTextExtension.CellHeight;
+    else
+      Result := 0; // To avoid compiler warnings
   end;
 end;
 
-procedure TGIFTextExtension.SetCharWidthHeight(Index: integer; Value: BYTE);
+procedure TGIFTextExtension.SetCharWidthHeight(Index: integer; Value: Byte);
 begin
-  case (Index) of
-    1: FPlainTextExtension.CellWidth := Value;
-    2: FPlainTextExtension.CellHeight := Value;
+  case (index) of
+    1:
+      FPlainTextExtension.CellWidth := Value;
+    2:
+      FPlainTextExtension.CellHeight := Value;
   end;
 end;
 
-function TGIFTextExtension.GetColorIndex(Index: integer): BYTE;
+function TGIFTextExtension.GetColorIndex(Index: integer): Byte;
 begin
-  case (Index) of
-    1: Result := FPlainTextExtension.TextFGColorIndex;
-    2: Result := FPlainTextExtension.TextBGColorIndex;
-  else
-    Result := 0; // To avoid compiler warnings
+  case (index) of
+    1:
+      Result := FPlainTextExtension.TextFGColorIndex;
+    2:
+      Result := FPlainTextExtension.TextBGColorIndex;
+    else
+      Result := 0; // To avoid compiler warnings
   end;
 end;
 
-procedure TGIFTextExtension.SetColorIndex(Index: integer; Value: BYTE);
+procedure TGIFTextExtension.SetColorIndex(Index: integer; Value: Byte);
 begin
-  case (Index) of
-    1: FPlainTextExtension.TextFGColorIndex := Value;
-    2: FPlainTextExtension.TextBGColorIndex := Value;
+  case (index) of
+    1:
+      FPlainTextExtension.TextFGColorIndex := Value;
+    2:
+      FPlainTextExtension.TextBGColorIndex := Value;
   end;
 end;
 
 procedure TGIFTextExtension.SaveToStream(Stream: TStream);
 begin
   inherited SaveToStream(Stream);
-  Stream.Write(FPlainTextExtension, sizeof(FPlainTextExtension));
+  Stream.Write(FPlainTextExtension, SizeOf(FPlainTextExtension));
   WriteStrings(Stream, FText);
 end;
 
 procedure TGIFTextExtension.LoadFromStream(Stream: TStream);
 begin
   inherited LoadFromStream(Stream);
-  ReadCheck(Stream, FPlainTextExtension, sizeof(FPlainTextExtension));
+  ReadCheck(Stream, FPlainTextExtension, SizeOf(FPlainTextExtension));
   ReadStrings(Stream, FText);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFCommentExtension
+// TGIFCommentExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFCommentExtension.Create(ASubImage: TGIFSubImage);
 begin
   inherited Create(ASubImage);
@@ -9423,13 +9268,14 @@ begin
   ReadStrings(Stream, FText);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//		TGIFApplicationExtension registration database
+// TGIFApplicationExtension registration database
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 type
   PAppExtRec = ^TAppExtRec;
+
   TAppExtRec = record
     AppClass: TGIFAppExtensionClass;
     Ident: TGIFApplicationRec;
@@ -9446,9 +9292,8 @@ type
 
 constructor TAppExtensionList.Create;
 const
-  NSLoopIdent: array[0..1] of TGIFApplicationRec =
-    ((Identifier: 'NETSCAPE'; Authentication: '2.0'),
-     (Identifier: 'ANIMEXTS'; Authentication: '1.0'));
+  NSLoopIdent: array [0 .. 1] of TGIFApplicationRec = ((Identifier: 'NETSCAPE'; Authentication: '2.0'), (Identifier: 'ANIMEXTS';
+    Authentication: '1.0'));
 begin
   inherited Create;
   Add(NSLoopIdent[0], TGIFAppExtNSLoop);
@@ -9457,10 +9302,10 @@ end;
 
 destructor TAppExtensionList.Destroy;
 var
-  I: Integer;
+  i: integer;
 begin
-  for I := 0 to Count-1 do
-    Dispose(PAppExtRec(Items[I]));
+  for i := 0 to Count - 1 do
+    Dispose(PAppExtRec(Items[i]));
   inherited Destroy;
 end;
 
@@ -9476,30 +9321,27 @@ end;
 
 function TAppExtensionList.FindExt(eIdent: TGIFApplicationRec): TGIFAppExtensionClass;
 var
-  I: Integer;
+  i: integer;
 begin
-  for I := Count-1 downto 0 do
-    with PAppExtRec(Items[I])^ do
-      if CompareMem(@Ident, @eIdent, sizeof(TGIFApplicationRec)) then
-      begin
+  for i := Count - 1 downto 0 do
+    with PAppExtRec(Items[i])^ do
+      if CompareMem(@Ident, @eIdent, SizeOf(TGIFApplicationRec)) then begin
         Result := AppClass;
-        Exit;
+        exit;
       end;
   Result := nil;
 end;
 
 procedure TAppExtensionList.Remove(eClass: TGIFAppExtensionClass);
 var
-  I: Integer;
+  i: integer;
   P: PAppExtRec;
 begin
-  for I := Count-1 downto 0 do
-  begin
-    P := PAppExtRec(Items[I]);
-    if P^.AppClass.InheritsFrom(eClass) then
-    begin
+  for i := Count - 1 downto 0 do begin
+    P := PAppExtRec(Items[i]);
+    if P^.AppClass.InheritsFrom(eClass) then begin
       Dispose(P);
-      Delete(I);
+      Delete(i);
     end;
   end;
 end;
@@ -9514,17 +9356,16 @@ begin
   Result := AppExtensionList;
 end;
 
-class procedure TGIFApplicationExtension.RegisterExtension(eIdent: TGIFApplicationRec;
-  eClass: TGIFAppExtensionClass);
+class procedure TGIFApplicationExtension.RegisterExtension(eIdent: TGIFApplicationRec; eClass: TGIFAppExtensionClass);
 begin
   GetAppExtensionList.Add(eIdent, eClass);
 end;
 
 class function TGIFApplicationExtension.FindSubExtension(Stream: TStream): TGIFExtensionClass;
 var
-  eIdent		: TGIFApplicationRec;
-  OldPos		: longInt;
-  Size			: BYTE;
+  eIdent: TGIFApplicationRec;
+  OldPos: longInt;
+  Size: Byte;
 begin
   OldPos := Stream.Position;
   Result := nil;
@@ -9532,36 +9373,31 @@ begin
     exit;
 
   // Some old Adobe export filters mistakenly uses a value of 10
-  if (Size = 10) then
-  begin
+  if (Size = 10) then begin
     { TODO -oanme -cImprovement : replace with seek or read and check contents = 'Adobe' }
     if (Stream.Read(eIdent, 10) <> 10) then
       exit;
     Result := TGIFUnknownAppExtension;
     exit;
-  end else
-  if (Size <> sizeof(TGIFApplicationRec)) or
-    (Stream.Read(eIdent, sizeof(eIdent)) <> sizeof(eIdent)) then
-  begin
+  end else if (Size <> SizeOf(TGIFApplicationRec)) or (Stream.Read(eIdent, SizeOf(eIdent)) <> SizeOf(eIdent)) then begin
     Stream.Position := OldPos;
     Result := inherited FindSubExtension(Stream);
-  end else
-  begin
+  end else begin
     Result := GetAppExtensionList.FindExt(eIdent);
     if (Result = nil) then
       Result := TGIFUnknownAppExtension;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFApplicationExtension
+// TGIFApplicationExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFApplicationExtension.Create(ASubImage: TGIFSubImage);
 begin
   inherited Create(ASubImage);
-  FillChar(FIdent, sizeof(FIdent), 0);
+  FillChar(FIdent, SizeOf(FIdent), 0);
 end;
 
 destructor TGIFApplicationExtension.Destroy;
@@ -9574,54 +9410,53 @@ begin
   Result := bsApplicationExtension;
 end;
 
-function TGIFApplicationExtension.GetAuthentication: string;
+function TGIFApplicationExtension.GetAuthentication: AnsiString;
 begin
   Result := FIdent.Authentication;
 end;
 
-procedure TGIFApplicationExtension.SetAuthentication(const Value: string);
+procedure TGIFApplicationExtension.SetAuthentication(const Value: AnsiString);
 begin
-  if (Length(Value) < sizeof(TGIFAuthenticationCode)) then
-    FillChar(FIdent.Authentication, sizeof(TGIFAuthenticationCode), 32);
-  StrLCopy(@(FIdent.Authentication[0]), PChar(Value), sizeof(TGIFAuthenticationCode));
+  if (length(Value) < SizeOf(TGIFAuthenticationCode)) then
+    FillChar(FIdent.Authentication, SizeOf(TGIFAuthenticationCode), 32);
+  StrLCopy(@(FIdent.Authentication[0]), PAnsiChar(Value), SizeOf(TGIFAuthenticationCode));
 end;
 
-function TGIFApplicationExtension.GetIdentifier: string;
+function TGIFApplicationExtension.GetIdentifier: AnsiString;
 begin
   Result := FIdent.Identifier;
 end;
 
-procedure TGIFApplicationExtension.SetIdentifier(const Value: string);
+procedure TGIFApplicationExtension.SetIdentifier(const Value: AnsiString);
 begin
-  if (Length(Value) < sizeof(TGIFIdentifierCode)) then
-    FillChar(FIdent.Identifier, sizeof(TGIFIdentifierCode), 32);
-  StrLCopy(@(FIdent.Identifier[0]), PChar(Value), sizeof(TGIFIdentifierCode));
+  if (length(Value) < SizeOf(TGIFIdentifierCode)) then
+    FillChar(FIdent.Identifier, SizeOf(TGIFIdentifierCode), 32);
+  StrLCopy(@(FIdent.Identifier[0]), PAnsiChar(Value), SizeOf(TGIFIdentifierCode));
 end;
 
 procedure TGIFApplicationExtension.SaveToStream(Stream: TStream);
 begin
   inherited SaveToStream(Stream);
-  WriteByte(Stream, sizeof(FIdent)); // Block size
-  Stream.Write(FIdent, sizeof(FIdent));
+  WriteByte(Stream, SizeOf(FIdent)); // Block size
+  Stream.Write(FIdent, SizeOf(FIdent));
   SaveData(Stream);
 end;
 
 procedure TGIFApplicationExtension.LoadFromStream(Stream: TStream);
 var
-  i			: integer;
+  i: integer;
 begin
   inherited LoadFromStream(Stream);
   i := ReadByte(Stream);
   // Some old Adobe export filters mistakenly uses a value of 10
   if (i = 10) then
-    FillChar(FIdent, sizeOf(FIdent), 0)
-  else
-    if (i < 11) then
-      Error(sBadBlockSize);
+    FillChar(FIdent, SizeOf(FIdent), 0)
+  else if (i < 11) then
+    Error(sBadBlockSize);
 
-  ReadCheck(Stream, FIdent, sizeof(FIdent));
+  ReadCheck(Stream, FIdent, SizeOf(FIdent));
 
-  Dec(i, sizeof(FIdent));
+  Dec(i, SizeOf(FIdent));
   // Ignore extra data
   Stream.Seek(i, soFromCurrent);
 
@@ -9632,11 +9467,11 @@ begin
   LoadData(Stream);
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFUnknownAppExtension
+// TGIFUnknownAppExtension
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFBlock.Create(ASize: integer);
 begin
   inherited Create;
@@ -9670,20 +9505,19 @@ end;
 
 destructor TGIFUnknownAppExtension.Destroy;
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to FBlocks.Count-1 do
+  for i := 0 to FBlocks.Count - 1 do
     TGIFBlock(FBlocks[i]).Free;
   FBlocks.Free;
   inherited Destroy;
 end;
 
-
 procedure TGIFUnknownAppExtension.SaveData(Stream: TStream);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to FBlocks.Count-1 do
+  for i := 0 to FBlocks.Count - 1 do
     TGIFBlock(FBlocks[i]).SaveToStream(Stream);
   // Terminating zero
   WriteByte(Stream, 0);
@@ -9691,23 +9525,21 @@ end;
 
 procedure TGIFUnknownAppExtension.LoadData(Stream: TStream);
 var
-  b			: BYTE;
-  Block			: TGIFBlock;
-  i			: integer;
+  b: Byte;
+  Block: TGIFBlock;
+  i: integer;
 begin
   // Zap old blocks
-  for i := 0 to FBlocks.Count-1 do
+  for i := 0 to FBlocks.Count - 1 do
     TGIFBlock(FBlocks[i]).Free;
   FBlocks.Clear;
 
   // Read blocks
   if (Stream.Read(b, 1) <> 1) then
     exit;
-  while (b <> 0) do
-  begin
+  while (b <> 0) do begin
     Block := TGIFBlock.Create(b);
-    try
-      Block.LoadFromStream(Stream);
+    try Block.LoadFromStream(Stream);
     except
       Block.Free;
       raise;
@@ -9718,15 +9550,15 @@ begin
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//                      TGIFAppExtNSLoop
+// TGIFAppExtNSLoop
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 const
   // Netscape sub block types
-  nbLoopExtension	= 1;
-  nbBufferExtension	= 2;
+  nbLoopExtension = 1;
+  nbBufferExtension = 2;
 
 constructor TGIFAppExtNSLoop.Create(ASubImage: TGIFSubImage);
 const
@@ -9739,16 +9571,17 @@ end;
 procedure TGIFAppExtNSLoop.SaveData(Stream: TStream);
 begin
   // Write loop count
-  WriteByte(Stream, 1 + sizeof(FLoops)); // Size of block
-  WriteByte(Stream, nbLoopExtension); // Identify sub block as looping extension data
-  Stream.Write(FLoops, sizeof(FLoops)); // Loop count
+  WriteByte(Stream, 1 + SizeOf(FLoops)); // Size of block
+  WriteByte(Stream, nbLoopExtension);
+  // Identify sub block as looping extension data
+  Stream.Write(FLoops, SizeOf(FLoops)); // Loop count
 
   // Write buffer size if specified
-  if (FBufferSize > 0) then
-  begin
-    WriteByte(Stream, 1 + sizeof(FBufferSize)); // Size of block
-    WriteByte(Stream, nbBufferExtension); // Identify sub block as buffer size data
-    Stream.Write(FBufferSize, sizeof(FBufferSize)); // Buffer size
+  if (FBufferSize > 0) then begin
+    WriteByte(Stream, 1 + SizeOf(FBufferSize)); // Size of block
+    WriteByte(Stream, nbBufferExtension);
+    // Identify sub block as buffer size data
+    Stream.Write(FBufferSize, SizeOf(FBufferSize)); // Buffer size
   end;
 
   WriteByte(Stream, 0); // Terminating zero
@@ -9756,32 +9589,29 @@ end;
 
 procedure TGIFAppExtNSLoop.LoadData(Stream: TStream);
 var
-  BlockSize		: integer;
-  BlockType		: integer;
+  BlockSize: integer;
+  BlockType: integer;
 begin
   // Read size of first block or terminating zero
   BlockSize := ReadByte(Stream);
-  while (BlockSize <> 0) do
-  begin
+  while (BlockSize <> 0) do begin
     BlockType := ReadByte(Stream);
-    dec(BlockSize);
+    Dec(BlockSize);
 
-    case (BlockType AND $07) of
-      nbLoopExtension:
-        begin
-          if (BlockSize < sizeof(FLoops)) then
+    case (BlockType and $07) of
+      nbLoopExtension: begin
+          if (BlockSize < SizeOf(FLoops)) then
             Error(sInvalidData);
           // Read loop count
-          ReadCheck(Stream, FLoops, sizeof(FLoops));
-          dec(BlockSize, sizeof(FLoops));
+          ReadCheck(Stream, FLoops, SizeOf(FLoops));
+          Dec(BlockSize, SizeOf(FLoops));
         end;
-      nbBufferExtension:
-        begin
-          if (BlockSize < sizeof(FBufferSize)) then
+      nbBufferExtension: begin
+          if (BlockSize < SizeOf(FBufferSize)) then
             Error(sInvalidData);
           // Read buffer size
-          ReadCheck(Stream, FBufferSize, sizeof(FBufferSize));
-          dec(BlockSize, sizeof(FBufferSize));
+          ReadCheck(Stream, FBufferSize, SizeOf(FBufferSize));
+          Dec(BlockSize, SizeOf(FBufferSize));
         end;
     end;
 
@@ -9794,26 +9624,25 @@ begin
   end;
 end;
 
-
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFImageList
+// TGIFImageList
 //
-////////////////////////////////////////////////////////////////////////////////
-function TGIFImageList.GetImage(Index: Integer): TGIFSubImage;
+/// /////////////////////////////////////////////////////////////////////////////
+function TGIFImageList.GetImage(Index: integer): TGIFSubImage;
 begin
-  Result := TGIFSubImage(Items[Index]);
+  Result := TGIFSubImage(Items[index]);
 end;
 
-procedure TGIFImageList.SetImage(Index: Integer; SubImage: TGIFSubImage);
+procedure TGIFImageList.SetImage(Index: integer; SubImage: TGIFSubImage);
 begin
-  Items[Index] := SubImage;
+  Items[index] := SubImage;
 end;
 
 procedure TGIFImageList.LoadFromStream(Stream: TStream; Parent: TObject);
 var
-  b			: BYTE;
-  SubImage		: TGIFSubImage;
+  b: Byte;
+  SubImage: TGIFSubImage;
 begin
   // Peek ahead to determine block type
   repeat
@@ -9821,23 +9650,20 @@ begin
       exit;
   until (b <> 0); // Ignore 0 padding (non-compliant)
 
-  while (b <> bsTrailer) do
-  begin
+  while (b <> bsTrailer) do begin
     Stream.Seek(-1, soFromCurrent);
-    if (b in [bsExtensionIntroducer, bsImageDescriptor]) then
-    begin
+    if (b in [bsExtensionIntroducer, bsImageDescriptor]) then begin
       SubImage := TGIFSubImage.Create(Parent as TGIFImage);
       try
         SubImage.LoadFromStream(Stream);
         Add(SubImage);
-        Image.Progress(Self, psRunning, MulDiv(Stream.Position, 100, Stream.Size),
-          GIFImageRenderOnLoad, Rect(0,0,0,0), sProgressLoading);
+        Image.Progress(self, psRunning, MulDiv(Stream.Position, 100, Stream.Size), GIFImageRenderOnLoad, Rect(0, 0, 0, 0),
+          sProgressLoading);
       except
         SubImage.Free;
         raise;
       end;
-    end else
-    begin
+    end else begin
       Warning(gsWarning, sBadBlock);
       break;
     end;
@@ -9851,22 +9677,21 @@ end;
 
 procedure TGIFImageList.SaveToStream(Stream: TStream);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to Count-1 do
-  begin
+  for i := 0 to Count - 1 do begin
     TGIFItem(Items[i]).SaveToStream(Stream);
-    Image.Progress(Self, psRunning, MulDiv((i+1), 100, Count), False, Rect(0,0,0,0), sProgressSaving);
+    Image.Progress(self, psRunning, MulDiv((i + 1), 100, Count), False, Rect(0, 0, 0, 0), sProgressSaving);
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFPainter
+// TGIFPainter
 //
-////////////////////////////////////////////////////////////////////////////////
-constructor TGIFPainter.CreateRef(Painter: PGIFPainter; AImage: TGIFImage;
-  ACanvas: TCanvas; ARect: TRect; Options: TGIFDrawOptions);
+/// /////////////////////////////////////////////////////////////////////////////
+constructor TGIFPainter.CreateRef(Painter: PGIFPainter; AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect;
+  Options: TGIFDrawOptions);
 begin
   Create(AImage, ACanvas, ARect, Options);
   PainterRef := Painter;
@@ -9874,12 +9699,11 @@ begin
     PainterRef^ := self;
 end;
 
-constructor TGIFPainter.Create(AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect;
-  Options: TGIFDrawOptions);
+constructor TGIFPainter.Create(AImage: TGIFImage; ACanvas: TCanvas; ARect: TRect; Options: TGIFDrawOptions);
 var
-  i			: integer;
-  BackgroundColor	: TColor;
-  Disposals		: set of TDisposalMethod;
+  i: integer;
+  BackgroundColor: TColor;
+  Disposals: set of TDisposalMethod;
 begin
   inherited Create(True);
   FreeOnTerminate := True;
@@ -9898,46 +9722,43 @@ begin
   FAnimationSpeed := FImage.AnimationSpeed;
 
   // An event handle is used for animation delays
-  if (FDrawOptions >= [goAnimate, goAsync]) and (FImage.Images.Count > 1) and
-    (FAnimationSpeed >= 0) then
+  if (FDrawOptions >= [goAnimate, goAsync]) and (FImage.Images.Count > 1) and (FAnimationSpeed >= 0) then
     FEventHandle := CreateEvent(nil, False, False, nil);
 
   // Preprocessing of extensions to determine if we need frame buffers
   Disposals := [];
-  if (FImage.DrawBackgroundColor = clNone) then
-  begin
+  if (FImage.DrawBackgroundColor = clNone) then begin
     if (FImage.GlobalColorMap.Count > 0) then
       BackgroundColor := FImage.BackgroundColor
     else
       BackgroundColor := ColorToRGB(clWindow);
-  end else
+  end
+  else
     BackgroundColor := ColorToRGB(FImage.DrawBackgroundColor);
 
   // Need background buffer to clear on loop
   if (goClearOnLoop in FDrawOptions) then
     Include(Disposals, dmBackground);
 
-  for i := 0 to FImage.Images.Count-1 do
+  for i := 0 to FImage.Images.Count - 1 do
     if (FImage.Images[i].GraphicControlExtension <> nil) then
       with (FImage.Images[i].GraphicControlExtension) do
         Include(Disposals, Disposal);
 
   // Need background buffer to draw transparent on background
-  if (dmBackground in Disposals) and (goTransparent in FDrawOptions) then
-  begin
+  if (dmBackground in Disposals) and (goTransparent in FDrawOptions) then begin
     Background := TBitmap.Create;
-    Background.Height := FRect.Bottom-FRect.Top;
-    Background.Width := FRect.Right-FRect.Left;
+    Background.Height := FRect.Bottom - FRect.Top;
+    Background.Width := FRect.Right - FRect.Left;
     // Copy background immediately
     Background.Canvas.CopyMode := cmSrcCopy;
     Background.Canvas.CopyRect(Background.Canvas.ClipRect, FCanvas, FRect);
   end;
   // Need frame- and backup buffer to restore to previous and background
-  if ((Disposals * [dmPrevious, dmBackground]) <> []) then
-  begin
+  if ((Disposals * [dmPrevious, dmBackground]) <> []) then begin
     BackupBuffer := TBitmap.Create;
-    BackupBuffer.Height := FRect.Bottom-FRect.Top;
-    BackupBuffer.Width := FRect.Right-FRect.Left;
+    BackupBuffer.Height := FRect.Bottom - FRect.Top;
+    BackupBuffer.Width := FRect.Right - FRect.Left;
     BackupBuffer.Canvas.CopyMode := cmSrcCopy;
     BackupBuffer.Canvas.Brush.Color := BackgroundColor;
     BackupBuffer.Canvas.Brush.Style := bsSolid;
@@ -9946,11 +9767,11 @@ begin
     BackupBuffer.Canvas.Brush.Style := bsDiagCross;
 {$ENDIF}
     // Step 1: Copy destination to backup buffer
-    //         Always executed before first frame and only once.
+    // Always executed before first frame and only once.
     BackupBuffer.Canvas.CopyRect(BackupBuffer.Canvas.ClipRect, FCanvas, FRect);
     FrameBuffer := TBitmap.Create;
-    FrameBuffer.Height := FRect.Bottom-FRect.Top;
-    FrameBuffer.Width := FRect.Right-FRect.Left;
+    FrameBuffer.Height := FRect.Bottom - FRect.Top;
+    FrameBuffer.Width := FRect.Right - FRect.Left;
     FrameBuffer.Canvas.CopyMode := cmSrcCopy;
     FrameBuffer.Canvas.Brush.Color := BackgroundColor;
     FrameBuffer.Canvas.Brush.Style := bsSolid;
@@ -9979,8 +9800,7 @@ begin
     Value := 0
   else if (Value > 1000) then
     Value := 1000;
-  if (Value <> FAnimationSpeed) then
-  begin
+  if (Value <> FAnimationSpeed) then begin
     FAnimationSpeed := Value;
     // Signal WaitForSingleObject delay to abort
     if (FEventHandle <> 0) then
@@ -10015,19 +9835,18 @@ begin
   // It shouldn't really be nescessary to protect PainterRef in this manner
   // since we are running in the main thread at this point, but I'm a little
   // paranoid about the way PainterRef is being used...
-  with Image.Painters.LockList do
-    try
-      // Zap pointer to self and remove from painter list
-      if (PainterRef <> nil) and (PainterRef^ = self) then
-        PainterRef^ := nil;
-
-    finally
-      Image.Painters.UnLockList;
-    end;
-
-  Image.Painters.Remove(self);
-  FImage := nil;
-
+  if Image <> nil then // 2001.02.23
+  begin // 2001.02.23
+    with Image.Painters.LockList do
+      try
+        // Zap pointer to self and remove from painter list
+        if (PainterRef <> nil) and (PainterRef^ = self) then
+          PainterRef^ := nil;
+      finally Image.Painters.UnlockList;
+      end;
+    Image.Painters.Remove(self);
+    FImage := nil;
+  end; // 2001.02.23
 
   // Free buffers
   if (BackupBuffer <> nil) then
@@ -10052,39 +9871,29 @@ end;
 // Non-buffered paint - Executed in main thread
 procedure TGIFPainter.DoPaint;
 begin
-  FImage.Images[ActiveImage].Draw(FCanvas, FRect, (goTransparent in FDrawOptions),
-    (goTile in FDrawOptions));
+  FImage.Images[ActiveImage].Draw(FCanvas, FRect, (goTransparent in FDrawOptions), (goTile in FDrawOptions));
   FStarted := True;
 end;
 
 // Buffered paint - Executed in main thread
 procedure TGIFPainter.DoPaintFrame;
 var
-  DrawDestination	: TCanvas;
-  DrawRect		: TRect;
-  DoStep2		,
-  DoStep3		,
-  DoStep5		,
-  DoStep6		: boolean;
-  SavePal		,
-  SourcePal		: HPALETTE;
+  DrawDestination: TCanvas;
+  DrawRect: TRect;
+  DoStep2, DoStep3, DoStep5, DoStep6: Boolean;
+  SavePal, SourcePal: HPalette;
 
   procedure ClearBackup;
   var
-    r			,
-    Tile		: TRect;
-    FrameTop		,
-    FrameHeight		: integer;
-    ImageWidth		,
-    ImageHeight		: integer;
+    R, Tile: TRect;
+    FrameTop, FrameHeight: integer;
+    ImageWidth, ImageHeight: integer;
   begin
 
-    if (goTransparent in FDrawOptions) then
-    begin
+    if (goTransparent in FDrawOptions) then begin
       // If the frame is transparent, we must remove it by copying the
       // background buffer over it
-      if (goTile in FDrawOptions) then
-      begin
+      if (goTile in FDrawOptions) then begin
         FrameTop := FImage.Images[ActiveImage].Top;
         FrameHeight := FImage.Images[ActiveImage].Height;
         ImageWidth := FImage.Width;
@@ -10092,12 +9901,10 @@ var
 
         Tile.Left := FRect.Left + FImage.Images[ActiveImage].Left;
         Tile.Right := Tile.Left + FImage.Images[ActiveImage].Width;
-        while (Tile.Left < FRect.Right) do
-        begin
+        while (Tile.Left < FRect.Right) do begin
           Tile.Top := FRect.Top + FrameTop;
           Tile.Bottom := Tile.Top + FrameHeight;
-          while (Tile.Top < FRect.Bottom) do
-          begin
+          while (Tile.Top < FRect.Bottom) do begin
             BackupBuffer.Canvas.CopyRect(Tile, Background.Canvas, Tile);
             Tile.Top := Tile.Top + ImageHeight;
             Tile.Bottom := Tile.Bottom + ImageHeight;
@@ -10105,20 +9912,16 @@ var
           Tile.Left := Tile.Left + ImageWidth;
           Tile.Right := Tile.Right + ImageWidth;
         end;
-      end else
-      begin
-        r := FImage.Images[ActiveImage].ScaleRect(BackupBuffer.Canvas.ClipRect);
-        BackupBuffer.Canvas.CopyRect(r, Background.Canvas, r)
+      end else begin
+        R := FImage.Images[ActiveImage].ScaleRect(BackupBuffer.Canvas.ClipRect);
+        BackupBuffer.Canvas.CopyRect(R, Background.Canvas, R)
       end;
-    end else
-    begin
+    end else begin
       // If the frame isn't transparent, we just clear the area covered by
       // it to the background color.
       // Tile the background unless the frame covers all of the image
-      if (goTile in FDrawOptions) and
-        ((FImage.Width <> FImage.Images[ActiveImage].Width) and
-         (FImage.height <> FImage.Images[ActiveImage].Height)) then
-      begin
+      if (goTile in FDrawOptions) and ((FImage.Width <> FImage.Images[ActiveImage].Width) and
+        (FImage.Height <> FImage.Images[ActiveImage].Height)) then begin
         FrameTop := FImage.Images[ActiveImage].Top;
         FrameHeight := FImage.Images[ActiveImage].Height;
         ImageWidth := FImage.Width;
@@ -10128,12 +9931,10 @@ var
 
         Tile.Left := FRect.Left + FImage.Images[ActiveImage].Left;
         Tile.Right := Tile.Left + FImage.Images[ActiveImage].Width;
-        while (Tile.Left < FRect.Right) do
-        begin
+        while (Tile.Left < FRect.Right) do begin
           Tile.Top := FRect.Top + FrameTop;
           Tile.Bottom := Tile.Top + FrameHeight;
-          while (Tile.Top < FRect.Bottom) do
-          begin
+          while (Tile.Top < FRect.Bottom) do begin
             BackupBuffer.Canvas.FillRect(Tile);
 
             Tile.Top := Tile.Top + ImageHeight;
@@ -10142,15 +9943,15 @@ var
           Tile.Left := Tile.Left + ImageWidth;
           Tile.Right := Tile.Right + ImageWidth;
         end;
-      end else
+      end
+      else
         BackupBuffer.Canvas.FillRect(FImage.Images[ActiveImage].ScaleRect(FRect));
     end;
   end;
 
 begin
   if (goValidateCanvas in FDrawOptions) then
-    if (GetObjectType(ValidateDC) <> OBJ_DC) then
-    begin
+    if (GetObjectType(ValidateDC) <> OBJ_DC) then begin
       Terminate;
       exit;
     end;
@@ -10160,46 +9961,44 @@ begin
   DoStep3 := False;
   DoStep5 := False;
   DoStep6 := False;
-{
-Disposal mode algorithm:
+  {
+    Disposal mode algorithm:
 
-Step 1: Copy destination to backup buffer
-        Always executed before first frame and only once.
-        Done in constructor.
-Step 2: Clear previous frame (implementation is same as step 6)
-        Done implicitly by implementation.
-        Only done explicitly on first frame if goClearOnLoop option is set.
-Step 3: Copy backup buffer to frame buffer
-Step 4: Draw frame
-Step 5: Copy buffer to destination
-Step 6: Clear frame from backup buffer
-+------------+------------------+---------------------+------------------------+
-|New  \  Old |  dmNone          |  dmBackground       |  dmPrevious            |
-+------------+------------------+---------------------+------------------------+
-|dmNone      |                  |                     |                        |
-|            |4. Paint on backup|4. Paint on backup   |4. Paint on backup      |
-|            |5. Restore        |5. Restore           |5. Restore              |
-+------------+------------------+---------------------+------------------------+
-|dmBackground|                  |                     |                        |
-|            |4. Paint on backup|4. Paint on backup   |4. Paint on backup      |
-|            |5. Restore        |5. Restore           |5. Restore              |
-|            |6. Clear backup   |6. Clear backup      |6. Clear backup         |
-+------------+------------------+---------------------+------------------------+
-|dmPrevious  |                  |                     |                        |
-|            |                  |3. Copy backup to buf|3. Copy backup to buf   |
-|            |4. Paint on dest  |4. Paint on buf      |4. Paint on buf         |
-|            |                  |5. Copy buf to dest  |5. Copy buf to dest     |
-+------------+------------------+---------------------+------------------------+
-}
+    Step 1: Copy destination to backup buffer
+    Always executed before first frame and only once.
+    Done in constructor.
+    Step 2: Clear previous frame (implementation is same as step 6)
+    Done implicitly by implementation.
+    Only done explicitly on first frame if goClearOnLoop option is set.
+    Step 3: Copy backup buffer to frame buffer
+    Step 4: Draw frame
+    Step 5: Copy buffer to destination
+    Step 6: Clear frame from backup buffer
+    +------------+------------------+---------------------+------------------------+
+    |New  \  Old |  dmNone          |  dmBackground       |  dmPrevious            |
+    +------------+------------------+---------------------+------------------------+
+    |dmNone      |                  |                     |                        |
+    |            |4. Paint on backup|4. Paint on backup   |4. Paint on backup      |
+    |            |5. Restore        |5. Restore           |5. Restore              |
+    +------------+------------------+---------------------+------------------------+
+    |dmBackground|                  |                     |                        |
+    |            |4. Paint on backup|4. Paint on backup   |4. Paint on backup      |
+    |            |5. Restore        |5. Restore           |5. Restore              |
+    |            |6. Clear backup   |6. Clear backup      |6. Clear backup         |
+    +------------+------------------+---------------------+------------------------+
+    |dmPrevious  |                  |                     |                        |
+    |            |                  |3. Copy backup to buf|3. Copy backup to buf   |
+    |            |4. Paint on dest  |4. Paint on buf      |4. Paint on buf         |
+    |            |                  |5. Copy buf to dest  |5. Copy buf to dest     |
+    +------------+------------------+---------------------+------------------------+
+  }
   case (Disposal) of
-    dmNone, dmNoDisposal:
-      begin
+    dmNone, dmNoDisposal: begin
         DrawDestination := BackupBuffer.Canvas;
         DrawRect := BackupBuffer.Canvas.ClipRect;
         DoStep5 := True;
       end;
-    dmBackground:
-      begin
+    dmBackground: begin
         DrawDestination := BackupBuffer.Canvas;
         DrawRect := BackupBuffer.Canvas.ClipRect;
         DoStep5 := True;
@@ -10207,18 +10006,16 @@ Step 6: Clear frame from backup buffer
       end;
     dmPrevious:
       case (OldDisposal) of
-        dmNone, dmNoDisposal:
-        begin
-          DrawDestination := FCanvas;
-          DrawRect := FRect;
-        end;
-        dmBackground, dmPrevious:
-        begin
-          DrawDestination := FrameBuffer.Canvas;
-          DrawRect := FrameBuffer.Canvas.ClipRect;
-          DoStep3 := True;
-          DoStep5 := True;
-        end;
+        dmNone, dmNoDisposal: begin
+            DrawDestination := FCanvas;
+            DrawRect := FRect;
+          end;
+        dmBackground, dmPrevious: begin
+            DrawDestination := FrameBuffer.Canvas;
+            DrawRect := FrameBuffer.Canvas.ClipRect;
+            DoStep3 := True;
+            DoStep5 := True;
+          end;
       end;
   end;
 
@@ -10232,21 +10029,18 @@ Step 6: Clear frame from backup buffer
 
   // Step 2: Clear previous frame
   if (DoStep2) then
-   ClearBackup;
+    ClearBackup;
 
   // Step 3: Copy backup buffer to frame buffer
   if (DoStep3) then
-    FrameBuffer.Canvas.CopyRect(FrameBuffer.Canvas.ClipRect,
-      BackupBuffer.Canvas, BackupBuffer.Canvas.ClipRect);
+    FrameBuffer.Canvas.CopyRect(FrameBuffer.Canvas.ClipRect, BackupBuffer.Canvas, BackupBuffer.Canvas.ClipRect);
 
   // Step 4: Draw frame
   if (DrawDestination <> nil) then
-    FImage.Images[ActiveImage].Draw(DrawDestination, DrawRect,
-      (goTransparent in FDrawOptions), (goTile in FDrawOptions));
+    FImage.Images[ActiveImage].Draw(DrawDestination, DrawRect, (goTransparent in FDrawOptions), (goTile in FDrawOptions));
 
   // Step 5: Copy buffer to destination
-  if (DoStep5) then
-  begin
+  if (DoStep5) then begin
     FCanvas.CopyMode := cmSrcCopy;
     FCanvas.CopyRect(FRect, DrawDestination, DrawRect);
   end;
@@ -10256,60 +10050,55 @@ Step 6: Clear frame from backup buffer
 
   // Step 6: Clear frame from backup buffer
   if (DoStep6) then
-   ClearBackup;
+    ClearBackup;
 
   FStarted := True;
 end;
 
 // Prefetch bitmap
 // Used to force the GIF image to be rendered as a bitmap
-{$ifdef SERIALIZE_RENDER}
+{$IFDEF SERIALIZE_RENDER}
+
 procedure TGIFPainter.PrefetchBitmap;
 begin
   // Touch current bitmap to force bitmap to be rendered
   if not((FImage.Images[ActiveImage].Empty) or (FImage.Images[ActiveImage].HasBitmap)) then
     FImage.Images[ActiveImage].Bitmap;
 end;
-{$endif}
+{$ENDIF}
 
 // Main thread execution loop - This is where it all happens...
 procedure TGIFPainter.Execute;
 var
-  i			: integer;
-  LoopCount		,
-  LoopPoint		: integer;
-  Looping		: boolean;
-  Ext			: TGIFExtension;
-  Msg			: TMsg;
-  Delay			,
-  OldDelay		,
-  DelayUsed		: longInt;
-  DelayStart		,
-  NewDelayStart		: DWORD;
+  i: integer;
+  LoopCount, LoopPoint: integer;
+  Looping: Boolean;
+  Ext: TGIFExtension;
+  Msg: TMsg;
+  Delay, OldDelay, DelayUsed: longInt;
+  DelayStart, NewDelayStart: DWORD;
 
   procedure FireEvent(Event: TNotifyEvent);
   begin
     if not(Assigned(Event)) then
       exit;
     FEvent := Event;
-    try
-      DoSynchronize(DoEvent);
-    finally
-      FEvent := nil;
+    try DoSynchronize(DoEvent);
+    finally FEvent := nil;
     end;
   end;
 
 begin
-{
-  Disposal:
+  {
+    Disposal:
     dmNone: Same as dmNodisposal
     dmNoDisposal: Do not dispose
     dmBackground: Clear with background color *)
     dmPrevious: Previous image
     *) Note: Background color should either be a BROWSER SPECIFIED Background
-       color (DrawBackgroundColor) or the background image if any frames are
-       transparent.
-}
+    color (DrawBackgroundColor) or the background image if any frames are
+    transparent.
+  }
   try
     try
       if (goValidateCanvas in FDrawOptions) then
@@ -10317,8 +10106,7 @@ begin
       DoRestart := True;
 
       // Loop to restart paint
-      while (DoRestart) and not(Terminated) do
-      begin
+      while (DoRestart) and not(Terminated) do begin
         FActiveImage := 0;
         // Fire OnStartPaint event
         // Note: ActiveImage may be altered by the event handler
@@ -10339,9 +10127,7 @@ begin
         OldDelay := 0;
 
         // Loop to loop - duh!
-        while ((LoopCount <> 0) or (goLoopContinously in DrawOptions)) and
-          not(Terminated or DoRestart) do
-        begin
+        while ((LoopCount <> 0) or (goLoopContinously in DrawOptions)) and not(Terminated or DoRestart) do begin
           FActiveImage := LoopPoint;
 
           // Fire OnLoopPaint event
@@ -10350,30 +10136,26 @@ begin
             FireEvent(FOnLoop);
 
           // Loop to animate
-          while (ActiveImage < FImage.Images.Count) and not(Terminated or DoRestart) do
-          begin
+          while (ActiveImage < FImage.Images.Count) and not(Terminated or DoRestart) do begin
             // Ignore empty images
             if (FImage.Images[ActiveImage].Empty) then
               break;
             // Delay from previous image
-            if (Delay > 0) then
-            begin
+            if (Delay > 0) then begin
               // Prefetch frame bitmap
-{$ifdef SERIALIZE_RENDER}
+{$IFDEF SERIALIZE_RENDER}
               DoSynchronize(PrefetchBitmap);
-{$else}
+{$ELSE}
               FImage.Images[ActiveImage].Bitmap;
-{$endif}
-
+{$ENDIF}
               // Calculate inter frame delay
               NewDelayStart := timeGetTime;
-              if (FAnimationSpeed > 0) then
-              begin
+              if (FAnimationSpeed > 0) then begin
                 // Calculate number of mS used in prefetch and display
                 try
-                  DelayUsed := integer(NewDelayStart-DelayStart)-OldDelay;
+                  DelayUsed := integer(NewDelayStart - DelayStart) - OldDelay;
                   // Prevent feedback oscillations caused by over/undercompensation.
-                  DelayUsed := DelayUsed DIV 2;
+                  DelayUsed := DelayUsed div 2;
                   // Convert delay value to mS and...
                   // ...Adjust for time already spent converting GIF to bitmap and...
                   // ...Adjust for Animation Speed factor.
@@ -10383,8 +10165,7 @@ begin
                   Delay := GIFMaximumDelay * GIFDelayExp;
                   OldDelay := 0;
                 end;
-              end else
-              begin
+              end else begin
                 if (goAsync in DrawOptions) then
                   Delay := longInt(INFINITE)
                 else
@@ -10394,13 +10175,10 @@ begin
               DelayStart := NewDelayStart;
 
               // Sleep in one chunk if we are running in a thread
-              if (goAsync in DrawOptions) then
-              begin
+              if (goAsync in DrawOptions) then begin
                 // Use of WaitForSingleObject allows TGIFPainter.Stop to wake us up
-                if (Delay > 0) or (FAnimationSpeed = 0) then
-                begin
-                  if (WaitForSingleObject(FEventHandle, DWORD(Delay)) <> WAIT_TIMEOUT) then
-                  begin
+                if (Delay > 0) or (FAnimationSpeed = 0) then begin
+                  if (WaitForSingleObject(FEventHandle, DWORD(Delay)) <> WAIT_TIMEOUT) then begin
                     // Don't use interframe delay feedback adjustment if delay
                     // were prematurely aborted (e.g. because the animation
                     // speed were changed)
@@ -10408,35 +10186,29 @@ begin
                     DelayStart := longInt(timeGetTime);
                   end;
                 end;
-              end else
-              begin
+              end else begin
                 if (Delay <= 0) then
                   Delay := 1;
                 // Fetch start time
                 NewDelayStart := timeGetTime;
                 // If we are not running in a thread we Sleep in small chunks
                 // and give the user a chance to abort
-                while (Delay > 0) and not(Terminated or DoRestart) do
-                begin
+                while (Delay > 0) and not(Terminated or DoRestart) do begin
                   if (Delay < 100) then
                     Sleep(Delay)
                   else
                     Sleep(100);
                   // Calculate number of mS delayed in this chunk
                   DelayUsed := integer(timeGetTime - NewDelayStart);
-                  dec(Delay, DelayUsed);
+                  Dec(Delay, DelayUsed);
                   // Reset start time for chunk
-                  NewDelaySTart := timeGetTime;
+                  NewDelayStart := timeGetTime;
                   // Application.ProcessMessages wannabe
-                  while (not(Terminated or DoRestart)) and
-                    (PeekMessage(Msg, 0, 0, 0, PM_REMOVE)) do
-                  begin
-                    if (Msg.Message <> WM_QUIT) then
-                    begin
+                  while (not(Terminated or DoRestart)) and (PeekMessage(Msg, 0, 0, 0, PM_REMOVE)) do begin
+                    if (Msg.Message <> WM_QUIT) then begin
                       TranslateMessage(Msg);
                       DispatchMessage(Msg);
-                    end else
-                    begin
+                    end else begin
                       // Put WM_QUIT back in queue and get out of here fast
                       PostQuitMessage(Msg.WParam);
                       Terminate;
@@ -10444,7 +10216,8 @@ begin
                   end;
                 end;
               end;
-            end else
+            end
+            else
               Sleep(0); // Yield
             if (Terminated) then
               break;
@@ -10457,26 +10230,22 @@ begin
 
             // Pre-draw processing of extensions
             Disposal := dmNoDisposal;
-            for i := 0 to FImage.Images[ActiveImage].Extensions.Count-1 do
-            begin
+            for i := 0 to FImage.Images[ActiveImage].Extensions.Count - 1 do begin
               Ext := FImage.Images[ActiveImage].Extensions[i];
-              if (Ext is TGIFAppExtNSLoop) then
-              begin
+              if (Ext is TGIFAppExtNSLoop) then begin
                 // Recursive loops not supported (or defined)
                 if (Looping) then
                   continue;
                 Looping := True;
                 LoopCount := TGIFAppExtNSLoop(Ext).Loops;
-                if ((LoopCount = 0) or (goLoopContinously in DrawOptions)) and
-                  (goAsync in DrawOptions) then
+                if ((LoopCount = 0) or (goLoopContinously in DrawOptions)) and (goAsync in DrawOptions) then
                   LoopCount := -1; // Infinite if running in separate thread
 {$IFNDEF STRICT_MOZILLA}
                 // Loop from this image and on
                 // Note: This is not standard behavior
                 LoopPoint := ActiveImage;
 {$ENDIF}
-              end else
-              if (Ext is TGIFGraphicControlExtension) then
+              end else if (Ext is TGIFGraphicControlExtension) then
                 Disposal := TGIFGraphicControlExtension(Ext).Disposal;
             end;
 
@@ -10493,8 +10262,7 @@ begin
             Delay := GIFDefaultDelay; // Default delay
             // Post-draw processing of extensions
             if (FImage.Images[ActiveImage].GraphicControlExtension <> nil) then
-              if (FImage.Images[ActiveImage].GraphicControlExtension.Delay > 0) then
-              begin
+              if (FImage.Images[ActiveImage].GraphicControlExtension.Delay > 0) then begin
                 Delay := FImage.Images[ActiveImage].GraphicControlExtension.Delay;
 
                 // Enforce minimum animation delay in compliance with Mozilla
@@ -10514,7 +10282,7 @@ begin
             // Don't increment frame counter if event handler modified
             // current frame
             if (FActiveImage = i) then
-              Inc(FActiveImage);
+              inc(FActiveImage);
             // Nothing more to do unless we are animating
             if not(goAnimate in DrawOptions) then
               break;
@@ -10525,6 +10293,8 @@ begin
           if ([goAnimate, goLoop] * DrawOptions <> [goAnimate, goLoop]) then
             break;
         end;
+        if (Terminated) then // 2001.07.23
+          break; // 2001.07.23
       end;
       FActiveImage := -1;
       // Fire OnEndPaint event
@@ -10535,8 +10305,7 @@ begin
         Free;
     end;
   except
-    on E: Exception do
-    begin
+    on E: Exception do begin
       // Eat exception and terminate thread...
       // If we allow the exception to abort the thread at this point, the
       // application will hang since the thread destructor will never be called
@@ -10558,8 +10327,7 @@ end;
 procedure TGIFPainter.Stop;
 begin
   Terminate;
-  if (goAsync in FDrawOptions) then
-  begin
+  if (goAsync in FDrawOptions) then begin
     // Signal WaitForSingleObject delay to abort
     if (FEventHandle <> 0) then
       SetEvent(FEventHandle);
@@ -10576,11 +10344,11 @@ begin
     Resume; // Must be running before we can terminate
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TColorMapOptimizer
+// TColorMapOptimizer
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 // Used by TGIFImage to optimize local color maps to a single global color map.
 // The following algorithm is used:
 // 1) Build a histogram for each image
@@ -10589,41 +10357,45 @@ end;
 // 4) Map entries > max to entries <= 256
 // 5) Build new color map
 // 6) Map images to new color map
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 
 type
 
-  POptimizeEntry	= ^TOptimizeEntry;
+  POptimizeEntry = ^TOptimizeEntry;
+
   TColorRec = record
-  case byte of
-    0: (Value: integer);
-    1: (Color: TGIFColor);
-    2: (SameAs: POptimizeEntry); // Used if TOptimizeEntry.Count = 0
+    case Byte of
+      0:
+        (Value: integer);
+      1:
+        (Color: TGIFColor);
+      2:
+        (SameAs: POptimizeEntry); // Used if TOptimizeEntry.Count = 0
   end;
 
   TOptimizeEntry = record
-    Count		: integer;	// Usage count
-    OldIndex		: integer;	// Color OldIndex
-    NewIndex		: integer;	// NewIndex color OldIndex
-    Color		: TColorRec;	// Color value
+    Count: integer; // Usage count
+    OldIndex: integer; // Color OldIndex
+    NewIndex: integer; // NewIndex color OldIndex
+    Color: TColorRec; // Color value
   end;
 
-  TOptimizeEntries	= array[0..255] of TOptimizeEntry;
-  POptimizeEntries	= ^TOptimizeEntries;
+  TOptimizeEntries = array [0 .. 255] of TOptimizeEntry;
+  POptimizeEntries = ^TOptimizeEntries;
 
   THistogram = class(TObject)
   private
-    PHistogram		: POptimizeEntries;
-    FCount		: integer;
-    FColorMap		: TGIFColorMap;
-    FList		: TList;
-    FImages		: TList;
+    PHistogram: POptimizeEntries;
+    FCount: integer;
+    FColorMap: TGIFColorMap;
+    FList: TList;
+    FImages: TList;
   public
     constructor Create(AColorMap: TGIFColorMap);
     destructor Destroy; override;
-    function ProcessSubImage(Image: TGIFSubImage): boolean;
+    function ProcessSubImage(Image: TGIFSubImage): Boolean;
     function Prune: integer;
-    procedure MapImages(UseTransparency: boolean; NewTransparentColorIndex: byte);
+    procedure MapImages(UseTransparency: Boolean; NewTransparentColorIndex: Byte);
     property Count: integer read FCount;
     property ColorMap: TGIFColorMap read FColorMap;
     property List: TList read FList;
@@ -10631,13 +10403,13 @@ type
 
   TColorMapOptimizer = class(TObject)
   private
-    FImage		: TGIFImage;
-    FHistogramList	: TList;
-    FHistogram		: TList;
-    FColorMap		: TColorMap;
-    FFinalCount		: integer;
-    FUseTransparency	: boolean;
-    FNewTransparentColorIndex: byte;
+    FImage: TGIFImage;
+    FHistogramList: TList;
+    FHistogram: TList;
+    FColorMap: TColorMap;
+    FFinalCount: integer;
+    FUseTransparency: Boolean;
+    FNewTransparentColorIndex: Byte;
   protected
     procedure ProcessImage;
     procedure MergeColors;
@@ -10661,7 +10433,7 @@ end;
 
 constructor THistogram.Create(AColorMap: TGIFColorMap);
 var
-  i			: integer;
+  i: integer;
 begin
   inherited Create;
 
@@ -10671,15 +10443,14 @@ begin
   FImages := TList.Create;
 
   // Allocate memory for histogram
-  GetMem(PHistogram, FCount * sizeof(TOptimizeEntry));
+  GetMem(PHistogram, FCount * SizeOf(TOptimizeEntry));
   FList := TList.Create;
 
   FList.Capacity := FCount;
 
   // Move data to histogram and initialize
-  for i := 0 to FCount-1 do
-    with PHistogram^[i] do
-    begin
+  for i := 0 to FCount - 1 do
+    with PHistogram^[i] do begin
       FList.Add(@PHistogram^[i]);
       OldIndex := i;
       Count := 0;
@@ -10697,14 +10468,13 @@ begin
   inherited Destroy;
 end;
 
-//: Build a color histogram
-function THistogram.ProcessSubImage(Image: TGIFSubImage): boolean;
+// : Build a color histogram
+function THistogram.ProcessSubImage(Image: TGIFSubImage): Boolean;
 var
-  Size			: integer;
-  Pixel			: PChar;
-  IsTransparent		,
-  WasTransparent	: boolean;
-  OldTransparentColorIndex: byte;
+  Size: integer;
+  Pixel: PAnsiChar;
+  IsTransparent, WasTransparent: Boolean;
+  OldTransparentColorIndex: Byte;
 begin
   Result := False;
   if (Image.Empty) then
@@ -10712,7 +10482,7 @@ begin
 
   FImages.Add(Image);
 
-  Pixel := Image.data;
+  Pixel := Image.Data;
   Size := Image.Width * Image.Height;
 
   IsTransparent := Image.Transparent;
@@ -10723,39 +10493,35 @@ begin
   WasTransparent := False;
 
   (*
-  ** Sum up usage count for each color
+    ** Sum up usage count for each color
   *)
-  while (Size > 0) do
-  begin
+  while (Size > 0) do begin
     // Ignore transparent pixels
-    if (not IsTransparent) or (ord(Pixel^) <> OldTransparentColorIndex) then
-    begin
+    if (not IsTransparent) or (Ord(Pixel^) <> OldTransparentColorIndex) then begin
       // Check for invalid color index
-      if (ord(Pixel^) >= FCount) then
-      begin
+      if (Ord(Pixel^) >= FCount) then begin
         Pixel^ := #0; // ***FIXME*** Isn't this an error condition?
         Image.Warning(gsWarning, sInvalidColor);
       end;
 
-      with PHistogram^[ord(Pixel^)] do
-      begin
+      with PHistogram^[Ord(Pixel^)] do begin
         // Stop if any color reaches the max count
         if (Count = high(integer)) then
           break;
         inc(Count);
       end;
-    end else
+    end
+    else
       WasTransparent := WasTransparent or IsTransparent;
     inc(Pixel);
-    dec(Size);
+    Dec(Size);
   end;
 
   (*
-  ** Clear frames transparency flag if the frame claimed to
-  ** be transparent, but wasn't
+    ** Clear frames transparency flag if the frame claimed to
+    ** be transparent, but wasn't
   *)
-  if (IsTransparent and not WasTransparent) then
-  begin
+  if (IsTransparent and not WasTransparent) then begin
     Image.GraphicControlExtension.TransparentColorIndex := 0;
     Image.GraphicControlExtension.Transparent := False;
   end;
@@ -10763,25 +10529,24 @@ begin
   Result := WasTransparent;
 end;
 
-//: Removed unused color entries from the histogram
+// : Removed unused color entries from the histogram
 function THistogram.Prune: integer;
 var
-  i, j			: integer;
+  i, j: integer;
 begin
   (*
-  **  Sort by usage count
+    **  Sort by usage count
   *)
   FList.Sort(CompareCount);
 
   (*
-  **  Determine number of used colors
+    **  Determine number of used colors
   *)
-  for i := 0 to FCount-1 do
+  for i := 0 to FCount - 1 do
     // Find first unused color entry
-    if (POptimizeEntry(FList[i])^.Count = 0) then
-    begin
+    if (POptimizeEntry(FList[i])^.Count = 0) then begin
       // Zap unused colors
-      for j := i to FCount-1 do
+      for j := i to FCount - 1 do
         POptimizeEntry(FList[j])^.Count := -1; // Use -1 to signal unused entry
       // Remove unused entries
       FCount := i;
@@ -10792,51 +10557,49 @@ begin
   Result := FCount;
 end;
 
-//: Convert images from old color map to new color map
-procedure THistogram.MapImages(UseTransparency: boolean; NewTransparentColorIndex: byte);
+// : Convert images from old color map to new color map
+procedure THistogram.MapImages(UseTransparency: Boolean; NewTransparentColorIndex: Byte);
 var
-  i			: integer;
-  Size			: integer;
-  Pixel			: PChar;
-  ReverseMap		: array[byte] of byte;
-  IsTransparent		: boolean;
-  OldTransparentColorIndex: byte;
+  i: integer;
+  Size: integer;
+  Pixel: PAnsiChar;
+  ReverseMap: array [Byte] of Byte;
+  IsTransparent: Boolean;
+  OldTransparentColorIndex: Byte;
 begin
   (*
-  ** Build NewIndex map
+    ** Build NewIndex map
   *)
-  for i := 0 to List.Count-1 do
+  for i := 0 to List.Count - 1 do
     ReverseMap[POptimizeEntry(List[i])^.OldIndex] := POptimizeEntry(List[i])^.NewIndex;
 
   (*
-  **  Reorder all images using this color map
+    **  Reorder all images using this color map
   *)
-  for i := 0 to FImages.Count-1 do
-    with TGIFSubImage(FImages[i]) do
-    begin
+  for i := 0 to FImages.Count - 1 do
+    with TGIFSubImage(FImages[i]) do begin
       Pixel := Data;
       Size := Width * Height;
 
       // Determine frame transparency
       IsTransparent := (Transparent) and (UseTransparency);
-      if (IsTransparent) then
-      begin
+      if (IsTransparent) then begin
         OldTransparentColorIndex := GraphicControlExtension.TransparentColorIndex;
         // Map transparent color
         GraphicControlExtension.TransparentColorIndex := NewTransparentColorIndex;
-      end else
+      end
+      else
         OldTransparentColorIndex := 0; // To avoid compiler warning
 
       // Map all pixels to new color map
-      while (Size > 0) do
-      begin
+      while (Size > 0) do begin
         // Map transparent pixels to the new transparent color index and...
-        if (IsTransparent) and (ord(Pixel^) = OldTransparentColorIndex) then
-          Pixel^ := char(NewTransparentColorIndex)
+        if (IsTransparent) and (Ord(Pixel^) = OldTransparentColorIndex) then
+          Pixel^ := AnsiChar(NewTransparentColorIndex)
         else
           // ... all other pixels to their new color index
-          Pixel^ := char(ReverseMap[ord(Pixel^)]);
-        dec(size);
+          Pixel^ := AnsiChar(ReverseMap[Ord(Pixel^)]);
+        Dec(Size);
         inc(Pixel);
       end;
     end;
@@ -10852,11 +10615,11 @@ end;
 
 destructor TColorMapOptimizer.Destroy;
 var
-  i			: integer;
+  i: integer;
 begin
   FHistogram.Free;
 
-  for i := FHistogramList.Count-1 downto 0 do
+  for i := FHistogramList.Count - 1 downto 0 do
     THistogram(FHistogramList[i]).Free;
   FHistogramList.Free;
 
@@ -10865,24 +10628,22 @@ end;
 
 procedure TColorMapOptimizer.ProcessImage;
 var
-  Hist			: THistogram;
-  i			: integer;
-  ProcessedImage	: boolean;
+  Hist: THistogram;
+  i: integer;
+  ProcessedImage: Boolean;
 begin
   FUseTransparency := False;
   (*
-  ** First process images using global color map
+    ** First process images using global color map
   *)
-  if (FImage.GlobalColorMap.Count > 0) then
-  begin
+  if (FImage.GlobalColorMap.Count > 0) then begin
     Hist := THistogram.Create(FImage.GlobalColorMap);
     ProcessedImage := False;
     // Process all images that are using the global color map
-    for i := 0 to FImage.Images.Count-1 do
-      if (FImage.Images[i].ColorMap.Count = 0) and (not FImage.Images[i].Empty) then
-      begin
+    for i := 0 to FImage.Images.Count - 1 do
+      if (FImage.Images[i].ColorMap.Count = 0) and (not FImage.Images[i].Empty) then begin
         ProcessedImage := True;
-      // Note: Do not change order of statements. Shortcircuit evaluation not desired!
+        // Note: Do not change order of statements. Shortcircuit evaluation not desired!
         FUseTransparency := Hist.ProcessSubImage(FImage.Images[i]) or FUseTransparency;
       end;
     // Keep the histogram if any images used the global color map...
@@ -10893,11 +10654,10 @@ begin
   end;
 
   (*
-  ** Next process images that have a local color map
+    ** Next process images that have a local color map
   *)
-  for i := 0 to FImage.Images.Count-1 do
-    if (FImage.Images[i].ColorMap.Count > 0) and (not FImage.Images[i].Empty) then
-    begin
+  for i := 0 to FImage.Images.Count - 1 do
+    if (FImage.Images[i].ColorMap.Count > 0) and (not FImage.Images[i].Empty) then begin
       Hist := THistogram.Create(FImage.Images[i].ColorMap);
       FHistogramList.Add(Hist);
       // Note: Do not change order of statements. Shortcircuit evaluation not desired!
@@ -10907,47 +10667,46 @@ end;
 
 procedure TColorMapOptimizer.MergeColors;
 var
-  Entry, SameEntry	: POptimizeEntry;
-  i			: integer;
+  Entry, SameEntry: POptimizeEntry;
+  i: integer;
 begin
   (*
-  **  Sort by color value
+    **  Sort by color value
   *)
   FHistogram.Sort(CompareColor);
 
   (*
-  **  Merge same colors
+    **  Merge same colors
   *)
   SameEntry := POptimizeEntry(FHistogram[0]);
-  for i := 1 to FHistogram.Count-1 do
-  begin
+  for i := 1 to FHistogram.Count - 1 do begin
     Entry := POptimizeEntry(FHistogram[i]);
     ASSERT(Entry^.Count > 0, 'Unused entry exported from THistogram');
-    if (Entry^.Color.Value = SameEntry^.Color.Value) then
-    begin
+    if (Entry^.Color.Value = SameEntry^.Color.Value) then begin
       // Transfer usage count to first entry
       inc(SameEntry^.Count, Entry^.Count);
       Entry^.Count := 0; // Use 0 to signal merged entry
       Entry^.Color.SameAs := SameEntry; // Point to master
-    end else
+    end
+    else
       SameEntry := Entry;
   end;
 end;
 
 procedure TColorMapOptimizer.MapColors;
 var
-  i, j			: integer;
-  Delta, BestDelta	: integer;
-  BestIndex		: integer;
-  MaxColors		: integer;
+  i, j: integer;
+  Delta, BestDelta: integer;
+  BestIndex: integer;
+  MaxColors: integer;
 begin
   (*
-  **  Sort by usage count
+    **  Sort by usage count
   *)
   FHistogram.Sort(CompareCount);
 
   (*
-  ** Handle transparency
+    ** Handle transparency
   *)
   if (FUseTransparency) then
     MaxColors := 255
@@ -10955,51 +10714,44 @@ begin
     MaxColors := 256;
 
   (*
-  **  Determine number of colors used (max 256)
+    **  Determine number of colors used (max 256)
   *)
   FFinalCount := FHistogram.Count;
-  for i := 0 to FFinalCount-1 do
-    if (i >= MaxColors) or (POptimizeEntry(FHistogram[i])^.Count = 0) then
-    begin
+  for i := 0 to FFinalCount - 1 do
+    if (i >= MaxColors) or (POptimizeEntry(FHistogram[i])^.Count = 0) then begin
       FFinalCount := i;
       break;
     end;
 
   (*
-  **  Build color map and reverse map for final entries
+    **  Build color map and reverse map for final entries
   *)
-  for i := 0 to FFinalCount-1 do
-  begin
+  for i := 0 to FFinalCount - 1 do begin
     POptimizeEntry(FHistogram[i])^.NewIndex := i;
     FColorMap[i] := POptimizeEntry(FHistogram[i])^.Color.Color;
   end;
 
   (*
-  **  Map colors > 256 to colors <= 256 and build NewIndex color map
+    **  Map colors > 256 to colors <= 256 and build NewIndex color map
   *)
-  for i := FFinalCount to FHistogram.Count-1 do
-    with POptimizeEntry(FHistogram[i])^ do
-    begin
+  for i := FFinalCount to FHistogram.Count - 1 do
+    with POptimizeEntry(FHistogram[i])^ do begin
       // Entries with a usage count of -1 is unused
       ASSERT(Count <> -1, 'Internal error: Unused entry exported');
       // Entries with a usage count of 0 has been merged with another entry
-      if (Count = 0) then
-      begin
+      if (Count = 0) then begin
         // Use mapping of master entry
         ASSERT(Color.SameAs.NewIndex < 256, 'Internal error: Mapping to unmapped color');
         NewIndex := Color.SameAs.NewIndex;
-      end else
-      begin
+      end else begin
         // Search for entry with nearest color value
         BestIndex := 0;
-        BestDelta := 255*3;
-        for j := 0 to FFinalCount-1 do
-        begin
-          Delta := ABS((POptimizeEntry(FHistogram[j])^.Color.Color.Red - Color.Color.Red) +
+        BestDelta := 255 * 3;
+        for j := 0 to FFinalCount - 1 do begin
+          Delta := abs((POptimizeEntry(FHistogram[j])^.Color.Color.Red - Color.Color.Red) +
             (POptimizeEntry(FHistogram[j])^.Color.Color.Green - Color.Color.Green) +
             (POptimizeEntry(FHistogram[j])^.Color.Color.Blue - Color.Color.Blue));
-          if (Delta < BestDelta) then
-          begin
+          if (Delta < BestDelta) then begin
             BestDelta := Delta;
             BestIndex := j;
           end;
@@ -11009,10 +10761,9 @@ begin
     end;
 
   (*
-  ** Add transparency color to new color map
+    ** Add transparency color to new color map
   *)
-  if (FUseTransparency) then
-  begin
+  if (FUseTransparency) then begin
     FNewTransparentColorIndex := FFinalCount;
     FColorMap[FFinalCount].Red := 0;
     FColorMap[FFinalCount].Green := 0;
@@ -11023,10 +10774,10 @@ end;
 
 procedure TColorMapOptimizer.ReplaceColorMaps;
 var
-  i			: integer;
+  i: integer;
 begin
   // Zap all local color maps
-  for i := 0 to FImage.Images.Count-1 do
+  for i := 0 to FImage.Images.Count - 1 do
     if (FImage.Images[i].ColorMap <> nil) then
       FImage.Images[i].ColorMap.Clear;
   // Store optimized global color map
@@ -11036,8 +10787,8 @@ end;
 
 procedure TColorMapOptimizer.Optimize;
 var
-  Total			: integer;
-  i, j			: integer;
+  Total: integer;
+  i, j: integer;
 begin
   // Stop all painters during optimize...
   FImage.PaintStop;
@@ -11046,13 +10797,13 @@ begin
   try
 
     (*
-    **  Process all sub images
+      **  Process all sub images
     *)
     ProcessImage;
 
     // Prune histograms and calculate total number of colors
     Total := 0;
-    for i := 0 to FHistogramList.Count-1 do
+    for i := 0 to FHistogramList.Count - 1 do
       inc(Total, THistogram(FHistogramList[i]).Prune);
 
     // Allocate global histogram
@@ -11060,54 +10811,51 @@ begin
     FHistogram.Capacity := Total;
 
     // Move data pointers from local histograms to global histogram
-    for i := 0 to FHistogramList.Count-1 do
+    for i := 0 to FHistogramList.Count - 1 do
       with THistogram(FHistogramList[i]) do
-        for j := 0 to Count-1 do
-        begin
+        for j := 0 to Count - 1 do begin
           ASSERT(POptimizeEntry(List[j])^.Count > 0, 'Unused entry exported from THistogram');
           FHistogram.Add(List[j]);
         end;
 
     (*
-    **  Merge same colors
+      **  Merge same colors
     *)
     MergeColors;
 
     (*
-    **  Build color map and NewIndex map for final entries
+      **  Build color map and NewIndex map for final entries
     *)
     MapColors;
 
     (*
-    **  Replace local colormaps with global color map
+      **  Replace local colormaps with global color map
     *)
     ReplaceColorMaps;
 
     (*
-    **  Process images for each color map
+      **  Process images for each color map
     *)
-    for i := 0 to FHistogramList.Count-1 do
+    for i := 0 to FHistogramList.Count - 1 do
       THistogram(FHistogramList[i]).MapImages(FUseTransparency, FNewTransparentColorIndex);
 
     (*
-    **  Delete the frame's old bitmaps and palettes
+      **  Delete the frame's old bitmaps and palettes
     *)
-    for i := 0 to FImage.Images.Count-1 do
-    begin
+    for i := 0 to FImage.Images.Count - 1 do begin
       FImage.Images[i].HasBitmap := False;
       FImage.Images[i].Palette := 0;
     end;
 
-  finally
-    FImage.Painters.UnlockList;
+  finally FImage.Painters.UnlockList;
   end;
 end;
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			TGIFImage
+// TGIFImage
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 constructor TGIFImage.Create;
 begin
   inherited Create;
@@ -11127,20 +10875,20 @@ begin
   FDrawBackgroundColor := clNone;
   IsDrawing := False;
   IsInsideGetPalette := False;
+  FForceFrame := -1; // 2004.03.09
   NewImage;
 end;
 
 destructor TGIFImage.Destroy;
 var
-  i			: integer;
+  i: integer;
 begin
   PaintStop;
   with FPainters.LockList do
     try
-      for i := Count-1 downto 0 do
+      for i := Count - 1 downto 0 do
         TGIFPainter(Items[i]).FImage := nil;
-    finally
-      FPainters.UnLockList;
+    finally FPainters.UnlockList;
     end;
 
   Clear;
@@ -11169,12 +10917,11 @@ end;
 
 function TGIFImage.GetVersion: TGIFVersion;
 var
-  v			: TGIFVersion;
-  i			: integer;
+  v: TGIFVersion;
+  i: integer;
 begin
   Result := gvUnknown;
-  for i := 0 to FImages.Count-1 do
-  begin
+  for i := 0 to FImages.Count - 1 do begin
     v := FImages[i].Version;
     if (v > Result) then
       Result := v;
@@ -11185,30 +10932,30 @@ end;
 
 function TGIFImage.GetColorResolution: integer;
 var
-  i			: integer;
+  i: integer;
 begin
   Result := FHeader.ColorResolution;
-  for i := 0 to FImages.Count-1 do
+  for i := 0 to FImages.Count - 1 do
     if (FImages[i].ColorResolution > Result) then
       Result := FImages[i].ColorResolution;
 end;
 
 function TGIFImage.GetBitsPerPixel: integer;
 var
-  i			: integer;
+  i: integer;
 begin
   Result := FHeader.BitsPerPixel;
-  for i := 0 to FImages.Count-1 do
+  for i := 0 to FImages.Count - 1 do
     if (FImages[i].BitsPerPixel > Result) then
       Result := FImages[i].BitsPerPixel;
 end;
 
-function TGIFImage.GetBackgroundColorIndex: BYTE;
+function TGIFImage.GetBackgroundColorIndex: Byte;
 begin
   Result := FHeader.BackgroundColorIndex;
 end;
 
-procedure TGIFImage.SetBackgroundColorIndex(const Value: BYTE);
+procedure TGIFImage.SetBackgroundColorIndex(const Value: Byte);
 begin
   FHeader.BackgroundColorIndex := Value;
 end;
@@ -11223,12 +10970,12 @@ begin
   FHeader.BackgroundColor := Value;
 end;
 
-function TGIFImage.GetAspectRatio: BYTE;
+function TGIFImage.GetAspectRatio: Byte;
 begin
   Result := FHeader.AspectRatio;
 end;
 
-procedure TGIFImage.SetAspectRatio(const Value: BYTE);
+procedure TGIFImage.SetAspectRatio(const Value: Byte);
 begin
   FHeader.AspectRatio := Value;
 end;
@@ -11247,14 +10994,32 @@ begin
   Changed(self);
 end;
 
+function TGIFImage.GetAnimate: Boolean;
+begin // 2002.07.07
+  Result := goAnimate in DrawOptions;
+end;
+
+procedure TGIFImage.SetAnimate(const Value: Boolean);
+begin // 2002.07.07
+  if Value then
+    DrawOptions := DrawOptions + [goAnimate]
+  else
+    DrawOptions := DrawOptions - [goAnimate];
+end;
+
+procedure TGIFImage.SetForceFrame(const Value: integer);
+begin // 2004.03.09
+  FForceFrame := Value;
+  Changed(self);
+end;
+
 procedure TGIFImage.SetAnimationSpeed(Value: integer);
 begin
   if (Value < 0) then
     Value := 0
   else if (Value > 1000) then
     Value := 1000;
-  if (Value <> FAnimationSpeed) then
-  begin
+  if (Value <> FAnimationSpeed) then begin
     FAnimationSpeed := Value;
     // Use the FPainters threadlist to protect FDrawPainter from being modified
     // by the thread while we mess with it
@@ -11264,7 +11029,7 @@ begin
           FDrawPainter.AnimationSpeed := FAnimationSpeed;
       finally
         // Release the lock on FPainters to let paint thread kill itself
-        FPainters.UnLockList;
+          FPainters.UnlockList;
       end;
   end;
 end;
@@ -11278,31 +11043,24 @@ end;
 
 procedure TGIFImage.OptimizeColorMap;
 var
-  ColorMapOptimizer	: TColorMapOptimizer;
+  ColorMapOptimizer: TColorMapOptimizer;
 begin
   ColorMapOptimizer := TColorMapOptimizer.Create(self);
-  try
-    ColorMapOptimizer.Optimize;
-  finally
-    ColorMapOptimizer.Free;
+  try ColorMapOptimizer.Optimize;
+  finally ColorMapOptimizer.Free;
   end;
 end;
 
-procedure TGIFImage.Optimize(Options: TGIFOptimizeOptions;
-  ColorReduction: TColorReduction; DitherMode: TDitherMode;
+procedure TGIFImage.Optimize(Options: TGIFOptimizeOptions; ColorReduction: TColorReduction; DitherMode: TDitherMode;
   ReductionBits: integer);
 var
-  i			,
-  j			: integer;
-  Delay			: integer;
-  GCE			: TGIFGraphicControlExtension;
-  ThisRect		,
-  NextRect		,
-  MergeRect		: TRect;
-  Prog			,
-  MaxProg		: integer;
+  i, j: integer;
+  Delay: integer;
+  GCE: TGIFGraphicControlExtension;
+  ThisRect, NextRect, MergeRect: TRect;
+  Prog, MaxProg: integer;
 
-  function Scan(Buf: PChar; Value: Byte; Count: integer): boolean; assembler;
+  function Scan(Buf: PAnsiChar; Value: Byte; Count: integer): Boolean; assembler;
   asm
     PUSH	EDI
     MOV		EDI, Buf
@@ -11312,202 +11070,171 @@ var
     MOV		EAX, False
     JNE		@@1
     MOV		EAX, True
-@@1:POP		EDI
+  @@1:POP		EDI
   end;
 
-begin
-  if (Empty) then
-    exit;
-  // Stop all painters during optimize...
-  PaintStop;
-  // ...and prevent any new from starting while we are doing our thing
-  FPainters.LockList;
-  try
-    Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressOptimizing);
+  begin
+    if (Empty) then
+      exit;
+    // Stop all painters during optimize...
+    PaintStop;
+    // ...and prevent any new from starting while we are doing our thing
+    FPainters.LockList;
     try
+      Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressOptimizing);
+      try
 
-      Prog := 0;
-      MaxProg := Images.Count*6;
+        Prog := 0;
+        MaxProg := Images.Count * 6;
 
-      // Sort color map by usage and remove unused entries
-      if (ooColorMap in Options) then
-      begin
-        // Optimize global color map
-        if (GlobalColorMap.Count > 0) then
-          GlobalColorMap.Optimize;
-        // Optimize local color maps
-        for i := 0 to Images.Count-1 do
-        begin
-          inc(Prog);
-          if (Images[i].ColorMap.Count > 0) then
-          begin
-            Images[i].ColorMap.Optimize;
-            Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-              Rect(0,0,0,0), sProgressOptimizing);
-          end;
-        end;
-      end;
-
-      // Remove passive elements, pass 1
-      if (ooCleanup in Options) then
-      begin
-        // Check for transparency flag without any transparent pixels
-        for i := 0 to Images.Count-1 do
-        begin
-          inc(Prog);
-          if (Images[i].Transparent) then
-          begin
-            if not(Scan(Images[i].Data,
-                        Images[i].GraphicControlExtension.TransparentColorIndex,
-                        Images[i].DataSize)) then
-            begin
-              Images[i].GraphicControlExtension.Transparent := False;
-              Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-                Rect(0,0,0,0), sProgressOptimizing);
+        // Sort color map by usage and remove unused entries
+        if (ooColorMap in Options) then begin
+          // Optimize global color map
+          if (GlobalColorMap.Count > 0) then
+            GlobalColorMap.Optimize;
+          // Optimize local color maps
+          for i := 0 to Images.Count - 1 do begin
+            inc(Prog);
+            if (Images[i].ColorMap.Count > 0) then begin
+              Images[i].ColorMap.Optimize;
+              Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
             end;
           end;
         end;
 
-        // Change redundant disposal modes
-        for i := 0 to Images.Count-2 do
-        begin
-          inc(Prog);
-          if (Images[i].GraphicControlExtension <> nil) and
-            (Images[i].GraphicControlExtension.Disposal in [dmPrevious, dmBackground]) and
-            (not Images[i+1].Transparent) then
-          begin
-            ThisRect := Images[i].BoundsRect;
-            NextRect := Images[i+1].BoundsRect;
-            if (not IntersectRect(MergeRect, ThisRect, NextRect)) then
-              continue;
-            // If the next frame completely covers the current frame,
-            // change the disposal mode to dmNone
-            if (EqualRect(MergeRect, NextRect)) then
-              Images[i].GraphicControlExtension.Disposal := dmNone;
-            Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-              Rect(0,0,0,0), sProgressOptimizing);
+        // Remove passive elements, pass 1
+        if (ooCleanup in Options) then begin
+          // Check for transparency flag without any transparent pixels
+          for i := 0 to Images.Count - 1 do begin
+            inc(Prog);
+            if (Images[i].Transparent) then begin
+              if not(Scan(Images[i].Data, Images[i].GraphicControlExtension.TransparentColorIndex, Images[i].DataSize)) then
+              begin
+                Images[i].GraphicControlExtension.Transparent := False;
+                Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
+              end;
+            end;
           end;
-        end;
-      end else
-        inc(Prog, 2*Images.Count);
 
-      // Merge layers of equal pixels (remove redundant pixels)
-      if (ooMerge in Options) then
-      begin
-        // Merge from last to first to avoid intefering with merge
-        for i := Images.Count-1 downto 1 do
-        begin
-          inc(Prog);
-          j := i-1;
-          // If the "previous" frames uses dmPrevious disposal mode, we must
-          // instead merge with the frame before the previous
-          while (j > 0) and
-            ((Images[j].GraphicControlExtension <> nil) and
-             (Images[j].GraphicControlExtension.Disposal = dmPrevious)) do
-            dec(j);
-          // Merge
-          Images[i].Merge(Images[j]);
-          Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-            Rect(0,0,0,0), sProgressOptimizing);
-        end;
-      end else
+          // Change redundant disposal modes
+          for i := 0 to Images.Count - 2 do begin
+            inc(Prog);
+            if (Images[i].GraphicControlExtension <> nil) and
+              (Images[i].GraphicControlExtension.Disposal in [dmPrevious, dmBackground]) and (not Images[i + 1].Transparent)
+            then begin
+              ThisRect := Images[i].BoundsRect;
+              NextRect := Images[i + 1].BoundsRect;
+              if (not IntersectRect(MergeRect, ThisRect, NextRect)) then
+                continue;
+              // If the next frame completely covers the current frame,
+              // change the disposal mode to dmNone
+              if (EqualRect(MergeRect, NextRect)) then
+                Images[i].GraphicControlExtension.Disposal := dmNone;
+              Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
+            end;
+          end;
+        end
+        else
+          inc(Prog, 2 * Images.Count);
+
+        // Merge layers of equal pixels (remove redundant pixels)
+        if (ooMerge in Options) then begin
+          // Merge from last to first to avoid intefering with merge
+          for i := Images.Count - 1 downto 1 do begin
+            inc(Prog);
+            j := i - 1;
+            // If the "previous" frames uses dmPrevious disposal mode, we must
+            // instead merge with the frame before the previous
+            while (j > 0) and ((Images[j].GraphicControlExtension <> nil) and
+              (Images[j].GraphicControlExtension.Disposal = dmPrevious)) do
+              Dec(j);
+            // Merge
+            Images[i].Merge(Images[j]);
+            Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
+          end;
+        end
+        else
+          inc(Prog, Images.Count);
+
+        // Crop transparent areas
+        if (ooCrop in Options) then begin
+          for i := Images.Count - 1 downto 0 do begin
+            inc(Prog);
+            if (not Images[i].Empty) and (Images[i].Transparent) then begin
+              // Remember frames delay in case frame is deleted
+              Delay := Images[i].GraphicControlExtension.Delay;
+              // Crop
+              Images[i].Crop;
+              // If the frame was completely transparent we remove it
+              if (Images[i].Empty) then begin
+                // Transfer delay to previous frame in case frame was deleted
+                if (i > 0) and (Images[i - 1].Transparent) then
+                  Images[i - 1].GraphicControlExtension.Delay := Images[i - 1].GraphicControlExtension.Delay + Delay;
+                Images.Delete(i);
+              end;
+              Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
+            end;
+          end;
+        end
+        else
+          inc(Prog, Images.Count);
+
+        // Remove passive elements, pass 2
         inc(Prog, Images.Count);
-
-      // Crop transparent areas
-      if (ooCrop in Options) then
-      begin
-        for i := Images.Count-1 downto 0 do
-        begin
-          inc(Prog);
-          if (not Images[i].Empty) and (Images[i].Transparent) then
-          begin
-            // Remember frames delay in case frame is deleted
-            Delay := Images[i].GraphicControlExtension.Delay;
-            // Crop
-            Images[i].Crop;
-            // If the frame was completely transparent we remove it
-            if (Images[i].Empty) then
-            begin
-              // Transfer delay to previous frame in case frame was deleted
-              if (i > 0) and (Images[i-1].Transparent) then
-                Images[i-1].GraphicControlExtension.Delay :=
-                  Images[i-1].GraphicControlExtension.Delay + Delay;
-              Images.Delete(i);
+        if (ooCleanup in Options) then begin
+          for i := Images.Count - 1 downto 0 do begin
+            // Remove comments and application extensions
+            for j := Images[i].Extensions.Count - 1 downto 0 do
+              if (Images[i].Extensions[j] is TGIFCommentExtension) or (Images[i].Extensions[j] is TGIFTextExtension) or
+                (Images[i].Extensions[j] is TGIFUnknownAppExtension) or
+                ((Images[i].Extensions[j] is TGIFAppExtNSLoop) and ((i > 0) or (Images.Count = 1))) then
+                Images[i].Extensions.Delete(j);
+            if (Images[i].GraphicControlExtension <> nil) then begin
+              GCE := Images[i].GraphicControlExtension;
+              // Zap GCE if all of the following are true:
+              // * No delay or only one image
+              // * Not transparent
+              // * No prompt
+              // * No disposal or only one image
+              if ((GCE.Delay = 0) or (Images.Count = 1)) and (not GCE.Transparent) and (not GCE.UserInput) and
+                ((GCE.Disposal in [dmNone, dmNoDisposal]) or (Images.Count = 1)) then begin
+                GCE.Free;
+              end;
             end;
-            Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-              Rect(0,0,0,0), sProgressOptimizing);
+            // Zap frame if it has become empty
+            if (Images[i].Empty) and (Images[i].Extensions.Count = 0) then
+              Images[i].Free;
           end;
-        end;
-      end else
-        inc(Prog, Images.Count);
+          Progress(self, psRunning, MulDiv(Prog, 100, MaxProg), False, Rect(0, 0, 0, 0), sProgressOptimizing);
+        end
+        else
 
-      // Remove passive elements, pass 2
-      inc(Prog, Images.Count);
-      if (ooCleanup in Options) then
-      begin
-        for i := Images.Count-1 downto 0 do
-        begin
-          // Remove comments and application extensions
-          for j := Images[i].Extensions.Count-1 downto 0 do
-            if (Images[i].Extensions[j] is TGIFCommentExtension) or
-              (Images[i].Extensions[j] is TGIFTextExtension) or
-              (Images[i].Extensions[j] is TGIFUnknownAppExtension) or
-              ((Images[i].Extensions[j] is TGIFAppExtNSLoop) and
-               ((i > 0) or (Images.Count = 1))) then
-              Images[i].Extensions.Delete(j);
-          if (Images[i].GraphicControlExtension <> nil) then
-          begin
-            GCE := Images[i].GraphicControlExtension;
-            // Zap GCE if all of the following are true:
-            // * No delay or only one image
-            // * Not transparent
-            // * No prompt
-            // * No disposal or only one image
-            if ((GCE.Delay = 0) or (Images.Count = 1)) and
-              (not GCE.Transparent) and
-              (not GCE.UserInput) and
-              ((GCE.Disposal in [dmNone, dmNoDisposal]) or (Images.Count = 1)) then
-            begin
-              GCE.Free;
-            end;
+          // Reduce color depth
+          if (ooReduceColors in Options) then begin
+            if (ColorReduction = rmPalette) then
+              Error(sInvalidReduction);
+            { TODO -oanme -cFeature : Implement ooReduceColors option. }
+            // Not implemented!
           end;
-          // Zap frame if it has become empty
-          if (Images[i].Empty) and (Images[i].Extensions.Count = 0) then
-            Images[i].Free;
-        end;
-        Progress(Self, psRunning, MulDiv(Prog, 100, MaxProg), False,
-          Rect(0,0,0,0), sProgressOptimizing);
-      end else
-
-      // Reduce color depth
-      if (ooReduceColors in Options) then
-      begin
-        if (ColorReduction = rmPalette) then
-          Error(sInvalidReduction);
-        { TODO -oanme -cFeature : Implement ooReduceColors option. }
-        // Not implemented!
+      finally
+        if ExceptObject = nil then
+          i := 100
+        else
+          i := 0;
+        Progress(self, psEnding, i, False, Rect(0, 0, 0, 0), sProgressOptimizing);
       end;
-    finally
-      if ExceptObject = nil then
-        i := 100
-      else
-        i := 0;
-      Progress(Self, psEnding, i, False, Rect(0,0,0,0), sProgressOptimizing);
+    finally FPainters.UnlockList;
     end;
-  finally
-    FPainters.UnlockList;
   end;
-end;
 
 procedure TGIFImage.Pack;
 var
-  i			: integer;
+  i: integer;
 begin
   // Zap bitmaps and palettes
   FreeBitmap;
   Palette := 0;
-  for i := 0 to FImages.Count-1 do
-  begin
+  for i := 0 to FImages.Count - 1 do begin
     FImages[i].Bitmap := nil;
     FImages[i].Palette := 0;
   end;
@@ -11524,9 +11251,9 @@ end;
 
 procedure TGIFImage.SaveToStream(Stream: TStream);
 var
-  n			: Integer;
+  n: integer;
 begin
-  Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressSaving);
+  Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressSaving);
   try
     // Write header
     FHeader.SaveToStream(Stream);
@@ -11534,26 +11261,43 @@ begin
     FImages.SaveToStream(Stream);
     // Write trailer
     with TGIFTrailer.Create(self) do
-      try
-        SaveToStream(Stream);
-      finally
-        Free;
+      try SaveToStream(Stream);
+      finally Free;
       end;
   finally
     if ExceptObject = nil then
       n := 100
     else
       n := 0;
-    Progress(Self, psEnding, n, True, Rect(0,0,0,0), sProgressSaving);
+    Progress(self, psEnding, n, True, Rect(0, 0, 0, 0), sProgressSaving);
   end;
 end;
 
+// 2006.07.09 ->
+{$IFDEF FIXHEADER_WIDTHHEIGHT_SILENT}
+
+procedure TGIFImage.FixHeaderWidthHeight;
+var
+  i, w, h: integer;
+begin
+  for i := 0 to Images.Count - 1 do begin
+    w := Images.SubImages[i].Left + Images.SubImages[i].Width;
+    h := Images.SubImages[i].Top + Images.SubImages[i].Height;
+    if w > Header.Width then
+      Header.Width := w;
+    if h > Header.Height then
+      Header.Height := h;
+  end;
+end;
+{$ENDIF}
+// 2006.07.09 <-
+
 procedure TGIFImage.LoadFromStream(Stream: TStream);
 var
-  n			: Integer;
-  Position		: integer;
+  n: integer;
+  Position: integer;
 begin
-  Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressLoading);
+  Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressLoading);
   try
     // Zap old image
     Clear;
@@ -11563,12 +11307,13 @@ begin
       FHeader.LoadFromStream(Stream);
       // Read images
       FImages.LoadFromStream(Stream, self);
+{$IFDEF FIXHEADER_WIDTHHEIGHT_SILENT}
+      FixHeaderWidthHeight; // 2006.07.09
+{$ENDIF}
       // Read trailer
       with TGIFTrailer.Create(self) do
-        try
-          LoadFromStream(Stream);
-        finally
-          Free;
+        try LoadFromStream(Stream);
+        finally Free;
         end;
     except
       // Restore stream position in case of error.
@@ -11581,14 +11326,24 @@ begin
       n := 100
     else
       n := 0;
-    Progress(Self, psEnding, n, True, Rect(0,0,0,0), sProgressLoading);
+    Progress(self, psEnding, n, True, Rect(0, 0, 0, 0), sProgressLoading);
+  end;
+end;
+
+procedure TGIFImage.LoadFromResourceName(Instance: THandle; const ResName: string);
+// 2002.07.07
+var
+  Stream: TCustomMemoryStream;
+begin
+  Stream := TResourceStream.Create(Instance, ResName, RT_RCDATA);
+  try LoadFromStream(Stream);
+  finally Stream.Free;
   end;
 end;
 
 function TGIFImage.GetBitmap: TBitmap;
 begin
-  if not(Empty) then
-  begin
+  if not(Empty) then begin
     Result := FBitmap;
     if (Result <> nil) then
       exit;
@@ -11596,14 +11351,11 @@ begin
     Result := FBitmap;
     FBitmap.OnChange := Changed;
     // Use first image as default
-    if (Images.Count > 0) then
-    begin
-      if (Images[0].Width = Width) and (Images[0].Height = Height) then
-      begin
+    if (Images.Count > 0) then begin
+      if (Images[0].Width = Width) and (Images[0].Height = Height) then begin
         // Use first image as it has same dimensions
         FBitmap.Assign(Images[0].Bitmap);
-      end else
-      begin
+      end else begin
         // Draw first image on bitmap
         FBitmap.Palette := CopyPalette(Palette);
         FBitmap.Height := Height;
@@ -11611,7 +11363,8 @@ begin
         Images[0].Draw(FBitmap.Canvas, FBitmap.Canvas.ClipRect, False, False);
       end;
     end;
-  end else
+  end
+  else
     Result := nil
 end;
 
@@ -11635,8 +11388,7 @@ begin
   if (DrawPainter <> nil) then
     DrawPainter.Stop;
 
-  if (FBitmap <> nil) then
-  begin
+  if (FBitmap <> nil) then begin
     FBitmap.Free;
     FBitmap := nil;
   end;
@@ -11644,14 +11396,12 @@ end;
 
 function TGIFImage.Add(Source: TPersistent): integer;
 var
-  Image			: TGIFSubImage;
+  Image: TGIFSubImage;
 begin
   Image := nil; // To avoid compiler warning - not needed.
-  if (Source is TGraphic) then
-  begin
+  if (Source is TGraphic) then begin
     Image := TGIFSubImage.Create(self);
-    try
-      Image.Assign(Source);
+    try Image.Assign(Source);
       // ***FIXME*** Documentation should explain the inconsistency here:
       // TGIFimage does not take ownership of Source after TGIFImage.Add() and
       // therefore does not delete Source.
@@ -11659,8 +11409,7 @@ begin
       Image.Free;
       raise;
     end;
-  end else
-  if (Source is TGIFSubImage) then
+  end else if (Source is TGIFSubImage) then
     Image := TGIFSubImage(Source)
   else
     Error(sUnsupportedClass);
@@ -11676,25 +11425,23 @@ begin
   Result := (FImages.Count = 0);
 end;
 
-function TGIFImage.GetHeight: Integer;
+function TGIFImage.GetHeight: integer;
 begin
   Result := FHeader.Height;
 end;
 
-function TGIFImage.GetWidth: Integer;
+function TGIFImage.GetWidth: integer;
 begin
   Result := FHeader.Width;
 end;
 
 function TGIFImage.GetIsTransparent: Boolean;
 var
-  i			: integer;
+  i: integer;
 begin
   Result := False;
-  for i := 0 to Images.Count-1 do
-    if (Images[i].GraphicControlExtension <> nil) and
-      (Images[i].GraphicControlExtension.Transparent) then
-    begin
+  for i := 0 to Images.Count - 1 do
+    if (Images[i].GraphicControlExtension <> nil) and (Images[i].GraphicControlExtension.Transparent) then begin
       Result := True;
       exit;
     end;
@@ -11705,7 +11452,7 @@ begin
   Result := (Graphic = self);
 end;
 
-function TGIFImage.GetPalette: HPALETTE;
+function TGIFImage.GetPalette: HPalette;
 begin
   // Check for recursion
   // (TGIFImage.GetPalette->TGIFSubImage.GetPalette->TGIFImage.GetPalette etc...)
@@ -11720,33 +11467,27 @@ begin
     else if (FGlobalPalette <> 0) then
       // Or a previously exported global palette
       Result := FGlobalPalette
-    else if (DoDither) then
-    begin
+    else if (DoDither) then begin
       // or create a new dither palette
       FGlobalPalette := WebPalette;
       Result := FGlobalPalette;
-    end else
-    if (FHeader.ColorMap.Count > 0) then
-    begin
+    end else if (FHeader.ColorMap.Count > 0) then begin
       // or create a new if first time
       FGlobalPalette := FHeader.ColorMap.ExportPalette;
       Result := FGlobalPalette;
-    end else
-    if (FImages.Count > 0) then
+    end else if (FImages.Count > 0) then
       // This can cause a recursion if no global palette exist and image[0]
       // hasn't got one either. Checked by the IsInsideGetPalette semaphor.
       Result := FImages[0].Palette;
-  finally
-    IsInsideGetPalette := False;
+  finally IsInsideGetPalette := False;
   end;
 end;
 
 procedure TGIFImage.SetPalette(Value: HPalette);
 var
-  NeedNewBitmap		: boolean;
+  NeedNewBitmap: Boolean;
 begin
-  if (Value <> FGlobalPalette) then
-  begin
+  if (Value <> FGlobalPalette) then begin
     // Zap old palette
     if (FGlobalPalette <> 0) then
       DeleteObject(FGlobalPalette);
@@ -11757,12 +11498,11 @@ begin
     // Use new palette
     FGlobalPalette := Value;
 
-    if (NeedNewBitmap) then
-    begin
+    if (NeedNewBitmap) then begin
       // Need to create new bitmap and repaint
       FreeBitmap;
       PaletteModified := True;
-      Changed(Self);
+      Changed(self);
     end;
   end;
 end;
@@ -11770,33 +11510,31 @@ end;
 // Obsolete
 // procedure TGIFImage.Changed(Sender: TObject);
 // begin
-//  inherited Changed(Sender);
+// inherited Changed(Sender);
 // end;
 
-procedure TGIFImage.SetHeight(Value: Integer);
+procedure TGIFImage.SetHeight(Value: integer);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to Images.Count-1 do
+  for i := 0 to Images.Count - 1 do
     if (Images[i].Top + Images[i].Height > Value) then
       Error(sBadHeight);
-  if (Value <> Header.Height) then
-  begin
+  if (Value <> Header.Height) then begin
     Header.Height := Value;
     FreeBitmap;
     Changed(self);
   end;
 end;
 
-procedure TGIFImage.SetWidth(Value: Integer);
+procedure TGIFImage.SetWidth(Value: integer);
 var
-  i			: integer;
+  i: integer;
 begin
-  for i := 0 to Images.Count-1 do
+  for i := 0 to Images.Count - 1 do
     if (Images[i].Left + Images[i].Width > Value) then
       Error(sBadWidth);
-  if (Value <> Header.Width) then
-  begin
+  if (Value <> Header.Width) then begin
     Header.Width := Value;
     FreeBitmap;
     Changed(self);
@@ -11822,93 +11560,102 @@ end;
 { TODO 1 -oanme -cImprovement : Better handling of TGIFImage.Assign(Empty TBitmap). }
 procedure TGIFImage.Assign(Source: TPersistent);
 var
-  i			: integer;
-  Image			: TGIFSubImage;
+  i: integer;
+  Image: TGIFSubImage;
 begin
   if (Source = self) then
     exit;
-  if (Source = nil) then
-  begin
+  if (Source = nil) then begin
     Clear;
-  end else
-  //
-  // TGIFImage import
-  //
-  if (Source is TGIFImage) then
-  begin
-    Clear;
-    // Temporarily copy event handlers to be able to generate progress events
-    // during the copy and handle copy errors
-    OnProgress := TGIFImage(Source).OnProgress;
-    try
-      FOnWarning := TGIFImage(Source).OnWarning;
-      Progress(Self, psStarting, 0, False, Rect(0,0,0,0), sProgressCopying);
+  end
+  else
+    //
+    // TGIFImage import
+    //
+    if (Source is TGIFImage) then begin
+      Clear;
+      // Temporarily copy event handlers to be able to generate progress events
+      // during the copy and handle copy errors
+      OnProgress := TGIFImage(Source).OnProgress;
       try
-        FHeader.Assign(TGIFImage(Source).Header);
-        FThreadPriority := TGIFImage(Source).ThreadPriority;
-        FDrawBackgroundColor := TGIFImage(Source).DrawBackgroundColor;
-        FDrawOptions := TGIFImage(Source).DrawOptions;
-        FColorReduction := TGIFImage(Source).ColorReduction;
-        FDitherMode := TGIFImage(Source).DitherMode;
-
-        for i := 0 to TGIFImage(Source).Images.Count-1 do
-        begin
-          Image := TGIFSubImage.Create(self);
-          Image.Assign(TGIFImage(Source).Images[i]);
-          Add(Image);
-          Progress(Self, psRunning, MulDiv((i+1), 100, TGIFImage(Source).Images.Count),
-            False, Rect(0,0,0,0), sProgressCopying);
+        FOnWarning := TGIFImage(Source).OnWarning;
+        Progress(self, psStarting, 0, False, Rect(0, 0, 0, 0), sProgressCopying);
+        try
+          FHeader.Assign(TGIFImage(Source).Header);
+          FThreadPriority := TGIFImage(Source).ThreadPriority;
+          FDrawBackgroundColor := TGIFImage(Source).DrawBackgroundColor;
+          FDrawOptions := TGIFImage(Source).DrawOptions;
+          FColorReduction := TGIFImage(Source).ColorReduction;
+          FDitherMode := TGIFImage(Source).DitherMode;
+          FForceFrame := TGIFImage(Source).ForceFrame; // 2004.03.09
+          // 2002.07.07 ->
+          FOnWarning := TGIFImage(Source).FOnWarning;
+          FOnStartPaint := TGIFImage(Source).FOnStartPaint;
+          FOnPaint := TGIFImage(Source).FOnPaint;
+          FOnEndPaint := TGIFImage(Source).FOnEndPaint;
+          FOnAfterPaint := TGIFImage(Source).FOnAfterPaint;
+          FOnLoop := TGIFImage(Source).FOnLoop;
+          // 2002.07.07 <-
+          for i := 0 to TGIFImage(Source).Images.Count - 1 do begin
+            Image := TGIFSubImage.Create(self);
+            Image.Assign(TGIFImage(Source).Images[i]);
+            Add(Image);
+            Progress(self, psRunning, MulDiv((i + 1), 100, TGIFImage(Source).Images.Count), False, Rect(0, 0, 0, 0),
+              sProgressCopying);
+          end;
+{$IFDEF FIXHEADER_WIDTHHEIGHT_SILENT}
+          FixHeaderWidthHeight; // 2006.07.09
+{$ENDIF}
+        finally
+          if ExceptObject = nil then
+            i := 100
+          else
+            i := 0;
+          Progress(self, psEnding, i, False, Rect(0, 0, 0, 0), sProgressCopying);
         end;
       finally
-        if ExceptObject = nil then
-          i := 100
-        else
-          i := 0;
-        Progress(Self, psEnding, i, False, Rect(0,0,0,0), sProgressCopying);
+        // Reset event handlers
+        FOnWarning := nil;
+        OnProgress := nil;
       end;
-    finally
-      // Reset event handlers
-      FOnWarning := nil;
-      OnProgress := nil;
-    end;
-  end else
-  //
-  // Import via TGIFSubImage.Assign
-  //
-  begin
-    Clear;
-    Image := TGIFSubImage.Create(self);
-    try
-      Image.Assign(Source);
-      Add(Image);
-    except
-      on E: EConvertError do
-      begin
-        Image.Free;
-        // Unsupported format - fall back to Source.AssignTo
-        inherited Assign(Source);
-      end;
+    end
     else
-      // Unknown conversion error
-      Image.Free;
-      raise;
+    //
+    // Import via TGIFSubImage.Assign
+    //
+    begin
+      Clear;
+      Image := TGIFSubImage.Create(self);
+      try
+        Image.Assign(Source);
+        Add(Image);
+      except
+        on E: EConvertError do begin
+          Image.Free;
+          // Unsupported format - fall back to Source.AssignTo
+          inherited Assign(Source);
+        end;
+        else
+          // Unknown conversion error
+          Image.Free;
+        raise;
+      end;
     end;
-  end;
 end;
 
-procedure TGIFImage.LoadFromClipboardFormat(AFormat: Word; AData: THandle;
-  APalette: HPALETTE);
+procedure TGIFImage.LoadFromClipboardFormat(AFormat: Word; AData: THandle; APalette: HPalette);
 {$IFDEF REGISTER_TGIFIMAGE}
 var
-  Size			: Longint;
-  Buffer		: Pointer;
-  Stream		: TMemoryStream;
-  Bmp			: TBitmap;
-begin
+  Size: longInt;
+  Buffer: Pointer;
+  Stream: TMemoryStream;
+  Bmp: TBitmap;
+{$ENDIF}  // 2002.07.07
+begin // 2002.07.07
+{$IFDEF REGISTER_TGIFIMAGE}  // 2002.07.07
   if (AData = 0) then
     AData := GetClipboardData(AFormat);
-  if (AData <> 0) and (AFormat = CF_GIF) then
-  begin
+  if (AData <> 0) and (AFormat = CF_GIF) then begin
     // Get size and pointer to data
     Size := GlobalSize(AData);
     Buffer := GlobalLock(AData);
@@ -11920,40 +11667,35 @@ begin
         Move(Buffer^, Stream.Memory^, Size);
         // Load GIF from stream
         LoadFromStream(Stream);
-      finally
-        Stream.Free;
+      finally Stream.Free;
       end;
-    finally
-      GlobalUnlock(AData);
+    finally GlobalUnlock(AData);
     end;
-  end else
-  if (AData <> 0) and (AFormat = CF_BITMAP) then
-  begin
+  end else if (AData <> 0) and (AFormat = CF_BITMAP) then begin
     // No GIF on clipboard - try loading a bitmap instead
     Bmp := TBitmap.Create;
     try
       Bmp.LoadFromClipboardFormat(AFormat, AData, APalette);
       Assign(Bmp);
-    finally
-      Bmp.Free;
+    finally Bmp.Free;
     end;
-  end else
+  end
+  else
     Error(sUnknownClipboardFormat);
+{$ELSE}  // 2002.07.07
+  Error(sGIFToClipboard); // 2002.07.07
+{$ENDIF}  // 2002.07.07
 end;
-{$ELSE}
-begin
-  Error(sGIFToClipboard);
-end;
-{$ENDIF}
 
-procedure TGIFImage.SaveToClipboardFormat(var AFormat: Word; var AData: THandle;
-  var APalette: HPALETTE);
+procedure TGIFImage.SaveToClipboardFormat(var AFormat: Word; var AData: THandle; var APalette: HPalette);
 {$IFDEF REGISTER_TGIFIMAGE}
 var
-  Stream		: TMemoryStream;
-  Data			: THandle;
-  Buffer		: Pointer;
-begin
+  Stream: TMemoryStream;
+  Data: THandle;
+  Buffer: Pointer;
+{$ENDIF}  // 2002.07.07
+begin // 2002.07.07
+{$IFDEF REGISTER_TGIFIMAGE}  // 2002.07.07
   if (Empty) then
     exit;
   // First store a bitmap version on the clipboard...
@@ -11967,14 +11709,12 @@ begin
     // Allocate some memory for the GIF data
     Data := GlobalAlloc(HeapAllocFlags, Stream.Size);
     try
-      if (Data <> 0) then
-      begin
+      if (Data <> 0) then begin
         Buffer := GlobalLock(Data);
         try
           // Copy GIF data from stream memory to clipboard memory
-          Move(Stream.Memory^, Buffer^, Stream.Size);
-        finally
-          GlobalUnlock(Data);
+            Move(Stream.Memory^, Buffer^, Stream.Size);
+        finally GlobalUnlock(Data);
         end;
         // Transfer data to clipboard
         if (SetClipboardData(CF_GIF, Data) = 0) then
@@ -11984,31 +11724,28 @@ begin
       GlobalFree(Data);
       raise;
     end;
-  finally
-    Stream.Free;
+  finally Stream.Free;
   end;
+{$ELSE}  // 2002.07.07
+  Error(sGIFToClipboard); // 2002.07.07
+{$ENDIF}  // 2002.07.07
 end;
-{$ELSE}
-begin
-  Error(sGIFToClipboard);
-end;
-{$ENDIF}
 
 function TGIFImage.GetColorMap: TGIFColorMap;
 begin
   Result := FHeader.ColorMap;
 end;
 
-function TGIFImage.GetDoDither: boolean;
+function TGIFImage.GetDoDither: Boolean;
 begin
-  Result := (goDither in DrawOptions) and
-    (((goAutoDither in DrawOptions) and DoAutoDither) or
-      not(goAutoDither in DrawOptions));
+  Result := (goDither in DrawOptions) and (((goAutoDither in DrawOptions) and DoAutoDither) or
+    not(goAutoDither in DrawOptions));
 end;
 
 {$IFDEF VER9x}
-procedure TGIFImage.Progress(Sender: TObject; Stage: TProgressStage;
-  PercentDone: Byte; RedrawNow: Boolean; const R: TRect; const Msg: string);
+
+procedure TGIFImage.Progress(Sender: TObject; Stage: TProgressStage; PercentDone: Byte; RedrawNow: Boolean; const R: TRect;
+  const Msg: string);
 begin
   if Assigned(FOnProgress) then
     FOnProgress(Sender, Stage, PercentDone, RedrawNow, R, Msg);
@@ -12016,9 +11753,11 @@ end;
 {$ENDIF}
 
 procedure TGIFImage.StopDraw;
+{$IFNDEF VER14_PLUS}  // 2001.07.23
 var
-  Msg			: TMsg;
-  ThreadWindow		: HWND;
+  Msg: TMsg;
+  ThreadWindow: HWND;
+{$ENDIF}  // 2001.07.23
 begin
   repeat
     // Use the FPainters threadlist to protect FDrawPainter from being modified
@@ -12037,24 +11776,31 @@ begin
 
       finally
         // Release the lock on FPainters to let paint thread kill itself
-        FPainters.UnLockList;
+          FPainters.UnlockList;
       end;
 
+{$IFDEF VER14_PLUS}
+    // 2002.07.07
+    if (GetCurrentThreadID = MainThreadID) then
+      while CheckSynchronize do { loop };
+{$ELSE}
     // Process Messages to make Synchronize work
     // (Instead of Application.ProcessMessages)
+    // {$IFDEF VER14_PLUS}  // 2001.07.23
+    // Break;  // 2001.07.23
+    // Sleep(0); // Yield  // 2001.07.23
+    // {$ELSE}  // 2001.07.23
     ThreadWindow := FindWindow('TThreadWindow', nil);
-    while PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) do
-    begin
-      if (Msg.Message <> WM_QUIT) then
-      begin
+    while PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) do begin
+      if (Msg.Message <> WM_QUIT) then begin
         TranslateMessage(Msg);
         DispatchMessage(Msg);
-      end else
-      begin
+      end else begin
         PostQuitMessage(Msg.WParam);
         exit;
       end;
     end;
+{$ENDIF}  // 2001.07.23
     Sleep(0); // Yield
 
   until (False);
@@ -12063,26 +11809,25 @@ end;
 
 procedure TGIFImage.Draw(ACanvas: TCanvas; const Rect: TRect);
 var
-  Canvas		: TCanvas;
-  DestRect		: TRect;
-  Msg			: TMsg;
-  ThreadWindow		: HWND;
+  Canvas: TCanvas;
+  DestRect: TRect;
+{$IFNDEF VER14_PLUS}  // 2001.07.23
+  Msg: TMsg;
+  ThreadWindow: HWND;
+{$ENDIF}  // 2001.07.23
 
   procedure DrawTile(Rect: TRect; Bitmap: TBitmap);
   var
-    Tile		: TRect;
+    Tile: TRect;
   begin
-    if (goTile in FDrawOptions) then
-    begin
+    if (goTile in FDrawOptions) then begin
       // Note: This design does not handle transparency correctly!
       Tile.Left := Rect.Left;
       Tile.Right := Tile.Left + Width;
-      while (Tile.Left < Rect.Right) do
-      begin
+      while (Tile.Left < Rect.Right) do begin
         Tile.Top := Rect.Top;
         Tile.Bottom := Tile.Top + Height;
-        while (Tile.Top < Rect.Bottom) do
-        begin
+        while (Tile.Top < Rect.Bottom) do begin
           ACanvas.StretchDraw(Tile, Bitmap);
           Tile.Top := Tile.Top + Height;
           Tile.Bottom := Tile.Top + Height;
@@ -12090,7 +11835,8 @@ var
         Tile.Left := Tile.Left + Width;
         Tile.Right := Tile.Left + Width;
       end;
-    end else
+    end
+    else
       ACanvas.StretchDraw(Rect, Bitmap);
   end;
 
@@ -12104,14 +11850,16 @@ begin
     // Copy bitmap to canvas if we are already drawing
     // (or have drawn but are finished)
     if (FImages.Count = 1) or // Only one image
-      (not (goAnimate in FDrawOptions)) then // Don't animate
+      (not(goAnimate in FDrawOptions)) then // Don't animate
     begin
-      FImages[0].Draw(ACanvas, Rect, (goTransparent in FDrawOptions),
-        (goTile in FDrawOptions));
+      // 2004.03.09 ->
+      if (FForceFrame >= 0) and (FForceFrame < FImages.Count) then
+        FImages[FForceFrame].Draw(ACanvas, Rect, (goTransparent in FDrawOptions), (goTile in FDrawOptions))
+      else
+        // 2004.03.09 <-
+        FImages[0].Draw(ACanvas, Rect, (goTransparent in FDrawOptions), (goTile in FDrawOptions));
       exit;
-    end else
-    if (FBitmap <> nil) and not(goDirectDraw in FDrawOptions) then
-    begin
+    end else if (FBitmap <> nil) and not(goDirectDraw in FDrawOptions) then begin
       DrawTile(Rect, Bitmap);
       exit;
     end;
@@ -12120,78 +11868,76 @@ begin
     // by the thread while we mess with it
     with FPainters.LockList do
       try
-      // If we are already painting on the canvas in goDirectDraw mode
-      // and at the same location, just exit and let the painter do
-      // its thing when it's ready
-      if (FDrawPainter <> nil) and (FDrawPainter.Canvas = ACanvas) and
-        EqualRect(FDrawPainter.Rect, Rect) then
-        exit;
+        // If we are already painting on the canvas in goDirectDraw mode
+        // and at the same location, just exit and let the painter do
+        // its thing when it's ready
+        if (FDrawPainter <> nil) and (FDrawPainter.Canvas = ACanvas) and EqualRect(FDrawPainter.Rect, Rect) then
+          exit;
 
-      // Kill the current paint thread
-      StopDraw;
+        // Kill the current paint thread
+        StopDraw;
 
-      if not(goDirectDraw in FDrawOptions) then
-      begin
-        // Create a bitmap to draw on
-        NewBitmap;
-        Canvas := FBitmap.Canvas;
-        DestRect := Canvas.ClipRect;
-        // Initialize bitmap canvas with background image
-        Canvas.CopyRect(DestRect, ACanvas, Rect);
-      end else
-      begin
-        Canvas := ACanvas;
-        DestRect := Rect;
-      end;
-
-      // Create new paint thread
-      InternalPaint(@FDrawPainter, Canvas, DestRect, FDrawOptions);
-
-      if (FDrawPainter <> nil) then
-      begin
-        // Launch thread
-        FDrawPainter.Start;
-
-        if not(goDirectDraw in FDrawOptions) then
-        begin
-          ThreadWindow := FindWindow('TThreadWindow', nil);
-          // Wait for thread to render first frame
-          while (FDrawPainter <> nil) and (not FDrawPainter.Terminated) and
-            (not FDrawPainter.Started) do
-            // Process Messages to make Synchronize work
-            // (Instead of Application.ProcessMessages)
-            if PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) then
-            begin
-              if (Msg.Message <> WM_QUIT) then
-              begin
-                TranslateMessage(Msg);
-                DispatchMessage(Msg);
-              end else
-              begin
-                PostQuitMessage(Msg.WParam);
-                exit;
-              end;
-            end else
-              Sleep(0); // Yield
-          // Draw frame to destination
-          DrawTile(Rect, Bitmap);
+        if not(goDirectDraw in FDrawOptions) then begin
+          // Create a bitmap to draw on
+          NewBitmap;
+          Canvas := FBitmap.Canvas;
+          DestRect := Canvas.ClipRect;
+          // Initialize bitmap canvas with background image
+          Canvas.CopyRect(DestRect, ACanvas, Rect);
+        end else begin
+          Canvas := ACanvas;
+          DestRect := Rect;
         end;
-      end;
-    finally
-      FPainters.UnLockList;
-    end;
 
-  finally
-    IsDrawing := False;
+        // Create new paint thread
+        InternalPaint(@FDrawPainter, Canvas, DestRect, FDrawOptions);
+
+        if (FDrawPainter <> nil) then begin
+          // Launch thread
+          FDrawPainter.Start;
+
+          if not(goDirectDraw in FDrawOptions) then begin
+{$IFDEF VER14_PLUS}
+            // 2002.07.07
+            while (FDrawPainter <> nil) and (not FDrawPainter.Terminated) and (not FDrawPainter.Started) do begin
+              if not CheckSynchronize then
+                Sleep(0); // Yield
+            end;
+{$ELSE}
+            // {$IFNDEF VER14_PLUS}  // 2001.07.23
+            ThreadWindow := FindWindow('TThreadWindow', nil);
+            // Wait for thread to render first frame
+            while (FDrawPainter <> nil) and (not FDrawPainter.Terminated) and (not FDrawPainter.Started) do
+              // Process Messages to make Synchronize work
+              // (Instead of Application.ProcessMessages)
+              if PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) then begin
+                if (Msg.Message <> WM_QUIT) then begin
+                  TranslateMessage(Msg);
+                  DispatchMessage(Msg);
+                end else begin
+                  PostQuitMessage(Msg.WParam);
+                  exit;
+                end;
+              end
+              else
+                Sleep(0); // Yield
+{$ENDIF}  // 2001.07.23
+            // Draw frame to destination
+            DrawTile(Rect, Bitmap);
+          end;
+        end;
+      finally FPainters.UnlockList;
+      end;
+
+  finally IsDrawing := False;
   end;
 end;
 
 // Internal pain(t) routine used by Draw()
-function TGIFImage.InternalPaint(Painter: PGifPainter; ACanvas: TCanvas;
-  const Rect: TRect; Options: TGIFDrawOptions): TGIFPainter;
+function TGIFImage.InternalPaint(Painter: PGIFPainter; ACanvas: TCanvas; const Rect: TRect; Options: TGIFDrawOptions)
+  : TGIFPainter;
 begin
-  if (Empty) or (Rect.Left >= Rect.Right) or (Rect.Top >= Rect.Bottom) then
-  begin
+  if (Empty) or (Rect.Left >= Rect.Right) or (Rect.Top >= Rect.Bottom) then begin
     Result := nil;
     if (Painter <> nil) then
       Painter^ := Result;
@@ -12210,8 +11956,7 @@ begin
   Result.OnLoop := FOnLoop;
   Result.OnEndPaint := FOnEndPaint;
 
-  if not(goAsync in Options) then
-  begin
+  if not(goAsync in Options) then begin
     // Run in main thread
     Result.Execute;
     // Note: Painter threads executing in the main thread are freed upon exit
@@ -12219,12 +11964,12 @@ begin
     Result := nil;
     if (Painter <> nil) then
       Painter^ := Result;
-  end else
+  end
+  else
     Result.Priority := FThreadPriority;
 end;
 
-function TGIFImage.Paint(ACanvas: TCanvas; const Rect: TRect;
-  Options: TGIFDrawOptions): TGIFPainter;
+function TGIFImage.Paint(ACanvas: TCanvas; const Rect: TRect; Options: TGIFDrawOptions): TGIFPainter;
 begin
   Result := InternalPaint(nil, ACanvas, Rect, Options);
   if (Result <> nil) then
@@ -12234,40 +11979,41 @@ end;
 
 procedure TGIFImage.PaintStart;
 var
-  i			: integer;
+  i: integer;
 begin
   with FPainters.LockList do
     try
-      for i := 0 to Count-1 do
+      for i := 0 to Count - 1 do
         TGIFPainter(Items[i]).Start;
-    finally
-      FPainters.UnLockList;
+    finally FPainters.UnlockList;
     end;
 end;
 
 procedure TGIFImage.PaintStop;
 var
-  Ghosts		: integer;
-  i			: integer;
-  Msg			: TMsg;
-  ThreadWindow		: HWND;
+  Ghosts: integer;
+  i: integer;
+{$IFNDEF VER14_PLUS}  // 2001.07.23
+  Msg: TMsg;
+  ThreadWindow: HWND;
+{$ENDIF}  // 2001.07.23
 
+{$IFNDEF VER14_PLUS}  // 2001.07.23
   procedure KillThreads;
   var
-    i			: integer;
+    i: integer;
   begin
     with FPainters.LockList do
       try
-        for i := Count-1 downto 0 do
-          if (goAsync in TGIFPainter(Items[i]).DrawOptions) then
-          begin
+        for i := Count - 1 downto 0 do
+          if (goAsync in TGIFPainter(Items[i]).DrawOptions) then begin
             TerminateThread(TGIFPainter(Items[i]).Handle, 0);
             Delete(i);
           end;
-      finally
-        FPainters.UnLockList;
+      finally FPainters.UnlockList;
       end;
   end;
+{$ENDIF}  // 2001.07.23
 
 begin
   try
@@ -12282,171 +12028,192 @@ begin
           // Painters will attempt to remove them self from the
           // painter list when they die
           Ghosts := Count;
-          for i := Ghosts-1 downto 0 do
-          begin
+          for i := Ghosts - 1 downto 0 do begin
             if not(goAsync in TGIFPainter(Items[i]).DrawOptions) then
-              dec(Ghosts);
+              Dec(Ghosts);
             TGIFPainter(Items[i]).Stop;
           end;
-        finally
-          FPainters.UnLockList;
+        finally FPainters.UnlockList;
         end;
 
       // If all painters were synchronous, there's no purpose waiting for them
       // to terminate, because they are running in the main thread.
       if (Ghosts = 0) then
         exit;
-
+{$IFDEF VER14_PLUS}
+      // 2002.07.07
+      if (GetCurrentThreadID = MainThreadID) then
+        while CheckSynchronize do { loop };
+{$ELSE}
       // Process Messages to make TThread.Synchronize work
       // (Instead of Application.ProcessMessages)
+      // {$IFDEF VER14_PLUS}  // 2001.07.23
+      // Exit;  // 2001.07.23
+      // {$ELSE}  // 2001.07.23
       ThreadWindow := FindWindow('TThreadWindow', nil);
-      if (ThreadWindow = 0) then
-      begin
+      if (ThreadWindow = 0) then begin
         KillThreads;
         exit;
       end;
-      while PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) do
-      begin
-        if (Msg.Message <> WM_QUIT) then
-        begin
+      while PeekMessage(Msg, ThreadWindow, CM_DESTROYWINDOW, CM_EXECPROC, PM_REMOVE) do begin
+        if (Msg.Message <> WM_QUIT) then begin
           TranslateMessage(Msg);
           DispatchMessage(Msg);
-        end else
-        begin
+        end else begin
           KillThreads;
           exit;
         end;
       end;
+{$ENDIF}  // 2001.07.23
       Sleep(0);
     until (False);
-  finally
-    FreeBitmap;
+  finally FreeBitmap;
   end;
 end;
 
 procedure TGIFImage.PaintPause;
 var
-  i			: integer;
+  i: integer;
 begin
   with FPainters.LockList do
     try
-      for i := 0 to Count-1 do
+      for i := 0 to Count - 1 do
         TGIFPainter(Items[i]).Suspend;
-    finally
-      FPainters.UnLockList;
+    finally FPainters.UnlockList;
     end;
 end;
 
 procedure TGIFImage.PaintResume;
 var
-  i			: integer;
+  i: integer;
 begin
   // Implementation is currently same as PaintStart, but don't call PaintStart
   // in case its implementation changes
   with FPainters.LockList do
     try
-      for i := 0 to Count-1 do
+      for i := 0 to Count - 1 do
         TGIFPainter(Items[i]).Start;
-    finally
-      FPainters.UnLockList;
+    finally FPainters.UnlockList;
     end;
 end;
 
 procedure TGIFImage.PaintRestart;
 var
-  i			: integer;
+  i: integer;
 begin
   with FPainters.LockList do
     try
-      for i := 0 to Count-1 do
+      for i := 0 to Count - 1 do
         TGIFPainter(Items[i]).Restart;
-    finally
-      FPainters.UnLockList;
+    finally FPainters.UnlockList;
     end;
 end;
 
 procedure TGIFImage.Warning(Sender: TObject; Severity: TGIFSeverity; Message: string);
 begin
   if (Assigned(FOnWarning)) then
-    FOnWarning(Sender, Severity, Message);
+    FOnWarning(Sender, Severity, message);
 end;
 
 {$IFDEF VER12_PLUS}
+{$IFNDEF VER14_PLUS}
+
+// not anymore need for Delphi 6 and up  // 2001.07.23
 type
   TDummyThread = class(TThread)
   protected
     procedure Execute; override;
   end;
+
 procedure TDummyThread.Execute;
 begin
 end;
+{$ENDIF}  // 2001.07.23
 {$ENDIF}
 
 var
   DesktopDC: HDC;
 {$IFDEF VER12_PLUS}
+{$IFNDEF VER14_PLUS} // not anymore need for Delphi 6 and up  // 2001.07.23
   DummyThread: TThread;
+{$ENDIF}  // 2001.07.23
 {$ENDIF}
-
-////////////////////////////////////////////////////////////////////////////////
-//
-//			Initialization
-//
-////////////////////////////////////////////////////////////////////////////////
+  /// /////////////////////////////////////////////////////////////////////////////
+  //
+  // Initialization
+  //
+  /// /////////////////////////////////////////////////////////////////////////////
 
 initialization
+
 {$IFDEF REGISTER_TGIFIMAGE}
   TPicture.RegisterFileFormat('GIF', sGIFImageFile, TGIFImage);
-  CF_GIF := RegisterClipboardFormat(PChar(sGIFImageFile));
-  TPicture.RegisterClipboardFormat(CF_GIF, TGIFImage);
+// 2008.10.19 ->
+{$IFDEF VER20_PLUS}
+CF_GIF := RegisterClipboardFormat(PWideChar(sGIFImageFile));
+{$ELSE}
+CF_GIF := RegisterClipboardFormat(PChar(sGIFImageFile));
 {$ENDIF}
-  DesktopDC := GetDC(0);
-  try
-    PaletteDevice := (GetDeviceCaps(DesktopDC, BITSPIXEL) * GetDeviceCaps(DesktopDC, PLANES) <= 8);
-    DoAutoDither := PaletteDevice;
-  finally
-    ReleaseDC(0, DesktopDC);
-  end;
+// 2008.10.19 <-
+TPicture.RegisterClipboardFormat(CF_GIF, TGIFImage);
+{$ENDIF}
+DesktopDC := GetDC(0);
+try
+  PaletteDevice := (GetDeviceCaps(DesktopDC, BITSPIXEL) * GetDeviceCaps(DesktopDC, PLANES) <= 8);
+  DoAutoDither := PaletteDevice;
+finally ReleaseDC(0, DesktopDC);
+end;
 
 {$IFDEF VER9x}
-  // Note: This doesn't return the same palette as the Delphi 3 system palette
-  // since the true system palette contains 20 entries and the Delphi 3 system
-  // palette only contains 16.
-  // For our purpose this doesn't matter since we do not care about the actual
-  // colors (or their number) in the palette.
-  // Stock objects doesn't have to be deleted.
-  SystemPalette16 := GetStockObject(DEFAULT_PALETTE);
+// Note: This doesn't return the same palette as the Delphi 3 system palette
+// since the true system palette contains 20 entries and the Delphi 3 system
+// palette only contains 16.
+// For our purpose this doesn't matter since we do not care about the actual
+// colors (or their number) in the palette.
+// Stock objects doesn't have to be deleted.
+SystemPalette16 := GetStockObject(DEFAULT_PALETTE);
 {$ENDIF}
 {$IFDEF VER12_PLUS}
-  // Make sure that at least one thread always exist.
-  // This is done to circumvent a race condition bug in Delphi 4.x and later:
-  // When threads are deleted and created in rapid succesion, a situation might
-  // arise where the thread window is deleted *after* the threads it controls
-  // has been created. See the Delphi Bug Lists for more information.
-  DummyThread := TDummyThread.Create(True);
+// Make sure that at least one thread always exist.
+// This is done to circumvent a race condition bug in Delphi 4.x and later:
+// When threads are deleted and created in rapid succesion, a situation might
+// arise where the thread window is deleted *after* the threads it controls
+// has been created. See the Delphi Bug Lists for more information.
+{$IFNDEF VER14_PLUS} // not anymore need for Delphi 6 and up  // 2001.07.23
+DummyThread := TDummyThread.Create(True);
+{$ENDIF}  // 2001.07.23
 {$ENDIF}
 
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 //
-//			Finalization
+// Finalization
 //
-////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////
 finalization
-  ExtensionList.Free;
-  AppExtensionList.Free;
+
+ExtensionList.Free;
+AppExtensionList.Free;
 {$IFNDEF VER9x}
-  {$IFDEF REGISTER_TGIFIMAGE}
-    TPicture.UnregisterGraphicClass(TGIFImage);
-  {$ENDIF}
-  {$IFDEF VER100}
-  if (pf8BitBitmap <> nil) then
-    pf8BitBitmap.Free;
-  {$ENDIF}
+{$IFDEF REGISTER_TGIFIMAGE}
+TPicture.UnregisterGraphicClass(TGIFImage);
+{$ENDIF}
+{$IFDEF VER100}
+if (pf8BitBitmap <> nil) then
+  pf8BitBitmap.Free;
+{$ENDIF}
 {$ENDIF}
 {$IFDEF VER12_PLUS}
-  if (DummyThread <> nil) then
-    DummyThread.Free;
+{$IFNDEF VER14_PLUS} // not anymore need for Delphi 6 and up  // 2001.07.23
+if (DummyThread <> nil) then
+// 2006.10.16 ->
+// DummyThread.Free;
+begin
+  DummyThread.Resume;
+  DummyThread.WaitFor;
+  DummyThread.Free;
+end;
+// 2006.10.16 <-
+{$ENDIF}  // 2001.07.23
 {$ENDIF}
+
 end.
-
-

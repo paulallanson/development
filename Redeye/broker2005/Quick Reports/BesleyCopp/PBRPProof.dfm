@@ -436,7 +436,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 2
         Top = 0
         Width = 717

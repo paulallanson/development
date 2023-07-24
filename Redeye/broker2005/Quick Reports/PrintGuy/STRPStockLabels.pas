@@ -35,7 +35,7 @@ type
     QRShape6: TQRShape;
     QRLabel1: TQRLabel;
     QRDBText3: TQRDBText;
-    imgReport: TgtQRImage;
+    imgReport: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;

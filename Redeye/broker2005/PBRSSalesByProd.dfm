@@ -33,6 +33,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 440
     Width = 786
@@ -153,6 +154,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 786
@@ -223,6 +225,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       OnClick = DateToButtonClick
     end
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 113
@@ -245,6 +248,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       OnClick = chkbxCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 128
       Top = 11
       Width = 328
@@ -443,6 +447,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 252
     Top = 184
     Width = 289

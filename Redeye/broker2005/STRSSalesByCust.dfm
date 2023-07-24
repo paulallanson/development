@@ -107,6 +107,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       end>
   end
   object pnlCustProd: TPanel
+    ParentBackground = False
     Left = 0
     Top = 426
     Width = 701
@@ -305,6 +306,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 701
@@ -371,6 +373,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = 'Customer'
       TabOrder = 2
       object rdgrpCustAllorOne: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 14
         Width = 113
@@ -429,6 +432,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = 'Product'
       TabOrder = 3
       object rdgrpPartsAllorOne: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 14
         Width = 113
@@ -528,6 +532,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       Caption = 'Rep'
       TabOrder = 8
       object rdgrpRepAllorOne: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 14
         Width = 113
@@ -569,6 +574,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       end
     end
     object pnlExportPrgrss: TPanel
+      ParentBackground = False
       Left = 200
       Top = 171
       Width = 289

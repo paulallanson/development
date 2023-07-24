@@ -35,6 +35,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 293
     Width = 839
@@ -272,6 +273,7 @@ object frmpbluSuppliers: TfrmpbluSuppliers
       end>
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 839

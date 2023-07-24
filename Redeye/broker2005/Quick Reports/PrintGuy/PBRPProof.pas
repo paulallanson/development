@@ -61,8 +61,8 @@ type
     GetLastSQL: TQuery;
     UpdPOSQL: TQuery;
     lblProofRevision: TQRLabel;
-    ReportImage: TgtQRImage;
-    labCompanyAddress: TgtQRMemo;
+    ReportImage: TQRImage;
+    labCompanyAddress: TQRMemo;
     qryGetComp: TQuery;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);

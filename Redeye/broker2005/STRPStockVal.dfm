@@ -718,7 +718,7 @@ object STRPStockValfrm: TSTRPStockValfrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblOpeningValue: TgtQRLabel
+      object qrlblOpeningValue: TQRLabel
         Left = 620
         Top = 1
         Width = 89

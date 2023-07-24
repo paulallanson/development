@@ -19,6 +19,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 652
@@ -130,6 +131,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
         end>
     end
     object pnlPart: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 650
@@ -161,6 +163,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 223
     Width = 652
@@ -186,6 +189,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       ParentFont = False
     end
     object pnlButton: TPanel
+      ParentBackground = False
       Left = 547
       Top = 1
       Width = 104

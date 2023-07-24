@@ -17,6 +17,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
   PixelsPerInch = 96
   TextHeight = 15
   object pnlPriceGrid: TPanel
+    ParentBackground = False
     Left = 0
     Top = 274
     Width = 543
@@ -106,6 +107,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 41
     Width = 543
@@ -114,6 +116,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     BevelOuter = bvNone
     TabOrder = 1
     object pnlHeader: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 241
@@ -122,6 +125,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       BevelOuter = bvNone
       TabOrder = 0
       object pnlHeaderTop: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 241
@@ -182,6 +186,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         end
       end
       object pnlHeaderLeft: TPanel
+        ParentBackground = False
         Left = 0
         Top = 97
         Width = 65
@@ -205,6 +210,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         end
       end
       object pnlDelComm: TPanel
+        ParentBackground = False
         Left = 65
         Top = 97
         Width = 176
@@ -229,6 +235,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       end
     end
     object pnlExChrgs: TPanel
+      ParentBackground = False
       Left = 241
       Top = 0
       Width = 302
@@ -257,6 +264,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         TabOrder = 0
       end
       object pnlExChrgBtns: TPanel
+        ParentBackground = False
         Left = 0
         Top = 192
         Width = 302
@@ -303,6 +311,7 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     end
   end
   object pnlSupplier: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 543

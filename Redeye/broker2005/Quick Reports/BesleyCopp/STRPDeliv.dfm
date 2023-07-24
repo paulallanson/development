@@ -817,7 +817,7 @@ object STRPDelivfrm: TSTRPDelivfrm
         WordWrap = True
         FontSize = 10
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 14
         Top = 40
         Width = 717

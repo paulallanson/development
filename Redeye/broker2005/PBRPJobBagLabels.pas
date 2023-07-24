@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, gtQRExport, gtQrCtrls;
+  CCSPrint, PBPOObjects, qrprntr, printers, QrExport;
 
 type
   TPBRPJobBagLabelsFrm = class(TForm)
@@ -13,28 +13,28 @@ type
     JBDelivSQL: TQuery;
     JBDelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    JBNumberLbl: TgtQRLabel;
+    JBNumberLbl: TQRLabel;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     SupplierSQL: TQuery;
     AddressSRC: TDataSource;
     CompSQL: TQuery;
-    BoxQuantityLbl: TgtQRLabel;
-    Memodescription: TgtQRMemo;
-    QRDBCustOrderRef: TgtQRDBText;
-    lblCustomer: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    NumberedLbl: TgtQRLabel;
-    FromLbl: TgtQRLabel;
-    qrmCompany: TgtQRMemo;
-    DeliveryDatelbl: TgtQRLabel;
-    ReportImage: TgtQRImage;
+    BoxQuantityLbl: TQRLabel;
+    Memodescription: TQRMemo;
+    QRDBCustOrderRef: TQRDBText;
+    lblCustomer: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    NumberedLbl: TQRLabel;
+    FromLbl: TQRLabel;
+    qrmCompany: TQRMemo;
+    DeliveryDatelbl: TQRLabel;
+    ReportImage: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -64,7 +64,8 @@ var
 
 implementation
 
-uses PBImages, CCSCommon, pbDatabase;
+uses
+  PBImages, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -271,6 +272,12 @@ begin
   FbAddressOnly := Value;
 end;
 
+function TPBRPJobBagLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPJobBagLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -307,7 +314,7 @@ begin
      end;
 
     DeliveryDateLbl.caption := PBDateStr(JBDelivSQL.fieldbyname('Date_Point').asdatetime);
-    
+
     try
       iBoxQuantity := strtoint(JBDelivSQL.fieldbyname('Forms_per_Box').asstring)
     except
@@ -416,5 +423,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

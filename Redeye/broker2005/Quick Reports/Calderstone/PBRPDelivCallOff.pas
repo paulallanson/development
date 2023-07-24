@@ -8,7 +8,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects, gtQrCtrls;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects;
 
 type
   TPBRPDelivCallOffFrm = class(TForm)
@@ -16,48 +16,48 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    AddressMemo: TgtQRMemo;
-    DeliveryMemo: TgtQRMemo;
+    AddressMemo: TQRMemo;
+    DeliveryMemo: TQRMemo;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     AddressSRC: TDataSource;
     SupplierSQL: TQuery;
-    QRDBText2: TgtQRDBText;
-    YourRefLbl: TgtQRLabel;
-    DateLbl: TgtQRLabel;
+    QRDBText2: TQRDBText;
+    YourRefLbl: TQRLabel;
+    DateLbl: TQRLabel;
     GetNarrSQL: TQuery;
     CompSQL: TQuery;
-    Account: TgtQRDBText;
+    Account: TQRDBText;
     CustDetsSQL: TQuery;
-    Accountlbl: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    lblDelInst: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
+    Accountlbl: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    lblDelInst: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel6: TQRLabel;
     QRBand2: TQRSubDetail;
     GetPickDataSource: TDataSource;
     GetPickSQL: TQuery;
-    FormRefLbl: TgtQRLabel;
-    FormRefDescLbl: TgtQRLabel;
-    QRDBText3: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    BoxesLbl: TgtQRLabel;
-    QuantityLbl: TgtQRLabel;
-    OrderRefLbl: TgtQRLabel;
+    FormRefLbl: TQRLabel;
+    FormRefDescLbl: TQRLabel;
+    QRDBText3: TQRDBText;
+    QRDBText5: TQRDBText;
+    BoxesLbl: TQRLabel;
+    QuantityLbl: TQRLabel;
+    OrderRefLbl: TQRLabel;
     CallOffDataSource: TDataSource;
     CallOffSQL: TQuery;
-    QRLabel9: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    PickQRMemo: TgtQRMemo;
-    QRLabel2: TgtQRLabel;
-    QRLabel12: TgtQRLabel;
-    QRDBText1: TgtQRDBText;
+    QRLabel9: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRLabel7: TQRLabel;
+    PickQRMemo: TQRMemo;
+    QRLabel2: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRDBText1: TQRDBText;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

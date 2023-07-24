@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint, gtQrCtrls;
+  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
 
 type
   TPBRPPEndRepTeamPerformFrm = class(TForm)
@@ -267,7 +267,7 @@ type
     qryDummyNull: TQuery;
     qryDummy: TQuery;
     qryRepTeamBudgets: TQuery;
-    gtQRLabel1: TgtQRLabel;
+    gtQRLabel1: TQRLabel;
     qryRepTeamSubReps: TQuery;
     qryDummyTeam: TQuery;
     qryDummyNullTeam: TQuery;

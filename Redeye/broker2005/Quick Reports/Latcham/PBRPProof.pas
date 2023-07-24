@@ -72,8 +72,8 @@ type
     lblOfficeContact: TQRLabel;
     QRDBText1: TQRDBText;
     QRMemoCmpnyNm: TQRMemo;
-    qrlblVatNo: TgtQRMemo;
-    gtlblFSCClaim: TgtQRLabel;
+    qrlblVatNo: TQRMemo;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);

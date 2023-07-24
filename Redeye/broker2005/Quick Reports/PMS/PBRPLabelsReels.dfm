@@ -93,7 +93,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
       DataSet = PODelivSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object NumberedLbl: TgtQRLabel
+      object NumberedLbl: TQRLabel
         Left = 16
         Top = 272
         Width = 97
@@ -124,7 +124,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object FromLbl: TgtQRLabel
+      object FromLbl: TQRLabel
         Left = 125
         Top = 272
         Width = 212
@@ -155,7 +155,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object Memodescription: TgtQRMemo
+      object Memodescription: TQRMemo
         Left = 125
         Top = 162
         Width = 321
@@ -188,7 +188,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object PONumberLbl: TgtQRLabel
+      object PONumberLbl: TQRLabel
         Left = 391
         Top = 210
         Width = 146
@@ -219,7 +219,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object BoxQuantityLbl: TgtQRLabel
+      object BoxQuantityLbl: TQRLabel
         Left = 125
         Top = 210
         Width = 58
@@ -250,7 +250,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object FormRefLbl: TgtQRLabel
+      object FormRefLbl: TQRLabel
         Left = 125
         Top = 141
         Width = 111
@@ -282,7 +282,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 16
         Top = 141
         Width = 77
@@ -314,7 +314,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBCustOrderRef: TgtQRDBText
+      object QRDBCustOrderRef: TQRDBText
         Left = 125
         Top = 239
         Width = 148
@@ -346,7 +346,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object lblCustomer: TgtQRLabel
+      object lblCustomer: TQRLabel
         Left = 125
         Top = 110
         Width = 84
@@ -377,7 +377,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 16
         Top = 110
         Width = 82
@@ -408,7 +408,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 16
         Top = 210
         Width = 68
@@ -439,7 +439,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 16
         Top = 239
         Width = 75
@@ -470,7 +470,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 280
         Top = 210
         Width = 105
@@ -501,7 +501,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 280
         Top = 239
         Width = 83
@@ -532,7 +532,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 16
         Top = 162
         Width = 95
@@ -563,7 +563,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 12
       end
-      object qrmCompany: TgtQRMemo
+      object qrmCompany: TQRMemo
         Left = 344
         Top = 8
         Width = 193
@@ -594,7 +594,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 10
       end
     end
-    object DeliveryDateLbl: TgtQRLabel
+    object DeliveryDateLbl: TQRLabel
       Left = 409
       Top = 258
       Width = 144

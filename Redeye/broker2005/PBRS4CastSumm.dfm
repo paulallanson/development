@@ -23,6 +23,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     Caption = 'Forecast from:'
   end
   object RadioGroup1: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 8
     Width = 129
@@ -36,6 +37,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     OnClick = RadioGroup1Click
   end
   object RadioGroup2: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 80
     Width = 129
@@ -67,6 +69,7 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     OnClick = PreviewBitBtnClick
   end
   object pnlRepSearch: TPanel
+    ParentBackground = False
     Left = 155
     Top = 16
     Width = 329

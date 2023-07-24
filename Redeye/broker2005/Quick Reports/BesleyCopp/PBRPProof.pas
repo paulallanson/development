@@ -202,7 +202,7 @@ type
     QRLabel23: TQRLabel;
     lblOfficeContact: TQRLabel;
     QRMemoCmpnyNm: TQRMemo;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     QRDBText1: TQRDBText;
     QRShape13: TQRShape;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var

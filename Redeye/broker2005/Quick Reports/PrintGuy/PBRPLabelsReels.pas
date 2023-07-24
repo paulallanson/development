@@ -33,8 +33,8 @@ type
     QRLabel7: TQRLabel;
     qryGetFSCClaim: TQuery;
     DeliveryDateLbl: TQRLabel;
-    ReportImage: TgtQRImage;
-    qrmCompany: TgtQRMemo;
+    ReportImage: TQRImage;
+    qrmCompany: TQRMemo;
     AddressMemo: TQRMemo;
     DeliveryName: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:

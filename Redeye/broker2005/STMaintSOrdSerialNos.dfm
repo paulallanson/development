@@ -18,6 +18,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 624
@@ -68,6 +69,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 393
     Width = 624
@@ -94,6 +96,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 65
     Width = 355
@@ -190,6 +193,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     end
   end
   object Panel4: TPanel
+    ParentBackground = False
     Left = 355
     Top = 65
     Width = 269

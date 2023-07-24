@@ -71,10 +71,10 @@ type
     lblOfficeContact: TQRLabel;
     QRDBText1: TQRDBText;
     QRMemoCmpnyNm: TQRMemo;
-    gtlblFSCClaim: TgtQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
-    qrlblVatNo: TgtQRMemo;
-    ReportImage: TgtQRImage;
+    qrlblVatNo: TQRMemo;
+    ReportImage: TQRImage;
     procedure PrintPOsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
     procedure DetailQRBandBeforePrint(Sender: TQRCustomBand; var PrintBand:

@@ -21,6 +21,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 742
@@ -56,6 +57,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Caption = 'days'
     end
     object AllOrOneRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 105
@@ -68,6 +70,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = AllOrOneRadioGroupClick
     end
     object customerrg: TRadioGroup
+      ParentBackground = False
       Left = 368
       Top = 8
       Width = 121
@@ -124,6 +127,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnExit = edtDueDaysExit
     end
     object grpbxReps: TGroupBox
+      ParentBackground = False
       Left = 117
       Top = 8
       Width = 249
@@ -164,6 +168,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       end
     end
     object grpbxCustomers: TGroupBox
+      ParentBackground = False
       Left = 493
       Top = 8
       Width = 240
@@ -205,6 +210,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     end
   end
   object pnlButton: TPanel
+    ParentBackground = False
     Left = 0
     Top = 389
     Width = 742

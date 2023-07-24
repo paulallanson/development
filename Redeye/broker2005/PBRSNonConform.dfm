@@ -17,6 +17,7 @@ object frmPBRSNonConform: TfrmPBRSNonConform
   PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 418
@@ -128,6 +129,7 @@ object frmPBRSNonConform: TfrmPBRSNonConform
       NumGlyphs = 2
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 5
       Width = 393

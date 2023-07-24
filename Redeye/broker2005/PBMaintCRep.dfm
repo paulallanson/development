@@ -30,6 +30,7 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 4
     Width = 369

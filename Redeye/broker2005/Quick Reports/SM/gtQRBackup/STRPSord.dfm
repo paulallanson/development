@@ -87,7 +87,7 @@ object STRPSordFrm: TSTRPSordFrm
         1307.041666666667000000
         2100.791666666667000000)
       BandType = rbPageHeader
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 18
         Top = -1
         Width = 399
@@ -105,7 +105,7 @@ object STRPSordFrm: TSTRPSordFrm
         Center = True
         Stretch = True
       end
-      object QRMemoAddress: TgtQRMemo
+      object QRMemoAddress: TQRMemo
         Left = 488
         Top = 1
         Width = 193
@@ -135,7 +135,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = False
         FontSize = 8
       end
-      object ReportTitleQRLabel: TgtQRLabel
+      object ReportTitleQRLabel: TQRLabel
         Left = 490
         Top = 208
         Width = 94
@@ -166,7 +166,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = False
         FontSize = 9
       end
-      object OrdNumQRLabel: TgtQRLabel
+      object OrdNumQRLabel: TQRLabel
         Left = 590
         Top = 208
         Width = 85
@@ -197,7 +197,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object OrdDateQRLabel: TgtQRLabel
+      object OrdDateQRLabel: TQRLabel
         Left = 490
         Top = 238
         Width = 71
@@ -228,7 +228,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object SalesOrdDateQRLabel: TgtQRLabel
+      object SalesOrdDateQRLabel: TQRLabel
         Left = 590
         Top = 238
         Width = 70
@@ -259,7 +259,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object CustomerAddmemo: TgtQRMemo
+      object CustomerAddmemo: TQRMemo
         Left = 120
         Top = 178
         Width = 313
@@ -289,7 +289,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = False
         FontSize = 9
       end
-      object QRLblWho: TgtQRLabel
+      object QRLblWho: TQRLabel
         Left = 490
         Top = 269
         Width = 81
@@ -320,7 +320,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblCntct: TgtQRLabel
+      object QRLblCntct: TQRLabel
         Left = 589
         Top = 269
         Width = 194
@@ -351,7 +351,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblCustRef: TgtQRLabel
+      object QRLblCustRef: TQRLabel
         Left = 490
         Top = 300
         Width = 53
@@ -382,7 +382,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblRef: TgtQRLabel
+      object QRLblRef: TQRLabel
         Left = 590
         Top = 300
         Width = 195
@@ -413,7 +413,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblReqDt: TgtQRLabel
+      object QRLblReqDt: TQRLabel
         Left = 590
         Top = 331
         Width = 70
@@ -444,7 +444,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblDtReq: TgtQRLabel
+      object QRLblDtReq: TQRLabel
         Left = 490
         Top = 331
         Width = 85
@@ -475,7 +475,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 120
         Top = 313
         Width = 73
@@ -506,7 +506,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object DellAddmemo: TgtQRMemo
+      object DellAddmemo: TQRMemo
         Left = 120
         Top = 333
         Width = 313
@@ -536,7 +536,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = False
         FontSize = 9
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 668
         Top = 475
         Width = 32
@@ -567,7 +567,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 604
         Top = 475
         Width = 29
@@ -598,7 +598,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 520
         Top = 473
         Width = 49
@@ -629,7 +629,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object OrdQtyQRLabel: TgtQRLabel
+      object OrdQtyQRLabel: TQRLabel
         Left = 520
         Top = 457
         Width = 50
@@ -660,7 +660,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 446
         Top = 473
         Width = 68
@@ -691,7 +691,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object DescQRLabel: TgtQRLabel
+      object DescQRLabel: TQRLabel
         Left = 168
         Top = 473
         Width = 65
@@ -722,7 +722,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object PartQRLabel: TgtQRLabel
+      object PartQRLabel: TQRLabel
         Left = 58
         Top = 473
         Width = 44
@@ -753,7 +753,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object LineQrLabel: TgtQRLabel
+      object LineQrLabel: TQRLabel
         Left = 24
         Top = 473
         Width = 24
@@ -784,7 +784,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrlblSalesOrder: TgtQRLabel
+      object qrlblSalesOrder: TQRLabel
         Left = 600
         Top = 160
         Width = 77
@@ -815,7 +815,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 732
         Top = 475
         Width = 26
@@ -846,7 +846,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 120
         Top = 150
         Width = 127
@@ -898,7 +898,7 @@ object STRPSordFrm: TSTRPSordFrm
         378.354166666666700000
         2100.791666666667000000)
       BandType = rbGroupFooter
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 531
         Top = 22
         Width = 69
@@ -929,7 +929,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object GoodsValueLbl: TgtQRLabel
+      object GoodsValueLbl: TQRLabel
         Left = 621
         Top = 22
         Width = 80
@@ -960,7 +960,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 538
         Top = 54
         Width = 61
@@ -991,7 +991,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object VATValueLbl: TgtQRLabel
+      object VATValueLbl: TQRLabel
         Left = 629
         Top = 54
         Width = 72
@@ -1022,7 +1022,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object TotalValueLbl: TgtQRLabel
+      object TotalValueLbl: TQRLabel
         Left = 623
         Top = 86
         Width = 78
@@ -1053,7 +1053,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 502
         Top = 86
         Width = 96
@@ -1084,7 +1084,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object lblSpecialNotes: TgtQRLabel
+      object lblSpecialNotes: TQRLabel
         Left = 25
         Top = 22
         Width = 81
@@ -1115,7 +1115,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object SpecialNotesMemo: TgtQRMemo
+      object SpecialNotesMemo: TQRMemo
         Left = 25
         Top = 37
         Width = 400
@@ -1152,7 +1152,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 25
         Top = 121
         Width = 232
@@ -1213,7 +1213,7 @@ object STRPSordFrm: TSTRPSordFrm
       DataSet = GetDetsQuery
       PrintBefore = False
       PrintIfEmpty = True
-      object PackqtyQRLabel: TgtQRLabel
+      object PackqtyQRLabel: TQRLabel
         Left = 448
         Top = 1
         Width = 65
@@ -1244,7 +1244,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object SOrdLineNoQRLabel: TgtQRLabel
+      object SOrdLineNoQRLabel: TQRLabel
         Left = 16
         Top = 1
         Width = 33
@@ -1275,7 +1275,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object PartCodeQRLabel: TgtQRLabel
+      object PartCodeQRLabel: TQRLabel
         Left = 58
         Top = 1
         Width = 103
@@ -1306,7 +1306,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object PartDescrQRLabel: TgtQRLabel
+      object PartDescrQRLabel: TQRLabel
         Left = 168
         Top = 1
         Width = 289
@@ -1337,7 +1337,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object SellPriceQRLabel: TgtQRLabel
+      object SellPriceQRLabel: TQRLabel
         Left = 576
         Top = 1
         Width = 57
@@ -1368,7 +1368,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object PackSizeQRLabel: TgtQRLabel
+      object PackSizeQRLabel: TQRLabel
         Left = 520
         Top = 1
         Width = 49
@@ -1399,7 +1399,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblValue: TgtQRLabel
+      object QRLblValue: TQRLabel
         Left = 645
         Top = 1
         Width = 55
@@ -1430,7 +1430,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object VatQRLabel: TgtQRLabel
+      object VatQRLabel: TQRLabel
         Left = 712
         Top = 2
         Width = 50
@@ -1507,7 +1507,7 @@ object STRPSordFrm: TSTRPSordFrm
       DataSet = ExtChrgsQuery
       PrintBefore = False
       PrintIfEmpty = True
-      object ExtChrgVatQRlbl: TgtQRLabel
+      object ExtChrgVatQRlbl: TQRLabel
         Left = 721
         Top = 4
         Width = 41
@@ -1538,7 +1538,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblDetails: TgtQRLabel
+      object QRLblDetails: TQRLabel
         Left = 168
         Top = 4
         Width = 77
@@ -1569,7 +1569,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLblamt: TgtQRLabel
+      object QRLblamt: TQRLabel
         Left = 644
         Top = 4
         Width = 56

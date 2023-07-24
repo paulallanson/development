@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls, gtQrCtrls;
+  Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls;
 
 type
   TSTRPPordfrm = class(TForm)
@@ -81,14 +81,14 @@ type
     QryRptSumm: TQuery;
     QRLabel8: TQRLabel;
     QRDBText1: TQRDBText;
-    DelAddmemo: TgtQRMemo;
+    DelAddmemo: TQRMemo;
     QRLabel13: TQRLabel;
     qryCust: TQuery;
     AddressSRC: TDataSource;
     qryAdhoc: TQuery;
     GetNarrSQL: TQuery;
     QRLabel14: TQRLabel;
-    qrlblRetail: TgtQRLabel;
+    qrlblRetail: TQRLabel;
     function Getdetails(Sender: TObject): integer;
     procedure qrpCustFooterBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

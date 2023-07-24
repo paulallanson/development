@@ -70,6 +70,7 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
     Kind = bkCancel
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 5
     Top = 0
     Width = 361

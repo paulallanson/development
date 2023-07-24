@@ -29,6 +29,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     SimplePanel = False
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 404
     Width = 782
@@ -160,6 +161,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 782
@@ -167,6 +169,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
     Align = alTop
     TabOrder = 3
     object rgCustomer: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 8
       Width = 113
@@ -180,6 +183,7 @@ object PBRSPOnotonJBfrm: TPBRSPOnotonJBfrm
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
+      ParentBackground = False
       Left = 128
       Top = 8
       Width = 329

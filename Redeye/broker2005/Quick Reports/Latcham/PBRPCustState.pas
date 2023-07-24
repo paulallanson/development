@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon, gtQrCtrls, gtQrExport, qrprntr, printers;
+  PBPOObjects, CCSCommon, QrExport, qrprntr, printers;
 
 type
   TPBRPCustStateFrm = class(TForm)
@@ -50,11 +50,11 @@ type
     qryGetPO: TQuery;
     qryGetSO: TQuery;
     qryGetJB: TQuery;
-    QRMemo2: TgtQRMemo;
-    gtQRMemo1: TgtQRMemo;
-    qrshpPayment: TgtQRShape;
-    memPayment: TgtQRRichText;
-    memDefPayment: TgtQRMemo;
+    QRMemo2: TQRMemo;
+    gtQRMemo1: TQRMemo;
+    qrshpPayment: TQRShape;
+    memPayment: TQRRichText;
+    memDefPayment: TQRMemo;
     GetNarrSQL: TQuery;
     QRDBText1: TQRDBText;
     QRLabel10: TQRLabel;
@@ -63,7 +63,7 @@ type
     QRLabel12: TQRLabel;
     QRLabel17: TQRLabel;
     QRLabel14: TQRLabel;
-    imgReport: TgtQRImage;
+    imgReport: TQRImage;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;

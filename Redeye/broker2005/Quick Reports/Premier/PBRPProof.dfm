@@ -94,7 +94,7 @@ object PBRPProofFrm: TPBRPProofFrm
         1087.437500000000000000
         1830.916666666667000000)
       BandType = rbPageHeader
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 194
         Top = 1
         Width = 295
@@ -112,7 +112,7 @@ object PBRPProofFrm: TPBRPProofFrm
           780.520833333333000000)
         Stretch = True
       end
-      object OrderLbl: TgtQRLabel
+      object OrderLbl: TQRLabel
         Left = 511
         Top = 20
         Width = 178
@@ -144,7 +144,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 14
       end
-      object PONumberLbl: TgtQRLabel
+      object PONumberLbl: TQRLabel
         Left = 576
         Top = 20
         Width = 107
@@ -175,7 +175,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 14
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 0
         Top = 220
         Width = 60
@@ -206,7 +206,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object YourRefLbl: TgtQRLabel
+      object YourRefLbl: TQRLabel
         Left = 0
         Top = 236
         Width = 67
@@ -237,7 +237,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object AddressMemo: TgtQRMemo
+      object AddressMemo: TQRMemo
         Left = 0
         Top = 268
         Width = 273
@@ -269,7 +269,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 0
         Top = 192
         Width = 45
@@ -301,7 +301,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel20: TgtQRLabel
+      object QRLabel20: TQRLabel
         Left = 0
         Top = 176
         Width = 57
@@ -332,7 +332,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object DateLbl: TgtQRLabel
+      object DateLbl: TQRLabel
         Left = 608
         Top = 128
         Width = 37
@@ -357,7 +357,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object lblProofRevision: TgtQRLabel
+      object lblProofRevision: TQRLabel
         Left = 540
         Top = 152
         Width = 105
@@ -408,7 +408,7 @@ object PBRPProofFrm: TPBRPProofFrm
         1611.312500000000000000
         1830.916666666667000000)
       BandType = rbDetail
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 0
         Top = 112
         Width = 690
@@ -426,7 +426,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 228
         Top = 175
         Width = 34
@@ -457,7 +457,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel15: TgtQRLabel
+      object QRLabel15: TQRLabel
         Left = 492
         Top = 175
         Width = 24
@@ -488,7 +488,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape5: TgtQRShape
+      object QRShape5: TQRShape
         Left = 268
         Top = 188
         Width = 209
@@ -506,7 +506,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape8: TgtQRShape
+      object QRShape8: TQRShape
         Left = 516
         Top = 188
         Width = 100
@@ -524,7 +524,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel18: TgtQRLabel
+      object QRLabel18: TQRLabel
         Left = 0
         Top = 127
         Width = 466
@@ -557,7 +557,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 0
         Top = 175
         Width = 180
@@ -588,7 +588,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel5: TgtQRLabel
+      object QRLabel5: TQRLabel
         Left = 0
         Top = 234
         Width = 203
@@ -619,7 +619,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel6: TgtQRLabel
+      object QRLabel6: TQRLabel
         Left = 228
         Top = 234
         Width = 34
@@ -650,7 +650,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 268
         Top = 247
         Width = 209
@@ -668,7 +668,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 492
         Top = 234
         Width = 24
@@ -699,7 +699,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 516
         Top = 247
         Width = 100
@@ -717,7 +717,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel8: TgtQRLabel
+      object QRLabel8: TQRLabel
         Left = 0
         Top = 291
         Width = 124
@@ -748,7 +748,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 11
       end
-      object QRLabel9: TgtQRLabel
+      object QRLabel9: TQRLabel
         Left = 228
         Top = 291
         Width = 34
@@ -779,7 +779,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape4: TgtQRShape
+      object QRShape4: TQRShape
         Left = 268
         Top = 304
         Width = 209
@@ -797,7 +797,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel10: TgtQRLabel
+      object QRLabel10: TQRLabel
         Left = 492
         Top = 291
         Width = 24
@@ -828,7 +828,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape6: TgtQRShape
+      object QRShape6: TQRShape
         Left = 516
         Top = 304
         Width = 100
@@ -846,7 +846,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape7: TgtQRShape
+      object QRShape7: TQRShape
         Left = 0
         Top = 336
         Width = 690
@@ -864,7 +864,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape9: TgtQRShape
+      object QRShape9: TQRShape
         Left = 0
         Top = 457
         Width = 690
@@ -882,7 +882,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel11: TgtQRLabel
+      object QRLabel11: TQRLabel
         Left = 0
         Top = 471
         Width = 219
@@ -913,7 +913,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape10: TgtQRShape
+      object QRShape10: TQRShape
         Left = 0
         Top = 609
         Width = 690
@@ -931,7 +931,7 @@ object PBRPProofFrm: TPBRPProofFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRLabel13: TgtQRLabel
+      object QRLabel13: TQRLabel
         Left = 16
         Top = 6
         Width = 47
@@ -962,7 +962,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel14: TgtQRLabel
+      object QRLabel14: TQRLabel
         Left = 128
         Top = 6
         Width = 46
@@ -993,7 +993,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel16: TgtQRLabel
+      object QRLabel16: TQRLabel
         Left = 520
         Top = 6
         Width = 32
@@ -1024,7 +1024,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel17: TgtQRLabel
+      object QRLabel17: TQRLabel
         Left = 584
         Top = 6
         Width = 32
@@ -1055,7 +1055,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLabel25: TgtQRLabel
+      object QRLabel25: TQRLabel
         Left = 563
         Top = 27
         Width = 10
@@ -1086,7 +1086,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel27: TgtQRLabel
+      object QRLabel27: TQRLabel
         Left = 0
         Top = 350
         Width = 623
@@ -1119,7 +1119,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel30: TgtQRLabel
+      object QRLabel30: TQRLabel
         Left = 0
         Top = 370
         Width = 606
@@ -1152,7 +1152,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel31: TgtQRLabel
+      object QRLabel31: TQRLabel
         Left = 0
         Top = 405
         Width = 515
@@ -1185,7 +1185,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel32: TgtQRLabel
+      object QRLabel32: TQRLabel
         Left = 0
         Top = 425
         Width = 242
@@ -1216,7 +1216,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object LabQuantity: TgtQRLabel
+      object LabQuantity: TQRLabel
         Left = 16
         Top = 27
         Width = 76
@@ -1247,7 +1247,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object LabJobTitle: TgtQRLabel
+      object LabJobTitle: TQRLabel
         Left = 128
         Top = 27
         Width = 337
@@ -1278,7 +1278,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object LabDepth: TgtQRLabel
+      object LabDepth: TQRLabel
         Left = 491
         Top = 27
         Width = 60
@@ -1309,7 +1309,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object LabWidth: TgtQRLabel
+      object LabWidth: TQRLabel
         Left = 584
         Top = 27
         Width = 59
@@ -1340,7 +1340,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 12
       end
-      object FormRefLbl: TgtQRLabel
+      object FormRefLbl: TQRLabel
         Left = 128
         Top = 70
         Width = 63
@@ -1371,7 +1371,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object FormRefDescLbl: TgtQRLabel
+      object FormRefDescLbl: TQRLabel
         Left = 128
         Top = 89
         Width = 89
@@ -1422,7 +1422,7 @@ object PBRPProofFrm: TPBRPProofFrm
         296.333333333333300000
         1830.916666666667000000)
       BandType = rbPageFooter
-      object QRLabel19: TgtQRLabel
+      object QRLabel19: TQRLabel
         Left = 8
         Top = 7
         Width = 97
@@ -1453,7 +1453,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRDBText8: TgtQRDBText
+      object QRDBText8: TQRDBText
         Left = 120
         Top = 6
         Width = 64
@@ -1485,7 +1485,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object lblCompanyAddress: TgtQRLabel
+      object lblCompanyAddress: TQRLabel
         Left = 8
         Top = 69
         Width = 96
@@ -1516,7 +1516,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRShape11: TgtQRShape
+      object QRShape11: TQRShape
         Left = 0
         Top = 50
         Width = 690

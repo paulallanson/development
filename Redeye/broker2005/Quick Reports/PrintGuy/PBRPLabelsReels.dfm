@@ -501,7 +501,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         WordWrap = True
         FontSize = 11
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 182
         Top = -1
         Width = 100
@@ -519,7 +519,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Center = True
         Stretch = True
       end
-      object qrmCompany: TgtQRMemo
+      object qrmCompany: TQRMemo
         Left = 8
         Top = 303
         Width = 441

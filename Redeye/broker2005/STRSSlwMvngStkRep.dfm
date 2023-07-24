@@ -89,6 +89,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Kind = bkCancel
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 184
     Width = 313
@@ -200,6 +201,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     TabOrder = 6
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 137
@@ -218,6 +220,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = AllOrOneRadioGroupClick
   end
   object RepGrpBox: TGroupBox
+    ParentBackground = False
     Left = 152
     Top = 8
     Width = 265
@@ -264,6 +267,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     end
   end
   object CustGrpBox: TGroupBox
+    ParentBackground = False
     Left = 153
     Top = 80
     Width = 265
@@ -310,6 +314,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     end
   end
   object CustRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 137
@@ -443,6 +448,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 240
     Width = 289

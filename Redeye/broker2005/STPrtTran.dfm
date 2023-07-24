@@ -31,6 +31,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Visible = False
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 742
@@ -59,6 +60,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       Caption = 'Quantity Moved (in singles)'
     end
     object GRNGroupBox: TGroupBox
+      ParentBackground = False
       Left = 12
       Top = 4
       Width = 713
@@ -111,6 +113,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       end
     end
     object PartGroupBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 4
       Width = 725
@@ -200,6 +203,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 343
     Width = 742
@@ -293,6 +297,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     end
   end
   object pnlCentre: TPanel
+    ParentBackground = False
     Left = 0
     Top = 89
     Width = 742
@@ -300,6 +305,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Align = alClient
     TabOrder = 3
     object pnlCentreLeft: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 370
@@ -311,6 +317,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         370
         252)
       object FromGroupBox: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 358
@@ -369,6 +376,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       end
     end
     object pnlCentreRight: TPanel
+      ParentBackground = False
       Left = 371
       Top = 1
       Width = 370
@@ -380,6 +388,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         370
         252)
       object ToGroupBox: TGroupBox
+        ParentBackground = False
         Left = 4
         Top = 8
         Width = 362

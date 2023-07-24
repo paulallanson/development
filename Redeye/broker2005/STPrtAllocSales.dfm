@@ -92,6 +92,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       end>
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 430
     Width = 747
@@ -201,6 +202,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 747

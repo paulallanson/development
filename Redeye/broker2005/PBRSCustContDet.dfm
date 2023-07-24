@@ -19,6 +19,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 984
@@ -89,6 +90,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentFont = False
     end
     object pnlStatusSelect: TPanel
+      ParentBackground = False
       Left = 2
       Top = 8
       Width = 147
@@ -164,6 +166,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         'Customer Type')
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 149
       Top = 8
       Width = 147
@@ -194,6 +197,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object Panel3: TPanel
+      ParentBackground = False
       Left = 296
       Top = 8
       Width = 147
@@ -224,6 +228,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       end
     end
     object RadioGroup1: TRadioGroup
+      ParentBackground = False
       Left = 869
       Top = 12
       Width = 108
@@ -281,6 +286,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 10
     end
     object Panel4: TPanel
+      ParentBackground = False
       Left = 443
       Top = 8
       Width = 147
@@ -326,6 +332,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         'Customer Type')
     end
     object Panel5: TPanel
+      ParentBackground = False
       Left = 590
       Top = 8
       Width = 115
@@ -362,6 +369,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 445
     Width = 984
@@ -372,6 +380,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       984
       41)
     object Panel1: TPanel
+      ParentBackground = False
       Left = 681
       Top = 1
       Width = 302
@@ -624,6 +633,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 268
     Top = 252
     Width = 289

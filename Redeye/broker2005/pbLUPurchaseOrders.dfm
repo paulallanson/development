@@ -247,6 +247,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 329
     Width = 771
@@ -269,6 +270,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 483
       Top = 1
       Width = 287
@@ -319,6 +321,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 771

@@ -19,6 +19,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
+    ParentBackground = False
     Left = 0
     Top = 145
     Width = 784
@@ -118,6 +119,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
   end
   object pnlControls: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 784
@@ -195,6 +197,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Caption = 'To Payment Date:'
     end
     object rdgrpRep: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 16
       Width = 113
@@ -208,6 +211,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnClick = rdgrpRepClick
     end
     object pnlRepSearch: TPanel
+      ParentBackground = False
       Left = 128
       Top = 16
       Width = 257
@@ -285,6 +289,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnExit = DateFromEditExit
     end
     object rdgrpCommType: TRadioGroup
+      ParentBackground = False
       Left = 392
       Top = 10
       Width = 185
@@ -298,6 +303,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnClick = rdgrpCommTypeClick
     end
     object RdGrpRepTyp: TRadioGroup
+      ParentBackground = False
       Left = 392
       Top = 74
       Width = 185
@@ -321,6 +327,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
   end
   object pnlPrintControl: TPanel
+    ParentBackground = False
     Left = 0
     Top = 443
     Width = 784
@@ -344,6 +351,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
+      ParentBackground = False
       Left = 551
       Top = 1
       Width = 232
@@ -484,6 +492,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 268
     Top = 215
     Width = 289

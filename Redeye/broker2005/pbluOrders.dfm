@@ -397,6 +397,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 367
     Width = 939
@@ -469,6 +470,7 @@ object frmpbLUOrders: TfrmpbLUOrders
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 939

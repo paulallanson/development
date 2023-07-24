@@ -24,6 +24,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
     Caption = 'Pack Size'
   end
   object CountGroupBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 313
@@ -156,6 +157,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 302
     Width = 327
@@ -214,6 +216,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
     end
   end
   object grpbxNumbered: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 194
     Width = 313

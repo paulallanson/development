@@ -176,12 +176,12 @@ $History: PBRSEnq.pas $
  * User: Roddym       Date: 13/12/99   Time: 16:10
  * Updated in $/PBL D5
  * Force print logo if faxing.
- * 
+ *
  * *****************  Version 3  *****************
  * User: Roddym       Date: 13/12/99   Time: 15:14
  * Updated in $/PBL D5
  * Don't print artwork or forms per box if no data.
- * 
+ *
  * *****************  Version 2  *****************
  * User: Roddym       Date: 8/12/99    Time: 16:17
  * Updated in $/PBL D5
@@ -200,7 +200,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, gtQrExport,
+  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, QrExport,
   CCSCommon, Inifiles;
 
 type
@@ -301,8 +301,9 @@ var
   EnqArrayCount: integer;
 implementation
 
-uses PBFaxList, LetterDM, PBEmailList, PBSendFax, PBDBEnqLtr, pbMainMenu, printers,
-      CCSPrint, PDLetter, pbDatabase;
+uses
+  PBFaxList, LetterDM, PBEmailList, PBSendFax, PBDBEnqLtr, pbMainMenu, printers,
+  CCSPrint, PDLetter, pbDatabase, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -873,9 +874,9 @@ begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
         Printers.Printer.PrinterIndex := -1;
-        for icount := 0 to pred(Printer.Printers.count) do
+        for icount := 0 to pred(Printers.Printer.Printers.count) do
           begin
-            if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+            if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
               Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
@@ -885,7 +886,7 @@ begin
         if SetupPrinter(aBroker.PrinterSettings) then
           begin
             PrintingPress.QuickR.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
             DefaultBin := GetBinSelection;
             SaveDefaultPrinter;
             FPrinted := true;
@@ -913,6 +914,13 @@ begin
 end;
 
 procedure TPBRSEnqFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
+begin
+  var fileName := 'ENQ' + FEnquiry.ToString;
+  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TPBRSEnqFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -927,11 +935,12 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   sFileName := 'ENQ' + inttostr(FEnquiry);
 
   AFilters := TgtQRFilters.Create(self);
@@ -1043,6 +1052,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBRSEnqFrm.LoadCombos;
 begin
@@ -1354,7 +1364,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1371,7 +1381,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin

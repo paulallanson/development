@@ -45,6 +45,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     OnSelectItem = BinsListViewSelectItem
   end
   object FuncGroupBox: TGroupBox
+    ParentBackground = False
     Left = 192
     Top = 288
     Width = 337
@@ -96,6 +97,7 @@ object STMntPrtBinFrm: TSTMntPrtBinFrm
     Kind = bkClose
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 280
     Width = 177

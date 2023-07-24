@@ -1054,7 +1054,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 10
       end
-      object lblSpecialNotes: TgtQRLabel
+      object lblSpecialNotes: TQRLabel
         Left = 25
         Top = 6
         Width = 76
@@ -1085,7 +1085,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = True
         FontSize = 10
       end
-      object SpecialNotesMemo: TgtQRMemo
+      object SpecialNotesMemo: TQRMemo
         Left = 25
         Top = 21
         Width = 400
@@ -1183,7 +1183,7 @@ object STRPSordFrm: TSTRPSordFrm
         WordWrap = False
         FontSize = 10
       end
-      object qrlblVatNo: TgtQRMemo
+      object qrlblVatNo: TQRMemo
         Left = 475
         Top = 180
         Width = 294

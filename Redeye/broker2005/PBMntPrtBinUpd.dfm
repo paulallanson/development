@@ -87,6 +87,7 @@ object PBMntPrtBinUpdFrm: TPBMntPrtBinUpdFrm
     Kind = bkCancel
   end
   object PickRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 72
     Width = 89

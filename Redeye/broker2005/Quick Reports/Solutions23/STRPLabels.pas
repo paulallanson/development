@@ -115,11 +115,11 @@ type
     QRLabel5: TQRLabel;
     qryGetFSCClaim: TQuery;
     DeliveryDateLbl: TQRLabel;
-    qrmCompany: TgtQRMemo;
+    qrmCompany: TQRMemo;
     CompSQL: TQuery;
     lblCustomer: TQRLabel;
     AddressMemo: TQRMemo;
-    ReportImage: TgtQRImage;
+    ReportImage: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

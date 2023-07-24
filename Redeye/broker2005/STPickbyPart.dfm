@@ -23,6 +23,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 774
@@ -66,6 +67,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 677
     Top = 41
     Width = 97
@@ -166,6 +168,7 @@ object STPickbyPartFrm: TSTPickbyPartFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 41
     Width = 677

@@ -89,7 +89,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         261.937500000000000000
         2831.041666666667000000)
       BandType = rbPageHeader
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 830
         Top = 10
         Width = 209
@@ -121,7 +121,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 14
       end
-      object QRShape3: TgtQRShape
+      object QRShape3: TQRShape
         Left = 16
         Top = 47
         Width = 753
@@ -139,7 +139,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object OrdDateQRLabel: TgtQRLabel
+      object OrdDateQRLabel: TQRLabel
         Left = 790
         Top = 51
         Width = 109
@@ -170,7 +170,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 14
       end
-      object PurchOrdDateQRLabel: TgtQRLabel
+      object PurchOrdDateQRLabel: TQRLabel
         Left = 928
         Top = 51
         Width = 109
@@ -201,7 +201,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 14
       end
-      object PurchOrdDescrQRLabel: TgtQRLabel
+      object PurchOrdDescrQRLabel: TQRLabel
         Left = 22
         Top = 56
         Width = 563
@@ -232,7 +232,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 14
       end
-      object OrdNumQRLabel: TgtQRLabel
+      object OrdNumQRLabel: TQRLabel
         Left = 422
         Top = 6
         Width = 169
@@ -263,7 +263,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 18
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 14
         Top = 6
         Width = 398
@@ -294,7 +294,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 18
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 790
         Top = 10
         Width = 121
@@ -347,7 +347,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
       Expression = 'GetOrdHedQuery.Purch_Ord'
       Master = PurchOrdQuickReport
       ReprintOnNewPage = True
-      object gtQRShape2: TgtQRShape
+      object gtQRShape2: TQRShape
         Left = 416
         Top = 200
         Width = 193
@@ -365,7 +365,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object QRShape2: TgtQRShape
+      object QRShape2: TQRShape
         Left = 646
         Top = 40
         Width = 346
@@ -383,7 +383,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRShape1: TgtQRShape
+      object QRShape1: TQRShape
         Left = 64
         Top = 32
         Width = 337
@@ -401,7 +401,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Shape = qrsRectangle
         VertAdjust = 0
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 648
         Top = 16
         Width = 84
@@ -432,7 +432,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 62
         Top = 8
         Width = 27
@@ -463,7 +463,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 12
       end
-      object LineQrLabel: TgtQRLabel
+      object LineQrLabel: TQRLabel
         Left = 0
         Top = 218
         Width = 25
@@ -494,7 +494,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object PartQRLabel: TgtQRLabel
+      object PartQRLabel: TQRLabel
         Left = 34
         Top = 218
         Width = 43
@@ -525,7 +525,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object DescQRLabel: TgtQRLabel
+      object DescQRLabel: TQRLabel
         Left = 136
         Top = 218
         Width = 64
@@ -556,7 +556,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object OrdQtyQRLabel: TgtQRLabel
+      object OrdQtyQRLabel: TQRLabel
         Left = 488
         Top = 218
         Width = 54
@@ -587,7 +587,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object SAddr5QRLabel: TgtQRLabel
+      object SAddr5QRLabel: TQRLabel
         Left = 72
         Top = 105
         Width = 321
@@ -612,7 +612,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object SAddr1QRLabel: TgtQRLabel
+      object SAddr1QRLabel: TQRLabel
         Left = 72
         Top = 41
         Width = 321
@@ -637,7 +637,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object SAddr2QRLabel: TgtQRLabel
+      object SAddr2QRLabel: TQRLabel
         Left = 72
         Top = 57
         Width = 321
@@ -662,7 +662,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object SAddr3QRLabel: TgtQRLabel
+      object SAddr3QRLabel: TQRLabel
         Left = 72
         Top = 73
         Width = 321
@@ -687,7 +687,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object SAddr4QRLabel: TgtQRLabel
+      object SAddr4QRLabel: TQRLabel
         Left = 72
         Top = 89
         Width = 321
@@ -712,7 +712,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object SAddr6QRLabel: TgtQRLabel
+      object SAddr6QRLabel: TQRLabel
         Left = 72
         Top = 121
         Width = 321
@@ -737,7 +737,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 420
         Top = 218
         Width = 52
@@ -768,7 +768,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel7: TgtQRLabel
+      object QRLabel7: TQRLabel
         Left = 803
         Top = 218
         Width = 29
@@ -799,7 +799,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object QRLabel12: TgtQRLabel
+      object QRLabel12: TQRLabel
         Left = 841
         Top = 218
         Width = 55
@@ -830,7 +830,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object qrlblContact: TgtQRLabel
+      object qrlblContact: TQRLabel
         Left = 744
         Top = 16
         Width = 95
@@ -891,7 +891,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = False
         FontSize = 10
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 908
         Top = 218
         Width = 34
@@ -922,7 +922,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 581
         Top = 218
         Width = 29
@@ -953,7 +953,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 632
         Top = 218
         Width = 70
@@ -984,7 +984,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel8: TgtQRLabel
+      object gtQRLabel8: TQRLabel
         Left = 488
         Top = 198
         Width = 44
@@ -1015,7 +1015,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 712
         Top = 218
         Width = 54
@@ -1046,7 +1046,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 9
       end
-      object gtQRShape3: TgtQRShape
+      object gtQRShape3: TQRShape
         Left = 632
         Top = 200
         Width = 265
@@ -1064,7 +1064,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel7: TgtQRLabel
+      object gtQRLabel7: TQRLabel
         Left = 744
         Top = 198
         Width = 50
@@ -1125,7 +1125,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
       DataSet = GetDetsQuery
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblPackSize: TgtQRLabel
+      object qrlblPackSize: TQRLabel
         Left = 701
         Top = 0
         Width = 65
@@ -1150,7 +1150,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object OrigPurchPriceQrLabel: TgtQRLabel
+      object OrigPurchPriceQrLabel: TQRLabel
         Left = 499
         Top = 0
         Width = 111
@@ -1175,7 +1175,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object PackSizeQRLabel: TgtQRLabel
+      object PackSizeQRLabel: TQRLabel
         Left = 456
         Top = 0
         Width = 86
@@ -1200,7 +1200,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object PurchPriceQrLabel: TgtQRLabel
+      object PurchPriceQrLabel: TQRLabel
         Left = 741
         Top = 0
         Width = 91
@@ -1225,7 +1225,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object POrdLineNoQRLabel: TgtQRLabel
+      object POrdLineNoQRLabel: TQRLabel
         Left = -8
         Top = 1
         Width = 33
@@ -1256,7 +1256,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object PartCodeQRLabel: TgtQRLabel
+      object PartCodeQRLabel: TQRLabel
         Left = 34
         Top = 1
         Width = 95
@@ -1287,7 +1287,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object PartDescrQRLabel: TgtQRLabel
+      object PartDescrQRLabel: TQRLabel
         Left = 136
         Top = 1
         Width = 265
@@ -1318,7 +1318,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object QRLblValue: TgtQRLabel
+      object QRLblValue: TQRLabel
         Left = 842
         Top = 1
         Width = 55
@@ -1343,7 +1343,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblNotes: TgtQRLabel
+      object qrlblNotes: TQRLabel
         Left = 908
         Top = 1
         Width = 49
@@ -1368,7 +1368,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object PackQTYQrLabel: TgtQRLabel
+      object PackQTYQrLabel: TQRLabel
         Left = 388
         Top = 0
         Width = 84
@@ -1393,7 +1393,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblSuppliedQty: TgtQRLabel
+      object qrlblSuppliedQty: TQRLabel
         Left = 623
         Top = 0
         Width = 79
@@ -1442,7 +1442,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
       DataSet = qryExtraCharges
       PrintBefore = False
       PrintIfEmpty = True
-      object qrlblDetails: TgtQRLabel
+      object qrlblDetails: TQRLabel
         Left = 136
         Top = 3
         Width = 53
@@ -1473,7 +1473,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 8
       end
-      object qrlblExChrgAmount: TgtQRLabel
+      object qrlblExChrgAmount: TQRLabel
         Left = 861
         Top = 3
         Width = 36
@@ -1524,7 +1524,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         145.520833333333300000
         2831.041666666667000000)
       BandType = rbSummary
-      object TotalQRLabel: TgtQRLabel
+      object TotalQRLabel: TQRLabel
         Left = 678
         Top = 16
         Width = 118
@@ -1555,7 +1555,7 @@ object STRPPOAckFrm: TSTRPPOAckFrm
         WordWrap = True
         FontSize = 10
       end
-      object OrderValQRLabel: TgtQRLabel
+      object OrderValQRLabel: TQRLabel
         Left = 796
         Top = 16
         Width = 102

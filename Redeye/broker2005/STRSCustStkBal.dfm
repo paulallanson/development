@@ -24,6 +24,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Caption = 'Customer'
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 120
     Width = 353
@@ -94,6 +95,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     end
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 68
     Top = 140
     Width = 289
@@ -254,6 +256,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     NumGlyphs = 2
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 8
     Top = 216
     Width = 353
@@ -372,6 +375,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Visible = False
   end
   object RdGrpRptTyp: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 353

@@ -165,7 +165,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, gtQrCtrls;
+  CCSPrint, PBPOObjects;
 
 type
   TPBRPCusSupLabsFrm = class(TForm)
@@ -176,9 +176,9 @@ type
     CustomerSQL: TQuery;
     AddressSRC: TDataSource;
     CompSQL: TQuery;
-    AddressMemo: TgtQRMemo;
+    AddressMemo: TQRMemo;
     SupplierSQL: TQuery;
-    FAOQRLabel: TgtQRLabel;
+    FAOQRLabel: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

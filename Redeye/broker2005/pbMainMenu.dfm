@@ -1,9 +1,9 @@
 object frmpbMainMenu: TfrmpbMainMenu
   Left = 121
   Top = 85
-  Width = 1241
-  Height = 552
   Caption = 'Print Management Information System'
+  ClientHeight = 0
+  ClientWidth = 120
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object frmpbMainMenu: TfrmpbMainMenu
   Font.Style = []
   FormStyle = fsMDIForm
   Menu = mnMain
-  OldCreateOrder = False
   Position = poScreenCenter
   ShowHint = True
   WindowState = wsMaximized
@@ -20,12 +19,11 @@ object frmpbMainMenu: TfrmpbMainMenu
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 1233
+    Width = 120
     Height = 45
     Bands = <
       item
@@ -34,6 +32,7 @@ object frmpbMainMenu: TfrmpbMainMenu
         MinHeight = 41
         Width = 1229
       end>
+    ExplicitWidth = 1233
     object ToolBar1: TToolBar
       Left = 9
       Top = 0
@@ -43,7 +42,6 @@ object frmpbMainMenu: TfrmpbMainMenu
       ButtonWidth = 62
       Caption = 'ToolBar1'
       DragMode = dmAutomatic
-      Flat = True
       Images = imglstMainMenu
       ParentShowHint = False
       ShowCaptions = True
@@ -237,8 +235,8 @@ object frmpbMainMenu: TfrmpbMainMenu
   end
   object stsbrMainMenu: TStatusBar
     Left = 0
-    Top = 482
-    Width = 1233
+    Top = -19
+    Width = 120
     Height = 19
     Panels = <
       item
@@ -253,6 +251,8 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
+    ExplicitTop = 482
+    ExplicitWidth = 1233
   end
   object mnMain: TMainMenu
     Left = 256

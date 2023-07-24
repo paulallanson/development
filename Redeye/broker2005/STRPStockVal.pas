@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls, printers, ccscommon,
-  qrprntr, gtQrCtrls;
+  qrprntr;
 
 type
   TSTRPStockValfrm = class(TForm)
@@ -56,7 +56,7 @@ type
     qrlblTotalClosing: TQRLabel;
     OldqryReport: TQuery;
     QRDBText4: TQRDBText;
-    qrlblOpeningValue: TgtQRLabel;
+    qrlblOpeningValue: TQRLabel;
     QRDBText7: TQRDBText;
     QRLabel13: TQRLabel;
     QRLabel14: TQRLabel;

@@ -42,6 +42,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     NumGlyphs = 2
   end
   object SelectionType: TRadioGroup
+    ParentBackground = False
     Left = 280
     Top = 16
     Width = 161
@@ -88,6 +89,7 @@ object STPartSuppSelFrm: TSTPartSuppSelFrm
     Kind = bkCancel
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 265

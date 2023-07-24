@@ -17,6 +17,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlproduct: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 722
@@ -86,6 +87,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     end
   end
   object pnlFunctions: TPanel
+    ParentBackground = False
     Left = 0
     Top = 162
     Width = 722
@@ -163,6 +165,7 @@ object STMaintSOrdLineServFrm: TSTMaintSOrdLineServFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 49
     Width = 722

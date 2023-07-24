@@ -102,7 +102,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
       DataSet = PODelivSQL
       PrintBefore = False
       PrintIfEmpty = True
-      object PONumberLbl: TgtQRLabel
+      object PONumberLbl: TQRLabel
         Left = 646
         Top = 54
         Width = 71
@@ -133,7 +133,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText2: TgtQRDBText
+      object QRDBText2: TQRDBText
         Left = 96
         Top = 88
         Width = 201
@@ -165,7 +165,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText3: TgtQRDBText
+      object QRDBText3: TQRDBText
         Left = 612
         Top = 121
         Width = 105
@@ -198,7 +198,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText5: TgtQRDBText
+      object QRDBText5: TQRDBText
         Left = 633
         Top = 354
         Width = 99
@@ -230,7 +230,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object AddressMemo: TgtQRMemo
+      object AddressMemo: TQRMemo
         Left = 0
         Top = 159
         Width = 331
@@ -268,7 +268,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object DeliveryMemo: TgtQRMemo
+      object DeliveryMemo: TQRMemo
         Left = 385
         Top = 159
         Width = 331
@@ -305,7 +305,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object Account: TgtQRDBText
+      object Account: TQRDBText
         Left = 96
         Top = 54
         Width = 94
@@ -337,7 +337,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object DelInstructMemo: TgtQRMemo
+      object DelInstructMemo: TQRMemo
         Left = 136
         Top = 486
         Width = 534
@@ -374,7 +374,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object FormRefLbl: TgtQRLabel
+      object FormRefLbl: TQRLabel
         Left = 136
         Top = 430
         Width = 71
@@ -405,7 +405,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object FormRefDescLbl: TgtQRLabel
+      object FormRefDescLbl: TQRLabel
         Left = 136
         Top = 454
         Width = 79
@@ -436,7 +436,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel1: TgtQRLabel
+      object QRLabel1: TQRLabel
         Left = 2
         Top = 323
         Width = 54
@@ -467,7 +467,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel2: TgtQRLabel
+      object QRLabel2: TQRLabel
         Left = 136
         Top = 323
         Width = 190
@@ -498,7 +498,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel3: TgtQRLabel
+      object QRLabel3: TQRLabel
         Left = 64
         Top = 323
         Width = 57
@@ -529,7 +529,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRLabel4: TgtQRLabel
+      object QRLabel4: TQRLabel
         Left = 633
         Top = 323
         Width = 77
@@ -591,7 +591,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 28
       end
-      object gtQRLabel1: TgtQRLabel
+      object gtQRLabel1: TQRLabel
         Left = 0
         Top = 139
         Width = 115
@@ -622,7 +622,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object qrlblInstructions: TgtQRLabel
+      object qrlblInstructions: TQRLabel
         Left = 384
         Top = 139
         Width = 142
@@ -653,7 +653,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel3: TgtQRLabel
+      object gtQRLabel3: TQRLabel
         Left = 0
         Top = 54
         Width = 86
@@ -684,7 +684,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel4: TgtQRLabel
+      object gtQRLabel4: TQRLabel
         Left = 0
         Top = 88
         Width = 94
@@ -715,7 +715,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object QRDBText6: TgtQRDBText
+      object QRDBText6: TQRDBText
         Left = 136
         Top = 354
         Width = 377
@@ -747,7 +747,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel5: TgtQRLabel
+      object gtQRLabel5: TQRLabel
         Left = 521
         Top = 323
         Width = 62
@@ -778,7 +778,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel6: TgtQRLabel
+      object gtQRLabel6: TQRLabel
         Left = 26
         Top = 355
         Width = 9
@@ -809,7 +809,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape1: TgtQRShape
+      object gtQRShape1: TQRShape
         Left = 0
         Top = 304
         Width = 721
@@ -829,7 +829,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRDBText1: TgtQRDBText
+      object gtQRDBText1: TQRDBText
         Left = 65
         Top = 354
         Width = 57
@@ -861,7 +861,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText2: TgtQRDBText
+      object gtQRDBText2: TQRDBText
         Left = 521
         Top = 354
         Width = 100
@@ -893,7 +893,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel2: TgtQRLabel
+      object gtQRLabel2: TQRLabel
         Left = 0
         Top = 22
         Width = 70
@@ -924,7 +924,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRDBText3: TgtQRDBText
+      object gtQRDBText3: TQRDBText
         Left = 96
         Top = 22
         Width = 201
@@ -956,7 +956,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object DeliveryDateLbl: TgtQRLabel
+      object DeliveryDateLbl: TQRLabel
         Left = 613
         Top = 88
         Width = 104
@@ -987,7 +987,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 312
         Top = 1
         Width = 128
@@ -1023,7 +1023,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         402.166666666666700000
         1899.708333333333000000)
       BandType = rbPageFooter
-      object gtQRLabel11: TgtQRLabel
+      object gtQRLabel11: TQRLabel
         Left = 0
         Top = 70
         Width = 80
@@ -1054,7 +1054,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape6: TgtQRShape
+      object gtQRShape6: TQRShape
         Left = 88
         Top = 72
         Width = 193
@@ -1072,7 +1072,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRShape7: TgtQRShape
+      object gtQRShape7: TQRShape
         Left = 384
         Top = 72
         Width = 193
@@ -1090,7 +1090,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         Shape = qrsHorLine
         VertAdjust = 0
       end
-      object gtQRLabel12: TgtQRLabel
+      object gtQRLabel12: TQRLabel
         Left = 300
         Top = 70
         Width = 73
@@ -1121,7 +1121,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRLabel13: TgtQRLabel
+      object gtQRLabel13: TQRLabel
         Left = 598
         Top = 70
         Width = 32
@@ -1152,7 +1152,7 @@ object PBRPDelivFrm: TPBRPDelivFrm
         WordWrap = True
         FontSize = 12
       end
-      object gtQRShape8: TgtQRShape
+      object gtQRShape8: TQRShape
         Left = 632
         Top = 72
         Width = 81

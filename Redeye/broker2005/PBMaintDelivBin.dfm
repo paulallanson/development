@@ -15,6 +15,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
   PixelsPerInch = 96
   TextHeight = 13
   object grpBxBins: TGroupBox
+    ParentBackground = False
     Left = 2
     Top = 0
     Width = 361
@@ -81,6 +82,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 130
     Width = 366
@@ -127,6 +129,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     end
   end
   object pnlAdjustment: TPanel
+    ParentBackground = False
     Left = 0
     Top = 80
     Width = 366
@@ -136,6 +139,7 @@ object PBMaintDelivBinfrm: TPBMaintDelivBinfrm
     Caption = 'pnlAdjustment'
     TabOrder = 2
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 2
       Top = 1
       Width = 362

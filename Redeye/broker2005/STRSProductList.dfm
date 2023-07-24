@@ -44,6 +44,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     Visible = False
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 92
     Width = 305
@@ -118,6 +119,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     end
   end
   object rdgrpGroups: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 16
     Width = 105
@@ -136,6 +138,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     OnClick = rdgrpGroupsClick
   end
   object grpbxGroups: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 16
     Width = 265
@@ -298,6 +301,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     Kind = bkCancel
   end
   object TotByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 395
     Top = 14
     Width = 126
@@ -321,6 +325,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 132
     Top = 79
     Width = 289

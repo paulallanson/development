@@ -568,7 +568,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         WordWrap = True
         FontSize = 10
       end
-      object ReportImage: TgtQRImage
+      object ReportImage: TQRImage
         Left = 182
         Top = -1
         Width = 90
@@ -586,7 +586,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Center = True
         Stretch = True
       end
-      object qrmCompany: TgtQRMemo
+      object qrmCompany: TQRMemo
         Left = 8
         Top = 302
         Width = 441

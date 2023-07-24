@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, PBPOObjects, ActnList, PBDocObjects;
+  DB, DBTables, PBPOObjects, ActnList, PBDocObjects, System.Actions;
 
 type
   TPBPODM = class(TDataModule)

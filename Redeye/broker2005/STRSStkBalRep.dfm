@@ -21,6 +21,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 64
     Top = 136
     Width = 289
@@ -104,6 +105,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     NumGlyphs = 2
   end
   object grpbxRange: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 132
     Width = 305
@@ -179,6 +181,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object rdgrpSort: TRadioGroup
+    ParentBackground = False
     Left = 320
     Top = 132
     Width = 89
@@ -198,6 +201,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = rdgrpSortClick
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 8
     Top = 216
     Width = 305
@@ -225,6 +229,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 137
@@ -243,6 +248,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = AllOrOneRadioGroupClick
   end
   object RepGrpBox: TGroupBox
+    ParentBackground = False
     Left = 152
     Top = 0
     Width = 265
@@ -289,6 +295,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object CustRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 65
     Width = 137
@@ -307,6 +314,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
+    ParentBackground = False
     Left = 153
     Top = 65
     Width = 265

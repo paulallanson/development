@@ -206,7 +206,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, gtQrExport,
+  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, QrExport,
   OleServer, CCSCommon, CCSPress, IniFiles;
 
 type

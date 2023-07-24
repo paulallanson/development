@@ -17,6 +17,7 @@ object PBMaintSuppInvoicePassFrm: TPBMaintSuppInvoicePassFrm
   PixelsPerInch = 96
   TextHeight = 13
   object rdgrpSelection: TRadioGroup
+    ParentBackground = False
     Left = 40
     Top = 8
     Width = 193

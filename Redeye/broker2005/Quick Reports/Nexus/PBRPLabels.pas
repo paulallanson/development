@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, gtQrCtrls, qrprntr, printers, CCSCommon, gtQRExport;
+  CCSPrint, PBPOObjects, qrprntr, printers, CCSCommon, QrExport;
 
 type
   TPBRPLabelsFrm = class(TForm)
@@ -13,32 +13,32 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
+    PONumberLbl: TQRLabel;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     SupplierSQL: TQuery;
     AddressSRC: TDataSource;
     CompSQL: TQuery;
-    BoxQuantityLbl: TgtQRLabel;
-    Memodescription: TgtQRMemo;
-    FormRefLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    QRDBCustOrderRef: TgtQRDBText;
-    lblCustomer: TgtQRLabel;
+    BoxQuantityLbl: TQRLabel;
+    Memodescription: TQRMemo;
+    FormRefLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    AddressMemo: TQRMemo;
+    QRDBCustOrderRef: TQRDBText;
+    lblCustomer: TQRLabel;
     CustSQL: TQuery;
-    QRLabel2: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    QRLabel7: TgtQRLabel;
-    NumberedLbl: TgtQRLabel;
-    FromLbl: TgtQRLabel;
-    AddQRLabel: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
-    gtlblFSCClaim: TgtQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    NumberedLbl: TQRLabel;
+    FromLbl: TQRLabel;
+    AddQRLabel: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
+    gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
@@ -57,6 +57,7 @@ type
     rPONumber: real;
     iLine, iBoxQuantity, iSets: Integer;
     iIntSel: Integer;
+    LogoPath: string;
     sNumberFrom, sNumberTo, sPrefix: string[10];
     bLineup: boolean;
     bStocked: string;
@@ -70,7 +71,8 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase;
+uses
+  pbMainMenu, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -323,6 +325,12 @@ begin
   FbAddressOnly := Value;
 end;
 
+function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -453,5 +461,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

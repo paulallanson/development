@@ -17,6 +17,7 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 233
@@ -124,6 +125,7 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 391
@@ -160,6 +162,7 @@ object STMntPOrdQtyFrm: TSTMntPOrdQtyFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 192
     Width = 391

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
-  gtQrCtrls, gtQrExport;
+  QrExport;
 
 type
   TPBRPJobBagDelivNoteFrm = class(TForm)
@@ -13,84 +13,83 @@ type
     JBDelivSQL: TQuery;
     JBDelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
-    AddressMemo: TgtQRMemo;
-    BoxesLbl: TgtQRLabel;
+    PONumberLbl: TQRLabel;
+    AddressMemo: TQRMemo;
+    BoxesLbl: TQRLabel;
     CustomerSQL: TQuery;
     AdhocSQL: TQuery;
     RepSQL: TQuery;
     AddressSRC: TDataSource;
     SupplierSQL: TQuery;
-    QRDBText2: TgtQRDBText;
-    QRDBText3: TgtQRDBText;
-    QRDBText4: TgtQRDBText;
-    QRDBText5: TgtQRDBText;
-    QRDBText6: TgtQRDBText;
-    YourRefLbl: TgtQRLabel;
-    DateLbl: TgtQRLabel;
-    OrderRefLbl: TgtQRLabel;
-    QtyOrderedLbl: TgtQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText3: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText6: TQRDBText;
+    YourRefLbl: TQRLabel;
+    DateLbl: TQRLabel;
+    OrderRefLbl: TQRLabel;
+    QtyOrderedLbl: TQRLabel;
     GetNarrSQL: TQuery;
     CompSQL: TQuery;
-    Account: TgtQRDBText;
+    Account: TQRDBText;
     CustDetsSQL: TQuery;
-    Accountlbl: TgtQRLabel;
-    DeliveryDateLbl: TgtQRLabel;
-    QRLabel1: TgtQRLabel;
-    QRLabel3: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    qrlblDeliveryNote: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    qrlblJobNo: TgtQRLabel;
-    QRLabel8: TgtQRLabel;
-    QRLabel9: TgtQRLabel;
-    QRLabel10: TgtQRLabel;
-    QRLabel11: TgtQRLabel;
+    Accountlbl: TQRLabel;
+    DeliveryDateLbl: TQRLabel;
+    QRLabel1: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel4: TQRLabel;
+    qrlblDeliveryNote: TQRLabel;
+    QRLabel6: TQRLabel;
+    qrlblJobNo: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
     QRBand3: TQRBand;
-    QRLabel12: TgtQRLabel;
-    QRShape2: TgtQRShape;
-    QRShape3: TgtQRShape;
-    QRLabel15: TgtQRLabel;
-    QRLabel16: TgtQRLabel;
-    QRShape4: TgtQRShape;
-    gtQRFilters1: TgtQRFilters;
-    gtQRLabel1: TgtQRLabel;
-    qrlblContact: TgtQRDBText;
-    lbldelInst: TgtQRLabel;
-    DeliveryMemo: TgtQRMemo;
+    QRLabel12: TQRLabel;
+    QRShape2: TQRShape;
+    QRShape3: TQRShape;
+    QRLabel15: TQRLabel;
+    QRLabel16: TQRLabel;
+    QRShape4: TQRShape;
+    gtQRLabel1: TQRLabel;
+    qrlblContact: TQRDBText;
+    lbldelInst: TQRLabel;
+    DeliveryMemo: TQRMemo;
     qrbCourier: TQRChildBand;
     qryCourierService: TQuery;
     qryPackageType: TQuery;
-    gtQRLabel2: TgtQRLabel;
-    gtQRDBText1: TgtQRDBText;
-    gtQRLabel3: TgtQRLabel;
-    gtQRDBText2: TgtQRDBText;
-    gtQRLabel4: TgtQRLabel;
-    gtQRDBText3: TgtQRDBText;
-    gtQRLabel5: TgtQRLabel;
-    gtQRLabel6: TgtQRLabel;
-    gtQRShape1: TgtQRShape;
-    gtQRLabel7: TgtQRLabel;
-    gtQRShape2: TgtQRShape;
-    gtQRShape3: TgtQRShape;
-    gtQRLabel8: TgtQRLabel;
-    gtQRLabel9: TgtQRLabel;
-    gtQRShape4: TgtQRShape;
-    gtQRLabel10: TgtQRLabel;
-    gtQRShape5: TgtQRShape;
-    gtQRLabel11: TgtQRLabel;
-    gtQRShape6: TgtQRShape;
-    gtQRShape7: TgtQRShape;
-    gtQRLabel12: TgtQRLabel;
-    gtQRLabel13: TgtQRLabel;
-    gtQRShape8: TgtQRShape;
-    gtQRLabel14: TgtQRLabel;
-    gtQRShape9: TgtQRShape;
-    qrlblWeight: TgtQRLabel;
-    lblDelNote: TgtQRLabel;
-    QRMemoCmpnyNm: TgtQRMemo;
-    qrlblVatNo: TgtQRMemo;
-    ReportImage: TgtQRImage;
+    gtQRLabel2: TQRLabel;
+    gtQRDBText1: TQRDBText;
+    gtQRLabel3: TQRLabel;
+    gtQRDBText2: TQRDBText;
+    gtQRLabel4: TQRLabel;
+    gtQRDBText3: TQRDBText;
+    gtQRLabel5: TQRLabel;
+    gtQRLabel6: TQRLabel;
+    gtQRShape1: TQRShape;
+    gtQRLabel7: TQRLabel;
+    gtQRShape2: TQRShape;
+    gtQRShape3: TQRShape;
+    gtQRLabel8: TQRLabel;
+    gtQRLabel9: TQRLabel;
+    gtQRShape4: TQRShape;
+    gtQRLabel10: TQRLabel;
+    gtQRShape5: TQRShape;
+    gtQRLabel11: TQRLabel;
+    gtQRShape6: TQRShape;
+    gtQRShape7: TQRShape;
+    gtQRLabel12: TQRLabel;
+    gtQRLabel13: TQRLabel;
+    gtQRShape8: TQRShape;
+    gtQRLabel14: TQRLabel;
+    gtQRShape9: TQRShape;
+    qrlblWeight: TQRLabel;
+    lblDelNote: TQRLabel;
+    QRMemoCmpnyNm: TQRMemo;
+    qrlblVatNo: TQRMemo;
+    ReportImage: TQRImage;
     qryGetFSCClaim: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
@@ -120,7 +119,8 @@ var
 
 implementation
 
-uses pbMainMenu, PBPODataMod, CCSCommon, PBImages;
+uses
+  pbMainMenu, PBPODataMod, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -398,6 +398,12 @@ begin
   end;
 end;
 
+function TPBRPJobBagDelivNoteFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(JBDelivQuickReport, Result, PONo, PoLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPJobBagDelivNoteFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -516,6 +522,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBRPJobBagDelivNoteFrm.qrbCourierBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

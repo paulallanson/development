@@ -40,6 +40,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       end>
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 301
     Width = 891
@@ -62,6 +63,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
+      ParentBackground = False
       Left = 617
       Top = 1
       Width = 273
@@ -371,6 +373,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 891

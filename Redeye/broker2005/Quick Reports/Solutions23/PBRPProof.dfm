@@ -1566,7 +1566,7 @@ object PBRPProofFrm: TPBRPProofFrm
         WordWrap = True
         FontSize = 8
       end
-      object labCompanyAddress: TgtQRMemo
+      object labCompanyAddress: TQRMemo
         Tag = 1
         Left = 0
         Top = 69
@@ -1599,7 +1599,7 @@ object PBRPProofFrm: TPBRPProofFrm
         FontSize = 10
       end
     end
-    object ReportImage: TgtQRImage
+    object ReportImage: TQRImage
       Left = 37
       Top = 38
       Width = 255

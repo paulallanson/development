@@ -21,6 +21,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 504
     Width = 797
@@ -28,6 +29,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Align = alBottom
     TabOrder = 0
     object Panel4: TPanel
+      ParentBackground = False
       Left = 305
       Top = 1
       Width = 491
@@ -100,6 +102,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Panels = <>
   end
   object pnlNotes: TPanel
+    ParentBackground = False
     Left = 0
     Top = 72
     Width = 797
@@ -107,6 +110,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Align = alClient
     TabOrder = 2
     object pnlNCAdetails: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 795
@@ -115,6 +119,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Caption = 'pnlNCAdetails'
       TabOrder = 0
       object Panel5: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -136,6 +141,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlResponse: TPanel
+      ParentBackground = False
       Left = 1
       Top = 101
       Width = 795
@@ -144,6 +150,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Caption = 'pnlResponse'
       TabOrder = 1
       object Panel7: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -165,6 +172,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlAction: TPanel
+      ParentBackground = False
       Left = 1
       Top = 150
       Width = 795
@@ -173,6 +181,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Caption = 'pnlAction'
       TabOrder = 2
       object Panel6: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -194,6 +203,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlPrevent: TPanel
+      ParentBackground = False
       Left = 1
       Top = 250
       Width = 795
@@ -202,6 +212,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Caption = 'pnlPrevent'
       TabOrder = 3
       object Panel9: TPanel
+        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -224,6 +235,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 423
     Width = 797
@@ -368,6 +380,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       NumGlyphs = 2
     end
     object rdgrpJobRePrinted: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 3
       Width = 145
@@ -380,6 +393,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       TabOrder = 7
     end
     object rdgrpSamples: TRadioGroup
+      ParentBackground = False
       Left = 168
       Top = 3
       Width = 145
@@ -393,6 +407,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 797

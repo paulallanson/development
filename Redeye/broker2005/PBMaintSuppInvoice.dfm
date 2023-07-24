@@ -22,6 +22,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 787
@@ -194,6 +195,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       end>
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 472
     Width = 787
@@ -256,6 +258,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Kind = bkCancel
     end
     object pnlValues: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 432
@@ -304,6 +307,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 349
     Width = 787
@@ -338,6 +342,7 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         101)
     end
     object pnlTotals: TPanel
+      ParentBackground = False
       Left = 601
       Top = 1
       Width = 185

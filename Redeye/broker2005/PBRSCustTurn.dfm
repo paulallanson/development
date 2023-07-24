@@ -29,6 +29,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Caption = 'Sort by'
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 256
     Top = 168
     Width = 115
@@ -37,6 +38,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     TabOrder = 7
   end
   object GrpBxDts: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 96
     Width = 217
@@ -148,6 +150,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     NumGlyphs = 2
   end
   object TotByRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 256
     Top = 96
     Width = 115
@@ -225,6 +228,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     TabOrder = 8
   end
   object rgRep: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 16
     Width = 129
@@ -238,6 +242,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     OnClick = rgRepClick
   end
   object pnlRep: TPanel
+    ParentBackground = False
     Left = 158
     Top = 24
     Width = 329
@@ -339,6 +344,7 @@ object PBRSCustTurnFrm: TPBRSCustTurnFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 84
     Top = 132
     Width = 289
