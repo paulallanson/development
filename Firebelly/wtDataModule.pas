@@ -57,6 +57,7 @@ type
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
     procedure dtbsWorktopsLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
+    procedure dtbsWorktopsBeforeConnect(Sender: TObject);
   private
     FIsSQL: Boolean;
     FUserName: string;
@@ -775,6 +776,13 @@ begin
 
   if DriverName = 'MSSQL' then
     FIsSQL := true;
+end;
+
+procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
+begin
+  dtbsWorktops.FormatOptions.OwnMapRules := True;
+  dtbsWorktops.FormatOptions.MapRules.Clear;
+  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);

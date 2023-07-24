@@ -8,6 +8,7 @@ object dtmdlWorktops: TdtmdlWorktops
     LoginPrompt = False
     OnLogin = dtbsWorktopsLogin
     AfterConnect = dtbsWorktopsAfterConnect
+    BeforeConnect = dtbsWorktopsBeforeConnect
     Left = 24
     Top = 24
   end
