@@ -40,14 +40,13 @@ implementation
 
 uses
   {$IFDEF FIREBELLY}
-   AllCommon;
+  AllCommon;
   {$ENDIF}
   {$IFDEF REDEYE}
   CCSCommon;
   {$ENDIF}
-
-  {$IFNDEF REDEYE OR IFNDEF FIREBELLY}
-  Define Firebelly or RedEye in project conditional defines
+  {$IF NOT DEFINED(REDEYE) AND NOT DEFINED(FIREBELLY)}
+  Define FIREBELLY or REDEYE in project conditional defines
   {$ENDIF}
 
 { TPrinterTools }
@@ -76,8 +75,8 @@ begin
   {$IFDEF REDEYE}
   Result := CCSCommon.GetWinTempDir;
   {$ENDIF}
-  {$IFNDEF REDEYE OR IFNDEF FIREBELLY}
-  Define Firebelly or RedEye in project conditional defines
+  {$IF NOT DEFINED(REDEYE) AND NOT DEFINED(FIREBELLY)}
+  Define FIREBELLY or REDEYE in project conditional defines
   {$ENDIF}
 end;
 
