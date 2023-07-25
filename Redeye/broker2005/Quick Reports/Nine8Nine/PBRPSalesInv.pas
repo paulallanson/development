@@ -92,7 +92,6 @@ type
     qryCompCat: TQuery;
     qryUniqueInv: TQuery;
     qryCategory: TQuery;
-    gtQRFilters1: TgtQRFilters;
     gtNotesShape: TQRShape;
     RichmemoNotes: TQRRichText;
     memoNotes: TQRMemo;
@@ -151,6 +150,8 @@ type
     FCategory: integer;
     FSuffix: boolean;
     FSuffixValue: string;
+    FShowZeroValues: string;
+    FbCustomerisReseller: Boolean;
     function GetCategoryPayNotes(tempCode: integer): integer;
     procedure GetSODeliveryDetails(tempCode: string);
     function GetPOCustOrderNo(tempCode: string): string;
@@ -158,9 +159,6 @@ type
     function GetJBCustOrderNo(tempCode: string): string;
     function GetPOFSCClaim(tempCode: real; tempLine: integer): string;
     function GetSOLineFSCClaim(tempCode, tempLine: integer): string;
-    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
-    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
-    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
     function GetSOLineProduct(tempCode: integer; tempLine: integer): string;
     function GetFormRefDesc(tempCode: real; tempLine: integer): string;
     function GetSOLinePUnit(tempCode: integer; tempLine: integer): string;
@@ -178,6 +176,8 @@ type
     procedure GetDetails;
     procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
     procedure BuildPaymentNotes(const iNarrative: integer);
+    procedure SetShowZeroValues(const Value: string);
+    procedure SetbCustomerisReseller(const Value: Boolean);
   public
     bInvoice: boolean;
     bPrintLogo: boolean;
@@ -188,7 +188,13 @@ type
     bLineUp : Boolean;
     SelCode: Integer;
     PrinterSettings: TPrinterSettings;
+    { ShowZeroValues, bCustomerisReseller added by GDK }
+    property ShowZeroValues: string read FShowZeroValues write SetShowZeroValues;
+    property bCustomerisReseller: Boolean read FbCustomerisReseller write SetbCustomerisReseller;
     procedure GetInvoiceData;
+    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
+    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
+    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
   end;
 
 var
@@ -1105,6 +1111,16 @@ procedure TPBRPSalesInvFrm.QtyInvoicedLblPrint(sender: TObject;
 begin
   if bLineUp then
     Value := 'NNNNNNNN';
+end;
+
+procedure TPBRPSalesInvFrm.SetbCustomerisReseller(const Value: Boolean);
+begin
+  FbCustomerisReseller := Value;
+end;
+
+procedure TPBRPSalesInvFrm.SetShowZeroValues(const Value: string);
+begin
+  FShowZeroValues := Value;
 end;
 
 procedure TPBRPSalesInvFrm.AddChargesFooterBeforePrint(

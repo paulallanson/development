@@ -68,7 +68,7 @@ type
     lblQuantity: TQRLabel;
     qrmDescription: TQRRichText;
     qryPOLineChgs: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     qrlblRevenueCentre: TQRLabel;
     qrlblRevenueCentreData: TQRLabel;
     qryGetProductType: TQuery;

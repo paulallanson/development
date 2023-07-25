@@ -58,7 +58,7 @@ type
     gtQRMemo2: TQRMemo;
     gtQRLabel3: TQRLabel;
     gtQRLabel4: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     gtQRLabel5: TQRLabel;
     gtQRLabel6: TQRLabel;
     gtQRLabel7: TQRLabel;

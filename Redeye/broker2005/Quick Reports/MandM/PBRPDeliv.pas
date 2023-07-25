@@ -180,7 +180,7 @@ type
     GetPickSQL: TQuery;
     QRLabel13: TQRLabel;
     QRLabel14: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     GetPickCallOffSQL: TQuery;
     gtlblFSCClaim: TQRLabel;
     qryGetFSCClaim: TQuery;

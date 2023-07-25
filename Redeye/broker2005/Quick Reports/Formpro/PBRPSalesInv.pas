@@ -98,7 +98,7 @@ type
     qryUniqueInv: TQuery;
     memDefPayment: TQRMemo;
     qryCategory: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     imgReport: TQRImage;
     gtNotesShape: TQRShape;
     RichmemoNotes: TQRRichText;

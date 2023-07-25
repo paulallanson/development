@@ -208,7 +208,7 @@ type
     QRLabel3: TQRLabel;
     GetPickCallOffSQL: TQuery;
     PsQRShape1: TQRShape;
-    gtQRFilters1: TgtQRFilters;
+    
     ReportImage: TQRImage;
     qryInvLocation: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:

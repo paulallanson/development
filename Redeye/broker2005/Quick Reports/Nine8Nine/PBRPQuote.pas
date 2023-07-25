@@ -25,7 +25,6 @@ type
     qryReportlines: TQuery;
     dtsReport: TDataSource;
     qrygetNotes: TQuery;
-    gtQRFilters1: TgtQRFilters;
     qrmAddress: TQRMemo;
     QRLabel4: TQRLabel;
     qrlblContactName: TQRLabel;
@@ -177,8 +176,10 @@ type
     rTotalCost, rTotalSell, rTotalSupplied: real;
     ipage: integer;
     FShowBreakdown: boolean;
+    FEndUserVersion: Boolean;
     procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
     procedure SetShowBreakdown(const Value: boolean);
+    procedure SetEndUserVersion(const Value: Boolean);
     { Private declarations }
   public
     ForceNewPage: boolean;
@@ -188,6 +189,8 @@ type
     PrinterSettings: TPrinterSettings;
     function Getdetails: integer;
     property ShowBreakdown: boolean read FShowBreakdown write SetShowBreakdown;
+    { EndUserVersion added by GDK }
+    property EndUserVersion: Boolean read FEndUserVersion write SetEndUserVersion;
   end;
 
 var
@@ -442,6 +445,11 @@ begin
     SpecMemo.Lines.Clear;
     SpecMemo.Lines.Text := aStr;
   end;
+end;
+
+procedure TfrmPBRPQuote.SetEndUserVersion(const Value: Boolean);
+begin
+  FEndUserVersion := Value;
 end;
 
 procedure TfrmPBRPQuote.SetShowBreakdown(const Value: boolean);

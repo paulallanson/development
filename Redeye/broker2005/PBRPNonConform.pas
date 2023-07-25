@@ -22,7 +22,6 @@ type
     gtQRLabel1: TQRLabel;
     gtQRDBText2: TQRDBText;
     dtsReport: TDataSource;
-    gtQRFilters1: TgtQRFilters;
     GetNarrSQL: TQuery;
     gtQRLabel13: TQRLabel;
     gtQRDBText8: TQRDBText;

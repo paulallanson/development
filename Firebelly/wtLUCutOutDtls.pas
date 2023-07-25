@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses wtMaintCutOutDtls, wtDataModule;
+uses
+  System.UITypes,
+  wtMaintCutOutDtls, wtDataModule;
 
 {$R *.dfm}
 

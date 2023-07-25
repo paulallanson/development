@@ -64,7 +64,7 @@ type
     QRLabel16: TQRLabel;
     QRShape4: TQRShape;
     GetPickCallOffSQL: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     gtQRLabel1: TQRLabel;
     qrlblContact: TQRDBText;
     lbldelInst: TQRLabel;

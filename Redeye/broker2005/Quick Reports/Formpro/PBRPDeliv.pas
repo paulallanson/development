@@ -189,7 +189,7 @@ type
     QRShape4: TQRShape;
     QRMemoCmpnyNm: TQRMemo;
     GetPickCallOffSQL: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     gtQRLabel1: TQRLabel;
     qrlblContact: TQRDBText;
     lblDelNote: TQRLabel;

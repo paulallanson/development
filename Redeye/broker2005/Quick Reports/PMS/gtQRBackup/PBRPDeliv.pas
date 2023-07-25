@@ -210,7 +210,7 @@ type
     PsQRImage1: TQRImage;
     PsQRShape1: TQRShape;
     PsQRMemo1: TQRMemo;
-    gtQRFilters1: TgtQRFilters;
+    
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

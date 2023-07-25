@@ -67,7 +67,7 @@ type
     lblReference: TQRLabel;
     ExtrasVatLbl: TQRLabel;
     qrySIHead: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     qrlblInvoiceTotal: TQRLabel;
     qrlblVatTotal: TQRLabel;
     qrlblNetTotal: TQRLabel;

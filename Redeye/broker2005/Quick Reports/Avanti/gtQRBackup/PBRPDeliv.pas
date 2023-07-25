@@ -182,7 +182,7 @@ type
     GetPickSQL: TQuery;
     QRLabel13: TQRLabel;
     QRLabel14: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     GetPickCallOffSQL: TQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);

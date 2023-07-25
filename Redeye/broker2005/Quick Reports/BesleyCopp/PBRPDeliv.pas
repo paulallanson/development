@@ -68,7 +68,7 @@ type
     lbldelInst: TQRLabel;
     DeliveryMemo: TQRMemo;
     GetPickCallOffSQL: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     lblDelNote: TQRLabel;
     imgReport: TQRImage;
     QRMemo2: TQRMemo;

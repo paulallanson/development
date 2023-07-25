@@ -1,29 +1,23 @@
 object PBRPJBDraftFrm: TPBRPJBDraftFrm
   Left = 60
   Top = 44
-  Width = 989
-  Height = 690
   Caption = 'Draft Sales Invoice Print'
+  ClientHeight = 652
+  ClientWidth = 977
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 8
     Top = 8
-    Width = 794
-    Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Width = 992
+    Height = 1403
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = GetOrdHedQuery
     Font.Charset = ANSI_CHARSET
@@ -43,6 +37,7 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       200.000000000000000000
       2970.000000000000000000
@@ -56,1031 +51,977 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageHeaderQRBand: TQRBand
       Left = 0
-      Top = 19
-      Width = 794
-      Height = 398
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 24
+      Width = 992
+      Height = 498
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        1053.041666666667000000
-        2100.791666666667000000)
+        1054.100000000000000000
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRMemoAddress: TQRMemo
-        Left = 488
+        Left = 610
         Top = 1
-        Width = 193
-        Height = 125
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 241
+        Height = 156
         Size.Values = (
           330.729166666666700000
           1291.166666666667000000
           2.645833333333333000
           510.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
         WordWrap = False
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 9
       end
       object ReportTitleQRLabel: TQRLabel
-        Left = 448
-        Top = 296
-        Width = 71
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 370
+        Width = 99
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
-          783.166666666666800000
-          187.854166666666700000)
+          783.166666666666700000
+          209.550000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag No'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object OrdNumQRLabel: TQRLabel
-        Left = 566
-        Top = 296
-        Width = 88
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 708
+        Top = 370
+        Width = 112
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1497.541666666667000000
-          783.166666666666800000
-          232.833333333333400000)
+          46.566666666666670000
+          1498.600000000000000000
+          783.166666666666700000
+          237.066666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Number:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object OrdDateQRLabel: TQRLabel
-        Left = 448
-        Top = 206
-        Width = 73
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 258
+        Width = 94
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
-          545.041666666666700000
-          193.145833333333300000)
+          546.100000000000000000
+          198.966666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Date'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object SalesOrdDateQRLabel: TQRLabel
-        Left = 566
-        Top = 206
-        Width = 69
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 708
+        Top = 258
+        Width = 90
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1497.541666666667000000
-          545.041666666666700000
-          182.562500000000000000)
+          46.566666666666670000
+          1498.600000000000000000
+          546.100000000000000000
+          190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Date:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object CustomerAddmemo: TQRMemo
-        Left = 104
-        Top = 178
-        Width = 313
-        Height = 119
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 130
+        Top = 223
+        Width = 391
+        Height = 149
         Size.Values = (
           314.854166666666700000
           275.166666666666700000
           470.958333333333400000
           828.145833333333200000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
         WordWrap = False
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object QRLblWho: TQRLabel
-        Left = 448
-        Top = 229
-        Width = 92
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 286
+        Width = 118
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
-          605.895833333333400000
-          243.416666666666700000)
+          605.366666666666700000
+          249.766666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Your Contact:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLblCntct: TQRLabel
-        Left = 565
-        Top = 229
-        Width = 194
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 706
+        Top = 286
+        Width = 243
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1494.895833333333000000
-          605.895833333333400000
-          513.291666666666800000)
+          46.566666666666670000
+          1494.366666666667000000
+          605.366666666666700000
+          514.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Contact'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLblCustRef: TQRLabel
-        Left = 448
-        Top = 252
-        Width = 58
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 315
+        Width = 75
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
           666.750000000000000000
-          153.458333333333300000)
+          158.750000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Your Ref'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLblRef: TQRLabel
-        Left = 566
-        Top = 252
-        Width = 195
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 708
+        Top = 315
+        Width = 244
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1497.541666666667000000
+          46.566666666666670000
+          1498.600000000000000000
           666.750000000000000000
-          515.937500000000000000)
+          516.466666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = '123456789012345678901234'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLblReqDt: TQRLabel
-        Left = 566
-        Top = 275
-        Width = 69
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 708
+        Top = 344
+        Width = 90
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1497.541666666667000000
-          727.604166666666800000
-          182.562500000000000000)
+          46.566666666666670000
+          1498.600000000000000000
+          728.133333333333300000
+          190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Date:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLblDtReq: TQRLabel
-        Left = 448
-        Top = 275
-        Width = 94
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 344
+        Width = 123
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
-          727.604166666666800000
-          248.708333333333300000)
+          728.133333333333300000
+          260.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Date Required'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel12: TQRLabel
-        Left = 655
-        Top = 377
-        Width = 37
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 817
+        Top = 471
+        Width = 48
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1733.020833333333000000
-          997.479166666666900000
-          97.895833333333340000)
+          46.566666666666670000
+          1729.316666666667000000
+          996.950000000000000000
+          101.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Value'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel7: TQRLabel
-        Left = 504
-        Top = 377
-        Width = 33
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 628
+        Top = 471
+        Width = 43
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1333.500000000000000000
-          997.479166666666900000
-          87.312500000000000000)
+          46.566666666666670000
+          1329.266666666667000000
+          996.950000000000000000
+          91.016666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Price'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object OrdQtyQRLabel: TQRLabel
-        Left = 556
-        Top = 377
-        Width = 62
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 689
+        Top = 471
+        Width = 84
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1471.083333333333000000
-          997.479166666666900000
-          164.041666666666700000)
+          46.566666666666670000
+          1458.383333333333000000
+          996.950000000000000000
+          177.800000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Price Unit'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 390
-        Top = 377
-        Width = 68
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 488
+        Top = 471
+        Width = 85
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1031.875000000000000000
-          997.479166666666900000
+          46.566666666666670000
+          1032.933333333333000000
+          996.950000000000000000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Quantity'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DescQRLabel: TQRLabel
-        Left = 24
-        Top = 377
-        Width = 74
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 471
+        Width = 99
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           63.500000000000000000
-          997.479166666666900000
-          195.791666666666700000)
+          996.950000000000000000
+          209.550000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
-      object QRLabel9: TQRLabel
-        Left = 448
-        Top = 152
-        Width = 217
-        Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+      object qrlblReportTitle: TQRLabel
+        Left = 560
+        Top = 190
+        Width = 269
+        Height = 26
         Size.Values = (
-          55.562500000000000000
+          55.033333333333330000
           1185.333333333333000000
-          402.166666666666600000
-          574.145833333333400000)
+          402.166666666666700000
+          569.383333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Draft Sales Invoice Details'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 740
-        Top = 377
-        Width = 27
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 925
+        Top = 471
+        Width = 34
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1957.916666666667000000
-          997.479166666666900000
-          71.437500000000000000)
+          996.950000000000000000
+          71.966666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'VAT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel1: TQRLabel
-        Left = 24
-        Top = 336
-        Width = 53
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 420
+        Width = 68
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           63.500000000000000000
           889.000000000000000000
-          140.229166666666700000)
+          143.933333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Project:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblJobBagDescription: TQRLabel
-        Left = 86
-        Top = 336
-        Width = 117
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 108
+        Top = 420
+        Width = 155
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          227.541666666666700000
+          46.566666666666670000
+          228.600000000000000000
           889.000000000000000000
-          309.562500000000000000)
+          328.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblJobBagDescription'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblCompanyName: TQRLabel
-        Left = 32
-        Top = 8
-        Width = 184
-        Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 40
+        Top = 10
+        Width = 233
+        Height = 38
         Size.Values = (
-          79.375000000000000000
-          84.666666666666680000
+          80.433333333333330000
+          84.666666666666670000
           21.166666666666670000
-          486.833333333333400000)
+          493.183333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblCompanyName'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -24
+        Font.Height = -30
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 18
       end
       object qrlblRevenueCentre: TQRLabel
-        Left = 448
-        Top = 336
-        Width = 111
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 560
+        Top = 420
+        Width = 142
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1185.333333333333000000
           889.000000000000000000
-          293.687500000000000000)
+          300.566666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Revenue Centre:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblRevenueCentreData: TQRLabel
-        Left = 565
-        Top = 336
-        Width = 194
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 706
+        Top = 420
+        Width = 243
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1494.895833333333000000
+          46.566666666666670000
+          1494.366666666667000000
           889.000000000000000000
-          513.291666666666700000)
+          514.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Revenue Centre'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
     object FooterQRBand: TQRBand
       Left = 0
-      Top = 478
-      Width = 794
-      Height = 133
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 599
+      Width = 992
+      Height = 166
       AfterPrint = FooterQRBandAfterPrint
       AlignToBottom = True
       BeforePrint = FooterQRBandBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        351.895833333333400000
-        2100.791666666667000000)
+        351.366666666666700000
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel14: TQRLabel
-        Left = 541
-        Top = 22
-        Width = 59
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 671
+        Top = 28
+        Width = 79
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1431.395833333333000000
-          58.208333333333340000
-          156.104166666666700000)
+          1420.283333333333000000
+          59.266666666666670000
+          167.216666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Net'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object GoodsValueLbl: TQRLabel
-        Left = 609
-        Top = 22
-        Width = 84
-        Height = 21
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 757
+        Top = 28
+        Width = 109
+        Height = 26
         Size.Values = (
-          55.562500000000000000
-          1611.312500000000000000
-          58.208333333333340000
-          222.250000000000000000)
+          55.033333333333330000
+          1602.316666666667000000
+          59.266666666666670000
+          230.716666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'GoodsValueLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel15: TQRLabel
-        Left = 537
-        Top = 46
-        Width = 63
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 668
+        Top = 57
+        Width = 82
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1420.812500000000000000
-          121.708333333333300000
-          166.687500000000000000)
+          1413.933333333333000000
+          120.650000000000000000
+          173.566666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total VAT'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object VATValueLbl: TQRLabel
-        Left = 620
-        Top = 46
-        Width = 73
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 772
+        Top = 57
+        Width = 94
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1640.416666666667000000
-          121.708333333333300000
-          193.145833333333300000)
+          1634.066666666667000000
+          120.650000000000000000
+          198.966666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'VATValueLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object TotalValueLbl: TQRLabel
-        Left = 615
-        Top = 70
-        Width = 78
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 766
+        Top = 87
+        Width = 101
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1627.187500000000000000
-          185.208333333333300000
-          206.375000000000000000)
+          1621.366666666667000000
+          184.150000000000000000
+          213.783333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'TotalValueLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel16: TQRLabel
-        Left = 527
-        Top = 70
-        Width = 73
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 652
+        Top = 87
+        Width = 98
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1394.354166666667000000
-          185.208333333333300000
-          193.145833333333300000)
+          1380.066666666667000000
+          184.150000000000000000
+          207.433333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total Gross'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object gtQRLabel1: TQRLabel
-        Left = 657
-        Top = 110
-        Width = 36
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 821
+        Top = 138
+        Width = 45
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          1738.312500000000000000
-          291.041666666666700000
+          1737.783333333333000000
+          292.100000000000000000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'e&oe'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
     object qrsbdJBLines: TQRSubDetail
       Left = 0
-      Top = 420
-      Width = 794
-      Height = 20
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 526
+      Width = 992
+      Height = 25
       AlignToBottom = False
       BeforePrint = qrsbdJBLinesBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -1091,26 +1032,26 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
       ParentFont = False
       Size.Values = (
         52.916666666666670000
-        2100.791666666667000000)
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = GetDetsQuery
       PrintBefore = False
       PrintIfEmpty = True
       object lblDescription: TQRLabel
-        Left = 24
+        Left = 30
         Top = 1
-        Width = 361
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 451
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           63.500000000000000000
-          2.645833333333333000
-          955.145833333333500000)
+          2.116666666666667000
+          954.616666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1119,184 +1060,176 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblSellPrice: TQRLabel
-        Left = 474
+        Left = 592
         Top = 1
-        Width = 63
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 80
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1254.125000000000000000
-          2.645833333333333000
-          166.687500000000000000)
+          46.566666666666670000
+          1253.066666666667000000
+          2.116666666666667000
+          169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblSellPrice'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblSellUnit: TQRLabel
-        Left = 562
+        Left = 699
         Top = 1
-        Width = 57
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 74
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1486.958333333333000000
-          2.645833333333333000
-          150.812500000000000000)
+          46.566666666666670000
+          1479.550000000000000000
+          2.116666666666667000
+          156.633333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblSellUnit'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblValue: TQRLabel
-        Left = 646
+        Left = 805
         Top = 1
-        Width = 46
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 59
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1709.208333333333000000
-          2.645833333333333000
-          121.708333333333300000)
+          46.566666666666670000
+          1703.916666666667000000
+          2.116666666666667000
+          124.883333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblValue'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblVat: TQRLabel
-        Left = 696
+        Left = 870
         Top = 1
-        Width = 72
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 90
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1841.500000000000000000
-          2.645833333333333000
+          2.116666666666667000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'lblVat'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblQuantity: TQRLabel
-        Left = 393
+        Left = 491
         Top = 1
-        Width = 65
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 81
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1039.812500000000000000
-          2.645833333333333000
-          171.979166666666700000)
+          46.566666666666670000
+          1039.283333333333000000
+          2.116666666666667000
+          171.450000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'lblQuantity'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrmDescription: TQRRichText
-        Left = 24
+        Left = 30
         Top = 1
-        Width = 369
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 461
+        Height = 20
         Size.Values = (
           42.333333333333340000
           63.500000000000000000
           2.645833333333333000
           976.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
@@ -1305,26 +1238,26 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = []
+        HiresExport = False
+        Transparent = False
+        YIncrement = 50
       end
     end
     object pogroupheader: TQRGroup
       Left = 0
-      Top = 417
-      Width = 794
-      Height = 3
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 522
+      Width = 992
+      Height = 4
       AlignToBottom = False
       BeforePrint = pogroupheaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        7.937500000000000000
-        2100.791666666667000000)
+        8.466666666666667000
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'GetOrdHedQuery.Sel1'
       FooterBand = FooterQRBand
       Master = qrpDetails
@@ -1332,41 +1265,36 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     end
     object qrsbdAddCharges: TQRSubDetail
       Left = 0
-      Top = 458
-      Width = 794
-      Height = 20
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 574
+      Width = 992
+      Height = 25
       AlignToBottom = False
       BeforePrint = qrsbdAddChargesBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         52.916666666666670000
-        2100.791666666667000000)
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrsbdJBLines
       DataSet = qryPOLineChgs
       PrintBefore = False
       PrintIfEmpty = True
       object lblAddDescription: TQRLabel
-        Left = 24
+        Left = 30
         Top = 1
-        Width = 369
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 461
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           63.500000000000000000
-          2.645833333333333000
-          976.312500000000000000)
+          2.116666666666667000
+          975.783333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1375,124 +1303,119 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblAddValue: TQRLabel
-        Left = 646
+        Left = 805
         Top = 1
-        Width = 46
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 59
+        Height = 22
         Size.Values = (
-          44.979166666666670000
-          1709.208333333333000000
-          2.645833333333333000
-          121.708333333333300000)
+          46.566666666666670000
+          1703.916666666667000000
+          2.116666666666667000
+          124.883333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblValue'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object lblAddVAT: TQRLabel
-        Left = 696
+        Left = 870
         Top = 1
-        Width = 72
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 90
+        Height = 22
         Size.Values = (
-          44.979166666666670000
+          46.566666666666670000
           1841.500000000000000000
-          2.645833333333333000
+          2.116666666666667000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'lblVat'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
     object chldbndFSCClaim: TQRChildBand
       Left = 0
-      Top = 440
-      Width = 794
-      Height = 18
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Top = 551
+      Width = 992
+      Height = 23
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        47.625000000000000000
-        2100.791666666667000000)
+        48.683333333333330000
+        2099.733333333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrsbdJBLines
+      PrintOrder = cboAfterParent
       object gtlblFSCClaim: TQRLabel
-        Left = 24
+        Left = 30
         Top = 1
-        Width = 52
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Width = 65
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           63.500000000000000000
-          2.645833333333333000
+          2.116666666666667000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'FSC Claim:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Tahoma'
         Font.Style = [fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1938,20 +1861,6 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         Name = 'Job_Bag_Line'
         ParamType = ptUnknown
       end>
-  end
-  object gtQRFilters1: TgtQRFilters
-    HTML.Author = 'Pragnaan'
-    HTML.Keywords = 'gtQrFilters'
-    HTML.ImageDir = 'Images'
-    PDF.Author = 'Pragnaan'
-    PDF.Keywords = 'QuickReport, Export, Filters'
-    RTF.Author = 'Pragnaan'
-    RTF.Keywords = 'QuickReport, Export, Filters'
-    RTF.ExportImageFormat = ifBMP
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkExcel, fkText, fkGIF, fkJPEG, fkBMP, fkEMF, fkWMF]
-    Left = 344
-    Top = 171
   end
   object qryGetProductType: TQuery
     DatabaseName = 'PB'

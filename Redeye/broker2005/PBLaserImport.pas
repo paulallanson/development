@@ -72,6 +72,8 @@ var
 
 implementation
 
+{$R *.DFM}
+
 uses CCSCommon, SFJobBagLogDM, ComObj, ActiveX, pbMainMenu;
 
 type
@@ -80,7 +82,6 @@ type
     ColumnNo : integer;
     ColumnLength : integer;
   end;
-{$R *.DFM}
 
 procedure TPBLaserImportFrm.btnFindFileClick(Sender: TObject);
 begin

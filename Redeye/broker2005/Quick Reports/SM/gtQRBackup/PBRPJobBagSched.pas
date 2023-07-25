@@ -19,7 +19,7 @@ type
     qrgJobBag: TQRGroup;
     QRLabel1: TQRLabel;
     dtsReport: TDataSource;
-    gtQRFilters1: TgtQRFilters;
+    
     QRLabel6: TQRLabel;
     QRLabel4: TQRLabel;
     QRDBText3: TQRDBText;

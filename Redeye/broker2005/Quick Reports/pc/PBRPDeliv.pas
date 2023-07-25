@@ -192,7 +192,7 @@ type
     lbldelInst: TQRLabel;
     DeliveryMemo: TQRMemo;
     GetPickCallOffSQL: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

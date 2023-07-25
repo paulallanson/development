@@ -209,7 +209,7 @@ type
     GetPickCallOffSQL: TQuery;
     ReportImage: TQRImage;
     PsQRShape1: TQRShape;
-    gtQRFilters1: TgtQRFilters;
+    
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

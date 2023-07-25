@@ -72,7 +72,7 @@ type
     lblReference: TQRLabel;
     ExtrasVatLbl: TQRLabel;
     qrySIHead: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep; var PrintReport:
       Boolean);
     procedure InvoiceFooterBeforePrint(Sender: TQRCustomBand; var PrintBand:

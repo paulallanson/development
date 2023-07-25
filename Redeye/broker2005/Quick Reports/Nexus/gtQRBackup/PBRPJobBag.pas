@@ -31,7 +31,7 @@ type
     dtsReport: TDataSource;
     qrygetNotes: TQuery;
     QRSubDetail1: TQRSubDetail;
-    gtQRFilters1: TgtQRFilters;
+    
     QRLabel6: TQRLabel;
     qrmAddress: TQRMemo;
     QRLabel10: TQRLabel;

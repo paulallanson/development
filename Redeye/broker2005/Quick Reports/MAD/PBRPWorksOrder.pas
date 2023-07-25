@@ -52,7 +52,7 @@ type
     gtQRLabel8: TQRLabel;
     gtQRDBText9: TQRDBText;
     gtQRDBText10: TQRDBText;
-    gtQRFilters1: TgtQRFilters;
+    
     QRLabel6: TQRLabel;
     qrmAddress: TQRMemo;
     QRLabel10: TQRLabel;

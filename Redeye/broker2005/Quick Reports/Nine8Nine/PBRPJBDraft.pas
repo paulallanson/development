@@ -52,7 +52,7 @@ type
     OrdQtyQRLabel: TQRLabel;
     QRLabel3: TQRLabel;
     DescQRLabel: TQRLabel;
-    QRLabel9: TQRLabel;
+    qrlblReportTitle: TQRLabel;
     QRLabel2: TQRLabel;
     qrySOLinePart: TQuery;
     qryGetPriceUnit: TQuery;
@@ -68,7 +68,6 @@ type
     lblQuantity: TQRLabel;
     qrmDescription: TQRRichText;
     qryPOLineChgs: TQuery;
-    gtQRFilters1: TgtQRFilters;
     qrlblRevenueCentre: TQRLabel;
     qrlblRevenueCentreData: TQRLabel;
     qryGetProductType: TQuery;

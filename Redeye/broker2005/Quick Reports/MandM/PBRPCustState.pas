@@ -47,7 +47,7 @@ type
     TotGoodsQRLbl: TQRLabel;
     TotVatQRLbl: TQRLabel;
     InvTotQrLbl: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     gtQRLabel1: TQRLabel;
     gtQRLabel2: TQRLabel;
     gtQRLabel3: TQRLabel;

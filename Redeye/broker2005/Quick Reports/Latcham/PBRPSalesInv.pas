@@ -86,7 +86,7 @@ type
     qryCompCat: TQuery;
     qryUniqueInv: TQuery;
     qryCategory: TQuery;
-    gtQRFilters1: TgtQRFilters;
+    
     imgReport: TQRImage;
     gtNotesShape: TQRShape;
     RichmemoNotes: TQRRichText;

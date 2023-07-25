@@ -26,7 +26,7 @@ type
     dtsReport: TDataSource;
     qrygetNotes: TQuery;
     qrbLineDetail: TQRSubDetail;
-    gtQRFilters1: TgtQRFilters;
+    
     qrmAddress: TQRMemo;
     QRLabel4: TQRLabel;
     qrlblContactName: TQRLabel;

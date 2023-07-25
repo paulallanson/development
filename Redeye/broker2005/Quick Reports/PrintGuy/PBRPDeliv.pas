@@ -36,7 +36,7 @@ type
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     OrderLbl: TQRLabel;
     gtQRLabel1: TQRLabel;
     qrlblInstructions: TQRLabel;

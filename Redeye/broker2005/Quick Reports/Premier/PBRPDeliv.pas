@@ -46,7 +46,7 @@ type
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
+    
     ReportImage: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
