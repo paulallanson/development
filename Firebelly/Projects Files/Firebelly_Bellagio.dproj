@@ -59,6 +59,7 @@
         <DCC_ExeOutput>..\Bellagio\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>..\Bellagio\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_Define>FIREBELLY;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>

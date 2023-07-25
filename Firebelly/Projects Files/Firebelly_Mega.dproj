@@ -59,7 +59,7 @@
         <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>..\MegaMarble\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>..\MegaMarble\$(Platform)\$(Config)</DCC_DcuOutput>
-        <DCC_Define>MEGAMARBLE;$(DCC_Define)</DCC_Define>
+        <DCC_Define>FIREBELLY;MEGAMARBLE;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>

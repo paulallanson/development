@@ -58,7 +58,6 @@
         <DCC_DcuOutput>..\Aire\$(Platform)\$(Config)</DCC_DcuOutput>
         <DebugSourcePath>C:\Program Files\Borland\Delphi7\quickrpt\;$(DebugSourcePath)</DebugSourcePath>
         <DCC_UsePackage>VCL50;VCLX50;VCLSMP50;VCLDB50;VCLADO50;ibevnt50;VCLBDE50;QRPT50;VCLIB50;VCLMID50;VCLIE50;INETDB50;INET50;NMFAST50;WEBMID50;dclocx50;dclaxserver50;VCLDBX50;TEEQR50;TEEUI50;TEEDB50;TEE50;DSS50;Crystal7;RBCIDE45;RBIDE45;RBRCL45;RBBDE45;RBUSER45;RBDB45;dclRBA45;RBDAD45;dclRBI45;RBRIDE45;RBRAP45;PSQRD50;$(DCC_UsePackage)</DCC_UsePackage>
-        <DCC_Define>ROMANY;$(DCC_Define)</DCC_Define>
         <DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
         <DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
         <DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
@@ -68,6 +67,7 @@
         <VerInfo_Keys>FileVersion=1.0.0.0</VerInfo_Keys>
         <DCC_ExeOutput>..\Aire\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_UnitSearchPath>..\;..\..\Components\CRPackage;..\..\Components\Turbo Async Pro\source;..\..\PrinterTools;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_Define>FIREBELLY;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
