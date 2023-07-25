@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db, DBTables;
+  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db, DBTables,
+  System.ImageList;
 
 type
   TStockDet     = class;

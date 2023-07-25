@@ -4,8 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DB, DBTables, TeEngine, Series, ExtCtrls, TeeProcs,
-  Chart, DbChart, Buttons, CCSPrint;
+  Dialogs, StdCtrls, DB, DBTables, VclTee.TeEngine, VclTee.Series, ExtCtrls,
+  VclTee.TeeProcs, VclTee.Chart, VclTee.DbChart, Buttons, CCSPrint,
+  VclTee.TeeGDIPlus;
 
 type
   TPBRSNCASourcePieFrm = class(TForm)

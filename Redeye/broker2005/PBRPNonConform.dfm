@@ -1397,7 +1397,7 @@ object frmPBRPNonConform: TfrmPBRPNonConform
         84.666666666666670000
         1899.708333333333000000)
       BandType = rbPageFooter
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 616
         Top = 11
         Width = 90

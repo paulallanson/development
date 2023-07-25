@@ -1,9 +1,9 @@
 object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   Left = 279
   Top = 102
-  Width = 725
-  Height = 411
   Caption = 'Purchase Invoices'
+  ClientHeight = 364
+  ClientWidth = 707
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,31 +11,29 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 717
+    Width = 707
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 713
+        Width = 701
       end>
     object PageScroller1: TPageScroller
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 700
+      Width = 692
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -43,12 +41,11 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 700
+        Width = 680
         Height = 41
         ButtonHeight = 36
-        ButtonWidth = 62
+        ButtonWidth = 56
         Caption = 'ToolBar1'
-        Flat = True
         Images = imglstFunctions
         ParentShowHint = False
         ShowCaptions = True
@@ -65,7 +62,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnMouseDown = btnAddMouseDown
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 56
           Top = 0
           Hint = 'Change purchase invoice details'
           Caption = '  &Change  '
@@ -74,7 +71,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 124
+          Left = 112
           Top = 0
           Hint = 'Delete a purchase invoice'
           Caption = '&Delete'
@@ -83,7 +80,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnDeleteClick
         end
         object btnPass: TToolButton
-          Left = 186
+          Left = 168
           Top = 0
           Hint = 'Pass the selected invoice/invoices for posting to ledgers'
           Caption = '&Pass'
@@ -92,7 +89,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnPassClick
         end
         object btnQuery: TToolButton
-          Left = 248
+          Left = 224
           Top = 0
           Hint = 'Flag the invoice as a query'
           Caption = '&Query'
@@ -101,7 +98,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnQueryClick
         end
         object btnReset: TToolButton
-          Left = 310
+          Left = 280
           Top = 0
           Hint = 'Reset the invoice/invoices, do not allow posting to ledger'
           Caption = 'Re&set'
@@ -110,7 +107,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           OnClick = btnResetClick
         end
         object ToolButton2: TToolButton
-          Left = 372
+          Left = 336
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -118,7 +115,7 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 380
+          Left = 344
           Top = 0
           Caption = '&Reports'
           ImageIndex = 4
@@ -128,12 +125,12 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 324
-    Width = 717
+    Top = 304
+    Width = 707
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 8
@@ -151,13 +148,13 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
-      Left = 531
+      Left = 521
       Top = 1
       Width = 185
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         185
@@ -185,8 +182,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 365
-    Width = 717
+    Top = 345
+    Width = 707
     Height = 19
     Panels = <
       item
@@ -199,8 +196,8 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 717
-    Height = 250
+    Width = 707
+    Height = 230
     Align = alClient
     DataSource = dmSupplierInvoice.dsSIHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -308,19 +305,20 @@ object frmPBLUPurchaseInvoices: TfrmPBLUPurchaseInvoices
         Expanded = False
         FieldName = 'New_Date'
         Title.Caption = 'Date Created'
+        Width = 64
         Visible = True
       end>
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 717
+    Width = 707
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8

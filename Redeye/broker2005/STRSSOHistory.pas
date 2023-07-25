@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Grids, DBGrids, OleCtnrs, ComCtrls;
+  StdCtrls, Buttons, ExtCtrls, Grids, DBGrids, OleCtnrs, ComCtrls, Data.DB;
 
 type
   TSTRSSOHistoryFrm = class(TForm)

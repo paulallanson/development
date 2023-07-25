@@ -1,9 +1,9 @@
 object frmPBLUStock: TfrmPBLUStock
   Left = 29
   Top = 110
-  Width = 1248
-  Height = 493
   Caption = 'Stock'
+  ClientHeight = 421
+  ClientWidth = 1230
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object frmPBLUStock: TfrmPBLUStock
   Font.Style = []
   FormStyle = fsMDIChild
   Menu = mmnuStock
-  OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
   OnActivate = FormActivate
@@ -21,24 +20,23 @@ object frmPBLUStock: TfrmPBLUStock
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1240
+    Width = 1230
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1236
+        Width = 1224
       end>
     object PageScroller1: TPageScroller
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1223
+      Width = 1215
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -46,12 +44,11 @@ object frmPBLUStock: TfrmPBLUStock
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1223
+        Width = 1203
         Height = 41
-        ButtonHeight = 36
+        ButtonHeight = 44
         ButtonWidth = 62
         Caption = 'ToolBar1'
-        Flat = True
         Images = imglstMaint
         ShowCaptions = True
         TabOrder = 0
@@ -125,7 +122,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object btnCustomerCodes: TToolButton
-          Left = 393
+          Left = 399
           Top = 0
           Caption = 'Codes'
           Enabled = False
@@ -133,7 +130,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnCustomerCodesClick
         end
         object ToolButton2: TToolButton
-          Left = 455
+          Left = 461
           Top = 0
           Width = 8
           Caption = 'ToolButton2'
@@ -141,7 +138,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnEnquiry: TToolButton
-          Left = 463
+          Left = 469
           Top = 0
           Caption = 'Enquiry'
           DropdownMenu = pmnEnquiry
@@ -150,7 +147,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object btnMovementsSep: TToolButton
-          Left = 538
+          Left = 550
           Top = 0
           Width = 8
           Caption = 'btnMovementsSep'
@@ -158,7 +155,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnReceipts: TToolButton
-          Left = 546
+          Left = 558
           Top = 0
           Caption = 'Receipts'
           Enabled = False
@@ -166,7 +163,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnReceiptsClick
         end
         object btnTransfers: TToolButton
-          Left = 608
+          Left = 620
           Top = 0
           Caption = '&Transfers'
           Enabled = False
@@ -174,7 +171,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnTransfersClick
         end
         object btnAdjustIn: TToolButton
-          Left = 670
+          Left = 682
           Top = 0
           Caption = 'Adjust in'
           Enabled = False
@@ -182,7 +179,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnAdjustInClick
         end
         object btnAdjustOut: TToolButton
-          Left = 732
+          Left = 744
           Top = 0
           Caption = 'Adjust Out'
           Enabled = False
@@ -190,7 +187,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnAdjustOutClick
         end
         object btnOvers: TToolButton
-          Left = 794
+          Left = 806
           Top = 0
           Caption = '&Overs'
           Enabled = False
@@ -198,7 +195,7 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnOversClick
         end
         object btnUsage: TToolButton
-          Left = 856
+          Left = 868
           Top = 0
           Hint = 'Production Usage'
           Caption = '&Usage'
@@ -206,14 +203,14 @@ object frmPBLUStock: TfrmPBLUStock
           OnClick = btnUsageClick
         end
         object btnReturns: TToolButton
-          Left = 918
+          Left = 930
           Top = 0
           Caption = 'Returns'
           ImageIndex = 16
           OnClick = btnReturnsClick
         end
         object btnStkTakeSep: TToolButton
-          Left = 980
+          Left = 992
           Top = 0
           Width = 8
           Caption = 'btnStkTakeSep'
@@ -221,7 +218,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnStockTake: TToolButton
-          Left = 988
+          Left = 1000
           Top = 0
           Caption = 'Stk Take'
           DropdownMenu = pmuStocktake
@@ -229,7 +226,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsDropDown
         end
         object ToolButton3: TToolButton
-          Left = 1063
+          Left = 1081
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -237,7 +234,7 @@ object frmPBLUStock: TfrmPBLUStock
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 1071
+          Left = 1089
           Top = 0
           Caption = 'Reports'
           ImageIndex = 10
@@ -249,8 +246,8 @@ object frmPBLUStock: TfrmPBLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1240
-    Height = 311
+    Width = 1230
+    Height = 285
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -381,15 +378,15 @@ object frmPBLUStock: TfrmPBLUStock
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 385
-    Width = 1240
+    Top = 359
+    Width = 1230
     Height = 43
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      1240
+      1230
       43)
     object Label1: TLabel
       Left = 8
@@ -410,13 +407,13 @@ object frmPBLUStock: TfrmPBLUStock
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
-      Left = 1054
+      Left = 1044
       Top = 1
       Width = 185
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object btnClose: TButton
         Left = 96
@@ -469,8 +466,8 @@ object frmPBLUStock: TfrmPBLUStock
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 428
-    Width = 1240
+    Top = 402
+    Width = 1230
     Height = 19
     Panels = <
       item
@@ -481,15 +478,15 @@ object frmPBLUStock: TfrmPBLUStock
       end>
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 1240
+    Width = 1230
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Label3: TLabel
       Left = 8

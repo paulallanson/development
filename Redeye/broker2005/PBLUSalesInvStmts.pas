@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ImgList, ComCtrls, ToolWin, StdCtrls, Buttons, Grids, DBGrids,
-  ExtCtrls, PBPOObjects;
+  ExtCtrls, PBPOObjects, Data.DB, System.ImageList;
 
 type
   TPBLUSalesInvStmtsFrm = class(TForm)

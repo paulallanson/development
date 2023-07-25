@@ -164,8 +164,9 @@ var
 
 implementation
 
-uses PBFaxToOne, PBEmailToOne, PBLUSupp, CCSPrint, PBRPODueEnq, PBLURep,
-  pbDatabase, printers, DateSelV5, pbMainMenu;
+uses
+  PBFaxToOne, PBEmailToOne, PBLUSupp, CCSPrint, PBRPODueEnq, PBLURep,
+  pbDatabase, printers, DateSelV5, pbMainMenu, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -527,6 +528,13 @@ begin
 end;
 
 procedure TPBRSODueEnqFrm.PrintToAttachment(Sender: TObject);
+begin
+  var filename := 'OverdueEnqs' + '-' + PBRPODueEnqFrm.RepNo.ToString;
+  PrinterTools.New.PrintToAttachment(PBRPODueEnqFrm.PrintODueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TPBRSODueEnqFrm.PrintToAttachment(Sender: TObject);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -542,11 +550,11 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
 //  sFileName := 'ENQ' + inttostr(FEnquiry);
 
   {Code used to generate a unique filename}
@@ -669,7 +677,7 @@ begin
     end;
   AFilters.free;
 end;
-
+*)
 
 procedure TPBRSODueEnqFrm.rgRepClick(Sender: TObject);
 begin

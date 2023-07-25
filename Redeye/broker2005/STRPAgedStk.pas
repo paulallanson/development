@@ -55,7 +55,6 @@ type
     qrlblRange: TQRLabel;
     DateQRLabel: TQRLabel;
     QRSysData1: TQRSysData;
-    gtQRFilters1: TgtQRFilters;
     Query1: TQuery;
     QRMemoRepName: TQRMemo;
     GetTopRepSQL: TQuery;

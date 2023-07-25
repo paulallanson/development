@@ -1,7 +1,4 @@
 object dtmdlEnqs: TdtmdlEnqs
-  OldCreateOrder = False
-  Left = 192
-  Top = 107
   Height = 488
   Width = 544
   object qryEnqs: TQuery

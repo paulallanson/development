@@ -11,14 +11,12 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     288
     461)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 11
@@ -189,6 +187,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show cancelled Orders'
     TabOrder = 16
+    ExplicitTop = 393
   end
   object SearchButton: TButton
     Left = 12
@@ -200,6 +199,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Default = True
     TabOrder = 17
     OnClick = SearchButtonClick
+    ExplicitTop = 425
   end
   object edtDate: TEdit
     Left = 120
@@ -209,6 +209,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     TabOrder = 13
     OnExit = edtDateExit
+    ExplicitTop = 338
   end
   object btnDate: TBitBtn
     Left = 216
@@ -216,8 +217,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 14
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -232,6 +231,9 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 14
+    OnClick = btnDateClick
+    ExplicitTop = 336
   end
   object edtDescription: TEdit
     Left = 120
@@ -277,6 +279,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Caption = 'Clear Search'
     TabOrder = 18
     OnClick = ClearButtonClick
+    ExplicitTop = 425
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
@@ -287,6 +290,7 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Work in Progress'
     TabOrder = 15
+    ExplicitTop = 369
   end
   object edtRep: TEdit
     Left = 120

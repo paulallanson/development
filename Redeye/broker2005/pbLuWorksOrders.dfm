@@ -1,9 +1,9 @@
 object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
-  Width = 902
-  Height = 425
   Caption = 'Works Instructions'
+  ClientHeight = 366
+  ClientWidth = 886
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Font.Style = []
   FormStyle = fsMDIChild
   Menu = mmnuStock
-  OldCreateOrder = False
   Position = poDefault
   Visible = True
   OnActivate = FormActivate
@@ -21,12 +20,11 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 894
+    Width = 886
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -65,24 +63,23 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 894
+    Width = 886
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 890
+        Width = 880
       end>
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 877
+      Width = 871
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
-      Flat = True
       Images = imglstOrders
       ShowCaptions = True
       TabOrder = 0
@@ -94,7 +91,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -102,7 +99,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnChangeClick
       end
       object btnDelete: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -110,7 +107,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnDeleteClick
       end
       object btnRepeat: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = '&Repeat'
         Enabled = False
@@ -118,7 +115,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnRepeatClick
       end
       object btnPrint: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -126,7 +123,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnPrintClick
       end
       object btnPrintISO: TToolButton
-        Left = 310
+        Left = 280
         Top = 0
         Caption = 'ISO Print'
         Enabled = False
@@ -134,7 +131,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnPrintISOClick
       end
       object btnStatus: TToolButton
-        Left = 372
+        Left = 336
         Top = 0
         Caption = 'Status'
         Enabled = False
@@ -142,7 +139,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnStatusClick
       end
       object btnDespatches: TToolButton
-        Left = 434
+        Left = 392
         Top = 0
         Caption = 'Despatch'
         Enabled = False
@@ -150,7 +147,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         OnClick = btnDespatchesClick
       end
       object ToolButton2: TToolButton
-        Left = 496
+        Left = 448
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -158,7 +155,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 504
+        Left = 456
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -169,8 +166,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 894
-    Height = 244
+    Width = 886
+    Height = 231
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -269,8 +266,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 319
-    Width = 894
+    Top = 306
+    Width = 886
     Height = 41
     Align = alBottom
     TabOrder = 3
@@ -290,7 +287,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 608
+      Left = 600
       Top = 1
       Width = 285
       Height = 39
@@ -348,8 +345,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 360
-    Width = 894
+    Top = 347
+    Width = 886
     Height = 19
     Panels = <
       item

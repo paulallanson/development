@@ -62,8 +62,9 @@ var
 
 implementation
 
-uses PBRPSalesInv, CCSPrint, CCSemailHandler, pbDatabase,
-  PBEmailList, CCSCommon, pbMainMenu;
+uses
+  PBRPSalesInv, CCSPrint, CCSemailHandler, pbDatabase,
+  PBEmailList, CCSCommon, pbMainMenu, Printer.Tools;
 
 {$R *.DFM}
 
@@ -519,6 +520,13 @@ begin
 end;
 
 procedure TSTRSPODelivNoteFrm.PrintToAttachment(STRPPODelivNoteFrm: TSTRPPODelivNoteFrm);
+begin
+  var fileName := 'PO_Delivery_Note' + STRPPODelivNoteFrm.DeliveryNo.ToString;
+  PrinterTools.New.PrintToAttachment(STRPPODelivNoteFrm.qrpDetails, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TSTRSPODelivNoteFrm.PrintToAttachment(STRPPODelivNoteFrm: TSTRPPODelivNoteFrm);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -643,9 +651,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTRSPODelivNoteFrm.chkbxPrintlogoClick(Sender: TObject);
 begin

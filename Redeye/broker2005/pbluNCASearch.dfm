@@ -11,13 +11,11 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
     288
     337)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -124,6 +122,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive NCAs'
     TabOrder = 11
+    ExplicitTop = 270
   end
   object SearchButton: TButton
     Left = 12
@@ -135,6 +134,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Default = True
     TabOrder = 12
     OnClick = SearchButtonClick
+    ExplicitTop = 302
   end
   object edtDescription: TEdit
     Left = 120
@@ -163,8 +163,6 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Top = 213
     Width = 25
     Height = 25
-    TabOrder = 9
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -179,6 +177,8 @@ object frmpbluNCASearch: TfrmpbluNCASearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = btnDateClick
   end
   object edtRep: TEdit
     Left = 120
@@ -203,6 +203,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Caption = 'Clear Search'
     TabOrder = 13
     OnClick = ClearButtonClick
+    ExplicitTop = 303
   end
   object chkbxShowLiveNCA: TCheckBox
     Tag = 12
@@ -213,6 +214,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Live NCAs'
     TabOrder = 10
+    ExplicitTop = 247
   end
   object edtRaisingDept: TEdit
     Left = 120

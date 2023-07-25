@@ -9,7 +9,7 @@ uses
   IdTCPClient, IdHTTP, Menus, ShellAPI, IniFiles, StrUtils, Spin, printers,
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
-  pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes;
+  pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList;
 
 type
   TPBMaintCustFrm = class(TForm)

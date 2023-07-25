@@ -1,40 +1,42 @@
 object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
   Left = 90
   Top = 101
-  Width = 1234
-  Height = 610
   Caption = 'Cost of Non Conformance by Year'
+  ClientHeight = 707
+  ClientWidth = 1461
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 557
-    Width = 1226
+    Top = 688
+    Width = 1461
     Height = 19
     Panels = <>
+    ExplicitTop = -19
+    ExplicitWidth = 148
   end
   object Panel1: TPanel
-    ParentBackground = False
-    Left = 1056
+    Left = 1291
     Top = 33
     Width = 170
-    Height = 265
+    Height = 396
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = -22
+    ExplicitHeight = 265
     DesignSize = (
       170
-      265)
+      396)
     object Label1: TLabel
       Left = 16
       Top = 32
@@ -62,13 +64,11 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     end
     object btnPrint: TBitBtn
       Left = 22
-      Top = 238
+      Top = 369
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Print'
-      TabOrder = 2
-      OnClick = btnPrintClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -83,37 +83,43 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnPrintClick
+      ExplicitTop = 238
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 298
-    Width = 1226
+    Top = 429
+    Width = 1461
     Height = 259
     Align = alBottom
     BevelOuter = bvNone
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = -278
+    ExplicitWidth = 148
     object Panel5: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 89
       Height = 259
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
     end
     object Panel6: TPanel
-      ParentBackground = False
-      Left = 1056
+      Left = 1291
       Top = 0
       Width = 170
       Height = 259
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = -22
       DesignSize = (
         170
         259)
@@ -131,186 +137,157 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     object dbChart2: TDBChart
       Left = 89
       Top = 0
-      Width = 967
+      Width = 1202
       Height = 259
-      BackWall.Brush.Color = clWhite
       BackWall.Brush.Style = bsClear
       Title.Font.Charset = ANSI_CHARSET
       Title.Font.Color = clBlack
-      Title.Font.Height = -13
       Title.Font.Name = 'Comic Sans MS'
-      Title.Font.Style = []
       Title.Text.Strings = (
         'Number of Non Comformance and'
         'Customer Complaints')
-      Legend.ColorWidth = 20
       Legend.LegendStyle = lsSeries
       View3D = False
       Align = alClient
       TabOrder = 2
+      ExplicitWidth = 967
+      DefaultCanvas = 'TGDIPlusCanvas'
+      ColorPaletteIndex = 13
       object BarSeries1: TBarSeries
-        Marks.ArrowLength = 20
+        HoverElement = []
         Marks.Frame.Visible = False
-        Marks.Style = smsValue
         Marks.Transparent = True
-        Marks.Visible = True
+        Marks.Style = smsValue
         DataSource = qryYear1Chart2
         SeriesColor = clRed
         ValueFormat = '#,##0'
         XLabelsSource = 'COLUMN1'
         BarWidthPercent = 50
-        XValues.DateTime = False
         XValues.Name = 'X'
-        XValues.Multiplier = 1.000000000000000000
         XValues.Order = loAscending
-        YValues.DateTime = False
         YValues.Name = 'Bar'
-        YValues.Multiplier = 1.000000000000000000
         YValues.Order = loNone
         YValues.ValueSource = 'COLUMN2'
       end
       object BarSeries2: TBarSeries
-        Marks.ArrowLength = 20
+        HoverElement = []
         Marks.Frame.Visible = False
-        Marks.Style = smsValue
         Marks.Transparent = True
-        Marks.Visible = True
+        Marks.Style = smsValue
         DataSource = qryYear2Chart2
         SeriesColor = clGreen
         ValueFormat = '#,##0'
         BarWidthPercent = 50
-        XValues.DateTime = False
         XValues.Name = 'X'
-        XValues.Multiplier = 1.000000000000000000
         XValues.Order = loAscending
-        YValues.DateTime = False
         YValues.Name = 'Bar'
-        YValues.Multiplier = 1.000000000000000000
         YValues.Order = loNone
         YValues.ValueSource = 'COLUMN2'
       end
       object BarSeries3: TBarSeries
-        Marks.ArrowLength = 20
+        HoverElement = []
         Marks.Frame.Visible = False
-        Marks.Style = smsValue
         Marks.Transparent = True
-        Marks.Visible = True
+        Marks.Style = smsValue
         DataSource = qryYear3Chart2
         SeriesColor = clYellow
         ValueFormat = '#,##0'
         BarWidthPercent = 50
-        XValues.DateTime = False
         XValues.Name = 'X'
-        XValues.Multiplier = 1.000000000000000000
         XValues.Order = loAscending
-        YValues.DateTime = False
         YValues.Name = 'Bar'
-        YValues.Multiplier = 1.000000000000000000
         YValues.Order = loNone
         YValues.ValueSource = 'COLUMN2'
       end
     end
   end
   object Panel4: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 1226
+    Width = 1461
     Height = 33
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 148
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 33
     Width = 89
-    Height = 265
+    Height = 396
     Align = alLeft
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
+    ExplicitHeight = 265
   end
   object dbChart1: TDBChart
     Left = 89
     Top = 33
-    Width = 967
-    Height = 265
-    BackWall.Brush.Color = clWhite
+    Width = 1202
+    Height = 396
     BackWall.Brush.Style = bsClear
     Title.Font.Charset = ANSI_CHARSET
     Title.Font.Color = clBlack
-    Title.Font.Height = -13
     Title.Font.Name = 'Comic Sans MS'
-    Title.Font.Style = []
     Title.Text.Strings = (
       'Cost of Non Conformance and '
       'Customer Complaints')
-    Legend.ColorWidth = 20
     Legend.LegendStyle = lsSeries
     View3D = False
     Align = alClient
     TabOrder = 5
+    ExplicitWidth = 967
+    ExplicitHeight = 265
+    DefaultCanvas = 'TGDIPlusCanvas'
+    ColorPaletteIndex = 13
     object Series1: TBarSeries
-      Marks.ArrowLength = 20
+      HoverElement = []
       Marks.Frame.Visible = False
-      Marks.Style = smsValue
       Marks.Transparent = True
-      Marks.Visible = True
+      Marks.Style = smsValue
       DataSource = qryYear1Chart1
       SeriesColor = clRed
       ValueFormat = #163'#,##0'
       XLabelsSource = 'COLUMN1'
       BarWidthPercent = 75
-      XValues.DateTime = False
       XValues.Name = 'X'
-      XValues.Multiplier = 1.000000000000000000
       XValues.Order = loAscending
-      YValues.DateTime = False
       YValues.Name = 'Bar'
-      YValues.Multiplier = 1.000000000000000000
       YValues.Order = loNone
       YValues.ValueSource = 'COLUMN2'
     end
     object Series2: TBarSeries
-      Marks.ArrowLength = 20
+      HoverElement = []
       Marks.Frame.Visible = False
-      Marks.Style = smsValue
       Marks.Transparent = True
-      Marks.Visible = True
+      Marks.Style = smsValue
       DataSource = qryYear2Chart1
       SeriesColor = clGreen
       ValueFormat = #163'#,##0'
       XLabelsSource = 'COLUMN1'
       BarWidthPercent = 75
-      XValues.DateTime = False
       XValues.Name = 'X'
-      XValues.Multiplier = 1.000000000000000000
       XValues.Order = loAscending
-      YValues.DateTime = False
       YValues.Name = 'Bar'
-      YValues.Multiplier = 1.000000000000000000
       YValues.Order = loNone
       YValues.ValueSource = 'COLUMN2'
     end
     object Series3: TBarSeries
-      Marks.ArrowLength = 20
+      HoverElement = []
       Marks.Frame.Visible = False
-      Marks.Style = smsValue
       Marks.Transparent = True
-      Marks.Visible = True
+      Marks.Style = smsValue
       DataSource = qryYear3Chart1
       SeriesColor = clYellow
       ValueFormat = #163'#,##0'
       XLabelsSource = 'COLUMN1'
       BarWidthPercent = 75
-      XValues.DateTime = False
       XValues.Name = 'X'
-      XValues.Multiplier = 1.000000000000000000
       XValues.Order = loAscending
-      YValues.DateTime = False
       YValues.Name = 'Bar'
-      YValues.Multiplier = 1.000000000000000000
       YValues.Order = loNone
       YValues.ValueSource = 'COLUMN2'
     end

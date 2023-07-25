@@ -1,30 +1,24 @@
 object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
   Left = 226
   Top = 129
-  Width = 1140
-  Height = 736
   Caption = 'Purchase Order Delivery Note'
+  ClientHeight = 697
+  ClientWidth = 1124
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 144
     Top = 16
-    Width = 794
-    Height = 1123
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Width = 992
+    Height = 1403
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = GetOrdHedQuery
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +38,7 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Page.Columns = 1
     Page.Orientation = poPortrait
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2970.000000000000000000
@@ -57,53 +52,58 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageHeaderQRBand: TQRBand
-      Left = 38
-      Top = 38
-      Width = 718
-      Height = 363
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 454
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        960.437499999999900000
-        1899.708333333333000000)
+        960.966666666666700000
+        1900.766666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object ReportImage: TQRImage
-        Left = 504
-        Top = -12
-        Width = 209
-        Height = 209
+        Left = 630
+        Top = -15
+        Width = 261
+        Height = 261
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           553.000000000000000000
           1333.500000000000000000
           -31.750000000000000000
           552.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Center = True
         Picture.Data = {
           07544269746D617006630200424D066302000000000036040000280000002201
@@ -4998,516 +4998,483 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         Stretch = True
       end
       object ReportTitleQRLabel: TQRLabel
-        Left = 16
-        Top = 6
-        Width = 309
-        Height = 57
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 20
+        Top = 8
+        Width = 382
+        Height = 71
         Size.Values = (
-          150.812500000000000000
-          42.333333333333340000
-          15.875000000000000000
-          817.562500000000000000)
+          150.283333333333300000
+          42.333333333333330000
+          16.933333333333330000
+          808.566666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Note'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -48
+        Font.Height = -60
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 36
       end
       object gtQRLabel2: TQRLabel
-        Left = 14
-        Top = 107
-        Width = 108
-        Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 18
+        Top = 134
+        Width = 133
+        Height = 29
         Size.Values = (
-          60.854166666666680000
-          37.041666666666670000
-          283.104166666666700000
-          285.750000000000000000)
+          61.383333333333330000
+          38.100000000000000000
+          283.633333333333300000
+          281.516666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Date:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object DateRequiredLabel: TQRLabel
-        Left = 126
-        Top = 107
-        Width = 89
-        Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 158
+        Top = 134
+        Width = 112
+        Height = 29
         Size.Values = (
-          60.854166666666680000
-          333.375000000000000000
-          283.104166666666700000
-          235.479166666666700000)
+          61.383333333333330000
+          334.433333333333300000
+          283.633333333333300000
+          237.066666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Order Date:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 14
-        Top = 149
-        Width = 84
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 18
+        Top = 186
+        Width = 104
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          37.041666666666670000
-          394.229166666666700000
-          222.250000000000000000)
+          38.100000000000000000
+          393.700000000000000000
+          220.133333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Deliver To:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object qrlblContact: TQRLabel
-        Left = 112
-        Top = 149
-        Width = 95
-        Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 140
+        Top = 186
+        Width = 117
+        Height = 25
         Size.Values = (
           52.916666666666670000
-          296.333333333333400000
-          394.229166666666700000
-          251.354166666666700000)
+          296.333333333333300000
+          393.700000000000000000
+          247.650000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblContact'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object QRShape2: TQRShape
-        Left = 14
-        Top = 168
-        Width = 395
-        Height = 137
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 18
+        Top = 210
+        Width = 494
+        Height = 171
         Size.Values = (
           362.479166666666700000
           37.041666666666670000
           444.500000000000000000
           1045.104166666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object DellAddmemo: TQRMemo
-        Left = 24
-        Top = 177
-        Width = 324
-        Height = 96
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 221
+        Width = 405
+        Height = 120
         Size.Values = (
           254.000000000000000000
           63.500000000000000000
           468.312500000000100000
           857.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
         WordWrap = False
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object qrlblReferencelabel: TQRLabel
-        Left = 23
-        Top = 285
-        Width = 70
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 29
+        Top = 356
+        Width = 86
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          60.854166666666680000
-          754.062500000000000000
-          185.208333333333300000)
+          44.450000000000000000
+          61.383333333333330000
+          753.533333333333300000
+          182.033333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Reference:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblreference: TQRLabel
-        Left = 98
-        Top = 285
-        Width = 305
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 123
+        Top = 356
+        Width = 381
+        Height = 21
         Size.Values = (
           44.979166666666670000
           259.291666666666700000
           754.062500000000000000
           806.979166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'qrlblreference'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel5: TQRLabel
-        Left = 24
-        Top = 313
-        Width = 46
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 391
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          828.145833333333400000
-          121.708333333333300000)
+          827.616666666666700000
+          120.650000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Phone:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel6: TQRLabel
-        Left = 24
-        Top = 333
-        Width = 29
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 30
+        Top = 416
+        Width = 35
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           63.500000000000000000
-          881.062500000000000000
-          76.729166666666680000)
+          880.533333333333300000
+          74.083333333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Fax:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DPhoneQRLabel: TQRLabel
-        Left = 80
-        Top = 313
-        Width = 281
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 100
+        Top = 391
+        Width = 351
+        Height = 21
         Size.Values = (
           44.979166666666670000
           211.666666666666700000
           828.145833333333200000
           743.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Phone'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DFaxQRLabel: TQRLabel
-        Left = 80
-        Top = 333
-        Width = 281
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 100
+        Top = 416
+        Width = 351
+        Height = 21
         Size.Values = (
           44.979166666666670000
           211.666666666666700000
           881.062500000000000000
           743.479166666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Fax'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlDelNumber: TQRLabel
-        Left = 14
-        Top = 75
-        Width = 134
-        Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 18
+        Top = 94
+        Width = 164
+        Height = 29
         Size.Values = (
-          60.854166666666680000
-          37.041666666666670000
-          198.437500000000000000
-          354.541666666666700000)
+          61.383333333333330000
+          38.100000000000000000
+          198.966666666666700000
+          347.133333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Number:'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
     end
     object FooterQRBand: TQRBand
-      Left = 38
-      Top = 468
-      Width = 718
-      Height = 136
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 585
+      Width = 898
+      Height = 170
       AlignToBottom = True
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        359.833333333333400000
-        1899.708333333333000000)
+        359.833333333333300000
+        1900.766666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object gtQRShape1: TQRShape
-        Left = 8
-        Top = 24
-        Width = 409
-        Height = 103
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 10
+        Top = 30
+        Width = 511
+        Height = 129
         Size.Values = (
           272.520833333333400000
           21.166666666666670000
           63.500000000000000000
           1082.145833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsRectangle
         VertAdjust = 0
       end
       object lblSpecialNotes: TQRLabel
-        Left = 9
-        Top = 6
-        Width = 82
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 11
+        Top = 8
+        Width = 101
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
-          15.875000000000000000
-          216.958333333333400000)
+          44.450000000000000000
+          23.283333333333330000
+          16.933333333333330000
+          213.783333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Special Notes'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object SpecialNotesMemo: TQRMemo
-        Left = 17
-        Top = 34
-        Width = 392
-        Height = 87
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 21
+        Top = 43
+        Width = 490
+        Height = 109
         Size.Values = (
           230.187500000000000000
           44.979166666666670000
           89.958333333333340000
           1037.166666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -5519,201 +5486,187 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
           '')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
     end
     object pogroupheader: TQRGroup
-      Left = 38
-      Top = 401
-      Width = 718
-      Height = 42
-      Frame.Color = clBlack
-      Frame.DrawTop = False
+      Left = 47
+      Top = 501
+      Width = 898
+      Height = 53
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = pogroupheaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       Size.Values = (
-        111.125000000000000000
-        1899.708333333333000000)
+        112.183333333333300000
+        1900.766666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'GetOrdHedQuery.Sel1'
       FooterBand = FooterQRBand
       Master = qrpDetails
       ReprintOnNewPage = True
       object LineQrLabel: TQRLabel
-        Left = 8
-        Top = 23
-        Width = 29
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 10
+        Top = 29
+        Width = 34
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           21.166666666666670000
-          60.854166666666680000
-          76.729166666666680000)
+          61.383333333333330000
+          71.966666666666670000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Line'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object PartQRLabel: TQRLabel
-        Left = 42
-        Top = 23
-        Width = 50
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 53
+        Top = 29
+        Width = 64
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          111.125000000000000000
-          60.854166666666680000
-          132.291666666666700000)
+          44.450000000000000000
+          112.183333333333300000
+          61.383333333333330000
+          135.466666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DescQRLabel: TQRLabel
-        Left = 160
-        Top = 23
-        Width = 72
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 200
+        Top = 29
+        Width = 91
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           423.333333333333300000
-          60.854166666666680000
-          190.500000000000000000)
+          61.383333333333330000
+          192.616666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object OrdQtyQRLabel: TQRLabel
-        Left = 664
-        Top = 8
-        Width = 52
-        Height = 32
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 830
+        Top = 10
+        Width = 65
+        Height = 40
         Size.Values = (
           84.666666666666680000
           1756.833333333333000000
           21.166666666666670000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Pack Size'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 614
-        Top = 23
-        Width = 38
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 768
+        Top = 29
+        Width = 48
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1624.541666666667000000
-          60.854166666666680000
-          100.541666666666700000)
+          44.450000000000000000
+          1625.600000000000000000
+          61.383333333333330000
+          101.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Packs'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 443
-      Width = 718
-      Height = 25
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 554
+      Width = 898
+      Height = 31
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -5723,165 +5676,162 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        66.145833333333340000
-        1899.708333333333000000)
+        65.616666666666670000
+        1900.766666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = GetDetsQuery
       PrintBefore = False
       PrintIfEmpty = True
       object PackqtyQRLabel: TQRLabel
-        Left = 594
-        Top = 3
-        Width = 57
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 743
+        Top = 4
+        Width = 71
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1571.625000000000000000
           7.937500000000000000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'PackqtyQRLabel'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object POrdLineNoQRLabel: TQRLabel
         Left = 0
-        Top = 3
-        Width = 33
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Top = 4
+        Width = 41
+        Height = 21
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           7.937500000000000000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'LineNo'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object PartCodeQRLabel: TQRLabel
-        Left = 42
-        Top = 3
-        Width = 111
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 53
+        Top = 4
+        Width = 139
+        Height = 21
         Size.Values = (
           44.979166666666670000
           111.125000000000000000
           7.937500000000000000
           293.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Product'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object PartDescrQRLabel: TQRLabel
-        Left = 160
-        Top = 3
-        Width = 433
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 200
+        Top = 4
+        Width = 541
+        Height = 21
         Size.Values = (
           44.979166666666670000
           423.333333333333300000
           7.937500000000000000
           1145.645833333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Description'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object PackSizeQRLabel: TQRLabel
-        Left = 654
-        Top = 3
-        Width = 49
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 818
+        Top = 4
+        Width = 61
+        Height = 21
         Size.Values = (
           44.979166666666670000
           1730.375000000000000000
           7.937500000000000000
           129.645833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Pack'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end

@@ -68,7 +68,6 @@ type
     lblDeliveryDate: TQRLabel;
     lblQuantity: TQRLabel;
     qryReportTotal_on_order: TFloatField;
-    gtQRFilters1: TgtQRFilters;
     QRLabel7: TQRLabel;
     qryReportPaid_Stock: TFloatField;
     lblPaidStock: TQRLabel;

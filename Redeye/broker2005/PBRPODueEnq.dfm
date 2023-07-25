@@ -1669,10 +1669,4 @@ object PBRPODueEnqFrm: TPBRPODueEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkExcel, fkText, fkGIF, fkJPEG, fkBMP, fkEMF, fkWMF]
-    Left = 606
-    Top = 54
-  end
 end

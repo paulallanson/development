@@ -110,8 +110,10 @@ type
     rTotalCost, rTotalSell: real;
     ipage: integer;
     FShowBreakdown: boolean;
+    FEndUserVersion: Boolean;
     procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
     procedure SetShowBreakdown(const Value: boolean);
+    procedure SetEndUserVersion(const Value: Boolean);
     { Private declarations }
   public
     ForceNewPage: boolean;
@@ -121,6 +123,7 @@ type
     PrinterSettings: TPrinterSettings;
     function Getdetails: integer;
     property ShowBreakdown: boolean read FShowBreakdown write SetShowBreakdown;
+    property EndUserVersion: Boolean read FEndUserVersion write SetEndUserVersion;
   end;
 
 var
@@ -323,6 +326,11 @@ begin
 
   rTotalSell := rTotalSell + rTotalPrice;
 
+end;
+
+procedure TfrmPBRPQuote.SetEndUserVersion(const Value: Boolean);
+begin
+  FEndUserVersion := Value;
 end;
 
 procedure TfrmPBRPQuote.SetShowBreakdown(const Value: boolean);

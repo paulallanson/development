@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ExtCtrls, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, PBWOrdersDM,
-  ToolWin, DB, DBTables, Inifiles, Buttons;
+  ToolWin, DB, DBTables, Inifiles, Buttons, System.ImageList;
 
 type
   TfrmPBLUWorksOrders = class(TForm)

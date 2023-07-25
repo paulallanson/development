@@ -52,7 +52,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, gtQrCtrls;
+  CCSPrint;
 
 type
   TSTRPLabelsFrm = class(TForm)

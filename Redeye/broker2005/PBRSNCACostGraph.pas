@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, DBTables, TeEngine, Series, TeeProcs, Chart, DbChart,
-  StdCtrls, CheckLst, ExtCtrls, ComCtrls, DBCtrls, Buttons, CCSPrint;
+  StdCtrls, CheckLst, ExtCtrls, ComCtrls, DBCtrls, Buttons, CCSPrint,
+  VclTee.TeeGDIPlus;
 
 type
   TPBRSNCACostGraphFrm = class(TForm)

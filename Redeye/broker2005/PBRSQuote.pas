@@ -67,8 +67,9 @@ var
 
 implementation
 
-uses pbDatabase, PBFaxList, PBSendFax, CCSemailHandler,
-  pbMainMenu, PBEmailList;
+uses
+  pbDatabase, PBFaxList, PBSendFax, CCSemailHandler,
+  pbMainMenu, PBEmailList, Printer.Tools;
 
 {$R *.dfm}
 
@@ -699,6 +700,17 @@ end;
 
 procedure TfrmPBRSQuote.PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean);
 var
+  fileName: string;
+begin
+  if EndUser then
+    fileName := 'RSP' + tempcode else
+    fileName := 'QUOTE' + tempcode;
+  PrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, tempCode);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TfrmPBRSQuote.PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean);
+var
   i: integer;
   sLocation, sFileName: string;
   zLocation, zFileName: array[0..255] of char;
@@ -853,5 +865,6 @@ begin
     end;
   AFilters.free;
 end;
+*)
 
 end.

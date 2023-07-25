@@ -1,7 +1,6 @@
 object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   Left = 162
   Top = 151
-  AutoScroll = False
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Stock Numbered Lots'
   ClientHeight = 245
@@ -12,21 +11,21 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 544
     Height = 185
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 538
+    ExplicitHeight = 176
     object dbgrdBinLots: TDBGrid
       Left = 1
       Top = 41
@@ -105,14 +104,15 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
         end>
     end
     object pnlPart: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 542
       Height = 40
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 536
       DesignSize = (
         542
         40)
@@ -170,31 +170,37 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 217
+    ExplicitWidth = 538
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 185
     Width = 544
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 176
+    ExplicitWidth = 538
     object Panel3: TPanel
-      ParentBackground = False
       Left = 440
       Top = 1
       Width = 103
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 434
       object BitBtn1: TBitBtn
         Left = 16
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 0
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 0
       end
     end
   end

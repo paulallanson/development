@@ -11,12 +11,10 @@ object frmPBRSQuote: TfrmPBRSQuote
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
@@ -40,9 +38,10 @@ object frmPBRSQuote: TfrmPBRSQuote
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkCancel
     end
     object PreviewBitBtn: TBitBtn
       Left = 97
@@ -56,9 +55,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -73,6 +69,9 @@ object frmPBRSQuote: TfrmPBRSQuote
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 177
@@ -87,9 +86,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -104,6 +100,9 @@ object frmPBRSQuote: TfrmPBRSQuote
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = PrintBitBtnClick
     end
     object FaxBitBtn: TBitBtn
       Left = 257
@@ -117,9 +116,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      Visible = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -134,6 +130,9 @@ object frmPBRSQuote: TfrmPBRSQuote
         33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
         3333777777333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
     end
     object EmailBitBtn: TBitBtn
       Left = 336
@@ -142,8 +141,6 @@ object frmPBRSQuote: TfrmPBRSQuote
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Email'
-      TabOrder = 4
-      OnClick = EmailBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -158,6 +155,8 @@ object frmPBRSQuote: TfrmPBRSQuote
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
       Left = 8

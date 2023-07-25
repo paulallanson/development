@@ -1,34 +1,34 @@
 object frmPBLUNCARpts: TfrmPBLUNCARpts
   Left = 201
   Top = 107
-  Width = 421
-  Height = 310
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Non Conformance Reports'
+  ClientHeight = 272
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 413
-    Height = 235
+    Width = 409
+    Height = 231
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 405
+    ExplicitHeight = 230
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 413
-      Height = 235
+      Width = 409
+      Height = 231
       Align = alClient
       Columns = <
         item
@@ -43,35 +43,45 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
           Caption = 'Item No'
           Width = 0
         end>
-      Items.Data = {
-        210100000400000000000000FFFFFFFFFFFFFFFF0100000000000000194E6F6E
-        20436F6E666F726D616E636520627920526561736F6E10504252534E43415245
-        41534F4E46524D00000000FFFFFFFFFFFFFFFF0100000000000000214E6F6E20
-        436F6E666F726D616E636520536F7572636520416C6C6F636174696F6E105042
-        52534E4341534F5552434546524D00000000FFFFFFFFFFFFFFFF010000000000
-        00001F436F7374206F66204E6F6E20436F6E666F726D616E6365206279205965
-        617213504252534E4341434F5354475241504846524D00000000FFFFFFFFFFFF
-        FFFF01000000000000001D4E6F6E20436F6E666F726D616E636520436F756E74
-        206279205965617210504252534E4341434C49454E5446524DFFFFFFFFFFFFFF
-        FF}
+      Items.ItemData = {
+        05F60100000400000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
+        00194E006F006E00200043006F006E0066006F0072006D0061006E0063006500
+        200062007900200052006500610073006F006E001050004200520053004E0043
+        00410052004500410053004F004E00460052004D000000000000000000FFFFFF
+        FFFFFFFFFF01000000FFFFFFFF00000000214E006F006E00200043006F006E00
+        66006F0072006D0061006E0063006500200053006F0075007200630065002000
+        41006C006C006F0063006100740069006F006E001050004200520053004E0043
+        00410053004F005500520043004500460052004D000000000000000000FFFFFF
+        FFFFFFFFFF01000000FFFFFFFF000000001F43006F007300740020006F006600
+        20004E006F006E00200043006F006E0066006F0072006D0061006E0063006500
+        200062007900200059006500610072001350004200520053004E004300410043
+        004F005300540047005200410050004800460052004D000000000000000000FF
+        FFFFFFFFFFFFFF01000000FFFFFFFF000000001D4E006F006E00200043006F00
+        6E0066006F0072006D0061006E0063006500200043006F0075006E0074002000
+        62007900200059006500610072001050004200520053004E004300410043004C
+        00490045004E005400460052004D0000000000FFFFFFFFFFFFFFFF}
       ReadOnly = True
       RowSelect = True
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 413
+      ExplicitHeight = 235
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 235
-    Width = 413
+    Top = 231
+    Width = 409
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 230
+    ExplicitWidth = 405
     DesignSize = (
-      413
+      409
       41)
     object btnRun: TButton
       Left = 16
@@ -83,7 +93,7 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
       OnClick = btnRunClick
     end
     object Button2: TButton
-      Left = 328
+      Left = 332
       Top = 8
       Width = 75
       Height = 25
@@ -91,6 +101,7 @@ object frmPBLUNCARpts: TfrmPBLUNCARpts
       Caption = '&Close'
       TabOrder = 1
       OnClick = Button2Click
+      ExplicitLeft = 328
     end
   end
 end

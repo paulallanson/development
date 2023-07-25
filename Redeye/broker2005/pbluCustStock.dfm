@@ -1,10 +1,9 @@
 object frmpbluCustStock: TfrmpbluCustStock
   Left = 0
   Top = 0
-  AutoScroll = False
   Caption = 'Customer stock details'
-  ClientHeight = 553
-  ClientWidth = 814
+  ClientHeight = 552
+  ClientWidth = 810
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +11,6 @@ object frmpbluCustStock: TfrmpbluCustStock
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poDefault
   Visible = True
   OnActivate = FormActivate
@@ -21,12 +19,11 @@ object frmpbluCustStock: TfrmpbluCustStock
   OnDestroy = FormDestroy
   OnDeactivate = FormDeactivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 534
-    Width = 814
+    Top = 533
+    Width = 810
     Height = 19
     Panels = <
       item
@@ -39,31 +36,30 @@ object frmpbluCustStock: TfrmpbluCustStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 814
+    Width = 810
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 810
+        Width = 804
       end>
     object PageScroller1: TPageScroller
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 797
+      Width = 795
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 797
+        Width = 783
         Height = 41
-        ButtonHeight = 36
+        ButtonHeight = 44
         ButtonWidth = 62
         Caption = 'ToolBar1'
-        Flat = True
         Images = imglstMaint
         ShowCaptions = True
         TabOrder = 0
@@ -139,7 +135,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           Style = tbsDropDown
         end
         object btnMaintain: TToolButton
-          Left = 393
+          Left = 395
           Top = 0
           Caption = 'Maintain'
           Enabled = False
@@ -147,7 +143,7 @@ object frmpbluCustStock: TfrmpbluCustStock
           OnClick = btnMaintainClick
         end
         object btnTransfers: TToolButton
-          Left = 455
+          Left = 457
           Top = 0
           Caption = '&Moves'
           DropdownMenu = pmnMovements
@@ -159,15 +155,15 @@ object frmpbluCustStock: TfrmpbluCustStock
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 493
-    Width = 814
+    Top = 492
+    Width = 810
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      814
+      810
       41)
     object Label1: TLabel
       Left = 8
@@ -188,13 +184,13 @@ object frmpbluCustStock: TfrmpbluCustStock
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
-      Left = 628
+      Left = 624
       Top = 1
       Width = 185
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         185
@@ -223,8 +219,8 @@ object frmpbluCustStock: TfrmpbluCustStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 814
-    Height = 419
+    Width = 810
+    Height = 418
     Align = alClient
     DataSource = dtmdlStock.dtsStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -350,17 +346,16 @@ object frmpbluCustStock: TfrmpbluCustStock
       end>
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 814
+    Width = 810
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
     object Panel4: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 409
@@ -369,6 +364,7 @@ object frmpbluCustStock: TfrmpbluCustStock
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -387,7 +383,7 @@ object frmpbluCustStock: TfrmpbluCustStock
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 405
+      Width = 401
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -395,18 +391,18 @@ object frmpbluCustStock: TfrmpbluCustStock
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 405
+        Width = 389
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 401
+            Width = 383
           end>
         object ToolBar2: TToolBar
-          Left = 9
+          Left = 11
           Top = 0
-          Width = 388
+          Width = 374
           Height = 25
           Align = alClient
           ButtonWidth = 62
@@ -422,49 +418,49 @@ object frmpbluCustStock: TfrmpbluCustStock
           Wrapable = False
           object btnCustomers: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Caption = 'Calls'
             ImageIndex = 0
             OnClick = btnCustomersClick
           end
           object btnQuotes: TToolButton
             Left = 62
-            Top = 2
+            Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
             Left = 124
-            Top = 2
+            Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
             Left = 186
-            Top = 2
+            Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = ToolButton5Click
           end
           object btnJobs: TToolButton
             Left = 248
-            Top = 2
+            Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
             Left = 310
-            Top = 2
+            Top = 0
             Caption = 'Stock'
             Enabled = False
             ImageIndex = 4
           end
           object btnSalesInvoicing: TToolButton
             Left = 372
-            Top = 2
+            Top = 0
             Caption = 'Sales'
             ImageIndex = 5
             OnClick = btnSalesInvoicingClick

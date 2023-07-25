@@ -36,7 +36,6 @@ type
     FaxBitBtn: TBitBtn;
     GetPartsSQL: TQuery;
     EmailBitBtn: TBitBtn;
-    gtQRFilters1: TgtQRFilters;
     btbtnExcel: TBitBtn;
     OleContainer1: TOleContainer;
     pnlExportPrgrss: TPanel;
@@ -99,8 +98,9 @@ var
 
 implementation
 
-uses STPrtMnt, DateSelV5, STFaxList, STEmailList, PBLURep, PBLUCust, printers,
-      CCSPrint, PBSendFax, ccscommon, pbMainMenu, pbDatabase;
+uses
+  STPrtMnt, DateSelV5, STFaxList, STEmailList, PBLURep, PBLUCust, printers,
+  CCSPrint, PBSendFax, ccscommon, pbMainMenu, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -782,8 +782,14 @@ begin
   GetEmailApp;
 end;
 
-procedure TSTRSSlwMvngStkRepfrm.PrintToAttachment(
-  STRPSlwMvngStkRepFrm: TSTRPSlwMvngStkRepFrm);
+procedure TSTRSSlwMvngStkRepfrm.PrintToAttachment(STRPSlwMvngStkRepFrm: TSTRPSlwMvngStkRepFrm);
+begin
+  var fileName := 'SlowMoving' + '-' + STRPSlwMvngStkRepFrm.RepNo.ToString;
+  PrinterTools.New.PrintToAttachment(STRPSlwMvngStkRepFrm.qrDetails, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TSTRSSlwMvngStkRepfrm.PrintToAttachment(STRPSlwMvngStkRepFrm: TSTRPSlwMvngStkRepFrm);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -798,11 +804,11 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   sFileName := 'SlowMoving';
 
   AFilters := TgtQRFilters.Create(self);
@@ -912,9 +918,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTRSSlwMvngStkRepfrm.FormDestroy(Sender: TObject);
 begin

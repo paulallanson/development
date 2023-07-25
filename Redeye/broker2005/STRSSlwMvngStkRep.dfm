@@ -588,18 +588,4 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    HTML.Author = 'Gnostice'
-    HTML.Keywords = 'gtQrFilters'
-    HTML.ImageDir = 'Images'
-    PDF.Author = 'Gnostice'
-    PDF.Keywords = 'QuickReport, Export, Filters'
-    RTF.Author = 'Gnostice'
-    RTF.Keywords = 'QuickReport, Export, Filters'
-    RTF.ExportImageFormat = ifBMP
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkExcel, fkText, fkGIF, fkJPEG, fkBMP, fkEMF, fkWMF]
-    Left = 344
-    Top = 232
-  end
 end

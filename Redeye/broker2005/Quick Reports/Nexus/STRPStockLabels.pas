@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, CCSCommon, printers, qrprntr, gtQrCtrls;
+  CCSPrint, CCSCommon, printers, qrprntr;
 
 type
   TSTRPStockLabelsFrm = class(TForm)

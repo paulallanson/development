@@ -1,7 +1,4 @@
 object dtmdlStock: TdtmdlStock
-  OldCreateOrder = False
-  Left = 41
-  Top = 68
   Height = 579
   Width = 781
   object qryCustStock: TQuery

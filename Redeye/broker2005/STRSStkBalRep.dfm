@@ -3,29 +3,27 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'Stock Balance Report'
-  ClientHeight = 344
-  ClientWidth = 418
+  ClientHeight = 343
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
   DesignSize = (
-    418
-    344)
-  PixelsPerInch = 96
+    414
+    343)
   TextHeight = 13
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 64
     Top = 136
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 14
     Visible = False
     object lblExporting: TLabel
@@ -54,9 +52,10 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 88
@@ -64,8 +63,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -80,6 +77,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 171
@@ -87,8 +86,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 2
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -103,9 +100,10 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = PrintBitBtnClick
   end
   object grpbxRange: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 132
     Width = 305
@@ -116,6 +114,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
     object Label1: TLabel
@@ -181,7 +180,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object rdgrpSort: TRadioGroup
-    ParentBackground = False
     Left = 320
     Top = 132
     Width = 89
@@ -196,16 +194,17 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Items.Strings = (
       'No'
       'Yes')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 4
     OnClick = rdgrpSortClick
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 8
     Top = 216
     Width = 305
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     object ChkBxExcProd: TCheckBox
       Left = 17
@@ -229,7 +228,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 0
     Width = 137
@@ -243,12 +241,12 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 6
     OnClick = AllOrOneRadioGroupClick
   end
   object RepGrpBox: TGroupBox
-    ParentBackground = False
     Left = 152
     Top = 0
     Width = 265
@@ -258,6 +256,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 7
     Visible = False
@@ -295,7 +294,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     end
   end
   object CustRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 65
     Width = 137
@@ -309,12 +307,12 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 8
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
-    ParentBackground = False
     Left = 153
     Top = 65
     Width = 265
@@ -324,6 +322,7 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 9
     Visible = False
@@ -366,8 +365,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Width = 75
     Height = 25
     Caption = '&Fax'
-    TabOrder = 10
-    OnClick = FaxBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -382,6 +379,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
       3333777777333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = FaxBitBtnClick
   end
   object EmailBitBtn: TBitBtn
     Left = 335
@@ -394,9 +393,6 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 11
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -411,6 +407,9 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 11
+    OnClick = EmailBitBtnClick
   end
   object OleContainer1: TOleContainer
     Left = 316
@@ -423,14 +422,12 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = 7
+    Left = -1
     Top = 280
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
-    TabOrder = 13
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -474,6 +471,9 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 13
+    OnClick = btbtnExcelClick
+    ExplicitLeft = 7
   end
   object GetPartsSQL: TQuery
     DatabaseName = 'PB'

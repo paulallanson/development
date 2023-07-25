@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, ToolWin, StdCtrls, Grids, DBGrids, Buttons, ExtCtrls, ImgList,
-  Db, Menus;
+  Db, Menus, System.ImageList;
 
 type
   TfrmpbluSuppliers = class(TForm)

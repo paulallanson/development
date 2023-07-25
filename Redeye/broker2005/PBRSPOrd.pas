@@ -32,7 +32,7 @@ $History: PBRSPOrd.pas $
  * Updated in $/PBL D5
  * New Fax Drivers - Put in the call to the WaitForFaxFinish procedure in
  * PBSendFaxFrm.
- * 
+ *
  * *****************  Version 30  *****************
  * User: Paul         Date: 15/11/:1   Time: 13:45
  * Updated in $/PBL D5
@@ -313,7 +313,7 @@ implementation
 uses
   PBSendFax, PBFaxList,
   PBDBPOrdLtr, CCSPrint, LetterDM, PDLetter, Printers,
-  PBEmailList, pbMainMenu, pbDatabase;
+  PBEmailList, pbMainMenu, pbDatabase, Printer.Tools;
 
 var
   sAttachmentType: string;
@@ -1101,9 +1101,9 @@ begin
         GetDefaultPrinter;
         {Find the default printer in the list of printers }
         Printers.Printer.PrinterIndex := -1;
-        for icount := 0 to pred(Printer.Printers.count) do
+        for icount := 0 to pred(Printers.Printer.Printers.count) do
           begin
-            if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+            if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
               Printers.Printer.PrinterIndex := icount;
           end;
         if DefaultPrinter <> '' then
@@ -1113,7 +1113,7 @@ begin
         if SetupPrinter(aBroker.PrinterSettings) then
           begin
             PrintingPress.QuickR.Print;
-            DefaultPrinter := printer.Printers[printer.printerindex];
+            DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
             DefaultBin := GetBinSelection;
             SaveDefaultPrinter;
             FPrinted := true;
@@ -1142,6 +1142,17 @@ end;
 
 procedure TPBRSPOrdFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
 var
+  fileName: string;
+begin
+  if TypeRadioGroup.ItemIndex = 0 then
+    fileName := 'PO' + floattostr(dbPOrdLtr.PONumber) else
+    fileName := 'Ack' + floattostr(dbPOrdLtr.PONumber);
+  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TPBRSPOrdFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
+var
   i: integer;
   sLocation, sFileName: string;
   AFilters: TgtQRFilters;
@@ -1155,11 +1166,12 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   if TypeRadioGroup.ItemIndex = 0 then
     sFileName := 'PO' + floattostr(dbPOrdLtr.PONumber)
   else
@@ -1274,6 +1286,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBRSPOrdFrm.LoadCombos;
 begin
@@ -1638,7 +1651,7 @@ var
   hDevMode: THandle;
   Device,Driver,Port: array [0..1024] of Char;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   if hDevMode <> 0 then
   begin
         DevMode := GlobalLock (hDevMode);
@@ -1655,7 +1668,7 @@ var
      bin: integer;
      DevMode : PDevMode;
 begin
-  Printer.GetPrinter (Device,Driver,Port,hDevMode);
+  Printers.Printer.GetPrinter (Device,Driver,Port,hDevMode);
   bin := -1;
   if hDevMode <> 0 then
   begin

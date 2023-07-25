@@ -3,19 +3,17 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
   Top = 5
   BorderStyle = bsDialog
   Caption = 'Aged Stock Report'
-  ClientHeight = 465
-  ClientWidth = 589
+  ClientHeight = 464
+  ClientWidth = 585
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 376
@@ -43,11 +41,11 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 64
     Top = 120
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 14
     Visible = False
     object lblExporting: TLabel
@@ -67,7 +65,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object grpbxRange: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 296
     Width = 289
@@ -78,6 +75,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label2: TLabel
@@ -153,9 +151,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -170,6 +165,9 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 326
@@ -182,9 +180,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -199,6 +194,9 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PrintBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 8
@@ -210,12 +208,12 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
   end
   object RadioGroupCst: TRadioGroup
-    ParentBackground = False
     Left = 448
     Top = 80
     Width = 129
@@ -225,11 +223,11 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'Cost'
       'Sales')
+    ParentBackground = False
     TabOrder = 4
     OnClick = RadioGroupCstClick
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 121
@@ -243,12 +241,12 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     OnClick = AllOrOneRadioGroupClick
   end
   object RepGrpBox: TGroupBox
-    ParentBackground = False
     Left = 136
     Top = 8
     Width = 297
@@ -258,6 +256,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 6
     Visible = False
@@ -295,7 +294,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object CustRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 80
     Width = 121
@@ -309,12 +307,12 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 7
     OnClick = CustRadioGroupClick
   end
   object CustGrpBox: TGroupBox
-    ParentBackground = False
     Left = 136
     Top = 80
     Width = 297
@@ -324,6 +322,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 8
     Visible = False
@@ -371,9 +370,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 9
-    OnClick = FaxBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -388,6 +384,9 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
       3333777777333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 9
+    OnClick = FaxBitBtnClick
   end
   object EmailBitBtn: TBitBtn
     Left = 503
@@ -400,9 +399,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 10
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -417,6 +413,9 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 10
+    OnClick = EmailBitBtnClick
   end
   object ChkBxExcProd: TCheckBox
     Left = 9
@@ -432,8 +431,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Width = 75
     Height = 25
     Caption = 'Excel'
-    TabOrder = 13
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -477,9 +474,10 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 13
+    OnClick = btbtnExcelClick
   end
   object rdgrpReportType: TRadioGroup
-    ParentBackground = False
     Left = 448
     Top = 8
     Width = 129
@@ -489,11 +487,11 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'Listing'
       'Destroy Notification')
+    ParentBackground = False
     TabOrder = 15
     OnClick = rdgrpReportTypeClick
   end
   object RadioGroup1: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 151
     Width = 121
@@ -507,12 +505,12 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'All Stores'
       'One Store')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 16
     OnClick = RadioGroup1Click
   end
   object StoresGrpBox: TGroupBox
-    ParentBackground = False
     Left = 137
     Top = 151
     Width = 296
@@ -522,6 +520,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 17
     Visible = False
@@ -559,7 +558,6 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     end
   end
   object rdgBins: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 219
     Width = 121
@@ -573,13 +571,13 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Items.Strings = (
       'All Bins'
       'Bin Range')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 18
     Visible = False
     OnClick = rdgBinsClick
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 137
     Top = 219
     Width = 296
@@ -589,6 +587,7 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 19
     Visible = False

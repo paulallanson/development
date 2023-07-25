@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, ToolWin, Grids, DBGrids, StdCtrls, pbEnqsdm,
-  Db, IniFiles, Buttons;
+  Db, IniFiles, Buttons, System.ImageList;
 
 type
   TfrmPBLuEnquiries = class(TForm)

@@ -318,7 +318,7 @@ object PBRPSalesProfitSummFrm: TPBRPSalesProfitSummFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 656
         Top = 11
         Width = 56
@@ -347,7 +347,7 @@ object PBRPSalesProfitSummFrm: TPBRPSalesProfitSummFrm
         Transparent = False
         FontSize = 8
       end
-      object gtQRSysData2: TgtQRSysData
+      object gtQRSysData2: TQRSysData
         Left = 643
         Top = 32
         Width = 69

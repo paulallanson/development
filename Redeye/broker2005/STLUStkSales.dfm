@@ -1,7 +1,6 @@
 object STLUStkSalesFrm: TSTLUStkSalesFrm
   Left = 64
   Top = 129
-  AutoScroll = False
   Caption = 'Stock Sales'
   ClientHeight = 310
   ClientWidth = 640
@@ -11,20 +10,20 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 640
     Height = 269
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 634
+    ExplicitHeight = 260
     object dbgrdSales: TDBGrid
       Left = 1
       Top = 33
@@ -140,14 +139,15 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
         end>
     end
     object pnlPart: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 638
       Height = 32
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 632
       object lblPartDesc: TLabel
         Left = 152
         Top = 8
@@ -172,44 +172,46 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 269
     Width = 640
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 260
+    ExplicitWidth = 634
     DesignSize = (
       640
       41)
     object pnlButton: TPanel
-      ParentBackground = False
       Left = 535
       Top = 1
       Width = 104
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 529
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 0
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 0
       end
     end
     object btnExcel: TBitBtn
-      Left = 432
+      Left = 426
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -253,6 +255,9 @@ object STLUStkSalesFrm: TSTLUStkSalesFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 1
+      OnClick = btnExcelClick
+      ExplicitLeft = 420
     end
   end
   object pmnFunctions: TPopupMenu

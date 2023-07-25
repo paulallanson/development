@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, ImgList, StdCtrls, ComCtrls, Grids, DBGrids, ToolWin, Db,
-  DBTables, Menus, STPOObjects, STSOObjects, Buttons;
+  DBTables, Menus, STPOObjects, STSOObjects, Buttons, System.ImageList;
 
 type
   TfrmPBLUPurchaseOrders = class(TForm)

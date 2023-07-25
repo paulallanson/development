@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ExtCtrls, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin,
-  Db, DBTables, pbJobsDM, pbJobBagDM, inifiles, Buttons;
+  Db, DBTables, pbJobsDM, pbJobBagDM, inifiles, Buttons, System.ImageList;
 
 type
   TfrmPBluNCA = class(TForm)

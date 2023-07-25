@@ -1,8 +1,5 @@
 object dtmdlOrders: TdtmdlOrders
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 135
-  Top = 181
   Height = 480
   Width = 696
   object qryOrders: TQuery

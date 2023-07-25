@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, IniFiles, Menus, CCSCommon,
-  PBStockDM;
+  PBStockDM, Data.DB;
 
 type
   TSTLUStkPurchasesFrm = class(TForm)

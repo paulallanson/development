@@ -121,9 +121,10 @@ var
 
 implementation
 
-uses STPrtMnt, STFaxList, STEmailList, PBLURep, PBLUCust, printers, CCSPrint,
+uses
+  STPrtMnt, STFaxList, STEmailList, PBLURep, PBLUCust, printers, CCSPrint,
   PBSendFax, CCSCommon, STRPAgedStkNote, STLUPrtStor, STMntPrtBin,
-  pbMainMenu, pbDatabase;
+  pbMainMenu, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -879,9 +880,14 @@ begin
 
 end;
 
+procedure TSTRSAgedStkFrm.PrintToAttachment(STRPAgedStkfrm: TSTRPAgedStkfrm);
+begin
+  var fileName := 'AgedStk' +'-' + STRPAgedStkfrm.RepNo.ToString;
+  PrinterTools.New.PrintToAttachment(STRPAgedStkfrm.qrAgedStk, FEmailAttachment, fileName, sAttachmentType);
+end;
 
-procedure TSTRSAgedStkFrm.PrintToAttachment(
-  STRPAgedStkfrm: TSTRPAgedStkfrm);
+(* GDK ToDo: remove after tests
+procedure TSTRSAgedStkFrm.PrintToAttachment(STRPAgedStkfrm: TSTRPAgedStkfrm);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -896,11 +902,12 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   sFileName := 'AgedStk';
 
   AFilters := TgtQRFilters.Create(self);
@@ -1010,9 +1017,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTRSAgedStkFrm.FormDestroy(Sender: TObject);
 begin

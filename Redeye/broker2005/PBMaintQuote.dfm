@@ -1,7 +1,6 @@
 object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Left = 186
   Top = 18
-  AutoScroll = False
   Caption = 'Maintain Quotes'
   ClientHeight = 699
   ClientWidth = 1135
@@ -13,21 +12,20 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1135
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1129
     DesignSize = (
       1135
       41)
@@ -46,21 +44,23 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Date'
     end
     object lblAccountManager: TLabel
-      Left = 911
+      Left = 905
       Top = 15
       Width = 68
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Office Contact'
+      ExplicitLeft = 911
     end
     object Label5: TLabel
-      Left = 671
+      Left = 665
       Top = 15
       Width = 89
       Height = 13
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'Quote Required by'
+      ExplicitLeft = 671
     end
     object edtQuote: TEdit
       Left = 80
@@ -83,8 +83,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Top = 9
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -99,9 +97,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateClick
     end
     object edtOfficeContact: TEdit
-      Left = 992
+      Left = 986
       Top = 11
       Width = 95
       Height = 21
@@ -110,9 +110,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 3
+      ExplicitLeft = 980
     end
     object btnAccountManager: TButton
-      Left = 1099
+      Left = 1093
       Top = 8
       Width = 23
       Height = 23
@@ -126,24 +127,24 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       ParentFont = False
       TabOrder = 4
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 1087
     end
     object edtQuoteReqDate: TEdit
-      Left = 767
+      Left = 761
       Top = 11
       Width = 81
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 5
       OnExit = edtQuoteReqDateExit
+      ExplicitLeft = 755
     end
     object BitBtn9: TBitBtn
-      Left = 858
+      Left = 852
       Top = 9
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 6
-      OnClick = BitBtn9Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -158,25 +159,30 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = BitBtn9Click
+      ExplicitLeft = 846
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 41
     Width = 1135
     Height = 192
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1129
     object Panel9: TPanel
-      ParentBackground = False
       Left = 918
       Top = 1
       Width = 216
       Height = 190
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 912
       DesignSize = (
         216
         190)
@@ -224,8 +230,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
-        TabOrder = 1
-        OnClick = BitBtn6Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -240,6 +244,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = BitBtn6Click
       end
       object edtStartDate: TEdit
         Left = 89
@@ -265,8 +271,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Width = 25
         Height = 25
         Anchors = [akTop, akRight]
-        TabOrder = 4
-        OnClick = BitBtn2Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -281,19 +285,20 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 4
+        OnClick = BitBtn2Click
       end
     end
     object Panel10: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 96
       Height = 190
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object rdgType: TRadioGroup
-        ParentBackground = False
         Left = 9
         Top = 2
         Width = 78
@@ -303,28 +308,31 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Items.Strings = (
           'Customer'
           'Prospect')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgTypeClick
       end
     end
     object Panel11: TPanel
-      ParentBackground = False
       Left = 97
       Top = 1
       Width = 821
       Height = 190
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 815
       object Panel12: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 821
         Height = 78
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 815
         DesignSize = (
           821
           78)
@@ -350,33 +358,36 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Caption = 'Email'
         end
         object Label13: TLabel
-          Left = 613
+          Left = 607
           Top = 34
           Width = 31
           Height = 13
           Anchors = [akTop, akRight]
           Caption = 'Phone'
+          ExplicitLeft = 613
         end
         object edtContactName: TEdit
           Left = 69
           Top = 30
-          Width = 531
+          Width = 525
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 6
           Visible = False
+          ExplicitWidth = 519
         end
         object edtCustomer: TEdit
           Left = 69
           Top = 4
-          Width = 606
+          Width = 600
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
           TabOrder = 0
+          ExplicitWidth = 594
         end
         object BitBtn1: TBitBtn
-          Left = 682
+          Left = 676
           Top = 2
           Width = 25
           Height = 25
@@ -390,9 +401,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentFont = False
           TabOrder = 1
           OnClick = BitBtn1Click
+          ExplicitLeft = 670
         end
         object btnContact: TBitBtn
-          Left = 575
+          Left = 569
           Top = 28
           Width = 25
           Height = 25
@@ -406,45 +418,50 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentFont = False
           TabOrder = 2
           OnClick = btnContactClick
+          ExplicitLeft = 563
         end
         object dblkpCustomerContact: TDBLookupComboBox
           Left = 69
           Top = 30
-          Width = 497
+          Width = 491
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Contact_no'
           ListField = 'Name'
           TabOrder = 3
           OnClick = dblkpCustomerContactClick
+          ExplicitWidth = 485
         end
         object edtEmail: TEdit
           Left = 69
           Top = 54
-          Width = 750
+          Width = 744
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 4
           OnChange = CheckOK
+          ExplicitWidth = 738
         end
         object edtPhone: TEdit
-          Left = 653
+          Left = 647
           Top = 30
           Width = 165
           Height = 21
           Anchors = [akTop, akRight]
           TabOrder = 5
+          ExplicitLeft = 641
         end
       end
       object Panel13: TPanel
-        ParentBackground = False
         Left = 0
         Top = 78
         Width = 821
         Height = 80
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 815
         DesignSize = (
           821
           80)
@@ -465,14 +482,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object edtDescription: TEdit
           Left = 69
           Top = 62
-          Width = 751
+          Width = 745
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
           OnChange = CheckOK
+          ExplicitWidth = 739
         end
         object btnReps: TBitBtn
-          Left = 575
+          Left = 569
           Top = 2
           Width = 25
           Height = 25
@@ -486,27 +504,30 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentFont = False
           TabOrder = 1
           OnClick = btnRepsClick
+          ExplicitLeft = 563
         end
         object edtRep: TEdit
           Left = 69
           Top = 4
-          Width = 497
+          Width = 491
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
           TabOrder = 2
+          ExplicitWidth = 485
         end
         object pnlSubReps: TPanel
-          ParentBackground = False
           Left = 0
           Top = 29
-          Width = 608
+          Width = 602
           Height = 30
           Anchors = [akLeft, akTop, akRight]
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 3
+          ExplicitWidth = 596
           DesignSize = (
-            608
+            602
             30)
           object Label2: TLabel
             Left = 8
@@ -518,14 +539,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           object edtSubRep: TEdit
             Left = 69
             Top = 4
-            Width = 497
+            Width = 491
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
             TabOrder = 0
+            ExplicitWidth = 485
           end
           object btnSubReps: TBitBtn
-            Left = 575
+            Left = 569
             Top = 2
             Width = 25
             Height = 25
@@ -539,11 +561,11 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             ParentFont = False
             TabOrder = 1
             OnClick = btnSubRepsClick
+            ExplicitLeft = 563
           end
         end
       end
       object pnlEndUSer: TPanel
-        ParentBackground = False
         Left = 0
         Top = 158
         Width = 821
@@ -551,8 +573,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Align = alBottom
         BevelOuter = bvNone
         Caption = 'pnlEndUSer'
+        ParentBackground = False
         TabOrder = 2
         Visible = False
+        ExplicitWidth = 815
         DesignSize = (
           821
           32)
@@ -566,14 +590,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         object edtEndUser: TEdit
           Left = 69
           Top = 8
-          Width = 606
+          Width = 600
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
           TabOrder = 0
+          ExplicitWidth = 594
         end
         object btnEndUser: TBitBtn
-          Left = 682
+          Left = 676
           Top = 6
           Width = 25
           Height = 25
@@ -587,6 +612,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           ParentFont = False
           TabOrder = 1
           OnClick = btnEndUserClick
+          ExplicitLeft = 670
         end
       end
     end
@@ -599,15 +625,17 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     ActivePage = tsGeneralSpec
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1129
+    ExplicitHeight = 254
     object tsCharges: TTabSheet
       Caption = 'Charges'
       object Panel3: TPanel
-        ParentBackground = False
         Left = 1042
         Top = 0
         Width = 85
         Height = 235
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnAddCharge: TBitBtn
           Left = 8
@@ -654,21 +682,21 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         end
       end
       object Panel1: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1042
         Height = 235
         Align = alClient
+        ParentBackground = False
         TabOrder = 1
         object Panel4: TPanel
-          ParentBackground = False
           Left = 1
           Top = 198
           Width = 1040
           Height = 36
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 0
           DesignSize = (
             1040
@@ -780,12 +808,12 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           70)
       end
       object Panel18: TPanel
-        ParentBackground = False
         Left = 969
         Top = 0
         Width = 85
         Height = 243
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object btnDeleteSupply: TBitBtn
           Left = 8
@@ -834,22 +862,22 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Documents'
       ImageIndex = 2
       object Panel6: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1127
         Height = 235
         Align = alClient
         Caption = 'Panel6'
+        ParentBackground = False
         TabOrder = 0
         object Panel7: TPanel
-          ParentBackground = False
           Left = 1
           Top = 210
           Width = 1125
           Height = 24
           Align = alBottom
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 0
           object lblDocumentDir: TLabel
             Left = 8
@@ -959,13 +987,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Caption = 'Specification'
       ImageIndex = 3
       object Panel8: TPanel
-        ParentBackground = False
         Left = 1042
         Top = 0
         Width = 85
         Height = 235
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 1036
+        ExplicitHeight = 226
         object btnPrintSpec: TBitBtn
           Left = 8
           Top = 8
@@ -986,18 +1016,20 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         ScrollBars = ssBoth
         TabOrder = 1
         OnChange = memSpecChange
+        ExplicitWidth = 1036
+        ExplicitHeight = 226
       end
     end
     object tsSpecification: TTabSheet
       Caption = 'Specification'
       ImageIndex = 4
       object Panel15: TPanel
-        ParentBackground = False
         Left = 969
         Top = 0
         Width = 85
         Height = 243
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object BitBtn3: TBitBtn
           Left = 8
@@ -1013,14 +1045,16 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 496
     Width = 1135
     Height = 145
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 487
+    ExplicitWidth = 1129
     object Label10: TLabel
       Left = 112
       Top = 18
@@ -1093,9 +1127,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-      OnClick = btnNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1110,16 +1141,20 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnNotesClick
     end
     object pnlOurTotals: TPanel
-      ParentBackground = False
       Left = 896
       Top = 0
       Width = 239
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 5
+      ExplicitLeft = 890
       DesignSize = (
         239
         145)
@@ -1207,13 +1242,13 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         ParentFont = False
       end
       object pnlPackPrice: TPanel
-        ParentBackground = False
         Left = 0
         Top = 115
         Width = 239
         Height = 30
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         DesignSize = (
           239
@@ -1252,10 +1287,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           Height = 23
           Hint = 'Clear'
           Anchors = [akRight, akBottom]
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
-          OnClick = bitbtnPriceUnitClearClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1270,28 +1301,34 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          OnClick = bitbtnPriceUnitClearClick
         end
       end
     end
     object Panel5: TPanel
-      ParentBackground = False
       Left = 875
       Top = 0
       Width = 21
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 6
+      ExplicitLeft = 869
     end
     object pnlReseller: TPanel
-      ParentBackground = False
       Left = 667
       Top = 0
       Width = 208
       Height = 145
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 7
+      ExplicitLeft = 661
       DesignSize = (
         208
         145)
@@ -1394,15 +1431,19 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       item
         Width = 50
       end>
+    ExplicitTop = 671
+    ExplicitWidth = 1129
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 641
     Width = 1135
     Height = 39
     Align = alBottom
+    ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 632
+    ExplicitWidth = 1129
     object lblGDPRSignedStatement: TLabel
       Left = 11
       Top = 13
@@ -1418,14 +1459,15 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       Visible = False
     end
     object pnlBottom: TPanel
-      ParentBackground = False
       Left = 758
       Top = 1
       Width = 376
       Height = 37
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 752
       DesignSize = (
         376
         37)
@@ -1454,8 +1496,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Caption = 'Save'
         Default = True
         Enabled = False
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -1474,6 +1514,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 290
@@ -1481,9 +1523,10 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
+        Kind = bkCancel
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnCancelClick
-        Kind = bkCancel
       end
       object btnOKEstimate: TBitBtn
         Left = 114
@@ -1494,8 +1537,6 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
         Caption = 'Estimate'
         Default = True
         Enabled = False
-        TabOrder = 2
-        OnClick = btnOKEstimateClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -1514,6 +1555,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnOKEstimateClick
       end
     end
   end
@@ -1554,135 +1597,7 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
     Top = 172
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1940,12 +1855,8 @@ object PBMaintQuoteFrm: TPBMaintQuoteFrm
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
+      2800000040000000200000000100010000000000000100000000000000000000
       000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

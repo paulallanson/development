@@ -80,8 +80,9 @@ var
 
 implementation
 
-uses printers, STStockDM, PBFaxToOne, PBFaxList, PBSendFax, ccsprint,
-  pbMainMenu, PBEmailList, CCSCommon, pbDatabase;
+uses
+  printers, STStockDM, PBFaxToOne, PBFaxList, PBSendFax, ccsprint,
+  pbMainMenu, PBEmailList, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -139,7 +140,7 @@ procedure TSTPordRSlFrm.PrintBitBtnClick(Sender: TObject);
 begin
   CheckOk(Self);
   RunReport(False);
-  DefaultPrinter := printer.Printers[printer.printerindex];
+  DefaultPrinter := Printers.Printer.Printers[printers.Printer.printerindex];
   SaveDefaultPrinter;
   close;
 end;
@@ -799,9 +800,9 @@ begin
 
   {Find the default printer in the list of printers }
   Printers.Printer.PrinterIndex := -1;
-  for icount := 0 to pred(Printer.Printers.count) do
+  for icount := 0 to pred(Printers.Printer.Printers.count) do
     begin
-      if pos(DefaultPrinter,Printer.printers[icount]) > 0 then
+      if pos(DefaultPrinter,Printers.Printer.Printers[icount]) > 0 then
         Printers.Printer.PrinterIndex := icount;
     end;
 (*  {Find the default printer in the list of printers }
@@ -838,11 +839,11 @@ var
 begin
   IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
 
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
-      Free;
-    end;
+  try
+    IniFile.WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;
@@ -853,6 +854,13 @@ begin
   GetDefaultPrinter;
 end;
 
+procedure TSTPordRSlFrm.PrintToAttachment(STPOrdRepFrm: TSTPOrdRepFrm);
+begin
+  var fileName := 'PO' + trim(SelectionMemo.Text);
+  PrinterTools.New.PrintToAttachment(STPOrdRepFrm.PurchOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 procedure TSTPordRSlFrm.PrintToAttachment(STPOrdRepFrm: TSTPOrdRepFrm);
 var
   i: integer;
@@ -978,9 +986,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTPordRSlFrm.FormDestroy(Sender: TObject);
 begin

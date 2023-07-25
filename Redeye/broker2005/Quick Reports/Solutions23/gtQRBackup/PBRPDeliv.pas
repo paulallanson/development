@@ -112,7 +112,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
-  QrExport, gtQrCtrls;
+  QrExport;
 
 type
   TPBRPDelivFrm = class(TForm)

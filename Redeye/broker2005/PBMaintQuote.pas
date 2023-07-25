@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, pbQuotesDM, ComCtrls, Grids, StdCtrls, DBCtrls, Buttons,
   ExtCtrls, Spin, ShellAPI, IniFiles, DB, ADODB, ActiveX,
-  Menus, ImgList, Clipbrd, ToolWin;
+  Menus, ImgList, Clipbrd, ToolWin, System.ImageList;
 
 type
   TPBMaintQuoteFrm = class(TForm)

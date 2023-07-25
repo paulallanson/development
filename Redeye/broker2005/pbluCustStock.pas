@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, ImgList, ComCtrls, ToolWin, Grids, DBGrids, Db, Menus;
+  StdCtrls, ExtCtrls, ImgList, ComCtrls, ToolWin, Grids, DBGrids, Db, Menus,
+  System.ImageList;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}

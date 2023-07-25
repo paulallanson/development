@@ -115,7 +115,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon, gtQrCtrls;
+  PBPOObjects, CCSCommon;
 
 type
   TPBRPCustStateFrm = class(TForm)

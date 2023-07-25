@@ -1,7 +1,6 @@
 object STLUStkLocFrm: TSTLUStkLocFrm
   Left = 148
   Top = 213
-  AutoScroll = False
   Caption = 'Stock Locations'
   ClientHeight = 283
   ClientWidth = 652
@@ -11,21 +10,21 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 652
     Height = 223
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 646
+    ExplicitHeight = 214
     object dbgrdLocations: TDBGrid
       Left = 1
       Top = 33
@@ -131,14 +130,15 @@ object STLUStkLocFrm: TSTLUStkLocFrm
         end>
     end
     object pnlPart: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 650
       Height = 32
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 644
       object lblPartDesc: TLabel
         Left = 184
         Top = 8
@@ -163,13 +163,15 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 223
     Width = 652
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 214
+    ExplicitWidth = 646
     DesignSize = (
       652
       41)
@@ -189,33 +191,33 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       ParentFont = False
     end
     object pnlButton: TPanel
-      ParentBackground = False
       Left = 547
       Top = 1
       Width = 104
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 541
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 0
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 0
       end
     end
     object btnExcel: TBitBtn
-      Left = 456
+      Left = 450
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -259,6 +261,9 @@ object STLUStkLocFrm: TSTLUStkLocFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 1
+      OnClick = btnExcelClick
+      ExplicitLeft = 444
     end
   end
   object StatusBar1: TStatusBar
@@ -267,6 +272,8 @@ object STLUStkLocFrm: TSTLUStkLocFrm
     Width = 652
     Height = 19
     Panels = <>
+    ExplicitTop = 255
+    ExplicitWidth = 646
   end
   object pmnStock: TPopupMenu
     Left = 368

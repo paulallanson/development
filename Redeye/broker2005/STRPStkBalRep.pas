@@ -58,7 +58,6 @@ type
     ChildBand1: TQRChildBand;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
-    gtQRFilters1: TgtQRFilters;
     function GetDetails(Sender: TObject): Integer;
     procedure qrStkBalBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

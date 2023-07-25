@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ComCtrls, Db, DBTables, ImgList, Buttons, ExtCtrls;
+  StdCtrls, ComCtrls, Db, DBTables, ImgList, Buttons, ExtCtrls,
+  System.ImageList;
 
 type
   TSTMntPrtBinFrm = class(TForm)

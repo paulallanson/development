@@ -67,7 +67,6 @@ type
     qrOrdByGroup: TQRGroup;
     qrDelToGroup: TQRGroup;
     qrRepGroup: TQRGroup;
-    gtQRFilters1: TgtQRFilters;
     procedure qrOrdByGroup3BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure qrbRepTotalBeforePrint(Sender: TQRCustomBand;

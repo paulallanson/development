@@ -53,7 +53,6 @@ type
     SQLGetSlsDt: TQuery;
     QRLblSlsOrd: TQRLabel;
     QRLblDtReq: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
     qrySlowMvgNoRep: TQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure qrbndDetailBeforePrint(Sender: TQRCustomBand;

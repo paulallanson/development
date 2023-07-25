@@ -92,8 +92,10 @@ var
 
 implementation
 
-uses STPrtMnt, STRPStkBalRep2, PBLURep, PBLUCust, printers, ccsprint,
-  STFaxList, PBSendFax, STEmailList, CCSCommon, pbMainMenu, pbDatabase;
+uses
+  STPrtMnt, STRPStkBalRep2, PBLURep, PBLUCust, printers, ccsprint,
+  STFaxList, PBSendFax, STEmailList, CCSCommon, pbMainMenu, pbDatabase,
+  Printer.Tools;
 
 {$R *.DFM}
 
@@ -729,8 +731,14 @@ begin
     end;
 end;
 
-procedure TSTRSStkBalRepfrm.PrintToAttachment(
-  STRPStkBalRepfrm: TSTRPStkBalRepfrm);
+procedure TSTRSStkBalRepfrm.PrintToAttachment(STRPStkBalRepfrm: TSTRPStkBalRepfrm);
+begin
+  var fileName := 'StkBal' + '-' + STRPStkBalRepfrm.RepNo.ToString;
+  PrinterTools.New.PrintToAttachment(STRPStkBalRepfrm.qrStkBal, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TSTRSStkBalRepfrm.PrintToAttachment(STRPStkBalRepfrm: TSTRPStkBalRepfrm);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -745,11 +753,11 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   sFileName := 'StkBal';
 
   AFilters := TgtQRFilters.Create(self);
@@ -859,21 +867,21 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
+*)
 
 procedure TSTRSStkBalRepfrm.FormActivate(Sender: TObject);
 begin
-FEmailAttachment := TStringList.create;
-GetEmailApp;
-Emailbitbtn.enabled := rdgrpSort.itemIndex =0;
-faxbitbtn.enabled := rdgrpSort.itemindex = 0;
+  FEmailAttachment := TStringList.create;
+  GetEmailApp;
+  Emailbitbtn.enabled := rdgrpSort.itemIndex =0;
+  faxbitbtn.enabled := rdgrpSort.itemindex = 0;
 end;
 
 procedure TSTRSStkBalRepfrm.FormDestroy(Sender: TObject);
 begin
- FEmailAttachment.free;
+  FEmailAttachment.free;
 end;
 
 procedure TSTRSStkBalRepfrm.btbtnExcelClick(Sender: TObject);

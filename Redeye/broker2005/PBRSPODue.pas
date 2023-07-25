@@ -84,9 +84,10 @@ var
 
 implementation
 
-uses PBLUSupp, PBFaxToOne, DateSelV5, CCSPrint, Printers, PBLUOps,
+uses
+  PBLUSupp, PBFaxToOne, DateSelV5, CCSPrint, Printers, PBLUOps,
   PBLUCust, PBFaxList, PBSendFax, PBEmailList, CCSCommon, pbDatabase,
-  pbMainMenu;
+  pbMainMenu, Printer.Tools;
 
 {$R *.DFM}
 
@@ -650,7 +651,7 @@ begin
           sBody := sBodytext
         else
           sBody := 'Dear ' + sSalutation+','+#13#10#13#10''+ sBodytext;
-          
+
         if frmPBMainMenu.EmailApplication = 'GENERIC' then
             {Send to Email database}
             dmBroker.EmailViaGeneric(sSenderName, sSenderEmail, sRecipientName, sTo,sSubject,sBodyText,FEmailAttachment,
@@ -672,6 +673,13 @@ begin
   end;
 end;
 
+procedure TPBRSPODueFrm.PrintToAttachment(PBRPPODueFrm: TPBRPPODueFrm);
+begin
+  var fileName := 'OrdersDue' + '-' + PBRPPODueFrm.PONumberQRLabel.Caption;
+  PrinterTools.New.PrintToAttachment(PBRPPODueFrm.PrintPOsDueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 procedure TPBRSPODueFrm.PrintToAttachment(PBRPPODueFrm: TPBRPPODueFrm);
 var
   i: integer;
@@ -814,6 +822,7 @@ begin
 
   AFilters.free;
 end;
+*)
 
 procedure TPBRSPODueFrm.FormCreate(Sender: TObject);
 begin

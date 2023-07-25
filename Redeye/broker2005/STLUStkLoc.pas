@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, IniFiles, ComCtrls, Menus, CCSCommon,
-  pbStockDm;
+  pbStockDm, Data.DB;
 
 type
   TSTLUStkLocFrm = class(TForm)

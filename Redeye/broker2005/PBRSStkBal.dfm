@@ -3,19 +3,17 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
   Top = 160
   BorderStyle = bsDialog
   Caption = 'Stock Report'
-  ClientHeight = 227
-  ClientWidth = 449
+  ClientHeight = 226
+  ClientWidth = 445
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object IncRadioGroup: TRadioGroup
     Left = 8
@@ -101,8 +99,9 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Width = 75
     Height = 25
     Caption = '&Cancel'
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn
     Left = 96
@@ -110,8 +109,6 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -126,6 +123,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 184
@@ -133,8 +132,6 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 5
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -149,6 +146,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = PrintBitBtnClick
   end
   object chkIncludeNonStock: TCheckBox
     Left = 243
@@ -164,8 +163,6 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Width = 75
     Height = 25
     Caption = '&Fax'
-    TabOrder = 7
-    OnClick = FaxBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -180,6 +177,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
       33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
       3333777777333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = FaxBitBtnClick
   end
   object EmailBitBtn: TBitBtn
     Left = 359
@@ -192,9 +191,6 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 8
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -209,6 +205,9 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 8
+    OnClick = EmailBitBtnClick
   end
   object qryReport: TQuery
     DatabaseName = 'PB'

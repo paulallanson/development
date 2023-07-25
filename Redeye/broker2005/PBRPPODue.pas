@@ -18,7 +18,7 @@ type
     ODueDateQRLabel: TQRLabel;
     SelSuppsQRLabel: TQRLabel;
     SupNamQRDBText: TQRDBText;
-    QRLabel9: TQRLabel;
+    PONumberQRLabel: TQRLabel;
     JobDescrQRDBText: TQRDBText;
     QRLabel11: TQRLabel;
     DateQRDBText: TQRDBText;

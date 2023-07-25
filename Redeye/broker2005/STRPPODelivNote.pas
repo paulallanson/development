@@ -73,7 +73,9 @@ type
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
   private
+    FDeliveryNo: integer;
     procedure BuildSpecialNotes(iNarrative: integer);
+    procedure SetDeliveryNo(const Value: integer);
     { Private declarations }
   public
     { Public declarations }
@@ -81,6 +83,7 @@ type
     PackSize, QtyOrd : Integer;
     iIntSelCode: Integer ;
     PrinterSettings: TPrinterSettings;
+    property DeliveryNo: integer read FDeliveryNo write SetDeliveryNo;
   end;
 
 var
@@ -110,6 +113,11 @@ begin
   Result := 0;
   StartReport(self);
 
+end;
+
+procedure TSTRPPODelivNoteFrm.SetDeliveryNo(const Value: integer);
+begin
+  FDeliveryNo := Value;
 end;
 
 procedure TSTRPPODelivNoteFrm.StartReport(Sender: TObject);
@@ -165,8 +173,9 @@ begin
   DellAddMemo.Lines.Clear;
 
   with GetDetsQuery do
-    begin
-    qrlDelNumber.caption := 'Delivery Number: ' + fieldbyname('OrdNum').asstring;
+  begin
+    DeliveryNo := Fieldbyname('OrdNum').AsInteger;
+    qrlDelNumber.caption := 'Delivery Number: ' + DeliveryNo.ToString;
     DateRequiredLabel.Caption := DateToStr(FieldByName('Date_Required').AsDateTime);
 
     if fieldbyname('Sales_Order').asinteger <> 0 then

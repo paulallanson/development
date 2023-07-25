@@ -77,8 +77,9 @@ var
 
 implementation
 
-uses PBLUCust, PBDatabase, CCSPrint, Printers, PBEmailList, PBFaxList,
-  PBSendFax, pbMainMenu;
+uses
+  PBLUCust, PBDatabase, CCSPrint, Printers, PBEmailList, PBFaxList,
+  PBSendFax, pbMainMenu, Printer.Tools;
 
 {$R *.DFM}
 
@@ -549,8 +550,14 @@ begin
     end;
 end;
 
-procedure TPBRSStkBalFrm.PrintToAttachment(
-  PBRPStkBalfrm: TPBRPStkBalfrm);
+procedure TPBRSStkBalFrm.PrintToAttachment(PBRPStkBalfrm: TPBRPStkBalfrm);
+begin
+  var fileName := 'StkBal';
+  PrinterTools.New.PrintToAttachment(PBRPStkBalfrm.QuickReport, FEmailAttachment, fileName, sAttachmentType);
+end;
+
+(* GDK ToDo: remove after tests
+procedure TPBRSStkBalFrm.PrintToAttachment(PBRPStkBalfrm: TPBRPStkBalfrm);
 var
   i: integer;
   sLocation, sFileName: string;
@@ -565,11 +572,12 @@ begin
   FEmailAttachment.clear;
 
   sLocation := GetWinTempDir;
-(*  if FEmailLocation = '' then
-    sLocation := 'C:\Windows\temp\'
-  else
-    sLocation := FEmailLocation;
-*)
+
+//  if FEmailLocation = '' then
+//    sLocation := 'C:\Windows\temp\'
+//  else
+//    sLocation := FEmailLocation;
+
   sFileName := 'StkBal';
 
   AFilters := TgtQRFilters.Create(self);
@@ -679,10 +687,9 @@ begin
       end;
     end;
 
-
   AFilters.free;
 end;
-
+*)
 
 function TPBRSStkBalFrm.BuildContactDetails: string;
 { Local function }

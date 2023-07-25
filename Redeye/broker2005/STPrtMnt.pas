@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   DB, DBTables, Grids, DBGrids, StdCtrls, ExtCtrls, Buttons, ImgList,
-  ComCtrls, ToolWin;
+  ComCtrls, ToolWin, System.ImageList;
 
 type
   TSTPrtMntFrm = class(TForm)

@@ -173,7 +173,7 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         WordWrap = True
         FontSize = 10
       end
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 0
         Top = 264
         Width = 39

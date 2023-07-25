@@ -52,7 +52,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, gtQrCtrls;
+  CCSPrint;
 
 type
   TSTRPLabelsDelivFrm = class(TForm)
@@ -60,21 +60,21 @@ type
     PODelivSQL: TQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    PONumberLbl: TgtQRLabel;
+    PONumberLbl: TQRLabel;
     AddressSRC: TDataSource;
-    AddressMemo: TgtQRMemo;
-    QRDBCustOrderRef: TgtQRDBText;
-    lblCustomer: TgtQRLabel;
-    QRLabel2: TgtQRLabel;
-    QRLabel4: TgtQRLabel;
-    QRLabel5: TgtQRLabel;
-    QRLabel6: TgtQRLabel;
-    AddQRLabel: TgtQRLabel;
-    BoxNoQRLbl: TgtQRLabel;
-    BoxQRLbl: TgtQRLabel;
+    AddressMemo: TQRMemo;
+    QRDBCustOrderRef: TQRDBText;
+    lblCustomer: TQRLabel;
+    QRLabel2: TQRLabel;
+    QRLabel4: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    AddQRLabel: TQRLabel;
+    BoxNoQRLbl: TQRLabel;
+    BoxQRLbl: TQRLabel;
     AdhocSQL: TQuery;
     CustomerSQL: TQuery;
-    DeliveryDateLbl: TgtQRLabel;
+    DeliveryDateLbl: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -82,8 +82,10 @@ type
       PrintReport: Boolean);
   private
     FbAddressOnly: boolean;
+    FlogoPath: string;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     iSONumber: integer;
@@ -94,6 +96,7 @@ type
     PrintAddress: Boolean;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -197,6 +200,11 @@ begin
   QRLabel6.enabled := not bAddressOnly;
   DeliveryDatelbl.Enabled := not bAddressOnly;
   QRDBCustOrderRef.Enabled := not bAddressOnly;
+end;
+
+procedure TSTRPLabelsDelivFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
 end;
 
 procedure TSTRPLabelsDelivFrm.SetbAddressOnly(const Value: boolean);

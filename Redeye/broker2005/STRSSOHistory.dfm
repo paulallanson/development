@@ -1,7 +1,6 @@
 object STRSSOHistoryFrm: TSTRSSOHistoryFrm
   Left = 50
   Top = 89
-  AutoScroll = False
   Caption = 'Sales Order History by Customer and Part'
   ClientHeight = 450
   ClientWidth = 731
@@ -13,12 +12,10 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 0
@@ -163,18 +160,20 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       end>
   end
   object pnlCustProd: TPanel
-    ParentBackground = False
     Left = 0
     Top = 410
     Width = 731
     Height = 40
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 401
+    ExplicitWidth = 725
     DesignSize = (
       731
       40)
     object CancelBitBtn: TBitBtn
-      Left = 23
+      Left = 17
       Top = 8
       Width = 72
       Height = 25
@@ -185,12 +184,14 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkCancel
+      ExplicitLeft = 11
     end
     object PreviewBitBtn: TBitBtn
-      Left = 423
+      Left = 417
       Top = 8
       Width = 72
       Height = 25
@@ -201,9 +202,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -218,9 +216,13 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = PreviewBitBtnClick
+      ExplicitLeft = 411
     end
     object PrintBitBtn: TBitBtn
-      Left = 511
+      Left = 505
       Top = 8
       Width = 72
       Height = 25
@@ -231,9 +233,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -248,9 +247,13 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = PrintBitBtnClick
+      ExplicitLeft = 499
     end
     object btbtnCustCopy: TBitBtn
-      Left = 595
+      Left = 589
       Top = 7
       Width = 129
       Height = 25
@@ -261,9 +264,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btbtnCustCopyClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -278,16 +278,18 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btbtnCustCopyClick
+      ExplicitLeft = 583
     end
     object btnExcel: TBitBtn
-      Left = 335
+      Left = 329
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Excel'
-      TabOrder = 4
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -331,16 +333,20 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 4
+      OnClick = btnExcelClick
+      ExplicitLeft = 323
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 731
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 725
     object Label3: TLabel
       Left = 8
       Top = 18
@@ -427,8 +433,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       Top = 12
       Width = 25
       Height = 25
-      TabOrder = 5
-      OnClick = DateBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -443,14 +447,16 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 5
+      OnClick = DateBitBtnClick
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 200
     Top = 171
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblExporting: TLabel

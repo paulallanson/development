@@ -1335,7 +1335,7 @@ object frmPBRPNonConform: TfrmPBRPNonConform
         84.666666666666680000
         1899.708333333333000000)
       BandType = rbPageFooter
-      object gtQRSysData1: TgtQRSysData
+      object gtQRSysData1: TQRSysData
         Left = 616
         Top = 11
         Width = 90
@@ -1770,20 +1770,6 @@ object frmPBRPNonConform: TfrmPBRPNonConform
     DataSet = qryReport
     Left = 290
     Top = 46
-  end
-  object gtQRFilters1: TgtQRFilters
-    HTML.Author = 'Pragnaan'
-    HTML.Keywords = 'gtQrFilters'
-    HTML.ImageDir = 'Images'
-    PDF.Author = 'Pragnaan'
-    PDF.Keywords = 'QuickReport, Export, Filters'
-    RTF.Author = 'Pragnaan'
-    RTF.Keywords = 'QuickReport, Export, Filters'
-    RTF.ExportImageFormat = ifBMP
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkGIF, fkJPEG, fkBMP]
-    Left = 440
-    Top = 128
   end
   object GetNarrSQL: TQuery
     DatabaseName = 'PB'

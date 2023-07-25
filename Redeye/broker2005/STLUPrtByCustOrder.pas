@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Db, DBTables, ImgList, ExtCtrls, Grids, DBGrids, ComCtrls, StdCtrls,
-  ToolWin;
+  ToolWin, System.ImageList;
 
 type
   TSTLUPrtByCustOrderFrm = class(TForm)

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPRint, gtQrCtrls;
+  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPRint;
 
 type
   TSTPOrdRepFrm = class(TForm)

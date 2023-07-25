@@ -1,7 +1,6 @@
 object STLUStkPurchasesFrm: TSTLUStkPurchasesFrm
   Left = 71
   Top = 180
-  AutoScroll = False
   Caption = 'Stock Purchase Orders'
   ClientHeight = 319
   ClientWidth = 689
@@ -11,20 +10,20 @@ object STLUStkPurchasesFrm: TSTLUStkPurchasesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 689
     Height = 278
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 683
+    ExplicitHeight = 269
     object dbgrdPurchases: TDBGrid
       Left = 1
       Top = 33
@@ -109,14 +108,15 @@ object STLUStkPurchasesFrm: TSTLUStkPurchasesFrm
         end>
     end
     object pnlPart: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 687
       Height = 32
       Align = alTop
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 681
       object lblPartDesc: TLabel
         Left = 176
         Top = 8
@@ -141,44 +141,46 @@ object STLUStkPurchasesFrm: TSTLUStkPurchasesFrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 278
     Width = 689
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 269
+    ExplicitWidth = 683
     DesignSize = (
       689
       41)
     object pnlButton: TPanel
-      ParentBackground = False
       Left = 584
       Top = 1
       Width = 104
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 578
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 0
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 0
       end
     end
     object btnExcel: TBitBtn
-      Left = 456
+      Left = 450
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -222,6 +224,9 @@ object STLUStkPurchasesFrm: TSTLUStkPurchasesFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 1
+      OnClick = btnExcelClick
+      ExplicitLeft = 444
     end
   end
 end

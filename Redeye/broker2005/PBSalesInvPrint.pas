@@ -80,7 +80,9 @@ var
 
 implementation
 
-uses DateSelV5, CCSPrint, CCSemailHandler, PBEmailList, pbDatabase, pbMainMenu, ccsCommon;
+uses
+  DateSelV5, CCSPrint, CCSemailHandler, PBEmailList, pbDatabase, pbMainMenu,
+  ccsCommon, Printer.Tools;
 
 {$R *.DFM}
 
@@ -578,6 +580,19 @@ end;
 
 procedure TPBSalesInvPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
 var
+  fileName,
+  sPrefix: string;
+begin
+  if Self.CreditNotePrint then
+    sPrefix := 'SC' else
+    sPrefix := 'SI';
+  fileName := sPrefix + PBRPSalesInvFrm.InvoiceNumberlbl.Caption;
+  PrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+end;
+
+(*
+procedure TPBSalesInvPrintFrm.PrintToAttachment(PBRPSalesInvFrm: TPBRPSalesInvFrm; tempCode: string);
+var
   i: integer;
   sLocation, sFileName, sPrefix: string;
   zLocation, zFileName: array[0..255] of char;
@@ -605,12 +620,12 @@ begin
 
   sFileName := trim(stringReplace(sFileName,sLocation,'',[rfIgnoreCase]));
 
-(*  {Format is 'Si' + Enquiry Number + Random Number}
-  if self.CreditNotePrint then
-    sFileName := 'SC' + tempcode + '-' + sFilename
-  else
-    sFileName := 'SI' + tempcode + '-' + sFilename;
-*)
+//  {Format is 'Si' + Enquiry Number + Random Number}
+//  if self.CreditNotePrint then
+//    sFileName := 'SC' + tempcode + '-' + sFilename
+//  else
+//    sFileName := 'SI' + tempcode + '-' + sFilename;
+
   if self.CreditNotePrint then
     sPrefix := 'SC'
   else
@@ -747,6 +762,7 @@ begin
     end;
   AFilters.free;
 end;
+*)
 
 procedure TPBSalesInvPrintFrm.SetCreditNotePrint(const Value: boolean);
 begin

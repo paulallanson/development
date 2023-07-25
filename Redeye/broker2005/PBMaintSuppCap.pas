@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, DBCtrls, ComCtrls, Buttons, ExtCtrls, Db, DBTables, Grids,
-  DBGrids, ImgList;
+  DBGrids, ImgList, System.ImageList;
 
 type
   TCapDet = Class

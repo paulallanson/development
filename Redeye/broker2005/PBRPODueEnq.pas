@@ -137,7 +137,6 @@ type
     SuppBranchPageNoQRLabel: TQRLabel;
     RunDateQRLabel: TQRLabel;
     EnqNoLab: TQRLabel;
-    gtQRFilters1: TgtQRFilters;
     procedure PrintODueEnqQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;
