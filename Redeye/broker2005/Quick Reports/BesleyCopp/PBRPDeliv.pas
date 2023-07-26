@@ -102,7 +102,8 @@ var
 
 implementation
 
-uses pbMainMenu, PBPODataMod, CCSCommon, PBImages;
+uses
+  pbMainMenu, PBPODataMod, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -390,10 +391,16 @@ end;
 procedure TPBRPDelivFrm.QRBand2BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-QRLabel13.Caption := GetPickCallOffSQL.FieldByName('Description').AsString;
-QRLabel14.Caption := formatfloat('####',GetPickCallOffSql.fieldByName('quantity_Picked').asfloat);
+  QRLabel13.Caption := GetPickCallOffSQL.FieldByName('Description').AsString;
+  QRLabel14.Caption := formatfloat('####',GetPickCallOffSql.fieldByName('quantity_Picked').asfloat);
 end;
 
+function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(*
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -416,7 +423,7 @@ begin
   self.Preview := false;
   if self.GetDetails(self) = 0 then
     exit;
-    
+
   PBDelivQuickReport.Prepare;
 
   fileLocation := GetWinTempDir;
@@ -514,5 +521,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

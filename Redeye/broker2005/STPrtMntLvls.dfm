@@ -3,19 +3,17 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
   Top = 161
   BorderStyle = bsDialog
   Caption = 'Stock Levels'
-  ClientHeight = 147
-  ClientWidth = 213
+  ClientHeight = 138
+  ClientWidth = 207
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object lblMin: TLabel
     Left = 16
@@ -43,8 +41,9 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
     Top = 112
     Width = 75
     Height = 25
-    TabOrder = 0
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 0
   end
   object edtMin: TEdit
     Left = 112
@@ -78,7 +77,8 @@ object STPrtMntLvlsFrm: TSTPrtMntLvlsFrm
     Top = 112
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
 end

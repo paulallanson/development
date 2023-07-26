@@ -99,7 +99,7 @@ $History: PBRPDeliv.pas $
  * User: Roddym       Date: 14/03/:0   Time: 16:54
  * Updated in $/PBL D5/Quick Reports/BroadSword
  * New field Delivery_Instructions in Delivery_Detail.
- * 
+ *
  * *****************  Version 2  *****************
  * User: Roddym       Date: 10/03/:0   Time: 11:27
  * Updated in $/PBL D5/Quick Reports/BroadSword
@@ -209,7 +209,6 @@ type
     GetPickCallOffSQL: TQuery;
     ReportImage: TQRImage;
     PsQRShape1: TQRShape;
-    
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -238,7 +237,8 @@ var
 
 implementation
 
-uses CCSCommon, PBImages;
+uses
+  CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -536,6 +536,12 @@ begin
   QRLabel14.Caption := formatfloat('####',GetPickCallOffSql.fieldByName('quantity_Picked').asfloat);
 end;
 
+function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -558,7 +564,7 @@ begin
   self.Preview := false;
   if self.GetDetails(self) = 0 then
     exit;
-    
+
   PBDelivQuickReport.Prepare;
 
   fileLocation := GetWinTempDir;
@@ -656,5 +662,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

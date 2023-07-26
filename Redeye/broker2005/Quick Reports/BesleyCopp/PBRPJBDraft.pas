@@ -68,7 +68,6 @@ type
     lblQuantity: TQRLabel;
     qrmDescription: TQRRichText;
     qryPOLineChgs: TQuery;
-    
     qrlblRevenueCentre: TQRLabel;
     qrlblRevenueCentreData: TQRLabel;
     qryGetProductType: TQuery;
@@ -88,6 +87,7 @@ type
     memPayment: TQRMemo;
     qrmRegOffice: TQRMemo;
     qrmRegNumber: TQRMemo;
+    qrlblReportTitle: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

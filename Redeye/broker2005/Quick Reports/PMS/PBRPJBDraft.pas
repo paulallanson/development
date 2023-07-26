@@ -72,6 +72,7 @@ type
     qryGetProductType: TQuery;
     gtQRLabel1: TQRLabel;
     imgReport: TQRImage;
+    qrlblReportTitle: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

@@ -74,7 +74,8 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, PBImages;
+uses
+  pbMainMenu, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -308,6 +309,12 @@ begin
   FDeliveryDate := Value;
 end;
 
+function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -428,5 +435,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

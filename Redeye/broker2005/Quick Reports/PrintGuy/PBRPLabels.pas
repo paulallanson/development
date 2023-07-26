@@ -46,8 +46,10 @@ type
       attachmentType: string): TStringList;
   private
     FbAddressOnly: boolean;
+    FlogoPath: string;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
+    procedure SetlogoPath(const Value: string);
   public
     useCustAddress: ByteBool;
     Preview: ByteBool;
@@ -59,6 +61,8 @@ type
     bStocked: string;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
+    { logoPath added by GDK }
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -66,7 +70,8 @@ var
 
 implementation
 
-uses PBImages, CCSCommon, pbDatabase;
+uses
+  PBImages, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -314,7 +319,6 @@ begin
         {Finally, add the phone number} ;
       qrmCompany.Lines.Append('Telephone: ' + Trim(CompSQL.FieldByName('Phone').AsString) + ' Email: ' + Trim(CompSQL.FieldByName('Email').AsString));
   end;
-
 end;
 
 procedure TPBRPLabelsFrm.SetCaptions;
@@ -331,11 +335,22 @@ begin
   QRDBCustOrderRef.Enabled := not bAddressOnly;
 end;
 
+procedure TPBRPLabelsFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
+end;
+
 procedure TPBRPLabelsFrm.SetbAddressOnly(const Value: boolean);
 begin
   FbAddressOnly := Value;
 end;
 
+function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -482,5 +497,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

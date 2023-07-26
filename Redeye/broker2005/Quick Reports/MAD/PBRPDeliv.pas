@@ -68,7 +68,6 @@ type
     lbldelInst: TQRLabel;
     DeliveryMemo: TQRMemo;
     GetPickCallOffSQL: TQuery;
-    
     lblDelNote: TQRLabel;
     imgReport: TQRImage;
     QRMemo2: TQRMemo;
@@ -104,7 +103,8 @@ var
 
 implementation
 
-uses pbMainMenu, PBPODataMod, CCSCommon, PBImages;
+uses
+  pbMainMenu, PBPODataMod, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -396,6 +396,12 @@ QRLabel13.Caption := GetPickCallOffSQL.FieldByName('Description').AsString;
 QRLabel14.Caption := formatfloat('####',GetPickCallOffSql.fieldByName('quantity_Picked').asfloat);
 end;
 
+function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -418,7 +424,7 @@ begin
   self.Preview := false;
   if self.GetDetails(self) = 0 then
     exit;
-    
+
   PBDelivQuickReport.Prepare;
 
   fileLocation := GetWinTempDir;
@@ -516,5 +522,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

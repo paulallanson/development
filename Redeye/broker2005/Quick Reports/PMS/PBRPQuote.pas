@@ -26,7 +26,6 @@ type
     dtsReport: TDataSource;
     qrygetNotes: TQuery;
     qrbLineDetail: TQRSubDetail;
-    
     qrmAddress: TQRMemo;
     QRLabel4: TQRLabel;
     qrlblContactName: TQRLabel;
@@ -110,7 +109,11 @@ type
   private
     rTotalCost, rTotalSell: real;
     ipage: integer;
+    FEndUserVersion: Boolean;
+    FShowBreakDown: Boolean;
     procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure SetEndUserVersion(const Value: Boolean);
+    procedure SetShowBreakDown(const Value: Boolean);
     { Private declarations }
   public
     ForceNewPage: boolean;
@@ -119,6 +122,9 @@ type
     bPreview: boolean;
     PrinterSettings: TPrinterSettings;
     function Getdetails: integer;
+    { ShowBreakDown, EndUserVersion added by GDK }
+    property ShowBreakDown: Boolean read FShowBreakDown write SetShowBreakDown;
+    property EndUserVersion: Boolean read FEndUserVersion write SetEndUserVersion;
   end;
 
 var
@@ -237,11 +243,20 @@ begin
 //  qrrchTextProcessNotes.Height := 16;
 end;
 
+procedure TfrmPBRPQuote.SetEndUserVersion(const Value: Boolean);
+begin
+  FEndUserVersion := Value;
+end;
+
+procedure TfrmPBRPQuote.SetShowBreakDown(const Value: Boolean);
+begin
+  FShowBreakDown := Value;
+end;
+
 procedure TfrmPBRPQuote.qrGrpProcessesBeforePrint(
   Sender: TQRCustomBand; var PrintBand: Boolean);
 begin
   inc(iPage);
-
 end;
 
 procedure TfrmPBRPQuote.qrbLineDetailBeforePrint(Sender: TQRCustomBand;

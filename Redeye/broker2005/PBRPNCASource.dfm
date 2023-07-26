@@ -1,29 +1,23 @@
 object PBRPNCASourceFrm: TPBRPNCASourceFrm
   Left = 309
   Top = 114
-  Width = 1235
-  Height = 563
   Caption = 'PBRPNCASourceFrm'
+  ClientHeight = 516
+  ClientWidth = 1217
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrReport: TQuickRep
     Left = 40
     Top = 40
-    Width = 1123
-    Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Width = 1403
+    Height = 992
+    ShowingPreview = False
     DataSet = qryNCASource
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -42,6 +36,7 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -55,85 +50,100 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 435
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 544
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        1150.937500000000000000
-        2770.187500000000000000)
+        1151.466666666667000000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbTitle
       object QRLabel1: TQRLabel
-        Left = 552
-        Top = 80
-        Width = 106
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 690
+        Top = 100
+        Width = 133
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1460.500000000000000000
           211.666666666666700000
-          280.458333333333400000)
+          281.516666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Can you see this?'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblCount: TQRLabel
-        Left = 552
-        Top = 112
-        Width = 59
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 690
+        Top = 140
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1460.500000000000000000
-          296.333333333333400000
-          156.104166666666700000)
+          296.333333333333300000
+          156.633333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'qrlblCount'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object DBChart1: TDBChart
@@ -142,8 +152,6 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
         Width = 505
         Height = 345
         AllowPanning = pmNone
-        AllowZoom = False
-        BackWall.Brush.Color = clWhite
         BackWall.Brush.Style = bsClear
         BackWall.Pen.Visible = False
         Title.Text.Strings = (
@@ -155,20 +163,40 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
         View3DOptions.Orthogonal = False
         View3DOptions.Perspective = 0
         View3DOptions.Rotation = 360
+        View3DOptions.ZoomText = ztNo
         View3DWalls = False
+        Zoom.Allow = False
         TabOrder = 2
+        DefaultCanvas = 'TGDIPlusCanvas'
+        ColorPaletteIndex = 13
         object Series1: TPieSeries
-          Marks.ArrowLength = 8
-          Marks.Visible = True
+          HoverElement = []
+          Marks.Tail.Margin = 2
           DataSource = qryNCASource
           SeriesColor = clRed
           XLabelsSource = 'non_conform_dept_descr'
+          XValues.Order = loAscending
+          YValues.Name = 'Pie'
+          YValues.Order = loNone
+          YValues.ValueSource = 'Cost'
+          Frame.InnerBrush.BackColor = clRed
+          Frame.InnerBrush.Gradient.EndColor = clGray
+          Frame.InnerBrush.Gradient.MidColor = clWhite
+          Frame.InnerBrush.Gradient.StartColor = 4210752
+          Frame.InnerBrush.Gradient.Visible = True
+          Frame.MiddleBrush.BackColor = clYellow
+          Frame.MiddleBrush.Gradient.EndColor = 8553090
+          Frame.MiddleBrush.Gradient.MidColor = clWhite
+          Frame.MiddleBrush.Gradient.StartColor = clGray
+          Frame.MiddleBrush.Gradient.Visible = True
+          Frame.OuterBrush.BackColor = clGreen
+          Frame.OuterBrush.Gradient.EndColor = 4210752
+          Frame.OuterBrush.Gradient.MidColor = clWhite
+          Frame.OuterBrush.Gradient.StartColor = clSilver
+          Frame.OuterBrush.Gradient.Visible = True
+          Frame.Width = 4
+          OtherSlice.Legend.Visible = False
           OtherSlice.Text = 'Other'
-          PieValues.DateTime = False
-          PieValues.Name = 'Pie'
-          PieValues.Multiplier = 1.000000000000000000
-          PieValues.Order = loNone
-          PieValues.ValueSource = 'Cost'
         end
       end
     end

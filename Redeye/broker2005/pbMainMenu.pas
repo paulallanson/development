@@ -949,19 +949,19 @@ procedure TfrmpbMainMenu.GetCurrencyFormat;
 begin
   {Work out currency format for screen fields};
   sCurrencyMask := '###########';
-  if CurrencyDecimals > 0 then
-    sCurrencymask := Copy('###########', 1, 9 - CurrencyDecimals) +
-      '0.' + Copy('00000000', 1, CurrencyDecimals);
+  if FormatSettings.CurrencyDecimals > 0 then
+    sCurrencymask := Copy('###########', 1, 9 - FormatSettings.CurrencyDecimals) +
+      '0.' + Copy('00000000', 1, FormatSettings.CurrencyDecimals);
   {Work out currency format for Print fields};
   sPrintCurrencyMask := '##,###,###,###';
-  if CurrencyDecimals > 0 then
-    sPrintCurrencymask := Copy('##,###,###,###', 1, 11 - CurrencyDecimals) +
-      '0.' + Copy('00000000', 1, CurrencyDecimals);
+  if FormatSettings.CurrencyDecimals > 0 then
+    sPrintCurrencymask := Copy('##,###,###,###', 1, 11 - FormatSettings.CurrencyDecimals) +
+      '0.' + Copy('00000000', 1, FormatSettings.CurrencyDecimals);
   {Work out currency format for zeroised fields};
   sZeroCurrencyMask := '00000000000';
-  if CurrencyDecimals > 0 then
-    sZeroCurrencymask := Copy('00000000000', 1, 9 - CurrencyDecimals) +
-      '0.' + Copy('00000000', 1, CurrencyDecimals);
+  if FormatSettings.CurrencyDecimals > 0 then
+    sZeroCurrencymask := Copy('00000000000', 1, 9 - FormatSettings.CurrencyDecimals) +
+      '0.' + Copy('00000000', 1, FormatSettings.CurrencyDecimals);
 end;
 
 procedure TfrmpbMainMenu.mnuCompanyPrefsClick(Sender: TObject);

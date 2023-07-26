@@ -136,8 +136,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, CCSPrint, CCSCommon,
-  gtQrCtrls;
+  DB, DBTables, StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, CCSPrint,
+  CCSCommon;
 
 type
   TPBRPProofFrm = class(TForm)

@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 366
-  ClientWidth = 886
+  ClientHeight = 332
+  ClientWidth = 880
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,7 +24,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 886
+    Width = 880
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -63,19 +63,19 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 886
+    Width = 880
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 880
+        Width = 874
       end>
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 871
+      Width = 865
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -166,8 +166,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 886
-    Height = 231
+    Width = 880
+    Height = 197
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -266,8 +266,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 306
-    Width = 886
+    Top = 272
+    Width = 880
     Height = 41
     Align = alBottom
     TabOrder = 3
@@ -287,7 +287,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 600
+      Left = 594
       Top = 1
       Width = 285
       Height = 39
@@ -345,8 +345,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 347
-    Width = 886
+    Top = 313
+    Width = 880
     Height = 19
     Panels = <
       item
@@ -363,12 +363,12 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     Enabled = False
     Interval = 325
     OnTimer = tmrSearchTimer
-    Left = 368
-    Top = 128
+    Left = 397
+    Top = 140
   end
   object pmnFunctions: TPopupMenu
-    Left = 464
-    Top = 128
+    Left = 497
+    Top = 140
     object Add1: TMenuItem
       Caption = 'Add'
       OnClick = btnAddClick
@@ -401,8 +401,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     end
   end
   object imglstOrders: TImageList
-    Left = 240
-    Top = 112
+    Left = 300
+    Top = 140
     Bitmap = {
       494C01010D000E00040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
@@ -940,8 +940,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       000000000000}
   end
   object mmnuStock: TMainMenu
-    Left = 192
-    Top = 144
+    Left = 198
+    Top = 140
     object File1: TMenuItem
       Caption = '&File'
       object New1: TMenuItem

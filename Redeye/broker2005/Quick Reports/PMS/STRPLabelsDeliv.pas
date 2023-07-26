@@ -123,6 +123,8 @@ type
     procedure STLabelsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
   private
+    FlogoPath: string;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     iSONumber: integer;
@@ -131,6 +133,8 @@ type
     sNumberFrom, sNumberTo, sPrefix: string[10];
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
+    { logoPath added by GDK }
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -250,6 +254,11 @@ begin
   {CompQRMemo.Lines.Add('Tel: ' + Trim(CompSQL.FieldByName('Phone').AsString))};
   DescrQRLabel.Caption := SODelivSQL.fieldByName('Cust_Order_No').AsString;
   FormRefLbl.Caption := SODelivSQL.FieldByName('Sales_Order').AsString;
+end;
+
+procedure TSTRPLabelsDelivFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
 end;
 
 procedure TSTRPLabelsDelivFrm.STLabelsQuickReportBeforePrint(Sender: TCustomQuickRep;

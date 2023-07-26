@@ -50,8 +50,10 @@ type
       attachmentType: string): TStringList;
   private
     FbAddressOnly: boolean;
+    FlogoPath: string;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     rPONumber: real;
@@ -63,6 +65,8 @@ type
     UseCustAddress: boolean;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
+    { logoPath added by GDK }
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -70,7 +74,8 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, pbDatabase;
+uses
+  pbMainMenu, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -324,6 +329,11 @@ procedure TPBRPLabelsFrm.SetCaptions;
 begin
 end;
 
+procedure TPBRPLabelsFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
+end;
+
 procedure TPBRPLabelsFrm.SetbAddressOnly(const Value: boolean);
 begin
   FbAddressOnly := Value;
@@ -334,6 +344,12 @@ begin
   QRLabel7.enabled := not FbAddressOnly;
 end;
 
+function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -464,5 +480,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

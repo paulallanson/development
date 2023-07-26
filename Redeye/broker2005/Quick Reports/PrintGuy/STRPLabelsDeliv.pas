@@ -124,6 +124,8 @@ type
     procedure STLabelsQuickReportBeforePrint(Sender: TCustomQuickRep; var
       PrintReport: Boolean);
   private
+    FlogoPath: string;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     PrintAddress: ByteBool;
@@ -133,6 +135,8 @@ type
     sNumberFrom, sNumberTo, sPrefix: string[10];
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
+    { logoPath added by GDK }
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -234,6 +238,11 @@ begin
     lbldeliveryto.enabled := false;
   end;
 *)
+end;
+
+procedure TSTRPLabelsDelivFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
 end;
 
 procedure TSTRPLabelsDelivFrm.STLabelsQuickReportBeforePrint(Sender: TCustomQuickRep;

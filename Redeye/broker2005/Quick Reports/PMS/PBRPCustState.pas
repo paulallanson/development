@@ -62,7 +62,7 @@ $History: PBRPCustState.pas $
  * User: Janiner      Date: 17/10/:0   Time: 14:42
  * Updated in $/PBL D5
  * Amend report to force page break on change of customer.
- * 
+ *
  * *****************  Version 2  *****************
  * User: Paul         Date: 5/07/:0    Time: 17:02
  * Branched in $/PBL D5
@@ -100,7 +100,7 @@ $History: PBRPCustState.pas $
  * User: Roddym       Date: 9/12/99    Time: 16:30
  * Updated in $/PBL D5
  * QuickReport conversions.  Get rid of semicolons after comments.
- * 
+ *
  * *****************  Version 1  *****************
  * User: Roddym       Date: 7/12/99    Time: 9:42
  * Created in $/PBL D5
@@ -119,7 +119,7 @@ uses
 
 type
   TPBRPCustStateFrm = class(TForm)
-    CustStateQuickReport: TQuickRep;
+    InvoiceReport: TQuickRep;
     SalesInvDataSource: TDataSource;
     CompDataSource: TDataSource;
     GetCompSQL: TQuery;
@@ -167,7 +167,7 @@ type
     TotGoodsQRLbl: TQRLabel;
     TotVatQRLbl: TQRLabel;
     InvTotQrLbl: TQRLabel;
-    procedure CustStateQuickReportBeforePrint(Sender: TCustomQuickRep;
+    procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand;
@@ -178,12 +178,14 @@ type
       var PrintBand: Boolean);
     procedure InvDetailBandAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
-    procedure CustStateQuickReportAfterPrint(Sender: TObject);
+    procedure InvoiceReportAfterPrint(Sender: TObject);
     procedure GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure GrpFootQRBandAfterPrint(Sender: TQRCustomBand;
       BandPrinted: Boolean);
   private
+    exportFile: textFile;
+    exporting: boolean;
     FReprint: boolean;
     procedure SetReprint(const Value: boolean);
   public
@@ -195,6 +197,7 @@ type
     PrinterSettings : TPrinterSettings;
     rvat, rGoods: Real;
     property Reprint: boolean read FReprint write SetReprint;
+    procedure ExportToFile(fileName: string);
   end;
 
 var
@@ -209,11 +212,11 @@ var
 
 {$R *.DFM}
 
-procedure TPBRPCustStateFrm.CustStateQuickReportBeforePrint(Sender:
+procedure TPBRPCustStateFrm.InvoiceReportBeforePrint(Sender:
   TCustomQuickRep;
   var PrintReport: Boolean);
 begin
-  with CustStateQuickReport.PrinterSettings do
+  with InvoiceReport.PrinterSettings do
   begin
     PrinterIndex := PrinterSettings.PrinterIndex;
     Copies := PrinterSettings.Copies;
@@ -230,6 +233,33 @@ begin
     Close;
     Open;
   end;
+end;
+
+procedure TPBRPCustStateFrm.ExportToFile(fileName: string);
+var
+  tempStr: string;
+begin
+  self.exporting := true;
+  assignFile(self.exportFile, fileName);
+  rewrite(self.exportFile);
+
+  tempStr := '"Customer"'
+        + ',"Account Code"'
+        + ',"Run Date"'
+        + ',"Reference"'
+        + ',"Your Reference"'
+        + ',"Description"'
+        + ',"Goods"'
+        + ',"VAT"'
+        + ',"Total"'
+        + ',"Invoice No"'
+        + ',"Job Number"';
+
+  writeLn(self.exportFile, tempStr);
+
+  InvoiceReport.Prepare;
+
+  CloseFile(self.exportFile);
 end;
 
 function TPBRPCustStateFrm.GetDetails(Sender: TObject): Integer;
@@ -314,7 +344,7 @@ begin
   FReprint := Value;
 end;
 
-procedure TPBRPCustStateFrm.CustStateQuickReportAfterPrint(
+procedure TPBRPCustStateFrm.InvoiceReportAfterPrint(
   Sender: TObject);
 begin
   with UpCustSQL do
@@ -330,9 +360,9 @@ end;
 procedure TPBRPCustStateFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-      TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
-      TotVatQRLbl.caption := formatfloat('0.00',rVat);
-      InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloat(TotGoodsQRLbl.Caption)+StrToFloat(TotVatQRlbl.caption)));
+  TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
+  TotVatQRLbl.caption := formatfloat('0.00',rVat);
+  InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloat(TotGoodsQRLbl.Caption)+StrToFloat(TotVatQRlbl.caption)));
 end;
 
 procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;

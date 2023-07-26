@@ -124,8 +124,10 @@ type
       PrintReport: Boolean);
   private
     FbAddressOnly: boolean;
+    FlogoPath: string;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     iSONumber: integer;
@@ -135,6 +137,8 @@ type
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
+    { logoPath added by GDK }
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -253,6 +257,11 @@ begin
   QRDBCustOrderRef.Enabled := not bAddressOnly;
   lblCustOrderRef.enabled := not bAddressOnly;
   LblDeliveryNo.Enabled := not bAddressOnly;
+end;
+
+procedure TSTRPLabelsFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
 end;
 
 procedure TSTRPLabelsFrm.SetbAddressOnly(const Value: boolean);

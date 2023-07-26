@@ -48,6 +48,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     View3DOptions.Orthogonal = False
     View3DOptions.Perspective = 0
     View3DOptions.Rotation = 360
+    View3DOptions.ZoomText = ztNo
     View3DWalls = False
     Zoom.Allow = False
     TabOrder = 0
@@ -121,6 +122,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     View3DOptions.Orthogonal = False
     View3DOptions.Perspective = 0
     View3DOptions.Rotation = 360
+    View3DOptions.ZoomText = ztNo
     View3DWalls = False
     Zoom.Allow = False
     TabOrder = 1
@@ -194,6 +196,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     View3DOptions.Orthogonal = False
     View3DOptions.Perspective = 0
     View3DOptions.Rotation = 360
+    View3DOptions.ZoomText = ztNo
     View3DWalls = False
     Zoom.Allow = False
     TabOrder = 2
@@ -249,8 +252,8 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = -40
-    ExplicitWidth = 148
+    ExplicitTop = 588
+    ExplicitWidth = 1083
     object Panel1: TPanel
       Left = 831
       Top = 1
@@ -260,7 +263,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = -110
+      ExplicitLeft = 825
       DesignSize = (
         257
         38)
@@ -323,6 +326,7 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
     View3DOptions.Orthogonal = False
     View3DOptions.Perspective = 0
     View3DOptions.Rotation = 360
+    View3DOptions.ZoomText = ztNo
     View3DWalls = False
     Zoom.Allow = False
     TabOrder = 4

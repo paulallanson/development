@@ -44,6 +44,9 @@ implementation
 
 {$R *.DFM}
 
+uses
+  System.UITypes;
+
 { TSTPrtMntLvlsFrm }
 
 procedure TSTPrtMntLvlsFrm.SetMaxLevel(const Value: integer);

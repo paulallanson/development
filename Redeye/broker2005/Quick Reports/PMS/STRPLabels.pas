@@ -138,8 +138,10 @@ type
       PrintReport: Boolean);
   private
     FbAddressOnly: boolean;
+    FlogoPath: string;
     procedure SetbAddressOnly(const Value: boolean);
     procedure SetCaptions;
+    procedure SetlogoPath(const Value: string);
   public
     Preview: ByteBool;
     iSONumber: integer;
@@ -149,6 +151,8 @@ type
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
+    { logoPatha added bY gdk}
+    property logoPath: string read FlogoPath write SetlogoPath;
   end;
 
 var
@@ -296,6 +300,11 @@ begin
     QRBand1.enabled := false
   else
     QRSubDetAddress.enabled := false;
+end;
+
+procedure TSTRPLabelsFrm.SetlogoPath(const Value: string);
+begin
+  FlogoPath := Value;
 end;
 
 procedure TSTRPLabelsFrm.SetbAddressOnly(const Value: boolean);

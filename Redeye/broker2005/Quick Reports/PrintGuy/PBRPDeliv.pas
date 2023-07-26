@@ -36,7 +36,6 @@ type
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
-    
     OrderLbl: TQRLabel;
     gtQRLabel1: TQRLabel;
     qrlblInstructions: TQRLabel;
@@ -87,7 +86,8 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, PBImages;
+uses
+  pbMainMenu, CCSCommon, PBImages, Printer.Tools;
 
 {$R *.DFM}
 
@@ -99,7 +99,7 @@ var
   UseBrnchNm, UseFAO: boolean;
 begin
   if blineup then Exit;
-  UseBrnchNm := False;  
+  UseBrnchNm := False;
   UseFAO := false;
 
   if DeliveryDate = '' then
@@ -351,6 +351,12 @@ begin
   FDeliveryDate := Value;
 end;
 
+function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -373,7 +379,7 @@ begin
   self.Preview := false;
   if self.GetDetails(self) = 0 then
     exit;
-    
+
   PBDelivQuickReport.Prepare;
 
   fileLocation := GetWinTempDir;
@@ -471,5 +477,6 @@ begin
 
   AFilters.free;
 end;
+*)
 
 end.

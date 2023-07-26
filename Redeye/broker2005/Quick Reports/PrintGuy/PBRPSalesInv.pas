@@ -67,7 +67,6 @@ type
     lblReference: TQRLabel;
     ExtrasVatLbl: TQRLabel;
     qrySIHead: TQuery;
-    
     qrlblInvoiceTotal: TQRLabel;
     qrlblVatTotal: TQRLabel;
     qrlblNetTotal: TQRLabel;
@@ -132,14 +131,12 @@ type
   private
     FInvoiceNo : integer;
     FLoops: integer;
+    FbCustomerisReseller: Boolean;
     procedure BuildPaymentNotes(const iNarrative: integer);
     procedure GetSODeliveryDetails(tempCode: string);
     function GetPOCustOrderNo(tempCode: string): string;
     function GetSOCustOrderNo(tempCode: string): string;
     function GetJBCustOrderNo(tempCode: string): string;
-    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
-    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
-    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
     function GetSOLineProduct(tempCode: integer; tempLine: integer): string;
     function GetFormRefDesc(tempCode: real; tempLine: integer): string;
     function GetSOLinePUnit(tempCode: integer; tempLine: integer): string;
@@ -154,6 +151,7 @@ type
     procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
+    procedure SetbCustomerisReseller(const Value: Boolean);
   public
     bInvoice: boolean;
     bPrintLogo: boolean;
@@ -165,7 +163,12 @@ type
     SelCode: Integer;
     ShowZeroValues: string;
     PrinterSettings: TPrinterSettings;
+    { bCustomerisReseller added by GDK }
+    property bCustomerisReseller: Boolean read FbCustomerisReseller write SetbCustomerisReseller;
     procedure GetInvoiceData;
+    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
+    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
+    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
   end;
 
 var
@@ -909,6 +912,11 @@ procedure TPBRPSalesInvFrm.QtyInvoicedLblPrint(sender: TObject;
 begin
   if bLineUp then
     Value := 'NNNNNNNN';
+end;
+
+procedure TPBRPSalesInvFrm.SetbCustomerisReseller(const Value: Boolean);
+begin
+  FbCustomerisReseller := Value;
 end;
 
 procedure TPBRPSalesInvFrm.AddChargesFooterBeforePrint(

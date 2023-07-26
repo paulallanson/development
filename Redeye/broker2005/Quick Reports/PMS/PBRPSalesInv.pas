@@ -122,12 +122,11 @@ type
   private
     FInvoiceNo : integer;
     FLoops: integer;
+    FShowZeroValues: string;
+    FbCustomerisReseller: Boolean;
     function GetPOCustOrderNo(tempCode: string): string;
     function GetSOCustOrderNo(tempCode: string): string;
     function GetJBCustOrderNo(tempCode: string): string;
-    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
-    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
-    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
     function GetFormRefDesc(tempCode: real; tempLine: integer): string;
     function GetSOLinePUnit(tempCode: integer; tempLine: integer): string;
     procedure GetCompanyInfo(const iNoOfInvoices : integer);
@@ -141,6 +140,8 @@ type
     procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
+    procedure SetShowZeroValues(const Value: string);
+    procedure SetbCustomerisReseller(const Value: Boolean);
   public
     bInvoice: boolean;
     bUpdate: boolean;
@@ -151,7 +152,13 @@ type
     bLineUp : Boolean;
     SelCode: Integer;
     PrinterSettings: TPrinterSettings;
+    { ShowZeroValues, bCustomerisReseller added by GDK }
+    property ShowZeroValues: string read FShowZeroValues write SetShowZeroValues;
+    property bCustomerisReseller: Boolean read FbCustomerisReseller write SetbCustomerisReseller;
     procedure GetInvoiceData;
+    function GetPOLineDesc(tempCode: real; tempLine: integer): string;
+    function GetSOLineDesc(tempCode: integer; tempLine: integer): string;
+    function GetJBLineDesc(tempCode: integer; tempLine: integer): string;
   end;
 
 var
@@ -833,6 +840,16 @@ procedure TPBRPSalesInvFrm.QtyInvoicedLblPrint(sender: TObject;
 begin
   if bLineUp then
     Value := 'NNNNNNNN';
+end;
+
+procedure TPBRPSalesInvFrm.SetbCustomerisReseller(const Value: Boolean);
+begin
+  FbCustomerisReseller := Value;
+end;
+
+procedure TPBRPSalesInvFrm.SetShowZeroValues(const Value: string);
+begin
+  FShowZeroValues := Value;
 end;
 
 procedure TPBRPSalesInvFrm.AddChargesFooterBeforePrint(

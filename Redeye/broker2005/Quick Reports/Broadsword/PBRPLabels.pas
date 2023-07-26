@@ -71,7 +71,8 @@ var
 
 implementation
 
-uses CCSCommon, pbDatabase;
+uses
+  CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -277,6 +278,12 @@ begin
 
 end;
 
+function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -314,7 +321,7 @@ begin
      end;
 
     DeliveryDateLbl.caption := PBDateStr(PODelivSQL.fieldbyname('Date_Point').asdatetime);
-    
+
     try
       iBoxQuantity := strtoint(PODelivSQL.fieldbyname('Forms_per_Box').asstring)
     except
@@ -423,5 +430,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

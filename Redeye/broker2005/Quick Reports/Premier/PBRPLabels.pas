@@ -69,7 +69,8 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, pbDatabase;
+uses
+  pbMainMenu, CCSCommon, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -304,6 +305,12 @@ begin
   FbAddressOnly := Value;
 end;
 
+function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -434,5 +441,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.

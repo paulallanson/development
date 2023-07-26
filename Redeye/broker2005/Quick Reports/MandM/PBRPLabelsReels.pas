@@ -71,7 +71,8 @@ var
 
 implementation
 
-uses CCSCommon, PBImages, pbDatabase;
+uses
+  CCSCommon, PBImages, pbDatabase, Printer.Tools;
 
 {$R *.DFM}
 
@@ -314,6 +315,12 @@ begin
   FbAddressOnly := Value;
 end;
 
+function TPBRPLabelsReelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
+begin
+  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+end;
+
+(* GDK ToDo: remove after tests
 function TPBRPLabelsReelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer;
   attachmentType: string): TStringList;
 var
@@ -343,16 +350,16 @@ begin
 
     self.useCustAddress := false;
 
-(*    with PBLabelsQuickReport.page do
-      begin
-       PaperSize := Custom;
-       length := 105;
-       width := 148.5;
-       columns := 1;
-     end;
-*)
+//    with PBLabelsQuickReport.page do
+//      begin
+//       PaperSize := Custom;
+//       length := 105;
+//       width := 148.5;
+//       columns := 1;
+//     end;
+
     DeliveryDateLbl.caption := PBDateStr(PODelivSQL.fieldbyname('Date_Point').asdatetime);
-    
+
     try
       iBoxQuantity := strtoint(PODelivSQL.fieldbyname('Forms_per_Box').asstring)
     except
@@ -461,5 +468,6 @@ begin
     dmBroker.DeleteRecord(iIntSel);
   end;
 end;
+*)
 
 end.
