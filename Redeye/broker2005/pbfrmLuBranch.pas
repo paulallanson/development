@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, Db, DBTables;
+  StdCtrls, Grids, DBGrids, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TForm1 = class(TForm)
@@ -14,7 +17,7 @@ type
     Button3: TButton;
     Button4: TButton;
     dtsBranch: TDataSource;
-    qryBranch: TQuery;
+    qryBranch: TFDQuery;
   private
     { Private declarations }
   public

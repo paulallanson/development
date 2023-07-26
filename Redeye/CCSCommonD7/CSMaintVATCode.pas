@@ -35,7 +35,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables;
+  StdCtrls, Buttons, DBCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintVATCodeFrm = class(TForm)
@@ -43,10 +46,10 @@ type
     Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DescrEdit: TEdit;
     RefEdit: TEdit;
@@ -54,7 +57,7 @@ type
     DetsSRC: TDataSource;
     VATRateMemo: TMemo;
     Label3: TLabel;
-    CheckUniqueRefSQL: TQuery;
+    CheckUniqueRefSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

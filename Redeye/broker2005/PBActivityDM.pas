@@ -3,41 +3,44 @@ unit PBActivityDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, CCSCommon, ActiveX;
+  SysUtils, Classes, DB, CCSCommon, ActiveX,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TActMode   = (actAdd, actChange, actDelete, actView, actFollowUp);
 
   TdtmdlActivity = class(TDataModule)
-    qryZero: TQuery;
-    qryUpActivity: TQuery;
-    qryGetActivity: TQuery;
-    AddSQL: TQuery;
-    GetLastSQL: TQuery;
-    qryActivityGrid: TQuery;
+    qryZero: TFDQuery;
+    qryUpActivity: TFDQuery;
+    qryGetActivity: TFDQuery;
+    AddSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    qryActivityGrid: TFDQuery;
     dtsActivityGrid: TDataSource;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dsOperator: TDataSource;
-    qryCustomerBranches: TQuery;
-    qryContacts: TQuery;
+    qryCustomerBranches: TFDQuery;
+    qryContacts: TFDQuery;
     dtsCustomerBranches: TDataSource;
     dtsContacts: TDataSource;
-    qryAssignedTo: TQuery;
+    qryAssignedTo: TFDQuery;
     dtsAssignedTo: TDataSource;
-    qryActivityType: TQuery;
+    qryActivityType: TFDQuery;
     dtsActivityType: TDataSource;
-    qryActivityStatus: TQuery;
+    qryActivityStatus: TFDQuery;
     dtsActivityStatus: TDataSource;
-    qryActivityPriority: TQuery;
+    qryActivityPriority: TFDQuery;
     dtsActivityPriority: TDataSource;
-    qryActivityModule: TQuery;
+    qryActivityModule: TFDQuery;
     dtsActivityModule: TDataSource;
-    qryActivityBase: TQuery;
-    qryActivityReminder: TQuery;
+    qryActivityBase: TFDQuery;
+    qryActivityReminder: TFDQuery;
     dtsActivityReminder: TDataSource;
-    qryGetLinkedActivities: TQuery;
+    qryGetLinkedActivities: TFDQuery;
     dtsGetLinkedActivities: TDataSource;
-    qryGetCustomerContact: TQuery;
+    qryGetCustomerContact: TFDQuery;
   private
     function GetHeaderCount: integer;
     function GetReminderCount: integer;

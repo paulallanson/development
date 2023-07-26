@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPRepsCatPerformfrm = class(TForm)
@@ -13,13 +16,13 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRBand2: TQRBand;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     qrsubPeriods: TQRSubDetail;
     QRLabel2: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
     qrbGrpCatFooter: TQRBand;
@@ -176,8 +179,8 @@ type
     qrlblRepBudTOTotal: TQRLabel;
     qrlblRepActProfTotal: TQRLabel;
     qrlblRepBudProfTotal: TQRLabel;
-    qryRepCatBudgets: TQuery;
-    qryPeriods: TQuery;
+    qryRepCatBudgets: TFDQuery;
+    qryPeriods: TFDQuery;
     qrlblTODiff1: TQRLabel;
     qrlblProfDiff1: TQRLabel;
     qrlblTODiff2: TQRLabel;

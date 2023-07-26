@@ -1,6 +1,4 @@
 object dmJobBag: TdmJobBag
-  OldCreateOrder = False
-  Left = 198
   Height = 724
   Width = 1119
   object dsJBHeaderGrid: TDataSource
@@ -9,9 +7,9 @@ object dmJobBag: TdmJobBag
     Left = 40
     Top = 8
   end
-  object qryJBHeaderGrid: TQuery
-    DatabaseName = 'PB'
+  object qryJBHeaderGrid: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT Job_Bag.Job_Bag, Job_Bag.Job_Bag_Descr, Customer' +
@@ -41,23 +39,17 @@ object dmJobBag: TdmJobBag
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'custname'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'custname'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ShowInactive'
-        ParamType = ptUnknown
       end>
   end
-  object qryReserveSlot: TQuery
-    DatabaseName = 'PB'
+  object qryReserveSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag'
       
@@ -76,18 +68,16 @@ object dmJobBag: TdmJobBag
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetReservedSlot: TQuery
-    DatabaseName = 'PB'
+  object qryGetReservedSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Job_Bag'
       'WHERE Job_Bag_Descr = :GUID'
@@ -96,19 +86,17 @@ object dmJobBag: TdmJobBag
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 400
     Top = 16
   end
-  object qryJBHeader: TQuery
-    DatabaseName = 'PB'
+  object qryJBHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag.Job_Bag,'
       '      Job_Bag.Job_Bag_Descr,'
@@ -217,14 +205,12 @@ object dmJobBag: TdmJobBag
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'jobbag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpdHeader: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpdHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Job_Bag'
       '  SET Job_Bag_Descr=:Description,'
@@ -293,289 +279,216 @@ object dmJobBag: TdmJobBag
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Branch'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Date'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Goods_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Office_Contact'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Cust_Order_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Sub_Rep'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'inactive'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Ready_for_invoicing'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Account_Team'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Description_Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Original_Job_Bag'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Invoice_Location'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'On_Hold'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Artwork_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_Due_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_Proof_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_approval_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Data_Services_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Data_Required_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Brief_Required_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Required_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Brief_Available_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Available_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Proof_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Proof_Required_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Proof_Approval_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Samples_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_to_Client'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_Approval'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Start'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Invoiced_By'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Invoiced_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Bag_Production_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Cost_Centre'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Cash_Sales'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Production_Complete'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Production_Complete_date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Production_Complete_by'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Price_unit'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'File_Copies_Received_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'File_Copies_Received_by'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Invoice_This_Week'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
+        Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Branch'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
+        Name = 'Date'
         DataType = ftDateTime
+        ParamType = ptInput
+      end
+      item
+        Name = 'Goods_Required'
+      end
+      item
+        Name = 'Office_Contact'
+      end
+      item
+        Name = 'Cust_Order_no'
+      end
+      item
+        Name = 'Quantity'
+      end
+      item
+        Name = 'Rep'
+      end
+      item
+        Name = 'Sub_Rep'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Job_Bag_Status'
+      end
+      item
+        Name = 'inactive'
+      end
+      item
+        Name = 'Ready_for_invoicing'
+      end
+      item
+        Name = 'Account_Team'
+      end
+      item
+        Name = 'Description_Reference'
+      end
+      item
+        Name = 'Narrative'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Original_Job_Bag'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Invoice_Location'
+        DataType = ftInteger
+      end
+      item
+        Name = 'On_Hold'
+      end
+      item
+        Name = 'Artwork_Required'
+      end
+      item
+        Name = 'Artwork_Due_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Artwork_Proof_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Artwork_approval_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Data_Services_Required'
+      end
+      item
+        Name = 'Data_Required_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Brief_Required_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Required_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Brief_Available_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Available_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Proof_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Proof_Required_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Proof_Approval_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Samples_Required'
+      end
+      item
+        Name = 'Sample_to_Client'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Sample_Approval'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Date_Start'
+      end
+      item
+        Name = 'Invoiced_By'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Invoiced_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Job_Bag_Production_Status'
+      end
+      item
+        Name = 'Cost_Centre'
+      end
+      item
+        Name = 'Cash_Sales'
+      end
+      item
+        Name = 'Production_Complete'
+      end
+      item
+        Name = 'Production_Complete_date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Production_Complete_by'
+      end
+      item
+        Name = 'Price_unit'
+        DataType = ftInteger
+      end
+      item
+        Name = 'File_Copies_Received_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'File_Copies_Received_by'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Invoice_This_Week'
+        DataType = ftString
+      end
+      item
         Name = 'Invoice_This_Week_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_This_Week_By'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Pack_Format_ID'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Enclosing_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Enclosing_Type'
+      end
+      item
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Job_Bag_Line_Dets'
       'WHERE'
@@ -588,19 +501,19 @@ object dmJobBag: TdmJobBag
     Top = 168
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryJBAllLines: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllLines: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT JBL.*, S.Name as SupplierName, SB.Name as BranchName, JBL' +
@@ -625,71 +538,57 @@ object dmJobBag: TdmJobBag
     Top = 112
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end>
     object qryJBAllLinesJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag'
     end
     object qryJBAllLinesJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line'
     end
     object qryJBAllLinesJob_Bag_Line_Type: TStringField
       FieldName = 'Job_Bag_Line_Type'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Type'
       FixedChar = True
       Size = 2
     end
     object qryJBAllLinesPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
-      Origin = 'PB.Job_Bag_Line_Dets.Purchase_Order'
     end
     object qryJBAllLinesLine: TIntegerField
       FieldName = 'Line'
-      Origin = 'PB.Job_Bag_Line_Dets.Line'
     end
     object qryJBAllLinesSupplier: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Job_Bag_Line_Dets.Supplier'
     end
     object qryJBAllLinesBranch_No: TIntegerField
       FieldName = 'Branch_No'
-      Origin = 'PB.Job_Bag_Line_Dets.Branch_No'
     end
     object qryJBAllLinesJob_Bag_Line_Descr: TStringField
       FieldName = 'Job_Bag_Line_Descr'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Descr'
       FixedChar = True
       Size = 80
     end
     object qryJBAllLinesJob_Bag_Line_Cost: TCurrencyField
       FieldName = 'Job_Bag_Line_Cost'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Cost'
     end
     object qryJBAllLinesJob_Bag_Line_Sell: TCurrencyField
       FieldName = 'Job_Bag_Line_Sell'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Sell'
     end
     object qryJBAllLinesJob_Bag_Line_Invoiced: TStringField
       FieldName = 'Job_Bag_Line_Invoiced'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Invoiced'
       FixedChar = True
       Size = 2
     end
     object qryJBAllLinesJob_Bag_Quantity: TIntegerField
       FieldName = 'Job_Bag_Quantity'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Quantity'
     end
     object qryJBAllLinesVAT_Code: TIntegerField
       FieldName = 'VAT_Code'
-      Origin = 'PB.Job_Bag_Line_Dets.VAT_Code'
     end
     object qryJBAllLinesCurrency_Code: TIntegerField
       FieldName = 'Currency_Code'
-      Origin = 'PB.Job_Bag_Line_Dets.Currency_Code'
     end
     object qryJBAllLinesMargin: TFloatField
       FieldKind = fkCalculated
@@ -718,7 +617,6 @@ object dmJobBag: TdmJobBag
     end
     object qryJBAllLinessupp_inv_recd: TStringField
       FieldName = 'supp_inv_recd'
-      Origin = 'PB.Job_Bag_Line_Dets.supp_inv_recd'
       FixedChar = True
       Size = 4
     end
@@ -731,19 +629,15 @@ object dmJobBag: TdmJobBag
     end
     object qryJBAllLinesProduct_Type: TIntegerField
       FieldName = 'Product_Type'
-      Origin = 'PB.Job_Bag_Line_Dets.Product_Type'
     end
     object qryJBAllLinesOperator: TIntegerField
       FieldName = 'Operator'
-      Origin = 'PB.Job_Bag_Line_Dets.Operator'
     end
     object qryJBAllLinesSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'PB.Job_Bag_Line_Dets.Sales_Order'
     end
     object qryJBAllLinesSales_Order_Line_no: TIntegerField
       FieldName = 'Sales_Order_Line_no'
-      Origin = 'PB.Job_Bag_Line_Dets.Sales_Order_Line_no'
     end
     object qryJBAllLinesOrderNumber: TStringField
       FieldKind = fkCalculated
@@ -753,23 +647,18 @@ object dmJobBag: TdmJobBag
     end
     object qryJBAllLinesJob_Bag_Line_Status: TIntegerField
       FieldName = 'Job_Bag_Line_Status'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Status'
     end
     object qryJBAllLinesworks_order: TIntegerField
       FieldName = 'works_order'
-      Origin = 'PB.Job_Bag_Line_Dets.works_order'
     end
     object qryJBAllLinesProcess: TIntegerField
       FieldName = 'Process'
-      Origin = 'PB.Job_Bag_Line_Dets.Process'
     end
     object qryJBAllLinesPrice_Unit: TIntegerField
       FieldName = 'Price_Unit'
-      Origin = 'PB.Job_Bag_Line_Dets.Price_Unit'
     end
     object qryJBAllLinesSelling_Price: TCurrencyField
       FieldName = 'Selling_Price'
-      Origin = 'PB.Job_Bag_Line_Dets.Selling_Price'
     end
     object qryJBAllLinesQty_Invoiced: TFloatField
       FieldName = 'Qty_Invoiced'
@@ -817,9 +706,9 @@ object dmJobBag: TdmJobBag
       FieldName = 'Job_Bag_Line_Reseller'
     end
   end
-  object qryJBAddLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag_Line_Dets'
       #9'(Job_Bag,Job_Bag_Line,Job_Bag_Line_Type,Purchase_Order,Line,'
@@ -864,184 +753,148 @@ object dmJobBag: TdmJobBag
     Top = 168
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Type'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Cost'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Sell'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Cost'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Sell'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Job_Bag_Line_Invoiced'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Quantity'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'VAT_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'works_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Reseller_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Selling_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Bag_Line_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sequence_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Ready_To_Invoice'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_SSP'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_Cost_Plus_OHD'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Unit_SSP_Original'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Quote'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Reseller_Price'
+      end
+      item
+        Name = 'Selling_Price'
+      end
+      item
+        Name = 'Job_Bag_Line_Status'
+      end
+      item
+        Name = 'Sequence_no'
+      end
+      item
+        Name = 'Qty_Invoiced'
+      end
+      item
+        Name = 'Ready_To_Invoice'
+      end
+      item
+        Name = 'Unit_Cost'
+      end
+      item
+        Name = 'Unit_SSP'
+      end
+      item
+        Name = 'Unit_Cost_Plus_OHD'
+      end
+      item
+        Name = 'Unit_SSP_Original'
+      end
+      item
+        Name = 'Inactive'
+      end
+      item
+        Name = 'Quote'
+        DataType = ftFloat
+      end
+      item
         Name = 'Quote_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Cost_Markup_Perc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Is_Internal_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Reseller'
-        ParamType = ptUnknown
       end>
   end
   object dsJBAllLines: TDataSource
@@ -1050,29 +903,29 @@ object dmJobBag: TdmJobBag
     Left = 40
     Top = 112
   end
-  object qryJBType: TQuery
-    DatabaseName = 'PB'
+  object qryJBType: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Job_Bag_Line_Type')
     Left = 256
     Top = 120
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Price_unit WHERE Price_unit = :Unit')
     Left = 312
     Top = 152
     ParamData = <
       item
-        DataType = ftString
         Name = 'Unit'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object OperatorSQL: TQuery
-    DatabaseName = 'pb'
+  object OperatorSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator'
       'order by Name')
@@ -1085,8 +938,8 @@ object dmJobBag: TdmJobBag
     Left = 112
     Top = 488
   end
-  object qryCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from customer_Contact'
       'where Customer = :Customer and '
@@ -1096,14 +949,12 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object srcCustContact: TDataSource
@@ -1111,8 +962,8 @@ object dmJobBag: TdmJobBag
     Left = 312
     Top = 216
   end
-  object qryCustReps: TQuery
-    DatabaseName = 'PB'
+  object qryCustReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep.Name, Rep.Rep'
       'from Reps_Branches, Rep'
@@ -1123,14 +974,12 @@ object dmJobBag: TdmJobBag
     Top = 488
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object srcCustReps: TDataSource
@@ -1138,9 +987,9 @@ object dmJobBag: TdmJobBag
     Left = 336
     Top = 328
   end
-  object qryJBUpLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag_Line_Dets'
       'set Job_Bag_Line_Type = :Job_Bag_Line_Type,'
@@ -1184,188 +1033,152 @@ object dmJobBag: TdmJobBag
     Top = 168
     ParamData = <
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Type'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Cost'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line_Sell'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Cost'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Job_Bag_Line_Sell'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Job_Bag_Line_Invoiced'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Quantity'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'VAT_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'works_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Reseller_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Selling_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ready_To_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_SSP'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost_plus_OHD'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_SSP_Original'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Quote_Line_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Cost_Markup_Perc'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Line_Is_Internal_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Bag_Line_Reseller'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Job_Cost_Markup_Perc'
+      end
+      item
+        Name = 'Line_Is_Internal_Cost'
+      end
+      item
+        Name = 'Job_Bag_Line_Reseller'
+      end
+      item
         Name = 'Job_Bag'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_ord_line_Status, Inactive'
       'from Purchase_OrderLine'
@@ -1375,18 +1188,14 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBDelLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBDelLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag and'
@@ -1395,22 +1204,18 @@ object dmJobBag: TdmJobBag
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object dsDummy: TDataSource
     Left = 336
     Top = 112
   end
-  object qryPO: TQuery
-    DatabaseName = 'PB'
+  object qryPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_order, Line, Inactive,'
       '    Purch_ord_line_Status.Description as Status_Description,'
@@ -1428,18 +1233,14 @@ object dmJobBag: TdmJobBag
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
-  object qryProductType: TQuery
-    DatabaseName = 'PB'
+  object qryProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Product_Type, Product_Type.Description, Category.Descript' +
@@ -1452,13 +1253,11 @@ object dmJobBag: TdmJobBag
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Sales_invoice_no'
       'from Sales_Invoice_line, Sales_invoice '
@@ -1482,28 +1281,20 @@ object dmJobBag: TdmJobBag
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryCust: TQuery
-    DatabaseName = 'PB'
+  object qryCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from customer'
       'where customer = :customer')
@@ -1511,13 +1302,11 @@ object dmJobBag: TdmJobBag
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
-  object qrySO: TQuery
-    DatabaseName = 'PB'
+  object qrySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sales_order, Sales_order.Sales_order_head_Status, sales_O' +
@@ -1531,13 +1320,11 @@ object dmJobBag: TdmJobBag
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object GetLastJBLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
@@ -1546,13 +1333,11 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  sales_order_Line.*,'
       '        Sales_order.Sales_order_head_Status,'
@@ -1570,18 +1355,14 @@ object dmJobBag: TdmJobBag
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryWO: TQuery
-    DatabaseName = 'PB'
+  object qryWO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  works_order,'
       '        works_order.Works_order_Status,'
@@ -1598,13 +1379,11 @@ object dmJobBag: TdmJobBag
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'works_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetAllJBLines: TQuery
-    DatabaseName = 'pb'
+  object qryGetAllJBLines: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Job_Bag_line_dets'
       'where Job_Bag = :Job_Bag')
@@ -1612,13 +1391,11 @@ object dmJobBag: TdmJobBag
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetAccountMgr: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountMgr: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Account_Team_Name'
       'from Account_Team_Member, Account_Team'
@@ -1628,13 +1405,11 @@ object dmJobBag: TdmJobBag
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object GetLastJBSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_Job_Bag_Number'
       'From Company'
@@ -1642,8 +1417,8 @@ object dmJobBag: TdmJobBag
     Left = 112
     Top = 588
   end
-  object UpdLastJBSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastJBSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Job_Bag_Number = :Last_Job_Bag_Number'
@@ -1652,19 +1427,17 @@ object dmJobBag: TdmJobBag
     Top = 592
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Job_Bag_Number'
-        ParamType = ptUnknown
       end>
   end
-  object qrySpare: TQuery
-    DatabaseName = 'PB'
+  object qrySpare: TFDQuery
+    ConnectionName = 'PB'
     Left = 192
     Top = 592
   end
-  object qryJBAddHeader: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag ('
       'Job_Bag,'
@@ -1794,293 +1567,208 @@ object dmJobBag: TdmJobBag
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ready_for_invoicing'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Original_Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Artwork_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_Due_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_approval_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Data_Services_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Data_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Brief_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Brief_Available_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Available_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Approval_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Samples_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Sample_to_Client'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Sample_Approval'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Invoiced_by'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'Invoiced_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Production_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Centre'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cash_Sales'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Complete'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Complete_by'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'File_Copies_Received_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'File_Copies_Received_by'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Invoice_This_Week'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
+        Name = 'File_Copies_Received_by'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Invoice_This_Week'
+      end
+      item
         Name = 'Invoice_This_Week_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_This_Week_By'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Branch_No'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Pack_Format_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Pack_Format_ID'
+        DataType = ftInteger
+      end
+      item
         Name = 'Enclosing_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetOpAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetOpAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select account_team.account_team, account_team.account_team_name'
       'from account_team_member, Account_Team'
@@ -2090,13 +1778,11 @@ object dmJobBag: TdmJobBag
     Top = 472
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Account_Team'
@@ -2105,14 +1791,12 @@ object dmJobBag: TdmJobBag
     Top = 528
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBRepeatLines: TQuery
-    DatabaseName = 'PB'
+  object qryJBRepeatLines: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT JBL.*, S.Name as SupplierName, SB.Name as BranchName'
       'FROM Job_Bag_Line_Dets JBL, Supplier S, Supplier_Branch SB'
@@ -2132,71 +1816,57 @@ object dmJobBag: TdmJobBag
     Top = 168
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end>
     object IntegerField1: TIntegerField
       FieldName = 'Job_Bag'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag'
     end
     object IntegerField2: TIntegerField
       FieldName = 'Job_Bag_Line'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line'
     end
     object StringField1: TStringField
       FieldName = 'Job_Bag_Line_Type'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Type'
       FixedChar = True
       Size = 2
     end
     object FloatField1: TFloatField
       FieldName = 'Purchase_Order'
-      Origin = 'PB.Job_Bag_Line_Dets.Purchase_Order'
     end
     object IntegerField3: TIntegerField
       FieldName = 'Line'
-      Origin = 'PB.Job_Bag_Line_Dets.Line'
     end
     object IntegerField4: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Job_Bag_Line_Dets.Supplier'
     end
     object IntegerField5: TIntegerField
       FieldName = 'Branch_No'
-      Origin = 'PB.Job_Bag_Line_Dets.Branch_No'
     end
     object StringField2: TStringField
       FieldName = 'Job_Bag_Line_Descr'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Descr'
       FixedChar = True
       Size = 80
     end
     object CurrencyField1: TCurrencyField
       FieldName = 'Job_Bag_Line_Cost'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Cost'
     end
     object CurrencyField2: TCurrencyField
       FieldName = 'Job_Bag_Line_Sell'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Sell'
     end
     object StringField3: TStringField
       FieldName = 'Job_Bag_Line_Invoiced'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Invoiced'
       FixedChar = True
       Size = 2
     end
     object IntegerField6: TIntegerField
       FieldName = 'Job_Bag_Quantity'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Quantity'
     end
     object IntegerField7: TIntegerField
       FieldName = 'VAT_Code'
-      Origin = 'PB.Job_Bag_Line_Dets.VAT_Code'
     end
     object IntegerField8: TIntegerField
       FieldName = 'Currency_Code'
-      Origin = 'PB.Job_Bag_Line_Dets.Currency_Code'
     end
     object FloatField2: TFloatField
       FieldKind = fkCalculated
@@ -2225,7 +1895,6 @@ object dmJobBag: TdmJobBag
     end
     object StringField7: TStringField
       FieldName = 'supp_inv_recd'
-      Origin = 'PB.Job_Bag_Line_Dets.supp_inv_recd'
       FixedChar = True
       Size = 4
     end
@@ -2238,19 +1907,15 @@ object dmJobBag: TdmJobBag
     end
     object IntegerField9: TIntegerField
       FieldName = 'Product_Type'
-      Origin = 'PB.Job_Bag_Line_Dets.Product_Type'
     end
     object IntegerField10: TIntegerField
       FieldName = 'Operator'
-      Origin = 'PB.Job_Bag_Line_Dets.Operator'
     end
     object IntegerField11: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'PB.Job_Bag_Line_Dets.Sales_Order'
     end
     object IntegerField12: TIntegerField
       FieldName = 'Sales_Order_Line_no'
-      Origin = 'PB.Job_Bag_Line_Dets.Sales_Order_Line_no'
     end
     object StringField9: TStringField
       FieldKind = fkCalculated
@@ -2260,23 +1925,18 @@ object dmJobBag: TdmJobBag
     end
     object IntegerField13: TIntegerField
       FieldName = 'Job_Bag_Line_Status'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Status'
     end
     object IntegerField14: TIntegerField
       FieldName = 'works_order'
-      Origin = 'PB.Job_Bag_Line_Dets.works_order'
     end
     object IntegerField15: TIntegerField
       FieldName = 'Process'
-      Origin = 'PB.Job_Bag_Line_Dets.Process'
     end
     object IntegerField16: TIntegerField
       FieldName = 'Price_Unit'
-      Origin = 'PB.Job_Bag_Line_Dets.Price_Unit'
     end
     object CurrencyField3: TCurrencyField
       FieldName = 'Selling_Price'
-      Origin = 'PB.Job_Bag_Line_Dets.Selling_Price'
     end
     object qryJBRepeatLinesLine_Is_Internal_Cost: TStringField
       FieldName = 'Line_Is_Internal_Cost'
@@ -2298,8 +1958,8 @@ object dmJobBag: TdmJobBag
       FieldName = 'Unit_SSP_Original'
     end
   end
-  object qryJBWO: TQuery
-    DatabaseName = 'pb'
+  object qryJBWO: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from'
       'Job_Bag_Works_Order'
@@ -2309,9 +1969,7 @@ object dmJobBag: TdmJobBag
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object srcJBWO: TDataSource
@@ -2319,9 +1977,9 @@ object dmJobBag: TdmJobBag
     Left = 520
     Top = 328
   end
-  object qryJBUpdHeaderStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpdHeaderStatus: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Job_Bag'
       '  SET Job_Bag_Status = :Job_Bag_Status'
@@ -2336,18 +1994,16 @@ object dmJobBag: TdmJobBag
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'JobBag'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object GetPartDetailsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartDetailsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  part.Part_Description,'
       '        Purch_Pack_Quantity,'
@@ -2362,13 +2018,11 @@ object dmJobBag: TdmJobBag
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllWorks: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllWorks: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Works_Order.Job_Bag,'
       '        Job_Bag_Works_Order.Works_Order_no,'
@@ -2394,13 +2048,11 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddWorks: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddWorks: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Job_Bag_Works_Order'
       '(Job_Bag,'
@@ -2413,23 +2065,17 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBWorks: TQuery
-    DatabaseName = 'PB'
+  object qryJBWorks: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Works_Order.Job_Bag,'
       '        Job_Bag_Works_Order.Works_Order_no,'
@@ -2456,18 +2102,14 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetSupplier: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier.Name as Supplier_Name'
       'from Supplier'
@@ -2476,13 +2118,11 @@ object dmJobBag: TdmJobBag
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorksOrder: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorksOrder: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Works_Order'
@@ -2491,13 +2131,11 @@ object dmJobBag: TdmJobBag
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryCheckJBInvoiced: TQuery
-    DatabaseName = 'PB'
+  object qryCheckJBInvoiced: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from sales_invoice_line'
@@ -2506,13 +2144,11 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryInvoiceLoc: TQuery
-    DatabaseName = 'pb'
+  object qryInvoiceLoc: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Invoice_Location'
@@ -2525,9 +2161,7 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_location'
-        ParamType = ptUnknown
       end>
   end
   object srcInvoiceLoc: TDataSource
@@ -2535,8 +2169,8 @@ object dmJobBag: TdmJobBag
     Left = 560
     Top = 272
   end
-  object qrySalesInvoice: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice_Line.Purchase_Order,'
       'Sales_Invoice_Line.Line,'
@@ -2550,18 +2184,14 @@ object dmJobBag: TdmJobBag
     Top = 528
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOHead: TQuery
-    DatabaseName = 'PB'
+  object qryPOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Purchase_Order'
@@ -2570,13 +2200,11 @@ object dmJobBag: TdmJobBag
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBDocument: TQuery
-    DatabaseName = 'pb'
+  object qryJBDocument: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       '(select Operator.Name'
@@ -2590,18 +2218,14 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddDocument: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Document'
       '(Job_Bag,'
@@ -2623,43 +2247,31 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Created_By'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryJBAllDocuments: TQuery
-    DatabaseName = 'pb'
+  object qryJBAllDocuments: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *, '
       '(select Operator.Name'
@@ -2674,14 +2286,12 @@ object dmJobBag: TdmJobBag
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryAllSalesInvoices: TQuery
+  object qryAllSalesInvoices: TFDQuery
     OnCalcFields = qryAllSalesInvoicesCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       #9'Sales_Invoice.Sales_Invoice, '
@@ -2736,9 +2346,8 @@ object dmJobBag: TdmJobBag
     Top = 584
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryAllSalesInvoicesSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
@@ -2791,8 +2400,8 @@ object dmJobBag: TdmJobBag
     Left = 392
     Top = 584
   end
-  object qrySITotal: TQuery
-    DatabaseName = 'PB'
+  object qrySITotal: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_Dets.Job_Bag, '
       #9'SUM(CASE WHEN Price_unit_factor = 0 THEN'
@@ -2831,13 +2440,11 @@ object dmJobBag: TdmJobBag
     Top = 584
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -2846,13 +2453,11 @@ object dmJobBag: TdmJobBag
     Top = 584
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Reps_Branches.Rep, Rep.Name'
       'FROM Rep INNER JOIN Reps_Branches '
@@ -2867,18 +2472,14 @@ object dmJobBag: TdmJobBag
     Top = 536
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object oldqryJBAllProcesses: TQuery
-    DatabaseName = 'PB'
+  object oldqryJBAllProcesses: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Process.Job_Bag,'
@@ -2908,13 +2509,11 @@ object dmJobBag: TdmJobBag
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddProcess: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_bag_Process'
       '(Job_Bag,'
@@ -2946,63 +2545,43 @@ object dmJobBag: TdmJobBag
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Paper_Size'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Paper_Depth_mm'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Paper_Width_mm'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'No_of_Elements'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'No_of_hours'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Paper_Depth_mm'
+      end
+      item
+        Name = 'Paper_Width_mm'
+      end
+      item
+        Name = 'No_of_Elements'
+      end
+      item
+        Name = 'No_of_hours'
+      end
+      item
+        Name = 'Quantity'
+      end
+      item
+        Name = 'Work_Centre_Group'
+        DataType = ftInteger
+      end
+      item
         Name = 'Simplex_Or_Duplex'
-        ParamType = ptUnknown
       end>
   end
-  object oldqryJBProcess: TQuery
-    DatabaseName = 'PB'
+  object oldqryJBProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Process.Job_Bag,'
@@ -3032,18 +2611,14 @@ object dmJobBag: TdmJobBag
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllSchedules: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllSchedules: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Schedule.*, Operator.Name as Operator_Name'
@@ -3055,13 +2630,11 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddSchedule: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddSchedule: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_bag_Schedule'
       '(Job_Bag,'
@@ -3157,223 +2730,176 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Schedule_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Artwork_Required'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_Due_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Artwork_approval_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Data_Services_Required'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Data_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Brief_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Brief_Available_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Data_Available_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Available_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Text_Proof_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'PDF_Proof_Artwork_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'PDF_Proof_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'PDF_Proof_Approval_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Required_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Proof_Approval_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Samples_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_to_Client'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_Approval'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_Due_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_Proof_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Artwork_approval_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Data_Required_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Brief_Required_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Required_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Brief_Available_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Data_Available_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Available_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Text_Proof_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'PDF_Proof_Artwork_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'PDF_Proof_Required_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'PDF_Proof_Approval_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Proof_Required_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Proof_Approval_Date_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_to_Client_Act'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Sample_Approval_Act'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Schedule_Approval_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
+        Name = 'Sample_to_Client'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Sample_Approval'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Artwork_Due_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Artwork_Proof_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Artwork_approval_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Data_Required_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Brief_Required_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Required_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Brief_Available_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Data_Available_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Available_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Text_Proof_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'PDF_Proof_Artwork_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'PDF_Proof_Required_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'PDF_Proof_Approval_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Proof_Required_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Proof_Approval_Date_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Sample_to_Client_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Sample_Approval_Act'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Schedule_Approval_Type'
+        DataType = ftString
+      end
+      item
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryJBSchedule: TQuery
-    DatabaseName = 'PB'
+  object qryJBSchedule: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Schedule.*, Operator.Name as Operator_Name'
@@ -3385,18 +2911,14 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Schedule_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllRequests: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllRequests: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Stock_Request.Job_Bag,'
       '        Job_Bag_Stock_Request.Request_no,'
@@ -3444,13 +2966,11 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBRequest: TQuery
-    DatabaseName = 'PB'
+  object qryJBRequest: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Stock_Request.Job_Bag,'
       '        Job_Bag_Stock_Request.Request_no,'
@@ -3494,18 +3014,14 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Request_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddRequest: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddRequest: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Stock_Request'
       '(Job_Bag,'
@@ -3526,33 +3042,23 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Request_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Included_in_Charges'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddSOJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddSOJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Line_Dets'
       '    (Job_Bag,'
@@ -3593,89 +3099,63 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'VAT_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Product_Type'
+        DataType = ftInteger
+      end
+      item
         Name = 'Sequence_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryAllPurchInvoices: TQuery
+  object qryAllPurchInvoices: TFDQuery
     OnCalcFields = qryAllPurchInvoicesCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       #9'Supplier.Name AS Supplier_Name, '
@@ -3760,14 +3240,12 @@ object dmJobBag: TdmJobBag
     Top = 424
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryAllPurchInvoicesSupplier_Name: TStringField
       FieldName = 'Supplier_Name'
@@ -3832,9 +3310,9 @@ object dmJobBag: TdmJobBag
     Left = 384
     Top = 424
   end
-  object qryQHeader: TQuery
-    DatabaseName = 'PB'
+  object qryQHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Quote.Quote,'
@@ -3898,14 +3376,12 @@ object dmJobBag: TdmJobBag
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAllLines: TQuery
-    DatabaseName = 'PB'
+  object qryQAllLines: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Quote_Line.Quote,'
@@ -3945,13 +3421,11 @@ object dmJobBag: TdmJobBag
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddSupply: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddSupply: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Supply'
       '('
@@ -3974,38 +3448,26 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Supply_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Converted'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBSupply: TQuery
-    DatabaseName = 'PB'
+  object qryJBSupply: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Supply.Job_Bag,'
@@ -4026,18 +3488,14 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Supply_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllSupplies: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllSupplies: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Supply.Job_Bag,'
@@ -4078,13 +3536,11 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAllSupplies: TQuery
-    DatabaseName = 'PB'
+  object qryQAllSupplies: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Quote_Supply.Quote,'
@@ -4123,13 +3579,11 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBHeadTechXML: TQuery
-    DatabaseName = 'PB'
+  object qryJBHeadTechXML: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT'
       '       Job_Bag.Job_Bag as "tg:job_id",'
@@ -4181,13 +3635,12 @@ object dmJobBag: TdmJobBag
     Top = 448
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryJBProcessTechXML: TQuery
-    DatabaseName = 'PB'
+  object qryJBProcessTechXML: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select  (Works_Order_Process.Process_no-1) as "tg:post_press_ver' +
@@ -4257,18 +3710,14 @@ object dmJobBag: TdmJobBag
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBMasterTechXML: TQuery
-    DatabaseName = 'PB'
+  object qryJBMasterTechXML: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT'
       '       '#39#39' as "tg:version_id",'
@@ -4284,13 +3733,12 @@ object dmJobBag: TdmJobBag
     Top = 496
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryGetJBProdStatus: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBProdStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Job_Bag_Production_Status'
@@ -4299,13 +3747,11 @@ object dmJobBag: TdmJobBag
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Production_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qryAllProcesses: TQuery
-    DatabaseName = 'PB'
+  object qryAllProcesses: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process.*, Process_Group.*'
       'from Process, Process_Group'
@@ -4315,8 +3761,8 @@ object dmJobBag: TdmJobBag
     Left = 32
     Top = 320
   end
-  object qryJBProcess: TQuery
-    DatabaseName = 'PB'
+  object qryJBProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Process.Job_Bag,'
@@ -4340,18 +3786,14 @@ object dmJobBag: TdmJobBag
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object OldqryJBProcessTechXML: TQuery
-    DatabaseName = 'PB'
+  object OldqryJBProcessTechXML: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select  (Works_Order_Process.Process_no-1) as "tg:post_press_ver' +
@@ -4408,18 +3850,14 @@ object dmJobBag: TdmJobBag
     Top = 600
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBSILines: TQuery
-    DatabaseName = 'PB'
+  object qryJBSILines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from sales_invoice_line'
@@ -4429,18 +3867,14 @@ object dmJobBag: TdmJobBag
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustCC: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustCC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_CostCentre'
@@ -4450,18 +3884,14 @@ object dmJobBag: TdmJobBag
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Centre'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetBranchCC: TQuery
-    DatabaseName = 'PB'
+  object qryGetBranchCC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Branch_CostCentre'
@@ -4472,23 +3902,17 @@ object dmJobBag: TdmJobBag
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Centre'
-        ParamType = ptUnknown
       end>
   end
-  object qryDataCollect: TQuery
-    DatabaseName = 'PB'
+  object qryDataCollect: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Point,'
@@ -4545,132 +3969,105 @@ object dmJobBag: TdmJobBag
     Top = 640
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryDataCollectJob_Bag_Time_Log: TIntegerField
       FieldName = 'Job_Bag_Time_Log'
-      Origin = 'PB.Job_Bag_Time_Log.Job_Bag_Time_Log'
     end
     object qryDataCollectDate_Point: TDateTimeField
       FieldName = 'Date_Point'
-      Origin = 'PB.Job_Bag_Time_Log.Date_Point'
     end
     object qryDataCollectWork_Centre_Operator: TIntegerField
       FieldName = 'Work_Centre_Operator'
-      Origin = 'PB.Job_Bag_Time_Log.Work_Centre_Operator'
     end
     object qryDataCollectWC_Operator_Name: TStringField
       FieldName = 'WC_Operator_Name'
-      Origin = 'PB.Work_Centre_Operator.Name'
       FixedChar = True
       Size = 100
     end
     object qryDataCollectProcess_Group: TIntegerField
       FieldName = 'Process_Group'
-      Origin = 'PB.Job_Bag_Time_Log.Process_Group'
     end
     object qryDataCollectProcess_Group_Description: TStringField
       FieldName = 'Process_Group_Description'
-      Origin = 'PB.Process_Group.Process_Group_Description'
       FixedChar = True
       Size = 100
     end
     object qryDataCollectProcess: TIntegerField
       FieldName = 'Process'
-      Origin = 'PB.Job_Bag_Time_Log.Process'
     end
     object qryDataCollectProcess_Description: TStringField
       FieldName = 'Process_Description'
-      Origin = 'PB.Process.Process_Description'
       FixedChar = True
       Size = 100
     end
     object qryDataCollectWork_Centre: TIntegerField
       FieldName = 'Work_Centre'
-      Origin = 'PB.Job_Bag_Time_Log.Work_Centre'
     end
     object qryDataCollectWork_Centre_Name: TStringField
       FieldName = 'Work_Centre_Name'
-      Origin = 'PB.Work_Centre.Work_Centre_Name'
       FixedChar = True
       Size = 100
     end
     object qryDataCollectOperation: TIntegerField
       FieldName = 'Operation'
-      Origin = 'PB.Job_Bag_Time_Log.Operation'
     end
     object qryDataCollectOperation_Description: TStringField
       FieldName = 'Operation_Description'
-      Origin = 'PB.Process_Operation.Operation_Description'
       FixedChar = True
       Size = 100
     end
     object qryDataCollectPaper_Size: TIntegerField
       FieldName = 'Paper_Size'
-      Origin = 'PB.Job_Bag_Time_Log.Paper_Size'
     end
     object qryDataCollectPaper_Size_Description: TStringField
       FieldName = 'Paper_Size_Description'
-      Origin = 'PB.Paper_Size.Description'
       FixedChar = True
       Size = 60
     end
     object qryDataCollectNumber_Up: TIntegerField
       FieldName = 'Number_Up'
-      Origin = 'PB.Job_Bag_Time_Log.Number_Up'
     end
     object qryDataCollectQuantity: TFloatField
       FieldName = 'Quantity'
-      Origin = 'PB.Job_Bag_Time_Log.Quantity'
     end
     object qryDataCollectLaser_Format: TStringField
       FieldName = 'Laser_Format'
-      Origin = 'PB.Job_Bag_Time_Log.Laser_Format'
       FixedChar = True
       Size = 2
     end
     object qryDataCollectLabour_Time_From: TDateTimeField
       FieldName = 'Labour_Time_From'
-      Origin = 'PB.Job_Bag_Time_Log.Labour_Time_From'
     end
     object qryDataCollectLabour_Time_To: TDateTimeField
       FieldName = 'Labour_Time_To'
-      Origin = 'PB.Job_Bag_Time_Log.Labour_Time_To'
     end
     object qryDataCollectLabour_Hours: TFloatField
       FieldName = 'Labour_Hours'
-      Origin = 'PB.Job_Bag_Time_Log.Labour_Hours'
       DisplayFormat = '##0.00'
     end
     object qryDataCollectMachine_Hours: TFloatField
       FieldName = 'Machine_Hours'
-      Origin = 'PB.Job_Bag_Time_Log.Machine_Hours'
       DisplayFormat = '##0.00'
     end
     object qryDataCollectLabour_Overtime_Hours: TFloatField
       FieldName = 'Labour_Overtime_Hours'
-      Origin = 'PB.Job_Bag_Time_Log.Labour_Overtime_Hours'
       DisplayFormat = '##0.00'
     end
     object qryDataCollectTeam_Count: TIntegerField
       FieldName = 'Team_Count'
-      Origin = 'PB.Job_Bag_Time_Log.Team_Count'
     end
     object qryDataCollectHourly_Rate: TFloatField
       FieldName = 'Hourly_Rate'
-      Origin = 'PB.Job_Bag_Time_Log.Hourly_Rate'
       DisplayFormat = '##0.00'
     end
   end
@@ -4679,8 +4076,8 @@ object dmJobBag: TdmJobBag
     Left = 392
     Top = 640
   end
-  object qryDepartments: TQuery
-    DatabaseName = 'PB'
+  object qryDepartments: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Process_Group'
@@ -4688,8 +4085,8 @@ object dmJobBag: TdmJobBag
     Left = 472
     Top = 640
   end
-  object qryGetDataCollectTotals: TQuery
-    DatabaseName = 'PB'
+  object qryGetDataCollectTotals: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Time_Log.Job_Bag,'
       '      Sum(Labour_Hours) as Total_Labour,'
@@ -4703,23 +4100,17 @@ object dmJobBag: TdmJobBag
     Top = 648
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Contact.Name,'
       'Contact_info.Account_Number'
@@ -4732,23 +4123,17 @@ object dmJobBag: TdmJobBag
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdQuoteStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdQuoteStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status'
@@ -4757,18 +4142,14 @@ object dmJobBag: TdmJobBag
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpdQuoteStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpdQuoteStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Quote'
       'set Quote_Status = :Quote_Status'
@@ -4779,18 +4160,14 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerPrices: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerPrices: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Cost'
@@ -4799,13 +4176,11 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllNonConforms: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllNonConforms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
       #9'Job_Bag_Non_Conform.Date_Point, '
@@ -4874,13 +4249,11 @@ object dmJobBag: TdmJobBag
     Top = 704
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetLastNC: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastNC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_Non_Conform_Number'
       'From Company'
@@ -4888,8 +4261,8 @@ object dmJobBag: TdmJobBag
     Left = 128
     Top = 704
   end
-  object qryUpdateLastNC: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateLastNC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Non_Conform_Number = :Last_Non_Conform_Number'
@@ -4898,13 +4271,11 @@ object dmJobBag: TdmJobBag
     Top = 704
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Non_Conform_Number'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddNonConform: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddNonConform: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Job_bag_Non_Conform'
       '(Job_Bag_Non_Conform,'
@@ -4959,118 +4330,83 @@ object dmJobBag: TdmJobBag
     Top = 704
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Non_Conform'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Raised_by_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'QA_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'QA_Sign_Off_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Non_Conform_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Response_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Corrective_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Preventative_notes_id'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Response_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Corrective_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Preventative_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Total_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Total_Cost_to_Client'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Non_Conform_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Reprinted'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Samples_Available'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Response_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Corrective_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Preventative_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Total_Cost'
+      end
+      item
+        Name = 'Total_Cost_to_Client'
+      end
+      item
+        Name = 'Non_Conform_Status'
+      end
+      item
+        Name = 'Job_Reprinted'
+      end
+      item
+        Name = 'Samples_Available'
+      end
+      item
         Name = 'Non_Conform_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryGetNonConformStatus: TQuery
-    DatabaseName = 'pb'
+  object qryGetNonConformStatus: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Status'
@@ -5079,13 +4415,11 @@ object dmJobBag: TdmJobBag
     Top = 760
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qryPITotal: TQuery
-    DatabaseName = 'PB'
+  object qryPITotal: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_Dets.Job_Bag, '
       #9'SUM(CASE WHEN Price_unit_factor = 0 THEN'
@@ -5141,18 +4475,14 @@ object dmJobBag: TdmJobBag
     Top = 696
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryDataCollectCosts: TQuery
-    DatabaseName = 'PB'
+  object qryDataCollectCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT job_bag_time_log.Job_Bag,'
       #9'Process_Group.Sequence_no,'
@@ -5249,14 +4579,12 @@ object dmJobBag: TdmJobBag
     Top = 672
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'job_bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object srcDataCollectCosts: TDataSource
@@ -5264,8 +4592,8 @@ object dmJobBag: TdmJobBag
     Left = 696
     Top = 664
   end
-  object qryJBDelivery: TQuery
-    DatabaseName = 'pb'
+  object qryJBDelivery: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select '#9'Job_bag,'
       #9'Delivery_no,'
@@ -5298,18 +4626,14 @@ object dmJobBag: TdmJobBag
     Top = 760
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAddDelivery: TQuery
-    DatabaseName = 'PB'
+  object qryJBAddDelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Delivery_Detail'
       '( Job_Bag,'
@@ -5371,138 +4695,95 @@ object dmJobBag: TdmJobBag
     Top = 760
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_to_deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Box_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'No_of_boxes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deliver_via_Company'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_to_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_note_Printed'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Reqd_by_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Consignment_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Package_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Weight_Kilos'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Service_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Supplier_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier_Branch'
+        DataType = ftInteger
+      end
+      item
         Name = 'Company_Branch'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBAllDeliveries: TQuery
-    DatabaseName = 'PB'
+  object qryJBAllDeliveries: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Job_bag,'
       #9'Delivery_no,'
@@ -5571,13 +4852,11 @@ object dmJobBag: TdmJobBag
     Top = 760
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object GetAddHocAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAddHocAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name, Building_No_name,'
       '               Street, Locale, Town,'
@@ -5590,17 +4869,15 @@ object dmJobBag: TdmJobBag
     Top = 18
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_Hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object AddrSRC: TDataSource
     Left = 888
     Top = 16
   end
-  object GetRepAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRepAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name, Building_No_name,'
       '               Street, Locale, Town,'
@@ -5612,13 +4889,11 @@ object dmJobBag: TdmJobBag
     Top = 78
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object GetCustAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select   Customer.Name as Name, Customer_Branch.Name as Branch_N' +
@@ -5642,18 +4917,14 @@ object dmJobBag: TdmJobBag
     Top = 142
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
-  object GetSuppAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select   Supplier.Name as Name, Supplier_Branch.Name as Branch_N' +
@@ -5673,18 +4944,14 @@ object dmJobBag: TdmJobBag
     Top = 199
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
-  object GetCompAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name,'
       '         Company.Building_No_Name,'
@@ -5701,8 +4968,8 @@ object dmJobBag: TdmJobBag
     Left = 776
     Top = 262
   end
-  object GetCompBrAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompBrAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Company.Name,'
       '         Company_Branch.Name as Branch_Name,'
@@ -5720,13 +4987,11 @@ object dmJobBag: TdmJobBag
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryCourierService: TQuery
-    DatabaseName = 'PB'
+  object qryCourierService: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Courier_Service.service_no, Courier_Service.courier, Cour' +
@@ -5739,9 +5004,7 @@ object dmJobBag: TdmJobBag
     Top = 633
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Courier'
-        ParamType = ptUnknown
       end>
   end
   object dtsCourierService: TDataSource
@@ -5749,8 +5012,8 @@ object dmJobBag: TdmJobBag
     Left = 904
     Top = 633
   end
-  object qryPackageType: TQuery
-    DatabaseName = 'PB'
+  object qryPackageType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Package_Type'
@@ -5763,8 +5026,8 @@ object dmJobBag: TdmJobBag
     Left = 904
     Top = 569
   end
-  object qryAllPriceUnits: TQuery
-    DatabaseName = 'PB'
+  object qryAllPriceUnits: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Price_unit '
@@ -5777,8 +5040,8 @@ object dmJobBag: TdmJobBag
     Left = 864
     Top = 376
   end
-  object qryGetCustomerAccount: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerAccount: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Invoice_CB.Account_code'
       'from Customer_Branch, Customer_Branch Invoice_CB'
@@ -5796,18 +5059,14 @@ object dmJobBag: TdmJobBag
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProcessGroups: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcessGroups: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Process_Group.Process_Group,'
       '        Process_Group.Process_Group_Description,'
@@ -5817,8 +5076,8 @@ object dmJobBag: TdmJobBag
     Left = 952
     Top = 16
   end
-  object qryJProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryJProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Job_Bag,'
@@ -5832,18 +5091,14 @@ object dmJobBag: TdmJobBag
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
-  object qryJAddProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryJAddProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Process_Group'
       '('
@@ -5863,28 +5118,20 @@ object dmJobBag: TdmJobBag
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Specification'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Specification_ID'
-        ParamType = ptUnknown
       end>
   end
-  object qryQProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryQProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Quote,'
@@ -5898,18 +5145,14 @@ object dmJobBag: TdmJobBag
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
-  object qryAllSalesInvoiceCharges: TQuery
-    DatabaseName = 'PB'
+  object qryAllSalesInvoiceCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        SUM(Sales_Invoice_Add_charge.Amount) as Amount_Total,'
@@ -5929,13 +5172,11 @@ object dmJobBag: TdmJobBag
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryAllPurchInvoiceCharges: TQuery
-    DatabaseName = 'PB'
+  object qryAllPurchInvoiceCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Supplier_Invoice.Supplier_Invoice,'
       '        SUM(Supplier_Invoice_charge.Amount) as Amount_Total,'
@@ -5955,13 +5196,11 @@ object dmJobBag: TdmJobBag
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdateContactStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateContactStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer_Contact'
       'SET Contact_Status = 100'
@@ -5972,23 +5211,17 @@ object dmJobBag: TdmJobBag
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetQuoteCostDefaults: TQuery
-    DatabaseName = 'PB'
+  object qryGetQuoteCostDefaults: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Company.Default_Quote_Cost_Process_Grp,'
       '        Company.Default_Quote_Cost_Process,'
@@ -6019,8 +5252,8 @@ object dmJobBag: TdmJobBag
     Left = 960
     Top = 320
   end
-  object qryGetCustomerSubRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerSubRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 reps_branches.Rep'
       'FROM Rep '
@@ -6032,18 +5265,14 @@ object dmJobBag: TdmJobBag
     Top = 528
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Default_Quote_Cost_Markup_Perc,'
       '        Override_Cost_Markup_Perc'
@@ -6053,13 +5282,11 @@ object dmJobBag: TdmJobBag
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
-  object qryPackFormat: TQuery
-    DatabaseName = 'PB'
+  object qryPackFormat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Pack_Format'
       'WHERE'
@@ -6069,9 +5296,7 @@ object dmJobBag: TdmJobBag
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
   object dtsPackFormat: TDataSource

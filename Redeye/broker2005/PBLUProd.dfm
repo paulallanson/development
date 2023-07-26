@@ -187,8 +187,8 @@ object PBLUProdFrm: TPBLUProdFrm
       OnClick = ChkBxExcProdClick
     end
   end
-  object qrySelParts: TQuery
-    DatabaseName = 'PB'
+  object qrySelParts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.part,'
       ' part.Part_Description '

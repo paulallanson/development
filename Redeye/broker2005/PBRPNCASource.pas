@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, VclTee.TeEngine, VclTee.Series, VclTee.TeeProcs,
+  Dialogs, DB, VclTee.TeEngine, VclTee.Series, VclTee.TeeProcs,
   VclTee.Chart, VclTee.DbChart, ExtCtrls, QuickRpt, QRCtrls, CCSPrint,
-  VclTee.TeeGDIPlus;
+  VclTee.TeeGDIPlus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPNCASourceFrm = class(TForm)
     qrReport: TQuickRep;
-    qryNCASource: TQuery;
+    qryNCASource: TFDQuery;
     dtsNCASource: TDataSource;
     QRBand1: TQRBand;
     QRLabel1: TQRLabel;

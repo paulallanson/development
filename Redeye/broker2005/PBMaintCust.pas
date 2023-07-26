@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls, pbCustomerDM,
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, pbCustomerDM,
   Grids, DBGrids, IdBaseComponent, IdComponent, IdTCPConnection,
   IdTCPClient, IdHTTP, Menus, ShellAPI, IniFiles, StrUtils, Spin, printers,
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,

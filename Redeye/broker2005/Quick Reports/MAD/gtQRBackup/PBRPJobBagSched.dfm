@@ -1598,8 +1598,8 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'TOP 1'
       #9'Job_Bag_Schedule.*,'

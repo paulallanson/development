@@ -221,8 +221,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
     TabOrder = 10
     OnClick = chkbxincludezeroClick
   end
-  object qryGetPeriod: TQuery
-    DatabaseName = 'pb'
+  object qryGetPeriod: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -236,13 +236,13 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     Left = 472
     Top = 184
   end
-  object qryDeleteAnalysis: TQuery
-    DatabaseName = 'pb'
+  object qryDeleteAnalysis: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete from Analysis'
       'where Operator = :Operator')
@@ -255,8 +255,8 @@ object PBRS4CastMonthInvsFrm: TPBRS4CastMonthInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetIntSel: TQuery
-    DatabaseName = 'PB'
+  object qryGetIntSel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(Operator)+1 as Operator'
       'from Analysis')

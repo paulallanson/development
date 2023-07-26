@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DBCtrls, DB, DBTables, STPOrdRep, QrExport,
-  Inifiles;
+  StdCtrls, Buttons, ExtCtrls, DBCtrls, DB, STPOrdRep, QrExport,
+  Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPordRSlFrm = class(TForm)
@@ -13,19 +16,19 @@ type
     PrintBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     SelectRadioGroup: TRadioGroup;
-    DelRepSelQuery: TQuery;
-    AddRepSelQuery: TQuery;
+    DelRepSelQuery: TFDQuery;
+    AddRepSelQuery: TFDQuery;
     FaxBitBtn: TBitBtn;
     SelectionGroup: TGroupBox;
     Label1: TLabel;
     EnqLUSpeedButton: TSpeedButton;
     SelectionMemo: TMemo;
     SelectLst: TListBox;
-    DelWorkSQL: TQuery;
-    AddWorkSQL: TQuery;
-    GetPORngSQL: TQuery;
+    DelWorkSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    GetPORngSQL: TFDQuery;
     ChkBxLogo: TCheckBox;
-    qryGetPOs: TQuery;
+    qryGetPOs: TFDQuery;
     EmailBitBtn: TBitBtn;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);

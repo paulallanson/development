@@ -699,8 +699,8 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
       end
     end
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       '        Part.Part_Description,'
@@ -732,8 +732,8 @@ object STRPStockLabelsFrm: TSTRPStockLabelsFrm
     Left = 323
     Top = 83
   end
-  object FormRefSQL: TQuery
-    DatabaseName = 'PB'
+  object FormRefSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Form_Reference'

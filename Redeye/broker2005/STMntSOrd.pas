@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls, Grids, STSOObjects,
-  Menus, CCSCommon, PBJobBagDM, IniFiles;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, Grids, STSOObjects,
+  Menus, CCSCommon, PBJobBagDM, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 type
   TSTMntSOrdFrm = class(TForm)
     FlashTimer: TTimer;
@@ -73,7 +76,7 @@ type
     btnAddService: TMenuItem;
     btnDelivery: TBitBtn;
     FalshTimerDelNotes: TTimer;
-    qryVATCode: TQuery;
+    qryVATCode: TFDQuery;
     dtsVatCode: TDataSource;
     Label18: TLabel;
     cmbbxOrderType: TComboBox;
@@ -93,7 +96,7 @@ type
     Label12: TLabel;
     edtCostCentre: TEdit;
     btnCostCentre: TBitBtn;
-    qryGetStockAlloc: TQuery;
+    qryGetStockAlloc: TFDQuery;
     chkbxInactive: TCheckBox;
     ChangePrices1: TMenuItem;
     Change1: TMenuItem;
@@ -215,21 +218,21 @@ type
     procedure SaveSerialNos(const inx: integer);
     procedure UpdateSOLines;
     procedure UpdateRepPerc;
-    procedure UpdateJobBagLine(Query: TQuery; const inx: Integer);
+    procedure UpdateJobBagLine(Query: TFDQuery; const inx: Integer);
     procedure CreateExtraChargeLine;
     procedure UpdateExtraCharges;
     procedure RecalcTotals;
     procedure CallExtChgMaintScreen(sTempFuncMode: Char);
-    procedure DeleteJobBagLine(Query: TQuery; const inx: Integer);
-    procedure DeleteJobBagRequest(Query: TQuery; const inx: Integer);
+    procedure DeleteJobBagLine(Query: TFDQuery; const inx: Integer);
+    procedure DeleteJobBagRequest(Query: TFDQuery; const inx: Integer);
     procedure DefContact(iTempCust, iTempBranch: Integer);
     procedure CallLineDetailsMaintScreen(sTempFuncMode: Char);
     procedure CallLineMaintScreen(sTempFuncMode: Char);
     procedure CallServiceMaintScreen(sTempFuncMode: Char);
-    procedure HandleSOLine(Query: TQuery; const inx: Integer);
-    procedure HandleJobBagLine(Query: TQuery; const inx: Integer);
-    procedure HandleJobBagRequest(Query: TQuery; const inx: Integer);
-    procedure HandleSORepPerc(Query: TQuery; const inx: integer);
+    procedure HandleSOLine(Query: TFDQuery; const inx: Integer);
+    procedure HandleJobBagLine(Query: TFDQuery; const inx: Integer);
+    procedure HandleJobBagRequest(Query: TFDQuery; const inx: Integer);
+    procedure HandleSORepPerc(Query: TFDQuery; const inx: integer);
     procedure GetSupplierOrderTypes;
     procedure DisplaySourceDetails;
     procedure SetDeliverTo;
@@ -1067,7 +1070,7 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.DeleteJobBagLine(Query: TQuery;
+procedure TSTMntSOrdFrm.DeleteJobBagLine(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;
@@ -1091,7 +1094,7 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.UpdateJobBagLine(Query: TQuery;
+procedure TSTMntSOrdFrm.UpdateJobBagLine(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;
@@ -1140,7 +1143,7 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.HandleJobBagLine(Query: TQuery;
+procedure TSTMntSOrdFrm.HandleJobBagLine(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;
@@ -1783,7 +1786,7 @@ begin
   bDisableLineNameChangeEvent := False;
 end;
 
-procedure TSTMntSOrdFrm.HandleSOLine(Query: TQuery; const inx: Integer);
+procedure TSTMntSOrdFrm.HandleSOLine(Query: TFDQuery; const inx: Integer);
 var
   i: Integer;
 begin
@@ -2343,7 +2346,7 @@ begin {Update the sales order lines}
 
 end;
 
-procedure TSTMntSOrdFrm.HandleSORepPerc(Query: TQuery; const inx: integer);
+procedure TSTMntSOrdFrm.HandleSORepPerc(Query: TFDQuery; const inx: integer);
 var
   i: Integer;
 begin
@@ -3334,7 +3337,7 @@ begin
 *)
 end;
 
-procedure TSTMntSOrdFrm.HandleJobBagRequest(Query: TQuery;
+procedure TSTMntSOrdFrm.HandleJobBagRequest(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;
@@ -3368,7 +3371,7 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.DeleteJobBagRequest(Query: TQuery;
+procedure TSTMntSOrdFrm.DeleteJobBagRequest(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;

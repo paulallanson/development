@@ -110,7 +110,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBPOObjects, Spin;
+  StdCtrls, Buttons, ExtCtrls, DB, PBPOObjects, Spin;
 
 type
   TPBRSPORepMFrm = class(TForm)

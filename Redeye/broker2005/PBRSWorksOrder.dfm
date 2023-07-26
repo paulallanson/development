@@ -432,8 +432,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       end
     end
   end
-  object qryGetRange: TQuery
-    DatabaseName = 'pb'
+  object qryGetRange: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT distinct Works_Order.Works_Order_number'
       'FROM Works_order'
@@ -454,8 +454,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetWorksOrder: TQuery
-    DatabaseName = 'pb'
+  object qryGetWorksOrder: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'
@@ -500,8 +500,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Left = 264
     Top = 104
   end
-  object qryUpWOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpWOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Works_Order'
       'set Works_Order_Status = 30'

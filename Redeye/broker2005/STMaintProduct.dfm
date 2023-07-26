@@ -1127,8 +1127,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       NumGlyphs = 2
     end
   end
-  object qryProduct: TQuery
-    DatabaseName = 'PB'
+  object qryProduct: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part.*,'
       '       (select top 1 form_reference.form_reference'
@@ -1150,8 +1150,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryPartGroup: TQuery
-    DatabaseName = 'PB'
+  object qryPartGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Group, Part_Group_Descr_Short, Part_Group_Descr'
       'from'
@@ -1171,8 +1171,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 312
     Top = 224
   end
-  object qryVatCode: TQuery
-    DatabaseName = 'PB'
+  object qryVatCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From VAT_Code'
       'Order By VAT_Code'
@@ -1180,8 +1180,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 264
     Top = 224
   end
-  object qryCostUplift: TQuery
-    DatabaseName = 'PB'
+  object qryCostUplift: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Markup_type')
@@ -1193,8 +1193,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 496
     Top = 272
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_Unit'
@@ -1207,8 +1207,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 488
     Top = 376
   end
-  object qryGetCust: TQuery
-    DatabaseName = 'PB'
+  object qryGetCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer.Name as Cust_Name,'
       '       Customer_Branch.Name as Branch_Name,'
@@ -1236,8 +1236,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryDelPart: TQuery
-    DatabaseName = 'PB'
+  object qryDelPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Part'
       'Where (Part = :Part)'
@@ -1251,8 +1251,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryUpPart: TQuery
-    DatabaseName = 'PB'
+  object qryUpPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set'
@@ -1459,8 +1459,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryAddPart: TQuery
-    DatabaseName = 'PB'
+  object qryAddPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -1674,8 +1674,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryCheckProductCode: TQuery
-    DatabaseName = 'PB'
+  object qryCheckProductCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
@@ -1688,8 +1688,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryAddLevels: TQuery
-    DatabaseName = 'PB'
+  object qryAddLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Levels'
       'select top 1 :Part, '
@@ -1710,8 +1710,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryUOM: TQuery
-    DatabaseName = 'PB'
+  object qryUOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Unit_of_Measure'
@@ -1724,8 +1724,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 360
     Top = 336
   end
-  object qryProductTypes: TQuery
-    DatabaseName = 'PB'
+  object qryProductTypes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Product_Type'
@@ -1739,8 +1739,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 240
     Top = 152
   end
-  object qryUpStockRef: TQuery
-    DatabaseName = 'PB'
+  object qryUpStockRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Form_Reference'
       'set Stock_Reference = :Stock_Reference'
@@ -1759,8 +1759,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryUpFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryUpFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Form_Reference'
       'set Stock_Reference = '#39#39
@@ -1774,8 +1774,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryDelPartLevels: TQuery
-    DatabaseName = 'PB'
+  object qryDelPartLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Part_Store_Levels'
       'where Part = :Part')
@@ -1788,8 +1788,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'
@@ -1802,8 +1802,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 472
     Top = 112
   end
-  object qryGetBOM: TQuery
-    DatabaseName = 'PB'
+  object qryGetBOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Element'
@@ -1822,8 +1822,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Left = 156
     Top = 328
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Nominal, Purchase_Nominal'
       'FROM Product_Type'
@@ -1837,8 +1837,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         ParamType = ptUnknown
       end>
   end
-  object qryDelStoreStockSN: TQuery
-    DatabaseName = 'PB'
+  object qryDelStoreStockSN: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete'
       'from store_Stock_serial_Item'

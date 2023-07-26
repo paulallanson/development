@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Db, DBTables, Qrctrls;
+  ExtCtrls, QuickRpt, Db, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPUnpaidStockFrm = class(TForm)
     qrReport: TQuickRep;
-    qryReport: TQuery;
-    qrySalesInvDets: TQuery;
+    qryReport: TFDQuery;
+    qrySalesInvDets: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel1: TQRLabel;

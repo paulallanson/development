@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Spin;
+  StdCtrls, Buttons, DBCtrls, DB, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintFinanceYearFrm = class(TForm)
@@ -12,33 +15,33 @@ type
     Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     edtTitle: TEdit;
     edtYear: TEdit;
     Label2: TLabel;
     DetsSRC: TDataSource;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     Label3: TLabel;
     cmbMonth: TComboBox;
     Label4: TLabel;
     spnNoOfPeriods: TSpinEdit;
-    qryGetLastPeriod: TQuery;
-    qryChkPeriod: TQuery;
-    qryAddPeriod: TQuery;
-    DelPeriodsSQL: TQuery;
-    qryUpPeriod: TQuery;
-    DelBudgetsSQL: TQuery;
-    DelRepCatsSQL: TQuery;
-    DelRepFinanceSQL: TQuery;
+    qryGetLastPeriod: TFDQuery;
+    qryChkPeriod: TFDQuery;
+    qryAddPeriod: TFDQuery;
+    DelPeriodsSQL: TFDQuery;
+    qryUpPeriod: TFDQuery;
+    DelBudgetsSQL: TFDQuery;
+    DelRepCatsSQL: TFDQuery;
+    DelRepFinanceSQL: TFDQuery;
     Label19: TLabel;
     cmbBudgetType: TComboBox;
     Label5: TLabel;
     cmbCommission: TComboBox;
-    UpdBasicSQL: TQuery;
+    UpdBasicSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

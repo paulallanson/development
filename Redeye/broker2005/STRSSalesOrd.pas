@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, STSOObjects, IniFiles, CCSPrint, DB, DBTables, STRPSord,
-  QrExport;
+  StdCtrls, Buttons, STSOObjects, IniFiles, CCSPrint, DB, STRPSord,
+  QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSSalesOrdfrm = class(TForm)
@@ -19,7 +22,7 @@ type
     PrintBitBtn: TBitBtn;
     ChkBxLogo: TCheckBox;
     EmailBitBtn: TBitBtn;
-    qryGetSOs: TQuery;
+    qryGetSOs: TFDQuery;
     procedure PreviewbitbtnClick(Sender: TObject);
     procedure Runreport(Preview: ByteBool);
     procedure FormCreate(Sender: TObject);

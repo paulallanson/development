@@ -275,8 +275,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       76
       76)
   end
-  object qrySOAlloc: TQuery
-    DatabaseName = 'PB'
+  object qrySOAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Part_Store_Allocation.*,'
       '        Part.Part_Description,'
@@ -350,8 +350,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Left = 104
     Top = 161
   end
-  object qryDelPick: TQuery
-    DatabaseName = 'PB'
+  object qryDelPick: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_order_Picking'
       'where Sales_Order_Picking = :Sales_Order_Picking')
@@ -364,8 +364,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPick: TQuery
-    DatabaseName = 'PB'
+  object qryAddPick: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Order_Picking'
       '(Sales_Order_Picking,'
@@ -493,16 +493,16 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNext: TQuery
-    DatabaseName = 'PB'
+  object qryGetNext: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Sales_Order_Picking) as Last_Picking'
       'from Sales_Order_Picking')
     Left = 344
     Top = 160
   end
-  object qryPickNotes: TQuery
-    DatabaseName = 'PB'
+  object qryPickNotes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select distinct Sales_Order_Picking, Picking_List_Ref, Date_Pick' +
@@ -518,8 +518,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOPicking: TQuery
-    DatabaseName = 'PB'
+  object qrySOPicking: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  sales_order_line.Part,'
       
@@ -566,8 +566,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProdLocation: TQuery
-    DatabaseName = 'PB'
+  object qryProdLocation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_order.Production_Location,'
       '        Production_Location.Receive_Forward_Stock'

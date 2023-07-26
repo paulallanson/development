@@ -166,8 +166,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       86
       40)
   end
-  object qryJBStock: TQuery
-    DatabaseName = 'pb'
+  object qryJBStock: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order_line.Part,'
       '      Part.Part_Description,'
@@ -200,8 +200,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBSalesOrders: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBSalesOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Order_line.Part,'
       '      Sales_Order_line.sales_order,'
@@ -235,8 +235,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBReturns: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBReturns: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Job_Bag_Return'
@@ -256,8 +256,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSO: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order_line'
       
@@ -284,8 +284,8 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJBReturn: TQuery
-    DatabaseName = 'PB'
+  object qryUpdJBReturn: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag_Return'
       'set Quantity = Quantity - :Quantity'

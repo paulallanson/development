@@ -4,18 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Db, DBTables, ExtCtrls, oomisc, printers, CCSPrint;
+  QuickRpt, Db, ExtCtrls, oomisc, printers, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TFaxHandler = class(TDataModule)
-    GetOldFaxesQuery: TQuery;
+    GetOldFaxesQuery: TFDQuery;
     WaitForFaxFinishTimer: TTimer;
-    FaxDatabase: TDatabase;
-    DelFaxQuery: TQuery;
-    AddFaxSQL: TQuery;
-    qrySelCustBrnchFax: TQuery;
+    FaxDatabase: TFDConnection;
+    DelFaxQuery: TFDQuery;
+    AddFaxSQL: TFDQuery;
+    qrySelCustBrnchFax: TFDQuery;
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
-    procedure FaxDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure DataModuleCreate(Sender: TObject);
   private
     FaxFileName: string;
@@ -75,7 +79,7 @@ begin
   end;
 end;
 
-procedure TFaxHandler.FaxDatabaseLogin(Database: TDatabase;
+procedure TFaxHandler.FaxDatabaseLogin(Database: TFDConnection;
   LoginParams: TStrings);
 begin
   {Get user and password from login screen};

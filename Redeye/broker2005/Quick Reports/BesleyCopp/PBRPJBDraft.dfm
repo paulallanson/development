@@ -1801,8 +1801,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     Left = 560
     Top = 286
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -1905,8 +1905,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOrdHedQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdHedQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sel1, text100'
       'from'
@@ -1937,8 +1937,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSOAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as DelNam,'
       '          Customer_Branch.Building_no_Name as DelAdd1,'
@@ -1970,16 +1970,16 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     Left = 96
     Top = 79
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 96
     Top = 126
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -2014,8 +2014,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
     Left = 352
     Top = 343
   end
-  object GetContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Contact.Name as Contact_Name'
       'From  Customer_Contact'
@@ -2045,8 +2045,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'
@@ -2062,8 +2062,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOLinePart: TQuery
-    DatabaseName = 'pb'
+  object qrySOLinePart: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order_Line.Part,'
       '  Part.Price_unit, Part.Part_Description'
@@ -2087,8 +2087,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -2102,8 +2102,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Order_Line.Part,'
       
@@ -2131,8 +2131,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryJBLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Purchase_OrderLine.Purchase_Order,'
@@ -2184,8 +2184,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPOLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryPOLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Purchase_OrderLine.Purchase_Order,'
@@ -2242,8 +2242,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Product_Type.Description, Category.Description as Categor' +
@@ -2260,8 +2260,8 @@ object PBRPJBDraftFrm: TPBRPJBDraftFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'

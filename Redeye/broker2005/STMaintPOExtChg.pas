@@ -14,8 +14,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Spin, ExtCtrls,
-  STPOObjects;
+  StdCtrls, Buttons, DBCtrls, DB, Spin, ExtCtrls,
+  STPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintPOExtChgFrm = class(TForm)
@@ -32,7 +35,7 @@ type
     Label5: TLabel;
     VATDBLookupComboBox: TDBLookupComboBox;
     VATsDataSource: TDataSource;
-    GetVatsQuery: TQuery;
+    GetVatsQuery: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

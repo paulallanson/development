@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Spin, Buttons, DB, DBTables, Grids, ComCtrls;
+  StdCtrls, Spin, Buttons, DB, Grids, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintLastNosFrm = class(TForm)
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    GetDetsSQL: TQuery;
-    UpdDetsSQL: TQuery;
-    qryCompany: TQuery;
+    GetDetsSQL: TFDQuery;
+    UpdDetsSQL: TFDQuery;
+    qryCompany: TFDQuery;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
@@ -25,8 +28,8 @@ type
     LastJBSpinEdit: TSpinEdit;
     LastWOSpinEdit: TSpinEdit;
     grdDetails: TStringGrid;
-    qryGetCompCat: TQuery;
-    qryUpdCompCat: TQuery;
+    qryGetCompCat: TFDQuery;
+    qryUpdCompCat: TFDQuery;
     cmbSuffix: TComboBox;
     Label3: TLabel;
     lastInvNoSpinEdit: TSpinEdit;

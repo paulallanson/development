@@ -51,26 +51,29 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables;
+  StdCtrls, Buttons, DBCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintSupOrdTypeFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label1: TLabel;
     SuppNameEdit: TEdit;
-    GetBranchNameSQL: TQuery;
+    GetBranchNameSQL: TFDQuery;
     Label6: TLabel;
     OrdTypeEdit: TEdit;
     DescriptionEdit: TEdit;
     Label8: TLabel;
-    GetOrderTypesSQL: TQuery;
-    CheckOrderTypeSQL: TQuery;
+    GetOrderTypesSQL: TFDQuery;
+    CheckOrderTypeSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

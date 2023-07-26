@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Grids, DBGrids, StdCtrls, DBCtrls, ExtCtrls, Buttons, STSOObjects,
-  ComCtrls, Menus;
+  Db, Grids, DBGrids, StdCtrls, DBCtrls, ExtCtrls, Buttons, STSOObjects,
+  ComCtrls, Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtAllocSalesFrm = class(TForm)
     DetsDataSource: TDataSource;
     DetsDBGrid: TDBGrid;
     DetsTimer: TTimer;
-    GetDetsSQL: TQuery;
-    UpdSOHeadSQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    UpdSOHeadSQL: TFDQuery;
     Panel2: TPanel;
     stsDetails: TStatusBar;
     OKBitBtn: TBitBtn;
@@ -21,14 +24,14 @@ type
     AllBitBtn: TBitBtn;
     Panel1: TPanel;
     lblSalesOrderNo: TLabel;
-    GetPartStoreSQL: TQuery;
+    GetPartStoreSQL: TFDQuery;
     lblAllocateSeq: TLabel;
     cmbAllocateSeq: TComboBox;
     pmnuAllocate: TPopupMenu;
     mnuAllocatethisline: TMenuItem;
     mnuAllocateAllLines: TMenuItem;
     mnuAllocatebyBin: TMenuItem;
-    qryGetCompositeParts: TQuery;
+    qryGetCompositeParts: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure StoreFromDBLookupComboBoxClick(Sender: TObject);

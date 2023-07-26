@@ -9,8 +9,8 @@ object dmLookUpSInv: TdmLookUpSInv
     Left = 24
     Top = 16
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Sales_Invoice_No,'
@@ -106,8 +106,8 @@ object dmLookUpSInv: TdmLookUpSInv
       FieldName = 'statement_date'
     end
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Customer.Name as Customer_Name, '
       '                      Customer_Branch.Name as Branch_Name,'
@@ -131,8 +131,8 @@ object dmLookUpSInv: TdmLookUpSInv
         ParamType = ptUnknown
       end>
   end
-  object Query1: TQuery
-    DatabaseName = 'PB'
+  object Query1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice_No,'
       '        Sales_Invoice.Invoice_Date,'
@@ -207,7 +207,7 @@ object dmLookUpSInv: TdmLookUpSInv
         ParamType = ptUnknown
       end>
   end
-  object DummySQL: TQuery
+  object DummySQL: TFDQuery
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Sales_Invoice_No,'
@@ -242,8 +242,8 @@ object dmLookUpSInv: TdmLookUpSInv
     Left = 88
     Top = 72
   end
-  object GetStatementSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStatementSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Last_Statement_ref'
       'from Customer_Branch'
@@ -263,8 +263,8 @@ object dmLookUpSInv: TdmLookUpSInv
         ParamType = ptUnknown
       end>
   end
-  object GetCustStatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustStatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct'
       '          Statement_Reference,'
@@ -289,8 +289,8 @@ object dmLookUpSInv: TdmLookUpSInv
         ParamType = ptUnknown
       end>
   end
-  object SetStatementSQL: TQuery
-    DatabaseName = 'PB'
+  object SetStatementSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update sales_invoice'
       'set statement_reference = NULL,'
@@ -305,7 +305,7 @@ object dmLookUpSInv: TdmLookUpSInv
         ParamType = ptUnknown
       end>
   end
-  object oldDummySQL: TQuery
+  object oldDummySQL: TFDQuery
     SQL.Strings = (
       'SELECT  '
       '        Sales_Invoice.Sales_Invoice,'

@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, CCSCommon, PBRPStkBal,
-  QrExport, CCSPress, IniFiles;
+  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, CCSCommon, PBRPStkBal,
+  QrExport, CCSPress, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSStkBalFrm = class(TForm)
-    QryReport: TQuery;
+    QryReport: TFDQuery;
     dsReport: TDataSource;
-    CustomerSQL: TQuery;
+    CustomerSQL: TFDQuery;
     IncRadioGroup: TRadioGroup;
     rgCustomer: TRadioGroup;
     CustomerPanel: TPanel;
@@ -24,9 +27,9 @@ type
     chkIncludeNonStock: TCheckBox;
     FaxBitBtn: TBitBtn;
     EmailBitBtn: TBitBtn;
-    GetPartsSQL: TQuery;
-    Dummy2SQL: TQuery;
-    DummySQL: TQuery;
+    GetPartsSQL: TFDQuery;
+    Dummy2SQL: TFDQuery;
+    DummySQL: TFDQuery;
     procedure rgCustomerClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

@@ -48,12 +48,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons, DBCtrls;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSLUSContaFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -77,8 +80,8 @@ type
     LabelPhone: TLabel;
     LabelFax: TLabel;
     ActiveOnlyCheckBox: TCheckBox;
-    qryCheckPOs: TQuery;
-    qryCheckEnqs: TQuery;
+    qryCheckPOs: TFDQuery;
+    qryCheckEnqs: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure NameEditChange(Sender: TObject);

@@ -778,8 +778,8 @@ object PBRP4CastMonthInvsFrm: TPBRP4CastMonthInvsFrm
       end
     end
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Analysis_type, '
       #9'Analysis.Category,'

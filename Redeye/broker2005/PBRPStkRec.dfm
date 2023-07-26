@@ -654,8 +654,8 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
       ReprintOnNewPage = False
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'
@@ -753,7 +753,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
       Size = 30
     end
   end
-  object qryReport1: TQuery
+  object qryReport1: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'
@@ -804,7 +804,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     Left = 310
     Top = 62
   end
-  object qryReport2: TQuery
+  object qryReport2: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'
@@ -853,7 +853,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     Left = 366
     Top = 62
   end
-  object qryReport3: TQuery
+  object qryReport3: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'
@@ -904,7 +904,7 @@ object PBRPStkRecfrm: TPBRPStkRecfrm
     Left = 422
     Top = 62
   end
-  object qryReport0: TQuery
+  object qryReport0: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'

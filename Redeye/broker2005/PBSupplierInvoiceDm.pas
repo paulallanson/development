@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, CCSCommon;
+  Db, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPIMode   = (piAdd, piChange, piDelete, piRaise, piView);
@@ -12,7 +15,7 @@ type
   TPICMode   = (picAdd, picChange, picDelete, picView);
 
   TdmSupplierInvoice = class(TDataModule)
-    qrySIHeaderGrid: TQuery;
+    qrySIHeaderGrid: TFDQuery;
     qrySIHeaderGridSupplier_Invoice: TIntegerField;
     qrySIHeaderGridSupplier: TIntegerField;
     qrySIHeaderGridBranch_no: TIntegerField;
@@ -27,14 +30,14 @@ type
     qrySIHeaderGridBranch_Name: TStringField;
     qrySIHeaderGridStatus_Desc: TStringField;
     dsSIHeaderGrid: TDataSource;
-    qryCompany: TQuery;
-    qrySIAllCharges: TQuery;
-    qrySIHeader: TQuery;
-    qryOperator: TQuery;
+    qryCompany: TFDQuery;
+    qrySIAllCharges: TFDQuery;
+    qrySIHeader: TFDQuery;
+    qryOperator: TFDQuery;
     dsOperator: TDataSource;
-    qryGetSuppBranch: TQuery;
-    qryGetPurchOrd: TQuery;
-    qryPOAllLines: TQuery;
+    qryGetSuppBranch: TFDQuery;
+    qryGetPurchOrd: TFDQuery;
+    qryPOAllLines: TFDQuery;
     qryPOAllLinesPurchase_Order: TFloatField;
     qryPOAllLinesLine: TIntegerField;
     qryPOAllLinesSuppliers_Desc: TStringField;
@@ -55,43 +58,43 @@ type
     qryPOAllLinesPOLine: TStringField;
     dsPOLine: TDataSource;
     dsDummy: TDataSource;
-    qrySILine: TQuery;
-    qryGetPO: TQuery;
-    qryGetPurchOrdL: TQuery;
-    qryGetJB: TQuery;
-    qrySIAllLines: TQuery;
-    qrySIAddHeader: TQuery;
-    qrySIUpHeader: TQuery;
-    qryZero: TQuery;
-    qrySIGetLast: TQuery;
-    qrySIAddCharge: TQuery;
-    qrySIAddLine: TQuery;
-    qryGetVat: TQuery;
-    qryGetPriceUnit: TQuery;
-    qryPOLine: TQuery;
-    qryGetInvStatus: TQuery;
-    qryPOLineChgs: TQuery;
-    qryJBAllLines: TQuery;
+    qrySILine: TFDQuery;
+    qryGetPO: TFDQuery;
+    qryGetPurchOrdL: TFDQuery;
+    qryGetJB: TFDQuery;
+    qrySIAllLines: TFDQuery;
+    qrySIAddHeader: TFDQuery;
+    qrySIUpHeader: TFDQuery;
+    qryZero: TFDQuery;
+    qrySIGetLast: TFDQuery;
+    qrySIAddCharge: TFDQuery;
+    qrySIAddLine: TFDQuery;
+    qryGetVat: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qryPOLine: TFDQuery;
+    qryGetInvStatus: TFDQuery;
+    qryPOLineChgs: TFDQuery;
+    qryJBAllLines: TFDQuery;
     dsJBLine: TDataSource;
-    qryJBLine: TQuery;
-    qryCheckPIN: TQuery;
-    qryPOUpLine: TQuery;
-    qryJBUpLine: TQuery;
-    qrySIUpStatus: TQuery;
-    qrySIUpLineStatus: TQuery;
-    qryPOUpLineStatus: TQuery;
-    qrySIGetAllStatus: TQuery;
+    qryJBLine: TFDQuery;
+    qryCheckPIN: TFDQuery;
+    qryPOUpLine: TFDQuery;
+    qryJBUpLine: TFDQuery;
+    qrySIUpStatus: TFDQuery;
+    qrySIUpLineStatus: TFDQuery;
+    qryPOUpLineStatus: TFDQuery;
+    qrySIGetAllStatus: TFDQuery;
     qryPOAllLinesQuantity: TFloatField;
     qryPOAllLinesPrice_Unit_Description: TStringField;
-    qryPurchAll: TQuery;
+    qryPurchAll: TFDQuery;
     dsPurchOrd: TDataSource;
-    qryPurchHead: TQuery;
-    qryPurchLines: TQuery;
-    qryPurchChgs: TQuery;
-    qryPurchUpLine: TQuery;
-    qryPurchChkStatus: TQuery;
-    qryPurchUpStatus: TQuery;
-    qryPCHeaderGrid: TQuery;
+    qryPurchHead: TFDQuery;
+    qryPurchLines: TFDQuery;
+    qryPurchChgs: TFDQuery;
+    qryPurchUpLine: TFDQuery;
+    qryPurchChkStatus: TFDQuery;
+    qryPurchUpStatus: TFDQuery;
+    qryPCHeaderGrid: TFDQuery;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
     IntegerField3: TIntegerField;
@@ -111,10 +114,10 @@ type
     qryPCHeaderGridVAT_Value_Diff: TCurrencyField;
     qryPCHeaderGridGoods_Credit: TCurrencyField;
     qryPCHeaderGridVAT_Credit: TCurrencyField;
-    qryPOLinePInvs: TQuery;
-    qryJBLinePInvs: TQuery;
-    qryProdType: TQuery;
-    qryPOsSalesInvd: TQuery;
+    qryPOLinePInvs: TFDQuery;
+    qryJBLinePInvs: TFDQuery;
+    qryProdType: TFDQuery;
+    qryPOsSalesInvd: TFDQuery;
     qryPOsSalesInvdPurchase_Order: TFloatField;
     qryPOsSalesInvdLine: TIntegerField;
     qryPOsSalesInvdDate_Point: TDateTimeField;
@@ -136,14 +139,14 @@ type
     qryPOsSalesInvdCustomer_Name: TStringField;
     qryPOsSalesInvdPOLine: TStringField;
     qrySIHeaderGridPONum: TStringField;
-    qrySelInvPOs: TQuery;
-    qrySIPurchOrdLines: TQuery;
+    qrySelInvPOs: TFDQuery;
+    qrySIPurchOrdLines: TFDQuery;
     qrySIHeaderGridtot_val: TFloatField;
     qrySIHeaderGridtot_invoices: TFloatField;
-    qryGetPOInvs: TQuery;
-    qryGetJBInvs: TQuery;
-    qryGetPurchLineInvs: TQuery;
-    qryPOsDeliv: TQuery;
+    qryGetPOInvs: TFDQuery;
+    qryGetJBInvs: TFDQuery;
+    qryGetPurchLineInvs: TFDQuery;
+    qryPOsDeliv: TFDQuery;
     qryPOsDelivPurchase_Order: TFloatField;
     qryPOsDelivLine: TIntegerField;
     qryPOsDelivDate_Point: TDateTimeField;
@@ -167,7 +170,7 @@ type
     qryPOsDelivNeeds_Authorising: TStringField;
     qryPOsSalesInvdNeeds_Authorising: TStringField;
     qryPOAllLinesNeeds_Authorising: TStringField;
-    qryGetOperator: TQuery;
+    qryGetOperator: TFDQuery;
     qryPOsSalesInvdOn_Hold: TStringField;
     qryPOsSalesInvdAuthorised_By: TIntegerField;
     qryPOsDelivOn_Hold: TStringField;
@@ -175,12 +178,12 @@ type
     qryPOAllLinesOn_Hold: TStringField;
     qryPOAllLinesAuthorised_By: TIntegerField;
     qryPCHeaderGridOrig_Supplier_Invoice_no: TStringField;
-    qryCheckSInvoice: TQuery;
-    qryPassSInvoice: TQuery;
-    qryUpPOPIStatus: TQuery;
+    qryCheckSInvoice: TFDQuery;
+    qryPassSInvoice: TFDQuery;
+    qryUpPOPIStatus: TFDQuery;
     qryPCHeaderGridAccount_Code: TStringField;
     qrySIHeaderGridAccount_Code: TStringField;
-    qryGetSupplier: TQuery;
+    qryGetSupplier: TFDQuery;
     qryPOsDelivJob_Bag: TIntegerField;
     qryPOAllLinesJob_Bag: TIntegerField;
     qryPOsSalesInvdJob_Bag: TIntegerField;
@@ -191,7 +194,7 @@ type
     qryPOsDelivSales_Invoice_no: TStringField;
     qryPOsDelivInvoice_Date: TDateTimeField;
     qrySIHeaderGridSales_Invoice_No: TStringField;
-    qryGetPOInvoice: TQuery;
+    qryGetPOInvoice: TFDQuery;
     qryPOsDelivPurch_Ord_Line_Status: TIntegerField;
     qryPOsSalesInvdPurch_Ord_Line_Status: TIntegerField;
     qryPOAllLinesPurch_Ord_Line_Status: TIntegerField;
@@ -2615,12 +2618,12 @@ end;
 
 procedure TdmSupplierInvoice.RefreshPOData;
 var
-  tempQry: TQuery;
+  tempQry: TFDQuery;
 begin
   //the datasource has one of two queries as its dataset
   //one shows all purchase orders, the other just shows purchase orders that
   //have at least been part sales invoices raised
-  tempQry := dsPOline.dataset as TQuery;
+  tempQry := dsPOline.dataset as TFDQuery;
   //with tempQry do
   begin
     tempQry.Close;

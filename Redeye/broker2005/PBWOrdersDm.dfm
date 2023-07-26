@@ -1,11 +1,8 @@
 object dtmdlWOrders: TdtmdlWOrders
-  OldCreateOrder = False
-  Left = 215
-  Top = 89
   Height = 649
   Width = 1106
-  object qryWOHeader: TQuery
-    DatabaseName = 'pb'
+  object qryWOHeader: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Works_Order.*,'
       '        Customer_Branch.Name as Branch_Name,'
@@ -56,13 +53,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAddHeader: TQuery
-    DatabaseName = 'pb'
+  object qryWOAddHeader: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'INSERT INTO Works_Order'
       '  (Works_Order,'
@@ -142,178 +137,121 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Actual_quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Version_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Method'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Production_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Previous_WO_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Vat_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Account_Team'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Selling_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sell_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'is_perso_100_percent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Company'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Company_Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Customer_Ad_Hoc_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryWOUpHeader: TQuery
-    DatabaseName = 'pb'
+  object qryWOUpHeader: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'UPDATE Works_Order'
       'set'
@@ -357,178 +295,124 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Actual_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Version_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice_Method'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimated_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Production_type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Previous_WO_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Vat_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Account_Team'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Estimated_selling_price'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sell_unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'is_perso_100_percent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Company'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Company_Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Return_Branch_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Return_Customer_Ad_Hoc_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Return_Customer_Ad_Hoc_Address'
+        DataType = ftInteger
+      end
+      item
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'pb'
+  object qryZero: TFDQuery
+    ConnectionName = 'pb'
     Left = 376
     Top = 208
   end
-  object qryWOHeaderGrid: TQuery
-    DatabaseName = 'PB'
+  object qryWOHeaderGrid: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 2000 Works_Order.*,'
       '        Customer_Branch.Name as Branch_Name,'
@@ -587,19 +471,13 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsWOHeaderGrid: TDataSource
@@ -607,8 +485,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 472
     Top = 8
   end
-  object qryAllWOrders: TQuery
-    DatabaseName = 'PB'
+  object qryAllWOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 2000 Works_Order.*,'
       '        Customer_Branch.Name as Branch_Name,'
@@ -668,23 +546,20 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
-  object qryOperator: TQuery
-    DatabaseName = 'PB'
+  object qryOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator'
       'order by Name')
@@ -696,15 +571,15 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 368
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
     Left = 32
     Top = 416
   end
-  object qryRep: TQuery
-    DatabaseName = 'PB'
+  object qryRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Rep')
     Left = 32
@@ -715,8 +590,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 320
   end
-  object qryCustReps: TQuery
-    DatabaseName = 'PB'
+  object qryCustReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep.Name, Rep.Rep'
       'from Reps_Branches, Rep'
@@ -727,18 +602,16 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 272
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryCustContacts: TQuery
-    DatabaseName = 'PB'
+  object qryCustContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Contact.*'
       'from Customer_Contact'
@@ -749,14 +622,12 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 224
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsCustContacts: TDataSource
@@ -764,8 +635,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 224
   end
-  object qryReserveSlot: TQuery
-    DatabaseName = 'PB'
+  object qryReserveSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Works_Order'
       '  ('
@@ -809,13 +680,13 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryGetReservedSlot: TQuery
-    DatabaseName = 'PB'
+  object qryGetReservedSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Works_Order'
       'WHERE Description = :GUID'
@@ -824,13 +695,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOGetLast: TQuery
-    DatabaseName = 'PB'
+  object qryWOGetLast: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Last_Works_Order_number'
       'from Company'
@@ -838,8 +707,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 272
     Top = 8
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Job_Bag, Job_Bag_Line'
       'From Job_Bag_Line_Dets'
@@ -849,13 +718,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdJB: TQuery
-    DatabaseName = 'PB'
+  object qryUpdJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag_Line_Dets'
       'Set    Supplier = :Supplier,'
@@ -877,83 +744,55 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'selling_Price'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'selling_Price'
+      end
+      item
         Name = 'Price_unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddJB: TQuery
-    DatabaseName = 'PB'
+  object qryAddJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Line_Dets'
       '    (Job_Bag,'
@@ -992,83 +831,55 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Selling_Price'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Selling_Price'
+      end
+      item
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object GetLastJBSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_Job_Bag_Number'
       'From Company'
@@ -1076,8 +887,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 32
     Top = 12
   end
-  object UpdLastJBSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastJBSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Job_Bag_Number = :Last_Job_Bag_Number'
@@ -1086,13 +897,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Job_Bag_Number'
-        ParamType = ptUnknown
       end>
   end
-  object qryCheckJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryCheckJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag'
       'from Job_Bag'
@@ -1101,13 +910,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object GetLastJBLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
@@ -1116,13 +923,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddJBHead: TQuery
-    DatabaseName = 'PB'
+  object qryAddJBHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag'
       '  (Job_Bag,'
@@ -1159,88 +964,58 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 424
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Production_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qrySpare: TQuery
-    DatabaseName = 'PB'
+  object qrySpare: TFDQuery
+    ConnectionName = 'PB'
     Left = 672
     Top = 128
   end
-  object qryGetProcesses: TQuery
-    DatabaseName = 'pb'
+  object qryGetProcesses: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Production_Type,'
       'Process_no,'
@@ -1254,13 +1029,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Production_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAddProcess: TQuery
-    DatabaseName = 'PB'
+  object qryWOAddProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Works_Order_Process'
       '(Works_order,'
@@ -1298,78 +1071,52 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Target_Receipt_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Number_Up'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Laser_Format'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Custom_Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'No_of_hours'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Team_Count'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Work_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryWOProcess: TQuery
-    DatabaseName = 'pb'
+  object qryWOProcess: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Works_Order_Process.*, Process.Process_Description, Proce' +
@@ -1385,18 +1132,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAllProcesses: TQuery
-    DatabaseName = 'pb'
+  object qryWOAllProcesses: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Works_Order_Process.*, Process.Process_Description, Proce' +
@@ -1410,13 +1153,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOEvent: TQuery
-    DatabaseName = 'pb'
+  object qryWOEvent: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Works_Order_Event.*, Operator.Operator_Name'
       'from Works_Order_Event, Operator'
@@ -1426,18 +1167,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAddEvent: TQuery
-    DatabaseName = 'pb'
+  object qryWOAddEvent: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Works_order_Event ('
       'Works_Order,'
@@ -1455,33 +1192,23 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_Date_Time'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAllDeliveries: TQuery
-    DatabaseName = 'pb'
+  object qryWOAllDeliveries: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Works_Order_Delivery.*,'
       'Courier.Courier_Name,'
@@ -1501,13 +1228,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'works_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryWODelivery: TQuery
-    DatabaseName = 'pb'
+  object qryWODelivery: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Works_Order_Delivery.*,'
       'Courier.Courier_Name,'
@@ -1527,18 +1252,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'works_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAddDelivery: TQuery
-    DatabaseName = 'pb'
+  object qryWOAddDelivery: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Works_order_Delivery'
       '(Works_Order,'
@@ -1596,124 +1317,85 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_To_Deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pack_quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_weight_Kilos'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Package_Size'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Account'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Account_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Package_Weight_gms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Building_no_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Street'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Locale'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Town'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Postcode'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Handover_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Courier_Sort'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Courier_Speed'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsCourierService: TDataSource
@@ -1721,8 +1403,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 792
     Top = 243
   end
-  object qryCourierService: TQuery
-    DatabaseName = 'PB'
+  object qryCourierService: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from courier_service'
@@ -1734,18 +1416,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 243
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOAllEvents: TQuery
-    DatabaseName = 'pb'
+  object qryWOAllEvents: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Works_Order_Event.*, Operator.Name as Operator_Name'
       'from Works_order_Event, Operator'
@@ -1756,13 +1434,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJBLine: TQuery
-    DatabaseName = 'pb'
+  object qryGetJBLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Job_Bag_Line'
       'from Job_Bag_Line_dets'
@@ -1772,13 +1448,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 424
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'works_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdJBHead: TQuery
-    DatabaseName = 'pb'
+  object qryUpdJBHead: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Update Job_Bag'
       'set Job_Bag_Production_Status = :Job_Bag_Production_Status'
@@ -1787,23 +1461,19 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 424
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Production_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOProcessQstn: TQuery
-    DatabaseName = 'pb'
+  object qryWOProcessQstn: TFDQuery
+    ConnectionName = 'pb'
     Left = 272
     Top = 64
   end
-  object qryWOAddProcessQstn: TQuery
-    DatabaseName = 'pb'
+  object qryWOAddProcessQstn: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Works_Order_Process_Detail'
       '(Works_Order, Process_no, Process, Question, Process_Answer)'
@@ -1814,33 +1484,23 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Answer'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWOQuestions: TQuery
-    DatabaseName = 'PB'
+  object qryGetWOQuestions: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Works_Order_Process_Detail.Process_Answer,'
       '        Works_Order_Process_Detail.Works_Order,'
@@ -1856,23 +1516,17 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetQuestions: TQuery
-    DatabaseName = 'pb'
+  object qryGetQuestions: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process_question'
@@ -1885,13 +1539,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetQuestionList: TQuery
-    DatabaseName = 'pb'
+  object qryGetQuestionList: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process_Question_List'
@@ -1902,18 +1554,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
-  object qryVatCode: TQuery
-    DatabaseName = 'pb'
+  object qryVatCode: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Vat_Code'
       'order by Vat_Rate')
@@ -1930,8 +1578,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 272
   end
-  object qryAccManager: TQuery
-    DatabaseName = 'PB'
+  object qryAccManager: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select User_Group_Operator.*, Operator.Name '
       'from User_Group_Operator, Operator'
@@ -1946,8 +1594,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 176
   end
-  object qryGetOpAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetOpAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select account_team.account_team, account_team.account_team_name'
       'from account_team_member, Account_Team'
@@ -1957,13 +1605,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Account_Team'
@@ -1972,13 +1618,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end>
   end
-  object qrySelectedWO: TQuery
-    DatabaseName = 'pb'
+  object qrySelectedWO: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Works_order.Works_Order_status,'
       
@@ -1993,13 +1637,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_Unit'
@@ -2012,8 +1654,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 88
     Top = 512
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'pb'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -2022,13 +1664,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJBWO: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBWO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag'
       'from Job_Bag_Works_Order'
@@ -2037,13 +1677,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddJBWO: TQuery
-    DatabaseName = 'PB'
+  object qryAddJBWO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag_Works_Order'
       '(Job_Bag,'
@@ -2059,23 +1697,17 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdWONumber: TQuery
-    DatabaseName = 'PB'
+  object qryUpdWONumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Works_Order'
       'Set Works_Order_Number = :Works_Order_Number'
@@ -2084,18 +1716,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetLastWOJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastWOJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Works_Order_no) as Last_Works_Order'
       'from Job_Bag_Works_Order'
@@ -2104,13 +1732,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPackage: TQuery
-    DatabaseName = 'PB'
+  object qryGetPackage: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Package_Size'
@@ -2119,13 +1745,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 464
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Package_Size'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Rep'
       'from Reps_Branches'
@@ -2135,18 +1759,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 512
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -2155,13 +1775,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpWODeliv: TQuery
-    DatabaseName = 'PB'
+  object qryUpWODeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Works_Order_delivery'
       'set Date_Deliv_Actual = :Date_Deliv_Actual,'
@@ -2171,28 +1789,20 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 263
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpWOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpWOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Works_Order'
       'Set Works_Order_Status = :Works_Order_Status'
@@ -2201,18 +1811,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryGetWOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Works_Order_Status_Descr'
       'from Works_Order_Status'
@@ -2221,13 +1827,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJobBagWO: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBagWO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Works_Order.Works_Order,'
       'Works_Order.Works_Order_Status'
@@ -2238,13 +1842,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 568
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryPaperSize: TQuery
-    DatabaseName = 'PB'
+  object qryPaperSize: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Paper_Size'
@@ -2257,8 +1859,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 832
     Top = 8
   end
-  object qryGetPaperSize: TQuery
-    DatabaseName = 'PB'
+  object qryGetPaperSize: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Paper_Size'
@@ -2267,13 +1869,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end>
   end
-  object qryWOJBProcesses: TQuery
-    DatabaseName = 'PB'
+  object qryWOJBProcesses: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Job_Bag_Process.Job_Bag,'
@@ -2299,13 +1899,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProcessList: TQuery
-    DatabaseName = 'pb'
+  object qryGetProcessList: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select process.*, process_group.* '
       'from process, process_group'
@@ -2316,8 +1914,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 792
     Top = 184
   end
-  object qryGetWIProcess: TQuery
-    DatabaseName = 'PB'
+  object qryGetWIProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Works_Order_Process.Works_Order, Works_Order_Process.Proc' +
@@ -2329,13 +1927,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Process.Process,'
       '        Process.Process_Description,'
@@ -2352,9 +1948,7 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcessPaperSize: TDataSource
@@ -2362,8 +1956,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 832
     Top = 56
   end
-  object qryProcessPaperSize: TQuery
-    DatabaseName = 'PB'
+  object qryProcessPaperSize: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Works_Order_Process.Process,'
       '        Paper_Size.Paper_Size,'
@@ -2389,33 +1983,23 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetOldQuestions: TQuery
-    DatabaseName = 'pb'
+  object qryGetOldQuestions: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Process_question.*'
       'from Process_question, Works_Order_Process_Detail'
@@ -2444,33 +2028,23 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object qryWCGroup: TQuery
-    DatabaseName = 'PB'
+  object qryWCGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Work_Centre_Group'
@@ -2488,9 +2062,9 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 840
     Top = 520
   end
-  object qryWC: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsWCGroup
+  object qryWC: TFDQuery
+    MasterSource = dtsWCGroup
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select work_centre.work_Centre_Name'
       'from work_centre_WC_Group, work_Centre'
@@ -2503,12 +2077,10 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 512
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'work_Centre_Group'
-        ParamType = ptUnknown
       end>
   end
-  object OldqryWCGroup: TQuery
+  object OldqryWCGroup: TFDQuery
     SQL.Strings = (
       
         'select Work_Centre_Group.Work_Centre_Group, Work_Centre_Group.Wo' +
@@ -2523,13 +2095,11 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCourierService: TQuery
-    DatabaseName = 'PB'
+  object qryGetCourierService: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Courier_Service'
@@ -2538,18 +2108,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryCourierSort: TQuery
-    DatabaseName = 'PB'
+  object qryCourierSort: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from courier_sort'
@@ -2561,14 +2127,10 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 299
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Courier_Sort'
-        ParamType = ptUnknown
       end>
   end
   object dtsCourierSort: TDataSource
@@ -2576,8 +2138,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 792
     Top = 299
   end
-  object qryCourierSpeed: TQuery
-    DatabaseName = 'PB'
+  object qryCourierSpeed: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from courier_Speed'
@@ -2589,14 +2151,10 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 347
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Courier_Speed'
-        ParamType = ptUnknown
       end>
   end
   object dtsCourierSpeed: TDataSource
@@ -2604,8 +2162,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 784
     Top = 347
   end
-  object qryGetCompAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCompAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name,'
       '         Company.Building_No_Name,'
@@ -2623,8 +2181,8 @@ object dtmdlWOrders: TdtmdlWOrders
     Left = 928
     Top = 6
   end
-  object qryGetCustAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select   Customer.Name as Name, Customer_Branch.Name as Branch_N' +
@@ -2649,18 +2207,14 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 54
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetAddHocAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetAddHocAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name, Building_No_name,'
       '               Street, Locale, Town,'
@@ -2674,17 +2228,15 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 114
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_Hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object dtsAddress: TDataSource
     Left = 1000
     Top = 8
   end
-  object qryGetCompBrAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCompBrAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Company.Name,'
       '         Company_Branch.Name as Branch_Name,'
@@ -2703,9 +2255,7 @@ object dtmdlWOrders: TdtmdlWOrders
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
-  ccsCommon, qrprntr, printers;
+  Db, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
+  ccsCommon, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPDelivfrm = class(TForm)
@@ -13,21 +16,21 @@ type
     PageHeadQRBand: TQRBand;
     GroupHeadQRGroup: TQRGroup;
     AllocDataSource: TDataSource;
-    GetAllocDetQuery: TQuery;
+    GetAllocDetQuery: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     PartQRDBText: TQRDBText;
     DescQRDBText: TQRDBText;
     PreviewQRLabel: TQRLabel;
-    GetAllAllocDetQuery: TQuery;
+    GetAllAllocDetQuery: TFDQuery;
     NotesQRMemo: TQRMemo;
-    GetCustSQL: TQuery;
-    GetDelivNarrSQL: TQuery;
-    GetAllocMasterQuery: TQuery;
+    GetCustSQL: TFDQuery;
+    GetDelivNarrSQL: TFDQuery;
+    GetAllocMasterQuery: TFDQuery;
     QRDBText4: TQRDBText;
-    DummySQL: TQuery;
+    DummySQL: TFDQuery;
     DelInstructMemo: TQRMemo;
     QRLabelQty: TQRLabel;
-    AdhocSQL: TQuery;
+    AdhocSQL: TFDQuery;
     AddressSRC: TDataSource;
     QRLblAccnt: TQRLabel;
     CustRefQRDBText: TQRDBText;
@@ -37,8 +40,8 @@ type
     QRLabel5: TQRLabel;
     QRLabel10: TQRLabel;
     QRLabel1: TQRLabel;
-    GetAccountSQL: TQuery;
-    GetAllocSerialNoSQL: TQuery;
+    GetAccountSQL: TFDQuery;
+    GetAllocSerialNoSQL: TFDQuery;
     qrdetailSerialNos: TQRSubDetail;
     lblSerialCaption: TQRLabel;
     lblSerialRange: TQRLabel;
@@ -51,7 +54,7 @@ type
     QRLabel3: TQRLabel;
     qrlblDespatched: TQRLabel;
     QRBand3: TQRBand;
-    qryGetComp: TQuery;
+    qryGetComp: TFDQuery;
     QRLabel4: TQRLabel;
     qrlblLineNo: TQRLabel;
     OrderLbl: TQRLabel;
@@ -84,7 +87,7 @@ type
   private
     iLineCount: integer;
     NoOfSerialNoBands: integer;
-    procedure BuildDeliveryNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildDeliveryNotes(aQuery : TFDQuery; const iNarrative : integer);
     function BuildQueryString : string;
   public
     Reprint: byteBool;
@@ -338,7 +341,7 @@ begin
 DelInstructMemo.Lines.Clear;
 end;
 
-procedure TSTRPDelivfrm.BuildDeliveryNotes(aQuery: TQuery;
+procedure TSTRPDelivfrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative: integer);
 var
   aStr : string;

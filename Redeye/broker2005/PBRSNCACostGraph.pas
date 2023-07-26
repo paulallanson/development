@@ -4,9 +4,12 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, VclTee.TeEngine, VclTee.Series, VclTee.TeeProcs,
+  Dialogs, DB, VclTee.TeEngine, VclTee.Series, VclTee.TeeProcs,
   VclTee.Chart, VclTee.DbChart, StdCtrls, CheckLst, ExtCtrls, ComCtrls,
-  DBCtrls, Buttons, CCSPrint, VclTee.TeeGDIPlus;
+  DBCtrls, Buttons, CCSPrint, VclTee.TeeGDIPlus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSNCACostGraphFrm = class(TForm)
@@ -26,17 +29,17 @@ type
     BarSeries1: TBarSeries;
     BarSeries2: TBarSeries;
     BarSeries3: TBarSeries;
-    qryYear1Chart1: TQuery;
-    qryYear2Chart1: TQuery;
-    qryYear3Chart1: TQuery;
-    qryYear1Chart2: TQuery;
-    qryYears: TQuery;
+    qryYear1Chart1: TFDQuery;
+    qryYear2Chart1: TFDQuery;
+    qryYear3Chart1: TFDQuery;
+    qryYear1Chart2: TFDQuery;
+    qryYears: TFDQuery;
     dtsYears: TDataSource;
     Button1: TButton;
     lstbxYears: TListBox;
-    qryYear2Chart2: TQuery;
-    qryYear3Chart2: TQuery;
-    qryGetYearPeriods: TQuery;
+    qryYear2Chart2: TFDQuery;
+    qryYear3Chart2: TFDQuery;
+    qryGetYearPeriods: TFDQuery;
     btnPrint: TBitBtn;
     btnClose: TButton;
     procedure FormActivate(Sender: TObject);

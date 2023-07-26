@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, Spin, DB, DBTables, DBCtrls;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, Spin, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSBarCodeFrm = class(TForm)
@@ -30,10 +33,10 @@ type
     btnBinTo: TSpeedButton;
     Label7: TLabel;
     dblkpWarehouse: TDBLookupComboBox;
-    qryWarehouse: TQuery;
+    qryWarehouse: TFDQuery;
     dtsWH: TDataSource;
     CloseBitBtn: TBitBtn;
-    qryBins: TQuery;
+    qryBins: TFDQuery;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

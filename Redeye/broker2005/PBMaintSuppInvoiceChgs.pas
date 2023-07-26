@@ -4,14 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, PBPOObjects, PBSupplierInvoiceDM, Db, DBTables,
-  ExtCtrls, Mask;
+  StdCtrls, Buttons, DBCtrls, PBPOObjects, PBSupplierInvoiceDM, Db, ExtCtrls, Mask,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSuppInvoiceChgsfrm = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryVAT: TQuery;
+    qryVAT: TFDQuery;
     dsVAT: TDataSource;
     lblDelete: TLabel;
     pnlDetails: TPanel;

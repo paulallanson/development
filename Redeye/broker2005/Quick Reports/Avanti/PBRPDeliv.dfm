@@ -1266,8 +1266,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
       end
     end
   end
-  object PODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object PODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line, '
@@ -1353,8 +1353,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 896
     Top = 232
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -1390,8 +1390,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  Building_no_name,'
@@ -1412,8 +1412,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       'Building_no_name,'
@@ -1438,8 +1438,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 888
     Top = 24
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier.Name as Supplier_Name,'
       'Building_no_name,'
@@ -1469,8 +1469,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -1485,8 +1485,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'
@@ -1503,9 +1503,9 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 816
     Top = 192
   end
-  object CustDetsSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = PODelivSRC
+  object CustDetsSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = PODelivSRC
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -1543,8 +1543,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 409
     Top = 272
   end
-  object GetPickSQL: TQuery
-    DatabaseName = 'PB '
+  object GetPickSQL: TFDQuery
+    ConnectionName = 'PB '
     SQL.Strings = (
       'select *'
       'from Picking_Detail'
@@ -1565,8 +1565,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPickCallOffSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPickCallOffSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Picking_Detail.*, Delivery_Detail.Stock_Location_Desc, De' +
@@ -1629,8 +1629,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'

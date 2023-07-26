@@ -679,8 +679,8 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     TabOrder = 21
     Value = 90
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Distinct'
       '    Customer.Name AS CustName,'

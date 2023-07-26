@@ -1579,13 +1579,13 @@ object PBRPProdAmendsFrm: TPBRPProdAmendsFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 40
     Top = 32
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '    Job_Bag_Time_Log.Job_Bag_Time_Log,'

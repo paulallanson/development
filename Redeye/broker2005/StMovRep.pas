@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables;
+  Qrctrls, QuickRpt, ExtCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TStMovRepFrm = class(TForm)
@@ -22,9 +25,9 @@ type
     RefQRDBText: TQRDBText;
     StoreQRDBText: TQRDBText;
     GetMoveDataSource: TDataSource;
-    GetUserMoveQuery: TQuery;
+    GetUserMoveQuery: TFDQuery;
     QRDBText11: TQRDBText;
-    UpdPrtMoveQuery: TQuery;
+    UpdPrtMoveQuery: TFDQuery;
     QRGroup1: TQRGroup;
     QRLabel2: TQRLabel;
     QRLabel13: TQRLabel;
@@ -39,8 +42,8 @@ type
     qrbRepFooter: TQRBand;
     Group1TotalQRLabel: TQRLabel;
     TotCostQRExpr: TQRExpr;
-    GetDetsQuery: TQuery;
-    GetMoveQuery: TQuery;
+    GetDetsQuery: TFDQuery;
+    GetMoveQuery: TFDQuery;
     qrbRepSummary: TQRBand;
     QRLabel3: TQRLabel;
     QRExpr1: TQRExpr;

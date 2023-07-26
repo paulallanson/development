@@ -473,8 +473,8 @@ object PBRPCapabilityFrm: TPBRPCapabilityFrm
       end
     end
   end
-  object qryCapability: TQuery
-    DatabaseName = 'PB'
+  object qryCapability: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Product_TypeCapability.Product_Type, '
       #9'Product_TypeCapability.Capability, '

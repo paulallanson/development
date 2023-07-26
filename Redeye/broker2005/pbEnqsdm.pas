@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlEnqs = class(TDataModule)
-    qryEnqs: TQuery;
+    qryEnqs: TFDQuery;
     dtsEnqs: TDataSource;
-    qryDummy: TQuery;
-    qryEnqsJB: TQuery;
+    qryDummy: TFDQuery;
+    qryEnqsJB: TFDQuery;
     dtsEnqsJB: TDataSource;
-    qryEnqsNotConverted: TQuery;
+    qryEnqsNotConverted: TFDQuery;
     qryEnqsDate_Point: TDateTimeField;
     qryEnqsEnquiry_Status: TIntegerField;
     qryEnqsStatus_Description: TStringField;
@@ -38,13 +41,13 @@ type
     qryEnqsEnq_Inactive: TStringField;
     qryEnqsProduct_Type_Description: TStringField;
     qryEnqsStatus_Text: TStringField;
-    qryPO: TQuery;
-    qryReasons: TQuery;
+    qryPO: TFDQuery;
+    qryReasons: TFDQuery;
     dtsReasons: TDataSource;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryGetEnquiryLine: TQuery;
-    qryUpdEnquiryLine: TQuery;
+    qryGetEnquiryLine: TFDQuery;
+    qryUpdEnquiryLine: TFDQuery;
     procedure qryEnqsStatus_TextGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
   private

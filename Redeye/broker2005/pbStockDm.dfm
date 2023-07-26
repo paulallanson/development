@@ -1,8 +1,8 @@
 object dtmdlStock: TdtmdlStock
   Height = 579
   Width = 781
-  object qryCustStock: TQuery
-    DatabaseName = 'PB'
+  object qryCustStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -231,8 +231,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 16
   end
-  object qryPartMvmnts: TQuery
-    DatabaseName = 'PB'
+  object qryPartMvmnts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select   part_movement.Date_received,'
       '         part_store.Part_Store_Name,'
@@ -323,8 +323,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 72
   end
-  object qryPartStoreBins: TQuery
-    DatabaseName = 'PB'
+  object qryPartStoreBins: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    Store_Stock.Part,'
       #9'         Part.Part_Description,'
@@ -411,8 +411,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 128
   end
-  object qryStoreStockNumberedItems: TQuery
-    DatabaseName = 'PB'
+  object qryStoreStockNumberedItems: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    Store_Stock.Part as Part,'
       #9'         Part.Part_Description as Description,'
@@ -522,8 +522,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 176
   end
-  object qryPartSales: TQuery
-    DatabaseName = 'PB'
+  object qryPartSales: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order_line.part,'
       '       part.part_description,'
@@ -657,8 +657,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 232
   end
-  object qryPartProduction: TQuery
-    DatabaseName = 'PB'
+  object qryPartProduction: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purchase_orderline.Form_Reference,'
       '       form_reference.stock_reference as Part,'
@@ -818,8 +818,8 @@ object dtmdlStock: TdtmdlStock
       Calculated = True
     end
   end
-  object qryPartPOs: TQuery
-    DatabaseName = 'PB'
+  object qryPartPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purch_ord_line.part,'
       '       part.part_description as Description,'
@@ -902,8 +902,8 @@ object dtmdlStock: TdtmdlStock
     Left = 184
     Top = 344
   end
-  object qryStckDetsbyFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryStckDetsbyFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.Part,'
       '       part.part_description as description,'
@@ -975,8 +975,8 @@ object dtmdlStock: TdtmdlStock
     Left = 304
     Top = 16
   end
-  object qryPartNumbers: TQuery
-    DatabaseName = 'PB'
+  object qryPartNumbers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    Store_Stock.Part as Part,'
       #9'         Part.Part_Description as Description,'
@@ -1021,8 +1021,8 @@ object dtmdlStock: TdtmdlStock
     Left = 392
     Top = 80
   end
-  object qryStock: TQuery
-    DatabaseName = 'PB'
+  object qryStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 10000 part.Part,'
       '        Part.Customer,'
@@ -1293,8 +1293,8 @@ object dtmdlStock: TdtmdlStock
       Size = 30
     end
   end
-  object qryPartDeliveries: TQuery
-    DatabaseName = 'PB'
+  object qryPartDeliveries: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       '  Delivery_Detail.Purchase_Order,'
@@ -1401,8 +1401,8 @@ object dtmdlStock: TdtmdlStock
     Left = 408
     Top = 296
   end
-  object qryShowPartDeliveries: TQuery
-    DatabaseName = 'PB'
+  object qryShowPartDeliveries: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       '  Delivery_Detail.Purchase_Order,'
@@ -1513,8 +1513,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryStockLocations: TQuery
-    DatabaseName = 'PB'
+  object qryStockLocations: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Store_Stock.Quantity_Allocated, '
       #9'Store_Stock.Store_Quantity, '
@@ -1560,8 +1560,8 @@ object dtmdlStock: TdtmdlStock
     Left = 176
     Top = 400
   end
-  object qryPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Part_Store'
       'order by Part_Store_Name')
@@ -1573,8 +1573,8 @@ object dtmdlStock: TdtmdlStock
     Left = 392
     Top = 136
   end
-  object qryMoves: TQuery
-    DatabaseName = 'pb'
+  object qryMoves: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Part_Movement'
@@ -1588,8 +1588,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryShowCustDeliveries: TQuery
-    DatabaseName = 'PB'
+  object qryShowCustDeliveries: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       '  Delivery_Detail.Purchase_Order,'
@@ -1719,8 +1719,8 @@ object dtmdlStock: TdtmdlStock
     Left = 408
     Top = 408
   end
-  object qryCustDeliveries: TQuery
-    DatabaseName = 'PB'
+  object qryCustDeliveries: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '
       '  Delivery_Detail.Purchase_Order,'
@@ -1831,8 +1831,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetUsedForJob: TQuery
-    DatabaseName = 'PB'
+  object qryGetUsedForJob: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Part_Movement.Part_Movement'
       'from Part_Movement'
@@ -1847,8 +1847,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryStockUsage: TQuery
-    DatabaseName = 'PB'
+  object qryStockUsage: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT  Sum(Store_Stock.Quantity_Allocated) AS Quantity_Allocate' +
@@ -1916,8 +1916,8 @@ object dtmdlStock: TdtmdlStock
     Left = 176
     Top = 456
   end
-  object qryProductionLocation: TQuery
-    DatabaseName = 'PB'
+  object qryProductionLocation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Production_location'
@@ -1931,8 +1931,8 @@ object dtmdlStock: TdtmdlStock
     Left = 408
     Top = 472
   end
-  object qryGetProductionLocation: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductionLocation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Production_Location'
@@ -1946,8 +1946,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Store_Stock'
@@ -1974,8 +1974,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartAllocation: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartAllocation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Part_Store_Allocation'
@@ -1989,8 +1989,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobNumber: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobNumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select DISTINCT Job_Bag'
       'from Job_Bag_Stock_Request'
@@ -2004,8 +2004,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryPallets: TQuery
-    DatabaseName = 'PB'
+  object qryPallets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 2000'
       #9'Store_Stock.Store_Stock, '
@@ -2043,8 +2043,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryDummyPallets: TQuery
-    DatabaseName = 'PB'
+  object qryDummyPallets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 2000'
       #9'Store_Stock.Store_Stock, '
@@ -2086,8 +2086,8 @@ object dtmdlStock: TdtmdlStock
     Left = 496
     Top = 88
   end
-  object qryGetPart: TQuery
-    DatabaseName = 'PB'
+  object qryGetPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Part'
@@ -2102,8 +2102,8 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustName: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer.Name as Cust_Name,'
       '       Customer_Branch.Name as Branch_Name'
@@ -2130,13 +2130,13 @@ object dtmdlStock: TdtmdlStock
         ParamType = ptUnknown
       end>
   end
-  object qryUpdMulti: TQuery
-    DatabaseName = 'PB'
+  object qryUpdMulti: TFDQuery
+    ConnectionName = 'PB'
     Left = 640
     Top = 152
   end
-  object qryUpdMultiPartInactive: TQuery
-    DatabaseName = 'PB'
+  object qryUpdMultiPartInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Part'
       'SET Not_in_Use = :Not_In_Use'

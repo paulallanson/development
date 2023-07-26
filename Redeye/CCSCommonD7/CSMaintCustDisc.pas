@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCsMaintCustDiscFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    UpdSQL: TQuery;
+    UpdSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
-    AddSQL: TQuery;
-    DelSQL: TQuery;
-    GetLastCodeSql: TQuery;
+    AddSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    GetLastCodeSql: TFDQuery;
     CstCntrLabel: TLabel;
     DescLabel: TLabel;
     CustLabel: TLabel;
@@ -27,13 +30,13 @@ type
     DateToEdit: TEdit;
     DateToBitBtn: TBitBtn;
     DiscDBLookupComboBox: TDBLookupComboBox;
-    GetDiscSql: TQuery;
+    GetDiscSql: TFDQuery;
     GetDiscDataSource: TDataSource;
     ByLabel: TLabel;
     PartEdit: TEdit;
     PartBitBtn: TBitBtn;
     DiscValMemo: TMemo;
-    GetDetsQuery: TQuery;
+    GetDetsQuery: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

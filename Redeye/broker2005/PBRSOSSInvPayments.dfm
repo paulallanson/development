@@ -432,8 +432,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Width = 50
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_invoice.Customer,'
       '        Sales_invoice.Branch_no,'

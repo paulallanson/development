@@ -321,8 +321,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
     TabOrder = 5
     OnClick = rdgrpPaymentTypeClick
   end
-  object qryGetInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct'
       'Sales_Invoice.Customer,'
@@ -367,8 +367,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryUpInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update sales_invoice'
       'Set Account_Number = :Account_Number,'
@@ -429,8 +429,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSILines: TQuery
-    DatabaseName = 'pb'
+  object qryGetSILines: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Sales_invoice_Line'
@@ -444,8 +444,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Job_bag_Line_Dets'
@@ -465,8 +465,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryUpdJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag'
       'set On_Hold = :On_Hold'
@@ -485,8 +485,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOdelivLines: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOdelivLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Delivery_Detail'
@@ -507,8 +507,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPODeliv: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPODeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'set Qty_Delivered = Qty_to_Deliver,'
@@ -540,8 +540,8 @@ object PBMaintSalesInvPayFrm: TPBMaintSalesInvPayFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPO: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set ready_to_invoice = '#39'N'#39

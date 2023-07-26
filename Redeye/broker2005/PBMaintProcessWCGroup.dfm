@@ -174,8 +174,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     TabOrder = 6
     Visible = False
   end
-  object qryWCGroups: TQuery
-    DatabaseName = 'pb'
+  object qryWCGroups: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre_Group.*'
       'from Work_Centre_Group')
@@ -187,8 +187,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Process_Work_Centre_Group'
       '(Process,'
@@ -220,8 +220,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre_Group.*'
       'from Work_Centre_Group'
@@ -229,8 +229,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
     Left = 328
     Top = 120
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Process_Work_Centre_Group.*, Work_Centre_Group_Name'
       'from Process_Work_Centre_Group, Work_Centre_Group'
@@ -247,8 +247,8 @@ object PBMaintProcessWCGroupFrm: TPBMaintProcessWCGroupFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Process_Work_Centre_Group'
       'where Process = :Process')

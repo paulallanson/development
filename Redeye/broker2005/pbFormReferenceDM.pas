@@ -3,15 +3,18 @@ unit pbFormReferenceDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, Math;
+  SysUtils, Classes, DB, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlForms = class(TDataModule)
-    qryForms: TQuery;
+    qryForms: TFDQuery;
     dtsForms: TDataSource;
-    old_qryDummy: TQuery;
-    qryDummy: TQuery;
-    qryLocations: TQuery;
+    old_qryDummy: TFDQuery;
+    qryDummy: TFDQuery;
+    qryLocations: TFDQuery;
     qryLocationsForm_Reference: TIntegerField;
     qryLocationsForm_Reference_ID: TStringField;
     qryLocationsForm_Reference_Descr: TStringField;
@@ -30,15 +33,15 @@ type
     dtsLocations: TDataSource;
     dtsHistory: TDataSource;
     dtsNull: TDataSource;
-    qryCustomer: TQuery;
-    qryBranch: TQuery;
-    qryGetTotalStock: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
-    CompSQL: TQuery;
-    CustomerSQL: TQuery;
-    qryHistory: TQuery;
+    qryCustomer: TFDQuery;
+    qryBranch: TFDQuery;
+    qryGetTotalStock: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    CompSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
+    qryHistory: TFDQuery;
     qryHistoryPurchase_Order: TFloatField;
     qryHistoryLine: TIntegerField;
     qryHistoryDelivery_no: TIntegerField;

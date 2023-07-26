@@ -17,22 +17,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSupBrchFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     FlashTimer: TTimer;
-    GetCompSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
-    CheckCustAccExistsSQL: TQuery;
-    UpdNotesOnlySQL: TQuery;
+    GetCompSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    UpdNotesOnlySQL: TFDQuery;
     pgcntrlSupplier: TPageControl;
     tbshtDetails: TTabSheet;
     tbshtProductTypes: TTabSheet;
@@ -58,7 +61,7 @@ type
     PostCodeEdit: TEdit;
     AccCodeEdit: TEdit;
     PrintBitBtn: TBitBtn;
-    qryGetBranch: TQuery;
+    qryGetBranch: TFDQuery;
     Label4: TLabel;
     chkbxActive: TCheckBox;
     procedure FormActivate(Sender: TObject);

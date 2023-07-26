@@ -8,28 +8,31 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, CCSPrint, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPDelivCallOffFrm = class(TForm)
     PBDelivQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     AddressMemo: TQRMemo;
     DeliveryMemo: TQRMemo;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
     AddressSRC: TDataSource;
-    SupplierSQL: TQuery;
+    SupplierSQL: TFDQuery;
     QRDBText2: TQRDBText;
     YourRefLbl: TQRLabel;
     DateLbl: TQRLabel;
-    GetNarrSQL: TQuery;
-    CompSQL: TQuery;
+    GetNarrSQL: TFDQuery;
+    CompSQL: TFDQuery;
     Account: TQRDBText;
-    CustDetsSQL: TQuery;
+    CustDetsSQL: TFDQuery;
     Accountlbl: TQRLabel;
     DeliveryDateLbl: TQRLabel;
     QRLabel1: TQRLabel;
@@ -39,7 +42,7 @@ type
     QRLabel6: TQRLabel;
     QRBand2: TQRSubDetail;
     GetPickDataSource: TDataSource;
-    GetPickSQL: TQuery;
+    GetPickSQL: TFDQuery;
     FormRefLbl: TQRLabel;
     FormRefDescLbl: TQRLabel;
     QRDBText3: TQRDBText;
@@ -48,7 +51,7 @@ type
     QuantityLbl: TQRLabel;
     OrderRefLbl: TQRLabel;
     CallOffDataSource: TDataSource;
-    CallOffSQL: TQuery;
+    CallOffSQL: TFDQuery;
     QRLabel9: TQRLabel;
     QRLabel5: TQRLabel;
     QRLabel10: TQRLabel;
@@ -74,7 +77,7 @@ type
     FCustomer: integer;
     FCustomerRef: string;
     FOrderDate: TDateTime;
-    procedure BuildDeliveryNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildDeliveryNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure SetDeliveryDate(const Value: string);
     procedure SetBranch(const Value: integer);
     procedure SetCustomer(const Value: integer);
@@ -260,7 +263,7 @@ end;
 *)
 end;
 
-procedure TPBRPDelivCallOffFrm.BuildDeliveryNotes(aQuery: TQuery;
+procedure TPBRPDelivCallOffFrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

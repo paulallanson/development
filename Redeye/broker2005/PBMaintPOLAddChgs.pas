@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, PBPOObjects;
+  StdCtrls, Buttons, Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPOLAddChgsfrm = class(TForm)
@@ -15,14 +18,14 @@ type
     Label2: TLabel;
     memCost: TMemo;
     delLabel: TLabel;
-    UpdSQL: TQuery;
-    AddSQL: TQuery;
-    GetLastSQL: TQuery;
-    qryDel: TQuery;
-    getLastProfitSQL: TQuery;
-    addSalesProfitSQL: TQuery;
-    updSalesProfitSQL: TQuery;
-    qryDelSalesProfit: TQuery;
+    UpdSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    qryDel: TFDQuery;
+    getLastProfitSQL: TFDQuery;
+    addSalesProfitSQL: TFDQuery;
+    updSalesProfitSQL: TFDQuery;
+    qryDelSalesProfit: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure OKbitbtnClick(Sender: TObject);

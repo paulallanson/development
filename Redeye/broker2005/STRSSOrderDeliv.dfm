@@ -375,8 +375,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
         Width = 50
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_Delivery.Sales_Order,'
       '        Sales_Order_Delivery.Sales_order_delivery_no,'
@@ -400,35 +400,35 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Top = 160
     object qryReportSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'PB.Sales_Order_Delivery.Sales_Order'
+
     end
     object qryReportSales_order_delivery_no: TIntegerField
       FieldName = 'Sales_order_delivery_no'
-      Origin = 'PB.Sales_Order_Delivery.Sales_order_delivery_no'
+
     end
     object qryReportDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
-      Origin = 'PB.Sales_Order_Delivery.Delivery_Date'
+
     end
     object qryReportConsignment_number: TStringField
       FieldName = 'Consignment_number'
-      Origin = 'PB.Sales_Order_Delivery.Consignment_number'
+
       FixedChar = True
       Size = 40
     end
     object qryReportCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-      Origin = 'PB.Sales_Order.Cust_Order_No'
+
       FixedChar = True
       Size = 80
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'PB.Sales_Order.Customer'
+
     end
     object qryReportName: TStringField
       FieldName = 'Name'
-      Origin = 'PB.Customer.Name'
+
       FixedChar = True
       Size = 80
     end
@@ -439,13 +439,13 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Left = 272
     Top = 160
   end
-  object qryExport: TQuery
-    DatabaseName = 'PB'
+  object qryExport: TFDQuery
+    ConnectionName = 'PB'
     Left = 384
     Top = 160
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Data_Transfer_Directory'
       'from company'
@@ -453,8 +453,8 @@ object STRSSOrderDelivFrm: TSTRSSOrderDelivFrm
     Left = 464
     Top = 168
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer, Email_address_order_confirm'
       'from Customer'

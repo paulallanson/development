@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls;
+  Dialogs, ExtCtrls, QuickRpt, DB, QRCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPAgedStkNoteFrm = class(TForm)
@@ -12,9 +15,9 @@ type
     QRBand1: TQRBand;
     QRLabel1: TQRLabel;
     QRSysData1: TQRSysData;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrlblDateSince: TQRLabel;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     qrgStoreStock: TQRGroup;
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
@@ -37,7 +40,7 @@ type
     qrlblValue: TQRLabel;
     QRLabel11: TQRLabel;
     qrlblLastUsageDate: TQRLabel;
-    qryLastUsageDate: TQuery;
+    qryLastUsageDate: TFDQuery;
     QRShape2: TQRShape;
     QRLabel12: TQRLabel;
     QRDBText7: TQRDBText;

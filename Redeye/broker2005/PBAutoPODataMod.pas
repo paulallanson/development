@@ -61,37 +61,40 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables;
+  DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBAutoPODM = class(TDataModule)
-    GetLinesNotPOedSQL: TQuery;
-    UpdEnqHeadSQL: TQuery;
-    AddNotesSQL: TQuery;
-    UpdEnqLineSQL: TQuery;
-    GetExtChgsSQL: TQuery;
-    GetQtysSQL: TQuery;
+    GetLinesNotPOedSQL: TFDQuery;
+    UpdEnqHeadSQL: TFDQuery;
+    AddNotesSQL: TFDQuery;
+    UpdEnqLineSQL: TFDQuery;
+    GetExtChgsSQL: TFDQuery;
+    GetQtysSQL: TFDQuery;
     QtysSRC: TDataSource;
-    GetProofStatSQL: TQuery;
+    GetProofStatSQL: TFDQuery;
     ProofStatSRC: TDataSource;
-    GetContactSQL: TQuery;
+    GetContactSQL: TFDQuery;
     ContactSRC: TDataSource;
-    GetVATSQL: TQuery;
+    GetVATSQL: TFDQuery;
     VATSRC: TDataSource;
     InvMethSRC: TDataSource;
-    GetInvMethSQL: TQuery;
-    GetEnqSQL: TQuery;
-    GetExistPOsSQL: TQuery;
-    GetPartsSQL: TQuery;
-    GetAddDetsSQL: TQuery;
-    Old_GetQtysSQL: TQuery;
-    GetQuestionsSQL: TQuery;
-    GetAnswersSQL: TQuery;
-    GetPriceUnitSQL: TQuery;
-    qrySelRep: TQuery;
-    qrySelCustAddress: TQuery;
-    qrySelCompanyAddress: TQuery;
-    qryJobTypes: TQuery;
+    GetInvMethSQL: TFDQuery;
+    GetEnqSQL: TFDQuery;
+    GetExistPOsSQL: TFDQuery;
+    GetPartsSQL: TFDQuery;
+    GetAddDetsSQL: TFDQuery;
+    Old_GetQtysSQL: TFDQuery;
+    GetQuestionsSQL: TFDQuery;
+    GetAnswersSQL: TFDQuery;
+    GetPriceUnitSQL: TFDQuery;
+    qrySelRep: TFDQuery;
+    qrySelCustAddress: TFDQuery;
+    qrySelCompanyAddress: TFDQuery;
+    qryJobTypes: TFDQuery;
   public
     function GetPriceUnitDescr(TempCode: integer): string;
   end;

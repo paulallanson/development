@@ -126,24 +126,27 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, CCSPrint, PBPOObjects,
-  QrExport;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, CCSPrint, PBPOObjects,
+  QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPDelivFrm = class(TForm)
     PBDelivQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     PONumberLbl: TQRLabel;
     AddressMemo: TQRMemo;
     DeliveryMemo: TQRMemo;
     BoxesLbl: TQRLabel;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
     AddressSRC: TDataSource;
-    SupplierSQL: TQuery;
+    SupplierSQL: TFDQuery;
     QRDBText2: TQRDBText;
     QRDBText3: TQRDBText;
     QRDBText4: TQRDBText;
@@ -153,10 +156,10 @@ type
     DateLbl: TQRLabel;
     OrderRefLbl: TQRLabel;
     QtyOrderedLbl: TQRLabel;
-    GetNarrSQL: TQuery;
-    CompSQL: TQuery;
+    GetNarrSQL: TFDQuery;
+    CompSQL: TFDQuery;
     Account: TQRDBText;
-    CustDetsSQL: TQuery;
+    CustDetsSQL: TFDQuery;
     Accountlbl: TQRLabel;
     DelInstructMemo: TQRMemo;
     FormRefLbl: TQRLabel;
@@ -177,12 +180,12 @@ type
     QRLabel2: TQRLabel;
     QRShape1: TQRShape;
     GetPickDataSource: TDataSource;
-    GetPickSQL: TQuery;
+    GetPickSQL: TFDQuery;
     QRLabel13: TQRLabel;
     QRLabel14: TQRLabel;
-    GetPickCallOffSQL: TQuery;
+    GetPickCallOffSQL: TFDQuery;
     gtlblFSCClaim: TQRLabel;
-    qryGetFSCClaim: TQuery;
+    qryGetFSCClaim: TFDQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;
@@ -193,7 +196,7 @@ type
       var PrintBand: Boolean);
   private
     FDeliveryDate: string;
-    procedure BuildDeliveryNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildDeliveryNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure SetDeliveryDate(const Value: string);
   public
     PONo: real;
@@ -444,7 +447,7 @@ begin
   end;
 end;
 
-procedure TPBRPDelivFrm.BuildDeliveryNotes(aQuery: TQuery;
+procedure TPBRPDelivFrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

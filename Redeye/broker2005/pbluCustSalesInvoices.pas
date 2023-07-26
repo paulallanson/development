@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, StdCtrls, Grids, DBGrids, ExtCtrls, ImgList, ToolWin, pbSalesInvoiceDM,
-  Db, DBTables;
+  Db;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}

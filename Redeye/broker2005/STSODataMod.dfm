@@ -6,8 +6,8 @@ object STSalesOrdDM: TSTSalesOrdDM
   Top = 99
   Height = 661
   Width = 1287
-  object GetSOLineSql: TQuery
-    DatabaseName = 'PB'
+  object GetSOLineSql: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Sales_Order_Line'
@@ -31,8 +31,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_SO_Number, Last_Invoice_No'
       'From Company'
@@ -41,8 +41,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 304
     Top = 64
   end
-  object UpdLastSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_SO_Number = :Last_SO_Number'
@@ -57,8 +57,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set      Office_Contact = :Office_Contact,'
@@ -238,16 +238,16 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select In_Use_By, Name from Company Where Company = 1'
       ' ')
     Left = 32
     Top = 240
   end
-  object OperatorSQL: TQuery
-    DatabaseName = 'pb'
+  object OperatorSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator')
     Left = 128
@@ -259,8 +259,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 128
     Top = 232
   end
-  object DelSOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Sales_Order_Line'
       'Where (Sales_Order = :Sales_Order) and'
@@ -282,8 +282,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddSOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order_Line'
       
@@ -438,8 +438,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order_Line'
       'Set'
@@ -565,8 +565,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptInput
       end>
   end
-  object GetStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order_Line_Status.Description'
       'From Sales_Order_Line_Status'
@@ -580,8 +580,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetCustContSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustContSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Contact_No, Name,'
       '  contact_info.*'
@@ -605,8 +605,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetSOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT SO.*, C.Name as CustomerName, CB.Name as BranchName,'
       
@@ -643,8 +643,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order'
       '  (Sales_Order,'
@@ -854,8 +854,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetLineDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLineDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Sales_Order_Line'
@@ -873,8 +873,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetDelSOLinesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelSOLinesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order_Line_No'
       'From Sales_Order_Line'
@@ -891,8 +891,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Sales_Order'
       'Where'
@@ -907,8 +907,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartDescSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartDescSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select part.Part_Description, Purch_Pack_Quantity, Sell_Pack_Qua' +
@@ -926,8 +926,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Part'
       'where part.part = :Part')
@@ -946,8 +946,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 224
     Top = 232
   end
-  object StoreSQL: TQuery
-    DatabaseName = 'PB'
+  object StoreSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Store_Name, Part_Store'
       'from Part_Store'
@@ -955,8 +955,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 224
     Top = 184
   end
-  object GetCustCstCntrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustCstCntrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Cost_centre'
       'from Customer_CostCentre'
@@ -972,8 +972,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartDiscSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartDiscSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select discount_value, discount_type, date_effective, date_ineff' +
@@ -1008,8 +1008,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetGroupDiscSQL: TQuery
-    DatabaseName = 'PB'
+  object GetGroupDiscSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select discount_value, discount_type, date_effective, date_ineff' +
@@ -1045,8 +1045,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DefWHouseSQL: TQuery
-    DatabaseName = 'PB'
+  object DefWHouseSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Default_Warehouse'
       'from company'
@@ -1054,8 +1054,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 32
     Top = 184
   end
-  object UpdSOLineRepPercSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOLineRepPercSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_OrderRep'
       'Set'
@@ -1090,8 +1090,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddSOLineRepPercSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSOLineRepPercSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_OrderRep'
       '(Sales_Order, Rep, Rep_Percentage)'
@@ -1126,8 +1126,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelSOLineRepPercSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSOLineRepPercSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Sales_OrderRep'
       'Where (Sales_Order = :Sales_Order) and'
@@ -1150,8 +1150,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetRepDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRepDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_OrderRep.*, Name'
       'from Sales_OrderRep, Rep'
@@ -1166,8 +1166,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetCustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer'
       'from Customer_Branch'
@@ -1186,16 +1186,16 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 400
     Top = 192
   end
-  object GetPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part'
       'from part')
     Left = 456
     Top = 192
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Rep'
       'where ((inactive = '#39'N'#39') or (inactive is NULL) or Rep = :Rep)'
@@ -1214,8 +1214,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 400
     Top = 336
   end
-  object GetCustRepsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustRepsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep, Is_Main_Rep'
       'From Reps_Branches'
@@ -1236,8 +1236,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer'
@@ -1251,8 +1251,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetCustBrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustBrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Branch.*'
       'from Customer_Branch'
@@ -1273,8 +1273,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelAllRepPercSQL: TQuery
-    DatabaseName = 'PB'
+  object DelAllRepPercSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_OrderRep'
       'where Sales_Order = :Sales_Order')
@@ -1287,8 +1287,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetCustAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name, Customer_Branch.*'
       'from Customer, Customer_Branch'
@@ -1309,8 +1309,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetOSSObySuppSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOSSObySuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_Order.Sales_Order'
       
@@ -1329,8 +1329,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyDtls: TQuery
-    DatabaseName = 'PB'
+  object qryCompanyDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Company '
@@ -1344,8 +1344,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetContactName: TQuery
-    DatabaseName = 'PB'
+  object qryGetContactName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Customer_Contact '
@@ -1371,8 +1371,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Order '
       'SET Sales_Order_Head_Status = :Status'
@@ -1391,8 +1391,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetVatRateSQL: TQuery
-    DatabaseName = 'PB'
+  object GetVatRateSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select vat_Code.Vat_Rate'
       'from Vat_Code, Customer'
@@ -1408,8 +1408,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdLastInvSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Invoice_No = :Last_Invoice_No'
@@ -1425,13 +1425,13 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddInvSQL: TQuery
-    DatabaseName = 'PB'
+  object AddInvSQL: TFDQuery
+    ConnectionName = 'PB'
     Left = 72
     Top = 8
   end
-  object UpdInvHeadSQL: TQuery
-    DatabaseName = 'pb'
+  object UpdInvHeadSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Sales_invoice'
       
@@ -1526,8 +1526,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptInput
       end>
   end
-  object AddInvLineSQL: TQuery
-    DatabaseName = 'pb'
+  object AddInvLineSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Sales_Invoice_Line (Sales_Invoice,'
       
@@ -1634,8 +1634,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddInvHeadSQL: TQuery
-    DatabaseName = 'pb'
+  object AddInvHeadSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Sales_invoice'
       '(Sales_Invoice,'
@@ -1676,8 +1676,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptInput
       end>
   end
-  object GetInvoiceNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetInvoiceNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice'
       'from Sales_Invoice'
@@ -1708,8 +1708,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptInput
       end>
   end
-  object UpdInvLineSQL: TQuery
-    DatabaseName = 'pb'
+  object UpdInvLineSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Update Sales_Invoice_Line'
       'Set Qty_Invoiced = :Quantity,'
@@ -1767,8 +1767,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetInvoiceSQL: TQuery
-    DatabaseName = 'pb'
+  object GetInvoiceSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'Select Sales_Invoice.*, Sales_Invoice_Line.Sales_Order, Sales_In' +
@@ -1795,8 +1795,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetExtChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetExtChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Sales_Order_Add_Charge'
@@ -1813,8 +1813,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object GetExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Sales_Invoice_Add_Charge'
@@ -1837,8 +1837,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object AddExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Invoice_Add_Charge'
       
@@ -1886,8 +1886,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_invoice_Add_Charge'
       'Set'
@@ -1931,8 +1931,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetExtChgsInvSQL: TQuery
-    DatabaseName = 'PB'
+  object GetExtChgsInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Sales_Invoice_Add_Charge'
@@ -1950,8 +1950,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetSuppOTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppOTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Supplier_order_type'
       'where Supplier = :Supplier')
@@ -1969,8 +1969,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 112
     Top = 328
   end
-  object RepSourceSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSourceSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Replenish_Source')
     Left = 248
@@ -1981,8 +1981,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 312
     Top = 336
   end
-  object GetSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name, Discount'
       'from Supplier'
@@ -1996,8 +1996,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetSuppBrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppBrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name'
       'from Supplier_Branch'
@@ -2017,8 +2017,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartVatRateSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartVatRateSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select vat_Code.Vat_Rate , Vat_Code.Vat_code'
       'from Vat_Code, Part'
@@ -2036,8 +2036,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetRateSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRateSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select vat_Code.Vat_Rate'
       'from Vat_Code'
@@ -2056,8 +2056,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Supplier'
@@ -2083,8 +2083,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object DelExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Sales_invoice_Add_Charge'
       'Where'
@@ -2103,8 +2103,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddOrdExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object AddOrdExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order_Add_Charge'
       
@@ -2159,8 +2159,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelOrdExtChgSQL: TQuery
-    DatabaseName = 'PB'
+  object DelOrdExtChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Sales_Order_Add_Charge'
       'Where'
@@ -2180,8 +2180,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryListSOwithoutPO: TQuery
-    DatabaseName = 'PB'
+  object qryListSOwithoutPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_Order.Sales_Order as Sales_Order,'
       '       Supplier.name as Supplier_Name'
@@ -2206,8 +2206,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 560
     Top = 56
   end
-  object GetDiscTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDiscTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Discount_Type')
@@ -2219,8 +2219,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 560
     Top = 192
   end
-  object GetInvLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetInvLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Invoice_Line.Goods_Value, Qty_Invoiced'
       'from Sales_Invoice_Line , Sales_Invoice'
@@ -2250,8 +2250,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCallOffDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetCallOffDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order.*,'
       '       Purchase_OrderLine.*'
@@ -2291,8 +2291,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryCallOffList: TQuery
-    DatabaseName = 'PB'
+  object qryCallOffList: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.customer, '
       '       Purchase_OrderLine.Branch_no,'
@@ -2314,8 +2314,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 112
     Top = 473
   end
-  object qryGetFormRefDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetFormRefDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * '
       'from Form_Reference '
@@ -2329,8 +2329,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'delivery_location.description,'
       #9'delivery_location.quantity, '
@@ -2449,8 +2449,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       FieldName = 'Vat_Code'
     end
   end
-  object PriceUnitSQL: TQuery
-    DatabaseName = 'PB'
+  object PriceUnitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -2464,8 +2464,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object CheckPartExistsQuery: TQuery
-    DatabaseName = 'PB'
+  object CheckPartExistsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
@@ -2478,8 +2478,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdPartQuery: TQuery
-    DatabaseName = 'PB'
+  object UpdPartQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set Part_Purchase_Price = :Part_Purchase_Price,'
@@ -2505,8 +2505,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddPartQuery: TQuery
-    DatabaseName = 'PB'
+  object AddPartQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -2606,8 +2606,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetDelivDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetDelivDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select * from Delivery_detail where purchase_order = :purchase_o' +
@@ -2621,8 +2621,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOAddChgs: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOAddChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Purch_Ord_line_Add_chg '
@@ -2642,8 +2642,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustVat: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustVat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Vat_Rate '
       'from Vat_Code  '
@@ -2659,8 +2659,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetDelInvLinesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelInvLinesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Invoice_Line_No'
       'From Sales_Invoice_Line'
@@ -2675,8 +2675,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelInvLineSQL: TQuery
-    DatabaseName = 'PB'
+  object DelInvLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Sales_Invoice_Line'
       'Where (Sales_Invoice = :Sales_Invoice) and'
@@ -2700,8 +2700,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelInvSQL: TQuery
-    DatabaseName = 'PB'
+  object DelInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Sales_Invoice'
       'Where'
@@ -2716,8 +2716,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetInvDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetInvDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_Invoice_Line.*, sales_Order_Line .*'
       'from Sales_Invoice_Line'
@@ -2739,8 +2739,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object QryGetAdHoc: TQuery
-    DatabaseName = 'PB'
+  object QryGetAdHoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Ad_Hoc_Address'
@@ -2756,8 +2756,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Store_Stock.Part,'
@@ -2805,8 +2805,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetSOSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_order_line_Serial_no'
@@ -2821,8 +2821,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelSOSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSOSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_order_Line_Serial_no'
       'where Sales_order = :Sales_order and'
@@ -2842,8 +2842,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Order_line_Serial_no'
       
@@ -2887,8 +2887,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddStStkSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object AddStStkSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Store_stock_Serial_item'
       
@@ -2932,8 +2932,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelStStkSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object DelStStkSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Store_Stock_Serial_item'
       'where Store_Stock = :Store_Stock and'
@@ -2952,8 +2952,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetNextStStkSerialNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextStStkSerialNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Serial_item_no) as Last_Serial_no'
       'from Store_stock_serial_item'
@@ -2967,8 +2967,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetStockSerialNosSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStockSerialNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_Stock.Store_Stock,'
       '           Store_Stock.Part,'
@@ -2994,8 +2994,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object MarkupSQL: TQuery
-    DatabaseName = 'PB'
+  object MarkupSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Markup_Type')
     Left = 608
@@ -3006,8 +3006,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 648
     Top = 440
   end
-  object qryDelSOSerialNos: TQuery
-    DatabaseName = 'PB'
+  object qryDelSOSerialNos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_Order_line_serial_no '
       'where sales_order = :sales_order;')
@@ -3020,8 +3020,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelSOSundry: TQuery
-    DatabaseName = 'PB'
+  object qryDelSOSundry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from sales_order_sundry '
       'where sales_order = :sales_order;')
@@ -3034,8 +3034,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelSORep: TQuery
-    DatabaseName = 'PB'
+  object qryDelSORep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from sales_orderrep '
       'where sales_order = :sales_order;')
@@ -3048,8 +3048,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelSONarrative: TQuery
-    DatabaseName = 'PB'
+  object qryDelSONarrative: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from narrative_line '
       'where narrative = :narrative;')
@@ -3062,8 +3062,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelSOPORef: TQuery
-    DatabaseName = 'PB'
+  object qryDelSOPORef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update purch_ord '
       'set sales_order = null'
@@ -3077,8 +3077,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOLineInvdQty: TQuery
-    DatabaseName = 'PB'
+  object qrySOLineInvdQty: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(qty_invoiced) as tot_invoiced '
       'from sales_invoice_line'
@@ -3098,8 +3098,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOLineDelivQty: TQuery
-    DatabaseName = 'PB'
+  object qrySOLineDelivQty: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Sum(quantity_picked) AS tot_picked, '
       #9'Sum(sales_order_line.quantity_delivered) AS tot_delivered'
@@ -3127,8 +3127,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryPObySO: TQuery
-    DatabaseName = 'PB'
+  object qryPObySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 * from purch_ord  '
       'where sales_order = :SONum')
@@ -3141,8 +3141,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelStoreStockSISOAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryDelStoreStockSISOAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update store_stock_serial_item '
       'set sales_order = null,'
@@ -3157,8 +3157,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qrySelContractbySO: TQuery
-    DatabaseName = 'PB'
+  object qrySelContractbySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from contract_line'
@@ -3178,8 +3178,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranchRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetBranchRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select rep'
       'from reps_branches'
@@ -3199,8 +3199,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelStrStckSOLineAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryDelStrStckSOLineAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update store_stock_serial_item '
       'set sales_order = null,'
@@ -3222,8 +3222,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddJobBagSQL: TQuery
-    DatabaseName = 'PB'
+  object AddJobBagSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Line_Dets'
       '    (Job_Bag,'
@@ -3344,8 +3344,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetLastJBLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
@@ -3359,8 +3359,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelJobBagSQL: TQuery
-    DatabaseName = 'PB'
+  object DelJobBagSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Job_Bag_Line_dets'
       'where sales_order = :sales_order and'
@@ -3385,8 +3385,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdJobBagSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdJobBagSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Job_Bag_Line_Dets'
       'set '
@@ -3480,8 +3480,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBLine: TQuery
-    DatabaseName = 'pb'
+  object qryGetJBLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select job_bag, Job_Bag_Line'
       'from Job_Bag_line_Dets'
@@ -3501,8 +3501,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdLoc: TQuery
-    DatabaseName = 'pb'
+  object qryGetProdLoc: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Production_location'
@@ -3516,8 +3516,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetAccountMgr: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountMgr: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Account_Team_Name'
       'from Account_Team_Member, Account_Team'
@@ -3532,8 +3532,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from account_team'
@@ -3547,8 +3547,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSOHeadStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOHeadStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order'
       'set Sales_order_Head_status = :sales_order_head_Status'
@@ -3567,8 +3567,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartTransferSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartTransferSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Transfer'
@@ -3582,8 +3582,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartAllocationSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartAllocationSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Part_Store_allocation.store_stock,'
       '        Store_Stock.Part,'
@@ -3610,8 +3610,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOAddCharge: TQuery
-    DatabaseName = 'PB'
+  object qrySOAddCharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select count(*) as LineCount '
       'from Sales_Order_Add_Charge '
@@ -3626,8 +3626,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object CheckSOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckSOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order.Sales_Order_Head_Status,'
       '       (Select Sum(Quantity_Delivered - Quantity_Invoiced)'
@@ -3684,8 +3684,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdOrderStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdOrderStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order_Head_Status = :Status'
@@ -3704,8 +3704,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSalesOrderLineSQL: TQuery
-    DatabaseName = 'pb'
+  object UpdSalesOrderLineSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update sales_order_line'
       'set Quantity_delivered = :Quantity_Delivered,'
@@ -3754,8 +3754,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartAllocbySOL: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartAllocbySOL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Store_Allocation.Part_Store_Allocation,'
       #9'Part_Store_Allocation.Quantity_allocated,'
@@ -3789,8 +3789,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPartAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPartAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Store_Allocation'
       'Set Quantity_Overs = Quantity_Overs + :Quantity_Overs'
@@ -3809,8 +3809,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJobBagLine: TQuery
-    DatabaseName = 'pb'
+  object qryUpdJobBagLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update job_bag_line_dets'
       'set Job_Bag_line_cost = :Job_Bag_Line_Cost,'
@@ -3854,8 +3854,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryJBUpHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
@@ -3874,8 +3874,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qrySalesOrderJB: TQuery
-    DatabaseName = 'pb'
+  object qrySalesOrderJB: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct Order_Type, Job_Bag'
       'from Sales_order, job_bag_line_dets'
@@ -3890,8 +3890,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryJBChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -3938,8 +3938,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Store_Stock'
@@ -3953,8 +3953,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DeletePartTransferSQL: TQuery
-    DatabaseName = 'PB'
+  object DeletePartTransferSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Part_Transfer'
       'where Part_Transfer = :Part_Transfer')
@@ -3967,8 +3967,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object UpdatePartTransferSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdatePartTransferSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Transfer'
       'set Store_Quantity = :Store_Quantity'
@@ -3987,8 +3987,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object updSOLValuesSQL: TQuery
-    DatabaseName = 'pb'
+  object updSOLValuesSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update sales_order_line'
       'set Quantity_delivered = :Quantity_Delivered,'
@@ -4043,8 +4043,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBRequest: TQuery
-    DatabaseName = 'pb'
+  object qryGetJBRequest: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select job_bag, Request_no'
       'from Job_Bag_Stock_Request'
@@ -4064,8 +4064,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object GetLastJBRequestSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastJBRequestSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Request_no) as Last_JB_Request_Number'
       'from Job_Bag_Stock_Request'
@@ -4079,8 +4079,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddJobBagReqSQL: TQuery
-    DatabaseName = 'PB'
+  object AddJobBagReqSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Job_Bag_Stock_Request'
       '    (Job_Bag,'
@@ -4116,8 +4116,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelJobBagReqSQL: TQuery
-    DatabaseName = 'PB'
+  object DelJobBagReqSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Job_Bag_Stock_Request'
       'where sales_order = :sales_order and'
@@ -4142,8 +4142,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSODelivAdd: TQuery
-    DatabaseName = 'PB'
+  object qryGetSODelivAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_order.Sales_Order,'
       '        Sales_order.Delivery_Customer,'
@@ -4175,8 +4175,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustCC: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustCC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_CostCentre'
@@ -4196,8 +4196,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranchCC: TQuery
-    DatabaseName = 'PB'
+  object qryGetBranchCC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Branch_CostCentre'
@@ -4223,8 +4223,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustBranch: TQuery
-    DatabaseName = 'pb'
+  object qryGetCustBranch: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select CB.Customer,'
       '        CB.Branch_no,'
@@ -4252,8 +4252,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOLastDelivery: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOLastDelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 1 Sales_Order.Sales_Order,'
       'Sales_Order.Delivery_Customer,'
@@ -4279,8 +4279,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object qryVat: TQuery
-    DatabaseName = 'pb'
+  object qryVat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Vat_Code'
       'order by Vat_Rate')
@@ -4292,8 +4292,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     Left = 640
     Top = 560
   end
-  object qryUpdateContactStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateContactStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer_Contact'
       'SET Contact_Status = 100'
@@ -4319,8 +4319,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddDelivLineDetSQL: TQuery
-    DatabaseName = 'PB'
+  object AddDelivLineDetSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_order_Delivery_Line'
       '(     Sales_Order,'
@@ -4368,8 +4368,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object AddDelivDetSQL: TQuery
-    DatabaseName = 'PB'
+  object AddDelivDetSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_order_Delivery'
       '('
@@ -4450,8 +4450,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelDelivDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object DelDelivDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete'
       'From Sales_order_Delivery'
@@ -4470,8 +4470,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ParamType = ptUnknown
       end>
   end
-  object DelDelivLineDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object DelDelivLineDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete '
       'From Sales_Order_Delivery_Line'

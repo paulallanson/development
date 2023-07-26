@@ -52,8 +52,8 @@ object PBMaintWOrderStatusFrm: TPBMaintWOrderStatusFrm
     TabOrder = 2
     Kind = bkCancel
   end
-  object qryWOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryWOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Works_Order_Status'

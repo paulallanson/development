@@ -366,15 +366,15 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       OnExit = ValidateMoney
     end
   end
-  object qryVAT: TQuery
-    DatabaseName = 'PB'
+  object qryVAT: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from VAT_Code')
     Left = 424
     Top = 40
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Price_Unit')
     Left = 256
@@ -390,8 +390,8 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
     Left = 216
     Top = 56
   end
-  object qryNominal: TQuery
-    DatabaseName = 'PB'
+  object qryNominal: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Nominal'

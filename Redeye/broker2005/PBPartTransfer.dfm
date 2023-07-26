@@ -982,8 +982,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
       C007C003C007C003C007C007C007C00700000000000000000000000000000000
       000000000000}
   end
-  object GetPOLinesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOLinesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line.Part, Purch_Ord_Line.Quantity_Ordered,'
       
@@ -1037,8 +1037,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord_Line'
       'Set'
@@ -1087,8 +1087,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord.Purch_Ord_Status,'
       '       (Select Count(Purch_Ord_Line_No)'
@@ -1127,8 +1127,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set'
@@ -1151,8 +1151,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPartPackSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartPackSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select purch_pack_Quantity'
       'From Part'
@@ -1169,8 +1169,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOrdAllocsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOrdAllocsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line_Alloc.Parts_For_Job,'
       '       Parts_For_Job.Part_Qty'
@@ -1202,8 +1202,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPFJStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPFJStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Parts_For_Job'
       'Set Part_Status = :Part_Status'
@@ -1228,8 +1228,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object DelOrdAllocSQL: TQuery
-    DatabaseName = 'PB'
+  object DelOrdAllocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Purch_Ord_Line_Alloc'
       'Where (Purch_Ord_Line_Alloc.Purch_Ord = :Purch_Ord) and'
@@ -1267,8 +1267,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOTransSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOTransSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Transfer.Part, Part_Transfer.Store_Quantity,'
       
@@ -1309,8 +1309,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord, Purch_Ord_Line_No'
       'From Part_Transfer'
@@ -1329,8 +1329,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete'
       'From Part_Transfer'
@@ -1348,8 +1348,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Transfer'
       'Set Quantity_Received = Quantity_Received + :Quantity_Received,'
@@ -1386,13 +1386,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 456
     Top = 200
   end
-  object AddStStkSIqry: TQuery
-    DatabaseName = 'PB'
+  object AddStStkSIqry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into store_stock_Serial_item'
       '(Store_stock, serial_item_no, serial_item_from, serial_item_to)'
@@ -1424,8 +1424,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object GetStStkSIqry: TQuery
-    DatabaseName = 'PB'
+  object GetStStkSIqry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Store_stock_Serial_item'
@@ -1439,8 +1439,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPArt: TQuery
-    DatabaseName = 'PB'
+  object qryGetPArt: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part.Part,'
       '       Part.Part_Description,'
@@ -1468,8 +1468,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'pb'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Customer'
@@ -1483,8 +1483,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpPODelivery: TQuery
-    DatabaseName = 'PB'
+  object qryUpPODelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'set Qty_Delivered = Qty_Delivered + :Qty_Delivered, '
@@ -1521,8 +1521,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckPart: TQuery
-    DatabaseName = 'PB'
+  object qryCheckPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part'
@@ -1536,8 +1536,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPart: TQuery
-    DatabaseName = 'PB'
+  object qryAddPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -1676,8 +1676,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPart: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set Part_Purchase_Price = :Part_Purchase_Price,'
@@ -1734,8 +1734,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckStoreLevels: TQuery
-    DatabaseName = 'PB'
+  object qryCheckStoreLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part'
       'from Part_Store_Levels'
@@ -1750,8 +1750,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddStoreLevels: TQuery
-    DatabaseName = 'PB'
+  object qryAddStoreLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Part_Store_Levels'
       
@@ -1794,8 +1794,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOQtyToDeliver: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOQtyToDeliver: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'set Qty_to_Deliver = :Qty_to_Deliver'
@@ -1826,8 +1826,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextPODelivery: TQuery
-    DatabaseName = 'pb'
+  object qryGetNextPODelivery: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select max(Delivery_no) as Last_Delivery'
       'from delivery_detail'
@@ -1846,8 +1846,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPODelivery: TQuery
-    DatabaseName = 'PB'
+  object qryAddPODelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Delivery_Detail'
       '(Purchase_order,'
@@ -1920,8 +1920,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartTransfer: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartTransfer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Transfer'
@@ -1947,8 +1947,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelPartTransfer: TQuery
-    DatabaseName = 'PB'
+  object qryDelPartTransfer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Part_Transfer'
       'Where (Part_Transfer = :Part_Transfer) and'
@@ -1966,8 +1966,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryOvers: TQuery
-    DatabaseName = 'PB'
+  object qryOvers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Movement.*'
       'from Part_Movement'
@@ -1990,8 +1990,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOPicking: TQuery
-    DatabaseName = 'PB'
+  object qrySOPicking: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_Order_Line.Part, sales_order_picking.*'
       'from Sales_Order_Line, Sales_Order_Picking'
@@ -2023,8 +2023,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPODelivery: TQuery
-    DatabaseName = 'PB'
+  object qryGetPODelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 * '
       'from Delivery_Detail'
@@ -2045,8 +2045,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         ParamType = ptUnknown
       end>
   end
-  object qryMovetype: TQuery
-    DatabaseName = 'PB'
+  object qryMovetype: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Movement_Type'
@@ -2072,8 +2072,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Left = 687
     Top = 55
   end
-  object qryVersions: TQuery
-    DatabaseName = 'pb'
+  object qryVersions: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Select Purchase_Order,'
       '       Line,'
@@ -2111,8 +2111,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Left = 97
     Top = 438
   end
-  object qryUpPOVersions: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOVersions: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLineStockCode'
       

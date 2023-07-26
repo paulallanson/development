@@ -1389,8 +1389,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Left = 57
     Top = 70
   end
-  object GetAllocDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllocDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part.Part, Part.Part_Description,Sales_Order.Sales_Order,'
       
@@ -1443,8 +1443,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllAllocDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllAllocDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store_Allocation.Part_Store_Allocation'
       'FROM'
@@ -1474,8 +1474,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Building_no_name,'
@@ -1511,8 +1511,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelivNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelivNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'from Narrative_Line'
@@ -1527,8 +1527,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllocMasterQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllocMasterQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Int_sel.*,'
       '  Sales_Order.Sales_Order,'
@@ -1593,8 +1593,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object DummySQL: TQuery
-    DatabaseName = 'PB'
+  object DummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Int_sel.*, Sales_Order.Sales_Order, Sales_Order.Sales_ord' +
@@ -1634,8 +1634,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  Building_no_name,'
@@ -1660,8 +1660,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Left = 152
     Top = 72
   end
-  object GetAccountSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAccountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Account_Code'
       'from'
@@ -1687,8 +1687,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllocSerialNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAllocSerialNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from sales_order_line_serial_no'
@@ -1708,8 +1708,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetComp: TQuery
-    DatabaseName = 'PB'
+  object qryGetComp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'

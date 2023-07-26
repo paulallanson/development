@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Db, DBTables, Inifiles, QrExport, STRPStkBalRep,
-  OleCtnrs, ComCtrls;
+  StdCtrls, Buttons, ExtCtrls, Db, Inifiles, QrExport, STRPStkBalRep,
+  OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSStkBalRepfrm = class(TForm)
@@ -33,7 +36,7 @@ type
     CustLuSpeedButton: TSpeedButton;
     CustEdit: TEdit;
     FaxBitBtn: TBitBtn;
-    GetPartsSQL: TQuery;
+    GetPartsSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
     chkbxNumbers: TCheckBox;
     OleContainer1: TOleContainer;

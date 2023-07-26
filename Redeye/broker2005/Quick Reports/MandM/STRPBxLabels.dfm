@@ -690,8 +690,8 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     WordWrap = True
     FontSize = 12
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Int_Sel.Text100,'
       '        Int_Sel.Int_Sel_Code,'
@@ -725,8 +725,8 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
     Left = 323
     Top = 83
   end
-  object FormRefSQL: TQuery
-    DatabaseName = 'PB'
+  object FormRefSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Form_Reference'
@@ -740,8 +740,8 @@ object STRPBxLabelsFrm: TSTRPBxLabelsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'

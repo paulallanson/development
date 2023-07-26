@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon, jpeg;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon, jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPQuote = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -17,21 +20,21 @@ type
     QRLabel3: TQRLabel;
     QRDBText5: TQRDBText;
     qrgQuote: TQRGroup;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryContact: TQuery;
+    qryContact: TFDQuery;
     gtQRLabel1: TQRLabel;
     gtQRDBText2: TQRDBText;
-    qryReportlines: TQuery;
+    qryReportlines: TFDQuery;
     dtsReport: TDataSource;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     
     qrmAddress: TQRMemo;
     QRLabel4: TQRLabel;
     qrlblContactName: TQRLabel;
     QRDBText3: TQRDBText;
     qrgfQuote: TQRBand;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtQRLabel2: TQRLabel;
     gtQRDBText7: TQRDBText;
     ReportImage: TQRImage;
@@ -50,11 +53,11 @@ type
     gtQRLabel20: TQRLabel;
     gtQRLabel21: TQRLabel;
     qrbPostage: TQRChildBand;
-    qryProspect: TQuery;
+    qryProspect: TFDQuery;
     qrbPageFooter: TQRBand;
-    qryReportSupply: TQuery;
-    oldqryReportSupply: TQuery;
-    qryReportDepts: TQuery;
+    qryReportSupply: TFDQuery;
+    oldqryReportSupply: TFDQuery;
+    qryReportDepts: TFDQuery;
     qrbDeptHeader: TQRGroup;
     gtQRDBText8: TQRDBText;
     qrbDeptDetail: TQRSubDetail;
@@ -107,7 +110,7 @@ type
     gtQRLabel33: TQRLabel;
     gtQRLabel34: TQRLabel;
     gtQRLabel4: TQRLabel;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     gtQRImage1: TQRImage;
     gtQRLabel3: TQRLabel;
     gtQRMemo1: TQRMemo;
@@ -115,7 +118,7 @@ type
     imgISO: TQRImage;
     qrmRegNumber: TQRMemo;
     qrmRegOffice: TQRMemo;
-    qryReportOld: TQuery;
+    qryReportOld: TFDQuery;
     qrlblEndUser: TQRLabel;
     qrlblEndUserName: TQRDBText;
     gtlblQuoteUnitPrice: TQRLabel;
@@ -144,8 +147,8 @@ type
     ipage: integer;
     FShowBreakdown: boolean;
     FEndUserVersion: boolean;
-    procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
-    procedure BuildQuoteNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildNotes(aQuery : TFDQuery; const iNarrative : integer);
+    procedure BuildQuoteNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure SetShowBreakdown(const Value: boolean);
     procedure SetEndUserVersion(const Value: boolean);
     { Private declarations }
@@ -437,7 +440,7 @@ begin
     end;
 end;
 
-procedure TfrmPBRPQuote.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPQuote.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -463,7 +466,7 @@ begin
   end;
 end;
 
-procedure TfrmPBRPQuote.BuildQuoteNotes(aQuery: TQuery;
+procedure TfrmPBRPQuote.BuildQuoteNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

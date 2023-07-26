@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, STPickObject,
-  CCSCommon, ComCtrls, ExtCtrls, STPacks;
+  Db, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, STPickObject,
+  CCSCommon, ComCtrls, ExtCtrls, STPacks,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintPickFrm = class(TForm)
-    GetIntSelSQL: TQuery;
+    GetIntSelSQL: TFDQuery;
     Panel1: TPanel;
     Label1: TLabel;
     Label2: TLabel;
@@ -25,8 +28,8 @@ type
     Label3: TLabel;
     LblOrderNo: TLabel;
     cmbPickingNote: TComboBox;
-    qryPickNotes: TQuery;
-    qryProdLocation: TQuery;
+    qryPickNotes: TFDQuery;
+    qryProdLocation: TFDQuery;
     CancelBtn: TBitBtn;
     procedure FormShow(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);

@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, DB, DBTables, IniFiles, CCSCommon,
+  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, DB, IniFiles, CCSCommon,
   pbDatabase, pbSalesInvoiceDM, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdExplicitTLSClientServerBase, IdFTP,
-  ComCtrls;
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSEInvoiceFrm = class(TForm)
     FTP: TIdFTP;
-    qryCustEInvoice: TQuery;
-    qryUpdSIStatus: TQuery;
-    qryUpdCustomer: TQuery;
+    qryCustEInvoice: TFDQuery;
+    qryUpdSIStatus: TFDQuery;
+    qryUpdCustomer: TFDQuery;
     StatusBar1: TStatusBar;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -31,7 +34,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    qryUpdSInvoice: TQuery;
+    qryUpdSInvoice: TFDQuery;
     Panel1: TPanel;
     Label1: TLabel;
     Label5: TLabel;
@@ -40,7 +43,7 @@ type
     Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
-    qryGetInvoice: TQuery;
+    qryGetInvoice: TFDQuery;
     edtInvoiceNo: TEdit;
     edtInvoiceDate: TEdit;
     edtCustomer: TEdit;

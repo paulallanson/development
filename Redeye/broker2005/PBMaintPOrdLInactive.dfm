@@ -75,8 +75,8 @@ object PBMaintPOrdLInactiveFrm: TPBMaintPOrdLInactiveFrm
     TabOrder = 4
     OnClick = chkReActivateClick
   end
-  object qryReason: TQuery
-    DatabaseName = 'PB'
+  object qryReason: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Inactive_reason')

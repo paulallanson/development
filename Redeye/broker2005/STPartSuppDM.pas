@@ -4,50 +4,53 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPartSDM = class(TDataModule)
-    PartSuppSQL: TQuery;
-    PartNoSuppSQL: TQuery;
-    PartWithSuppSQL: TQuery;
-    qryInsertPart: TQuery;
-    qryInsertPartSupp: TQuery;
-    qryPartDtls: TQuery;
+    PartSuppSQL: TFDQuery;
+    PartNoSuppSQL: TFDQuery;
+    PartWithSuppSQL: TFDQuery;
+    qryInsertPart: TFDQuery;
+    qryInsertPartSupp: TFDQuery;
+    qryPartDtls: TFDQuery;
     dtsrcImportQueries: TDataSource;
-    qryGetImpFieldDefs: TQuery;
-    qryUpdatePart: TQuery;
-    qryDeletePart: TQuery;
-    qryDeletePartSupplier: TQuery;
-    qryGetSuppDtls: TQuery;
-    qryUpdatePartPurchPrice: TQuery;
-    qryDoesPartExist: TQuery;
-    qryUpdPartSuppDisc: TQuery;
-    qryFindPartGroup: TQuery;
-    qryNewPartGroup: TQuery;
-    qryGetHighestPartGroup: TQuery;
-    qrySelNoOfKFieldProdGrps: TQuery;
-    qryInsertFormRef: TQuery;
-    qryGetUOM: TQuery;
-    qryAddUOM: TQuery;
-    qryLastUOM: TQuery;
-    qryLastFormRef: TQuery;
-    qryUpdateFormRef: TQuery;
-    qryInsertStkLevels: TQuery;
-    qryGetPartStore: TQuery;
-    qryLastStoreStock: TQuery;
-    qryUpdateStkLevels: TQuery;
-    qryGetCustWithAccCode: TQuery;
-    qryGetContract: TQuery;
-    qryAddCustDisc: TQuery;
-    qryDelCustDisc: TQuery;
-    qryAddPartAlloc: TQuery;
-    qryGetStoreStock: TQuery;
-    qryGetPartGroup: TQuery;
-    qryDelCustStockDisc: TQuery;
-    qryCheckPartSuppDisc: TQuery;
-    qryGetPriceUnit: TQuery;
-    qryGetVatCode: TQuery;
+    qryGetImpFieldDefs: TFDQuery;
+    qryUpdatePart: TFDQuery;
+    qryDeletePart: TFDQuery;
+    qryDeletePartSupplier: TFDQuery;
+    qryGetSuppDtls: TFDQuery;
+    qryUpdatePartPurchPrice: TFDQuery;
+    qryDoesPartExist: TFDQuery;
+    qryUpdPartSuppDisc: TFDQuery;
+    qryFindPartGroup: TFDQuery;
+    qryNewPartGroup: TFDQuery;
+    qryGetHighestPartGroup: TFDQuery;
+    qrySelNoOfKFieldProdGrps: TFDQuery;
+    qryInsertFormRef: TFDQuery;
+    qryGetUOM: TFDQuery;
+    qryAddUOM: TFDQuery;
+    qryLastUOM: TFDQuery;
+    qryLastFormRef: TFDQuery;
+    qryUpdateFormRef: TFDQuery;
+    qryInsertStkLevels: TFDQuery;
+    qryGetPartStore: TFDQuery;
+    qryLastStoreStock: TFDQuery;
+    qryUpdateStkLevels: TFDQuery;
+    qryGetCustWithAccCode: TFDQuery;
+    qryGetContract: TFDQuery;
+    qryAddCustDisc: TFDQuery;
+    qryDelCustDisc: TFDQuery;
+    qryAddPartAlloc: TFDQuery;
+    qryGetStoreStock: TFDQuery;
+    qryGetPartGroup: TFDQuery;
+    qryDelCustStockDisc: TFDQuery;
+    qryCheckPartSuppDisc: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qryGetVatCode: TFDQuery;
   private
     function GetStoreType(TempCode: integer): integer;
     function GetLotsInUse(TempCode: integer): boolean;

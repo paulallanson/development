@@ -4,44 +4,47 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPODM = class(TDataModule)
-    qryInsPO: TQuery;
-    qryUpdPO: TQuery;
-    qryDelPO: TQuery;
-    qryGetLastPO: TQuery;
-    qryInsPOLine: TQuery;
-    qryUpdPOLine: TQuery;
-    qryGetPOLines: TQuery;
-    qryDelPOLine: TQuery;
-    qryDelPOLines: TQuery;
-    qryGetLastPOLine: TQuery;
-    qryGetPartDet: TQuery;
-    qryGetPOTypeDesc: TQuery;
-    qryGetSupplierInfo: TQuery;
-    qryLastCompnyPO: TQuery;
-    qryIncLastPONum: TQuery;
-    qryIncPOFileNo: TQuery;
-    qryGetPO: TQuery;
-    qryGetPOLines2: TQuery;
-    qryGetSuppOrdTypeDesc: TQuery;
-    qryNewPOs: TQuery;
-    qryGetSuppPartInfo: TQuery;
-    qryDelExChgs: TQuery;
-    qryInsExChg: TQuery;
-    qryGetExChgs: TQuery;
-    qryGetVatRate: TQuery;
-    qryGetCoDtls: TQuery;
-    qryCompany: TQuery;
-    qryUpd: TQuery;
-    qryUpPOStatus: TQuery;
-    qryCheckPart: TQuery;
-    qryAddPart: TQuery;
-    qryAddLevels: TQuery;
-    qryGetLastSOLine: TQuery;
-    qryInsSOLine: TQuery;
+    qryInsPO: TFDQuery;
+    qryUpdPO: TFDQuery;
+    qryDelPO: TFDQuery;
+    qryGetLastPO: TFDQuery;
+    qryInsPOLine: TFDQuery;
+    qryUpdPOLine: TFDQuery;
+    qryGetPOLines: TFDQuery;
+    qryDelPOLine: TFDQuery;
+    qryDelPOLines: TFDQuery;
+    qryGetLastPOLine: TFDQuery;
+    qryGetPartDet: TFDQuery;
+    qryGetPOTypeDesc: TFDQuery;
+    qryGetSupplierInfo: TFDQuery;
+    qryLastCompnyPO: TFDQuery;
+    qryIncLastPONum: TFDQuery;
+    qryIncPOFileNo: TFDQuery;
+    qryGetPO: TFDQuery;
+    qryGetPOLines2: TFDQuery;
+    qryGetSuppOrdTypeDesc: TFDQuery;
+    qryNewPOs: TFDQuery;
+    qryGetSuppPartInfo: TFDQuery;
+    qryDelExChgs: TFDQuery;
+    qryInsExChg: TFDQuery;
+    qryGetExChgs: TFDQuery;
+    qryGetVatRate: TFDQuery;
+    qryGetCoDtls: TFDQuery;
+    qryCompany: TFDQuery;
+    qryUpd: TFDQuery;
+    qryUpPOStatus: TFDQuery;
+    qryCheckPart: TFDQuery;
+    qryAddPart: TFDQuery;
+    qryAddLevels: TFDQuery;
+    qryGetLastSOLine: TFDQuery;
+    qryInsSOLine: TFDQuery;
   private
     { Private declarations }
   public

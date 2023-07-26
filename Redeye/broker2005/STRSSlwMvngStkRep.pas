@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls, ExtCtrls, Db, DBTables, Inifiles, QrExport, STRPSlwMvngStkRep,
-  OleCtnrs ;
+  StdCtrls, Buttons, ComCtrls, ExtCtrls, Db, Inifiles, QrExport, STRPSlwMvngStkRep,
+  OleCtnrs ,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSSlwMvngStkRepfrm = class(TForm)
@@ -34,7 +37,7 @@ type
     CustEdit: TEdit;
     CustRadioGroup: TRadioGroup;
     FaxBitBtn: TBitBtn;
-    GetPartsSQL: TQuery;
+    GetPartsSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
     btbtnExcel: TBitBtn;
     OleContainer1: TOleContainer;
@@ -144,7 +147,7 @@ begin
         CustomerName := SelCustName;
         QRLblCust.Caption := QRLblCust.Caption+'Customer - '+SelCustName;
       end;
-{    if (dmStock.STDatabase.Session.GetAliasDriverName('PB') = 'MSSQL') then
+{    if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
     begin
       STRPSlwMvngStkRepfrm.bSQLDatabase := true;
 
@@ -514,7 +517,7 @@ begin
       end;
       STRPSlwMvngStkRepFrm.bExcProd := ChkBxExcProd.Checked;
       STRPSlwMvngStkRepfrm.qrlblDateSince.Caption := 'Report showing stock with no movements since:- '+DateEdit.Text;
-{      if (dmStock.STDatabase.Session.GetAliasDriverName('PB') = 'MSSQL') then
+{      if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
       begin
         STRPSlwMvngStkRepfrm.bSQLDatabase := true;
         STRPSlwMvngStkRepfrm.qrSlwMvngStk.DataSet := STRPSlwMvngStkRepfrm.qrySlwMvngStk;
@@ -740,7 +743,7 @@ begin
         end;
         STRPSlwMvngStkRepFrm.bExcProd := ChkBxExcProd.Checked;
         STRPSlwMvngStkRepfrm.qrlblDateSince.Caption := 'Report showing stock with no movements since:- '+DateEdit.Text;
-{        if (dmStock.STDatabase.Session.GetAliasDriverName('PB') = 'MSSQL') then
+{        if (dmStock.STDatabase.FDManager.GetAliasDriverName('PB') = 'MSSQL') then
         begin
           STRPSlwMvngStkRepfrm.bSQLDatabase := true;
           STRPSlwMvngStkRepfrm.qrSlwMvngStk.DataSet := STRPSlwMvngStkRepfrm.qrySlwMvngStk;

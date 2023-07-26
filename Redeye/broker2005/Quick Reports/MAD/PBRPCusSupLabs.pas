@@ -184,23 +184,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCusSupLabsFrm = class(TForm)
     PBLabelsQuickReport: TQuickRep;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    CustomerSQL: TQuery;
+    CustomerSQL: TFDQuery;
     AddressSRC: TDataSource;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     AddressMemo: TQRMemo;
     lblCustomer: TQRLabel;
     DeliveryDateLbl: TQRLabel;
     FAOQRLabel: TQRLabel;
-    SupplierSQL: TQuery;
+    SupplierSQL: TFDQuery;
     qrmCompany: TQRMemo;
     imgReport: TQRImage;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:

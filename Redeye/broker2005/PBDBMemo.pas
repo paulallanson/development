@@ -40,7 +40,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, DB, Buttons, DBTables;
+  StdCtrls, DBCtrls, DB, Buttons;
 
 type
   TPBDBMemoFrm = class(TForm)
@@ -118,8 +118,8 @@ begin
     try
       Narrative.DbKey := NarrNo;
       Narrative.LoadFromDB;
-      DataMemo.Text := Narrative.Data;
-      DispMemo.Text := Narrative.Data;
+      DataMemo.Text := Narrative.DataInfo;
+      DispMemo.Text := Narrative.DataInfo;
     finally
       Narrative.Free;
     end;
@@ -141,7 +141,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarr;
-    Narrative.Data := DataMemo.Text;
+    Narrative.DataInfo := DataMemo.Text;
     Narrative.SaveToDB;
     iNarr := Narrative.DbKey;
   finally

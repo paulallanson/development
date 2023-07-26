@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtDlgs, Db, DBTables, Buttons;
+  StdCtrls, ExtDlgs, Db, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintPrtECommFrm = class(TForm)
@@ -23,10 +26,10 @@ type
     btnBrowse2: TButton;
     btbtnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryInsECommInfo: TQuery;
-    qryUpdECommInfo: TQuery;
-    qrySelECommInfo: TQuery;
-    qryTopECommNo: TQuery;
+    qryInsECommInfo: TFDQuery;
+    qryUpdECommInfo: TFDQuery;
+    qrySelECommInfo: TFDQuery;
+    qryTopECommNo: TFDQuery;
     procedure btnBrowse1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnBrowse2Click(Sender: TObject);

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, Db, DBTables, ExtCtrls, ComCtrls, CCSCommon;
+  StdCtrls, Grids, DBGrids, Db, ExtCtrls, ComCtrls, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUReps = class(TForm)
     dbgDetails: TDBGrid;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     StatusBar1: TStatusBar;
     Panel1: TPanel;

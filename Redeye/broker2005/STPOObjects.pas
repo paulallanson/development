@@ -1506,7 +1506,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally

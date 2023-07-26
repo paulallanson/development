@@ -58,16 +58,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintBranchFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label1: TLabel;
@@ -88,8 +91,8 @@ type
     FaxEdit: TEdit;
     EMailEdit: TEdit;
     PostCodeEdit: TEdit;
-    GetCustNameSQL: TQuery;
-    GetBranchNameSQL: TQuery;
+    GetCustNameSQL: TFDQuery;
+    GetBranchNameSQL: TFDQuery;
     FlashTimer: TTimer;
     Label11: TLabel;
     AccCodeEdit: TEdit;
@@ -98,9 +101,9 @@ type
     InvToBranchLabel: TLabel;
     InvCustBtn: TButton;
     InvToBranch: TButton;
-    CheckCustAccExistsSQL: TQuery;
-    GetCompSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    GetCompSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
     Label4: TLabel;
     ProspectComboBox: TComboBox;
     DelivNotesBitBtn: TBitBtn;

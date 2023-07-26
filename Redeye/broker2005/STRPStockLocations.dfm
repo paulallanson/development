@@ -779,8 +779,8 @@ object frmSTRPStockLocations: TfrmSTRPStockLocations
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Store_Stock.Quantity_Allocated,'
       '        Store_Stock.Store_Quantity,'

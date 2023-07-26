@@ -1883,8 +1883,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
       end
     end
   end
-  object InvHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object InvHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Name as Customer_Name,'
@@ -1915,9 +1915,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 928
     Top = 463
   end
-  object InvLineSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvHeadSRC
+  object InvLineSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.*,'
       '        Price_Unit.Price_Unit,'
@@ -1956,9 +1956,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 848
     Top = 184
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvHeadSRC
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'select Sales_Invoice.Customer,'
       'Customer.Name as Customer_name,'
@@ -1990,16 +1990,16 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryComp: TQuery
-    DatabaseName = 'PB'
+  object qryComp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Company')
     Left = 928
     Top = 521
   end
-  object InvOneHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object InvOneHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Name as Customer_Name,'
@@ -2028,8 +2028,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object UpInvHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpInvHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Invoice'
       'set Sales_Invoice_Status = :Status,'
@@ -2060,8 +2060,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object UpInvLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpInvLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Invoice_Line'
       'set Sales_Invoice_Status = :Status'
@@ -2086,8 +2086,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object InvRHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object InvRHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Name as Customer_Name,'
@@ -2110,8 +2110,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 928
     Top = 49
   end
-  object NotesSQL: TQuery
-    DatabaseName = 'PB'
+  object NotesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_line'
@@ -2126,9 +2126,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object InvAddChgSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvLineSRC
+  object InvAddChgSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvLineSRC
     SQL.Strings = (
       'select * '
       'from sales_inv_line_add_chg'
@@ -2149,9 +2149,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object OldInvLineSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvHeadSRC
+  object OldInvLineSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'select Sales_invoice_Line.*,'
       '          Purchase_orderLine.*,'
@@ -2186,9 +2186,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object DeliverySQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvLineSRC
+  object DeliverySQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvLineSRC
     SQL.Strings = (
       'select top 1 Delivery_Detail.*'
       'from Delivery_Detail'
@@ -2221,8 +2221,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 80
     Top = 280
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -2241,8 +2241,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -2261,8 +2261,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -2289,8 +2289,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -2307,8 +2307,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 341
     Top = 376
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -2334,8 +2334,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object CreditHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object CreditHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice.*,'
       '           Customer.Name as Customer_Name,'
@@ -2361,8 +2361,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
     Left = 456
     Top = 269
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -2377,8 +2377,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_orderLine.Customers_Desc, '
       '        Purchase_OrderLine.Cust_Order_no,'
@@ -2406,8 +2406,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part.Part, '
       '          Part_Description, '
@@ -2432,8 +2432,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Descr'
       'from Job_Bag_Line_Dets'
@@ -2453,9 +2453,9 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryInvCharges: TQuery
-    DatabaseName = 'PB'
-    DataSource = InvHeadSRC
+  object qryInvCharges: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = InvHeadSRC
     SQL.Strings = (
       'select Sales_invoice_Add_Charge.*, VAT_Code.VAT_Rate'
       'from Sales_invoice_Add_Charge, VAT_Code'
@@ -2472,8 +2472,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Cust_Order_no'
       'from Job_Bag'
@@ -2487,8 +2487,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Sales_order, Cust_Order_no, Delivery_Customer, Delivery_B' +
@@ -2504,13 +2504,13 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCompCat: TQuery
-    DatabaseName = 'PB'
+  object qryCompCat: TFDQuery
+    ConnectionName = 'PB'
     Left = 784
     Top = 425
   end
-  object qryUniqueInv: TQuery
-    DatabaseName = 'PB'
+  object qryUniqueInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -2524,8 +2524,8 @@ object PBRPSalesInvFrm: TPBRPSalesInvFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'

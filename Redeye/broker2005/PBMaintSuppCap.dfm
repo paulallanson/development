@@ -235,15 +235,15 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       end
     end
   end
-  object GetLastIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(Int_Sel_Code) as Last_Code from Int_Sel')
     Left = 128
     Top = 96
   end
-  object AddIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object AddIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4)'
@@ -279,8 +279,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object DelIntSelsSQL: TQuery
-    DatabaseName = 'PB'
+  object DelIntSelsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) and'
@@ -305,8 +305,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object LoadIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object LoadIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -345,8 +345,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object GetIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Int_Sel.Sel1 as Product_Type, Int_Sel.Sel2 as Capability,'
       '       Product_Type.Description as PT_Description,'
@@ -376,8 +376,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object GetUnSelProdTypsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetUnSelProdTypsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type.Product_Type,'
       '       Product_Type.Description,'
@@ -416,8 +416,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Left = 353
     Top = 128
   end
-  object GetUnSelCapsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetUnSelCapsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_TypeCapability.Capability,'
       '       Product_TypeCapability.Description as Cap_Description'
@@ -466,8 +466,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
     Left = 321
     Top = 384
   end
-  object DelIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) and'
@@ -493,8 +493,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDefCapSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDefCapSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_TypeCapability.Capability,'
       '       Product_TypeCapability.Description'
@@ -792,8 +792,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
       FFFFFFFF007F007FFFFFFFFF01FF01FF00000000000000000000000000000000
       000000000000}
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Splr_BrnchPrdct_TypCpblty'
       '(Supplier, Branch_No, Product_Type, Capability)'
@@ -830,8 +830,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Splr_BrnchPrdct_TypCpblty'
       'Where (Supplier = :Supplier) and'
@@ -871,8 +871,8 @@ object PBMaintSuppCapFrm: TPBMaintSuppCapFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNewCapSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNewCapSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sel1, Sel2'
       'From Int_Sel'

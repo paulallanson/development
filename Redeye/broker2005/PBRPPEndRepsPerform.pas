@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPEndRepsPerformfrm = class(TForm)
@@ -13,13 +16,13 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     qrRepBand: TQRBand;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     qrsubPeriods: TQRSubDetail;
     QRLabel2: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
     qrbGrpCatFooter: TQRBand;
@@ -107,8 +110,8 @@ type
     qrlblRepBudTOTotal: TQRLabel;
     qrlblRepActProfTotal: TQRLabel;
     qrlblRepBudProfTotal: TQRLabel;
-    qryRepBudgets: TQuery;
-    qryPeriods: TQuery;
+    qryRepBudgets: TFDQuery;
+    qryPeriods: TFDQuery;
     qrlblTODiff1: TQRLabel;
     qrlblProfDiff1: TQRLabel;
     qrlblTODiff2: TQRLabel;
@@ -136,7 +139,7 @@ type
     qrlblTODiffTotal: TQRLabel;
     qrlblProfDiffTotal: TQRLabel;
     qrbCompanyTotal: TQRBand;
-    qryRep: TQuery;
+    qryRep: TFDQuery;
     qrlblCommission: TQRLabel;
     qrlblComm1: TQRLabel;
     qrlblComm2: TQRLabel;
@@ -252,12 +255,12 @@ type
     qrlblTotalComm: TQRLabel;
     qrlblTotalCommission: TQRLabel;
     QRShape2: TQRShape;
-    qrySubReps: TQuery;
-    qrySubReport: TQuery;
-    qrySubReportNull: TQuery;
-    qryReportNull: TQuery;
-    qrySubRepsOld: TQuery;
-    qryRepsOld: TQuery;
+    qrySubReps: TFDQuery;
+    qrySubReport: TFDQuery;
+    qrySubReportNull: TFDQuery;
+    qryReportNull: TFDQuery;
+    qrySubRepsOld: TFDQuery;
+    qryRepsOld: TFDQuery;
     qrdbRepName: TQRDBText;
     qrlblMonth1: TQRLabel;
     QRLabel5: TQRLabel;

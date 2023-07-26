@@ -263,8 +263,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
       OnClick = dblkpProductCatClick
     end
   end
-  object qryVat: TQuery
-    DatabaseName = 'pb'
+  object qryVat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Vat_Code'
@@ -272,8 +272,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
     Left = 280
     Top = 296
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'pb'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -281,8 +281,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
     Left = 280
     Top = 256
   end
-  object qryProductCat: TQuery
-    DatabaseName = 'pb'
+  object qryProductCat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -305,8 +305,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
     Left = 320
     Top = 296
   end
-  object qryGetPUnit: TQuery
-    DatabaseName = 'pb'
+  object qryGetPUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -320,8 +320,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'pb'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
@@ -334,9 +334,9 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
         ParamType = ptUnknown
       end>
   end
-  object qryWOProcess: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsJobBagWO
+  object qryWOProcess: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsJobBagWO
     SQL.Strings = (
       'SELECT Works_Order_Process.Works_Order,'
       '        Works_Order_Process.Process,'
@@ -365,8 +365,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
     Left = 392
     Top = 48
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'pb'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Works_Order_Process.Works_Order,'
       '        Works_Order_Process.Process,'
@@ -398,8 +398,8 @@ object PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJobBagWO: TQuery
-    DatabaseName = 'pb'
+  object qryJobBagWO: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Job_Bag, Job_Bag_Works_Order.Works_Order, Works_Order_Num' +

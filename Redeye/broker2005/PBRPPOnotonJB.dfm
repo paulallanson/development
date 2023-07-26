@@ -760,8 +760,8 @@ object PBRPPOnotonJBfrm: TPBRPPOnotonJBfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'

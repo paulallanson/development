@@ -2,8 +2,8 @@ object dtmdlOrders: TdtmdlOrders
   OnCreate = DataModuleCreate
   Height = 480
   Width = 696
-  object qryOrders: TQuery
-    DatabaseName = 'PB'
+  object qryOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP :Records'
       '  Purchase_OrderLine.Customer,'
@@ -285,8 +285,8 @@ object dtmdlOrders: TdtmdlOrders
     Left = 72
     Top = 40
   end
-  object qrySOrders: TQuery
-    DatabaseName = 'PB'
+  object qrySOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP :Records'
       #9'sales_order.customer,'
@@ -400,8 +400,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryPOrders: TQuery
-    DatabaseName = 'PB'
+  object qryPOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP :Records'
       '  Purchase_OrderLine.Customer,'
@@ -537,8 +537,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryperiodEnd: TQuery
-    DatabaseName = 'PB'
+  object qryperiodEnd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_profit.*, Purchase_OrderLine.Qty_Invoiced'
       'from Sales_profit, Purchase_Orderline'
@@ -564,8 +564,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryOnHold: TQuery
-    DatabaseName = 'PB'
+  object qryOnHold: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update purchase_orderline'
       'set On_hold = :On_Hold'
@@ -590,16 +590,16 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 80
     Top = 168
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_Order'
@@ -613,8 +613,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object GetPickRefSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPickRefSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Sales_Order, Picking_List_Ref'
       'from Part_Store_Allocation'
@@ -628,8 +628,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryInvoicePO: TQuery
-    DatabaseName = 'PB'
+  object qryInvoicePO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Sales_invoice_no'
       'from Sales_Invoice_line, Sales_invoice '
@@ -653,8 +653,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryInvoiceSO: TQuery
-    DatabaseName = 'PB'
+  object qryInvoiceSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Sales_Invoice.Sales_Invoice_No'
       'FROM (Sales_Invoice '
@@ -675,8 +675,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryJBOrders: TQuery
-    DatabaseName = 'PB'
+  object qryJBOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Purchase_OrderLine.Customer,'
@@ -798,8 +798,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySelectedPO: TQuery
-    DatabaseName = 'PB'
+  object qrySelectedPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purchase_Order.Purchase_Order,'
       '       Purchase_Order.Supplier,'
@@ -842,8 +842,8 @@ object dtmdlOrders: TdtmdlOrders
     Left = 512
     Top = 40
   end
-  object qryCallOffs: TQuery
-    DatabaseName = 'PB'
+  object qryCallOffs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'sales_order.customer,'
       '                Customer.Name,'
@@ -1065,8 +1065,8 @@ object dtmdlOrders: TdtmdlOrders
       Size = 50
     end
   end
-  object qryCust: TQuery
-    DatabaseName = 'PB'
+  object qryCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from customer'
       'where customer = :customer')
@@ -1079,8 +1079,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySOHeaders: TQuery
-    DatabaseName = 'PB'
+  object qrySOHeaders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'TOP :Records'
       '  sales_order.customer,'
@@ -1196,8 +1196,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySelectedSO: TQuery
-    DatabaseName = 'PB'
+  object qrySelectedSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_order.sales_order,'
       '      Sales_order.date_ordered,'
@@ -1220,8 +1220,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryOperator: TQuery
-    DatabaseName = 'PB'
+  object qryOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Operator'
@@ -1235,8 +1235,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySOPicking: TQuery
-    DatabaseName = 'pb'
+  object qrySOPicking: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from sales_order_picking'
@@ -1250,8 +1250,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryGetSInvoice: TQuery
-    DatabaseName = 'pb'
+  object qryGetSInvoice: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from sales_invoice_line'
@@ -1265,8 +1265,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qryPOProofStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPOProofStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select top 1 Proof_History.Proof_History, Proof_Status.Proof_App' +
@@ -1290,8 +1290,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySetSOInvoice: TQuery
-    DatabaseName = 'PB'
+  object qrySetSOInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_order'
       'set Sales_order_head_Status = 250'
@@ -1305,8 +1305,8 @@ object dtmdlOrders: TdtmdlOrders
         ParamType = ptUnknown
       end>
   end
-  object qrySOLines: TQuery
-    DatabaseName = 'PB'
+  object qrySOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'TOP :Records'
       '  sales_order.customer,'

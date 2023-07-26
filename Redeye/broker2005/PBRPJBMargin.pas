@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, CCSPrint, CCSCommon, printers, qrprntr;
+  Db, ExtCtrls, QuickRpt, Qrctrls, CCSPrint, CCSCommon, printers, qrprntr,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPJBMarginFrm = class(TForm)
     QuickReport: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand2: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel3: TQRLabel;
@@ -71,18 +74,18 @@ type
     qrdbJobDate: TQRDBText;
     qrdbJobDescription: TQRDBText;
     qrdbJobQuantity: TQRDBText;
-    qryGetPOLine: TQuery;
-    qryGetProdType: TQuery;
+    qryGetPOLine: TFDQuery;
+    qryGetProdType: TFDQuery;
     QRLabel4: TQRLabel;
     QRDBText7: TQRDBText;
     QRDBText8: TQRDBText;
     QRLabel16: TQRLabel;
     QRDBText9: TQRDBText;
     QRDBText10: TQRDBText;
-    qryGetSuppInvoice: TQuery;
-    qryGetSalesInvoice: TQuery;
-    qryGetSuppPOInvoice: TQuery;
-    qryGetPO: TQuery;
+    qryGetSuppInvoice: TFDQuery;
+    qryGetSalesInvoice: TFDQuery;
+    qryGetSuppPOInvoice: TFDQuery;
+    qryGetPO: TFDQuery;
     qrlblPODate: TQRLabel;
     procedure QuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

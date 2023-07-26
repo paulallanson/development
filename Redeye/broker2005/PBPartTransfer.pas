@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db, DBTables;
+  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TStockDet     = class;
@@ -125,22 +128,22 @@ type
   end;
   TPBPartTransferFrm = class(TForm)
     TreeImageList: TImageList;
-    GetPOLinesSQL: TQuery;
-    UpdPOLineSQL: TQuery;
-    CheckPOStatusSQL: TQuery;
-    UpdPOStatusSQL: TQuery;
+    GetPOLinesSQL: TFDQuery;
+    UpdPOLineSQL: TFDQuery;
+    CheckPOStatusSQL: TFDQuery;
+    UpdPOStatusSQL: TFDQuery;
     ToDataTreeView: TTreeView;
-    GetPartPackSQL: TQuery;
-    GetOrdAllocsSQL: TQuery;
-    UpdPFJStatusSQL: TQuery;
-    DelOrdAllocSQL: TQuery;
-    GetSOTransSQL: TQuery;
-    GetSOTranSQL: TQuery;
-    DelSOTranSQL: TQuery;
-    UpdSOTranSQL: TQuery;
-    qryZero: TQuery;
-    AddStStkSIqry: TQuery;
-    GetStStkSIqry: TQuery;
+    GetPartPackSQL: TFDQuery;
+    GetOrdAllocsSQL: TFDQuery;
+    UpdPFJStatusSQL: TFDQuery;
+    DelOrdAllocSQL: TFDQuery;
+    GetSOTransSQL: TFDQuery;
+    GetSOTranSQL: TFDQuery;
+    DelSOTranSQL: TFDQuery;
+    UpdSOTranSQL: TFDQuery;
+    qryZero: TFDQuery;
+    AddStStkSIqry: TFDQuery;
+    GetStStkSIqry: TFDQuery;
     StatusBar1: TStatusBar;
     pnlBottom: TPanel;
     OKBitBtn: TBitBtn;
@@ -153,8 +156,8 @@ type
     QtyMemo: TMemo;
     MovedLabel: TLabel;
     MovedMemo: TMemo;
-    qryGetPArt: TQuery;
-    qryGetCustomer: TQuery;
+    qryGetPArt: TFDQuery;
+    qryGetCustomer: TFDQuery;
     PartGroupBox: TGroupBox;
     Label2: TLabel;
     Label8: TLabel;
@@ -190,28 +193,28 @@ type
     DateBitBtn: TBitBtn;
     lblMoveType: TLabel;
     edtReference: TEdit;
-    qryUpPODelivery: TQuery;
-    qryCheckPart: TQuery;
-    qryAddPart: TQuery;
-    qryUpdPart: TQuery;
-    qryCheckStoreLevels: TQuery;
-    qryAddStoreLevels: TQuery;
-    qryUpPOQtyToDeliver: TQuery;
-    qryGetNextPODelivery: TQuery;
-    qryAddPODelivery: TQuery;
-    qryGetPartTransfer: TQuery;
-    qryDelPartTransfer: TQuery;
-    qryOvers: TQuery;
-    qrySOPicking: TQuery;
-    qryGetPODelivery: TQuery;
+    qryUpPODelivery: TFDQuery;
+    qryCheckPart: TFDQuery;
+    qryAddPart: TFDQuery;
+    qryUpdPart: TFDQuery;
+    qryCheckStoreLevels: TFDQuery;
+    qryAddStoreLevels: TFDQuery;
+    qryUpPOQtyToDeliver: TFDQuery;
+    qryGetNextPODelivery: TFDQuery;
+    qryAddPODelivery: TFDQuery;
+    qryGetPartTransfer: TFDQuery;
+    qryDelPartTransfer: TFDQuery;
+    qryOvers: TFDQuery;
+    qrySOPicking: TFDQuery;
+    qryGetPODelivery: TFDQuery;
     lblReference: TLabel;
     dblkpMoveType: TDBLookupComboBox;
-    qryMovetype: TQuery;
+    qryMovetype: TFDQuery;
     dtsMoveType: TDataSource;
     dblkpVersions: TDBLookupComboBox;
-    qryVersions: TQuery;
+    qryVersions: TFDQuery;
     dtsVersions: TDataSource;
-    qryUpPOVersions: TQuery;
+    qryUpPOVersions: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormActivate(Sender: TObject);

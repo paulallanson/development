@@ -243,8 +243,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
   end
-  object qryInsJobType: TQuery
-    DatabaseName = 'PB'
+  object qryInsJobType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into job_type'
       '  (job_type,'
@@ -291,8 +291,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJobType: TQuery
-    DatabaseName = 'PB'
+  object qryUpdJobType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update job_type'
       'set Job_Type_Description = :Job_Type_Description,'
@@ -331,8 +331,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelJobType: TQuery
-    DatabaseName = 'PB'
+  object qryDelJobType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from job_type'
       'where job_type = :job_type;'
@@ -346,8 +346,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySelNextJobType: TQuery
-    DatabaseName = 'PB'
+  object qrySelNextJobType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(job_type) as last_job_type_no from job_type;')
     Left = 232

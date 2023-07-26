@@ -295,8 +295,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
       TabOrder = 5
     end
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into courier_service  (courier,'
       '   service_no,'
@@ -353,8 +353,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update courier_service'
       'Set'
@@ -405,8 +405,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From courier_service '
       'where courier = :courier and '
@@ -425,8 +425,8 @@ object STMaintCourierServFrm: TSTMaintCourierServFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextServiceNo: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextServiceNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max (service_no) as max_serv_no '
       'from courier_service '

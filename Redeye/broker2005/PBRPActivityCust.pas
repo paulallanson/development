@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, DateUtils;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPActivityCustFrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrReport: TQuickRep;
     qrbndGrpHdr: TQRGroup;
     qrbndGrpFtr: TQRBand;
@@ -37,7 +40,7 @@ type
     QRLabel16: TQRLabel;
     qrlblGroupCount: TQRLabel;
     qrlblTotalCount: TQRLabel;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     QRLabel22: TQRLabel;
     QRLabel1: TQRLabel;
     QRDBText1: TQRDBText;

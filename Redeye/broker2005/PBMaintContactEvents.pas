@@ -154,20 +154,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls, ComCtrls, pbEventsDM;
+  StdCtrls, Buttons, DBCtrls, DB, Mask, ExtCtrls, ComCtrls, pbEventsDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintContactEvents = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
-    QryZero: TQuery;
+    QryZero: TFDQuery;
     DispMemo: TMemo;
     dblkpContact: TDBLookupComboBox;
     Label1: TLabel;
@@ -175,10 +178,10 @@ type
     DateDateTimePicker: TDateTimePicker;
     Label2: TLabel;
     Label3: TLabel;
-    GetLastSQL: TQuery;
+    GetLastSQL: TFDQuery;
     Label4: TLabel;
     dblkpBranch: TDBLookupComboBox;
-    qryBranch: TQuery;
+    qryBranch: TFDQuery;
     dtsBranch: TDataSource;
     Button1: TButton;
     Button2: TButton;

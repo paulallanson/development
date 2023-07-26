@@ -978,8 +978,8 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     Left = 533
     Top = 61
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Store_Stock.*,'
       '       (0 - Store_Stock.Store_Quantity) as Store_Quantity_Pos,'
@@ -1004,66 +1004,66 @@ object STNegStkRepFrm: TSTNegStkRepFrm
     Top = 27
     object GetDetsQueryStore_Stock: TIntegerField
       FieldName = 'Store_Stock'
-      Origin = 'PB.Store_Stock.Store_Stock'
+
     end
     object GetDetsQueryQuantity_Allocated: TIntegerField
       FieldName = 'Quantity_Allocated'
-      Origin = 'PB.Store_Stock.Quantity_Allocated'
+
     end
     object GetDetsQueryStore_Quantity: TIntegerField
       FieldName = 'Store_Quantity'
-      Origin = 'PB.Store_Stock.Store_Quantity'
+
     end
     object GetDetsQueryStore_Cost: TCurrencyField
       FieldName = 'Store_Cost'
-      Origin = 'PB.Store_Stock.Store_Cost'
+
     end
     object GetDetsQueryDate_Received: TDateTimeField
       FieldName = 'Date_Received'
-      Origin = 'PB.Store_Stock.Date_Received'
+
     end
     object GetDetsQueryPart: TStringField
       FieldName = 'Part'
-      Origin = 'PB.Store_Stock.Part'
+
       FixedChar = True
       Size = 30
     end
     object GetDetsQueryPart_Store_Lot: TStringField
       FieldName = 'Part_Store_Lot'
-      Origin = 'PB.Store_Stock.Part_Store_Lot'
+
       FixedChar = True
       Size = 40
     end
     object GetDetsQueryPart_Store: TIntegerField
       FieldName = 'Part_Store'
-      Origin = 'PB.Store_Stock.Part_Store'
+
     end
     object GetDetsQueryPart_Bin: TStringField
       FieldName = 'Part_Bin'
-      Origin = 'PB.Store_Stock.Part_Bin'
+
       FixedChar = True
     end
     object GetDetsQueryStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
-      Origin = 'PB.Store_Stock.Stock_Pack_Quantity'
+
     end
     object GetDetsQueryPart_Description: TStringField
       FieldName = 'Part_Description'
-      Origin = 'PB.Part.Part_Description'
+
       FixedChar = True
       Size = 60
     end
     object GetDetsQueryPurch_Pack_Quantity: TIntegerField
       FieldName = 'Purch_Pack_Quantity'
-      Origin = 'PB.Part.Purch_Pack_Quantity'
+
     end
     object GetDetsQueryPart_Purchase_Price: TCurrencyField
       FieldName = 'Part_Purchase_Price'
-      Origin = 'PB.Part.Part_Purchase_Price'
+
     end
     object GetDetsQueryPart_Store_Name: TStringField
       FieldName = 'Part_Store_Name'
-      Origin = 'PB.Part_Store.Part_Store_Name'
+
       FixedChar = True
       Size = 60
     end

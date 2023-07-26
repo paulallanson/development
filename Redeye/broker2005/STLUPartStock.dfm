@@ -243,8 +243,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Left = 560
     Top = 128
   end
-  object qryStock: TQuery
-    DatabaseName = 'PB'
+  object qryStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -448,8 +448,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Left = 400
     Top = 136
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -642,8 +642,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       FieldName = 'form_reference'
     end
   end
-  object qryStore: TQuery
-    DatabaseName = 'pb'
+  object qryStore: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from part_store'
       'where part_store = :Part_Store')

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, CCSPrint, DateSelV5, PBPOObjects, CCSCommon, OleCtnrs, ComCtrls;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, CCSPrint, DateSelV5, PBPOObjects, CCSCommon, OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPurchInvFrm = class(TForm)
-    OldqryPurchInv: TQuery;
+    OldqryPurchInv: TFDQuery;
     dtsrcPurchInv: TDataSource;
     pnlDisplay: TPanel;
     pnlControls: TPanel;
@@ -53,7 +56,7 @@ type
     OldqryPurchInvCost_Unit_Factor: TFloatField;
     OldqryPurchInvPrice_Unit_Factor: TFloatField;
     OldqryPurchInvDate_Point: TDateTimeField;
-    qryPurchInv: TQuery;
+    qryPurchInv: TFDQuery;
     qryPurchInvPurchase_Order: TFloatField;
     qryPurchInvLine: TIntegerField;
     qryPurchInvDate_Point: TDateTimeField;

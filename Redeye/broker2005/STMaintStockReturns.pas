@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, Grids, DBCtrls, StdCtrls, Buttons, ComCtrls, pbStockDM, stStockDM,
-  DB, DBTables, stPickingDM, IniFiles;
+  DB, stPickingDM, IniFiles;
 
 type
   TSTMaintStockReturnsFrm = class(TForm)

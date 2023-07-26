@@ -4,35 +4,38 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, STStkTkObject;
+  Db, STStkTkObject,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTStkTkDM = class(TDataModule)
-    PartSQL: TQuery;
-    CountListSQL: TQuery;
+    PartSQL: TFDQuery;
+    CountListSQL: TFDQuery;
     CountListSRC: TDataSource;
-    CheckValidBinSQL: TQuery;
-    CheckValidLotSQL: TQuery;
-    PartStoreSQL: TQuery;
-    CountHeadSQL: TQuery;
-    CountDtlsSQL: TQuery;
+    CheckValidBinSQL: TFDQuery;
+    CheckValidLotSQL: TFDQuery;
+    PartStoreSQL: TFDQuery;
+    CountHeadSQL: TFDQuery;
+    CountDtlsSQL: TFDQuery;
     CountDtlsSRC: TDataSource;
-    CountPartDtlsSQL: TQuery;
-    GetCountStkSQL: TQuery;
-    FreezeCountSQL: TQuery;
-    UpdCountSql: TQuery;
-    NextStockTakeSQL: TQuery;
-    AddStockTakeSQL: TQuery;
-    DelCountSQL: TQuery;
-    UpdStatusSQL: TQuery;
-    StoreStockSQL: TQuery;
-    GetStoreStockNoSQL: TQuery;
-    DelCountRecSQl: TQuery;
-    GetCountQtySQL: TQuery;
-    GetPartSQL: TQuery;
-    GetStockDescSQL: TQuery;
-    qryGetLastLot: TQuery;
-    qryGetCustomer: TQuery;
+    CountPartDtlsSQL: TFDQuery;
+    GetCountStkSQL: TFDQuery;
+    FreezeCountSQL: TFDQuery;
+    UpdCountSql: TFDQuery;
+    NextStockTakeSQL: TFDQuery;
+    AddStockTakeSQL: TFDQuery;
+    DelCountSQL: TFDQuery;
+    UpdStatusSQL: TFDQuery;
+    StoreStockSQL: TFDQuery;
+    GetStoreStockNoSQL: TFDQuery;
+    DelCountRecSQl: TFDQuery;
+    GetCountQtySQL: TFDQuery;
+    GetPartSQL: TFDQuery;
+    GetStockDescSQL: TFDQuery;
+    qryGetLastLot: TFDQuery;
+    qryGetCustomer: TFDQuery;
   procedure AddStockTake(iStockTake, iStore: integer; sBin, sLot,
     sStatus, sRef, sPart, sOrigBin, sOrigLot: String; iPriorQty, iCountQty, iPackQty, iPriorPackQty: integer; dDate: TDateTime; rCost: real);
   private
@@ -68,7 +71,7 @@ var
 
 implementation
 
-Uses CCSCommon, STStockDM;
+uses CCSCommon, STStockDM;
 
 {$R *.DFM}
 

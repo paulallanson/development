@@ -105,8 +105,8 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
     TabOrder = 6
     OnClick = btbtnDeleteClick
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Data_Transfer_Directory, Default_warehouse'
       'from company'
@@ -114,8 +114,8 @@ object STImpSalesOrdersFrm: TSTImpSalesOrdersFrm
     Left = 200
     Top = 112
   end
-  object qryWarehouse: TQuery
-    DatabaseName = 'PB'
+  object qryWarehouse: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from part_store'
       'order by Part_Store_name')

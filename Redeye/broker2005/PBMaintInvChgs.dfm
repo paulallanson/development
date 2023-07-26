@@ -200,8 +200,8 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
       TabOrder = 6
     end
   end
-  object qryVAT: TQuery
-    DatabaseName = 'PB'
+  object qryVAT: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from VAT_Code')
     Left = 72
@@ -212,8 +212,8 @@ object PBMaintInvChgsfrm: TPBMaintInvChgsfrm
     Left = 104
     Top = 96
   end
-  object qryAddChrgs: TQuery
-    DatabaseName = 'PB'
+  object qryAddChrgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from additional_charge'
       'order by details')

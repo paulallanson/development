@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DBTables, DB, ExtCtrls,
-  ComCtrls;
+  StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUDocumentLogos = class(TForm)
@@ -19,8 +22,8 @@ type
     btnDelete: TBitBtn;
     BitBtn4: TBitBtn;
     btnExcel: TBitBtn;
-    qryDocumentLogo: TQuery;
-    qryDelete: TQuery;
+    qryDocumentLogo: TFDQuery;
+    qryDelete: TFDQuery;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

@@ -101,9 +101,9 @@ object frmSTLUProductLvls: TfrmSTLUProductLvls
         Visible = True
       end>
   end
-  object qryStoreLevels: TQuery
+  object qryStoreLevels: TFDQuery
     OnCalcFields = qryStoreLevelsCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part_Store_levels.*, Part_Store_type_Name'
       'from part_Store_levels, part_store_type'

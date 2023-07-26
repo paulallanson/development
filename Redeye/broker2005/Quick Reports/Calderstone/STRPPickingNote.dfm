@@ -1661,8 +1661,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Sales_Order_Picking.Picking_List_Ref,'
@@ -1737,8 +1737,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -1774,8 +1774,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  '#39#39' as Branch_Name,'
@@ -1798,8 +1798,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptInput
       end>
   end
-  object qryGetProduction: TQuery
-    DatabaseName = 'pb'
+  object qryGetProduction: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Select'
       '  Production_Location_Name,'
@@ -1822,8 +1822,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'pb'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select top 1 Job_Bag'
       'from Job_Bag_Line_dets'
@@ -1837,8 +1837,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetAccountSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAccountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Account_Code'
       'from'
@@ -1868,8 +1868,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
     Left = 104
     Top = 32
   end
-  object GetCustHOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustHOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -1913,8 +1913,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelivNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelivNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'from Narrative_Line'
@@ -1929,8 +1929,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object AddDelivDetSQL: TQuery
-    DatabaseName = 'PB'
+  object AddDelivDetSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_order_Delivery'
       
@@ -1996,8 +1996,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object AddDelivLineDetSQL: TQuery
-    DatabaseName = 'PB'
+  object AddDelivLineDetSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_order_Delivery_Line'
       
@@ -2030,8 +2030,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSOHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set sales_Order.Sales_order_Head_Status = :status'
@@ -2053,8 +2053,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -2084,8 +2084,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelivCountSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelivCountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order'
       'from sales_order_delivery'
@@ -2101,8 +2101,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSerialNos: TQuery
-    DatabaseName = 'PB'
+  object qryGetSerialNos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_stock_serial_item.*'
       'from Store_stock_serial_item, Part_Store_allocation'
@@ -2125,8 +2125,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckDelivSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckDelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Quantity_Delivered'
       'from Sales_order_Delivery_Line'
@@ -2159,8 +2159,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBagReq: TQuery
-    DatabaseName = 'pb'
+  object qryGetJobBagReq: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select top 1 Job_Bag'
       'from Job_Bag_Stock_Request'
@@ -2174,8 +2174,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'
@@ -2189,8 +2189,8 @@ object STRPPickingNoteFrm: TSTRPPickingNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetDelivery: TQuery
-    DatabaseName = 'PB'
+  object qryGetDelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_Order'
       'FROM Sales_Order_Delivery'

@@ -617,8 +617,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
       end
     end
   end
-  object oldSODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object oldSODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Int_Sel.*, Sales_Order.*, Part.Part_Description, Sales_Or' +
@@ -659,8 +659,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     Left = 88
     Top = 360
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -680,8 +680,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Name,'
       #9#9#9'Building_no_name,'
@@ -711,8 +711,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object SODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object SODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Int_Sel.*,'
       '        Sales_Order.*,'
@@ -737,8 +737,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'

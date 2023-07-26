@@ -951,7 +951,7 @@ var
   tempStr: String;
 begin
   empty := true;
-  Enquiry.Line.Narrative.Data := mmLineNarrative.Text;
+  Enquiry.Line.Narrative.DataInfo := mmLineNarrative.Text;
   (*
   Enquiry.Line.Narrative.Lines.Clear;
   for x := 0 to (mmLineNarrative.Lines.Count - 1) do
@@ -999,7 +999,7 @@ var
   tempStr: string;
 begin
   mmLineNarrative.Lines.Clear;
-  mmLineNarrative.Text := Enquiry.Line.Narrative.Data;
+  mmLineNarrative.Text := Enquiry.Line.Narrative.DataInfo;
   (*
   for x := 0 to (Enquiry.Line.Narrative.Lines.Count - 1) do
   begin

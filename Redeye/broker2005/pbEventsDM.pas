@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlEvents = class(TDataModule)
-    qryEvents: TQuery;
+    qryEvents: TFDQuery;
     dtsEvents: TDataSource;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
   private
     function GetHeaderCount: integer;
     { Private declarations }

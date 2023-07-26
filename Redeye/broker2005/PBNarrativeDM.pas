@@ -37,30 +37,33 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmNarrative = class(TDataModule)
-    qryReserveSlot: TQuery;
-    qryGetReservedSlot: TQuery;
-    qryDelete: TQuery;
-    qryUpdateLine1: TQuery;
-    qryAddLine: TQuery;
-    qryReadNarrative: TQuery;
-    qryZero: TQuery;
+    qryReserveSlot: TFDQuery;
+    qryGetReservedSlot: TFDQuery;
+    qryDelete: TFDQuery;
+    qryUpdateLine1: TFDQuery;
+    qryAddLine: TFDQuery;
+    qryReadNarrative: TFDQuery;
+    qryZero: TFDQuery;
   end;
 
-  TNarrative   = class
+  TNarrative = class
   private
     dmNarrative: TdmNarrative;
     FDbKey: integer;
-    FData: string;
+    FDataInfo: string;
     FUpdated: Boolean;
     procedure AddZero;
     procedure DeleteZero;
     function  ReserveASlot : integer;
     procedure SetDbKey(const Value: integer);
-    procedure SetData(const Value: string);
+    procedure SetDataInfo(const Value: string);
     procedure SetUpdated(const Value: Boolean);
   public
     constructor Create;
@@ -69,7 +72,7 @@ type
     procedure LoadFromDB;
     procedure SaveToDB;
     property DbKey : integer read FDbKey write SetDbKey;
-    property Data : string read FData write SetData;
+    property DataInfo : string read FDataInfo write SetDataInfo;
     property Updated : Boolean read FUpdated write SetUpdated;
   end;
 
@@ -125,7 +128,7 @@ begin
       Next;
     end;
     Close;
-    Self.Data := sTemp;
+    Self.DataInfo := sTemp;
   end;
 end;
 
@@ -165,7 +168,7 @@ begin
   { Narrative Data is stored in lumps of 100 characters }
   if DbKey <> 0 then
     Delete;
-  if Data = '' then
+  if DataInfo = '' then
   begin
     DbKey := 0;
   end
@@ -179,14 +182,14 @@ begin
     with dmNarrative.qryUpdateLine1 do
     begin
       ParamByName('Narrative').AsInteger := DbKey;
-      ParamByName('Text').AsString := Copy(Data, 1, Data_Lump_Length);
+      ParamByName('Text').AsString := Copy(DataInfo, 1, Data_Lump_Length);
       ParamByname('Updated').AsString := upChar;
       ExecSQL;
     end;
-    if Length(Data) > Data_Lump_Length then
+    if Length(DataInfo) > Data_Lump_Length then
     begin
       i := 2;
-      lump := Copy(Data, Data_Lump_Length+1, Max_Copy_Length);
+      lump := Copy(DataInfo, Data_Lump_Length+1, Max_Copy_Length);
       while Length(Lump) > 0 do
       begin
         with dmNarrative.qryAddLine do
@@ -209,9 +212,9 @@ begin
   FDbKey := Value;
 end;
 
-procedure TNarrative.SetData(const Value: string);
+procedure TNarrative.SetDataInfo(const Value: string);
 begin
-  FData := Trim(Value);
+  FDataInfo := Trim(Value);
 end;
 
 procedure TNarrative.SetUpdated(const Value: Boolean);

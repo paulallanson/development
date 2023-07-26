@@ -115,8 +115,8 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     TabOrder = 5
     Value = 1
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'

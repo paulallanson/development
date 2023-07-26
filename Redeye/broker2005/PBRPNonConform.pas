@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPNonConform = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -22,7 +25,7 @@ type
     gtQRLabel1: TQRLabel;
     gtQRDBText2: TQRDBText;
     dtsReport: TDataSource;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtQRLabel13: TQRLabel;
     gtQRDBText8: TQRDBText;
     QRLabel4: TQRLabel;
@@ -67,7 +70,7 @@ type
     gtQRLabel6: TQRLabel;
     gtQRShape3: TQRShape;
     qrlblCosttoClient: TQRLabel;
-    qetOldReport: TQuery;
+    qetOldReport: TFDQuery;
     QRLabel1: TQRLabel;
     gtQRDBText3: TQRDBText;
     procedure qrgNCABeforePrint(Sender: TQRCustomBand;
@@ -81,10 +84,10 @@ type
   private
     rTotalCost, rTotalSell: real;
     ipage: integer;
-    procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
-    procedure BuildResponse(aQuery: TQuery; const iNarrative: integer);
-    procedure BuildCorrective(aQuery: TQuery; const iNarrative: integer);
-    procedure BuildPreventative(aQuery: TQuery; const iNarrative: integer);
+    procedure BuildNotes(aQuery : TFDQuery; const iNarrative : integer);
+    procedure BuildResponse(aQuery: TFDQuery; const iNarrative: integer);
+    procedure BuildCorrective(aQuery: TFDQuery; const iNarrative: integer);
+    procedure BuildPreventative(aQuery: TFDQuery; const iNarrative: integer);
     { Private declarations }
   public
     ForceNewPage: boolean;
@@ -174,7 +177,7 @@ begin
 
 end;
 
-procedure TfrmPBRPNonConform.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPNonConform.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -200,7 +203,7 @@ begin
   end;
 end;
 
-procedure TfrmPBRPNonConform.BuildResponse(aQuery: TQuery;
+procedure TfrmPBRPNonConform.BuildResponse(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -226,7 +229,7 @@ begin
   end;
 end;
 
-procedure TfrmPBRPNonConform.BuildCorrective(aQuery: TQuery;
+procedure TfrmPBRPNonConform.BuildCorrective(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -252,7 +255,7 @@ begin
   end;
 end;
 
-procedure TfrmPBRPNonConform.BuildPreventative(aQuery: TQuery;
+procedure TfrmPBRPNonConform.BuildPreventative(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

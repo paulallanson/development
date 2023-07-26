@@ -1301,12 +1301,12 @@ object PBRPNCAReasonFrm: TPBRPNCAReasonFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 47
     Top = 8
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
       #9'Job_Bag_Non_Conform.Date_Point,'
@@ -1421,7 +1421,7 @@ object PBRPNCAReasonFrm: TPBRPNCAReasonFrm
     Left = 277
     Top = 11
   end
-  object qryDummyOld: TQuery
+  object qryDummyOld: TFDQuery
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'

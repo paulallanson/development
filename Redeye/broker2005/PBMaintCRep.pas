@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, Spin, DBCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Spin, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TpbMaintCRepFrm = class(TForm)
@@ -18,20 +21,20 @@ type
     spnPercentage: TSpinEdit;
     DelLabel: TLabel;
     OKBitBtn: TBitBtn;
-    GetRepsSQL: TQuery;
+    GetRepsSQL: TFDQuery;
     CancelBitBtn: TBitBtn;
     RepsSRC: TDataSource;
-    DelSQL: TQuery;
-    UpdSQL: TQuery;
-    AddSQL: TQuery;
-    qryGetRep: TQuery;
-    qryBranches: TQuery;
+    DelSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    qryGetRep: TFDQuery;
+    qryBranches: TFDQuery;
     dtsBranches: TDataSource;
     dblkpBranches: TDBLookupComboBox;
-    qryAllBranches: TQuery;
-    qryGetBranches: TQuery;
+    qryAllBranches: TFDQuery;
+    qryGetBranches: TFDQuery;
     chkbxIsMainRep: TCheckBox;
-    qryGetRepBranches: TQuery;
+    qryGetRepBranches: TFDQuery;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

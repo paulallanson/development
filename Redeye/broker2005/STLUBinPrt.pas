@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ComCtrls, ExtCtrls, ImgList, Db, DBTables, Buttons,
-  System.ImageList;
+  StdCtrls, ComCtrls, ExtCtrls, ImgList, Db, Buttons,
+  System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTLUBinPrtFrm = class(TForm)
@@ -25,14 +28,14 @@ type
     Key3Label: TLabel;
     Key4Image: TImage;
     Key4Label: TLabel;
-    GetBinsSQL: TQuery;
-    GetBinsPartSQL: TQuery;
+    GetBinsSQL: TFDQuery;
+    GetBinsPartSQL: TFDQuery;
     PartDescrEdit: TEdit;
     SelBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetBinsHadPartSQL: TQuery;
-    GetBinsEmptySQL: TQuery;
-    GetAllBinsSQL: TQuery;
+    GetBinsHadPartSQL: TFDQuery;
+    GetBinsEmptySQL: TFDQuery;
+    GetAllBinsSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure LoadBinsList(Sender: TObject);
     procedure CheckButtons(Sender: TObject);

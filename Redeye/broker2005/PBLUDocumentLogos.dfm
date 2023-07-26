@@ -136,8 +136,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
     Left = 160
     Top = 120
   end
-  object qryDocumentLogo: TQuery
-    DatabaseName = 'PB'
+  object qryDocumentLogo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Document_Logo'
@@ -155,8 +155,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     Left = 232
     Top = 120
   end

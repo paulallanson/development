@@ -102,14 +102,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, Mask, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintCContaFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label1: TLabel;
@@ -118,10 +121,10 @@ type
     CustNameEdit: TEdit;
     NameEdit: TEdit;
     BranchNameEdit: TEdit;
-    GetBranchNameSQL: TQuery;
+    GetBranchNameSQL: TFDQuery;
     Label4: TLabel;
     TypeDBLCB: TDBLookupComboBox;
-    GetContTypesSQL: TQuery;
+    GetContTypesSQL: TFDQuery;
     ContTypesSRC: TDataSource;
     Label6: TLabel;
     PhoneEdit: TEdit;
@@ -131,20 +134,20 @@ type
     SalutationEdit: TEdit;
     MobileEdt: TEdit;
     MobileLabel: TLabel;
-    QryZero: TQuery;
+    QryZero: TFDQuery;
     ContTypeMaintBitBtn: TBitBtn;
     LevelDBLCB: TDBLookupComboBox;
     lblcontactLevel: TLabel;
     lblFaxNo: TLabel;
     Label8: TLabel;
     RecvCorresCB: TCheckBox;
-    GetContLevelsSQL: TQuery;
+    GetContLevelsSQL: TFDQuery;
     ContLevelsSRC: TDataSource;
     FaxEdit: TEdit;
     ContLevelMaintBitBtn: TBitBtn;
     Label9: TLabel;
     FileTypDBLCB: TDBLookupComboBox;
-    GetFileTypeSQL: TQuery;
+    GetFileTypeSQL: TFDQuery;
     FileTypSRC: TDataSource;
     Label10: TLabel;
     StatusDBLCB: TDBLookupComboBox;
@@ -153,10 +156,10 @@ type
     ChkBxActive: TCheckBox;
     NotesBitBtn: TBitBtn;
     FlashTimer: TTimer;
-    UpdNotesOnlySQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    qryStatus: TQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    qryStatus: TFDQuery;
     srcStatus: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);

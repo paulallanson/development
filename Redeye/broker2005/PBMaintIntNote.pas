@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, Db, DBTables;
+  StdCtrls, Buttons, ExtCtrls, ComCtrls, DBCtrls, PBPOObjects, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintIntNoteFrm = class(TForm)
@@ -20,7 +23,7 @@ type
     DelLabel: TLabel;
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    qrySelOperators: TQuery;
+    qrySelOperators: TFDQuery;
     OperatorsSRC: TDataSource;
     procedure FormShow(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -44,7 +47,7 @@ implementation
 
 function TPBMaintIntNoteFrm.Edit(note: TIntNote): boolean;
 begin
-  self.mmNoteText.text := note.Narrative.Data;
+  self.mmNoteText.text := note.Narrative.DataInfo;
   self.dtpckDate.Date := Trunc(note.DateEntered);
   self.dtpckTime.Time := Frac(note.DateEntered);
   self.dblucmbbxOperator.KeyValue := note.Operator;
@@ -53,7 +56,7 @@ begin
 
   if self.ShowModal = mrOK then
   begin
-    note.Narrative.Data := self.mmNoteText.text;
+    note.Narrative.DataInfo := self.mmNoteText.text;
     note.DateEntered := self.dtpckDate.Date + self.dtpckTime.Time;
     note.Operator := self.dblucmbbxOperator.KeyValue;
     self.qrySelOperators.locate('operator', self.dblucmbbxOperator.KeyValue, [loPartialKey]);
@@ -78,7 +81,7 @@ end;
 
 function TPBMaintIntNoteFrm.Delete(note: TIntNote): boolean;
 begin
-  self.mmNoteText.text := note.Narrative.Data;
+  self.mmNoteText.text := note.Narrative.DataInfo;
   self.dtpckDate.Date := Trunc(note.DateEntered);
   self.dtpckTime.Time := Frac(note.DateEntered);
   self.dblucmbbxOperator.KeyValue := note.Operator;
@@ -103,7 +106,7 @@ end;
 
 function TPBMaintIntNoteFrm.New(note: TIntNote): boolean;
 begin
-  self.mmNoteText.text := note.Narrative.Data;
+  self.mmNoteText.text := note.Narrative.DataInfo;
   self.dtpckDate.Date := Trunc(note.DateEntered);
   self.dtpckTime.Time := Frac(note.DateEntered);
   self.dblucmbbxOperator.KeyValue := note.Operator;
@@ -112,7 +115,7 @@ begin
 
   if self.ShowModal = mrOK then
   begin
-    note.Narrative.Data := self.mmNoteText.text;
+    note.Narrative.DataInfo := self.mmNoteText.text;
     note.DateEntered := self.dtpckDate.Date + self.dtpckTime.Time;
     note.Operator := self.dblucmbbxOperator.KeyValue;
     self.qrySelOperators.locate('operator', self.dblucmbbxOperator.KeyValue, [loPartialKey]);

@@ -1952,8 +1952,8 @@ object PBRPPORepFrm: TPBRPPORepFrm
     Left = 584
     Top = 9
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sum(Amount) as Add_Cost, sum(Quotation_Price) as Add_Pric' +

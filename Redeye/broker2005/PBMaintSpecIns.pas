@@ -63,7 +63,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, Buttons;
+  DB, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSpecInsFrm = class(TForm)
@@ -72,11 +75,11 @@ type
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
     ClearBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
-    qryZero: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    qryZero: TFDQuery;
     Label1: TLabel;
     NarrativeEdit: TEdit;
     procedure FormActivate(Sender: TObject);
@@ -144,8 +147,8 @@ begin
     try
       Narrative.DbKey := NarrNo;
       Narrative.LoadFromDB;
-      DataMemo.Text := Narrative.Data;
-      DispMemo.Text := Narrative.Data;
+      DataMemo.Text := Narrative.DataInfo;
+      DispMemo.Text := Narrative.DataInfo;
     finally
       Narrative.Free;
     end;
@@ -195,7 +198,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarr;
-    Narrative.Data := DispMemo.Text;
+    Narrative.DataInfo := DispMemo.Text;
     Narrative.SaveToDB;
     iNarr := Narrative.DbKey;
   finally

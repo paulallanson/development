@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Db, DBTables, CCSPrint, Qrctrls;
+  ExtCtrls, QuickRpt, Db, CCSPrint, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPCustStkBalDetfrm = class(TForm)
     QuickReport: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand1: TQRBand;
     qrlblTitle: TQRLabel;
     qrbCustHeader: TQRGroup;
     QRSysData1: TQRSysData;
     QRDBText3: TQRDBText;
-    GetSerNosSQL: TQuery;
+    GetSerNosSQL: TFDQuery;
     GetSerNosSQLSerial_item_from: TStringField;
     GetSerNosSQLSerial_item_to: TStringField;
     QRBand2: TQRBand;
@@ -38,9 +41,9 @@ type
     lblDeliveryDate: TQRLabel;
     qrlblQuantity: TQRLabel;
     lblCustOrderNo: TQRLabel;
-    qryLastDetails: TQuery;
-    qryOrders: TQuery;
-    qryGetOnOrd: TQuery;
+    qryLastDetails: TFDQuery;
+    qryOrders: TFDQuery;
+    qryGetOnOrd: TFDQuery;
     QRLblQtyOnOrd: TQRLabel;
     qryOrdersCust_Order_No: TStringField;
     qryOrdersPurchase_Order: TFloatField;
@@ -49,12 +52,12 @@ type
     qryOrdersForms_per_Box: TStringField;
     qryOrdersLast_Delivery: TDateTimeField;
     dtsReport: TDataSource;
-    qryGetLastSO: TQuery;
+    qryGetLastSO: TFDQuery;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
     qrlblReorder: TQRLabel;
     qrlblTotalOrder: TQRLabel;
-    qryLevels: TQuery;
+    qryLevels: TFDQuery;
     qryReportPart: TStringField;
     qryReportPart_Description: TStringField;
     qryReportCustomer: TIntegerField;

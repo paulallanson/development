@@ -4,117 +4,121 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, PBPOObjects;
+  Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TdmAccImport = class(TDataModule)
-    AddBranchSQL: TQuery;
-    AddCustSQL: TQuery;
-    GetBranchSQL: TQuery;
-    UpCustSQL: TQuery;
-    UpBranchSQL: TQuery;
-    GetNextBranchSQL: TQuery;
-    GetNextCustSQL: TQuery;
-    GetNextContactSQL: TQuery;
-    AddRepSQL: TQuery;
-    AddContactSQL: TQuery;
-    AddSuppSQL: TQuery;
-    GetNextSuppSQL: TQuery;
-    AddSuppBranchSQL: TQuery;
-    UpSuppSQL: TQuery;
-    UpSuppBranchSQL: TQuery;
-    GetLastNarrSQL: TQuery;
-    GetCustBranchSQL: TQuery;
-    AddSuppContSQL: TQuery;
-    GetNextSuppContactSQL: TQuery;
-    GetSuppBranchSQL: TQuery;
-    AddNarrSQL: TQuery;
-    UpBranchNarrSQL: TQuery;
-    GetSageCustomer: TQuery;
-    Sage50Database: TDatabase;
-    CustExistSQL: TQuery;
-    GetNextRepSQL: TQuery;
-    AddNewRepSQL: TQuery;
-    CheckRepSQL: TQuery;
-    AddCurrencySQL: TQuery;
-    GetSageSupplier: TQuery;
-    SuppExistSQL: TQuery;
-    UpCreditLimitSQL: TQuery;
-    UpCompanyImpSQL: TQuery;
-    GetSagePayments: TQuery;
-    UpPaymentSQL: TQuery;
-    GetCompanySQL: TQuery;
-    UpCompanyPayDateSQL: TQuery;
-    UpAuditHSQL: TQuery;
-    GetSageAuditH: TQuery;
-    GetSageAuditU: TQuery;
-    UPAuditUSQL: TQuery;
-    DelSageAuditH: TQuery;
-    MaximiserDB: TDatabase;
-    GetMaxContacts: TQuery;
-    GetMaxEmail: TQuery;
-    GetMaxWebsite: TQuery;
-    CustNameExistSQL: TQuery;
-    CheckContactSQL: TQuery;
-    qryGetCType: TQuery;
-    qryNextCType: TQuery;
-    qryAddCType: TQuery;
-    QuickbooksDB: TDatabase;
-    DelRepSQL: TQuery;
-    GetRepSQL: TQuery;
-    GetCustBrSQL: TQuery;
-    AddContactinfoSQL: TQuery;
-    CheckBranchSQL: TQuery;
-    UpdBranchSQL: TQuery;
-    UpdContactSQL: TQuery;
-    UpdContactInfoSQL: TQuery;
-    qryGetCustomerContact: TQuery;
-    qryGetSupplierContact: TQuery;
-    qryGetProductTYpe: TQuery;
-    qryAddPO: TQuery;
-    qryAddPOLine: TQuery;
-    qryGetPriceUnit: TQuery;
-    qryGetRep: TQuery;
-    qryAddDelivLine: TQuery;
-    qryAddSI: TQuery;
-    qryAddSILine: TQuery;
-    qryGetNextSI: TQuery;
-    qryGetNextPI: TQuery;
-    qryAddPI: TQuery;
-    qryAddPILine: TQuery;
-    qryGetTopRep: TQuery;
-    qryCheckSINumber: TQuery;
-    qryUpdSI: TQuery;
-    qryGetNextSILine: TQuery;
-    UpCreditNoteSQL: TQuery;
-    UpdCustSQL: TQuery;
-    CheckSuppContactSQL: TQuery;
-    UpdSuppContactSQL: TQuery;
-    DelSageAuditU: TQuery;
-    qryAddCustomerType: TQuery;
-    qryGetCustomerType: TQuery;
-    qryAddCountry: TQuery;
-    qryGetCountry: TQuery;
-    qryGetVatCode: TQuery;
-    qryGetPaymentTerms: TQuery;
-    qryGetOperator: TQuery;
-    qryGetPriceUnitByDesc: TQuery;
-    qryGetNextJobBag: TQuery;
-    qryUpCompany: TQuery;
-    qryAddJobBag: TQuery;
-    qryAddJobBagLine: TQuery;
-    qryGetPriceUnitFactor: TQuery;
-    qryGetPOImport: TQuery;
-    qryGetSupplierByAccount: TQuery;
-    qryGetPurchaseOrder: TQuery;
-    qryUpdPOLine: TQuery;
-    qryUpdDeliveryDetail: TQuery;
-    qryUpdJBLine: TQuery;
-    qryGetJobBagRef: TQuery;
-    qryGetJBLine: TQuery;
-    qryGetNextSICharge: TQuery;
-    qryAddSICharge: TQuery;
-    qryGetVat: TQuery;
+    AddBranchSQL: TFDQuery;
+    AddCustSQL: TFDQuery;
+    GetBranchSQL: TFDQuery;
+    UpCustSQL: TFDQuery;
+    UpBranchSQL: TFDQuery;
+    GetNextBranchSQL: TFDQuery;
+    GetNextCustSQL: TFDQuery;
+    GetNextContactSQL: TFDQuery;
+    AddRepSQL: TFDQuery;
+    AddContactSQL: TFDQuery;
+    AddSuppSQL: TFDQuery;
+    GetNextSuppSQL: TFDQuery;
+    AddSuppBranchSQL: TFDQuery;
+    UpSuppSQL: TFDQuery;
+    UpSuppBranchSQL: TFDQuery;
+    GetLastNarrSQL: TFDQuery;
+    GetCustBranchSQL: TFDQuery;
+    AddSuppContSQL: TFDQuery;
+    GetNextSuppContactSQL: TFDQuery;
+    GetSuppBranchSQL: TFDQuery;
+    AddNarrSQL: TFDQuery;
+    UpBranchNarrSQL: TFDQuery;
+    GetSageCustomer: TFDQuery;
+    Sage50Database: TFDConnection;
+    CustExistSQL: TFDQuery;
+    GetNextRepSQL: TFDQuery;
+    AddNewRepSQL: TFDQuery;
+    CheckRepSQL: TFDQuery;
+    AddCurrencySQL: TFDQuery;
+    GetSageSupplier: TFDQuery;
+    SuppExistSQL: TFDQuery;
+    UpCreditLimitSQL: TFDQuery;
+    UpCompanyImpSQL: TFDQuery;
+    GetSagePayments: TFDQuery;
+    UpPaymentSQL: TFDQuery;
+    GetCompanySQL: TFDQuery;
+    UpCompanyPayDateSQL: TFDQuery;
+    UpAuditHSQL: TFDQuery;
+    GetSageAuditH: TFDQuery;
+    GetSageAuditU: TFDQuery;
+    UPAuditUSQL: TFDQuery;
+    DelSageAuditH: TFDQuery;
+    MaximiserDB: TFDConnection;
+    GetMaxContacts: TFDQuery;
+    GetMaxEmail: TFDQuery;
+    GetMaxWebsite: TFDQuery;
+    CustNameExistSQL: TFDQuery;
+    CheckContactSQL: TFDQuery;
+    qryGetCType: TFDQuery;
+    qryNextCType: TFDQuery;
+    qryAddCType: TFDQuery;
+    QuickbooksDB: TFDConnection;
+    DelRepSQL: TFDQuery;
+    GetRepSQL: TFDQuery;
+    GetCustBrSQL: TFDQuery;
+    AddContactinfoSQL: TFDQuery;
+    CheckBranchSQL: TFDQuery;
+    UpdBranchSQL: TFDQuery;
+    UpdContactSQL: TFDQuery;
+    UpdContactInfoSQL: TFDQuery;
+    qryGetCustomerContact: TFDQuery;
+    qryGetSupplierContact: TFDQuery;
+    qryGetProductTYpe: TFDQuery;
+    qryAddPO: TFDQuery;
+    qryAddPOLine: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qryGetRep: TFDQuery;
+    qryAddDelivLine: TFDQuery;
+    qryAddSI: TFDQuery;
+    qryAddSILine: TFDQuery;
+    qryGetNextSI: TFDQuery;
+    qryGetNextPI: TFDQuery;
+    qryAddPI: TFDQuery;
+    qryAddPILine: TFDQuery;
+    qryGetTopRep: TFDQuery;
+    qryCheckSINumber: TFDQuery;
+    qryUpdSI: TFDQuery;
+    qryGetNextSILine: TFDQuery;
+    UpCreditNoteSQL: TFDQuery;
+    UpdCustSQL: TFDQuery;
+    CheckSuppContactSQL: TFDQuery;
+    UpdSuppContactSQL: TFDQuery;
+    DelSageAuditU: TFDQuery;
+    qryAddCustomerType: TFDQuery;
+    qryGetCustomerType: TFDQuery;
+    qryAddCountry: TFDQuery;
+    qryGetCountry: TFDQuery;
+    qryGetVatCode: TFDQuery;
+    qryGetPaymentTerms: TFDQuery;
+    qryGetOperator: TFDQuery;
+    qryGetPriceUnitByDesc: TFDQuery;
+    qryGetNextJobBag: TFDQuery;
+    qryUpCompany: TFDQuery;
+    qryAddJobBag: TFDQuery;
+    qryAddJobBagLine: TFDQuery;
+    qryGetPriceUnitFactor: TFDQuery;
+    qryGetPOImport: TFDQuery;
+    qryGetSupplierByAccount: TFDQuery;
+    qryGetPurchaseOrder: TFDQuery;
+    qryUpdPOLine: TFDQuery;
+    qryUpdDeliveryDetail: TFDQuery;
+    qryUpdJBLine: TFDQuery;
+    qryGetJobBagRef: TFDQuery;
+    qryGetJBLine: TFDQuery;
+    qryGetNextSICharge: TFDQuery;
+    qryAddSICharge: TFDQuery;
+    qryGetVat: TFDQuery;
   private
     icustomer: integer;
     LastPaymentUpdate: TDateTime;
@@ -224,8 +228,8 @@ type
     procedure DoOnePayment;
     procedure DoOneAuditH;
     procedure DoOneAuditU;
-    procedure SetProperties(QuerySQL: TQuery);
-    procedure SetMaximiserProperties(QuerySQL: TQuery);
+    procedure SetProperties(QuerySQL: TFDQuery);
+    procedure SetMaximiserProperties(QuerySQL: TFDQuery);
     procedure SetAccountRef(const Value: string);
     procedure SetAccountStatus(const Value: string);
     procedure SetAddress1(const Value: string);
@@ -541,7 +545,7 @@ const
 
 procedure TdmAccImport.AddCustomers(sDataSource: string);
 begin
-  Sage50Database.AliasName := sDataSource;
+  Sage50Database.ConnectionDefName := sDataSource;
   Sage50Database.Connected := true;
   with GetSageCustomer do
     begin
@@ -564,7 +568,7 @@ end;
 
 procedure TdmAccImport.AddSuppliers(sDataSource: string);
 begin
-  Sage50Database.AliasName := sDataSource;
+  Sage50Database.ConnectionDefName := sDataSource;
   Sage50Database.Connected := true;
   with GetSageSupplier do
     begin
@@ -585,7 +589,7 @@ begin
     end;
 end;
 
-procedure TdmAccImport.SetProperties(QuerySQL: TQuery);
+procedure TdmAccImport.SetProperties(QuerySQL: TFDQuery);
 begin
   with QuerySQL do
   begin
@@ -626,7 +630,7 @@ begin
   end;
 end;
 
-procedure TdmAccImport.SetMaximiserProperties(QuerySQL: TQuery);
+procedure TdmAccImport.SetMaximiserProperties(QuerySQL: TFDQuery);
 begin
   with QuerySQL do
   begin
@@ -1492,7 +1496,7 @@ end;
 
 procedure TdmAccImport.AddCreditLimits(sDataSource: string);
 begin
-  Sage50Database.AliasName := sDataSource;
+  Sage50Database.ConnectionDefName := sDataSource;
   Sage50Database.Connected := true;
   with GetSageCustomer do
     begin
@@ -1543,7 +1547,7 @@ begin
         LastPaymentUpdate := fieldbyname('Last_Payment_Update').asdatetime;
     end;
 
-  Sage50Database.AliasName := sDataSource;
+  Sage50Database.ConnectionDefName := sDataSource;
   Sage50Database.Connected := true;
 
   {Clear the Sage Audit Header File}
@@ -1672,7 +1676,7 @@ end;
 
 procedure TdmAccImport.AddStock(sDataSource: string);
 begin
-  Sage50Database.AliasName := sDataSource;
+  Sage50Database.ConnectionDefName := sDataSource;
   Sage50Database.Connected := true;
 
   {As yet no stock linkage exists for Sage}
@@ -2020,7 +2024,7 @@ end;
 
 procedure TdmAccImport.AddMaximiserContacts(sDataSource: string);
 begin
-  MaximiserDB.AliasName := sDataSource;
+  MaximiserDB.ConnectionDefName := sDataSource;
   MaximiserDB.Connected := true;
   with GetMaxContacts do
     begin
@@ -2043,7 +2047,7 @@ end;
 
 procedure TdmAccImport.AddQuickbooksCustomers(sDataSource: string);
 begin
-  QuickbooksDB.AliasName := sDataSource;
+  QuickbooksDB.ConnectionDefName := sDataSource;
   QuickbooksDB.Connected := true;
   with GetMaxContacts do
     begin

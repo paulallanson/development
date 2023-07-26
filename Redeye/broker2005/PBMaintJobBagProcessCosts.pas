@@ -4,34 +4,37 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, StdCtrls, Buttons, ExtCtrls, DB, DBTables, DBCtrls, pbJobBagdm;
+  Dialogs, Grids, StdCtrls, Buttons, ExtCtrls, DB, DBCtrls, pbJobBagdm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagProcessCostsFrm = class(TForm)
     pnlBottom: TPanel;
     sgDetails: TStringGrid;
-    qryDel: TQuery;
-    qryAdd: TQuery;
-    qryCostUnit: TQuery;
+    qryDel: TFDQuery;
+    qryAdd: TFDQuery;
+    qryCostUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     dblkpPriceUnit: TDBLookupComboBox;
     dblkpProcess: TDBLookupComboBox;
     Panel1: TPanel;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
     dblkpVAT: TDBLookupComboBox;
-    qryVAT: TQuery;
+    qryVAT: TFDQuery;
     dtsVAT: TDataSource;
     dblkpOperation: TDBLookupComboBox;
-    qryOperation: TQuery;
+    qryOperation: TFDQuery;
     dtsOperation: TDataSource;
     dblkpCategory: TDBLookupComboBox;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     dtsCategory: TDataSource;
     dblkpSubCategory: TDBLookupComboBox;
-    qrySubCategory: TQuery;
+    qrySubCategory: TFDQuery;
     dtsSubCategory: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);

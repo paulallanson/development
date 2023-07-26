@@ -626,8 +626,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
       FontSize = 12
     end
   end
-  object PODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object PODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*,'
       'Delivery_Detail.*,'
@@ -676,8 +676,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Left = 527
     Top = 360
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -706,8 +706,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -726,8 +726,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -746,8 +746,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -779,8 +779,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Left = 88
     Top = 360
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'

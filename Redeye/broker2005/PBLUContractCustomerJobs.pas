@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, pbJobsDm;
+  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, pbJobsDm;
 
 type
   TPBLUContractCustomerJobsFrm = class(TForm)

@@ -153,8 +153,8 @@ object STMaintStockUsageLineFrm: TSTMaintStockUsageLineFrm
     TabOrder = 6
     OnClick = btnPartClick
   end
-  object qryGetPart: TQuery
-    DatabaseName = 'PB'
+  object qryGetPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part'

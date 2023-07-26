@@ -1409,8 +1409,8 @@ object PBRPStkValfrm: TPBRPStkValfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Purchase_OrderLine.Order_Price,'
       #9'Purchase_OrderLine.Selling_Price, '

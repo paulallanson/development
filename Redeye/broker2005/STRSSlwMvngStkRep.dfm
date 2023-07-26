@@ -471,8 +471,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       TabOrder = 0
     end
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Distinct'
       '    Customer.Name as CustName,'

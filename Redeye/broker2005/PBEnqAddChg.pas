@@ -23,18 +23,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DB, DBTables, DBGrids;
+  StdCtrls, Buttons, Grids, DB, DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqAddChgFrm = class(TForm)
     AddChargesGrid: TStringGrid;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    UpdateSQL: TQuery;
-    DeleteSQL: TQuery;
-    InsertSQL: TQuery;
+    UpdateSQL: TFDQuery;
+    DeleteSQL: TFDQuery;
+    InsertSQL: TFDQuery;
     DeleteButton: TBitBtn;
-    addchargesSQL: TQuery;
+    addchargesSQL: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure AddChargesGridDrawCell(Sender: TObject; vCol, vRow: Longint;
       Rect: TRect; State: TGridDrawState);

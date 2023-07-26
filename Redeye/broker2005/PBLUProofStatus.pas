@@ -77,12 +77,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUProofStatusFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -94,7 +97,7 @@ type
     AddBitBtn: TBitBtn;
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
-    UpStatSQL: TQuery;
+    UpStatSQL: TFDQuery;
     GetDetsSQLProof_Status: TStringField;
     GetDetsSQLDescription: TStringField;
     GetDetsSQLProof_Approval_Status: TStringField;

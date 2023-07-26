@@ -1189,8 +1189,8 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Form_Reference.Form_Reference_ID,'
       '       Form_Reference.Form_Reference_Descr,'
@@ -1335,9 +1335,9 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Left = 94
     Top = 62
   end
-  object qryOrders: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryOrders: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT top 1 Purchase_OrderLine.Cust_Order_No,'
       '        Purchase_OrderLine.Purchase_Order,'
@@ -1417,8 +1417,8 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       FieldName = 'Last_Delivery'
     end
   end
-  object qryLastDetails: TQuery
-    DatabaseName = 'PB'
+  object qryLastDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Top 1'
       '  Delivery_Detail.Qty_Delivered,'

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, CCSPrint, DBCtrls, DB, DBTables;
+  ExtCtrls, StdCtrls, Buttons, CCSPrint, DBCtrls, DB;
 
 type
   TPBRSOSSInvJobBagsFrm = class(TForm)

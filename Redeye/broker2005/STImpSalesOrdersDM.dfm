@@ -5,8 +5,8 @@ object dtmdlImpSO: TdtmdlImpSO
   Top = 102
   Height = 454
   Width = 748
-  object qryAddSO: TQuery
-    DatabaseName = 'PB'
+  object qryAddSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order'
       '  (Sales_Order,'
@@ -188,16 +188,16 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select In_Use_By from Company Where Company = 1'
       ' ')
     Left = 232
     Top = 8
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_SO_Number, Last_Invoice_No'
       'From Company'
@@ -206,8 +206,8 @@ object dtmdlImpSO: TdtmdlImpSO
     Left = 168
     Top = 8
   end
-  object UpdLastSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_SO_Number = :Last_SO_Number'
@@ -222,8 +222,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddSORep: TQuery
-    DatabaseName = 'PB'
+  object qryAddSORep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_OrderRep'
       '(Sales_Order, Rep, Rep_Percentage)'
@@ -258,8 +258,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryChkCostCentre: TQuery
-    DatabaseName = 'PB'
+  object qryChkCostCentre: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Customer_CostCentre'
@@ -279,8 +279,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddCostCentre: TQuery
-    DatabaseName = 'PB'
+  object qryAddCostCentre: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Customer_CostCentre'
       '(Customer,'
@@ -309,8 +309,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Rep'
       'from Reps_Branches'
@@ -330,8 +330,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Contact_no'
       'from Customer_Contact'
@@ -357,8 +357,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranch: TQuery
-    DatabaseName = 'PB'
+  object qryGetBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Branch_no'
       'from Customer_Branch'
@@ -378,8 +378,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddSOLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddSOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order_Line'
       
@@ -510,8 +510,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetPart: TQuery
-    DatabaseName = 'PB'
+  object qryGetPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Part'
       'where Part = :Part')
@@ -524,8 +524,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryAddCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Contact'
       '        (Customer,'
@@ -563,8 +563,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryLastCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryLastCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Contact_no) as Last_Contact'
       'from Customer_Contact'
@@ -584,8 +584,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_Code_prefix'
       'from Customer'
@@ -599,16 +599,16 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAuditSession: TQuery
-    DatabaseName = 'PB'
+  object qryAuditSession: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Audit_Number) as Last_session'
       'from Transfer_Audit')
     Left = 384
     Top = 64
   end
-  object qryAddError: TQuery
-    DatabaseName = 'PB'
+  object qryAddError: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Transfer_Audit'
       '(Transfer_Audit,'
@@ -688,8 +688,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSOL: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteSOL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from sales_order_line'
       'where sales_order = :Sales_Order')
@@ -702,8 +702,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSO: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_order'
       'where Sales_order = :Sales_Order')
@@ -716,8 +716,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSORep: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteSORep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_OrderRep'
       'where Sales_Order = :Sales_Order')
@@ -730,8 +730,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetConsumer: TQuery
-    DatabaseName = 'PB'
+  object qryGetConsumer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Web_Users.Consumer_ID,'
       #9'Web_Users.Web_User_ID,'
@@ -761,8 +761,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetDelBranch: TQuery
-    DatabaseName = 'PB'
+  object qryGetDelBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Branch_no'
       'from Customer_Branch'
@@ -782,8 +782,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryLastBranch: TQuery
-    DatabaseName = 'PB'
+  object qryLastBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Branch_no) as Last_Branch'
       'from Customer_Branch'
@@ -797,8 +797,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddBranch: TQuery
-    DatabaseName = 'PB'
+  object qryAddBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Branch'
       '        (Customer,'
@@ -884,8 +884,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartDisc: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Discount'
@@ -950,8 +950,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppCharges: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supplier_Charge'
@@ -965,8 +965,8 @@ object dtmdlImpSO: TdtmdlImpSO
         ParamType = ptUnknown
       end>
   end
-  object qryAddSOCharge: TQuery
-    DatabaseName = 'PB'
+  object qryAddSOCharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Order_Add_Charge'
       

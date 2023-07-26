@@ -236,8 +236,8 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
       Value = 0
     end
   end
-  object qryUpd: TQuery
-    DatabaseName = 'PB'
+  object qryUpd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Element'
       'Set Quantity = :Quantity'
@@ -262,8 +262,8 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'pb'
+  object qryDel: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete from Part_Element'
       'where Part = :Part AND'

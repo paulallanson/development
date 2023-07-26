@@ -1442,8 +1442,8 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
       end
     end
   end
-  object qryStkBalRep: TQuery
-    DatabaseName = 'PB'
+  object qryStkBalRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.part,'
       '       part.part_description,'
@@ -1615,8 +1615,8 @@ object STRPStkBalRep2frm: TSTRPStkBalRep2frm
         ParamType = ptInput
       end>
   end
-  object GetSerNosSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSerNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Store_Stock_Serial_item.Serial_item_from,'
       'Store_Stock_Serial_item.Serial_item_to'

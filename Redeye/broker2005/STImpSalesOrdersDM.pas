@@ -4,37 +4,40 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, CCSCommon, FileCtrl;
+  Db, CCSCommon, FileCtrl,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlImpSO = class(TDataModule)
-    qryAddSO: TQuery;
-    qryCompany: TQuery;
-    GetLastSQL: TQuery;
-    UpdLastSQL: TQuery;
-    qryAddSORep: TQuery;
-    qryChkCostCentre: TQuery;
-    qryAddCostCentre: TQuery;
-    qryGetCustRep: TQuery;
-    qryGetCustContact: TQuery;
-    qryGetBranch: TQuery;
-    qryAddSOLine: TQuery;
-    qryGetPart: TQuery;
-    qryAddCustContact: TQuery;
-    qryLastCustContact: TQuery;
-    qryCustomer: TQuery;
-    qryAuditSession: TQuery;
-    qryAddError: TQuery;
-    qryDeleteSOL: TQuery;
-    qryDeleteSO: TQuery;
-    qryDeleteSORep: TQuery;
-    qryGetConsumer: TQuery;
-    qryGetDelBranch: TQuery;
-    qryLastBranch: TQuery;
-    qryAddBranch: TQuery;
-    qryGetPartDisc: TQuery;
-    qryGetSuppCharges: TQuery;
-    qryAddSOCharge: TQuery;
+    qryAddSO: TFDQuery;
+    qryCompany: TFDQuery;
+    GetLastSQL: TFDQuery;
+    UpdLastSQL: TFDQuery;
+    qryAddSORep: TFDQuery;
+    qryChkCostCentre: TFDQuery;
+    qryAddCostCentre: TFDQuery;
+    qryGetCustRep: TFDQuery;
+    qryGetCustContact: TFDQuery;
+    qryGetBranch: TFDQuery;
+    qryAddSOLine: TFDQuery;
+    qryGetPart: TFDQuery;
+    qryAddCustContact: TFDQuery;
+    qryLastCustContact: TFDQuery;
+    qryCustomer: TFDQuery;
+    qryAuditSession: TFDQuery;
+    qryAddError: TFDQuery;
+    qryDeleteSOL: TFDQuery;
+    qryDeleteSO: TFDQuery;
+    qryDeleteSORep: TFDQuery;
+    qryGetConsumer: TFDQuery;
+    qryGetDelBranch: TFDQuery;
+    qryLastBranch: TFDQuery;
+    qryAddBranch: TFDQuery;
+    qryGetPartDisc: TFDQuery;
+    qryGetSuppCharges: TFDQuery;
+    qryAddSOCharge: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     FOperator: integer;

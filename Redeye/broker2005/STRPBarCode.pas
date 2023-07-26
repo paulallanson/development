@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QRCtrls, QuickRpt, ExtCtrls, DB, DBTables, CCSCommon, printers, qrprntr,
-  QBarcode;
+  Dialogs, QRCtrls, QuickRpt, ExtCtrls, DB, CCSCommon, printers, qrprntr,
+  QBarcode,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPBarCodeFrm = class(TForm)
     qrpDetails: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRDBText1: TQRDBText;
     QRBand1: TQRBand;
-    qryUpdCompany: TQuery;
+    qryUpdCompany: TFDQuery;
     barcodeNo: TBarCode;
     qrlblType: TQRLabel;
     qrlblFoot: TQRDBText;

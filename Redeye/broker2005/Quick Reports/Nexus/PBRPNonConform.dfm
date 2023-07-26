@@ -1631,8 +1631,8 @@ object frmPBRPNonConform: TfrmPBRPNonConform
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
@@ -1771,8 +1771,8 @@ object frmPBRPNonConform: TfrmPBRPNonConform
     Left = 290
     Top = 46
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -1787,8 +1787,8 @@ object frmPBRPNonConform: TfrmPBRPNonConform
         ParamType = ptUnknown
       end>
   end
-  object qetOldReport: TQuery
-    DatabaseName = 'pb'
+  object qetOldReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Job_Bag_Non_Conform.*,'
       '        Job_Bag.Customer,'

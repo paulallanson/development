@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, CCSCommon;
+  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSStkValFrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
     qryReportOrder_price: TCurrencyField;
     qryReportQty_In_Stock: TFloatField;
@@ -17,7 +20,7 @@ type
     qryReportReorder_Level: TIntegerField;
     qryReportCustomer_Name: TStringField;
     qryReportForm_Reference_ID: TStringField;
-    CustomerSQL: TQuery;
+    CustomerSQL: TFDQuery;
     rgCustomer: TRadioGroup;
     CustomerPanel: TPanel;
     lblCustomer: TLabel;
@@ -26,13 +29,13 @@ type
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;
-    oldDummySQL: TQuery;
+    oldDummySQL: TFDQuery;
     RepRadioGroup: TRadioGroup;
     RepPanel: TPanel;
     Label1: TLabel;
     RepEdit: TEdit;
     RepButton: TButton;
-    DummySQL: TQuery;
+    DummySQL: TFDQuery;
     OrdValChkBox: TCheckBox;
     chkbxCustomerVal: TCheckBox;
     procedure rgCustomerClick(Sender: TObject);

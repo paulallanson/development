@@ -135,9 +135,9 @@ object PBAboutOpsFrm: TPBAboutOpsFrm
         Visible = True
       end>
   end
-  object qryOperator: TQuery
+  object qryOperator: TFDQuery
     OnCalcFields = qryOperatorCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'operator, '
       #9'Name, '

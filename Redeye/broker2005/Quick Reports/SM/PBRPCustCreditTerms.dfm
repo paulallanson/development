@@ -1574,8 +1574,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
       end
     end
   end
-  object qryDetails: TQuery
-    DatabaseName = 'PB'
+  object qryDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Name as Customer_Name,'
@@ -1622,8 +1622,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -1641,8 +1641,8 @@ object PBRPCustCreditTermsFrm: TPBRPCustCreditTermsFrm
     Left = 85
     Top = 32
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'

@@ -284,8 +284,8 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
     TabOrder = 12
     Visible = False
   end
-  object qryGetFYPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryGetFYPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -300,8 +300,8 @@ object PBRSPEndLocPerformfrm: TPBRSPEndLocPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'

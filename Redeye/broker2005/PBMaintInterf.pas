@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Spin, Buttons, DB, DBTables, DBCtrls, ComCtrls;
+  StdCtrls, Spin, Buttons, DB, DBCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintInterfFrm = class(TForm)
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    GetDetsSQL: TQuery;
-    UpdDetsSQL: TQuery;
-    AccPkgSQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    UpdDetsSQL: TFDQuery;
+    AccPkgSQL: TFDQuery;
     AccPkgSRC: TDataSource;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
@@ -38,7 +41,7 @@ type
     GroupBox3: TGroupBox;
     dblkpSchedule: TDBLookupComboBox;
     Label7: TLabel;
-    qrySchedPackage: TQuery;
+    qrySchedPackage: TFDQuery;
     dtsSchedPackage: TDataSource;
     BitBtn3: TBitBtn;
     Label8: TLabel;

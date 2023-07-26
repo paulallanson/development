@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, DB, DBTables, ExtDlgs;
+  Dialogs, StdCtrls, Mask, DBCtrls, Buttons, DB, ExtDlgs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintDocumentLogos = class(TForm)
@@ -12,9 +15,9 @@ type
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
     edtLogoName: TEdit;
-    qryUpdate: TQuery;
-    qryAdd: TQuery;
-    qryGetLast: TQuery;
+    qryUpdate: TFDQuery;
+    qryAdd: TFDQuery;
+    qryGetLast: TFDQuery;
     Label7: TLabel;
     edtLogoPath: TEdit;
     Button3: TButton;

@@ -829,8 +829,8 @@ object PBRPSuppDetFrm: TPBRPSuppDetFrm
       end
     end
   end
-  object GetDetsQry: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Supplier_Branch.*, Supplier.Name+'#39'/'#39'+Supplier_Branch.name' +

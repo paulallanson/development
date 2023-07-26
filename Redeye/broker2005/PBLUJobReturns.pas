@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, ExtCtrls, ComCtrls, pbJobsDM, DB,
-  DBTables, CCSCommon;
+  Dialogs, Grids, DBGrids, StdCtrls, ExtCtrls, ComCtrls, pbJobsDM, DB, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUJobReturns = class(TForm)
@@ -32,7 +34,7 @@ type
     lblQtyOvers: TLabel;
     Label6: TLabel;
     lblCustomer: TLabel;
-    qryPart: TQuery;
+    qryPart: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormActivate(Sender: TObject);

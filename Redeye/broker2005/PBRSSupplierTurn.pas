@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, Db, DBTables, ExtCtrls, DateSelV5, PBPOObjects, Printers, CCSPrint,
-  ComCtrls, Spin, OleCtnrs;
+  Buttons, StdCtrls, Db, ExtCtrls, DateSelV5, PBPOObjects, Printers, CCSPrint,
+  ComCtrls, Spin, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSupplierTurnFrm = class(TForm)
@@ -25,11 +28,11 @@ type
     spnRecords: TSpinEdit;
     GroupBox1: TGroupBox;
     chkbxExcludeCosts: TCheckBox;
-    qryPurchByInv: TQuery;
-    qryUpdIntSel: TQuery;
-    AddIntSelQuery: TQuery;
-    GetSalesQuery: TQuery;
-    qryCreditLines: TQuery;
+    qryPurchByInv: TFDQuery;
+    qryUpdIntSel: TFDQuery;
+    AddIntSelQuery: TFDQuery;
+    GetSalesQuery: TFDQuery;
+    qryCreditLines: TFDQuery;
     OleContainer1: TOleContainer;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;

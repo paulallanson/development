@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, ExtCtrls, Buttons, DateSelV5,  CCSPrint;
+  Db, StdCtrls, ExtCtrls, Buttons, DateSelV5,  CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRS4CastInvsFrm = class(TForm)
@@ -33,7 +36,7 @@ type
     chkbxExcludeCosts: TCheckBox;
     TotByRadioGroup: TRadioGroup;
     chkbxRepPageBreak: TCheckBox;
-    SQLRep: TQuery;
+    SQLRep: TFDQuery;
     procedure btnRepClick(Sender: TObject);
     procedure rdgrpRepClick(Sender: TObject);
     procedure btnCustLUClick(Sender: TObject);

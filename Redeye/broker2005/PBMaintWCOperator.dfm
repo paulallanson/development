@@ -201,8 +201,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       Value = 1
     end
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Work_Centre_Operator'
       '        (Work_Centre_Operator,'
@@ -219,8 +219,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from process_group'
@@ -233,8 +233,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Left = 32
     Top = 48
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Work_Centre_Operator'
       'Set'
@@ -297,8 +297,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Rep(Rep, Name)'
       'SELECT Max(Rep)+1, :GUID FROM Rep'
@@ -314,8 +314,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         ParamType = ptInput
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Work_Centre_Operator'
       'Where'
@@ -329,8 +329,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Work_Centre_Operator'
       'From Work_Centre_Operator'
@@ -344,9 +344,9 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         ParamType = ptInput
       end>
   end
-  object qryProcess: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsProcessGroup
+  object qryProcess: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsProcessGroup
     SQL.Strings = (
       'select *'
       'from Process'
@@ -366,8 +366,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Left = 288
     Top = 168
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'PB'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Operator'

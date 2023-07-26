@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, pbStockDM,
-  Db, DBTables, Inifiles, Buttons, System.ImageList;
+  Db, Inifiles, Buttons, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUStock = class(TForm)
@@ -175,7 +178,7 @@ type
     procedure SetButtonProperties(Sender: TObject);
     procedure CallMaintWizard;
     procedure CallMultiSelection;
-    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TQuery);
+    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery);
   private
     bSQLAdd: boolean;
     iMnuMaint: integer;
@@ -692,7 +695,7 @@ begin
     end;
 end;
 
-procedure TfrmPBLUStock.MultiSQLAdd(sTempStr: String; tmpQuery: TQuery);
+procedure TfrmPBLUStock.MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery);
 begin
   if bSQLAdd = False then
     begin

@@ -3375,8 +3375,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
       end
     end
   end
-  object qrySalesComm: TQuery
-    DatabaseName = 'PB'
+  object qrySalesComm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         '// this sql is built from the selection screen from a const sql ' +
@@ -3438,8 +3438,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
     Left = 27
     Top = 16
   end
-  object GetCommRtQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCommRtQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from category'
       'where category = :category')
@@ -3452,8 +3452,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepFinance: TQuery
-    DatabaseName = 'PB'
+  object qryRepFinance: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Rep_Financial'
@@ -3473,8 +3473,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetRepCatComm: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepCatComm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Financial_Cat'
@@ -3500,8 +3500,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetRepCatBudget: TQuery
-    DatabaseName = 'pb'
+  object qryGetRepCatBudget: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Rep_Cat_Budget'
@@ -3528,8 +3528,8 @@ object PBRPPEndRepsCatCommFrm: TPBRPPEndRepsCatCommFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetRepBudget: TQuery
-    DatabaseName = 'pb'
+  object qryGetRepBudget: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Rep_Budget'

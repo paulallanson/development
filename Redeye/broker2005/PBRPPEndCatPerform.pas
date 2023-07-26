@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPEndCatPerformfrm = class(TForm)
@@ -13,13 +16,13 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryCategories: TQuery;
+    qryCategories: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRBand2: TQRBand;
-    qrySortBy: TQuery;
+    qrySortBy: TFDQuery;
     qrsubPeriods: TQRSubDetail;
     QRLabel2: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
     qrbGrpCatFooter: TQRBand;
@@ -119,7 +122,7 @@ type
     qrlblRepActProf12: TQRLabel;
     qrlblRepActTOTotal: TQRLabel;
     qrlblRepActProfTotal: TQRLabel;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     QRBand3: TQRBand;
     QRLabel7: TQRLabel;
     qrlblActTotalTO1: TQRLabel;
@@ -150,18 +153,18 @@ type
     qrlblActTotalProf: TQRLabel;
     QRSysData1: TQRSysData;
     QRSysData2: TQRSysData;
-    qryDummy: TQuery;
-    qrySalesProfit: TQuery;
-    qrytmpConsolidate: TQuery;
-    qrytmpCategories: TQuery;
-    qryDummyConsolidate: TQuery;
-    qryDummyCustomer: TQuery;
-    qryDummyCategory: TQuery;
-    qrySalesProfitLoc: TQuery;
-    qrySalesProfitCust: TQuery;
-    qryDummyCust: TQuery;
-    qryDummyConsolidateCust: TQuery;
-    qryCustRep: TQuery;
+    qryDummy: TFDQuery;
+    qrySalesProfit: TFDQuery;
+    qrytmpConsolidate: TFDQuery;
+    qrytmpCategories: TFDQuery;
+    qryDummyConsolidate: TFDQuery;
+    qryDummyCustomer: TFDQuery;
+    qryDummyCategory: TFDQuery;
+    qrySalesProfitLoc: TFDQuery;
+    qrySalesProfitCust: TFDQuery;
+    qryDummyCust: TFDQuery;
+    qryDummyConsolidateCust: TFDQuery;
+    qryCustRep: TFDQuery;
     procedure quickreportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRBand2BeforePrint(Sender: TQRCustomBand;

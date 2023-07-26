@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, StdCtrls, Db, DBTables;
+  Grids, DBGrids, StdCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmSTLUProductLvls = class(TForm)
@@ -12,7 +15,7 @@ type
     btnChange: TButton;
     btnClose: TButton;
     dbgDetails: TDBGrid;
-    qryStoreLevels: TQuery;
+    qryStoreLevels: TFDQuery;
     dtsStoreLevels: TDataSource;
     qryStoreLevelsPart: TStringField;
     qryStoreLevelsPart_Store_Type: TIntegerField;

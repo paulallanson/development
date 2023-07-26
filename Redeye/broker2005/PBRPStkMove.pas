@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Qrctrls, Db, DBTables, CCSPrint, CCSCommon;
+  ExtCtrls, QuickRpt, Qrctrls, Db, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPStkMovefrm = class(TForm)
@@ -19,7 +22,7 @@ type
     QRLabel8: TQRLabel;
     OrderDetail: TQRSubDetail;
     QRDBText1: TQRDBText;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qryReportPurchase_Order: TFloatField;
     qryReportLine: TIntegerField;
     qryReportDelivery_no: TIntegerField;
@@ -73,11 +76,11 @@ type
     QRLabel14: TQRLabel;
     lblCustSellTotalIn: TQRLabel;
     QRShape2: TQRShape;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
-    CompSQL: TQuery;
-    CustomerSQL: TQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    CompSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
     QRLabel15: TQRLabel;
     QRShape3: TQRShape;
     QRShape4: TQRShape;

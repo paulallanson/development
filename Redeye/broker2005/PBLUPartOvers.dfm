@@ -130,8 +130,8 @@ object PBLUPartOversFrm: TPBLUPartOversFrm
       107
       113)
   end
-  object qryOvers: TQuery
-    DatabaseName = 'PB'
+  object qryOvers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Movement.*'
       'from Part_Movement'

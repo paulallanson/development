@@ -4,42 +4,45 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmPeriodEnd = class(TDataModule)
-    qryUpdPeriod: TQuery;
-    qryPeriod: TQuery;
-    qryNextPeriod: TQuery;
-    qrySalesInv: TQuery;
-    qryAddSalesProfit: TQuery;
-    qryGetPO: TQuery;
-    qryGetLastSProfit: TQuery;
-    qryPO: TQuery;
-    qryPOLine: TQuery;
-    qrySO: TQuery;
-    qrySORep: TQuery;
-    qryCompany: TQuery;
-    qrySOLine: TQuery;
-    qryPurchOrd: TQuery;
-    qrySinvAddChgs: TQuery;
-    qryUpPOLineChgs: TQuery;
-    qrySPOAddChgs: TQuery;
-    qryUpSPOchgs: TQuery;
-    qryJB: TQuery;
-    qryJBLine: TQuery;
-    qryGetPeriod: TQuery;
-    qryUpCompany: TQuery;
-    qryCustomerReps: TQuery;
-    qryRep: TQuery;
-    qryProductType: TQuery;
-    qryAddAnalysis: TQuery;
-    qry4Cast: TQuery;
-    qryPOLineCost: TQuery;
-    qryPOInvLine: TQuery;
-    qryUpPOInvAddChgs: TQuery;
-    qryUpPurchInvLine: TQuery;
-    qryGetRepTeam: TQuery;
+    qryUpdPeriod: TFDQuery;
+    qryPeriod: TFDQuery;
+    qryNextPeriod: TFDQuery;
+    qrySalesInv: TFDQuery;
+    qryAddSalesProfit: TFDQuery;
+    qryGetPO: TFDQuery;
+    qryGetLastSProfit: TFDQuery;
+    qryPO: TFDQuery;
+    qryPOLine: TFDQuery;
+    qrySO: TFDQuery;
+    qrySORep: TFDQuery;
+    qryCompany: TFDQuery;
+    qrySOLine: TFDQuery;
+    qryPurchOrd: TFDQuery;
+    qrySinvAddChgs: TFDQuery;
+    qryUpPOLineChgs: TFDQuery;
+    qrySPOAddChgs: TFDQuery;
+    qryUpSPOchgs: TFDQuery;
+    qryJB: TFDQuery;
+    qryJBLine: TFDQuery;
+    qryGetPeriod: TFDQuery;
+    qryUpCompany: TFDQuery;
+    qryCustomerReps: TFDQuery;
+    qryRep: TFDQuery;
+    qryProductType: TFDQuery;
+    qryAddAnalysis: TFDQuery;
+    qry4Cast: TFDQuery;
+    qryPOLineCost: TFDQuery;
+    qryPOInvLine: TFDQuery;
+    qryUpPOInvAddChgs: TFDQuery;
+    qryUpPurchInvLine: TFDQuery;
+    qryGetRepTeam: TFDQuery;
   private
     { Private declarations }
   public

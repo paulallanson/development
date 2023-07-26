@@ -1188,8 +1188,8 @@ object StMovRepFrm: TStMovRepFrm
     Left = 163
     Top = 35
   end
-  object GetUserMoveQuery: TQuery
-    DatabaseName = 'PB'
+  object GetUserMoveQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Part_Movement.*, Part_Store.Part_Store_Name, Part_Movemen' +
@@ -1233,8 +1233,8 @@ object StMovRepFrm: TStMovRepFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPrtMoveQuery: TQuery
-    DatabaseName = 'PB'
+  object UpdPrtMoveQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Movement'
       'set Print_on_Audit = :sStatus '
@@ -1253,13 +1253,13 @@ object StMovRepFrm: TStMovRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     Left = 232
     Top = 41
   end
-  object GetMoveQuery: TQuery
-    DatabaseName = 'PB'
+  object GetMoveQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Movement.*,'
       '       Part_Store.Part_Store_Name,'

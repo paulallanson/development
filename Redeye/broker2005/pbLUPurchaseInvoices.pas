@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin,
-  Db, DBTables, PBSupplierInvoiceDM, System.ImageList;
+  Db, PBSupplierInvoiceDM, System.ImageList;
 
 type
   TfrmPBLUPurchaseInvoices = class(TForm)

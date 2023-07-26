@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls;
+  Db, ExtCtrls, QuickRpt, CCSPrint, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPPordfrm = class(TForm)
     QuickReport: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand1: TQRBand;
     qrlblTitle: TQRLabel;
     qrlblselection: TQRLabel;
@@ -27,12 +30,12 @@ type
     QRLabel5: TQRLabel;
     QRLblDt: TQRLabel;
     QRLabel10: TQRLabel;
-    qryExtraCharges: TQuery;
+    qryExtraCharges: TFDQuery;
     QRLabel11: TQRLabel;
     QRLabel12: TQRLabel;
     QRGroup1: TQRGroup;
-    OldQryRptSumm: TQuery;
-    OldQryRptDet: TQuery;
+    OldQryRptSumm: TFDQuery;
+    OldQryRptDet: TFDQuery;
     QRBndDtl: TQRBand;
     QRChldDtl: TQRChildBand;
     QRChldSumm: TQRChildBand;
@@ -59,7 +62,7 @@ type
     QRLblTotDlvrd: TQRLabel;
     QRShape2: TQRShape;
     QRLblPartSelection: TQRLabel;
-    QryRptSummBypart: TQuery;
+    QryRptSummBypart: TFDQuery;
     QRBand2: TQRBand;
     QRLabel4: TQRLabel;
     QRLblRepTot: TQRLabel;
@@ -77,16 +80,16 @@ type
     QRShape8: TQRShape;
     QRLblOrdTot: TQRLabel;
     QRShape9: TQRShape;
-    QryRptDet: TQuery;
-    QryRptSumm: TQuery;
+    QryRptDet: TFDQuery;
+    QryRptSumm: TFDQuery;
     QRLabel8: TQRLabel;
     QRDBText1: TQRDBText;
     DelAddmemo: TQRMemo;
     QRLabel13: TQRLabel;
-    qryCust: TQuery;
+    qryCust: TFDQuery;
     AddressSRC: TDataSource;
-    qryAdhoc: TQuery;
-    GetNarrSQL: TQuery;
+    qryAdhoc: TFDQuery;
+    GetNarrSQL: TFDQuery;
     QRLabel14: TQRLabel;
     qrlblRetail: TQRLabel;
     function Getdetails(Sender: TObject): integer;

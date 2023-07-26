@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ExtCtrls,
-  PBPOObjects, DBCtrls, Db, DBTables;
+  PBPOObjects, DBCtrls, Db;
 
 type
   TPBMaintPOrdLineCallOffFrm = class(TForm)

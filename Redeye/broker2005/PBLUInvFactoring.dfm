@@ -461,8 +461,8 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
       9E79FC1F000000007EFEFFDF0000000000000000000000000000000000000000
       000000000000}
   end
-  object qrySelFactorFileList: TQuery
-    DatabaseName = 'PB'
+  object qrySelFactorFileList: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct sales_invoice.factoring_filename,'
       'sales_invoice.factoring_date '
@@ -473,8 +473,8 @@ object PBLUInvFactoringFrm: TPBLUInvFactoringFrm
     Left = 48
     Top = 93
   end
-  object qrySelInvs: TQuery
-    DatabaseName = 'PB'
+  object qrySelInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Sales_Invoice_No,'

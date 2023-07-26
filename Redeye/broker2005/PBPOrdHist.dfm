@@ -36,8 +36,8 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Height = 19
     Panels = <>
   end
-  object qrySelPOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySelPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purchase_orderline.purchase_order ,'
       ' purchase_orderline.line ,'

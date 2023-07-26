@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, Mask, Spin;
+  DB, StdCtrls, ComCtrls, Buttons, DBCtrls, ExtCtrls, Mask, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCompanyFrm = class(TForm)
-    GetCompanySQL: TQuery;
-    UpCompanySQL: TQuery;
-    GetCurrSQL: TQuery;
+    GetCompanySQL: TFDQuery;
+    UpCompanySQL: TFDQuery;
+    GetCurrSQL: TFDQuery;
     GetCurrSRC: TDataSource;
     tbSettings: TPageControl;
     tbsAddress: TTabSheet;
@@ -36,7 +39,7 @@ type
     NominalDBLookupComboBox: TDBLookupComboBox;
     Label3: TLabel;
     Label4: TLabel;
-    GetNominalSQL: TQuery;
+    GetNominalSQL: TFDQuery;
     GetNominalSRC: TDataSource;
     TabSheet3: TTabSheet;
     GroupBox1: TGroupBox;
@@ -45,7 +48,7 @@ type
     Label12: TLabel;
     BranchEdit: TEdit;
     SelSuppBtn: TBitBtn;
-    GetSupplierSQL: TQuery;
+    GetSupplierSQL: TFDQuery;
     ClearBitBtn: TBitBtn;
     GroupBox2: TGroupBox;
     SuppFaxEdit: TEdit;
@@ -54,17 +57,17 @@ type
     SuppPhoneEdit: TEdit;
     dblucmbbxCommission: TDBLookupComboBox;
     dtdrcCommission: TDataSource;
-    qryCommission: TQuery;
+    qryCommission: TFDQuery;
     Label15: TLabel;
     DelivNotesBitBtn: TBitBtn;
     FlashDelivTimer: TTimer;
-    UpdDelivNotesOnlySQL: TQuery;
+    UpdDelivNotesOnlySQL: TFDQuery;
     chkbxAssignPIN: TCheckBox;
     Label16: TLabel;
     DBLuCmbBxDefVat: TDBLookupComboBox;
-    QryVat: TQuery;
+    QryVat: TFDQuery;
     DsVat: TDataSource;
-    QryPrdTyp: TQuery;
+    QryPrdTyp: TFDQuery;
     DSPrdTyp: TDataSource;
     TabSheet4: TTabSheet;
     chkbxFormRefReq: TCheckBox;
@@ -144,7 +147,7 @@ type
     edtWebAddress: TEdit;
     Label40: TLabel;
     memDeliveryThreshold: TMemo;
-    qryOnlineVAT: TQuery;
+    qryOnlineVAT: TFDQuery;
     dtsOnlineVAT: TDataSource;
     tbsTerms: TTabSheet;
     Label41: TLabel;
@@ -184,7 +187,7 @@ type
     chkbxAllowDeliveryImbal: TCheckBox;
     Label48: TLabel;
     PayTermsDBLookupComboBox: TDBLookupComboBox;
-    qryPayTerms: TQuery;
+    qryPayTerms: TFDQuery;
     dtsPayTerms: TDataSource;
     BitBtn5: TBitBtn;
     btnCreditTermsNotes: TBitBtn;
@@ -206,7 +209,7 @@ type
     tbsCRM: TTabSheet;
     Label52: TLabel;
     dblkpQActivityType: TDBLookupComboBox;
-    qryActivityType: TQuery;
+    qryActivityType: TFDQuery;
     dtsActivityType: TDataSource;
     btnActivityType: TButton;
     Label53: TLabel;
@@ -252,9 +255,9 @@ type
     edtQuoteDescription: TMemo;
     Label65: TLabel;
     memQuoteCostMarkup: TMemo;
-    qryProcessGroup: TQuery;
+    qryProcessGroup: TFDQuery;
     dtsProcessGroup: TDataSource;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
     dblkpProcessGroup: TDBLookupComboBox;
     dblkpProcess: TDBLookupComboBox;
@@ -636,7 +639,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -650,7 +653,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally
@@ -1308,7 +1311,7 @@ begin
   cmbAliasList.clear;
   sgList := TStringList.Create;
   try
-    Session.GetAliasNames(sgList);
+    FDManager.GetConnectionDefNames(sgList);
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if ((pos('Redeye',sgList[iAliasList]) > 0) or (pos('Redeye',sgList[iAliasList]) > 0) or
@@ -1604,7 +1607,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iEnqText;
-    Notes.Data := memEmailEnquiry.Text;
+    Notes.DataInfo := memEmailEnquiry.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1619,7 +1622,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iPOText;
-    Notes.Data := memEmailPO.Text;
+    Notes.DataInfo := memEmailPO.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1634,7 +1637,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iAckText;
-    Notes.Data := memEmailAck.Text;
+    Notes.DataInfo := memEmailAck.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1649,7 +1652,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iQuoteText;
-    Notes.Data := memEmailQuote.Text;
+    Notes.DataInfo := memEmailQuote.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1664,7 +1667,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iInvoiceText;
-    Notes.Data := memEmailInvoice.Text;
+    Notes.DataInfo := memEmailInvoice.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1679,7 +1682,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iOrdersDueText;
-    Notes.Data := memEmailOrdersDue.Text;
+    Notes.DataInfo := memEmailOrdersDue.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1694,7 +1697,7 @@ begin
   Notes := TNarrative.Create;
   try
     Notes.DbKey := iProformaInvoiceText;
-    Notes.Data := memEmailProformaInvoice.Text;
+    Notes.DataInfo := memEmailProformaInvoice.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally

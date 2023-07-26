@@ -475,8 +475,8 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     Left = 104
     Top = 168
   end
-  object qrySalesbyProd: TQuery
-    DatabaseName = 'PB'
+  object qrySalesbyProd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '     '#9'Sales_Invoice_Line.Sales_Invoice,'

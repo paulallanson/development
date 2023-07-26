@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, DBCtrls, ExtCtrls, PBJobBagDM;
+  StdCtrls, Buttons, Db, DBCtrls, ExtCtrls, PBJobBagDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintEmailSupplierFrm = class(TForm)
@@ -12,7 +15,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     edtEmail: TEdit;
-    qrySContacts: TQuery;
+    qrySContacts: TFDQuery;
     dtsContacts: TDataSource;
     GroupBox2: TGroupBox;
     Label3: TLabel;
@@ -22,9 +25,9 @@ type
     Label4: TLabel;
     dblkpContacts: TDBLookupComboBox;
     dblkpSuppliers: TDBLookupComboBox;
-    qrySuppliers: TQuery;
+    qrySuppliers: TFDQuery;
     dtsSuppliers: TDataSource;
-    qryCContacts: TQuery;
+    qryCContacts: TFDQuery;
     procedure dtsContactsDataChange(Sender: TObject; Field: TField);
     procedure EnableOK(Sender: TObject);
     procedure FormShow(Sender: TObject);

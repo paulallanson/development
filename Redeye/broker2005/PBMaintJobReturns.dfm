@@ -309,8 +309,8 @@ object frmPBMaintJobReturns: TfrmPBMaintJobReturns
       WordWrap = False
     end
   end
-  object qryJobReturns: TQuery
-    DatabaseName = 'pb'
+  object qryJobReturns: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct'
       '  Job_Bag.Job_Bag,'

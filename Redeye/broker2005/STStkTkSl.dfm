@@ -481,8 +481,8 @@ object STStkTkslfrm: TSTStkTkslfrm
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
-  object CheckRefQuery: TQuery
-    DatabaseName = 'PB'
+  object CheckRefQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Stock_Take.Stock_Take_Ref'
       'from Stock_Take'

@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, Buttons, DB, DBTables,
-  ComCtrls;
+  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, Buttons, DB, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintStockFrm = class(TForm)
@@ -27,18 +29,18 @@ type
     Label2: TLabel;
     edtPartTo: TEdit;
     lblDescriptionTo: TLabel;
-    qryStockFrom: TQuery;
+    qryStockFrom: TFDQuery;
     dtsStockFrom: TDataSource;
-    qryStockTo: TQuery;
+    qryStockTo: TFDQuery;
     dtsStockTo: TDataSource;
     PartBitBtn: TBitBtn;
     BitBtn5: TBitBtn;
     dbgDetailsTo: TDBGrid;
     StatusBar1: TStatusBar;
-    qryUpdStoreStock: TQuery;
-    qryUpdMovements: TQuery;
-    qryGetMovements: TQuery;
-    qryUpdMovementBal: TQuery;
+    qryUpdStoreStock: TFDQuery;
+    qryUpdMovements: TFDQuery;
+    qryGetMovements: TFDQuery;
+    qryUpdMovementBal: TFDQuery;
     procedure PartBitBtnClick(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);

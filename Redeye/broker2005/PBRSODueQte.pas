@@ -82,7 +82,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, PBPOObjects, ExtCtrls, DB, DBTables;
+  StdCtrls, Buttons, PBPOObjects, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSODueQteFrm = class(TForm)
@@ -97,7 +100,7 @@ type
     Label1: TLabel;
     RepLUSpeedButton: TSpeedButton;
     DateSpeedButton: TSpeedButton;
-    qryRep: TQuery;
+    qryRep: TFDQuery;
     procedure CanPrint(Sender: TObject);
     procedure AllOrOneRadioGroupClick(Sender: TObject);
     procedure PreviewBitBtnClick(Sender: TObject);

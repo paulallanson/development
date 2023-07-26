@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, CCSCommon, qrprntr,
-  printers, CCSPrint;
+  Db, ExtCtrls, QuickRpt, Qrctrls, CCSCommon, qrprntr,
+  printers, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesByInvFrm = class(TForm)
@@ -48,9 +51,9 @@ type
     RepTotVatQRLbl: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
     GrpByQRDBText: TQRDBText;
-    AddCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
     TotCstQRLbl: TQRLabel;
-    oldGetCostsQuery: TQuery;
+    oldGetCostsQuery: TFDQuery;
     TotalCostLbl: TQRLabel;
     RepTotCostQRLbl: TQRLabel;
     QRShape3: TQRShape;
@@ -61,7 +64,7 @@ type
     RepMargQRLbl: TQRLabel;
     QRDBText2: TQRDBText;
     QRLabel19: TQRLabel;
-    qrySalesbyInv: TQuery;
+    qrySalesbyInv: TFDQuery;
     qrySalesbyInvCustomer: TIntegerField;
     qrySalesbyInvBranch_no: TIntegerField;
     qrySalesbyInvSales_Invoice: TIntegerField;
@@ -81,23 +84,23 @@ type
     qrySalesbyInvRep_Name: TStringField;
     qrySalesbyInvInvoiceRef: TStringField;
     qrySalesbyInvInvoice_Description: TStringField;
-    qryGetPOCrCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
     qrySalesbyInvSupplier_Desc: TStringField;
     qrySalesbyInvOrderDesc: TStringField;
     lblDescription: TQRLabel;
     qrlblPONumber: TQRLabel;
-    oldqryGetJBCosts: TQuery;
-    qryCreditLines: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetInvLine: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetInvAddChrg: TQuery;
-    GetCostsQuery: TQuery;
-    qryGetJbCosts: TQuery;
+    oldqryGetJBCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetInvLine: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetInvAddChrg: TFDQuery;
+    GetCostsQuery: TFDQuery;
+    qryGetJbCosts: TFDQuery;
     InvCostQrLbl: TQRLabel;
     QRLabel12: TQRLabel;
     TotalInvCostlbl: TQRLabel;
@@ -113,7 +116,7 @@ type
     QRLabel6: TQRLabel;
     QRDBText1: TQRDBText;
     qrySalesbyInvQuantity: TFloatField;
-    qryGetJobBag: TQuery;
+    qryGetJobBag: TFDQuery;
     procedure oldqrySalesByInvPOLineGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
     procedure qckrpSalesByInvBeforePrint(Sender: TCustomQuickRep;

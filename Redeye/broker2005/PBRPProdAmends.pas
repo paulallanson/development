@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, CCSPrint, DB, DBTables;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, CCSPrint, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPProdAmendsFrm = class(TForm)
@@ -14,8 +17,8 @@ type
     qrlblDateRange: TQRLabel;
     QRSysData1: TQRSysData;
     QRSysData2: TQRSysData;
-    qryReport: TQuery;
-    qryDummy: TQuery;
+    qryReport: TFDQuery;
+    qryDummy: TFDQuery;
     qrbndGrpHdr: TQRGroup;
     qrlblGroupHeader: TQRLabel;
     QRDBText6: TQRDBText;

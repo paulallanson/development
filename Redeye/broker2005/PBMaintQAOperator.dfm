@@ -100,8 +100,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
       OnChange = CheckOK
     end
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into QA_Operator'
       '        (QA_Operator,'
@@ -116,8 +116,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update QA_Operator'
       'Set'
@@ -144,8 +144,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Rep(Rep, Name)'
       'SELECT Max(Rep)+1, :GUID FROM Rep'
@@ -161,8 +161,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
         ParamType = ptInput
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From QA_Operator'
       'Where'
@@ -176,8 +176,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select QA_Operator'
       'From QA_Operator'

@@ -156,8 +156,8 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
       TabOrder = 0
     end
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select 99999 as Period,'
       #39'Rolling 12 Month'#39' as Description'
@@ -182,8 +182,8 @@ object PBRSNCASourceFrm: TPBRSNCASourceFrm
     Left = 280
     Top = 160
   end
-  object qryGetDates: TQuery
-    DatabaseName = 'PB'
+  object qryGetDates: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from period '

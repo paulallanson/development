@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls, printers, qrprntr, CCSCommon;
+  Dialogs, ExtCtrls, QuickRpt, DB, QRCtrls, printers, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesInvStatsFrm = class(TForm)
@@ -12,7 +15,7 @@ type
     qrbPageHeader: TQRBand;
     QRLabel1: TQRLabel;
     qrgrpRepHeader: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrDetails: TQRSubDetail;
     qrbPeriodFooter: TQRBand;
     qrlblSalesInvoiceCount: TQRLabel;
@@ -40,13 +43,13 @@ type
     QRLabel15: TQRLabel;
     qrlblSalesInvoiceValue: TQRLabel;
     qrlblSalesCreditValue: TQRLabel;
-    qryGetPOs: TQuery;
-    qryGetJobBags: TQuery;
+    qryGetPOs: TFDQuery;
+    qryGetJobBags: TFDQuery;
     QRLabel14: TQRLabel;
     qrlblNewClientCount: TQRLabel;
-    qryGetNewClients: TQuery;
+    qryGetNewClients: TFDQuery;
     qrgrpPeriodHeader: TQRGroup;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     qrlblName: TQRLabel;
     qrdbTextName: TQRDBText;
     qrbRepFooter: TQRBand;

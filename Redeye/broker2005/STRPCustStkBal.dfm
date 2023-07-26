@@ -990,8 +990,8 @@ object STRPCustStkBalfrm: TSTRPCustStkBalfrm
       end
     end
   end
-  object qryStkBalRep: TQuery
-    DatabaseName = 'PB'
+  object qryStkBalRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       '        Part.Part_Description,'
@@ -1075,8 +1075,8 @@ object STRPCustStkBalfrm: TSTRPCustStkBalfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastSO: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 date_received as Last_Sales_Date'
       'from part_movement'
@@ -1092,7 +1092,7 @@ object STRPCustStkBalfrm: TSTRPCustStkBalfrm
         ParamType = ptUnknown
       end>
   end
-  object oldqryStkBalRep: TQuery
+  object oldqryStkBalRep: TFDQuery
     SQL.Strings = (
       'SELECT  Customer.Name,'
       '        Part.Customer,'
@@ -1149,8 +1149,8 @@ object STRPCustStkBalfrm: TSTRPCustStkBalfrm
         ParamType = ptUnknown
       end>
   end
-  object GetSerNosSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSerNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Store_Stock_Serial_item.Serial_item_from,'
       'Store_Stock_Serial_item.Serial_item_to'

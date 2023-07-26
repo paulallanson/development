@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, DBCtrls, Inifiles, Spin, ComCtrls;
+  StdCtrls, Buttons, Db, DBCtrls, Inifiles, Spin, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintClientFrm = class(TForm)
@@ -17,8 +20,8 @@ type
     btnCancel: TBitBtn;
     ApplicDBLCB: TDBLookupComboBox;
     TypeDBLCB: TDBLookupComboBox;
-    GetApplicQuery: TQuery;
-    GetTypQuery: TQuery;
+    GetApplicQuery: TFDQuery;
+    GetTypQuery: TFDQuery;
     GepApplicDataSource: TDataSource;
     GetDefTypDataSource: TDataSource;
     ApplicClrBitBtn: TBitBtn;
@@ -144,7 +147,7 @@ begin
   Interval := TempArray;
 
 
-  sAliasName := dmBroker.PBLDatabase.AliasName;
+  sAliasName := dmBroker.PBLDatabase.ConnectionDefName;
   {get General Email Account}
   GetPrivateProfileString('Email',  pchar(sAliasName + ' Email Account'), '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
@@ -200,7 +203,7 @@ var
   IniFile : TIniFile;
   sAliasName: string;
 begin
-  sAliasName := dmBroker.PBLDatabase.AliasName;
+  sAliasName := dmBroker.PBLDatabase.ConnectionDefName;
 
   IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
 

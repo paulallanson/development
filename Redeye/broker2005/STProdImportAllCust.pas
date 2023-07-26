@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ComCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables,
-  DBCtrls;
+  Buttons, StdCtrls, ComCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTProdImportAllCustFrm = class(TForm)
@@ -33,13 +35,13 @@ type
     lblStep2: TLabel;
     Label2: TLabel;
     dblkpPartStore: TDBLookupComboBox;
-    qryPartStore: TQuery;
+    qryPartStore: TFDQuery;
     dtsPartStore: TDataSource;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     Label4: TLabel;
     edtBin: TEdit;
     btnBin: TBitBtn;
-    qryGetCustomer: TQuery;
+    qryGetCustomer: TFDQuery;
     chkbxImportStock: TCheckBox;
     procedure btnFindFileClick(Sender: TObject);
     procedure ImportBtnClick(Sender: TObject);

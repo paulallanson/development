@@ -88,39 +88,42 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintCustFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetTypesSQL: TQuery;
+    GetTypesSQL: TFDQuery;
     TypesSRC: TDataSource;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
-    AddBranchSQL: TQuery;
-    UpdBranchSQL: TQuery;
-    DelBranchSQL: TQuery;
-    GetCrdStatSQL: TQuery;
+    AddBranchSQL: TFDQuery;
+    UpdBranchSQL: TFDQuery;
+    DelBranchSQL: TFDQuery;
+    GetCrdStatSQL: TFDQuery;
     CrdStatSRC: TDataSource;
-    GetCustNameSQL: TQuery;
-    GetBranchNameSQL: TQuery;
+    GetCustNameSQL: TFDQuery;
+    GetBranchNameSQL: TFDQuery;
     FlashTimer: TTimer;
-    GetIntrastatSQL: TQuery;
+    GetIntrastatSQL: TFDQuery;
     IntrastatSRC: TDataSource;
-    GetCountrySQL: TQuery;
+    GetCountrySQL: TFDQuery;
     CountrySRC: TDataSource;
-    GetCurrSQL: TQuery;
+    GetCurrSQL: TFDQuery;
     CurrSRC: TDataSource;
-    CheckCustAccExistsSQL: TQuery;
-    GetCompSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    GetCompSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
     FlashDelivTimer: TTimer;
     VATSRC: TDataSource;
-    GetVATSQL: TQuery;
+    GetVATSQL: TFDQuery;
     PageControl1: TPageControl;
     ContDetTabSheet: TTabSheet;
     FinLedTabSheet: TTabSheet;
@@ -178,7 +181,7 @@ type
     InvToBranch: TButton;
     Label1: TLabel;
     TypeDBLUCB: TDBLookupComboBox;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     VatMaintBitBtn: TBitBtn;
     CustTypeMaintBitBtn: TBitBtn;
     TabSheet1: TTabSheet;

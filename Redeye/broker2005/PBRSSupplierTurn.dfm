@@ -308,13 +308,13 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
-  object qryPurchByInv: TQuery
-    DatabaseName = 'PB'
+  object qryPurchByInv: TFDQuery
+    ConnectionName = 'PB'
     Left = 80
     Top = 16
   end
-  object qryUpdIntSel: TQuery
-    DatabaseName = 'PB'
+  object qryUpdIntSel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Int_Sel'
       'set Sel4 = Sel4 + :Sel4,'
@@ -372,8 +372,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object AddIntSelQuery: TQuery
-    DatabaseName = 'PB'
+  object AddIntSelQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, text100)'
@@ -428,8 +428,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSalesQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSalesQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Supplier_Invoice_Line.Qty_Invoiced,'
       '        Purchase_OrderLine.Selling_Price,'
@@ -465,8 +465,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCreditLines: TQuery
-    DatabaseName = 'PB'
+  object qryCreditLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'

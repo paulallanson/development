@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, qrprntr,
-  printers;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, qrprntr,
+  printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPSordFrm = class(TForm)
@@ -15,8 +18,8 @@ type
     GetDetsDataSource: TDataSource;
     QRSubDetail1: TQRSubDetail;
     pogroupheader: TQRGroup;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
     PackqtyQRLabel: TQRLabel;
     SOrdLineNoQRLabel: TQRLabel;
     PartCodeQRLabel: TQRLabel;
@@ -24,14 +27,14 @@ type
     SellPriceQRLabel: TQRLabel;
     PackSizeQRLabel: TQRLabel;
     QRLblValue: TQRLabel;
-    GetSOAddQuery: TQuery;
+    GetSOAddQuery: TFDQuery;
     ReportImage: TQRImage;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     QRMemoAddress: TQRMemo;
-    CustSQL: TQuery;
+    CustSQL: TFDQuery;
     AddressSRC: TDataSource;
-    ExtChrgsQuery: TQuery;
+    ExtChrgsQuery: TFDQuery;
     AddChargesBand: TQRSubDetail;
     ExtChrgVatQRlbl: TQRLabel;
     QRLblDetails: TQRLabel;
@@ -43,10 +46,10 @@ type
     TotalValueLbl: TQRLabel;
     QRLabel16: TQRLabel;
     VatQRLabel: TQRLabel;
-    GetContactSQL: TQuery;
+    GetContactSQL: TFDQuery;
     lblSpecialNotes: TQRLabel;
     SpecialNotesMemo: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     ReportTitleQRLabel: TQRLabel;
     OrdNumQRLabel: TQRLabel;
     OrdDateQRLabel: TQRLabel;
@@ -70,14 +73,14 @@ type
     LineQrLabel: TQRLabel;
     qrlblSalesOrder: TQRLabel;
     QRLabel2: TQRLabel;
-    qryGetProduction: TQuery;
-    AdhocSQL: TQuery;
-    GetCustSQL: TQuery;
-    GetCustHOSQL: TQuery;
-    qryGetJobBag: TQuery;
+    qryGetProduction: TFDQuery;
+    AdhocSQL: TFDQuery;
+    GetCustSQL: TFDQuery;
+    GetCustHOSQL: TFDQuery;
+    qryGetJobBag: TFDQuery;
     QRLabel4: TQRLabel;
     QRLabel1: TQRLabel;
-    qryGetJobBagReq: TQuery;
+    qryGetJobBagReq: TFDQuery;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;
     procedure StartReport(Sender: TObject);

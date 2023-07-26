@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBSalesInvoiceDM,
-  printers, qrprntr;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBSalesInvoiceDM,
+  printers, qrprntr,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPOSSInvJobBagsFrm = class(TForm)
@@ -23,7 +26,7 @@ type
     QRBand2: TQRBand;
     QRLabel21: TQRLabel;
     QRShape3: TQRShape;
-    qryOSInvs: TQuery;
+    qryOSInvs: TFDQuery;
     QRLabel6: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel5: TQRLabel;
@@ -34,7 +37,7 @@ type
     qrdbGroupName: TQRDBText;
     qrGroupFooter: TQRBand;
     QRLabel15: TQRLabel;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     qrlblGroupTotal: TQRLabel;
     qrlblReportTotal: TQRLabel;
     QRShape1: TQRShape;
@@ -46,12 +49,12 @@ type
     QRDBText3: TQRDBText;
     qrlblQtyToInv: TQRLabel;
     qrlblSalesValue: TQRLabel;
-    SQLGetStkInv: TQuery;
-    SQLGetStkInv_access: TQuery;
-    SQLGetRepName: TQuery;
+    SQLGetStkInv: TFDQuery;
+    SQLGetStkInv_access: TFDQuery;
+    SQLGetRepName: TFDQuery;
     qrlblSelection: TQRLabel;
     qrlblInclude: TQRLabel;
-    qryPO: TQuery;
+    qryPO: TFDQuery;
     QRDBText5: TQRDBText;
     QRLabel4: TQRLabel;
     qrlblSellUnit: TQRLabel;
@@ -63,7 +66,7 @@ type
     qrlblJBFooter: TQRLabel;
     qrlblJBTotal: TQRLabel;
     QRShape2: TQRShape;
-    qrySO: TQuery;
+    qrySO: TFDQuery;
     qrlblOrderNo: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

@@ -298,8 +298,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
       NumGlyphs = 2
     end
   end
-  object qryOperators: TQuery
-    DatabaseName = 'pb'
+  object qryOperators: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select User_Group_Operator.Operator, Operator.Name as Operator_N' +
@@ -315,8 +315,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Left = 416
     Top = 72
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Account_Team_Member'
       '(Account_Team,'
@@ -348,8 +348,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select User_Group_Operator.Operator, Operator.Name as Operator_N' +
@@ -360,8 +360,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Left = 328
     Top = 144
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Account_Team_Member.*, Operator.Name as Operator_Name'
       'from Account_Team_Member, Operator'
@@ -376,8 +376,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Account_Team_Member'
       'where Account_Team = :Account_Team')
@@ -390,8 +390,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
         ParamType = ptUnknown
       end>
   end
-  object qryReps: TQuery
-    DatabaseName = 'pb'
+  object qryReps: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Account_Team_Rep.*, Rep.Name as Rep_Name'
       'from Account_Team_Rep, Rep'
@@ -406,8 +406,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
         ParamType = ptUnknown
       end>
   end
-  object qryNonReps: TQuery
-    DatabaseName = 'pb'
+  object qryNonReps: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Rep.Rep, Rep.Name as Rep_Name'
       'from Rep'
@@ -415,8 +415,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Left = 336
     Top = 256
   end
-  object qryDummyRep: TQuery
-    DatabaseName = 'pb'
+  object qryDummyRep: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Rep.Rep, Rep.Name as Rep_Name'
       'from Rep'
@@ -424,8 +424,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
     Left = 336
     Top = 312
   end
-  object qryDeleteReps: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Account_Team_Rep'
       'where Account_Team = :Account_Team')
@@ -438,8 +438,8 @@ object frmPBMaintAccTeamMembers: TfrmPBMaintAccTeamMembers
         ParamType = ptUnknown
       end>
   end
-  object qryAddReps: TQuery
-    DatabaseName = 'PB'
+  object qryAddReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Account_Team_Rep'
       '(Account_Team,'

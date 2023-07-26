@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRP4CastInvsFrm = class(TForm)
-    qry4CastInvs: TQuery;
+    qry4CastInvs: TFDQuery;
     qrReport: TQuickRep;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
@@ -84,12 +87,12 @@ type
     QRShape3: TQRShape;
     qry4CastInvsform_reference_id: TStringField;
     qry4CastInvsstock_reference: TStringField;
-    oldqryDummy: TQuery;
-    qryBackup: TQuery;
+    oldqryDummy: TFDQuery;
+    qryBackup: TFDQuery;
     QRLabel22: TQRLabel;
     QRLabel23: TQRLabel;
     lblInvoiceUpfront: TQRLabel;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     qry4CastInvsAdditional_Cost: TFloatField;
     qry4CastInvsAdditional_Sell: TFloatField;
     qry4CastInvsQuantity: TFloatField;

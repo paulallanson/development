@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, DBCtrls, ExtCtrls, PBJobBagDM, Variants;
+  StdCtrls, Buttons, DB, DBCtrls, ExtCtrls, PBJobBagDM, Variants,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagRCFrm = class(TForm)
@@ -23,7 +26,7 @@ type
     lblSell: TLabel;
     CostValMemo: TMemo;
     SellValMemo: TMemo;
-    GetVATSQL: TQuery;
+    GetVATSQL: TFDQuery;
     VATSRC: TDataSource;
     VATDBLCB: TDBLookupComboBox;
     lblVatRate: TLabel;

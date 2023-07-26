@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects, qrprntr,
-  printers;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects, qrprntr,
+  printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesCommbyCatFrm = class(TForm)
     qckrpSalesByInv: TQuickRep;
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel2: TQRLabel;
@@ -33,8 +36,8 @@ type
     RepTotQRLabel: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
     GrpByQRDBText: TQRDBText;
-    AddCostsQuery: TQuery;
-    GetCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
+    GetCostsQuery: TFDQuery;
     RepTotCostQRLbl: TQRLabel;
     MarginQRLabel: TQRLabel;
     RepMargQRLbl: TQRLabel;
@@ -61,17 +64,17 @@ type
     qrySalesCommReference: TStringField;
     qrySalesCommInvoice_Description: TStringField;
     qrySalesCommInvoiceRef: TStringField;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
-    oldqryGetJBCosts: TQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    oldqryGetJBCosts: TFDQuery;
     qrySalesCommSales_Invoice_type: TStringField;
-    qryGetJBCosts: TQuery;
-    qryGetProdCosts: TQuery;
-    qryCreditLines: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
+    qryGetJBCosts: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
     QRDtlBnd: TQRBand;
     ChildBand1: TQRChildBand;
     QRGroupProdCat: TQRGroup;
@@ -93,8 +96,8 @@ type
     lblPaidDate: TQRDBText;
     Commissionlbl: TQRLabel;
     lblCommission: TQRLabel;
-    GetCommRtQuery: TQuery;
-    QryInvAddChrg: TQuery;
+    GetCommRtQuery: TFDQuery;
+    QryInvAddChrg: TFDQuery;
     ChildBand2: TQRChildBand;
     ChildBand3: TQRChildBand;
     QRLabel4: TQRLabel;
@@ -133,9 +136,9 @@ type
     QRLabelComm: TQRLabel;
     qrySalesCommRep_Responsibility: TFloatField;
     qrlblCommSplit: TQRLabel;
-    qryGetRepCatComm: TQuery;
+    qryGetRepCatComm: TFDQuery;
     qrySalesCommRep: TIntegerField;
-    qryRepFinance: TQuery;
+    qryRepFinance: TFDQuery;
     QRLabel11: TQRLabel;
     QRLabel12: TQRLabel;
     QRLabelCommType: TQRLabel;

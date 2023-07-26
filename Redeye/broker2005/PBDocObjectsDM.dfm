@@ -4,8 +4,8 @@ object dmPBDocObjects: TdmPBDocObjects
   Top = 176
   Height = 480
   Width = 696
-  object qryDelPOLineDocs: TQuery
-    DatabaseName = 'PB'
+  object qryDelPOLineDocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Purchase_orderlineDocs'
       'where purchase_order = :purchase_order and line = :line; ')
@@ -23,8 +23,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qryInsPOLineDocs: TQuery
-    DatabaseName = 'PB'
+  object qryInsPOLineDocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Purchase_orderlineDocs'
       '(Purchase_Order, Line, Document_no, Document_Title, Document)'
@@ -62,8 +62,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qryDelEnqLineDocs: TQuery
-    DatabaseName = 'PB'
+  object qryDelEnqLineDocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLineDocs'
       'where enquiry = :enquiry and '
@@ -82,8 +82,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qryInsEnqLineDoc: TQuery
-    DatabaseName = 'PB'
+  object qryInsEnqLineDoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into EnquiryLineDocs'
       '(Enquiry, Line, Document_no, Document_Title, Document)'
@@ -118,8 +118,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qrySelEnqLineDocs: TQuery
-    DatabaseName = 'PB'
+  object qrySelEnqLineDocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from EnquiryLineDocs '
       'where enquiry = :enquiry and line = :line '
@@ -138,8 +138,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qrySelPOLineDocs: TQuery
-    DatabaseName = 'PB'
+  object qrySelPOLineDocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Purchase_orderlineDocs '
       'where purchase_order = :purchase_order '
@@ -160,8 +160,8 @@ object dmPBDocObjects: TdmPBDocObjects
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     Left = 224
     Top = 8
   end

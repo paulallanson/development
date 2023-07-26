@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, Grids, DBGrids, StdCtrls, ExtCtrls, Buttons, ImgList,
-  ComCtrls, ToolWin, System.ImageList;
+  DB, Grids, DBGrids, StdCtrls, ExtCtrls, Buttons, ImgList,
+  ComCtrls, ToolWin, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtMntFrm = class(TForm)
     PartsDataSource: TDataSource;
     GridTimer: TTimer;
-    GetPartsQuery: TQuery;
-    GetPartQuery: TQuery;
-    UpdMultiSQL: TQuery;
-    DelSuppsQuery: TQuery;
-    AddSuppsQuery: TQuery;
+    GetPartsQuery: TFDQuery;
+    GetPartQuery: TFDQuery;
+    UpdMultiSQL: TFDQuery;
+    DelSuppsQuery: TFDQuery;
+    AddSuppsQuery: TFDQuery;
     Panel1: TPanel;
     CoolBar1: TCoolBar;
     ToolBar1: TToolBar;
@@ -46,8 +49,8 @@ type
     SuppPartBitBtn: TToolButton;
     Label2: TLabel;
     EdtDesc: TEdit;
-    GetCustNameSQL: TQuery;
-    qryPartsOnSOs: TQuery;
+    GetCustNameSQL: TFDQuery;
+    qryPartsOnSOs: TFDQuery;
     btbtnEComm: TToolButton;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);

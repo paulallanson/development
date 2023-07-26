@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, StdCtrls, DBCtrls, ComCtrls, ExtCtrls, pbStockDM,
-  Buttons, ImgList, ToolWin, DB, DBTables;
+  Buttons, ImgList, ToolWin, DB;
 
 type
   TfrmSTLUStockLocations = class(TForm)

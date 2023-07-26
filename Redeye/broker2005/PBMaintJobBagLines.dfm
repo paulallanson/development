@@ -370,8 +370,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     TabOrder = 4
     OnClick = chkbxInternalCostClick
   end
-  object qryVat: TQuery
-    DatabaseName = 'pb'
+  object qryVat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Vat_Code'
@@ -379,8 +379,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Left = 280
     Top = 296
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'pb'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -388,8 +388,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Left = 280
     Top = 256
   end
-  object qryProductCat: TQuery
-    DatabaseName = 'pb'
+  object qryProductCat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -412,8 +412,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Left = 320
     Top = 296
   end
-  object qryGetPUnit: TQuery
-    DatabaseName = 'pb'
+  object qryGetPUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -427,8 +427,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'pb'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
@@ -441,8 +441,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryWOProcess: TQuery
-    DatabaseName = 'pb'
+  object qryWOProcess: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Works_Order_Process.Works_Order,'
       '        Works_Order_Process.Process,'
@@ -471,8 +471,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Left = 392
     Top = 48
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'pb'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Process.Process_Description,'
       '        Process.Product_Type,'

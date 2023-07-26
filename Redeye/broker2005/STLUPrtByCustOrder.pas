@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ImgList, ExtCtrls, Grids, DBGrids, ComCtrls, StdCtrls,
-  ToolWin, System.ImageList;
+  Db, ImgList, ExtCtrls, Grids, DBGrids, ComCtrls, StdCtrls,
+  ToolWin, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTLUPrtByCustOrderFrm = class(TForm)
@@ -27,8 +30,8 @@ type
     GridTimer: TTimer;
     HotImageList2: TImageList;
     CoolImageList2: TImageList;
-    qryPartsOnSOs: TQuery;
-    qryPartsOnSOsFiltered: TQuery;
+    qryPartsOnSOs: TFDQuery;
+    qryPartsOnSOsFiltered: TFDQuery;
     procedure CodeEditKeyPress(Sender: TObject; var Key: Char);
     procedure CodeEditChange(Sender: TObject);
     procedure tlbtnSelectClick(Sender: TObject);

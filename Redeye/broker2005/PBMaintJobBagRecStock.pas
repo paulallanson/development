@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Grids, StdCtrls, ExtCtrls, Buttons;
+  Dialogs, DB, Grids, StdCtrls, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintJobBagRecStock = class(TForm)
@@ -20,13 +23,13 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     sgLines: TStringGrid;
-    qryJBStock: TQuery;
+    qryJBStock: TFDQuery;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryGetJBSalesOrders: TQuery;
-    qryGetJBReturns: TQuery;
-    qryUpdSO: TQuery;
-    qryUpdJBReturn: TQuery;
+    qryGetJBSalesOrders: TFDQuery;
+    qryGetJBReturns: TFDQuery;
+    qryUpdSO: TFDQuery;
+    qryUpdJBReturn: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;

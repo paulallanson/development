@@ -91,7 +91,7 @@ begin
   begin
     edtOperator.text := WOEvent.OperatorName;
     dtpckdate.date := WOEvent.DateEntered;
-    memDetails.text := WOEvent.Narrative.Data;
+    memDetails.text := WOEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -113,7 +113,7 @@ begin
   WOEvent.Operator := Operator;
   WOEvent.OperatorName := OperatorName;
   WOEvent.DateEntered := dtpckDate.Date;
-  WOEvent.Narrative.data := memDetails.text;
+  WOEvent.Narrative.DataInfo := memDetails.text;
   if Mode = woevAdd then
   begin
     WOEvent.Narrative.dbkey := 0;

@@ -513,8 +513,8 @@ object PBMaintJobBagSchedFrm: TPBMaintJobBagSchedFrm
       end
     end
   end
-  object qrySchedules: TQuery
-    DatabaseName = 'PB'
+  object qrySchedules: TFDQuery
+    ConnectionName = 'PB'
     Left = 272
     Top = 16
   end

@@ -770,8 +770,8 @@ object PBRPProofStatusfrm: TPBRPProofStatusfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       ' SELECT'
       '  PHist.Purchase_Order, '

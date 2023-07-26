@@ -78,16 +78,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  PBPOObjects, CCSPrint;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, Grids, DBGrids,
+  PBPOObjects, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPODueQteFrm = class(TForm)
     PrintODueQteQuickReport: TQuickRep;
     EnquiriesSRC: TDataSource;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
-    GetEnquiriesSQL: TQuery;
+    GetCompSQL: TFDQuery;
+    GetEnquiriesSQL: TFDQuery;
     ODuePageHeaderBand: TQRBand;
     QRLabel1: TQRLabel;
     RepsSelQRLabel: TQRLabel;

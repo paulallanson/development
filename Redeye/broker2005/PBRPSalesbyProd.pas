@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, ExtCtrls, Db, DBTables, Qrctrls, CCSPrint, CCSCommon,
-  QrExport;
+  QuickRpt, ExtCtrls, Db, Qrctrls, CCSPrint, CCSCommon,
+  QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesbyProdFrm = class(TForm)
     qckrpSalesByProd: TQuickRep;
     repQRGroup: TQRGroup;
-    qrySalesbyProd: TQuery;
+    qrySalesbyProd: TFDQuery;
     QRBand1: TQRBand;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
@@ -82,11 +85,11 @@ type
     qrySalesbyProdOrder: TStringField;
     qrmmAddChrg: TQRMemo;
     qrmmAddChrgPrice: TQRMemo;
-    qryInvAddChrgs: TQuery;
+    qryInvAddChrgs: TFDQuery;
     qryInvAddChrgsdetails: TStringField;
     qryInvAddChrgsamount: TCurrencyField;
-    qryInvAddChrgsbyInvCust: TQuery;
-    qryInvAddChrgsbyOrdCust: TQuery;
+    qryInvAddChrgsbyInvCust: TFDQuery;
+    qryInvAddChrgsbyOrdCust: TFDQuery;
     qrlblAddChrgs: TQRLabel;
     QRLabel8: TQRLabel;
     QRShape6: TQRShape;
@@ -98,13 +101,13 @@ type
     qrySalesbyProdInvoice_Or_Credit: TStringField;
     qrySalesbyProdSales_Invoice_Type: TStringField;
     qrySalesbyProdReference: TStringField;
-    GetCostsQuery: TQuery;
-    qryAddPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    AddCostsQuery: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetJBCosts: TQuery;
-    qryCreditLines: TQuery;
+    GetCostsQuery: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    AddCostsQuery: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetJBCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
     QRLblCstGrp2Total: TQRLabel;
     QRLblPrftGrp2Total: TQRLabel;
     QRLblCstTotal: TQRLabel;
@@ -126,12 +129,12 @@ type
     qrmmAddChrgProfit: TQRMemo;
     qrlblAddChrgeProfitTot: TQRLabel;
     qrlblDescription: TQRLabel;
-    qryPOLineFormRef: TQuery;
-    qryJBLineFormRef: TQuery;
-    qrySOLinePart: TQuery;
-    qryGetPO: TQuery;
-    qryGetJB: TQuery;
-    qryGetSO: TQuery;
+    qryPOLineFormRef: TFDQuery;
+    qryJBLineFormRef: TFDQuery;
+    qrySOLinePart: TFDQuery;
+    qryGetPO: TFDQuery;
+    qryGetJB: TFDQuery;
+    qryGetSO: TFDQuery;
     qrlblFormReference: TQRLabel;
     procedure qrySalesbyProdTotal_GoodsGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);

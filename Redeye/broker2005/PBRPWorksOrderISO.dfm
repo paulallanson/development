@@ -3257,8 +3257,8 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
       end
     end
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -3276,8 +3276,8 @@ object PBRPWorksOrderISOFrm: TPBRPWorksOrderISOFrm
     Left = 173
     Top = 40
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Works_Order.*,'
       '        Operator.Name as Office_Contact_Name,'

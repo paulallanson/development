@@ -4,8 +4,8 @@ object dtmdlCustomers: TdtmdlCustomers
   Top = 12
   Height = 794
   Width = 1095
-  object qryCustomers: TQuery
-    DatabaseName = 'PB'
+  object qryCustomers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -65,8 +65,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 96
     Top = 8
   end
-  object CheckCustAccExistsSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckCustAccExistsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer.Name'
       'From Customer, Customer_Branch'
@@ -92,8 +92,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 104
     Top = 188
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer(Customer, Name)'
       'SELECT Max(Customer)+1, :GUID FROM Customer'
@@ -109,8 +109,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptInput
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer'
       'From Customer'
@@ -124,8 +124,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptInput
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer(Customer, Name)'
       'SELECT Max(Customer)+1, :GUID FROM Customer'
@@ -146,8 +146,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 328
     Top = 176
   end
-  object GetStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer_Status,'
       '        Customer_Status_Descr From Customer_Status'
@@ -157,8 +157,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 288
     Top = 176
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer'
       'Set     Name = :Name,'
@@ -572,8 +572,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object GetCurrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCurrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Currency_Code, Currency_Code_Descr'
       'from Currency_Code'
@@ -581,24 +581,24 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 416
     Top = 172
   end
-  object GetTypesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetTypesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Type, Description From Customer_Type'
       'Order By Description')
     Left = 440
     Top = 232
   end
-  object GetVATSQL: TQuery
-    DatabaseName = 'PB'
+  object GetVATSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Vat_Code'
       'Order By Vat_Code')
     Left = 320
     Top = 380
   end
-  object GetCustNameSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustNameSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Name from Customer'
       'Where Customer = :Customer')
@@ -611,8 +611,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object GetCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object GetCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Country_Id, Country_Id_Descr'
       'from Country_Id'
@@ -620,8 +620,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 184
     Top = 308
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Customer'
       'Where'
@@ -635,8 +635,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Company')
@@ -648,8 +648,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 312
     Top = 452
   end
-  object GetBranchNameSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBranchNameSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Name from Customer_Branch'
       'Where (Customer = :Customer) and'
@@ -673,8 +673,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 352
     Top = 328
   end
-  object GetCrdStatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCrdStatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Credit_Status, Credit_Status_Descr'
       'From Credit_Status'
@@ -687,8 +687,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 40
     Top = 364
   end
-  object DelBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object DelBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Customer_Branch'
       'Where'
@@ -703,8 +703,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object CheckSuppAccExistsSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckSuppAccExistsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier.Name'
       'From Supplier, Supplier_Branch'
@@ -719,8 +719,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object UpdBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Branch'
       'Set'
@@ -837,8 +837,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 296
     Top = 260
   end
-  object AddBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object AddBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Branch'
       '        (Customer,'
@@ -976,8 +976,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object UpdNotesOnlySQL: TQuery
-    DatabaseName = 'PB'
+  object UpdNotesOnlySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Branch'
       'Set     Narrative = :Narrative'
@@ -999,8 +999,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object UpdDelivNotesOnlySQL: TQuery
-    DatabaseName = 'PB'
+  object UpdDelivNotesOnlySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Branch'
       'Set     Delivery_Narrative = :Delivery_Narrative'
@@ -1023,8 +1023,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object GetIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Intrastat_Id, Intrastat_Id_Descr'
       'from Intrastat_Id'
@@ -1037,8 +1037,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 424
     Top = 236
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -1150,8 +1150,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryCustProdPrefix: TQuery
-    DatabaseName = 'PB'
+  object qryCustProdPrefix: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_Code_Prefix as '#39'Prefix'#39','
       'name as '#39'Customer'#39
@@ -1173,8 +1173,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 442
     Top = 12
   end
-  object qryCustomersBase: TQuery
-    DatabaseName = 'PB'
+  object qryCustomersBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -1337,8 +1337,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerLU: TQuery
-    DatabaseName = 'pb'
+  object qryCustomerLU: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select customer.name'
       'from customer'
@@ -1351,8 +1351,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 576
     Top = 304
   end
-  object UpdprefixSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdprefixSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update customer'
       'set product_Code_prefix = :product_Code_prefix'
@@ -1371,8 +1371,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetTechCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetTechCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer as "tg:code",'
       '        Customer.Name as "tg:company_name",'
@@ -1402,8 +1402,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetTechContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetTechContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select top 1'
       '        Customer_Contact.email as "tg:code",'
@@ -1430,8 +1430,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryEInvoicing: TQuery
-    DatabaseName = 'PB'
+  object qryEInvoicing: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from e_invoicing_System'
@@ -1444,8 +1444,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 112
     Top = 416
   end
-  object qryUpdProductStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdProductStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set Not_In_Use = :Not_In_Use'
@@ -1464,8 +1464,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetEInvoicing: TQuery
-    DatabaseName = 'PB'
+  object qryGetEInvoicing: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from e_Invoicing_System'
@@ -1479,8 +1479,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryDocuments: TQuery
-    DatabaseName = 'PB'
+  object qryDocuments: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Document'
@@ -1500,8 +1500,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 584
     Top = 368
   end
-  object qryAddDocument: TQuery
-    DatabaseName = 'PB'
+  object qryAddDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Customer_Document'
       '(Customer,'
@@ -1546,8 +1546,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastDoc: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastDoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(document_no) as Last_Document'
       'from Customer_Document'
@@ -1561,8 +1561,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryDelDocument: TQuery
-    DatabaseName = 'PB'
+  object qryDelDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Customer_Document'
       'where customer = :customer and Document_no = :Document_no')
@@ -1580,8 +1580,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryUpdDocument: TQuery
-    DatabaseName = 'PB'
+  object qryUpdDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Document'
       'set Document = :Document, Document_Title = :Document_Title'
@@ -1610,8 +1610,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryTerms: TQuery
-    DatabaseName = 'PB'
+  object qryTerms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Payment_terms'
@@ -1624,8 +1624,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 368
     Top = 568
   end
-  object qryRevenueCentre: TQuery
-    DatabaseName = 'PB'
+  object qryRevenueCentre: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Invoice_location')
@@ -1637,8 +1637,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 112
     Top = 456
   end
-  object qryGetTerms: TQuery
-    DatabaseName = 'PB'
+  object qryGetTerms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Payment_terms'
@@ -1652,8 +1652,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object GetContactNameSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactNameSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Name, Email from Customer_Contact'
       'Where (Customer = :Customer) and'
@@ -1683,8 +1683,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 96
     Top = 48
   end
-  object qryProspectBase: TQuery
-    DatabaseName = 'PB'
+  object qryProspectBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'
@@ -1844,23 +1844,23 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryProspects: TQuery
-    DatabaseName = 'PB'
+  object qryProspects: TFDQuery
+    ConnectionName = 'PB'
     Left = 24
     Top = 48
   end
-  object qryUpdMulti: TQuery
-    DatabaseName = 'PB'
+  object qryUpdMulti: TFDQuery
+    ConnectionName = 'PB'
     Left = 496
     Top = 528
   end
-  object qryUpdMultiBranch: TQuery
-    DatabaseName = 'PB'
+  object qryUpdMultiBranch: TFDQuery
+    ConnectionName = 'PB'
     Left = 584
     Top = 528
   end
-  object qryGetOneCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetOneCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '    Customer.Customer,'
@@ -1967,8 +1967,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep, Name as Rep_Name'
       'from Rep'
@@ -1982,8 +1982,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 112
     Top = 504
   end
-  object qryDelRepBranch: TQuery
-    DatabaseName = 'PB'
+  object qryDelRepBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Reps_Branches'
       'WHERE Customer = :Customer AND'
@@ -2002,8 +2002,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryAddRepBranch: TQuery
-    DatabaseName = 'PB'
+  object qryAddRepBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'INSERT INTO Reps_Branches(Customer, Branch_no, Rep, Percentage, ' +
@@ -2033,8 +2033,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyTypes: TQuery
-    DatabaseName = 'PB'
+  object qryCompanyTypes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company_Type, Company_Type_Description'
       'from Company_Type'
@@ -2047,8 +2047,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 584
     Top = 592
   end
-  object qryGetAccCodes: TQuery
-    DatabaseName = 'PB'
+  object qryGetAccCodes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Account_Code, Customer.Name as Customer_Name'
       'From Customer_Branch, Customer'
@@ -2082,8 +2082,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 376
     Top = 680
   end
-  object qryGetImportance: TQuery
-    DatabaseName = 'PB'
+  object qryGetImportance: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Level_of_Importance, Importance_Description'
       'from Level_of_Importance'
@@ -2097,8 +2097,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 744
     Top = 12
   end
-  object qryCustomerBranches: TQuery
-    DatabaseName = 'PB'
+  object qryCustomerBranches: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Customer_branch'
@@ -2146,9 +2146,9 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 776
     Top = 184
   end
-  object qryContacts: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsCustomerBranches
+  object qryContacts: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsCustomerBranches
     SQL.Strings = (
       'SELECT  Customer_Contact.Contact_no,'
       '        Customer_Contact.Name,'
@@ -2216,8 +2216,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 780
     Top = 248
   end
-  object qryAddContact: TQuery
-    DatabaseName = 'PB'
+  object qryAddContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Contact'
       '        (Customer,'
@@ -2328,8 +2328,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryCheckName: TQuery
-    DatabaseName = 'PB'
+  object qryCheckName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Contact_no'
       'FROM Customer_Contact'
@@ -2355,8 +2355,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qrySetCContactActive: TQuery
-    DatabaseName = 'PB'
+  object qrySetCContactActive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set inactive = '#39'N'#39
@@ -2383,8 +2383,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qrySetCContactInactive: TQuery
-    DatabaseName = 'PB'
+  object qrySetCContactInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set inactive = '#39'Y'#39
@@ -2411,8 +2411,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustomerCat: TQuery
-    DatabaseName = 'PB'
+  object qryAddCustomerCat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Customer_Category'
       '(Customer,'
@@ -2450,8 +2450,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerCategories: TQuery
-    DatabaseName = 'PB'
+  object qryCustomerCategories: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description as Category_Description,'
@@ -2508,8 +2508,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 872
     Top = 144
   end
-  object qryDelCustomerCat: TQuery
-    DatabaseName = 'PB'
+  object qryDelCustomerCat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Customer_Category'
       'WHERE Customer = :Customer AND Category = :Category')
@@ -2527,8 +2527,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryUpCustomerCatSupply: TQuery
-    DatabaseName = 'PB'
+  object qryUpCustomerCatSupply: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer_Category'
       'Set We_Supply_This_Category = :We_Supply_This_Category'
@@ -2552,8 +2552,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryUpCustomerCatNotes: TQuery
-    DatabaseName = 'PB'
+  object qryUpCustomerCatNotes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer_Category'
       'Set Narrative = :Narrative'
@@ -2577,8 +2577,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetCContactDetails: TQuery
-    DatabaseName = 'PB'
+  object qryGetCContactDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer, Branch_no, Contact_no, enquiry as Order_no'
       'from Enquiry'
@@ -2674,8 +2674,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerOrders: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer, Contact_no as Order_no'
       'from Customer_Contact'
@@ -2741,8 +2741,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qrySetCustomerInactive: TQuery
-    DatabaseName = 'PB'
+  object qrySetCustomerInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer'
       'set acc_active = '#39'N'#39
@@ -2757,8 +2757,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryHOContacts: TQuery
-    DatabaseName = 'PB'
+  object qryHOContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Contact_no,'
       '        Customer_Contact.Name,'
@@ -2821,8 +2821,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 772
     Top = 536
   end
-  object qryGetContactCats: TQuery
-    DatabaseName = 'PB'
+  object qryGetContactCats: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT  Customer_Contact_Category.*, Category.Category, Category' +
@@ -2860,8 +2860,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 772
     Top = 592
   end
-  object qryUpCustomerCatUsed: TQuery
-    DatabaseName = 'PB'
+  object qryUpCustomerCatUsed: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer_Category'
       'SET Category_Used = :Category_Used'
@@ -2885,8 +2885,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryOperators: TQuery
-    DatabaseName = 'PB'
+  object qryOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Operator, Name as Operator_Name'
       'from Operator'
@@ -2900,8 +2900,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 112
     Top = 648
   end
-  object qryDelAccManager: TQuery
-    DatabaseName = 'PB'
+  object qryDelAccManager: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Customer_Operator'
       'WHERE Customer = :Customer')
@@ -2914,8 +2914,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryAddAccManager: TQuery
-    DatabaseName = 'PB'
+  object qryAddAccManager: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'INSERT INTO Customer_Operator(Customer, Operator, Is_Main_Operat' +
@@ -2935,8 +2935,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryDelSecondRep: TQuery
-    DatabaseName = 'PB'
+  object qryDelSecondRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Reps_Branches'
       
@@ -2977,8 +2977,8 @@ object dtmdlCustomers: TdtmdlCustomers
         ParamType = ptUnknown
       end>
   end
-  object qryEndUsers: TQuery
-    DatabaseName = 'PB'
+  object qryEndUsers: TFDQuery
+    ConnectionName = 'PB'
     Left = 24
     Top = 112
   end
@@ -2987,8 +2987,8 @@ object dtmdlCustomers: TdtmdlCustomers
     Left = 96
     Top = 112
   end
-  object qryEndUserBase: TQuery
-    DatabaseName = 'PB'
+  object qryEndUserBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Customer.Customer,'
       '        Customer.Name,'

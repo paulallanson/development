@@ -201,8 +201,8 @@ object PBRPNCASourceFrm: TPBRPNCASourceFrm
       end
     end
   end
-  object qryNCASource: TQuery
-    DatabaseName = 'PB'
+  object qryNCASource: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select non_conform_dept.non_conform_dept_descr,'
       #9'sum(Total_cost) as Cost'

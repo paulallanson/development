@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, CCSPrint, DBCtrls, DB, DBTables;
+  ExtCtrls, StdCtrls, Buttons, CCSPrint, DBCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSOSSInvPInvRecdFrm = class(TForm)
@@ -28,7 +31,7 @@ type
     Label2: TLabel;
     dblkpStatus: TDBLookupComboBox;
     dtsStatus: TDataSource;
-    qryPOStatus: TQuery;
+    qryPOStatus: TFDQuery;
     chkbxExcludeZeroValues: TCheckBox;
     procedure rdgrpRepClick(Sender: TObject);
     procedure btnRepClick(Sender: TObject);

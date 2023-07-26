@@ -475,8 +475,8 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     OnClick = btbtnExcelClick
     ExplicitLeft = 7
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Distinct Customer.Name AS CustName,'
       '    Customer_Branch.Name as Branchname,'

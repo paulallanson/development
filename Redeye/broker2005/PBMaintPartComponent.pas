@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPartComponentFrm = class(TForm)
@@ -17,10 +20,10 @@ type
     btnPart: TBitBtn;
     memQuantity: TMemo;
     Label2: TLabel;
-    qryGetLastNo: TQuery;
-    qryDel: TQuery;
-    qryAdd: TQuery;
-    qryUpd: TQuery;
+    qryGetLastNo: TFDQuery;
+    qryDel: TFDQuery;
+    qryAdd: TFDQuery;
+    qryUpd: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure btnPartClick(Sender: TObject);

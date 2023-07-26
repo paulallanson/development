@@ -182,10 +182,14 @@ resourcestring
 
   BDE_KEY = 'Software\Borland\Database Engine'; { path to BDE settings }
 
+const
+  myRedEye_INIFILE = 'Redeye.ini';
+
 implementation
 
 uses
-  Dialogs, System.UITypes;
+  Dialogs, System.UITypes,
+  FireDAC.Comp.Client;
 
 type
   TVerInfo = (tVersion, tBuild, tModule, tDesc, tCopyright, tShortName);
@@ -394,7 +398,7 @@ begin
   if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
   MI.Bodyformat := olFormatHTML;
@@ -467,7 +471,7 @@ begin
   if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
   MI.Bodyformat := olFormatHTML;
@@ -543,7 +547,7 @@ begin
   if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
   MI.Bodyformat := olFormatHTML;
@@ -721,7 +725,7 @@ begin
   if (EmailApplication = 'OUT2007') or (EmailApplication = 'OUT2010') or (EmailApplication = 'OUT2013') then
     begin
       if EmailAccount <> '' then
-        MI.SendUsingAccount := Outlook.session.accounts.item(EmailAccount);
+        MI.SendUsingAccount := Outlook.Session.accounts.item(EmailAccount);
     end;
 
   MI.Bodyformat := olFormatHTML;

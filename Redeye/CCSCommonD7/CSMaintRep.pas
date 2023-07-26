@@ -62,16 +62,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, Spin;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintRepFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label2: TLabel;
@@ -99,13 +102,13 @@ type
     Label5: TLabel;
     ProdNomlbl: TLabel;
     AdditDestslbl: TLabel;
-    RepNomSQL: TQuery;
+    RepNomSQL: TFDQuery;
     ProdNomDBLookupComboBox: TDBLookupComboBox;
     AddNomDBLookupComboBox: TDBLookupComboBox;
     RepNomSRC: TDataSource;
     Label6: TLabel;
     NominalBitBtn: TBitBtn;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     Label11: TLabel;
     spnCommission: TSpinEdit;
     procedure FormActivate(Sender: TObject);

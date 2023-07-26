@@ -28,7 +28,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, DB, DBTables, StdCtrls, Buttons;
+  ExtCtrls, DB, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintRepNomFrm = class(TForm)
@@ -37,10 +40,10 @@ type
     CancelBitBtn: TBitBtn;
     DetsGrpBox: TGroupBox;
     NameEdit: TEdit;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     FlashTimer: TTimer;
     NomLbl: TLabel;
     AdditDetsLbl: TLabel;

@@ -59,12 +59,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintGroupsFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetCustTypesSQL: TQuery;
+    GetCustTypesSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchTimer: TTimer;
     CloseBitBtn: TBitBtn;
@@ -74,12 +77,12 @@ type
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
     TypeRadioGroup: TRadioGroup;
-    GetPTCatsSQL: TQuery;
-    GetCountriesSQL: TQuery;
-    GetCurrencySQL: TQuery;
-    GetIntrastatsSQL: TQuery;
-    GetContTypesSQL: TQuery;
-    GetContLevelsSQL: TQuery;
+    GetPTCatsSQL: TFDQuery;
+    GetCountriesSQL: TFDQuery;
+    GetCurrencySQL: TFDQuery;
+    GetIntrastatsSQL: TFDQuery;
+    GetContTypesSQL: TFDQuery;
+    GetContLevelsSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure NameEditChange(Sender: TObject);

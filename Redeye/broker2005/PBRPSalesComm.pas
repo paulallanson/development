@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesCommFrm = class(TForm)
     qckrpSalesByInv: TQuickRep;
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel2: TQRLabel;
@@ -37,9 +40,9 @@ type
     RepTotQRLabel: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
     GrpByQRDBText: TQRDBText;
-    AddCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
     TotCstQRLbl: TQRLabel;
-    GetCostsQuery: TQuery;
+    GetCostsQuery: TFDQuery;
     RepTotCostQRLbl: TQRLabel;
     MarginQRLabel: TQRLabel;
     MargQRLbl: TQRLabel;
@@ -70,19 +73,19 @@ type
     qrySalesCommReference: TStringField;
     qrySalesCommInvoice_Description: TStringField;
     qrySalesCommInvoiceRef: TStringField;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
-    oldqryGetJBCosts: TQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    oldqryGetJBCosts: TFDQuery;
     qrySalesCommSales_Invoice_type: TStringField;
-    qryGetJBCosts: TQuery;
+    qryGetJBCosts: TFDQuery;
     lblCommission: TQRLabel;
     TotGoodsQRLbl: TQRLabel;
-    qryGetProdCosts: TQuery;
-    qryCreditLines: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
+    qryGetProdCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
     ChildBand1: TQRChildBand;
     QRLabel18: TQRLabel;
     TotalGoodsLbl: TQRLabel;
@@ -104,19 +107,19 @@ type
     QRLblTotCred: TQRLabel;
     QRLblTotJobs: TQRLabel;
     QRLabel1: TQRLabel;
-    qryGetNoOfJobs: TQuery;
+    qryGetNoOfJobs: TFDQuery;
     qrySalesCommRep: TIntegerField;
     QRShape5: TQRShape;
     QRLabel7: TQRLabel;
     QRLabelComm: TQRLabel;
     qrySalesCommRep_Responsibility: TFloatField;
     qrlblCommSplit: TQRLabel;
-    qryRepFinance: TQuery;
+    qryRepFinance: TFDQuery;
     qrlblInvoiceNo: TQRLabel;
     qrlblJobNumber: TQRLabel;
-    qryGetPOSICharges: TQuery;
-    qryGetMainPO: TQuery;
-    qryGetCallOffInvoices: TQuery;
+    qryGetPOSICharges: TFDQuery;
+    qryGetMainPO: TFDQuery;
+    qryGetCallOffInvoices: TFDQuery;
     procedure qckrpSalesByInvBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;

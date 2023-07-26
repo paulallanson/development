@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, PBPOObjects;
+  StdCtrls, Buttons, Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPackFormatFrm = class(TForm)
@@ -12,12 +15,12 @@ type
     lblDelete: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryInsPackFormat: TQuery;
-    qryUpdPackFormat: TQuery;
-    qryDelPackFormat: TQuery;
+    qryInsPackFormat: TFDQuery;
+    qryUpdPackFormat: TFDQuery;
+    qryDelPackFormat: TFDQuery;
     lblDescription: TLabel;
     edtDescription: TEdit;
-    qryGetLastID: TQuery;
+    qryGetLastID: TFDQuery;
     chkbxInactive: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);

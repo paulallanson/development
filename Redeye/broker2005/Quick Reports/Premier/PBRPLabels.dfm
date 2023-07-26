@@ -551,8 +551,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
       end
     end
   end
-  object PODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object PODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*,'
       'Delivery_Detail.*,'
@@ -601,8 +601,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
     Left = 527
     Top = 360
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -631,8 +631,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -651,8 +651,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -671,8 +671,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -704,8 +704,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
     Left = 88
     Top = 360
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -721,8 +721,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
     Left = 381
     Top = 360
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name'
       'from Customer'
@@ -736,8 +736,8 @@ object PBRPLabelsFrm: TPBRPLabelsFrm
         ParamType = ptUnknown
       end>
   end
-  object GetFAOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetFAOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Name'
       'From Customer_Contact'

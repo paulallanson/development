@@ -427,15 +427,15 @@ object PBRPSupCapFrm: TPBRPSupCapFrm
       'CapsMemo')
     TabOrder = 1
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 48
     Top = 16
   end
-  object GetSuppPTSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppPTSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  DISTINCT Supplier.Name as Sup_Name,'
       '        Supplier_Branch.Name as Branch_Name,'
@@ -464,8 +464,8 @@ object PBRPSupCapFrm: TPBRPSupCapFrm
     Left = 144
     Top = 24
   end
-  object GetCapsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCapsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Product_TypeCapability.Description, Product_TypeCapabilit' +

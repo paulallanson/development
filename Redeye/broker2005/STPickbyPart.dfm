@@ -207,8 +207,8 @@ object STPickbyPartFrm: TSTPickbyPartFrm
         60)
     end
   end
-  object GetIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from int_sel'

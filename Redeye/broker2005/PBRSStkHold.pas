@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, CCSCommon;
+  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSStkHoldFrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
-    CustomerSQL: TQuery;
+    CustomerSQL: TFDQuery;
     rgCustomer: TRadioGroup;
     CustomerPanel: TPanel;
     lblCustomer: TLabel;
@@ -19,7 +22,7 @@ type
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;
-    DummySQL: TQuery;
+    DummySQL: TFDQuery;
     chkbxExcludezero: TCheckBox;
     qryReportdescription: TStringField;
     qryReportquantity: TIntegerField;

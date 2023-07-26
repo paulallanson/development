@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DBCtrls, Buttons, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, DBCtrls, Buttons, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagInactiveFrm = class(TForm)
@@ -25,10 +28,10 @@ type
     lblDate: TLabel;
     chkbxReactivate: TCheckBox;
     lblOperator: TLabel;
-    qryReason: TQuery;
+    qryReason: TFDQuery;
     srcReason: TDataSource;
-    qryGetDetails: TQuery;
-    qryUpJobBag: TQuery;
+    qryGetDetails: TFDQuery;
+    qryUpJobBag: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure BitBtn4Click(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

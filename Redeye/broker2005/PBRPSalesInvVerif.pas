@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects, DateUtils;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesInvVerifFrm = class(TForm)
@@ -41,7 +44,7 @@ type
     RepTotVatQRLbl: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
     GrpByQRDBText: TQRDBText;
-    AddCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
     TotCstQRLbl: TQRLabel;
     TotalCostLbl: TQRLabel;
     RepTotCostQRLbl: TQRLabel;
@@ -51,7 +54,7 @@ type
     RepMargQRLbl: TQRLabel;
     QRDBText2: TQRDBText;
     QRLabel19: TQRLabel;
-    qrySalesbyInv: TQuery;
+    qrySalesbyInv: TFDQuery;
     qrySalesbyInvCustomer: TIntegerField;
     qrySalesbyInvBranch_no: TIntegerField;
     qrySalesbyInvSales_Invoice: TIntegerField;
@@ -70,19 +73,19 @@ type
     qrySalesbyInvRep_Name: TStringField;
     qrySalesbyInvInvoiceRef: TStringField;
     qrySalesbyInvInvoice_Description: TStringField;
-    qryGetPOCrCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
     qrySalesbyInvOrderDesc: TStringField;
     lblDescription: TQRLabel;
-    qryGetJBCrCosts: TQuery;
-    qryGetInvLine: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetInvAddChrg: TQuery;
-    GetCostsQuery: TQuery;
-    qryGetJbCosts: TQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetInvLine: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetInvAddChrg: TFDQuery;
+    GetCostsQuery: TFDQuery;
+    qryGetJbCosts: TFDQuery;
     QRSysData2: TQRSysData;
     QRSysData1: TQRSysData;
     qrySalesbyInvBranch_Name: TStringField;
@@ -93,7 +96,7 @@ type
     QRDBText3: TQRDBText;
     qrlblDaysToRaise: TQRLabel;
     qrySalesbyInvCust_Order_no: TStringField;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
     IntegerField3: TIntegerField;

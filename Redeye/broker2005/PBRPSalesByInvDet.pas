@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesByInvDetFrm = class(TForm)
     qckrpSalesByInv: TQuickRep;
-    oldqrySalesByInv: TQuery;
+    oldqrySalesByInv: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel1: TQRLabel;
@@ -46,8 +49,8 @@ type
     RepTotVatQRLbl: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
     GrpByQRDBText: TQRDBText;
-    AddCostsQuery: TQuery;
-    GetCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
+    GetCostsQuery: TFDQuery;
     oldqrySalesByInvPurchase_Order: TFloatField;
     oldqrySalesByInvLine: TIntegerField;
     oldqrySalesByInvCustomer: TIntegerField;
@@ -76,16 +79,16 @@ type
     oldqrySalesByInvInvoice_or_Credit: TStringField;
     QRDBText2: TQRDBText;
     QRLabel19: TQRLabel;
-    qrySalesbyInv: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
-    oldqryGetJBCosts: TQuery;
+    qrySalesbyInv: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    oldqryGetJBCosts: TFDQuery;
     lblCstmr: TQRLabel;
-    qryGetJBCosts: TQuery;
-    qryCreditLines: TQuery;
+    qryGetJBCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
     QRSubDetInvlns: TQRSubDetail;
-    qrygetinvline: TQuery;
+    qrygetinvline: TFDQuery;
     qrySalesbyInvCustomer: TIntegerField;
     qrySalesbyInvBranch_no: TIntegerField;
     qrySalesbyInvSales_Invoice: TIntegerField;
@@ -140,7 +143,7 @@ type
     qrygetinvlineDescription: TStringField;
     qrygetinvlineVAT_Ref: TStringField;
     QRSbDtlChrg: TQRSubDetail;
-    qryInvCharges: TQuery;
+    qryInvCharges: TFDQuery;
     QRLblChrg: TQRLabel;
     QRLblChrgVat: TQRLabel;
     QRLblChrgTot: TQRLabel;
@@ -153,21 +156,21 @@ type
     QRShape5: TQRShape;
     QRlblQty: TQRLabel;
     qrlblSupplier: TQRLabel;
-    qryJBLine: TQuery;
-    qrySOLine: TQuery;
-    qryPOLine: TQuery;
+    qryJBLine: TFDQuery;
+    qrySOLine: TFDQuery;
+    qryPOLine: TFDQuery;
     TotCstQRLbl: TQRLabel;
     MargQRLbl: TQRLabel;
     QRLblInvTotCst: TQRLabel;
     QRLblInvTotMarg: TQRLabel;
-    qryPO: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetJBCrCosts: TQuery;
+    qryPO: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
     qrlblChrgCost: TQRLabel;
     qrlblChrgMarg: TQRLabel;
-    qryGetInvAddChrg: TQuery;
+    qryGetInvAddChrg: TFDQuery;
     QRLabel9: TQRLabel;
     QRShape6: TQRShape;
     QRShape7: TQRShape;

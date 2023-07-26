@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Db, Grids, DBGrids, DBTables, CCSCommon,
-  OleCtnrs, ComCtrls;
+  StdCtrls, Buttons, ExtCtrls, Db, Grids, DBGrids, CCSCommon,
+  OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSWorkIPfrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
     pnlControl: TPanel;
     pnlDetail: TPanel;

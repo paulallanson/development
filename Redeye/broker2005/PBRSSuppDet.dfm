@@ -218,8 +218,8 @@ object PBRSSuppDetFrm: TPBRSSuppDetFrm
       Kind = bkCancel
     end
   end
-  object qryCurrentSuppStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCurrentSuppStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Supplier_Branch.*, Supplier.Name+'#39'/'#39'+Supplier_Branch.name' +

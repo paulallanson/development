@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBCtrls, DBTables;
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSNCASourceFrm = class(TForm)
@@ -15,7 +18,7 @@ type
     Label1: TLabel;
     GroupBox3: TGroupBox;
     GroupBox4: TGroupBox;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     dblkpGraph1: TDBLookupComboBox;
     dblkpGraph2: TDBLookupComboBox;
     Label3: TLabel;
@@ -24,7 +27,7 @@ type
     dblkpGraph4: TDBLookupComboBox;
     Label4: TLabel;
     dtsPeriods: TDataSource;
-    qryGetDates: TQuery;
+    qryGetDates: TFDQuery;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
   private

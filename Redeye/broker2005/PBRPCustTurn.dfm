@@ -865,9 +865,9 @@ object PBRPCustTurnFrm: TPBRPCustTurnFrm
       end
     end
   end
-  object QryCustTurn: TQuery
+  object QryCustTurn: TFDQuery
     OnCalcFields = QryCustTurnCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '        Customer.Name,'

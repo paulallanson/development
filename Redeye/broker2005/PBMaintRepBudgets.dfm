@@ -326,8 +326,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       end
     end
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description, Financial_Year'
       'from Period'
@@ -347,8 +347,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Left = 272
     Top = 8
   end
-  object qryGetRepBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep_Budget.Rep,'
       '        Rep_Budget.Period,'
@@ -379,8 +379,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryFirstPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryFirstPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Period'
       'from Period'
@@ -395,8 +395,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckBudget: TQuery
-    DatabaseName = 'PB'
+  object qryCheckBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_budget'
@@ -416,8 +416,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdBudget: TQuery
-    DatabaseName = 'PB'
+  object qryUpdBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Rep_Budget'
       'set Turnover_Value = :Turnover_Value, '
@@ -455,8 +455,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddBudget: TQuery
-    DatabaseName = 'PB'
+  object qryAddBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Rep_Budget'
       
@@ -491,8 +491,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddFinancials: TQuery
-    DatabaseName = 'PB'
+  object qryAddFinancials: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Rep_Financial'
       
@@ -541,8 +541,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelFinancials: TQuery
-    DatabaseName = 'PB'
+  object qryDelFinancials: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Rep_Financial'
       'where Rep = :Rep and Financial_Year = :Financial_Year')
@@ -560,8 +560,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckExists: TQuery
-    DatabaseName = 'PB'
+  object qryCheckExists: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Financial'
@@ -580,8 +580,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdFinancials: TQuery
-    DatabaseName = 'PB'
+  object qryUpdFinancials: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Rep_Financial'
       'set Commission_Type = :Commission_Type, '
@@ -642,8 +642,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
       OnClick = FillAcrossandDown1Click
     end
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from category'
@@ -651,8 +651,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
     Left = 96
     Top = 208
   end
-  object qryGetRepCategory: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep_Financial_Cat.Category,'
       '        Rep_Financial_Cat.Rep,'
@@ -684,8 +684,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelRepCats: TQuery
-    DatabaseName = 'pb'
+  object qryDelRepCats: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete from Rep_Financial_Cat'
       'where Rep = :Rep and '
@@ -704,8 +704,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddRepCats: TQuery
-    DatabaseName = 'pb'
+  object qryAddRepCats: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Insert into Rep_Financial_Cat'
       ' (Rep,'

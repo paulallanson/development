@@ -270,8 +270,8 @@ object frmPBLUJobReturns: TfrmPBLUJobReturns
         Visible = True
       end>
   end
-  object qryPart: TQuery
-    DatabaseName = 'pb'
+  object qryPart: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Part.Part,'
       '        Part.Part_Description,'

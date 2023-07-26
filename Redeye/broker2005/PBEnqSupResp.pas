@@ -111,7 +111,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, StdCtrls, Buttons, DB, DBTables, ExtCtrls, PBPOObjects;
+  Grids, StdCtrls, Buttons, DB, ExtCtrls, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqSupRespFrm = class(TForm)
@@ -131,16 +134,16 @@ type
     CancelBitBtn: TBitBtn;
     BitBtn3: TBitBtn;
     PUnitCombo: TComboBox;
-    PUnitSQL: TQuery;
+    PUnitSQL: TFDQuery;
     Bevel1: TBevel;
     Bevel2: TBevel;
     Label12: TLabel;
     ResponseList: TListBox;
     ResponseCodeList: TListBox;
-    UpEnqSuppSQL: TQuery;
-    UpEnqSuppQtySQL: TQuery;
+    UpEnqSuppSQL: TFDQuery;
+    UpEnqSuppQtySQL: TFDQuery;
     EnquiryLineGrid: TStringGrid;
-    EnqHeadSQL: TQuery;
+    EnqHeadSQL: TFDQuery;
     SelectedSuppliersGroup: TGroupBox;
     Label6: TLabel;
     SupplierCombo: TComboBox;
@@ -156,10 +159,10 @@ type
     SupplierMemo: TMemo;
     Bevel3: TBevel;
     AddChargesEdit: TMemo;
-    AddEnqSuppQtySQL: TQuery;
-    AddEnqQtySQL: TQuery;
-    UpEnqLineSQL: TQuery;
-    UpEnqHeadSQL: TQuery;
+    AddEnqSuppQtySQL: TFDQuery;
+    AddEnqQtySQL: TFDQuery;
+    UpEnqLineSQL: TFDQuery;
+    UpEnqHeadSQL: TFDQuery;
     SpeedButton3: TButton;
     SpeedButton2: TBitBtn;
     AddChargesGrid: TStringGrid;
@@ -168,7 +171,7 @@ type
     lblRunOnCost: TLabel;
     memRunOnCost: TMemo;
     btnDelete: TBitBtn;
-    DelEnqSuppQtySQL: TQuery;
+    DelEnqSuppQtySQL: TFDQuery;
     chkbxDecline: TCheckBox;
     procedure FormShow(Sender: TObject);
     procedure SupplierPricesGridDrawCell(Sender: TObject; vCol,

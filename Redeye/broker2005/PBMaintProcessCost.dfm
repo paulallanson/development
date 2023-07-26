@@ -308,8 +308,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
       Text = 'edtReference'
     end
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Price_Unit.Price_Unit,'
       '       Price_Unit.Description,'
@@ -324,8 +324,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
     Left = 240
     Top = 113
   end
-  object qryGetCost: TQuery
-    DatabaseName = 'PB'
+  object qryGetCost: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Cost.Process,'
       '        Process_Cost.Cost_Number,'
@@ -357,8 +357,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Process_Cost'
       '        (Customer,'
@@ -399,8 +399,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Process_Cost'
       'Set     Cost_Description = :Cost_Description,'
@@ -458,8 +458,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Process_Cost'
       'Where'
@@ -484,8 +484,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Product_Type'
       'Set     Description = :Description,'
@@ -531,8 +531,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Process_Cost'
       
@@ -557,8 +557,8 @@ object PBMaintProcessCostFrm: TPBMaintProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Cost_Number'
       'From Process_Cost'

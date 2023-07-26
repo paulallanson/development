@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, CCSCommon, PBPOObjects;
+  Buttons, StdCtrls, ExtCtrls, Grids, DBGrids, Db, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSStkMoveFrm = class(TForm)
@@ -31,7 +34,7 @@ type
     DateToButton: TSpeedButton;
     Label2: TLabel;
     DateToEdit: TEdit;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
     qryReportPurchase_Order: TFloatField;
     qryReportLine: TIntegerField;
@@ -62,17 +65,17 @@ type
     qryReportQty_In: TIntegerField;
     qryReportQty_Out: TIntegerField;
     qryReportDeliveryName: TStringField;
-    DummySQL: TQuery;
+    DummySQL: TFDQuery;
     Label3: TLabel;
     cbSort1: TComboBox;
     qryReportCustomers_Desc: TStringField;
     qryReportForm_Reference_ID: TStringField;
     qryReportPOrder: TStringField;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
-    CompSQL: TQuery;
-    CustomerSQL: TQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    CompSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
     Label4: TLabel;
     cbSort2: TComboBox;
     qryReportSelling_Price: TCurrencyField;

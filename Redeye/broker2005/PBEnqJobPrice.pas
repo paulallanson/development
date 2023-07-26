@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, DBCtrls, DBGrids, Grids, Buttons, ExtCtrls, Menus,
-  Mask, ComCtrls, printers;
+  DB, StdCtrls, DBCtrls, DBGrids, Grids, Buttons, ExtCtrls, Menus,
+  Mask, ComCtrls, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqJobPriceFrm = class(TForm)
     EnquiryLineListBox: TListBox;
-    SuppQtySQL: TQuery;
-    EnqQtySQL: TQuery;
+    SuppQtySQL: TFDQuery;
+    EnqQtySQL: TFDQuery;
     SelectPopUpMenu: TPopupMenu;
     mnuSelectThis1: TMenuItem;
-    UpEnqQtySQL: TQuery;
-    EnqHeadSQL: TQuery;
-    UpEnqLineSQL: TQuery;
-    UpEnqHeadSQL: TQuery;
-    UpSuppEnqQtySQL: TQuery;
-    PUnitSQL: TQuery;
+    UpEnqQtySQL: TFDQuery;
+    EnqHeadSQL: TFDQuery;
+    UpEnqLineSQL: TFDQuery;
+    UpEnqHeadSQL: TFDQuery;
+    UpSuppEnqQtySQL: TFDQuery;
+    PUnitSQL: TFDQuery;
     GroupBox1: TGroupBox;
     Label10: TLabel;
     Label11: TLabel;
@@ -67,13 +70,13 @@ type
     PricesPopUp: TPopupMenu;
     Applysamemarkup: TMenuItem;
     ApplysamePriceUnit: TMenuItem;
-    qrySupplier: TQuery;
+    qrySupplier: TFDQuery;
     Label3: TLabel;
     edtContact: TEdit;
-    ResetSuppEnqQtySQL: TQuery;
-    qryGetPriceUnit: TQuery;
-    qryPTPriceUnit: TQuery;
-    qryProdType: TQuery;
+    ResetSuppEnqQtySQL: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qryPTPriceUnit: TFDQuery;
+    qryProdType: TFDQuery;
     procedure EnquiryEditKeyPress(Sender: TObject; var Key: Char);
     procedure EnquiryLineListBoxClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

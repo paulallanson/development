@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon, QrExport, qrprntr, printers;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  PBPOObjects, CCSCommon, QrExport, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCustStateFrm = class(TForm)
     InvoiceReport: TQuickRep;
     SalesInvDataSource: TDataSource;
     CompDataSource: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -22,7 +25,7 @@ type
     QRBand1: TQRBand;
     lblAccountCode: TQRLabel;
     lblRundate: TQRLabel;
-    SalesInvSQL: TQuery;
+    SalesInvSQL: TFDQuery;
     QRDBText1: TQRDBText;
     GrpFootQRBand: TQRBand;
     lblInvoiceNo: TQRLabel;
@@ -32,14 +35,14 @@ type
     lblGoods: TQRLabel;
     lblPage: TQRLabel;
     QRLabel16: TQRLabel;
-    UpSalesInvSQL: TQuery;
+    UpSalesInvSQL: TFDQuery;
     lblDateRange: TQRLabel;
     lblTotal: TQRLabel;
-    UpCustSQL: TQuery;
+    UpCustSQL: TFDQuery;
     qrlblGoods: TQRLabel;
     qrlblVatTot: TQRLabel;
     qrlblTotal: TQRLabel;
-    OldSalesInvSQL: TQuery;
+    OldSalesInvSQL: TFDQuery;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;
     StringField1: TStringField;
@@ -82,16 +85,16 @@ type
     lblCustomerRef: TQRLabel;
     QRDBText2: TQRDBText;
     lblDescription: TQRLabel;
-    qryGetJB: TQuery;
-    qryGetPO: TQuery;
-    qryGetSO: TQuery;
-    qryJBLine: TQuery;
-    qryPOLine: TQuery;
-    qrySOLine: TQuery;
+    qryGetJB: TFDQuery;
+    qryGetPO: TFDQuery;
+    qryGetSO: TFDQuery;
+    qryJBLine: TFDQuery;
+    qryPOLine: TFDQuery;
+    qrySOLine: TFDQuery;
     QRDBText3: TQRDBText;
     lblDeliveryLocation: TQRLabel;
-    qryGetSODeliv: TQuery;
-    qryGetPOLineDeliv: TQuery;
+    qryGetSODeliv: TFDQuery;
+    qryGetPOLineDeliv: TFDQuery;
     procedure InvoiceReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;

@@ -285,8 +285,8 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       Value = 1
     end
   end
-  object qryWarehouse: TQuery
-    DatabaseName = 'PB'
+  object qryWarehouse: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Part_Store'
@@ -299,8 +299,8 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Left = 280
     Top = 8
   end
-  object qryBins: TQuery
-    DatabaseName = 'PB'
+  object qryBins: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Part_Store_bin'

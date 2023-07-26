@@ -127,19 +127,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmLookUpPOrd = class(TDataModule)
     DetsSRC: TDataSource;
     NullSRC: TDataSource;
-    SelectedSQL: TQuery;
-    GetContactSQL: TQuery;
-    GetDetsSQL: TQuery;
-    SelectedLineSQL: TQuery;
-    OlderDummySQL: TQuery;
-    GetCustSQL: TQuery;
-    OldDummySQL: TQuery;
+    SelectedSQL: TFDQuery;
+    GetContactSQL: TFDQuery;
+    GetDetsSQL: TFDQuery;
+    SelectedLineSQL: TFDQuery;
+    OlderDummySQL: TFDQuery;
+    GetCustSQL: TFDQuery;
+    OldDummySQL: TFDQuery;
     GetDetsSQLDate_Point: TDateTimeField;
     GetDetsSQLStatus_Description: TStringField;
     GetDetsSQLSupp_Name: TStringField;
@@ -161,13 +164,13 @@ type
     GetDetsSQLSelling_Unit: TStringField;
     GetDetsSQLPurch_Ord_Line_Status: TIntegerField;
     GetDetsSQLStatus_Descr: TStringField;
-    DummySQL: TQuery;
-    qryInvoice: TQuery;
+    DummySQL: TFDQuery;
+    qryInvoice: TFDQuery;
     GetDetsSQLProof_Revision: TStringField;
-    UpdSelectedLineSQL: TQuery;
+    UpdSelectedLineSQL: TFDQuery;
     GetDetsSQLOn_Hold: TStringField;
-    qryFindCustBranch: TQuery;
-    qryperiodEnd: TQuery;
+    qryFindCustBranch: TFDQuery;
+    qryperiodEnd: TFDQuery;
     GetDetsSQLGoods_Required: TDateTimeField;
     GetDetsSQLBranch_Name: TStringField;
     GetDetsSQLCustomer: TIntegerField;

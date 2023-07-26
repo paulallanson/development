@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, ComCtrls, Buttons, ExtCtrls, Db, DBTables, Grids,
-  DBGrids, ImgList, System.ImageList;
+  StdCtrls, DBCtrls, ComCtrls, Buttons, ExtCtrls, Db, Grids,
+  DBGrids, ImgList, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCapDet = Class
@@ -36,23 +39,23 @@ type
     DelCapSpeedButton: TSpeedButton;
     Label2: TLabel;
     Label3: TLabel;
-    GetLastIntSelSQL: TQuery;
-    AddIntSelSQL: TQuery;
-    DelIntSelsSQL: TQuery;
-    LoadIntSelSQL: TQuery;
-    GetIntSelSQL: TQuery;
-    GetUnSelProdTypsSQL: TQuery;
+    GetLastIntSelSQL: TFDQuery;
+    AddIntSelSQL: TFDQuery;
+    DelIntSelsSQL: TFDQuery;
+    LoadIntSelSQL: TFDQuery;
+    GetIntSelSQL: TFDQuery;
+    GetUnSelProdTypsSQL: TFDQuery;
     UnSelProdTypsDS: TDataSource;
     UnSelProdTypsDBGrid: TDBGrid;
     UnSelCapsDBGrid: TDBGrid;
-    GetUnSelCapsSQL: TQuery;
+    GetUnSelCapsSQL: TFDQuery;
     UnSelCapsDS: TDataSource;
-    DelIntSelSQL: TQuery;
-    GetDefCapSQL: TQuery;
+    DelIntSelSQL: TFDQuery;
+    GetDefCapSQL: TFDQuery;
     TreeViewImageList: TImageList;
-    AddSQL: TQuery;
-    DelSQL: TQuery;
-    GetNewCapSQL: TQuery;
+    AddSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    GetNewCapSQL: TFDQuery;
     function InitailiseGroupBox(TempTabSheet: TTabSheet): TGroupBox;
     function InitialiseIntSel(Sender: TObject): Integer;
     procedure DeleteIntSel(Sender: TObject);

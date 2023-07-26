@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, QuickRpt, QRCtrls, ExtCtrls;
+  Dialogs, DB, QuickRpt, QRCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPSalesHistoryLocFrm = class(TForm)
@@ -16,7 +19,7 @@ type
     qrlblDelivery: TQRLabel;
     QRSysData1: TQRSysData;
     gtQRLabel4: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrlblSelection: TQRLabel;
     qrbCustHeader: TQRGroup;
     QRDBText1: TQRDBText;
@@ -24,7 +27,7 @@ type
     QRSubDetail1: TQRSubDetail;
     QRSubDetail2: TQRSubDetail;
     dtsReport: TDataSource;
-    qryUsage: TQuery;
+    qryUsage: TFDQuery;
     QRDBText4: TQRDBText;
     qrpPartFooter: TQRBand;
     qrlblTotalUsage: TQRLabel;

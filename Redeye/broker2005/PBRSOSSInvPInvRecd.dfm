@@ -221,8 +221,8 @@ object PBRSOSSInvPInvRecdFrm: TPBRSOSSInvPInvRecdFrm
     Left = 576
     Top = 112
   end
-  object qryPOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purch_ord_Line_status.purch_ord_Line_status as Status,'
       'purch_ord_Line_status.Description '

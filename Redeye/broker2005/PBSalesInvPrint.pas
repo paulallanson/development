@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, PBPOObjects, DB, DBTables, PBRPSalesInv, QrExport,
-  IniFiles;
+  StdCtrls, Buttons, ExtCtrls, PBPOObjects, DB, PBRPSalesInv, QrExport,
+  IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBSalesInvPrintFrm = class(TForm)
@@ -18,19 +21,19 @@ type
     CloseBitBtn: TBitBtn;
     Updatechk: TCheckBox;
     EmailBitBtn: TBitBtn;
-    qryGetCustomers: TQuery;
-    GetInvCustSQL: TQuery;
-    GetCreditCustSQL: TQuery;
+    qryGetCustomers: TFDQuery;
+    GetInvCustSQL: TFDQuery;
+    GetCreditCustSQL: TFDQuery;
     SelectLst: TListBox;
-    InvHeadSQL: TQuery;
-    CreditHeadSQL: TQuery;
-    qryInvEmail: TQuery;
-    qryCreditEmail: TQuery;
-    InvPrintSQL: TQuery;
-    qryCheckInvoice: TQuery;
+    InvHeadSQL: TFDQuery;
+    CreditHeadSQL: TFDQuery;
+    qryInvEmail: TFDQuery;
+    qryCreditEmail: TFDQuery;
+    InvPrintSQL: TFDQuery;
+    qryCheckInvoice: TFDQuery;
     chkbxPrintLogo: TCheckBox;
     chkbxShowZeroValues: TCheckBox;
-    InvLineSQL: TQuery;
+    InvLineSQL: TFDQuery;
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure PreviewBitBtnClick(Sender: TObject);

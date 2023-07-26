@@ -1850,12 +1850,12 @@ object PBRPQuoteProductionFrm: TPBRPQuoteProductionFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 47
     Top = 8
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT'
       '  Quote.Quote,'

@@ -223,8 +223,8 @@ object frmpbluContacts: TfrmpbluContacts
     Left = 336
     Top = 80
   end
-  object qryCContacts: TQuery
-    DatabaseName = 'PB'
+  object qryCContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Contact_no,'
       '        Customer_Contact.Name as Contact_Name,'
@@ -269,8 +269,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qrySContacts: TQuery
-    DatabaseName = 'PB'
+  object qrySContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Supplier_BranchContacts.Contact_no,'
       '        Supplier_BranchContacts.Name as Contact_Name,'
@@ -325,8 +325,8 @@ object frmpbluContacts: TfrmpbluContacts
     Left = 200
     Top = 152
   end
-  object qryGetCContactDetails: TQuery
-    DatabaseName = 'PB'
+  object qryGetCContactDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer, Branch_no, Contact_no, enquiry as Order_no'
       'from Enquiry'
@@ -422,8 +422,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qryGetSContactDetails: TQuery
-    DatabaseName = 'PB'
+  object qryGetSContactDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier, Branch_no, Contact_no, enquiry as Order_no'
       'from Supplier_Enquiry'
@@ -474,8 +474,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qrySetCContactInactive: TQuery
-    DatabaseName = 'PB'
+  object qrySetCContactInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set inactive = '#39'Y'#39
@@ -502,8 +502,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qrySetSContactInactive: TQuery
-    DatabaseName = 'PB'
+  object qrySetSContactInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_BranchContacts'
       'set inactive = '#39'Y'#39
@@ -530,8 +530,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qryAddContact: TQuery
-    DatabaseName = 'PB'
+  object qryAddContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Contact'
       '        (Customer,'
@@ -642,8 +642,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qrySetCContactActive: TQuery
-    DatabaseName = 'PB'
+  object qrySetCContactActive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set inactive = '#39'N'#39
@@ -670,8 +670,8 @@ object frmpbluContacts: TfrmpbluContacts
         ParamType = ptUnknown
       end>
   end
-  object qryCheckName: TQuery
-    DatabaseName = 'PB'
+  object qryCheckName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Contact_no'
       'FROM Customer_Contact'

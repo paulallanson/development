@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls, qrprntr, printers;
+  Dialogs, ExtCtrls, QuickRpt, DB, QRCtrls, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPPickingNoteFrm = class(TForm)
@@ -55,32 +58,32 @@ type
     QRDBText2: TQRDBText;
     QRLabel19: TQRLabel;
     QRShape3: TQRShape;
-    qryReport: TQuery;
-    GetCustSQL: TQuery;
-    AdhocSQL: TQuery;
-    qryGetProduction: TQuery;
-    qryGetJobBag: TQuery;
-    GetAccountSQL: TQuery;
+    qryReport: TFDQuery;
+    GetCustSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    qryGetProduction: TFDQuery;
+    qryGetJobBag: TFDQuery;
+    GetAccountSQL: TFDQuery;
     AddressSRC: TDataSource;
-    GetCustHOSQL: TQuery;
-    GetDelivNarrSQL: TQuery;
-    AddDelivDetSQL: TQuery;
-    AddDelivLineDetSQL: TQuery;
-    UpdSOHeadSQL: TQuery;
-    CustSQL: TQuery;
-    GetDelivCountSQL: TQuery;
+    GetCustHOSQL: TFDQuery;
+    GetDelivNarrSQL: TFDQuery;
+    AddDelivDetSQL: TFDQuery;
+    AddDelivLineDetSQL: TFDQuery;
+    UpdSOHeadSQL: TFDQuery;
+    CustSQL: TFDQuery;
+    GetDelivCountSQL: TFDQuery;
     gtQRDBText1: TQRDBText;
     gtQRDBText2: TQRDBText;
-    qryGetSerialNos: TQuery;
-    CheckDelivSQL: TQuery;
-    qryGetJobBagReq: TQuery;
+    qryGetSerialNos: TFDQuery;
+    CheckDelivSQL: TFDQuery;
+    qryGetJobBagReq: TFDQuery;
     gtQRLabel2: TQRLabel;
     qrlblCompany: TQRLabel;
-    qryGetFSCClaim: TQuery;
+    qryGetFSCClaim: TFDQuery;
     chldbndFSCClaim: TQRChildBand;
     gtlblFSCClaim: TQRLabel;
     gtQRMemo1: TQRMemo;
-    qryGetDelivery: TQuery;
+    qryGetDelivery: TFDQuery;
     procedure qrLinedetailsBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;
@@ -96,7 +99,7 @@ type
   private
     sLastProduct: string;
     DeliveryNo: Integer;
-    procedure BuildDeliveryNotes(aQuery: TQuery;
+    procedure BuildDeliveryNotes(aQuery: TFDQuery;
       const iNarrative: integer);
     function GetJobBagNumber(tempCode: integer): string;
     function GetNextDeliveryNo(TempSoNo: integer): integer;
@@ -284,7 +287,7 @@ begin
   end;
 end;
 
-procedure TSTRPPickingNoteFrm.BuildDeliveryNotes(aQuery: TQuery;
+procedure TSTRPPickingNoteFrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative: integer);
 var
   aStr : string;

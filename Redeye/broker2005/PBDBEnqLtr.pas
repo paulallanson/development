@@ -322,7 +322,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSDataBroker, Db, DBTables, CCSPrint, LetterDM, PDLetter;
+  CCSDataBroker, Db, CCSPrint, LetterDM, PDLetter,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdbEnqLtr = class(TDataBroker)
@@ -330,23 +333,23 @@ type
     EnquiriesSRC: TDataSource;
     PartsSRC: TDataSource;
     AddDetailsSRC: TDataSource;
-    GetRngEnqsSQL: TQuery;
-    UpdStatusSQL: TQuery;
-    UpdHeadStatusSQL: TQuery;
-    UpdLineStatusSQL: TQuery;
-    GetUPSuppEnqSQL: TQuery;
-    GetUPEnqLineSQL: TQuery;
-    GetQtysSQL: TQuery;
-    GetNotesSQL: TQuery;
-    GetPartsSQL: TQuery;
-    GetAddDetailsSQL: TQuery;
-    GetQuestionsSQL: TQuery;
-    GetSuppContactSQL: TQuery;
-    GetEnquiriesSQL: TQuery;
-    GetOptionsSQL: TQuery;
-    qrySelEnqStatus: TQuery;
-    qrySelEnqLineStatus: TQuery;
-    GetOperatorSQL: TQuery;
+    GetRngEnqsSQL: TFDQuery;
+    UpdStatusSQL: TFDQuery;
+    UpdHeadStatusSQL: TFDQuery;
+    UpdLineStatusSQL: TFDQuery;
+    GetUPSuppEnqSQL: TFDQuery;
+    GetUPEnqLineSQL: TFDQuery;
+    GetQtysSQL: TFDQuery;
+    GetNotesSQL: TFDQuery;
+    GetPartsSQL: TFDQuery;
+    GetAddDetailsSQL: TFDQuery;
+    GetQuestionsSQL: TFDQuery;
+    GetSuppContactSQL: TFDQuery;
+    GetEnquiriesSQL: TFDQuery;
+    GetOptionsSQL: TFDQuery;
+    qrySelEnqStatus: TFDQuery;
+    qrySelEnqLineStatus: TFDQuery;
+    GetOperatorSQL: TFDQuery;
   private
     FOnlyMine: Boolean;
     FPreview: Boolean;

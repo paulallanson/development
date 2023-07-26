@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPrint;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPSordFrm = class(TForm)
@@ -23,8 +26,8 @@ type
     PartQRLabel: TQRLabel;
     DescQRLabel: TQRLabel;
     OrdQtyQRLabel: TQRLabel;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
     PackqtyQRLabel: TQRLabel;
     SPhoneQRLabel: TQRLabel;
     SFaxQRLabel: TQRLabel;
@@ -41,14 +44,14 @@ type
     PackSizeQRLabel: TQRLabel;
     QRLabel12: TQRLabel;
     QRLblValue: TQRLabel;
-    GetSOAddQuery: TQuery;
+    GetSOAddQuery: TFDQuery;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     ReportTitleQRLabel: TQRLabel;
     CustomerAddmemo: TQRMemo;
-    CustSQL: TQuery;
+    CustSQL: TFDQuery;
     AddressSRC: TDataSource;
-    ExtChrgsQuery: TQuery;
+    ExtChrgsQuery: TFDQuery;
     AddChargesBand: TQRSubDetail;
     ExtChrgVatQRlbl: TQRLabel;
     QRLblDetails: TQRLabel;
@@ -70,7 +73,7 @@ type
     QRLblRef: TQRLabel;
     QRLblWho: TQRLabel;
     QRLblCntct: TQRLabel;
-    GetContactSQL: TQuery;
+    GetContactSQL: TFDQuery;
     SOrdLineNoQRLabel: TQRLabel;
     QRBand1: TQRBand;
     QRMemoAddress: TQRMemo;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, StdCtrls, DBGrids, Buttons, ExtCtrls, DB, DBTables, Inifiles, STPickObject;
+  Dialogs, Grids, StdCtrls, DBGrids, Buttons, ExtCtrls, DB, Inifiles, STPickObject,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSPickingNoteFrm = class(TForm)
@@ -19,7 +22,7 @@ type
     SalesOrderlbl: TLabel;
     Label6: TLabel;
     OrderDatelbl: TLabel;
-    qrySOAlloc: TQuery;
+    qrySOAlloc: TFDQuery;
     dtsSOAlloc: TDataSource;
     Label2: TLabel;
     cmbPickingNote: TComboBox;
@@ -27,15 +30,15 @@ type
     Label1: TLabel;
     edtPickingDate: TEdit;
     CancelBitBtn: TBitBtn;
-    qryDelPick: TQuery;
-    qryAddPick: TQuery;
-    qryGetNext: TQuery;
+    qryDelPick: TFDQuery;
+    qryAddPick: TFDQuery;
+    qryGetNext: TFDQuery;
     btnDate: TSpeedButton;
-    qryPickNotes: TQuery;
-    qrySOPicking: TQuery;
+    qryPickNotes: TFDQuery;
+    qrySOPicking: TFDQuery;
     lblPickingConfirmed: TLabel;
     chkbxPrintCopy: TCheckBox;
-    qryProdLocation: TQuery;
+    qryProdLocation: TFDQuery;
     chkbxAutoConfirm: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);

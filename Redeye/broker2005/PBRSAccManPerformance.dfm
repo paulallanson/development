@@ -279,8 +279,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Height = 19
     Panels = <>
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Operator.Operator,'
       '        Operator.Name as Operator_Name,'
@@ -436,8 +436,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Left = 848
     Top = 8
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Operator.Operator,'
       '        Operator.Name as Operator_Name,'
@@ -592,8 +592,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         ParamType = ptUnknown
       end>
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 5'
       '        Financial_Year,'

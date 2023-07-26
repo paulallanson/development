@@ -1625,8 +1625,8 @@ object STStkValRepFrm: TSTStkValRepFrm
     Left = 687
     Top = 77
   end
-  object GetStoreStkQuery: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStkQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select'
       
@@ -1683,8 +1683,8 @@ object STStkValRepFrm: TSTStkValRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCountStkQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCountStkQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Stock_Take.Part, Stock_Take.Store_Cost, Stock_Take.Stock_' +
@@ -1734,13 +1734,13 @@ object STStkValRepFrm: TSTStkValRepFrm
     Left = 374
     Top = 78
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     Left = 251
     Top = 43
   end
-  object GetTopRepSQL: TQuery
-    DatabaseName = 'PB'
+  object GetTopRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Rep.Name as Rep_Name'
       
@@ -1777,8 +1777,8 @@ object STStkValRepFrm: TSTStkValRepFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOs: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Part_movement'
       'from part_movement'
@@ -1795,8 +1795,8 @@ object STStkValRepFrm: TSTStkValRepFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchOrds: TQuery
-    DatabaseName = 'PB'
+  object qryGetPurchOrds: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Purch_Ord'
       'from Purch_Ord_Line'

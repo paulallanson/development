@@ -33,32 +33,35 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, PBEnqObjects, PBPOObjects, PBDocObjects;
+  DB, PBEnqObjects, PBPOObjects, PBDocObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqDataModFrm = class(TDataModule)
-    EnqHeadSQL: TQuery;
-    EnqLineSQL: TQuery;
+    EnqHeadSQL: TFDQuery;
+    EnqLineSQL: TFDQuery;
     EnqHeadSRC: TDataSource;
-    EnqLineQtySQL: TQuery;
-    EnqLineQSQL: TQuery;
-    EnqLineAddSQL: TQuery;
-    EnqLinePartSQL: TQuery;
-    EnqLineCapSQL: TQuery;
+    EnqLineQtySQL: TFDQuery;
+    EnqLineQSQL: TFDQuery;
+    EnqLineAddSQL: TFDQuery;
+    EnqLinePartSQL: TFDQuery;
+    EnqLineCapSQL: TFDQuery;
     EnqLineSRC: TDataSource;
     EnqLineQtySRC: TDataSource;
     EnqLineQSRC: TDataSource;
     EnqLineAddSRC: TDataSource;
     EnqLinePartSRC: TDataSource;
     EnqLineCapSRC: TDataSource;
-    EnqLineSuppSQL: TQuery;
+    EnqLineSuppSQL: TFDQuery;
     EnqLineSuppSRC: TDataSource;
-    OldEnqLineSQL: TQuery;
-    EnqLineOptSQL: TQuery;
+    OldEnqLineSQL: TFDQuery;
+    EnqLineOptSQL: TFDQuery;
     DataSource1: TDataSource;
-    qryDelEnqLineDocs: TQuery;
-    qryInsEnqLineDoc: TQuery;
-    qrySelEnqLineDocs: TQuery;
+    qryDelEnqLineDocs: TFDQuery;
+    qryInsEnqLineDoc: TFDQuery;
+    qrySelEnqLineDocs: TFDQuery;
     procedure PBEnqDataModFrmCreate(Sender: TObject);
     procedure PBEnqDataModFrmDestroy(Sender: TObject);
   private

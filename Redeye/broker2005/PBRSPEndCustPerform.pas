@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DateSelV5, PBPOObjects, Db, DBTables, Printers, CCSPrint,
-  DBCtrls, ExtCtrls, OleCtnrs, ComCtrls;
+  StdCtrls, Buttons, DateSelV5, PBPOObjects, Db, Printers, CCSPrint,
+  DBCtrls, ExtCtrls, OleCtnrs, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPEndCustPerformFrm = class(TForm)
-    qrySalesProfit: TQuery;
+    qrySalesProfit: TFDQuery;
     pnlButtons: TPanel;
     btnPreview: TBitBtn;
     btnPrint: TBitBtn;
@@ -20,9 +23,9 @@ type
     btnLUCust: TButton;
     Label1: TLabel;
     dblkpFY: TDBLookupComboBox;
-    qryFY: TQuery;
+    qryFY: TFDQuery;
     dtsFY: TDataSource;
-    qryGetFY: TQuery;
+    qryGetFY: TFDQuery;
     btnExcel: TBitBtn;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;

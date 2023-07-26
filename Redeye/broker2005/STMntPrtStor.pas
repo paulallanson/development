@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMntPrtStorFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    UpdSQL: TQuery;
+    UpdSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     NameEdit: TEdit;
     Label5: TLabel;
-    AddSQL: TQuery;
-    DelSQL: TQuery;
-    GetLastSQL: TQuery;
+    AddSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
     Label1: TLabel;
     StorTypDBLookupComboBox: TDBLookupComboBox;
-    GetStorTypsQuery: TQuery;
+    GetStorTypsQuery: TFDQuery;
     StorTypsDataSource: TDataSource;
     BinsCheckBox: TCheckBox;
     LotsCheckBox: TCheckBox;

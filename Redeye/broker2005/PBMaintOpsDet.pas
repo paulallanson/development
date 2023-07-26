@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls, DBCtrls, DB, DBTables, Menus, ExtCtrls;
+  StdCtrls, Buttons, ComCtrls, DBCtrls, DB, Menus, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintOpsDetFrm = class(TForm)
@@ -14,22 +17,22 @@ type
     LoginEdit: TEdit;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetChecksSQL: TQuery;
+    GetChecksSQL: TFDQuery;
     DelLabel: TLabel;
-    CheckExistsSQL: TQuery;
-    GetLastOpSQL: TQuery;
-    AddOpSQL: TQuery;
-    UpdOpSQL: TQuery;
-    DelOpChecksSQL: TQuery;
-    DelOpSQL: TQuery;
-    AddCheckSQL: TQuery;
-    qryZero: TQuery;
-    GetLoginDetsSQL: TQuery;
-    ChangePassSQL: TQuery;
+    CheckExistsSQL: TFDQuery;
+    GetLastOpSQL: TFDQuery;
+    AddOpSQL: TFDQuery;
+    UpdOpSQL: TFDQuery;
+    DelOpChecksSQL: TFDQuery;
+    DelOpSQL: TFDQuery;
+    AddCheckSQL: TFDQuery;
+    qryZero: TFDQuery;
+    GetLoginDetsSQL: TFDQuery;
+    ChangePassSQL: TFDQuery;
     Label4: TLabel;
     RepComboBox: TDBLookupComboBox;
     RepNASpeedButton: TSpeedButton;
-    GetRepsSQL: TQuery;
+    GetRepsSQL: TFDQuery;
     RepsDS: TDataSource;
     EmailEdit: TEdit;
     Label6: TLabel;
@@ -52,7 +55,7 @@ type
     rdgrpAuthorise: TRadioGroup;
     Label7: TLabel;
     ShortNameEdit: TEdit;
-    CheckShortNameExistsSQL: TQuery;
+    CheckShortNameExistsSQL: TFDQuery;
     tbshtEnqs: TTabSheet;
     chkbxCannotViewPrices: TCheckBox;
     chkbxCanConvert: TCheckBox;
@@ -76,9 +79,9 @@ type
     btnRevenueCentre: TBitBtn;
     BitBtn1: TBitBtn;
     lstbxRevenueCode: TListBox;
-    qryRevCodes: TQuery;
-    qryDelRevCodes: TQuery;
-    qryAddRevCodes: TQuery;
+    qryRevCodes: TFDQuery;
+    qryDelRevCodes: TFDQuery;
+    qryAddRevCodes: TFDQuery;
     Label12: TLabel;
     memAuthLimit: TMemo;
     TabSheet1: TTabSheet;

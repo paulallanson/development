@@ -173,8 +173,8 @@ object STLUCourierServFrm: TSTLUCourierServFrm
     Left = 240
     Top = 72
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From courier_service'

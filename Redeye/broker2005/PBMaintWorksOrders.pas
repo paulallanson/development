@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, Grids, Buttons, DBCtrls, ExtCtrls, pbWOrdersDM,
-  DB, DBTables, Spin, PBJobBagDM, Menus;
+  DB, Spin, PBJobBagDM, Menus;
 
 type
   TfrmPBMaintWorksOrders = class(TForm)
@@ -261,7 +261,10 @@ uses pbMainMenu, CCSCommon, DateSelV5, PBLUCust, PBLUCConta,
   PBLUProductionType, PBLUPreProduction, PBNarrativeDM, pbDatabase,
   PBMaintWOrderEvents, PBMaintWOrderDelivs, PBMaintJobBagDets, PBLUCRep,
   PBLUAccountManager, PBMaintJobBag, PBImages, PBDBMemo, PBLUOps,
-  pbLUCompBranch, PBLUAdHoc;
+  pbLUCompBranch, PBLUAdHoc,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 const
 
@@ -571,7 +574,7 @@ var
   myBitBtn: TBitBtn;
   myRadioGroup: TRadiogroup;
   myGroupBox: TGroupBox;
-  myQuery: TQuery;
+  myQuery: TFDQuery;
   myDataSource: TDataSource;
   myDBLookupCombo: TDBLookupComboBox;
 begin
@@ -724,11 +727,11 @@ begin
       visible := (WOrder.DataModule.ShowProcessPaperSize(aProcess.Process) = 'Y');
     end;
 
-  myQuery := TQuery.Create(Self);
+  myQuery := TFDQuery.Create(Self);
   with myQuery do
     begin
       Name := 'qryPPSize'+inttostr(aProcess.Process);
-      DatabaseName := WOrder.DataModule.qryProcessPaperSize.DatabaseName;
+      ConnectionName := WOrder.DataModule.qryProcessPaperSize.ConnectionName;
       SQL := WOrder.DataModule.qryProcessPaperSize.SQL;
       close;
       parambyname('Works_Order').asinteger := WOrder.dbKey;
@@ -922,11 +925,11 @@ begin
           OnKeyPress := CheckKeyisNumber;
         end;
 
-      myQuery := TQuery.Create(Self);
+      myQuery := TFDQuery.Create(Self);
       with myQuery do
         begin
           Name := 'qryWCGroup'+inttostr(aProcess.Process);
-          DatabaseName := WOrder.DataModule.qryWCGroup.DatabaseName;
+          ConnectionName := WOrder.DataModule.qryWCGroup.ConnectionName;
           SQL := WOrder.DataModule.qryWCGroup.SQL;
           close;
 //          parambyname('Process').asinteger := aProcess.Process;
@@ -957,11 +960,11 @@ begin
           OnClick := dblkpMachineGroupClick;
         end;
 
-      myQuery := TQuery.Create(Self);
+      myQuery := TFDQuery.Create(Self);
       with myQuery do
         begin
           Name := 'qryWC'+inttostr(aProcess.Process);
-          DatabaseName := WOrder.DataModule.qryWC.DatabaseName;
+          ConnectionName := WOrder.DataModule.qryWC.ConnectionName;
           SQL := WOrder.DataModule.qryWC.SQL;
         end;
 
@@ -1041,7 +1044,7 @@ begin
       width := memProcessNotes.Width;
       lines.Clear;
       tabOrder := memProcessNotes.TabOrder;
-      text := aProcess.Narrative.Data;
+      text := aProcess.Narrative.DataInfo;
     end;
 
 {------------------------------------------------}
@@ -1876,7 +1879,7 @@ begin
     begin
       {Get the process notes}
       tempMem := (findcomponent('mem'+inttostr(WOrder.Processes[icount].process)) as TMemo);
-      WOrder.Processes[icount].Narrative.Data := tempMem.Text;
+      WOrder.Processes[icount].Narrative.DataInfo := tempMem.Text;
       if WOrder.dbKey = 0 then
         Worder.Processes[icount].Narrative.dbkey := 0;
       {Get the process Target Receipt dates}
@@ -2025,7 +2028,7 @@ begin
   try
     inx := WOrder.Events.IndexOf(inx);
     WOEvent := WOrder.Events[inx];
-    memEventNotes.Text := WOEvent.Narrative.Data;
+    memEventNotes.Text := WOEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;
@@ -2729,8 +2732,8 @@ var
 begin
   for i := pred(self.componentcount) downto 0 do
     begin
-      if Components[i] is TQuery then
-        TQuery(Components[i]).free
+      if Components[i] is TFDQuery then
+        TFDQuery(Components[i]).free
       else
       if Components[i] is TDataSource then
         TDataSource(Components[i]).free
@@ -2773,9 +2776,9 @@ end;
 
 procedure TfrmPBMaintWorksOrders.GetWorkCentres(tmpProcess: TWOProcess);
 var
-  myQuery: TQuery;
+  myQuery: TFDQuery;
 begin
-  myQuery := (findcomponent('qryWC'+inttostr(tmpProcess.process)) as TQuery);
+  myQuery := (findcomponent('qryWC'+inttostr(tmpProcess.process)) as TFDQuery);
   with myQuery do
     begin
       close;

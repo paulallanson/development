@@ -4,8 +4,8 @@ object DMStoreStock: TDMStoreStock
   Top = 144
   Height = 480
   Width = 696
-  object qrySelStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qrySelStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from store_stock '
       'where store_stock = :store_stock;')
@@ -18,8 +18,8 @@ object DMStoreStock: TDMStoreStock
         ParamType = ptUnknown
       end>
   end
-  object qryUpdStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryUpdStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update store_stock'
       'set Quantity_Allocated = :Quantity_Allocated,'
@@ -104,8 +104,8 @@ object DMStoreStock: TDMStoreStock
         ParamType = ptUnknown
       end>
   end
-  object qrySelPartStore: TQuery
-    DatabaseName = 'PB'
+  object qrySelPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from part_store '
       'where part_store = :part_store;')

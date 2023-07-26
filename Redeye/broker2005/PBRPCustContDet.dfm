@@ -1195,8 +1195,8 @@ object PBRPCustContDetFrm: TPBRPCustContDetFrm
       end
     end
   end
-  object GetDetsQry: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Name AS Contact_Name,'
       '        Customer_Contact.Email,'

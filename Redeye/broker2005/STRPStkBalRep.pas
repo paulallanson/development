@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Db, DBTables, Qrctrls, QrExport;
+  ExtCtrls, QuickRpt, Db, Qrctrls, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPStkBalRepfrm = class(TForm)
     qrStkBal: TQuickRep;
-    qryStkBalRep: TQuery;
+    qryStkBalRep: TFDQuery;
     QRBand: TQRBand;
     TitleQRLabel: TQRLabel;
     DateQRLabel: TQRLabel;
@@ -46,10 +49,10 @@ type
     QRLabel8: TQRLabel;
     QRDBText4: TQRDBText;
     QRLabel9: TQRLabel;
-    GetTopRepSQL: TQuery;
-    Query1: TQuery;
+    GetTopRepSQL: TFDQuery;
+    Query1: TFDQuery;
     QRMemoRepName: TQRMemo;
-    GetSerNosSQL: TQuery;
+    GetSerNosSQL: TFDQuery;
     QRSubDtlSerNos: TQRSubDetail;
     lblSerialNos: TQRLabel;
     lblSerialNoRange: TQRLabel;

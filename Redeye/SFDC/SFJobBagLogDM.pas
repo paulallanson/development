@@ -3,27 +3,30 @@ unit SFJobBagLogDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables;
+  SysUtils, Classes, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlJobBagLog = class(TDataModule)
-    qryProcessGrp: TQuery;
+    qryProcessGrp: TFDQuery;
     dtsProcessGroup: TDataSource;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
-    qryWorkCentre: TQuery;
+    qryWorkCentre: TFDQuery;
     dtsWorkCentre: TDataSource;
-    qryProcessPaper: TQuery;
+    qryProcessPaper: TFDQuery;
     dtsProcessPaper: TDataSource;
-    qryGetJobBag: TQuery;
-    DelSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    GetLastSQL: TQuery;
-    qryZero: TQuery;
-    qryJobLogGrid: TQuery;
+    qryGetJobBag: TFDQuery;
+    DelSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    qryZero: TFDQuery;
+    qryJobLogGrid: TFDQuery;
     dtsJobLogGrid: TDataSource;
-    oldqryJobLogBase: TQuery;
+    oldqryJobLogBase: TFDQuery;
     qryJobLogGridJob_Bag_Time_Log: TIntegerField;
     qryJobLogGridDate_Entered: TDateTimeField;
     qryJobLogGridJob_Bag: TIntegerField;
@@ -52,35 +55,35 @@ type
     qryJobLogGridLabour_Hours: TFloatField;
     qryJobLogGridMachine_Hours: TFloatField;
     qryJobLogGridTeam_Count: TIntegerField;
-    qryWCOperators: TQuery;
+    qryWCOperators: TFDQuery;
     dtsWCOperators: TDataSource;
-    qryGetProcessGrp: TQuery;
-    qryProcessOps: TQuery;
+    qryGetProcessGrp: TFDQuery;
+    qryProcessOps: TFDQuery;
     dtsProcessOps: TDataSource;
     qryJobLogGridWork_Centre_Operator: TStringField;
     qryJobLogGridOperation_Description: TStringField;
     qryJobLogGridLabour_Overtime_Hours: TFloatField;
-    qryGetEmployee: TQuery;
-    qryGetJobLog: TQuery;
-    qryProcessGrpWC: TQuery;
+    qryGetEmployee: TFDQuery;
+    qryGetJobLog: TFDQuery;
+    qryProcessGrpWC: TFDQuery;
     dtsProcessGrpWC: TDataSource;
-    qryGetJobTimeLog: TQuery;
-    qryDelMulti: TQuery;
-    qryWCOperatorsBase: TQuery;
-    qryOldJobLogBase: TQuery;
-    qryOldGetJobLog: TQuery;
-    qryGetNonJobTimeLog: TQuery;
+    qryGetJobTimeLog: TFDQuery;
+    qryDelMulti: TFDQuery;
+    qryWCOperatorsBase: TFDQuery;
+    qryOldJobLogBase: TFDQuery;
+    qryOldGetJobLog: TFDQuery;
+    qryGetNonJobTimeLog: TFDQuery;
     qryJobLogGridActivity: TStringField;
-    qryActivities: TQuery;
-    qryGetEmployeeTime: TQuery;
-    qryDelJobBagLog: TQuery;
-    qryGetActivity: TQuery;
-    qryJobLogBase: TQuery;
-    qryGetWorkCentre: TQuery;
-    qryGetWorkCentrebyName: TQuery;
-    qryGetProcess: TQuery;
-    qryGetWorkCentrebyShortName: TQuery;
-    qryWCOperator: TQuery;
+    qryActivities: TFDQuery;
+    qryGetEmployeeTime: TFDQuery;
+    qryDelJobBagLog: TFDQuery;
+    qryGetActivity: TFDQuery;
+    qryJobLogBase: TFDQuery;
+    qryGetWorkCentre: TFDQuery;
+    qryGetWorkCentrebyName: TFDQuery;
+    qryGetProcess: TFDQuery;
+    qryGetWorkCentrebyShortName: TFDQuery;
+    qryWCOperator: TFDQuery;
   private
     function GetHeaderCount: integer;
     procedure GetTotalHours;

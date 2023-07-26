@@ -176,8 +176,8 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
     TabOrder = 6
     Visible = False
   end
-  object qryWorkCentres: TQuery
-    DatabaseName = 'pb'
+  object qryWorkCentres: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre.*'
       'from Work_Centre')
@@ -189,8 +189,8 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Work_Centre_WC_Group'
       '(Work_Centre,'
@@ -221,8 +221,8 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre.*'
       'from Work_Centre'
@@ -230,8 +230,8 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
     Left = 328
     Top = 120
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre_WC_Group.*, Work_Centre_Name'
       'from Work_Centre_WC_Group, Work_Centre'
@@ -246,8 +246,8 @@ object PBMaintWorkCentreGroupWCFrm: TPBMaintWorkCentreGroupWCFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Work_Centre_WC_Group'
       'where Work_Centre_Group = :Work_Centre_Group')

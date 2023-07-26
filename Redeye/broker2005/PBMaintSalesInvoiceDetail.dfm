@@ -212,9 +212,9 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
         Visible = True
       end>
   end
-  object qrySIAllDetails: TQuery
+  object qrySIAllDetails: TFDQuery
     OnCalcFields = qrySIAllDetailsCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_order.Sales_Order,'
       '  sales_order_line.sales_order_line_no,'
@@ -410,8 +410,8 @@ object PBMaintSalesInvoiceDetailFrm: TPBMaintSalesInvoiceDetailFrm
     Left = 232
     Top = 80
   end
-  object qryAdhoc: TQuery
-    DatabaseName = 'PB'
+  object qryAdhoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name'
       'from Ad_hoc_address'

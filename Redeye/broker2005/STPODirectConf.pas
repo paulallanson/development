@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, Db, DBTables, STPAcks;
+  Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, Db, STPAcks,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPODirectConfFrm = class(TForm)
@@ -20,18 +23,18 @@ type
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
     grdDetails: TStringGrid;
-    qryGetDtls: TQuery;
+    qryGetDtls: TFDQuery;
     lblPONumber: TLabel;
     Label5: TLabel;
     lblSupplier: TLabel;
     Label6: TLabel;
     lblSalesOrder: TLabel;
-    qryGetHead: TQuery;
-    UpdPOStatusSQL: TQuery;
-    CheckPOStatusSQL: TQuery;
-    UpdPOLineSQL: TQuery;
+    qryGetHead: TFDQuery;
+    UpdPOStatusSQL: TFDQuery;
+    CheckPOStatusSQL: TFDQuery;
+    UpdPOLineSQL: TFDQuery;
     BitBtnAdd: TBitBtn;
-    qryInsPOLine: TQuery;
+    qryInsPOLine: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

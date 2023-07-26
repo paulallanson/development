@@ -73,7 +73,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids;
+  ExtCtrls, DB, StdCtrls, Buttons, Grids, DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUSpecInsFrm = class(TForm)
@@ -85,7 +88,7 @@ type
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     SearchTimer: TTimer;
     SelectBitBtn: TBitBtn;
     procedure FormActivate(Sender: TObject);

@@ -4,8 +4,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
   Top = 110
   Height = 613
   Width = 696
-  object qrySuppliers: TQuery
-    DatabaseName = 'PB'
+  object qrySuppliers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Supplier.Supplier,'
       '        Supplier.Name,'
@@ -63,8 +63,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 80
     Top = 16
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier'
       'Set     Name = :Name,'
@@ -126,8 +126,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 24
     Top = 64
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier'
       'From Supplier'
@@ -141,8 +141,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptInput
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Supplier'
       'Where'
@@ -156,8 +156,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object GetIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Intrastat_Id, Intrastat_Id_Descr'
       'from Intrastat_Id'
@@ -165,8 +165,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 512
     Top = 76
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Supplier(Supplier,Name,Supplier_ID)'
       
@@ -182,8 +182,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptInput
       end>
   end
-  object AddBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object AddBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Supplier_Branch'
       '(Supplier,Branch_No,Name,Building_No_Name,Street,'
@@ -204,8 +204,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 272
     Top = 92
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Company')
@@ -217,8 +217,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 576
     Top = 76
   end
-  object GetCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object GetCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Country_Id, Country_Id_Descr'
       'from Country_Id'
@@ -226,8 +226,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 184
     Top = 92
   end
-  object UpdBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Branch'
       'Set'
@@ -304,8 +304,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object UpdNotesOnlySQL: TQuery
-    DatabaseName = 'PB'
+  object UpdNotesOnlySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Branch'
       'Set     Narrative = :Narrative'
@@ -328,8 +328,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object CheckCustAccExistsSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckCustAccExistsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer.Name'
       'From Customer, Customer_Branch'
@@ -344,8 +344,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object DelBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object DelBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Supplier_Branch'
       'Where'
@@ -360,8 +360,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object CheckSuppAccExistsSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckSuppAccExistsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier.Name'
       'From Supplier, Supplier_Branch'
@@ -387,8 +387,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 296
     Top = 252
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier'
       'Set     Name = :Name,'
@@ -487,8 +487,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object GetCurrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCurrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Currency_Code, Currency_Code_Descr'
       'from Currency_Code'
@@ -496,16 +496,16 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 336
     Top = 316
   end
-  object GetVATSQL: TQuery
-    DatabaseName = 'PB'
+  object GetVATSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Vat_Code'
       'Order By Vat_Code')
     Left = 168
     Top = 276
   end
-  object qryGetSupplier: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Supplier.Supplier,'
       '        Supplier.Name,'
@@ -550,8 +550,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryCharges: TQuery
-    DatabaseName = 'PB'
+  object qryCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Supplier_Charge'
@@ -571,8 +571,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 576
     Top = 8
   end
-  object qryCouriers: TQuery
-    DatabaseName = 'PB'
+  object qryCouriers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Courier'
@@ -585,8 +585,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 568
     Top = 152
   end
-  object qryDocuments: TQuery
-    DatabaseName = 'PB'
+  object qryDocuments: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supplier_Document'
@@ -606,8 +606,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 592
     Top = 240
   end
-  object qryAddDocument: TQuery
-    DatabaseName = 'PB'
+  object qryAddDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Supplier_Document'
       '(Supplier,'
@@ -652,8 +652,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastDoc: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastDoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(document_no) as Last_Document'
       'from Supplier_Document'
@@ -667,8 +667,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryDelDocument: TQuery
-    DatabaseName = 'PB'
+  object qryDelDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Supplier_Document'
       'where Supplier = :Supplier and Document_no = :Document_no')
@@ -686,8 +686,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryUpdDocument: TQuery
-    DatabaseName = 'PB'
+  object qryUpdDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Document'
       'set Document = :Document, Document_Title = :Document_Title'
@@ -716,8 +716,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvoices: TQuery
-    DatabaseName = 'pb'
+  object qryGetInvoices: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Supplier_invoice'
@@ -732,8 +732,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryAddReplEntity: TQuery
-    DatabaseName = 'PB'
+  object qryAddReplEntity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Insert Into Replicate_Entity(Replicate_Entity, Entity, Code1, Co' +
@@ -771,8 +771,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qrySuppliersBase: TQuery
-    DatabaseName = 'PB'
+  object qrySuppliersBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Supplier.Supplier,'
       '        Supplier.Name,'
@@ -823,8 +823,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
         ParamType = ptUnknown
       end>
   end
-  object qryTerms: TQuery
-    DatabaseName = 'PB'
+  object qryTerms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Payment_terms'
@@ -837,8 +837,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Left = 88
     Top = 456
   end
-  object OldqrySuppliersBase: TQuery
-    DatabaseName = 'PB'
+  object OldqrySuppliersBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Supplier.Supplier,'
       '        Supplier.Name,'

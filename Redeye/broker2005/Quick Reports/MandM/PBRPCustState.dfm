@@ -1562,16 +1562,16 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Left = 427
     Top = 20
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 432
     Top = 71
   end
-  object SalesInvSQL_old: TQuery
-    DatabaseName = 'PB'
+  object SalesInvSQL_old: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'
@@ -1647,8 +1647,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object UpSalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object UpSalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_invoice'
       'set Statement_reference = :Statement_reference,'
@@ -1685,8 +1685,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object UpCustSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Customer_Branch'
       'set Last_Statement_ref = :Last_statement_Ref'
@@ -1711,8 +1711,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object SalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object SalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'
@@ -1784,8 +1784,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_orderLine.Customers_Desc, '
       '        Purchase_OrderLine.Cust_Order_no,'
@@ -1813,8 +1813,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part.Part, '
       '          Part_Description, '
@@ -1839,8 +1839,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Descr'
       'from Job_Bag_Line_Dets'
@@ -1860,8 +1860,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Cust_Order_no'
       'from Job_Bag'
@@ -1875,8 +1875,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_order, Cust_Order_no'
       'from Sales_order'

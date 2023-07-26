@@ -5,8 +5,8 @@ object PBAuditDataMod: TPBAuditDataMod
   Top = 106
   Height = 480
   Width = 696
-  object AddAuditSQL: TQuery
-    DatabaseName = 'PB'
+  object AddAuditSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Audit_Trail'
       
@@ -60,8 +60,8 @@ object PBAuditDataMod: TPBAuditDataMod
         ParamType = ptUnknown
       end>
   end
-  object Add1stAuditSQL: TQuery
-    DatabaseName = 'PB'
+  object Add1stAuditSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Audit_Trail'
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
@@ -76,15 +76,15 @@ object PBAuditDataMod: TPBAuditDataMod
         ParamType = ptUnknown
       end>
   end
-  object GetAuditDescrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAuditDescrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '{See GetAuditDescr function} ;')
     Left = 64
     Top = 72
   end
-  object GetAuditTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAuditTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Audit_Type'
@@ -98,8 +98,8 @@ object PBAuditDataMod: TPBAuditDataMod
         ParamType = ptUnknown
       end>
   end
-  object GetAuditFlagsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAuditFlagsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Audit_Log_Prog, Audit_Log_Upd, Audit_Log_Fields, Audit_Lo' +
@@ -109,8 +109,8 @@ object PBAuditDataMod: TPBAuditDataMod
     Left = 64
     Top = 128
   end
-  object GetFldChgTypSQL: TQuery
-    DatabaseName = 'PB'
+  object GetFldChgTypSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Audit_Type.Audit_Type,'
       '        AT2.Audit_Code_1_Field,'
@@ -142,8 +142,8 @@ object PBAuditDataMod: TPBAuditDataMod
         ParamType = ptUnknown
       end>
   end
-  object Access_Add1stAuditSQL: TQuery
-    DatabaseName = 'PB'
+  object Access_Add1stAuditSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Audit_Trail'
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
@@ -158,8 +158,8 @@ object PBAuditDataMod: TPBAuditDataMod
         ParamType = ptUnknown
       end>
   end
-  object Access_AddAuditSQL: TQuery
-    DatabaseName = 'PB'
+  object Access_AddAuditSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Audit_Trail'
       

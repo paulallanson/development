@@ -4,28 +4,31 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ComCtrls, Db, DBTables, StdCtrls, DBCtrls, Buttons;
+  Grids, DBGrids, ComCtrls, Db, StdCtrls, DBCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBQuestnCatsFrm = class(TForm)
     QuestnDBGrid: TDBGrid;
-    GetQuestnsSQL: TQuery;
+    GetQuestnsSQL: TFDQuery;
     QuestnsDS: TDataSource;
     Label1: TLabel;
     dblkpProductType: TDBLookupComboBox;
     Label2: TLabel;
-    GetCatsSQL: TQuery;
+    GetCatsSQL: TFDQuery;
     CatsDS: TDataSource;
     CloseBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
     AddMemo: TMemo;
-    GetCatsProdTypesSQL: TQuery;
-    GetLastNoSQL: TQuery;
-    AddSQL: TQuery;
-    AddQListSQL: TQuery;
-    qryProdType: TQuery;
+    GetCatsProdTypesSQL: TFDQuery;
+    GetLastNoSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    AddQListSQL: TFDQuery;
+    qryProdType: TFDQuery;
     dtsProdType: TDataSource;
-    qryGetProductType: TQuery;
+    qryGetProductType: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure dblkpProductTypeClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);

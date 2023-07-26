@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls, printers, ccscommon,
-  qrprntr;
+  Db, ExtCtrls, QuickRpt, CCSPrint, Qrctrls, printers, ccscommon,
+  qrprntr,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPStockValfrm = class(TForm)
@@ -27,8 +30,8 @@ type
     QRLabel6: TQRLabel;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
-    qryPartStore: TQuery;
-    qryReport: TQuery;
+    qryPartStore: TFDQuery;
+    qryReport: TFDQuery;
     QRLabel7: TQRLabel;
     QRDBText8: TQRDBText;
     QRSysData2: TQRSysData;
@@ -54,7 +57,7 @@ type
     qrlblTotalUsage: TQRLabel;
     qrlblTotalWastage: TQRLabel;
     qrlblTotalClosing: TQRLabel;
-    OldqryReport: TQuery;
+    OldqryReport: TFDQuery;
     QRDBText4: TQRDBText;
     qrlblOpeningValue: TQRLabel;
     QRDBText7: TQRDBText;

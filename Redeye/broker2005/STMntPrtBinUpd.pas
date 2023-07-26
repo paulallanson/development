@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Db, DBTables;
+  StdCtrls, Buttons, ExtCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMntPrtBinUpdFrm = class(TForm)
@@ -15,8 +18,8 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     PickRadioGroup: TRadioGroup;
-    GetBinSQL: TQuery;
-    AddBinSQL: TQuery;
+    GetBinSQL: TFDQuery;
+    AddBinSQL: TFDQuery;
     chkbxProduction: TCheckBox;
     procedure BinFromEditChange(Sender: TObject);
     procedure BinToEditChange(Sender: TObject);

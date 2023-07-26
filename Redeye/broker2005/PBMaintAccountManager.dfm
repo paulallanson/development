@@ -101,8 +101,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     TabOrder = 5
     OnClick = btnTeamClick
   end
-  object qryOperators: TQuery
-    DatabaseName = 'pb'
+  object qryOperators: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Operator.* '
       'from Operator'
@@ -123,8 +123,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Left = 240
     Top = 8
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into User_Group_Operator'
       '        (User_Group_Operator,'
@@ -153,16 +153,16 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'PB'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(User_Group_Operator) as Last_Number'
       'from User_Group_Operator')
     Left = 120
     Top = 65528
   end
-  object qryDelete: TQuery
-    DatabaseName = 'pb'
+  object qryDelete: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'delete from user_group_operator'
       'where user_group_operator = :User_Group_operator')
@@ -175,8 +175,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         ParamType = ptUnknown
       end>
   end
-  object qryTeam: TQuery
-    DatabaseName = 'pb'
+  object qryTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Account_Team'
       'order by Account_Team_Name')
@@ -188,8 +188,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
     Left = 112
     Top = 64
   end
-  object qryGetAccountTeam: TQuery
-    DatabaseName = 'pb'
+  object qryGetAccountTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Account_Team_Member'
@@ -203,8 +203,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelTeam: TQuery
-    DatabaseName = 'pb'
+  object qryDelTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'delete from Account_Team_Member'
       'where Operator = :Operator')
@@ -217,8 +217,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddTeam: TQuery
-    DatabaseName = 'pb'
+  object qryAddTeam: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Account_team_member'
       'values (:account_Team, :Member_no, :Operator)')
@@ -241,8 +241,8 @@ object PBMaintAccountManagerFrm: TPBMaintAccountManagerFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetMemberNo: TQuery
-    DatabaseName = 'pb'
+  object qryGetMemberNo: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select max(Member_no) as Member_no'
       'from Account_Team_Member'

@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, DBTables, Variants,
-  shFolder, Outlook12_TLB;
+  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, Variants,
+  shFolder, Outlook12_TLB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TemailHandler = class(TDataModule)
-    qrySelCustomerContacts: TQuery;
-    qryEmailList: TQuery;
+    qrySelCustomerContacts: TFDQuery;
+    qryEmailList: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private

@@ -119,9 +119,9 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     TabOrder = 3
     Kind = bkCancel
   end
-  object qrySContacts: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsSuppliers
+  object qrySContacts: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsSuppliers
     SQL.Strings = (
       'select distinct Contact_no, Name, Email'
       'from Supplier_BranchContacts'
@@ -143,8 +143,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Left = 392
     Top = 64
   end
-  object qrySuppliers: TQuery
-    DatabaseName = 'PB'
+  object qrySuppliers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct supplier, Name'
       'from Supplier'
@@ -159,8 +159,8 @@ object PBMaintEmailSupplierFrm: TPBMaintEmailSupplierFrm
     Left = 392
     Top = 16
   end
-  object qryCContacts: TQuery
-    DatabaseName = 'PB'
+  object qryCContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Contact_no, Name, Email'
       'from customer_Contact'

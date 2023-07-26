@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesByPrdCatFrm = class(TForm)
@@ -27,8 +30,8 @@ type
     RepTotSellQRLbl: TQRLabel;
     RepTotVatQRLbl: TQRLabel;
     RepTotGoodsQRLbl: TQRLabel;
-    AddCostsQuery: TQuery;
-    GetCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
+    GetCostsQuery: TFDQuery;
     TotalCostLbl: TQRLabel;
     RepTotCostQRLbl: TQRLabel;
     QRShape4: TQRShape;
@@ -36,15 +39,15 @@ type
     GrpMargQRLbl: TQRLabel;
     RepMargQRLbl: TQRLabel;
     QRLabel19: TQRLabel;
-    qrySalesbyPrdCat: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
-    qryAddPOCosts: TQuery;
-    oldqryGetJBCosts: TQuery;
-    qryGetJBCosts: TQuery;
-    qryCreditLines: TQuery;
+    qrySalesbyPrdCat: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    oldqryGetJBCosts: TFDQuery;
+    qryGetJBCosts: TFDQuery;
+    qryCreditLines: TFDQuery;
     QRSubDetInvlns: TQRSubDetail;
-    qrygetinvline: TQuery;
+    qrygetinvline: TFDQuery;
     qrySalesbyPrdCatCustomer: TIntegerField;
     qrySalesbyPrdCatBranch_no: TIntegerField;
     qrySalesbyPrdCatSales_Invoice: TIntegerField;
@@ -98,23 +101,23 @@ type
     qrygetinvlineVat_Rate: TFloatField;
     qrygetinvlineDescription: TStringField;
     qrygetinvlineVAT_Ref: TStringField;
-    qryInvCharges: TQuery;
+    qryInvCharges: TFDQuery;
     LblDesc: TQRLabel;
     QRSbDtlInvTot: TQRSubDetail;
     QRShape5: TQRShape;
-    qryJBLine: TQuery;
-    qrySOLine: TQuery;
-    qryPOLine: TQuery;
+    qryJBLine: TFDQuery;
+    qrySOLine: TFDQuery;
+    qryPOLine: TFDQuery;
     TotCstQRLbl: TQRLabel;
     MargQRLbl: TQRLabel;
     QRLblInvTotCst: TQRLabel;
     QRLblInvTotMarg: TQRLabel;
-    qryPO: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetInvAddChrg: TQuery;
+    qryPO: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetInvAddChrg: TFDQuery;
     qrySalesbyPrdCatDescription: TStringField;
     qrySalesbyPrdCatInvoice_Line_No: TIntegerField;
     QRLblInvGoods: TQRLabel;

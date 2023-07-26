@@ -69,8 +69,8 @@ object frmPBExpiryDate: TfrmPBExpiryDate
     TabOrder = 3
     Text = 'edtoldExpiryDate'
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'PB'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Company_CheckSum = :Company_CheckSum'

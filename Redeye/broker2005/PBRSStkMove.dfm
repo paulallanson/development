@@ -587,9 +587,9 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     State = cbChecked
     TabOrder = 3
   end
-  object qryReport: TQuery
+  object qryReport: TFDQuery
     OnCalcFields = qryReportCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Delivery_Detail.Purchase_Order,'
       '        Delivery_Detail.Line,'
@@ -812,7 +812,7 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Left = 264
     Top = 248
   end
-  object DummySQL: TQuery
+  object DummySQL: TFDQuery
     SQL.Strings = (
       'SELECT  Delivery_Detail.Purchase_Order,'
       '        Delivery_Detail.Line,'
@@ -894,8 +894,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Left = 448
     Top = 249
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -914,8 +914,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -934,8 +934,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -962,8 +962,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -976,8 +976,8 @@ object PBRSStkMoveFrm: TPBRSStkMoveFrm
     Left = 261
     Top = 336
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'

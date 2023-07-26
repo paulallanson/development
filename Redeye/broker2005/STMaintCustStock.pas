@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, Buttons, DB, DBTables,
-  ComCtrls;
+  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, Buttons, DB, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintCustStockFrm = class(TForm)
@@ -24,17 +26,17 @@ type
     edtCustomerFrom: TEdit;
     Label2: TLabel;
     edtCustomerTo: TEdit;
-    qryProductsFrom: TQuery;
+    qryProductsFrom: TFDQuery;
     dtsProductsFrom: TDataSource;
-    qryProductsTo: TQuery;
+    qryProductsTo: TFDQuery;
     dtsProductsTo: TDataSource;
     btnLUCustomerFrom: TBitBtn;
     btnLUCustomerTo: TBitBtn;
     StatusBar1: TStatusBar;
-    qryUpdPart: TQuery;
+    qryUpdPart: TFDQuery;
     dbgDetailsFrom: TDBGrid;
     dbgDetailsTo: TDBGrid;
-    qryUpdFormRef: TQuery;
+    qryUpdFormRef: TFDQuery;
     Panel1: TPanel;
     Label3: TLabel;
     edtSearchFrom: TEdit;

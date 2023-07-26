@@ -1505,8 +1505,8 @@ object PBRPODueEnqFrm: TPBRPODueEnqFrm
       ReprintOnNewPage = False
     end
   end
-  object GetEnquiriesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetEnquiriesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT Supplier.Supplier, Supplier_Branch.Branch_no, Su' +
@@ -1639,16 +1639,16 @@ object PBRPODueEnqFrm: TPBRPODueEnqFrm
     Left = 499
     Top = 113
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 424
     Top = 111
   end
-  object GetQtysSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQtysSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Distinct Quantity From Enquiry_LineQuantity'
       'Where (Enquiry = :Enquiry) and'

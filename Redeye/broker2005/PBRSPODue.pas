@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBPOObjects, PBRPPODue, QrExport, Spin,
-  ComCtrls, OleCtnrs;
+  StdCtrls, Buttons, ExtCtrls, DB, PBPOObjects, PBRPPODue, QrExport, Spin,
+  ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPODueFrm = class(TForm)
@@ -25,10 +28,10 @@ type
     Customerlbl: TLabel;
     CustEdit: TEdit;
     LUCustSpeedButton: TSpeedButton;
-    GetPOsSQL: TQuery;
+    GetPOsSQL: TFDQuery;
     chkbxBranches: TCheckBox;
     EmailBitBtn: TBitBtn;
-    oldGetPOsSQL: TQuery;
+    oldGetPOsSQL: TFDQuery;
     btnExcel: TBitBtn;
     OleContainer1: TOleContainer;
     pnlExportPrgrss: TPanel;

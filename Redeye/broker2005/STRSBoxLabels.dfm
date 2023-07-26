@@ -285,8 +285,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Left = 240
     Top = 176
   end
-  object GetSordSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSordSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_line.Sell_pack_Quantity,'
       '        Sales_Order_line.Part,'
@@ -319,8 +319,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSerialNumbers: TQuery
-    DatabaseName = 'PB'
+  object qryGetSerialNumbers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from sales_order_line_serial_no'
@@ -340,8 +340,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryLogos: TQuery
-    DatabaseName = 'PB'
+  object qryLogos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Document_Logo'

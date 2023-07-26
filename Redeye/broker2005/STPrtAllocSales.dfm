@@ -228,8 +228,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Left = 560
     Top = 248
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select'
       '    Sales_Order_Line.Sales_Order_Line_No,'
@@ -316,8 +316,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSOHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order.Sales_Order_Head_Status = :status'
@@ -340,8 +340,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPartStoreSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartStoreSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * '
       'from Part_Store'
@@ -372,8 +372,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       OnClick = mnuAllocateAllLinesClick
     end
   end
-  object qryGetCompositeParts: TQuery
-    DatabaseName = 'PB'
+  object qryGetCompositeParts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '     Part,'

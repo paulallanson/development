@@ -14,8 +14,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Left = 16
     Top = 88
   end
-  object SelectedSQL: TQuery
-    DatabaseName = 'PB'
+  object SelectedSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purchase_Order.Purchase_Order,'
       '       Purchase_Order.Supplier,'
@@ -52,8 +52,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object GetContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier_BranchContacts.Name as Contact_Name'
       'From  Supplier_BranchContacts'
@@ -79,8 +79,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 500 Purchase_Order.Date_Point,'
       '        Purch_Ord_Line_Status.Description AS Status_Description,'
@@ -285,8 +285,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
       FieldName = 'Original_Order'
     end
   end
-  object SelectedLineSQL: TQuery
-    DatabaseName = 'PB'
+  object SelectedLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          Customer.Name as Cust_Name,'
@@ -319,8 +319,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object OlderDummySQL: TQuery
-    DatabaseName = 'PB'
+  object OlderDummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1000'
       '    Purchase_Order.Date_Point,'
@@ -381,8 +381,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Left = 280
     Top = 16
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Customer.Name as Customer_Name,'
       '                       Customer.Customer'
@@ -404,8 +404,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object OldDummySQL: TQuery
-    DatabaseName = 'PB'
+  object OldDummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1000'
       '    Purchase_Order.Date_Point,'
@@ -479,8 +479,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Left = 280
     Top = 80
   end
-  object DummySQL: TQuery
-    DatabaseName = 'PB'
+  object DummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 500 Purchase_Order.Date_Point,'
       '        Purch_Ord_Line_Status.Description AS Status_Description,'
@@ -559,8 +559,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
     Left = 288
     Top = 264
   end
-  object qryInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Sales_invoice_no'
       'from Sales_Invoice_line, Sales_invoice '
@@ -584,8 +584,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object UpdSelectedLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSelectedLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set Purchase_OrderLine.On_Hold = :On_Hold'
@@ -613,8 +613,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object qryFindCustBranch: TQuery
-    DatabaseName = 'PB'
+  object qryFindCustBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Customer,'
       '         Customer.Name as Customer_Name,'
@@ -634,8 +634,8 @@ object dmLookUpPOrd: TdmLookUpPOrd
         ParamType = ptUnknown
       end>
   end
-  object qryperiodEnd: TQuery
-    DatabaseName = 'PB'
+  object qryperiodEnd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_profit'

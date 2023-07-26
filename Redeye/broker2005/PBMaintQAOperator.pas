@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, DBCtrls, StdCtrls, Buttons;
+  Dialogs, DB, DBCtrls, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintQAOperatorFrm = class(TForm)
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    AddSQL: TQuery;
+    AddSQL: TFDQuery;
     DelLabel: TLabel;
     detsgrpbox: TGroupBox;
     Label1: TLabel;
     chkbxActive: TCheckBox;
-    UpdSQL: TQuery;
-    qryZero: TQuery;
-    DelSQL: TQuery;
-    GetLastSQL: TQuery;
+    UpdSQL: TFDQuery;
+    qryZero: TFDQuery;
+    DelSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
     btnProcessClear: TBitBtn;
     edtEmployeeName: TEdit;
     procedure FormActivate(Sender: TObject);

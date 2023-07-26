@@ -299,8 +299,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     OnExit = dblkpSubCategoryExit
     OnKeyPress = dblkpSubCategoryKeyPress
   end
-  object qryDel: TQuery
-    DatabaseName = 'PB'
+  object qryDel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Part_Quantity_Price'
       'where Part = :Part')
@@ -313,8 +313,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Quantity_Price'
       '  (Part,'
@@ -385,8 +385,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCostUnit: TQuery
-    DatabaseName = 'PB'
+  object qryCostUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from price_unit'
@@ -402,8 +402,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 376
     Top = 304
   end
-  object qryProcess: TQuery
-    DatabaseName = 'PB'
+  object qryProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Process'
       'ORDER BY Process_Description')
@@ -415,8 +415,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 160
     Top = 88
   end
-  object qryVAT: TQuery
-    DatabaseName = 'PB'
+  object qryVAT: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from VAT_Code'
       'Order by Vat_Code')
@@ -428,8 +428,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 376
     Top = 360
   end
-  object qryOperation: TQuery
-    DatabaseName = 'PB'
+  object qryOperation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Process_Cost'
       'where Customer = :Customer and Process = :Process'
@@ -453,8 +453,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 160
     Top = 152
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Process_Cost_Category'
       
@@ -485,8 +485,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Left = 160
     Top = 216
   end
-  object qrySubCategory: TQuery
-    DatabaseName = 'PB'
+  object qrySubCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Process_Cost_Category_Sub'
       'where Customer = :Customer and'

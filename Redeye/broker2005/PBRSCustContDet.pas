@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, CCSPrint, CCSCommon, Spin, ComCtrls, OleCtnrs;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, CCSPrint, CCSCommon, Spin, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCustContDetFrm = class(TForm)
-    qryCurrentContStatus: TQuery;
+    qryCurrentContStatus: TFDQuery;
     dtsrcCurrentContStatus: TDataSource;
     pnlControls: TPanel;
     pnlPrintControl: TPanel;
@@ -18,7 +21,7 @@ type
     Panel1: TPanel;
     btnPreview: TBitBtn;
     btnPrint: TBitBtn;
-    qryContStatus: TQuery;
+    qryContStatus: TFDQuery;
     cmbbxContStatus: TComboBox;
     btnCancel: TBitBtn;
     cbSort1: TComboBox;
@@ -33,8 +36,8 @@ type
     Panel3: TPanel;
     Label7: TLabel;
     RepComboBox: TComboBox;
-    QryContType: TQuery;
-    QryRep: TQuery;
+    QryContType: TFDQuery;
+    QryRep: TFDQuery;
     QryRepName: TStringField;
     RadioGroup1: TRadioGroup;
     QryContTypeDescription: TStringField;
@@ -76,17 +79,17 @@ type
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
-    qryExcel: TQuery;
+    qryExcel: TFDQuery;
     qryCurrentContStatusSalutation: TStringField;
-    stdSQL: TQuery;
-    qryCompany: TQuery;
-    qryGetFY: TQuery;
+    stdSQL: TFDQuery;
+    qryCompany: TFDQuery;
+    qryGetFY: TFDQuery;
     Panel4: TPanel;
     lblCustomerType: TLabel;
     CustTypeComboBox: TComboBox;
     Label9: TLabel;
     cbSort4: TComboBox;
-    qryCustType: TQuery;
+    qryCustType: TFDQuery;
     qryCustTypeDescription: TStringField;
     qryCurrentContStatusCustomer_Type_Description: TStringField;
     qryCurrentContStatusAccount_Manager_Name: TStringField;
@@ -94,8 +97,8 @@ type
     Label6: TLabel;
     cmbbxCustStatus: TComboBox;
     qryCurrentContStatusCustomer_Status_Descr: TStringField;
-    OldStdSQL: TQuery;
-    oldqryCurrentContStatus: TQuery;
+    OldStdSQL: TFDQuery;
+    oldqryCurrentContStatus: TFDQuery;
     StringField1: TStringField;
     StringField2: TStringField;
     StringField3: TStringField;
@@ -147,7 +150,7 @@ type
     function BuildQueryString: string;
     procedure CallReport(const bPreview : Boolean);
     function Ordering(aBox: TComboBox): string;
-    procedure ExportToFile(fileName: string; tempqry: TQuery);
+    procedure ExportToFile(fileName: string; tempqry: TFDQuery);
     function GetYearDescription(iCode: integer): string;
     procedure SetProspects(const Value: boolean);
   public
@@ -558,7 +561,7 @@ begin
     end;
 end;
 
-procedure TPBRSCustContDetFrm.ExportToFile(fileName: string; tempqry: TQuery);
+procedure TPBRSCustContDetFrm.ExportToFile(fileName: string; tempqry: TFDQuery);
 var
   tempStr: string;
   exportFile: textFile;

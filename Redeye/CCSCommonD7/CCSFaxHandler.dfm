@@ -5,8 +5,8 @@ object FaxHandler: TFaxHandler
   Top = 195
   Height = 328
   Width = 648
-  object GetOldFaxesQuery: TQuery
-    DatabaseName = 'faxesSQL'
+  object GetOldFaxesQuery: TFDQuery
+    ConnectionName = 'faxesSQL'
     SQL.Strings = (
       'Select FileName From FaxStat'
       'Where (CreatedOn < :Date_Before)')
@@ -24,15 +24,15 @@ object FaxHandler: TFaxHandler
     OnTimer = WaitForFaxFinishTimerTimer
     Left = 264
   end
-  object FaxDatabase: TDatabase
-    AliasName = 'faxes'
-    DatabaseName = 'faxesSQL'
-    SessionName = 'Default'
+  object FaxDatabase: TFDConnection
+    ConnectionDefName = 'faxes'
+    ConnectionName = 'faxesSQL'
+
     OnLogin = FaxDatabaseLogin
     Left = 24
   end
-  object DelFaxQuery: TQuery
-    DatabaseName = 'faxesSQL'
+  object DelFaxQuery: TFDQuery
+    ConnectionName = 'faxesSQL'
     SQL.Strings = (
       'Delete From Faxstat'
       'Where (FileName = :FileName)')
@@ -45,8 +45,8 @@ object FaxHandler: TFaxHandler
         ParamType = ptUnknown
       end>
   end
-  object AddFaxSQL: TQuery
-    DatabaseName = 'faxesSQL'
+  object AddFaxSQL: TFDQuery
+    ConnectionName = 'faxesSQL'
     SQL.Strings = (
       'Insert Into Faxstat'
       '(CreatedOn, FileName, PhoneNo, Status, NoOfRetries, LastTried,'
@@ -100,8 +100,8 @@ object FaxHandler: TFaxHandler
         ParamType = ptUnknown
       end>
   end
-  object qrySelCustBrnchFax: TQuery
-    DatabaseName = 'PB'
+  object qrySelCustBrnchFax: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select customer.name,'
       '  customer_branch.name as branch_name,'

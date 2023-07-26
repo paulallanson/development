@@ -4,29 +4,32 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, PBDBMemo, PBDelivNotes,
-  ComCtrls, Grids, DBGrids, IniFiles;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, PBDBMemo, PBDelivNotes,
+  ComCtrls, Grids, DBGrids, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintBranchFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
-    GetCustNameSQL: TQuery;
-    GetBranchNameSQL: TQuery;
+    GetCustNameSQL: TFDQuery;
+    GetBranchNameSQL: TFDQuery;
     FlashTimer: TTimer;
-    CheckCustAccExistsSQL: TQuery;
-    GetCompSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    GetCompSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
     FlashDelivTimer: TTimer;
-    UpdDelivNotesOnlySQL: TQuery;
-    UpdNotesOnlySQL: TQuery;
+    UpdDelivNotesOnlySQL: TFDQuery;
+    UpdNotesOnlySQL: TFDQuery;
     PrintBitBtn: TBitBtn;
-    qryGetBranch: TQuery;
+    qryGetBranch: TFDQuery;
     pgBranches: TPageControl;
     tbGeneral: TTabSheet;
     tbCostCentres: TTabSheet;
@@ -71,13 +74,13 @@ type
     btnChgCostCentre: TBitBtn;
     btnDelCostCentre: TBitBtn;
     dbgCostCentres: TDBGrid;
-    qryCostCentres: TQuery;
+    qryCostCentres: TFDQuery;
     dtsCostCentres: TDataSource;
     btnAddContact: TBitBtn;
     btnChgContact: TBitBtn;
     btnDelContact: TBitBtn;
     dbgContacts: TDBGrid;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
     chkbxShowInactive: TCheckBox;
     tbEcommerce: TTabSheet;
@@ -88,7 +91,7 @@ type
     Label37: TLabel;
     edtInvToContact: TEdit;
     BitBtn5: TBitBtn;
-    GetContactNameSQL: TQuery;
+    GetContactNameSQL: TFDQuery;
     Label18: TLabel;
     CountyEdit: TEdit;
     procedure FormActivate(Sender: TObject);

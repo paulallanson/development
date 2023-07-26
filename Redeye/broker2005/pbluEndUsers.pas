@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, Menus, ExtCtrls, ImgList, ComCtrls, ToolWin,
-  StdCtrls, Buttons, DB, DBTables, pbCustomerDM, Inifiles;
+  StdCtrls, Buttons, DB, pbCustomerDM, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUEndUsers = class(TForm)
@@ -92,7 +95,7 @@ type
     procedure CallMaintScreen(Mode: string);
     function ProspectOrdersExist: boolean;
     procedure SetProspectInactive;
-    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TQuery;
+    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery;
       bBranch: boolean);
   protected
     procedure LUEndUsersEventsClosed(var Message: TMessage);
@@ -1164,7 +1167,7 @@ begin
     end;
 end;
 
-procedure TfrmPBLUEndUsers.MultiSQLAdd(sTempStr: String; tmpQuery: TQuery; bBranch: boolean);
+procedure TfrmPBLUEndUsers.MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery; bBranch: boolean);
 begin
   if bBranch then
     begin

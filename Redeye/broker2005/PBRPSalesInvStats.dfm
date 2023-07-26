@@ -1599,8 +1599,8 @@ object PBRPSalesInvStatsFrm: TPBRPSalesInvStatsFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Period.Period,'
       '  (Period.Last_Period_End_Date) + 1 as Start_Date,'
@@ -1653,8 +1653,8 @@ object PBRPSalesInvStatsFrm: TPBRPSalesInvStatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOs: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select count(Purchase_Order.purchase_order) as Purchase_Order_Co' +
@@ -1703,8 +1703,8 @@ object PBRPSalesInvStatsFrm: TPBRPSalesInvStatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBags: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBags: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select count(Job_bag.Job_Bag) as Job_Bag_Count'
       'from Job_Bag'
@@ -1746,8 +1746,8 @@ object PBRPSalesInvStatsFrm: TPBRPSalesInvStatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNewClients: TQuery
-    DatabaseName = 'PB'
+  object qryGetNewClients: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct count(customer.customer) as Customer_Count'
       'from  customer,'
@@ -1785,7 +1785,7 @@ object PBRPSalesInvStatsFrm: TPBRPSalesInvStatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT Period.Period,'
       '  (Period.Last_Period_End_Date) + 1 as Start_Date,'

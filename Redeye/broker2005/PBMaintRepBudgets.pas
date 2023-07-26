@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
-  ExtCtrls, Menus, ComCtrls;
+  Db, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
+  ExtCtrls, Menus, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintRepBudgetsFrm = class(TForm)
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     dtsPeriods: TDataSource;
-    qryGetRepBudgets: TQuery;
-    qryFirstPeriod: TQuery;
-    qryCheckBudget: TQuery;
-    qryUpdBudget: TQuery;
-    qryAddBudget: TQuery;
+    qryGetRepBudgets: TFDQuery;
+    qryFirstPeriod: TFDQuery;
+    qryCheckBudget: TFDQuery;
+    qryUpdBudget: TFDQuery;
+    qryAddBudget: TFDQuery;
     Panel3: TPanel;
     Label3: TLabel;
     Label4: TLabel;
@@ -38,10 +41,10 @@ type
     Label1: TLabel;
     memCommission: TMemo;
     rdgrpCommType: TRadioGroup;
-    qryAddFinancials: TQuery;
-    qryDelFinancials: TQuery;
-    qryCheckExists: TQuery;
-    qryUpdFinancials: TQuery;
+    qryAddFinancials: TFDQuery;
+    qryDelFinancials: TFDQuery;
+    qryCheckExists: TFDQuery;
+    qryUpdFinancials: TFDQuery;
     pmnFill: TPopupMenu;
     Filldown1: TMenuItem;
     FillAcrossandDown1: TMenuItem;
@@ -50,10 +53,10 @@ type
     tbshtBudgets: TTabSheet;
     grdDetails: TStringGrid;
     grdCategory: TStringGrid;
-    qryCategory: TQuery;
-    qryGetRepCategory: TQuery;
-    qryDelRepCats: TQuery;
-    qryAddRepCats: TQuery;
+    qryCategory: TFDQuery;
+    qryGetRepCategory: TFDQuery;
+    qryDelRepCats: TFDQuery;
+    qryAddRepCats: TFDQuery;
     cmbxCommissionBasis: TComboBox;
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

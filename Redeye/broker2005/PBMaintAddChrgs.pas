@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, CCSCommon;
+  StdCtrls, Buttons, Db, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintAddChrgsFrm = class(TForm)
@@ -16,10 +19,10 @@ type
     edtDescription: TEdit;
     lblCost: TLabel;
     lblCharge: TLabel;
-    qryInsAddChrg: TQuery;
-    qryUpdAddChrg: TQuery;
-    qryDelAddChrge: TQuery;
-    qrySelNextAddChrg: TQuery;
+    qryInsAddChrg: TFDQuery;
+    qryUpdAddChrg: TFDQuery;
+    qryDelAddChrge: TFDQuery;
+    qrySelNextAddChrg: TFDQuery;
     memSell: TMemo;
     memCost: TMemo;
     procedure FormActivate(Sender: TObject);

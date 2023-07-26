@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, CCSCommon, qrprntr,
-  printers, CCSPrint;
+  Db, ExtCtrls, QuickRpt, Qrctrls, CCSCommon, qrprntr,
+  printers, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCustDetFrm = class(TForm)
     QRPCustStat: TQuickRep;
-    GetDetsQry: TQuery;
+    GetDetsQry: TFDQuery;
     QRBand1: TQRBand;
     QRCustGroup: TQRGroup;
     QRFootBand: TQRBand;
@@ -49,7 +52,7 @@ type
     QRLabel12: TQRLabel;
     QRDBText11: TQRDBText;
     memoNotes: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText9: TQRDBText;
     ImportanceQRLabel: TQRLabel;
@@ -63,7 +66,7 @@ type
   private
     exportFile: textFile;
     exporting: boolean;
-    procedure BuildNotes(aQuery: TQuery; const iNarrative: integer);
+    procedure BuildNotes(aQuery: TFDQuery; const iNarrative: integer);
   public
     PrinterSettings : TPrinterSettings;
     bIsSummary: boolean;
@@ -140,7 +143,7 @@ begin
 
 end;
 
-procedure TPBRPCustDetFrm.BuildNotes(aQuery: TQuery;
+procedure TPBRPCustDetFrm.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

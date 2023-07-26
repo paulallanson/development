@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, QrExport;
+  Db, ExtCtrls, QuickRpt, Qrctrls, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPSlwMvngStkRepfrm = class(TForm)
     qrDetails: TQuickRep;
-    qrySlwMvngStk: TQuery;
+    qrySlwMvngStk: TFDQuery;
     qrbndDetail: TQRBand;
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
@@ -50,10 +53,10 @@ type
     QRDBText12: TQRDBText;
     QRLabel12: TQRLabel;
     QRLabel13: TQRLabel;
-    SQLGetSlsDt: TQuery;
+    SQLGetSlsDt: TFDQuery;
     QRLblSlsOrd: TQRLabel;
     QRLblDtReq: TQRLabel;
-    qrySlowMvgNoRep: TQuery;
+    qrySlowMvgNoRep: TFDQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure qrbndDetailBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

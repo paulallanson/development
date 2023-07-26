@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Buttons, StdCtrls, ExtCtrls, DBCtrls, Spin;
+  Dialogs, DB, Buttons, StdCtrls, ExtCtrls, DBCtrls, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSalesInvStatsFrm = class(TForm)
@@ -14,7 +17,7 @@ type
     PrintReportBitBtn: TBitBtn;
     PreviewReportBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryPeriod: TQuery;
+    qryPeriod: TFDQuery;
     dtsPeriod: TDataSource;
     Label2: TLabel;
     spnPeriods: TSpinEdit;

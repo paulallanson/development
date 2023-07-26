@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Spin, Db, DBTables, ExtCtrls, Math;
+  StdCtrls, Buttons, Spin, Db, ExtCtrls, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtTransQtyFrm = class(TForm)
-    CheckBinSQL: TQuery;
+    CheckBinSQL: TFDQuery;
     PnlActn: TPanel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryCheckBinCount: TQuery;
+    qryCheckBinCount: TFDQuery;
     GroupBox1: TGroupBox;
     memoQty: TMemo;
     Label5: TLabel;
@@ -40,7 +43,7 @@ type
     grpbxJobNumber: TGroupBox;
     Label8: TLabel;
     edtJobNumber: TEdit;
-    qryJobBag: TQuery;
+    qryJobBag: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure CostMemoExit(Sender: TObject);

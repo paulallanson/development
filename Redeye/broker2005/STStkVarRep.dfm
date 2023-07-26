@@ -1199,8 +1199,8 @@ object STStkVarRepFrm: TSTStkVarRepFrm
     Left = 453
     Top = 61
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Stock_Take.*,'
       '  Part.Part_Description, '
@@ -1232,8 +1232,8 @@ object STStkVarRepFrm: TSTStkVarRepFrm
     Left = 374
     Top = 78
   end
-  object qryGetLastLot: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastLot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select store_stock.*'
       'from store_stock'

@@ -1012,8 +1012,8 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
       end
     end
   end
-  object qryPurchbyInv: TQuery
-    DatabaseName = 'PB'
+  object qryPurchbyInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT (Supplier_Invoice.Vat_Value - Supplier_Invoice.Vat_Value_' +
@@ -1043,41 +1043,41 @@ object PBRPPurchByInvFrm: TPBRPPurchByInvFrm
     Top = 80
     object qryPurchbyInvvat: TCurrencyField
       FieldName = 'vat'
-      Origin = 'PB.Supplier_Invoice.Vat_Value'
+
     end
     object qryPurchbyInvgoods: TCurrencyField
       FieldName = 'goods'
-      Origin = 'PB.Supplier_Invoice.Goods_Value'
+
     end
     object qryPurchbyInvTotal_Goods: TCurrencyField
       FieldName = 'Total_Goods'
-      Origin = 'PB.Supplier_Invoice.Vat_Value'
+
     end
     object qryPurchbyInvInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
-      Origin = 'PB.Supplier_Invoice.Invoice_Date'
+
     end
     object qryPurchbyInvSupplier_Invoice_no: TStringField
       FieldName = 'Supplier_Invoice_no'
-      Origin = 'PB.Supplier_Invoice.Supplier_Invoice_no'
+
       FixedChar = True
       Size = 40
     end
     object qryPurchbyInvInvoice_or_Credit: TStringField
       FieldName = 'Invoice_or_Credit'
-      Origin = 'PB.Supplier_Invoice.Invoice_or_Credit'
+
       FixedChar = True
       Size = 2
     end
     object qryPurchbyInvName: TStringField
       FieldName = 'Name'
-      Origin = 'PB.Supplier_Branch.Name'
+
       FixedChar = True
       Size = 80
     end
     object qryPurchbyInvName_1: TStringField
       FieldName = 'Name_1'
-      Origin = 'PB.Supplier.Name'
+
       FixedChar = True
       Size = 80
     end

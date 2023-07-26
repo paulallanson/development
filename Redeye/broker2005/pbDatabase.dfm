@@ -1,22 +1,17 @@
 object dmBroker: TdmBroker
-  OldCreateOrder = False
-  Left = 72
-  Top = 88
   Height = 617
   Width = 1292
-  object PBLDatabase: TDatabase
-    AliasName = 'Broker'
-    DatabaseName = 'PB'
+  object PBLDatabase: TFDConnection
+    ConnectionName = 'PB'
     Params.Strings = (
-      'USER NAME=admin')
-    SessionName = 'Default'
-    AfterConnect = PBLDatabaseAfterConnect
+      'ConnectionDef=Redeye')
     OnLogin = PBLDatabaseLogin
+    AfterConnect = PBLDatabaseAfterConnect
     Left = 48
     Top = 16
   end
-  object AddIntSelQuery: TQuery
-    DatabaseName = 'PB'
+  object AddIntSelQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, text100)'
@@ -37,23 +32,19 @@ object dmBroker: TdmBroker
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
-  object GetLastIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Int_Sel_Code) as Last_Code'
       'From Int_Sel'
@@ -62,8 +53,8 @@ object dmBroker: TdmBroker
     Left = 160
     Top = 60
   end
-  object DelWorkSQL: TQuery
-    DatabaseName = 'PB'
+  object DelWorkSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
@@ -72,13 +63,11 @@ object dmBroker: TdmBroker
     Top = 116
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
-  object AddWorkSQL: TQuery
-    DatabaseName = 'PB'
+  object AddWorkSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -91,18 +80,14 @@ object dmBroker: TdmBroker
     Top = 172
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
-  object GetButtonStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object GetButtonStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Button_Status'
       'From Operator_Button'
@@ -114,31 +99,25 @@ object dmBroker: TdmBroker
     Top = 28
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Button_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryIsEnqQuickQuote: TQuery
-    DatabaseName = 'PB'
+  object qryIsEnqQuickQuote: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select enquiry_type from enquiry where enquiry = :enquiry')
     Left = 72
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'PB'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Operator'
@@ -148,13 +127,11 @@ object dmBroker: TdmBroker
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from company'
@@ -162,8 +139,8 @@ object dmBroker: TdmBroker
     Left = 72
     Top = 248
   end
-  object qryGetButtons: TQuery
-    DatabaseName = 'PB'
+  object qryGetButtons: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Button_Name, Button_Status'
       'From Operator_Button'
@@ -173,13 +150,11 @@ object dmBroker: TdmBroker
     Top = 178
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStation: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWorkStation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From WorkStation_Redeye'
       'Where'
@@ -188,13 +163,11 @@ object dmBroker: TdmBroker
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStations: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWorkStations: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From WorkStation_Redeye'
       'Where'
@@ -205,18 +178,14 @@ object dmBroker: TdmBroker
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Descr'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorkStation: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkStation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select WorkStation from WorkStation_Redeye'
       'Where WorkStation = :WorkStation')
@@ -224,13 +193,11 @@ object dmBroker: TdmBroker
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddWorkStation: TQuery
-    DatabaseName = 'PB'
+  object qryAddWorkStation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into WorkStation_Redeye'
       
@@ -244,33 +211,23 @@ object dmBroker: TdmBroker
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'WorkStation_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Software_Version'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Logged_in'
-        ParamType = ptUnknown
       end>
   end
-  object qryCheckWSLock: TQuery
-    DatabaseName = 'PB'
+  object qryCheckWSLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Workstation_Lock.*, Workstation_Redeye.Workstation_Name, ' +
@@ -292,43 +249,31 @@ object dmBroker: TdmBroker
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Table_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Workstation'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
-  object qryGetLastWSLock: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastWSLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Lock_No) as Last_Lock_No'
       'from Workstation_Lock'
@@ -337,13 +282,11 @@ object dmBroker: TdmBroker
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddWSLock: TQuery
-    DatabaseName = 'PB'
+  object qryAddWSLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Workstation_Lock'
       '(Workstation,'
@@ -371,53 +314,35 @@ object dmBroker: TdmBroker
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Lock_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Table_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Title'
-        ParamType = ptUnknown
       end>
   end
-  object qryDeleteWSLock: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWSLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Workstation_Lock'
       'where Workstation = :Workstation AND'
@@ -431,43 +356,29 @@ object dmBroker: TdmBroker
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Key_Value_5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Table_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStationLock: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWorkStationLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From WorkStation_Lock '
       'Where'
@@ -476,13 +387,11 @@ object dmBroker: TdmBroker
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation'
-        ParamType = ptUnknown
       end>
   end
-  object qryDeleteWorkStationsLocks: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWorkStationsLocks: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From WorkStation_Lock'
       'Where'
@@ -496,13 +405,11 @@ object dmBroker: TdmBroker
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'WorkStation_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -511,18 +418,16 @@ object dmBroker: TdmBroker
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
-  object qrySpare: TQuery
-    DatabaseName = 'PB'
+  object qrySpare: TFDQuery
+    ConnectionName = 'PB'
     Left = 160
     Top = 7
   end
-  object qryGetCust: TQuery
-    DatabaseName = 'PB'
+  object qryGetCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Customer'
       'Where Customer = :Customer')
@@ -530,21 +435,19 @@ object dmBroker: TdmBroker
     Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetNextProductID: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextProductID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(product_id) as Last_Product_ID'
       'from Part')
     Left = 552
     Top = 168
   end
-  object qryDelTempID: TQuery
-    DatabaseName = 'PB'
+  object qryDelTempID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete'
       'From Int_Sel'
@@ -554,13 +457,13 @@ object dmBroker: TdmBroker
     Top = 232
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryAddWithKey: TQuery
-    DatabaseName = 'PB'
+  object qryAddWithKey: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Tag, Text100)'
@@ -573,43 +476,43 @@ object dmBroker: TdmBroker
     Top = 288
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Key'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Sel4'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Tag'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Text100'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryCompBranch: TQuery
-    DatabaseName = 'PB'
+  object qryCompBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Company_Branch'
@@ -617,8 +520,8 @@ object dmBroker: TdmBroker
     Left = 160
     Top = 240
   end
-  object qryGetOpCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetOpCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select customer.Customer, customer.Invoice_location'
       'from customer, Operator_invoice_location'
@@ -631,18 +534,14 @@ object dmBroker: TdmBroker
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpCompanyDD: TQuery
-    DatabaseName = 'PB'
+  object qryUpCompanyDD: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_File_No_Direct_Debit = Last_File_No_Direct_Debit + 1'
@@ -650,8 +549,8 @@ object dmBroker: TdmBroker
     Left = 688
     Top = 96
   end
-  object qryAddReplEntity: TQuery
-    DatabaseName = 'PB'
+  object qryAddReplEntity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Insert Into Replicate_Entity(Replicate_Entity, Entity, Code1, Co' +
@@ -665,33 +564,23 @@ object dmBroker: TdmBroker
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Entity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Replicate_Action'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierID: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplierID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier_ID, acc_active'
       'from Supplier'
@@ -700,13 +589,11 @@ object dmBroker: TdmBroker
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCategory: TQuery
-    DatabaseName = 'PB'
+  object qryGetCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -715,13 +602,11 @@ object dmBroker: TdmBroker
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT SUM(Store_Quantity) as Total_Stock'
       'FROM Store_Stock'
@@ -730,13 +615,11 @@ object dmBroker: TdmBroker
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryGetPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 '
       #9#9'Financial_Year.No_of_Periods, '
@@ -750,13 +633,11 @@ object dmBroker: TdmBroker
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
-  object qryCheckActivity: TQuery
-    DatabaseName = 'PB'
+  object qryCheckActivity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Activity, Original_Activity'
       'FROM Activity'
@@ -769,28 +650,20 @@ object dmBroker: TdmBroker
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Entity_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Module'
-        ParamType = ptUnknown
       end>
   end
-  object qryCustomerSubRep: TQuery
-    DatabaseName = 'PB'
+  object qryCustomerSubRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Rep'
       'FROM reps_branches'
@@ -800,18 +673,14 @@ object dmBroker: TdmBroker
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetDocumentNames: TQuery
-    DatabaseName = 'PB'
+  object qryGetDocumentNames: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Document_Structure'
@@ -820,13 +689,11 @@ object dmBroker: TdmBroker
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Module_ID'
-        ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'EmailsSQL'
+  object qryZero: TFDQuery
+    ConnectionName = 'EmailsSQL'
     SQL.Strings = (
       'Insert Into Rep(Rep, Name)'
       'SELECT Max(Rep)+1, :GUID FROM Rep'
@@ -837,13 +704,13 @@ object dmBroker: TdmBroker
     Top = 176
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryUpdEmail: TQuery
-    DatabaseName = 'EmailsSQL'
+  object qryUpdEmail: TFDQuery
+    ConnectionName = 'EmailsSQL'
     SQL.Strings = (
       'Update Email_Log'
       'Set'
@@ -861,53 +728,35 @@ object dmBroker: TdmBroker
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email_Subject'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sender_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sender_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Recipient_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Recipient_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Body_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Workstation_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Id'
-        ParamType = ptUnknown
       end>
   end
-  object qryAddEmail: TQuery
-    DatabaseName = 'EmailsSQL'
+  object qryAddEmail: TFDQuery
+    ConnectionName = 'EmailsSQL'
     SQL.Strings = (
       'Insert Into Email_Log'
       '        (Date_Created,'
@@ -921,18 +770,16 @@ object dmBroker: TdmBroker
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryGetLastEmail: TQuery
-    DatabaseName = 'EmailsSQL'
+  object qryGetLastEmail: TFDQuery
+    ConnectionName = 'EmailsSQL'
     SQL.Strings = (
       'Select Email_Id'
       'From Email_Log Where Email_Subject = :GUID'
@@ -941,13 +788,13 @@ object dmBroker: TdmBroker
     Top = 128
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryAddEmailAttachment: TQuery
-    DatabaseName = 'EmailsSQL'
+  object qryAddEmailAttachment: TFDQuery
+    ConnectionName = 'EmailsSQL'
     SQL.Strings = (
       'INSERT INTO Email_Attachment'
       '(Email_ID,'
@@ -961,28 +808,23 @@ object dmBroker: TdmBroker
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Attachment_Filename'
-        ParamType = ptUnknown
       end>
   end
-  object EmailDatabase: TDatabase
-    AliasName = 'EMails'
-    DatabaseName = 'EmailsSQL'
+  object EmailDatabase: TFDConnection
+    ConnectionName = 'EmailsSQL'
     Params.Strings = (
-      '=')
-    SessionName = 'Default'
+      '='
+      'ConnectionDef=Redeye')
     OnLogin = EmailDatabaseLogin
     Left = 1032
     Top = 32
   end
-  object qryGetCustomerRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Rep'
       'from Reps_Branches'
@@ -992,18 +834,14 @@ object dmBroker: TdmBroker
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -1012,13 +850,11 @@ object dmBroker: TdmBroker
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerSubRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerSubRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 reps_branches.Rep'
       'FROM Rep '
@@ -1029,18 +865,14 @@ object dmBroker: TdmBroker
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryCompanySupplier: TQuery
-    DatabaseName = 'PB'
+  object qryCompanySupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Company.Company,'
       '        Supplier_Branch.Account_Code'

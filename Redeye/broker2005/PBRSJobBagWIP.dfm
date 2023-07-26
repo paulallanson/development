@@ -602,8 +602,8 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
       OnClick = ExcOnHoldCheckBoxClick
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order, '
       #9'Delivery_Detail.Line, '
@@ -759,8 +759,8 @@ object PBRSJobBagWIPfrm: TPBRSJobBagWIPfrm
     Left = 400
     Top = 88
   end
-  object qryExcel: TQuery
-    DatabaseName = 'pb'
+  object qryExcel: TFDQuery
+    ConnectionName = 'pb'
     Left = 664
     Top = 200
   end

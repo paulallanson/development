@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, StdCtrls, Buttons, Db, DBTables, Spin, ExtCtrls, CCSCommon,
-  Menus, ComCtrls;
+  Grids, DBGrids, StdCtrls, Buttons, Db, Spin, ExtCtrls, CCSCommon,
+  Menus, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSRptOrdsFrm = class(TForm)
@@ -15,13 +18,13 @@ type
     pnlButton: TPanel;
     CancelBitBtn: TBitBtn;
     dbgDetails: TDBGrid;
-    qryLive: TQuery;
+    qryLive: TFDQuery;
     dtsrcLive: TDataSource;
     PopupMenu1: TPopupMenu;
     ResetGrid1: TMenuItem;
     cmbbxOrderBy1: TComboBox;
     lblOrderBy1: TLabel;
-    qryBaseSQL: TQuery;
+    qryBaseSQL: TFDQuery;
     btbtnRepeat: TBitBtn;
     btbtnChange: TBitBtn;
     Label1: TLabel;

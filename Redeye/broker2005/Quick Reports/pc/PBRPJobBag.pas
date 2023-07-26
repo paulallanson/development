@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPJobBag = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -20,16 +23,16 @@ type
     QRDBText5: TQRDBText;
     qrgJobBag: TQRGroup;
     QRLabel1: TQRLabel;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryContact: TQuery;
+    qryContact: TFDQuery;
     gtQRLabel1: TQRLabel;
     gtQRLabel5: TQRLabel;
     gtQRDBText2: TQRDBText;
     gtQRDBText6: TQRDBText;
-    qryReportlines: TQuery;
+    qryReportlines: TFDQuery;
     dtsReport: TDataSource;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     
     QRLabel6: TQRLabel;
@@ -66,7 +69,7 @@ type
     qrgfJobBag: TQRBand;
     gtQRLabel12: TQRLabel;
     memoNotes: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     procedure qrgJobBagBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
@@ -84,7 +87,7 @@ type
   private
     rTotalCost, rTotalSell: real;
     ipage: integer;
-    procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildNotes(aQuery : TFDQuery; const iNarrative : integer);
     { Private declarations }
   public
     ForceNewPage: boolean;
@@ -226,7 +229,7 @@ begin
   gtlblTotalmargin.caption := formatfloat('##,###,##0.00',rTotalSell - rTotalCost);
 end;
 
-procedure TfrmPBRPJobBag.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPJobBag.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

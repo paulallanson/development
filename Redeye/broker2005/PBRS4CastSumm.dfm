@@ -146,8 +146,8 @@ object PBRS4CastSummfrm: TPBRS4CastSummfrm
     TabOrder = 7
     Kind = bkCancel
   end
-  object qrySalesComm: TQuery
-    DatabaseName = 'pb'
+  object qrySalesComm: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order,'
       #9'Delivery_Detail.Line,'

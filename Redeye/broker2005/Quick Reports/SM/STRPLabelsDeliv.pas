@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPLabelsDelivFrm = class(TForm)
     STLabelsQuickReport: TQuickRep;
-    oldSODelivSQL: TQuery;
+    oldSODelivSQL: TFDQuery;
     SODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     AddressSRC: TDataSource;
@@ -18,8 +21,8 @@ type
     lblCustomer: TQRLabel;
     QRLabel2: TQRLabel;
     BoxQRLbl: TQRLabel;
-    AdhocSQL: TQuery;
-    CustomerSQL: TQuery;
+    AdhocSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
     lblCustOrderRef: TQRLabel;
     lblDate: TQRLabel;
     lblDeliveryNo: TQRLabel;
@@ -28,7 +31,7 @@ type
     qrlblDelivery: TQRLabel;
     lblDeliveryTo: TQRLabel;
     QRLabel3: TQRLabel;
-    SODelivSQL: TQuery;
+    SODelivSQL: TFDQuery;
     QRDBText1: TQRDBText;
     DeliveryDateLbl: TQRLabel;
     AddressMemo: TQRMemo;

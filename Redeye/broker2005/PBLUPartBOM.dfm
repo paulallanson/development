@@ -158,8 +158,8 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Left = 40
     Top = 120
   end
-  object qryGetDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *, Part.Part_Description'
       'from Part_Element, Part'
@@ -175,8 +175,8 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'pb'
+  object qryAdd: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Part_Element'
       '(Part,'
@@ -212,8 +212,8 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNext: TQuery
-    DatabaseName = 'pb'
+  object qryGetNext: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select max(Element_no) as Last_Element'
       'from Part_Element'

@@ -1430,8 +1430,8 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Purchase_OrderLine.Purchase_Order,'
       #9'Purchase_OrderLine.Line,'
@@ -1599,8 +1599,8 @@ object PBRPFSCClaimFrm: TPBRPFSCClaimFrm
       DisplayFormat = '#,###,##0'
     end
   end
-  object qryGetStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purchase_Order,'
       '        Date_Received,'

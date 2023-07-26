@@ -373,8 +373,8 @@ object STMaintParamFrm: TSTMaintParamFrm
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
   end
-  object UpdCompSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set'

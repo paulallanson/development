@@ -60,35 +60,38 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables;
+  DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRDPORepDataMod = class(TDataModule)
-    GetPOsSeq00SQL: TQuery;
-    GetPOsSeq30SQL: TQuery;
-    GetPosSeq20SQL: TQuery;
-    GetPOsSeq50SQL: TQuery;
-    GetPosSeq40SQL: TQuery;
-    GetPOsSeq41SQL: TQuery;
-    GetPosSeq11SQL: TQuery;
-    GetPOsSeq10SQL: TQuery;
-    GetPOsSeq02SQL: TQuery;
-    GetPOsSeq01SQL: TQuery;
-    GetPosSeq21SQL: TQuery;
-    GetPosSeq12SQL: TQuery;
-    GetPosSeq22SQL: TQuery;
-    GetPOsSeq31SQL: TQuery;
-    GetPOsSeq32SQL: TQuery;
-    GetPOsSeq42SQL: TQuery;
-    GetPOsSeq51SQL: TQuery;
-    GetPOsSeq52SQL: TQuery;
-    FormRefSQL: TQuery;
-    GetPOsSeq60SQL: TQuery;
-    GetPOsSeq61SQL: TQuery;
-    GetPOsSeq62SQL: TQuery;
-    GetPOsSeq70SQL: TQuery;
-    GetPOsSeq71SQL: TQuery;
-    GetPOsSeq72SQL: TQuery;
+    GetPOsSeq00SQL: TFDQuery;
+    GetPOsSeq30SQL: TFDQuery;
+    GetPosSeq20SQL: TFDQuery;
+    GetPOsSeq50SQL: TFDQuery;
+    GetPosSeq40SQL: TFDQuery;
+    GetPOsSeq41SQL: TFDQuery;
+    GetPosSeq11SQL: TFDQuery;
+    GetPOsSeq10SQL: TFDQuery;
+    GetPOsSeq02SQL: TFDQuery;
+    GetPOsSeq01SQL: TFDQuery;
+    GetPosSeq21SQL: TFDQuery;
+    GetPosSeq12SQL: TFDQuery;
+    GetPosSeq22SQL: TFDQuery;
+    GetPOsSeq31SQL: TFDQuery;
+    GetPOsSeq32SQL: TFDQuery;
+    GetPOsSeq42SQL: TFDQuery;
+    GetPOsSeq51SQL: TFDQuery;
+    GetPOsSeq52SQL: TFDQuery;
+    FormRefSQL: TFDQuery;
+    GetPOsSeq60SQL: TFDQuery;
+    GetPOsSeq61SQL: TFDQuery;
+    GetPOsSeq62SQL: TFDQuery;
+    GetPOsSeq70SQL: TFDQuery;
+    GetPOsSeq71SQL: TFDQuery;
+    GetPOsSeq72SQL: TFDQuery;
     procedure GetPOsSeq00SQLAfterCancel(DataSet: TDataSet);
     procedure GetPOsSeq00SQLtotal_order_valGetText(Sender: TField;
       var Txt: String; DisplayText: Boolean);

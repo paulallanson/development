@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, StdCtrls, DBTables, Buttons, Printers, ExtCtrls, QrExport, STRPPODelivNote,
-  IniFiles;
+  DB, StdCtrls, Buttons, Printers, ExtCtrls, QrExport, STRPPODelivNote,
+  IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSPODelivNoteFrm = class(TForm)
@@ -16,14 +19,14 @@ type
     SelectionMemo: TMemo;
     SelectLst: TListBox;
     Label1: TLabel;
-    AddIntSelQuery: TQuery;
-    AddWorkSQL: TQuery;
-    DelWorkSQL: TQuery;
-    GetLastIntSelSQL: TQuery;
+    AddIntSelQuery: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
     rdgrpLogo: TRadioGroup;
     chkbxPrintlogo: TCheckBox;
-    GetOrdHedQuery: TQuery;
+    GetOrdHedQuery: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure PrintBtnClick(Sender: TObject);
     procedure PreviewBtnClick(Sender: TObject);

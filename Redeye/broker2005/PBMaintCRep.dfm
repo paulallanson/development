@@ -293,8 +293,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
   end
-  object GetRepsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRepsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep, Name'
       'From Rep'
@@ -328,8 +328,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Left = 88
     Top = 4
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Reps_Branches'
       'Where'
@@ -355,8 +355,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Reps_Branches'
       'Set'
@@ -395,8 +395,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Reps_Branches'
       '        (Customer,'
@@ -439,8 +439,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -454,8 +454,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         ParamType = ptUnknown
       end>
   end
-  object qryBranches: TQuery
-    DatabaseName = 'pb'
+  object qryBranches: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Customer_branch'
@@ -483,8 +483,8 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
     Left = 296
     Top = 52
   end
-  object qryAllBranches: TQuery
-    DatabaseName = 'pb'
+  object qryAllBranches: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Customer_branch'
@@ -507,15 +507,15 @@ object pbMaintCRepFrm: TpbMaintCRepFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetBranches: TQuery
-    DatabaseName = 'pb'
+  object qryGetBranches: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       '')
     Left = 240
     Top = 52
   end
-  object qryGetRepBranches: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepBranches: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep'
       'FROM Reps_Branches'

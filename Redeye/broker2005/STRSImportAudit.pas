@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, DBCtrls;
+  Db, StdCtrls, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSImportAuditfrm = class(TForm)
@@ -13,7 +16,7 @@ type
     btnPreview: TBitBtn;
     btnPrint: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryAudit: TQuery;
+    qryAudit: TFDQuery;
     dtsAudit: TDataSource;
     procedure EnableButtons(Sender: TObject);
     procedure FormActivate(Sender: TObject);

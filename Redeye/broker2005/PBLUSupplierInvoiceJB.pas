@@ -68,7 +68,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, Mask, DBCtrls,
+  StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, Mask, DBCtrls,
   ComCtrls, CCSCommon, PBSupplierInvoiceDM, Variants;
 
 type

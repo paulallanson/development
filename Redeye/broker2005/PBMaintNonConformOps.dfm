@@ -150,8 +150,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     TabOrder = 6
     Visible = False
   end
-  object qryOperators: TQuery
-    DatabaseName = 'pb'
+  object qryOperators: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Operator, Operator.Name as Operator_Name'
       'from Operator'
@@ -164,8 +164,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Non_Conform_Operator'
       '(Non_Conform_Operator,'
@@ -184,8 +184,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Operator, Operator.Name as Operator_Name'
       'from Operator'
@@ -193,8 +193,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Left = 328
     Top = 120
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Non_Conform_Operator.*, Operator.Name as Operator_Name'
       'from Non_Conform_Operator, Operator'
@@ -202,8 +202,8 @@ object PBMaintNonConformOpsFrm: TPBMaintNonConformOpsFrm
     Left = 104
     Top = 64
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Non_Conform_Operator')
     Left = 192

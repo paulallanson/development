@@ -1693,8 +1693,8 @@ object PBRP4CastSummFrm: TPBRP4CastSummFrm
       end
     end
   end
-  object qrySalesComm: TQuery
-    DatabaseName = 'PB'
+  object qrySalesComm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Delivery_Detail.Qty_to_Deliver,'
       #9'Delivery_Detail.Date_Point,'

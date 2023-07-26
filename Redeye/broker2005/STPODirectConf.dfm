@@ -216,8 +216,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       73
       66)
   end
-  object qryGetDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Purch_Ord_Line.*, '
       #9'Part.Part_Description,'
@@ -241,8 +241,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetHead: TQuery
-    DatabaseName = 'PB'
+  object qryGetHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord.Purch_ord,'
       'Purch_Ord.Purch_Ord_Status,'
@@ -283,8 +283,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set'
@@ -307,8 +307,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord.Purch_Ord_Status,'
       '       (Select Count(Purch_Ord_Line_No)'
@@ -378,8 +378,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord_Line'
       'Set'
@@ -435,8 +435,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         ParamType = ptUnknown
       end>
   end
-  object qryInsPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryInsPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Purch_Ord_Line'
       

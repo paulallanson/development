@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPJobBagSched = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -72,7 +75,7 @@ type
     qrgfJobBag: TQRBand;
     gtQRLabel12: TQRLabel;
     memoNotes: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtQRLabel2: TQRLabel;
     procedure qrgJobBagBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
@@ -82,7 +85,7 @@ type
       var PrintBand: Boolean);
     procedure qrbPageHeaderBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
-    procedure BuildNotes(aQuery: TQuery; const iNarrative: integer);
+    procedure BuildNotes(aQuery: TFDQuery; const iNarrative: integer);
   private
     rTotalCost, rTotalSell: real;
     ipage: integer;
@@ -150,7 +153,7 @@ begin
     qrgfJobBag.enabled := true;
 end;
 
-procedure TfrmPBRPJobBagSched.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPJobBagSched.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

@@ -3935,8 +3935,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Works_Order.*,'
       '        Operator.Name as Office_Contact_Name,'
@@ -3957,8 +3957,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'pb'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -3997,8 +3997,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 440
     Top = 40
   end
-  object qryContact: TQuery
-    DatabaseName = 'pb'
+  object qryContact: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer_Contact.Name as Contact_Name,'
       '        Customer_Contact.Email,'
@@ -4035,9 +4035,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryWOProcesses: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsReport
+  object qryWOProcesses: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT Works_Order_Process.*, '
       #9'Process.Process_Description, '
@@ -4084,8 +4084,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 298
     Top = 38
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'pb'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Narrative_line'
@@ -4100,9 +4100,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryWOProcessQ: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsWOProcesses
+  object qryWOProcessQ: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsWOProcesses
     SQL.Strings = (
       'select '#9'Works_Order_Process_Detail.Process_Answer,'
       #9'Process_Question.Question_Text'
@@ -4145,9 +4145,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 288
     Top = 112
   end
-  object qryWODelivery: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryWODelivery: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select Works_Order_Delivery.*,'
       'Courier.Courier_Name,'
@@ -4186,8 +4186,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryUpWO: TQuery
-    DatabaseName = 'PB'
+  object qryUpWO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Works_Order'
       'set Works_Order_Status = 20'
@@ -4201,7 +4201,7 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object OldqryWOProcesses: TQuery
+  object OldqryWOProcesses: TFDQuery
     SQL.Strings = (
       'select Works_Order_Process.*,'
       '      Process.Process_Description,'
@@ -4231,9 +4231,9 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryWOPOrders: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsReport
+  object qryWOPOrders: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Purchase_Order,'
       '        Job_Bag_Line_Dets.Line,'
@@ -4282,8 +4282,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 760
     Top = 96
   end
-  object qryGetCompAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCompAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name,'
       '         Company.Building_No_Name,'
@@ -4302,8 +4302,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 928
     Top = 6
   end
-  object qryGetCustAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Customer.Name,'
       '         Customer_Branch.Building_No_Name,'
@@ -4337,8 +4337,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
         ParamType = ptUnknown
       end>
   end
-  object qryGetAddHocAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetAddHocAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name,'
       '         Building_No_name,'
@@ -4365,8 +4365,8 @@ object frmPBRPWorksOrder: TfrmPBRPWorksOrder
     Left = 1016
     Top = 8
   end
-  object qryGetCompBrAddr: TQuery
-    DatabaseName = 'PB'
+  object qryGetCompBrAddr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Company.Name,'
       '         Company_Branch.Building_No_Name,'

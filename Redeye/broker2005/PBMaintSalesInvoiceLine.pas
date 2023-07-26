@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, PBPOObjects, PBSalesInvoiceDM, DBCtrls, Db, DBTables, CCSCommon,
-  Mask;
+  StdCtrls, Buttons, ExtCtrls, PBPOObjects, PBSalesInvoiceDM, DBCtrls, Db, CCSCommon,
+  Mask,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSalesInvoiceLinefrm = class(TForm)
@@ -16,11 +19,11 @@ type
     lblOrderType: TLabel;
     lblOrderNumber: TLabel;
     Label1: TLabel;
-    qryVAT: TQuery;
-    qryPriceUnit: TQuery;
+    qryVAT: TFDQuery;
+    qryPriceUnit: TFDQuery;
     dsVAT: TDataSource;
     dsPriceUnit: TDataSource;
-    qryNominal: TQuery;
+    qryNominal: TFDQuery;
     dsNominal: TDataSource;
     pnlDetails: TPanel;
     Label2: TLabel;

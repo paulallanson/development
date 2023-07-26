@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids;
+  Db, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintFYRepBudgetsFrm = class(TForm)
@@ -14,16 +17,16 @@ type
     edtFY: TEdit;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     dtsPeriods: TDataSource;
-    qryReps: TQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
     grdDetails: TStringGrid;
-    qryGetRepBudgets: TQuery;
-    qryFirstPeriod: TQuery;
-    qryCheckBudget: TQuery;
-    qryUpdBudget: TQuery;
-    qryAddBudget: TQuery;
+    qryGetRepBudgets: TFDQuery;
+    qryFirstPeriod: TFDQuery;
+    qryCheckBudget: TFDQuery;
+    qryUpdBudget: TFDQuery;
+    qryAddBudget: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);

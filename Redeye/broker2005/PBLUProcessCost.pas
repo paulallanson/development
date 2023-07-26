@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ComCtrls, ExtCtrls, Menus, DB, DBCtrls,
-  DBTables, Grids, DBGrids, Mask;
+  Dialogs, StdCtrls, Buttons, ComCtrls, ExtCtrls, Menus, DB, DBCtrls, Grids, DBGrids, Mask,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUProcessCostFrm = class(TForm)
@@ -33,10 +35,10 @@ type
     btnChgPCostSub: TMenuItem;
     btnDelPCostSub: TMenuItem;
     lblTask: TLabel;
-    qryProcessCosts: TQuery;
+    qryProcessCosts: TFDQuery;
     dtsProcessCosts: TDataSource;
-    qryProcessCostCat: TQuery;
-    qryProcessCostSub: TQuery;
+    qryProcessCostCat: TFDQuery;
+    qryProcessCostSub: TFDQuery;
     dtsProcessCostCat: TDataSource;
     dtsProcessCostSub: TDataSource;
     dblstProcessCosts: TDBLookupListBox;
@@ -56,17 +58,17 @@ type
     lblProcessDescription: TLabel;
     lblDescription: TLabel;
     btnCopyPCost: TMenuItem;
-    qryAddProcessCost: TQuery;
-    qryAddProcessCostCat: TQuery;
-    qryLastCostNumber: TQuery;
-    qryLastCatNumber: TQuery;
-    qryAddProcessCostSub: TQuery;
-    qryDelete: TQuery;
+    qryAddProcessCost: TFDQuery;
+    qryAddProcessCostCat: TFDQuery;
+    qryLastCostNumber: TFDQuery;
+    qryLastCatNumber: TFDQuery;
+    qryAddProcessCostSub: TFDQuery;
+    qryDelete: TFDQuery;
     dblkpProcess: TDBLookupComboBox;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
-    qryGetPTProcess: TQuery;
-    qryGetProcess: TQuery;
+    qryGetPTProcess: TFDQuery;
+    qryGetProcess: TFDQuery;
     grpbxCopy: TGroupBox;
     edtCopyCustomer: TEdit;
     btnRep: TButton;

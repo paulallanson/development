@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ToolWin, ComCtrls, Menus, StdActns, ActnList, Grids,
-  DBGrids, ExtCtrls, ImgList, ShellAPI, CCSCommon, DB, DBTables, OleCtnrs,
+  DBGrids, ExtCtrls, ImgList, ShellAPI, CCSCommon, DB, OleCtnrs,
   IniFiles, PBActivityDM, System.Actions, System.ImageList;
 
 type
@@ -424,7 +424,10 @@ uses pbluCustomers, pbluSuppliers, pbLogin, PBMaintCompany, PBLUPrdTyp,
   PBLULevelOfImportance, PBLUCountry, PBLUActivityType,
   PBMaintActivityReminder, PBQuestnCats, PBLUQuestn, PBMaintProdCats,
   PBLUCap, PBCapCats, PBLUActivities, PBExpiryDate, PBLUWorksOrderStatus,
-  PBLUContracts, pbluEndUsers, PBLUDocumentLogos, PBLUPackFormat;
+  PBLUContracts, pbluEndUsers, PBLUDocumentLogos, PBLUPackFormat,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 {$R *.DFM}
 
@@ -571,14 +574,12 @@ begin
 
   {Search the INI file for Activity Interval}
   {This method used for backward compatibility with WIN95}
+  FillChar(TempArray, SizeOf(TempArray), #0);
   GetPrivateProfileString('Activity', 'Reminder Interval', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
-  try
-    iActivityInterval := strtoint(TempArray);
-  except
+  if not TryStrToInt(TempArray, iActivityInterval) then
     iActivityInterval := 0;
-  end;
 
   if iActivityInterval = 0 then
     tmrCheckActivity.Interval := 900000
@@ -937,8 +938,8 @@ begin
     begin
       EmailApplication := ReadString('Email', 'Application', 'None');
       EmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      EmailAccount := ReadString('Email', pchar(dmBroker.PBLDatabase.AliasName + ' Email Account'), '');
-      InvoiceEmailAccount := ReadString('Email', pchar(dmBroker.PBLDatabase.AliasName + ' Invoice Email Account'), '');
+      EmailAccount := ReadString('Email', pchar(dmBroker.PBLDatabase.ConnectionDefName + ' Email Account'), '');
+      InvoiceEmailAccount := ReadString('Email', pchar(dmBroker.PBLDatabase.ConnectionDefName + ' Invoice Email Account'), '');
       if trim(InvoiceEmailAccount) = '' then
         InvoiceEmailAccount := EmailAccount;
       Free;
@@ -2216,7 +2217,7 @@ procedure TfrmpbMainMenu.miExcelClick(Sender: TObject);
 var
   icount: integer;
   tmpForm: TForm;
-  tmpQuery: TQuery;
+  tmpQuery: TFDQuery;
   tmpGrid: TDBGrid;
 begin
   tmpForm := ActiveMDIChild;
@@ -2226,7 +2227,7 @@ end;
 procedure TfrmpbMainMenu.ExportToExcel(tmpForm: TForm);
 var
   icount: integer;
-  tmpQuery: TQuery;
+  tmpQuery: TFDQuery;
   tmpGrid: TDBGrid;
 begin
   for icount := 0 to pred(tmpForm.ComponentCount) do

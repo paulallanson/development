@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, DBCtrls, IniFiles;
+  StdCtrls, Buttons, ExtCtrls, DB, DBCtrls, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSProofNFrm = class(TForm)
@@ -15,16 +18,16 @@ type
     EstNumLabel: TLabel;
     OrderMemo: TMemo;
     QuoLUSpeedButton: TSpeedButton;
-    GetPOsSQL: TQuery;
+    GetPOsSQL: TFDQuery;
     chkbxPrintLogo: TCheckBox;
     Label1: TLabel;
     edtProofRevision: TEdit;
-    UpdPOSQL: TQuery;
+    UpdPOSQL: TFDQuery;
     Label2: TLabel;
     dblkpProofStatus: TDBLookupComboBox;
-    ProofStatusSQL: TQuery;
+    ProofStatusSQL: TFDQuery;
     ProofStatusSRC: TDataSource;
-    DefStatSQL: TQuery;
+    DefStatSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);

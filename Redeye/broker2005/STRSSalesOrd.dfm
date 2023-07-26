@@ -164,8 +164,8 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     TabOrder = 5
     OnClick = EmailBitBtnClick
   end
-  object qryGetSOs: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sel1,'
       '        text100,'

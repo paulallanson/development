@@ -269,8 +269,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Left = 296
     Top = 88
   end
-  object qryAddPartAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryAddPartAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Allocation'
       '(Part_Store_Allocation, Store_Stock, Quantity_Allocated, Part)'
@@ -296,8 +296,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from Store_Stock'

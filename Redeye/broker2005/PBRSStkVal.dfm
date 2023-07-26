@@ -213,8 +213,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Caption = 'Customer valuation'
     TabOrder = 8
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purchase_OrderLine.Order_Price, Purchase_OrderLine.Sellin' +
@@ -303,8 +303,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Left = 104
     Top = 112
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -330,8 +330,8 @@ object PBRSStkValFrm: TPBRSStkValFrm
         ParamType = ptUnknown
       end>
   end
-  object oldDummySQL: TQuery
-    DatabaseName = 'PB'
+  object oldDummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Order_Price,'
       '        Purchase_OrderLine.Selling_Price,'
@@ -389,7 +389,7 @@ object PBRSStkValFrm: TPBRSStkValFrm
     Left = 352
     Top = 56
   end
-  object DummySQL: TQuery
+  object DummySQL: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Purchase_OrderLine.Order_Price,'
       #9'Purchase_OrderLine.Selling_Price, '

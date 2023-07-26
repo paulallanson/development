@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls;
+  Db, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUPOLAddChgsfrm = class(TForm)
@@ -16,15 +19,15 @@ type
     chgBitBtn: TBitBtn;
     AddBitBtn: TBitBtn;
     lblPONumber: TLabel;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsSRC: TDataSource;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     lblCustomer: TLabel;
     lblSupplier: TLabel;
-    GetPOSQL: TQuery;
-    qryPeriod: TQuery;
+    GetPOSQL: TFDQuery;
+    qryPeriod: TFDQuery;
     btnClose: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);

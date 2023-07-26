@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPWorksOrder = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -21,10 +24,10 @@ type
     QRDBText5: TQRDBText;
     qrgWOrder: TQRGroup;
     QRLabel1: TQRLabel;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
     gtQRDBText1: TQRDBText;
-    qryContact: TQuery;
+    qryContact: TFDQuery;
     gtQRShape1: TQRShape;
     gtQRLabel1: TQRLabel;
     gtQRLabel3: TQRLabel;
@@ -36,13 +39,13 @@ type
     gtQRDBText4: TQRDBText;
     gtQRDBText5: TQRDBText;
     gtQRDBText6: TQRDBText;
-    qryWOProcesses: TQuery;
+    qryWOProcesses: TFDQuery;
     dtsReport: TDataSource;
     qrsdtlProcesses: TQRSubDetail;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     qrGrpProcesses: TQRGroup;
     gtProcess: TQRDBText;
-    qryWOProcessQ: TQuery;
+    qryWOProcessQ: TFDQuery;
     qrbGrpProcessFooter: TQRBand;
     QRSubDetail1: TQRSubDetail;
     dtsWOProcesses: TDataSource;
@@ -77,7 +80,7 @@ type
     gtQRDBText12: TQRDBText;
     qrgrpDelivery: TQRGroup;
     qrsdtlDelivery: TQRSubDetail;
-    qryWODelivery: TQuery;
+    qryWODelivery: TFDQuery;
     gtQRLabel14: TQRLabel;
     gtQRDBText13: TQRDBText;
     gtQRDBText14: TQRDBText;
@@ -106,14 +109,14 @@ type
     QRShape2: TQRShape;
     gtQRShape28: TQRShape;
     qrlblAccountName: TQRLabel;
-    qryUpWO: TQuery;
+    qryUpWO: TFDQuery;
     qrlblProcessSize: TQRLabel;
     gtdbTextRunTime: TQRDBText;
     gtlblRunTime: TQRLabel;
     gtlblTeamSize: TQRLabel;
     gtdbtextTeamSize: TQRDBText;
     gtlblMAchineGroup: TQRLabel;
-    OldqryWOProcesses: TQuery;
+    OldqryWOProcesses: TFDQuery;
     gtdbtextMachineGroup: TQRDBText;
     gtlblMachine: TQRLabel;
     gtdbTextMachine: TQRDBText;
@@ -132,7 +135,7 @@ type
     qrlblPaymentTerms: TQRLabel;
     QRGroup1: TQRGroup;
     qrsdtPOrders: TQRSubDetail;
-    qryWOPOrders: TQuery;
+    qryWOPOrders: TFDQuery;
     dsWOPOrders: TDataSource;
     gtQRLabel26: TQRLabel;
     gtQRShape7: TQRShape;
@@ -167,11 +170,11 @@ type
     qrChildReturnAddress: TQRChildBand;
     gtQRLabel31: TQRLabel;
     qrmReturnAddress: TQRMemo;
-    qryGetCompAddr: TQuery;
-    qryGetCustAddr: TQuery;
-    qryGetAddHocAddr: TQuery;
+    qryGetCompAddr: TFDQuery;
+    qryGetCustAddr: TFDQuery;
+    qryGetAddHocAddr: TFDQuery;
     dtsReturnAddress: TDataSource;
-    qryGetCompBrAddr: TQuery;
+    qryGetCompBrAddr: TFDQuery;
     procedure qrgWOrderBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;

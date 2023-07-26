@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, PBDBQuoLtr, PBDBQuoSumLtr,
-  QrExport, CCSCommon, CCSPress, Inifiles;
+  StdCtrls, Buttons, ExtCtrls, DB, CCSDataBroker, PBDBQuoLtr, PBDBQuoSumLtr,
+  QrExport, CCSCommon, CCSPress, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TQuoLetterClass = class of TdbQuoLtr;
@@ -13,7 +16,7 @@ type
   TPBRSQuoFrm = class(TForm)
     MyOrAllRadioGroup: TRadioGroup;
     AllOrOneRadioGroup: TRadioGroup;
-    GetEnqSQL: TQuery;
+    GetEnqSQL: TFDQuery;
     pnlButtons: TPanel;
     cbPrintLogo: TCheckBox;
     CancelBitBtn: TBitBtn;
@@ -32,10 +35,10 @@ type
     EnqLUSpeedButton: TSpeedButton;
     SelectionMemo: TMemo;
     SelectLst: TListBox;
-    AddIntSelQuery: TQuery;
-    AddWorkSQL: TQuery;
-    DelWorkSQL: TQuery;
-    GetLastIntSelSQL: TQuery;
+    AddIntSelQuery: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
     procedure CanPrint(Sender: TObject);
     procedure AllOrOneRadioGroupClick(Sender: TObject);
     procedure PreviewBitBtnClick(Sender: TObject);

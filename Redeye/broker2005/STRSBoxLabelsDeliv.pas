@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Spin, StdCtrls, Buttons, IniFiles, ccsCommon, DB, DBTables, DBCtrls;
+  Spin, StdCtrls, Buttons, IniFiles, ccsCommon, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSBoxLabelsDelivFrm = class(TForm)
@@ -34,7 +37,7 @@ type
     Label12: TLabel;
     dblkpLogos: TDBLookupComboBox;
     FormRefClrBitBtn: TBitBtn;
-    qryLogos: TQuery;
+    qryLogos: TFDQuery;
     dtsLogos: TDataSource;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);

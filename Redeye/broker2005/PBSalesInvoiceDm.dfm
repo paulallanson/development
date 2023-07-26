@@ -1,15 +1,12 @@
 object dmSalesInvoice: TdmSalesInvoice
-  OldCreateOrder = False
-  Left = 317
-  Top = 69
   Height = 655
   Width = 1048
   object dsDummy: TDataSource
     Left = 416
     Top = 336
   end
-  object qryPEnd: TQuery
-    DatabaseName = 'PB'
+  object qryPEnd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_Profit'
@@ -18,13 +15,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 12
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOUpLine: TQuery
-    DatabaseName = 'pb'
+  object qryPOUpLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Purch_Ord_Line_Status = :Purch_Ord_Line_Status,'
@@ -37,33 +32,23 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Sales_Invoice,'
       #9'      Sales_Invoice.Invoice_Date,'
@@ -159,13 +144,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAllLines: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_invoice_line.*,'
       '          Price_Unit.Description as Price_Unit_Description,'
@@ -179,13 +162,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qrySILine: TQuery
-    DatabaseName = 'PB'
+  object qrySILine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_invoice_line.*,'
       '          Price_Unit.Description as Price_Unit_Description,'
@@ -203,18 +184,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAddLine: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Invoice_Line'
       '  (Sales_Invoice,'
@@ -269,131 +246,96 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_order'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Line'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Goods_Value'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Value'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Product_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Price_unit'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Nominal'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Internal_Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Sales_order'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Sales_order_Line_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Credit_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Not_Printed'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Cost_Price'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
+        Name = 'Line'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Qty_Invoiced'
+      end
+      item
+        Name = 'Goods_Value'
+      end
+      item
+        Name = 'VAT_Code'
+      end
+      item
+        Name = 'VAT_Value'
+      end
+      item
+        Name = 'Product_Type'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Sales_Invoice_Status'
+      end
+      item
+        Name = 'Price_unit'
+      end
+      item
+        Name = 'Nominal'
+      end
+      item
+        Name = 'Narrative'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Job_Bag'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Job_Bag_Line'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Reference'
+      end
+      item
+        Name = 'Internal_Narrative'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Sales_order'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Sales_order_Line_no'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Credit_Type'
+        DataType = ftString
+      end
+      item
+        Name = 'Not_Printed'
+      end
+      item
+        Name = 'Cost_Price'
+      end
+      item
         Name = 'Reseller_Price'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end>
   end
-  object qrySIGetLast: TQuery
-    DatabaseName = 'PB'
+  object qrySIGetLast: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Sales_Invoice) as Last_Sales_invoice'
       'from Sales_invoice')
     Left = 304
     Top = 8
   end
-  object qrySIAddHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Sales_invoice'
       '     (Sales_Invoice,'
@@ -487,228 +429,170 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_to_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_to_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Paid_Status'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Paid_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Sales_invoice_type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Period_End_run'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Internal_Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Cash_Sales'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Number'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Month'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Year'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Contact_no'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Contact_no'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Contact_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Credit_Note_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Print_as_Delivery_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Created'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Sub_Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Quantity'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Date_Created'
+      end
+      item
+        Name = 'Sub_Rep'
+        DataType = ftInteger
+      end
+      item
         Name = 'Alt_Sales_Invoice_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 304
     Top = 64
   end
-  object qrySICharges: TQuery
-    DatabaseName = 'PB'
+  object qrySICharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_invoice_Add_Charge.*,'
       '          Vat_Code.Vat_Rate'
@@ -720,18 +604,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAddCharge: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddCharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Invoice_Add_Charge'
       '    (Sales_Invoice,'
@@ -762,58 +642,41 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAt_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cost_price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'poAddChrg'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Purchase_Order'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Purchase_Order'
+        DataType = ftFloat
+      end
+      item
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qrySILineChgs: TQuery
-    DatabaseName = 'PB'
+  object qrySILineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  sales_inv_line_add_chg.Additional_Charge,'
       '        sales_inv_line_add_chg.Sales_Invoice,'
@@ -840,23 +703,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAddLineChg: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddLineChg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Inv_Line_Add_Chg'
       '    (Sales_Invoice,'
@@ -880,48 +737,32 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAllCharges: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_invoice_Add_Charge.*,'
       '          Vat_Code.Vat_Rate'
@@ -932,9 +773,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object dsSIHeaderGrid: TDataSource
@@ -942,9 +781,9 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 456
     Top = 8
   end
-  object qrySIHeaderGrid: TQuery
+  object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 2000'
       #9#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
@@ -1056,124 +895,91 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Status'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Operator'
+      end
+      item
+        Name = 'Operator'
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Status'
         DataType = ftInteger
+      end
+      item
         Name = 'Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Rep_Name'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Sub_Rep_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -1324,8 +1130,8 @@ object dmSalesInvoice: TdmSalesInvoice
       Size = 25
     end
   end
-  object qryOperator: TQuery
-    DatabaseName = 'PB'
+  object qryOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator')
     Left = 528
@@ -1336,8 +1142,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 584
     Top = 8
   end
-  object qryGetCustBranch: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '          Building_no_Name,'
@@ -1353,18 +1159,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_orderLine.Customers_Desc, Cust_Order_no'
       'from Purchase_orderLine'
@@ -1374,18 +1176,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'PB'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Order_Line.Part, Part.Part_description'
       'from Sales_Order_Line, Part'
@@ -1396,18 +1194,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Dets.Job_Bag_Line_Descr'
       'from Job_Bag_Line_Dets'
@@ -1417,18 +1211,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIUpHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIUpHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_invoice'
       'SET Goods_Value = :Goods_Value, '
@@ -1477,218 +1267,162 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_to_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_to_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Paid_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Sales_invoice_type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Period_End_run'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Internal_Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Cash_Sales'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Number'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Month'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Account_Year'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftInteger
-        Name = 'Contact_no'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
-        Name = 'Contact_Name'
         ParamType = ptInput
       end
       item
+        Name = 'Contact_no'
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
+        Name = 'Contact_Name'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Credit_Note_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Print_as_Delivery_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Quantity'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'End_User_Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Alt_Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryCustReps: TQuery
-    DatabaseName = 'PB'
+  object qryCustReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep.Name, Rep.Rep'
       'from Reps_Branches, Rep'
@@ -1699,18 +1433,16 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qrySIAllLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  sales_inv_line_add_chg.Additional_Charge,'
       '        sales_inv_line_add_chg.Sales_Invoice,'
@@ -1732,18 +1464,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'PB'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from VAT_Code'
@@ -1752,13 +1480,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -1767,20 +1493,18 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
     Left = 448
     Top = 232
   end
-  object qryPOAllLines: TQuery
-    DatabaseName = 'PB'
+  object qryPOAllLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -1847,24 +1571,20 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 336
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Invoiced1'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Invoiced2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
+        Name = 'Invoiced2'
+        DataType = ftString
+      end
+      item
         Name = 'Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dsPOLine: TDataSource
@@ -1872,8 +1592,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 360
     Top = 336
   end
-  object qryPOAll: TQuery
-    DatabaseName = 'PB'
+  object qryPOAll: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -1953,8 +1673,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 472
     Top = 336
   end
-  object qryPODeliv: TQuery
-    DatabaseName = 'PB'
+  object qryPODeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.*,'
       '          (select sum(Qty_Delivered)'
@@ -2028,8 +1748,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 528
     Top = 336
   end
-  object oldqryPOLine: TQuery
-    DatabaseName = 'PB'
+  object oldqryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -2094,18 +1814,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetInvStatus: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_invoice_Status'
@@ -2114,14 +1830,12 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_invoice_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOAll: TQuery
+  object qrySOAll: TFDQuery
     OnCalcFields = qrySOAllCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order.*,'
       '          Customer.Name as Customer_Name,'
@@ -2174,9 +1888,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 152
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qrySOAllSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -2286,8 +1999,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 88
     Top = 160
   end
-  object qryJBAll: TQuery
-    DatabaseName = 'PB'
+  object qryJBAll: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag.*,'
       '          Customer.Name as Customer_Name,'
@@ -2407,9 +2120,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 264
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dsJBAll: TDataSource
@@ -2417,8 +2129,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 64
     Top = 264
   end
-  object qrySOHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySOHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_Order.*,'
       '        Customer.Name as Customer_Name,'
@@ -2457,13 +2169,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOLines: TQuery
-    DatabaseName = 'PB'
+  object qrySOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Sales_Order_line.Sales_Order,'
       #9'Sales_Order_line.Sales_Order_line_no, '
@@ -2504,13 +2214,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBHeader: TQuery
-    DatabaseName = 'PB'
+  object qryJBHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Job_Bag.*,'
       #9'      Customer.Name as Customer_Name,'
@@ -2551,13 +2259,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBLines: TQuery
-    DatabaseName = 'PB'
+  object qryJBLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -2655,13 +2361,12 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 264
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryGetPType: TQuery
-    DatabaseName = 'PB'
+  object qryGetPType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_Type.Product_Type,'
       '        Product_type.Description,'
@@ -2679,13 +2384,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPOChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order, Line'
       'from Purchase_Orderline'
@@ -2695,18 +2398,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 106
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_Status'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOUpHead: TQuery
-    DatabaseName = 'PB'
+  object qryPOUpHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_Order'
       'set Purch_Ord_Head_Status = :Purch_Ord_Head_Status'
@@ -2715,18 +2414,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Head_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOUpLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOUpLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order_Line'
       'Set Quantity_Invoiced = Quantity_Invoiced + :Quantity_Invoiced'
@@ -2740,23 +2435,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySOChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order.Sales_Order_Head_Status,'
       '       (Select Sum(Quantity_Ordered - Quantity_Invoiced)'
@@ -2785,13 +2474,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 60
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOUpHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOUpHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order_Head_Status = :Sales_Order_Head_Status'
@@ -2800,18 +2487,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Head_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Job_Bag_Line_Dets'
       'set Job_Bag_Line_Invoiced = :Job_Bag_Line_Invoiced,'
@@ -2822,28 +2505,20 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryRep: TQuery
-    DatabaseName = 'PB'
+  object qryRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -2853,9 +2528,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object dsRep: TDataSource
@@ -2863,8 +2536,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 56
     Top = 360
   end
-  object qryJBChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -2916,13 +2589,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 316
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
@@ -2931,18 +2602,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Order_Line.Part,'
       
@@ -2960,18 +2627,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Dets.Job_Bag_Line_Descr, '
       '(Job_Bag_Quantity - isnull(Qty_Invoiced,0)) as Qty_Outstanding,'
@@ -2983,18 +2646,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryPOLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord_Line_Add_Chg.Purchase_Order,'
       '        Purch_Ord_Line_Add_Chg.Line,'
@@ -3034,18 +2693,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryCustInvTo: TQuery
-    DatabaseName = 'PB'
+  object qryCustInvTo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Branch.Inv_To_Customer,'
       '           Customer_Branch.Inv_To_Branch,'
@@ -3067,18 +2722,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -3157,18 +2808,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -3177,13 +2824,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryJBLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Line_Dets.Job_Bag,'
       #9'Purchase_OrderLine.Purchase_Order, '
@@ -3221,9 +2866,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object dsJBLines: TDataSource
@@ -3231,9 +2874,9 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 232
     Top = 264
   end
-  object qrySCHeaderGrid: TQuery
+  object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySCHeaderGridCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'
@@ -3309,99 +2952,69 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 448
     ParamData = <
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Status'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Status'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Status'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Inactive'
         DataType = ftString
-        Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Inactive'
+        DataType = ftString
+      end
+      item
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
       end>
     object DateTimeField1: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -3549,8 +3162,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 112
     Top = 424
   end
-  object qrySOChgs: TQuery
-    DatabaseName = 'PB'
+  object qrySOChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_Order,'
       '        Additional_Charge,'
@@ -3566,13 +3179,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order, '
       '          Replenish_source, Cust_Order_No'
@@ -3582,13 +3193,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
-  object qryPO2bInvoiced: TQuery
-    DatabaseName = 'PB'
+  object qryPO2bInvoiced: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -3709,8 +3318,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 232
     Top = 336
   end
-  object qryPeriodEnd: TQuery
-    DatabaseName = 'PB'
+  object qryPeriodEnd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from period'
@@ -3720,12 +3329,10 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'period'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOAll_Access: TQuery
+  object qrySOAll_Access: TFDQuery
     OnCalcFields = qrySOAllCalcFields
     SQL.Strings = (
       'select Sales_Order.*,'
@@ -3774,9 +3381,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 152
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object IntegerField7: TIntegerField
       FieldName = 'Sales_Order'
@@ -3881,8 +3487,8 @@ object dmSalesInvoice: TdmSalesInvoice
       Calculated = True
     end
   end
-  object qryGetCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'contact_info.Contact_Name,'
@@ -3902,23 +3508,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'contact_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'PB'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator'
       'where Operator = :Operator')
@@ -3926,13 +3526,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOLinePart: TQuery
-    DatabaseName = 'pb'
+  object qrySOLinePart: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order_Line.Part,'
       '  Part.Price_unit, Part.Part_Description, Part.Product_Type'
@@ -3946,23 +3544,19 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qrySpare: TQuery
-    DatabaseName = 'PB'
+  object qrySpare: TFDQuery
+    ConnectionName = 'PB'
     Left = 112
     Top = 376
   end
-  object qryCheckJB: TQuery
-    DatabaseName = 'PB'
+  object qryCheckJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Job_Bag_line'
       'from Job_Bag_line_Dets'
@@ -3972,18 +3566,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPOLine: TQuery
-    DatabaseName = 'pb'
+  object qryGetPOLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_order,'
       '        Purchase_OrderLine.Line,'
@@ -4007,18 +3597,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOUpLineStatus: TQuery
-    DatabaseName = 'pb'
+  object qryPOUpLineStatus: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Purch_Ord_Line_Status = :Purch_Ord_Line_Status'
@@ -4029,23 +3615,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJBLine: TQuery
-    DatabaseName = 'pb'
+  object qryGetJBLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Job_Bag, Job_Bag_Line, Job_Bag_Quantity, Qty_Invoiced'
       'from Job_Bag_Line_dets'
@@ -4054,18 +3634,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpLineStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpLineStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Job_Bag_Line_Dets'
       'set Job_Bag_Line_Invoiced = :Job_Bag_Line_Invoiced'
@@ -4075,23 +3651,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
-  object oldqryJBAll: TQuery
-    DatabaseName = 'PB'
+  object oldqryJBAll: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag.*,'
       '          Customer.Name as Customer_Name,'
@@ -4122,13 +3692,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 496
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCust: TQuery
-    DatabaseName = 'PB'
+  object qryGetCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *,'
       '(select Payment_Terms_Description'
@@ -4142,13 +3710,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOCheckJB: TQuery
-    DatabaseName = 'PB'
+  object qrySOCheckJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Job_Bag_line'
       'from Job_Bag_line_Dets'
@@ -4158,18 +3724,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryInvoiceLoc: TQuery
-    DatabaseName = 'pb'
+  object qryInvoiceLoc: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Invoice_Location'
@@ -4181,9 +3743,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end>
   end
   object dsInvoiceLoc: TDataSource
@@ -4191,8 +3751,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 192
     Top = 488
   end
-  object qryCheckJBPO: TQuery
-    DatabaseName = 'PB'
+  object qryCheckJBPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag'
       'from Job_Bag_Line_dets'
@@ -4205,26 +3765,22 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetInvoiceLoc: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvoiceLoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Invoice_Location')
     Left = 384
     Top = 488
   end
-  object qryGetDefaultInvLoc: TQuery
-    DatabaseName = 'PB'
+  object qryGetDefaultInvLoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Invoice_Location'
@@ -4232,8 +3788,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 488
     Top = 488
   end
-  object qryCustJBL: TQuery
-    DatabaseName = 'PB'
+  object qryCustJBL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag,'
       '        Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -4323,9 +3879,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object dsCustJBL: TDataSource
@@ -4333,8 +3887,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 232
     Top = 432
   end
-  object qryGetCat: TQuery
-    DatabaseName = 'PB'
+  object qryGetCat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Category'
@@ -4343,13 +3897,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 440
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetJBInvLoc: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBInvLoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Invoice_Location'
       'from Job_Bag'
@@ -4358,13 +3910,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryCreditReason: TQuery
-    DatabaseName = 'PB'
+  object qryCreditReason: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Credit_Note_Reason'
@@ -4377,8 +3927,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 696
     Top = 504
   end
-  object qrySIGetLastLine: TQuery
-    DatabaseName = 'PB'
+  object qrySIGetLastLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Invoice_Line_No) as Last_Sales_Invoice_Line'
       'from Sales_Invoice_Line'
@@ -4387,13 +3937,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBChkStockReq: TQuery
-    DatabaseName = 'PB'
+  object qryJBChkStockReq: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -4442,13 +3990,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpEInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryUpEInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Invoice'
       'set Electronic_Invoice = :Electronic_Invoice,'
@@ -4460,33 +4006,23 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_Order_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Print_as_Delivery_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Cust_Order_no'
       'from Job_Bag'
@@ -4495,13 +4031,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIUpStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySIUpStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Invoice'
       'set Sales_Invoice_Status = :Sales_Invoice_Status'
@@ -4510,18 +4044,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryPOUpRep: TQuery
-    DatabaseName = 'pb'
+  object qryPOUpRep: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Rep = :Rep'
@@ -4532,23 +4062,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
-  object qryJBUpRep: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_bag'
       'Set Rep = :Rep'
@@ -4557,18 +4081,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
-  object qrySODelRep: TQuery
-    DatabaseName = 'PB'
+  object qrySODelRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Sales_OrderRep'
       'Where Sales_Order = :Sales_Order')
@@ -4576,13 +4096,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOUpRep: TQuery
-    DatabaseName = 'PB'
+  object qrySOUpRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Sales_OrderRep'
       'values (:Sales_Order, :Rep, 0)')
@@ -4590,18 +4108,14 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAddDetail: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddDetail: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Invoice_Detail'
       '  (Sales_Invoice,'
@@ -4628,53 +4142,37 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 552
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Detail_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_order_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qrySIGetLastDetail: TQuery
-    DatabaseName = 'PB'
+  object qrySIGetLastDetail: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Sales_Invoice_Detail_No) as Last_Sales_Invoice_Detail'
       'from Sales_Invoice_Detail'
@@ -4683,13 +4181,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qrySIAllDetails: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_order.Sales_Order,'
       '  sales_order_line.sales_order_line_no,'
@@ -4762,14 +4258,12 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 544
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOAllUninvoiced: TQuery
+  object qrySOAllUninvoiced: TFDQuery
     OnCalcFields = qrySOAllCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order.*,'
       '          Customer.Name as Customer_Name,'
@@ -4817,9 +4311,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 152
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object IntegerField23: TIntegerField
       FieldName = 'Sales_Order'
@@ -4924,8 +4417,8 @@ object dmSalesInvoice: TdmSalesInvoice
       Calculated = True
     end
   end
-  object qryPriceUnits: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnits: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Price_unit '
@@ -4938,8 +4431,8 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 864
     Top = 504
   end
-  object qrySOUpdDelQty: TQuery
-    DatabaseName = 'PB'
+  object qrySOUpdDelQty: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Order_Line'
       'SET Quantity_Deleted = :Quantity_Deleted'
@@ -4949,23 +4442,17 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Deleted'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
       end>
   end
-  object qrySOUnDoLines: TQuery
-    DatabaseName = 'PB'
+  object qrySOUnDoLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Order_Line'
       'SET Quantity_Deleted = 0'
@@ -4983,13 +4470,11 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpPaidStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpPaidStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Invoice'
       'SET Paid_Status = :Paid_Status,'
@@ -5000,28 +4485,20 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 560
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
-  object qrySubRep: TQuery
-    DatabaseName = 'PB'
+  object qrySubRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Rep'
@@ -5032,9 +4509,7 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 406
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object dsSubRep: TDataSource
@@ -5042,9 +4517,9 @@ object dmSalesInvoice: TdmSalesInvoice
     Left = 56
     Top = 406
   end
-  object OldqrySIHeaderGrid: TQuery
+  object OldqrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 2000'
       #9#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
@@ -5128,124 +4603,91 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'UnFactored'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Status'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Operator'
+      end
+      item
+        Name = 'Operator'
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Code_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Status'
         DataType = ftInteger
+      end
+      item
         Name = 'Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Invoice_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Rep_Name'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Sub_Rep_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Status_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end>
     object DateTimeField10: TDateTimeField
       FieldName = 'Invoice_Date'
@@ -5381,8 +4823,8 @@ object dmSalesInvoice: TdmSalesInvoice
       Size = 50
     end
   end
-  object qryCheckInvoice: TQuery
-    DatabaseName = 'pb'
+  object qryCheckInvoice: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Select Sales_Invoice, Sales_invoice_No'
       'from Sales_Invoice'
@@ -5394,14 +4836,10 @@ object dmSalesInvoice: TdmSalesInvoice
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -4,8 +4,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
   Top = 122
   Height = 527
   Width = 738
-  object qryProcessGrp: TQuery
-    DatabaseName = 'PB'
+  object qryProcessGrp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Group'
@@ -18,9 +18,9 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 24
   end
-  object qryProcess: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsProcessGroup
+  object qryProcess: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsProcessGroup
     SQL.Strings = (
       'select'
       '    Process.Process,'
@@ -47,8 +47,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 80
   end
-  object qryWorkCentre: TQuery
-    DatabaseName = 'PB'
+  object qryWorkCentre: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre'
@@ -61,9 +61,9 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 144
   end
-  object qryProcessPaper: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsProcess
+  object qryProcessPaper: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsProcess
     SQL.Strings = (
       'select Process_Paper_Size.Process,'
       'Process_Paper_Size.Paper_Size,'
@@ -86,8 +86,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 200
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'Pb'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'Pb'
     SQL.Strings = (
       'select  Job_Bag.Job_Bag,'
       '        Job_Bag.Customer,'
@@ -105,8 +105,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Job_Bag_Time_Log'
       'Where'
@@ -120,8 +120,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Insert Into Job_Bag_Time_Log (Job_Bag_Time_Log, Custom_Paper_Siz' +
@@ -138,8 +138,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptInput
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag_Time_Log'
       'Set'
@@ -326,8 +326,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Job_Bag_Time_Log'
       'From Job_Bag_Time_Log'
@@ -341,8 +341,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Insert Into Job_Bag_Time_Log (Job_Bag_Time_Log, Custom_Paper_Siz' +
@@ -360,8 +360,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptInput
       end>
   end
-  object qryJobLogGrid: TQuery
-    DatabaseName = 'PB'
+  object qryJobLogGrid: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Entered,'
@@ -558,7 +558,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 424
     Top = 152
   end
-  object oldqryJobLogBase: TQuery
+  object oldqryJobLogBase: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Entered,'
@@ -628,8 +628,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 552
     Top = 152
   end
-  object qryWCOperators: TQuery
-    DatabaseName = 'PB'
+  object qryWCOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Work_Centre_Operator.*'
       'From Work_Centre_Operator'
@@ -660,8 +660,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 424
     Top = 200
   end
-  object qryGetProcessGrp: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcessGrp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Group'
@@ -675,9 +675,9 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryProcessOps: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsProcess
+  object qryProcessOps: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsProcess
     SQL.Strings = (
       'select Process_Operation.Process,'
       'Process_Operation.Operation,'
@@ -701,8 +701,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 256
   end
-  object qryGetEmployee: TQuery
-    DatabaseName = 'PB'
+  object qryGetEmployee: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre_Operator'
@@ -716,8 +716,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobLog: TQuery
-    DatabaseName = 'pb'
+  object qryGetJobLog: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Entered,'
@@ -791,8 +791,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryProcessGrpWC: TQuery
-    DatabaseName = 'PB'
+  object qryProcessGrpWC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  Process_Group.Process_Group_description,'
@@ -824,8 +824,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 120
     Top = 320
   end
-  object qryGetJobTimeLog: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobTimeLog: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Job_Bag_Time_Log'
@@ -863,8 +863,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryDelMulti: TQuery
-    DatabaseName = 'PB'
+  object qryDelMulti: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Job_Bag_Time_Log'
       'Where'
@@ -878,8 +878,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryWCOperatorsBase: TQuery
-    DatabaseName = 'PB'
+  object qryWCOperatorsBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Work_Centre_Operator.*'
       'From Work_Centre_Operator'
@@ -904,7 +904,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryOldJobLogBase: TQuery
+  object qryOldJobLogBase: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Entered, '
@@ -976,8 +976,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 504
     Top = 88
   end
-  object qryOldGetJobLog: TQuery
-    DatabaseName = 'pb'
+  object qryOldGetJobLog: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Time_Log.Job_Bag_Time_Log,'
       #9'Job_Bag_Time_Log.Date_Entered, '
@@ -1054,8 +1054,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetNonJobTimeLog: TQuery
-    DatabaseName = 'PB'
+  object qryGetNonJobTimeLog: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *, Customer.Name as Customer_Name'
       'FROM Customer'
@@ -1097,9 +1097,9 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryActivities: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsProcessGroup
+  object qryActivities: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsProcessGroup
     SQL.Strings = (
       'select *'
       'from Process_Group_Activity'
@@ -1114,8 +1114,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetEmployeeTime: TQuery
-    DatabaseName = 'PB'
+  object qryGetEmployeeTime: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '        Job_Bag_Time_Log.Work_Centre_Operator,'
@@ -1143,8 +1143,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryDelJobBagLog: TQuery
-    DatabaseName = 'PB'
+  object qryDelJobBagLog: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from job_bag_time_log'
       'where Job_bag_Time_Log = :Job_Bag_Time_Log')
@@ -1157,8 +1157,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetActivity: TQuery
-    DatabaseName = 'PB'
+  object qryGetActivity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Group_Activity'
@@ -1178,7 +1178,7 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryJobLogBase: TQuery
+  object qryJobLogBase: TFDQuery
     SQL.Strings = (
       'SELECT'
       '    Job_Bag_Time_Log.Job_Bag_Time_Log,'
@@ -1248,8 +1248,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
     Left = 504
     Top = 152
   end
-  object qryGetWorkCentre: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentre: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre'
@@ -1263,8 +1263,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentrebyName: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentrebyName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre'
@@ -1278,8 +1278,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '    Process.Process,'
@@ -1301,8 +1301,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentrebyShortName: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentrebyShortName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre'
@@ -1316,8 +1316,8 @@ object dtmdlJobBagLog: TdtmdlJobBagLog
         ParamType = ptUnknown
       end>
   end
-  object qryWCOperator: TQuery
-    DatabaseName = 'PB'
+  object qryWCOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre_Operator'

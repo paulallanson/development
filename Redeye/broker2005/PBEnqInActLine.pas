@@ -47,27 +47,30 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, Grids, Buttons, DBCtrls;
+  DB, StdCtrls, Grids, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqInActLineFrm = class(TForm)
     EnqLinesStringGrid: TStringGrid;
-    GetReasonsSQL: TQuery;
+    GetReasonsSQL: TFDQuery;
     ReasonsSRC: TDataSource;
     ReasonsDBLUCB: TDBLookupComboBox;
     Label1: TLabel;
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    UpdActiveLineSQL: TQuery;
-    UpdActiveHeadSQL: TQuery;
+    UpdActiveLineSQL: TFDQuery;
+    UpdActiveHeadSQL: TFDQuery;
     EnqNoDBText: TDBText;
-    GetDetsSQL: TQuery;
-    GDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    GDetsSQL: TFDQuery;
     DetsSRC: TDataSource;
     DescDBText: TDBText;
     GDetsSQLEnquiry: TIntegerField;
     GDetsSQLDescription: TStringField;
-    UpdInActiveSQL: TQuery;
+    UpdInActiveSQL: TFDQuery;
     ReasMntBitBtn: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure EnqLinesStringGridSelectCell(Sender: TObject; Col,

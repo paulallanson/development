@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, DB, DBTables, QRCtrls, qrprntr, Printers, CCSCommon;
+  Dialogs, ExtCtrls, QuickRpt, DB, QRCtrls, qrprntr, Printers, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmSTRPStockLocations = class(TForm)
     qrpDetails: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand1: TQRBand;
     QRSubDetail1: TQRSubDetail;
     QRDBText1: TQRDBText;

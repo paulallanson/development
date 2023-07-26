@@ -656,8 +656,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 0
     end
   end
-  object qryCurrentContStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCurrentContStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Name AS Contact_Name,'
       '        Customer_Contact.Salutation,'
@@ -942,9 +942,9 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Left = 144
     Top = 248
   end
-  object qryContStatus: TQuery
+  object qryContStatus: TFDQuery
     AutoRefresh = True
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Contact_Status, Contact_status.Contact_Status_descr'
       'from Contact_status'
@@ -961,8 +961,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Size = 40
     end
   end
-  object QryContType: TQuery
-    DatabaseName = 'PB'
+  object QryContType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Contact_Type'
       'order by Description')
@@ -970,13 +970,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 12
     object QryContTypeDescription: TStringField
       FieldName = 'Description'
-      Origin = 'PB.Contact_Type.Description'
+
       FixedChar = True
       Size = 80
     end
   end
-  object QryRep: TQuery
-    DatabaseName = 'PB'
+  object QryRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep, Name'
       'from Rep'
@@ -989,13 +989,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Size = 80
     end
   end
-  object qryExcel: TQuery
-    DatabaseName = 'pb'
+  object qryExcel: TFDQuery
+    ConnectionName = 'pb'
     Left = 664
     Top = 200
   end
-  object stdSQL: TQuery
-    DatabaseName = 'pb'
+  object stdSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Customer_Contact.Name AS Contact_Name,'
       #9'Customer_Contact.Salutation,'
@@ -1139,8 +1139,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Financial_Year, Period'
       'from Company'
@@ -1148,8 +1148,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Left = 368
     Top = 176
   end
-  object qryGetFY: TQuery
-    DatabaseName = 'PB'
+  object qryGetFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Financial_Year'
       'where Financial_Year = :Financial_Year')
@@ -1162,8 +1162,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCustType: TQuery
-    DatabaseName = 'PB'
+  object qryCustType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Type, Description'
       'from Customer_Type'
@@ -1174,8 +1174,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       FieldName = 'Description'
     end
   end
-  object OldStdSQL: TQuery
-    DatabaseName = 'pb'
+  object OldStdSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Customer_Contact.Name AS Contact_Name,'
       #9'Customer_Contact.Salutation,'
@@ -1292,8 +1292,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         ParamType = ptUnknown
       end>
   end
-  object oldqryCurrentContStatus: TQuery
-    DatabaseName = 'PB'
+  object oldqryCurrentContStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Name AS Contact_Name,'
       '        Customer_Contact.Salutation,'

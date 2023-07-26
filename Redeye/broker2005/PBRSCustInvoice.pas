@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Buttons, StdCtrls, ExtCtrls, DB, DBTables, PBSalesInvoiceDM;
+  Dialogs, Buttons, StdCtrls, ExtCtrls, DB, PBSalesInvoiceDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCustInvoiceFrm = class(TForm)
@@ -21,7 +24,7 @@ type
     Label3: TLabel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryGetSalesOrders: TQuery;
+    qryGetSalesOrders: TFDQuery;
     procedure ContTypeMaintBitBtnClick(Sender: TObject);
     procedure btnDateFromClick(Sender: TObject);
     procedure btnDateToClick(Sender: TObject);

@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ComCtrls, Db, DBTables, ImgList, Buttons, ExtCtrls,
-  System.ImageList;
+  StdCtrls, ComCtrls, Db, ImgList, Buttons, ExtCtrls,
+  System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMntPrtBinFrm = class(TForm)
     StoreLabel: TLabel;
     BinsListView: TListView;
-    GetBinsSQL: TQuery;
+    GetBinsSQL: TFDQuery;
     BinImageList: TImageList;
     FuncGroupBox: TGroupBox;
     AddBitBtn: TBitBtn;
     UpdBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
     CloseBitBtn: TBitBtn;
-    DelBinSQL: TQuery;
-    UpdBinSQL: TQuery;
+    DelBinSQL: TFDQuery;
+    UpdBinSQL: TFDQuery;
     GroupBox1: TGroupBox;
     Image1: TImage;
     Label1: TLabel;

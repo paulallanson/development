@@ -241,8 +241,8 @@ object PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm
       OnClick = CheckOK
     end
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'pb'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -255,8 +255,8 @@ object PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm
     Left = 384
     Top = 128
   end
-  object qryGetPUnit: TQuery
-    DatabaseName = 'pb'
+  object qryGetPUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -270,8 +270,8 @@ object PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryVat: TQuery
-    DatabaseName = 'pb'
+  object qryVat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Vat_Code'

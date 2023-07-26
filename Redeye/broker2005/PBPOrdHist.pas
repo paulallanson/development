@@ -18,12 +18,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, Db, DBTables, CCSCommon, ComCtrls;
+  Grids, Db, CCSCommon, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBPOrdHistFrm = class(TForm)
     strgrdOrdHist: TStringGrid;
-    qrySelPOLine: TQuery;
+    qrySelPOLine: TFDQuery;
     StatusBar1: TStatusBar;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

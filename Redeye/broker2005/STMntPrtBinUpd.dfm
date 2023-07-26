@@ -107,8 +107,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
     Caption = 'Production Bin'
     TabOrder = 5
   end
-  object GetBinSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Part_Store_Bin'
@@ -128,8 +128,8 @@ object STMntPrtBinUpdFrm: TSTMntPrtBinUpdFrm
         ParamType = ptUnknown
       end>
   end
-  object AddBinSQL: TQuery
-    DatabaseName = 'PB'
+  object AddBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part_Store_Bin'
       '(Part_Store, Part_Bin, Bin_Can_Pick, Production_Bin)'

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, pbEnqsDM, Db, DBTables;
+  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, pbEnqsDM, Db;
 
 type
   TPBLUCustomerEnqsFrm = class(TForm)

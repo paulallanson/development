@@ -477,42 +477,45 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSDataBroker, Db, DBTables, PBPOObjects, PBPODataMod, CCSPrint, PDLetter, CCSCommon;
+  CCSDataBroker, Db, PBPOObjects, PBPODataMod, CCSPrint, PDLetter, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdbPOrdLtr = class(TDataBroker)
-    GetDelivsSQL: TQuery;
-    GetSuppAddrSQL: TQuery;
-    GetPartsSQL: TQuery;
-    GetSpecInstrSQL: TQuery;
-    GetExtChgsSQL: TQuery;
+    GetDelivsSQL: TFDQuery;
+    GetSuppAddrSQL: TFDQuery;
+    GetPartsSQL: TFDQuery;
+    GetSpecInstrSQL: TFDQuery;
+    GetExtChgsSQL: TFDQuery;
     SpecInstrSRC: TDataSource;
-    GetAddHocAddrSQL: TQuery;
+    GetAddHocAddrSQL: TFDQuery;
     QuestionsSRC: TDataSource;
     CompSRC: TDataSource;
     AddDetailsSRC: TDataSource;
-    GetEnqSQL: TQuery;
+    GetEnqSQL: TFDQuery;
     EnqSRC: TDataSource;
-    GetRepAddrSQL: TQuery;
+    GetRepAddrSQL: TFDQuery;
     DelivAddrSRC: TDataSource;
     POsSRC: TDataSource;
-    GetQuestionsSQL: TQuery;
+    GetQuestionsSQL: TFDQuery;
     PartsDataSRC: TDataSource;
-    GetAddDetailsSQL: TQuery;
-    GetQtysSQL: TQuery;
-    GetPOsSQL: TQuery;
+    GetAddDetailsSQL: TFDQuery;
+    GetQtysSQL: TFDQuery;
+    GetPOsSQL: TFDQuery;
     DelivsSRC: TDataSource;
-    GetCustAddrSQL: TQuery;
-    GetAckSQL: TQuery;
-    GetNotesSQL: TQuery;
-    GetCompSQL: TQuery;
-    UpdLineStatusSQL: TQuery;
-    UpdHeadStatusSQL: TQuery;
-    GetCustomerContactSQL: TQuery;
-    GetAckLineSQL: TQuery;
+    GetCustAddrSQL: TFDQuery;
+    GetAckSQL: TFDQuery;
+    GetNotesSQL: TFDQuery;
+    GetCompSQL: TFDQuery;
+    UpdLineStatusSQL: TFDQuery;
+    UpdHeadStatusSQL: TFDQuery;
+    GetCustomerContactSQL: TFDQuery;
+    GetAckLineSQL: TFDQuery;
     AddressSRC: TDataSource;
-    GetCustomerNameSQL: TQuery;
-    GetRngPOsSQL: TQuery;
+    GetCustomerNameSQL: TFDQuery;
+    GetRngPOsSQL: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private

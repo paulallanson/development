@@ -4,8 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, DBGrids, Db,
-  DBTables, Menus, Buttons, PBSupplierInvoiceDM;
+  Grids, ImgList, ComCtrls, ToolWin, StdCtrls, ExtCtrls, DBGrids, Db, Menus, Buttons, PBSupplierInvoiceDM;
 
 type
   TPBLUSupplierInvoiceCNFrm = class(TForm)

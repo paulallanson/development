@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons, DBCtrls,
-  pbCustomerDm;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons, DBCtrls,
+  pbCustomerDm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUCustFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     dbgDetails: TDBGrid;
     SearchGrpBox: TGroupBox;
     edtName: TEdit;
@@ -25,7 +28,7 @@ type
     AddBitBtn: TBitBtn;
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
-    SelectedSQL: TQuery;
+    SelectedSQL: TFDQuery;
     NullSRC: TDataSource;
     DispPanel: TPanel;
     DBCustText: TDBText;

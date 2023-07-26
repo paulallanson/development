@@ -4,19 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls, DBCtrls, DB, DBTables;
+  StdCtrls, Buttons, ComCtrls, DBCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintCourierFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     DelLabel: TLabel;
-    CheckExistsSQL: TQuery;
-    GetLastOpSQL: TQuery;
-    AddOpSQL: TQuery;
-    UpdOpSQL: TQuery;
-    DelOpSQL: TQuery;
-    qryZero: TQuery;
+    CheckExistsSQL: TFDQuery;
+    GetLastOpSQL: TFDQuery;
+    AddOpSQL: TFDQuery;
+    UpdOpSQL: TFDQuery;
+    DelOpSQL: TFDQuery;
+    qryZero: TFDQuery;
     GroupBox1: TGroupBox;
     Label1: TLabel;
     NameEdit: TEdit;

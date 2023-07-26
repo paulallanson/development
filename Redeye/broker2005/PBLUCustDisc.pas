@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons, DBCtrls,
-  ComCtrls, ImgList;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons, DBCtrls,
+  ComCtrls, ImgList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TDiscDet = class
@@ -51,12 +54,12 @@ type
 
   TPBLUCustDiscFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     CountLabel: TLabel;
     DiscTreeView: TTreeView;
     TreeImageList: TImageList;
-    GetGroupsQuery: TQuery;
-    GetPartsQuery: TQuery;
+    GetGroupsQuery: TFDQuery;
+    GetPartsQuery: TFDQuery;
     Panel1: TPanel;
     CustLabel: TLabel;
     Panel2: TPanel;

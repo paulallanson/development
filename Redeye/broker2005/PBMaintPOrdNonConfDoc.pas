@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, DBCtrls, Buttons, ExtCtrls, PBPOObjects, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPOrdNonConfDocFrm = class(TForm)
@@ -13,10 +15,10 @@ type
     Panel4: TPanel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryNCType: TQuery;
-    qryRaisingDept: TQuery;
-    qrySourceDept: TQuery;
-    qryQAOperator: TQuery;
+    qryNCType: TFDQuery;
+    qryRaisingDept: TFDQuery;
+    qrySourceDept: TFDQuery;
+    qryQAOperator: TFDQuery;
     dtsNCType: TDataSource;
     dtsRaisingDept: TDataSource;
     dtsSourceDept: TDataSource;
@@ -70,7 +72,7 @@ type
     Label22: TLabel;
     dblkpCategory: TDBLookupComboBox;
     BitBtn5: TBitBtn;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     dtsCategory: TDataSource;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

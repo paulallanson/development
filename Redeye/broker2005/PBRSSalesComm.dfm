@@ -515,8 +515,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       TabOrder = 0
     end
   end
-  object qrySalesComm: TQuery
-    DatabaseName = 'pb'
+  object qrySalesComm: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT distinct '
       #9'Sales_Invoice.Customer, '
@@ -647,7 +647,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Left = 112
     Top = 200
   end
-  object oldqrySalesComm: TQuery
+  object oldqrySalesComm: TFDQuery
     SQL.Strings = (
       'SELECT'
       'Sales_Invoice_Line.Purchase_Order,'
@@ -708,8 +708,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Left = 320
     Top = 217
   end
-  object qryCompanyCommType: TQuery
-    DatabaseName = 'PB'
+  object qryCompanyCommType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select commission_type , performance_target_type'
       'from company '
@@ -717,8 +717,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Left = 440
     Top = 112
   end
-  object qryRepName: TQuery
-    DatabaseName = 'PB'
+  object qryRepName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep.Name'
       'From Rep'

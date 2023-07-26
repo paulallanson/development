@@ -554,9 +554,9 @@ object PBRPSupplierTurnFrm: TPBRPSupplierTurnFrm
       end
     end
   end
-  object qryReport: TQuery
+  object qryReport: TFDQuery
     OnCalcFields = qryReportCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier.Name, Int_Sel.*, Supplier_Branch.Account_Code'
       'FROM Int_Sel inner JOIN (Supplier INNER JOIN Supplier_Branch ON'

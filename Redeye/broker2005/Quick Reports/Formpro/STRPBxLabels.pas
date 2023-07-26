@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPBxLabelsFrm = class(TForm)
     STLabelsQuickReport: TQuickRep;
     QRBand1: TQRSubDetail;
     QRDBCustOrderRef: TQRDBText;
-    RepSQL: TQuery;
+    RepSQL: TFDQuery;
     FromLbl: TQRLabel;
     lblBoxNo: TQRLabel;
     NumberedLbl: TQRLabel;
@@ -29,7 +32,7 @@ type
     SRCRep: TDataSource;
     QRLblBxqty: TQRLabel;
     QRLblBoxNo: TQRLabel;
-    FormRefSQL: TQuery;
+    FormRefSQL: TFDQuery;
     lblFormRefID: TQRLabel;
     lblFormRefDesc: TQRLabel;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, CCSPrint, Qrctrls;
+  Db, ExtCtrls, QuickRpt, CCSPrint, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPCustProdUsagefrm = class(TForm)
     QuickReport: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand1: TQRBand;
     qrlblTitle: TQRLabel;
     qrlblselection: TQRLabel;
@@ -30,7 +33,7 @@ type
     qrlblTotalCustValue: TQRLabel;
     QRSysData1: TQRSysData;
     qrlblDateSelection: TQRLabel;
-    qrySOReport: TQuery;
+    qrySOReport: TFDQuery;
     function Getdetails(Sender: TObject): integer;
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

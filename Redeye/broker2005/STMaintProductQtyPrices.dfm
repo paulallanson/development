@@ -283,8 +283,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     OnExit = dblkpCostUnitExit
     OnKeyPress = dblkpCostUnitKeyPress
   end
-  object qryGetQtyPrices: TQuery
-    DatabaseName = 'PB'
+  object qryGetQtyPrices: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Part_Quantity_Price.Part,'
       #9'Part_Quantity_Price.Quantity, '
@@ -315,8 +315,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'PB'
+  object qryDel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Part_Quantity_Price'
       'where Part = :Part')
@@ -329,8 +329,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Quantity_Price'
       '  (Part,'
@@ -401,8 +401,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySuppliers: TQuery
-    DatabaseName = 'PB'
+  object qrySuppliers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from supplier'
       'where (Acc_Active = '#39'Y'#39')'
@@ -415,8 +415,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Left = 584
     Top = 120
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from price_unit'

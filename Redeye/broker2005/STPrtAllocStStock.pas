@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, Grids, DBGrids, ExtCtrls, Menus;
+  StdCtrls, Buttons, Db, Grids, DBGrids, ExtCtrls, Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtAllocStStockFrm = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
     dbgDetails: TDBGrid;
-    qryStoreStock: TQuery;
+    qryStoreStock: TFDQuery;
     srcStoreStock: TDataSource;
     lblProduct: TLabel;
     lblPartStore: TLabel;
@@ -32,7 +35,7 @@ type
     BitBtn1: TBitBtn;
     Label1: TLabel;
     lblQtyOrdered: TLabel;
-    UpdSOHeadSQL: TQuery;
+    UpdSOHeadSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
   private

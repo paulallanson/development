@@ -1,8 +1,8 @@
 object dtmdlEnqs: TdtmdlEnqs
   Height = 488
   Width = 544
-  object qryEnqs: TQuery
-    DatabaseName = 'PB'
+  object qryEnqs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  TOP 100'
       '        Enquiry.Date_Point,'
@@ -179,7 +179,7 @@ object dtmdlEnqs: TdtmdlEnqs
     Left = 80
     Top = 16
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT  TOP :Records'
       '        Enquiry.Date_Point,'
@@ -255,8 +255,8 @@ object dtmdlEnqs: TdtmdlEnqs
         ParamType = ptUnknown
       end>
   end
-  object qryEnqsJB: TQuery
-    DatabaseName = 'pb'
+  object qryEnqsJB: TFDQuery
+    ConnectionName = 'pb'
     Left = 16
     Top = 104
   end
@@ -265,7 +265,7 @@ object dtmdlEnqs: TdtmdlEnqs
     Left = 80
     Top = 104
   end
-  object qryEnqsNotConverted: TQuery
+  object qryEnqsNotConverted: TFDQuery
     SQL.Strings = (
       'SELECT  TOP 2000'
       '        Enquiry.Date_Point,'
@@ -334,8 +334,8 @@ object dtmdlEnqs: TdtmdlEnqs
         ParamType = ptUnknown
       end>
   end
-  object qryPO: TQuery
-    DatabaseName = 'PB'
+  object qryPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purchase_OrderLine.Purchase_Order'
       'FROM Purchase_OrderLine'
@@ -355,8 +355,8 @@ object dtmdlEnqs: TdtmdlEnqs
         ParamType = ptUnknown
       end>
   end
-  object qryReasons: TQuery
-    DatabaseName = 'PB'
+  object qryReasons: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Enq_InActive_Reason.Enq_InActive_Reason,'
       '        Enq_InActive_Reason.Description'
@@ -370,8 +370,8 @@ object dtmdlEnqs: TdtmdlEnqs
     Left = 88
     Top = 248
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Price_unit, Description '
       'FROM Price_unit'
@@ -384,8 +384,8 @@ object dtmdlEnqs: TdtmdlEnqs
     Left = 88
     Top = 304
   end
-  object qryGetEnquiryLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetEnquiryLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  EnquiryLine.Enq_InActive,'
       '        EnquiryLine.Enq_InActive_Date,'
@@ -422,8 +422,8 @@ object dtmdlEnqs: TdtmdlEnqs
         ParamType = ptUnknown
       end>
   end
-  object qryUpdEnquiryLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdEnquiryLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE EnquiryLine'
       'SET  Enq_inactive_Winning_price = :Enq_inactive_Winning_price,'

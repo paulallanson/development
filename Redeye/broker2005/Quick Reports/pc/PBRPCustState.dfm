@@ -1380,8 +1380,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Left = 427
     Top = 20
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -1398,8 +1398,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Left = 512
     Top = 55
   end
-  object SalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object SalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'
@@ -1450,8 +1450,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object UpSalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object UpSalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_invoice'
       'set Statement_reference = :Statement_reference,'
@@ -1488,8 +1488,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object UpCustSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Customer_Branch'
       'set Last_Statement_ref = :Last_statement_Ref'
@@ -1514,8 +1514,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Purchase_orderLine'
@@ -1535,8 +1535,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'PB'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Sales_Order'
@@ -1550,8 +1550,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Job_Bag'

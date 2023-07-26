@@ -158,7 +158,7 @@ object frmpbluCustWorksJB: TfrmpbluCustWorksJB
     Left = 368
     Top = 128
   end
-  object Query1: TQuery
+  object Query1: TFDQuery
     Left = 448
     Top = 88
   end

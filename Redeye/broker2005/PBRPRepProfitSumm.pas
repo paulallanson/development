@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, CCSPrint, ExtCtrls, Db, DBTables;
+  Qrctrls, QuickRpt, CCSPrint, ExtCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPRepProfitSummFrm = class(TForm)
@@ -22,8 +25,8 @@ type
     QRGrpHeadPg2: TQRBand;
     QRSubDetailpg2: TQRSubDetail;
     DataSRCRepPrft: TDataSource;
-    SQLRepPrft: TQuery;
-    SQLRep: TQuery;
+    SQLRepPrft: TFDQuery;
+    SQLRep: TFDQuery;
     QRLabel2: TQRLabel;
     QRGrpPg1: TQRGroup;
     QRDtlpg1: TQRBand;

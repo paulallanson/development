@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCustProfitSummFrm = class(TForm)
@@ -12,7 +15,7 @@ type
     PageHeaderBand1: TQRBand;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryCustProfSumm: TQuery;
+    qryCustProfSumm: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRDBText1: TQRDBText;
     qrlblCustomer: TQRLabel;
@@ -27,7 +30,7 @@ type
     qrlblTotProf: TQRLabel;
     QRShape1: TQRShape;
     QRShape2: TQRShape;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     qrlblCost: TQRLabel;
     qrlblSale: TQRLabel;
     qrlblProf: TQRLabel;

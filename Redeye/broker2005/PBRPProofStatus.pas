@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, ExtCtrls, Db, DBTables, Qrctrls, CCSPrint, CCSCommon;
+  QuickRpt, ExtCtrls, Db, Qrctrls, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPProofStatusfrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpProofStatus: TQuickRep;
     qrbndHeading: TQRBand;
     qrlblTitle: TQRLabel;

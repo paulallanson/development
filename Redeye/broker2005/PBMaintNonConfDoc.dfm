@@ -907,8 +907,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       OnChange = CheckOK
     end
   end
-  object qryNCType: TQuery
-    DatabaseName = 'PB'
+  object qryNCType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_type'
@@ -925,8 +925,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRaisingDept: TQuery
-    DatabaseName = 'PB'
+  object qryRaisingDept: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Dept'
@@ -943,8 +943,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySourceDept: TQuery
-    DatabaseName = 'PB'
+  object qrySourceDept: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Dept'
@@ -961,8 +961,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryQAOperator: TQuery
-    DatabaseName = 'PB'
+  object qryQAOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from QA_Operator'
@@ -999,8 +999,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Left = 552
     Top = 200
   end
-  object qryGetNonConform: TQuery
-    DatabaseName = 'PB'
+  object qryGetNonConform: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
@@ -1137,8 +1137,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'Pb'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'Pb'
     SQL.Strings = (
       'select  Job_Bag.Job_Bag,'
       '        Job_Bag.Customer,'
@@ -1162,8 +1162,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastNC: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastNC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_Non_Conform_Number'
       'From Company'
@@ -1171,8 +1171,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Left = 128
     Top = 704
   end
-  object qryUpdateLastNC: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateLastNC: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Non_Conform_Number = :Last_Non_Conform_Number'
@@ -1186,8 +1186,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'PB'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_bag_Non_Conform'
       'set Date_Point = :Date_Point,'
@@ -1332,8 +1332,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag_Non_Conform'
       'set inactive = '#39'Y'#39', inactive_date = getdate()'
@@ -1347,8 +1347,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Job_bag_Non_Conform'
       '(Job_Bag_Non_Conform,'
@@ -1527,8 +1527,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purchase_orderLine.Purchase_Order,'
       '        Purchase_orderLine.Customer,'
@@ -1555,8 +1555,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Category'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, Grids, DBGrids, StdCtrls, ExtCtrls, Buttons;
+  DB, Grids, DBGrids, StdCtrls, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMntPOrdAddFrm = class(TForm)
@@ -19,12 +22,12 @@ type
     NoOfItemsLabel: TLabel;
     CloseBitBtn: TBitBtn;
     SelectBitBtn: TBitBtn;
-    GetPartsSQL: TQuery;
+    GetPartsSQL: TFDQuery;
     SuppRadioGroup: TRadioGroup;
     StoreCheckBox: TCheckBox;
-    GetPOPartsSQL: TQuery;
-    GetSOPartsSQL: TQuery;
-    GetDiscRateSQL: TQuery;
+    GetPOPartsSQL: TFDQuery;
+    GetSOPartsSQL: TFDQuery;
+    GetDiscRateSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowGrid(Sender: TObject);
     procedure CodeEditChange(Sender: TObject);

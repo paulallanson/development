@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPOAuthFrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrReport: TQuickRep;
     qrbndGrpHdr: TQRGroup;
     qrbndGrpFtr: TQRBand;
@@ -23,7 +26,7 @@ type
     qrlblGrandTotalSell: TQRLabel;
     qrlblGrandTotalCost: TQRLabel;
     QRShape3: TQRShape;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     QRShape1: TQRShape;
     qrbDetails: TQRSubDetail;
     QRDBText2: TQRDBText;

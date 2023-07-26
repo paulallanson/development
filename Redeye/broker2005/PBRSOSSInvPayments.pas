@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, StdCtrls, Db, DBTables, Buttons, ComCtrls, Printers, CCSPrint;
+  Grids, DBGrids, ExtCtrls, StdCtrls, Db, Buttons, ComCtrls, Printers, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSOSSInvPaymentsFrm = class(TForm)
@@ -21,7 +24,7 @@ type
     btnPrint: TBitBtn;
     Panel4: TPanel;
     btnPaid: TBitBtn;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     chkbxPaid: TCheckBox;
     dtsReport: TDataSource;
     stsbrDetails: TStatusBar;

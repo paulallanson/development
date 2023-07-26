@@ -3422,8 +3422,8 @@ object PBRPNCAClientfrm: TPBRPNCAClientfrm
       end
     end
   end
-  object qryCustomers: TQuery
-    DatabaseName = 'PB'
+  object qryCustomers: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Job_bag_non_Conform.date_point,'
       '        Job_bag_non_Conform.Job_bag_non_Conform,'
@@ -3485,8 +3485,8 @@ object PBRPNCAClientfrm: TPBRPNCAClientfrm
         ParamType = ptUnknown
       end>
   end
-  object qryNCAType: TQuery
-    DatabaseName = 'PB'
+  object qryNCAType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Non_Conform_Type.Non_Conform_Type,'
       '        Non_Conform_Type.Non_Conform_Type_Descr,'
@@ -3530,8 +3530,8 @@ object PBRPNCAClientfrm: TPBRPNCAClientfrm
         ParamType = ptUnknown
       end>
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Customer.Customer, Customer.Name, Job_bag_non_Conform.dat' +
@@ -3570,8 +3570,8 @@ object PBRPNCAClientfrm: TPBRPNCAClientfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -3592,8 +3592,8 @@ object PBRPNCAClientfrm: TPBRPNCAClientfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCustomersOld: TQuery
-    DatabaseName = 'PB'
+  object qryCustomersOld: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Customer,'
       '        Customer.Name as Customer_Name,'

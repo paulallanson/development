@@ -888,8 +888,8 @@ object PBRPSalesProfitSummFrm: TPBRPSalesProfitSummFrm
       end
     end
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select rep.rep, Rep.Name as Rep_Name,'
       #9'sum(Total_Cost_Value) as Cost_Value,'

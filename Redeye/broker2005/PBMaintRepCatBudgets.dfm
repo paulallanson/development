@@ -201,8 +201,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
       end
     end
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description, Financial_Year'
       'from Period'
@@ -217,8 +217,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Rep'
       'order by Name')
@@ -230,8 +230,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Left = 376
     Top = 32
   end
-  object qryGetRepBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Period.Financial_Year,'
       '        Rep_Cat_Budget.Rep,'
@@ -264,8 +264,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryFirstPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryFirstPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Period'
       'from Period'
@@ -280,8 +280,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckBudget: TQuery
-    DatabaseName = 'PB'
+  object qryCheckBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Cat_budget'
@@ -306,8 +306,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdBudget: TQuery
-    DatabaseName = 'PB'
+  object qryUpdBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Rep_Cat_Budget'
       'set Turnover_Value = :Turnover_Value, '
@@ -345,8 +345,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddBudget: TQuery
-    DatabaseName = 'PB'
+  object qryAddBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Rep_Cat_Budget'
       
@@ -381,8 +381,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from category'

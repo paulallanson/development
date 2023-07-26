@@ -1004,8 +1004,8 @@ object PBRPSalesProfitFrm: TPBRPSalesProfitFrm
       end
     end
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Sales_profit.rep,'
       #9'rep.Name as Rep_Name,'

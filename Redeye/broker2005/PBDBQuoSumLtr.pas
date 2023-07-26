@@ -57,7 +57,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSDataBroker, Db, DBTables, CCSPrint, PDLetter, PBDBQuoLtr;
+  CCSDataBroker, Db, CCSPrint, PDLetter, PBDBQuoLtr;
 
 type
   TdbQuoSumLtr = class(TdbQuoLtr)

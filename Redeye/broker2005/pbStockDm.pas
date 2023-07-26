@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlStock = class(TDataModule)
-    qryCustStock: TQuery;
+    qryCustStock: TFDQuery;
     dtsStock: TDataSource;
-    qryPartMvmnts: TQuery;
+    qryPartMvmnts: TFDQuery;
     qryPartMvmntsDate_received: TDateTimeField;
     qryPartMvmntsPart_Store_Name: TStringField;
     qryPartMvmntsPart_Movement_Bin: TStringField;
@@ -21,11 +24,11 @@ type
     qryPartMvmntsStore_Quantity: TIntegerField;
     qryPartMvmntsStore_cost: TCurrencyField;
     dtsrcPartMvmnts: TDataSource;
-    qryPartStoreBins: TQuery;
+    qryPartStoreBins: TFDQuery;
     dtsrcPartStoreBins: TDataSource;
-    qryStoreStockNumberedItems: TQuery;
+    qryStoreStockNumberedItems: TFDQuery;
     dtsrcStoreStockNumberedItems: TDataSource;
-    qryPartSales: TQuery;
+    qryPartSales: TFDQuery;
     qryPartSalespart: TStringField;
     qryPartSalespart_description: TStringField;
     qryPartSalessales_order: TIntegerField;
@@ -39,7 +42,7 @@ type
     qryPartSalesCost: TFloatField;
     qryPartSalesQuantity: TFloatField;
     dtsrcPartSales: TDataSource;
-    qryPartProduction: TQuery;
+    qryPartProduction: TFDQuery;
     qryPartProductionForm_Reference: TIntegerField;
     qryPartProductionPart: TStringField;
     qryPartProductionDescription: TStringField;
@@ -59,7 +62,7 @@ type
     qryPartProductionQuantity: TFloatField;
     qryPartProductiontot_sell_price: TCurrencyField;
     qryPartProductiontot_ord_price: TFloatField;
-    qryPartPOs: TQuery;
+    qryPartPOs: TFDQuery;
     qryPartPOspart: TStringField;
     qryPartPOsDescription: TStringField;
     qryPartPOsPurchaseOrder: TIntegerField;
@@ -81,12 +84,12 @@ type
     qryCustStockprod_ord_qty: TFloatField;
     qryCustStockpaid_for: TIntegerField;
     qryCustStocknot_paid_for: TIntegerField;
-    qryStckDetsbyFormRef: TQuery;
+    qryStckDetsbyFormRef: TFDQuery;
     qryCustStockform_reference_id: TStringField;
-    qryPartNumbers: TQuery;
+    qryPartNumbers: TFDQuery;
     dtsrcPartNumbers: TDataSource;
     qryCustStockform_reference: TIntegerField;
-    qryStock: TQuery;
+    qryStock: TFDQuery;
     StringField1: TStringField;
     IntegerField1: TIntegerField;
     StringField2: TStringField;
@@ -99,36 +102,36 @@ type
     IntegerField7: TIntegerField;
     StringField3: TStringField;
     IntegerField8: TIntegerField;
-    qryPartDeliveries: TQuery;
+    qryPartDeliveries: TFDQuery;
     dtsPartDeliveries: TDataSource;
-    qryShowPartDeliveries: TQuery;
-    qryStockLocations: TQuery;
+    qryShowPartDeliveries: TFDQuery;
+    qryStockLocations: TFDQuery;
     dtsStockLocations: TDataSource;
-    qryPartStore: TQuery;
+    qryPartStore: TFDQuery;
     dtsPartStore: TDataSource;
-    qryMoves: TQuery;
+    qryMoves: TFDQuery;
     qryPartMvmntsPart_Store_Total_Quantity: TFloatField;
     qryPartMvmntsAudit_User: TStringField;
     qryPartSalesJob_Bag: TIntegerField;
     qryPartSalesJob_Bag_Req: TIntegerField;
     qryPartSalesJob_Bag_No: TIntegerField;
-    qryShowCustDeliveries: TQuery;
+    qryShowCustDeliveries: TFDQuery;
     dtsCustDeliveries: TDataSource;
     qryCustStockCustomer_Name: TStringField;
-    qryCustDeliveries: TQuery;
+    qryCustDeliveries: TFDQuery;
     qryPartSalesSales_Order_Status: TStringField;
-    qryGetUsedForJob: TQuery;
+    qryGetUsedForJob: TFDQuery;
     qryPartSalesQuantity_Delivered: TIntegerField;
     qryPartSalesQuantity_Invoiced: TIntegerField;
     qryPartMvmntsAudit_Workstation: TStringField;
-    qryStockUsage: TQuery;
+    qryStockUsage: TFDQuery;
     dtsStockUsage: TDataSource;
-    qryProductionLocation: TQuery;
+    qryProductionLocation: TFDQuery;
     dtsProductionLocation: TDataSource;
-    qryGetProductionLocation: TQuery;
-    qryGetStoreStock: TQuery;
-    qryGetPartAllocation: TQuery;
-    qryGetJobNumber: TQuery;
+    qryGetProductionLocation: TFDQuery;
+    qryGetStoreStock: TFDQuery;
+    qryGetPartAllocation: TFDQuery;
+    qryGetJobNumber: TFDQuery;
     qryStockCustomer_Name: TStringField;
     qryStockNot_in_Use: TStringField;
     qryStockProduct_Class: TStringField;
@@ -140,14 +143,14 @@ type
     qryCustStockMaximum_Stock: TIntegerField;
     qryCustStockReorder_Level: TIntegerField;
     qryCustStockForward_Qty: TIntegerField;
-    qryPallets: TQuery;
-    qryDummyPallets: TQuery;
+    qryPallets: TFDQuery;
+    qryDummyPallets: TFDQuery;
     dtsPallets: TDataSource;
     qryCustStockNot_In_Use: TStringField;
-    qryGetPart: TQuery;
-    qryGetCustName: TQuery;
-    qryUpdMulti: TQuery;
-    qryUpdMultiPartInactive: TQuery;
+    qryGetPart: TFDQuery;
+    qryGetCustName: TFDQuery;
+    qryUpdMulti: TFDQuery;
+    qryUpdMultiPartInactive: TFDQuery;
     qryStockSO_Unallocated: TIntegerField;
     qryCustStockSO_unallocated: TIntegerField;
     qryCustStockFuture_Stock: TIntegerField;

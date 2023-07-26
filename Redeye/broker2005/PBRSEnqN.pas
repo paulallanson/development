@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, QrExport,
-  CCSCommon, Inifiles, Menus, ComCtrls, DateUtils, PBActivityDM;
+  StdCtrls, Buttons, ExtCtrls, DB, CCSDataBroker, CCSPress, QrExport,
+  CCSCommon, Inifiles, Menus, ComCtrls, DateUtils, PBActivityDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSEnqNFrm = class(TForm)
-    GetEnqSQL: TQuery;
-    GetEnqSuppSQL: TQuery;
+    GetEnqSQL: TFDQuery;
+    GetEnqSuppSQL: TFDQuery;
     pnlButtons: TPanel;
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;

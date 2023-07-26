@@ -100,38 +100,41 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmSTMaintFormRef = class(TForm)
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DetsGrpBox: TGroupBox;
     Label1: TLabel;
     CustNameEdit: TEdit;
-    GetFormRefSQL: TQuery;
+    GetFormRefSQL: TFDQuery;
     FormRefSRC: TDataSource;
     Label6: TLabel;
     RefIDEdit: TEdit;
     RefDescrEdit: TEdit;
     Label8: TLabel;
-    MaxSQL: TQuery;
-    GetLastSQL: TQuery;
-    CheckFormRefSQL: TQuery;
-    qryZero: TQuery;
-    CompanySQL: TQuery;
+    MaxSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    CheckFormRefSQL: TFDQuery;
+    qryZero: TFDQuery;
+    CompanySQL: TFDQuery;
     Panel1: TPanel;
     DelLabel: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     StockRefEdit: TEdit;
     Label3: TLabel;
-    CheckFormRef2SQL: TQuery;
-    CheckFormRef3SQL: TQuery;
-    CheckFormRef4SQL: TQuery;
-    qryDelEComm: TQuery;
-    qryECommStockRef: TQuery;
+    CheckFormRef2SQL: TFDQuery;
+    CheckFormRef3SQL: TFDQuery;
+    CheckFormRef4SQL: TFDQuery;
+    qryDelEComm: TFDQuery;
+    qryECommStockRef: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Buttons, DB, DBTables, PBQuotesDM, ComCtrls,
-  ExtCtrls;
+  Dialogs, DBCtrls, StdCtrls, Buttons, DB, PBQuotesDM, ComCtrls,
+  ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintQuoteLinesFrm = class(TForm)
@@ -23,12 +26,12 @@ type
     lblCostPrice: TLabel;
     Label4: TLabel;
     dblkpPriceUnit: TDBLookupComboBox;
-    qryPriceUnit: TQuery;
-    qryProcessGroup: TQuery;
+    qryPriceUnit: TFDQuery;
+    qryProcessGroup: TFDQuery;
     dtsProcessGroup: TDataSource;
     dtsPriceUnit: TDataSource;
-    qryGetPUnit: TQuery;
-    qryGetProductType: TQuery;
+    qryGetPUnit: TFDQuery;
+    qryGetProductType: TFDQuery;
     dblkpProcessGroup: TDBLookupComboBox;
     Label5: TLabel;
     memASPrice: TMemo;
@@ -38,18 +41,18 @@ type
     memDCOHD: TMemo;
     Label10: TLabel;
     memSSPOrig: TMemo;
-    qryWCGroup: TQuery;
+    qryWCGroup: TFDQuery;
     dtsWCGroup: TDataSource;
-    qryWC: TQuery;
+    qryWC: TFDQuery;
     dtsWC: TDataSource;
     dblkpProcess: TDBLookupComboBox;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
     btnProducts: TButton;
     edtDescription: TMemo;
     Label14: TLabel;
     dblkpVat: TDBLookupComboBox;
-    qryVat: TQuery;
+    qryVat: TFDQuery;
     dtsVat: TDataSource;
     grpbxWorkCentre: TGroupBox;
     Label3: TLabel;

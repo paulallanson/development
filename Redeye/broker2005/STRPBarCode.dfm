@@ -234,8 +234,8 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
       BandType = rbSummary
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Int_Sel'
@@ -250,8 +250,8 @@ object STRPBarCodeFrm: TSTRPBarCodeFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdCompany: TQuery
-    DatabaseName = 'PB'
+  object qryUpdCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'set Last_Pallet_ID = :Last_Pallet'

@@ -4,13 +4,13 @@ object dtmdlActivity: TdtmdlActivity
   Top = 143
   Height = 524
   Width = 686
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 296
     Top = 16
   end
-  object qryUpActivity: TQuery
-    DatabaseName = 'PB'
+  object qryUpActivity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Activity'
       'SET   Activity_Type = :Activity_Type,'
@@ -121,8 +121,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object qryGetActivity: TQuery
-    DatabaseName = 'PB'
+  object qryGetActivity: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'
@@ -198,8 +198,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT Into Activity'
       '        (Activity,'
@@ -273,8 +273,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Activity'
       'From Activity'
@@ -290,8 +290,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object qryActivityGrid: TQuery
-    DatabaseName = 'PB'
+  object qryActivityGrid: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'
@@ -362,8 +362,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 128
     Top = 16
   end
-  object qryOperator: TQuery
-    DatabaseName = 'PB'
+  object qryOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator'
       'Order By Operator.Name')
@@ -375,8 +375,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 584
     Top = 16
   end
-  object qryCustomerBranches: TQuery
-    DatabaseName = 'PB'
+  object qryCustomerBranches: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Customer_branch'
@@ -399,8 +399,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object qryContacts: TQuery
-    DatabaseName = 'PB'
+  object qryContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Contact_no,'
       '        Customer_Contact.Name,'
@@ -462,8 +462,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 588
     Top = 128
   end
-  object qryAssignedTo: TQuery
-    DatabaseName = 'PB'
+  object qryAssignedTo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Operator'
@@ -485,8 +485,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 592
     Top = 192
   end
-  object qryActivityType: TQuery
-    DatabaseName = 'PB'
+  object qryActivityType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Activity_Type'
@@ -499,8 +499,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 592
     Top = 256
   end
-  object qryActivityStatus: TQuery
-    DatabaseName = 'PB'
+  object qryActivityStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Activity_Status'
@@ -513,8 +513,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 592
     Top = 312
   end
-  object qryActivityPriority: TQuery
-    DatabaseName = 'PB'
+  object qryActivityPriority: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Activity_Priority'
@@ -527,8 +527,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 592
     Top = 376
   end
-  object qryActivityModule: TQuery
-    DatabaseName = 'PB'
+  object qryActivityModule: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Activity_Module'
@@ -541,8 +541,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 592
     Top = 432
   end
-  object qryActivityBase: TQuery
-    DatabaseName = 'PB'
+  object qryActivityBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'
@@ -635,8 +635,8 @@ object dtmdlActivity: TdtmdlActivity
         ParamType = ptUnknown
       end>
   end
-  object qryActivityReminder: TQuery
-    DatabaseName = 'PB'
+  object qryActivityReminder: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'
@@ -726,8 +726,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 128
     Top = 72
   end
-  object qryGetLinkedActivities: TQuery
-    DatabaseName = 'PB'
+  object qryGetLinkedActivities: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Activity.Activity,'
       '        Activity.Activity_Type,'
@@ -822,8 +822,8 @@ object dtmdlActivity: TdtmdlActivity
     Left = 120
     Top = 248
   end
-  object qryGetCustomerContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Customer,'
       '        Customer_Contact.Branch_no,'

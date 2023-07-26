@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DBCtrls, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, DBCtrls, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintProcessCostFrm = class(TForm)
@@ -23,15 +26,15 @@ type
     DelLabel: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryGetCost: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
-    qryZero: TQuery;
-    qryDelete: TQuery;
-    GetLastSQL: TQuery;
+    qryGetCost: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    qryZero: TFDQuery;
+    qryDelete: TFDQuery;
+    GetLastSQL: TFDQuery;
     dblkpPriceUnit: TDBLookupComboBox;
     Label3: TLabel;
     edtReference: TEdit;

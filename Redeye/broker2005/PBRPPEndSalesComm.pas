@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, CCSCommon, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPEndSalesCommFrm = class(TForm)
     qckrpSalesByInv: TQuickRep;
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel2: TQRLabel;
@@ -50,7 +53,7 @@ type
     MargQRLbl: TQRLabel;
     qrdbtxtInvDate: TQRDBText;
     Commissionlbl: TQRLabel;
-    GetCommRtQuery: TQuery;
+    GetCommRtQuery: TFDQuery;
     qrbCategoryFooter: TQRChildBand;
     qrbRepTotals: TQRChildBand;
     QRLabel4: TQRLabel;
@@ -80,8 +83,8 @@ type
     QRLabel7: TQRLabel;
     QRLabelComm: TQRLabel;
     qrlblCommSplit: TQRLabel;
-    qryRepFinance: TQuery;
-    qryGetRepComm: TQuery;
+    qryRepFinance: TFDQuery;
+    qryGetRepComm: TFDQuery;
     qrlblInvoice: TQRLabel;
     qrlblCommRate: TQRLabel;
     QRLabel1: TQRLabel;
@@ -91,7 +94,7 @@ type
     QRLabel19: TQRLabel;
     qrlblBonus: TQRLabel;
     TotalBonusProdSumm: TQRLabel;
-    qryGetRepBudget: TQuery;
+    qryGetRepBudget: TFDQuery;
     qrlblBudgetTO: TQRLabel;
     qrlblBudgetProfit: TQRLabel;
     QRLabel20: TQRLabel;

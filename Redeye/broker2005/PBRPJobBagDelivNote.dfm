@@ -2008,8 +2008,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
       FontSize = 18
     end
   end
-  object JBDelivSQL: TQuery
-    DatabaseName = 'PB'
+  object JBDelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Job_Bag_Delivery_Detail.Job_Bag,'
@@ -2082,8 +2082,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
     Left = 478
     Top = 256
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -2120,8 +2120,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptInput
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  Building_no_name,'
@@ -2142,8 +2142,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptInput
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       'Building_no_name,'
@@ -2168,8 +2168,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
     Left = 470
     Top = 48
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier.Name as Supplier_Name,'
       'Building_no_name,'
@@ -2199,8 +2199,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptInput
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -2215,8 +2215,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptInput
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'
@@ -2237,9 +2237,9 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
     Left = 398
     Top = 216
   end
-  object CustDetsSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = JBDelivSRC
+  object CustDetsSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = JBDelivSRC
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -2272,8 +2272,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptInput
       end>
   end
-  object qryCourierService: TQuery
-    DatabaseName = 'PB'
+  object qryCourierService: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Courier.Courier_Name,'
       'Courier_Service.Service_Description'
@@ -2295,8 +2295,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPackageType: TQuery
-    DatabaseName = 'PB'
+  object qryPackageType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Package_Type'
@@ -2310,8 +2310,8 @@ object PBRPJobBagDelivNoteFrm: TPBRPJobBagDelivNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFSCClaim: TQuery
-    DatabaseName = 'PB'
+  object qryGetFSCClaim: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from FSC_Material_Claim'

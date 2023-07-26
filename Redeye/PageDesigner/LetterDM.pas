@@ -496,7 +496,7 @@ begin
     Exit;
   uName := dmBroker.UserName;
   pWord := dmBroker.Password;
-  alias := dmBroker.PBLDatabase.AliasName + 'ADO';
+  alias := dmBroker.PBLDatabase.ConnectionDefName + 'ADO';
   with ADOConn do
   begin
     ConnectionString := 'Provider=MSDASQL.1;Persist Security Info=False;' +

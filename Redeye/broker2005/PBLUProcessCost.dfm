@@ -382,8 +382,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
       OnClick = btnDelPCostSubClick
     end
   end
-  object qryProcessCosts: TQuery
-    DatabaseName = 'PB'
+  object qryProcessCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Cost.Customer,'
       '       Process_Cost.Process,'
@@ -417,8 +417,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Left = 168
     Top = 225
   end
-  object qryProcessCostCat: TQuery
-    DatabaseName = 'PB'
+  object qryProcessCostCat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Cost_Category.Customer,'
       '        Process_Cost_Category.Process,'
@@ -454,8 +454,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProcessCostSub: TQuery
-    DatabaseName = 'PB'
+  object qryProcessCostSub: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Cost_Category_Sub.Customer,'
       '        Process_Cost_Category_Sub.Process,'
@@ -508,8 +508,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Left = 648
     Top = 185
   end
-  object qryAddProcessCost: TQuery
-    DatabaseName = 'PB'
+  object qryAddProcessCost: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Process_Cost'
       '        (Customer,'
@@ -570,8 +570,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddProcessCostCat: TQuery
-    DatabaseName = 'PB'
+  object qryAddProcessCostCat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Process_Cost_Category'
       '        (Customer,'
@@ -644,8 +644,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryLastCostNumber: TQuery
-    DatabaseName = 'PB'
+  object qryLastCostNumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(Cost_Number) as Last_Number'
       'From Process_Cost'
@@ -664,8 +664,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryLastCatNumber: TQuery
-    DatabaseName = 'PB'
+  object qryLastCatNumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(Category_Number) as Last_Number'
       'From Process_Cost_Category'
@@ -691,8 +691,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddProcessCostSub: TQuery
-    DatabaseName = 'PB'
+  object qryAddProcessCostSub: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Process_Cost_Category_Sub'
       '        (Customer,'
@@ -777,13 +777,13 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     Left = 368
     Top = 161
   end
-  object qryProcess: TQuery
-    DatabaseName = 'PB'
+  object qryProcess: TFDQuery
+    ConnectionName = 'PB'
     Left = 288
     Top = 8
   end
@@ -792,7 +792,7 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
     Left = 344
     Top = 8
   end
-  object qryGetPTProcess: TQuery
+  object qryGetPTProcess: TFDQuery
     SQL.Strings = (
       'select *'
       'from Process'
@@ -807,8 +807,8 @@ object PBLUProcessCostFrm: TPBLUProcessCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process'

@@ -95,8 +95,8 @@ object STStkTkSelFrm: TSTStkTkSelFrm
     Visible = False
     OnClick = BitBtnCnclClick
   end
-  object DelCountRecSQl: TQuery
-    DatabaseName = 'PB'
+  object DelCountRecSQl: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Stock_Take'
       'where Stock_Take.Stock_Take_Ref = :Stock_Take_Ref'

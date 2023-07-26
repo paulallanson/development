@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, STStkTkObject,
-  CCSCommon, ComCtrls, ExtCtrls, ADODB;
+  Db, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, STStkTkObject,
+  CCSCommon, ComCtrls, ExtCtrls, ADODB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTStkTkbyPartFrm = class(TForm)
@@ -30,8 +33,8 @@ type
     ADOConnection1: TADOConnection;
     ADOQuery1: TADOQuery;
     DocOpenDialog: TOpenDialog;
-    qryUpdStocktake: TQuery;
-    qryUpdStockTakeStatus: TQuery;
+    qryUpdStocktake: TFDQuery;
+    qryUpdStockTakeStatus: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure ChangebtnClick(Sender: TObject);

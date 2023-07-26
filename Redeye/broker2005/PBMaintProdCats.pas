@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, ExtCtrls;
+  Db, Grids, DBGrids, StdCtrls, DBCtrls, Buttons, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintProdCatsFrm = class(TForm)
@@ -14,9 +17,9 @@ type
     Label1: TLabel;
     pnlLeft: TPanel;
     dbgrdOut: TDBGrid;
-    qrySelProdCatsFalse: TQuery;
-    qryProdCatsTrue: TQuery;
-    qrySelCategories: TQuery;
+    qrySelProdCatsFalse: TFDQuery;
+    qryProdCatsTrue: TFDQuery;
+    qrySelCategories: TFDQuery;
     dtsrcCategories: TDataSource;
     pnlRight: TPanel;
     pnlRight2: TPanel;
@@ -27,7 +30,7 @@ type
     dtsrcInCat: TDataSource;
     dblucmbbxCategories: TDBLookupComboBox;
     Splitter1: TSplitter;
-    qryUpdProdType: TQuery;
+    qryUpdProdType: TFDQuery;
     qryProdCatsTrueproduct_type: TIntegerField;
     qryProdCatsTruedescription: TStringField;
     qryProdCatsTruecategory: TIntegerField;

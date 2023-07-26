@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, DB, DBTables, Grids, DBGrids, StdCtrls, Buttons,
-  ComCtrls;
+  Dialogs, ExtCtrls, DB, Grids, DBGrids, StdCtrls, Buttons,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTLUPartStockFrm = class(TForm)
@@ -19,7 +22,7 @@ type
     Label2: TLabel;
     lblWarehouse: TLabel;
     dtsStock: TDataSource;
-    qryStock: TQuery;
+    qryStock: TFDQuery;
     StringField1: TStringField;
     IntegerField1: TIntegerField;
     StringField2: TStringField;
@@ -33,7 +36,7 @@ type
     StringField3: TStringField;
     IntegerField8: TIntegerField;
     tmrSearch: TTimer;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     StringField4: TStringField;
     IntegerField9: TIntegerField;
     StringField5: TStringField;
@@ -46,7 +49,7 @@ type
     IntegerField15: TIntegerField;
     StringField6: TStringField;
     IntegerField16: TIntegerField;
-    qryStore: TQuery;
+    qryStore: TFDQuery;
     StatusBar1: TStatusBar;
     qryStockProduct_Class_Description: TStringField;
     qryStockNot_in_Use: TStringField;

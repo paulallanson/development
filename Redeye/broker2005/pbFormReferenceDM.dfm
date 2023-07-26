@@ -4,8 +4,8 @@ object dtmdlForms: TdtmdlForms
   Top = 143
   Height = 429
   Width = 459
-  object qryForms: TQuery
-    DatabaseName = 'PB'
+  object qryForms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Form_Reference.Form_Reference_ID,'
       '      Form_Reference.Form_Reference_Descr,'
@@ -43,7 +43,7 @@ object dtmdlForms: TdtmdlForms
     Left = 68
     Top = 80
   end
-  object old_qryDummy: TQuery
+  object old_qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT Form_Reference.Form_Reference,'
       '      Form_Reference.Form_Reference_ID,'
@@ -87,8 +87,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Form_Reference.Form_Reference,'
       '        Form_Reference.Form_Reference_ID,'
@@ -162,8 +162,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object qryLocations: TQuery
-    DatabaseName = 'PB'
+  object qryLocations: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Form_Reference.Form_Reference,'
       '        Form_Reference.Form_Reference_ID,'
@@ -295,8 +295,8 @@ object dtmdlForms: TdtmdlForms
     Left = 312
     Top = 152
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name'
       'from Customer'
@@ -310,8 +310,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object qryBranch: TQuery
-    DatabaseName = 'PB'
+  object qryBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Branch.Name'
       'from Customer_Branch'
@@ -331,8 +331,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object qryGetTotalStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetTotalStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select SUM(Purchase_OrderLine.Qty_in_Stock) as Total_Stock'
       'from Purchase_orderLine'
@@ -347,8 +347,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -367,8 +367,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -387,8 +387,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -415,8 +415,8 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -429,8 +429,8 @@ object dtmdlForms: TdtmdlForms
     Left = 261
     Top = 336
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -456,9 +456,9 @@ object dtmdlForms: TdtmdlForms
         ParamType = ptUnknown
       end>
   end
-  object qryHistory: TQuery
+  object qryHistory: TFDQuery
     OnCalcFields = qryHistoryCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Delivery_Detail.Purchase_Order,'
       '      Delivery_Detail.Line,'

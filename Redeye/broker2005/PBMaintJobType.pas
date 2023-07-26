@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, PBPOObjects;
+  StdCtrls, Buttons, Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobTypeFrm = class(TForm)
@@ -14,10 +17,10 @@ type
     CancelBitBtn: TBitBtn;
     lblDescription: TLabel;
     edtDescription: TEdit;
-    qryInsJobType: TQuery;
-    qryUpdJobType: TQuery;
-    qryDelJobType: TQuery;
-    qrySelNextJobType: TQuery;
+    qryInsJobType: TFDQuery;
+    qryUpdJobType: TFDQuery;
+    qryDelJobType: TFDQuery;
+    qrySelNextJobType: TFDQuery;
     chkbxOneDelivery: TCheckBox;
     chkbxDeliverToStock: TCheckBox;
     chkbxRepCanConvert: TCheckBox;

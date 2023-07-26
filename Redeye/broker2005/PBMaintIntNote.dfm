@@ -271,8 +271,8 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       NumGlyphs = 2
     end
   end
-  object qrySelOperators: TQuery
-    DatabaseName = 'PB'
+  object qrySelOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Operator, Name'
       'From Operator'

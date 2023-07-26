@@ -130,8 +130,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Left = 368
     Top = 5
   end
-  object qryInsECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qryInsECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into ecommerce_info'
       '(Ecommerce_info, Stock_Reference)'
@@ -151,8 +151,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
         ParamType = ptInput
       end>
   end
-  object qryUpdECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qryUpdECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update ecommerce_info'
       'set'
@@ -174,8 +174,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
         ParamType = ptInput
       end>
   end
-  object qrySelECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qrySelECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from ecommerce_info'
       'where stock_reference = :stock_reference;')
@@ -188,8 +188,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
         ParamType = ptInput
       end>
   end
-  object qryTopECommNo: TQuery
-    DatabaseName = 'PB'
+  object qryTopECommNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(ecommerce_info) as top_No '
       'from ecommerce_info;')
@@ -201,8 +201,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Left = 40
     Top = 72
   end
-  object qryUpdFullImg: TQuery
-    DatabaseName = 'PB'
+  object qryUpdFullImg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update ecommerce_info '
       'set full_image = :full_image, '
@@ -239,8 +239,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelEcommInfo: TQuery
-    DatabaseName = 'PB'
+  object qryDelEcommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from ecommerce_info '
       'where ecommerce_info = :ecomm_info')

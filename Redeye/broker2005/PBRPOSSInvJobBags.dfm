@@ -1429,8 +1429,8 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
       end
     end
   end
-  object qryOSInvs: TQuery
-    DatabaseName = 'PB'
+  object qryOSInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Purchase_OrderLine.Purchase_Order,'
@@ -1533,7 +1533,7 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
     Left = 39
     Top = 8
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT '#9'Job_Bag.Job_Bag,'
       #9'Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -1615,8 +1615,8 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
     Left = 200
     Top = 16
   end
-  object SQLGetStkInv: TQuery
-    DatabaseName = 'PB'
+  object SQLGetStkInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT sales_Order_Line.*, Part.Part, Part.Part_Description,Part' +
@@ -1688,8 +1688,8 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
     Left = 288
     Top = 32
   end
-  object SQLGetStkInv_access: TQuery
-    DatabaseName = 'PB'
+  object SQLGetStkInv_access: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT sales_Order_Line.*, Part.Part, Part.Part_Description,Part' +
@@ -1756,13 +1756,13 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
     Left = 296
     Top = 96
   end
-  object SQLGetRepName: TQuery
-    DatabaseName = 'PB'
+  object SQLGetRepName: TFDQuery
+    ConnectionName = 'PB'
     Left = 454
     Top = 60
   end
-  object qryPO: TQuery
-    DatabaseName = 'PB'
+  object qryPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purchase_orderLine.Purchase_Order,'
       '        Price_Unit.Price_Unit_Factor,'
@@ -1786,8 +1786,8 @@ object PBRPOSSInvJobBagsFrm: TPBRPOSSInvJobBagsFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySO: TQuery
-    DatabaseName = 'PB'
+  object qrySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_order_Line.Part_Sales_Price, Sales_order_Line.Part,'
       'Part.Price_unit, Sales_order_Line.Sell_Pack_Quantity'

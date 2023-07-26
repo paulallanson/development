@@ -4231,8 +4231,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       end
     end
   end
-  object qryCategories: TQuery
-    DatabaseName = 'PB'
+  object qryCategories: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT Category.Category, Category.Description as Categ' +
@@ -4270,8 +4270,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySortBy: TQuery
-    DatabaseName = 'PB'
+  object qrySortBy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Invoice_Location as Sortby_Code, Invoice_Location_Descr a' +
@@ -4281,15 +4281,15 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Left = 83
     Top = 38
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 235
     Top = 38
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -4310,8 +4310,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Invoice_Location.Invoice_Location,'
       '        Invoice_Location.Invoice_Location_Descr,'
@@ -4365,8 +4365,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Profit.category,'
       '                Invoice_Location.Invoice_Location,'
@@ -4413,7 +4413,7 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrytmpConsolidate: TQuery
+  object qrytmpConsolidate: TFDQuery
     SQL.Strings = (
       
         'Select DISTINCT 0 as Category, '#39'All Categories'#39' as Category_Desc' +
@@ -4436,7 +4436,7 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrytmpCategories: TQuery
+  object qrytmpCategories: TFDQuery
     SQL.Strings = (
       
         'SELECT DISTINCT Category.Category, Category.Description as Categ' +
@@ -4474,8 +4474,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyConsolidate: TQuery
-    DatabaseName = 'PB'
+  object qryDummyConsolidate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Invoice_Location.Invoice_Location,'
       '        Invoice_Location.Invoice_Location_Descr,'
@@ -4523,7 +4523,7 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyCustomer: TQuery
+  object qryDummyCustomer: TFDQuery
     SQL.Strings = (
       
         'select distinct Sales_profit.customer as Sortby_Code, Customer.N' +
@@ -4558,8 +4558,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyCategory: TQuery
-    DatabaseName = 'PB'
+  object qryDummyCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -4567,8 +4567,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Left = 891
     Top = 14
   end
-  object qrySalesProfitLoc: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfitLoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Category.Category,'
       '                Category.Description,'
@@ -4615,8 +4615,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesProfitCust: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfitCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Category.Category,'
       '                Category.Description,'
@@ -4657,8 +4657,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyCust: TQuery
-    DatabaseName = 'PB'
+  object qryDummyCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Name,'
@@ -4707,8 +4707,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyConsolidateCust: TQuery
-    DatabaseName = 'PB'
+  object qryDummyConsolidateCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer.Customer,'
       '        Customer.Name,'
@@ -4749,8 +4749,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCustRep: TQuery
-    DatabaseName = 'PB'
+  object qryCustRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Rep.Name as Rep_Name'
       'from Reps_Branches, Rep'

@@ -197,8 +197,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     ListSource = dtsStoreType
     TabOrder = 1
   end
-  object qryStores: TQuery
-    DatabaseName = 'PB'
+  object qryStores: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Store')
@@ -210,8 +210,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Left = 240
     Top = 240
   end
-  object qryStoreLevels: TQuery
-    DatabaseName = 'PB'
+  object qryStoreLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Part_Store_levels'
@@ -231,8 +231,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPartLevel: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPartLevel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Store_Levels'
       'Set'
@@ -289,8 +289,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
         ParamType = ptUnknown
       end>
   end
-  object qryAddPartLevel: TQuery
-    DatabaseName = 'PB'
+  object qryAddPartLevel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part_Store_Levels'
       '(Minimum_Stock, Maximum_Stock, Part, Part_Store_Type,'
@@ -341,8 +341,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
         ParamType = ptUnknown
       end>
   end
-  object qryDelPartLevel: TQuery
-    DatabaseName = 'PB'
+  object qryDelPartLevel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Part_Store_Levels'
       'Where (Part = :Part) and'
@@ -365,8 +365,8 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
         ParamType = ptUnknown
       end>
   end
-  object qryStoreType: TQuery
-    DatabaseName = 'PB'
+  object qryStoreType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Part_Store_type'
       'where part_store_type not in (select part_Store_type '

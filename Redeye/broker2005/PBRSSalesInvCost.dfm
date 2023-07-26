@@ -249,8 +249,8 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     ListSource = dtsPeriods
     TabOrder = 9
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -263,9 +263,9 @@ object PBRSSalesInvCostfrm: TPBRSSalesInvCostfrm
     Left = 280
     Top = 8
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsFY
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsFY
     SQL.Strings = (
       'select *'
       'from Period'

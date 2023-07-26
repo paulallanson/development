@@ -77,23 +77,27 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, oomisc, printers, ShellAPI, DB, DBTables, Inifiles,
-  AdFaxCtl,syncobjs;
+  StdCtrls, ExtCtrls, oomisc, printers, ShellAPI, DB, Inifiles,
+  AdFaxCtl,syncobjs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TPBSendFaxFrm = class(TForm)
     Label1: TLabel;
     WaitForFaxFinishTimer: TTimer;
-    AddFaxSQL: TQuery;
-    GetOldFaxesQuery: TQuery;
-    DelFaxQuery: TQuery;
-    FaxDatabase: TDatabase;
+    AddFaxSQL: TFDQuery;
+    GetOldFaxesQuery: TFDQuery;
+    DelFaxQuery: TFDQuery;
+    FaxDatabase: TFDConnection;
     ApdFaxDriverInterface1: TApdFaxDriverInterface;
     function OutToFax(FaxNo, FaxDescr, TempFaxTime: string): ByteBool;
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
-    procedure FaxDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure WaitForFaxFinish(Sender: TObject);
     procedure SendFax(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -394,7 +398,7 @@ begin
   end;
 end;
 
-procedure TPBSendFaxFrm.FaxDatabaseLogin(Database: TDatabase;
+procedure TPBSendFaxFrm.FaxDatabaseLogin(Database: TFDConnection;
   LoginParams: TStrings);
 begin
   {Get user and password from login screen};

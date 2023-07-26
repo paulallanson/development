@@ -4,20 +4,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
-  ExtCtrls, ComCtrls, Menus;
+  Db, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
+  ExtCtrls, ComCtrls, Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintRepFinancialsFrm = class(TForm)
-    qryPeriods: TQuery;
-    qryReps: TQuery;
+    qryPeriods: TFDQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
-    qryGetRepBudgets: TQuery;
-    qryFirstPeriod: TQuery;
-    qryCheckBudget: TQuery;
-    qryUpdBudget: TQuery;
-    qryAddBudget: TQuery;
-    qryCategory: TQuery;
+    qryGetRepBudgets: TFDQuery;
+    qryFirstPeriod: TFDQuery;
+    qryCheckBudget: TFDQuery;
+    qryUpdBudget: TFDQuery;
+    qryAddBudget: TFDQuery;
+    qryCategory: TFDQuery;
     StatusBar1: TStatusBar;
     Panel1: TPanel;
     OKBitBtn: TBitBtn;
@@ -40,13 +43,13 @@ type
     grdCategory: TStringGrid;
     memBonus: TMemo;
     StringGrid1: TStringGrid;
-    qryFY: TQuery;
-    qryCheckExists: TQuery;
-    qryAddRepCats: TQuery;
-    qryDelRepCats: TQuery;
-    qryGetRepCategory: TQuery;
-    qryAddFinancials: TQuery;
-    qryUpdFinancials: TQuery;
+    qryFY: TFDQuery;
+    qryCheckExists: TFDQuery;
+    qryAddRepCats: TFDQuery;
+    qryDelRepCats: TFDQuery;
+    qryGetRepCategory: TFDQuery;
+    qryAddFinancials: TFDQuery;
+    qryUpdFinancials: TFDQuery;
     rdgrpBonus: TRadioGroup;
     rdgrpBonusType: TRadioGroup;
     grpbxCommission: TGroupBox;

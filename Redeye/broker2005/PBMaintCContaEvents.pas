@@ -154,20 +154,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls, ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, Mask, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCContaEventsFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
-    GetOperatorsSQL: TQuery;
+    GetOperatorsSQL: TFDQuery;
     OperatorsSRC: TDataSource;
-    QryZero: TQuery;
+    QryZero: TFDQuery;
     DispMemo: TMemo;
     OperatorDBLookupComboBox: TDBLookupComboBox;
     Label1: TLabel;
@@ -175,7 +178,7 @@ type
     DateDateTimePicker: TDateTimePicker;
     Label2: TLabel;
     Label3: TLabel;
-    GetLastSQL: TQuery;
+    GetLastSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

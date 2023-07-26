@@ -303,8 +303,8 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
   end
-  object qryGetSalesOrders: TQuery
-    DatabaseName = 'PB'
+  object qryGetSalesOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order.Sales_Order,'
       '        Sales_Order.Date_Required,'

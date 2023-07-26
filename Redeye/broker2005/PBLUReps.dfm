@@ -133,8 +133,8 @@ object frmPBLUReps: TfrmPBLUReps
       OnClick = btnChangeClick
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Reps_Branches.Customer,'
       '        Reps_Branches.Branch_no,'

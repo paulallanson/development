@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls;
+  Db, QuickRpt, Qrctrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTStkVarRepFrm = class(TForm)
@@ -21,7 +24,7 @@ type
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
     GetStoreStkDataSource: TDataSource;
-    GetDetsQuery: TQuery;
+    GetDetsQuery: TFDQuery;
     DateQRLabel: TQRLabel;
     QRDBText5: TQRDBText;
     SeqByQRLabel: TQRLabel;
@@ -49,7 +52,7 @@ type
     qrlblCountCost: TQRLabel;
     qrlblVarianceCost: TQRLabel;
     qrlblTotalCost: TQRLabel;
-    qryGetLastLot: TQuery;
+    qryGetLastLot: TFDQuery;
   function GetDetails(Sender: TObject): Integer;
   procedure StkVarQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

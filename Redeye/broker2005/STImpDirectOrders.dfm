@@ -162,8 +162,8 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
       OnClick = btnCloseClick
     end
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Data_Transfer_Directory, Default_warehouse'
       'from company'

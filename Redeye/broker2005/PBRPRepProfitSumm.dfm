@@ -958,9 +958,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     Left = 254
     Top = 78
   end
-  object SQLRepPrft: TQuery
-    DatabaseName = 'PB'
-    DataSource = DataSRCRepPrft
+  object SQLRepPrft: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = DataSRCRepPrft
     SQL.Strings = (
       'select '#9'sales_profit.rep,'
       #9'rep.name as rep_name,'
@@ -1013,8 +1013,8 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         ParamType = ptUnknown
       end>
   end
-  object SQLRep: TQuery
-    DatabaseName = 'PB'
+  object SQLRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'distinct rep.rep,'
       #9'rep.name as rep_name'

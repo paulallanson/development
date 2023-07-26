@@ -164,8 +164,8 @@ object PBMaintSuppInvoiceChgsfrm: TPBMaintSuppInvoiceChgsfrm
       OnChange = CheckOK
     end
   end
-  object qryVAT: TQuery
-    DatabaseName = 'PB'
+  object qryVAT: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from VAT_Code')
     Left = 256

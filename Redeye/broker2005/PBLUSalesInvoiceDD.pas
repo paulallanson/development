@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, Buttons, DB,
-  DBTables, IniFiles, OleCtnrs;
+  Dialogs, Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, Buttons, DB, IniFiles, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUSalesInvoiceDDFrm = class(TForm)
@@ -25,15 +27,15 @@ type
     lblExpTo: TLabel;
     edtExpFile: TEdit;
     btnBrowse: TButton;
-    qrySalesInvs: TQuery;
-    qrySalesInvByDate: TQuery;
-    qrySalesInvByNumber: TQuery;
-    qryUpdInvs: TQuery;
-    GetLastIntSelSQL: TQuery;
-    AddWorkSQL: TQuery;
-    GetInvRngSQL: TQuery;
-    AddIntSelQuery: TQuery;
-    DelWorkSQL: TQuery;
+    qrySalesInvs: TFDQuery;
+    qrySalesInvByDate: TFDQuery;
+    qrySalesInvByNumber: TFDQuery;
+    qryUpdInvs: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    GetInvRngSQL: TFDQuery;
+    AddIntSelQuery: TFDQuery;
+    DelWorkSQL: TFDQuery;
     OpenDialog1: TOpenDialog;
     dtsSalesInv: TDataSource;
     chkbxShowExported: TCheckBox;

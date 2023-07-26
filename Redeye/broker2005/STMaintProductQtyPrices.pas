@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, StdCtrls, Buttons, ExtCtrls, DB, DBTables, DBCtrls;
+  Dialogs, Grids, StdCtrls, Buttons, ExtCtrls, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintProductQtyPricesFrm = class(TForm)
@@ -15,13 +18,13 @@ type
     lblProduct: TLabel;
     Label2: TLabel;
     lblDescription: TLabel;
-    qryGetQtyPrices: TQuery;
-    qryDel: TQuery;
-    qryAdd: TQuery;
+    qryGetQtyPrices: TFDQuery;
+    qryDel: TFDQuery;
+    qryAdd: TFDQuery;
     dblkpSuppliers: TDBLookupComboBox;
-    qrySuppliers: TQuery;
+    qrySuppliers: TFDQuery;
     dtsSupplier: TDataSource;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
     dblkpSellUnit: TDBLookupComboBox;
     OKBitBtn: TBitBtn;

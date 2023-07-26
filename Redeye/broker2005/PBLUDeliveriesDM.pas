@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlDeliveries = class(TDataModule)
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
-    CompSQL: TQuery;
-    CustomerSQL: TQuery;
-    qryPODetails: TQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    CompSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
+    qryPODetails: TFDQuery;
     qryPODetailsPurchase_Order: TFloatField;
     qryPODetailsLine: TIntegerField;
     qryPODetailsDelivery_no: TIntegerField;
@@ -51,26 +54,26 @@ type
     qryPODetailsOriginal_OrderLine: TFloatField;
     qryPODetailsNumber_Instructions: TStringField;
     dtsDetails: TDataSource;
-    qrySODetails: TQuery;
+    qrySODetails: TFDQuery;
     qryPODetailsDeliveryName: TStringField;
-    qryUpDelivDate: TQuery;
-    qryUpDelivPrinted: TQuery;
-    qryCheckDeliv: TQuery;
-    qryGetPOLine: TQuery;
-    qryUpPOLine: TQuery;
-    qryGetPOLines: TQuery;
-    qryUpPOHead: TQuery;
-    qryUpDelivery: TQuery;
-    qryAddDelivLocs: TQuery;
-    qryUpDelivLocs: TQuery;
-    qryDelPickLocs: TQuery;
-    qryUpDelivLocsAlloc: TQuery;
-    qryAddPickDtls: TQuery;
-    qryGetNextPickNo: TQuery;
-    qryUpPOLineFormRef: TQuery;
-    qryGetStock: TQuery;
-    qryGetCallOff: TQuery;
-    qryUpPOStock: TQuery;
+    qryUpDelivDate: TFDQuery;
+    qryUpDelivPrinted: TFDQuery;
+    qryCheckDeliv: TFDQuery;
+    qryGetPOLine: TFDQuery;
+    qryUpPOLine: TFDQuery;
+    qryGetPOLines: TFDQuery;
+    qryUpPOHead: TFDQuery;
+    qryUpDelivery: TFDQuery;
+    qryAddDelivLocs: TFDQuery;
+    qryUpDelivLocs: TFDQuery;
+    qryDelPickLocs: TFDQuery;
+    qryUpDelivLocsAlloc: TFDQuery;
+    qryAddPickDtls: TFDQuery;
+    qryGetNextPickNo: TFDQuery;
+    qryUpPOLineFormRef: TFDQuery;
+    qryGetStock: TFDQuery;
+    qryGetCallOff: TFDQuery;
+    qryUpPOStock: TFDQuery;
     qrySODetailsSales_Order: TIntegerField;
     qrySODetailsSales_order_delivery_no: TIntegerField;
     qrySODetailsDelivery_Date: TDateTimeField;
@@ -90,7 +93,7 @@ type
     qrySODetailsSales_Order_Head_Status: TIntegerField;
     qrySODetailsReplenish_Source: TIntegerField;
     qrySODetailsDate_Ordered: TDateTimeField;
-    qryUpPOLineInvUpfront: TQuery;
+    qryUpPOLineInvUpfront: TFDQuery;
     qryPODetailsGoods_reqd_by_customer: TDateTimeField;
     qryPODetailsInvoice_upfront: TStringField;
     qryPODetailsOrder_Price: TCurrencyField;

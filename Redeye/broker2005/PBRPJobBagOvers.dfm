@@ -796,8 +796,8 @@ object PBRPJobBagOversFrm: TPBRPJobBagOversFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT'
       #9'Job_Bag_Schedule.*,'
@@ -859,7 +859,7 @@ object PBRPJobBagOversFrm: TPBRPJobBagOversFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'select DISTINCT'#9'Part.Part,'
       #9'Part.Part_Description,'
@@ -914,8 +914,8 @@ object PBRPJobBagOversFrm: TPBRPJobBagOversFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJobBags: TQuery
-    DatabaseName = 'pb'
+  object qryJobBags: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select DISTINCT Job_Bag.Job_Bag,'
       '        Job_Bag.Job_Bag_Descr,'

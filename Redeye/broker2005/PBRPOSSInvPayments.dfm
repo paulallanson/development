@@ -1125,8 +1125,8 @@ object PBRPOSSInvPaymentsFrm: TPBRPOSSInvPaymentsFrm
       end
     end
   end
-  object qrySalesInvOutPay: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvOutPay: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_invoice.Customer,'
       '        Sales_invoice.Branch_no,'

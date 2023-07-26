@@ -134,7 +134,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, PBPOObjects;
+  StdCtrls, Buttons, DB, PBPOObjects;
 
 type
   TPBAutoPOFrm = class(TForm)

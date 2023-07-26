@@ -1594,8 +1594,8 @@ object frmPBRPJobBag: TfrmPBRPJobBag
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Job_Bag.*,'
       '        Operator.Name as Office_Contact_Name'
@@ -1611,8 +1611,8 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'pb'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -1648,8 +1648,8 @@ object frmPBRPJobBag: TfrmPBRPJobBag
     Left = 432
     Top = 48
   end
-  object qryContact: TQuery
-    DatabaseName = 'pb'
+  object qryContact: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer_Contact.Name as Contact_Name,'
       '        Customer_Contact.Email,'
@@ -1686,9 +1686,9 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         ParamType = ptUnknown
       end>
   end
-  object qryReportlines: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsReport
+  object qryReportlines: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT Job_Bag_Line_dets.*'
       'FROM Job_Bag_line_dets'
@@ -1709,8 +1709,8 @@ object frmPBRPJobBag: TfrmPBRPJobBag
     Left = 290
     Top = 46
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'pb'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Narrative_line'
@@ -1725,8 +1725,8 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'

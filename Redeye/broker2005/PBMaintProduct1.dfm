@@ -466,8 +466,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
       OnClick = btnCancel1Click
     end
   end
-  object qryTemplate: TQuery
-    DatabaseName = 'PB'
+  object qryTemplate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Template_no,'
       '        Product_Code_Prefix,'
@@ -490,8 +490,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
     Left = 304
     Top = 16
   end
-  object qryAddLevels: TQuery
-    DatabaseName = 'PB'
+  object qryAddLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Levels'
       'select top 1 :Part, '
@@ -512,8 +512,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPart: TQuery
-    DatabaseName = 'PB'
+  object qryAddPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -705,8 +705,8 @@ object PBMaintProduct1Frm: TPBMaintProduct1Frm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckProductCode: TQuery
-    DatabaseName = 'PB'
+  object qryCheckProductCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')

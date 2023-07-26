@@ -373,8 +373,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Left = 64
     Top = 212
   end
-  object qrySelUnPaidAgedStk: TQuery
-    DatabaseName = 'PB'
+  object qrySelUnPaidAgedStk: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    store_stock.part as Part,'
       '          part.part_description as Description,'
@@ -543,8 +543,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
       OnClick = ResetGrid1Click
     end
   end
-  object qryUpdPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update purchase_orderline '
       'set invoice_upfront = '#39'Y'#39' '
@@ -570,8 +570,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
     Left = 256
     Top = 256
   end
-  object qrySelPOrd: TQuery
-    DatabaseName = 'PB'
+  object qrySelPOrd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from purchase_order'
       'where purchase_order = :PO;')
@@ -584,8 +584,8 @@ object StMaintAgedStkFrm: TStMaintAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryUpdStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update store_stock '
       'set invoice_upfront = '#39'Y'#39' '

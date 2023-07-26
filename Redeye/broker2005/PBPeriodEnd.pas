@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, CCSCommon, DateSelV5, ComCtrls;
+  StdCtrls, Buttons, Db, CCSCommon, DateSelV5, ComCtrls;
 
 type
   TPBPeriodEndfrm = class(TForm)

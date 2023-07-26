@@ -1689,8 +1689,8 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 312
     Top = 19
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Sales_order_Line.Quantity_Ordered,Sales_order.Sales_order' +
@@ -1737,8 +1737,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOrdHedQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdHedQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sel1, text100'
       'from'
@@ -1764,8 +1764,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSOAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as DelNam,'
       '          Customer_Branch.Building_no_Name as DelAdd1,'
@@ -1797,16 +1797,16 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 96
     Top = 79
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 184
     Top = 78
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -1841,9 +1841,9 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 360
     Top = 71
   end
-  object ExtChrgsQuery: TQuery
-    DatabaseName = 'PB'
-    DataSource = GetDetsDataSource
+  object ExtChrgsQuery: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = GetDetsDataSource
     SQL.Strings = (
       'select Sales_Order_Add_Charge.*, Vat_Code.Vat_Rate'
       'from sales_Order_add_charge'
@@ -1864,8 +1864,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Contact.Name as Contact_Name'
       'From  Customer_Contact'

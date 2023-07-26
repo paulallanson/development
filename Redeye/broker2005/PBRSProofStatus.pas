@@ -79,12 +79,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  PBRPProofStatus, Printers, CCSPrint, CCSCommon;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  PBRPProofStatus, Printers, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSProofStatusFrm = class(TForm)
-    qryCurrentProofStatus: TQuery;
+    qryCurrentProofStatus: TFDQuery;
     dtsrcCurrentProofStatus: TDataSource;
     pnlDisplay: TPanel;
     pnlControls: TPanel;
@@ -99,7 +102,7 @@ type
     Panel1: TPanel;
     PreviewReportBitBtn: TBitBtn;
     PrintReportBitBtn: TBitBtn;
-    qryProofStatus: TQuery;
+    qryProofStatus: TFDQuery;
     cmbbxProofStatus: TComboBox;
     dbgrdProofStatus: TDBGrid;
     lblRecordCount: TLabel;

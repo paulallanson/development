@@ -326,8 +326,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
       TabOrder = 0
     end
   end
-  object qryCurrentContStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCurrentContStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Supplier_BranchContacts.Name AS Contact_Name,'
       #9'Supplier_BranchContacts.Salutation,'
@@ -405,8 +405,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Left = 272
     Top = 120
   end
-  object QryContType: TQuery
-    DatabaseName = 'PB'
+  object QryContType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Contact_Type'
       'order by Description')
@@ -414,18 +414,18 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Top = 12
     object QryContTypeDescription: TStringField
       FieldName = 'Description'
-      Origin = 'PB.Contact_Type.Description'
+
       FixedChar = True
       Size = 80
     end
   end
-  object qryExcel: TQuery
-    DatabaseName = 'pb'
+  object qryExcel: TFDQuery
+    ConnectionName = 'pb'
     Left = 648
     Top = 128
   end
-  object stdSQL: TQuery
-    DatabaseName = 'pb'
+  object stdSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'Supplier_BranchContacts.Name AS Contact_Name,'
       #9'Supplier_BranchContacts.Salutation,'
@@ -465,8 +465,8 @@ object PBRSSuppContDetFrm: TPBRSSuppContDetFrm
     Left = 48
     Top = 120
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Financial_Year, Period'
       'from Company'

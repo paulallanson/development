@@ -5,7 +5,10 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, ExtCtrls, Menus,
-  ImgList, pbCustomerDM, Buttons, db, DBTables, pbluCustEvents, Inifiles;
+  ImgList, pbCustomerDM, Buttons, db, pbluCustEvents, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBLUProspects = class(TForm)
@@ -96,7 +99,7 @@ type
     procedure SetDisableNameChangeEvent(const Value: boolean);
     procedure CallMaintScreen(Mode: string);
     procedure SetOperator(iTempOp: Integer);
-    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TQuery;
+    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery;
       bBranch: boolean);
     procedure ShowColumns;
     function ProspectOrdersExist: boolean;
@@ -644,7 +647,7 @@ begin
     end;
 end;
 
-procedure TfrmPBLUProspects.MultiSQLAdd(sTempStr: String; tmpQuery: TQuery; bBranch: boolean);
+procedure TfrmPBLUProspects.MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery; bBranch: boolean);
 begin
   if bBranch then
     begin

@@ -459,13 +459,13 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
   end
-  object GetBinsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinsSQL: TFDQuery
+    ConnectionName = 'PB'
     Left = 256
     Top = 200
   end
-  object GetBinsPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinsPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Store_Stock.Part_Bin, Max(Part_Store_Bin.Bin_Can_Pick) as' +
@@ -494,8 +494,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
         ParamType = ptUnknown
       end>
   end
-  object GetBinsHadPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinsHadPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Movement.Part_Movement_Bin As Part_Bin,'
       '       Max(Part_Store_Bin.Bin_Can_Pick) as Bin_Can_Pick,'
@@ -538,8 +538,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
         ParamType = ptUnknown
       end>
   end
-  object GetBinsEmptySQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinsEmptySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Part_Store_Bin.Part_Bin, Part_Store_Bin.Bin_Can_Pick, 0 A' +
@@ -570,8 +570,8 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllBinsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAllBinsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Part_Store_Bin.Part_Bin, Part_Store_Bin.Bin_Can_Pick, sum' +

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls;
+  Db, QuickRpt, Qrctrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTStkValRepFrm = class(TForm)
@@ -19,9 +22,9 @@ type
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
     GetStoreStkDataSource: TDataSource;
-    GetStoreStkQuery: TQuery;
-    GetCountStkQuery: TQuery;
-    GetDetsQuery: TQuery;
+    GetStoreStkQuery: TFDQuery;
+    GetCountStkQuery: TFDQuery;
+    GetDetsQuery: TFDQuery;
     TotCostQRLabel: TQRLabel;
     SeqByQRLabel: TQRLabel;
     NameQRLabel: TQRLabel;
@@ -44,7 +47,7 @@ type
     qrlblGrandTotalValue: TQRLabel;
     QRLabel10: TQRLabel;
     QRMemoRepName: TQRMemo;
-    GetTopRepSQL: TQuery;
+    GetTopRepSQL: TFDQuery;
     QRGroup2: TQRGroup;
     QRLabel11: TQRLabel;
     QRDBText4: TQRDBText;
@@ -67,8 +70,8 @@ type
     QRLblTotBinCst: TQRLabel;
     QRShape3: TQRShape;
     qrlblStockTakeRef: TQRLabel;
-    qryGetPOs: TQuery;
-    qryGetPurchOrds: TQuery;
+    qryGetPOs: TFDQuery;
+    qryGetPurchOrds: TFDQuery;
   function GetDetails(Sender: TObject): Integer;
   procedure StkValQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

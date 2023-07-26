@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, Db, DBTables, ExtCtrls, QrExport;
+  Qrctrls, QuickRpt, Db, ExtCtrls, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPAgedStkFrm = class(TForm)
     qrAgedStk: TQuickRep;
-    qryAgedStk: TQuery;
+    qryAgedStk: TFDQuery;
     QRBand: TQRBand;
     TitleQRLabel: TQRLabel;
     qrlblDateSince: TQRLabel;
@@ -43,7 +46,7 @@ type
     QRLblVal: TQRLabel;
     QRLabel11: TQRLabel;
     QRLabel12: TQRLabel;
-    GetSalesDtQry: TQuery;
+    GetSalesDtQry: TFDQuery;
     qrlblLastSalesDate: TQRLabel;
     QRLblCust: TQRLabel;
     QRLabel13: TQRLabel;
@@ -55,14 +58,14 @@ type
     qrlblRange: TQRLabel;
     DateQRLabel: TQRLabel;
     QRSysData1: TQRSysData;
-    Query1: TQuery;
+    Query1: TFDQuery;
     QRMemoRepName: TQRMemo;
-    GetTopRepSQL: TQuery;
+    GetTopRepSQL: TFDQuery;
     QRLabel14: TQRLabel;
     QRDBText7: TQRDBText;
-    qryGetPOs: TQuery;
-    qryGetPurchOrds: TQuery;
-    qryAccMgr: TQuery;
+    qryGetPOs: TFDQuery;
+    qryGetPurchOrds: TFDQuery;
+    qryAccMgr: TFDQuery;
     qrlblLastJobUsedDate: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     procedure qrbndDetailBeforePrint(Sender: TQRCustomBand;

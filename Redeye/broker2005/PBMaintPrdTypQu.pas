@@ -83,7 +83,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, variants;
+  StdCtrls, Buttons, DBCtrls, DB, variants,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPrdTypQuFrm = class(TForm)
@@ -91,15 +94,15 @@ type
     Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     TextEdit: TEdit;
     PrdTypDescrEdit: TEdit;
     Label2: TLabel;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     Label3: TLabel;
     SequenceEdit: TEdit;
     Label4: TLabel;
@@ -108,15 +111,15 @@ type
     DBLUPromptType: TDBLookupComboBox;
     lblItems: TLabel;
     BtnItems: TBitBtn;
-    qryPromptType: TQuery;
-    qryQuestionCat: TQuery;
+    qryPromptType: TFDQuery;
+    qryQuestionCat: TFDQuery;
     srcPromptType: TDataSource;
     srcQuestionCat: TDataSource;
-    qryQuestionList: TQuery;
-    qryDelQList: TQuery;
-    qryAddQList: TQuery;
-    Query1: TQuery;
-    qryLastQList: TQuery;
+    qryQuestionList: TFDQuery;
+    qryDelQList: TFDQuery;
+    qryAddQList: TFDQuery;
+    Query1: TFDQuery;
+    qryLastQList: TFDQuery;
     chkbxActive: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);

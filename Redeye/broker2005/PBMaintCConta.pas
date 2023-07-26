@@ -4,39 +4,42 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Mask, ExtCtrls, PBDBMemo, CCSCommon,
-  ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, Mask, ExtCtrls, PBDBMemo, CCSCommon,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCContaFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
-    GetBranchNameSQL: TQuery;
-    GetContTypesSQL: TQuery;
+    GetBranchNameSQL: TFDQuery;
+    GetContTypesSQL: TFDQuery;
     ContTypesSRC: TDataSource;
-    QryZero: TQuery;
-    GetContLevelsSQL: TQuery;
+    QryZero: TFDQuery;
+    GetContLevelsSQL: TFDQuery;
     ContLevelsSRC: TDataSource;
-    GetFileTypeSQL: TQuery;
+    GetFileTypeSQL: TFDQuery;
     FileTypSRC: TDataSource;
     FlashTimer: TTimer;
-    UpdNotesOnlySQL: TQuery;
-    qryStatus: TQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    qryStatus: TFDQuery;
     srcStatus: TDataSource;
-    qryGetContact: TQuery;
-    qryBranch: TQuery;
+    qryGetContact: TFDQuery;
+    qryBranch: TFDQuery;
     dtsBranch: TDataSource;
-    qrySelContInfo: TQuery;
-    qryUpdContInfo: TQuery;
-    qryInsContInfo: TQuery;
-    qryDelContInfo: TQuery;
-    qryNextContInfo: TQuery;
-    qrySelOperator: TQuery;
+    qrySelContInfo: TFDQuery;
+    qryUpdContInfo: TFDQuery;
+    qryInsContInfo: TFDQuery;
+    qryDelContInfo: TFDQuery;
+    qryNextContInfo: TFDQuery;
+    qrySelOperator: TFDQuery;
     pgDetails: TPageControl;
     tsDetails: TTabSheet;
     tsCostCentres: TTabSheet;
@@ -90,11 +93,11 @@ type
     Label14: TLabel;
     lstbxNonMembers: TListBox;
     lstbxNonMembersCodes: TListBox;
-    qryMembers: TQuery;
-    qryDummy: TQuery;
-    qryCostCentre: TQuery;
-    qryAdd: TQuery;
-    qryDelete: TQuery;
+    qryMembers: TFDQuery;
+    qryDummy: TFDQuery;
+    qryCostCentre: TFDQuery;
+    qryAdd: TFDQuery;
+    qryDelete: TFDQuery;
     chkbxPaysOnline: TCheckBox;
     tsCategories: TTabSheet;
     Label15: TLabel;
@@ -105,11 +108,11 @@ type
     lstbxNonCategoryCode: TListBox;
     btnAddCategory: TBitBtn;
     btnRemoveCategory: TBitBtn;
-    qryCategory: TQuery;
-    qryCategoryDummy: TQuery;
-    qryUseCategoryMembers: TQuery;
-    qryDeleteCategories: TQuery;
-    qryAddCategory: TQuery;
+    qryCategory: TFDQuery;
+    qryCategoryDummy: TFDQuery;
+    qryUseCategoryMembers: TFDQuery;
+    qryDeleteCategories: TFDQuery;
+    qryAddCategory: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

@@ -95,8 +95,8 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
     TabOrder = 3
     Kind = bkCancel
   end
-  object qrySContacts: TQuery
-    DatabaseName = 'PB'
+  object qrySContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Contact_no, Name, Email'
       'from Supplier_BranchContacts'
@@ -112,8 +112,8 @@ object PBMaintEmailFrm: TPBMaintEmailFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCContacts: TQuery
-    DatabaseName = 'PB'
+  object qryCContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Contact_no, Name, Email'
       'from customer_Contact'

@@ -3,14 +3,14 @@ inherited dbPOrdLtr: TdbPOrdLtr
   Top = 195
   Height = 533
   Width = 574
-  inherited qryLayout: TQuery
+  inherited qryLayout: TFDQuery
     Left = 108
   end
-  inherited qryCompany: TQuery
+  inherited qryCompany: TFDQuery
     Left = 26
   end
-  object GetDelivsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelivsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  *'
       'FROM Delivery_Detail'
@@ -31,8 +31,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetSuppAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Supplier.Name, Supplier_Branch.Building_No_name,'
       '               Supplier_Branch.Street, Supplier_Branch.Locale,'
@@ -56,8 +56,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From Purchase_OrderLinePart_Detail'
       'Where (Purchase_Order = :Purchase_Order) and (Line = :Line)'
@@ -76,8 +76,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetSpecInstrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSpecInstrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'from Narrative_Line'
@@ -93,8 +93,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetExtChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetExtChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sum(Amount) as Total_Extra_Charges'
       'FROM Purch_Ord_Line_Add_chg'
@@ -120,8 +120,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 127
     Top = 175
   end
-  object GetAddHocAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAddHocAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name, Building_No_name,'
       '               Street, Locale, Town,'
@@ -153,8 +153,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 296
     Top = 119
   end
-  object GetEnqSQL: TQuery
-    DatabaseName = 'PB'
+  object GetEnqSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Forms_Per_Box,'
       '        Purchase_OrderLine.Depth, Purchase_OrderLine.Depth_Unit,'
@@ -199,8 +199,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 80
     Top = 63
   end
-  object GetRepAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRepAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Name, Building_No_name,'
       '               Street, Locale, Town,'
@@ -227,8 +227,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 296
     Top = 175
   end
-  object GetQuestionsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQuestionsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT  Product_TypeQuestion.Question_Text, Enquiry_Questions.Pr' +
@@ -265,8 +265,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 272
     Top = 8
   end
-  object GetAddDetailsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAddDetailsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Purchase_OrderLineAddtl_Dtls'
       'WHERE (PURCHASE_ORDER = :PURCHASE_ORDER) AND'
@@ -291,8 +291,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetQtysSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQtysSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Quantity From Purchase_OrderLine'
       'Where (Supplier = :Supplier) and'
@@ -324,8 +324,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetPOsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier.Name,'
       '       Supplier_Branch.Building_No_name,'
@@ -423,8 +423,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 96
     Top = 119
   end
-  object GetCustAddrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustAddrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select   Customer.Name, Customer_Branch.Building_No_name,'
       '               Customer_Branch.Street, Customer_Branch.Locale,'
@@ -448,8 +448,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetAckSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAckSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Customer.Name, Customer_Branch.Building_No_name,'
       
@@ -572,8 +572,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptInput
       end>
   end
-  object GetNotesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNotesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_line'
@@ -588,16 +588,16 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 192
     Top = 63
   end
-  object UpdLineStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLineStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'Set Purch_Ord_Line_Status = 20'
@@ -618,8 +618,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object UpdHeadStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdHeadStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_Order'
       'Set Purch_Ord_Head_Status = 20'
@@ -634,8 +634,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetCustomerContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustomerContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT CC.Name, CC.Salutation'
       'FROM Customer_Contact CC'
@@ -663,8 +663,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptInput
       end>
   end
-  object GetAckLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAckLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Customer.Name,'
       #9'      Customer_Branch.Building_No_name,'
@@ -705,8 +705,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
     Left = 296
     Top = 240
   end
-  object GetCustomerNameSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustomerNameSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name'
       'from Customer'
@@ -720,8 +720,8 @@ inherited dbPOrdLtr: TdbPOrdLtr
         ParamType = ptUnknown
       end>
   end
-  object GetRngPOsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRngPOsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier.Name,'
       '       Supplier_Branch.Building_No_name,'

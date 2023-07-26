@@ -1179,16 +1179,16 @@ object STRPStockUsageDetfrm: TSTRPStockUsageDetfrm
       end
     end
   end
-  object qryPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_store')
     Left = 368
     Top = 24
   end
-  object qryStoreBal: TQuery
-    DatabaseName = 'PB'
+  object qryStoreBal: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 part_movement.Part_Store_Total_Quantity'
       #9' from part_movement'
@@ -1220,8 +1220,8 @@ object STRPStockUsageDetfrm: TSTRPStockUsageDetfrm
     Left = 104
     Top = 16
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Part.Part,'
       #9'Part.Part_Description,'
@@ -1283,9 +1283,9 @@ object STRPStockUsageDetfrm: TSTRPStockUsageDetfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPartMoves: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryPartMoves: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT '#9'Part_Movement.Date_Received,'
       #9'Part_Movement.Store_Quantity, '

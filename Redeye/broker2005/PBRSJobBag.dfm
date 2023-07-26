@@ -275,8 +275,8 @@ object frmPBRSJobBag: TfrmPBRSJobBag
       end
     end
   end
-  object qryGetRange: TQuery
-    DatabaseName = 'pb'
+  object qryGetRange: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT distinct Works_Order.Works_Order_number'
       'FROM Works_order'
@@ -297,8 +297,8 @@ object frmPBRSJobBag: TfrmPBRSJobBag
         ParamType = ptUnknown
       end>
   end
-  object qryGetWorksOrder: TQuery
-    DatabaseName = 'pb'
+  object qryGetWorksOrder: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Int_Sel.Int_Sel_Code,'
       '        Int_Sel.Sel1,'

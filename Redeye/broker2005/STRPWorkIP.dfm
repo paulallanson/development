@@ -1264,8 +1264,8 @@ object STRPWorkIPfrm: TSTRPWorkIPfrm
       FontSize = 9
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_Order.*, Customer.Name, Sales_Order_line.Part,'
       

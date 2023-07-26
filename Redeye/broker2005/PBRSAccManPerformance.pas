@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Grids, DBGrids, ExtCtrls, StdCtrls, Buttons,
-  ComCtrls;
+  Dialogs, DB, Grids, DBGrids, ExtCtrls, StdCtrls, Buttons,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSAccManPerformanceFrm = class(TForm)
     pnlFooter: TPanel;
     pnlHeader: TPanel;
     dbgDetails: TDBGrid;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     btnClose: TButton;
     rgAccMan: TRadioGroup;
@@ -20,8 +23,8 @@ type
     lblCustBran: TLabel;
     edtAccMan: TEdit;
     btnAccMan: TButton;
-    qryDummy: TQuery;
-    qryFY: TQuery;
+    qryDummy: TFDQuery;
+    qryFY: TFDQuery;
     btnExcel: TBitBtn;
     stsbrDetails: TStatusBar;
     procedure FormActivate(Sender: TObject);

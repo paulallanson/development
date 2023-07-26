@@ -611,8 +611,8 @@ object STRPCustProdUsagefrm: TSTRPCustProdUsagefrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Part.Part,'
       #9'Part.Part_Description,'
@@ -715,8 +715,8 @@ object STRPCustProdUsagefrm: TSTRPCustProdUsagefrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOReport: TQuery
-    DatabaseName = 'PB'
+  object qrySOReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order.customer,'
       '       customer.name,'

@@ -5841,8 +5841,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Left = 312
     Top = 75
   end
-  object GetOrdDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_Ord.Purch_Ord_No as' +
@@ -5916,8 +5916,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelFromSuppQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDelFromSuppQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier.Name as SuppNam,'
       '       Supplier_Branch.Name,'
@@ -5997,13 +5997,13 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
       Size = 40
     end
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     Left = 640
     Top = 157
   end
-  object GetOrdHedQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdHedQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sel1, text100'
       'from'
@@ -6041,8 +6041,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSODelAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSODelAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    Sales_Order.Delivery_Contact_Name,'
       '          Customer.Name as DelNam,'
@@ -6085,16 +6085,16 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Left = 632
     Top = 23
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 184
     Top = 78
   end
-  object qryExtraCharges: TQuery
-    DatabaseName = 'PB'
+  object qryExtraCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord_Add_Charge.*,'
       
@@ -6118,8 +6118,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'
@@ -6139,8 +6139,8 @@ object STRPPODelivNoteFrm: TSTRPPODelivNoteFrm
     Left = 752
     Top = 36
   end
-  object GetDelivAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDelivAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 182

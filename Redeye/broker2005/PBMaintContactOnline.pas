@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables, DBCtrls;
+  Dialogs, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintContactOnlineFrm = class(TForm)
     btnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryNextWebUserID: TQuery;
-    qryInsWebUser: TQuery;
-    qryGetContact: TQuery;
-    UpdSQL: TQuery;
-    qrySelWebUserID: TQuery;
-    qryUpdWebUser: TQuery;
+    qryNextWebUserID: TFDQuery;
+    qryInsWebUser: TFDQuery;
+    qryGetContact: TFDQuery;
+    UpdSQL: TFDQuery;
+    qrySelWebUserID: TFDQuery;
+    qryUpdWebUser: TFDQuery;
     GroupBox1: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -25,10 +28,10 @@ type
     GroupBox2: TGroupBox;
     Label3: TLabel;
     edtConsumerID: TEdit;
-    qryCheckUserName: TQuery;
+    qryCheckUserName: TFDQuery;
     Label4: TLabel;
     dblkpWebRole: TDBLookupComboBox;
-    qryWebRole: TQuery;
+    qryWebRole: TFDQuery;
     dtsWebRole: TDataSource;
     chkbxCanEnterRetail: TCheckBox;
     procedure EnableOK(Sender: TObject);

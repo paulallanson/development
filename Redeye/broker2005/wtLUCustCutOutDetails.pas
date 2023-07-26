@@ -4,16 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, DBTables,
-  ExtCtrls, ComCtrls;
+  Dialogs, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmWTLUCustCutOutDetails = class(TForm)
     dbgDetails: TDBGrid;
-    tblCOutThickness: TTable;
+    tblCOutThickness: TFDTable;
     srcCOutThickness: TDataSource;
     srclkpCOutThickness: TDataSource;
-    lkpCOutThickness: TQuery;
+    lkpCOutThickness: TFDQuery;
     lkpCOutThicknessCutout: TIntegerField;
     lkpCOutThicknessEdge_Type: TIntegerField;
     lkpCOutThicknessMaterial_Type: TIntegerField;
@@ -23,12 +25,12 @@ type
     lkpCOutThicknessUnit_Cost: TFloatField;
     lkpCOutThicknessPrice_Unit_Description: TStringField;
     lkpCOutThicknessinactive: TStringField;
-    lkpMatType: TQuery;
+    lkpMatType: TFDQuery;
     srclkpMatType: TDataSource;
-    qryDelCOutThick: TQuery;
-    qryGetCutOutThickness: TQuery;
-    qryAddCutOutThickness: TQuery;
-    qryDeleteCutOutThickness: TQuery;
+    qryDelCOutThick: TFDQuery;
+    qryGetCutOutThickness: TFDQuery;
+    qryAddCutOutThickness: TFDQuery;
+    qryDeleteCutOutThickness: TFDQuery;
     tmrRefresh: TTimer;
     Panel1: TPanel;
     stsbrDetails: TStatusBar;
@@ -47,7 +49,7 @@ type
     dblkpEdgeType: TDBLookupComboBox;
     dblkpCopyMaterial: TDBLookupComboBox;
     btnGo: TButton;
-    lkpEdgeType: TQuery;
+    lkpEdgeType: TFDQuery;
     srclkpEdgeType: TDataSource;
     btnExcel: TBitBtn;
     SpeedButton2: TSpeedButton;

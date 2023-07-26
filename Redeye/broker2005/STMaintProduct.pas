@@ -4,34 +4,37 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DBCtrls, Db, DBTables, Mask, Spin, ComCtrls,
-  Grids, DBGrids;
+  StdCtrls, Buttons, ExtCtrls, DBCtrls, Db, Mask, Spin, ComCtrls,
+  Grids, DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmSTMaintProduct = class(TForm)
-    qryProduct: TQuery;
-    qryPartGroup: TQuery;
+    qryProduct: TFDQuery;
+    qryPartGroup: TFDQuery;
     dtsPartGroup: TDataSource;
     dtsVatCode: TDataSource;
-    qryVatCode: TQuery;
-    qryCostUplift: TQuery;
+    qryVatCode: TFDQuery;
+    qryCostUplift: TFDQuery;
     dtsCostUplift: TDataSource;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryGetCust: TQuery;
-    qryDelPart: TQuery;
-    qryUpPart: TQuery;
-    qryAddPart: TQuery;
-    qryCheckProductCode: TQuery;
-    qryAddLevels: TQuery;
-    qryUOM: TQuery;
+    qryGetCust: TFDQuery;
+    qryDelPart: TFDQuery;
+    qryUpPart: TFDQuery;
+    qryAddPart: TFDQuery;
+    qryCheckProductCode: TFDQuery;
+    qryAddLevels: TFDQuery;
+    qryUOM: TFDQuery;
     dtsUOM: TDataSource;
-    qryProductTypes: TQuery;
+    qryProductTypes: TFDQuery;
     dtsProductTypes: TDataSource;
-    qryUpStockRef: TQuery;
-    qryUpFormRef: TQuery;
-    qryDelPartLevels: TQuery;
-    qryFSCClaim: TQuery;
+    qryUpStockRef: TFDQuery;
+    qryUpFormRef: TFDQuery;
+    qryDelPartLevels: TFDQuery;
+    qryFSCClaim: TFDQuery;
     dtsFSCClaim: TDataSource;
     pgDetails: TPageControl;
     Panel1: TPanel;
@@ -107,15 +110,15 @@ type
     chkbxHasBOM: TCheckBox;
     tsBOM: TTabSheet;
     pnlComponents: TPanel;
-    qryGetBOM: TQuery;
+    qryGetBOM: TFDQuery;
     btnAdd: TBitBtn;
     btnChange: TBitBtn;
     btnDelete: TBitBtn;
     dbgComponents: TDBGrid;
     dtsGetBOM: TDataSource;
-    qryGetProductType: TQuery;
+    qryGetProductType: TFDQuery;
     chkbxGlobalProduct: TCheckBox;
-    qryDelStoreStockSN: TQuery;
+    qryDelStoreStockSN: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnOKSuppClick(Sender: TObject);

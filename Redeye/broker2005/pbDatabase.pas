@@ -4,61 +4,68 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, stdctrls, buttons, dbctrls, spin, Grids, ComCtrls, DBGrids,
-  ExtCtrls, ComObj, ActiveX;
+  Db, stdctrls, buttons, dbctrls, spin, Grids, ComCtrls, DBGrids,
+  ExtCtrls, ComObj, ActiveX,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.VCLUI.Wait;
 
 type
   TdmBroker = class(TDataModule)
-    PBLDatabase: TDatabase;
-    AddIntSelQuery: TQuery;
-    GetLastIntSelSQL: TQuery;
-    DelWorkSQL: TQuery;
-    AddWorkSQL: TQuery;
-    GetButtonStatusSQL: TQuery;
-    qryIsEnqQuickQuote: TQuery;
-    qryGetOperator: TQuery;
-    qryCompany: TQuery;
-    qryGetButtons: TQuery;
-    qryDeleteWorkStation: TQuery;
-    qryDeleteWorkStations: TQuery;
-    qryGetWorkStation: TQuery;
-    qryAddWorkStation: TQuery;
-    qryCheckWSLock: TQuery;
-    qryGetLastWSLock: TQuery;
-    qryAddWSLock: TQuery;
-    qryDeleteWSLock: TQuery;
-    qryDeleteWorkStationLock: TQuery;
-    qryDeleteWorkStationsLocks: TQuery;
-    qryFY: TQuery;
-    qrySpare: TQuery;
-    qryGetCust: TQuery;
-    qryGetNextProductID: TQuery;
-    qryDelTempID: TQuery;
-    qryAddWithKey: TQuery;
-    qryCompBranch: TQuery;
-    qryGetOpCustomer: TQuery;
-    qryUpCompanyDD: TQuery;
-    qryAddReplEntity: TQuery;
-    qryGetSupplierID: TQuery;
-    qryGetCategory: TQuery;
-    qryGetStoreStock: TQuery;
-    qryGetPeriod: TQuery;
-    qryCheckActivity: TQuery;
-    qryCustomerSubRep: TQuery;
-    qryGetDocumentNames: TQuery;
-    qryZero: TQuery;
-    qryUpdEmail: TQuery;
-    qryAddEmail: TQuery;
-    qryGetLastEmail: TQuery;
-    qryAddEmailAttachment: TQuery;
-    EmailDatabase: TDatabase;
-    qryGetCustomerRep: TQuery;
-    qryGetRep: TQuery;
-    qryGetCustomerSubRep: TQuery;
-    qryCompanySupplier: TQuery;
-    procedure PBLDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    PBLDatabase: TFDConnection;
+    AddIntSelQuery: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    GetButtonStatusSQL: TFDQuery;
+    qryIsEnqQuickQuote: TFDQuery;
+    qryGetOperator: TFDQuery;
+    qryCompany: TFDQuery;
+    qryGetButtons: TFDQuery;
+    qryDeleteWorkStation: TFDQuery;
+    qryDeleteWorkStations: TFDQuery;
+    qryGetWorkStation: TFDQuery;
+    qryAddWorkStation: TFDQuery;
+    qryCheckWSLock: TFDQuery;
+    qryGetLastWSLock: TFDQuery;
+    qryAddWSLock: TFDQuery;
+    qryDeleteWSLock: TFDQuery;
+    qryDeleteWorkStationLock: TFDQuery;
+    qryDeleteWorkStationsLocks: TFDQuery;
+    qryFY: TFDQuery;
+    qrySpare: TFDQuery;
+    qryGetCust: TFDQuery;
+    qryGetNextProductID: TFDQuery;
+    qryDelTempID: TFDQuery;
+    qryAddWithKey: TFDQuery;
+    qryCompBranch: TFDQuery;
+    qryGetOpCustomer: TFDQuery;
+    qryUpCompanyDD: TFDQuery;
+    qryAddReplEntity: TFDQuery;
+    qryGetSupplierID: TFDQuery;
+    qryGetCategory: TFDQuery;
+    qryGetStoreStock: TFDQuery;
+    qryGetPeriod: TFDQuery;
+    qryCheckActivity: TFDQuery;
+    qryCustomerSubRep: TFDQuery;
+    qryGetDocumentNames: TFDQuery;
+    qryZero: TFDQuery;
+    qryUpdEmail: TFDQuery;
+    qryAddEmail: TFDQuery;
+    qryGetLastEmail: TFDQuery;
+    qryAddEmailAttachment: TFDQuery;
+    EmailDatabase: TFDConnection;
+    qryGetCustomerRep: TFDQuery;
+    qryGetRep: TFDQuery;
+    qryGetCustomerSubRep: TFDQuery;
+    qryCompanySupplier: TFDQuery;
     procedure PBLDatabaseAfterConnect(Sender: TObject);
-    procedure EmailDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    procedure PBLDatabaseLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
+    procedure EmailDatabaseLogin(AConnection: TFDCustomConnection;
+      AParams: TFDConnectionDefParams);
   private
     FUserName: string;
     FPassword: string;
@@ -275,23 +282,6 @@ uses
 
 {$R *.DFM}
 
-procedure TdmBroker.PBLDatabaseLogin(Database: TDatabase;
-  LoginParams: TStrings);
-begin
-{$IFDEF DEMO}
-  LoginParams.Values['USER NAME'] := 'admin';
-  LoginParams.Values['PASSWORD'] := '';
-  UserName := 'admin';
-  Password := '';
-{$ELSE}
-  LoginParams.Values['USER NAME'] := frmpbLogin.UserEdit.Text;
-  LoginParams.Values['PASSWORD'] := Trim(frmpbLogin.PasswordEdit.Text);
-  UserName := frmpbLogin.UserEdit.Text;
-  Password := Trim(frmpbLogin.PasswordEdit.Text);
-{$ENDIF}
-end;
-
-
 procedure TdmBroker.SetPassword(const Value: string);
 begin
   FPassword := Value;
@@ -307,9 +297,25 @@ var
   DriverName : string;
 begin
   { Find out what kind of database this is, Access or SQL Server }
-  DriverName := Session.GetAliasDriverName(PBLDatabase.AliasName);
+  DriverName := PBLDatabase.DriverName;
   if DriverName = 'MSSQL' then
     FIsSQL := true;
+end;
+
+procedure TdmBroker.PBLDatabaseLogin(AConnection: TFDCustomConnection;
+  AParams: TFDConnectionDefParams);
+begin
+{$IFDEF DEMO}
+  AParams.UserName := 'admin';
+  AParams.Password := '';
+  UserName := 'admin';
+  Password := '';
+{$ELSE}
+  AParams.UserName := frmpbLogin.UserEdit.Text;
+  AParams.Password := Trim(frmpbLogin.PasswordEdit.Text);
+  UserName := frmpbLogin.UserEdit.Text;
+  Password := Trim(frmpbLogin.PasswordEdit.Text);
+{$ENDIF}
 end;
 
 procedure TdmBroker.AddIntSelCode(iTempIntSelCode: Integer; rTemp: real; sTemp: string);
@@ -2243,7 +2249,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -2600,7 +2606,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally
@@ -2690,6 +2696,13 @@ begin
         end;
       Close ;
     end;
+end;
+
+procedure TdmBroker.EmailDatabaseLogin(AConnection: TFDCustomConnection;
+  AParams: TFDConnectionDefParams);
+begin
+  AParams.UserName := Self.UserName;
+  AParams.Password := Self.Password;
 end;
 
 procedure TdmBroker.EmailViaGeneric(sSenderName, sSenderEmail, sRecipientName, sRecipient, sSubject, sBody: string;
@@ -2797,13 +2810,6 @@ begin
       open;
       result := trim(fieldbyname('Email_Storage_Directory').asstring);
     end;
-end;
-
-procedure TdmBroker.EmailDatabaseLogin(Database: TDatabase;
-  LoginParams: TStrings);
-begin
-  LoginParams.Values['USER NAME'] := self.UserName;
-  LoginParams.Values['PASSWORD'] := self.Password;
 end;
 
 function TdmBroker.GetCompanyContractDirectory: string;

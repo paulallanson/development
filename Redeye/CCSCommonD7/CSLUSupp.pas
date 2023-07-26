@@ -61,12 +61,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons, DBCtrls, CSCommon;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons, DBCtrls, CSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSLUSuppFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -80,9 +83,9 @@ type
     AddBitBtn: TBitBtn;
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
-    SelectedSQL: TQuery;
+    SelectedSQL: TFDQuery;
     NullSRC: TDataSource;
-    GetODueEnqDetsSQL: TQuery;
+    GetODueEnqDetsSQL: TFDQuery;
     ActiveOnlyCheckBox: TCheckBox;
     DispPanel: TPanel;
     LabelName: TLabel;

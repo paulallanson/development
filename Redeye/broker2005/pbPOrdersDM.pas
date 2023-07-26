@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlPOrders = class(TDataModule)
-    qryPOHeaderGrid: TQuery;
+    qryPOHeaderGrid: TFDQuery;
     dtsPOHeaderGrid: TDataSource;
-    qryCompany: TQuery;
-    qryUpd: TQuery;
-    qryUpdPOLine: TQuery;
-    qryGetPOLines: TQuery;
-    qryCheckPOStatus: TQuery;
-    qryUpdPOStatus: TQuery;
+    qryCompany: TFDQuery;
+    qryUpd: TFDQuery;
+    qryUpdPOLine: TFDQuery;
+    qryGetPOLines: TFDQuery;
+    qryCheckPOStatus: TFDQuery;
+    qryUpdPOStatus: TFDQuery;
   private
     function GetHeaderCount: integer;
     { Private declarations }

@@ -123,8 +123,8 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
       Value = 0
     end
   end
-  object qryCategories: TQuery
-    DatabaseName = 'pb'
+  object qryCategories: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Category.* '
       'from Category'
@@ -149,8 +149,8 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
     DataSet = qryCategories
     Left = 248
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Category_KPI'
       '        (Customer,'
@@ -194,8 +194,8 @@ object PBMaintCustomerCatsFrm: TPBMaintCustomerCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'pb'
+  object qryDelete: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'delete from Customer_Category_KPI'
       'where Customer = :Customer and Category = :Category')

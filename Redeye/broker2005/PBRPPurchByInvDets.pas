@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, DBTables, QRCtrls;
+  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, QRCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPurchByInvDetsFrm = class(TForm)
     qrDetails: TQuickRep;
     qrbndPageHeader: TQRBand;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
     repQRGroup: TQRGroup;
@@ -41,7 +44,7 @@ type
     qrlblDiff: TQRLabel;
     qrlblDescription: TQRLabel;
     QRLabel11: TQRLabel;
-    qryGetPO: TQuery;
+    qryGetPO: TFDQuery;
     qrlblOrderPrice: TQRLabel;
     qrlblOrderUnit: TQRLabel;
     qrlblCostPrice: TQRLabel;

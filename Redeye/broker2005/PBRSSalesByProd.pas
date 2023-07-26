@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, ComCtrls, Db, DBTables, Grids, DBGrids, Buttons, StdCtrls,
-  CCSPrint, DateSelV5, PBPOObjects, QrExport, OleCtnrs, CCSCommon;
+  ExtCtrls, ComCtrls, Db, Grids, DBGrids, Buttons, StdCtrls,
+  CCSPrint, DateSelV5, PBPOObjects, QrExport, OleCtnrs, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSalesByProdFrm = class(TForm)
@@ -32,7 +35,7 @@ type
     chkbxBranches: TCheckBox;
     chkbxTotalbyBranch: TCheckBox;
     chkbxTotalbyProduct: TCheckBox;
-    qrySalesbyProd: TQuery;
+    qrySalesbyProd: TFDQuery;
     qrySalesbyProdSales_Invoice: TIntegerField;
     qrySalesbyProdInvoice_Line_No: TIntegerField;
     qrySalesbyProdPurchase_Order: TFloatField;

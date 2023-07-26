@@ -927,8 +927,8 @@ object STRPSOReturnsFrm: TSTRPSOReturnsFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select '#9'part_transfer.Part,'
       #9'part.part_description,'
@@ -1011,8 +1011,8 @@ object STRPSOReturnsFrm: TSTRPSOReturnsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetLocations: TQuery
-    DatabaseName = 'PB'
+  object qryGetLocations: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct top 3 Part_Bin'
       'from Store_Stock'

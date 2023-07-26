@@ -9284,8 +9284,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
       end
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Rep_Cat_Budget.Rep, Rep.Name'
       'FROM Rep_Cat_Budget, Rep'
@@ -9317,8 +9317,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -9326,8 +9326,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
     Left = 83
     Top = 38
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -9388,8 +9388,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepCatBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryRepCatBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Cat_Budget'
@@ -9421,8 +9421,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -9443,8 +9443,8 @@ object PBRPPEndRepsCatPerformfrm: TPBRPPEndRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepCat: TQuery
-    DatabaseName = 'pb'
+  object qryRepCat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Rep_Financial_Cat'

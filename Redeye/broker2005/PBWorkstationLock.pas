@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, Grids, DBGrids, ExtCtrls, StdCtrls;
+  Dialogs, DB, Grids, DBGrids, ExtCtrls, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBWorkstationLockFrm = class(TForm)
     Panel1: TPanel;
     dbgDetails: TDBGrid;
-    qryWorkstationLock: TQuery;
+    qryWorkstationLock: TFDQuery;
     dtsWorkstationLock: TDataSource;
     btnUnlock: TButton;
     btnRefresh: TButton;
     btnClose: TButton;
-    qryDeleteWSL: TQuery;
+    qryDeleteWSL: TFDQuery;
     procedure btnRefreshClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);

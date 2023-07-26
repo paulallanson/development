@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls;
+  Dialogs, DB, StdCtrls, Buttons, Grids, DBGrids, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUPartOversFrm = class(TForm)
@@ -16,7 +19,7 @@ type
     lblDescription: TLabel;
     btnSelect: TBitBtn;
     btnCancel: TBitBtn;
-    qryOvers: TQuery;
+    qryOvers: TFDQuery;
     sgDetails: TStringGrid;
     Label3: TLabel;
     lblQuantity: TLabel;

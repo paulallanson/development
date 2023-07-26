@@ -340,8 +340,8 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
       TabStop = True
     end
   end
-  object CountSQL: TQuery
-    DatabaseName = 'PB'
+  object CountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*,'
       'Job_Bag_Delivery_Detail.*,'

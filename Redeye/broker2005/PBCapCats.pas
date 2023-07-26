@@ -4,27 +4,30 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ComCtrls, Db, DBTables, StdCtrls, DBCtrls, Buttons;
+  Grids, DBGrids, ComCtrls, Db, StdCtrls, DBCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBCapCatsFrm = class(TForm)
     CapDBGrid: TDBGrid;
-    GetCapsSQL: TQuery;
+    GetCapsSQL: TFDQuery;
     CapsDS: TDataSource;
     Label1: TLabel;
-    GetCatsSQL: TQuery;
+    GetCatsSQL: TFDQuery;
     CatsDS: TDataSource;
     CloseBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
     AddMemo: TMemo;
-    GetCatsProdTypesSQL: TQuery;
-    GetLastNoSQL: TQuery;
-    AddSQL: TQuery;
+    GetCatsProdTypesSQL: TFDQuery;
+    GetLastNoSQL: TFDQuery;
+    AddSQL: TFDQuery;
     Label2: TLabel;
     dblkpProductType: TDBLookupComboBox;
-    qryProdType: TQuery;
+    qryProdType: TFDQuery;
     dtsProdType: TDataSource;
-    qryGetProductType: TQuery;
+    qryGetProductType: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CatDBLookupComboBoxClick(Sender: TObject);
     procedure CheckOK(Sender: TObject);

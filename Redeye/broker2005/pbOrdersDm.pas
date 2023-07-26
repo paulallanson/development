@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlOrders = class(TDataModule)
-    qryOrders: TQuery;
+    qryOrders: TFDQuery;
     dtsOrders: TDataSource;
-    qrySOrders: TQuery;
-    qryPOrders: TQuery;
-    qryperiodEnd: TQuery;
-    qryOnHold: TQuery;
-    qryCompany: TQuery;
-    qrySOHead: TQuery;
-    GetPickRefSQL: TQuery;
-    qryInvoicePO: TQuery;
-    qryInvoiceSO: TQuery;
-    qryJBOrders: TQuery;
-    qrySelectedPO: TQuery;
+    qrySOrders: TFDQuery;
+    qryPOrders: TFDQuery;
+    qryperiodEnd: TFDQuery;
+    qryOnHold: TFDQuery;
+    qryCompany: TFDQuery;
+    qrySOHead: TFDQuery;
+    GetPickRefSQL: TFDQuery;
+    qryInvoicePO: TFDQuery;
+    qryInvoiceSO: TFDQuery;
+    qryJBOrders: TFDQuery;
+    qrySelectedPO: TFDQuery;
     qryOrdersCustomer: TIntegerField;
     qryOrdersName: TStringField;
     qryOrdersSales_order: TFloatField;
@@ -46,7 +49,7 @@ type
     qryOrdersSupplier_Name: TStringField;
     qryOrdersStatus_Text: TStringField;
     dtsCallOffs: TDataSource;
-    qryCallOffs: TQuery;
+    qryCallOffs: TFDQuery;
     qryCallOffscustomer: TIntegerField;
     qryCallOffsName: TStringField;
     qryCallOffssales_order: TIntegerField;
@@ -60,23 +63,23 @@ type
     qryCallOffsOn_Hold: TStringField;
     qryCallOffsSupplier: TIntegerField;
     qryCallOffsStatus_Text: TStringField;
-    qryCust: TQuery;
+    qryCust: TFDQuery;
     qryOrdersjob_bag: TIntegerField;
     qryOrdersDescription_Reference: TStringField;
     qryOrdersRep: TIntegerField;
     qryOrdersRep_Name: TStringField;
     qryOrdersOperator: TIntegerField;
     qryOrdersOperator_Name: TStringField;
-    qrySOHeaders: TQuery;
+    qrySOHeaders: TFDQuery;
     qryCallOffsRep: TIntegerField;
     qryCallOffsRep_Name: TStringField;
     qryCallOffsOperator: TIntegerField;
     qryCallOffsOperator_Name: TStringField;
-    qrySelectedSO: TQuery;
+    qrySelectedSO: TFDQuery;
     qryOrdersOriginal_order: TFloatField;
-    qryOperator: TQuery;
-    qrySOPicking: TQuery;
-    qryGetSInvoice: TQuery;
+    qryOperator: TFDQuery;
+    qrySOPicking: TFDQuery;
+    qryGetSInvoice: TFDQuery;
     qryOrdersInactive: TStringField;
     qryOrdersNeeds_Authorising: TStringField;
     qryOrdersAuthorised_By: TIntegerField;
@@ -84,7 +87,7 @@ type
     qryOrdersOrder_Number: TFloatField;
     qryCallOffsPurch_Ord_No: TStringField;
     qryOrdersProof_Required: TStringField;
-    qryPOProofStatus: TQuery;
+    qryPOProofStatus: TFDQuery;
     qryCallOffsSales_Order_Head_Status: TIntegerField;
     qryCallOffsSales_Order_Type: TStringField;
     qryCallOffsSales_Order_Type_Description: TStringField;
@@ -93,9 +96,9 @@ type
     qryCallOffsAccount_Code: TStringField;
     qryOrdersNCA_Live_Lines: TIntegerField;
     qryOrdersNCA_Signed_Off: TIntegerField;
-    qrySetSOInvoice: TQuery;
+    qrySetSOInvoice: TFDQuery;
     qryCallOffsinactive: TStringField;
-    qrySOLines: TQuery;
+    qrySOLines: TFDQuery;
     qryCallOffsPart: TStringField;
     qryCallOffsDescription: TStringField;
     qryCallOffsQuantity: TIntegerField;

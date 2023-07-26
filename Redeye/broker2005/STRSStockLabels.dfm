@@ -190,8 +190,8 @@ object STRSStockLabelsfrm: TSTRSStockLabelsfrm
     State = cbChecked
     TabOrder = 4
   end
-  object CountSQL: TQuery
-    DatabaseName = 'PB'
+  object CountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Part.Part, Part.Part_Description, Customer.Name, Part.Sel' +

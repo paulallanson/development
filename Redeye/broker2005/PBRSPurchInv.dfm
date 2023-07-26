@@ -529,8 +529,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
       Visible = False
     end
   end
-  object OldqryPurchInv: TQuery
-    DatabaseName = 'pb'
+  object OldqryPurchInv: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT'
       '    Supplier_Invoice_Line.Supplier_Invoice,'
@@ -684,8 +684,8 @@ object PBRSPurchInvFrm: TPBRSPurchInvFrm
     Left = 112
     Top = 200
   end
-  object qryPurchInv: TQuery
-    DatabaseName = 'PB'
+  object qryPurchInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'

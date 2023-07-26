@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, DB, DBTables, Printers, CCSPrint;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, ComCtrls, DB, Printers, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRS4CastMonthInvsFrm = class(TForm)
@@ -21,10 +24,10 @@ type
     CancelBitBtn: TBitBtn;
     lblProcessing: TLabel;
     prgrsbrPeriodEnd: TProgressBar;
-    qryGetPeriod: TQuery;
-    qrySalesProfit: TQuery;
-    qryDeleteAnalysis: TQuery;
-    qryGetIntSel: TQuery;
+    qryGetPeriod: TFDQuery;
+    qrySalesProfit: TFDQuery;
+    qryDeleteAnalysis: TFDQuery;
+    qryGetIntSel: TFDQuery;
     ExcOnHoldCheckBox: TCheckBox;
     chkbxincludezero: TCheckBox;
     chkbxExcludeInvoices: TCheckBox;

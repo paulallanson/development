@@ -4,8 +4,8 @@ object dtmdlPOrders: TdtmdlPOrders
   Top = 106
   Height = 451
   Width = 676
-  object qryPOHeaderGrid: TQuery
-    DatabaseName = 'pb'
+  object qryPOHeaderGrid: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select '#9'purch_ord,'
       #9'purch_ord_no,'
@@ -68,21 +68,21 @@ object dtmdlPOrders: TdtmdlPOrders
     Left = 128
     Top = 16
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 40
     Top = 80
   end
-  object qryUpd: TQuery
-    DatabaseName = 'PB'
+  object qryUpd: TFDQuery
+    ConnectionName = 'PB'
     Left = 112
     Top = 80
   end
-  object qryUpdPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord_Line'
       'Set'
@@ -128,8 +128,8 @@ object dtmdlPOrders: TdtmdlPOrders
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLines: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord_Line.Purch_Ord,'
       '        Purch_Ord_Line.Purch_Ord_Line_No,'
@@ -157,8 +157,8 @@ object dtmdlPOrders: TdtmdlPOrders
         ParamType = ptUnknown
       end>
   end
-  object qryCheckPOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCheckPOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord.Purch_Ord_Status,'
       '       (Select Count(Purch_Ord_Line_No)'
@@ -228,8 +228,8 @@ object dtmdlPOrders: TdtmdlPOrders
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set'

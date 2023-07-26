@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Spin, Db, DBTables, IniFiles, PBPOObjects, DBCtrls;
+  StdCtrls, Buttons, Spin, Db, IniFiles, PBPOObjects, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCusSupLabsfrm = class(TForm)
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
-    CountSQL: TQuery;
+    CountSQL: TFDQuery;
     PrintBitBtn: TBitBtn;
     Label5: TLabel;
     NoofBoxesSpinEdit: TSpinEdit;
@@ -21,11 +24,11 @@ type
     ContactDBLookupComboBox: TDBLookupComboBox;                                        
     ContactBitBtn: TBitBtn;
     ContactLabel: TLabel;
-    GetSuppBranchesSQL: TQuery;
-    GetCustBranchesSQL: TQuery;
+    GetSuppBranchesSQL: TFDQuery;
+    GetCustBranchesSQL: TFDQuery;
     BranchesDS: TDataSource;
-    GetSuppContactsSQL: TQuery;
-    GetCustContactsSQL: TQuery;
+    GetSuppContactsSQL: TFDQuery;
+    GetCustContactsSQL: TFDQuery;
     ContactsDS: TDataSource;
     procedure PreviewBitBtnClick(Sender: TObject);
     procedure SetupBitBtnClick(Sender: TObject);
@@ -398,7 +401,7 @@ begin
         BranchesDS.DataSet := GetSuppBranchesSQL ;
         ContactsDS.DataSet := GetSuppContactsSQL ;
         end;
-      With (BranchesDS.DataSet as TQuery) do
+      With (BranchesDS.DataSet as TFDQuery) do
         begin
         Close ;
         ParamByName('SelCode').AsInteger := iCode ;
@@ -414,7 +417,7 @@ end;
 
 procedure TPBRSCusSupLabsfrm.GetContacts(Sender: TObject);
 begin
-With (ContactsDS.DataSet as TQuery) do
+With (ContactsDS.DataSet as TFDQuery) do
         begin
         Close ;
         ParamByName('SelCode').AsInteger := iCode ;

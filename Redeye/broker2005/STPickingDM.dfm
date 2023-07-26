@@ -4,8 +4,8 @@ object STPickDM: TSTPickDM
   Top = 179
   Height = 479
   Width = 814
-  object PickListSQL: TQuery
-    DatabaseName = 'PB'
+  object PickListSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Part_Store_Allocation.Picking_List_Ref,'
       '  Part_Store.Part_Store, Stock_Lots_In_Use, Stock_Bins_In_Use'
@@ -28,8 +28,8 @@ object STPickDM: TSTPickDM
     Left = 96
     Top = 16
   end
-  object PickDtlsSQL: TQuery
-    DatabaseName = 'PB'
+  object PickDtlsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT       Part_Store_Allocation.Store_Stock,'
       '             Part_Store_Allocation.Picking_List_Ref,'
@@ -97,8 +97,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object PartSQL: TQuery
-    DatabaseName = 'PB'
+  object PartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Description, Track_Serial_No'
       'from Part'
@@ -117,8 +117,8 @@ object STPickDM: TSTPickDM
     Left = 96
     Top = 72
   end
-  object PickPartDtlsSQL: TQuery
-    DatabaseName = 'PB'
+  object PickPartDtlsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT       Part_Store_Allocation.Store_Stock,'
       '             Part_Store_Allocation.Picking_List_Ref,'
@@ -193,8 +193,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object StoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object StoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_Stock.*'
       'from Store_Stock'
@@ -208,8 +208,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object PickHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object PickHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Part_Store_Allocation.Picking_List_Ref,'
       '  Part_Store.Part_Store, Stock_Lots_In_Use, Stock_Bins_In_Use'
@@ -232,8 +232,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object ClearPickSQL: TQuery
-    DatabaseName = 'PB'
+  object ClearPickSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Part_Store_Allocation'
       'set Picking_List_Ref = null'
@@ -247,8 +247,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdPurchOrdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPurchOrdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purch_Ord_line'
       'set Quantity_Sent = Quantity_Sent + :Quantity_Sent'
@@ -274,8 +274,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object CheckPickBinSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPickBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from part_Store_bin'
@@ -295,8 +295,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object CheckPickLotSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPickLotSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from store_Stock'
@@ -316,8 +316,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdPFJSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPFJSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Parts_For_Job'
       'set Part_Status = :Part_Status'
@@ -336,8 +336,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object PartStoreSQL: TQuery
-    DatabaseName = 'PB'
+  object PartStoreSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Part_Store'
@@ -351,8 +351,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSalesOrdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSalesOrdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order_line'
       
@@ -380,8 +380,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSalesOrdHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSalesOrdHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order'
       'set Sales_Order_Head_Status = :Status'
@@ -400,8 +400,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdDirectSalesOrdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdDirectSalesOrdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order_line'
       'set Quantity_Delivered = :Quantity_Delivered,'
@@ -435,8 +435,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object CheckPickBinLotSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPickBinLotSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from store_Stock'
@@ -469,8 +469,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Store_Stock'
       'From Store_Stock'
@@ -517,8 +517,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSalesOrderInvQty: TQuery
-    DatabaseName = 'PB'
+  object UpdSalesOrderInvQty: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order_line'
       'set Quantity_Invoiced = Quantity_Invoiced + :Quantity_Invoiced'
@@ -545,8 +545,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object CheckSOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckSOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order.Sales_Order_Head_Status,'
       '       (Select Sum(Quantity_Delivered - Quantity_Invoiced)'
@@ -614,8 +614,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdOrderStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdOrderStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order_Head_Status = :Status'
@@ -634,8 +634,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object UpdSalesOrdDelivSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSalesOrdDelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Order_Delivery_Line'
       'set Quantity_Delivered = Quantity_Delivered + :Deliv_Qty,'
@@ -673,8 +673,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOAddCharge: TQuery
-    DatabaseName = 'PB'
+  object qrySOAddCharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select count(*) as LineCount '
       'from Sales_Order_Add_Charge '
@@ -689,8 +689,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrder: TQuery
-    DatabaseName = 'pb'
+  object qryGetSalesOrder: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_order, Order_type, Part_Store'
       'from Sales_Order'
@@ -704,8 +704,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderLines: TQuery
-    DatabaseName = 'pb'
+  object qryGetSalesOrderLines: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from sales_order_line'
@@ -720,8 +720,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJobBagLine: TQuery
-    DatabaseName = 'pb'
+  object qryUpdJobBagLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update job_bag_line_dets'
       'set Job_Bag_line_cost = :Job_Bag_Line_Cost,'
@@ -765,8 +765,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySalesOrderJB: TQuery
-    DatabaseName = 'pb'
+  object qrySalesOrderJB: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct Order_Type, Job_Bag'
       'from Sales_order, job_bag_stock_request'
@@ -781,8 +781,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryJBChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qryJBChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -830,8 +830,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryJBUpHead: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
@@ -850,8 +850,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductionLoc: TQuery
-    DatabaseName = 'pb'
+  object qryGetProductionLoc: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Production_Location.Part_Store,  Production_Location.Part' +
@@ -870,8 +870,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object PartTransferSQL: TQuery
-    DatabaseName = 'PB'
+  object PartTransferSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Transfer'
@@ -897,8 +897,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesOrderLine: TQuery
-    DatabaseName = 'pb'
+  object qryGetSalesOrderLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from sales_order_line'
@@ -919,8 +919,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOPickHead: TQuery
-    DatabaseName = 'PB'
+  object qrySOPickHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Sales_Order_Picking.Sales_Order_Picking,'
       
@@ -942,8 +942,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOPickLines: TQuery
-    DatabaseName = 'PB'
+  object qrySOPickLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_Picking.Sales_Order_Picking,'
       '        Sales_Order_Picking.Picking_No,'
@@ -998,8 +998,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSOPicking: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSOPicking: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order_Picking'
       'set Pick_Note_Confirmed = '#39'Y'#39
@@ -1013,8 +1013,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOPicking: TQuery
-    DatabaseName = 'PB'
+  object qrySOPicking: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Sales_Order_Picking.Sales_Order,'
       #9'count(Sales_Order_Picking.Sales_order_Picking) as Pick_Lines,'
@@ -1035,8 +1035,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySOProductionLines: TQuery
-    DatabaseName = 'PB'
+  object qrySOProductionLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part_Store_Allocation.Store_Stock,'
       '        Store_Stock.Part_Bin,'
@@ -1079,8 +1079,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qrySalesOrderJBReq: TQuery
-    DatabaseName = 'pb'
+  object qrySalesOrderJBReq: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct Order_Type, Job_Bag'
       'from Sales_order, Job_Bag_Stock_Request'
@@ -1095,8 +1095,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryJBChkStockReq: TQuery
-    DatabaseName = 'PB'
+  object qryJBChkStockReq: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag,'
       #9'(select count(Job_Bag)'
@@ -1150,8 +1150,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object GetSalesOrderHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSalesOrderHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_order,'
       '  Sales_Order_Head_Status,'
@@ -1178,8 +1178,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSODelivLine: TQuery
-    DatabaseName = 'pb'
+  object qryDeleteSODelivLine: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete Sales_order_Delivery_line'
       'where Sales_order = :Sales_Order')
@@ -1192,8 +1192,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSODeliv: TQuery
-    DatabaseName = 'pb'
+  object qryDeleteSODeliv: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete Sales_order_Delivery'
       'where Sales_order = :Sales_Order')
@@ -1206,8 +1206,8 @@ object STPickDM: TSTPickDM
         ParamType = ptUnknown
       end>
   end
-  object qryDeleteSOPicking: TQuery
-    DatabaseName = 'pb'
+  object qryDeleteSOPicking: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Delete Sales_order_Picking'
       'where Sales_order = :Sales_Order'

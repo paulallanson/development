@@ -180,8 +180,8 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
         end>
     end
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord_line_Add_chg.Purchase_order,'
       '          Purch_Ord_line_Add_chg.Line,'
@@ -228,8 +228,8 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Left = 176
     Top = 225
   end
-  object GetPOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purchase_orderLine.Purchase_Order,'
       '        Purchase_orderLine.Line,'
@@ -274,8 +274,8 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Period) as Period'
       'from period')

@@ -132,8 +132,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
     Left = 248
     Top = 112
   end
-  object qryInsECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qryInsECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into ecommerce_info'
       
@@ -179,8 +179,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
         ParamType = ptInput
       end>
   end
-  object qryUpdECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qryUpdECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update ecommerce_info'
       'set'
@@ -226,8 +226,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
         ParamType = ptInput
       end>
   end
-  object qrySelECommInfo: TQuery
-    DatabaseName = 'PB'
+  object qrySelECommInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from ecommerce_info'
       'where stock_reference = :stock_reference;')
@@ -240,8 +240,8 @@ object STMaintPrtECommFrm: TSTMaintPrtECommFrm
         ParamType = ptUnknown
       end>
   end
-  object qryTopECommNo: TQuery
-    DatabaseName = 'PB'
+  object qryTopECommNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(ecommerce_info) as top_No '
       'from ecommerce_info;')

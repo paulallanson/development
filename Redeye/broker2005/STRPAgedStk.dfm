@@ -1510,8 +1510,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
       end
     end
   end
-  object qryAgedStk: TQuery
-    DatabaseName = 'PB'
+  object qryAgedStk: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    store_stock.part as Part,'
       '          part.part_description as Description,'
@@ -1669,8 +1669,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSalesDtQry: TQuery
-    DatabaseName = 'PB'
+  object GetSalesDtQry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 date_received as Sales_Dt'
       'from part_movement'
@@ -1714,8 +1714,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object Query1: TQuery
-    DatabaseName = 'pb'
+  object Query1: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select    store_stock.part as Part,'
       '          part.part_description as Description,'
@@ -1839,8 +1839,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object GetTopRepSQL: TQuery
-    DatabaseName = 'PB'
+  object GetTopRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Rep.Name as Rep_Name'
       
@@ -1865,8 +1865,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOs: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Purchase_OrderLine.Purchase_Order'
       'from Purchase_OrderLine, Form_Reference'
@@ -1883,8 +1883,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchOrds: TQuery
-    DatabaseName = 'PB'
+  object qryGetPurchOrds: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Purch_Ord'
       'from Purch_Ord_Line'
@@ -1898,8 +1898,8 @@ object STRPAgedStkFrm: TSTRPAgedStkFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAccMgr: TQuery
-    DatabaseName = 'PB'
+  object qryAccMgr: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Customer_Operator.Customer,'
       'Customer_Operator.Operator,'

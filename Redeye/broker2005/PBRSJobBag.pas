@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRSJobBag = class(TForm)
@@ -22,8 +25,8 @@ type
     Label2: TLabel;
     memDescription: TMemo;
     SelectLst: TListBox;
-    qryGetRange: TQuery;
-    qryGetWorksOrder: TQuery;
+    qryGetRange: TFDQuery;
+    qryGetWorksOrder: TFDQuery;
     Label3: TLabel;
     memQuantity: TMemo;
     rdgReportType: TRadioGroup;

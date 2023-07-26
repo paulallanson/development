@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPEndRepTeamPerformFrm = class(TForm)
@@ -13,13 +16,13 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryRepTeams: TQuery;
+    qryRepTeams: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRBand2: TQRBand;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     qrsubPeriods: TQRSubDetail;
     QRLabel2: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
     qrbGrpCatFooter: TQRBand;
@@ -148,8 +151,8 @@ type
     qrlblRepBudTOTotal: TQRLabel;
     qrlblRepActProfTotal: TQRLabel;
     qrlblRepBudProfTotal: TQRLabel;
-    qryRepTeamBudgetsOld: TQuery;
-    qryPeriods: TQuery;
+    qryRepTeamBudgetsOld: TFDQuery;
+    qryPeriods: TFDQuery;
     qrlblTODiff1: TQRLabel;
     qrlblProfDiff1: TQRLabel;
     qrlblTODiff2: TQRLabel;
@@ -264,15 +267,15 @@ type
     qrlblExcludeCosts: TQRLabel;
     QRSysData2: TQRSysData;
     QRSysData1: TQRSysData;
-    qryDummyNull: TQuery;
-    qryDummy: TQuery;
-    qryRepTeamBudgets: TQuery;
+    qryDummyNull: TFDQuery;
+    qryDummy: TFDQuery;
+    qryRepTeamBudgets: TFDQuery;
     gtQRLabel1: TQRLabel;
-    qryRepTeamSubReps: TQuery;
-    qryDummyTeam: TQuery;
-    qryDummyNullTeam: TQuery;
-    qryDummyTeamSub: TQuery;
-    qryRepTeamReps: TQuery;
+    qryRepTeamSubReps: TFDQuery;
+    qryDummyTeam: TFDQuery;
+    qryDummyNullTeam: TFDQuery;
+    qryDummyTeamSub: TFDQuery;
+    qryRepTeamReps: TFDQuery;
     procedure quickreportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRBand2BeforePrint(Sender: TQRCustomBand;

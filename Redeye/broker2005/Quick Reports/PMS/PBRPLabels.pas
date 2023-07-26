@@ -4,26 +4,29 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr,  QrExport, printers;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, PBPOObjects, qrprntr,  QrExport, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPLabelsFrm = class(TForm)
     PBLabelsQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
     AddressSRC: TDataSource;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     FormRefLbl: TQRLabel;
     QRLabel1: TQRLabel;
     AddressMemo: TQRMemo;
     lblCustomer: TQRLabel;
-    CustSQL: TQuery;
+    CustSQL: TFDQuery;
     QRLabel7: TQRLabel;
     QRLabel3: TQRLabel;
     CompNameQRLabel: TQRLabel;
@@ -31,7 +34,7 @@ type
     QRShape1: TQRShape;
     QRShape2: TQRShape;
     DeliveryDateLbl: TQRLabel;
-    GetFAOSQL: TQuery;
+    GetFAOSQL: TFDQuery;
     FAOQRLabel: TQRLabel;
     DescrQRLabel: TQRLabel;
     QRLabel4: TQRLabel;

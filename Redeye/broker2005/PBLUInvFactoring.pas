@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, Menus, ImgList, ComCtrls, ToolWin, Grids, INIFiles,
-  DBGrids, StdCtrls;
+  Db, ExtCtrls, Menus, ImgList, ComCtrls, ToolWin, Grids, INIFiles,
+  DBGrids, StdCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUInvFactoringFrm = class(TForm)
@@ -22,8 +25,8 @@ type
     btnClose: TToolButton;
     ImgHot: TImageList;
     ImgCool: TImageList;
-    qrySelFactorFileList: TQuery;
-    qrySelInvs: TQuery;
+    qrySelFactorFileList: TFDQuery;
+    qrySelInvs: TFDQuery;
     dtsrcGrid: TDataSource;
     procedure FormShow(Sender: TObject);
     procedure cmbFactorFilesChange(Sender: TObject);

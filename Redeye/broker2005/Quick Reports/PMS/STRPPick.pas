@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, StdCtrls, STSOObjects, STPacks, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPPickfrm = class(TForm)
@@ -12,29 +15,29 @@ type
     PageHeadQRBand: TQRBand;
     GroupHeadQRGroup: TQRGroup;
     AllocDataSource: TDataSource;
-    GetAllocDetQuery: TQuery;
-    oldGetAllocMasterQuery: TQuery;
+    GetAllocDetQuery: TFDQuery;
+    oldGetAllocMasterQuery: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     PartQRDBText: TQRDBText;
     DescQRDBText: TQRDBText;
     BinQRDBText: TQRDBText;
     PreviewQRLabel: TQRLabel;
-    UpdAllocDetQuery: TQuery;
-    GetAllAllocDetQuery: TQuery;
-    UpdRefQuery: TQuery;
+    UpdAllocDetQuery: TFDQuery;
+    GetAllAllocDetQuery: TFDQuery;
+    UpdRefQuery: TFDQuery;
     NotesQRMemo: TQRMemo;
-    GetCustSQL: TQuery;
-    UpdSOHeadSQL: TQuery;
-    GetDelivNarrSQL: TQuery;
-    GetDelivCountSQL: TQuery;
-    GetNextSODelivSQL: TQuery;
-    GetAllocMasterQuery: TQuery;
+    GetCustSQL: TFDQuery;
+    UpdSOHeadSQL: TFDQuery;
+    GetDelivNarrSQL: TFDQuery;
+    GetDelivCountSQL: TFDQuery;
+    GetNextSODelivSQL: TFDQuery;
+    GetAllocMasterQuery: TFDQuery;
     QRDBText4: TQRDBText;
-    DummySQL: TQuery;
+    DummySQL: TFDQuery;
     DelInstructMemo: TQRMemo;
     QRLabelQty: TQRLabel;
     QRLabelDlvrd: TQRLabel;
-    AdhocSQL: TQuery;
+    AdhocSQL: TFDQuery;
     AddressSRC: TDataSource;
     QRLblAccnt: TQRLabel;
     CustRefQRDBText: TQRDBText;
@@ -47,7 +50,7 @@ type
     QRLabel10: TQRLabel;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
-    GetAccountSQL: TQuery;
+    GetAccountSQL: TFDQuery;
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel8: TQRLabel;
@@ -56,17 +59,17 @@ type
     QRLabel12: TQRLabel;
     QRLabel13: TQRLabel;
     QRLabel14: TQRLabel;
-    AddDelivLineDetSQL: TQuery;
-    CheckDelivSQL: TQuery;
-    AddDelivDetSQL: TQuery;
+    AddDelivLineDetSQL: TFDQuery;
+    CheckDelivSQL: TFDQuery;
+    AddDelivDetSQL: TFDQuery;
     qrdetailSerialNos: TQRSubDetail;
-    GetAllocSerialNoSQL: TQuery;
+    GetAllocSerialNoSQL: TFDQuery;
     lblSerialCaption: TQRLabel;
     lblSerialRange: TQRLabel;
     qrLblShortCode: TQRLabel;
     qrlblWarehouse: TQRLabel;
-    GetCustHOSQL: TQuery;
-    qryCompany: TQuery;
+    GetCustHOSQL: TFDQuery;
+    qryCompany: TFDQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure PageHeadQRBandBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
@@ -90,7 +93,7 @@ type
       BandPrinted: Boolean);
   private
     { Private declarations }
-    procedure BuildDeliveryNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildDeliveryNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure LockCompanyRecord;
     procedure FreeCompanyRecord;
     function BuildQueryString : string;
@@ -408,7 +411,7 @@ begin
 DelInstructMemo.Lines.Clear;
 end;
 
-procedure TSTRPPickfrm.BuildDeliveryNotes(aQuery: TQuery;
+procedure TSTRPPickfrm.BuildDeliveryNotes(aQuery: TFDQuery;
   const iNarrative: integer);
 var
   aStr : string;

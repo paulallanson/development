@@ -148,8 +148,8 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
     OnEnter = ValueMemoEnter
     OnExit = CostMemoExit
   end
-  object CheckBinSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Bin'
       'From Part_Store_Bin'

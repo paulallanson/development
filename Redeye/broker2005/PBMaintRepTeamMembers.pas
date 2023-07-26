@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls, DBTables;
+  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintRepTeamMembers = class(TForm)
@@ -24,11 +27,11 @@ type
     lstbxNonRepsCodes: TListBox;
     btnAddRep: TBitBtn;
     btnRemoveRep: TBitBtn;
-    qryReps: TQuery;
-    qryDeleteReps: TQuery;
-    qryAddReps: TQuery;
-    qryNonReps: TQuery;
-    qryDummyRep: TQuery;
+    qryReps: TFDQuery;
+    qryDeleteReps: TFDQuery;
+    qryAddReps: TFDQuery;
+    qryNonReps: TFDQuery;
+    qryDummyRep: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnAddRepClick(Sender: TObject);

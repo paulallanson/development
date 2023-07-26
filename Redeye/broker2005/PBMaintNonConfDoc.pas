@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, StdCtrls, DBCtrls, Buttons, ExtCtrls, DB, PBJobBagDM,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintNonConfDocFrm = class(TForm)
@@ -13,10 +15,10 @@ type
     Panel4: TPanel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryNCType: TQuery;
-    qryRaisingDept: TQuery;
-    qrySourceDept: TQuery;
-    qryQAOperator: TQuery;
+    qryNCType: TFDQuery;
+    qryRaisingDept: TFDQuery;
+    qrySourceDept: TFDQuery;
+    qryQAOperator: TFDQuery;
     dtsNCType: TDataSource;
     dtsRaisingDept: TDataSource;
     dtsSourceDept: TDataSource;
@@ -37,13 +39,13 @@ type
     Label5: TLabel;
     Label4: TLabel;
     edtDescription: TEdit;
-    qryGetNonConform: TQuery;
-    qryGetJobBag: TQuery;
-    qryGetLastNC: TQuery;
-    qryUpdateLastNC: TQuery;
-    qryUpdate: TQuery;
-    qryDelete: TQuery;
-    qryAdd: TQuery;
+    qryGetNonConform: TFDQuery;
+    qryGetJobBag: TFDQuery;
+    qryGetLastNC: TFDQuery;
+    qryUpdateLastNC: TFDQuery;
+    qryUpdate: TFDQuery;
+    qryDelete: TFDQuery;
+    qryAdd: TFDQuery;
     pnlNotes: TPanel;
     pnlQASignOff: TPanel;
     Label14: TLabel;
@@ -93,7 +95,7 @@ type
     edtPORep: TEdit;
     edtPOAccountManager: TEdit;
     edtPODescription: TEdit;
-    qryGetPO: TQuery;
+    qryGetPO: TFDQuery;
     rdgrpJobRePrinted: TRadioGroup;
     rdgrpSamples: TRadioGroup;
     Label12: TLabel;
@@ -106,7 +108,7 @@ type
     Label22: TLabel;
     dblkpCategory: TDBLookupComboBox;
     BitBtn5: TBitBtn;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     dtsCategory: TDataSource;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -381,7 +383,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -395,7 +397,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally

@@ -463,8 +463,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         Width = 50
       end>
   end
-  object qryLive: TQuery
-    DatabaseName = 'PB'
+  object qryLive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purchase_orderline.purchase_order ,'
       ' purchase_orderline.line ,'
@@ -616,7 +616,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = ResetGrid1Click
     end
   end
-  object qryBaseSQL: TQuery
+  object qryBaseSQL: TFDQuery
     SQL.Strings = (
       'select purchase_orderline.purchase_order ,'
       ' purchase_orderline.line ,'

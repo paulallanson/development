@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, ExtCtrls, DBCtrls, STSOObjects;
+  StdCtrls, Buttons, Db, ExtCtrls, DBCtrls, STSOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintSOrdSerialNosFrm = class(TForm)
@@ -13,7 +16,7 @@ type
     lblProductCode: TLabel;
     Label4: TLabel;
     lblQuantity: TLabel;
-    qrySerialNos: TQuery;
+    qrySerialNos: TFDQuery;
     srcSerialNos: TDataSource;
     Label5: TLabel;
     lblSerialItems: TLabel;

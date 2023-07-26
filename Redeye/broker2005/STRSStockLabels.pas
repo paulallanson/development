@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Spin, Db, DBTables, IniFiles, printers, Winspool, ComCtrls;
+  StdCtrls, Buttons, Spin, Db, IniFiles, printers, Winspool, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSStockLabelsfrm = class(TForm)
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
-    CountSQL: TQuery;
+    CountSQL: TFDQuery;
     PrintBitBtn: TBitBtn;
     GroupBox1: TGroupBox;
     Label1: TLabel;

@@ -2626,13 +2626,13 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       ReprintOnNewPage = False
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 80
     Top = 16
   end
-  object qryOldWCOperators: TQuery
-    DatabaseName = 'PB'
+  object qryOldWCOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Work_Centre_Operator'
@@ -2653,8 +2653,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryOldDummy: TQuery
-    DatabaseName = 'PB'
+  object qryOldDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Time_Log.Job_Bag_Time_Log,'
@@ -2680,8 +2680,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Left = 168
     Top = 16
   end
-  object qryDummyJobs: TQuery
-    DatabaseName = 'PB'
+  object qryDummyJobs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Time_Log.Job_Bag_Time_Log,'
@@ -2713,8 +2713,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Left = 166
     Top = 94
   end
-  object qryDummynonJobs: TQuery
-    DatabaseName = 'PB'
+  object qryDummynonJobs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Time_Log.Job_Bag_Time_Log,'
@@ -2744,8 +2744,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Left = 166
     Top = 150
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_bag,'
       '        Process_Group,'
@@ -2779,8 +2779,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryWCOperators: TQuery
-    DatabaseName = 'PB'
+  object qryWCOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Work_Centre_Operator.Work_Centre_Operator,'
       #9'Work_Centre_Operator.Name'
@@ -2821,8 +2821,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         ParamType = ptUnknown
       end>
   end
-  object qrygetJobBagCharges: TQuery
-    DatabaseName = 'PB'
+  object qrygetJobBagCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_dets.Job_bag,'
       #9'Job_Bag_Line_dets.Product_Type,'
@@ -2862,8 +2862,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryOldGetJobBagCharges: TQuery
-    DatabaseName = 'PB'
+  object qryOldGetJobBagCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_dets.Job_bag,'
       #9'sum(Job_bag_Line_dets.Job_bag_line_sell) as Total_Chargeable,'

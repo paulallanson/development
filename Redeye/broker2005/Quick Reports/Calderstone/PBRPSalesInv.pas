@@ -4,54 +4,57 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, DBTables, ExtCtrls, CCSPrint,
-  CCSCommon, PBPOObjects, qrprntr, printers, PBDatabase;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, ExtCtrls, CCSPrint,
+  CCSCommon, PBPOObjects, qrprntr, printers, PBDatabase,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesInvFrm = class(TForm)
     InvoiceReport: TQuickRep;
-    InvHeadSQL: TQuery;
+    InvHeadSQL: TFDQuery;
     InvHeadSRC: TDataSource;
-    InvLineSQL: TQuery;
+    InvLineSQL: TFDQuery;
     InvLineSRC: TDataSource;
-    CustomerSQL: TQuery;
+    CustomerSQL: TFDQuery;
     InvoiceFooter: TQRBand;
-    qryComp: TQuery;
-    InvOneHeadSQL: TQuery;
-    UpInvHeadSQL: TQuery;
-    UpInvLineSQL: TQuery;
-    InvRHeadSQL: TQuery;
-    NotesSQL: TQuery;
+    qryComp: TFDQuery;
+    InvOneHeadSQL: TFDQuery;
+    UpInvHeadSQL: TFDQuery;
+    UpInvLineSQL: TFDQuery;
+    InvRHeadSQL: TFDQuery;
+    NotesSQL: TFDQuery;
     InvoiceGroupHeader: TQRGroup;
-    InvAddChgSQL: TQuery;
-    OldInvLineSQL: TQuery;
+    InvAddChgSQL: TFDQuery;
+    OldInvLineSQL: TFDQuery;
     GoodsTotalLbl: TQRLabel;
     Dummy03: TQRLabel;
     Dummy05: TQRLabel;
     Dummy06: TQRLabel;
-    DeliverySQL: TQuery;
+    DeliverySQL: TFDQuery;
     DeliverySRC: TDataSource;
     AddressSRC: TDataSource;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
-    CompSQL: TQuery;
-    CustSQL: TQuery;
-    CreditHeadSQL: TQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
+    CompSQL: TFDQuery;
+    CustSQL: TFDQuery;
+    CreditHeadSQL: TFDQuery;
     GoodsLbl: TQRLabel;
     QtyInvoicedLbl: TQRLabel;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     GoodsVatLbl: TQRLabel;
     lblDescription: TQRLabel;
-    qryPOLine: TQuery;
-    qrySOLine: TQuery;
-    qryJBLine: TQuery;
-    qryInvCharges: TQuery;
+    qryPOLine: TFDQuery;
+    qrySOLine: TFDQuery;
+    qryJBLine: TFDQuery;
+    qryInvCharges: TFDQuery;
     lblPriceUnit: TQRLabel;
     InvoiceLine: TQRSubDetail;
-    qryJBHead: TQuery;
-    qrySOHead: TQuery;
-    qrySIHead: TQuery;
+    qryJBHead: TFDQuery;
+    qrySOHead: TFDQuery;
+    qrySIHead: TFDQuery;
     chldbndFormRef: TQRChildBand;
     lblFormRef: TQRLabel;
     QRBand1: TQRBand;
@@ -99,7 +102,7 @@ type
     qrlblOrdernumber: TQRLabel;
     memPayment: TQRMemo;
     qrlblCompanyReg: TQRMemo;
-    qryInvLineCharges: TQuery;
+    qryInvLineCharges: TFDQuery;
     LineCharges: TQRSubDetail;
     qrlblDetails: TQRLabel;
     qrlblAmount: TQRLabel;
@@ -161,7 +164,7 @@ type
     procedure UpdateInvoiceNumber(const iNo : integer);
     procedure UpdateCreditNoteNumber(const iNo : integer);
     procedure GetDetails;
-    procedure BuildInvoiceNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildInvoiceNotes(aQuery : TFDQuery; const iNarrative : integer);
     function GetSIReference(tempCode: string): string;
     function GetSIType(tempCode: string): string;
     procedure BuildPaymentNotes(const iNarrative: integer);
@@ -283,7 +286,7 @@ begin
 
 end;
 
-procedure TPBRPSalesInvFrm.BuildInvoiceNotes(aQuery: TQuery;
+procedure TPBRPSalesInvFrm.BuildInvoiceNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;
@@ -435,7 +438,7 @@ begin
 
   GoodsVATLbl.Caption := formatfloat('0.00',(rVATValue));
 
-  BuildInvoiceNotes((InvoiceReport.DataSet as TQuery),InvoiceReport.DataSet.fieldbyname('Narrative').asinteger);
+  BuildInvoiceNotes((InvoiceReport.DataSet as TFDQuery),InvoiceReport.DataSet.fieldbyname('Narrative').asinteger);
 
 (*  if memoNotes.lines.text = '' then
     AddChargesFooter.enabled := false

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPQuote = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -17,14 +20,14 @@ type
     QRLabel3: TQRLabel;
     QRDBText5: TQRDBText;
     qrgQuote: TQRGroup;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryContact: TQuery;
+    qryContact: TFDQuery;
     gtQRLabel1: TQRLabel;
     gtQRDBText2: TQRDBText;
-    qryReportlines: TQuery;
+    qryReportlines: TFDQuery;
     dtsReport: TDataSource;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     qrbLineDetail: TQRSubDetail;
     
     qrmAddress: TQRMemo;
@@ -42,12 +45,12 @@ type
     gtQRLabel10: TQRLabel;
     gtlblTotalSales: TQRLabel;
     qrgfQuote: TQRBand;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtlblUnitPrice: TQRLabel;
     gtlblPriceUnit: TQRLabel;
     gtlblTotalPrice: TQRLabel;
     qrbSupplyLines: TQRSubDetail;
-    qryReportSupply: TQuery;
+    qryReportSupply: TFDQuery;
     gtQRDBText6: TQRDBText;
     gtQRDBText9: TQRDBText;
     gtQRDBText10: TQRDBText;
@@ -90,7 +93,7 @@ type
     gtQRLabel33: TQRLabel;
     gtQRLabel34: TQRLabel;
     gtQRLabel35: TQRLabel;
-    qryProspect: TQuery;
+    qryProspect: TFDQuery;
     procedure qrgQuoteBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
@@ -111,7 +114,7 @@ type
     rTotalCost, rTotalSell: real;
     ipage: integer;
     FShowBreakdown: boolean;
-    procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure SetShowBreakdown(const Value: boolean);
     { Private declarations }
   public
@@ -278,7 +281,7 @@ begin
     end;
 end;
 
-procedure TfrmPBRPQuote.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPQuote.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

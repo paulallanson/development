@@ -119,15 +119,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  PBPOObjects, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCustStateFrm = class(TForm)
     CustStateQuickReport: TQuickRep;
     SalesInvDataSource: TDataSource;
     CompDataSource: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -137,7 +140,7 @@ type
     CustRefQRDBText: TQRDBText;
     QRBand1: TQRBand;
     lblRundate: TQRLabel;
-    SalesInvSQL: TQuery;
+    SalesInvSQL: TFDQuery;
     QRDBText1: TQRDBText;
     GrpFootQRBand: TQRBand;
     QRLabel1: TQRLabel;
@@ -154,8 +157,8 @@ type
     QRLabel16: TQRLabel;
     QRLabel11: TQRLabel;
     QRLabel12: TQRLabel;
-    UpSalesInvSQL: TQuery;
-    UpCustSQL: TQuery;
+    UpSalesInvSQL: TFDQuery;
+    UpCustSQL: TFDQuery;
     QRLabel17: TQRLabel;
     LblTotal: TQRLabel;
     TotGoodsQRLbl: TQRLabel;
@@ -173,9 +176,9 @@ type
     QRMemo1: TQRMemo;
     QRShape1: TQRShape;
     lblCustomerRef: TQRLabel;
-    qryGetPO: TQuery;
-    qryGetSO: TQuery;
-    qryGetJB: TQuery;
+    qryGetPO: TFDQuery;
+    qryGetSO: TFDQuery;
+    qryGetJB: TFDQuery;
     procedure CustStateQuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     function GetDetails(Sender: TObject): Integer;

@@ -4,8 +4,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
   Top = 60
   Height = 505
   Width = 720
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -24,8 +24,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       #9#9#9'Building_no_name,'
@@ -44,8 +44,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'
@@ -72,8 +72,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -86,8 +86,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Left = 245
     Top = 32
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -113,9 +113,9 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryPODetails: TQuery
+  object qryPODetails: TFDQuery
     OnCalcFields = qryPODetailsCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 500'
       '  Delivery_Detail.Purchase_Order,'
@@ -424,9 +424,9 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Left = 95
     Top = 96
   end
-  object qrySODetails: TQuery
+  object qrySODetails: TFDQuery
     OnCalcFields = qrySODetailsCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_Delivery.*,'
       '        Sales_Order.Cust_Order_No,'
@@ -472,59 +472,59 @@ object dtmdlDeliveries: TdtmdlDeliveries
       end>
     object qrySODetailsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-      Origin = 'PB.Sales_Order_Delivery.Sales_Order'
+
     end
     object qrySODetailsSales_order_delivery_no: TIntegerField
       FieldName = 'Sales_order_delivery_no'
-      Origin = 'PB.Sales_Order_Delivery.Sales_order_delivery_no'
+
     end
     object qrySODetailsDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
-      Origin = 'PB.Sales_Order_Delivery.Delivery_Date'
+
     end
     object qrySODetailsDespatch_note_No: TStringField
       FieldName = 'Despatch_note_No'
-      Origin = 'PB.Sales_Order_Delivery.Despatch_note_No'
+
       FixedChar = True
       Size = 40
     end
     object qrySODetailsCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-      Origin = 'PB.Sales_Order.Cust_Order_No'
+
       FixedChar = True
       Size = 80
     end
     object qrySODetailsDelivery_Customer: TIntegerField
       FieldName = 'Delivery_Customer'
-      Origin = 'PB.Sales_Order.Delivery_Customer'
+
     end
     object qrySODetailsDelivery_Branch: TIntegerField
       FieldName = 'Delivery_Branch'
-      Origin = 'PB.Sales_Order.Delivery_Branch'
+
     end
     object qrySODetailsAd_hoc_Address: TIntegerField
       FieldName = 'Ad_hoc_Address'
-      Origin = 'PB.Sales_Order.Ad_hoc_Address'
+
     end
     object qrySODetailsReplenish_ID: TStringField
       FieldName = 'Replenish_ID'
-      Origin = 'PB.Replenish_Source.Replenish_ID'
+
       FixedChar = True
       Size = 2
     end
     object qrySODetailsReplenish_Source_Descr: TStringField
       FieldName = 'Replenish_Source_Descr'
-      Origin = 'PB.Replenish_Source.Replenish_Source_Descr'
+
       FixedChar = True
       Size = 40
     end
     object qrySODetailsSupplier: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Sales_Order.Supplier'
+
     end
     object qrySODetailsBranch_no0: TIntegerField
       FieldName = 'Branch_no0'
-      Origin = 'PB.Sales_Order.Branch_no0'
+
     end
     object qrySODetailsDeliveryName: TStringField
       FieldKind = fkCalculated
@@ -592,8 +592,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
       Size = 100
     end
   end
-  object qryUpDelivDate: TQuery
-    DatabaseName = 'PB'
+  object qryUpDelivDate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'Set'
@@ -632,8 +632,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpDelivPrinted: TQuery
-    DatabaseName = 'PB'
+  object qryUpDelivPrinted: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'Set'
@@ -661,8 +661,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryCheckDeliv: TQuery
-    DatabaseName = 'PB'
+  object qryCheckDeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Delivery_Detail'
       'where Purchase_Order = :Purchase_Order and'
@@ -681,8 +681,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Purch_Ord_Line_Status, Original_Order, Original_Orderline' +
@@ -704,8 +704,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       
@@ -737,8 +737,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLines: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order, Line, Purch_Ord_line_Status'
       'from Purchase_OrderLine'
@@ -752,8 +752,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOHead: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_Order'
       'set Purch_Ord_Head_Status = :Purch_Ord_Head_Status'
@@ -772,8 +772,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpDelivery: TQuery
-    DatabaseName = 'PB'
+  object qryUpDelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Delivery_Detail'
       'Set'
@@ -940,8 +940,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryAddDelivLocs: TQuery
-    DatabaseName = 'PB'
+  object qryAddDelivLocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Delivery_Location'
       '  (Purchase_Order,'
@@ -993,8 +993,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpDelivLocs: TQuery
-    DatabaseName = 'PB'
+  object qryUpDelivLocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Delivery_Location'
       'set Quantity = :Quantity,'
@@ -1037,8 +1037,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryDelPickLocs: TQuery
-    DatabaseName = 'PB'
+  object qryDelPickLocs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Picking_Detail'
       'where'
@@ -1064,8 +1064,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpDelivLocsAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryUpDelivLocsAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Delivery_Location'
       'set Quantity_Allocated = :Quantity_Allocated'
@@ -1102,8 +1102,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryAddPickDtls: TQuery
-    DatabaseName = 'PB'
+  object qryAddPickDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Picking_Detail'
       '(Purchase_order,'
@@ -1174,8 +1174,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextPickNo: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextPickNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(picking_no) as Last_Pick_Number'
       'from Picking_Detail'
@@ -1208,8 +1208,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOLineFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOLineFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set Form_Reference = :Form_Reference'
@@ -1234,8 +1234,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryGetStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Qty_Delivered) as Qty_in_Stock'
       'from Delivery_Detail'
@@ -1262,8 +1262,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryGetCallOff: TQuery
-    DatabaseName = 'PB'
+  object qryGetCallOff: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Qty_Delivered) as Qty_Called_off'
       'from Delivery_Detail, Purchase_OrderLine'
@@ -1307,8 +1307,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOStock: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set Qty_in_Stock = :Qty_in_Stock'
@@ -1338,8 +1338,8 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Left = 96
     Top = 152
   end
-  object qryUpPOLineInvUpfront: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOLineInvUpfront: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_OrderLine'
       'set Invoice_upfront = :Invoice_upfront'

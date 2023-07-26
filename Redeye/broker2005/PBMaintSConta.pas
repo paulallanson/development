@@ -108,16 +108,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSContaFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label1: TLabel;
@@ -125,10 +128,10 @@ type
     Label3: TLabel;
     SuppNameEdit: TEdit;
     NameEdit: TEdit;
-    GetBranchNameSQL: TQuery;
+    GetBranchNameSQL: TFDQuery;
     Label4: TLabel;
     TypeDBLCB: TDBLookupComboBox;
-    GetContTypesSQL: TQuery;
+    GetContTypesSQL: TFDQuery;
     ContTypesSRC: TDataSource;
     PhoneEdit: TEdit;
     EMailEdit: TEdit;
@@ -136,7 +139,7 @@ type
     Label7: TLabel;
     SalutationEdit: TEdit;
     Label8: TLabel;
-    QryZero: TQuery;
+    QryZero: TFDQuery;
     Label5: TLabel;
     FaxEdit: TEdit;
     MobileEdit: TEdit;
@@ -144,14 +147,14 @@ type
     ContTypeMaintBitBtn: TBitBtn;
     Label10: TLabel;
     FileTypDBLCB: TDBLookupComboBox;
-    GetFileTypeSQL: TQuery;
+    GetFileTypeSQL: TFDQuery;
     FileTypSRC: TDataSource;
     NotesBitBtn: TBitBtn;
     FlashTimer: TTimer;
-    UpdNotesOnlySQL: TQuery;
-    qryGetContact: TQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    qryGetContact: TFDQuery;
     dblkpBranchName: TDBLookupComboBox;
-    qryBranch: TQuery;
+    qryBranch: TFDQuery;
     dtsBranch: TDataSource;
     chkbxActive: TCheckBox;
     procedure FormActivate(Sender: TObject);

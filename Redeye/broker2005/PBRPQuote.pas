@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, DB, ExtCtrls, QuickRpt, QRCtrls, QrExport, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRPQuote = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrpDetails: TQuickRep;
     qrbPageHeader: TQRBand;
     qrlblQuoteCaption: TQRLabel;
@@ -17,14 +20,14 @@ type
     QRLabel3: TQRLabel;
     QRDBText5: TQRDBText;
     qrgQuote: TQRGroup;
-    qryCustomer: TQuery;
+    qryCustomer: TFDQuery;
     dtsAddress: TDataSource;
-    qryContact: TQuery;
+    qryContact: TFDQuery;
     gtQRLabel1: TQRLabel;
     gtQRDBText2: TQRDBText;
-    qryReportlines: TQuery;
+    qryReportlines: TFDQuery;
     dtsReport: TDataSource;
-    qrygetNotes: TQuery;
+    qrygetNotes: TFDQuery;
     
     qrmAddress: TQRMemo;
     QRLabel4: TQRLabel;
@@ -32,8 +35,8 @@ type
     QRDBText3: TQRDBText;
     qrbPageFooter: TQRBand;
     qrgfQuote: TQRBand;
-    GetNarrSQL: TQuery;
-    qryReportSupply: TQuery;
+    GetNarrSQL: TFDQuery;
+    qryReportSupply: TFDQuery;
     gtQRLabel2: TQRLabel;
     gtQRDBText7: TQRDBText;
     ReportImage: TQRImage;
@@ -67,9 +70,9 @@ type
     gtQRLabel33: TQRLabel;
     gtQRLabel34: TQRLabel;
     gtQRLabel35: TQRLabel;
-    qryProspect: TQuery;
-    oldqryReportSupply: TQuery;
-    qryReportDepts: TQuery;
+    qryProspect: TFDQuery;
+    oldqryReportSupply: TFDQuery;
+    qryReportDepts: TFDQuery;
     qrbDeptDetail: TQRSubDetail;
     qrbLineDetail: TQRSubDetail;
     gtQRDBText3: TQRDBText;
@@ -92,7 +95,7 @@ type
     gtQRDBText12: TQRDBText;
     gtQRDBText13: TQRDBText;
     gtQRLabel36: TQRLabel;
-    qryCosts: TQuery;
+    qryCosts: TFDQuery;
     gtlblReference: TQRLabel;
     gtQRLabel5: TQRLabel;
     qryReportlinesQuote: TFloatField;
@@ -177,7 +180,7 @@ type
     rTotalCost, rTotalSell, rTotalSupplied: real;
     ipage: integer;
     FShowBreakdown: boolean;
-    procedure BuildNotes(aQuery : TQuery; const iNarrative : integer);
+    procedure BuildNotes(aQuery : TFDQuery; const iNarrative : integer);
     procedure SetShowBreakdown(const Value: boolean);
     { Private declarations }
   public
@@ -419,7 +422,7 @@ begin
     SpecMemo.Lines.Text := qryReportDepts.fieldbyname('Quote_Specification').asstring;
 end;
 
-procedure TfrmPBRPQuote.BuildNotes(aQuery: TQuery;
+procedure TfrmPBRPQuote.BuildNotes(aQuery: TFDQuery;
   const iNarrative : integer);
 var
   aStr : string;

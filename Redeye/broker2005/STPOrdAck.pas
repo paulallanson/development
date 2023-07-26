@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPrint;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPOrdAckFrm = class(TForm)
@@ -26,17 +29,17 @@ type
     QRLabel6: TQRLabel;
     QRLabel5: TQRLabel;
     OrdQtyQRLabel: TQRLabel;
-    GetOrdDetQuery: TQuery;
-    GetRecOrdQuery: TQuery;
-    GetDelFromSuppQuery: TQuery;
-    UpdStatusQuery: TQuery;
+    GetOrdDetQuery: TFDQuery;
+    GetRecOrdQuery: TFDQuery;
+    GetDelFromSuppQuery: TFDQuery;
+    UpdStatusQuery: TFDQuery;
     PreviewQRLabel: TQRLabel;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
-    GetDelFromStoreQuery: TQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
+    GetDelFromStoreQuery: TFDQuery;
     PackqtyQRLabel: TQRLabel;
     ReprintQRLabel: TQRLabel;
-    GetPFJQuery: TQuery;
+    GetPFJQuery: TFDQuery;
     OrderValQRLabel: TQRLabel;
     SAddr5QRLabel: TQRLabel;
     GetDelFromSuppQuerySuppNam: TStringField;
@@ -54,7 +57,7 @@ type
     SAddr3QRLabel: TQRLabel;
     SAddr4QRLabel: TQRLabel;
     SAddr6QRLabel: TQRLabel;
-    GetDelivAddQuery: TQuery;
+    GetDelivAddQuery: TFDQuery;
     SPhoneQRLabel: TQRLabel;
     SFaxQRLabel: TQRLabel;
     SEmailLegQRLabel: TQRLabel;
@@ -71,10 +74,10 @@ type
     PackSizeQRLabel: TQRLabel;
     QRLabel12: TQRLabel;
     QRLblValue: TQRLabel;
-    GetSODelAddQuery: TQuery;
+    GetSODelAddQuery: TFDQuery;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
-    qryExtraCharges: TQuery;
+    GetCompSQL: TFDQuery;
+    qryExtraCharges: TFDQuery;
     QRSubDetail2: TQRSubDetail;
     qrlblDetails: TQRLabel;
     qrlblExChrgAmount: TQRLabel;
@@ -87,7 +90,7 @@ type
     qrlblContact: TQRLabel;
     lblSpecialNotes: TQRLabel;
     SpecialNotesMemo: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtQRShape1: TQRShape;
     DellAddmemo: TQRMemo;
     AddressSRC: TDataSource;

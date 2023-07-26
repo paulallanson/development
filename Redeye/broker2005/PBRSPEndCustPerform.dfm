@@ -224,13 +224,13 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
       end
     end
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     Left = 16
     Top = 72
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -243,8 +243,8 @@ object PBRSPEndCustPerformFrm: TPBRSPEndCustPerformFrm
     Left = 176
     Top = 16
   end
-  object qryGetFY: TQuery
-    DatabaseName = 'PB'
+  object qryGetFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description'
       'from Period'

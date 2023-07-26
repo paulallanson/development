@@ -142,8 +142,8 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
     Caption = 'Exclude zero stock items'
     TabOrder = 5
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'delivery_location.description, '
       #9'delivery_location.quantity, '
@@ -248,8 +248,8 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
     Left = 48
     Top = 32
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -275,8 +275,8 @@ object PBRSStkHoldFrm: TPBRSStkHoldFrm
         ParamType = ptUnknown
       end>
   end
-  object DummySQL: TQuery
-    DatabaseName = 'PB'
+  object DummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'delivery_location.description, '
       #9'delivery_location.quantity, '

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, FileCtrl, ComCtrls, CCSCommon, Db, DBTables, DBCtrls,
-  ExtCtrls;
+  StdCtrls, Buttons, FileCtrl, ComCtrls, CCSCommon, Db, DBCtrls,
+  ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTImpDirectOrdersFrm = class(TForm)
@@ -19,7 +22,7 @@ type
     btnImport: TBitBtn;
     BitBtn1: TBitBtn;
     btbtnDelete: TBitBtn;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     Panel2: TPanel;
     Label1: TLabel;
     edtImportDir: TEdit;

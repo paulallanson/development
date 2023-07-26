@@ -637,8 +637,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
       TabOrder = 0
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Line_Dets.Job_Bag,'
       '  Job_Bag_Line_Dets.Job_Bag_Line,'
@@ -697,101 +697,101 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Top = 248
     object qryReportJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag'
+
     end
     object qryReportJob_Bag_Line: TIntegerField
       FieldName = 'Job_Bag_Line'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line'
+
     end
     object qryReportJob_Bag_Line_Descr: TStringField
       FieldName = 'Job_Bag_Line_Descr'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Descr'
+
       FixedChar = True
       Size = 80
     end
     object qryReportCustomer_Name: TStringField
       FieldName = 'Customer_Name'
-      Origin = 'PB.Customer.Name'
+
       FixedChar = True
       Size = 80
     end
     object qryReportSupplier_Name: TStringField
       FieldName = 'Supplier_Name'
-      Origin = 'PB.Supplier.Name'
+
       FixedChar = True
       Size = 80
     end
     object qryReportJob_Bag_Line_Cost: TCurrencyField
       FieldName = 'Job_Bag_Line_Cost'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Cost'
+
     end
     object qryReportJob_Bag_Line_Sell: TCurrencyField
       FieldName = 'Job_Bag_Line_Sell'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Sell'
+
     end
     object qryReportJob_Bag_Quantity: TIntegerField
       FieldName = 'Job_Bag_Quantity'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Quantity'
+
     end
     object qryReportVAT_Code: TIntegerField
       FieldName = 'VAT_Code'
-      Origin = 'PB.Job_Bag_Line_Dets.VAT_Code'
+
     end
     object qryReportJob_Bag_Line_Type: TStringField
       FieldName = 'Job_Bag_Line_Type'
-      Origin = 'PB.Job_Bag_Line_Dets.Job_Bag_Line_Type'
+
       FixedChar = True
       Size = 2
     end
     object qryReportCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-      Origin = 'PB.Job_Bag.Cust_Order_No'
+
       FixedChar = True
       Size = 80
     end
     object qryReportRep: TIntegerField
       FieldName = 'Rep'
-      Origin = 'PB.Rep.Rep'
+
     end
     object qryReportRep_Name: TStringField
       FieldName = 'Rep_Name'
-      Origin = 'PB.Rep.Name'
+
       FixedChar = True
       Size = 80
     end
     object qryReportVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      Origin = 'PB.Vat_Code.Vat_Rate'
+
     end
     object qryReportDate_Point: TDateTimeField
       FieldName = 'Date_Point'
-      Origin = 'PB.Job_Bag.Date_Point'
+
     end
     object qryReportCustomer: TIntegerField
       FieldName = 'Customer'
-      Origin = 'PB.Job_Bag.Customer'
+
     end
     object qryReportBranch_no: TIntegerField
       FieldName = 'Branch_no'
-      Origin = 'PB.Supplier_Branch.Branch_no'
+
     end
     object qryReportCustomer_Branch_Name: TStringField
       FieldName = 'Customer_Branch_Name'
-      Origin = 'PB.Customer_Branch.Name'
+
       FixedChar = True
       Size = 80
     end
     object qryReportSupplier: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Job_Bag_Line_Dets.Supplier'
+
     end
     object qryReportSupplier_Branch_no: TIntegerField
       FieldName = 'Supplier_Branch_no'
-      Origin = 'PB.Supplier_Branch.Branch_no'
+
     end
     object qryReportSupplier_Branch_Name: TStringField
       FieldName = 'Supplier_Branch_Name'
-      Origin = 'PB.Supplier_Branch.Name'
+
       FixedChar = True
       Size = 80
     end
@@ -820,8 +820,8 @@ object PBRSJBMarginfrm: TPBRSJBMarginfrm
     Left = 328
     Top = 248
   end
-  object oldqryReport: TQuery
-    DatabaseName = 'PB'
+  object oldqryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_Dets.Job_Bag,'
       '        Job_Bag_Line_Dets.Job_Bag_Line,'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls;
+  Db, QuickRpt, Qrctrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TStStkTkRepFrm = class(TForm)
@@ -24,24 +27,24 @@ type
     DescQRDBText: TQRDBText;
     QRDBText1: TQRDBText;
     GetDetsDataSource: TDataSource;
-    GetDetsQuery: TQuery;
+    GetDetsQuery: TFDQuery;
     CountQRLabel: TQRLabel;
     QRShape5: TQRShape;
     QRLabel1: TQRLabel;
-    GetAllBinQuery: TQuery;
-    AddCountDetQuery: TQuery;
-    GetNextRefQuery: TQuery;
+    GetAllBinQuery: TFDQuery;
+    AddCountDetQuery: TFDQuery;
+    GetNextRefQuery: TFDQuery;
     QRShape8: TQRShape;
     QRLabel4: TQRLabel;
     QRLabel5: TQRLabel;
-    ReprintQuery: TQuery;
+    ReprintQuery: TFDQuery;
     ReprintQRLabel: TQRLabel;
     QRDBText3: TQRDBText;
     DateQRLabel: TQRLabel;
     OptionQRLabel: TQRLabel;
     RngQRLabel: TQRLabel;
     QRShape1: TQRShape;
-    GetByPartSQL: TQuery;
+    GetByPartSQL: TFDQuery;
     QRLblQty: TQRLabel;
     QRDBTxtPackSize: TQRDBText;
     QRLabel6: TQRLabel;

@@ -62,8 +62,8 @@ object Form1: TForm1
     Left = 160
     Top = 32
   end
-  object qryBranch: TQuery
-    DatabaseName = 'PB'
+  object qryBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Customer_branch'

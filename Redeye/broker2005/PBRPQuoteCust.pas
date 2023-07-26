@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPQuoteCustFrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrReport: TQuickRep;
     qrbndGrpHdr: TQRGroup;
     qrbndGrpFtr: TQRBand;
@@ -25,7 +28,7 @@ type
     qrlblGrandTotalCost: TQRLabel;
     qrlblGrandTotalASP: TQRLabel;
     QRShape3: TQRShape;
-    OldqryDummy: TQuery;
+    OldqryDummy: TFDQuery;
     QRShape1: TQRShape;
     qrbDetails: TQRSubDetail;
     QRDBText2: TQRDBText;
@@ -74,7 +77,7 @@ type
     qrlblStatus: TQRLabel;
     QRLabel19: TQRLabel;
     qrlblVers: TQRLabel;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     QRLabel22: TQRLabel;
     QRDBText9: TQRDBText;
     procedure qrReportBeforePrint(Sender: TCustomQuickRep;

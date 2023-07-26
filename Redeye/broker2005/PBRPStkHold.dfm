@@ -944,8 +944,8 @@ object PBRPStkHoldfrm: TPBRPStkHoldfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'delivery_location.description, '
       #9'delivery_location.quantity, '

@@ -90,7 +90,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, StdCtrls, ExtCtrls, Spin, Buttons, DBTables, DB, ComCtrls;
+  Grids, StdCtrls, ExtCtrls, Spin, Buttons, DB, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqLineDtlsFrm = class(TForm)
@@ -112,17 +115,17 @@ type
     OKBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     Label1: TLabel;
-    ProductSQL: TQuery;
+    ProductSQL: TFDQuery;
     Unit1: TEdit;
     UpDown1: TUpDown;
     Unit2: TEdit;
     UpDown2: TUpDown;
     Label2: TLabel;
     NCR_OTCCombo: TComboBox;
-    NCRSQL: TQuery;
+    NCRSQL: TFDQuery;
     NCR_OTCEdit: TEdit;
     ProductTypeEdit: TEdit;
-    StdSizeSQL: TQuery;
+    StdSizeSQL: TFDQuery;
     CheckBox1: TCheckBox;
     Label5: TLabel;
     FormRefEdit: TEdit;
@@ -138,7 +141,7 @@ type
     Label4: TLabel;
     Label6: TLabel;
     cmbbxJobType: TComboBox;
-    qrySelJobType: TQuery;
+    qrySelJobType: TFDQuery;
     btbtnDelJobType: TBitBtn;
     procedure LineDescEditKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);

@@ -18112,8 +18112,8 @@ object frmPBRPQuote: TfrmPBRPQuote
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT  Quote.*,'
       '        Operator.Name AS Office_Contact_Name,'
@@ -18137,8 +18137,8 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'pb'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -18180,8 +18180,8 @@ object frmPBRPQuote: TfrmPBRPQuote
     Left = 432
     Top = 48
   end
-  object qryContact: TQuery
-    DatabaseName = 'pb'
+  object qryContact: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer_Contact.Name as Contact_Name,'
       '        Customer_Contact.Email,'
@@ -18218,9 +18218,9 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryReportlines: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsReport
+  object qryReportlines: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT Quote_Line.*,'
       '        Price_Unit.Price_Unit_factor,'
@@ -18256,8 +18256,8 @@ object frmPBRPQuote: TfrmPBRPQuote
     Left = 290
     Top = 46
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'pb'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Narrative_line'
@@ -18272,8 +18272,8 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -18288,8 +18288,8 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryProspect: TQuery
-    DatabaseName = 'pb'
+  object qryProspect: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select'
       'Ad_Hoc_Address.Name as Customer_Name,'
@@ -18313,9 +18313,9 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryReportSupply: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryReportSupply: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT '#9'Quote_Supply.Quote,'
       #9'Quote_Supply.Quote_Supply_No,'
@@ -18353,9 +18353,9 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object oldqryReportSupply: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object oldqryReportSupply: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'select'
       '    Quote_Supply.Quote,'
@@ -18400,9 +18400,9 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object qryReportDepts: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryReportDepts: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'Select'
       '    Quote_Process_Group.Quote,'
@@ -18427,8 +18427,8 @@ object frmPBRPQuote: TfrmPBRPQuote
         ParamType = ptUnknown
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -18445,8 +18445,8 @@ object frmPBRPQuote: TfrmPBRPQuote
     Left = 173
     Top = 128
   end
-  object qryReportOld: TQuery
-    DatabaseName = 'pb'
+  object qryReportOld: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select  Quote.*,'
       '        Operator.Name as Office_Contact_Name,'

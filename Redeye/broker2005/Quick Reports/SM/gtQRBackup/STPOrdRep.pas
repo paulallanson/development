@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPRint;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, CCSPRint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPOrdRepFrm = class(TForm)
@@ -14,16 +17,16 @@ type
     GetDetsDataSource: TDataSource;
     TotalQRLabel: TQRLabel;
     pogroupheader: TQRGroup;
-    GetOrdDetQuery: TQuery;
-    GetRecOrdQuery: TQuery;
-    GetDelFromSuppQuery: TQuery;
-    UpdStatusQuery: TQuery;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
-    GetDelFromStoreQuery: TQuery;
+    GetOrdDetQuery: TFDQuery;
+    GetRecOrdQuery: TFDQuery;
+    GetDelFromSuppQuery: TFDQuery;
+    UpdStatusQuery: TFDQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
+    GetDelFromStoreQuery: TFDQuery;
     PackqtyQRLabel: TQRLabel;
     ReprintQRLabel: TQRLabel;
-    GetPFJQuery: TQuery;
+    GetPFJQuery: TFDQuery;
     OrderValQRLabel: TQRLabel;
     GetDelFromSuppQuerySuppNam: TStringField;
     GetDelFromSuppQueryName: TStringField;
@@ -35,16 +38,16 @@ type
     GetDelFromSuppQueryPhone: TStringField;
     GetDelFromSuppQueryFax_Number: TStringField;
     GetDelFromSuppQueryemail: TStringField;
-    GetDelivAddQuery: TQuery;
+    GetDelivAddQuery: TFDQuery;
     PartCodeQRLabel: TQRLabel;
     PartDescrQRLabel: TQRLabel;
     PurchPriceQRLabel: TQRLabel;
     PackSizeQRLabel: TQRLabel;
     QRLblValue: TQRLabel;
-    GetSODelAddQuery: TQuery;
+    GetSODelAddQuery: TFDQuery;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
-    qryExtraCharges: TQuery;
+    GetCompSQL: TFDQuery;
+    qryExtraCharges: TFDQuery;
     QRSubDetail2: TQRSubDetail;
     qrlblDetails: TQRLabel;
     qrlblExChrgAmount: TQRLabel;

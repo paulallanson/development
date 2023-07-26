@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, CCSPrint, IniFiles, DB, DBTables, DBCtrls;
+  Dialogs, StdCtrls, Buttons, CCSPrint, IniFiles, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCustCreditTermsFrm = class(TForm)
@@ -17,7 +20,7 @@ type
     chkbxPrintLogo: TCheckBox;
     Label1: TLabel;
     dblkpOperator: TDBLookupComboBox;
-    qryOperators: TQuery;
+    qryOperators: TFDQuery;
     dtsOperators: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure PreviewbitbtnClick(Sender: TObject);

@@ -65,8 +65,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, Buttons, DB, DBTables, Grids, DBGrids, ExtCtrls, Menus,
-  ComCtrls;
+  StdCtrls, DBCtrls, Buttons, DB, Grids, DBGrids, ExtCtrls, Menus,
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqSelSupFrm = class(TForm)
@@ -74,34 +77,34 @@ type
     Label3: TLabel;
     AddBitBtn: TBitBtn;
     RemBitBtn: TBitBtn;
-    GetSuppsSQL: TQuery;
-    GetSuppsSelSQL: TQuery;
+    GetSuppsSQL: TFDQuery;
+    GetSuppsSelSQL: TFDQuery;
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    DelSuppsSQL: TQuery;
+    DelSuppsSQL: TFDQuery;
     CapableChkBox: TCheckBox;
-    UpdSuppsNSQL: TQuery;
-    GetSuppSQL: TQuery;
-    AddSuppSQL: TQuery;
-    UpdSuppYSQL: TQuery;
-    GetSuppNameSQL: TQuery;
-    CheckCapSQL: TQuery;
+    UpdSuppsNSQL: TFDQuery;
+    GetSuppSQL: TFDQuery;
+    AddSuppSQL: TFDQuery;
+    UpdSuppYSQL: TFDQuery;
+    GetSuppNameSQL: TFDQuery;
+    CheckCapSQL: TFDQuery;
     OtherBranchesChkBox: TCheckBox;
-    GetLastIntSelSQL: TQuery;
-    AddIntSelSQL: TQuery;
+    GetLastIntSelSQL: TFDQuery;
+    AddIntSelSQL: TFDQuery;
     SuppsSRC: TDataSource;
     SuppsDBGrid: TDBGrid;
-    DelIntSelsSQL: TQuery;
+    DelIntSelsSQL: TFDQuery;
     SupSelDBGrid: TDBGrid;
     SelSupSRC: TDataSource;
-    SelSupSQL: TQuery;
-    DelIntSelSQL: TQuery;
+    SelSupSQL: TFDQuery;
+    DelIntSelSQL: TFDQuery;
     NoOfSuppsLabel: TLabel;
     NoOfSelSupLabel: TLabel;
     Timer1: TTimer;
     WaitLabel: TLabel;
     SelSuppBitBtn: TBitBtn;
-    ChkIntSelSQL: TQuery;
+    ChkIntSelSQL: TFDQuery;
     SearchGrpBox: TGroupBox;
     SearchEdit: TEdit;
     AddAllBitBtn: TBitBtn;

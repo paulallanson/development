@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBPOObjects, Spin, QuickRpt,
+  StdCtrls, Buttons, ExtCtrls, DB, PBPOObjects, Spin, QuickRpt,
   OleCtnrs, ComCtrls, CCSCommon;
 
 type

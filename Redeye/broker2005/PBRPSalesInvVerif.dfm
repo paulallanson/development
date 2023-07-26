@@ -1546,8 +1546,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
       end
     end
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Add_Cost'
       'from Purch_Ord_line_add_chg'
@@ -1569,9 +1569,9 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesbyInv: TQuery
+  object qrySalesbyInv: TFDQuery
     OnCalcFields = qrySalesbyInvCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 176
@@ -1682,8 +1682,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
       FieldName = 'Date_Created'
     end
   end
-  object qryGetPOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  Purch_Ord.Purch_Ord,'
@@ -1720,8 +1720,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sum(Sales_order_line.Part_Cost*((Sales_invoice_line.Qty_I' +
@@ -1755,8 +1755,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryAddPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Total_Cost'
       'from Purch_Ord_add_charge'
@@ -1778,8 +1778,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag_Line_Cost '
       'FROM Job_Bag_Line_Dets'
@@ -1800,8 +1800,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -1825,8 +1825,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       #9'Purch_Ord.Purch_Ord, '
@@ -1861,8 +1861,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_line.Sales_Order,'
       '        Sales_Order_line.Sales_Order_line_no,'
@@ -1894,8 +1894,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetProdCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Order_Price,'
       '        Price_unit_Factor as Order_unit_Factor,'
@@ -1919,8 +1919,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvAddChrg: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvAddChrg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from sales_invoice_add_charge'
@@ -1934,8 +1934,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Sales_Invoice_Line.Invoice_Line_no,'
       #9'Sales_Invoice_Line.Qty_Invoiced, '
@@ -1988,8 +1988,8 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJbCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJbCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -2061,9 +2061,9 @@ object PBRPSalesInvVerifFrm: TPBRPSalesInvVerifFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     OnCalcFields = qrySalesbyInvCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Invoice.Inv_to_Customer AS Customer, '
       #9' Sales_Invoice.Inv_to_Branch AS Branch_no, '

@@ -273,8 +273,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Left = 72
     Top = 136
   end
-  object qryPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Part_store'
@@ -287,8 +287,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Left = 304
     Top = 33
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Default_Warehouse'
       'from company'
@@ -296,8 +296,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Left = 272
     Top = 137
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_Code_Prefix'
       'from Customer'

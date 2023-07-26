@@ -78,7 +78,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DB, DBTables, DBGrids;
+  StdCtrls, Buttons, Grids, DB, DBGrids;
 
 type
   TPBLUEnqAddChgFrm = class(TForm)

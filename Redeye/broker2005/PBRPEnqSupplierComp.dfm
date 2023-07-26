@@ -1487,8 +1487,8 @@ object PBRPEnqSupplierCompFrm: TPBRPEnqSupplierCompFrm
       end
     end
   end
-  object qryDetails: TQuery
-    DatabaseName = 'PB'
+  object qryDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Supplier_Enquiry.Supplier,'
       '        EnquiryLine.Enquiry,'
@@ -1591,8 +1591,8 @@ object PBRPEnqSupplierCompFrm: TPBRPEnqSupplierCompFrm
         ParamType = ptUnknown
       end>
   end
-  object qryQuantities: TQuery
-    DatabaseName = 'PB'
+  object qryQuantities: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Enquiry_LineQuantity.Enquiry, Enquiry_LineQuantity.Line, ' +

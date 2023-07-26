@@ -174,8 +174,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     TabOrder = 6
     Visible = False
   end
-  object qryProcesses: TQuery
-    DatabaseName = 'pb'
+  object qryProcesses: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process')
@@ -187,8 +187,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Production_TypeProcess'
       '(Production_Type,'
@@ -220,16 +220,16 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process')
     Left = 488
     Top = 48
   end
-  object qryProdProcess: TQuery
-    DatabaseName = 'pb'
+  object qryProdProcess: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Production_TypeProcess.Production_type,'
       'Process.Process, Process.Process_Description'
@@ -245,8 +245,8 @@ object frmPBMaintProductionProcess: TfrmPBMaintProductionProcess
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Production_TypeProcess'
       'where Production_Type = :Production_Type')

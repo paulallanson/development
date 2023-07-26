@@ -82,8 +82,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
     OnEnter = memCostEnter
     OnExit = memCostExit
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purch_ord_line_Add_Chg'
       'set Details = :Details,'
@@ -127,8 +127,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Purch_ord_Line_Add_Chg'
       '        (Purchase_order,'
@@ -185,8 +185,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(Additional_Charge) as Last_Charge'
       'from Purch_ord_line_Add_Chg'
@@ -206,8 +206,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'PB'
+  object qryDel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Purch_Ord_Line_Add_Chg'
       'where Purchase_Order = :Purchase_Order and'
@@ -232,16 +232,16 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object getLastProfitSQL: TQuery
-    DatabaseName = 'PB'
+  object getLastProfitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Sales_Profit) as Last_Profit'
       'from Sales_Profit')
     Left = 40
     Top = 48
   end
-  object addSalesProfitSQL: TQuery
-    DatabaseName = 'PB'
+  object addSalesProfitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Profit'
       '  (Sales_Profit,'
@@ -389,8 +389,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object updSalesProfitSQL: TQuery
-    DatabaseName = 'PB'
+  object updSalesProfitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Profit'
       'set Total_Cost_Value = :Total_Cost_Value'
@@ -409,8 +409,8 @@ object PBMaintPOLAddChgsfrm: TPBMaintPOLAddChgsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelSalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qryDelSalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_Profit'
       'where Sales_Profit = :Sales_Profit')

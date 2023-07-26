@@ -47,64 +47,67 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmGroups = class(TDataModule)
-    GetLastContTypeSQL: TQuery;
-    GetLastCurrencySQL: TQuery;
-    UpdPTCatSQL: TQuery;
-    GetLastCustTypeSQL: TQuery;
-    UpdCountrySQL: TQuery;
-    GetLastPTCatSQL: TQuery;
-    AddCustTypeSQL: TQuery;
-    AddPTCatSQL: TQuery;
-    GetLastCountrySQL: TQuery;
-    AddCurrencySQL: TQuery;
-    UpdContTypeSQL: TQuery;
-    AddCountrySQL: TQuery;
-    DelCustTypeSQL: TQuery;
-    DelCountrySQL: TQuery;
-    UpdCustTypeSQL: TQuery;
-    UpdCurrencySQL: TQuery;
-    DelIntrastatSQL: TQuery;
-    UpdIntrastatSQL: TQuery;
-    DelPTCatSQL: TQuery;
-    AddIntrastatSQL: TQuery;
-    DelCurrencySQL: TQuery;
-    AddContTypeSQL: TQuery;
-    GetLastIntrastatSQL: TQuery;
-    DelContTypeSQL: TQuery;
-    qryZero: TQuery;
-    AddColourSQL: TQuery;
-    UpdColourSQL: TQuery;
-    DelColourSQL: TQuery;
-    GetLastColourSQL: TQuery;
-    AddWeightSQL: TQuery;
-    UpdWeightSQL: TQuery;
-    DelWeightSQL: TQuery;
-    GetLastWeightSQL: TQuery;
-    AddBrandSQL: TQuery;
-    AddMaterialSQL: TQuery;
-    UpdBrandSQL: TQuery;
-    UpdMaterialSQL: TQuery;
-    DelBrandSQL: TQuery;
-    DelMaterialSQL: TQuery;
-    GetLastBrandSQL: TQuery;
-    GetLastMaterialSQL: TQuery;
-    AddContLevelSQL: TQuery;
-    UpdContLevelSQL: TQuery;
-    DelContLevelSQL: TQuery;
-    GetLastContLevelSQL: TQuery;
-    AddUOMSQL: TQuery;
-    UpdUOMSQL: TQuery;
-    DelUOMSQL: TQuery;
-    GetLastUOMSQL: TQuery;
+    GetLastContTypeSQL: TFDQuery;
+    GetLastCurrencySQL: TFDQuery;
+    UpdPTCatSQL: TFDQuery;
+    GetLastCustTypeSQL: TFDQuery;
+    UpdCountrySQL: TFDQuery;
+    GetLastPTCatSQL: TFDQuery;
+    AddCustTypeSQL: TFDQuery;
+    AddPTCatSQL: TFDQuery;
+    GetLastCountrySQL: TFDQuery;
+    AddCurrencySQL: TFDQuery;
+    UpdContTypeSQL: TFDQuery;
+    AddCountrySQL: TFDQuery;
+    DelCustTypeSQL: TFDQuery;
+    DelCountrySQL: TFDQuery;
+    UpdCustTypeSQL: TFDQuery;
+    UpdCurrencySQL: TFDQuery;
+    DelIntrastatSQL: TFDQuery;
+    UpdIntrastatSQL: TFDQuery;
+    DelPTCatSQL: TFDQuery;
+    AddIntrastatSQL: TFDQuery;
+    DelCurrencySQL: TFDQuery;
+    AddContTypeSQL: TFDQuery;
+    GetLastIntrastatSQL: TFDQuery;
+    DelContTypeSQL: TFDQuery;
+    qryZero: TFDQuery;
+    AddColourSQL: TFDQuery;
+    UpdColourSQL: TFDQuery;
+    DelColourSQL: TFDQuery;
+    GetLastColourSQL: TFDQuery;
+    AddWeightSQL: TFDQuery;
+    UpdWeightSQL: TFDQuery;
+    DelWeightSQL: TFDQuery;
+    GetLastWeightSQL: TFDQuery;
+    AddBrandSQL: TFDQuery;
+    AddMaterialSQL: TFDQuery;
+    UpdBrandSQL: TFDQuery;
+    UpdMaterialSQL: TFDQuery;
+    DelBrandSQL: TFDQuery;
+    DelMaterialSQL: TFDQuery;
+    GetLastBrandSQL: TFDQuery;
+    GetLastMaterialSQL: TFDQuery;
+    AddContLevelSQL: TFDQuery;
+    UpdContLevelSQL: TFDQuery;
+    DelContLevelSQL: TFDQuery;
+    GetLastContLevelSQL: TFDQuery;
+    AddUOMSQL: TFDQuery;
+    UpdUOMSQL: TFDQuery;
+    DelUOMSQL: TFDQuery;
+    GetLastUOMSQL: TFDQuery;
   private
     procedure AddZero(const tabName : string);
     procedure DelZero(const tabName : string);
     function GenericReserve(const tabName : string;
-      AddQry, GetQry : TQuery) : integer;
+      AddQry, GetQry : TFDQuery) : integer;
   public
     function GetNextContactType : integer;
     function GetNextCountryId : integer;
@@ -272,7 +275,7 @@ begin
 end;
 
 function TdmGroups.GenericReserve(const tabName : string;
-  AddQry, GetQry : TQuery) : integer;
+  AddQry, GetQry : TFDQuery) : integer;
 var
   aGuid : TGuid;
 begin

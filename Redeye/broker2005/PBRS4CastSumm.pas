@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Db, DBTables, DateSelV5, PBPOObjects, CCSPrint;
+  StdCtrls, Buttons, ExtCtrls, Db, DateSelV5, PBPOObjects, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRS4CastSummfrm = class(TForm)
@@ -19,7 +22,7 @@ type
     Label1: TLabel;
     DateFromEdit: TEdit;
     DateFromBitBtn: TBitBtn;
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     CancelBitBtn: TBitBtn;
     procedure btnRepClick(Sender: TObject);
     procedure DateFromEditChange(Sender: TObject);

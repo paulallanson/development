@@ -630,8 +630,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       TabOrder = 8
     end
   end
-  object qryNCType: TQuery
-    DatabaseName = 'PB'
+  object qryNCType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_type'
@@ -648,8 +648,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRaisingDept: TQuery
-    DatabaseName = 'PB'
+  object qryRaisingDept: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Dept'
@@ -666,8 +666,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySourceDept: TQuery
-    DatabaseName = 'PB'
+  object qrySourceDept: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Dept'
@@ -684,8 +684,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         ParamType = ptUnknown
       end>
   end
-  object qryQAOperator: TQuery
-    DatabaseName = 'PB'
+  object qryQAOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from QA_Operator'
@@ -722,8 +722,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Left = 752
     Top = 240
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Non_Conform_Category'

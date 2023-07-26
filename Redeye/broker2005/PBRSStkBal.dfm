@@ -209,8 +209,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     TabOrder = 8
     OnClick = EmailBitBtnClick
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 256
     Top = 72
   end
@@ -220,8 +220,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Left = 208
     Top = 72
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -247,8 +247,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct(Customer.Name) as Cust_Name,'
       '       Customer_Branch.Name as Branch_Name,'
@@ -328,8 +328,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Left = 296
     Top = 104
   end
-  object Dummy2SQL: TQuery
-    DatabaseName = 'PB'
+  object Dummy2SQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT (Customer.Name) AS Cust_Name,'
       '  Customer_Branch.Name AS Branch_Name,'
@@ -354,7 +354,7 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Left = 408
     Top = 120
   end
-  object DummySQL: TQuery
+  object DummySQL: TFDQuery
     SQL.Strings = (
       'SELECT Form_Reference.Form_Reference_ID,'
       '       Form_Reference.Form_Reference_Descr,'

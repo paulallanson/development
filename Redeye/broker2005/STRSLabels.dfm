@@ -290,8 +290,8 @@ object STRSLabelsfrm: TSTRSLabelsfrm
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
   end
-  object CountSQL: TQuery
-    DatabaseName = 'PB'
+  object CountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Part.Part, Part.Part_Description, Customer.Name, Part.Sel' +

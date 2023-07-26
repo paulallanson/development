@@ -273,8 +273,8 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
       Kind = bkCancel
     end
   end
-  object qryStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       '        Part.Part_Description,'
@@ -304,8 +304,8 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryUpStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Store_Stock'
       'SET Quantity_Allocated = :Quantity_Allocated,'
@@ -336,8 +336,8 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryDelStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE from Store_Stock'
       
@@ -352,8 +352,8 @@ object STMaintStoreStockfrm: TSTMaintStoreStockfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartStoreAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartStoreAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store_Allocation.Part_Store_Allocation'
       'FROM Part_Store_Allocation'

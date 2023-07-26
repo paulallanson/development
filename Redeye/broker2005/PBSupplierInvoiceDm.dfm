@@ -4,9 +4,9 @@ object dmSupplierInvoice: TdmSupplierInvoice
   Top = 161
   Height = 526
   Width = 795
-  object qrySIHeaderGrid: TQuery
+  object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select TOP 2000'
       '        Supplier_invoice.*,'
@@ -84,59 +84,59 @@ object dmSupplierInvoice: TdmSupplierInvoice
       end>
     object qrySIHeaderGridSupplier_Invoice: TIntegerField
       FieldName = 'Supplier_Invoice'
-      Origin = 'PB.Supplier_Invoice.Supplier_Invoice'
+
     end
     object qrySIHeaderGridSupplier: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Supplier_Invoice.Supplier'
+
     end
     object qrySIHeaderGridBranch_no: TIntegerField
       FieldName = 'Branch_no'
-      Origin = 'PB.Supplier_Invoice.Branch_no'
+
     end
     object qrySIHeaderGridVat_Value: TFloatField
       FieldName = 'Vat_Value'
-      Origin = 'PB.Supplier_Invoice.Vat_Value'
+
       currency = True
     end
     object qrySIHeaderGridGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      Origin = 'PB.Supplier_Invoice.Goods_Value'
+
       currency = True
     end
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
-      Origin = 'PB.Supplier_Invoice.Invoice_Date'
+
     end
     object qrySIHeaderGridSupplier_Invoice_no: TStringField
       FieldName = 'Supplier_Invoice_no'
-      Origin = 'PB.Supplier_Invoice.Supplier_Invoice_no'
+
     end
     object qrySIHeaderGridSupp_Invoice_Status: TIntegerField
       FieldName = 'Supp_Invoice_Status'
-      Origin = 'PB.Supplier_Invoice.Supp_Invoice_Status'
+
     end
     object qrySIHeaderGridCurrency_Code: TIntegerField
       FieldName = 'Currency_Code'
-      Origin = 'PB.Supplier_Invoice.Currency_Code'
+
     end
     object qrySIHeaderGridSupp_Inv_Alt_Ref: TStringField
       FieldName = 'Supp_Inv_Alt_Ref'
-      Origin = 'PB.Supplier_Invoice.Supp_Inv_Alt_Ref'
+
     end
     object qrySIHeaderGridSupplier_Name: TStringField
       FieldName = 'Supplier_Name'
-      Origin = 'PB.Supplier.Name'
+
       Size = 40
     end
     object qrySIHeaderGridBranch_Name: TStringField
       FieldName = 'Branch_Name'
-      Origin = 'PB.Supplier_Branch.Name'
+
       Size = 40
     end
     object qrySIHeaderGridStatus_Desc: TStringField
       FieldName = 'Status_Desc'
-      Origin = 'PB.Supp_Invoice_Status.Description'
+
       Size = 40
     end
     object qrySIHeaderGridPONum: TStringField
@@ -182,15 +182,15 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 336
     Top = 8
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company')
     Left = 312
     Top = 304
   end
-  object qrySIAllCharges: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier_invoice_Charge.*,'
       '          Vat_Code.Vat_Rate'
@@ -206,8 +206,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier_invoice.*,'
       '          Supplier.Name as Supplier_Name,'
@@ -239,8 +239,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryOperator: TQuery
-    DatabaseName = 'PB'
+  object qryOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator')
     Left = 464
@@ -251,8 +251,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 520
     Top = 8
   end
-  object qryGetSuppBranch: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '          Building_no_Name,'
@@ -278,8 +278,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchOrd: TQuery
-    DatabaseName = 'PB'
+  object qryGetPurchOrd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Purch_Ord'
@@ -293,8 +293,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOAllLines: TQuery
-    DatabaseName = 'pb'
+  object qryPOAllLines: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select top 1000  Purchase_OrderLine.Purchase_Order,'
       '          Purchase_OrderLine.Line,'
@@ -522,8 +522,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 152
     Top = 8
   end
-  object qrySILine: TQuery
-    DatabaseName = 'PB'
+  object qrySILine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier_invoice_line.*,'
       '          Price_Unit.Description as Price_Unit_Description,'
@@ -552,8 +552,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_orderLine.Suppliers_Desc,'
       '        Quantity,'
@@ -591,8 +591,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchOrdL: TQuery
-    DatabaseName = 'PB'
+  object qryGetPurchOrdL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord_Line.Part,'
       ' Part.Part_description,'
@@ -620,8 +620,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Job_Bag_Line_Dets.Job_Bag_Line_Descr, Job_Bag_Line_Cost, ' +
@@ -644,8 +644,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAllLines: TQuery
-    DatabaseName = 'PB'
+  object qrySIAllLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Supplier_Invoice_Line.Supplier_Invoice,'
       '        Supplier_Invoice_Line.Invoice_Line_No,'
@@ -695,8 +695,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAddHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Supplier_invoice'
       '     (Supplier_Invoice,'
@@ -816,8 +816,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIUpHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIUpHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Supplier_invoice'
       'SET Goods_Value = :Goods_Value, '
@@ -914,21 +914,21 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 384
     Top = 64
   end
-  object qrySIGetLast: TQuery
-    DatabaseName = 'PB'
+  object qrySIGetLast: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Supplier_Invoice) as Last_Supplier_invoice'
       'from Supplier_invoice')
     Left = 408
     Top = 8
   end
-  object qrySIAddCharge: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddCharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Supplier_Invoice_Charge'
       '    (Supplier_Invoice,'
@@ -992,8 +992,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIAddLine: TQuery
-    DatabaseName = 'PB'
+  object qrySIAddLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Supplier_Invoice_Line'
       '  (Supplier_Invoice,'
@@ -1142,8 +1142,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'PB'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from VAT_Code'
@@ -1157,8 +1157,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -1172,8 +1172,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Purchase_OrderLine.Purchase_Order,'
       #9'Purchase_OrderLine.Line, '
@@ -1227,8 +1227,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetInvStatus: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supp_invoice_Status'
@@ -1242,8 +1242,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryPOLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord_Line_Add_Chg.Purchase_Order,'
       '        Purch_Ord_Line_Add_Chg.Line,'
@@ -1292,8 +1292,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBAllLines: TQuery
-    DatabaseName = 'pb'
+  object qryJBAllLines: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT TOP 1000'
       '  Job_Bag_Line_Dets.Job_Bag,'
@@ -1336,8 +1336,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 96
     Top = 56
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Job_Bag_Line_Dets.Job_Bag,'
@@ -1380,8 +1380,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCheckPIN: TQuery
-    DatabaseName = 'PB'
+  object qryCheckPIN: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Supplier.Name, Supplier_invoice_no'
       'from Supplier_invoice, Supplier'
@@ -1402,8 +1402,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOUpLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOUpLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Qty_Supp_Inv_Pend = Qty_Supp_Inv_Pend + :Qty_Supp_Inv_Pend, '
@@ -1430,8 +1430,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBUpLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBUpLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Job_Bag_line_Dets'
       'set Supp_inv_recd = :Supp_inv_recd'
@@ -1456,8 +1456,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIUpStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySIUpStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Supplier_Invoice'
       'set Supp_invoice_Status = :Supp_Invoice_Status'
@@ -1476,8 +1476,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIUpLineStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySIUpLineStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Supplier_Invoice_Line'
       'set Supp_invoice_Status = :Supp_Invoice_Status'
@@ -1502,8 +1502,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOUpLineStatus: TQuery
-    DatabaseName = 'pb'
+  object qryPOUpLineStatus: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Qty_Supp_Inv = Qty_Supp_inv + :Qty_Supp_Inv,'
@@ -1535,8 +1535,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIGetAllStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySIGetAllStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Supplier_invoice'
@@ -1556,8 +1556,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchAll: TQuery
-    DatabaseName = 'PB'
+  object qryPurchAll: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord.Purch_Ord,'
       '        Purch_Ord.Purch_Ord_No,'
@@ -1598,8 +1598,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 96
     Top = 112
   end
-  object qryPurchHead: TQuery
-    DatabaseName = 'PB'
+  object qryPurchHead: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purch_Ord.Purch_Ord,'
       '        Supplier_Branch.Account_Code,'
@@ -1624,8 +1624,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchLines: TQuery
-    DatabaseName = 'PB'
+  object qryPurchLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord_Line.Purch_Ord,'
       '        Purch_Ord_Line.Purch_Ord_Line_No,'
@@ -1660,8 +1660,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchChgs: TQuery
-    DatabaseName = 'PB'
+  object qryPurchChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_ord,'
       '          Additional_Charge,'
@@ -1683,8 +1683,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchUpLine: TQuery
-    DatabaseName = 'PB'
+  object qryPurchUpLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purch_ord_line'
       'set Qty_Invoiced = Qty_Invoiced + :Qty_Invoiced'
@@ -1709,8 +1709,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchChkStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPurchChkStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_ord, '
       '          sum(Qty_Invoiced) as Qty_Invoiced,'
@@ -1729,8 +1729,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPurchUpStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPurchUpStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_ord'
       'set Purch_ord_Status = :Purch_Ord_Status'
@@ -1749,9 +1749,9 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPCHeaderGrid: TQuery
+  object qryPCHeaderGrid: TFDQuery
     OnCalcFields = qryPCHeaderGridCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Supplier_invoice.*,'
       '          Supplier.Name as Supplier_Name,'
@@ -1822,82 +1822,82 @@ object dmSupplierInvoice: TdmSupplierInvoice
       end>
     object IntegerField1: TIntegerField
       FieldName = 'Supplier_Invoice'
-      Origin = 'PB.Supplier_Invoice.Supplier_Invoice'
+
     end
     object IntegerField2: TIntegerField
       FieldName = 'Supplier'
-      Origin = 'PB.Supplier_Invoice.Supplier'
+
     end
     object IntegerField3: TIntegerField
       FieldName = 'Branch_no'
-      Origin = 'PB.Supplier_Invoice.Branch_no'
+
     end
     object FloatField1: TFloatField
       FieldName = 'Vat_Value'
-      Origin = 'PB.Supplier_Invoice.Vat_Value'
+
       currency = True
     end
     object FloatField2: TFloatField
       FieldName = 'Goods_Value'
-      Origin = 'PB.Supplier_Invoice.Goods_Value'
+
       currency = True
     end
     object DateTimeField1: TDateTimeField
       FieldName = 'Invoice_Date'
-      Origin = 'PB.Supplier_Invoice.Invoice_Date'
+
     end
     object StringField1: TStringField
       FieldName = 'Supplier_Invoice_no'
-      Origin = 'PB.Supplier_Invoice.Supplier_Invoice_no'
+
     end
     object IntegerField4: TIntegerField
       FieldName = 'Supp_Invoice_Status'
-      Origin = 'PB.Supplier_Invoice.Supp_Invoice_Status'
+
     end
     object IntegerField5: TIntegerField
       FieldName = 'Currency_Code'
-      Origin = 'PB.Supplier_Invoice.Currency_Code'
+
     end
     object StringField2: TStringField
       FieldName = 'Supp_Inv_Alt_Ref'
-      Origin = 'PB.Supplier_Invoice.Supp_Inv_Alt_Ref'
+
     end
     object StringField3: TStringField
       FieldName = 'Supplier_Name'
-      Origin = 'PB.Supplier.Name'
+
       Size = 40
     end
     object StringField4: TStringField
       FieldName = 'Branch_Name'
-      Origin = 'PB.Supplier_Branch.Name'
+
       Size = 40
     end
     object StringField5: TStringField
       FieldName = 'Status_Desc'
-      Origin = 'PB.Supp_Invoice_Status.Description'
+
       Size = 40
     end
     object qryPCHeaderGridInvoice_or_Credit: TStringField
       FieldName = 'Invoice_or_Credit'
-      Origin = 'PB.Supplier_Invoice.Invoice_or_Credit'
+
       FixedChar = True
       Size = 2
     end
     object qryPCHeaderGridGoods_Value_Diff: TCurrencyField
       FieldName = 'Goods_Value_Diff'
-      Origin = 'PB.Supplier_Invoice.Goods_Value_Diff'
+
     end
     object qryPCHeaderGridVAT_Value_Diff: TCurrencyField
       FieldName = 'VAT_Value_Diff'
-      Origin = 'PB.Supplier_Invoice.VAT_Value_Diff'
+
     end
     object qryPCHeaderGridGoods_Credit: TCurrencyField
       FieldName = 'Goods_Credit'
-      Origin = 'PB.Supplier_Invoice.Goods_Value'
+
     end
     object qryPCHeaderGridVAT_Credit: TCurrencyField
       FieldName = 'VAT_Credit'
-      Origin = 'PB.Supplier_Invoice.Vat_Value'
+
     end
     object qryPCHeaderGridOrig_Supplier_Invoice_no: TStringField
       FieldName = 'Orig_Supplier_Invoice_no'
@@ -1919,8 +1919,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Left = 248
     Top = 120
   end
-  object qryPOLinePInvs: TQuery
-    DatabaseName = 'PB'
+  object qryPOLinePInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order,'
       '        Line,'
@@ -1983,8 +1983,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryJBLinePInvs: TQuery
-    DatabaseName = 'PB'
+  object qryJBLinePInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order,'
       '        Line,'
@@ -2036,8 +2036,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryProdType: TQuery
-    DatabaseName = 'PB'
+  object qryProdType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purchase_Nominal'
       'from Product_Type'
@@ -2051,8 +2051,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOsSalesInvd: TQuery
-    DatabaseName = 'PB'
+  object qryPOsSalesInvd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1000  Purchase_OrderLine.Purchase_Order,'
       '          Purchase_OrderLine.Line,'
@@ -2269,8 +2269,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
       Size = 30
     end
   end
-  object qrySelInvPOs: TQuery
-    DatabaseName = 'PB'
+  object qrySelInvPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select supplier_invoice_line.purchase_order,'
       'purch_ord.purch_ord_no as purch_ord,'
@@ -2290,8 +2290,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qrySIPurchOrdLines: TQuery
-    DatabaseName = 'PB'
+  object qrySIPurchOrdLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct (Purch_Ord)'
       'from supplier_invoice_line '
@@ -2307,8 +2307,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOInvs: TQuery
-    DatabaseName = 'pb'
+  object qryGetPOInvs: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Purchase_Order,'
       '        Line,'
@@ -2361,8 +2361,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBInvs: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_Order,'
       '        Line,'
@@ -2404,8 +2404,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchLineInvs: TQuery
-    DatabaseName = 'pb'
+  object qryGetPurchLineInvs: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Purchase_Order,'
       '        Line,'
@@ -2449,8 +2449,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPOsDeliv: TQuery
-    DatabaseName = 'PB'
+  object qryPOsDeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1000  Purchase_OrderLine.Purchase_Order,'
       '          Purchase_OrderLine.Line,'
@@ -2665,8 +2665,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
       Size = 30
     end
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'PB'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator'
       'where Operator = :Operator')
@@ -2679,8 +2679,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryCheckSInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryCheckSInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select top 1 Supplier.Name, Supplier_invoice_no, Goods_Value, In' +
@@ -2709,8 +2709,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryPassSInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryPassSInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Supplier_Invoice'
       'set Supp_invoice_Status = 20'
@@ -2736,8 +2736,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOPIStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOPIStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purchase_Orderline'
       'set Supp_inv_Recd = '#39'Y'#39
@@ -2762,8 +2762,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplier: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from supplier'
       'where supplier = :Supplier')
@@ -2776,8 +2776,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Sales_Invoice.Sales_Invoice_No, Sales_Invoice.Invoice_Dat' +

@@ -303,8 +303,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
       end
     end
   end
-  object CheckBinSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Bin, Production_Bin'
       'From Part_Store_Bin'
@@ -325,8 +325,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckBinCount: TQuery
-    DatabaseName = 'PB'
+  object qryCheckBinCount: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 2 *'
       'from part_store_bin'
@@ -342,8 +342,8 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJobBag: TQuery
-    DatabaseName = 'pb'
+  object qryJobBag: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select job_bag'
       'from Job_Bag'

@@ -2003,8 +2003,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Line_Dets.Job_Bag,'
@@ -2156,8 +2156,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_OrderLine.Product_Type, Product_Type.Description'
       'from Purchase_OrderLine, Product_Type'
@@ -2172,8 +2172,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProdType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_Type.Product_Type, Product_Type.Description'
       'from Product_Type'
@@ -2187,8 +2187,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Supplier_Invoice_Line.Supplier_Invoice,'
       #9'Supplier_Invoice_Line.Invoice_Line_No,'
@@ -2213,8 +2213,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSalesInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryGetSalesInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Sales_Invoice_Line.Sales_Invoice, '
       #9'Sales_Invoice_Line.Invoice_Line_No, '
@@ -2251,8 +2251,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppPOInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppPOInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Supplier_Invoice_Line.Supplier_Invoice,'
       #9'Supplier_Invoice_Line.Invoice_Line_No,'
@@ -2295,8 +2295,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purchase_Order.Date_Point'
       'From Purchase_Order'
@@ -2310,8 +2310,8 @@ object PBRPJobBagCompleteFrm: TPBRPJobBagCompleteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Line_Dets.Job_Bag,'

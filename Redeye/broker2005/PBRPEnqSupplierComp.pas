@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables, CCSPrint;
+  Dialogs, ExtCtrls, QuickRpt, QRCtrls, DB, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPEnqSupplierCompFrm = class(TForm)
@@ -18,8 +21,8 @@ type
     QRSysData3: TQRSysData;
     QRSysData4: TQRSysData;
     qrDetail: TQRSubDetail;
-    qryDetails: TQuery;
-    qryQuantities: TQuery;
+    qryDetails: TFDQuery;
+    qryQuantities: TFDQuery;
     qrgrpEnquiry: TQRGroup;
     grpheadSupplier: TQRGroup;
     QRDBText6: TQRDBText;

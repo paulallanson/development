@@ -653,9 +653,9 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         Width = 50
       end>
   end
-  object qrySalesByInv: TQuery
+  object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Invoice.Inv_to_Customer AS Customer, '
       #9'Sales_Invoice.Inv_to_Branch AS Branch_no, '
@@ -803,8 +803,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Left = 112
     Top = 200
   end
-  object SQLRep: TQuery
-    DatabaseName = 'PB'
+  object SQLRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep, Name'
       'from Rep'

@@ -229,8 +229,8 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
   end
-  object qryInsPackFormat: TQuery
-    DatabaseName = 'PB'
+  object qryInsPackFormat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Pack_Format'
       '  (Pack_Format_Description, inactive)'
@@ -254,8 +254,8 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPackFormat: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPackFormat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Pack_Format'
       
@@ -283,8 +283,8 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelPackFormat: TQuery
-    DatabaseName = 'PB'
+  object qryDelPackFormat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Pack_Format'
       'where ID = :ID ')
@@ -297,8 +297,8 @@ object PBMaintPackFormatFrm: TPBMaintPackFormatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastID: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT MAX(ID) as Last_ID'
       'FROM Pack_Format')

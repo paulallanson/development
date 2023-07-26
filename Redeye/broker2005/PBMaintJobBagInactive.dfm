@@ -156,8 +156,8 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
       TabOrder = 2
     end
   end
-  object qryReason: TQuery
-    DatabaseName = 'PB'
+  object qryReason: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Inactive_reason')
@@ -169,8 +169,8 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Left = 168
     Top = 41
   end
-  object qryGetDetails: TQuery
-    DatabaseName = 'PB'
+  object qryGetDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag.Job_Bag,'
       '        Job_Bag.InActive,'
@@ -191,8 +191,8 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryUpJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag'
       'set Inactive = :Inactive,'

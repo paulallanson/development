@@ -601,8 +601,8 @@ object STRPStockReturnsFrm: TSTRPStockReturnsFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT'
       #9'Job_Bag_Schedule.*,'
@@ -664,7 +664,7 @@ object STRPStockReturnsFrm: TSTRPStockReturnsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'select'
       '  store_stock.store_stock,'

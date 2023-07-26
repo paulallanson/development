@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, DBCtrls, StdCtrls, Buttons, Spin;
+  Dialogs, DB, DBCtrls, StdCtrls, Buttons, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintWCOperatorFrm = class(TForm)
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    AddSQL: TQuery;
-    qryProcessGroup: TQuery;
+    AddSQL: TFDQuery;
+    qryProcessGroup: TFDQuery;
     dtsProcessGroup: TDataSource;
     DelLabel: TLabel;
     detsgrpbox: TGroupBox;
@@ -22,17 +25,17 @@ type
     Label3: TLabel;
     dblkpProcessGroup: TDBLookupComboBox;
     chkbxActive: TCheckBox;
-    UpdSQL: TQuery;
-    qryZero: TQuery;
-    DelSQL: TQuery;
-    GetLastSQL: TQuery;
+    UpdSQL: TFDQuery;
+    qryZero: TFDQuery;
+    DelSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
     Label4: TLabel;
     dblkpProcess: TDBLookupComboBox;
-    qryProcess: TQuery;
+    qryProcess: TFDQuery;
     dtsProcess: TDataSource;
     btnProcessClear: TBitBtn;
     edtEmployeeName: TEdit;
-    qryGetOperator: TQuery;
+    qryGetOperator: TFDQuery;
     Label5: TLabel;
     memHourlyRate: TMemo;
     Label6: TLabel;

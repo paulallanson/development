@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Db, DBTables, CCSPrint, Qrctrls;
+  ExtCtrls, QuickRpt, Db, CCSPrint, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPCustStkBalfrm = class(TForm)
     QuickReport: TQuickRep;
-    qryStkBalRep: TQuery;
+    qryStkBalRep: TFDQuery;
     QRBand1: TQRBand;
     qrlblTitle: TQRLabel;
     QRLabel2: TQRLabel;
@@ -19,8 +22,8 @@ type
     QRLabel6: TQRLabel;
     QRLabel7: TQRLabel;
     QRLabel8: TQRLabel;
-    qryGetLastSO: TQuery;
-    oldqryStkBalRep: TQuery;
+    qryGetLastSO: TFDQuery;
+    oldqryStkBalRep: TFDQuery;
     qrbCustFooter: TQRBand;
     qrbCustHeader: TQRGroup;
     QRLabel9: TQRLabel;
@@ -29,7 +32,7 @@ type
     QRSysData1: TQRSysData;
     qrlblSelection: TQRLabel;
     QRDBText3: TQRDBText;
-    GetSerNosSQL: TQuery;
+    GetSerNosSQL: TFDQuery;
     GetSerNosSQLSerial_item_from: TStringField;
     GetSerNosSQLSerial_item_to: TStringField;
     QRBand2: TQRBand;

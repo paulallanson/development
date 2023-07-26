@@ -156,8 +156,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
     TabOrder = 4
     OnClick = SelBitBtnClick
   end
-  object GetBinsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBinsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Store_Bin.Part_Bin, Part_Store_Bin.Bin_Can_Pick,'
       '       (Select Sum(Store_Quantity)'
@@ -459,8 +459,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
   end
-  object DelBinSQL: TQuery
-    DatabaseName = 'PB'
+  object DelBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Part_Store_Bin'
       'Where (Part_Store = :Part_Store) and'
@@ -480,8 +480,8 @@ object PBMntPrtBinFrm: TPBMntPrtBinFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdBinSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Store_Bin'
       'Set'

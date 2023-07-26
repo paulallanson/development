@@ -218,8 +218,8 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
       TabOrder = 0
     end
   end
-  object qrySerialNos: TQuery
-    DatabaseName = 'PB'
+  object qrySerialNos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_Stock.Store_Stock,'
       '           Store_Stock.Part,'

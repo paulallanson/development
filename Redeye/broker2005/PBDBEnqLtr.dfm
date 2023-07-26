@@ -3,11 +3,11 @@ inherited dbEnqLtr: TdbEnqLtr
   Top = 223
   Height = 479
   Width = 741
-  inherited qryLayout: TQuery
+  inherited qryLayout: TFDQuery
     Left = 248
     Top = 224
   end
-  inherited qryCompany: TQuery
+  inherited qryCompany: TFDQuery
     Left = 64
     Top = 296
   end
@@ -31,8 +31,8 @@ inherited dbEnqLtr: TdbEnqLtr
     Left = 336
     Top = 12
   end
-  object GetRngEnqsSQL: TQuery
-    DatabaseName = 'pb'
+  object GetRngEnqsSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'SELECT  distinct Supplier.Name, Supplier_Branch.Building_No_Name' +
@@ -143,8 +143,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object UpdStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Enquiry'
       'Set Printed_Enquiry = '#39'Y'#39
@@ -176,8 +176,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object UpdHeadStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdHeadStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Enquiry'
       'Set Enquiry_Status = :Enquiry_Status'
@@ -196,8 +196,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object UpdLineStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLineStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update EnquiryLine'
       'Set Enquiry_Status = 30'
@@ -217,8 +217,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetUPSuppEnqSQL: TQuery
-    DatabaseName = 'PB'
+  object GetUPSuppEnqSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier'
       'From Supplier_Enquiry'
@@ -240,8 +240,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetUPEnqLineSQL: TQuery
-    DatabaseName = 'PB'
+  object GetUPEnqLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Min(Enquiry_Status) as Min_Status'
       'From EnquiryLine'
@@ -258,8 +258,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetQtysSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQtysSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Quantity From Supplier_EnquiryQty'
       'Where (Supplier = :Supplier) and'
@@ -291,8 +291,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetNotesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNotesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Narrative_Line'
       'where Narrative = :Narrative'
@@ -306,8 +306,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From EnquiryLinePart_Detail'
       'Where (Enquiry = :Enquiry) and (Line = :Line)'
@@ -326,8 +326,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetAddDetailsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAddDetailsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select EnquiryLineAdditionl_Dtls.*'
       'from EnquiryLineAdditionl_Dtls'
@@ -348,8 +348,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetQuestionsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQuestionsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT  Product_TypeQuestion.Question_Text, Enquiry_Questions.Pr' +
@@ -381,8 +381,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetSuppContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier_BranchContacts.*'
       'From Supplier_BranchContacts'
@@ -409,8 +409,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetEnquiriesSQL: TQuery
-    DatabaseName = 'pb'
+  object GetEnquiriesSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'SELECT  distinct Supplier.Name, Supplier_Branch.Building_No_Name' +
@@ -525,8 +525,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetOptionsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOptionsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Product_TypeOChg.Description'
       'from EnquiryLineProduct_TypeOChg, Product_TypeOChg'
@@ -567,8 +567,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object qrySelEnqStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySelEnqStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select enquiry_status '
       'from enquiry '
@@ -582,8 +582,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object qrySelEnqLineStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySelEnqLineStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Enquiry_Status '
       'from enquiryline '
@@ -603,8 +603,8 @@ inherited dbEnqLtr: TdbEnqLtr
         ParamType = ptUnknown
       end>
   end
-  object GetOperatorSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOperatorSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Operator'

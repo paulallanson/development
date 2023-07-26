@@ -2419,8 +2419,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       OnClick = rdgTypeClick
     end
   end
-  object CapabilitySQL: TQuery
-    DatabaseName = 'pb'
+  object CapabilitySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select DISTINCT Product_TypeCapability.Capability,'
       #9#9'Product_TypeCapability.Default_for_all,'
@@ -2462,8 +2462,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object QuestionSQL: TQuery
-    DatabaseName = 'pb'
+  object QuestionSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Product_TypeQuestion'
@@ -2478,8 +2478,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object InsEnqLineQtySQL: TQuery
-    DatabaseName = 'pb'
+  object InsEnqLineQtySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Enquiry_lineQuantity (enquiry,'
       '                                           Line,'
@@ -2506,8 +2506,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLineCapSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLineCapSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into EnquiryLinPrdct_TypCpblty (enquiry,'
       '                                                      Line,'
@@ -2545,8 +2545,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLineQSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLineQSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Enquiry_Questions (enquiry,'
       '                                         line,'
@@ -2587,8 +2587,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLineAddSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLineAddSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into EnquiryLineAdditionl_Dtls (enquiry,'
       '                                                   Line,'
@@ -2631,8 +2631,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLinePartSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLinePartSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into EnquiryLinePart_Detail (enquiry,'
       '                                               Line,'
@@ -2768,24 +2768,24 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpCompanySQL: TQuery
-    DatabaseName = 'pb'
+  object UpCompanySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Company'
       'set Last_Enquiry_Number = Last_Enquiry_Number + 1')
     Left = 132
     Top = 122
   end
-  object GetCompanySQL: TQuery
-    DatabaseName = 'pb'
+  object GetCompanySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Last_Enquiry_Number'
       'from Company')
     Left = 268
     Top = 186
   end
-  object DelEnqSQL: TQuery
-    DatabaseName = 'pb'
+  object DelEnqSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'delete from enquiry where enquiry = :enquiry;')
     Left = 208
@@ -2797,8 +2797,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object AddEnqSupplierSQL: TQuery
-    DatabaseName = 'pb'
+  object AddEnqSupplierSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Supplier_Enquiry (Enquiry,'
       '                                            Line,'
@@ -2848,8 +2848,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqLineSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLine where enquiry = :Enquiry')
     Left = 216
@@ -2861,8 +2861,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqLineQtySQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqLineQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Enquiry_LineQuantity where enquiry = :enquiry')
     Left = 272
@@ -2874,8 +2874,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqQStSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqQStSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from enquiry_Questions where enquiry = :Enquiry')
     Left = 288
@@ -2887,8 +2887,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqLineAddSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqLineAddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLineAdditionl_Dtls where enquiry = :enquiry')
     Left = 336
@@ -2900,8 +2900,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqPartSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete'
       'from enquiryLinePart_Detail'
@@ -2915,8 +2915,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqCapSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqCapSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLinPrdct_typCpblty where enquiry = :enquiry')
     Left = 400
@@ -2928,8 +2928,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_Enquiry where enquiry = :enquiry')
     Left = 400
@@ -2941,8 +2941,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqSuppQtySQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSuppQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_EnquiryQty where enquiry = :enquiry')
     Left = 472
@@ -2954,8 +2954,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqSuppAddSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSuppAddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supp_Enq_add_Charge where Enquiry = :Enquiry')
     Left = 528
@@ -2967,8 +2967,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Narrative) as Last_Code'
       'From Narrative_Line'
@@ -2976,8 +2976,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Left = 48
     Top = 152
   end
-  object AddNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object AddNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Narrative_Line'
       
@@ -3005,8 +3005,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object AddEnqLineSQL: TQuery
-    DatabaseName = 'pb'
+  object AddEnqLineSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into EnquiryLine'
       '    (enquiry,'
@@ -3162,8 +3162,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptInput
       end>
   end
-  object DelEnqSupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_Enquiry'
       'where Enquiry = :Enquiry and'
@@ -3194,8 +3194,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelAllEnqSuppQtysSQL: TQuery
-    DatabaseName = 'PB'
+  object DelAllEnqSuppQtysSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_EnquiryQty'
       'where '#9'Enquiry = :Enquiry and'
@@ -3226,8 +3226,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckEnqSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckEnqSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supplier_Enquiry'
@@ -3259,8 +3259,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckEnqSuppQtySQL: TQuery
-    DatabaseName = 'PB'
+  object CheckEnqSuppQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supplier_EnquiryQty'
@@ -3298,8 +3298,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckEnqQtySQL: TQuery
-    DatabaseName = 'PB'
+  object CheckEnqQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Enquiry_LineQuantity'
       'where Enquiry = :Enquiry and'
@@ -3324,21 +3324,21 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object PaperDetailSQL: TQuery
-    DatabaseName = 'PB'
+  object PaperDetailSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from')
     Left = 240
     Top = 356
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     Left = 616
     Top = 128
   end
-  object DelEnqOneSuppAddSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqOneSuppAddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supp_enq_Add_Charge'
       'where Enquiry = :Enquiry and'
@@ -3369,8 +3369,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqSupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object UpEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Enquiry'
       'set Contact_No = :Contact_no, '
@@ -3414,8 +3414,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object QuestListSQL: TQuery
-    DatabaseName = 'PB'
+  object QuestListSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Product_TypeQList'
@@ -3435,8 +3435,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object OptionsSQL: TQuery
-    DatabaseName = 'pb'
+  object OptionsSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Product_TypeOChg'
@@ -3450,8 +3450,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLineOptSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLineOptSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into EnquiryLineProduct_TypeOChg (enquiry,'
       '                                                      Line,'
@@ -3491,8 +3491,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqOptSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqOptSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from EnquiryLineProduct_TypeOChg where enquiry = :enquiry')
     Left = 472
@@ -3504,8 +3504,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object AddEnqSuppOChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object AddEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Supp_Enq_Add_charge'
       'values (:Supplier, '
@@ -3551,8 +3551,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastAddChgSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastAddChgSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(Additional_Charge) as Last_Charge_Number'
       'from Supp_Enq_Add_charge'
@@ -3584,8 +3584,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckEnqSuppOChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supp_Enq_Add_charge'
@@ -3623,8 +3623,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqSuppOChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSuppOChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supp_Enq_Add_charge'
       'where Supplier = :Supplier and'
@@ -3665,8 +3665,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Left = 341
     Top = 354
   end
-  object qryGetLooseEnqLineQtys: TQuery
-    DatabaseName = 'PB'
+  object qryGetLooseEnqLineQtys: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select quantity from enquiry_linequantity'
       'where enquiry = :enquiry '
@@ -3686,8 +3686,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelEnqLineParts: TQuery
-    DatabaseName = 'PB'
+  object qryDelEnqLineParts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from enquirylinepart_detail '
       'where enquiry = :enquiry '
@@ -3712,8 +3712,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetActiveCustomerContact: TQuery
-    DatabaseName = 'pb'
+  object qryGetActiveCustomerContact: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Customer_Contact.Customer,'
       '        Customer_Contact.Branch_no,'
@@ -3742,8 +3742,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object custreps: TQuery
-    DatabaseName = 'pb'
+  object custreps: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Customer , Branch_no , Reps_Branches.Rep , Rep.Rep , '
       'Name, Is_Main_Rep'
@@ -3768,8 +3768,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object QCustomer: TQuery
-    DatabaseName = 'pb'
+  object QCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select name '
       'from Customer_branch '
@@ -3788,8 +3788,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object ContactSQL: TQuery
-    DatabaseName = 'pb'
+  object ContactSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Select Contact_No, Name'
       'From Customer_Contact'
@@ -3819,8 +3819,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object AddEnqSuppQtySQL: TQuery
-    DatabaseName = 'pb'
+  object AddEnqSuppQtySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Supplier_EnquiryQty (Enquiry,'
       '                                                  Line,'
@@ -3874,8 +3874,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object CustRepSQL: TQuery
-    DatabaseName = 'pb'
+  object CustRepSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Reps_branches.*, Name as Rep_Name'
       'from Reps_branches, Rep'
@@ -3899,15 +3899,15 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object OperatorSQL: TQuery
-    DatabaseName = 'pb'
+  object OperatorSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator')
     Left = 480
     Top = 264
   end
-  object AddEnqHeaderSQL: TQuery
-    DatabaseName = 'pb'
+  object AddEnqHeaderSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'insert into Enquiry (enquiry,'
       '                       Date_Point, '
@@ -4007,8 +4007,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqLineSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqLineSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update EnquiryLine'
       'set Form_Description=:Desc,'
@@ -4137,8 +4137,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object UpEnqHeaderSQL: TQuery
-    DatabaseName = 'pb'
+  object UpEnqHeaderSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Enquiry'
       'set Date_Point=:Enq_Date,'
@@ -4224,8 +4224,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object GetEnqSupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object GetEnqSupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier, Branch_no, Quantity, Enquiry, Line'
       'from Supplier_EnquiryQty'
@@ -4246,8 +4246,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqSupplierQtySQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqSupplierQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Supplier_EnquiryQty'
       'where Enquiry = :Enquiry and'
@@ -4284,8 +4284,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object DelEnqQtySQL: TQuery
-    DatabaseName = 'PB'
+  object DelEnqQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Enquiry_LineQuantity'
       'where Enquiry = :Enquiry and'
@@ -4310,8 +4310,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProductType: TQuery
-    DatabaseName = 'PB'
+  object qryProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
@@ -4329,8 +4329,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Left = 288
     Top = 56
   end
-  object oldCapabilitySQL: TQuery
-    DatabaseName = 'pb'
+  object oldCapabilitySQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Product_TypeCapability'

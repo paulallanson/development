@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  PBPOObjects, CCSCommon, QrExport, qrprntr, printers;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  PBPOObjects, CCSCommon, QrExport, qrprntr, printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPCustStateFrm = class(TForm)
     InvoiceReport: TQuickRep;
     SalesInvDataSource: TDataSource;
     CompDataSource: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -22,7 +25,7 @@ type
     CustRefQRDBText: TQRDBText;
     QRBand1: TQRBand;
     lblRundate: TQRLabel;
-    SalesInvSQL: TQuery;
+    SalesInvSQL: TFDQuery;
     GrpFootQRBand: TQRBand;
     QRLabel1: TQRLabel;
     lblInvoiceNo: TQRLabel;
@@ -34,8 +37,8 @@ type
     QRLabel8: TQRLabel;
     QRLabel15: TQRLabel;
     QRLabel16: TQRLabel;
-    UpSalesInvSQL: TQuery;
-    UpCustSQL: TQuery;
+    UpSalesInvSQL: TFDQuery;
+    UpCustSQL: TFDQuery;
     LblTotal: TQRLabel;
     TotGoodsQRLbl: TQRLabel;
     TotVatQRLbl: TQRLabel;
@@ -47,15 +50,15 @@ type
     LblAccountCode: TQRDBText;
     lblVat: TQRLabel;
     lblCustomerRef: TQRLabel;
-    qryGetPO: TQuery;
-    qryGetSO: TQuery;
-    qryGetJB: TQuery;
+    qryGetPO: TFDQuery;
+    qryGetSO: TFDQuery;
+    qryGetJB: TFDQuery;
     QRMemo2: TQRMemo;
     gtQRMemo1: TQRMemo;
     qrshpPayment: TQRShape;
     memPayment: TQRRichText;
     memDefPayment: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     QRDBText1: TQRDBText;
     QRLabel10: TQRLabel;
     QRLabel13: TQRLabel;

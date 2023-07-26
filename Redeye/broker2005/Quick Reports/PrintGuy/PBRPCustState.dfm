@@ -942,16 +942,16 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
     Left = 427
     Top = 20
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 432
     Top = 71
   end
-  object SalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object SalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        Sales_Invoice.Invoice_Date,'
@@ -1024,8 +1024,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptInput
       end>
   end
-  object UpSalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object UpSalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_invoice'
       'set Statement_reference = :Statement_reference,'
@@ -1062,8 +1062,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object UpCustSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Customer_Branch'
       'set Last_Statement_ref = :Last_statement_Ref'
@@ -1088,8 +1088,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object OldSalesInvSQL: TQuery
-    DatabaseName = 'PB'
+  object OldSalesInvSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Invoice.Customer,'
       '        Sales_Invoice.Branch_no,'
@@ -1331,8 +1331,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
       Calculated = True
     end
   end
-  object qryGetJB: TQuery
-    DatabaseName = 'PB'
+  object qryGetJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Job_Bag'
@@ -1346,8 +1346,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Purchase_orderLine'
@@ -1367,8 +1367,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSO: TQuery
-    DatabaseName = 'PB'
+  object qryGetSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Cust_Order_No'
       'from Sales_Order'
@@ -1382,8 +1382,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Descr'
       'from Job_Bag_Line_Dets'
@@ -1403,8 +1403,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_orderLine.Customers_Desc, '
       '        Purchase_OrderLine.Cust_Order_no,'
@@ -1432,8 +1432,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part.Part, '
       '          Part_Description, '
@@ -1458,8 +1458,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSODeliv: TQuery
-    DatabaseName = 'PB'
+  object qryGetSODeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Branch.Name as Branch_Name,'
       '        Customer.Name as Customer_Name,'
@@ -1486,8 +1486,8 @@ object PBRPCustStateFrm: TPBRPCustStateFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLineDeliv: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLineDeliv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1'
       '        Delivery_Detail.Purchase_Order,'

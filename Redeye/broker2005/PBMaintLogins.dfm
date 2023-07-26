@@ -121,8 +121,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
         Width = 50
       end>
   end
-  object qryWorkstation: TQuery
-    DatabaseName = 'PB'
+  object qryWorkstation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'#9'Workstation_Redeye.Workstation,'
       #9#9'Workstation_Redeye.Workstation_Name, '
@@ -142,8 +142,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     Left = 264
     Top = 88
   end
-  object qryDeleteWS: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWS: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Workstation_Redeye'
       'WHERE Workstation = :Workstation')

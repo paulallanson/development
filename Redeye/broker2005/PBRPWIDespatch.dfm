@@ -1065,8 +1065,8 @@ object PBRPWIDespatchFrm: TPBRPWIDespatchFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'works_order.works_order,'
       #9'works_order.works_order_number,'

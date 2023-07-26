@@ -186,8 +186,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
       end
     end
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description, Financial_Year'
       'from Period'
@@ -207,8 +207,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Left = 272
     Top = 8
   end
-  object qryGetRevLocBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryGetRevLocBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Invoice_Location_Budget.Invoice_Location,'
       '        Invoice_Location_Budget.Period,'
@@ -239,8 +239,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryFirstPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryFirstPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Period'
       'from Period'
@@ -255,8 +255,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckBudget: TQuery
-    DatabaseName = 'PB'
+  object qryCheckBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Invoice_Location_budget'
@@ -276,8 +276,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdBudget: TQuery
-    DatabaseName = 'PB'
+  object qryUpdBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Invoice_Location_Budget'
       'set Turnover_Value = :Turnover_Value, '
@@ -315,8 +315,8 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddBudget: TQuery
-    DatabaseName = 'PB'
+  object qryAddBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Invoice_Location_Budget'
       

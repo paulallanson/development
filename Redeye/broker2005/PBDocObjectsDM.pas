@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, PBDocObjects,
-  Db, DBTables, PBDatabase;
+  Db, PBDatabase,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmPBDocObjects = class(TDataModule)
-    qryDelPOLineDocs: TQuery;
-    qryInsPOLineDocs: TQuery;
-    qryDelEnqLineDocs: TQuery;
-    qryInsEnqLineDoc: TQuery;
-    qrySelEnqLineDocs: TQuery;
-    qrySelPOLineDocs: TQuery;
-    qryCompany: TQuery;
+    qryDelPOLineDocs: TFDQuery;
+    qryInsPOLineDocs: TFDQuery;
+    qryDelEnqLineDocs: TFDQuery;
+    qryInsEnqLineDoc: TFDQuery;
+    qrySelEnqLineDocs: TFDQuery;
+    qrySelPOLineDocs: TFDQuery;
+    qryCompany: TFDQuery;
   private
     { Private declarations }
   public

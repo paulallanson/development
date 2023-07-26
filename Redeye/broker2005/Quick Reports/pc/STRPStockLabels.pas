@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, CCSCommon, printers, qrprntr;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, CCSCommon, printers, qrprntr,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPStockLabelsFrm = class(TForm)
-    RepSQL: TQuery;
+    RepSQL: TFDQuery;
     SRCRep: TDataSource;
-    FormRefSQL: TQuery;
+    FormRefSQL: TFDQuery;
     qrpDetails: TQuickRep;
     QRBand1: TQRSubDetail;
     QRDBCustOrderRef: TQRDBText;

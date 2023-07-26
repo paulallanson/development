@@ -66,7 +66,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, PBGroupsDM, ExtCtrls;
+  StdCtrls, Buttons, DB, PBGroupsDM, ExtCtrls;
 
 type
   TPBMaintGroupsDetsFrm = class(TForm)

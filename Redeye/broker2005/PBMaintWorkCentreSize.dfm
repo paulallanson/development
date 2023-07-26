@@ -174,8 +174,8 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     TabOrder = 6
     Visible = False
   end
-  object qryPaperSize: TQuery
-    DatabaseName = 'pb'
+  object qryPaperSize: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Paper_Size.*'
       'from Paper_Size')
@@ -187,8 +187,8 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Work_Centre_Paper_Size'
       '(Work_Centre,'
@@ -220,8 +220,8 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Paper_Size.*'
       'from Paper_size'
@@ -229,8 +229,8 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
     Left = 328
     Top = 120
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Work_Centre_Paper_Size.*, Paper_Size.Description'
       'from Work_Centre_Paper_Size, Paper_Size'
@@ -245,8 +245,8 @@ object PBMaintWorkCentreSizeFrm: TPBMaintWorkCentreSizeFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Work_Centre_Paper_Size'
       'where Work_Centre = :Work_Centre')

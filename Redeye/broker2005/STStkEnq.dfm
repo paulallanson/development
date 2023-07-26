@@ -131,8 +131,8 @@ object STStkEnqFrm: TSTStkEnqFrm
       OnClick = StockTreeViewClick
     end
   end
-  object GetStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Store_Stock.Part_Bin, Store_Stock.Part_Store_Lot,'
       
@@ -706,8 +706,8 @@ object STStkEnqFrm: TSTStkEnqFrm
       C007C007C007C003FFFFFFFFC007C00700000000000000000000000000000000
       000000000000}
   end
-  object GetAllocSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAllocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store_Allocation.Quantity_Allocated,'
       '       Part_Store_Allocation.Purch_Ord,'
@@ -739,8 +739,8 @@ object STStkEnqFrm: TSTStkEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Store_Stock'
@@ -757,8 +757,8 @@ object STStkEnqFrm: TSTStkEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Track_Serial_No, Purch_Pack_Quantity'
       'From Part'
@@ -774,8 +774,8 @@ object STStkEnqFrm: TSTStkEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOnOrdSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOnOrdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord.Purch_Ord_No, Purch_Ord.Supplier,'
       
@@ -815,8 +815,8 @@ object STStkEnqFrm: TSTStkEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOnOrdAllocSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOnOrdAllocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order_Line.Quantity_Ordered,'
       '       Sales_Order_Line.Sales_order,'
@@ -850,8 +850,8 @@ object STStkEnqFrm: TSTStkEnqFrm
         ParamType = ptUnknown
       end>
   end
-  object GetStoresSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoresSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Store, Part_Store_Name'
       'From Part_Store'

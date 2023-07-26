@@ -186,8 +186,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
       end
     end
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description, Financial_Year'
       'from Period'
@@ -207,8 +207,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
     Left = 272
     Top = 8
   end
-  object qryGetRepBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep_Team_Budget.Rep_Team,'
       '        Rep_Team_Budget.Period,'
@@ -239,8 +239,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryFirstPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryFirstPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Period'
       'from Period'
@@ -255,8 +255,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckBudget: TQuery
-    DatabaseName = 'PB'
+  object qryCheckBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Team_budget'
@@ -276,8 +276,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdBudget: TQuery
-    DatabaseName = 'PB'
+  object qryUpdBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Rep_Team_Budget'
       'set Turnover_Value = :Turnover_Value, '
@@ -315,8 +315,8 @@ object PBMaintRepTeamBudgetsFrm: TPBMaintRepTeamBudgetsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddBudget: TQuery
-    DatabaseName = 'PB'
+  object qryAddBudget: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Rep_Team_Budget'
       

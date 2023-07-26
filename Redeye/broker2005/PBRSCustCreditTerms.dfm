@@ -168,8 +168,8 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     ListSource = dtsOperators
     TabOrder = 6
   end
-  object qryOperators: TQuery
-    DatabaseName = 'PB'
+  object qryOperators: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Operator'

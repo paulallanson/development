@@ -264,8 +264,8 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
       OnKeyPress = memQuantityKeyPress
     end
   end
-  object qryGetLastNo: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(Element_No) as Last_no'
       'from Part_Element'
@@ -279,8 +279,8 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'PB'
+  object qryDel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Part_Element'
       'where Part = :Part and Composite_Part = :Composite_Part')
@@ -298,8 +298,8 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Part_Element'
       '(Part,'
@@ -337,8 +337,8 @@ object PBMaintPartComponentFrm: TPBMaintPartComponentFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpd: TQuery
-    DatabaseName = 'PB'
+  object qryUpd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Element'
       'set Composite_Part = :Composite_Part,'

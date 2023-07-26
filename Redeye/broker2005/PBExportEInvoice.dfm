@@ -440,8 +440,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Left = 368
     Top = 128
   end
-  object qrySIHeader: TQuery
-    DatabaseName = 'PB'
+  object qrySIHeader: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'Sales_Invoice.Sales_Invoice,'
       #9'      Sales_Invoice.Invoice_Date,'
@@ -556,8 +556,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Left = 264
     Top = 184
   end
-  object qryCustEInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryCustEInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Customer,'
@@ -579,8 +579,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSIStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSIStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Invoice'
       'Set Sales_Invoice_Status = :Sales_Invoice_Status'
@@ -600,8 +600,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryUpdCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer'
       'Set Electronic_Invoice_File_No = :Electronic_Invoice_File_no'
@@ -620,8 +620,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Invoice'
       'Set Electronic_Invoice_Filename = :Electronic_Invoice_Filename,'

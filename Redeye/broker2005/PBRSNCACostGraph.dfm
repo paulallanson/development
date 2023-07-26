@@ -292,8 +292,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
       YValues.ValueSource = 'COLUMN2'
     end
   end
-  object qryYear1Chart1: TQuery
-    DatabaseName = 'PB'
+  object qryYear1Chart1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'sum(Total_Cost) '
@@ -332,8 +332,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryYear2Chart1: TQuery
-    DatabaseName = 'PB'
+  object qryYear2Chart1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'sum(Total_Cost) '
@@ -372,8 +372,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryYear3Chart1: TQuery
-    DatabaseName = 'PB'
+  object qryYear3Chart1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'sum(Total_Cost) '
@@ -412,8 +412,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryYear1Chart2: TQuery
-    DatabaseName = 'PB'
+  object qryYear1Chart2: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'count(Job_Bag_non_conform)'
@@ -452,8 +452,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryYears: TQuery
-    DatabaseName = 'PB'
+  object qryYears: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Period_Year from period'
       'order by Period_Year desc')
@@ -465,8 +465,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
     Left = 1144
     Top = 16
   end
-  object qryYear2Chart2: TQuery
-    DatabaseName = 'PB'
+  object qryYear2Chart2: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'count(Job_Bag_non_conform)'
@@ -505,8 +505,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryYear3Chart2: TQuery
-    DatabaseName = 'PB'
+  object qryYear3Chart2: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'datename(mm,period.period_end_date),'
       #9'count(Job_Bag_non_conform)'
@@ -545,8 +545,8 @@ object PBRSNCACostGraphFrm: TPBRSNCACostGraphFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetYearPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryGetYearPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select min(Period) as First_Period, max(period) as Last_period'
       'from period'

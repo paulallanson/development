@@ -1697,8 +1697,8 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
       end
     end
   end
-  object qry4CastInvs: TQuery
-    DatabaseName = 'PB'
+  object qry4CastInvs: TFDQuery
+    ConnectionName = 'PB'
     Left = 47
     Top = 8
     object qry4CastInvspurchase_order: TFloatField
@@ -1794,8 +1794,8 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
       FieldName = 'Quantity'
     end
   end
-  object oldqryDummy: TQuery
-    DatabaseName = 'PB'
+  object oldqryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  delivery_detail.purchase_order,'
@@ -1864,7 +1864,7 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     Left = 163
     Top = 9
   end
-  object qryBackup: TQuery
+  object qryBackup: TFDQuery
     SQL.Strings = (
       'SELECT'
       '  delivery_detail.purchase_order,'
@@ -1946,7 +1946,7 @@ object PBRP4CastInvsFrm: TPBRP4CastInvsFrm
     Left = 563
     Top = 9
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'select'
       '  delivery_detail.purchase_order,'

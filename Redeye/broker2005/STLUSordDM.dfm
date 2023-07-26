@@ -10,8 +10,8 @@ object DmLookupSOrd: TDmLookupSOrd
     Left = 16
     Top = 16
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1000'
       '    Customer.Name as Cust_Name,'
@@ -149,8 +149,8 @@ object DmLookupSOrd: TDmLookupSOrd
     Left = 144
     Top = 16
   end
-  object SelectedSQL: TQuery
-    DatabaseName = 'PB'
+  object SelectedSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sales_Order.Sales_Order,'
       '       Sales_Order.Customer,'
@@ -198,8 +198,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object oldDummySQL: TQuery
-    DatabaseName = 'PB'
+  object oldDummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1000'
       '    Customer.Name as Cust_Name,'
@@ -263,8 +263,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object GetContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Contact.Name as Contact_Name'
       'From  Customer_Contact'
@@ -293,8 +293,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object GetDespDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDespDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Order.Part_Store,'
       #9'Sales_Order.Date_Ordered,'
@@ -357,12 +357,12 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qryNewSOs: TQuery
+  object qryNewSOs: TFDQuery
     Left = 272
     Top = 88
   end
-  object GetPickRefSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPickRefSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Sales_Order, Picking_List_Ref'
       'from Part_Store_Allocation'
@@ -376,8 +376,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qryperiodEnd: TQuery
-    DatabaseName = 'PB'
+  object qryperiodEnd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_profit'
@@ -391,9 +391,9 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qrySalesHistory: TQuery
+  object qrySalesHistory: TFDQuery
     OnCalcFields = qrySalesHistoryCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order_line.*,'
       '  sales_order_head_status.description,'
@@ -549,9 +549,9 @@ object DmLookupSOrd: TDmLookupSOrd
       Calculated = True
     end
   end
-  object qryProductSalesbyCust: TQuery
+  object qryProductSalesbyCust: TFDQuery
     OnCalcFields = qryProductSalesbyCustCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order_line.sales_order,'
       '  sales_order_line.sales_order_line_no,'
@@ -741,8 +741,8 @@ object DmLookupSOrd: TDmLookupSOrd
       Size = 162
     end
   end
-  object qryInvoice: TQuery
-    DatabaseName = 'PB'
+  object qryInvoice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Sales_invoice_no'
       'from Sales_Invoice_line, Sales_invoice'
@@ -762,7 +762,7 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object OldqryProductSalesbyCust: TQuery
+  object OldqryProductSalesbyCust: TFDQuery
     SQL.Strings = (
       'select sales_order_line.sales_order,'
       '  sales_order_line.part,'
@@ -862,8 +862,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qryAdhoc: TQuery
-    DatabaseName = 'PB'
+  object qryAdhoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name'
       'from Ad_hoc_address'
@@ -877,8 +877,8 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qryCust: TQuery
-    DatabaseName = 'PB'
+  object qryCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Branch.Name as Branch_Name,'
       '           Customer.Name as Customer_Name'
@@ -900,9 +900,9 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qrySalesSerialNos: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsDetails
+  object qrySalesSerialNos: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsDetails
     SQL.Strings = (
       'select *'
       'from sales_order_line_serial_no'
@@ -928,8 +928,8 @@ object DmLookupSOrd: TDmLookupSOrd
     Left = 24
     Top = 272
   end
-  object DummySQL: TQuery
-    DatabaseName = 'PB'
+  object DummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1000'
       '    Customer.Name as Cust_Name,'
@@ -980,8 +980,8 @@ object DmLookupSOrd: TDmLookupSOrd
     Left = 200
     Top = 24
   end
-  object dummySalesbyCust: TQuery
-    DatabaseName = 'PB'
+  object dummySalesbyCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order_line.sales_order,'
       '  sales_order_line.sales_order_line_no,'
@@ -1105,9 +1105,9 @@ object DmLookupSOrd: TDmLookupSOrd
         ParamType = ptUnknown
       end>
   end
-  object qryProdSalesbyCust: TQuery
+  object qryProdSalesbyCust: TFDQuery
     OnCalcFields = qryProdSalesbyCustCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_order_line.sales_order,'
       '  sales_order_line.sales_order_line_no,'
@@ -1365,8 +1365,8 @@ object DmLookupSOrd: TDmLookupSOrd
       FieldName = 'Part_Cost_Cat'
     end
   end
-  object qryGetCustomerDetails: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerDetails: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Customer'

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, ComCtrls, Db, DBTables, CCSCommon,
-  OleCtnrs;
+  Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, ComCtrls, Db, CCSCommon,
+  OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSJBMarginfrm = class(TForm)
@@ -27,7 +30,7 @@ type
     edtSupplier: TEdit;
     btnSupplier: TButton;
     Panel3: TPanel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
     qryReportJob_Bag: TIntegerField;
     qryReportJob_Bag_Line: TIntegerField;
@@ -50,7 +53,7 @@ type
     qryReportSupplier: TIntegerField;
     qryReportSupplier_Branch_no: TIntegerField;
     qryReportSupplier_Branch_Name: TStringField;
-    oldqryReport: TQuery;
+    oldqryReport: TFDQuery;
     qryReportPurchase_Order: TFloatField;
     qryReportInactive: TStringField;
     qryReportJob_Bag_Descr: TStringField;

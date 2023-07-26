@@ -4,17 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, DBTables, CCSCommon, PBPOObjects,
-  QrExport, qrprntr, printers, QRCtrls, jpeg;
+  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, CCSCommon, PBPOObjects,
+  QrExport, qrprntr, printers, QRCtrls, jpeg,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 type
   TPBRPCustCreditTermsFrm = class(TForm)
     qrpDetails: TQuickRep;
-    qryDetails: TQuery;
+    qryDetails: TFDQuery;
     QRBand1: TQRBand;
     QRLabel3: TQRLabel;
     imgReport: TQRImage;
     CustomerAddMemo: TQRMemo;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     gtQRSysData1: TQRSysData;
     gtQRLabel1: TQRLabel;
     gtQRLabel2: TQRLabel;
@@ -28,7 +31,7 @@ type
     gtQRLabel6: TQRLabel;
     qrmCompanyDetails: TQRMemo;
     memCreditTerms: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     qrlblOperatorName: TQRLabel;
     qrlblOperatorPosition: TQRLabel;
     qrlblOperatorSignature: TQRLabel;

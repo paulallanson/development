@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls, DBTables;
+  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintProductionProcess = class(TForm)
@@ -17,16 +20,16 @@ type
     Panel2: TPanel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryProcesses: TQuery;
+    qryProcesses: TFDQuery;
     dtsProcesses: TDataSource;
     lstbxPProcessesCodes: TListBox;
     lstbxProcessesCodes: TListBox;
     Label3: TLabel;
     lblProduction: TLabel;
-    qryAdd: TQuery;
-    qryDummy: TQuery;
-    qryProdProcess: TQuery;
-    qryDelete: TQuery;
+    qryAdd: TFDQuery;
+    qryDummy: TFDQuery;
+    qryProdProcess: TFDQuery;
+    qryDelete: TFDQuery;
     Label4: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);

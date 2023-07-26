@@ -829,16 +829,16 @@ object STRPStockUsagefrm: TSTRPStockUsagefrm
       BandType = rbGroupFooter
     end
   end
-  object qryPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_store')
     Left = 368
     Top = 24
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Part.Part,'
       #9'Part.Part_Description,'

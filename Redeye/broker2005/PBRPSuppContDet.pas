@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, Db, DBTables, ExtCtrls, CCSPrint, CCSCommon;
+  Qrctrls, QuickRpt, Db, ExtCtrls, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSuppContDetFrm = class(TForm)
     QRPCustStat: TQuickRep;
-    GetDetsQry: TQuery;
+    GetDetsQry: TFDQuery;
     QRBand1: TQRBand;
     QRCustGroup: TQRGroup;
     QRFootBand: TQRBand;

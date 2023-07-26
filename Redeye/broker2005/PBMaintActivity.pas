@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Buttons, ExtCtrls, StdCtrls, ComCtrls, DBCtrls, pbActivityDM, DateUtils,
-  Grids, DBGrids, ShellAPI, PBDBMemo, DB, DBTables, ImgList, ToolWin, IniFiles;
+  Grids, DBGrids, ShellAPI, PBDBMemo, DB, ImgList, ToolWin, IniFiles;
 
 type
   TPBMaintActivityFrm = class(TForm)

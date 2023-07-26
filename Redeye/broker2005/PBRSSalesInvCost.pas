@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, ExtCtrls, Buttons, DateSelV5,  CCSPrint,
-  OleCtnrs, ComCtrls, DBCtrls;
+  Db, StdCtrls, ExtCtrls, Buttons, DateSelV5,  CCSPrint,
+  OleCtnrs, ComCtrls, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSalesInvCostfrm = class(TForm)
@@ -26,9 +29,9 @@ type
     dblkpFY: TDBLookupComboBox;
     Label2: TLabel;
     dblkpPeriods: TDBLookupComboBox;
-    qryFY: TQuery;
+    qryFY: TFDQuery;
     dtsFY: TDataSource;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     dtsPeriods: TDataSource;
     procedure rdgrpReasonClick(Sender: TObject);
     procedure btnCustomerClick(Sender: TObject);

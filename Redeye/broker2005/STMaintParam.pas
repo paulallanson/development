@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Spin, DBCtrls, Buttons, Db, DBTables;
+  StdCtrls, Spin, DBCtrls, Buttons, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintParamFrm = class(TForm)
@@ -32,7 +35,7 @@ type
     CostListCheckBox: TCheckBox;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    UpdCompSQL: TQuery;
+    UpdCompSQL: TFDQuery;
     SOrdLbl: TLabel;
     SOPNoSpinEdit: TSpinEdit;
     GroupBox2: TGroupBox;

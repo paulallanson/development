@@ -8447,8 +8447,8 @@ object PBRPRepsCatPerformfrm: TPBRPRepsCatPerformfrm
       end
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -8468,8 +8468,8 @@ object PBRPRepsCatPerformfrm: TPBRPRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -8477,8 +8477,8 @@ object PBRPRepsCatPerformfrm: TPBRPRepsCatPerformfrm
     Left = 83
     Top = 38
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8509,8 +8509,8 @@ object PBRPRepsCatPerformfrm: TPBRPRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepCatBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryRepCatBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Cat_Budget'
@@ -8542,8 +8542,8 @@ object PBRPRepsCatPerformfrm: TPBRPRepsCatPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'

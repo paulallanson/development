@@ -1269,8 +1269,8 @@ object STRPProfitRepfrm: TSTRPProfitRepfrm
       end
     end
   end
-  object qryProfitRepAll: TQuery
-    DatabaseName = 'PB'
+  object qryProfitRepAll: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Sales_Order.Sales_Order, '
       #9'Sales_Order.Date_Ordered, '
@@ -1341,8 +1341,8 @@ object STRPProfitRepfrm: TSTRPProfitRepfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Store_Name'
       'from Part_Store'
@@ -1357,8 +1357,8 @@ object STRPProfitRepfrm: TSTRPProfitRepfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySupplier: TQuery
-    DatabaseName = 'PB'
+  object qrySupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name'
       'from Supplier'

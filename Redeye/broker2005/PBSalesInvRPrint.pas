@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, StdCtrls, DBTables, Buttons, Printers, PBRPSalesInv, QrExport,
-  IniFiles, OleCtnrs;
+  DB, StdCtrls, Buttons, Printers, PBRPSalesInv, QrExport,
+  IniFiles, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBSalesInvRPrintFrm = class(TForm)
@@ -16,28 +19,28 @@ type
     SelectionMemo: TMemo;
     SelectLst: TListBox;
     Label1: TLabel;
-    AddIntSelQuery: TQuery;
-    AddWorkSQL: TQuery;
-    DelWorkSQL: TQuery;
-    GetLastIntSelSQL: TQuery;
-    InvRPrintSQL: TQuery;
+    AddIntSelQuery: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    GetLastIntSelSQL: TFDQuery;
+    InvRPrintSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
-    GetInvCustSQL: TQuery;
-    qryInvEmail: TQuery;
-    qryInvPrint: TQuery;
-    qryCreditPrint: TQuery;
-    qryCreditEmail: TQuery;
-    GetCreditCustSQL: TQuery;
-    qryGetCustomers: TQuery;
+    GetInvCustSQL: TFDQuery;
+    qryInvEmail: TFDQuery;
+    qryInvPrint: TFDQuery;
+    qryCreditPrint: TFDQuery;
+    qryCreditEmail: TFDQuery;
+    GetCreditCustSQL: TFDQuery;
+    qryGetCustomers: TFDQuery;
     chkbxPrintLogo: TCheckBox;
     chkbxShowZeroValues: TCheckBox;
-    InvLineSQL: TQuery;
+    InvLineSQL: TFDQuery;
     chkbxAttachCSVFile: TCheckBox;
-    InvLineCSVSQL: TQuery;
-    qryPO: TQuery;
-    qryJBLine: TQuery;
-    qryPOLine: TQuery;
-    InvCSVSQL: TQuery;
+    InvLineCSVSQL: TFDQuery;
+    qryPO: TFDQuery;
+    qryJBLine: TFDQuery;
+    qryPOLine: TFDQuery;
+    InvCSVSQL: TFDQuery;
     OleContainer1: TOleContainer;
     btbtnExcel: TBitBtn;
     procedure FormShow(Sender: TObject);

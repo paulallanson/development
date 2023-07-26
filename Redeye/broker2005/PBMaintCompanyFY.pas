@@ -4,25 +4,28 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, DBCtrls;
+  Db, StdCtrls, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCompanyFYfrm = class(TForm)
     OKBitBtn: TBitBtn;
     BitBtn2: TBitBtn;
-    qryYear: TQuery;
+    qryYear: TFDQuery;
     dtsYear: TDataSource;
-    qryPeriod: TQuery;
+    qryPeriod: TFDQuery;
     dtsPeriod: TDataSource;
-    GetDetsSQL: TQuery;
-    UpdDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    UpdDetsSQL: TFDQuery;
     grpbxDetails: TGroupBox;
     Label1: TLabel;
     Label2: TLabel;
     dblkpYear: TDBLookupComboBox;
     dblkpPeriod: TDBLookupComboBox;
     Label3: TLabel;
-    qryCheckSalesProfit: TQuery;
+    qryCheckSalesProfit: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

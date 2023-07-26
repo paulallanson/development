@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables;
+  StdCtrls, Buttons, DBCtrls, DB;
 
 type
   TPBMaintDBAliasFrm = class(TForm)
@@ -33,7 +33,8 @@ var
 
 implementation
 
-uses PBDatabase, pbMainMenu;
+uses PBDatabase, pbMainMenu,
+  FireDAC.Comp.Client;
 
 {$R *.DFM}
 
@@ -61,7 +62,7 @@ begin
   begin
     sgList := TStringList.Create;
     try
-      session.GetAliasParams(sAlias,sgList);
+      FDManager.GetConnectionDefParams(sAlias,sgList);
       edtAliasName.Text := sAlias;
       edtDatabaseName.Text := sgList.Values['DATABASE NAME'];
       edtServerName.Text := sgList.Values['SERVER NAME'];
@@ -101,7 +102,7 @@ begin
       try
         sgList.Add('DATABASE NAME='+edtDatabaseName.text);
         sgList.Add('SERVER NAME='+edtServerName.text);
-        Session.AddAlias(edtAliasName.text, 'MSSQL', sgList);
+        FDManager.AddConnectionDef(edtAliasName.text, 'MSSQL', sgList);
       finally
         sgList.Free;
       end;
@@ -114,7 +115,7 @@ begin
         sgList.Clear;
         sgList.Add('DATABASE NAME='+edtDatabaseName.text);
         sgList.Add('SERVER NAME='+edtServerName.text);
-        Session.ModifyAlias(edtAliasName.text,sgList);
+        FDManager.ModifyConnectionDef(edtAliasName.text,sgList);
       finally
         sgList.Free;
       end;
@@ -126,10 +127,10 @@ begin
       if MessageDlg('Really delete these details ?', mtConfirmation, [mbNo,
         mbYes], 0) = mrYes then
       begin
-        Session.DeleteAlias(edtAliasName.text);
+        FDManager.DeleteConnectionDef(edtAliasName.text);
       end;
     end;
-  Session.SaveConfigFile;
+  FDManager.SaveConnectionDefFile;
 
   sCode := edtAliasName.Text;
 end;

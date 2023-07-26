@@ -340,16 +340,16 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Position = 8
     TabOrder = 14
   end
-  object GetApplicQuery: TQuery
-    DatabaseName = 'PB'
+  object GetApplicQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Email_application')
     Left = 320
     Top = 24
   end
-  object GetTypQuery: TQuery
-    DatabaseName = 'PB'
+  object GetTypQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'ExportFilter'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, ExtCtrls, Db, DBTables, PBPOObjects;
+  StdCtrls, Buttons, DBCtrls, ExtCtrls, Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPOrdInactiveFrm = class(TForm)
@@ -23,13 +26,13 @@ type
     lblSupplier: TLabel;
     lblCustomer: TLabel;
     BitBtn4: TBitBtn;
-    GetHeadDtlsSQL: TQuery;
-    qryReason: TQuery;
+    GetHeadDtlsSQL: TFDQuery;
+    qryReason: TFDQuery;
     srcReason: TDataSource;
-    qryUpPorder: TQuery;
+    qryUpPorder: TFDQuery;
     reActiveChk: TCheckBox;
-    qryCountJBLines: TQuery;
-    qryUpJBInactive: TQuery;
+    qryCountJBLines: TFDQuery;
+    qryUpJBInactive: TFDQuery;
     Label4: TLabel;
     lblOperatorName: TLabel;
     procedure FormActivate(Sender: TObject);

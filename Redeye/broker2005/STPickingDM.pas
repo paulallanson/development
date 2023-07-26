@@ -4,54 +4,57 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, stPickObject, stSOObjects, STPacks;
+  Db, stPickObject, stSOObjects, STPacks,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPickDM = class(TDataModule)
-    PickListSQL: TQuery;
+    PickListSQL: TFDQuery;
     PickListSRC: TDataSource;
-    PickDtlsSQL: TQuery;
-    PartSQL: TQuery;
+    PickDtlsSQL: TFDQuery;
+    PartSQL: TFDQuery;
     PickDtlsSRC: TDataSource;
-    PickPartDtlsSQL: TQuery;
-    StoreStockSQL: TQuery;
-    PickHeadSQL: TQuery;
-    ClearPickSQL: TQuery;
-    UpdPurchOrdSQL: TQuery;
-    CheckPickBinSQL: TQuery;
-    CheckPickLotSQL: TQuery;
-    UpdPFJSQL: TQuery;
-    PartStoreSQL: TQuery;
-    UpdSalesOrdSQL: TQuery;
-    UpdSalesOrdHeadSQL: TQuery;
-    UpdDirectSalesOrdSQL: TQuery;
-    CheckPickBinLotSQL: TQuery;
-    GetStoreStockSQL: TQuery;
-    UpdSalesOrderInvQty: TQuery;
-    CheckSOStatusSQL: TQuery;
-    UpdOrderStatusSQL: TQuery;
-    UpdSalesOrdDelivSQL: TQuery;
-    qrySOAddCharge: TQuery;
-    qryGetSalesOrder: TQuery;
-    qryGetSalesOrderLines: TQuery;
-    qryUpdJobBagLine: TQuery;
-    qrySalesOrderJB: TQuery;
-    qryJBChkStatus: TQuery;
-    qryJBUpHead: TQuery;
-    qryGetProductionLoc: TQuery;
-    PartTransferSQL: TQuery;
-    qryGetSalesOrderLine: TQuery;
-    qrySOPickHead: TQuery;
-    qrySOPickLines: TQuery;
-    qryUpdSOPicking: TQuery;
-    qrySOPicking: TQuery;
-    qrySOProductionLines: TQuery;
-    qrySalesOrderJBReq: TQuery;
-    qryJBChkStockReq: TQuery;
-    GetSalesOrderHeadSQL: TQuery;
-    qryDeleteSODelivLine: TQuery;
-    qryDeleteSODeliv: TQuery;
-    qryDeleteSOPicking: TQuery;
+    PickPartDtlsSQL: TFDQuery;
+    StoreStockSQL: TFDQuery;
+    PickHeadSQL: TFDQuery;
+    ClearPickSQL: TFDQuery;
+    UpdPurchOrdSQL: TFDQuery;
+    CheckPickBinSQL: TFDQuery;
+    CheckPickLotSQL: TFDQuery;
+    UpdPFJSQL: TFDQuery;
+    PartStoreSQL: TFDQuery;
+    UpdSalesOrdSQL: TFDQuery;
+    UpdSalesOrdHeadSQL: TFDQuery;
+    UpdDirectSalesOrdSQL: TFDQuery;
+    CheckPickBinLotSQL: TFDQuery;
+    GetStoreStockSQL: TFDQuery;
+    UpdSalesOrderInvQty: TFDQuery;
+    CheckSOStatusSQL: TFDQuery;
+    UpdOrderStatusSQL: TFDQuery;
+    UpdSalesOrdDelivSQL: TFDQuery;
+    qrySOAddCharge: TFDQuery;
+    qryGetSalesOrder: TFDQuery;
+    qryGetSalesOrderLines: TFDQuery;
+    qryUpdJobBagLine: TFDQuery;
+    qrySalesOrderJB: TFDQuery;
+    qryJBChkStatus: TFDQuery;
+    qryJBUpHead: TFDQuery;
+    qryGetProductionLoc: TFDQuery;
+    PartTransferSQL: TFDQuery;
+    qryGetSalesOrderLine: TFDQuery;
+    qrySOPickHead: TFDQuery;
+    qrySOPickLines: TFDQuery;
+    qryUpdSOPicking: TFDQuery;
+    qrySOPicking: TFDQuery;
+    qrySOProductionLines: TFDQuery;
+    qrySalesOrderJBReq: TFDQuery;
+    qryJBChkStockReq: TFDQuery;
+    GetSalesOrderHeadSQL: TFDQuery;
+    qryDeleteSODelivLine: TFDQuery;
+    qryDeleteSODeliv: TFDQuery;
+    qryDeleteSOPicking: TFDQuery;
   private
     procedure LoadSOPickingList(var PickingList: TPickingList);
     procedure LoadSOPickingLineDets(var PickingList: TPickingList);

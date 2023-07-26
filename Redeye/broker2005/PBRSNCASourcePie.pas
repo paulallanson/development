@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, DB, DBTables, VclTee.TeEngine, VclTee.Series, ExtCtrls,
+  Dialogs, StdCtrls, DB, VclTee.TeEngine, VclTee.Series, ExtCtrls,
   VclTee.TeeProcs, VclTee.Chart, VclTee.DbChart, Buttons, CCSPrint,
-  VclTee.TeeGDIPlus;
+  VclTee.TeeGDIPlus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSNCASourcePieFrm = class(TForm)
-    qryGraph1: TQuery;
+    qryGraph1: TFDQuery;
     dbchart1: TDBChart;
     Series1: TPieSeries;
     DBChart2: TDBChart;
@@ -20,9 +23,9 @@ type
     Panel2: TPanel;
     DBChart3: TDBChart;
     Series2: TPieSeries;
-    qryGraph2: TQuery;
-    qryGraph3: TQuery;
-    qryGraph4: TQuery;
+    qryGraph2: TFDQuery;
+    qryGraph3: TFDQuery;
+    qryGraph4: TFDQuery;
     Panel1: TPanel;
     btnPrint: TBitBtn;
     btnClose: TButton;
@@ -44,7 +47,7 @@ var
 
 implementation
 
-Uses Printers; 
+uses Printers; 
 
 {$R *.dfm}
 

@@ -515,8 +515,8 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     Left = 112
     Top = 200
   end
-  object qryPurchByInv: TQuery
-    DatabaseName = 'pb'
+  object qryPurchByInv: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT Supplier_Invoice.Vat_Value as vat,'
       
@@ -576,8 +576,8 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Size = 80
     end
   end
-  object qryDetail: TQuery
-    DatabaseName = 'pb'
+  object qryDetail: TFDQuery
+    ConnectionName = 'pb'
     Left = 424
     Top = 185
   end

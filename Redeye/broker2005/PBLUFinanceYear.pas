@@ -13,12 +13,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUFinanceYearFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -30,11 +33,11 @@ type
     AddBitBtn: TBitBtn;
     ChgBitBtn: TBitBtn;
     DelBitBtn: TBitBtn;
-    qryCheckSalesProfit: TQuery;
-    qryGetLastFY: TQuery;
-    qryCheckRepCatBudgets: TQuery;
-    qryCompany: TQuery;
-    qryCheckRepBudgets: TQuery;
+    qryCheckSalesProfit: TFDQuery;
+    qryGetLastFY: TFDQuery;
+    qryCheckRepCatBudgets: TFDQuery;
+    qryCompany: TFDQuery;
+    qryCheckRepBudgets: TFDQuery;
     btnRepBudget: TBitBtn;
     btnCustBudget: TBitBtn;
     procedure FormActivate(Sender: TObject);

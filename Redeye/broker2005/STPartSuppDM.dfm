@@ -4,8 +4,8 @@ object STPartSDM: TSTPartSDM
   Top = 34
   Height = 636
   Width = 941
-  object PartSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object PartSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
@@ -57,8 +57,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object PartNoSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object PartNoSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
@@ -87,8 +87,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object PartWithSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object PartWithSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Part.Part, Part.Part_Description, Part.Purch_Pack_Quantit' +
@@ -137,8 +137,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryInsertPart: TQuery
-    DatabaseName = 'PB'
+  object qryInsertPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into'
       'Part(Part, Part_Description, Part_Updated, Part_Cost_List,'
@@ -291,8 +291,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryInsertPartSupp: TQuery
-    DatabaseName = 'PB'
+  object qryInsertPartSupp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into '
       'Part_Supplier(Supplier, Branch_No, Part,'
@@ -337,8 +337,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryPartDtls: TQuery
-    DatabaseName = 'PB'
+  object qryPartDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Part'
@@ -356,8 +356,8 @@ object STPartSDM: TSTPartSDM
     Left = 224
     Top = 192
   end
-  object qryGetImpFieldDefs: TQuery
-    DatabaseName = 'PB'
+  object qryGetImpFieldDefs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Supplier_Prod_Imp'
@@ -371,8 +371,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdatePart: TQuery
-    DatabaseName = 'PB'
+  object qryUpdatePart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE part'
       'SET Part_description = :Part_Description,'
@@ -458,8 +458,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryDeletePart: TQuery
-    DatabaseName = 'PB'
+  object qryDeletePart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Part'
       'WHERE Part = :Part')
@@ -472,8 +472,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryDeletePartSupplier: TQuery
-    DatabaseName = 'PB'
+  object qryDeletePartSupplier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM part_Supplier'
       
@@ -493,8 +493,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Supplier'
@@ -508,8 +508,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdatePartPurchPrice: TQuery
-    DatabaseName = 'PB'
+  object qryUpdatePartPurchPrice: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE part'
       'SET Part_Purchase_Price = :Part_Purchase_Price'
@@ -528,8 +528,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryDoesPartExist: TQuery
-    DatabaseName = 'PB'
+  object qryDoesPartExist: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part, Sell_Pack_Quantity, Product_Class'
       'FROM Part '
@@ -543,8 +543,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPartSuppDisc: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPartSuppDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Part_Supplier '
       'SET Discount_this_Part = :Discount_this_Part '
@@ -575,8 +575,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryFindPartGroup: TQuery
-    DatabaseName = 'PB'
+  object qryFindPartGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from part_group '
       'where part_group_descr_short = :part_group_descr_short;')
@@ -589,8 +589,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryNewPartGroup: TQuery
-    DatabaseName = 'PB'
+  object qryNewPartGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT into part_group '
       'Values(:part_group, :part_group_descr_short, :part_group_descr);')
@@ -613,16 +613,16 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetHighestPartGroup: TQuery
-    DatabaseName = 'PB'
+  object qryGetHighestPartGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(part_group) as max_part_group'
       'from part_group;')
     Left = 304
     Top = 24
   end
-  object qrySelNoOfKFieldProdGrps: TQuery
-    DatabaseName = 'PB'
+  object qrySelNoOfKFieldProdGrps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select count(*) as NoOfGroups'
       'from part_group  '
@@ -630,8 +630,8 @@ object STPartSDM: TSTPartSDM
     Left = 224
     Top = 264
   end
-  object qryInsertFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryInsertFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Form_Reference'
       '(Form_reference,'
@@ -702,8 +702,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetUOM: TQuery
-    DatabaseName = 'PB'
+  object qryGetUOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Unit_of_measure'
       'from Unit_of_Measure'
@@ -717,8 +717,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryAddUOM: TQuery
-    DatabaseName = 'PB'
+  object qryAddUOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Unit_of_Measure'
       'values (:Unit_of_Measure,:UOM_Description)')
@@ -736,24 +736,24 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryLastUOM: TQuery
-    DatabaseName = 'PB'
+  object qryLastUOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(unit_of_measure) as Last_UOM'
       'from unit_of_measure')
     Left = 384
     Top = 176
   end
-  object qryLastFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryLastFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(Form_Reference) as Last_Form_Ref'
       'from Form_Reference')
     Left = 384
     Top = 224
   end
-  object qryUpdateFormRef: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateFormRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Form_Reference'
       'set Form_Reference_Descr = :Form_Reference_Descr,'
@@ -795,8 +795,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryInsertStkLevels: TQuery
-    DatabaseName = 'PB'
+  object qryInsertStkLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Levels'
       '(Part,'
@@ -856,8 +856,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartStore: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartStore: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Store'
@@ -871,15 +871,15 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryLastStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryLastStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Store_Stock) as Last_Store_Stock'
       'from Store_stock')
     Left = 384
     Top = 384
   end
-  object qryUpdateStkLevels: TQuery
+  object qryUpdateStkLevels: TFDQuery
     SQL.Strings = (
       'update part_store_levels'
       'set Minimum_Stock = :Minimum_Stock,'
@@ -928,8 +928,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustWithAccCode: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustWithAccCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Customer, Customer.Product_Code_Prefix'
       'from Customer_Branch, Customer'
@@ -944,8 +944,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetContract: TQuery
-    DatabaseName = 'PB'
+  object qryGetContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Customer'
       'from Customer'
@@ -959,8 +959,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryAddCustDisc: TQuery
-    DatabaseName = 'PB'
+  object qryAddCustDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Customer_Discount'
       'select ISNULL(max(Customer_Discount),0)+1,'
@@ -1017,8 +1017,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelCustDisc: TQuery
-    DatabaseName = 'PB'
+  object qryDelCustDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Customer_Discount'
       'where supplier = :Supplier and '
@@ -1037,8 +1037,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryAddPartAlloc: TQuery
-    DatabaseName = 'PB'
+  object qryAddPartAlloc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Allocation'
       '(Part_Store_Allocation, Store_Stock, Quantity_Allocated, Part)'
@@ -1064,8 +1064,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryGetStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from Store_Stock'
@@ -1110,8 +1110,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartGroup: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Part_Group'
@@ -1125,8 +1125,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryDelCustStockDisc: TQuery
-    DatabaseName = 'PB'
+  object qryDelCustStockDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Customer_Discount'
       'where supplier = 0 and '
@@ -1140,8 +1140,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryCheckPartSuppDisc: TQuery
-    DatabaseName = 'PB'
+  object qryCheckPartSuppDisc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Supplier'
@@ -1167,8 +1167,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Price_Unit'
       'FROM Price_Unit'
@@ -1182,8 +1182,8 @@ object STPartSDM: TSTPartSDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetVatCode: TQuery
-    DatabaseName = 'PB'
+  object qryGetVatCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Vat_Code '
       'FROM Vat_Code'

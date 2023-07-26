@@ -16,17 +16,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint,
-  QrExport;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPEnqLstFrm = class(TForm)
     qrpdetails: TQuickRep;
     PageHeaderQRBand: TQRBand;
-    GetEnquiriesSQL: TQuery;
+    GetEnquiriesSQL: TFDQuery;
     EnquiriesSRC: TDataSource;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     QRLabel6: TQRLabel;
     QRDBText6: TQRDBText;
     QRLabel7: TQRLabel;
@@ -35,7 +38,7 @@ type
     QRLabel11: TQRLabel;
     QRLabel10: TQRLabel;
     QRLabel12: TQRLabel;
-    GetQtysSQL: TQuery;
+    GetQtysSQL: TFDQuery;
     RunDateQRLabel: TQRLabel;
     QRLabel1: TQRLabel;
     QRLblCst: TQRLabel;
@@ -73,7 +76,7 @@ type
     QRLabel2: TQRLabel;
     QRDBText3: TQRDBText;
     GetEnquiriesSQLSupplier_Count: TIntegerField;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     StringField1: TStringField;
     IntegerField1: TIntegerField;
     IntegerField2: TIntegerField;

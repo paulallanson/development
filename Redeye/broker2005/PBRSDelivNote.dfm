@@ -268,8 +268,8 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
   end
-  object UpDelivSQL: TQuery
-    DatabaseName = 'PB'
+  object UpDelivSQL: TFDQuery
+    ConnectionName = 'PB'
     Left = 272
     Top = 32
   end

@@ -206,8 +206,8 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     ListSource = dtsStatus
     TabOrder = 10
   end
-  object qryPOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryPOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select purch_ord_Line_status.purch_ord_Line_status as Status,'
       'purch_ord_Line_status.Description '
@@ -223,8 +223,8 @@ object PBRSOSSInvFrm: TPBRSOSSInvFrm
     Left = 576
     Top = 112
   end
-  object qrySOStatus: TQuery
-    DatabaseName = 'PB'
+  object qrySOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sales_order_head_status.sales_order_head_status as Status' +

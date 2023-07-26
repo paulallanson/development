@@ -68,13 +68,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, ExtCtrls, QuickRpt, Qrctrls, CCSPrint, CCSCommon, qrprntr,
-  printers;
+  Db, ExtCtrls, QuickRpt, Qrctrls, CCSPrint, CCSCommon, qrprntr,
+  printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPJobBagExtrasWIPfrm = class(TForm)
     QuickReport: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrbPageHeader: TQRBand;
     qrlblTitle: TQRLabel;
     RunDateQRLabel: TQRLabel;
@@ -112,8 +115,8 @@ type
     QRLabel11: TQRLabel;
     QRDBText7: TQRDBText;
     qrlblOrderNo: TQRLabel;
-    qrySO: TQuery;
-    qryPO: TQuery;
+    qrySO: TFDQuery;
+    qryPO: TFDQuery;
     qrFooterJobBagSummary: TQRBand;
     QRDBText11: TQRDBText;
     QRDBText12: TQRDBText;

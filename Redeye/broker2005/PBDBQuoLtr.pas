@@ -306,28 +306,31 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSDataBroker, Db, DBTables, CCSPrint, PDLetter;
+  CCSDataBroker, Db, CCSPrint, PDLetter,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdbQuoLtr = class(TDataBroker)
-    GetNotesSQL: TQuery;
-    UpdEnqStatusSQL: TQuery;
-    GetPricesSQL: TQuery;
+    GetNotesSQL: TFDQuery;
+    UpdEnqStatusSQL: TFDQuery;
+    GetPricesSQL: TFDQuery;
     QuestionsSRC: TDataSource;
     EnquiriesSRC: TDataSource;
-    UpdStatusSQL: TQuery;
-    GetQtysSQL: TQuery;
-    GetAddDetailsSQL: TQuery;
-    GetRngEnqsSQL: TQuery;
+    UpdStatusSQL: TFDQuery;
+    GetQtysSQL: TFDQuery;
+    GetAddDetailsSQL: TFDQuery;
+    GetRngEnqsSQL: TFDQuery;
     PartsSRC: TDataSource;
-    GetQuestionsSQL: TQuery;
+    GetQuestionsSQL: TFDQuery;
     PricesSRC: TDataSource;
-    GetPartsSQL: TQuery;
+    GetPartsSQL: TFDQuery;
     AddDetailsSRC: TDataSource;
-    GetEnquiriesSQL: TQuery;
-    GetExtrasSQL: TQuery;
+    GetEnquiriesSQL: TFDQuery;
+    GetExtrasSQL: TFDQuery;
     ExtrasSRC: TDataSource;
-    GetOptChgsSQL: TQuery;
+    GetOptChgsSQL: TFDQuery;
   private
     fGetRngSQL: Boolean;
     procedure setRngSQL(const Value: Boolean);

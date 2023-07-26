@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons;
 
 type
   TPBLUDBAliasFrm = class(TForm)
@@ -32,7 +32,8 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, PBMaintDBAlias;
+uses pbMainMenu, pbDatabase, PBMaintDBAlias,
+  FireDAC.Comp.Client;
 
 {$R *.DFM}
 
@@ -96,7 +97,7 @@ begin
   lstbxAliasList.clear;
   sgList := TStringList.Create;
   try
-    Session.GetAliasNames(sgList);
+    FDManager.GetConnectionDefNames(sgList);
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if ((pos('Redeye',sgList[iAliasList]) > 0) or (pos('redeye',sgList[iAliasList]) > 0) or

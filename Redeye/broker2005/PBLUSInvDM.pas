@@ -4,19 +4,22 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, PBPOObjects, CCSCommon;
+  Db, PBPOObjects, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmLookUpSInv = class(TDataModule)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
-    GetCustSQL: TQuery;
-    Query1: TQuery;
-    DummySQL: TQuery;
-    GetStatementSQL: TQuery;
-    GetCustStatSQL: TQuery;
-    SetStatementSQL: TQuery;
-    oldDummySQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    GetCustSQL: TFDQuery;
+    Query1: TFDQuery;
+    DummySQL: TFDQuery;
+    GetStatementSQL: TFDQuery;
+    GetCustStatSQL: TFDQuery;
+    SetStatementSQL: TFDQuery;
+    oldDummySQL: TFDQuery;
     GetDetsSQLSales_Invoice: TIntegerField;
     GetDetsSQLSales_Invoice_No: TStringField;
     GetDetsSQLInvoice_Date: TDateTimeField;

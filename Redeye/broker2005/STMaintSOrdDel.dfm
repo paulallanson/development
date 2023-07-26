@@ -264,8 +264,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
   end
-  object qryCourier: TQuery
-    DatabaseName = 'PB'
+  object qryCourier: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from courier')
@@ -277,8 +277,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Left = 416
     Top = 59
   end
-  object qryCourierService: TQuery
-    DatabaseName = 'PB'
+  object qryCourierService: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from courier_service'
@@ -297,8 +297,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Left = 416
     Top = 107
   end
-  object qryGetSODelivery: TQuery
-    DatabaseName = 'PB'
+  object qryGetSODelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_order_Delivery'
@@ -318,8 +318,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpSODelivery: TQuery
-    DatabaseName = 'PB'
+  object qryUpSODelivery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update sales_order_delivery'
       'set Delivery_date = :Delivery_date,'
@@ -380,8 +380,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from company'

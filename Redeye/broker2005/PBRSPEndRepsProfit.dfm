@@ -239,14 +239,14 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
       OnClick = rdgrpReportTypeClick
     end
   end
-  object qrySalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qrySalesProfit: TFDQuery
+    ConnectionName = 'PB'
     Left = 176
     Top = 48
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsFY
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsFY
     SQL.Strings = (
       'select *'
       'from Period'
@@ -266,8 +266,8 @@ object PBRSPEndRepsProfitFrm: TPBRSPEndRepsProfitFrm
     Left = 184
     Top = 80
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'

@@ -985,8 +985,8 @@ object STRPProductListFrm: TSTRPProductListFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       '        Part.Part_Description,'
@@ -1027,8 +1027,8 @@ object STRPProductListFrm: TSTRPProductListFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       '        Part.Part_Description,'

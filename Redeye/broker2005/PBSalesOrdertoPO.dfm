@@ -135,8 +135,8 @@ object PBSalesOrdertoPOFrm: TPBSalesOrdertoPOFrm
         Visible = True
       end>
   end
-  object qryDirectSO: TQuery
-    DatabaseName = 'PB'
+  object qryDirectSO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  sales_order,'
       '        date_ordered,'

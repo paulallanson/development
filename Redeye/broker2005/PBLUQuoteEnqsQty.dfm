@@ -145,8 +145,8 @@ object PBLUQuoteEnqsQtyFrm: TPBLUQuoteEnqsQtyFrm
         Visible = True
       end>
   end
-  object qryCustEnquiryQtys: TQuery
-    DatabaseName = 'PB'
+  object qryCustEnquiryQtys: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  enquiry_linequantity.Enquiry,'

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, CCSPrint, DateSelV5, PBPOObjects, ComCtrls, OleCtnrs;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, CCSPrint, DateSelV5, PBPOObjects, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSalesCommFrm = class(TForm)
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     dtsrcSalesComm: TDataSource;
     pnlDisplay: TPanel;
     pnlControls: TPanel;
@@ -36,7 +39,7 @@ type
     DateToButton: TSpeedButton;
     Label1: TLabel;
     Label2: TLabel;
-    oldqrySalesComm: TQuery;
+    oldqrySalesComm: TFDQuery;
     qrySalesCommCustomer: TIntegerField;
     qrySalesCommBranch_no: TIntegerField;
     qrySalesCommSales_Invoice: TIntegerField;
@@ -55,10 +58,10 @@ type
     qrySalesCommCommission_Rate: TFloatField;
     qrySalesCommReference: TStringField;
     qrySalesCommInvoice_Description: TStringField;
-    qryCompanyCommType: TQuery;
+    qryCompanyCommType: TFDQuery;
     qrySalesCommPaidDateDesc: TStringField;
     rdgrpCommType: TRadioGroup;
-    qryRepName: TQuery;
+    qryRepName: TFDQuery;
     RdGrpRepTyp: TRadioGroup;
     ChkBxNewPgRep: TCheckBox;
     OleContainer1: TOleContainer;

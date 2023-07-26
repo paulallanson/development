@@ -1632,8 +1632,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Left = 177
     Top = 86
   end
-  object GetAllocDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllocDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part.Part, Part.Part_Description,Sales_Order.Sales_Order,'
       
@@ -1698,8 +1698,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllAllocDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllAllocDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store_Allocation.Part_Store_Allocation'
       'FROM'
@@ -1728,8 +1728,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -1766,8 +1766,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSOHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set sales_Order.Sales_order_Head_Status = :status'
@@ -1789,8 +1789,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelivNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDelivNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'from Narrative_Line'
@@ -1805,8 +1805,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllocMasterQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllocMasterQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Int_sel.*, Sales_Order.Sales_Order, Sales_Order.Sales_ord' +
@@ -1877,8 +1877,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object DummySQL: TQuery
-    DatabaseName = 'PB'
+  object DummySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Int_sel.*, Sales_Order.Sales_Order, Sales_Order.Sales_ord' +
@@ -1918,8 +1918,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  '#39#39' as Branch_Name,'
@@ -1946,8 +1946,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Left = 176
     Top = 8
   end
-  object GetAccountSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAccountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Account_Code'
       'from'
@@ -1973,8 +1973,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllocSerialNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAllocSerialNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from sales_order_line_serial_no'
@@ -1994,8 +1994,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCompName: TQuery
-    DatabaseName = 'PB'
+  object qryCompName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'
@@ -2011,8 +2011,8 @@ object STRPDelivfrm: TSTRPDelivfrm
     Left = 375
     Top = 24
   end
-  object qryUOM: TQuery
-    DatabaseName = 'PB'
+  object qryUOM: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Unit_of_measure'
@@ -2026,8 +2026,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustHOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustHOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -2071,8 +2071,8 @@ object STRPDelivfrm: TSTRPDelivfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCourierSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCourierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Courier.Courier_Name,'
       '        Sales_Order_Delivery.Delivery_Weight_kilos,'

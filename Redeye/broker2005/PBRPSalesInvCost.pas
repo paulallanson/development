@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint, DateUtils;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSalesInvCostFrm = class(TForm)
@@ -14,19 +17,19 @@ type
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
     QRSubDetail1: TQRSubDetail;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrlblDept1: TQRLabel;
     qrlblDept2: TQRLabel;
     qrlblDept3: TQRLabel;
-    qryDepartments: TQuery;
+    qryDepartments: TFDQuery;
     QRBand3: TQRBand;
     QRLabel7: TQRLabel;
     QRSysData1: TQRSysData;
     QRSysData2: TQRSysData;
     qrDbRepSortBy: TQRDBText;
-    qryDummy: TQuery;
+    qryDummy: TFDQuery;
     QRDBText1: TQRDBText;
-    qryDataCollect: TQuery;
+    qryDataCollect: TFDQuery;
     dtsReport: TDataSource;
     QRLabel15: TQRLabel;
     QRLabel16: TQRLabel;
@@ -137,8 +140,8 @@ type
     qrlblActContrib: TQRLabel;
     qrlblEstContrib: TQRLabel;
     qrlblEstQuantity: TQRLabel;
-    qryGetInvoiced: TQuery;
-    qryCatAnalysis: TQuery;
+    qryGetInvoiced: TFDQuery;
+    qryCatAnalysis: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;

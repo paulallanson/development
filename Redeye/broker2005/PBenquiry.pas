@@ -4,78 +4,81 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, Buttons, ComCtrls, Grids, Spin, DB, DBTables, PBPOObjects,
+  ExtCtrls, StdCtrls, Buttons, ComCtrls, Grids, Spin, DB, PBPOObjects,
   OleCtnrs, PBEnqObjects, PBMaintEnquiryDoc, ShellAPI, PBMaintPOEmail,
-  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX;
+  INIFiles, CCSCommon, PBDocObjects, PBDocObjectsDM, ActiveX,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnquiryFrm = class(TForm)
     Label8: TLabel;
     EnqLineList: TListBox;
     LineGrid: TStringGrid;
-    CapabilitySQL: TQuery;
-    QuestionSQL: TQuery;
-    InsEnqLineQtySQL: TQuery;
-    UpEnqLineCapSQL: TQuery;
-    UpEnqLineQSQL: TQuery;
-    UpEnqLineAddSQL: TQuery;
-    UpEnqLinePartSQL: TQuery;
-    UpCompanySQL: TQuery;
-    GetCompanySQL: TQuery;
-    DelEnqSQL: TQuery;
+    CapabilitySQL: TFDQuery;
+    QuestionSQL: TFDQuery;
+    InsEnqLineQtySQL: TFDQuery;
+    UpEnqLineCapSQL: TFDQuery;
+    UpEnqLineQSQL: TFDQuery;
+    UpEnqLineAddSQL: TFDQuery;
+    UpEnqLinePartSQL: TFDQuery;
+    UpCompanySQL: TFDQuery;
+    GetCompanySQL: TFDQuery;
+    DelEnqSQL: TFDQuery;
     EnquiryLbl: TLabel;
-    AddEnqSupplierSQL: TQuery;
-    DelEnqLineSQL: TQuery;
-    DelEnqLineQtySQL: TQuery;
-    DelEnqQStSQL: TQuery;
-    DelEnqLineAddSQL: TQuery;
-    DelEnqPartSQL: TQuery;
-    DelEnqCapSQL: TQuery;
-    DelEnqSuppSQL: TQuery;
-    DelEnqSuppQtySQL: TQuery;
-    DelEnqSuppAddSQL: TQuery;
+    AddEnqSupplierSQL: TFDQuery;
+    DelEnqLineSQL: TFDQuery;
+    DelEnqLineQtySQL: TFDQuery;
+    DelEnqQStSQL: TFDQuery;
+    DelEnqLineAddSQL: TFDQuery;
+    DelEnqPartSQL: TFDQuery;
+    DelEnqCapSQL: TFDQuery;
+    DelEnqSuppSQL: TFDQuery;
+    DelEnqSuppQtySQL: TFDQuery;
+    DelEnqSuppAddSQL: TFDQuery;
     EnquiryMessageLbl: TLabel;
-    GetLastNarrSQL: TQuery;
-    AddNarrSQL: TQuery;
-    AddEnqLineSQL: TQuery;
-    DelEnqSupplierSQL: TQuery;
-    DelAllEnqSuppQtysSQL: TQuery;
-    CheckEnqSuppSQL: TQuery;
-    CheckEnqSuppQtySQL: TQuery;
-    CheckEnqQtySQL: TQuery;
-    PaperDetailSQL: TQuery;
-    qryCompany: TQuery;
-    DelEnqOneSuppAddSQL: TQuery;
-    UpEnqSupplierSQL: TQuery;
-    QuestListSQL: TQuery;
-    OptionsSQL: TQuery;
-    UpEnqLineOptSQL: TQuery;
-    DelEnqOptSQL: TQuery;
-    AddEnqSuppOChgsSQL: TQuery;
-    GetLastAddChgSQL: TQuery;
-    CheckEnqSuppOChgsSQL: TQuery;
-    DelEnqSuppOChgsSQL: TQuery;
+    GetLastNarrSQL: TFDQuery;
+    AddNarrSQL: TFDQuery;
+    AddEnqLineSQL: TFDQuery;
+    DelEnqSupplierSQL: TFDQuery;
+    DelAllEnqSuppQtysSQL: TFDQuery;
+    CheckEnqSuppSQL: TFDQuery;
+    CheckEnqSuppQtySQL: TFDQuery;
+    CheckEnqQtySQL: TFDQuery;
+    PaperDetailSQL: TFDQuery;
+    qryCompany: TFDQuery;
+    DelEnqOneSuppAddSQL: TFDQuery;
+    UpEnqSupplierSQL: TFDQuery;
+    QuestListSQL: TFDQuery;
+    OptionsSQL: TFDQuery;
+    UpEnqLineOptSQL: TFDQuery;
+    DelEnqOptSQL: TFDQuery;
+    AddEnqSuppOChgsSQL: TFDQuery;
+    GetLastAddChgSQL: TFDQuery;
+    CheckEnqSuppOChgsSQL: TFDQuery;
+    DelEnqSuppOChgsSQL: TFDQuery;
     svDlgOfficeDoc: TSaveDialog;
-    qryGetLooseEnqLineQtys: TQuery;
-    qryDelEnqLineParts: TQuery;
-    qryGetActiveCustomerContact: TQuery;
+    qryGetLooseEnqLineQtys: TFDQuery;
+    qryDelEnqLineParts: TFDQuery;
+    qryGetActiveCustomerContact: TFDQuery;
     stsbrDetails: TStatusBar;
     pnlFooter: TPanel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    custreps: TQuery;
-    QCustomer: TQuery;
-    ContactSQL: TQuery;
-    AddEnqSuppQtySQL: TQuery;
-    CustRepSQL: TQuery;
-    OperatorSQL: TQuery;
-    AddEnqHeaderSQL: TQuery;
-    UpEnqLineSQL: TQuery;
-    UpEnqHeaderSQL: TQuery;
-    GetEnqSupplierSQL: TQuery;
-    DelEnqSupplierQtySQL: TQuery;
-    DelEnqQtySQL: TQuery;
-    qryProductType: TQuery;
+    custreps: TFDQuery;
+    QCustomer: TFDQuery;
+    ContactSQL: TFDQuery;
+    AddEnqSuppQtySQL: TFDQuery;
+    CustRepSQL: TFDQuery;
+    OperatorSQL: TFDQuery;
+    AddEnqHeaderSQL: TFDQuery;
+    UpEnqLineSQL: TFDQuery;
+    UpEnqHeaderSQL: TFDQuery;
+    GetEnqSupplierSQL: TFDQuery;
+    DelEnqSupplierQtySQL: TFDQuery;
+    DelEnqQtySQL: TFDQuery;
+    qryProductType: TFDQuery;
     DocOpenDialog: TOpenDialog;
     pnlLineDetails: TPanel;
     EnquiryLinePage: TPageControl;
@@ -194,7 +197,7 @@ type
     ChangeLineBitBtn: TBitBtn;
     DeleteLineBitBtn: TBitBtn;
     EnquiryLineGrid: TStringGrid;
-    oldCapabilitySQL: TQuery;
+    oldCapabilitySQL: TFDQuery;
     procedure DateBtnClick(Sender: TObject);
     procedure ContactComboDropDown(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -295,10 +298,10 @@ type
     procedure LoadOptions(iProduct: Integer);
     procedure GetAdditionalDetails;
     procedure DeleteLineForms;
-    procedure UpdateEnqHeader(EnqHeaderSQL: TQuery);
+    procedure UpdateEnqHeader(EnqHeaderSQL: TFDQuery);
     procedure GetEnquiryNumber;
     procedure UpdateEnqLine;
-    procedure UpdateLine(EnqLineSQL: TQuery; iNewLine: Integer);
+    procedure UpdateLine(EnqLineSQL: TFDQuery; iNewLine: Integer);
     procedure UpdateEnqLineQuestions(iline: Integer);
     procedure UpdateEnqLineAdds(iline: Integer);
     procedure UpdateEnqLineParts(iline: Integer);
@@ -1714,7 +1717,7 @@ begin
 end;
 
 
-procedure TPBEnquiryFrm.UpdateEnqHeader(EnqHeaderSQL: TQuery);
+procedure TPBEnquiryFrm.UpdateEnqHeader(EnqHeaderSQL: TFDQuery);
 begin
   {Update the Enquiry Header details}
   with EnqHeaderSQL do
@@ -1827,7 +1830,7 @@ begin
   end;
 end;
 
-procedure TPBEnquiryFrm.UpdateLine(EnqLineSQL: TQuery; iNewLine: Integer);
+procedure TPBEnquiryFrm.UpdateLine(EnqLineSQL: TFDQuery; iNewLine: Integer);
 begin
   with EnqLineSQL do
   begin
@@ -1884,7 +1887,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := PBenqlinetmp.iNarrative;
-    Narrative.Data := PBenqlinetmp.NotesMemo.Text;
+    Narrative.DataInfo := PBenqlinetmp.NotesMemo.Text;
     Narrative.SaveToDB;
     Result := Narrative.DbKey;
   finally
@@ -3238,7 +3241,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    PBEnqlinetmp.NotesMemo.Text := Narrative.Data;
+    PBEnqlinetmp.NotesMemo.Text := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;

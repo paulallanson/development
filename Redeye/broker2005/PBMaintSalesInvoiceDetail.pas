@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, ExtCtrls, DB, DBTables, StdCtrls, Buttons;
+  Dialogs, Grids, DBGrids, ExtCtrls, DB, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSalesInvoiceDetailFrm = class(TForm)
     pnlBottom: TPanel;
     DBGrid1: TDBGrid;
-    qrySIAllDetails: TQuery;
+    qrySIAllDetails: TFDQuery;
     dtsSIAllDetails: TDataSource;
     btnExcel: TBitBtn;
     pnlButton: TPanel;
@@ -44,7 +47,7 @@ type
     qrySIAllDetailscost_centre: TStringField;
     qrySIAllDetailsVat_Rate: TFloatField;
     qrySIAllDetailsDeliveryLocation: TStringField;
-    qryAdhoc: TQuery;
+    qryAdhoc: TFDQuery;
     qrySIAllDetailsSalesValue: TFloatField;
     procedure FormActivate(Sender: TObject);
     procedure btbtnCloseClick(Sender: TObject);

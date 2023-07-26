@@ -403,8 +403,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Kind = bkCancel
     end
   end
-  object qryCurrentProofStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCurrentProofStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       ' SELECT'
       '  PHist.Purchase_Order,'
@@ -550,9 +550,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Left = 24
     Top = 168
   end
-  object qryProofStatus: TQuery
+  object qryProofStatus: TFDQuery
     AutoRefresh = True
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select proof_status.description from proof_status')
     Left = 600

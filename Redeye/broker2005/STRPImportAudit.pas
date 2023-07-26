@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, Db, DBTables, ExtCtrls;
+  Qrctrls, QuickRpt, Db, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPImportAuditFrm = class(TForm)
     qrpImportAudit: TQuickRep;
     QRBand1: TQRBand;
     QRLabel1: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrgrpbAuditNumber: TQRGroup;
     QRSubDetail1: TQRSubDetail;
     QRSysData1: TQRSysData;

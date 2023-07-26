@@ -136,7 +136,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables, StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, CCSPrint, CCSCommon;
+  DB, StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPProofFrm = class(TForm)
@@ -151,8 +154,8 @@ type
     QRLabel17: TQRLabel;
     YourRefLbl: TQRLabel;
     AddressMemo: TQRMemo;
-    GetProofSQL: TQuery;
-    GetCompSQL: TQuery;
+    GetProofSQL: TFDQuery;
+    GetCompSQL: TFDQuery;
     CompSRC: TDataSource;
     POsSRC: TDataSource;
     QRShape1: TQRShape;
@@ -177,20 +180,20 @@ type
     QRShape8: TQRShape;
     QRBand1: TQRBand;
     QRLabel18: TQRLabel;
-    GetPOSQL: TQuery;
+    GetPOSQL: TFDQuery;
     QRLabel20: TQRLabel;
     LabQuantity: TQRLabel;
     LabJobTitle: TQRLabel;
     LabDepth: TQRLabel;
     LabWidth: TQRLabel;
-    FormRefSQL: TQuery;
+    FormRefSQL: TFDQuery;
     DateLbl: TQRLabel;
-    UpdSQL: TQuery;
-    AddSQL: TQuery;
-    qryZero: TQuery;
-    GetLastSQL: TQuery;
+    UpdSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    qryZero: TFDQuery;
+    GetLastSQL: TFDQuery;
     lblProofRevision: TQRLabel;
-    UpdPOSQL: TQuery;
+    UpdPOSQL: TFDQuery;
     QRShape10: TQRShape;
     QRShape11: TQRShape;
     QRShape12: TQRShape;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, ComCtrls, Db, DBTables, Buttons, ExtCtrls;
+  StdCtrls, Grids, ComCtrls, Db, Buttons, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSuppDet = class
@@ -25,14 +28,14 @@ type
     PartLabel: TLabel;
     PartEdit: TEdit;
     PartDescrEdit: TEdit;
-    GetPartSuppsQuery: TQuery;
-    GetSuppsQuery: TQuery;
+    GetPartSuppsQuery: TFDQuery;
+    GetSuppsQuery: TFDQuery;
     SuppsListView: TListView;
     AvailListView: TListView;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    AddSuppQuery: TQuery;
-    DelSuppsQuery: TQuery;
+    AddSuppQuery: TFDQuery;
+    DelSuppsQuery: TFDQuery;
     Label4: TLabel;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;

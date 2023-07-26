@@ -88,8 +88,8 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
       OnClick = mnuDeleteClick
     end
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Document_Structure'
       'WHERE Module_ID = :Module_ID')
@@ -102,8 +102,8 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Document_Structure'
       'VALUES (:Module_Id, :Folder_Name, GetDate())')
@@ -121,8 +121,8 @@ object PBMaintCompanyDocStructureFrm: TPBMaintCompanyDocStructureFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetNames: TQuery
-    DatabaseName = 'PB'
+  object qryGetNames: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Document_Structure'

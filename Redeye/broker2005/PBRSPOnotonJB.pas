@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, Buttons, Db, DBTables, CCSPrint;
+  Grids, DBGrids, ExtCtrls, ComCtrls, StdCtrls, Buttons, Db, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPOnotonJBfrm = class(TForm)
     stsDetails: TStatusBar;
     Panel1: TPanel;
     DBGrid1: TDBGrid;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     PreviewReportBitBtn: TBitBtn;
     PrintReportBitBtn: TBitBtn;

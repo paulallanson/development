@@ -63,8 +63,8 @@ object PBAuditControlFrm: TPBAuditControlFrm
     TabOrder = 5
     Kind = bkCancel
   end
-  object GetAuditFlagsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAuditFlagsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Audit_Log_Prog, Audit_Log_Upd, Audit_Log_Fields, Audit_Lo' +
@@ -74,8 +74,8 @@ object PBAuditControlFrm: TPBAuditControlFrm
     Left = 120
     Top = 24
   end
-  object UpdAuditFlagsSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdAuditFlagsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set'

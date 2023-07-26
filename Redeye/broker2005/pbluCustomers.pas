@@ -6,8 +6,11 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, ToolWin, Grids, DBGrids, ImgList, ExtCtrls, StdCtrls, Buttons,
   pbluCustOrders, pbluCustStock, pbluCustEnquiries, pbluCustJobs, pbluCustEvents,
-  pbluCustSalesInvoices, pbluCustQuotes, Db, DBTables, Menus, IdBaseComponent, IdComponent,
-  IdTCPConnection, IdTCPClient, IdHTTP, Inifiles, System.ImageList;
+  pbluCustSalesInvoices, pbluCustQuotes, Db, Menus, IdBaseComponent, IdComponent,
+  IdTCPConnection, IdTCPClient, IdHTTP, Inifiles, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmpbluCustomers = class(TForm)
@@ -146,7 +149,7 @@ type
     procedure SetOperator(iTempOp: Integer);
     procedure CreateCustomerTechXMLData(tmpCode: integer);
     procedure PostTechXMLtoSchedule(filename: string);
-    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TQuery; bBranch: boolean);
+    procedure MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery; bBranch: boolean);
     procedure ShowColumns;
     function CustomerOrdersExist: boolean;
     procedure SetCustomerInactive;
@@ -691,7 +694,7 @@ begin
     end;
 end;
 
-procedure TfrmpbluCustomers.MultiSQLAdd(sTempStr: String; tmpQuery: TQuery; bBranch: boolean);
+procedure TfrmpbluCustomers.MultiSQLAdd(sTempStr: String; tmpQuery: TFDQuery; bBranch: boolean);
 begin
   if bBranch then
     begin

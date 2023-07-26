@@ -341,8 +341,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     Left = 528
     Top = 216
   end
-  object qryUpdStocktake: TQuery
-    DatabaseName = 'PB'
+  object qryUpdStocktake: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Stock_Take'
       'set Stock_Take_Qty = :Stock_Take_Qty, Stock_Take_Status = '#39'H'#39
@@ -361,8 +361,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdStockTakeStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdStockTakeStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Stock_Take'
       'set Stock_Take_Status = '#39'H'#39

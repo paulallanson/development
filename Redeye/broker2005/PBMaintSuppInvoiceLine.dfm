@@ -259,15 +259,15 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
       OnChange = edtNominalChange
     end
   end
-  object qryVAT: TQuery
-    DatabaseName = 'PB'
+  object qryVAT: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from VAT_Code')
     Left = 424
     Top = 40
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Price_Unit')
     Left = 256

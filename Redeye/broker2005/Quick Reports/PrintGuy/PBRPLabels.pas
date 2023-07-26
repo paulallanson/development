@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, QrExport;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, PBPOObjects, qrprntr, printers, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPLabelsFrm = class(TForm)
     PBLabelsQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     PONumberLbl: TQRLabel;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
     AddressSRC: TDataSource;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     BoxQuantityLbl: TQRLabel;
     Memodescription: TQRMemo;
     FormRefLbl: TQRLabel;
@@ -34,7 +37,7 @@ type
     qrmCompany: TQRMemo;
     DeliveryDatelbl: TQRLabel;
     ReportImage: TQRImage;
-    qryGetFSCClaim: TQuery;
+    qryGetFSCClaim: TFDQuery;
     DeliveryName: TQRLabel;
     AddressMemo: TQRMemo;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:

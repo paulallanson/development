@@ -369,7 +369,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Left = 440
     Top = 120
   end
-  object Query1: TQuery
+  object Query1: TFDQuery
     Left = 248
     Top = 120
   end

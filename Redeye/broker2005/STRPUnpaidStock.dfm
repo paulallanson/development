@@ -1655,8 +1655,8 @@ object STRPUnpaidStockFrm: TSTRPUnpaidStockFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select delivery_detail.Date_Point,'
       '  delivery_detail.purchase_order,'
@@ -1829,8 +1829,8 @@ object STRPUnpaidStockFrm: TSTRPUnpaidStockFrm
       FieldName = 'Quantity'
     end
   end
-  object qrySalesInvDets: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvDets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct(pmOut.part_movement_reference),'
       

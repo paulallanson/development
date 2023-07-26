@@ -57,7 +57,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintSuppFrm = class(TForm)
@@ -65,10 +68,10 @@ type
     Label1: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     Label5: TLabel;
     Label7: TLabel;
@@ -90,38 +93,38 @@ type
     PostCodeEdit: TEdit;
     AccCodeEdit: TEdit;
     DiscountMemo: TMemo;
-    AddBranchSQL: TQuery;
-    UpdBranchSQL: TQuery;
-    DelBranchSQL: TQuery;
+    AddBranchSQL: TFDQuery;
+    UpdBranchSQL: TFDQuery;
+    DelBranchSQL: TFDQuery;
     FlashTimer: TTimer;
     Label2: TLabel;
     VATRefEdit: TEdit;
     Label3: TLabel;
     IntrastatSRC: TDataSource;
-    GetIntrastatSQL: TQuery;
+    GetIntrastatSQL: TFDQuery;
     IntrastatDBLookupComboBox: TDBLookupComboBox;
     CountrySRC: TDataSource;
-    GetCountrySQL: TQuery;
+    GetCountrySQL: TFDQuery;
     Label4: TLabel;
     CurrencyDBLookupComboBox: TDBLookupComboBox;
-    GetCompSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
-    CheckCustAccExistsSQL: TQuery;
-    GetCurrSQL: TQuery;
+    GetCompSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    GetCurrSQL: TFDQuery;
     CurrSRC: TDataSource;
-    GetVATSQL: TQuery;
+    GetVATSQL: TFDQuery;
     VATSRC: TDataSource;
     DefVATDBLookupComboBox: TDBLookupComboBox;
     VATBitBtn: TBitBtn;
     Label6: TLabel;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     VatMaintBitBtn: TBitBtn;
     Label12: TLabel;
     EANEdit: TEdit;
     Label13: TLabel;
     OurAccEdit: TEdit;
-    qryDelOrdList: TQuery;
-    qryAddOrdList: TQuery;
+    qryDelOrdList: TFDQuery;
+    qryAddOrdList: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

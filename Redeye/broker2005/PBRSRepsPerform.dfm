@@ -188,8 +188,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       TabOrder = 0
     end
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -202,8 +202,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Left = 336
     Top = 72
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Company'
@@ -211,13 +211,13 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Left = 16
     Top = 56
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 80
     Top = 24
   end
-  object AddIntSelQuery: TQuery
-    DatabaseName = 'PB'
+  object AddIntSelQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Sel5)'
@@ -272,8 +272,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryAddPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Total_Cost'
       'from Purch_Ord_add_charge'
@@ -295,8 +295,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Add_Cost'
       'from Purch_Ord_line_add_chg'
@@ -318,8 +318,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period'
       'from Period'
@@ -339,8 +339,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object SQLUpdIntSel: TQuery
-    DatabaseName = 'PB'
+  object SQLUpdIntSel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Int_Sel'
       'set Sel5= Sel5 + :Sel5,'
@@ -403,8 +403,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetFYPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryGetFYPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -419,8 +419,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Sales_Invoice_Line.Qty_Invoiced, Purchase_OrderLine.Order' +
@@ -465,8 +465,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCreditLines: TQuery
-    DatabaseName = 'PB'
+  object qryCreditLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -503,8 +503,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetProdCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Order_Price,'
       '        Price_unit_Factor as Order_unit_Factor,'
@@ -528,8 +528,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag_Line_Dets.Job_Bag_Line_Cost'
       'FROM Job_Bag_Line_Dets'
@@ -550,8 +550,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_line.Sales_Order,'
       '        Sales_Order_line.Sales_Order_line_no,'
@@ -581,8 +581,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  Purch_Ord.Purch_Ord,'
@@ -622,8 +622,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -681,8 +681,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Purch_Ord.Purch_Ord, '
@@ -720,8 +720,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sum(Part_Cost*((Sales_invoice_line.Qty_Invoiced*1.0000)/(' +

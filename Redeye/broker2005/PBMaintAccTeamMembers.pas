@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls, DBTables;
+  Dialogs, ExtCtrls, StdCtrls, Buttons, DB, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintAccTeamMembers = class(TForm)
@@ -12,12 +15,12 @@ type
     Panel2: TPanel;
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
-    qryOperators: TQuery;
+    qryOperators: TFDQuery;
     dtsOperators: TDataSource;
-    qryAdd: TQuery;
-    qryDummy: TQuery;
-    qryMembers: TQuery;
-    qryDelete: TQuery;
+    qryAdd: TFDQuery;
+    qryDummy: TFDQuery;
+    qryMembers: TFDQuery;
+    qryDelete: TFDQuery;
     Panel1: TPanel;
     Label3: TLabel;
     lblDetails: TLabel;
@@ -37,13 +40,13 @@ type
     Label6: TLabel;
     lstbxNonReps: TListBox;
     lstbxNonRepsCodes: TListBox;
-    qryReps: TQuery;
-    qryNonReps: TQuery;
-    qryDummyRep: TQuery;
+    qryReps: TFDQuery;
+    qryNonReps: TFDQuery;
+    qryDummyRep: TFDQuery;
     btnAddRep: TBitBtn;
     btnRemoveRep: TBitBtn;
-    qryDeleteReps: TQuery;
-    qryAddReps: TQuery;
+    qryDeleteReps: TFDQuery;
+    qryAddReps: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnAddClick(Sender: TObject);

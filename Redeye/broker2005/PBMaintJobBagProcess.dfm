@@ -317,8 +317,8 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       OnKeyPress = memHoursKeyPress
     end
   end
-  object qryWCGroups: TQuery
-    DatabaseName = 'PB'
+  object qryWCGroups: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Distinct Process.Process,'
       '      Work_Centre_Group.Work_Centre_Group,'

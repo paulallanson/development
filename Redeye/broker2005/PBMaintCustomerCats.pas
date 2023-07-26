@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, DBCtrls, StdCtrls, Buttons, Spin, ExtCtrls;
+  Dialogs, DB, DBCtrls, StdCtrls, Buttons, Spin, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCustomerCatsFrm = class(TForm)
@@ -12,11 +15,11 @@ type
     btnCancel: TBitBtn;
     Label1: TLabel;
     dblkpCategories: TDBLookupComboBox;
-    qryCategories: TQuery;
+    qryCategories: TFDQuery;
     dtsCategories: TDataSource;
     btnOperators: TBitBtn;
-    AddSQL: TQuery;
-    qryDelete: TQuery;
+    AddSQL: TFDQuery;
+    qryDelete: TFDQuery;
     radType: TRadioGroup;
     GroupBox1: TGroupBox;
     Label3: TLabel;

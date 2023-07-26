@@ -207,8 +207,8 @@ object STMaintPickFrm: TSTMaintPickFrm
         60)
     end
   end
-  object GetIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from int_sel'
@@ -223,8 +223,8 @@ object STMaintPickFrm: TSTMaintPickFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPickNotes: TQuery
-    DatabaseName = 'PB'
+  object qryPickNotes: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select distinct Sales_Order_Picking, Picking_List_Ref, Date_Pick' +
@@ -243,8 +243,8 @@ object STMaintPickFrm: TSTMaintPickFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProdLocation: TQuery
-    DatabaseName = 'PB'
+  object qryProdLocation: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Sales_order.Production_Location,'
       '        Production_Location.Receive_Forward_Stock'

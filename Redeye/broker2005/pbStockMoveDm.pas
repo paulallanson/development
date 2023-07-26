@@ -4,34 +4,37 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlStockMove = class(TDataModule)
-    GetStoresSQL: TQuery;
+    GetStoresSQL: TFDQuery;
     StoresDataSource: TDataSource;
-    CheckValidBinSQL: TQuery;
-    GetPartSql: TQuery;
-    UpdLastLotSQL: TQuery;
-    GetStoreStockIntSQL: TQuery;
-    GetStoreSQL: TQuery;
-    UpdStockSQL: TQuery;
-    DelStockSQL: TQuery;
-    GetStoreStockSQL: TQuery;
-    GetStoreBinSQL: TQuery;
-    AddStoreBinSQL: TQuery;
-    GetNextStockSQL: TQuery;
-    AddStockSQL: TQuery;
-    GetNextMoveSQL: TQuery;
-    AddMoveSQL: TQuery;
-    GetStoreStockNoSQL: TQuery;
-    CheckPartExistsQuery: TQuery;
-    AddPartQuery: TQuery;
-    UpdPartQuery: TQuery;
-    PriceUnitSQL: TQuery;
-    AddStStkSerial: TQuery;
-    qryGetStoreStock: TQuery;
-    qryPartInactive: TQuery;
+    CheckValidBinSQL: TFDQuery;
+    GetPartSql: TFDQuery;
+    UpdLastLotSQL: TFDQuery;
+    GetStoreStockIntSQL: TFDQuery;
+    GetStoreSQL: TFDQuery;
+    UpdStockSQL: TFDQuery;
+    DelStockSQL: TFDQuery;
+    GetStoreStockSQL: TFDQuery;
+    GetStoreBinSQL: TFDQuery;
+    AddStoreBinSQL: TFDQuery;
+    GetNextStockSQL: TFDQuery;
+    AddStockSQL: TFDQuery;
+    GetNextMoveSQL: TFDQuery;
+    AddMoveSQL: TFDQuery;
+    GetStoreStockNoSQL: TFDQuery;
+    CheckPartExistsQuery: TFDQuery;
+    AddPartQuery: TFDQuery;
+    UpdPartQuery: TFDQuery;
+    PriceUnitSQL: TFDQuery;
+    AddStStkSerial: TFDQuery;
+    qryGetStoreStock: TFDQuery;
+    qryPartInactive: TFDQuery;
   function validBin(iStore: integer; sBin: string): boolean;
   function GetPackSize(iTempPart: string): integer;
   procedure AddStock(sTempPart: String; iTempStore: Integer; sTempBin, sTempLot, sTempType, sTempRef: String; dTempDate: TDateTime;

@@ -1291,8 +1291,8 @@ object STRPSlwMvngStkRepfrm: TSTRPSlwMvngStkRepfrm
       end
     end
   end
-  object qrySlwMvngStk: TQuery
-    DatabaseName = 'PB'
+  object qrySlwMvngStk: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select   store_stock.part as Part,'
       '         part.part_description as Description,'
@@ -1426,8 +1426,8 @@ object STRPSlwMvngStkRepfrm: TSTRPSlwMvngStkRepfrm
     Left = 66
     Top = 16
   end
-  object SQLGetSlsDt: TQuery
-    DatabaseName = 'PB'
+  object SQLGetSlsDt: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT distinct Sales_Order.Sales_Order, Sales_Order.Date_Requir' +
@@ -1461,8 +1461,8 @@ object STRPSlwMvngStkRepfrm: TSTRPSlwMvngStkRepfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySlowMvgNoRep: TQuery
-    DatabaseName = 'PB'
+  object qrySlowMvgNoRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Store_Stock.Store_Quantity as Stock_Quantity,'
       #9'Store_Stock.Store_Cost as Stock_Value, '

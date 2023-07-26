@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QuickRpt, DB, DBTables, QRCtrls, ExtCtrls, CCSCommon, printers, qrprntr;
+  Dialogs, QuickRpt, DB, QRCtrls, ExtCtrls, CCSCommon, printers, qrprntr,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPFSCClaimFrm = class(TForm)
@@ -16,7 +19,7 @@ type
     QRSysData2: TQRSysData;
     QRSysData1: TQRSysData;
     qrHeadFSC: TQRGroup;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrFootProductType: TQRBand;
     qrsubdetails: TQRSubDetail;
     QRDBText1: TQRDBText;
@@ -42,7 +45,7 @@ type
     QRShape2: TQRShape;
     qrlblPOInStock: TQRLabel;
     qrlblPODespatched: TQRLabel;
-    qryGetStock: TQuery;
+    qryGetStock: TFDQuery;
     qrbDetailHeader: TQRChildBand;
     qrbSummaryHeader: TQRChildBand;
     QRLabel6: TQRLabel;

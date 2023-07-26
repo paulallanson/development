@@ -34,14 +34,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, DB, DBTables, StdCtrls, Buttons, ExtCtrls;
+  Grids, DBGrids, DB, StdCtrls, Buttons, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
   TfrmCSFaxStatus = class(TForm)
-    GetFaxesQuery: TQuery;
+    GetFaxesQuery: TFDQuery;
     GetFaxesDataSource: TDataSource;
-    GetFaxQuery: TQuery;
-    UpdFaxQuery: TQuery;
+    GetFaxQuery: TFDQuery;
+    UpdFaxQuery: TFDQuery;
     Label4: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
@@ -52,7 +56,7 @@ type
     ReFreshBitBtn: TBitBtn;
     Panel4: TPanel;
     ShowFaxesDBGrid: TDBGrid;
-    FaxDatabase: TDatabase;
+    FaxDatabase: TFDConnection;
     Timer1: TTimer;
     procedure FormActivate(Sender: TObject);
     procedure ShowFaxesDBGridColEnter(Sender: TObject);
@@ -63,7 +67,7 @@ type
     procedure ReFreshBitBtnClick(Sender: TObject);
     function GetFaxStatus(TempFax: string): Shortstring;
     procedure BitBtn1Click(Sender: TObject);
-    procedure FaxDatabaseLogin(Database: TDatabase; LoginParams: TStrings);
+    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
     procedure Timer1Timer(Sender: TObject);
   private
     { Private declarations }
@@ -198,7 +202,7 @@ begin
   close;
 end;
 
-procedure TfrmCSFaxStatus.FaxDatabaseLogin(Database: TDatabase;
+procedure TfrmCSFaxStatus.FaxDatabaseLogin(Database: TFDConnection;
   LoginParams: TStrings);
 begin
   {Get user and password from login screen};

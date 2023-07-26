@@ -191,8 +191,8 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
       Caption = 'lblCustomer'
     end
   end
-  object GetHeadDtlsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetHeadDtlsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer.Name AS Cust_name,'
       '        Supplier.Name AS Supp_Name,'
@@ -236,8 +236,8 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
         ParamType = ptUnknown
       end>
   end
-  object qryReason: TQuery
-    DatabaseName = 'PB'
+  object qryReason: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Inactive_reason')
@@ -249,8 +249,8 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Left = 168
     Top = 41
   end
-  object qryUpPorder: TQuery
-    DatabaseName = 'PB'
+  object qryUpPorder: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purchase_OrderLine'
       'set Inactive = :Inactive, '
@@ -292,8 +292,8 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCountJBLines: TQuery
-    DatabaseName = 'PB'
+  object qryCountJBLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select count(Job_Bag_Line) as Line_Count'
       'from Job_Bag_Line_Dets'
@@ -307,8 +307,8 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpJBInactive: TQuery
-    DatabaseName = 'PB'
+  object qryUpJBInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Job_Bag'
       'set Inactive = :Inactive'

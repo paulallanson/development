@@ -359,8 +359,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Height = 19
     Panels = <>
   end
-  object qryStockFrom: TQuery
-    DatabaseName = 'PB'
+  object qryStockFrom: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Store_Stock'
@@ -380,8 +380,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Left = 272
     Top = 120
   end
-  object qryStockTo: TQuery
-    DatabaseName = 'PB'
+  object qryStockTo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Store_Stock'
@@ -401,8 +401,8 @@ object STMaintStockFrm: TSTMaintStockFrm
     Left = 669
     Top = 128
   end
-  object qryUpdStoreStock: TQuery
-    DatabaseName = 'pb'
+  object qryUpdStoreStock: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update store_stock'
       'set Part = :Part'
@@ -421,8 +421,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdMovements: TQuery
-    DatabaseName = 'PB'
+  object qryUpdMovements: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Movement'
       'set Part = :Part_To'
@@ -453,8 +453,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetMovements: TQuery
-    DatabaseName = 'PB'
+  object qryGetMovements: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part_Movement'
@@ -474,8 +474,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdMovementBal: TQuery
-    DatabaseName = 'pb'
+  object qryUpdMovementBal: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Part_Movement'
       

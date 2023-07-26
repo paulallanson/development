@@ -4,8 +4,8 @@ object dtmdlStockMove: TdtmdlStockMove
   Top = 66
   Height = 479
   Width = 741
-  object GetStoresSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoresSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Store.*'
       'From Part_Store, Part_Store_Type'
@@ -24,8 +24,8 @@ object dtmdlStockMove: TdtmdlStockMove
     Left = 104
     Top = 16
   end
-  object CheckValidBinSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckValidBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from part_Store_bin'
@@ -45,8 +45,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetPartSql: TQuery
-    DatabaseName = 'PB'
+  object GetPartSql: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Part'
@@ -61,8 +61,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object UpdLastLotSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastLotSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set Last_Store_Lot = :Last_Store_Lot'
@@ -82,8 +82,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockIntSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockIntSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Store_Stock.Store_Quantity,'
       '       Store_Stock.Store_Cost,'
@@ -103,8 +103,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetStoreSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Part_Store'
@@ -120,8 +120,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object UpdStockSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Store_Stock'
       'Set'
@@ -177,8 +177,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object DelStockSQL: TQuery
-    DatabaseName = 'PB'
+  object DelStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Store_Stock'
       'Where (Store_Stock = :Store_Stock) and'
@@ -194,8 +194,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Store_Stock'
       'From Store_Stock'
@@ -242,8 +242,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetStoreBinSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Part_Store_Bin'
@@ -266,8 +266,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object AddStoreBinSQL: TQuery
-    DatabaseName = 'PB'
+  object AddStoreBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part_Store_Bin'
       '(Part_Store, Part_Bin, Bin_Can_Pick)'
@@ -296,8 +296,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetNextStockSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Store_Stock) as Last_Code'
       'From Store_Stock'
@@ -305,8 +305,8 @@ object dtmdlStockMove: TdtmdlStockMove
     Left = 272
     Top = 16
   end
-  object AddStockSQL: TQuery
-    DatabaseName = 'PB'
+  object AddStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Store_Stock'
       
@@ -423,16 +423,16 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetNextMoveSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextMoveSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Part_Movement) as Last_Code'
       'From Part_Movement')
     Left = 40
     Top = 248
   end
-  object AddMoveSQL: TQuery
-    DatabaseName = 'PB'
+  object AddMoveSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part_Movement'
       
@@ -575,8 +575,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_Stock.Store_Stock'
       'from Store_Stock'
@@ -609,8 +609,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object CheckPartExistsQuery: TQuery
-    DatabaseName = 'PB'
+  object CheckPartExistsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
@@ -623,8 +623,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object AddPartQuery: TQuery
-    DatabaseName = 'PB'
+  object AddPartQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -782,8 +782,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object UpdPartQuery: TQuery
-    DatabaseName = 'PB'
+  object UpdPartQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'Set Part_Purchase_Price = :Part_Purchase_Price,'
@@ -852,8 +852,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object PriceUnitSQL: TQuery
-    DatabaseName = 'PB'
+  object PriceUnitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -867,8 +867,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object AddStStkSerial: TQuery
-    DatabaseName = 'PB'
+  object AddStStkSerial: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into store_stock_Serial_item'
       '(Store_Stock, Serial_Item_no, Serial_item_from, serial_item_to)'
@@ -900,8 +900,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object qryGetStoreStock: TQuery
-    DatabaseName = 'pb'
+  object qryGetStoreStock: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select isnull(Sum(Store_Quantity),0) as Total_Stock,'
       '       isnull(Sum(Store_Cost),0.00) as Total_Stock_Value,'
@@ -931,8 +931,8 @@ object dtmdlStockMove: TdtmdlStockMove
         ParamType = ptUnknown
       end>
   end
-  object qryPartInactive: TQuery
-    DatabaseName = 'PB'
+  object qryPartInactive: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part'
       'set Not_in_Use = '#39'Y'#39

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, DBTables, ComCtrls;
+  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSRepsPerformfrm = class(TForm)
@@ -18,31 +21,31 @@ type
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;
-    qryFY: TQuery;
+    qryFY: TFDQuery;
     dtsFY: TDataSource;
-    qryCompany: TQuery;
-    qryReport: TQuery;
-    AddIntSelQuery: TQuery;
-    qryAddPOCosts: TQuery;
-    AddCostsQuery: TQuery;
-    qryPeriod: TQuery;
-    SQLUpdIntSel: TQuery;
-    qryGetFYPeriods: TQuery;
+    qryCompany: TFDQuery;
+    qryReport: TFDQuery;
+    AddIntSelQuery: TFDQuery;
+    qryAddPOCosts: TFDQuery;
+    AddCostsQuery: TFDQuery;
+    qryPeriod: TFDQuery;
+    SQLUpdIntSel: TFDQuery;
+    qryGetFYPeriods: TFDQuery;
     pnlProgress: TPanel;
     Label2: TLabel;
     Label3: TLabel;
     lblProgress: TLabel;
     lblRecordCount: TLabel;
     prgrsbrImport: TProgressBar;
-    GetCostsQuery: TQuery;
-    qryCreditLines: TQuery;
-    qryGetProdCosts: TQuery;
-    qryGetJBCrCosts: TQuery;
-    qryGetSOCrCosts: TQuery;
-    qryGetPOCrCosts: TQuery;
-    qryGetJBCosts: TQuery;
-    qryGetPOCosts: TQuery;
-    qryGetSOCosts: TQuery;
+    GetCostsQuery: TFDQuery;
+    qryCreditLines: TFDQuery;
+    qryGetProdCosts: TFDQuery;
+    qryGetJBCrCosts: TFDQuery;
+    qryGetSOCrCosts: TFDQuery;
+    qryGetPOCrCosts: TFDQuery;
+    qryGetJBCosts: TFDQuery;
+    qryGetPOCosts: TFDQuery;
+    qryGetSOCosts: TFDQuery;
     procedure rgRepClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnRepClick(Sender: TObject);

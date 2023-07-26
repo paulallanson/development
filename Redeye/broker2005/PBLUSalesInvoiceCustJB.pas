@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, Buttons, PBSalesInvoiceDM, ExtCtrls, DB, DBTables;
+  Dialogs, Grids, DBGrids, StdCtrls, Buttons, PBSalesInvoiceDM, ExtCtrls, DB;
 
 type
   TPBLUSalesInvoiceCustJBfrm = class(TForm)

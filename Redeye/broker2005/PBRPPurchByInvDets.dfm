@@ -1556,13 +1556,13 @@ object PBRPPurchByInvDetsFrm: TPBRPPurchByInvDetsFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 128
     Top = 32
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purch_Ord_No,'
       '        Part.Part_Description ,'

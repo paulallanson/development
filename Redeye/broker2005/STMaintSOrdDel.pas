@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Spin, DBCtrls, DBTables, Db, Mask, CCSCommon;
+  StdCtrls, Buttons, Spin, DBCtrls, Db, Mask, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintSOrdDelfrm = class(TForm)
@@ -30,17 +33,17 @@ type
     Label12: TLabel;
     edtDatePicked: TEdit;
     Label13: TLabel;
-    qryCourier: TQuery;
+    qryCourier: TFDQuery;
     dtsCourier: TDataSource;
-    qryCourierService: TQuery;
+    qryCourierService: TFDQuery;
     dblkpCourierService: TDBLookupComboBox;
     dtsCourierService: TDataSource;
-    qryGetSODelivery: TQuery;
-    qryUpSODelivery: TQuery;
+    qryGetSODelivery: TFDQuery;
+    qryUpSODelivery: TFDQuery;
     edtWeight: TEdit;
     btnCourier: TBitBtn;
     btnClear: TBitBtn;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

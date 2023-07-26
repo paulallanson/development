@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, ExtCtrls, Db, DBTables;
+  StdCtrls, Buttons, DBCtrls, ExtCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmSTMaintProductLvls = class(TForm)
@@ -23,15 +26,15 @@ type
     Label3: TLabel;
     Label4: TLabel;
     edtProductCode: TEdit;
-    qryStores: TQuery;
+    qryStores: TFDQuery;
     dtsStores: TDataSource;
-    qryStoreLevels: TQuery;
+    qryStoreLevels: TFDQuery;
     lblDelete: TLabel;
-    qryUpdPartLevel: TQuery;
-    qryAddPartLevel: TQuery;
-    qryDelPartLevel: TQuery;
+    qryUpdPartLevel: TFDQuery;
+    qryAddPartLevel: TFDQuery;
+    qryDelPartLevel: TFDQuery;
     dblkpStoreType: TDBLookupComboBox;
-    qryStoreType: TQuery;
+    qryStoreType: TFDQuery;
     dtsStoreType: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);

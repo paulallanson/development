@@ -119,7 +119,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, DBCtrls, Spin, ExtCtrls, PBPOObjects;
+  StdCtrls, Buttons, DB, DBCtrls, Spin, ExtCtrls, PBPOObjects;
 
 type
   TPBAutoPODetsFrm = class(TForm)

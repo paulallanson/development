@@ -1145,7 +1145,7 @@ procedure TPBMaintEnquiryFrm.DisplayLineNarrative;
 var
   x: integer;
 begin
-  mmLineNarrative.Text := Enquiry.Line.Narrative.Data;
+  mmLineNarrative.Text := Enquiry.Line.Narrative.DataInfo;
   (*
   with mmLineNarrative.Lines do
   begin
@@ -1169,7 +1169,7 @@ var
   tempStr: String;
 begin
   empty := true;
-  Enquiry.Line.Narrative.Data := mmLineNarrative.Text;
+  Enquiry.Line.Narrative.DataInfo := mmLineNarrative.Text;
   (*
   Enquiry.Line.Narrative.Lines.Clear;
   for x := 0 to (mmLineNarrative.Lines.Count - 1) do

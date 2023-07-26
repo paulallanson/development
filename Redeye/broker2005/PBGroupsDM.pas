@@ -47,68 +47,71 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmGroups = class(TDataModule)
-    GetLastContTypeSQL: TQuery;
-    GetLastCurrencySQL: TQuery;
-    UpdPTCatSQL: TQuery;
-    GetLastCustTypeSQL: TQuery;
-    UpdCountrySQL: TQuery;
-    GetLastPTCatSQL: TQuery;
-    AddCustTypeSQL: TQuery;
-    AddPTCatSQL: TQuery;
-    GetLastCountrySQL: TQuery;
-    AddCurrencySQL: TQuery;
-    UpdContTypeSQL: TQuery;
-    AddCountrySQL: TQuery;
-    DelCustTypeSQL: TQuery;
-    DelCountrySQL: TQuery;
-    UpdCustTypeSQL: TQuery;
-    UpdCurrencySQL: TQuery;
-    DelIntrastatSQL: TQuery;
-    UpdIntrastatSQL: TQuery;
-    DelPTCatSQL: TQuery;
-    AddIntrastatSQL: TQuery;
-    DelCurrencySQL: TQuery;
-    AddContTypeSQL: TQuery;
-    GetLastIntrastatSQL: TQuery;
-    DelContTypeSQL: TQuery;
-    qryZero: TQuery;
-    AddColourSQL: TQuery;
-    UpdColourSQL: TQuery;
-    DelColourSQL: TQuery;
-    GetLastColourSQL: TQuery;
-    AddWeightSQL: TQuery;
-    UpdWeightSQL: TQuery;
-    DelWeightSQL: TQuery;
-    GetLastWeightSQL: TQuery;
-    AddBrandSQL: TQuery;
-    AddMaterialSQL: TQuery;
-    UpdBrandSQL: TQuery;
-    UpdMaterialSQL: TQuery;
-    DelBrandSQL: TQuery;
-    DelMaterialSQL: TQuery;
-    GetLastBrandSQL: TQuery;
-    GetLastMaterialSQL: TQuery;
-    AddContLevelSQL: TQuery;
-    UpdContLevelSQL: TQuery;
-    DelContLevelSQL: TQuery;
-    GetLastContLevelSQL: TQuery;
-    AddEnqReasonSQL: TQuery;
-    UpdEnqReasonSQL: TQuery;
-    DelEnqReasonSQL: TQuery;
-    GetLastEnqReasonSQL: TQuery;
-    AddPOReasonSQL: TQuery;
-    UpdPOReasonSQL: TQuery;
-    DelPOReasonSQL: TQuery;
-    GetLastPOReasonSQL: TQuery;
+    GetLastContTypeSQL: TFDQuery;
+    GetLastCurrencySQL: TFDQuery;
+    UpdPTCatSQL: TFDQuery;
+    GetLastCustTypeSQL: TFDQuery;
+    UpdCountrySQL: TFDQuery;
+    GetLastPTCatSQL: TFDQuery;
+    AddCustTypeSQL: TFDQuery;
+    AddPTCatSQL: TFDQuery;
+    GetLastCountrySQL: TFDQuery;
+    AddCurrencySQL: TFDQuery;
+    UpdContTypeSQL: TFDQuery;
+    AddCountrySQL: TFDQuery;
+    DelCustTypeSQL: TFDQuery;
+    DelCountrySQL: TFDQuery;
+    UpdCustTypeSQL: TFDQuery;
+    UpdCurrencySQL: TFDQuery;
+    DelIntrastatSQL: TFDQuery;
+    UpdIntrastatSQL: TFDQuery;
+    DelPTCatSQL: TFDQuery;
+    AddIntrastatSQL: TFDQuery;
+    DelCurrencySQL: TFDQuery;
+    AddContTypeSQL: TFDQuery;
+    GetLastIntrastatSQL: TFDQuery;
+    DelContTypeSQL: TFDQuery;
+    qryZero: TFDQuery;
+    AddColourSQL: TFDQuery;
+    UpdColourSQL: TFDQuery;
+    DelColourSQL: TFDQuery;
+    GetLastColourSQL: TFDQuery;
+    AddWeightSQL: TFDQuery;
+    UpdWeightSQL: TFDQuery;
+    DelWeightSQL: TFDQuery;
+    GetLastWeightSQL: TFDQuery;
+    AddBrandSQL: TFDQuery;
+    AddMaterialSQL: TFDQuery;
+    UpdBrandSQL: TFDQuery;
+    UpdMaterialSQL: TFDQuery;
+    DelBrandSQL: TFDQuery;
+    DelMaterialSQL: TFDQuery;
+    GetLastBrandSQL: TFDQuery;
+    GetLastMaterialSQL: TFDQuery;
+    AddContLevelSQL: TFDQuery;
+    UpdContLevelSQL: TFDQuery;
+    DelContLevelSQL: TFDQuery;
+    GetLastContLevelSQL: TFDQuery;
+    AddEnqReasonSQL: TFDQuery;
+    UpdEnqReasonSQL: TFDQuery;
+    DelEnqReasonSQL: TFDQuery;
+    GetLastEnqReasonSQL: TFDQuery;
+    AddPOReasonSQL: TFDQuery;
+    UpdPOReasonSQL: TFDQuery;
+    DelPOReasonSQL: TFDQuery;
+    GetLastPOReasonSQL: TFDQuery;
   private
     procedure AddZero(const tabName : string);
     procedure DelZero(const tabName : string);
     function GenericReserve(const tabName : string;
-      AddQry, GetQry : TQuery) : integer;
+      AddQry, GetQry : TFDQuery) : integer;
   public
     function GetNextContactType : integer;
     function GetNextCountryId : integer;
@@ -122,18 +125,18 @@ type
     function GetNextWeight : integer;
     function GetNextBrand : integer;
     function GetNextMaterial : integer;
-    procedure SaveContactType(const Key : integer; const Data : string);
-    procedure SaveCountryId(const Key : integer; const Data : string);
-    procedure SaveCategory(const Key : integer; const Data : string; const CommRt : real);
-    procedure SaveCustType(const Key : integer; const Data : string; Color, FontColor: integer);
-    procedure SaveEnqReason(const Key : integer; const Data : string);
-    procedure SavePOReason(const Key : integer; const Data : string);
-    procedure SaveCurrency(const Key : integer; const Data : string);
-    procedure SaveIntrastat(const Key : integer; const Data : string);
-    procedure SaveColour(const Key : integer; const Data : string);
-    procedure SaveWeight(const Key : integer; const Data : string);
-    procedure SaveBrand(const Key : integer; const Data : string);
-    procedure SaveMaterial(const Key : integer; const Data : string);
+    procedure SaveContactType(const Key : integer; const DataInfo : string);
+    procedure SaveCountryId(const Key : integer; const DataInfo : string);
+    procedure SaveCategory(const Key : integer; const DataInfo : string; const CommRt : real);
+    procedure SaveCustType(const Key : integer; const DataInfo : string; Color, FontColor: integer);
+    procedure SaveEnqReason(const Key : integer; const DataInfo : string);
+    procedure SavePOReason(const Key : integer; const DataInfo : string);
+    procedure SaveCurrency(const Key : integer; const DataInfo : string);
+    procedure SaveIntrastat(const Key : integer; const DataInfo : string);
+    procedure SaveColour(const Key : integer; const DataInfo : string);
+    procedure SaveWeight(const Key : integer; const DataInfo : string);
+    procedure SaveBrand(const Key : integer; const DataInfo : string);
+    procedure SaveMaterial(const Key : integer; const DataInfo : string);
     procedure DeleteContactType(const Key : integer);
     procedure DeleteCountryId(const Key : integer);
     procedure DeleteCategory(const Key : integer);
@@ -148,7 +151,7 @@ type
     procedure DeleteMaterial(const Key : integer);
     procedure DeleteContactLevel(const Key: integer);
     function GetNextContactLevel: integer;
-    procedure SaveContactLevel(const Key: integer; const Data: string);
+    procedure SaveContactLevel(const Key: integer; const DataInfo: string);
   end;
 
 var
@@ -297,7 +300,7 @@ begin
 end;
 
 function TdmGroups.GenericReserve(const tabName : string;
-  AddQry, GetQry : TQuery) : integer;
+  AddQry, GetQry : TFDQuery) : integer;
 var
   aGuid : TGuid;
 begin
@@ -383,126 +386,126 @@ begin
   Result := GenericReserve('Paper_Material', AddMaterialSQL, GetLastMaterialSQL);
 end;
 
-procedure TdmGroups.SaveCategory(const Key: integer; const Data: string; const CommRt : Real);
+procedure TdmGroups.SaveCategory(const Key: integer; const DataInfo: string; const CommRt : Real);
 begin
   with UpdPTCatSQL do
   begin
     ParamByName('Category').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ParamByName('Comm_Rt').Asfloat := CommRt;
     ExecSQL;
   end;
 end;
 
 procedure TdmGroups.SaveContactType(const Key: integer;
-  const Data: string);
+  const DataInfo: string);
 begin
   with UpdContTypeSQL do
   begin
     ParamByName('Contact_Type').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCountryId(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCountryId(const Key: integer; const DataInfo: string);
 begin
   with UpdCountrySQL do
   begin
     ParamByName('Country_Id').AsInteger := Key;
-    ParamByName('Country_Id_Descr').AsString := Data;
+    ParamByName('Country_Id_Descr').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCurrency(const Key: integer; const Data: string);
+procedure TdmGroups.SaveCurrency(const Key: integer; const DataInfo: string);
 begin
   with UpdCurrencySQL do
   begin
     ParamByName('Currency_Code').AsInteger := Key;
-    ParamByName('Currency_Code_Descr').AsString := Data;
+    ParamByName('Currency_Code_Descr').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveCustType(const Key: integer; const Data: string; Color, FontColor: integer);
+procedure TdmGroups.SaveCustType(const Key: integer; const DataInfo: string; Color, FontColor: integer);
 begin
   with UpdCustTypeSQL do
   begin
     ParamByName('Customer_Type').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ParamByName('Color').Asinteger := Color;
     ParamByName('Font_Color').Asinteger := FontColor;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveEnqReason(const Key: integer; const Data: string);
+procedure TdmGroups.SaveEnqReason(const Key: integer; const DataInfo: string);
 begin
   with UpdEnqReasonSQL do
   begin
     ParamByName('Enq_Inactive_Reason').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SavePOReason(const Key: integer; const Data: string);
+procedure TdmGroups.SavePOReason(const Key: integer; const DataInfo: string);
 begin
   with UpdPOReasonSQL do
   begin
     ParamByName('Inactive_reason').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveIntrastat(const Key: integer; const Data: string);
+procedure TdmGroups.SaveIntrastat(const Key: integer; const DataInfo: string);
 begin
   with UpdIntrastatSQL do
   begin
     ParamByName('Intrastat_Id').AsInteger := Key;
-    ParamByName('Intrastat_Id_Descr').AsString := Data;
+    ParamByName('Intrastat_Id_Descr').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveColour(const Key: integer; const Data: string);
+procedure TdmGroups.SaveColour(const Key: integer; const DataInfo: string);
 begin
   with UpdColourSQL do
   begin
     ParamByName('Paper_Colour').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveWeight(const Key: integer; const Data: string);
+procedure TdmGroups.SaveWeight(const Key: integer; const DataInfo: string);
 begin
   with UpdWeightSQL do
   begin
     ParamByName('Paper_Weight').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveBrand(const Key: integer; const Data: string);
+procedure TdmGroups.SaveBrand(const Key: integer; const DataInfo: string);
 begin
   with UpdBrandSQL do
   begin
     ParamByName('Paper_Brand').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
 
-procedure TdmGroups.SaveMaterial(const Key: integer; const Data: string);
+procedure TdmGroups.SaveMaterial(const Key: integer; const DataInfo: string);
 begin
   with UpdMaterialSQL do
   begin
     ParamByName('Paper_Material').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 end;
@@ -522,12 +525,12 @@ begin
 end;
 
 procedure TdmGroups.SaveContactLevel(const Key: integer;
-  const Data: string);
+  const DataInfo: string);
 begin
   with UpdContLevelSQL do
   begin
     ParamByName('Contact_Level').AsInteger := Key;
-    ParamByName('Description').AsString := Data;
+    ParamByName('Description').AsString := DataInfo;
     ExecSQL;
   end;
 

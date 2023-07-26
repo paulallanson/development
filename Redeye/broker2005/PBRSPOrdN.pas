@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, QrExport,
-  OleServer, CCSCommon, CCSPress, IniFiles, ComCtrls, PBActivityDM, DBCtrls;
+  StdCtrls, Buttons, ExtCtrls, DB, CCSDataBroker, QrExport,
+  OleServer, CCSCommon, CCSPress, IniFiles, ComCtrls, PBActivityDM, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPOrdNFrm = class(TForm)
-    GetPOsSQL: TQuery;
-    GetAcksSQL: TQuery;
-    qryGetPODelivs: TQuery;
+    GetPOsSQL: TFDQuery;
+    GetAcksSQL: TFDQuery;
+    qryGetPODelivs: TFDQuery;
     pnlBottom: TPanel;
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
@@ -37,11 +40,11 @@ type
     rdbtnCustAddr: TRadioButton;
     rdbtnDelAddr: TRadioButton;
     StatusBar1: TStatusBar;
-    qryGetPO: TQuery;
+    qryGetPO: TFDQuery;
     Label12: TLabel;
     dblkpLogos: TDBLookupComboBox;
     FormRefClrBitBtn: TBitBtn;
-    qryLogos: TQuery;
+    qryLogos: TFDQuery;
     dtsLogos: TDataSource;
     procedure CanPrint(Sender: TObject);
     procedure PreviewBitBtnClick(Sender: TObject);

@@ -271,8 +271,8 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       TabOrder = 0
     end
   end
-  object qryGetDateRange: TQuery
-    DatabaseName = 'PB'
+  object qryGetDateRange: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -292,8 +292,8 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'

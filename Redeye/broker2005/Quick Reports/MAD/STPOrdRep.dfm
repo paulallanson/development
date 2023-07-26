@@ -1428,8 +1428,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
     Left = 312
     Top = 19
   end
-  object GetOrdDetQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_Ord.Purch_Ord_No as' +
@@ -1512,8 +1512,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetRecOrdQuery: TQuery
-    DatabaseName = 'PB'
+  object GetRecOrdQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_ord.Purch_Ord_Rec_r' +
@@ -1574,8 +1574,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelFromSuppQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDelFromSuppQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier.Name as SuppNam,'
       '       Supplier_Branch.Name,'
@@ -1655,9 +1655,9 @@ object STPOrdRepFrm: TSTPOrdRepFrm
       Size = 40
     end
   end
-  object UpdStatusQuery: TQuery
-    DatabaseName = 'PB'
-    DataSource = GetDetsDataSource
+  object UpdStatusQuery: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = GetDetsDataSource
     SQL.Strings = (
       'Update Purch_Ord'
       'Set Purch_Ord_Status = '#39'G'#39
@@ -1666,13 +1666,13 @@ object STPOrdRepFrm: TSTPOrdRepFrm
     Left = 30
     Top = 14
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     Left = 96
     Top = 269
   end
-  object GetOrdHedQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdHedQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sel1, text100'
       'from'
@@ -1697,8 +1697,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelFromStoreQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDelFromStoreQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store.Part_Store_Name as SuppNam,'
       '       Part_Store.Internal_Number_and_Stret as SuppAdd1,'
@@ -1723,8 +1723,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPFJQuery: TQuery
-    DatabaseName = 'PB'
+  object GetPFJQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line_Alloc.Parts_For_Job,Parts_For_Job.Job'
       'From Purch_Ord_Line_Alloc, Parts_For_Job, Purch_Ord'
@@ -1753,15 +1753,15 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetDelivAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDelivAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 182
     Top = 31
   end
-  object GetSODelAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSODelAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as DelNam,'
       '          Customer_Branch.Building_no_Name as DelAdd1,'
@@ -1793,16 +1793,16 @@ object STPOrdRepFrm: TSTPOrdRepFrm
     Left = 96
     Top = 79
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 184
     Top = 78
   end
-  object qryExtraCharges: TQuery
-    DatabaseName = 'PB'
+  object qryExtraCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord_Add_Charge.*,'
       
@@ -1826,8 +1826,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'
@@ -1843,8 +1843,8 @@ object STPOrdRepFrm: TSTPOrdRepFrm
         ParamType = ptUnknown
       end>
   end
-  object SuppSQL: TQuery
-    DatabaseName = 'PB'
+  object SuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier.Name as Supplier_Name,'
       #9#9#9'Building_no_name,'

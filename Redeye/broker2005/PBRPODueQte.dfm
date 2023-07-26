@@ -760,16 +760,16 @@ object PBRPODueQteFrm: TPBRPODueQteFrm
     Left = 523
     Top = 33
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 536
     Top = 103
   end
-  object GetEnquiriesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetEnquiriesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Enquiry, Description, Enquiry.Customer, Enquiry.Branch_no' +

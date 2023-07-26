@@ -4,8 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ImgList, Grids, DBGrids, ComCtrls, ToolWin, Buttons, DB, DBTables,
-  ExtCtrls, IniFiles, PBActivityDM, DateUtils;
+  Dialogs, StdCtrls, ImgList, Grids, DBGrids, ComCtrls, ToolWin, Buttons, DB, ExtCtrls, IniFiles, PBActivityDM, DateUtils;
 
 type
   TfrmPBLUActivities = class(TForm)

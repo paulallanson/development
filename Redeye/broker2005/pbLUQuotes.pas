@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ExtCtrls, ImgList, ComCtrls, Buttons, StdCtrls, Grids,
-  DBGrids, ToolWin, DB, DBTables, pbQuotesDM, IniFiles, pbJobBagDM;
+  DBGrids, ToolWin, DB, pbQuotesDM, IniFiles, pbJobBagDM;
 
 type
   TfrmPBLUQuotes = class(TForm)

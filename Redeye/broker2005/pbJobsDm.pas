@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlJobs = class(TDataModule)
-    qryJobs: TQuery;
+    qryJobs: TFDQuery;
     dtsJobs: TDataSource;
-    qryDummy: TQuery;
-    qryJobReturns: TQuery;
+    qryDummy: TFDQuery;
+    qryJobReturns: TFDQuery;
     dtsJobReturns: TDataSource;
-    qryJBReturnLines: TQuery;
+    qryJBReturnLines: TFDQuery;
     dtsJBReturnLines: TDataSource;
-    qryJBPartQtys: TQuery;
+    qryJBPartQtys: TFDQuery;
     qryJobsJob_Bag: TIntegerField;
     qryJobsJob_Bag_Descr: TStringField;
     qryJobsDate_Point: TDateTimeField;
@@ -42,28 +45,28 @@ type
     qryJobsCash_Lines: TIntegerField;
     qryJobsProduction_Status: TStringField;
     qryJobsAccount_Code: TStringField;
-    qryJobsNCA: TQuery;
+    qryJobsNCA: TFDQuery;
     dtsJobsNCA: TDataSource;
-    qryOldDummyNCA: TQuery;
+    qryOldDummyNCA: TFDQuery;
     qryJobsNCA_Live_Lines: TIntegerField;
     qryJobsNCA_Signed_Off: TIntegerField;
-    qryDummyNCA: TQuery;
+    qryDummyNCA: TFDQuery;
     qryJobsPO_Lines: TIntegerField;
     qryJobsProduction_Complete: TStringField;
     qryJobsQuote: TFloatField;
     qryJobsFile_Copies_Received_Date: TDateTimeField;
     qryJobsFile_Copies_Received_By_Name: TStringField;
-    qryDummyOlder: TQuery;
+    qryDummyOlder: TFDQuery;
     qryJobsSub_Rep_Name: TStringField;
     dtsContractJobs: TDataSource;
-    qryContractJobs: TQuery;
-    qryAddToContract: TQuery;
-    qryGetJobBagPOs: TQuery;
-    qryAddPOToContract: TQuery;
-    qryCheckContract: TQuery;
+    qryContractJobs: TFDQuery;
+    qryAddToContract: TFDQuery;
+    qryGetJobBagPOs: TFDQuery;
+    qryAddPOToContract: TFDQuery;
+    qryCheckContract: TFDQuery;
     qryJobsInvoice_This_Week: TStringField;
-    qryUpdInvThisWeek: TQuery;
-    qryDummyOld: TQuery;
+    qryUpdInvThisWeek: TFDQuery;
+    qryDummyOld: TFDQuery;
     qryJobsEnd_User_Name: TStringField;
     qryJobsPack_Format_Description: TStringField;
     qryJobsEnclosing_Type: TStringField;

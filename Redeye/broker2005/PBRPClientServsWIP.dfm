@@ -876,8 +876,8 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT'
       #9'Job_Bag_Schedule.*,'
@@ -939,7 +939,7 @@ object PBRPClientServsWIPFrm: TPBRPClientServsWIPFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT'
       #9'Job_Bag_Schedule.*,'

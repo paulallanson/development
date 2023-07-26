@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, PBWOrdersDm;
+  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, PBWOrdersDm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmpbluCustWorksJB = class(TForm)
@@ -17,7 +20,7 @@ type
     edtOrder: TEdit;
     stsbrDetails: TStatusBar;
     tmrSearch: TTimer;
-    Query1: TQuery;
+    Query1: TFDQuery;
     btnSelect: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);

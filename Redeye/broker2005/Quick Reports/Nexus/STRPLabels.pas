@@ -51,13 +51,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPLabelsFrm = class(TForm)
     STLabelsQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     PONumberLbl: TQRLabel;
@@ -76,13 +79,13 @@ type
     AddQRLabel: TQRLabel;
     BoxNoQRLbl: TQRLabel;
     BoxQRLbl: TQRLabel;
-    AdhocSQL: TQuery;
-    CustomerSQL: TQuery;
+    AdhocSQL: TFDQuery;
+    CustomerSQL: TFDQuery;
     QRLabel7: TQRLabel;
     qrdbPart: TQRDBText;
     DeliveryDateLbl: TQRLabel;
     gtlblFSCClaim: TQRLabel;
-    qryGetFSCClaim: TQuery;
+    qryGetFSCClaim: TFDQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

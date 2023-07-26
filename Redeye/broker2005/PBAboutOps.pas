@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, ExtCtrls, DB, DBTables;
+  Dialogs, Grids, DBGrids, StdCtrls, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBAboutOpsFrm = class(TForm)
@@ -16,7 +19,7 @@ type
     lblName: TLabel;
     lblPOCost: TLabel;
     lblMinSales: TLabel;
-    qryOperator: TQuery;
+    qryOperator: TFDQuery;
     dtsOperator: TDataSource;
     qryOperatoroperator: TIntegerField;
     qryOperatorName: TStringField;

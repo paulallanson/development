@@ -1367,8 +1367,8 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
       end
     end
   end
-  object qryStkBalRep: TQuery
-    DatabaseName = 'PB'
+  object qryStkBalRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select part.part,'
       '       part.part_description,'
@@ -1533,8 +1533,8 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
         ParamType = ptUnknown
       end>
   end
-  object GetTopRepSQL: TQuery
-    DatabaseName = 'PB'
+  object GetTopRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Rep.Name as Rep_Name'
       
@@ -1559,7 +1559,7 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
         ParamType = ptUnknown
       end>
   end
-  object Query1: TQuery
+  object Query1: TFDQuery
     SQL.Strings = (
       'select part.part,'
       '       part.part_description,'
@@ -1675,8 +1675,8 @@ object STRPStkBalRepfrm: TSTRPStkBalRepfrm
         ParamType = ptUnknown
       end>
   end
-  object GetSerNosSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSerNosSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Store_Stock_Serial_item.Serial_item_from,'
       'Store_Stock_Serial_item.Serial_item_to'

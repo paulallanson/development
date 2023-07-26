@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, PBContractDM, ComCtrls, StdCtrls, DBCtrls, Buttons, ExtCtrls,
-  DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, DBTables, PBJobBagDM, pbOrdersdm,
+  DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm,
   PBPOObjects, Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus,
   DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM;
 

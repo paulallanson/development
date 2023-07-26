@@ -95,8 +95,8 @@ object PBMaintContactMultiFrm: TPBMaintContactMultiFrm
     TabOrder = 4
     Text = 'edtCustomerName'
   end
-  object qryBranches: TQuery
-    DatabaseName = 'PB'
+  object qryBranches: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Branch_no, Name as Branch_Name'
       'from Customer_Branch'

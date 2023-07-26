@@ -1733,8 +1733,8 @@ object PBRPProofFrm: TPBRPProofFrm
       BandType = rbPageFooter
     end
   end
-  object GetProofSQL: TQuery
-    DatabaseName = 'PB'
+  object GetProofSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purchase_OrderLine.Purchase_Order, Purchase_OrderLine.Lin' +
@@ -1869,8 +1869,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
@@ -1887,8 +1887,8 @@ object PBRPProofFrm: TPBRPProofFrm
     Left = 136
     Top = 71
   end
-  object GetPOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Depth,'
       '        Purchase_OrderLine.Width,'
@@ -1930,8 +1930,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptUnknown
       end>
   end
-  object FormRefSQL: TQuery
-    DatabaseName = 'PB'
+  object FormRefSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Form_Reference'
@@ -1945,8 +1945,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Proof_History'
       'Set'
@@ -1990,8 +1990,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Proof_History'
       '(Proof_History, Proof_Status, Proof_Date, Purchase_Order, Line)'
@@ -2020,8 +2020,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Proof_History'
       '(Proof_History, Proof_Status, Proof_Date, Purchase_Order, Line)'
@@ -2046,8 +2046,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptInput
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Proof_History'
       'From Proof_History'
@@ -2072,8 +2072,8 @@ object PBRPProofFrm: TPBRPProofFrm
         ParamType = ptInput
       end>
   end
-  object UpdPOSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purchase_orderline'
       'set Proof_revision = :Proof_revision'

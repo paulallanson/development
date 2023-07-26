@@ -4,11 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, StdCtrls, Buttons, ExtCtrls;
+  Dialogs, DB, StdCtrls, Buttons, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintStoreStockfrm = class(TForm)
-    qryStoreStock: TQuery;
+    qryStoreStock: TFDQuery;
     pnlproduct: TPanel;
     Label1: TLabel;
     Label5: TLabel;
@@ -29,9 +32,9 @@ type
     Label15: TLabel;
     BinLocationEdit: TEdit;
     chkbxPaidFor: TCheckBox;
-    qryUpStoreStock: TQuery;
-    qryDelStoreStock: TQuery;
-    qryGetPartStoreAlloc: TQuery;
+    qryUpStoreStock: TFDQuery;
+    qryDelStoreStock: TFDQuery;
+    qryGetPartStoreAlloc: TFDQuery;
     lblMessage: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure OKBtnClick(Sender: TObject);

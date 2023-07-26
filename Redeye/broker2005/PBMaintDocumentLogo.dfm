@@ -115,8 +115,8 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
       'Delivery Notes'
       'Labels')
   end
-  object qryUpdate: TQuery
-    DatabaseName = 'PB'
+  object qryUpdate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Document_Logo'
       'SET'
@@ -155,8 +155,8 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Document_Logo'
       '('
@@ -197,8 +197,8 @@ object frmPBMaintDocumentLogos: TfrmPBMaintDocumentLogos
         ParamType = ptUnknown
       end>
   end
-  object qryGetLast: TQuery
-    DatabaseName = 'PB'
+  object qryGetLast: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(ID) as Last_ID'
       'From Document_Logo')

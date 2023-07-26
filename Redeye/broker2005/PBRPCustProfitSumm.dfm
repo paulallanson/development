@@ -716,8 +716,8 @@ object PBRPCustProfitSummFrm: TPBRPCustProfitSummFrm
       end
     end
   end
-  object qryCustProfSumm: TQuery
-    DatabaseName = 'PB'
+  object qryCustProfSumm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'sales_profit.customer,'
       #9'customer.name as cust_name,'
@@ -749,8 +749,8 @@ object PBRPCustProfitSummFrm: TPBRPCustProfitSummFrm
         Value = 4
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select period.period,'
       #9'period.description as period_description'

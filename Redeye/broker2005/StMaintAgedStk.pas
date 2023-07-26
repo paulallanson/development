@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, Menus, Db, DBTables, Grids, DBGrids, Buttons, ComCtrls,
-  StdCtrls, CCSCommon;
+  ExtCtrls, Menus, Db, Grids, DBGrids, Buttons, ComCtrls,
+  StdCtrls, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TStMaintAgedStkFrm = class(TForm)
@@ -27,10 +30,10 @@ type
     CustEdit: TEdit;
     DetsDBGrid: TDBGrid;
     DataSource1: TDataSource;
-    qrySelUnPaidAgedStk: TQuery;
+    qrySelUnPaidAgedStk: TFDQuery;
     ppmnGrid: TPopupMenu;
     SetReadyforInvoicng1: TMenuItem;
-    qryUpdPOLine: TQuery;
+    qryUpdPOLine: TFDQuery;
     tmrGridRefresh: TTimer;
     qrySelUnPaidAgedStkPart: TStringField;
     qrySelUnPaidAgedStkDescription: TStringField;
@@ -49,8 +52,8 @@ type
     qrySelUnPaidAgedStkdate_received: TDateTimeField;
     ResetGrid1: TMenuItem;
     chkbxBranch: TCheckBox;
-    qrySelPOrd: TQuery;
-    qryUpdStoreStock: TQuery;
+    qrySelPOrd: TFDQuery;
+    qryUpdStoreStock: TFDQuery;
     qrySelUnPaidAgedStkstore_stock: TIntegerField;
     pnlButtons: TPanel;
     CloseBitBtn: TBitBtn;

@@ -1420,8 +1420,8 @@ object frmwtRPPOrder: TfrmwtRPPOrder
       VertAdjust = 0
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'wt'
+  object qryReport: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT  Purchase_Order.Purchase_Order,'
       '        Purchase_Order.Supplier,'
@@ -1475,8 +1475,8 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Left = 912
     Top = 24
   end
-  object qrySupplier: TQuery
-    DatabaseName = 'WT'
+  object qrySupplier: TFDQuery
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT'
       '    Supplier,'
@@ -1500,16 +1500,16 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'wt'
+  object qryCompany: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 846
     Top = 151
   end
-  object qrygetNotes: TQuery
-    DatabaseName = 'wt'
+  object qrygetNotes: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select *'
       'from Notes'
@@ -1524,9 +1524,9 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'wt'
-    DataSource = dtsReport
+  object qryPOLine: TFDQuery
+    ConnectionName = 'wt'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT  Purchase_orderline.Purchase_Order,'
       '        Purchase_orderline.Line_no,'
@@ -1588,8 +1588,8 @@ object frmwtRPPOrder: TfrmwtRPPOrder
         ParamType = ptUnknown
       end>
   end
-  object qryCompanyAddress: TQuery
-    DatabaseName = 'wt'
+  object qryCompanyAddress: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select Street,'
       'Locale,'
@@ -1604,8 +1604,8 @@ object frmwtRPPOrder: TfrmwtRPPOrder
     Left = 936
     Top = 153
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'wt'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'Select Notes_Text'
       'From Notes'

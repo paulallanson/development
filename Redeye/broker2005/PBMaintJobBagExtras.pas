@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Buttons, DB, DBTables, PBJobBagDM, ComCtrls;
+  Dialogs, DBCtrls, StdCtrls, Buttons, DB, PBJobBagDM, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagExtrasFrm = class(TForm)
@@ -25,20 +28,20 @@ type
     dblkpPriceUnit: TDBLookupComboBox;
     dblkpVat: TDBLookupComboBox;
     Label5: TLabel;
-    qryVat: TQuery;
-    qryPriceUnit: TQuery;
-    qryProductCat: TQuery;
+    qryVat: TFDQuery;
+    qryPriceUnit: TFDQuery;
+    qryProductCat: TFDQuery;
     dtsProductCat: TDataSource;
     dtsPriceUnit: TDataSource;
     dtsVat: TDataSource;
-    qryGetPUnit: TQuery;
+    qryGetPUnit: TFDQuery;
     edtDescription: TRichEdit;
-    qryGetProductType: TQuery;
-    qryWOProcess: TQuery;
+    qryGetProductType: TFDQuery;
+    qryWOProcess: TFDQuery;
     dtsWOProcess: TDataSource;
-    qryGetProcess: TQuery;
+    qryGetProcess: TFDQuery;
     dblkpProductCat: TDBLookupComboBox;
-    qryJobBagWO: TQuery;
+    qryJobBagWO: TFDQuery;
     dtsJobBagWO: TDataSource;
     procedure btnProdTypeClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

@@ -186,8 +186,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
   end
-  object CountSQL: TQuery
-    DatabaseName = 'PB'
+  object CountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*,'
       'Delivery_Detail.*,'
@@ -220,8 +220,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
         ParamType = ptInput
       end>
   end
-  object GetSuppBranchesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppBranchesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Branch_No, Name'
       'From Supplier_Branch'
@@ -236,8 +236,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustBranchesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustBranchesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Branch_No, Name'
       'From Customer_Branch'
@@ -256,8 +256,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Left = 256
     Top = 40
   end
-  object GetSuppContactsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppContactsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Branch_No, Contact_no, Name'
       'From Supplier_BranchContacts'
@@ -279,8 +279,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustContactsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustContactsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Branch_No, Contact_No, Name'
       'From Customer_Contact'

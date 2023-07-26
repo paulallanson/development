@@ -149,8 +149,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
       OnChange = EnableOK
     end
   end
-  object qryNextWebUserID: TQuery
-    DatabaseName = 'PB'
+  object qryNextWebUserID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Web_User_ID) +1 as '#39'Web_User_ID'#39' '
       'from Web_Users'
@@ -158,8 +158,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
     Left = 272
     Top = 8
   end
-  object qryInsWebUser: TQuery
-    DatabaseName = 'PB'
+  object qryInsWebUser: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Web_Users'
       
@@ -208,8 +208,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Web_User_ID'
       'from Customer_Contact'
@@ -235,8 +235,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set Web_User_ID = :Web_User_ID'
@@ -267,8 +267,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySelWebUserID: TQuery
-    DatabaseName = 'PB'
+  object qrySelWebUserID: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Web_Users.*'
       'from Web_Users'
@@ -282,8 +282,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdWebUser: TQuery
-    DatabaseName = 'PB'
+  object qryUpdWebUser: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Web_Users'
       'set User_name = :User_name,'
@@ -332,8 +332,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckUserName: TQuery
-    DatabaseName = 'PB'
+  object qryCheckUserName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select User_Name,'
       #9'customer_contact.name as Contact_name,'
@@ -358,8 +358,8 @@ object PBMaintContactOnlineFrm: TPBMaintContactOnlineFrm
         ParamType = ptUnknown
       end>
   end
-  object qryWebRole: TQuery
-    DatabaseName = 'PB'
+  object qryWebRole: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Web_user_Roles')
     Left = 248

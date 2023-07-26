@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Db, DBTables, ExtCtrls;
+  StdCtrls, Buttons, Db, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintSalesInvPayFrm = class(TForm)
@@ -26,8 +29,8 @@ type
     Label10: TLabel;
     edtDatePaid: TEdit;
     btnDate: TSpeedButton;
-    qryGetInvoice: TQuery;
-    qryUpInvoice: TQuery;
+    qryGetInvoice: TFDQuery;
+    qryUpInvoice: TFDQuery;
     memTotalPaid: TMemo;
     grpbxCreditCard: TGroupBox;
     Label7: TLabel;
@@ -40,12 +43,12 @@ type
     Label13: TLabel;
     chkbxPaid: TCheckBox;
     rdgrpPaymentType: TRadioGroup;
-    qryGetSILines: TQuery;
-    qryGetJobBag: TQuery;
-    qryUpdJobBag: TQuery;
-    qryGetPOdelivLines: TQuery;
-    qryUpdPODeliv: TQuery;
-    qryUpdPO: TQuery;
+    qryGetSILines: TFDQuery;
+    qryGetJobBag: TFDQuery;
+    qryUpdJobBag: TFDQuery;
+    qryGetPOdelivLines: TFDQuery;
+    qryUpdPODeliv: TFDQuery;
+    qryUpdPO: TFDQuery;
     procedure btnOKClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure chkbxPaidClick(Sender: TObject);

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons;
+  Db, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintCourierServFrm = class(TForm)
@@ -18,12 +21,12 @@ type
     edtCourrierName: TEdit;
     edtDescShort: TEdit;
     edtDesc: TEdit;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     edtServiceCode: TEdit;
     lblServiceCode: TLabel;
-    qryGetNextServiceNo: TQuery;
+    qryGetNextServiceNo: TFDQuery;
     chkbxDeferred: TCheckBox;
     chkbxActive: TCheckBox;
     procedure FormShow(Sender: TObject);

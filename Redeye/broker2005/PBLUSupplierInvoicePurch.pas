@@ -46,7 +46,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, DB, DBTables, ExtCtrls, Mask, DBCtrls,
+  StdCtrls, Buttons, Grids, DBGrids, DB, ExtCtrls, Mask, DBCtrls,
   ComCtrls, CCSCommon, PBSupplierInvoiceDM;
 
 type
@@ -103,7 +103,10 @@ var
 
 implementation
 
-uses PBMaintSuppInvoice;
+uses PBMaintSuppInvoice,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 {$R *.DFM}
 
@@ -271,7 +274,7 @@ end;
 
 procedure TPBLUSupplierInvoicePurchFrm.CreateSuppInvoiceLines;
 var
-  TempQry: TQuery;
+  TempQry: TFDQuery;
   sTemp: string;
   aLine: TSuppInvoiceLine;
 begin

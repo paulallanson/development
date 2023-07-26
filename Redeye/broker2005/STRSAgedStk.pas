@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ComCtrls, ExtCtrls, Db, DBTables, Inifiles, QrExport, STRPAgedStk,
-  OleCtnrs, Spin;
+  StdCtrls, Buttons, ComCtrls, ExtCtrls, Db, Inifiles, QrExport, STRPAgedStk,
+  OleCtnrs, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSAgedStkFrm = class(TForm)
@@ -32,7 +35,7 @@ type
     CustLuSpeedButton: TSpeedButton;
     CustEdit: TEdit;
     FaxBitBtn: TBitBtn;
-    GetPartsSQL: TQuery;
+    GetPartsSQL: TFDQuery;
     EmailBitBtn: TBitBtn;
     ChkBxExcProd: TCheckBox;
     OleContainer1: TOleContainer;

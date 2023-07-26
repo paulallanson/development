@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, CCSPrint, PBPOObjects, Db, DBTables, Inifiles;
+  StdCtrls, Buttons, CCSPrint, PBPOObjects, Db, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSDelivNoteFrm = class(TForm)
@@ -24,7 +27,7 @@ type
     Confirmchkbox: TCheckBox;
     Label3: TLabel;
     QtyEdit: TEdit;
-    UpDelivSQL: TQuery;
+    UpDelivSQL: TFDQuery;
     PrintBitBtn: TBitBtn;
     chkbxPrintLogo: TCheckBox;
     procedure PreviewbitbtnClick(Sender: TObject);

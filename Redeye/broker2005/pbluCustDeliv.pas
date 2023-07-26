@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Db, DBTables, Grids, DBGrids, ExtCtrls, ccscommon, Variants;
+  StdCtrls, Db, Grids, DBGrids, ExtCtrls, ccscommon, Variants;
 
 type
   TfrmpbluOrderdeliv = class(TForm)

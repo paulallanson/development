@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, CCSPrint, CCSCommon, Spin, ComCtrls, OleCtnrs;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, CCSPrint, CCSCommon, Spin, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSuppContDetFrm = class(TForm)
-    qryCurrentContStatus: TQuery;
+    qryCurrentContStatus: TFDQuery;
     dtsrcCurrentContStatus: TDataSource;
     pnlControls: TPanel;
     pnlPrintControl: TPanel;
@@ -20,7 +23,7 @@ type
     Panel2: TPanel;
     Label2: TLabel;
     TypeComboBox: TComboBox;
-    QryContType: TQuery;
+    QryContType: TFDQuery;
     RadioGroup1: TRadioGroup;
     QryContTypeDescription: TStringField;
     chkbxSuppliers: TCheckBox;
@@ -32,9 +35,9 @@ type
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
-    qryExcel: TQuery;
-    stdSQL: TQuery;
-    qryCompany: TQuery;
+    qryExcel: TFDQuery;
+    stdSQL: TFDQuery;
+    qryCompany: TFDQuery;
     qryCurrentContStatusContact_Phone: TStringField;
     qryCurrentContStatusSupplier_Phone: TStringField;
     qryCurrentContStatusContact_Name: TStringField;
@@ -57,7 +60,7 @@ type
     procedure FixQuery;
     function BuildQueryString: string;
     procedure CallReport(const bPreview : Boolean);
-    procedure ExportToFile(fileName: string; tempqry: TQuery);
+    procedure ExportToFile(fileName: string; tempqry: TFDQuery);
   public
     { Public declarations }
   end;
@@ -257,7 +260,7 @@ begin
   self.OleContainer1.DoVerb(0);
 end;
 
-procedure TPBRSSuppContDetFrm.ExportToFile(fileName: string; tempqry: TQuery);
+procedure TPBRSSuppContDetFrm.ExportToFile(fileName: string; tempqry: TFDQuery);
 var
   tempStr: string;
   exportFile: textFile;

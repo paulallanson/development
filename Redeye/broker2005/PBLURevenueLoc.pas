@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLURevenueLocFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -23,7 +26,7 @@ type
     DelBitBtn: TBitBtn;
     chkbxActiveOnly: TCheckBox;
     DummySRC: TDataSource;
-    UpStatSQL: TQuery;
+    UpStatSQL: TFDQuery;
     GetDetsSQLInvoice_Location: TIntegerField;
     GetDetsSQLInvoice_Location_Descr: TStringField;
     GetDetsSQLDefault_PM_Revenue_Centre: TStringField;

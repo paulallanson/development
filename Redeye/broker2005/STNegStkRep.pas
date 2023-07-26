@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls;
+  Db, QuickRpt, Qrctrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTNegStkRepFrm = class(TForm)
@@ -31,7 +34,7 @@ type
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
     GetDetsDataSource: TDataSource;
-    GetDetsQuery: TQuery;
+    GetDetsQuery: TFDQuery;
     QRDBText3: TQRDBText;
     LatCostQRExpr: TQRExpr;
     TotCostQRLabel: TQRLabel;

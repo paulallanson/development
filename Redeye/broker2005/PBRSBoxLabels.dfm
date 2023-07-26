@@ -415,8 +415,8 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       NumGlyphs = 2
     end
   end
-  object CountSQL: TQuery
-    DatabaseName = 'PB'
+  object CountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*,'
       'Delivery_Detail.*,'
@@ -449,8 +449,8 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
         ParamType = ptInput
       end>
   end
-  object qryLogos: TQuery
-    DatabaseName = 'PB'
+  object qryLogos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Document_Logo'

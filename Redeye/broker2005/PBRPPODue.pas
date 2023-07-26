@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint, CCSCommon;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPODueFrm = class(TForm)
@@ -14,7 +17,7 @@ type
     POsDataSource: TDataSource;
     DetailQRBand: TQRBand;
     CompDataSource: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     ODueDateQRLabel: TQRLabel;
     SelSuppsQRLabel: TQRLabel;
     SupNamQRDBText: TQRDBText;
@@ -38,7 +41,7 @@ type
     QRShape1: TQRShape;
     Cust_SuppLbl: TQRLabel;
     QRDBText1: TQRDBText;
-    GetPOsSQL: TQuery;
+    GetPOsSQL: TFDQuery;
     QRDBText2: TQRDBText;
     QRDBText3: TQRDBText;
     OnHoldLbl: TQRLabel;
@@ -51,10 +54,10 @@ type
     QRLabel6: TQRLabel;
     QRLabel8: TQRLabel;
     QRShape2: TQRShape;
-    oldGetPOsSQL: TQuery;
+    oldGetPOsSQL: TFDQuery;
     SuppGrpFooterChild: TQRChildBand;
     qrshpSupplierTerms: TQRShape;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     memSupplierNotes: TQRRichText;
     gtQRLabel1: TQRLabel;
     gtQRDBText1: TQRDBText;

@@ -200,15 +200,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, CCSDataBroker, CCSPress, QrExport,
-  CCSCommon, Inifiles;
+  StdCtrls, Buttons, ExtCtrls, DB, CCSDataBroker, CCSPress, QrExport,
+  CCSCommon, Inifiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSEnqFrm = class(TForm)
     MyOrAllRadioGroup: TRadioGroup;
     AllOrOneRadioGroup: TRadioGroup;
-    GetEnqSQL: TQuery;
-    GetEnqSuppSQL: TQuery;
+    GetEnqSQL: TFDQuery;
+    GetEnqSuppSQL: TFDQuery;
     gbLayouts: TGroupBox;
     Label1: TLabel;
     cmbPageLayout: TComboBox;
@@ -226,10 +229,10 @@ type
     cbPrintLogo: TCheckBox;
     SelectLst: TListBox;
     EnqLUSpeedButton: TSpeedButton;
-    GetLastIntSelSQL: TQuery;
-    AddWorkSQL: TQuery;
-    DelWorkSQL: TQuery;
-    AddIntSelQuery: TQuery;
+    GetLastIntSelSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    DelWorkSQL: TFDQuery;
+    AddIntSelQuery: TFDQuery;
     CBFileCpy: TCheckBox;
     procedure CanPrint(Sender: TObject);
     procedure AllOrOneRadioGroupClick(Sender: TObject);

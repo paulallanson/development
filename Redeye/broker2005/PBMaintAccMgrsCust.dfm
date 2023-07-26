@@ -176,8 +176,8 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
     TabOrder = 6
     Visible = False
   end
-  object qryCustomers: TQuery
-    DatabaseName = 'pb'
+  object qryCustomers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer.Customer, Customer.Name as Operator_Name'
       'from Customer'
@@ -191,8 +191,8 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
     Left = 416
     Top = 48
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Customer_Operator'
       '(Customer,'
@@ -223,8 +223,8 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'pb'
+  object qryDummy: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer.Customer, Customer.Name as Customer_Name'
       'from Customer'
@@ -232,8 +232,8 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
     Left = 328
     Top = 120
   end
-  object qryMembers: TQuery
-    DatabaseName = 'pb'
+  object qryMembers: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Customer_Operator.*, Customer.Name as Customer_Name'
       'from Customer_Operator, Customer'
@@ -249,8 +249,8 @@ object PBMaintAccMgrsCustFrm: TPBMaintAccMgrsCustFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Customer_Operator'
       'where Operator = :Operator')

@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, StdCtrls, ExtCtrls, Db, DBTables, QuickRpt, Qrctrls;
+  Buttons, StdCtrls, ExtCtrls, Db, QuickRpt, Qrctrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPProfitRepfrm = class(TForm)
     qrProfitRep: TQuickRep;
-    qryProfitRepAll: TQuery;
+    qryProfitRepAll: TFDQuery;
     qrbndPageHeader: TQRBand;
     qrgrpHeader: TQRGroup;
     QRLabel1: TQRLabel;
@@ -54,8 +57,8 @@ type
     lblDescription: TQRLabel;
     QRLabel5: TQRLabel;
     qrlblReplenishSource: TQRLabel;
-    qryPartStore: TQuery;
-    qrySupplier: TQuery;
+    qryPartStore: TFDQuery;
+    qrySupplier: TFDQuery;
     function GetDetails(Sender: TObject): Integer;
     procedure qrbndDetailBeforePrint(Sender: TQRCustomBand;
       var PrintBand: Boolean);

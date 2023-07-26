@@ -2919,8 +2919,8 @@ object PBRPCustCatKPIFrm: TPBRPCustCatKPIFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_Order.Purchase_Order,'
       '        Purchase_Order.Date_Point,'
@@ -3072,8 +3072,8 @@ object PBRPCustCatKPIFrm: TPBRPCustCatKPIFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCustCatKPI: TQuery
-    DatabaseName = 'PB'
+  object qryCustCatKPI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Customer_Category_KPI.*, Category_KPI.Category_KPI_ID, Ca' +

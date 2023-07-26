@@ -3,38 +3,41 @@ unit PBContractDM;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, CCSCommon, ActiveX;
+  SysUtils, Classes, DB, CCSCommon, ActiveX,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TConMode   = (conAdd, conChange, conDelete, conCopy, conRequote, conView);
 
   TdtmdlContract = class(TDataModule)
-    qryGetContract: TQuery;
-    qryZero: TQuery;
-    AddSQL: TQuery;
-    GetLastSQL: TQuery;
-    qryUpContract: TQuery;
-    qryContractGrid: TQuery;
+    qryGetContract: TFDQuery;
+    qryZero: TFDQuery;
+    AddSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    qryUpContract: TFDQuery;
+    qryContractGrid: TFDQuery;
     dtsContractGrid: TDataSource;
-    qryContractBase: TQuery;
-    qryContacts: TQuery;
+    qryContractBase: TFDQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
-    qryPeriodType: TQuery;
+    qryPeriodType: TFDQuery;
     dtsPeriodType: TDataSource;
-    qryPaymentTerms: TQuery;
+    qryPaymentTerms: TFDQuery;
     dtsPaymentTerms: TDataSource;
-    qryAddContract: TQuery;
-    qryVersionCount: TQuery;
-    qryGetLastContractNo: TQuery;
-    qryUpCompany: TQuery;
-    qryJobBags: TQuery;
+    qryAddContract: TFDQuery;
+    qryVersionCount: TFDQuery;
+    qryGetLastContractNo: TFDQuery;
+    qryUpCompany: TFDQuery;
+    qryJobBags: TFDQuery;
     dtsJobBags: TDataSource;
-    qryDeleteJobBag: TQuery;
-    qryPurchaseOrders: TQuery;
+    qryDeleteJobBag: TFDQuery;
+    qryPurchaseOrders: TFDQuery;
     dtsPurchaseOrders: TDataSource;
-    qryDeletePO: TQuery;
-    qryGetdbKey: TQuery;
-    qrySalesInvoices: TQuery;
+    qryDeletePO: TFDQuery;
+    qryGetdbKey: TFDQuery;
+    qrySalesInvoices: TFDQuery;
     dtsSalesInvoices: TDataSource;
     qrySalesInvoicesSales_Invoice: TIntegerField;
     qrySalesInvoicesSales_Invoice_No: TStringField;
@@ -44,7 +47,7 @@ type
     qrySalesInvoicesGoods_Value: TFloatField;
     qrySalesInvoicesVat_Value: TFloatField;
     qrySalesInvoicesTotal_Value: TFloatField;
-    qryAllSalesInvoiceCharges: TQuery;
+    qryAllSalesInvoiceCharges: TFDQuery;
     qrySalesInvoicesTotal_Goods: TFloatField;
     qrySalesInvoicesTotal_Vat: TFloatField;
     qrySalesInvoicesTotal_Invoice: TFloatField;

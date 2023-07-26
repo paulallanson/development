@@ -36,17 +36,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmNarrative = class(TDataModule)
-    qryReserveSlot: TQuery;
-    qryGetReservedSlot: TQuery;
-    qryDelete: TQuery;
-    qryUpdateLine1: TQuery;
-    qryAddLine: TQuery;
-    qryReadNarrative: TQuery;
-    qryZero: TQuery;
+    qryReserveSlot: TFDQuery;
+    qryGetReservedSlot: TFDQuery;
+    qryDelete: TFDQuery;
+    qryUpdateLine1: TFDQuery;
+    qryAddLine: TFDQuery;
+    qryReadNarrative: TFDQuery;
+    qryZero: TFDQuery;
   end;
 
   TNarrative   = class

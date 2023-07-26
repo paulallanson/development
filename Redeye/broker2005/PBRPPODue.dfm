@@ -1462,16 +1462,16 @@ object PBRPPODueFrm: TPBRPPODueFrm
     Left = 411
     Top = 65
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 504
     Top = 103
   end
-  object GetPOsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Delivery_Detail.Purchase_Order,'
       '        Delivery_Detail.Line,'
@@ -1659,8 +1659,8 @@ object PBRPPODueFrm: TPBRPPODueFrm
         ParamType = ptUnknown
       end>
   end
-  object oldGetPOsSQL: TQuery
-    DatabaseName = 'PB'
+  object oldGetPOsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '    Delivery_Detail.Purchase_Order,'
@@ -1789,8 +1789,8 @@ object PBRPPODueFrm: TPBRPPODueFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'

@@ -887,8 +887,8 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Part.Part,'
       #9'      Part.Part_Description,'
@@ -959,9 +959,9 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
     Left = 184
     Top = 40
   end
-  object qryUsage: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryUsage: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT TOP :Record_List'
       '  '#9'Sales_Order_Line.Part,'
@@ -1029,8 +1029,8 @@ object STRPSalesHistoryFrm: TSTRPSalesHistoryFrm
         ParamType = ptUnknown
       end>
   end
-  object qryBranches: TQuery
-    DatabaseName = 'PB'
+  object qryBranches: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Customer_Branch.Name as Branch_Name,'
       '        Customer.Name as Customer_Name'

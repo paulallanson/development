@@ -88,16 +88,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSPrint, Db, DBTables, LetterDM, PDLetter;
+  CCSPrint, Db, LetterDM, PDLetter,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TBrokerProc = procedure of Object;
 
   TDataBroker = class(TDataModule)
-    qryLayout: TQuery;
-    qryCompany: TQuery;
-    qryFormRef: TQuery;
-    qryFSCClaim: TQuery;
+    qryLayout: TFDQuery;
+    qryCompany: TFDQuery;
+    qryFormRef: TFDQuery;
+    qryFSCClaim: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -160,7 +163,7 @@ type
     property  CompanyName : string read GetCompanyName;
     property  ContinuedFont : TFont read FContinuedFont write SetContinuedFont;
     property  ContinuedText : string read FContinuedText write FContinuedText;
-    property  DatabaseName : string read FDatabaseName write SetDatabaseName;
+    property  ConnectionName : string read FDatabaseName write SetDatabaseName;
     property  LayoutName : string read FLayoutName write SetLayoutName;
     property  LetterName : string read FLetterName write SetLetterName;
     property  PageLayout : TPageLayout read FPageLayout;
@@ -217,7 +220,7 @@ begin
   FPageLayout := TPageLayout.Create;
   FPrinterSettings := TPrinterSettings.Create;
   FCurrentRecord := 0;
-  DatabaseName := 'PB';  { Default to Print Broker database }
+  ConnectionName := 'PB';  { Default to Print Broker database }
 end;
 
 procedure TDataBroker.DataModuleDestroy(Sender: TObject);
@@ -483,14 +486,14 @@ var
 begin
   FDatabaseName := Value;
   for i := 0 to Pred(ComponentCount) do
-    if Components[i] is TQuery then
-      TQuery(Components[i]).DatabaseName := Value
+    if Components[i] is TFDQuery then
+      TFDQuery(Components[i]).ConnectionName := Value
     else
-    if Components[i] is TStoredProc then
-      TStoredProc(Components[i]).DatabaseName := Value
+    if Components[i] is TFDStoredProc then
+      TFDStoredProc(Components[i]).ConnectionName := Value
     else
-    if Components[i] is TTable then
-      TTable(Components[i]).DatabaseName := Value;
+    if Components[i] is TFDTable then
+      TFDTable(Components[i]).ConnectionName := Value;
 end;
 
 function TDataBroker.CreatePrintRecord(

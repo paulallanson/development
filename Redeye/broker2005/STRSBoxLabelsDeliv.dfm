@@ -310,8 +310,8 @@ object STRSBoxLabelsDelivFrm: TSTRSBoxLabelsDelivFrm
       NumGlyphs = 2
     end
   end
-  object qryLogos: TQuery
-    DatabaseName = 'PB'
+  object qryLogos: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Document_Logo'

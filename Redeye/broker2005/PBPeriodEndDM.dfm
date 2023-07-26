@@ -4,8 +4,8 @@ object dmPeriodEnd: TdmPeriodEnd
   Top = 92
   Height = 479
   Width = 741
-  object qryUpdPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Period'
       '        (Period,'
@@ -56,8 +56,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from period'
@@ -65,21 +65,21 @@ object dmPeriodEnd: TdmPeriodEnd
     Left = 96
     Top = 8
   end
-  object qryNextPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryNextPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(period) as Last_Period'
       'from Period')
     Left = 160
     Top = 8
   end
-  object qrySalesInv: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInv: TFDQuery
+    ConnectionName = 'PB'
     Left = 24
     Top = 72
   end
-  object qryAddSalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qryAddSalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sales_Profit'
       '  (Sales_Profit,'
@@ -248,13 +248,13 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     Left = 160
     Top = 72
   end
-  object qryGetLastSProfit: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastSProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(Sales_Profit) as Last_Sales_Profit'
       'from'
@@ -262,8 +262,8 @@ object dmPeriodEnd: TdmPeriodEnd
     Left = 224
     Top = 80
   end
-  object qryPO: TQuery
-    DatabaseName = 'PB'
+  object qryPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Purchase_Order'
@@ -277,8 +277,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_orderLine.Purchase_order,'
       '       Line,'
@@ -324,8 +324,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qrySO: TQuery
-    DatabaseName = 'PB'
+  object qrySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_Order,'
       '        Supplier,'
@@ -349,8 +349,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qrySORep: TQuery
-    DatabaseName = 'PB'
+  object qrySORep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from Sales_OrderRep'
@@ -364,8 +364,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from company'
@@ -373,8 +373,8 @@ object dmPeriodEnd: TdmPeriodEnd
     Left = 160
     Top = 144
   end
-  object qrySOLine: TQuery
-    DatabaseName = 'PB'
+  object qrySOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Sales_order_line'
@@ -394,8 +394,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryPurchOrd: TQuery
-    DatabaseName = 'PB'
+  object qryPurchOrd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purch_Ord.Purch_ord,'
       '       Purch_ord_Line.Purchase_Price,'
@@ -418,8 +418,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qrySinvAddChgs: TQuery
-    DatabaseName = 'PB'
+  object qrySinvAddChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Total_Charges'
       'from Sales_invoice_Add_Charge'
@@ -433,8 +433,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOLineChgs: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOLineChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purch_Ord_Line_Add_Chg'
       'set Sales_Profit = :Sales_Profit'
@@ -460,8 +460,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qrySPOAddChgs: TQuery
-    DatabaseName = 'PB'
+  object qrySPOAddChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select SUM(Amount) as Total_Charges'
       'from Purch_Ord, Purch_Ord_Add_Charge'
@@ -480,8 +480,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryUpSPOchgs: TQuery
-    DatabaseName = 'PB'
+  object qryUpSPOchgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Purch_ord_Add_Charge'
       'set Period_end_run = '#39'Y'#39
@@ -497,8 +497,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryJB: TQuery
-    DatabaseName = 'PB'
+  object qryJB: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag, Office_Contact, Account_Team'
       'from Job_Bag '
@@ -512,8 +512,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Job_Bag_Line_dets'
@@ -533,8 +533,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryGetPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryGetPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -548,8 +548,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'PB'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'set Financial_year = :Financial_year, Period = :Period')
@@ -567,8 +567,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryCustomerReps: TQuery
-    DatabaseName = 'PB'
+  object qryCustomerReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Reps_branches'
@@ -594,8 +594,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryRep: TQuery
-    DatabaseName = 'PB'
+  object qryRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -609,8 +609,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryProductType: TQuery
-    DatabaseName = 'PB'
+  object qryProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Product_Type'
@@ -624,8 +624,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryAddAnalysis: TQuery
-    DatabaseName = 'PB'
+  object qryAddAnalysis: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Analysis'
       '  (Operator,'
@@ -781,13 +781,13 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qry4Cast: TQuery
-    DatabaseName = 'pb'
+  object qry4Cast: TFDQuery
+    ConnectionName = 'pb'
     Left = 432
     Top = 312
   end
-  object qryPOLineCost: TQuery
-    DatabaseName = 'PB'
+  object qryPOLineCost: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Purchase_orderLine.Purchase_order,'
       '       Line,'
@@ -830,8 +830,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryPOInvLine: TQuery
-    DatabaseName = 'PB'
+  object qryPOInvLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier_Invoice_Line.Supplier_Invoice,'
       '       Supplier_Invoice_Line.Invoice_Line_no,'
@@ -874,8 +874,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryUpPOInvAddChgs: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOInvAddChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Supplier_Invoice_Charge'
       'set Supplier_Invoice_Charge.Sales_Profit = :Sales_Profit'
@@ -912,8 +912,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryUpPurchInvLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpPurchInvLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Invoice_Line'
       'set Sales_Profit = :Sales_Profit'
@@ -938,8 +938,8 @@ object dmPeriodEnd: TdmPeriodEnd
         ParamType = ptUnknown
       end>
   end
-  object qryGetRepTeam: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepTeam: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Rep_Team'
       'FROM Rep_Team_Member'

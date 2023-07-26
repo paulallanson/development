@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, Spin;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, Spin,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPaymentTermsFrm = class(TForm)
@@ -14,12 +17,12 @@ type
     CancelBitBtn: TBitBtn;
     DelLabel: TLabel;
     DescrEdit: TEdit;
-    UpdSQL: TQuery;
-    GetLastSQL: TQuery;
-    DelSQL: TQuery;
-    AddSQL: TQuery;
+    UpdSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    AddSQL: TFDQuery;
     DetsSRC: TDataSource;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     Label2: TLabel;
     spnDays: TSpinEdit;
     rdgrpPaymentType: TRadioGroup;

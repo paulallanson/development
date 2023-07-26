@@ -585,9 +585,9 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       TabOrder = 0
     end
   end
-  object qrySalesByPrdCat: TQuery
+  object qrySalesByPrdCat: TFDQuery
     OnCalcFields = qrySalesByPrdCatCalcFields
-    DatabaseName = 'pb'
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT DISTINCT Sales_Invoice.Inv_to_Customer AS Customer,'
       
@@ -746,8 +746,8 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     Left = 112
     Top = 200
   end
-  object SQLRep: TQuery
-    DatabaseName = 'PB'
+  object SQLRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep, Name'
       'from Rep'

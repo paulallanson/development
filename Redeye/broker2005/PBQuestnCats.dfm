@@ -124,8 +124,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
       'be undone.')
     TabOrder = 4
   end
-  object GetQuestnsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQuestnsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Question'
@@ -139,8 +139,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Left = 57
     Top = 120
   end
-  object GetCatsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCatsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Category, Description'
       'From Category'
@@ -153,8 +153,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Left = 105
     Top = 320
   end
-  object GetCatsProdTypesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCatsProdTypesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type'
       'From Product_Type'
@@ -168,8 +168,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Question) as Last_No'
       'From Product_TypeQuestion'
@@ -183,8 +183,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Product_TypeQuestion'
       
@@ -228,8 +228,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object AddQListSQL: TQuery
-    DatabaseName = 'PB'
+  object AddQListSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Product_TypeQList'
       '(Product_Type, Question, Question_List_No, Question_List_Descr)'
@@ -257,8 +257,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProdType: TQuery
-    DatabaseName = 'PB'
+  object qryProdType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type, Description'
       'From Product_Type'
@@ -271,8 +271,8 @@ object PBQuestnCatsFrm: TPBQuestnCatsFrm
     Left = 289
     Top = 32
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type'
       'From Product_Type'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBJobBagDm;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, PBJobBagDm,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagSchedFrm = class(TForm)
@@ -38,7 +41,7 @@ type
     Label1: TLabel;
     cmbRevision: TComboBox;
     BitBtn1: TBitBtn;
-    qrySchedules: TQuery;
+    qrySchedules: TFDQuery;
     lblScheduleDate: TLabel;
     lblScheduleOp: TLabel;
     Label26: TLabel;

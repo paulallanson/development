@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Buttons, DB, DBTables, PBQuotesDM, ComCtrls,
-  ExtCtrls;
+  Dialogs, DBCtrls, StdCtrls, Buttons, DB, PBQuotesDM, ComCtrls,
+  ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintQuoteSupplyFrm = class(TForm)
@@ -20,15 +23,15 @@ type
     lblCostPrice: TLabel;
     Label4: TLabel;
     dblkpPriceUnit: TDBLookupComboBox;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryGetPUnit: TQuery;
+    qryGetPUnit: TFDQuery;
     edtDescription: TRichEdit;
     Label5: TLabel;
     memSellPrice: TMemo;
     Label14: TLabel;
     dblkpVat: TDBLookupComboBox;
-    qryVat: TQuery;
+    qryVat: TFDQuery;
     dtsVat: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);

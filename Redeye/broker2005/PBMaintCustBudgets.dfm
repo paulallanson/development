@@ -235,8 +235,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
       NumGlyphs = 2
     end
   end
-  object qryCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Customer.Customer, Customer.Name as Customer_Name, Custom' +
@@ -264,8 +264,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Period, Description, Financial_Year'
       'from Period'
@@ -280,8 +280,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryDel: TQuery
-    DatabaseName = 'PB'
+  object qryDel: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Customer_Budget'
       'where Period >= :Start_Period and Period <= :End_Period')
@@ -299,8 +299,8 @@ object PBMaintCustBudgetsfrm: TPBMaintCustBudgetsfrm
         ParamType = ptUnknown
       end>
   end
-  object qryAdd: TQuery
-    DatabaseName = 'PB'
+  object qryAdd: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Customer_Budget'
       '  (Customer,'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtDlgs, Db, DBTables, Buttons, ExtCtrls, DBCtrls, jpeg, GIFImage;
+  StdCtrls, ExtDlgs, Db, Buttons, ExtCtrls, DBCtrls, jpeg, GIFImage,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCCSMaintPrtImagesFrm = class(TForm)
@@ -14,18 +17,18 @@ type
     btnBrowse2: TButton;
     btbtnOK: TBitBtn;
     BitBtn2: TBitBtn;
-    qryInsECommInfo: TQuery;
-    qryUpdECommInfo: TQuery;
-    qrySelECommInfo: TQuery;
-    qryTopECommNo: TQuery;
+    qryInsECommInfo: TFDQuery;
+    qryUpdECommInfo: TFDQuery;
+    qrySelECommInfo: TFDQuery;
+    qryTopECommNo: TFDQuery;
     DataSource1: TDataSource;
     lblPopUpImage: TLabel;
     Image2: TImage;
     lblFullImagePath: TLabel;
-    qryUpdFullImg: TQuery;
+    qryUpdFullImg: TFDQuery;
     Shape2: TShape;
     btbtnEraseImage2: TBitBtn;
-    qryDelEcommInfo: TQuery;
+    qryDelEcommInfo: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure btnBrowse2Click(Sender: TObject);
     procedure btbtnOKClick(Sender: TObject);
@@ -265,7 +268,7 @@ function TCCSMaintPrtImagesFrm.GetJPEG(dsSource: TDataSet; Field: String;
   var Img: TImage): Integer;
 var
   JPEG : TJpegImage;
-  BLStream : TBlobStream;
+  BLStream : TFDBlobStream;
 begin
   Result := -1;
   Jpeg := TJPEGImage.Create;
@@ -273,7 +276,7 @@ begin
     //If field is not empty, we can proceed with JPEG retrieve
     if not dsSource.FieldByName(Field).isNull then
     begin
-      BLStream := TBLOBStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
+      BLStream := TFDBlobStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
       try
         BLStream.Position := 0;
         try
@@ -319,7 +322,7 @@ function TCCSMaintPrtImagesFrm.GetBMP(dsSource: TDataSet; Field: string;
   var Img: TImage): Integer;
 var
   BitMap : TBitMap;
-  BLStream : TBlobStream;
+  BLStream : TFDBlobStream;
 begin
   Result := -1;
   BitMap := TBitMap.Create;
@@ -327,7 +330,7 @@ begin
     //If field is not empty, we can proceed with JPEG retrieve
     if not dsSource.FieldByName(Field).isNull then
     begin
-      BLStream := TBLOBStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
+      BLStream := TFDBlobStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
       try
         BLStream.Position := 0;
         try
@@ -349,7 +352,7 @@ function TCCSMaintPrtImagesFrm.GetGIF(dsSource: TDataSet; Field: string;
   var Img: TImage): integer;
 var
   GIF : TGIFImage;
-  BLStream : TBlobStream;
+  BLStream : TFDBlobStream;
 begin
   Result := -1;
   GIF := TGIFImage.Create;
@@ -357,7 +360,7 @@ begin
     //If field is not empty, we can proceed with JPEG retrieve
     if not dsSource.FieldByName(Field).isNull then
     begin
-      BLStream := TBLOBStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
+      BLStream := TFDBlobStream.Create(dsSource.FieldByName(Field) as TBLOBField, bmRead);
       try
         BLStream.Position := 0;
         try

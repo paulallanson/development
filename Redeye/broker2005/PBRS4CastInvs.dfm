@@ -305,8 +305,8 @@ object PBRS4CastInvsFrm: TPBRS4CastInvsFrm
     Caption = 'Page break by report total'
     TabOrder = 12
   end
-  object SQLRep: TQuery
-    DatabaseName = 'PB'
+  object SQLRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep, Name'
       'from Rep'

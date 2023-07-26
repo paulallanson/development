@@ -295,8 +295,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
       OnClick = CheckOK
     end
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Price_Unit.Price_Unit,'
       '       Price_Unit.Description,'
@@ -311,8 +311,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Left = 240
     Top = 97
   end
-  object qryGetCost: TQuery
-    DatabaseName = 'PB'
+  object qryGetCost: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Process_Cost_Category_Sub.Process,'
       '        Process_Cost_Category_Sub.Cost_Number,'
@@ -357,8 +357,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Process_Cost_Category_Sub'
       '        (Customer,'
@@ -424,8 +424,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Process_Cost_Category_Sub'
       'Set     Cost_Description = :Cost_Description,'
@@ -489,8 +489,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Process_Cost_Category_Sub'
       'Where'
@@ -529,8 +529,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Product_Type'
       'Set     Description = :Description,'
@@ -576,8 +576,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Process_Cost_Category_Sub'
       'where'
@@ -615,8 +615,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Sub_Category'
       'From Process_Cost_Category_Sub'

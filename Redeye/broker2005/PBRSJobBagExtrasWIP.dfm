@@ -618,8 +618,8 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
       OnClick = chkbxExcludeOnHoldClick
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Job_Bag_Line_Dets.Job_Bag, '
       #9'Job_Bag_Line_Dets.Job_Bag_Line, '
@@ -691,8 +691,8 @@ object PBRSJobBagExtrasWIPfrm: TPBRSJobBagExtrasWIPfrm
     Left = 400
     Top = 88
   end
-  object qryRepName: TQuery
-    DatabaseName = 'PB'
+  object qryRepName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep.Name'
       'From Rep'

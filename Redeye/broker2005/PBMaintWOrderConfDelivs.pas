@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DBCtrls, StdCtrls, Buttons, ExtCtrls, PBWOrdersDM, DB, DBTables;
+  Dialogs, DBCtrls, StdCtrls, Buttons, ExtCtrls, PBWOrdersDM, DB;
 
 type
   TfrmPBMaintWOrderConfDelivs = class(TForm)

@@ -372,8 +372,8 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
       OtherSlice.Text = 'Other'
     end
   end
-  object qryGraph1: TQuery
-    DatabaseName = 'PB'
+  object qryGraph1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select non_conform_dept.non_conform_dept_descr,'
       #9'sum(Total_cost) as Cost'
@@ -398,8 +398,8 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGraph2: TQuery
-    DatabaseName = 'PB'
+  object qryGraph2: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select non_conform_dept.non_conform_dept_descr,'
       #9'sum(Total_cost) as Cost'
@@ -424,8 +424,8 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGraph3: TQuery
-    DatabaseName = 'PB'
+  object qryGraph3: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select non_conform_dept.non_conform_dept_descr,'
       #9'sum(Total_cost) as Cost'
@@ -450,8 +450,8 @@ object PBRSNCASourcePieFrm: TPBRSNCASourcePieFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGraph4: TQuery
-    DatabaseName = 'PB'
+  object qryGraph4: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select non_conform_dept.non_conform_dept_descr,'
       #9'sum(Total_cost) as Cost'

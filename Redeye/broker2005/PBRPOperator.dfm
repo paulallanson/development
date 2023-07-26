@@ -422,8 +422,8 @@ object PBRPOperatorFrm: TPBRPOperatorFrm
       end
     end
   end
-  object qryOpBtns: TQuery
-    DatabaseName = 'PB'
+  object qryOpBtns: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Operator_Button'
       'where operator = :operator')
@@ -436,8 +436,8 @@ object PBRPOperatorFrm: TPBRPOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySelOperator: TQuery
-    DatabaseName = 'PB'
+  object qrySelOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select operator.*,'
       '  rep.Name as rep_name'
@@ -453,8 +453,8 @@ object PBRPOperatorFrm: TPBRPOperatorFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Document_Directory '
       'from company')

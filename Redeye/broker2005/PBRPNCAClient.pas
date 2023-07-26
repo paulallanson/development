@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint, DateUtils;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint, DateUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPNCAClientfrm = class(TForm)
@@ -13,10 +16,10 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryCustomers: TQuery;
+    qryCustomers: TFDQuery;
     QRSubDetail1: TQRSubDetail;
-    qryNCAType: TQuery;
-    qryReport: TQuery;
+    qryNCAType: TFDQuery;
+    qryReport: TFDQuery;
     qrbGrpRepFooter: TQRBand;
     qrDbRepTotalBy: TQRDBText;
     qrlblMonth1: TQRLabel;
@@ -45,7 +48,7 @@ type
     qrlblRepCount11: TQRLabel;
     qrlblRepCount12: TQRLabel;
     qrlblRepCountTotal: TQRLabel;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     QRBand3: TQRBand;
     QRLabel7: TQRLabel;
     qrlblTotalCount1: TQRLabel;
@@ -123,7 +126,7 @@ type
     qrlblCost11: TQRLabel;
     qrlblCost12: TQRLabel;
     qrlblTotalCost: TQRLabel;
-    qryCustomersOld: TQuery;
+    qryCustomersOld: TFDQuery;
     procedure quickreportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure QRSubDetail1BeforePrint(Sender: TQRCustomBand;

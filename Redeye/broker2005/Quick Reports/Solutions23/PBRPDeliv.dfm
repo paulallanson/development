@@ -1242,8 +1242,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
       Stretch = True
     end
   end
-  object PODelivSQL: TQuery
-    DatabaseName = 'PB'
+  object PODelivSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.*,'
       'Purchase_OrderLine.Cust_Order_no,'
@@ -1333,8 +1333,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 896
     Top = 232
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -1369,8 +1369,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  Building_no_name,'
@@ -1391,8 +1391,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object RepSQL: TQuery
-    DatabaseName = 'PB'
+  object RepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       'Building_no_name,'
@@ -1417,8 +1417,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 888
     Top = 24
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Supplier.Name as Supplier_Name,'
       'Building_no_name,'
@@ -1448,8 +1448,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'
@@ -1464,8 +1464,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'
@@ -1482,9 +1482,9 @@ object PBRPDelivFrm: TPBRPDelivFrm
     Left = 816
     Top = 192
   end
-  object CustDetsSQL: TQuery
-    DatabaseName = 'PB'
-    DataSource = PODelivSRC
+  object CustDetsSQL: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = PODelivSRC
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       'Building_no_name,'
@@ -1517,8 +1517,8 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptInput
       end>
   end
-  object qryGetComp: TQuery
-    DatabaseName = 'PB'
+  object qryGetComp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       'Building_no_name,'

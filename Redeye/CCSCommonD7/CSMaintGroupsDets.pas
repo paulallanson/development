@@ -47,7 +47,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, CSGroupsDM;
+  StdCtrls, Buttons, DB, CSGroupsDM;
 
 type
   TCSMaintGroupsDetsFrm = class(TForm)

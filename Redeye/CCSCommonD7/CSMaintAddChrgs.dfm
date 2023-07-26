@@ -262,8 +262,8 @@ object CSMaintAddChrgsFrm: TCSMaintAddChrgsFrm
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
   end
-  object qryInsAddChrg: TQuery
-    DatabaseName = 'PB'
+  object qryInsAddChrg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Additional_Charge'
       '  (Additional_charge,'
@@ -300,8 +300,8 @@ object CSMaintAddChrgsFrm: TCSMaintAddChrgsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdAddChrg: TQuery
-    DatabaseName = 'PB'
+  object qryUpdAddChrg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update additional_charge'
       'set Details = :Details,'
@@ -333,8 +333,8 @@ object CSMaintAddChrgsFrm: TCSMaintAddChrgsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDelAddChrge: TQuery
-    DatabaseName = 'PB'
+  object qryDelAddChrge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from additional_charge'
       'where additional_charge = :additional_charge;')
@@ -347,8 +347,8 @@ object CSMaintAddChrgsFrm: TCSMaintAddChrgsFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySelNextAddChrg: TQuery
-    DatabaseName = 'PB'
+  object qrySelNextAddChrg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Max(Additional_charge) as last_chrg_no from additional_ch' +

@@ -2210,8 +2210,8 @@ object PBRPJobBagExtrasWIPfrm: TPBRPJobBagExtrasWIPfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order, '
       #9'Delivery_Detail.Line, '
@@ -2279,8 +2279,8 @@ object PBRPJobBagExtrasWIPfrm: TPBRPJobBagExtrasWIPfrm
     Left = 710
     Top = 16
   end
-  object qrySO: TQuery
-    DatabaseName = 'PB'
+  object qrySO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sales_order_Line.Part_Sales_Price, Sales_order_Line.Part,'
       
@@ -2304,8 +2304,8 @@ object PBRPJobBagExtrasWIPfrm: TPBRPJobBagExtrasWIPfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPO: TQuery
-    DatabaseName = 'PB'
+  object qryPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Purchase_orderLine.Purchase_Order,'
       '        Price_Unit.Price_Unit_Factor,'

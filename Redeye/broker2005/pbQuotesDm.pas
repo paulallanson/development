@@ -3,7 +3,10 @@ unit pbQuotesDm;
 interface
 
 uses
-  SysUtils, Classes, DB, DBTables, pbMainMenu, CCSCommon, pbDatabase, Math;
+  SysUtils, Classes, DB, pbMainMenu, CCSCommon, pbDatabase, Math,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TqMode   = (qAdd, qChange, qDelete, qCopy, qView, qRepeat, qReQuote);
@@ -11,60 +14,60 @@ type
   TqDocMode = (qdocAdd, qdocChange, qdocDelete, qdocView);
 
   TdtmdlQuotes = class(TDataModule)
-    qryZero: TQuery;
-    qryQHeader: TQuery;
-    qryQAddHeader: TQuery;
-    qryQUpdHeader: TQuery;
+    qryZero: TFDQuery;
+    qryQHeader: TFDQuery;
+    qryQAddHeader: TFDQuery;
+    qryQUpdHeader: TFDQuery;
     dsQAllLines: TDataSource;
-    qryQAllLines: TQuery;
-    UpdLastQuoteSQL: TQuery;
-    GetLastQuoteSQL: TQuery;
-    qryQHeaderGrid: TQuery;
+    qryQAllLines: TFDQuery;
+    UpdLastQuoteSQL: TFDQuery;
+    GetLastQuoteSQL: TFDQuery;
+    qryQHeaderGrid: TFDQuery;
     dsQHeaderGrid: TDataSource;
-    qryGetCustomerRep: TQuery;
-    OperatorSQL: TQuery;
+    qryGetCustomerRep: TFDQuery;
+    OperatorSQL: TFDQuery;
     OperatorSRC: TDataSource;
     srcCustContact: TDataSource;
-    qryCustContact: TQuery;
-    qryGetRep: TQuery;
-    qryPriceUnit: TQuery;
+    qryCustContact: TFDQuery;
+    qryGetRep: TFDQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryQDocument: TQuery;
-    qryQAddDocument: TQuery;
-    qryQAllDocuments: TQuery;
-    qryQAddLine: TQuery;
-    qryQLine: TQuery;
-    qryQAllSupplies: TQuery;
-    qryQAddSupply: TQuery;
-    qryQSupply: TQuery;
-    qryGetPriceUnit: TQuery;
-    qryUpdQuoteStatus: TQuery;
-    qryGetProductType: TQuery;
-    qryGetPUnitFromFactor: TQuery;
-    qryQUpdEstimateFile: TQuery;
-    qryQReason: TQuery;
+    qryQDocument: TFDQuery;
+    qryQAddDocument: TFDQuery;
+    qryQAllDocuments: TFDQuery;
+    qryQAddLine: TFDQuery;
+    qryQLine: TFDQuery;
+    qryQAllSupplies: TFDQuery;
+    qryQAddSupply: TFDQuery;
+    qryQSupply: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qryUpdQuoteStatus: TFDQuery;
+    qryGetProductType: TFDQuery;
+    qryGetPUnitFromFactor: TFDQuery;
+    qryQUpdEstimateFile: TFDQuery;
+    qryQReason: TFDQuery;
     dtsQReason: TDataSource;
-    qryQuoteWon: TQuery;
-    qryDummy: TQuery;
-    qryGetWorkCentrebyName: TQuery;
-    qryGetWorkCentreGroupbyName: TQuery;
-    qryGetWorkCentreWCGroup: TQuery;
-    qryGetProcess: TQuery;
-    qryGetWorkCentrebyEstName: TQuery;
-    qryQuotesJB: TQuery;
+    qryQuoteWon: TFDQuery;
+    qryDummy: TFDQuery;
+    qryGetWorkCentrebyName: TFDQuery;
+    qryGetWorkCentreGroupbyName: TFDQuery;
+    qryGetWorkCentreWCGroup: TFDQuery;
+    qryGetProcess: TFDQuery;
+    qryGetWorkCentrebyEstName: TFDQuery;
+    qryQuotesJB: TFDQuery;
     dtsQuotesJB: TDataSource;
-    qryQuotesNotConverted: TQuery;
-    qryGetCustomerPrices: TQuery;
-    qryGetCustContact: TQuery;
-    qryQAddProcessGroup: TQuery;
-    qryQProcessGroup: TQuery;
-    qryGetProcessGroups: TQuery;
-    qryReQuoteCount: TQuery;
-    qryQUpdEstimateDate: TQuery;
-    qryGetCustomer: TQuery;
-    qryGetQuoteCostDefaults: TQuery;
-    qryGetCustomerSubRep: TQuery;
-    qryDummyOld: TQuery;
+    qryQuotesNotConverted: TFDQuery;
+    qryGetCustomerPrices: TFDQuery;
+    qryGetCustContact: TFDQuery;
+    qryQAddProcessGroup: TFDQuery;
+    qryQProcessGroup: TFDQuery;
+    qryGetProcessGroups: TFDQuery;
+    qryReQuoteCount: TFDQuery;
+    qryQUpdEstimateDate: TFDQuery;
+    qryGetCustomer: TFDQuery;
+    qryGetQuoteCostDefaults: TFDQuery;
+    qryGetCustomerSubRep: TFDQuery;
+    qryDummyOld: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     function GetHeaderCount: integer;
@@ -111,11 +114,11 @@ type
     function GetWorkCentreGroupbyWC(tempCode: integer): integer;
     function IsProspect(tempCode: integer): boolean;
     procedure SaveNarrative(var iNarrative: Integer; const Data: string);
-    procedure UpdateQuoteStatus(tempCode: real; tempStatus: integer);
     function UsingSearch: boolean;
+    procedure UpdateQuoteStatus(tempCode: real; tempStatus: integer);
   end;
 
-  TQuote      = class;
+  TQuote = class;
 
   TQuoteDept = class
   private
@@ -1576,7 +1579,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -1687,7 +1690,7 @@ begin
   Narrative := TNarrative.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally

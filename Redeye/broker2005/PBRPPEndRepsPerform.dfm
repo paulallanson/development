@@ -8571,8 +8571,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
       end
     end
   end
-  object qryReps: TQuery
-    DatabaseName = 'PB'
+  object qryReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT Rep_Budget.Rep, Rep.Name, sum(Rep_Budget.Profit_' +
@@ -8609,8 +8609,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -8618,8 +8618,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
     Left = 83
     Top = 38
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8681,8 +8681,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryRepBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Budget'
@@ -8708,8 +8708,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -8730,8 +8730,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRep: TQuery
-    DatabaseName = 'pb'
+  object qryRep: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Rep_Financial'
@@ -8751,8 +8751,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySubReps: TQuery
-    DatabaseName = 'PB'
+  object qrySubReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT Rep_Budget.Rep, Rep.Name, sum(Rep_Budget.Profit_' +
@@ -8789,8 +8789,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySubReport: TQuery
-    DatabaseName = 'PB'
+  object qrySubReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8852,8 +8852,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySubReportNull: TQuery
-    DatabaseName = 'PB'
+  object qrySubReportNull: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8910,8 +8910,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryReportNull: TQuery
-    DatabaseName = 'PB'
+  object qryReportNull: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8968,8 +8968,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qrySubRepsOld: TQuery
-    DatabaseName = 'PB'
+  object qrySubRepsOld: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_profit.Sub_Rep as Rep, Rep.Name'
       'FROM Rep RIGHT JOIN Sales_profit '
@@ -9003,8 +9003,8 @@ object PBRPPEndRepsPerformfrm: TPBRPPEndRepsPerformfrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepsOld: TQuery
-    DatabaseName = 'PB'
+  object qryRepsOld: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_profit.Rep, Rep.Name'
       'FROM Sales_profit, Rep'

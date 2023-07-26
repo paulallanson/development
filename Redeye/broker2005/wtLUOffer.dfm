@@ -133,15 +133,15 @@ object frmwtLUOffer: TfrmwtLUOffer
     Left = 216
     Top = 64
   end
-  object tblSalesOffer: TTable
-    DatabaseName = 'WT'
+  object tblSalesOffer: TFDTable
+    ConnectionName = 'WT'
     Filtered = True
     TableName = 'Sales_Offer'
     Left = 96
     Top = 64
   end
-  object qryDelete: TQuery
-    DatabaseName = 'wt'
+  object qryDelete: TFDQuery
+    ConnectionName = 'wt'
     SQL.Strings = (
       'delete from Sale_Offer'
       'where Sale_Offer = :Sale_Offer')

@@ -3808,13 +3808,13 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 179
     Top = 38
   end
-  object qryDepartments: TQuery
-    DatabaseName = 'PB'
+  object qryDepartments: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select distinct Process_Group, Process_Group.Process_Group_Descr' +
@@ -3824,8 +3824,8 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Left = 792
     Top = 24
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT'
       '    Customer.Name as Customer_Name,'
@@ -3875,9 +3875,9 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDataCollect: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsReport
+  object qryDataCollect: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsReport
     SQL.Strings = (
       'SELECT job_bag_time_log.Job_Bag,'
       #9'Process_Group.Sequence_no,'
@@ -3967,8 +3967,8 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
     Left = 232
     Top = 40
   end
-  object qryGetInvoiced: TQuery
-    DatabaseName = 'PB'
+  object qryGetInvoiced: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Sales_profit.Job_Bag,'
       #9'Category.Analysis_Code,'
@@ -3992,8 +3992,8 @@ object PBRPSalesInvCostFrm: TPBRPSalesInvCostFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCatAnalysis: TQuery
-    DatabaseName = 'PB'
+  object qryCatAnalysis: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Analysis_Code'
       'from Category'

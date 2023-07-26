@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, DBTables, DBCtrls, StdCtrls, Buttons;
+  Dialogs, DB, DBCtrls, StdCtrls, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintAccountManagerFrm = class(TForm)
@@ -12,20 +15,20 @@ type
     btnCancel: TBitBtn;
     Label1: TLabel;
     dblkpOperators: TDBLookupComboBox;
-    qryOperators: TQuery;
+    qryOperators: TFDQuery;
     dtsOperators: TDataSource;
     btnOperators: TBitBtn;
-    AddSQL: TQuery;
-    qryGetLast: TQuery;
-    qryDelete: TQuery;
+    AddSQL: TFDQuery;
+    qryGetLast: TFDQuery;
+    qryDelete: TFDQuery;
     Label2: TLabel;
     dblkpTeam: TDBLookupComboBox;
-    qryTeam: TQuery;
+    qryTeam: TFDQuery;
     dtsTeam: TDataSource;
-    qryGetAccountTeam: TQuery;
-    qryDelTeam: TQuery;
-    qryAddTeam: TQuery;
-    qryGetMemberNo: TQuery;
+    qryGetAccountTeam: TFDQuery;
+    qryDelTeam: TFDQuery;
+    qryAddTeam: TFDQuery;
+    qryGetMemberNo: TFDQuery;
     btnTeam: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure dblkpOperatorsClick(Sender: TObject);

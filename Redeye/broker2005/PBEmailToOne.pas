@@ -21,7 +21,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, CCSCommon, IniFiles, Db, DBTables, DBCtrls;
+  StdCtrls, Buttons, CCSCommon, IniFiles, Db, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEmailToOneFrm = class(TForm)
@@ -33,7 +36,7 @@ type
     OKBitBtn: TBitBtn;
     Label3: TLabel;
     cmbExportFilter: TDBLookupComboBox;
-    ExFilterSQL: TQuery;
+    ExFilterSQL: TFDQuery;
     ExFilterSRC: TDataSource;
     procedure FaxNoEditChange(Sender: TObject);
     procedure CheckOK(Sender: TObject);

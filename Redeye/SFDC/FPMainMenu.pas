@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ComCtrls, StdCtrls, DB, DBTables, Grids, DBGrids;
+  Dialogs, ComCtrls, StdCtrls, DB, Grids, DBGrids;
 
 type
   TfrmFPMainMenu = class(TForm)

@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, STStoreStockObj;
+  Db, STStoreStockObj,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TDMStoreStock = class(TDataModule)
-    qrySelStoreStock: TQuery;
-    qryUpdStoreStock: TQuery;
-    qrySelPartStore: TQuery;
+    qrySelStoreStock: TFDQuery;
+    qryUpdStoreStock: TFDQuery;
+    qrySelPartStore: TFDQuery;
   private
     { Private declarations }
   public

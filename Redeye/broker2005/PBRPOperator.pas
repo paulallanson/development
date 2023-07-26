@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Db, DBTables, Qrctrls, Buttons, ComCtrls, CCSPrint,
-  Menus;
+  ExtCtrls, QuickRpt, Db, Qrctrls, Buttons, ComCtrls, CCSPrint,
+  Menus,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPOperatorFrm = class(TForm)
@@ -13,16 +16,16 @@ type
     qrbndTitle: TQRBand;
     qrstrbndDetail: TQRStringsBand;
     qrlblButtonName: TQRLabel;
-    qryOpBtns: TQuery;
+    qryOpBtns: TFDQuery;
     qrlblAccess: TQRLabel;
     qrlblCat: TQRLabel;
     qrlblTitle: TQRLabel;
     qrlblOpName: TQRLabel;
-    qrySelOperator: TQuery;
+    qrySelOperator: TFDQuery;
     qrlblLoginName: TQRLabel;
     qrlblRep: TQRLabel;
     qrlblDocDirectory: TQRLabel;
-    qryCompany: TQuery;
+    qryCompany: TFDQuery;
     QRLabel1: TQRLabel;
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;

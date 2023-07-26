@@ -120,7 +120,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, DB, DBTables, PBPOObjects, Spin, ComCtrls,
+  StdCtrls, Buttons, ExtCtrls, DB, PBPOObjects, Spin, ComCtrls,
   OleCtnrs, CCSCommon;
 
 type

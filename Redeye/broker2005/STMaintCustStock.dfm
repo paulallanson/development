@@ -375,8 +375,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Height = 19
     Panels = <>
   end
-  object qryProductsFrom: TQuery
-    DatabaseName = 'PB'
+  object qryProductsFrom: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part'
@@ -410,8 +410,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Left = 272
     Top = 120
   end
-  object qryProductsTo: TQuery
-    DatabaseName = 'PB'
+  object qryProductsTo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part'
@@ -445,8 +445,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Left = 669
     Top = 128
   end
-  object qryUpdPart: TQuery
-    DatabaseName = 'pb'
+  object qryUpdPart: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Part'
       'set Customer = :Customer, Branch_no = :Branch_no'
@@ -470,8 +470,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         ParamType = ptUnknown
       end>
   end
-  object qryUpdFormRef: TQuery
-    DatabaseName = 'pb'
+  object qryUpdFormRef: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'update Form_Reference'
       'set Customer = :Customer, Branch_no = :Branch_no'

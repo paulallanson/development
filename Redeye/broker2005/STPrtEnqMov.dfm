@@ -273,8 +273,8 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
       0000}
     NumGlyphs = 2
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Part_Movement.Date_Received, Part_Movement_Type.Part_Move' +

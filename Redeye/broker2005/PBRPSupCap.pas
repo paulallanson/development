@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPSupCapFrm = class(TForm)
@@ -17,14 +20,14 @@ type
     PageNoQRLabel: TQRLabel;
     RepTotsQRGroup: TQRGroup;
     DetQRBand: TQRBand;
-    GetDetsSQL: TQuery;
-    GetSuppPTSQL: TQuery;
+    GetDetsSQL: TFDQuery;
+    GetSuppPTSQL: TFDQuery;
     SubGrpQRGroup: TQRGroup;
     DetailQRLabel: TQRLabel;
     SubGrpQRLabel: TQRLabel;
     CapsMemo: TMemo;
     CapsQRMemo: TQRMemo;
-    GetCapsSQL: TQuery;
+    GetCapsSQL: TFDQuery;
     DetHeadQRLabel: TQRLabel;
     QRLabel2: TQRLabel;
     procedure SupCapQuickReportBeforePrint(Sender: TCustomQuickRep;

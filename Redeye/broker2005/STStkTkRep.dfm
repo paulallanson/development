@@ -907,8 +907,8 @@ object StStkTkRepFrm: TStStkTkRepFrm
     Left = 485
     Top = 29
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Store_Stock.part, Store_Stock.part_store_lot, Store_Stock' +
@@ -1019,8 +1019,8 @@ object StStkTkRepFrm: TStStkTkRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetAllBinQuery: TQuery
-    DatabaseName = 'PB'
+  object GetAllBinQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Part_Store.Part_Store_Name, Part_Store_Bin.Part_Bin,'
       
@@ -1092,8 +1092,8 @@ object StStkTkRepFrm: TStStkTkRepFrm
         ParamType = ptUnknown
       end>
   end
-  object AddCountDetQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCountDetQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Stock_Take'
       '  (Stock_Take, Part_Store, Part_Bin, Part_store_Lot,'
@@ -1211,16 +1211,16 @@ object StStkTkRepFrm: TStStkTkRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNextRefQuery: TQuery
-    DatabaseName = 'PB'
+  object GetNextRefQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Stock_Take) as Last_Code'
       'From Stock_Take')
     Left = 520
     Top = 168
   end
-  object ReprintQuery: TQuery
-    DatabaseName = 'PB'
+  object ReprintQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Stock_Take.*, Stock_Take.Stock_Take_Prior_Qty as Stock_Qt' +
@@ -1244,8 +1244,8 @@ object StStkTkRepFrm: TStStkTkRepFrm
         ParamType = ptUnknown
       end>
   end
-  object GetByPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetByPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Store_Stock.part, Store_Stock.part_store_lot, Store_Stock' +

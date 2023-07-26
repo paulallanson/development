@@ -488,8 +488,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
       OnKeyPress = CheckKeyIsFloat
     end
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'pb'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -497,8 +497,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 328
     Top = 216
   end
-  object qryProcessGroup: TQuery
-    DatabaseName = 'pb'
+  object qryProcessGroup: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Process_Group'
@@ -516,8 +516,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 392
     Top = 216
   end
-  object qryGetPUnit: TQuery
-    DatabaseName = 'pb'
+  object qryGetPUnit: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -531,8 +531,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'pb'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from Product_Type'
       'where Product_Type = :Product_Type')
@@ -545,8 +545,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
         ParamType = ptUnknown
       end>
   end
-  object qryWCGroup: TQuery
-    DatabaseName = 'PB'
+  object qryWCGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Work_Centre_Group'
@@ -559,9 +559,9 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 456
     Top = 272
   end
-  object qryWC: TQuery
-    DatabaseName = 'PB'
-    DataSource = dtsWCGroup
+  object qryWC: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = dtsWCGroup
     SQL.Strings = (
       'select work_centre.work_Centre_Name'
       'from work_centre_WC_Group, work_Centre'
@@ -584,9 +584,9 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 392
     Top = 392
   end
-  object qryProcess: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsProcessGroup
+  object qryProcess: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsProcessGroup
     SQL.Strings = (
       'select *'
       'from Process'
@@ -606,8 +606,8 @@ object PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm
     Left = 424
     Top = 88
   end
-  object qryVat: TQuery
-    DatabaseName = 'pb'
+  object qryVat: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * '
       'from Vat_Code'

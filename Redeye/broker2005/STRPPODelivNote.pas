@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, CCSPrint;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPPODelivNoteFrm = class(TForm)
@@ -17,10 +20,10 @@ type
     PartQRLabel: TQRLabel;
     DescQRLabel: TQRLabel;
     OrdQtyQRLabel: TQRLabel;
-    GetOrdDetQuery: TQuery;
-    GetDelFromSuppQuery: TQuery;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
+    GetOrdDetQuery: TFDQuery;
+    GetDelFromSuppQuery: TFDQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
     PackqtyQRLabel: TQRLabel;
     GetDelFromSuppQuerySuppNam: TStringField;
     GetDelFromSuppQueryName: TStringField;
@@ -37,20 +40,20 @@ type
     PartDescrQRLabel: TQRLabel;
     QRLabel3: TQRLabel;
     PackSizeQRLabel: TQRLabel;
-    GetSODelAddQuery: TQuery;
+    GetSODelAddQuery: TFDQuery;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
-    qryExtraCharges: TQuery;
+    GetCompSQL: TFDQuery;
+    qryExtraCharges: TFDQuery;
     ReportImage: TQRImage;
     ReportTitleQRLabel: TQRLabel;
     lblSpecialNotes: TQRLabel;
     SpecialNotesMemo: TQRMemo;
-    GetNarrSQL: TQuery;
+    GetNarrSQL: TFDQuery;
     gtQRShape1: TQRShape;
     AddressSRC: TDataSource;
     gtQRLabel2: TQRLabel;
     DateRequiredLabel: TQRLabel;
-    GetDelivAddQuery: TQuery;
+    GetDelivAddQuery: TFDQuery;
     QRLabel2: TQRLabel;
     qrlblContact: TQRLabel;
     QRShape2: TQRShape;

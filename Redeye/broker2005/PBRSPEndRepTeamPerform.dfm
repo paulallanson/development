@@ -278,8 +278,8 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Left = 328
     Top = 8
   end
-  object qryFY: TQuery
-    DatabaseName = 'PB'
+  object qryFY: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -287,8 +287,8 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Left = 296
     Top = 8
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Company'
@@ -296,13 +296,13 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
     Left = 304
     Top = 192
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     Left = 376
     Top = 192
   end
-  object qryGetFYPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryGetFYPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -317,8 +317,8 @@ object PBRSPEndRepTeamPerformFrm: TPBRSPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepName: TQuery
-    DatabaseName = 'PB'
+  object qryRepName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep.Name'
       'From Rep'

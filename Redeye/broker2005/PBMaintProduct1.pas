@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ComCtrls, Mask, DBCtrls, DB, DBTables,
-  ExtCtrls;
+  Dialogs, StdCtrls, Buttons, ComCtrls, Mask, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintProduct1Frm = class(TForm)
@@ -16,7 +18,7 @@ type
     dblstTemplate: TDBLookupListBox;
     Label4: TLabel;
     edtTemplate: TMaskEdit;
-    qryTemplate: TQuery;
+    qryTemplate: TFDQuery;
     dtsTemplate: TDataSource;
     tsDescription: TTabSheet;
     Label6: TLabel;
@@ -51,14 +53,14 @@ type
     Label12: TLabel;
     Label13: TLabel;
     edtFullDescription: TEdit;
-    qryAddLevels: TQuery;
-    qryAddPart: TQuery;
+    qryAddLevels: TFDQuery;
+    qryAddPart: TFDQuery;
     tsProduct: TTabSheet;
     Label14: TLabel;
     edtCustomer4: TEdit;
     Label15: TLabel;
     edtProduct: TEdit;
-    qryCheckProductCode: TQuery;
+    qryCheckProductCode: TFDQuery;
     chkbxRunReceipts: TCheckBox;
     Panel2: TPanel;
     Label16: TLabel;

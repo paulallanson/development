@@ -2392,8 +2392,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       end
     end
   end
-  object qrySalesComm: TQuery
-    DatabaseName = 'PB'
+  object qrySalesComm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         '// this sql is built from the selection screen from a const sql ' +
@@ -2554,8 +2554,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
       FieldName = 'Rep'
     end
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Add_Cost'
       'from Purch_Ord_line_add_chg'
@@ -2577,8 +2577,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Sales_Invoice_Line.Qty_Invoiced, Purchase_OrderLine.Order' +
@@ -2621,8 +2621,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Purch_Ord.Purch_Ord, '
@@ -2660,8 +2660,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select sum(Part_Cost*((Sales_invoice_line.Qty_Invoiced*1.0000)/(' +
@@ -2705,8 +2705,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOCosts: TQuery
-    DatabaseName = 'PB'
+  object qryAddPOCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Total_Cost'
       'from Purch_Ord_add_charge'
@@ -2728,8 +2728,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object oldqryGetJBCosts: TQuery
-    DatabaseName = 'PB'
+  object oldqryGetJBCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Job_Bag_Line_Dets.Job_Bag,'
       #9'sum(Job_Bag_Line_Dets.Job_Bag_Line_Cost) as Total_Cost'
@@ -2754,8 +2754,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -2813,8 +2813,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProdCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetProdCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select  Order_Price,'
       '        Price_unit_Factor as Order_unit_Factor,'
@@ -2838,8 +2838,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCreditLines: TQuery
-    DatabaseName = 'PB'
+  object qryCreditLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice_Line.Sales_Invoice,'
       '        Sales_Invoice_Line.Invoice_Line_No,'
@@ -2876,8 +2876,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Line_Dets.Job_Bag_Line_Cost'
       'FROM Job_Bag_Line_Dets'
@@ -2898,8 +2898,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetSOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetSOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Order_line.Sales_Order,'
       '        Sales_Order_line.Sales_Order_line_no,'
@@ -2929,8 +2929,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOCrCosts: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOCrCosts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       '  Purch_Ord.Purch_Ord,'
@@ -2970,8 +2970,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCommRtQuery: TQuery
-    DatabaseName = 'PB'
+  object GetCommRtQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from category'
       'where category = :category')
@@ -2984,8 +2984,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object QryInvAddChrg: TQuery
-    DatabaseName = 'PB'
+  object QryInvAddChrg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Total_Add_Chrg'
       'from Sales_Invoice_Add_charge'
@@ -3002,8 +3002,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetRepCatComm: TQuery
-    DatabaseName = 'PB'
+  object qryGetRepCatComm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Financial_Cat'
@@ -3029,8 +3029,8 @@ object PBRPSalesCommbyCatFrm: TPBRPSalesCommbyCatFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepFinance: TQuery
-    DatabaseName = 'PB'
+  object qryRepFinance: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Rep_Financial'

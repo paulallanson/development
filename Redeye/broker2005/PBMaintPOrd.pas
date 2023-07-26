@@ -4,9 +4,12 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, Grids,
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, Grids,
   PBPOObjects, ComCtrls, Spin, ImgList, ToolWin, Menus, contnrs, ShellAPI,
-  IniFiles, PBDocObjects, OleCtnrs, PBJobBagDM, DBGrids, DateUtils, PBActivityDM;
+  IniFiles, PBDocObjects, OleCtnrs, PBJobBagDM, DBGrids, DateUtils, PBActivityDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPOrdFrm = class(TForm)
@@ -661,11 +664,11 @@ type
     procedure CallExtChgMaintScreen(sTempFuncMode: Char);
     procedure FillPartList(const iSelect: Integer);
     procedure DelNarrs(Sender: TObject);
-    procedure HandlePOLine(Query: TQuery; const inx: Integer);
-    procedure HandleJobBagLine(Query: TQuery; const inx: Integer);
-    procedure HandlePODelivery(Query: TQuery; const iOrd, iDel: Integer);
-    procedure HandleCallOffDelivery(Query: TQuery; const iOrd, iCallOff: Integer);
-    procedure HandleCallOffLine(Query: TQuery; const inx, iCallOff: Integer);
+    procedure HandlePOLine(Query: TFDQuery; const inx: Integer);
+    procedure HandleJobBagLine(Query: TFDQuery; const inx: Integer);
+    procedure HandlePODelivery(Query: TFDQuery; const iOrd, iDel: Integer);
+    procedure HandleCallOffDelivery(Query: TFDQuery; const iOrd, iCallOff: Integer);
+    procedure HandleCallOffLine(Query: TFDQuery; const inx, iCallOff: Integer);
 //    procedure UpdateJobBag(const inx: Integer);
     procedure UpdateJobBagHead(const inx: Integer);
     procedure UpdateSalesInvoice(const inx: Integer);
@@ -1431,7 +1434,7 @@ begin
   CheckOK(Self);
 end;
 
-procedure TPBMaintPOrdFrm.HandlePOLine(Query: TQuery;
+procedure TPBMaintPOrdFrm.HandlePOLine(Query: TFDQuery;
   const inx: Integer);
 var
   i, iTempNarr: Integer;
@@ -1575,7 +1578,7 @@ begin
   end;
 end;
 
-procedure TPBMaintPOrdFrm.HandleJobBagLine(Query: TQuery;
+procedure TPBMaintPOrdFrm.HandleJobBagLine(Query: TFDQuery;
   const inx: Integer);
 var
   dmJobBag : TdmJobBag;
@@ -1705,7 +1708,7 @@ begin
   end;
 end;
 
-procedure TPBMaintPOrdFrm.HandleCallOffLine(Query: TQuery;
+procedure TPBMaintPOrdFrm.HandleCallOffLine(Query: TFDQuery;
   const inx, iCallOff: Integer);
 var
   i: Integer;
@@ -1926,7 +1929,7 @@ begin
     Result := 10;
 end;
 
-procedure TPBMaintPOrdFrm.HandlePODelivery(Query: TQuery; const iOrd,
+procedure TPBMaintPOrdFrm.HandlePODelivery(Query: TFDQuery; const iOrd,
   iDel: Integer);
 var
   i: Integer;
@@ -1990,7 +1993,7 @@ begin
   end;
 end;
 
-procedure TPBMaintPOrdFrm.HandleCallOffDelivery(Query: TQuery; const iOrd,
+procedure TPBMaintPOrdFrm.HandleCallOffDelivery(Query: TFDQuery; const iOrd,
   iCallOff: Integer);
 var
   i: Integer;
@@ -6850,7 +6853,7 @@ begin
     self.sgIntNotes.RowCount :=
       self.SelectedLine.IntNoteList.Count + 1;
     self.mmIntNote.Text :=
-      self.SelectedLine.IntNoteList[inx].Narrative.Data;
+      self.SelectedLine.IntNoteList[inx].Narrative.DataInfo;
     self.btbtnChangeIntNote.Enabled := true;
     self.btbtnDeleteIntNote.Enabled := true;
   end
@@ -6884,7 +6887,7 @@ begin
   self.mmIntNote.Clear;
   inx :=  self.selectedLine.IntNoteList.Count - self.sgIntNotes.row;
   self.mmIntNote.Text :=
-    self.SelectedLine.IntNoteList[inx].Narrative.Data;
+    self.SelectedLine.IntNoteList[inx].Narrative.DataInfo;
 end;
 
 procedure TPBMaintPOrdFrm.ResetIntNotesDisplay;
@@ -6979,7 +6982,7 @@ begin
             self.SelectedLine.IntNoteList[self.SelectedLine.IntNoteList.count - 1].OperatorName + ' - ' +
             DateTimeToStr(self.SelectedLine.IntNoteList[self.SelectedLine.IntNoteList.count - 1].DateEntered) +
             #13#10 + #13#10 +
-            self.SelectedLine.IntNoteList[self.SelectedLine.IntNoteList.count - 1].Narrative.data;
+            self.SelectedLine.IntNoteList[self.SelectedLine.IntNoteList.count - 1].Narrative.DataInfo;
 
         decodetime(PBMaintContAppfrm.dtpckAppTime.time,Hour,Min,Sec,Msec);
 //        AppDatetime := PBMaintContAppFrm.mnthCalApp.date + encodetime(Hour,Min,Sec,Msec);

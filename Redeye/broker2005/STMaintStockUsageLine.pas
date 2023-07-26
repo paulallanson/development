@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTMaintStockUsageLineFrm = class(TForm)
@@ -20,7 +23,7 @@ type
     memNewStock: TMemo;
     memAdj: TMemo;
     btnPart: TBitBtn;
-    qryGetPart: TQuery;
+    qryGetPart: TFDQuery;
     procedure memNewStockExit(Sender: TObject);
     procedure memNewStockEnter(Sender: TObject);
     procedure memNewStockChange(Sender: TObject);

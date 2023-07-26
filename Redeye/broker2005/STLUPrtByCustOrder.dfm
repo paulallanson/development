@@ -490,8 +490,8 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
       FFF8C87FFC1F0000FFFFF1FFFFDF000000000000000000000000000000000000
       000000000000}
   end
-  object qryPartsOnSOs: TQuery
-    DatabaseName = 'PB'
+  object qryPartsOnSOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct(sales_order_line.part),'
       ' part.part_description,'
@@ -524,8 +524,8 @@ object STLUPrtByCustOrderFrm: TSTLUPrtByCustOrderFrm
         Value = 0d
       end>
   end
-  object qryPartsOnSOsFiltered: TQuery
-    DatabaseName = 'PB'
+  object qryPartsOnSOsFiltered: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct(sales_order_line.part),'
       ' part.part_description,'

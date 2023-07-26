@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBTables, DBCtrls, Buttons,
-  Printers, CCSPrint, CCSCommon, ComCtrls, OleCtnrs;
+  StdCtrls, ExtCtrls, Grids, DBGrids, Db, DBCtrls, Buttons,
+  Printers, CCSPrint, CCSCommon, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSCustDetFrm = class(TForm)
-    qryCurrentCustStatus: TQuery;
+    qryCurrentCustStatus: TFDQuery;
     dtsrcCurrentCustStatus: TDataSource;
     pnlDisplay: TPanel;
     pnlControls: TPanel;
     pnlStatusSelect: TPanel;
     Label1: TLabel;
-    qryCustStatus: TQuery;
+    qryCustStatus: TFDQuery;
     dbgrdCustStatus: TDBGrid;
     cbSort1: TComboBox;
     cbSort2: TComboBox;
@@ -27,8 +30,8 @@ type
     Panel3: TPanel;
     Label7: TLabel;
     RepComboBox: TComboBox;
-    QryCustType: TQuery;
-    QryRep: TQuery;
+    QryCustType: TFDQuery;
+    QryRep: TFDQuery;
     QryCustTypeDescription: TStringField;
     qryCustStatusCustomer_Status_descr: TStringField;
     QryRepName: TStringField;
@@ -48,7 +51,7 @@ type
     qryCurrentCustStatusDescription: TStringField;
     qryCurrentCustStatusName_1: TStringField;
     RadioGroup1: TRadioGroup;
-    NewStdSQL: TQuery;
+    NewStdSQL: TFDQuery;
     chkbxCustomers: TCheckBox;
     pnlPrintControl: TPanel;
     lblRecordCount: TLabel;
@@ -71,9 +74,9 @@ type
     Label2: TLabel;
     cmbbxLevelOfImp: TComboBox;
     qryCurrentCustStatusImportance_Description: TStringField;
-    qryLevelOfImp: TQuery;
+    qryLevelOfImp: TFDQuery;
     StringField1: TStringField;
-    StdSQL: TQuery;
+    StdSQL: TFDQuery;
     qryCurrentCustStatusRep_Type: TStringField;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxCustStatusChange(Sender: TObject);
@@ -104,7 +107,7 @@ var
 
 implementation
 
-Uses  PBRPCustDet, pbMainMenu, pbDatabase;
+uses  PBRPCustDet, pbMainMenu, pbDatabase;
 
 {$R *.DFM}
 

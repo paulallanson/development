@@ -4,21 +4,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TDmLookupSOrd = class(TDataModule)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     NullSRC: TDataSource;
-    SelectedSQL: TQuery;
-    oldDummySQL: TQuery;
-    GetContactSQL: TQuery;
-    GetDespDetsSQL: TQuery;
-    qryNewSOs: TQuery;
-    GetPickRefSQL: TQuery;
-    qryperiodEnd: TQuery;
-    qrySalesHistory: TQuery;
+    SelectedSQL: TFDQuery;
+    oldDummySQL: TFDQuery;
+    GetContactSQL: TFDQuery;
+    GetDespDetsSQL: TFDQuery;
+    qryNewSOs: TFDQuery;
+    GetPickRefSQL: TFDQuery;
+    qryperiodEnd: TFDQuery;
+    qrySalesHistory: TFDQuery;
     qrySalesHistorySales_Order: TIntegerField;
     qrySalesHistorySales_Order_line_no: TIntegerField;
     qrySalesHistoryPart: TStringField;
@@ -42,7 +45,7 @@ type
     qrySalesHistorydescription: TStringField;
     qrySalesHistorydate_ordered: TDateTimeField;
     qrySalesHistorypart_description: TStringField;
-    qryProductSalesbyCust: TQuery;
+    qryProductSalesbyCust: TFDQuery;
     qryProductSalesbyCustsales_order: TIntegerField;
     qryProductSalesbyCustpart: TStringField;
     qryProductSalesbyCustpart_sales_price: TCurrencyField;
@@ -55,7 +58,7 @@ type
     qryProductSalesbyCustquantity_ordered: TIntegerField;
     qryProductSalesbyCustdate_required: TDateTimeField;
     qryProductSalesbyCustdate_ordered: TDateTimeField;
-    qryInvoice: TQuery;
+    qryInvoice: TFDQuery;
     GetDetsSQLDescription: TStringField;
     GetDetsSQLCust_Name: TStringField;
     GetDetsSQLBranch_Name: TStringField;
@@ -70,13 +73,13 @@ type
     GetDetsSQLPurch_Ord_no: TStringField;
     GetDetsSQLStatus_Description: TStringField;
     qryProductSalesbyCustDelivery_Date: TDateTimeField;
-    OldqryProductSalesbyCust: TQuery;
-    qryAdhoc: TQuery;
-    qryCust: TQuery;
+    OldqryProductSalesbyCust: TFDQuery;
+    qryAdhoc: TFDQuery;
+    qryCust: TFDQuery;
     qryProductSalesbyCustdelivery_customer: TIntegerField;
     qryProductSalesbyCustdelivery_branch: TIntegerField;
     qryProductSalesbyCustad_hoc_address: TIntegerField;
-    qrySalesSerialNos: TQuery;
+    qrySalesSerialNos: TFDQuery;
     qryProductSalesbyCustsales_order_line_no: TIntegerField;
     dtsDetails: TDataSource;
     qryProductSalesbyCustDeliveryLocation: TStringField;
@@ -87,9 +90,9 @@ type
     GetDetsSQLDelivery_Customer: TIntegerField;
     GetDetsSQLDel_name: TStringField;
     GetDetsSQLDel_To_Add: TStringField;
-    DummySQL: TQuery;
-    dummySalesbyCust: TQuery;
-    qryProdSalesbyCust: TQuery;
+    DummySQL: TFDQuery;
+    dummySalesbyCust: TFDQuery;
+    qryProdSalesbyCust: TFDQuery;
     qryProdSalesbyCustsales_order: TIntegerField;
     qryProdSalesbyCustpart: TStringField;
     qryProdSalesbyCustpart_sales_price: TCurrencyField;
@@ -123,7 +126,7 @@ type
     qryProdSalesbyCustCustomer_Name: TStringField;
     qryProdSalesbyCustBranch_name: TStringField;
     qryProdSalesbyCustShort_Code: TStringField;
-    qryGetCustomerDetails: TQuery;
+    qryGetCustomerDetails: TFDQuery;
     qryProdSalesbyCustPart_Cost: TFloatField;
     qryProdSalesbyCustPurch_Pack_Quantity: TIntegerField;
     qryProdSalesbyCustVat_Rate: TFloatField;

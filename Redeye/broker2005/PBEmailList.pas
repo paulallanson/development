@@ -33,7 +33,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, DBTables, IniFiles;
+  StdCtrls, Buttons, Grids, DBCtrls, ExtCtrls, Db, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEmailListFrm = class(TForm)
@@ -43,15 +46,15 @@ type
     Panel2: TPanel;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    ExFilterSQL: TQuery;
+    ExFilterSQL: TFDQuery;
     ExFilterSRC: TDataSource;
-    UpSuppSQL: TQuery;
-    UpCustSQL: TQuery;
+    UpSuppSQL: TFDQuery;
+    UpCustSQL: TFDQuery;
     cmbContacts: TDBLookupComboBox;
-    qryContacts: TQuery;
+    qryContacts: TFDQuery;
     dtsContacts: TDataSource;
-    qrySuppliers: TQuery;
-    UpInvoiceSQL: TQuery;
+    qrySuppliers: TFDQuery;
+    UpInvoiceSQL: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure EmailListGridSelectCell(Sender: TObject; Col, Row: Longint;
       var CanSelect: Boolean);
@@ -69,7 +72,7 @@ type
     function cellleft(grid: TStringGrid; Col: Integer): Integer;
     function celltop(grid: TStringGrid; Row: Integer): Integer;
     procedure SetCodeType(const Value: string);
-    procedure UpdateDetails(UpSQL: TQuery);
+    procedure UpdateDetails(UpSQL: TFDQuery);
     procedure UpdateInvDetails;
   public
     { Public declarations }
@@ -240,7 +243,7 @@ begin
     UpdateDetails(UpCustSQL);
 end;
 
-procedure TPBEmailListFrm.UpdateDetails(UpSQL: TQuery);
+procedure TPBEmailListFrm.UpdateDetails(UpSQL: TFDQuery);
 var
   irow: integer;
 begin

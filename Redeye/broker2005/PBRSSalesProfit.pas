@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DateSelV5, PBPOObjects, Db, DBTables, Printers, CCSPrint,
-  DBCtrls, ExtCtrls;
+  StdCtrls, Buttons, DateSelV5, PBPOObjects, Db, Printers, CCSPrint,
+  DBCtrls, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSSalesProfitfrm = class(TForm)
-    qrySalesProfit: TQuery;
-    qryPeriods: TQuery;
+    qrySalesProfit: TFDQuery;
+    qryPeriods: TFDQuery;
     dtsPeriods: TDataSource;
     pnlButtons: TPanel;
     btnPreview: TBitBtn;

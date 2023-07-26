@@ -5,7 +5,9 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, PBJoBBagDM, StdCtrls, DBCtrls, Spin, Buttons, ExtCtrls, DB,
-  DBTables;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintJobBagProcessFrm = class(TForm)
@@ -33,7 +35,7 @@ type
     BitBtn4: TBitBtn;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    qryWCGroups: TQuery;
+    qryWCGroups: TFDQuery;
     dtsWCGroups: TDataSource;
     procedure BitBtn4Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);

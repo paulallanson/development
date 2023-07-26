@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls, CCSPrint;
+  Db, Qrctrls, QuickRpt, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPOnotonJBfrm = class(TForm)
@@ -23,7 +26,7 @@ type
     QRLabel8: TQRLabel;
     QRLabel9: TQRLabel;
     QRDBText1: TQRDBText;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText2: TQRDBText;
     QRDBText4: TQRDBText;
     QRDBText5: TQRDBText;

@@ -4,10 +4,13 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, DB, DBTables, IniFiles, CCSCommon,
+  Dialogs, Grids, DBGrids, StdCtrls, Buttons, ExtCtrls, DB, IniFiles, CCSCommon,
   pbDatabase, pbSalesInvoiceDM, IdBaseComponent, IdComponent,
   IdTCPConnection, IdTCPClient, IdExplicitTLSClientServerBase, IdFTP,
-  ComCtrls;
+  ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBExportEInvoiceFrm = class(TForm)
@@ -17,11 +20,11 @@ type
     btnSelection: TButton;
     dtsEInvoice: TDataSource;
     OpenDialog1: TOpenDialog;
-    qrySIHeader: TQuery;
+    qrySIHeader: TFDQuery;
     FTP: TIdFTP;
-    qryCustEInvoice: TQuery;
-    qryUpdSIStatus: TQuery;
-    qryUpdCustomer: TQuery;
+    qryCustEInvoice: TFDQuery;
+    qryUpdSIStatus: TFDQuery;
+    qryUpdCustomer: TFDQuery;
     rdgrpFileType: TRadioGroup;
     StatusBar1: TStatusBar;
     Panel3: TPanel;
@@ -46,7 +49,7 @@ type
     Label4: TLabel;
     Label5: TLabel;
     btnExcel: TBitBtn;
-    qryUpdSInvoice: TQuery;
+    qryUpdSInvoice: TFDQuery;
     procedure btnSelectionClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);

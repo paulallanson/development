@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Spin, StdCtrls, Buttons, DB, DBTables;
+  Dialogs, Spin, StdCtrls, Buttons, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPartBOMfrm = class(TForm)
@@ -18,8 +21,8 @@ type
     edtProduct: TEdit;
     edtDescription: TEdit;
     spnQuantity: TSpinEdit;
-    qryUpd: TQuery;
-    qryDel: TQuery;
+    qryUpd: TFDQuery;
+    qryDel: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
   private

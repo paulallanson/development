@@ -114,8 +114,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
       OnChange = NameEditChange
     end
   end
-  object GetPartSuppsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetPartSuppsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Supplier.Supplier,'
       '       Part_Supplier.Branch_No,'
@@ -137,8 +137,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSuppsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSuppsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Supplier_Branch.Supplier, Supplier_Branch.Branch_No,'
       
@@ -171,8 +171,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSuppQuery: TQuery
-    DatabaseName = 'PB'
+  object AddSuppQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into  Part_Supplier'
       '(Part, Supplier, Branch_No, Supplier_Preference_Order)'
@@ -205,8 +205,8 @@ object STMntPrtSuppFrm: TSTMntPrtSuppFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSuppsQuery: TQuery
-    DatabaseName = 'PB'
+  object DelSuppsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From  Part_Supplier'
       'Where (Part_Supplier.Part = :Part)'

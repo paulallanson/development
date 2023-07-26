@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, CCSPrint, ExtCtrls, QuickRpt, QRCtrls, DB, DBTables;
+  Dialogs, CCSPrint, ExtCtrls, QuickRpt, QRCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPProdWeeklyFrm = class(TForm)
@@ -27,7 +30,7 @@ type
     qrbndJobsPage1: TQRBand;
     QRDBText1: TQRDBText;
     QRDBText2: TQRDBText;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     qrSubDetailPage1: TQRSubDetail;
     qrbndTotalsPage1: TQRBand;
     QRLabel7: TQRLabel;
@@ -53,8 +56,8 @@ type
     QRLabel17: TQRLabel;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
-    qryOldWCOperators: TQuery;
-    qryOldDummy: TQuery;
+    qryOldWCOperators: TFDQuery;
+    qryOldDummy: TFDQuery;
     qrlblSheetNo: TQRLabel;
     qrgrpHeaderFinal: TQRBand;
     qrGrpCustomerFinal: TQRGroup;
@@ -77,8 +80,8 @@ type
     QRLabel27: TQRLabel;
     QRLabel28: TQRLabel;
     QRLabel29: TQRLabel;
-    qryDummyJobs: TQuery;
-    qryDummynonJobs: TQuery;
+    qryDummyJobs: TFDQuery;
+    qryDummynonJobs: TFDQuery;
     qrlblBasicTW: TQRLabel;
     qrlblOvertimeTW: TQRLabel;
     qrlblTotalTW: TQRLabel;
@@ -96,16 +99,16 @@ type
     qrlblReportTotalInvoiced: TQRLabel;
     qrlblReportTotalDifference: TQRLabel;
     QRLabel40: TQRLabel;
-    qryGetJobBag: TQuery;
+    qryGetJobBag: TFDQuery;
     qrlblOvertimeTD: TQRLabel;
     qrlblBasicTD: TQRLabel;
-    qryWCOperators: TQuery;
+    qryWCOperators: TFDQuery;
     QRGrpPage1: TQRGroup;
     qrGrpFinal: TQRGroup;
     qrGrpPage2: TQRGroup;
     qrGrpPage3: TQRGroup;
-    qrygetJobBagCharges: TQuery;
-    qryOldGetJobBagCharges: TQuery;
+    qrygetJobBagCharges: TFDQuery;
+    qryOldGetJobBagCharges: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrbndHeaderPage2BeforePrint(Sender: TQRCustomBand;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Buttons, StdCtrls, ExtCtrls, DB, DBTables;
+  Dialogs, Buttons, StdCtrls, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBMaintJobReturns = class(TForm)
@@ -27,7 +30,7 @@ type
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     memOvers: TMemo;
-    qryJobReturns: TQuery;
+    qryJobReturns: TFDQuery;
     procedure btnReturnsClick(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
   private

@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, QuickRpt, ExtCtrls, Db, DBTables, StdCtrls, qrprntr,
-  printers, QrExport;
+  Qrctrls, QuickRpt, ExtCtrls, Db, StdCtrls, qrprntr,
+  printers, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPJBDraftFrm = class(TForm)
@@ -15,16 +18,16 @@ type
     GetDetsDataSource: TDataSource;
     qrsbdJBLines: TQRSubDetail;
     pogroupheader: TQRGroup;
-    GetDetsQuery: TQuery;
-    GetOrdHedQuery: TQuery;
+    GetDetsQuery: TFDQuery;
+    GetOrdHedQuery: TFDQuery;
     lblDescription: TQRLabel;
     lblSellPrice: TQRLabel;
     lblSellUnit: TQRLabel;
     lblValue: TQRLabel;
-    GetSOAddQuery: TQuery;
+    GetSOAddQuery: TFDQuery;
     CompSRC: TDataSource;
-    GetCompSQL: TQuery;
-    CustSQL: TQuery;
+    GetCompSQL: TFDQuery;
+    CustSQL: TFDQuery;
     AddressSRC: TDataSource;
     QRLabel14: TQRLabel;
     GoodsValueLbl: TQRLabel;
@@ -33,8 +36,8 @@ type
     TotalValueLbl: TQRLabel;
     QRLabel16: TQRLabel;
     lblVat: TQRLabel;
-    GetContactSQL: TQuery;
-    GetNarrSQL: TQuery;
+    GetContactSQL: TFDQuery;
+    GetNarrSQL: TFDQuery;
     ReportTitleQRLabel: TQRLabel;
     OrdNumQRLabel: TQRLabel;
     OrdDateQRLabel: TQRLabel;
@@ -53,30 +56,30 @@ type
     DescQRLabel: TQRLabel;
     qrlblReportTitle: TQRLabel;
     QRLabel2: TQRLabel;
-    qrySOLinePart: TQuery;
-    qryGetPriceUnit: TQuery;
-    qrySOLine: TQuery;
+    qrySOLinePart: TFDQuery;
+    qryGetPriceUnit: TFDQuery;
+    qrySOLine: TFDQuery;
     QRLabel1: TQRLabel;
     lblJobBagDescription: TQRLabel;
     qrsbdAddCharges: TQRSubDetail;
     lblAddDescription: TQRLabel;
     lblAddValue: TQRLabel;
     lblAddVAT: TQRLabel;
-    qryJBLineChgs: TQuery;
+    qryJBLineChgs: TFDQuery;
     lblQuantity: TQRLabel;
     qrmDescription: TQRRichText;
-    qryPOLineChgs: TQuery;
+    qryPOLineChgs: TFDQuery;
     
     qrlblRevenueCentre: TQRLabel;
     qrlblRevenueCentreData: TQRLabel;
-    qryGetProductType: TQuery;
+    qryGetProductType: TFDQuery;
     gtQRLabel1: TQRLabel;
     imgReport: TQRImage;
     qrshpPaymentNotes: TQRShape;
     memPayment: TQRMemo;
     gtQRShape1: TQRShape;
     gtQRMemo1: TQRMemo;
-    qryInvLocation: TQuery;
+    qryInvLocation: TFDQuery;
     gtQRLabel2: TQRLabel;
     function GetDetails(Sender: TObject): Integer;
     function RunReport(Sender: TObject): Integer;

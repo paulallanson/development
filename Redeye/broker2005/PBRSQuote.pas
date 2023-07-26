@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, DBTables, Inifiles, PBRPQuote,
-  CCSCommon, QrExport;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, DB, Inifiles, PBRPQuote,
+  CCSCommon, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPBRSQuote = class(TForm)
@@ -23,12 +26,12 @@ type
     Label2: TLabel;
     memDescription: TMemo;
     SelectLst: TListBox;
-    qryGetRange: TQuery;
-    qryGetQuote: TQuery;
+    qryGetRange: TFDQuery;
+    qryGetQuote: TFDQuery;
     Label3: TLabel;
     memQuantity: TMemo;
     chkbxShowDetails: TCheckBox;
-    qryBlank: TQuery;
+    qryBlank: TFDQuery;
     chkbxEndUser: TCheckBox;
     procedure PrintBitBtnClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);

@@ -1607,8 +1607,8 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 312
     Top = 19
   end
-  object GetDetsQuery: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Sales_order_Line.Quantity_Ordered,Sales_order.Sales_order' +
@@ -1693,8 +1693,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOrdHedQuery: TQuery
-    DatabaseName = 'PB'
+  object GetOrdHedQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Sel1, text100'
       'from'
@@ -1720,8 +1720,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOAddQuery: TQuery
-    DatabaseName = 'PB'
+  object GetSOAddQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as DelNam,'
       '          Customer_Branch.Building_no_Name as DelAdd1,'
@@ -1753,16 +1753,16 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 96
     Top = 79
   end
-  object GetCompSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Company'
       'Where Company = 1')
     Left = 184
     Top = 78
   end
-  object CustSQL: TQuery
-    DatabaseName = 'PB'
+  object CustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -1797,9 +1797,9 @@ object STRPSordFrm: TSTRPSordFrm
     Left = 432
     Top = 167
   end
-  object ExtChrgsQuery: TQuery
-    DatabaseName = 'PB'
-    DataSource = GetDetsDataSource
+  object ExtChrgsQuery: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = GetDetsDataSource
     SQL.Strings = (
       'select Sales_Order_Add_Charge.*, Vat_Code.Vat_Rate'
       'from sales_Order_add_charge'
@@ -1820,8 +1820,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Contact.Name as Contact_Name'
       'From  Customer_Contact'
@@ -1851,8 +1851,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'
@@ -1868,8 +1868,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetProduction: TQuery
-    DatabaseName = 'pb'
+  object qryGetProduction: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'Select'
       '  Production_Location_Name,'
@@ -1892,8 +1892,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object AdhocSQL: TQuery
-    DatabaseName = 'PB'
+  object AdhocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  '#39#39' as Branch_Name,'
@@ -1916,8 +1916,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptInput
       end>
   end
-  object GetCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -1953,8 +1953,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object GetCustHOSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustHOSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Cust_Name,'
       'Customer_Branch.Name as Branch_Name,'
@@ -1998,8 +1998,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBag: TQuery
-    DatabaseName = 'pb'
+  object qryGetJobBag: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select top 1 Job_Bag'
       'from Job_Bag_Line_dets'
@@ -2013,8 +2013,8 @@ object STRPSordFrm: TSTRPSordFrm
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBagReq: TQuery
-    DatabaseName = 'pb'
+  object qryGetJobBagReq: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select top 1 Job_Bag'
       'from Job_Bag_Stock_Request'

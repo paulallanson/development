@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Grids, DBGrids, ExtCtrls, ComCtrls, CCSCommon,
-  Buttons, Variants;
+  Db, StdCtrls, Grids, DBGrids, ExtCtrls, ComCtrls, CCSCommon,
+  Buttons, Variants,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmpbluContacts = class(TForm)
     dbgDetails: TDBGrid;
     dtsContacts: TDataSource;
-    qryCContacts: TQuery;
-    qrySContacts: TQuery;
+    qryCContacts: TFDQuery;
+    qrySContacts: TFDQuery;
     StatusBar1: TStatusBar;
     Panel1: TPanel;
     btnClose: TButton;
@@ -20,10 +23,10 @@ type
     edtName: TEdit;
     Label1: TLabel;
     SearchTimer: TTimer;
-    qryGetCContactDetails: TQuery;
-    qryGetSContactDetails: TQuery;
-    qrySetCContactInactive: TQuery;
-    qrySetSContactInactive: TQuery;
+    qryGetCContactDetails: TFDQuery;
+    qryGetSContactDetails: TFDQuery;
+    qrySetCContactInactive: TFDQuery;
+    qrySetSContactInactive: TFDQuery;
     Panel2: TPanel;
     btnAdd: TButton;
     btnChange: TButton;
@@ -32,9 +35,9 @@ type
     btnMove: TButton;
     btnExcel: TBitBtn;
     Button2: TButton;
-    qryAddContact: TQuery;
-    qrySetCContactActive: TQuery;
-    qryCheckName: TQuery;
+    qryAddContact: TFDQuery;
+    qrySetCContactActive: TFDQuery;
+    qryCheckName: TFDQuery;
     procedure FormShow(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
     procedure SetButtons(Sender: TObject; Field: TField);

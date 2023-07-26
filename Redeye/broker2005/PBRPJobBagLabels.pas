@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, QrExport;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, PBPOObjects, qrprntr, printers, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPJobBagLabelsFrm = class(TForm)
     PBLabelsQuickReport: TQuickRep;
-    JBDelivSQL: TQuery;
+    JBDelivSQL: TFDQuery;
     JBDelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     JBNumberLbl: TQRLabel;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
     AddressSRC: TDataSource;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     BoxQuantityLbl: TQRLabel;
     Memodescription: TQRMemo;
     QRDBCustOrderRef: TQRDBText;

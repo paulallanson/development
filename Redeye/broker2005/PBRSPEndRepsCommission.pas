@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, DBTables, ComCtrls, OleCtnrs;
+  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPEndRepsCommissionFrm = class(TForm)
@@ -16,18 +19,18 @@ type
     lblYear: TLabel;
     dblkpFY: TDBLookupComboBox;
     dtsFY: TDataSource;
-    qryFY: TQuery;
-    qryCompany: TQuery;
-    qryGetFYPeriods: TQuery;
+    qryFY: TFDQuery;
+    qryCompany: TFDQuery;
+    qryGetFYPeriods: TFDQuery;
     Label2: TLabel;
     dblkpPeriods: TDBLookupComboBox;
     rdgrpReportType: TRadioGroup;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     dtsPeriods: TDataSource;
-    qrySalesComm: TQuery;
+    qrySalesComm: TFDQuery;
     ChkBxNewPgRep: TCheckBox;
-    qryGetFY: TQuery;
-    qryRepName: TQuery;
+    qryGetFY: TFDQuery;
+    qryRepName: TFDQuery;
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;

@@ -29,21 +29,24 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DB, DBTables;
+  DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBEnqSuppDataModFrm = class(TDataModule)
-    EnqHeadSQL: TQuery;
+    EnqHeadSQL: TFDQuery;
     EnqHeadSRC: TDataSource;
-    EnqLineSQL: TQuery;
+    EnqLineSQL: TFDQuery;
     EnqLineSRC: TDataSource;
-    EnqSuppSQL: TQuery;
+    EnqSuppSQL: TFDQuery;
     EnqSuppSRC: TDataSource;
-    EnqSuppQtySQL: TQuery;
+    EnqSuppQtySQL: TFDQuery;
     EnqSuppQtySRC: TDataSource;
-    EnqSuppChgsSQL: TQuery;
-    DelChargeSQL: TQuery;
-    AddEnqSuppChgsSQL: TQuery;
+    EnqSuppChgsSQL: TFDQuery;
+    DelChargeSQL: TFDQuery;
+    AddEnqSuppChgsSQL: TFDQuery;
     procedure PBEnqSuppDataModFrmCreate(Sender: TObject);
     procedure PBEnqSuppDataModFrmDestroy(Sender: TObject);
   private

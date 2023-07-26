@@ -87,8 +87,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
       OnClick = EnableOK
     end
   end
-  object qryYear: TQuery
-    DatabaseName = 'PB'
+  object qryYear: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Financial_Year'
@@ -102,8 +102,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Left = 240
     Top = 8
   end
-  object qryPeriod: TQuery
-    DatabaseName = 'PB'
+  object qryPeriod: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '
       '* from'
@@ -124,16 +124,16 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
     Left = 240
     Top = 72
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Financial_Year, Period'
       'From Company')
     Left = 64
     Top = 64
   end
-  object UpdDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set'
@@ -154,8 +154,8 @@ object PBMaintCompanyFYfrm: TPBMaintCompanyFYfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCheckSalesProfit: TQuery
-    DatabaseName = 'PB'
+  object qryCheckSalesProfit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_profit '
       'from sales_profit, period'

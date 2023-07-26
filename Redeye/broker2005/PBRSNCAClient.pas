@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, DBTables, ComCtrls, Spin,
-  OleCtnrs;
+  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, ComCtrls, Spin,
+  OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSNCAClientfrm = class(TForm)
@@ -18,10 +21,10 @@ type
     CancelBitBtn: TBitBtn;
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;
-    qryGetDateRange: TQuery;
+    qryGetDateRange: TFDQuery;
     Label2: TLabel;
     dblkpPeriod: TDBLookupComboBox;
-    qryPeriod: TQuery;
+    qryPeriod: TFDQuery;
     dtsPeriod: TDataSource;
     spnPeriods: TSpinEdit;
     OleContainer1: TOleContainer;

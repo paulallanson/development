@@ -77,7 +77,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, DB, DBTables, Buttons, Spin, ExtCtrls;
+  StdCtrls, DBCtrls, DB, Buttons, Spin, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtMntDetsMultiFrm = class(TForm)
@@ -87,19 +90,19 @@ type
     OKBitBtn: TBitBtn;
     Label7: TLabel;
     Label8: TLabel;
-    GetGroupsQuery: TQuery;
+    GetGroupsQuery: TFDQuery;
     GroupsDataSource: TDataSource;
-    GetVatsQuery: TQuery;
+    GetVatsQuery: TFDQuery;
     Label1: TLabel;
     Label2: TLabel;
     FromGroupBox: TGroupBox;
     VATDBLookupComboBox: TDBLookupComboBox;
     PurchPriceMemo: TMemo;
     PartGroupDBLookupComboBox: TDBLookupComboBox;
-    CheckPartExistsQuery: TQuery;
-    AddPartQuery: TQuery;
-    UpdPartQuery: TQuery;
-    DelPartQuery: TQuery;
+    CheckPartExistsQuery: TFDQuery;
+    AddPartQuery: TFDQuery;
+    UpdPartQuery: TFDQuery;
+    DelPartQuery: TFDQuery;
     ListMUMemo: TMemo;
     CatMUMemo: TMemo;
     Label6: TLabel;
@@ -123,7 +126,7 @@ type
     Label4: TLabel;
     dblkpPriceUnit: TDBLookupComboBox;
     dblkpPriceUnitTo: TDBLookupComboBox;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     srcPriceUnit: TDataSource;
     CustNameEdit: TEdit;
     CustNameToEdit: TEdit;
@@ -134,12 +137,12 @@ type
     PartTypeToDBLookupComboBox: TDBLookupComboBox;
     PartTypeDBLookupComboBox: TDBLookupComboBox;
     Label10: TLabel;
-    SQLGetPrdTyp: TQuery;
+    SQLGetPrdTyp: TFDQuery;
     DSGetPrdTyp: TDataSource;
     Label11: TLabel;
     dblkpUOM: TDBLookupComboBox;
     dblkpUOMTo: TDBLookupComboBox;
-    SQLGetUOM: TQuery;
+    SQLGetUOM: TFDQuery;
     DSGetUOM: TDataSource;
     chkbxOrderOnline: TCheckBox;
     chkbxToOrderOnline: TCheckBox;

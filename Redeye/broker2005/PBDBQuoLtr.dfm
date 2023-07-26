@@ -3,8 +3,8 @@ inherited dbQuoLtr: TdbQuoLtr
   Top = 62
   Height = 498
   Width = 639
-  object GetNotesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNotesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Narrative_Line'
       'where Narrative = :Narrative'
@@ -18,8 +18,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object UpdEnqStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdEnqStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Enquiry'
       'Set Enquiry_Status = 70,'
@@ -40,8 +40,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object GetPricesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPricesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select '#9'Enquiry_LineQuantity.Quantity,'
       #9#9#9'Enquiry_LineQuantity.Quotation_Price,'
@@ -81,8 +81,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Left = 176
     Top = 251
   end
-  object UpdStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update EnquiryLine'
       'Set Enquiry_Status = 70'
@@ -103,8 +103,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object GetQtysSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQtysSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Quantity From Supplier_EnquiryQty'
       'Where (Supplier = :Supplier) and'
@@ -136,8 +136,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object GetAddDetailsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetAddDetailsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select EnquiryLineAdditionl_Dtls.*'
       'from EnquiryLineAdditionl_Dtls'
@@ -158,8 +158,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object GetRngEnqsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRngEnqsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'
       
@@ -291,8 +291,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Left = 271
     Top = 201
   end
-  object GetQuestionsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetQuestionsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT  Product_TypeQuestion.Question_Text, Enquiry_Questions.Pr' +
@@ -331,8 +331,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Left = 176
     Top = 82
   end
-  object GetPartsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * From EnquiryLinePart_Detail'
       'Where (Enquiry = :Enquiry) and (Line = :Line)'
@@ -356,8 +356,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Left = 272
     Top = 129
   end
-  object GetEnquiriesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetEnquiriesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'
       
@@ -480,8 +480,8 @@ inherited dbQuoLtr: TdbQuoLtr
         ParamType = ptUnknown
       end>
   end
-  object GetExtrasSQL: TQuery
-    DatabaseName = 'PB'
+  object GetExtrasSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select '#9'Enquiry_LineQuantity.Quantity, Sum(Supp_enq_Add_Charge.Q' +
@@ -528,8 +528,8 @@ inherited dbQuoLtr: TdbQuoLtr
     Left = 272
     Top = 298
   end
-  object GetOptChgsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOptChgsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supp_Enq_Add_Charge'

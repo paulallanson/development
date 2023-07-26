@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, DBTables, CCSPrint;
+  QuickRpt, QRExpr, Qrctrls, StdCtrls, ExtCtrls, DB, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPORepFrm = class(TForm)
@@ -63,7 +66,7 @@ type
     Seq3QRGroup: TQRGroup;
     SequenceName3QRLabel: TQRLabel;
     SeqDesc3QRLabel: TQRLabel;
-    AddCostsQuery: TQuery;
+    AddCostsQuery: TFDQuery;
     AddCostsDataSource: TDataSource;
     QRLabel3: TQRLabel;
     RunDateQRLabel: TQRLabel;
@@ -249,12 +252,12 @@ begin
   SeqDescQRDBText.DataField := SeqQRGroup.Expression ;
   SeqDesc2QRDBText.DataField := Seq2QRGroup.Expression ;
   TempName := 'GetPOsSeq' + IntToStr(SeqNo) + IntToStr(SeqNo2)+ 'SQL';
-  POsDataSource.DataSet := (PBRDPORepDataMod.FindComponent(TempName) as TQuery);
+  POsDataSource.DataSet := (PBRDPORepDataMod.FindComponent(TempName) as TFDQuery);
   PrintPOsQuickReport.DataSet := POsDataSource.DataSet;
   FixDataSet;
 
   {Activate the main report query}
-  with (PBRDPORepDataMod.FindComponent(TempName) as TQuery) do
+  with (PBRDPORepDataMod.FindComponent(TempName) as TFDQuery) do
   begin
     SQL.text := SQL.text + PBRDPORepDataMod.GetCriteria(ExcludeCallOffs);
     SQL.text := SQL.text + PBRDPORepDataMod.GetJobBags(ExcludeJobBags);
@@ -507,7 +510,7 @@ begin
   writeLn(self.exportFile, tempStr);
 
   TempName := 'GetPOsSeq' + IntToStr(SeqNo) + IntToStr(SeqNo2)+ 'SQL';
-  POsDataSource.DataSet := (PBRDPORepDataMod.FindComponent(TempName) as TQuery);
+  POsDataSource.DataSet := (PBRDPORepDataMod.FindComponent(TempName) as TFDQuery);
   PrintPOsQuickReport.DataSet := POsDataSource.DataSet;
 
   PrintPOsQuickReport.Prepare;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, ComCtrls, StdCtrls, ExtCtrls, DB, DBTables, pbQuotesDM;
+  Dialogs, Grids, DBGrids, ComCtrls, StdCtrls, ExtCtrls, DB, pbQuotesDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUQuoteEnqsQtyFrm = class(TForm)
@@ -15,7 +18,7 @@ type
     btnSelect: TButton;
     stsbrDetails: TStatusBar;
     dbgDetails: TDBGrid;
-    qryCustEnquiryQtys: TQuery;
+    qryCustEnquiryQtys: TFDQuery;
     tmrSearch: TTimer;
     dtsCustEnquiryQtys: TDataSource;
     procedure FormCreate(Sender: TObject);

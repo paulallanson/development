@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, QuickRpt, Qrctrls, ExtCtrls, CCSPrint;
+  Db, QuickRpt, Qrctrls, ExtCtrls, CCSPrint,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPPEndLocPerformfrm = class(TForm)
@@ -13,13 +16,13 @@ type
     qrgReps: TQRGroup;
     qrlblTitle: TQRLabel;
     qrlblDateRange: TQRLabel;
-    qryRevenueLocs: TQuery;
+    qryRevenueLocs: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRBand2: TQRBand;
-    qryCategory: TQuery;
+    qryCategory: TFDQuery;
     qrsubPeriods: TQRSubDetail;
     QRLabel2: TQRLabel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRDBText5: TQRDBText;
     QRDBText6: TQRDBText;
     qrbGrpCatFooter: TQRBand;
@@ -92,24 +95,24 @@ type
     qrlblActProf12: TQRLabel;
     qrlblCatActTOTotal: TQRLabel;
     qrlblCatActProfTotal: TQRLabel;
-    qryPeriods: TQuery;
+    qryPeriods: TFDQuery;
     QRBand3: TQRBand;
     QRSysData1: TQRSysData;
     QRSysData2: TQRSysData;
-    qryDummyNull: TQuery;
-    qryDummy: TQuery;
-    qrySalesProfit: TQuery;
-    qrytmpConsolidate: TQuery;
-    qrytmpRevCentres: TQuery;
-    qryDummyConsolidate: TQuery;
-    qryDummyCustomer: TQuery;
-    qryDummyCategory: TQuery;
-    qrySalesProfitCat: TQuery;
-    qrySalesProfitCust: TQuery;
-    qryDummyNullCust: TQuery;
-    qryDummyCust: TQuery;
-    qryDummyConsolidateCust: TQuery;
-    qryCustRep: TQuery;
+    qryDummyNull: TFDQuery;
+    qryDummy: TFDQuery;
+    qrySalesProfit: TFDQuery;
+    qrytmpConsolidate: TFDQuery;
+    qrytmpRevCentres: TFDQuery;
+    qryDummyConsolidate: TFDQuery;
+    qryDummyCustomer: TFDQuery;
+    qryDummyCategory: TFDQuery;
+    qrySalesProfitCat: TFDQuery;
+    qrySalesProfitCust: TFDQuery;
+    qryDummyNullCust: TFDQuery;
+    qryDummyCust: TFDQuery;
+    qryDummyConsolidateCust: TFDQuery;
+    qryCustRep: TFDQuery;
     QRLabel8: TQRLabel;
     QRLabel9: TQRLabel;
     QRLabel10: TQRLabel;
@@ -193,7 +196,7 @@ type
     qrlblTODiffTotal: TQRLabel;
     qrlblProfDiffTotal: TQRLabel;
     QRShape1: TQRShape;
-    qryRevLocBudgets: TQuery;
+    qryRevLocBudgets: TFDQuery;
     QRLabel7: TQRLabel;
     QRLabel12: TQRLabel;
     QRLabel15: TQRLabel;

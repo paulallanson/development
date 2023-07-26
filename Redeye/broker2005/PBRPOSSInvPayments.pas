@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Qrctrls, Db, QuickRpt, DBTables, ExtCtrls, CCSPrint, Qrprntr, CCSCommon, PBPOObjects,
-  Printers;
+  Qrctrls, Db, QuickRpt, ExtCtrls, CCSPrint, Qrprntr, CCSCommon, PBPOObjects,
+  Printers,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPOSSInvPaymentsFrm = class(TForm)
@@ -31,7 +34,7 @@ type
     RepTotQRLabel: TQRLabel;
     RepTotSellQRLbl: TQRLabel;
     QRDBText2: TQRDBText;
-    qrySalesInvOutPay: TQuery;
+    qrySalesInvOutPay: TFDQuery;
     QRLabel1: TQRLabel;
     QRLabel4: TQRLabel;
     QRLabel5: TQRLabel;

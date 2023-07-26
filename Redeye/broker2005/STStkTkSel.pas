@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, Db, DBTables;
+  StdCtrls, Buttons, DBCtrls, Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTStkTkSelFrm = class(TForm)
@@ -13,7 +16,7 @@ type
     PartCodeBitBtn: TBitBtn;
     BitBtn3: TBitBtn;
     BitBtnCncl: TBitBtn;
-    DelCountRecSQl: TQuery;
+    DelCountRecSQl: TFDQuery;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);

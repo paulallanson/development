@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QuickRpt, QRCtrls, ExtCtrls, CCSPrint, DB, DBTables;
+  Dialogs, QuickRpt, QRCtrls, ExtCtrls, CCSPrint, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRP4CastMonthInvsFrm = class(TForm)
@@ -18,7 +21,7 @@ type
     qrgHeaderAnalysis: TQRGroup;
     QRSubDetail1: TQRSubDetail;
     qrgFooterAnalysis: TQRBand;
-    qrySalesProfit: TQuery;
+    qrySalesProfit: TFDQuery;
     QRDBText1: TQRDBText;
     qrlblAnalysisType: TQRLabel;
     QRLabel1: TQRLabel;

@@ -4,14 +4,17 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, DBTables, CCSCommon, PBPOObjects,
-  QrExport, qrprntr, printers, QRCtrls;
+  Dialogs, ExtCtrls, QuickRpt, CCSPrint, DB, CCSCommon, PBPOObjects,
+  QrExport, qrprntr, printers, QRCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 type
   TPBRPWorksOrderISOFrm = class(TForm)
     qrpDetails: TQuickRep;
     QRBand1: TQRBand;
-    CompSQL: TQuery;
-    qryReport: TQuery;
+    CompSQL: TFDQuery;
+    qryReport: TFDQuery;
     qrlblQuoteCaption: TQRLabel;
     QRDBText5: TQRDBText;
     QRLabel3: TQRLabel;

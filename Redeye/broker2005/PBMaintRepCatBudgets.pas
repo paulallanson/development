@@ -4,20 +4,23 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
-  ExtCtrls, ComCtrls;
+  Db, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, Mask, DBCGrids,
+  ExtCtrls, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintRepCatBudgetsFrm = class(TForm)
-    qryPeriods: TQuery;
-    qryReps: TQuery;
+    qryPeriods: TFDQuery;
+    qryReps: TFDQuery;
     dtsReps: TDataSource;
-    qryGetRepBudgets: TQuery;
-    qryFirstPeriod: TQuery;
-    qryCheckBudget: TQuery;
-    qryUpdBudget: TQuery;
-    qryAddBudget: TQuery;
-    qryCategory: TQuery;
+    qryGetRepBudgets: TFDQuery;
+    qryFirstPeriod: TFDQuery;
+    qryCheckBudget: TFDQuery;
+    qryUpdBudget: TFDQuery;
+    qryAddBudget: TFDQuery;
+    qryCategory: TFDQuery;
     StatusBar1: TStatusBar;
     Panel1: TPanel;
     OKBitBtn: TBitBtn;

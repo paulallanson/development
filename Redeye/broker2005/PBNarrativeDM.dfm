@@ -1,11 +1,8 @@
 object dmNarrative: TdmNarrative
-  OldCreateOrder = False
-  Left = 263
-  Top = 105
   Height = 540
   Width = 443
-  object qryReserveSlot: TQuery
-    DatabaseName = 'PB'
+  object qryReserveSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Narrative_Line'
       
@@ -18,13 +15,13 @@ object dmNarrative: TdmNarrative
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryGetReservedSlot: TQuery
-    DatabaseName = 'PB'
+  object qryGetReservedSlot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM narrative_line '
       'WHERE narrative_Text = :GUID')
@@ -32,26 +29,24 @@ object dmNarrative: TdmNarrative
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
-  object qryDelete: TQuery
-    DatabaseName = 'PB'
+  object qryDelete: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Narrative_Line WHERE Narrative = :Narrative')
     Left = 56
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryUpdateLine1: TQuery
-    DatabaseName = 'PB'
+  object qryUpdateLine1: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Narrative_Line'
       'SET Narrative_Text = :Text, Narrative_Line_Updated = :Updated'
@@ -60,23 +55,23 @@ object dmNarrative: TdmNarrative
     Top = 184
     ParamData = <
       item
-        DataType = ftString
         Name = 'Text'
-        ParamType = ptInput
-      end
-      item
         DataType = ftString
-        Name = 'Updated'
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
+        Name = 'Updated'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryAddLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Narrative_Line'
       
@@ -88,28 +83,28 @@ object dmNarrative: TdmNarrative
     Top = 240
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Text'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Updated'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
-  object qryReadNarrative: TQuery
-    DatabaseName = 'PB'
+  object qryReadNarrative: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * FROM Narrative_Line'
       'WHERE Narrative = :Narrative'
@@ -118,13 +113,13 @@ object dmNarrative: TdmNarrative
     Top = 296
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 160
     Top = 16
   end

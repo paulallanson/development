@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Contnrs, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls, Menus,
-  Grids, STPOObjects, DBGrids, PBSupplierInvoiceDM;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, Menus,
+  Grids, STPOObjects, DBGrids, PBSupplierInvoiceDM,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPOLine = class
@@ -69,27 +72,27 @@ type
   end;
 
   TSTMntPOrdFrm = class(TForm)
-    UpdSQL: TQuery;
+    UpdSQL: TFDQuery;
     DetsGrpBox: TGroupBox;
-    AddSQL: TQuery;
-    DelSQL: TQuery;
-    GetLastSQL: TQuery;
+    AddSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    GetLastSQL: TFDQuery;
     Label2: TLabel;
     DateEdit: TEdit;
     DateBitBtn: TBitBtn;
     NoLabel: TLabel;
     OrdNoEdit: TEdit;
-    GetLinesSQL: TQuery;
-    GetStoresSQL: TQuery;
+    GetLinesSQL: TFDQuery;
+    GetStoresSQL: TFDQuery;
     StoresDataSource: TDataSource;
-    GetReqdSQL: TQuery;
-    AddWorkSQL: TQuery;
-    UpdCompRefSQL: TQuery;
-    GetLastLineSQL: TQuery;
-    AddLineSQL: TQuery;
-    UpdLineSQL: TQuery;
-    DelLineSQL: TQuery;
-    DelLinesSQL: TQuery;
+    GetReqdSQL: TFDQuery;
+    AddWorkSQL: TFDQuery;
+    UpdCompRefSQL: TFDQuery;
+    GetLastLineSQL: TFDQuery;
+    AddLineSQL: TFDQuery;
+    UpdLineSQL: TFDQuery;
+    DelLineSQL: TFDQuery;
+    DelLinesSQL: TFDQuery;
     TotLabel: TLabel;
     SuppGroupBox: TGroupBox;
     Label1: TLabel;
@@ -98,25 +101,25 @@ type
     StoreFromGroupBox: TGroupBox;
     Label4: TLabel;
     StoreFromDBLookupComboBox: TDBLookupComboBox;
-    GetStoresFromSQL: TQuery;
+    GetStoresFromSQL: TFDQuery;
     StoresFromDataSource: TDataSource;
-    GetReqdPOSQL: TQuery;
-    GetReqdSOSQL: TQuery;
+    GetReqdPOSQL: TFDQuery;
+    GetReqdSOSQL: TFDQuery;
     Label5: TLabel;
     DescrEdit: TEdit;
-    GetPFJJobSQL: TQuery;
-    GetAllocsSQL: TQuery;
-    AddPFJSQL: TQuery;
-    DelPFJSQL: TQuery;
-    UpdPFJStatusOSQL: TQuery;
-    UpdPFJStatusRSQL: TQuery;
+    GetPFJJobSQL: TFDQuery;
+    GetAllocsSQL: TFDQuery;
+    AddPFJSQL: TFDQuery;
+    DelPFJSQL: TFDQuery;
+    UpdPFJStatusOSQL: TFDQuery;
+    UpdPFJStatusRSQL: TFDQuery;
     pnlStoreDetails: TPanel;
     Label3: TLabel;
     StoreDBLookupComboBox: TDBLookupComboBox;
     pnlSalesDetails: TPanel;
     Label6: TLabel;
     lblSalesOrder: TLabel;
-    GetDiscRateSQL: TQuery;
+    GetDiscRateSQL: TFDQuery;
     lblSuppOrderType: TLabel;
     ppmnPOLines: TPopupMenu;
     AddPOLine: TMenuItem;
@@ -133,20 +136,20 @@ type
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
-    qryInsSOLine: TQuery;
-    qrySelHighestSOLine: TQuery;
-    qrySelPart: TQuery;
-    qrySelSO: TQuery;
+    qryInsSOLine: TFDQuery;
+    qrySelHighestSOLine: TFDQuery;
+    qrySelPart: TFDQuery;
+    qrySelSO: TFDQuery;
     pnlFooter: TPanel;
     NotesBitBtn: TBitBtn;
     DelLabel: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
     FlashTimer: TTimer;
-    qryDelPONarrative: TQuery;
-    qryGetPO: TQuery;
+    qryDelPONarrative: TFDQuery;
+    qryGetPO: TFDQuery;
     stsbrDetails: TStatusBar;
-    qryGetOperator: TQuery;
+    qryGetOperator: TFDQuery;
     Label8: TLabel;
     RequestedByEdit: TEdit;
     Label9: TLabel;
@@ -158,13 +161,13 @@ type
     tsInvoices: TTabSheet;
     LinesListView: TListView;
     dbgInvoices: TDBGrid;
-    qryGetSInvoice: TQuery;
+    qryGetSInvoice: TFDQuery;
     dtsGetSInvoice: TDataSource;
-    qryPurchChkStatus: TQuery;
-    qryPurchUpStatus: TQuery;
-    qryGetSOStatus: TQuery;
-    qryUpSOStatus: TQuery;
-    UpdSOlineSQL: TQuery;
+    qryPurchChkStatus: TFDQuery;
+    qryPurchUpStatus: TFDQuery;
+    qryGetSOStatus: TFDQuery;
+    qryUpSOStatus: TFDQuery;
+    UpdSOlineSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);

@@ -1899,8 +1899,8 @@ object STRPPordfrm: TSTRPPordfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '// this query get'#39's overwritten by the summary or detailed query'
       ''
@@ -1917,8 +1917,8 @@ object STRPPordfrm: TSTRPPordfrm
     Left = 222
     Top = 16
   end
-  object qryExtraCharges: TQuery
-    DatabaseName = 'PB'
+  object qryExtraCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum (Purch_Ord_Add_Charge.Amount) as TotalVal'
       'from Purch_Ord_Add_Charge'
@@ -1941,8 +1941,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object OldQryRptSumm: TQuery
-    DatabaseName = 'PB'
+  object OldQryRptSumm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purch_Ord.Purch_Ord_No as OrdNum,'
       '       Purch_Ord.Purch_Ord_Date,'
@@ -2025,8 +2025,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object OldQryRptDet: TQuery
-    DatabaseName = 'PB'
+  object OldQryRptDet: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Purch_Ord_Line.Quantity_Ordered,Purch_Ord.Purch_Ord_No as' +
@@ -2108,8 +2108,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object QryRptSummBypart: TQuery
-    DatabaseName = 'PB'
+  object QryRptSummBypart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purch_Ord.Purch_Ord_No as OrdNum,'
       '       Purch_Ord.Purch_Ord_Date,'
@@ -2191,8 +2191,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object QryRptDet: TQuery
-    DatabaseName = 'PB'
+  object QryRptDet: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purch_Ord_Line.Quantity_Ordered,'
       '        Purch_Ord_Line.Purch_Ord_Line_No,'
@@ -2314,8 +2314,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object QryRptSumm: TQuery
-    DatabaseName = 'PB'
+  object QryRptSumm: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purch_Ord.Purch_Ord_No as OrdNum,'
       '       Purch_Ord.Purch_Ord_Date,'
@@ -2430,8 +2430,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptUnknown
       end>
   end
-  object qryCust: TQuery
-    DatabaseName = 'PB'
+  object qryCust: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Name as Customer_Name,'
       #9#9#9'Building_no_name,'
@@ -2467,8 +2467,8 @@ object STRPPordfrm: TSTRPPordfrm
     Left = 752
     Top = 31
   end
-  object qryAdhoc: TQuery
-    DatabaseName = 'PB'
+  object qryAdhoc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Name,'
       '  Building_no_name,'
@@ -2490,8 +2490,8 @@ object STRPPordfrm: TSTRPPordfrm
         ParamType = ptInput
       end>
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'pb'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Narrative_Text'
       'From Narrative_Line'

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Db, DBTables, Grids, DBGrids, Buttons;
+  StdCtrls, Db, Grids, DBGrids, Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtEnqMovFrm = class(TForm)
@@ -17,7 +20,7 @@ type
     ToEdit: TEdit;
     Label1: TLabel;
     PartDescrEdit: TEdit;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDataSource: TDataSource;
     DetsDBGrid: TDBGrid;
     Label2: TLabel;

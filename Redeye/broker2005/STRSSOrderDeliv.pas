@@ -4,15 +4,18 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, Db, DBTables, StdCtrls, Buttons, ComCtrls, CCSCommon,
-  CCSemailHandler, FileCtrl, Variants;
+  Grids, DBGrids, ExtCtrls, Db, StdCtrls, Buttons, ComCtrls, CCSCommon,
+  CCSemailHandler, FileCtrl, Variants,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRSSOrderDelivFrm = class(TForm)
     Panel2: TPanel;
     dbgDetails: TDBGrid;
     Panel1: TPanel;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dtsReport: TDataSource;
     grpbxCustomer: TGroupBox;
     edtCustomer: TEdit;
@@ -37,9 +40,9 @@ type
     qryReportCust_Order_No: TStringField;
     qryReportCustomer: TIntegerField;
     qryReportName: TStringField;
-    qryExport: TQuery;
-    qryCompany: TQuery;
-    qryCustomer: TQuery;
+    qryExport: TFDQuery;
+    qryCompany: TFDQuery;
+    qryCustomer: TFDQuery;
     btnDetails: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure rgCustomerClick(Sender: TObject);

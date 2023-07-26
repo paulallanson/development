@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, Db, DBTables, StdCtrls, ExtCtrls, DBCtrls, ComCtrls,
-  Buttons;
+  Grids, DBGrids, Db, StdCtrls, ExtCtrls, DBCtrls, ComCtrls,
+  Buttons,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBAuditViewFrm = class(TForm)
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDS: TDataSource;
     DetsDBGrid: TDBGrid;
     GetDetsSQLAudit_Text: TStringField;
@@ -30,10 +33,10 @@ type
     ErrorsCheckBox: TCheckBox;
     GroupBox2: TGroupBox;
     UsersRadioGroup: TRadioGroup;
-    GetOperatorsSQL: TQuery;
+    GetOperatorsSQL: TFDQuery;
     OperatorsDS: TDataSource;
     UserDBLookupComboBox: TDBLookupComboBox;
-    GetDetsSqlSQL: TQuery;
+    GetDetsSqlSQL: TFDQuery;
     StringField4: TStringField;
     IntegerField8: TIntegerField;
     IntegerField9: TIntegerField;

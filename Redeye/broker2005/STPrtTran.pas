@@ -4,8 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db, DBTables,
-  System.ImageList;
+  DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db, System.ImageList,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TStockDet     = class;
@@ -114,22 +116,22 @@ type
   end;
   TSTPrtTranFrm = class(TForm)
     TreeImageList: TImageList;
-    GetPOLinesSQL: TQuery;
-    UpdPOLineSQL: TQuery;
-    CheckPOStatusSQL: TQuery;
-    UpdPOStatusSQL: TQuery;
+    GetPOLinesSQL: TFDQuery;
+    UpdPOLineSQL: TFDQuery;
+    CheckPOStatusSQL: TFDQuery;
+    UpdPOStatusSQL: TFDQuery;
     ToDataTreeView: TTreeView;
-    GetPartPackSQL: TQuery;
-    GetOrdAllocsSQL: TQuery;
-    UpdPFJStatusSQL: TQuery;
-    DelOrdAllocSQL: TQuery;
-    GetSOTransSQL: TQuery;
-    GetSOTranSQL: TQuery;
-    DelSOTranSQL: TQuery;
-    UpdSOTranSQL: TQuery;
-    qryZero: TQuery;
-    AddStStkSIqry: TQuery;
-    GetStStkSIqry: TQuery;
+    GetPartPackSQL: TFDQuery;
+    GetOrdAllocsSQL: TFDQuery;
+    UpdPFJStatusSQL: TFDQuery;
+    DelOrdAllocSQL: TFDQuery;
+    GetSOTransSQL: TFDQuery;
+    GetSOTranSQL: TFDQuery;
+    DelSOTranSQL: TFDQuery;
+    UpdSOTranSQL: TFDQuery;
+    qryZero: TFDQuery;
+    AddStStkSIqry: TFDQuery;
+    GetStStkSIqry: TFDQuery;
     pnlTop: TPanel;
     Label3: TLabel;
     QtyLabel: TLabel;

@@ -194,8 +194,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       end
     end
   end
-  object qrySelProdCatsFalse: TQuery
-    DatabaseName = 'PB'
+  object qrySelProdCatsFalse: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select product_type.product_type,'
       '  product_type.description,'
@@ -216,8 +216,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProdCatsTrue: TQuery
-    DatabaseName = 'PB'
+  object qryProdCatsTrue: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select product_type.product_type,'
       '  product_type.description,'
@@ -253,8 +253,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
       Size = 80
     end
   end
-  object qrySelCategories: TQuery
-    DatabaseName = 'PB'
+  object qrySelCategories: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from category'
       'order by Category.Description')
@@ -276,8 +276,8 @@ object PBMaintProdCatsFrm: TPBMaintProdCatsFrm
     Left = 355
     Top = 82
   end
-  object qryUpdProdType: TQuery
-    DatabaseName = 'PB'
+  object qryUpdProdType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update product_type '
       'set '

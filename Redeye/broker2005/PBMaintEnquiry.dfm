@@ -1,9 +1,9 @@
 object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
   Left = 216
   Top = 119
-  Width = 761
-  Height = 583
   Caption = 'Maintain Enquiry'
+  ClientHeight = 544
+  ClientWidth = 745
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -11,18 +11,20 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
   Font.Name = 'Arial'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object pnlEnqHeader: TPanel
     Left = 0
     Top = 0
-    Width = 753
+    Width = 745
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 753
+    DesignSize = (
+      745
+      41)
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -110,7 +112,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akTop, akRight]
-      ItemHeight = 15
       TabOrder = 2
       OnChange = cmbbxOperatorsChange
     end
@@ -118,10 +119,11 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
   object pnlCustDetails: TPanel
     Left = 0
     Top = 41
-    Width = 753
+    Width = 745
     Height = 64
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 753
     object Label6: TLabel
       Left = 8
       Top = 12
@@ -202,7 +204,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Width = 217
       Height = 23
       Style = csDropDownList
-      ItemHeight = 15
       TabOrder = 1
       OnChange = cmbbxContactListChange
     end
@@ -212,26 +213,31 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Width = 217
       Height = 23
       Style = csDropDownList
-      ItemHeight = 15
       TabOrder = 2
       OnChange = cmbbxRepListChange
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 536
-    Width = 753
+    Top = 524
+    Width = 745
     Height = 20
     Panels = <>
-    SimplePanel = False
+    ExplicitTop = 536
+    ExplicitWidth = 753
   end
   object pnlOkCancelBtns: TPanel
     Left = 0
-    Top = 495
-    Width = 753
+    Top = 483
+    Width = 745
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 495
+    ExplicitWidth = 753
+    DesignSize = (
+      745
+      41)
     object btbtnOK: TBitBtn
       Left = 567
       Top = 8
@@ -239,8 +245,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'OK'
-      TabOrder = 0
-      OnClick = btbtnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -259,6 +263,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btbtnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 663
@@ -266,18 +272,21 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object PageControl1: TPageControl
     Left = 0
     Top = 105
-    Width = 753
-    Height = 390
+    Width = 745
+    Height = 378
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 4
+    ExplicitWidth = 753
+    ExplicitHeight = 390
     object TabSheet1: TTabSheet
       Caption = 'General'
       object Label9: TLabel
@@ -290,7 +299,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       object Label10: TLabel
         Left = 8
         Top = 44
-        Width = 71
+        Width = 70
         Height = 15
         Caption = 'Product Type'
       end
@@ -394,7 +403,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Width = 138
           Height = 23
           Hint = 'Paper_Colour'
-          ItemHeight = 0
           MaxLength = 40
           TabOrder = 1
           Visible = False
@@ -410,7 +418,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Width = 122
           Height = 23
           Hint = 'Paper_Weight'
-          ItemHeight = 0
           MaxLength = 40
           TabOrder = 2
           Visible = False
@@ -426,7 +433,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Width = 122
           Height = 23
           Hint = 'Paper_Brand'
-          ItemHeight = 0
           MaxLength = 40
           TabOrder = 3
           Visible = False
@@ -442,7 +448,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Width = 122
           Height = 23
           Hint = 'Paper_Material'
-          ItemHeight = 0
           MaxLength = 40
           TabOrder = 4
           Visible = False
@@ -455,11 +460,15 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       object pnlSpecTop: TPanel
         Left = 0
         Top = 0
-        Width = 745
+        Width = 737
         Height = 185
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 745
+        DesignSize = (
+          737
+          185)
         object Label48: TLabel
           Left = 8
           Top = 15
@@ -529,11 +538,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Top = 11
           Width = 16
           Height = 23
-          Min = 0
-          Position = 0
           TabOrder = 2
           TabStop = True
-          Wrap = False
           OnChanging = UpDown1Changing
         end
         object defaultSizeBtn: TButton
@@ -559,11 +565,8 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Top = 39
           Width = 16
           Height = 23
-          Min = 0
-          Position = 0
           TabOrder = 4
           TabStop = True
-          Wrap = False
           OnChanging = UpDown2Changing
         end
         object edtWidthUnit: TEdit
@@ -613,16 +616,17 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         object edtFormRef: TEdit
           Left = 451
           Top = 11
-          Width = 224
+          Width = 216
           Height = 23
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
           MaxLength = 40
           ReadOnly = True
           TabOrder = 9
+          ExplicitWidth = 224
         end
         object FormRefButton: TButton
-          Left = 682
+          Left = 674
           Top = 11
           Width = 24
           Height = 23
@@ -636,18 +640,15 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           ParentFont = False
           TabOrder = 10
           OnClick = FormRefButtonClick
+          ExplicitLeft = 682
         end
         object FormRefClrBitBtn: TBitBtn
-          Left = 713
+          Left = 705
           Top = 11
           Width = 24
           Height = 23
           Hint = 'Clear'
           Anchors = [akTop, akRight]
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 11
-          OnClick = FormRefClrBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -662,17 +663,23 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 11
+          OnClick = FormRefClrBitBtnClick
+          ExplicitLeft = 713
         end
         object edtFormDesc: TEdit
           Left = 451
           Top = 39
-          Width = 286
+          Width = 278
           Height = 23
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
           Color = clBtnFace
           ReadOnly = True
           TabOrder = 12
+          ExplicitWidth = 286
         end
         object PlateChangeSpin: TSpinEdit
           Tag = 108
@@ -728,19 +735,22 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       ImageIndex = 3
       object pnlPricesLower: TPanel
         Left = 0
-        Top = 202
-        Width = 745
+        Top = 190
+        Width = 737
         Height = 158
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitTop = 202
+        ExplicitWidth = 745
         object pnlPriceOptions: TPanel
-          Left = 591
+          Left = 583
           Top = 0
           Width = 154
           Height = 158
           Align = alRight
           TabOrder = 0
+          ExplicitLeft = 591
           object btnSelBestPrices: TButton
             Left = 8
             Top = 8
@@ -763,33 +773,36 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         object pnlPricesGrid: TPanel
           Left = 0
           Top = 0
-          Width = 591
+          Width = 583
           Height = 158
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
+          ExplicitWidth = 591
           object pnlSelectedPrices: TPanel
             Left = 0
             Top = 0
-            Width = 472
+            Width = 464
             Height = 158
             Align = alClient
             TabOrder = 0
+            ExplicitWidth = 472
             object pnlSelectedPricesTitle: TPanel
               Left = 1
               Top = 1
-              Width = 470
+              Width = 462
               Height = 24
               Align = alTop
               Alignment = taLeftJustify
               BevelOuter = bvNone
               Caption = '   Selected Prices'
               TabOrder = 0
+              ExplicitWidth = 470
             end
             object strgrdQuotePrices: TStringGrid
               Left = 1
               Top = 25
-              Width = 470
+              Width = 462
               Height = 132
               Align = alClient
               DefaultColWidth = 150
@@ -801,6 +814,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
               OnKeyUp = strgrdQuotePricesKeyUp
               OnSelectCell = strgrdQuotePricesSelectCell
               OnTopLeftChanged = strgrdQuotePricesTopLeftChanged
+              ExplicitWidth = 470
               ColWidths = (
                 150
                 57
@@ -828,12 +842,13 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             end
           end
           object pnlSelectedRunon: TPanel
-            Left = 472
+            Left = 464
             Top = 0
             Width = 119
             Height = 158
             Align = alRight
             TabOrder = 1
+            ExplicitLeft = 472
             object pnlSelectedRunonTitle: TPanel
               Left = 1
               Top = 1
@@ -869,12 +884,14 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
       object pnlPricesUpper: TPanel
         Left = 0
         Top = 0
-        Width = 745
-        Height = 202
+        Width = 737
+        Height = 190
         Align = alClient
         BevelOuter = bvNone
         Caption = 'pnlPricesUpper'
         TabOrder = 1
+        ExplicitWidth = 745
+        ExplicitHeight = 202
         object pnlSupplierPricesGrid: TPanel
           Left = 0
           Top = 0
@@ -945,10 +962,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
                 Width = 23
                 Height = 25
                 Hint = 'Insert a new quantity.'
-                ParentShowHint = False
-                ShowHint = True
-                TabOrder = 0
-                OnClick = btbtnAddQuantityClick
                 Glyph.Data = {
                   76010000424D7601000000000000760000002800000020000000100000000100
                   04000000000000010000130B0000130B00001000000000000000000000000000
@@ -963,6 +976,10 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
                   333333333337733333FF3333333C333330003333333733333777333333333333
                   3000333333333333377733333333333333333333333333333333}
                 NumGlyphs = 2
+                ParentShowHint = False
+                ShowHint = True
+                TabOrder = 0
+                OnClick = btbtnAddQuantityClick
               end
             end
             object strgrdSupplierPrices: TStringGrid
@@ -1005,6 +1022,9 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           Height = 202
           Align = alRight
           TabOrder = 1
+          DesignSize = (
+            154
+            190)
           object pnlCapabilityTitle: TPanel
             Left = 1
             Top = 1
@@ -1018,12 +1038,13 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           end
           object pnlCapabilitiesFooter: TPanel
             Left = 1
-            Top = 160
+            Top = 148
             Width = 152
             Height = 41
             Align = alBottom
             BevelOuter = bvNone
             TabOrder = 1
+            ExplicitTop = 160
             object btbtnSelectSuppliers: TBitBtn
               Left = 22
               Top = 8
@@ -1038,11 +1059,11 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             Left = 8
             Top = 24
             Width = 137
-            Height = 137
-            OnClickCheck = chklstbxCapabilitiesClickCheck
+            Height = 125
             Anchors = [akLeft, akTop, akRight, akBottom]
             ItemHeight = 15
             TabOrder = 2
+            OnClickCheck = chklstbxCapabilitiesClickCheck
           end
         end
       end
@@ -1161,15 +1182,16 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
         Height = 41
         Align = alBottom
         TabOrder = 1
+        DesignSize = (
+          737
+          41)
         object btnAddSuppCustNotes: TBitBtn
-          Left = 662
+          Left = 654
           Top = 7
           Width = 70
           Height = 25
           Anchors = [akTop, akRight]
           Caption = 'Add'
-          TabOrder = 0
-          OnClick = btnAddSuppCustNotesClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1184,6 +1206,9 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
             3BB33773333773333773B333333B3333333B7333333733333337}
           NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnAddSuppCustNotesClick
+          ExplicitLeft = 662
         end
       end
     end

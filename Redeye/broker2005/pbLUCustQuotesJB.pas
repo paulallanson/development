@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, pbQuotesDM, Db, DBTables;
+  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, pbQuotesDM, Db;
 
 type
   TfrmpbluCustQuotesJB = class(TForm)

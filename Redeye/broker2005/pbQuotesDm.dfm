@@ -1,18 +1,15 @@
 object dtmdlQuotes: TdtmdlQuotes
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 492
-  Top = 34
   Height = 690
   Width = 1033
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 720
     Top = 16
   end
-  object qryQHeader: TQuery
-    DatabaseName = 'PB'
+  object qryQHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Quote.Quote,'
       '      Quote.Ad_hoc_Address,'
@@ -97,14 +94,12 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAddHeader: TQuery
-    DatabaseName = 'PB'
+  object qryQAddHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Quote ('
       'Quote,'
@@ -190,184 +185,126 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Convert_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Required_By'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Sales_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Suggested_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimate_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Quote_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Last_Estimated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'End_User_Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'End_User_Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQUpdHeader: TQuery
-    DatabaseName = 'PB'
+  object qryQUpdHeader: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Quote'
       '  SET Description=:Description,'
@@ -416,174 +353,119 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Description'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Convert_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Required_By'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Sales_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Suggested_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimate_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Quote_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Last_Estimated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'End_User_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'End_User_Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object dsQAllLines: TDataSource
@@ -592,9 +474,9 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 112
     Top = 72
   end
-  object qryQAllLines: TQuery
-    DatabaseName = 'PB'
+  object qryQAllLines: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Quote_Line.Quote,'
@@ -646,13 +528,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object UpdLastQuoteSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdLastQuoteSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Company'
       'Set Last_Quote_Number = :Last_Quote_Number'
@@ -661,13 +541,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 584
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Quote_Number'
-        ParamType = ptUnknown
       end>
   end
-  object GetLastQuoteSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastQuoteSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Last_Quote_Number'
       'From Company'
@@ -675,9 +553,9 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 136
     Top = 584
   end
-  object qryQHeaderGrid: TQuery
-    DatabaseName = 'PB'
+  object qryQHeaderGrid: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Quote.Quote,'
       '        Quote.Description,'
@@ -715,19 +593,13 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'custname'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'custname'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ShowInactive'
-        ParamType = ptUnknown
       end>
   end
   object dsQHeaderGrid: TDataSource
@@ -736,8 +608,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 416
     Top = 16
   end
-  object qryGetCustomerRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Rep'
       'from Reps_Branches'
@@ -747,18 +619,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 472
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object OperatorSQL: TQuery
-    DatabaseName = 'pb'
+  object OperatorSQL: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator'
       'order by Name')
@@ -776,8 +644,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 360
     Top = 216
   end
-  object qryCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from customer_Contact'
       'where Customer = :Customer and '
@@ -787,18 +655,16 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 272
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep'
@@ -807,13 +673,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 592
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
-  object qryPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -829,8 +693,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 264
     Top = 488
   end
-  object qryQDocument: TQuery
-    DatabaseName = 'pb'
+  object qryQDocument: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Quote_Document'
@@ -839,18 +703,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAddDocument: TQuery
-    DatabaseName = 'PB'
+  object qryQAddDocument: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Quote_Document'
       '(Quote,'
@@ -868,33 +728,23 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAllDocuments: TQuery
-    DatabaseName = 'pb'
+  object qryQAllDocuments: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select *'
       'from Quote_Document'
@@ -904,14 +754,12 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAddLine: TQuery
-    DatabaseName = 'PB'
+  object qryQAddLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Quote_Line'
       #9'(Quote,'
@@ -975,139 +823,97 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Line_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reseller_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_SSP'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost_Plus_OHD'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_SSP_Original'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Converted'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'No_of_hours'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Team_Count'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Work_Centre_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Work_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Costing_Tool_Flag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Cost_Number'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Category_Number'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sub_Category'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Vat_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Cost_Markup_Perc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Is_Internal_Cost'
-        ParamType = ptUnknown
       end>
   end
-  object qryQLine: TQuery
-    DatabaseName = 'PB'
+  object qryQLine: TFDQuery
     FilterOptions = [foCaseInsensitive]
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Quote_Line.Quote,'
@@ -1155,18 +961,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Line_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAllSupplies: TQuery
-    DatabaseName = 'PB'
+  object qryQAllSupplies: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Quote_Supply.Quote,'
       #9'Quote_Supply.Quote_Supply_No,'
@@ -1195,13 +997,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAddSupply: TQuery
-    DatabaseName = 'PB'
+  object qryQAddSupply: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Quote_Supply'
       '('
@@ -1234,63 +1034,42 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Supply_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Converted'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Supply_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Vat_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
-  object qryQSupply: TQuery
-    DatabaseName = 'PB'
+  object qryQSupply: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Quote_Supply.Quote,'
       #9'Quote_Supply.Quote_Supply_No,'
@@ -1318,18 +1097,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Supply_No'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Price_unit'
@@ -1338,13 +1113,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
-  object qryUpdQuoteStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpdQuoteStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Quote'
       'set Quote_Status = :Quote_Status'
@@ -1353,18 +1126,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 536
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Product_Type'
@@ -1373,13 +1142,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetPUnitFromFactor: TQuery
-    DatabaseName = 'PB'
+  object qryGetPUnitFromFactor: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from Price_Unit'
@@ -1389,13 +1156,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit_Factor'
-        ParamType = ptUnknown
       end>
   end
-  object qryQUpdEstimateFile: TQuery
-    DatabaseName = 'PB'
+  object qryQUpdEstimateFile: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Quote'
       'Set Estimate_File = :Estimate_File'
@@ -1404,18 +1169,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Estimate_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQReason: TQuery
-    DatabaseName = 'PB'
+  object qryQReason: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Quote_Reason'
@@ -1429,8 +1190,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 112
     Top = 424
   end
-  object qryQuoteWon: TQuery
-    DatabaseName = 'PB'
+  object qryQuoteWon: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Quote'
       'set Quote_Status = 90'
@@ -1439,13 +1200,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       #9'      Quote.Quote,'
@@ -1506,28 +1265,20 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentrebyName: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentrebyName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Work_Centre'
@@ -1536,13 +1287,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Short_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentreGroupbyName: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentreGroupbyName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Work_Centre_Group '
       'from Work_Centre_Group'
@@ -1553,13 +1302,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Group_Short_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentreWCGroup: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentreWCGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 Work_Centre_Group '
       'from Work_Centre_WC_Group'
@@ -1568,13 +1315,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProcess: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcess: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process'
@@ -1583,13 +1328,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetWorkCentrebyEstName: TQuery
-    DatabaseName = 'PB'
+  object qryGetWorkCentrebyEstName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Work_Centre'
@@ -1598,13 +1341,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Estimating_Name'
-        ParamType = ptUnknown
       end>
   end
-  object qryQuotesJB: TQuery
-    DatabaseName = 'PB'
+  object qryQuotesJB: TFDQuery
+    ConnectionName = 'PB'
     Left = 616
     Top = 336
   end
@@ -1613,7 +1354,7 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 688
     Top = 336
   end
-  object qryQuotesNotConverted: TQuery
+  object qryQuotesNotConverted: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT TOP 2000'
       #9'      Quote.Quote,'
@@ -1663,23 +1404,17 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerPrices: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerPrices: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process_Cost'
@@ -1688,13 +1423,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Contact'
@@ -1705,23 +1438,17 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 512
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryQAddProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryQAddProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Quote_Process_Group'
       '('
@@ -1741,28 +1468,20 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Specification'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Specification_ID'
-        ParamType = ptUnknown
       end>
   end
-  object qryQProcessGroup: TQuery
-    DatabaseName = 'PB'
+  object qryQProcessGroup: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Quote,'
@@ -1776,18 +1495,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetProcessGroups: TQuery
-    DatabaseName = 'PB'
+  object qryGetProcessGroups: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Process_Group.Process_Group,'
       '        Process_Group.Process_Group_Description,'
@@ -1797,8 +1512,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 112
     Top = 352
   end
-  object qryReQuoteCount: TQuery
-    DatabaseName = 'PB'
+  object qryReQuoteCount: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT count(Quote) as ReQuote_Count'
       'FROM Quote'
@@ -1807,18 +1522,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryQUpdEstimateDate: TQuery
-    DatabaseName = 'PB'
+  object qryQUpdEstimateDate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Quote'
       'Set Date_Last_Estimated = :Date_Last_Estimated'
@@ -1827,18 +1538,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Last_Estimated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'pb'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       
         'select Customer, Customer_Status, Default_Quote_Cost_Markup_Perc' +
@@ -1850,13 +1557,11 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 576
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
-  object qryGetQuoteCostDefaults: TQuery
-    DatabaseName = 'PB'
+  object qryGetQuoteCostDefaults: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Company.Default_Quote_Cost_Process_Grp,'
       '        Company.Default_Quote_Cost_Process,'
@@ -1887,8 +1592,8 @@ object dtmdlQuotes: TdtmdlQuotes
     Left = 472
     Top = 416
   end
-  object qryGetCustomerSubRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerSubRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 reps_branches.Rep'
       'FROM Rep '
@@ -1899,18 +1604,14 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 472
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
-  object qryDummyOld: TQuery
-    DatabaseName = 'PB'
+  object qryDummyOld: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       #9'      Quote.Quote,'
@@ -1968,24 +1669,16 @@ object dtmdlQuotes: TdtmdlQuotes
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
 end

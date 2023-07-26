@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, Db, DBTables, PBPOObjects;
+  StdCtrls, Buttons, DBCtrls, Db, PBPOObjects,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPOrdLInactiveFrm = class(TForm)
@@ -14,7 +17,7 @@ type
     btnOK: TBitBtn;
     btnCancel: TBitBtn;
     chkReActivate: TCheckBox;
-    qryReason: TQuery;
+    qryReason: TFDQuery;
     srcReason: TDataSource;
     procedure BitBtn1Click(Sender: TObject);
     procedure DBLUReasonClick(Sender: TObject);

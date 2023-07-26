@@ -4,16 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCompBranchFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     DetsGrpBox: TGroupBox;
     Label2: TLabel;
@@ -29,9 +32,9 @@ type
     FlashDelivTimer: TTimer;
     NotesBitBtn: TBitBtn;
     DelivNotesBitBtn: TBitBtn;
-    qryZero: TQuery;
-    UpdNotesOnlySQL: TQuery;
-    UpdDelivNotesOnlySQL: TQuery;
+    qryZero: TFDQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    UpdDelivNotesOnlySQL: TFDQuery;
     PrintBitBtn: TBitBtn;
     chkbxActive: TCheckBox;
     procedure FormActivate(Sender: TObject);

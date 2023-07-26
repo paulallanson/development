@@ -87,12 +87,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons, DBCtrls;
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons, DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBLUSupBrchFrm = class(TForm)
     DetsSRC: TDataSource;
-    GetDetsSQL: TQuery;
+    GetDetsSQL: TFDQuery;
     DetsDBGrid: TDBGrid;
     SearchGrpBox: TGroupBox;
     NameEdit: TEdit;
@@ -107,7 +110,7 @@ type
     DelBitBtn: TBitBtn;
     GoToGrpBox: TGroupBox;
     ContactsBitBtn: TBitBtn;
-    GetODueEnqDetsSQL: TQuery;
+    GetODueEnqDetsSQL: TFDQuery;
     DispPanel: TPanel;
     DBBranchText: TDBText;
     DBBPhoneText: TDBText;

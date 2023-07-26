@@ -253,8 +253,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       OnClick = btnBrowseClick
     end
   end
-  object qrySalesInvByDate: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvByDate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  sales_invoice.sales_invoice,'
       '        sales_invoice.Sales_Invoice_No,'
@@ -312,8 +312,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesInvByNumber: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvByNumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sales_invoice.sales_invoice,'
       '  sales_invoice.Sales_Invoice_No,'
@@ -356,8 +356,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object qrySalesInvs: TQuery
-    DatabaseName = 'PB'
+  object qrySalesInvs: TFDQuery
+    ConnectionName = 'PB'
     Left = 8
     Top = 96
   end
@@ -367,8 +367,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Left = 368
     Top = 128
   end
-  object GetInvRngSQL: TQuery
-    DatabaseName = 'PB'
+  object GetInvRngSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Sales_Invoice.sales_invoice_no'
       'FROM Sales_invoice'
@@ -398,8 +398,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object DelWorkSQL: TQuery
-    DatabaseName = 'PB'
+  object DelWorkSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Int_Sel'
       'Where (Int_Sel_Code = :Int_Sel_Code) '
@@ -413,8 +413,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object AddIntSelQuery: TQuery
-    DatabaseName = 'PB'
+  object AddIntSelQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, text100)'
@@ -450,8 +450,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object AddWorkSQL: TQuery
-    DatabaseName = 'PB'
+  object AddWorkSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -474,8 +474,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastIntSelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastIntSelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Int_Sel_Code) as Last_Code'
       'From Int_Sel'
@@ -484,8 +484,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Left = 288
     Top = 84
   end
-  object qryUpdInvs: TQuery
-    DatabaseName = 'PB'
+  object qryUpdInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update sales_invoice'
       'set Factoring_Filename = :Factoring_Filename,'

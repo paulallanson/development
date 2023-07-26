@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, QuickRpt, Qrctrls, Db, DBTables, CCSPrint, CCSCommon, Math,
-  QrExport;
+  ExtCtrls, QuickRpt, Qrctrls, Db, CCSPrint, CCSCommon, Math,
+  QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPStkBalfrm = class(TForm)
@@ -19,7 +22,7 @@ type
     StkQRLabel: TQRLabel;
     OrderDetail: TQRSubDetail;
     CustQRDBText: TQRDBText;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRShape1: TQRShape;
     RepTypeQRLabel: TQRLabel;
     FooterQRBand: TQRBand;
@@ -45,7 +48,7 @@ type
     lblQtyonOrder: TQRLabel;
     qryReportStock_Reference: TStringField;
     dtsReport: TDataSource;
-    qryOrders: TQuery;
+    qryOrders: TFDQuery;
     QRSubDetail1: TQRSubDetail;
     QRDBText2: TQRDBText;
     QRDBText3: TQRDBText;
@@ -62,7 +65,7 @@ type
     qryOrdersQuantity: TFloatField;
     qryOrdersForms_per_Box: TStringField;
     qryOrdersLast_Delivery: TDateTimeField;
-    qryLastDetails: TQuery;
+    qryLastDetails: TFDQuery;
     lblCustOrderNo: TQRLabel;
     lblPONumber: TQRLabel;
     lblDeliveryDate: TQRLabel;

@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, Qrctrls, QuickRpt, ExtCtrls;
+  Db, Qrctrls, QuickRpt, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPStkBalRep2frm = class(TForm)
@@ -13,7 +16,7 @@ type
     TitleQRLabel: TQRLabel;
     DateQRLabel: TQRLabel;
     qrlblRange: TQRLabel;
-    qryStkBalRep: TQuery;
+    qryStkBalRep: TFDQuery;
     QRGroup1: TQRGroup;
     qrPart: TQRLabel;
     qrdbtxtPart: TQRDBText;
@@ -51,7 +54,7 @@ type
     qrsdtlNumbers: TQRSubDetail;
     lblSerialNos: TQRLabel;
     lblSerialNoRange: TQRLabel;
-    GetSerNosSQL: TQuery;
+    GetSerNosSQL: TFDQuery;
     GetSerNosSQLSerial_item_from: TStringField;
     GetSerNosSQLSerial_item_to: TStringField;
     ChildBand1: TQRChildBand;

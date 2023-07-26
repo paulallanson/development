@@ -4,13 +4,16 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, QRCtrls, QuickRpt, DB, DBTables, ExtCtrls, Printers,
-  CCSPrint, qrprntr, CCSCommon;
+  Dialogs, QRCtrls, QuickRpt, DB, ExtCtrls, Printers,
+  CCSPrint, qrprntr, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTRPSOReturnsFrm = class(TForm)
     qrpDetails: TQuickRep;
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     QRBand1: TQRBand;
     TitleQRLabel: TQRLabel;
     QRSysData1: TQRSysData;
@@ -42,7 +45,7 @@ type
     QRLabel8: TQRLabel;
     QRLabel9: TQRLabel;
     qrlblLocations: TQRLabel;
-    qryGetLocations: TQuery;
+    qryGetLocations: TFDQuery;
     procedure qrpDetailsBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);
     procedure qrsubStockBeforePrint(Sender: TQRCustomBand;

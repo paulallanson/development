@@ -226,8 +226,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
     TabOrder = 5
     Kind = bkClose
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 64
@@ -285,8 +285,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Left = 120
     Top = 80
   end
-  object GetOperatorsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOperatorsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Operator, Name'
       'From Operator'
@@ -299,8 +299,8 @@ object PBAuditViewFrm: TPBAuditViewFrm
     Left = 240
     Top = 104
   end
-  object GetDetsSqlSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSqlSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Audit_Trail.*, Operator.Name, Audit_Type.Audit_Type_Descr' +

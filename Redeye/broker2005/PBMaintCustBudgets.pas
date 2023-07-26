@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, Grids, ComCtrls, ExtCtrls, DB, DBTables;
+  Dialogs, StdCtrls, Buttons, Grids, ComCtrls, ExtCtrls, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintCustBudgetsfrm = class(TForm)
@@ -16,10 +19,10 @@ type
     pnlBottom: TPanel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryCustomer: TQuery;
-    qryPeriods: TQuery;
-    qryDel: TQuery;
-    qryAdd: TQuery;
+    qryCustomer: TFDQuery;
+    qryPeriods: TFDQuery;
+    qryDel: TFDQuery;
+    qryAdd: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;

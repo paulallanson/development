@@ -1263,8 +1263,8 @@ object STRPAgedStkNoteFrm: TSTRPAgedStkNoteFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select    store_stock.part as Part,'
       '          part.part_description as Description,'
@@ -1390,7 +1390,7 @@ object STRPAgedStkNoteFrm: TSTRPAgedStkNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'select TOP :Max_Records store_stock.part as Part,'
       '          part.part_description as Description,'
@@ -1516,8 +1516,8 @@ object STRPAgedStkNoteFrm: TSTRPAgedStkNoteFrm
         ParamType = ptUnknown
       end>
   end
-  object qryLastUsageDate: TQuery
-    DatabaseName = 'PB'
+  object qryLastUsageDate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 date_received as Sales_Dt'
       'from part_movement'

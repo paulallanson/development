@@ -4,22 +4,25 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, DBTables, Grids, DBGrids,
-  CCSPrint, PBPOObjects, qrprntr, printers, CCSCommon, QrExport;
+  StdCtrls, QuickRpt, QRExpr, Qrctrls, ExtCtrls, DB, Grids, DBGrids,
+  CCSPrint, PBPOObjects, qrprntr, printers, CCSCommon, QrExport,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRPLabelsFrm = class(TForm)
     PBLabelsQuickReport: TQuickRep;
-    PODelivSQL: TQuery;
+    PODelivSQL: TFDQuery;
     PODelivSRC: TDataSource;
     QRBand1: TQRSubDetail;
     PONumberLbl: TQRLabel;
-    CustomerSQL: TQuery;
-    AdhocSQL: TQuery;
-    RepSQL: TQuery;
-    SupplierSQL: TQuery;
+    CustomerSQL: TFDQuery;
+    AdhocSQL: TFDQuery;
+    RepSQL: TFDQuery;
+    SupplierSQL: TFDQuery;
     AddressSRC: TDataSource;
-    CompSQL: TQuery;
+    CompSQL: TFDQuery;
     BoxQuantityLbl: TQRLabel;
     Memodescription: TQRMemo;
     FormRefLbl: TQRLabel;
@@ -27,7 +30,7 @@ type
     AddressMemo: TQRMemo;
     QRDBCustOrderRef: TQRDBText;
     lblCustomer: TQRLabel;
-    CustSQL: TQuery;
+    CustSQL: TFDQuery;
     QRLabel2: TQRLabel;
     QRLabel3: TQRLabel;
     QRLabel4: TQRLabel;
@@ -39,7 +42,7 @@ type
     AddQRLabel: TQRLabel;
     DeliveryDateLbl: TQRLabel;
     gtlblFSCClaim: TQRLabel;
-    qryGetFSCClaim: TQuery;
+    qryGetFSCClaim: TFDQuery;
     procedure QRBand1BeforePrint(Sender: TQRCustomBand; var PrintBand:
       Boolean);
     function GetDetails(Sender: TObject): Integer;

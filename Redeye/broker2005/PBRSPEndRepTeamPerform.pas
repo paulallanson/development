@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, DBTables, ComCtrls, OleCtnrs;
+  Buttons, DBCtrls, StdCtrls, ExtCtrls, Db, ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSPEndRepTeamPerformFrm = class(TForm)
@@ -19,11 +22,11 @@ type
     PreviewBitBtn: TBitBtn;
     PrintBitBtn: TBitBtn;
     dtsFY: TDataSource;
-    qryFY: TQuery;
-    qryCompany: TQuery;
-    qryReport: TQuery;
-    qryGetFYPeriods: TQuery;
-    qryRepName: TQuery;
+    qryFY: TFDQuery;
+    qryCompany: TFDQuery;
+    qryReport: TFDQuery;
+    qryGetFYPeriods: TFDQuery;
+    qryRepName: TFDQuery;
     chkbxExcludeJBCosts: TCheckBox;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;

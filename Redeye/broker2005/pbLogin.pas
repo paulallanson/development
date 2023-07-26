@@ -4,7 +4,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBTables, ExtCtrls, IniFiles;
+  StdCtrls, Buttons, DB, ExtCtrls, IniFiles,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmpbLogin = class(TForm)
@@ -14,7 +17,7 @@ type
     Label2: TLabel;
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetOperatorSQL: TQuery;
+    GetOperatorSQL: TFDQuery;
     Edit1: TEdit;
     lblLogInto: TLabel;
     cmbAliasList: TComboBox;
@@ -75,7 +78,7 @@ begin
   cmbAliasList.clear;
   sgList := TStringList.Create;
   try
-    Session.GetAliasNames(sgList);
+    FDManager.GetConnectionDefNames(sgList);
     { fill a list box with alias names for the user to select from }
     for iAliasList := 0 to sgList.Count - 1 do
       if ((pos('Redeye',sgList[iAliasList]) > 0) or (pos('Redeye',sgList[iAliasList]) > 0) or
@@ -111,15 +114,15 @@ end;
 procedure TfrmpbLogin.OKBitBtnClick(Sender: TObject);
 begin
 (*  if sDBase = 'L' then
-    dmBroker.PBLDatabase.AliasName := 'Broker'
+    dmBroker.PBLDatabase.ConnectionDefName := 'Broker'
   else
   if sDBase = 'T' then
-    dmBroker.PBLDatabase.AliasName := 'BrokerTest';
+    dmBroker.PBLDatabase.ConnectionDefName := 'BrokerTest';
 *)
   if cmbAliasList.Text = '' then
-    dmBroker.PBLDatabase.AliasName := 'Broker'
+    dmBroker.PBLDatabase.ConnectionDefName := 'Broker'
   else
-    dmBroker.PBLDatabase.AliasName := cmbAliasList.Text;
+    dmBroker.PBLDatabase.ConnectionDefName := cmbAliasList.Text;
 
   try
     with GetOperatorSQL do

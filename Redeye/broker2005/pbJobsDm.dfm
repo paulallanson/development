@@ -4,8 +4,8 @@ object dtmdlJobs: TdtmdlJobs
   Top = 107
   Height = 562
   Width = 588
-  object qryJobs: TQuery
-    DatabaseName = 'PB'
+  object qryJobs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT DISTINCT TOP 2000 Job_Bag.Job_Bag, Job_Bag.Job_Bag_Descr,' +
@@ -213,7 +213,7 @@ object dtmdlJobs: TdtmdlJobs
     Left = 104
     Top = 40
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       '       Job_Bag.Job_Bag,'
@@ -338,8 +338,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryJobReturns: TQuery
-    DatabaseName = 'pb'
+  object qryJobReturns: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select distinct'
       '  Job_Bag.Job_Bag,'
@@ -386,9 +386,9 @@ object dtmdlJobs: TdtmdlJobs
     Left = 104
     Top = 104
   end
-  object qryJBReturnLines: TQuery
-    DatabaseName = 'pb'
-    DataSource = dtsJobReturns
+  object qryJBReturnLines: TFDQuery
+    ConnectionName = 'pb'
+    MasterSource = dtsJobReturns
     SQL.Strings = (
       'select Job_Bag_Return.Part,'
       '  Part.Part_description as Description,'
@@ -410,8 +410,8 @@ object dtmdlJobs: TdtmdlJobs
     Left = 120
     Top = 176
   end
-  object qryJBPartQtys: TQuery
-    DatabaseName = 'pb'
+  object qryJBPartQtys: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Sales_Order_line.Part,'
       '      sum(Quantity_Ordered) as Qty_Ordered,'
@@ -441,8 +441,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryJobsNCA: TQuery
-    DatabaseName = 'PB'
+  object qryJobsNCA: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
@@ -536,8 +536,8 @@ object dtmdlJobs: TdtmdlJobs
     Left = 120
     Top = 240
   end
-  object qryOldDummyNCA: TQuery
-    DatabaseName = 'PB'
+  object qryOldDummyNCA: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '      Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
@@ -629,8 +629,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryDummyNCA: TQuery
-    DatabaseName = 'PB'
+  object qryDummyNCA: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag_Non_Conform.Job_Bag_Non_Conform,'
       #9'Job_Bag_Non_Conform.Date_Point,'
@@ -775,7 +775,7 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryDummyOlder: TQuery
+  object qryDummyOlder: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       '       Job_Bag.Job_Bag,'
@@ -888,8 +888,8 @@ object dtmdlJobs: TdtmdlJobs
     Left = 120
     Top = 304
   end
-  object qryContractJobs: TQuery
-    DatabaseName = 'PB'
+  object qryContractJobs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Job_Bag.Job_Bag,'
       '        Job_Bag.Job_Bag_Descr,'
@@ -928,8 +928,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryAddToContract: TQuery
-    DatabaseName = 'PB'
+  object qryAddToContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Contract_Job_Bag(Contract, Job_Bag)'
       'VALUES (:Contract, :Job_Bag)')
@@ -947,8 +947,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBagPOs: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBagPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Purchase_Order'
       'FROM job_bag_line_dets'
@@ -972,8 +972,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOToContract: TQuery
-    DatabaseName = 'PB'
+  object qryAddPOToContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Contract_Purchase_Order(Contract, Purchase_Order)'
       'VALUES (:Contract, :Purchase_Order)')
@@ -991,8 +991,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryCheckContract: TQuery
-    DatabaseName = 'PB'
+  object qryCheckContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Contract'
       'FROM Contract_Job_Bag'
@@ -1006,8 +1006,8 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryUpdInvThisWeek: TQuery
-    DatabaseName = 'PB'
+  object qryUpdInvThisWeek: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Job_Bag'
       'SET Invoice_This_Week = :Invoice_This_Week,'
@@ -1038,7 +1038,7 @@ object dtmdlJobs: TdtmdlJobs
         ParamType = ptUnknown
       end>
   end
-  object qryDummyOld: TQuery
+  object qryDummyOld: TFDQuery
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       '       Job_Bag.Job_Bag,'

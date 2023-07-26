@@ -7732,8 +7732,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
       end
     end
   end
-  object qryRepTeams: TQuery
-    DatabaseName = 'PB'
+  object qryRepTeams: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT Sales_profit.Rep_Team, Rep_Team.Rep_Team_Name'
       'FROM Sales_profit'
@@ -7766,8 +7766,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryCategory: TQuery
-    DatabaseName = 'PB'
+  object qryCategory: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Category'
@@ -7775,8 +7775,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
     Left = 331
     Top = 38
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -7838,8 +7838,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepTeamBudgetsOld: TQuery
-    DatabaseName = 'PB'
+  object qryRepTeamBudgetsOld: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Rep_Team_Budget'
@@ -7865,8 +7865,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryPeriods: TQuery
-    DatabaseName = 'PB'
+  object qryPeriods: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Period'
@@ -7887,8 +7887,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyNull: TQuery
-    DatabaseName = 'PB'
+  object qryDummyNull: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -7945,8 +7945,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummy: TQuery
-    DatabaseName = 'PB'
+  object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Category.Category,'
       '        Category.Description,'
@@ -8013,8 +8013,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepTeamBudgets: TQuery
-    DatabaseName = 'PB'
+  object qryRepTeamBudgets: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'#9'Rep_Team.Rep_Team, '
       #9#9'Rep_Team.Rep_Team_Name, '
@@ -8055,8 +8055,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepTeamSubReps: TQuery
-    DatabaseName = 'PB'
+  object qryRepTeamSubReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep_Team_Member.Rep_Team,'
       '        Rep.Name as Description,'
@@ -8077,8 +8077,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyTeam: TQuery
-    DatabaseName = 'PB'
+  object qryDummyTeam: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep.Rep,'
       '        Rep.Name as Description,'
@@ -8145,8 +8145,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyNullTeam: TQuery
-    DatabaseName = 'PB'
+  object qryDummyNullTeam: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep.Rep,'
       '        Rep.Name as Description,'
@@ -8203,8 +8203,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryDummyTeamSub: TQuery
-    DatabaseName = 'PB'
+  object qryDummyTeamSub: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep.Rep,'
       '        Rep.Name as Description,'
@@ -8271,8 +8271,8 @@ object PBRPPEndRepTeamPerformFrm: TPBRPPEndRepTeamPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object qryRepTeamReps: TQuery
-    DatabaseName = 'PB'
+  object qryRepTeamReps: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Rep_Team_Member.Rep_Team,'
       '        Rep.Name as Description,'

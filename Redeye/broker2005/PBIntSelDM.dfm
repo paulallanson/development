@@ -4,8 +4,8 @@ object dmIntSel: TdmIntSel
   Top = 105
   Height = 540
   Width = 783
-  object GetLastTempIDSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastTempIDSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Int_Sel_Code'
       'From Int_Sel'
@@ -19,8 +19,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object AddTempIDSQL: TQuery
-    DatabaseName = 'PB'
+  object AddTempIDSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -36,8 +36,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object DelTempIDSQL: TQuery
-    DatabaseName = 'PB'
+  object DelTempIDSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete'
       'From Int_Sel'
@@ -52,8 +52,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object UpdTempIDSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdTempIDSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Int_Sel'
       'Set Sel1=:Sel1, Sel2=:Sel2, Sel3=:Sel3, Sel4=:Sel4,'
@@ -100,8 +100,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Text100)'
@@ -117,8 +117,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object AddWithKeySQL: TQuery
-    DatabaseName = 'PB'
+  object AddWithKeySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Tag, Text100)'
@@ -166,8 +166,8 @@ object dmIntSel: TdmIntSel
         ParamType = ptInput
       end>
   end
-  object AddWithKey5SQL: TQuery
-    DatabaseName = 'PB'
+  object AddWithKey5SQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Int_Sel'
       '(Int_Sel_Code, Sel1, Sel2, Sel3, Sel4, Sel5, Tag, Text100)'

@@ -4,18 +4,21 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables, DBIERRS;
+  Db, DBIERRS,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBAuditDataMod = class(TDataModule)
-    AddAuditSQL: TQuery;
-    Add1stAuditSQL: TQuery;
-    GetAuditDescrSQL: TQuery;
-    GetAuditTypeSQL: TQuery;
-    GetAuditFlagsSQL: TQuery;
-    GetFldChgTypSQL: TQuery;
-    Access_Add1stAuditSQL: TQuery;
-    Access_AddAuditSQL: TQuery;
+    AddAuditSQL: TFDQuery;
+    Add1stAuditSQL: TFDQuery;
+    GetAuditDescrSQL: TFDQuery;
+    GetAuditTypeSQL: TFDQuery;
+    GetAuditFlagsSQL: TFDQuery;
+    GetFldChgTypSQL: TFDQuery;
+    Access_Add1stAuditSQL: TFDQuery;
+    Access_AddAuditSQL: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -27,7 +30,7 @@ type
                                      sTempText: String);
     function GetAuditDescr(TempDS: TDataSet): String;
     procedure HandleException(Sender: TObject; E: Exception);
-    function FieldChanges(sTempTable: String; DSFrom: TDataSet; SQLTo: TQuery): ByteBool;
+    function FieldChanges(sTempTable: String; DSFrom: TDataSet; SQLTo: TFDQuery): ByteBool;
     function GetAuditOperation(TempDS: TDataSet): String;
   end;
 
@@ -199,11 +202,11 @@ If not bDontWriteError then
 MessageDlg(E.Message ,mtError,[mbOK],0) ;
 end;
 
-function TPBAuditDataMod.FieldChanges(sTempTable: String; DSFrom: TDataSet; SQLTo: TQuery): ByteBool;
+function TPBAuditDataMod.FieldChanges(sTempTable: String; DSFrom: TDataSet; SQLTo: TFDQuery): ByteBool;
 Var
 iCount, iTmpCde1, iTmpCde2, iTmpCde3, iTmpCde4: Integer ;
 TempField: TField ;
-TempParam: TParam;
+TempParam: TFDParam;
 TempFieldType: TFieldType;
 sTempFrom, sTempTo: String;
 begin
@@ -213,7 +216,7 @@ Result := False ;
 {If FILE UPDATE and FIELD CHANGES are disabled, don't bother to do anything else} ;
 If (not bAuditLogFields) and (not bAuditLogUpd) then
         exit ;
-{Loop through the PARAMETERS in the output TQuery} ;
+{Loop through the PARAMETERS in the output TFDQuery} ;
 For iCount := 0 to SQLTo.ParamCount -1 do
         begin
         TempParam := SQLTo.Params[iCount] ;

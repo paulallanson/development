@@ -1709,8 +1709,8 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
       end
     end
   end
-  object qryPurchInv: TQuery
-    DatabaseName = 'PB'
+  object qryPurchInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -1899,8 +1899,8 @@ object PBRPPurchInvFrm: TPBRPPurchInvFrm
       FieldName = 'SI_Cost_Unit_Factor'
     end
   end
-  object AddCostsQuery: TQuery
-    DatabaseName = 'PB'
+  object AddCostsQuery: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select sum(Amount) as Add_Cost'
       'from Supplier_Invoice_Charge'

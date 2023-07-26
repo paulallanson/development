@@ -272,7 +272,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Grids, DBGrids, DB, DBTables, ExtCtrls, Buttons,
+  StdCtrls, Grids, DBGrids, DB, ExtCtrls, Buttons,
   IniFiles, ComCtrls, ToolWin, Menus, ImgList, CCSCommon;
 
 type

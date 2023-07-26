@@ -253,8 +253,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       end
     end
   end
-  object GetDetsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetDetsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Int_Sel.*'
       'FROM Int_Sel'
@@ -278,8 +278,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Left = 287
     Top = 288
   end
-  object CustomerSQL: TQuery
-    DatabaseName = 'PB'
+  object CustomerSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Customer.Name as Name,'
       '        Customer_Branch.Building_no_name,'
@@ -333,8 +333,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Left = 88
     Top = 360
   end
-  object CompSQL: TQuery
-    DatabaseName = 'PB'
+  object CompSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Company.Name as Company_Name,'
       #9#9#9'Building_no_name,'
@@ -350,8 +350,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Left = 357
     Top = 352
   end
-  object SupplierSQL: TQuery
-    DatabaseName = 'PB'
+  object SupplierSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select  Supplier.Name as Name,'
       '        Supplier_Branch.Building_no_name,'

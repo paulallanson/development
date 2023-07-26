@@ -869,8 +869,8 @@ object STPrtTranFrm: TSTPrtTranFrm
       C007C003C007C003C007C007C007C00700000000000000000000000000000000
       000000000000}
   end
-  object GetPOLinesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPOLinesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line.Part, Purch_Ord_Line.Quantity_Ordered,'
       
@@ -924,8 +924,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOLineSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOLineSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord_Line'
       'Set'
@@ -974,8 +974,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object CheckPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord.Purch_Ord_Status,'
       '       (Select Count(Purch_Ord_Line_No)'
@@ -1014,8 +1014,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPOStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPOStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set'
@@ -1038,8 +1038,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object GetPartPackSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartPackSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select purch_pack_Quantity'
       'From Part'
@@ -1056,8 +1056,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object GetOrdAllocsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetOrdAllocsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line_Alloc.Parts_For_Job,'
       '       Parts_For_Job.Part_Qty'
@@ -1089,8 +1089,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdPFJStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPFJStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Parts_For_Job'
       'Set Part_Status = :Part_Status'
@@ -1115,8 +1115,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object DelOrdAllocSQL: TQuery
-    DatabaseName = 'PB'
+  object DelOrdAllocSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Purch_Ord_Line_Alloc'
       'Where (Purch_Ord_Line_Alloc.Purch_Ord = :Purch_Ord) and'
@@ -1154,8 +1154,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOTransSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOTransSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Part_Transfer.Part, Part_Transfer.Store_Quantity,'
       
@@ -1196,8 +1196,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object GetSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord, Purch_Ord_Line_No'
       'From Part_Transfer'
@@ -1216,8 +1216,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object DelSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object DelSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete'
       'From Part_Transfer'
@@ -1235,8 +1235,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object UpdSOTranSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOTranSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Part_Transfer'
       'Set Quantity_Received = Quantity_Received + :Quantity_Received,'
@@ -1273,13 +1273,13 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 464
     Top = 200
   end
-  object AddStStkSIqry: TQuery
-    DatabaseName = 'PB'
+  object AddStStkSIqry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into store_stock_Serial_item'
       '(Store_stock, serial_item_no, serial_item_from, serial_item_to)'
@@ -1311,8 +1311,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ParamType = ptUnknown
       end>
   end
-  object GetStStkSIqry: TQuery
-    DatabaseName = 'PB'
+  object GetStStkSIqry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Store_stock_Serial_item'

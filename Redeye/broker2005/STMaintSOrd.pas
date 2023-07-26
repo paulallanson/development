@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, ComCtrls, Grids, STSOObjects,
-  Menus, CCSCommon;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, ComCtrls, Grids, STSOObjects,
+  Menus, CCSCommon,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 type
   TSTMaintSOrdFrm = class(TForm)
     FlashTimer: TTimer;
@@ -175,8 +178,8 @@ type
     procedure DefContact(iTempCust, iTempBranch: Integer);
     procedure CallLineMaintScreen(sTempFuncMode: Char);
     procedure CallServiceMaintScreen(sTempFuncMode: Char);
-    procedure HandleSOLine(Query: TQuery; const inx: Integer);
-    procedure HandleSORepPerc(Query: TQuery; const inx: integer);
+    procedure HandleSOLine(Query: TFDQuery; const inx: Integer);
+    procedure HandleSORepPerc(Query: TFDQuery; const inx: integer);
     procedure GetSupplierOrderTypes;
     procedure DisplaySourceDetails;
     procedure SetDeliverTo;
@@ -1060,7 +1063,7 @@ begin
   bDisableLineNameChangeEvent := False;
 end;
 
-procedure TSTMaintSOrdFrm.HandleSOLine(Query: TQuery; const inx: Integer);
+procedure TSTMaintSOrdFrm.HandleSOLine(Query: TFDQuery; const inx: Integer);
 var
   i: Integer;
 begin
@@ -1541,7 +1544,7 @@ begin {Update the sales order lines}
 
 end;
 
-procedure TSTMaintSOrdFrm.HandleSORepPerc(Query: TQuery; const inx: integer);
+procedure TSTMaintSOrdFrm.HandleSORepPerc(Query: TFDQuery; const inx: integer);
 var
   i: Integer;
 begin

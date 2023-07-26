@@ -445,8 +445,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Width = 50
       end>
   end
-  object qryCurrentCustStatus: TQuery
-    DatabaseName = 'PB'
+  object qryCurrentCustStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Customer_Branch.*, Customer_Status.*, Customer_Type.*, Re' +
@@ -611,9 +611,9 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Left = 144
     Top = 192
   end
-  object qryCustStatus: TQuery
+  object qryCustStatus: TFDQuery
     AutoRefresh = True
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer_Status, Customer_status.Customer_Status_descr'
       'from Customer_status'
@@ -629,8 +629,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Size = 24
     end
   end
-  object QryCustType: TQuery
-    DatabaseName = 'PB'
+  object QryCustType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Customer_Type'
       'order by Customer_Type'
@@ -644,8 +644,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Size = 80
     end
   end
-  object QryRep: TQuery
-    DatabaseName = 'PB'
+  object QryRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep, Name'
       'from Rep'
@@ -660,8 +660,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Size = 80
     end
   end
-  object NewStdSQL: TQuery
-    DatabaseName = 'PB'
+  object NewStdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '  Customer_Branch.*,'
@@ -739,8 +739,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     Left = 240
     Top = 217
   end
-  object qryLevelOfImp: TQuery
-    DatabaseName = 'PB'
+  object qryLevelOfImp: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Level_of_Importance'
       'order by Importance_Description'
@@ -754,8 +754,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Size = 80
     end
   end
-  object StdSQL: TQuery
-    DatabaseName = 'PB'
+  object StdSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Branch.*,'
       '        Customer_Status.*,'

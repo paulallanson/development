@@ -4,8 +4,8 @@ object dmGroups: TdmGroups
   Top = 128
   Height = 479
   Width = 741
-  object GetLastContTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastContTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Contact_Type'
       'From Contact_Type'
@@ -19,8 +19,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object GetLastCurrencySQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastCurrencySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Currency_Code'
       'From Currency_Code'
@@ -34,8 +34,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdPTCatSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdPTCatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Category'
       'Set'
@@ -58,8 +58,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastCustTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastCustTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Customer_Type'
       'From Customer_Type'
@@ -73,8 +73,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object UpdCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Country_Id'
       'Set'
@@ -97,8 +97,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastPTCatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastPTCatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Category'
       'From Category'
@@ -112,8 +112,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddCustTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object AddCustTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Type'
       '(Customer_Type, Description)'
@@ -128,8 +128,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddPTCatSQL: TQuery
-    DatabaseName = 'PB'
+  object AddPTCatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Category'
       '(Category, Description)'
@@ -144,8 +144,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object GetLastCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Country_Id'
       'From Country_Id'
@@ -159,8 +159,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddCurrencySQL: TQuery
-    DatabaseName = 'PB'
+  object AddCurrencySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Currency_Code'
       '(Currency_Code, Currency_Code_Descr)'
@@ -174,8 +174,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdContTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdContTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Contact_Type'
       'Set'
@@ -198,8 +198,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object AddCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object AddCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Country_Id'
       '(Country_Id, Country_Id_Descr)'
@@ -214,8 +214,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object DelCustTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object DelCustTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Customer_Type'
       'Where Customer_Type = :Customer_Type')
@@ -228,8 +228,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelCountrySQL: TQuery
-    DatabaseName = 'PB'
+  object DelCountrySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Country_Id'
       'Where Country_Id = :Country_Id')
@@ -242,8 +242,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object UpdCustTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdCustTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Type'
       'Set'
@@ -266,8 +266,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object UpdCurrencySQL: TQuery
-    DatabaseName = 'PB'
+  object UpdCurrencySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Currency_Code'
       'Set'
@@ -290,8 +290,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object DelIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Intrastat_Id'
       'Where Intrastat_Id = :Intrastat_Id')
@@ -304,8 +304,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object UpdIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Intrastat_Id'
       'Set'
@@ -328,8 +328,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelPTCatSQL: TQuery
-    DatabaseName = 'PB'
+  object DelPTCatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Category'
       'Where Category = :Category')
@@ -342,8 +342,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object AddIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object AddIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Intrastat_Id'
       '(Intrastat_Id, Intrastat_Id_Descr)'
@@ -357,8 +357,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object DelCurrencySQL: TQuery
-    DatabaseName = 'PB'
+  object DelCurrencySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Currency_Code'
       'Where Currency_Code = :Currency_Code')
@@ -371,8 +371,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object AddContTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object AddContTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Contact_type'
       '(Contact_Type, Description)'
@@ -386,8 +386,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object GetLastIntrastatSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastIntrastatSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Intrastat_Id'
       'From Intrastat_Id'
@@ -401,8 +401,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object DelContTypeSQL: TQuery
-    DatabaseName = 'PB'
+  object DelContTypeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Contact_Type'
       'where Contact_Type = :Contact_Type')
@@ -415,8 +415,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Type'
       '(Customer_Type, Description)'
@@ -431,8 +431,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddColourSQL: TQuery
-    DatabaseName = 'PB'
+  object AddColourSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Paper_Colour'
       '(Paper_Colour, Paper_Colour_Description)'
@@ -446,8 +446,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdColourSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdColourSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Paper_Colour'
       'Set'
@@ -469,8 +469,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelColourSQL: TQuery
-    DatabaseName = 'PB'
+  object DelColourSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Paper_Colour'
       'where Paper_Colour = :Paper_Colour')
@@ -483,8 +483,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastColourSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastColourSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Paper_Colour'
       'From Paper_Colour'
@@ -498,8 +498,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddWeightSQL: TQuery
-    DatabaseName = 'PB'
+  object AddWeightSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Paper_Weight'
       '(Paper_Weight, Paper_Weight_Description)'
@@ -513,8 +513,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdWeightSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdWeightSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Paper_Weight'
       'Set'
@@ -535,8 +535,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelWeightSQL: TQuery
-    DatabaseName = 'PB'
+  object DelWeightSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Paper_Weight'
       'where Paper_Weight = :Paper_Weight')
@@ -549,8 +549,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastWeightSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastWeightSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Paper_Weight'
       'From Paper_Weight'
@@ -564,8 +564,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddBrandSQL: TQuery
-    DatabaseName = 'PB'
+  object AddBrandSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Paper_Brand'
       '(Paper_Brand, Paper_Brand_Description)'
@@ -579,8 +579,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddMaterialSQL: TQuery
-    DatabaseName = 'PB'
+  object AddMaterialSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Paper_Material'
       '(Paper_Material, Paper_Material_Description)'
@@ -594,8 +594,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdBrandSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdBrandSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Paper_Brand'
       'Set'
@@ -616,8 +616,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object UpdMaterialSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdMaterialSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Paper_Material'
       'Set'
@@ -639,8 +639,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelBrandSQL: TQuery
-    DatabaseName = 'PB'
+  object DelBrandSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Paper_Brand'
       'where Paper_Brand = :Paper_Brand')
@@ -653,8 +653,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelMaterialSQL: TQuery
-    DatabaseName = 'PB'
+  object DelMaterialSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Paper_Material'
       'where Paper_Material = :Paper_Material')
@@ -667,8 +667,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastBrandSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastBrandSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Paper_Brand'
       'From Paper_Brand'
@@ -682,8 +682,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object GetLastMaterialSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastMaterialSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Paper_Material'
       'From Paper_Material'
@@ -697,8 +697,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddContLevelSQL: TQuery
-    DatabaseName = 'PB'
+  object AddContLevelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Contact_Level'
       '(Contact_Level, Description)'
@@ -713,8 +713,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdContLevelSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdContLevelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Contact_Level'
       'Set'
@@ -737,8 +737,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelContLevelSQL: TQuery
-    DatabaseName = 'PB'
+  object DelContLevelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Contact_Level'
       'Where Contact_Level = :Contact_Level')
@@ -751,8 +751,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastContLevelSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastContLevelSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Contact_Level'
       'From Contact_Level'
@@ -766,8 +766,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object AddUOMSQL: TQuery
-    DatabaseName = 'PB'
+  object AddUOMSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Unit_of_measure'
       '(unit_of_measure, Uom_Description)'
@@ -781,8 +781,8 @@ object dmGroups: TdmGroups
         ParamType = ptInput
       end>
   end
-  object UpdUOMSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdUOMSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Unit_of_Measure'
       'Set'
@@ -805,8 +805,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object DelUOMSQL: TQuery
-    DatabaseName = 'PB'
+  object DelUOMSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Unit_Of_Measure'
       'Where Unit_of_Measure = :Unit_of_Measure')
@@ -819,8 +819,8 @@ object dmGroups: TdmGroups
         ParamType = ptUnknown
       end>
   end
-  object GetLastUOMSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastUOMSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Unit_of_Measure'
       'From Unit_of_Measure'

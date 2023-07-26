@@ -4,23 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, ExtCtrls, Mask, Spin, ComCtrls;
+  StdCtrls, Buttons, DBCtrls, DB, ExtCtrls, Mask, Spin, ComCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintPrdTypFrm = class(TForm)
     OKBitBtn: TBitBtn;
     CancelBitBtn: TBitBtn;
-    GetCatsSQL: TQuery;
+    GetCatsSQL: TFDQuery;
     CatsSRC: TDataSource;
-    GetLastSQL: TQuery;
-    AddSQL: TQuery;
-    UpdSQL: TQuery;
-    DelSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    UpdSQL: TFDQuery;
+    DelSQL: TFDQuery;
     DelLabel: TLabel;
     FlashTimer: TTimer;
-    qryZero: TQuery;
-    UpdNotesOnlySQL: TQuery;
-    qryInsDefCap: TQuery;
+    qryZero: TFDQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    qryInsDefCap: TFDQuery;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
@@ -50,12 +53,12 @@ type
     Label1: TLabel;
     DescrEdit: TEdit;
     Label9: TLabel;
-    qryMembers: TQuery;
-    qryPriceUnit: TQuery;
+    qryMembers: TFDQuery;
+    qryPriceUnit: TFDQuery;
     dtsPriceUnit: TDataSource;
-    qryDummy: TQuery;
-    qryDelete: TQuery;
-    qryAdd: TQuery;
+    qryDummy: TFDQuery;
+    qryDelete: TFDQuery;
+    qryAdd: TFDQuery;
     Label10: TLabel;
     cmbDefaults: TComboBox;
     lblFSCProductType: TLabel;

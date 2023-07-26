@@ -121,7 +121,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    AddDetailsMemo.Text := Narrative.Data;
+    AddDetailsMemo.Text := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;

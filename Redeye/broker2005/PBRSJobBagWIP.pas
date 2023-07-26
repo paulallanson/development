@@ -4,12 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Db, Grids, DBGrids, PBPOObjects, DBTables, CCSCommon,
-  ComCtrls, OleCtnrs;
+  StdCtrls, Buttons, ExtCtrls, Db, Grids, DBGrids, PBPOObjects, CCSCommon,
+  ComCtrls, OleCtnrs,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBRSJobBagWIPfrm = class(TForm)
-    qryReport: TQuery;
+    qryReport: TFDQuery;
     dsReport: TDataSource;
     qryReportPurchase_Order: TFloatField;
     qryReportLine: TIntegerField;
@@ -72,7 +75,7 @@ type
     chkbxShowSales: TCheckBox;
     chkbxShowCosts: TCheckBox;
     btnExcel: TBitBtn;
-    qryExcel: TQuery;
+    qryExcel: TFDQuery;
     OleContainer1: TOleContainer;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;

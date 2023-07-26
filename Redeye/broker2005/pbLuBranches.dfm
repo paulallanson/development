@@ -179,8 +179,8 @@ object frmpbluBranches: TfrmpbluBranches
     Left = 160
     Top = 32
   end
-  object qrySBranch: TQuery
-    DatabaseName = 'PB'
+  object qrySBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Supplier_branch'
@@ -209,8 +209,8 @@ object frmpbluBranches: TfrmpbluBranches
         ParamType = ptUnknown
       end>
   end
-  object qryCBranch: TQuery
-    DatabaseName = 'PB'
+  object qryCBranch: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from Customer_branch'

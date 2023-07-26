@@ -173,8 +173,8 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
         Visible = True
       end>
   end
-  object qryStoreStock: TQuery
-    DatabaseName = 'PB'
+  object qryStoreStock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *, (Store_Quantity-Quantity_Allocated) as Free_Stock'
       'from Store_Stock, Part_Store_Bin'
@@ -200,58 +200,58 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
       end>
     object qryStoreStockStore_Stock: TIntegerField
       FieldName = 'Store_Stock'
-      Origin = 'PB.Store_Stock.Store_Stock'
+
     end
     object qryStoreStockQuantity_Allocated: TIntegerField
       FieldName = 'Quantity_Allocated'
-      Origin = 'PB.Store_Stock.Quantity_Allocated'
+
     end
     object qryStoreStockStore_Quantity: TIntegerField
       FieldName = 'Store_Quantity'
-      Origin = 'PB.Store_Stock.Store_Quantity'
+
     end
     object qryStoreStockStore_Cost: TCurrencyField
       FieldName = 'Store_Cost'
-      Origin = 'PB.Store_Stock.Store_Cost'
+
     end
     object qryStoreStockDate_Received: TDateTimeField
       FieldName = 'Date_Received'
-      Origin = 'PB.Store_Stock.Date_Received'
+
     end
     object qryStoreStockPart: TStringField
       FieldName = 'Part'
-      Origin = 'PB.Store_Stock.Part'
+
       FixedChar = True
       Size = 30
     end
     object qryStoreStockPart_Store_Lot: TStringField
       FieldName = 'Part_Store_Lot'
-      Origin = 'PB.Store_Stock.Part_Store_Lot'
+
       FixedChar = True
       Size = 40
     end
     object qryStoreStockPart_Store: TIntegerField
       FieldName = 'Part_Store'
-      Origin = 'PB.Store_Stock.Part_Store'
+
     end
     object qryStoreStockPart_Bin: TStringField
       FieldName = 'Part_Bin'
-      Origin = 'PB.Store_Stock.Part_Bin'
+
       FixedChar = True
     end
     object qryStoreStockStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
-      Origin = 'PB.Store_Stock.Stock_Pack_Quantity'
+
     end
     object qryStoreStockStore_Stock_Description: TStringField
       FieldName = 'Store_Stock_Description'
-      Origin = 'PB.Store_Stock.Store_Stock_Description'
+
       FixedChar = True
       Size = 60
     end
     object qryStoreStockinvoice_upfront: TStringField
       FieldName = 'invoice_upfront'
-      Origin = 'PB.Store_Stock.invoice_upfront'
+
       FixedChar = True
       Size = 2
     end
@@ -264,8 +264,8 @@ object STPrtAllocStStockFrm: TSTPrtAllocStStockFrm
     Left = 232
     Top = 72
   end
-  object UpdSOHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSOHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Sales_Order'
       'Set Sales_Order.Sales_Order_Head_Status = :status'

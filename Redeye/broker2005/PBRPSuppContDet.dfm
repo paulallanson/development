@@ -954,8 +954,8 @@ object PBRPSuppContDetFrm: TPBRPSuppContDetFrm
       end
     end
   end
-  object GetDetsQry: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Supplier_BranchContacts.Name AS Contact_Name,'
       #9'Supplier_BranchContacts.Salutation,'

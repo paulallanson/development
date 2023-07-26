@@ -957,9 +957,9 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
     Left = 206
     Top = 78
   end
-  object SQLRepPrft: TQuery
-    DatabaseName = 'PB'
-    DataSource = DataSRCRepPrft
+  object SQLRepPrft: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = DataSRCRepPrft
     SQL.Strings = (
       'SELECT Rep_Budget.Rep,'
       #9'Rep_Budget.Period,'
@@ -1015,8 +1015,8 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object SQLRep: TQuery
-    DatabaseName = 'PB'
+  object SQLRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'distinct rep.rep,'
       #9'rep.name as rep_name'
@@ -1053,9 +1053,9 @@ object PBRPRepsPerformFrm: TPBRPRepsPerformFrm
         ParamType = ptUnknown
       end>
   end
-  object oldSQLRepPrft: TQuery
-    DatabaseName = 'PB'
-    DataSource = DataSRCRepPrft
+  object oldSQLRepPrft: TFDQuery
+    ConnectionName = 'PB'
+    MasterSource = DataSRCRepPrft
     SQL.Strings = (
       'select'
       '  int_sel.sel1 as Rep,'

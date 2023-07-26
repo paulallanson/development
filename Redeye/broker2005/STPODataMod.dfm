@@ -4,8 +4,8 @@ object STPODM: TSTPODM
   Top = 136
   Height = 480
   Width = 785
-  object qryInsPO: TQuery
-    DatabaseName = 'PB'
+  object qryInsPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Purch_Ord'
       
@@ -104,8 +104,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPO: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set'
@@ -212,8 +212,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryDelPO: TQuery
-    DatabaseName = 'PB'
+  object qryDelPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE '
       'FROM Purch_Ord '
@@ -227,8 +227,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Purch_Ord) as Last_Code'
       'From Purch_Ord'
@@ -238,8 +238,8 @@ object STPODM: TSTPODM
     Left = 16
     Top = 168
   end
-  object qryInsPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryInsPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Purch_Ord_Line'
       
@@ -371,8 +371,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord_Line'
       'Set'
@@ -493,8 +493,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLines: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Purch_Ord_Line.Part, Purch_Ord_Line.Quantity_Ordered,'
       
@@ -522,8 +522,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryDelPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryDelPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Purch_Ord_Line'
       'Where (Purch_Ord_Line.Purch_Ord = :Purch_Ord) and'
@@ -543,8 +543,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryDelPOLines: TQuery
-    DatabaseName = 'PB'
+  object qryDelPOLines: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete From Purch_Ord_Line'
       'Where (Purch_Ord_Line.Purch_Ord = :Purch_Ord) '
@@ -559,8 +559,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Purch_Ord_Line_No) as Last_Code'
       'From Purch_Ord_Line'
@@ -577,8 +577,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPartDet: TQuery
-    DatabaseName = 'PB'
+  object qryGetPartDet: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'from Part'
@@ -592,8 +592,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOTypeDesc: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOTypeDesc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Purch_Ord_Type '
@@ -607,8 +607,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierInfo: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplierInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Supplier '
@@ -622,8 +622,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryLastCompnyPO: TQuery
-    DatabaseName = 'PB'
+  object qryLastCompnyPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Last_PO_Number '
       'FROM Company '
@@ -631,8 +631,8 @@ object STPODM: TSTPODM
     Left = 104
     Top = 168
   end
-  object qryIncLastPONum: TQuery
-    DatabaseName = 'PB'
+  object qryIncLastPONum: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Company '
       'SET Last_PO_Number = :Last_PO '
@@ -646,8 +646,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryIncPOFileNo: TQuery
-    DatabaseName = 'PB'
+  object qryIncPOFileNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Supplier '
       'SET Last_PO_File = :FileNo '
@@ -666,8 +666,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPO: TQuery
-    DatabaseName = 'PB'
+  object qryGetPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select * from Purch_Ord '
       'WHERE Purch_Ord_No = :PurchOrdNo')
@@ -680,8 +680,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOLines2: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOLines2: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Purch_Ord_Line '
@@ -695,8 +695,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppOrdTypeDesc: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppOrdTypeDesc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Supplier_Ord_Type '
@@ -715,8 +715,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryNewPOs: TQuery
-    DatabaseName = 'PB'
+  object qryNewPOs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * '
       'FROM Purch_Ord '
@@ -730,8 +730,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetSuppPartInfo: TQuery
-    DatabaseName = 'PB'
+  object qryGetSuppPartInfo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * From Part_Supplier '
       'WHERE Supplier = :Supplier AND '
@@ -750,8 +750,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryDelExChgs: TQuery
-    DatabaseName = 'PB'
+  object qryDelExChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Purch_Ord_Add_Charge'
       'Where Purch_Ord = :Purch_Ord;')
@@ -764,8 +764,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryInsExChg: TQuery
-    DatabaseName = 'PB'
+  object qryInsExChg: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT into Purch_Ord_Add_Charge'
       
@@ -810,8 +810,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetExChgs: TQuery
-    DatabaseName = 'PB'
+  object qryGetExChgs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT * from Purch_Ord_Add_Charge '
       'Where Purch_Ord = :Purch_Ord;')
@@ -824,8 +824,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetVatRate: TQuery
-    DatabaseName = 'PB'
+  object qryGetVatRate: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Vat_Code'
       'where Vat_Code = :Vat_Code;')
@@ -838,29 +838,29 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCoDtls: TQuery
-    DatabaseName = 'PB'
+  object qryGetCoDtls: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company '
       'where company=1;')
     Left = 104
     Top = 120
   end
-  object qryCompany: TQuery
-    DatabaseName = 'PB'
+  object qryCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from company'
       'where company = 1')
     Left = 360
     Top = 232
   end
-  object qryUpd: TQuery
-    DatabaseName = 'PB'
+  object qryUpd: TFDQuery
+    ConnectionName = 'PB'
     Left = 424
     Top = 232
   end
-  object qryUpPOStatus: TQuery
-    DatabaseName = 'PB'
+  object qryUpPOStatus: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Purch_Ord'
       'Set Purch_Ord_Status = :Purch_Ord_Status'
@@ -879,8 +879,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryCheckPart: TQuery
-    DatabaseName = 'PB'
+  object qryCheckPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Part'
@@ -894,8 +894,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryAddPart: TQuery
-    DatabaseName = 'PB'
+  object qryAddPart: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Part'
       
@@ -980,8 +980,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryAddLevels: TQuery
-    DatabaseName = 'PB'
+  object qryAddLevels: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Part_Store_Levels'
       'select top 1 :Part, '
@@ -1012,8 +1012,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastSOLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastSOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Sales_Order_line_No) as Max_Line_No'
       'from Sales_Order_Line'
@@ -1027,8 +1027,8 @@ object STPODM: TSTPODM
         ParamType = ptUnknown
       end>
   end
-  object qryInsSOLine: TQuery
-    DatabaseName = 'PB'
+  object qryInsSOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Sales_Order_Line'
       

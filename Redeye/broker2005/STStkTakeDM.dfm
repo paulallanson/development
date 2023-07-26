@@ -4,8 +4,8 @@ object STStkTkDM: TSTStkTkDM
   Top = 107
   Height = 436
   Width = 544
-  object PartSQL: TQuery
-    DatabaseName = 'PB'
+  object PartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part_Description, Track_Serial_No, Purch_Pack_quantity'
       'from Part'
@@ -19,8 +19,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object CountListSQL: TQuery
-    DatabaseName = 'PB'
+  object CountListSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT distinct Stock_Take.Stock_Take_Ref,Stock_Take.Stock_Take_' +
@@ -65,8 +65,8 @@ object STStkTkDM: TSTStkTkDM
     Left = 128
     Top = 16
   end
-  object CheckValidBinSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckValidBinSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from part_Store_bin'
@@ -86,8 +86,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object CheckValidLotSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckValidLotSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * '
       'from store_Stock'
@@ -107,8 +107,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object PartStoreSQL: TQuery
-    DatabaseName = 'PB'
+  object PartStoreSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from'
       'Part_Store'
@@ -122,8 +122,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object CountHeadSQL: TQuery
-    DatabaseName = 'PB'
+  object CountHeadSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT distinct Stock_Take.Stock_Take_Ref,'
       '  Part_Store.Part_Store, Stock_Lots_In_Use, Stock_Bins_In_Use'
@@ -142,8 +142,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object CountDtlsSQL: TQuery
-    DatabaseName = 'PB'
+  object CountDtlsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Stock_Take.*, Part.Part_Description, Part.Track_Serial_No' +
@@ -179,8 +179,8 @@ object STStkTkDM: TSTStkTkDM
     Left = 136
     Top = 232
   end
-  object CountPartDtlsSQL: TQuery
-    DatabaseName = 'PB'
+  object CountPartDtlsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select stock_take.*, part.Part_Description, Part.Track_Serial_No'
       'from stock_take, Part'
@@ -216,8 +216,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object GetCountStkSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCountStkSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select stock_take.*'
       'from stock_take'
@@ -234,8 +234,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object FreezeCountSQL: TQuery
-    DatabaseName = 'PB'
+  object FreezeCountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Stock_take'
       'set Date_Received = :Date_Received,'
@@ -268,8 +268,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object UpdCountSql: TQuery
-    DatabaseName = 'PB'
+  object UpdCountSql: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Stock_Take'
       
@@ -321,8 +321,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object NextStockTakeSQL: TQuery
-    DatabaseName = 'PB'
+  object NextStockTakeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Stock_Take) as Max_Stock_Take'
       'from Stock_Take'
@@ -330,8 +330,8 @@ object STStkTkDM: TSTStkTkDM
     Left = 216
     Top = 136
   end
-  object AddStockTakeSQL: TQuery
-    DatabaseName = 'PB'
+  object AddStockTakeSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Stock_Take'
       
@@ -449,8 +449,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object DelCountSQL: TQuery
-    DatabaseName = 'PB'
+  object DelCountSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Stock_Take'
       'set Stock_Take_Qty = 0, Stock_Take_Status = :Status'
@@ -471,8 +471,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object UpdStatusSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdStatusSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update stock_take'
       'set stock_take_status = :status'
@@ -492,8 +492,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object StoreStockSQL: TQuery
-    DatabaseName = 'PB'
+  object StoreStockSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Store_Stock.*'
       'from Store_Stock'
@@ -507,8 +507,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object GetStoreStockNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStoreStockNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Store_Stock.Store_Stock, Store_Stock.Sets_Per_Pad, Purcha' +
@@ -543,8 +543,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object DelCountRecSQl: TQuery
-    DatabaseName = 'PB'
+  object DelCountRecSQl: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Stock_Take'
       'where Stock_Take.Stock_Take = :Stock_Take')
@@ -557,8 +557,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object GetCountQtySQL: TQuery
-    DatabaseName = 'PB'
+  object GetCountQtySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Stock_Take.Stock_Take, Store_Stock.Store_Quantity, Store_' +
@@ -583,8 +583,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object GetPartSQL: TQuery
-    DatabaseName = 'PB'
+  object GetPartSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'Select Part.Track_Serial_No, Part.Part_Purchase_Price, Part.Purc' +
@@ -606,8 +606,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object GetStockDescSQL: TQuery
-    DatabaseName = 'PB'
+  object GetStockDescSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Store_Stock.Store_Stock_Description, Store_Stock.Invoice_' +
@@ -644,8 +644,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastLot: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastLot: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select store_stock.*'
       'from store_stock'
@@ -666,8 +666,8 @@ object STStkTkDM: TSTStkTkDM
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomer: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomer: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Part.Part, Part.Customer, Invoice_upfront'
       'from Part, Customer'

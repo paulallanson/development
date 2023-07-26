@@ -29,7 +29,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, Buttons, DB, DBTables;
+  StdCtrls, DBCtrls, Buttons, DB,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TCSMaintSupCapFrm = class(TForm)
@@ -46,18 +49,18 @@ type
     SuppLabel: TLabel;
     BranchLabel: TLabel;
     ProdTypesSRC: TDataSource;
-    GetProdTypesSQL: TQuery;
-    GetProdTypesSelSQL: TQuery;
+    GetProdTypesSQL: TFDQuery;
+    GetProdTypesSelSQL: TFDQuery;
     CapSelLB: TListBox;
-    GetCapsSQL: TQuery;
+    GetCapsSQL: TFDQuery;
     CapsSRC: TDataSource;
     CapsDBLLB: TDBLookupListBox;
-    GetCapsSelSQL: TQuery;
+    GetCapsSelSQL: TFDQuery;
     CancelBitBtn: TBitBtn;
     CloseBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    DelCapSQL: TQuery;
-    AddCapSQL: TQuery;
+    DelCapSQL: TFDQuery;
+    AddCapSQL: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure ShowProdTypes(Sender: TObject);
     procedure AlreadySelChkBoxClick(Sender: TObject);

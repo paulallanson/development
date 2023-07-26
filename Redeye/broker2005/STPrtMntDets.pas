@@ -133,7 +133,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, DBCtrls, DB, DBTables, Buttons, ExtCtrls;
+  StdCtrls, DBCtrls, DB, Buttons, ExtCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TSTPrtMntDetsFrm = class(TForm)
@@ -148,21 +151,21 @@ type
     VATsDataSource: TDataSource;
     CancelBitBtn: TBitBtn;
     OKBitBtn: TBitBtn;
-    CheckPartExistsQuery: TQuery;
-    AddPartQuery: TQuery;
-    UpdPartQuery: TQuery;
-    DelPartQuery: TQuery;
+    CheckPartExistsQuery: TFDQuery;
+    AddPartQuery: TFDQuery;
+    UpdPartQuery: TFDQuery;
+    DelPartQuery: TFDQuery;
     PurchPriceMemo: TMemo;
     Label6: TLabel;
     PurchPackQtyMemo: TMemo;
     Label7: TLabel;
     PartGroupDBLookupComboBox: TDBLookupComboBox;
     Label8: TLabel;
-    GetGroupsQuery: TQuery;
+    GetGroupsQuery: TFDQuery;
     GroupsDataSource: TDataSource;
     GroupClearBitBtn: TBitBtn;
     NotInUseCheckBox: TCheckBox;
-    GetVatsQuery: TQuery;
+    GetVatsQuery: TFDQuery;
     OKSuppBitBtn: TBitBtn;
     VatMaintBitBtn: TBitBtn;
     PrtGrpMaintBitBtn: TBitBtn;
@@ -171,7 +174,7 @@ type
     Label10: TLabel;
     dblkpPriceUnit: TDBLookupComboBox;
     srcPriceUnit: TDataSource;
-    qryPriceUnit: TQuery;
+    qryPriceUnit: TFDQuery;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     Label11: TLabel;
@@ -187,7 +190,7 @@ type
     Label12: TLabel;
     DBLUCmbBxCstUplft: TDBLookupComboBox;
     Label3: TLabel;
-    qryCstUplft: TQuery;
+    qryCstUplft: TFDQuery;
     DataSRCCstUplft: TDataSource;
     CatMUMemo: TMemo;
     Label13: TLabel;

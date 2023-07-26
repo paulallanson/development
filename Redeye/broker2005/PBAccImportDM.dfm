@@ -3,8 +3,8 @@ object dmAccImport: TdmAccImport
   Top = 86
   Height = 634
   Width = 1280
-  object AddBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object AddBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Branch'
       '        (Customer,'
@@ -128,8 +128,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddCustSQL: TQuery
-    DatabaseName = 'PB'
+  object AddCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Customer'
       #9#9#9'(Customer, Name, Settlement_Discount,'
@@ -292,8 +292,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object GetBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
@@ -308,8 +308,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpCustSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer'
       'Set     Acc_Active = :Acc_Active,'
@@ -342,8 +342,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object UpBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Branch'
       'Set'
@@ -371,8 +371,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetNextBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Branch_no) as Last_Branch'
       'from Customer_Branch'
@@ -386,16 +386,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetNextCustSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(customer) as Last_Customer'
       'from Customer')
     Left = 256
     Top = 136
   end
-  object GetNextContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(contact_no) as Last_Contact'
       'from Customer_Contact'
@@ -416,8 +416,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddRepSQL: TQuery
-    DatabaseName = 'PB'
+  object AddRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Reps_Branches'
       '        (Customer,'
@@ -461,8 +461,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddContactSQL: TQuery
-    DatabaseName = 'PB'
+  object AddContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Contact'
       '        (Customer,'
@@ -541,8 +541,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Supplier'
       '        (Supplier,'
@@ -615,16 +615,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetNextSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(Supplier) as Last_Supplier'
       'from Supplier')
     Left = 96
     Top = 192
   end
-  object AddSuppBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSuppBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Supplier_Branch'
       '        (Supplier,'
@@ -721,8 +721,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpSuppSQL: TQuery
-    DatabaseName = 'PB'
+  object UpSuppSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier'
       'Set     Acc_Active = :Acc_Active'
@@ -743,8 +743,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpSuppBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object UpSuppBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_Branch'
       'Set'
@@ -772,8 +772,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetLastNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Narrative) as Last_Code'
       'From Narrative_Line'
@@ -781,8 +781,8 @@ object dmAccImport: TdmAccImport
     Left = 312
     Top = 240
   end
-  object GetCustBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer, Branch_no,  Account_Code, Narrative'
       'from Customer_Branch'
@@ -796,8 +796,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddSuppContSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSuppContSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Supplier_BranchContacts'
       '        (Supplier,'
@@ -875,8 +875,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetNextSuppContactSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextSuppContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select max(contact_no) as Last_Contact'
       'from Supplier_BranchContacts'
@@ -897,8 +897,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetSuppBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object GetSuppBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Supplier_Branch'
@@ -912,8 +912,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object AddNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Narrative_Line'
       
@@ -941,8 +941,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpBranchNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object UpBranchNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Customer_Branch'
       'set Narrative = :Narrative'
@@ -967,22 +967,22 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetSageCustomer: TQuery
-    DatabaseName = 'dBSage50'
+  object GetSageCustomer: TFDQuery
+    ConnectionName = 'dBSage50'
     SQL.Strings = (
       'select * from'
       'SALES_LEDGER')
     Left = 408
     Top = 80
   end
-  object Sage50Database: TDatabase
-    DatabaseName = 'dbSage50'
-    SessionName = 'Default'
+  object Sage50Database: TFDConnection
+    ConnectionName = 'dbSage50'
+
     Left = 408
     Top = 32
   end
-  object CustExistSQL: TQuery
-    DatabaseName = 'PB'
+  object CustExistSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Customer_Branch.Customer, Customer_Branch.Name, Customer_' +
@@ -1013,16 +1013,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetNextRepSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNextRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Max(rep) as Last_Record'
       'from Rep')
     Left = 240
     Top = 288
   end
-  object AddNewRepSQL: TQuery
-    DatabaseName = 'PB'
+  object AddNewRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'insert into Rep (Rep, Name, Building_no_name, Street, Locale, To' +
@@ -1047,8 +1047,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object CheckRepSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Rep'
       'where Name like :Name')
@@ -1061,8 +1061,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddCurrencySQL: TQuery
-    DatabaseName = 'PB'
+  object AddCurrencySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Currency_Code (Currency_Code, Currency_Code_Descr)'
       'values (:Currency_Code, :Currency_Code_Descr)')
@@ -1080,16 +1080,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetSageSupplier: TQuery
-    DatabaseName = 'dbSage50'
+  object GetSageSupplier: TFDQuery
+    ConnectionName = 'dbSage50'
     SQL.Strings = (
       'select *'
       'from PURCHASE_LEDGER')
     Left = 408
     Top = 128
   end
-  object SuppExistSQL: TQuery
-    DatabaseName = 'PB'
+  object SuppExistSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'select Supplier_Branch.Name, Supplier_Branch.Supplier, Supplier_' +
@@ -1120,8 +1120,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpCreditLimitSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCreditLimitSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Customer'
       
@@ -1147,8 +1147,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpCompanyImpSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCompanyImpSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update company'
       'set Data_Import_Directory = :Data_Import_Directory'
@@ -1162,8 +1162,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetSagePayments: TQuery
-    DatabaseName = 'PB'
+  object GetSagePayments: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Audit_header.tran_number,'
       'Audit_header.type,'
@@ -1189,8 +1189,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpPaymentSQL: TQuery
-    DatabaseName = 'PB'
+  object UpPaymentSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Sales_Invoice'
       'set Paid_Status = :Paid_Status,'
@@ -1222,16 +1222,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetCompanySQL: TQuery
-    DatabaseName = 'PB'
+  object GetCompanySQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Company'
       'where company = 1')
     Left = 296
     Top = 32
   end
-  object UpCompanyPayDateSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCompanyPayDateSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update company'
       'set Last_Payment_Update = :Last_Payment_Update'
@@ -1245,8 +1245,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpAuditHSQL: TQuery
-    DatabaseName = 'PB'
+  object UpAuditHSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sage_Audit_Header'
       
@@ -1286,18 +1286,18 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetSageAuditH: TQuery
-    DatabaseName = 'dbSage50'
+  object GetSageAuditH: TFDQuery
+    ConnectionName = 'dbSage50'
     Left = 96
     Top = 16
   end
-  object GetSageAuditU: TQuery
-    DatabaseName = 'dbSage50'
+  object GetSageAuditU: TFDQuery
+    ConnectionName = 'dbSage50'
     Left = 160
     Top = 16
   end
-  object UPAuditUSQL: TQuery
-    DatabaseName = 'PB'
+  object UPAuditUSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Sage_Audit_Usage'
       'values (:type,'
@@ -1364,21 +1364,21 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object DelSageAuditH: TQuery
-    DatabaseName = 'PB'
+  object DelSageAuditH: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sage_Audit_Header')
     Left = 824
     Top = 312
   end
-  object MaximiserDB: TDatabase
-    DatabaseName = 'dbMaximiser'
-    SessionName = 'Default'
+  object MaximiserDB: TFDConnection
+    ConnectionName = 'dbMaximiser'
+
     Left = 496
     Top = 8
   end
-  object GetMaxContacts: TQuery
-    DatabaseName = 'dbMaximiser'
+  object GetMaxContacts: TFDQuery
+    ConnectionName = 'dbMaximiser'
     SQL.Strings = (
       'SELECT  CLIENT.Client_Id,'
       '        CLIENT.Contact_Number,'
@@ -1405,8 +1405,8 @@ object dmAccImport: TdmAccImport
     Left = 496
     Top = 56
   end
-  object GetMaxEmail: TQuery
-    DatabaseName = 'dbMaximiser'
+  object GetMaxEmail: TFDQuery
+    ConnectionName = 'dbMaximiser'
     SQL.Strings = (
       'select U_e_mail_address.U_e_mail_address as E_Mail'
       'from U_e_mail_address'
@@ -1426,8 +1426,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetMaxWebsite: TQuery
-    DatabaseName = 'dbMaximiser'
+  object GetMaxWebsite: TFDQuery
+    ConnectionName = 'dbMaximiser'
     SQL.Strings = (
       'select U_web_site.U_web_site as Web_address'
       'from U_web_site'
@@ -1447,8 +1447,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object CustNameExistSQL: TQuery
-    DatabaseName = 'PB'
+  object CustNameExistSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Customer.Customer, Customer.Name'
       'from Customer'
@@ -1462,8 +1462,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object CheckContactSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 1 Contact_no, Name'
       'from Customer_contact'
@@ -1493,8 +1493,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetCType: TQuery
-    DatabaseName = 'PB'
+  object qryGetCType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Contact_Type, Description'
       'from Contact_Type'
@@ -1508,16 +1508,16 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryNextCType: TQuery
-    DatabaseName = 'PB'
+  object qryNextCType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select max(Contact_Type)+1 as Next_Contact_Type'
       'from Contact_type')
     Left = 496
     Top = 344
   end
-  object qryAddCType: TQuery
-    DatabaseName = 'PB'
+  object qryAddCType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'insert into Contact_Type(Contact_Type, Description)'
       'values (:Contact_Type, :Description)')
@@ -1535,14 +1535,14 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object QuickbooksDB: TDatabase
-    DatabaseName = 'dbQuickbooks'
-    SessionName = 'Default'
+  object QuickbooksDB: TFDConnection
+    ConnectionName = 'dbQuickbooks'
+
     Left = 600
     Top = 8
   end
-  object DelRepSQL: TQuery
-    DatabaseName = 'PB'
+  object DelRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Delete from Reps_Branches'
       'where Customer = :Customer')
@@ -1555,8 +1555,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetRepSQL: TQuery
-    DatabaseName = 'PB'
+  object GetRepSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Rep'
       'from Rep'
@@ -1575,8 +1575,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object GetCustBrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCustBrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
@@ -1591,8 +1591,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object AddContactinfoSQL: TQuery
-    DatabaseName = 'PB'
+  object AddContactinfoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Contact_Info'
       '  (Contact_Info,'
@@ -1635,8 +1635,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object CheckBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select top 1 *'
       'from Customer_Branch'
@@ -1655,8 +1655,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpdBranchSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdBranchSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Branch'
       'set     Name = :Name,'
@@ -1740,8 +1740,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpdContactSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       'set     Name = :Name,'
@@ -1797,8 +1797,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpdContactInfoSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdContactInfoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Customer_Contact'
       
@@ -1827,8 +1827,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 * '
       'FROM Customer_Contact'
@@ -1847,8 +1847,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierContact: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplierContact: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 * '
       'FROM Supplier_BranchContacts'
@@ -1867,8 +1867,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetProductTYpe: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductTYpe: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Product_Type'
@@ -1882,8 +1882,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddPO: TQuery
-    DatabaseName = 'PB'
+  object qryAddPO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Purchase_Order'
       '      (Purchase_order,'
@@ -1949,8 +1949,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       ' INSERT INTO Purchase_OrderLine'
       ' ('
@@ -2137,8 +2137,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnit: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Price_Unit'
       'FROM Price_Unit'
@@ -2146,8 +2146,8 @@ object dmAccImport: TdmAccImport
     Left = 816
     Top = 128
   end
-  object qryGetRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 * '
       'FROM Reps_Branches'
@@ -2166,8 +2166,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddDelivLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddDelivLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Delivery_Detail'
       '    ('
@@ -2292,8 +2292,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddSI: TQuery
-    DatabaseName = 'PB'
+  object qryAddSI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Sales_Invoice'
       '    ('
@@ -2480,8 +2480,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddSILine: TQuery
-    DatabaseName = 'PB'
+  object qryAddSILine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Sales_Invoice_Line'
       '    ('
@@ -2593,24 +2593,24 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextSI: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextSI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT ISNULL(MAX(Sales_Invoice),0)+1 as Next_SI_Number'
       'FROM Sales_Invoice')
     Left = 928
     Top = 80
   end
-  object qryGetNextPI: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextPI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT ISNULL(MAX(Supplier_Invoice),0)+1 as Next_PI_Number'
       'FROM Supplier_Invoice')
     Left = 928
     Top = 136
   end
-  object qryAddPI: TQuery
-    DatabaseName = 'PB'
+  object qryAddPI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Supplier_Invoice'
       '      ('
@@ -2721,8 +2721,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddPILine: TQuery
-    DatabaseName = 'PB'
+  object qryAddPILine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Supplier_Invoice_Line'
       '    ('
@@ -2813,8 +2813,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetTopRep: TQuery
-    DatabaseName = 'PB'
+  object qryGetTopRep: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 1 Rep'
       'FROM Rep'
@@ -2822,8 +2822,8 @@ object dmAccImport: TdmAccImport
     Left = 824
     Top = 248
   end
-  object qryCheckSINumber: TQuery
-    DatabaseName = 'PB'
+  object qryCheckSINumber: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT ISNULL(Sales_Invoice,0) as Sales_Invoice'
       'FROM Sales_Invoice'
@@ -2837,8 +2837,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdSI: TQuery
-    DatabaseName = 'PB'
+  object qryUpdSI: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Invoice'
       'SET    Goods_Value = Goods_Value + :Goods_Value,'
@@ -2864,8 +2864,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextSILine: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextSILine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT ISNULL(MAX(Invoice_Line_No),0)+1 as Next_SI_Line_Number'
       'FROM Sales_Invoice_Line'
@@ -2879,8 +2879,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpCreditNoteSQL: TQuery
-    DatabaseName = 'PB'
+  object UpCreditNoteSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Sales_Invoice'
       'SET Paid_Status = '#39'Y'#39','
@@ -2903,8 +2903,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpdCustSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdCustSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Customer'
       'SET Name = :Name,'
@@ -2930,8 +2930,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object CheckSuppContactSQL: TQuery
-    DatabaseName = 'PB'
+  object CheckSuppContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 1 Contact_no, Name'
       'from Supplier_BranchContacts'
@@ -2961,8 +2961,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object UpdSuppContactSQL: TQuery
-    DatabaseName = 'PB'
+  object UpdSuppContactSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Update Supplier_BranchContacts'
       'set     Name = :Name,'
@@ -3018,15 +3018,15 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object DelSageAuditU: TQuery
-    DatabaseName = 'PB'
+  object DelSageAuditU: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sage_Audit_Usage')
     Left = 824
     Top = 368
   end
-  object qryAddCustomerType: TQuery
-    DatabaseName = 'PB'
+  object qryAddCustomerType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Customer_Type'
       '(Customer_Type, Description)'
@@ -3041,8 +3041,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetCustomerType: TQuery
-    DatabaseName = 'PB'
+  object qryGetCustomerType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Customer_Type '
       'FROM Customer_Type'
@@ -3057,8 +3057,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddCountry: TQuery
-    DatabaseName = 'PB'
+  object qryAddCountry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Country_Id'
       '(Country_Id, Country_Id_Descr)'
@@ -3073,8 +3073,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetCountry: TQuery
-    DatabaseName = 'PB'
+  object qryGetCountry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Country_Id '
       'FROM Country_Id'
@@ -3089,8 +3089,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetVatCode: TQuery
-    DatabaseName = 'PB'
+  object qryGetVatCode: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Vat_Code '
       'FROM Vat_Code'
@@ -3105,8 +3105,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPaymentTerms: TQuery
-    DatabaseName = 'PB'
+  object qryGetPaymentTerms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Payment_Terms'
       'FROM Payment_Terms'
@@ -3121,8 +3121,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetOperator: TQuery
-    DatabaseName = 'PB'
+  object qryGetOperator: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Operator'
       'FROM Operator'
@@ -3136,8 +3136,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnitByDesc: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnitByDesc: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Price_Unit'
@@ -3158,8 +3158,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT (Last_Job_Bag_Number + 1) as Next_Job_bag_Number'
       'FROM Company'
@@ -3167,8 +3167,8 @@ object dmAccImport: TdmAccImport
     Left = 824
     Top = 424
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'PB'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Company'
       'Set Last_Job_Bag_Number = :Last_Job_Bag_Number'
@@ -3182,8 +3182,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryAddJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Job_Bag'
       '      ('
@@ -3307,8 +3307,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddJobBagLine: TQuery
-    DatabaseName = 'PB'
+  object qryAddJobBagLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert into Job_bag_line_Dets'
       '('
@@ -3467,8 +3467,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPriceUnitFactor: TQuery
-    DatabaseName = 'PB'
+  object qryGetPriceUnitFactor: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Price_Unit_Factor'
       'FROM Price_Unit'
@@ -3482,8 +3482,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPOImport: TQuery
-    DatabaseName = 'PB'
+  object qryGetPOImport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Purchase_Orders_Import'
@@ -3497,8 +3497,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetSupplierByAccount: TQuery
-    DatabaseName = 'PB'
+  object qryGetSupplierByAccount: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier, Branch_no'
       'FROM Supplier_Branch'
@@ -3512,8 +3512,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetPurchaseOrder: TQuery
-    DatabaseName = 'PB'
+  object qryGetPurchaseOrder: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Supplier, Branch_No'
       'FROM Purchase_order'
@@ -3527,8 +3527,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdPOLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdPOLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Purchase_orderline'
       'SET Quantity = Quantity + :Quantity,'
@@ -3553,8 +3553,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdDeliveryDetail: TQuery
-    DatabaseName = 'PB'
+  object qryUpdDeliveryDetail: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Delivery_Detail'
       'SET Qty_To_Deliver = Qty_To_Deliver + :Quantity,'
@@ -3579,8 +3579,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryUpdJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryUpdJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Job_Bag_Line_Dets'
       'SET Job_Bag_Quantity = Job_Bag_Quantity + :Quantity,'
@@ -3611,8 +3611,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetJobBagRef: TQuery
-    DatabaseName = 'PB'
+  object qryGetJobBagRef: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT TOP 1 Job_Bag.Job_Bag, Job_Bag_Descr'
       'FROM Job_Bag'
@@ -3626,8 +3626,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetJBLine: TQuery
-    DatabaseName = 'PB'
+  object qryGetJBLine: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Job_Bag'
       'FROM Job_Bag_Line_Dets'
@@ -3646,8 +3646,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetNextSICharge: TQuery
-    DatabaseName = 'PB'
+  object qryGetNextSICharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT ISNULL(MAX(Additional_Charge),0)+1 as Next_SI_Charge_Numb' +
@@ -3663,8 +3663,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryAddSICharge: TQuery
-    DatabaseName = 'PB'
+  object qryAddSICharge: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Sales_Invoice_Add_Charge'
       '    ('
@@ -3720,8 +3720,8 @@ object dmAccImport: TdmAccImport
         ParamType = ptUnknown
       end>
   end
-  object qryGetVat: TQuery
-    DatabaseName = 'PB'
+  object qryGetVat: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT Vat_Rate '
       'FROM Vat_Code'

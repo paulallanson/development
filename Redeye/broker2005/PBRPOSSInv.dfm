@@ -1732,8 +1732,8 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
       end
     end
   end
-  object qryOSInvs: TQuery
-    DatabaseName = 'PB'
+  object qryOSInvs: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Purchase_OrderLine.Purchase_Order,'
@@ -1836,8 +1836,8 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
     Left = 39
     Top = 8
   end
-  object oldqryDummy: TQuery
-    DatabaseName = 'PB'
+  object oldqryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select'
       'Purchase_OrderLine.Purchase_Order,'
@@ -1929,7 +1929,7 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
     Left = 104
     Top = 8
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'SELECT  Purchase_OrderLine.Purchase_Order,'
       '        Purchase_OrderLine.Line,'
@@ -2059,8 +2059,8 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
         ParamType = ptUnknown
       end>
   end
-  object SQLGetStkInv: TQuery
-    DatabaseName = 'PB'
+  object SQLGetStkInv: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT sales_Order_Line.*, Part.Part, Part.Part_Description,Part' +
@@ -2134,8 +2134,8 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
     Left = 288
     Top = 16
   end
-  object SQLGetStkInv_access: TQuery
-    DatabaseName = 'PB'
+  object SQLGetStkInv_access: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT sales_Order_Line.*, Part.Part, Part.Part_Description,Part' +
@@ -2202,8 +2202,8 @@ object PBRPOSSInvFrm: TPBRPOSSInvFrm
     Left = 352
     Top = 40
   end
-  object SQLGetRepName: TQuery
-    DatabaseName = 'PB'
+  object SQLGetRepName: TFDQuery
+    ConnectionName = 'PB'
     Left = 454
     Top = 60
   end

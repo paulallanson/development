@@ -4,8 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DBCtrls, DB, DBTables, Spin, ExtCtrls,
-  PBPOObjects, ComCtrls, Grids, Menus, Math, PBDelivNotes;
+  StdCtrls, Buttons, DBCtrls, DB, Spin, ExtCtrls,
+  PBPOObjects, ComCtrls, Grids, Menus, Math, PBDelivNotes,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TPBMaintDelivFrm = class(TForm)
@@ -46,15 +49,15 @@ type
     StockAdd: TMenuItem;
     StockChange: TMenuItem;
     StockDel: TMenuItem;
-    QueryGetPOlineDets: TQuery;
-    GetMoveRecsSQL: TQuery;
-    UpdStoreLvlSQL: TQuery;
-    StoreLvlSQL: TQuery;
+    QueryGetPOlineDets: TFDQuery;
+    GetMoveRecsSQL: TFDQuery;
+    UpdStoreLvlSQL: TFDQuery;
+    StoreLvlSQL: TFDQuery;
     Label17: TLabel;
     edtStockRef: TEdit;
     FlashDelivTimer: TTimer;
-    ChkOneDelivSQL: TQuery;
-    UpdOrdQtySQL: TQuery;
+    ChkOneDelivSQL: TFDQuery;
+    UpdOrdQtySQL: TFDQuery;
     lblOrderPrice: TLabel;
     lblOrderQty: TLabel;
     DelInstructPanel: TPanel;
@@ -111,12 +114,12 @@ type
     Label21: TLabel;
     dblkppackageType: TDBLookupComboBox;
     dblkpVersions: TDBLookupComboBox;
-    qryVersions: TQuery;
+    qryVersions: TFDQuery;
     dtsVersions: TDataSource;
-    qryUpPOVersions: TQuery;
-    qryGetPODelivery: TQuery;
-    qryAddPODelivery: TQuery;
-    qryGetNextPODelivery: TQuery;
+    qryUpPOVersions: TFDQuery;
+    qryGetPODelivery: TFDQuery;
+    qryAddPODelivery: TFDQuery;
+    qryGetNextPODelivery: TFDQuery;
     DeliveryToStockChk: TCheckBox;
     Label19: TLabel;
     CountyEdit: TEdit;

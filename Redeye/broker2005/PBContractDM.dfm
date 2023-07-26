@@ -4,8 +4,8 @@ object dtmdlContract: TdtmdlContract
   Top = 127
   Height = 546
   Width = 980
-  object qryGetContract: TQuery
-    DatabaseName = 'PB'
+  object qryGetContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Contract.Contract,'
       '        Contract.Customer,'
@@ -110,13 +110,13 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryZero: TQuery
-    DatabaseName = 'PB'
+  object qryZero: TFDQuery
+    ConnectionName = 'PB'
     Left = 288
     Top = 16
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT Into Activity'
       '        (Activity,'
@@ -190,8 +190,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object GetLastSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Activity'
       'From Activity'
@@ -207,8 +207,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryUpContract: TQuery
-    DatabaseName = 'PB'
+  object qryUpContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'UPDATE Contract'
       'SET'
@@ -400,8 +400,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryContractGrid: TQuery
-    DatabaseName = 'PB'
+  object qryContractGrid: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 32
@@ -412,8 +412,8 @@ object dtmdlContract: TdtmdlContract
     Left = 112
     Top = 16
   end
-  object qryContractBase: TQuery
-    DatabaseName = 'PB'
+  object qryContractBase: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Contract.Contract,'
       '        Contract.Customer,'
@@ -522,8 +522,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryContacts: TQuery
-    DatabaseName = 'PB'
+  object qryContacts: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Customer_Contact.Contact_no,'
       '        Customer_Contact.Name,'
@@ -580,8 +580,8 @@ object dtmdlContract: TdtmdlContract
     Left = 588
     Top = 144
   end
-  object qryPeriodType: TQuery
-    DatabaseName = 'PB'
+  object qryPeriodType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Period_Type'
@@ -594,8 +594,8 @@ object dtmdlContract: TdtmdlContract
     Left = 592
     Top = 200
   end
-  object qryPaymentTerms: TQuery
-    DatabaseName = 'PB'
+  object qryPaymentTerms: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT *'
       'FROM Payment_Terms'
@@ -608,8 +608,8 @@ object dtmdlContract: TdtmdlContract
     Left = 592
     Top = 256
   end
-  object qryAddContract: TQuery
-    DatabaseName = 'PB'
+  object qryAddContract: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'INSERT INTO Contract'
       '('
@@ -844,8 +844,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryVersionCount: TQuery
-    DatabaseName = 'PB'
+  object qryVersionCount: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT max(Contract_Number) as Last_Version'
       'FROM Contract'
@@ -859,16 +859,16 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetLastContractNo: TQuery
-    DatabaseName = 'PB'
+  object qryGetLastContractNo: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Last_Contract_Number'
       'from Company')
     Left = 472
     Top = 16
   end
-  object qryUpCompany: TQuery
-    DatabaseName = 'PB'
+  object qryUpCompany: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'update Company'
       'set Last_Contract_Number = :Last_Contract_Number'
@@ -882,8 +882,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryJobBags: TQuery
-    DatabaseName = 'PB'
+  object qryJobBags: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Contract_Job_Bag.ID,'
       '        Contract_Job_Bag.Contract,'
@@ -948,8 +948,8 @@ object dtmdlContract: TdtmdlContract
     Left = 352
     Top = 192
   end
-  object qryDeleteJobBag: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteJobBag: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Contract_Job_Bag'
       'WHERE Contract = :Contract AND'
@@ -968,8 +968,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryPurchaseOrders: TQuery
-    DatabaseName = 'PB'
+  object qryPurchaseOrders: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Contract_Purchase_Order.ID,'
       '        Contract_Purchase_Order.Contract,'
@@ -1073,8 +1073,8 @@ object dtmdlContract: TdtmdlContract
     Left = 352
     Top = 312
   end
-  object qryDeletePO: TQuery
-    DatabaseName = 'PB'
+  object qryDeletePO: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Contract_Purchase_Order'
       'WHERE Contract = :Contract AND'
@@ -1093,8 +1093,8 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qryGetdbKey: TQuery
-    DatabaseName = 'PB'
+  object qryGetdbKey: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Contract'
       'From Contract'
@@ -1110,9 +1110,9 @@ object dtmdlContract: TdtmdlContract
         ParamType = ptUnknown
       end>
   end
-  object qrySalesInvoices: TQuery
+  object qrySalesInvoices: TFDQuery
     OnCalcFields = qrySalesInvoicesCalcFields
-    DatabaseName = 'PB'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       #9'Sales_Invoice.Sales_Invoice,'
@@ -1228,8 +1228,8 @@ object dtmdlContract: TdtmdlContract
     Left = 592
     Top = 320
   end
-  object qryAllSalesInvoiceCharges: TQuery
-    DatabaseName = 'PB'
+  object qryAllSalesInvoiceCharges: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT  Sales_Invoice.Sales_Invoice,'
       '        SUM(Sales_Invoice_Add_charge.Amount) as Amount_Total,'

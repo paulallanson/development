@@ -124,8 +124,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
     TabOrder = 4
     OnClick = dblkpProductTypeClick
   end
-  object GetCapsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCapsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select *'
       'From Capability'
@@ -139,8 +139,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Left = 57
     Top = 120
   end
-  object GetCatsSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCatsSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Category, Description'
       'From Category'
@@ -153,8 +153,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Left = 265
     Top = 128
   end
-  object GetCatsProdTypesSQL: TQuery
-    DatabaseName = 'PB'
+  object GetCatsProdTypesSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type'
       'From Product_Type'
@@ -168,8 +168,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object GetLastNoSQL: TQuery
-    DatabaseName = 'PB'
+  object GetLastNoSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Max(Capability) as Last_No'
       'From Product_TypeCapability'
@@ -183,8 +183,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object AddSQL: TQuery
-    DatabaseName = 'PB'
+  object AddSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Insert Into Product_TypeCapability'
       '(Product_Type, Capability, Description)'
@@ -210,8 +210,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
         ParamType = ptUnknown
       end>
   end
-  object qryProdType: TQuery
-    DatabaseName = 'PB'
+  object qryProdType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type, Description'
       'From Product_Type'
@@ -224,8 +224,8 @@ object PBCapCatsFrm: TPBCapCatsFrm
     Left = 201
     Top = 24
   end
-  object qryGetProductType: TQuery
-    DatabaseName = 'PB'
+  object qryGetProductType: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Product_Type'
       'From Product_Type'

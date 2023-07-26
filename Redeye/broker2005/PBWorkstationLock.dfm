@@ -121,8 +121,8 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
         Visible = True
       end>
   end
-  object qryWorkstationLock: TQuery
-    DatabaseName = 'PB'
+  object qryWorkstationLock: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT'
       '    Workstation_Lock.*,'
@@ -147,8 +147,8 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
     Left = 208
     Top = 88
   end
-  object qryDeleteWSL: TQuery
-    DatabaseName = 'PB'
+  object qryDeleteWSL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'DELETE FROM Workstation_Lock'
       'WHERE Workstation = :Workstation AND'

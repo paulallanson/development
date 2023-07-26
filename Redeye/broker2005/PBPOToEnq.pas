@@ -63,7 +63,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  PBPOObjects, StdCtrls, DB, DBTables, Buttons, Grids;
+  PBPOObjects, StdCtrls, DB, Buttons, Grids;
 
 type
   TPBPOToEnqFrm = class(TForm)

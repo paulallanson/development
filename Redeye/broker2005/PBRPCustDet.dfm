@@ -1333,8 +1333,8 @@ object PBRPCustDetFrm: TPBRPCustDetFrm
       end
     end
   end
-  object GetDetsQry: TQuery
-    DatabaseName = 'PB'
+  object GetDetsQry: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       
         'SELECT Customer_Branch.*, Customer_Status.*, Customer_Type.*, Re' +
@@ -1358,8 +1358,8 @@ object PBRPCustDetFrm: TPBRPCustDetFrm
     Left = 160
     Top = 32
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'

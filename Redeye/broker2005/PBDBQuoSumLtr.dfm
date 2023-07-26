@@ -1,5 +1,5 @@
 inherited dbQuoSumLtr: TdbQuoSumLtr
-  inherited GetRngEnqsSQL: TQuery
+  inherited GetRngEnqsSQL: TFDQuery
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'
       
@@ -78,7 +78,7 @@ inherited dbQuoSumLtr: TdbQuoSumLtr
       ' '
       ' ')
   end
-  inherited GetQuestionsSQL: TQuery
+  inherited GetQuestionsSQL: TFDQuery
     SQL.Strings = (
       
         'SELECT  Product_TypeQuestion.Question_Text, Enquiry_Questions.Pr' +
@@ -92,7 +92,7 @@ inherited dbQuoSumLtr: TdbQuoSumLtr
         'on)'
       'ORDER BY Sequence_Reference')
   end
-  inherited GetEnquiriesSQL: TQuery
+  inherited GetEnquiriesSQL: TFDQuery
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'
       

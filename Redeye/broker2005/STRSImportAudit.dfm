@@ -108,8 +108,8 @@ object STRSImportAuditfrm: TSTRSImportAuditfrm
     TabOrder = 3
     Kind = bkCancel
   end
-  object qryAudit: TQuery
-    DatabaseName = 'PB'
+  object qryAudit: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select distinct Audit_number, date_Started'
       'from transfer_audit'

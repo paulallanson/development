@@ -1937,8 +1937,8 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'pb'
+  object qryReport: TFDQuery
+    ConnectionName = 'pb'
     SQL.Strings = (
       'SELECT '#9'TOP 1'
       #9'Job_Bag_Schedule.*,'
@@ -1968,8 +1968,8 @@ object frmPBRPJobBagSched: TfrmPBRPJobBagSched
     Left = 290
     Top = 46
   end
-  object GetNarrSQL: TQuery
-    DatabaseName = 'PB'
+  object GetNarrSQL: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Narrative_Text'
       'From Narrative_Line'

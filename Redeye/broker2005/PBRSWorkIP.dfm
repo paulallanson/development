@@ -658,8 +658,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     TabOrder = 5
     Visible = False
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT '#9'Delivery_Detail.Purchase_Order, '
       #9'Delivery_Detail.Line, '
@@ -825,8 +825,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     Left = 464
     Top = 32
   end
-  object qryRepName: TQuery
-    DatabaseName = 'PB'
+  object qryRepName: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'Select Rep.Name'
       'From Rep'

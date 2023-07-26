@@ -1246,14 +1246,14 @@ object PBRPJobBagWIPStkReqfrm: TPBRPJobBagWIPStkReqfrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       '')
     Left = 32
     Top = 32
   end
-  object qryDummy: TQuery
+  object qryDummy: TFDQuery
     SQL.Strings = (
       'select distinct job_bag_stock_request.job_bag, '
       #9'Job_bag.job_bag_descr, '

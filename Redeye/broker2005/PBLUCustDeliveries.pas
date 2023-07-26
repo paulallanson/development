@@ -4,8 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, pbStockDM, ComCtrls, DB,
-  DBTables;
+  Dialogs, ExtCtrls, StdCtrls, Grids, DBGrids, pbStockDM, ComCtrls, DB;
 
 type
   TPBLUCustDeliveriesFrm = class(TForm)

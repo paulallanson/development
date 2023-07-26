@@ -273,8 +273,8 @@ object STRPImportAuditFrm: TSTRPImportAuditFrm
       end
     end
   end
-  object qryReport: TQuery
-    DatabaseName = 'PB'
+  object qryReport: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select Transfer_Audit.*, Error_Code_Descr'
       'from Transfer_audit, error_code'

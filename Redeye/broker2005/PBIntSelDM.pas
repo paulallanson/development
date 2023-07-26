@@ -40,17 +40,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdmIntSel = class(TDataModule)
-    GetLastTempIDSQL: TQuery;
-    AddTempIDSQL: TQuery;
-    DelTempIDSQL: TQuery;
-    UpdTempIDSQL: TQuery;
-    qryZero: TQuery;
-    AddWithKeySQL: TQuery;
-    AddWithKey5SQL: TQuery;
+    GetLastTempIDSQL: TFDQuery;
+    AddTempIDSQL: TFDQuery;
+    DelTempIDSQL: TFDQuery;
+    UpdTempIDSQL: TFDQuery;
+    qryZero: TFDQuery;
+    AddWithKeySQL: TFDQuery;
+    AddWithKey5SQL: TFDQuery;
   private
     procedure AddZero;
     procedure DeleteZero;

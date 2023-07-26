@@ -4,49 +4,52 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, DBTables;
+  Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdtmdlSuppliers = class(TDataModule)
-    qrySuppliers: TQuery;
+    qrySuppliers: TFDQuery;
     dtsSuppliers: TDataSource;
-    qryZero: TQuery;
+    qryZero: TFDQuery;
     CurrSRC: TDataSource;
-    GetLastSQL: TQuery;
-    DelSQL: TQuery;
-    GetIntrastatSQL: TQuery;
-    AddSQL: TQuery;
-    AddBranchSQL: TQuery;
+    GetLastSQL: TFDQuery;
+    DelSQL: TFDQuery;
+    GetIntrastatSQL: TFDQuery;
+    AddSQL: TFDQuery;
+    AddBranchSQL: TFDQuery;
     CountrySRC: TDataSource;
-    GetCompSQL: TQuery;
+    GetCompSQL: TFDQuery;
     IntrastatSRC: TDataSource;
-    GetCountrySQL: TQuery;
-    UpdBranchSQL: TQuery;
-    UpdNotesOnlySQL: TQuery;
-    CheckCustAccExistsSQL: TQuery;
-    DelBranchSQL: TQuery;
-    CheckSuppAccExistsSQL: TQuery;
+    GetCountrySQL: TFDQuery;
+    UpdBranchSQL: TFDQuery;
+    UpdNotesOnlySQL: TFDQuery;
+    CheckCustAccExistsSQL: TFDQuery;
+    DelBranchSQL: TFDQuery;
+    CheckSuppAccExistsSQL: TFDQuery;
     VATSRC: TDataSource;
-    UpdSQL: TQuery;
-    GetCurrSQL: TQuery;
-    GetVATSQL: TQuery;
-    qryGetSupplier: TQuery;
-    qryCharges: TQuery;
+    UpdSQL: TFDQuery;
+    GetCurrSQL: TFDQuery;
+    GetVATSQL: TFDQuery;
+    qryGetSupplier: TFDQuery;
+    qryCharges: TFDQuery;
     dtsCharges: TDataSource;
-    qryCouriers: TQuery;
+    qryCouriers: TFDQuery;
     dtsCouriers: TDataSource;
-    qryDocuments: TQuery;
+    qryDocuments: TFDQuery;
     dtsDocuments: TDataSource;
-    qryAddDocument: TQuery;
-    qryGetLastDoc: TQuery;
-    qryDelDocument: TQuery;
-    qryUpdDocument: TQuery;
-    qryGetInvoices: TQuery;
-    qryAddReplEntity: TQuery;
-    qrySuppliersBase: TQuery;
-    qryTerms: TQuery;
+    qryAddDocument: TFDQuery;
+    qryGetLastDoc: TFDQuery;
+    qryDelDocument: TFDQuery;
+    qryUpdDocument: TFDQuery;
+    qryGetInvoices: TFDQuery;
+    qryAddReplEntity: TFDQuery;
+    qrySuppliersBase: TFDQuery;
+    qryTerms: TFDQuery;
     dtsTerms: TDataSource;
-    OldqrySuppliersBase: TQuery;
+    OldqrySuppliersBase: TFDQuery;
   private
     function GetHeaderCount: integer;
     { Private declarations }
