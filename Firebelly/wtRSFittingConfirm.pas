@@ -1288,7 +1288,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;

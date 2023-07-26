@@ -319,9 +319,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAllLines: TFDQuery
@@ -363,9 +361,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryOperator: TFDQuery
@@ -391,9 +387,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'last_sales_order_number'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAddHeader: TFDQuery
@@ -517,279 +511,179 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Raised'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Project_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Extra_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Install_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Ref_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Reqd_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Recd_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Install_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Install_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsTemplateinOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Duration'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Duration'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Fitter'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Templater'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Collection_Only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supply_Only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Appliance_Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_Plan_Document'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_No_Production'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Production'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Do_Not_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qrySOUpHeader: TFDQuery
@@ -852,264 +746,170 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Raised'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Project_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Extra_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Contact_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Install_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Ref_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Reqd_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Materials_Recd_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Install_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Install_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Fitter'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Templater'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Collection_Only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supply_Only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsTemplateInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'IsFittingInOutlook'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Duration'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Duration'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Appliance_Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_Plan_Document'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_No_Production'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Production'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Do_Not_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Branch_no'
+        DataType = ftInteger
+      end
+      item
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOLine: TFDQuery
@@ -1151,14 +951,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_Number'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAddLine: TFDQuery
@@ -1214,114 +1010,74 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nett_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Survey_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Markup_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Waste_Value'
-        ParamType = ptUnknown
       end>
   end
   object qryRep: TFDQuery
@@ -1348,9 +1104,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qrygetRep: TFDQuery
@@ -1362,9 +1116,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'rep'
-        ParamType = ptUnknown
       end>
   end
   object qryGetAddress: TFDQuery
@@ -1378,9 +1130,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextAdd: TFDQuery
@@ -1420,54 +1170,35 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address_name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_city'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_state'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Installation_Address'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryUpAddress: TFDQuery
@@ -1488,49 +1219,31 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_City'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_State'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryDelAddress: TFDQuery
@@ -1542,9 +1255,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'address'
-        ParamType = ptUnknown
       end>
   end
   object qryVAT: TFDQuery
@@ -1557,21 +1268,17 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 232
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
-
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
       DisplayFormat = '0.00'
     end
     object qryVATDescription: TStringField
       FieldName = 'Description'
-
       Size = 40
     end
     object qryVATVat_Code: TStringField
       FieldName = 'Vat_Code'
-
       Size = 1
     end
   end
@@ -1602,9 +1309,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryGetVat: TFDQuery
@@ -1617,9 +1322,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'vat'
-        ParamType = ptUnknown
       end>
   end
   object qryQHeader: TFDQuery
@@ -1690,9 +1393,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryCustQuotes: TFDQuery
@@ -1731,14 +1432,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end>
   end
   object dsCustQuotes: TDataSource
@@ -1760,9 +1457,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOLines: TFDQuery
@@ -1834,64 +1529,40 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOUpStatus: TFDQuery
@@ -1904,14 +1575,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOUpdLine: TFDQuery
@@ -1945,114 +1612,74 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 176
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Job'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nett_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Installation_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Survey_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Markup_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Waste_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOrderInvoices: TFDQuery
@@ -2064,9 +1691,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qrySetSOrderInactive: TFDQuery
@@ -2079,9 +1704,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpCustomer: TFDQuery
@@ -2094,9 +1717,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuote: TFDQuery
@@ -2109,14 +1730,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qrySOUpSalesInvoice: TFDQuery
@@ -2129,14 +1746,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLinkedQuotes: TFDQuery
@@ -2181,9 +1794,8 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryGetLinkedQuotesSales_Order: TIntegerField
       FieldName = 'Sales_Order'
@@ -2258,9 +1870,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryFitter: TFDQuery
@@ -2274,9 +1884,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Fitter'
-        ParamType = ptUnknown
       end>
   end
   object qryTemplater: TFDQuery
@@ -2290,9 +1898,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Templater'
-        ParamType = ptUnknown
       end>
   end
   object dtsFitter: TDataSource
@@ -2318,14 +1924,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Note'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAddEvent: TFDQuery
@@ -2347,29 +1949,19 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object qrySOAllEvents: TFDQuery
@@ -2383,9 +1975,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryQAllEvents: TFDQuery
@@ -2399,9 +1989,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuoteVersions: TFDQuery
@@ -2415,19 +2003,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetQuote: TFDQuery
@@ -2442,9 +2024,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 472
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteSlabs: TFDQuery
@@ -2458,9 +2038,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 464
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPurchases: TFDQuery
@@ -2530,19 +2108,16 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 400
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qrySOPurchasesPurchase_Order: TIntegerField
       FieldName = 'Purchase_Order'
@@ -2660,14 +2235,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryDeletePO: TFDQuery
@@ -2680,9 +2251,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerContact: TFDQuery
@@ -2695,14 +2264,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOSlabs: TFDQuery
@@ -2716,9 +2281,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchases: TFDQuery
@@ -2732,9 +2295,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOrderEmail: TFDQuery
@@ -2760,9 +2321,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetQuoteSlabs: TFDQuery
@@ -2798,9 +2357,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 520
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetQuoteSlabs: TDataSource
@@ -2862,9 +2419,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 528
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsSalesInvoices: TDataSource
@@ -2883,19 +2438,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJobCustomer: TFDQuery
@@ -2909,19 +2458,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOLQuoteNo: TFDQuery
@@ -2937,9 +2480,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryJobs: TFDQuery
@@ -2973,9 +2514,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsJobs: TDataSource
@@ -3020,9 +2559,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsRemedials: TDataSource
@@ -3119,14 +2656,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Template_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOUpFitting: TFDQuery
@@ -3139,14 +2672,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Fitting_Docs_Returned'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryRevenueCentre: TFDQuery
@@ -3173,9 +2702,7 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryRemedialReport: TFDQuery
@@ -3237,19 +2764,13 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryJobsDummyOlder: TFDQuery
@@ -3336,14 +2857,10 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Completed'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryJobsDummyOld: TFDQuery

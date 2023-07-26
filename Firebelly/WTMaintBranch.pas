@@ -336,7 +336,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;
@@ -349,7 +349,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iInstallationNotes;
-    Notes.Data := memInstallationNotes.Text;
+    Notes.DataInfo := memInstallationNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally

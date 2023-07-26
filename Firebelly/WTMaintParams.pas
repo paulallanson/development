@@ -521,7 +521,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;
@@ -755,7 +755,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iPayments;
-    Notes.Data := memPayment.Text;
+    Notes.DataInfo := memPayment.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -770,7 +770,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iRetailPayments;
-    Notes.Data := memRetailPayment.Text;
+    Notes.DataInfo := memRetailPayment.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -785,7 +785,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iFactoredPayments;
-    Notes.Data := memFactoredPayment.Text;
+    Notes.DataInfo := memFactoredPayment.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -800,7 +800,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iTerms;
-    Notes.Data := memTerms.Text;
+    Notes.DataInfo := memTerms.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -815,7 +815,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iRetailTerms;
-    Notes.Data := memRetailTerms.Text;
+    Notes.DataInfo := memRetailTerms.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -830,7 +830,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iAvailability;
-    Notes.Data := memAvail.Text;
+    Notes.DataInfo := memAvail.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -845,7 +845,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iConfirmation;
-    Notes.Data := memConfirm.Text;
+    Notes.DataInfo := memConfirm.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -860,7 +860,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iQuoteEmail;
-    Notes.Data := memEmailQuote.Text;
+    Notes.DataInfo := memEmailQuote.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -875,7 +875,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iRetailQuoteEmail;
-    Notes.Data := memEmailRetailQuote.Text;
+    Notes.DataInfo := memEmailRetailQuote.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -890,7 +890,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iInvoiceEmail;
-    Notes.Data := memEmailInvoice.Text;
+    Notes.DataInfo := memEmailInvoice.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -905,7 +905,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iSalesFittingConfirmEmail;
-    Notes.Data := memEmailSalesFittingConfirm.Text;
+    Notes.DataInfo := memEmailSalesFittingConfirm.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -920,7 +920,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iSalesConfirmEmail;
-    Notes.Data := memEmailSalesConfirm.Text;
+    Notes.DataInfo := memEmailSalesConfirm.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -935,7 +935,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iRetailSalesConfirmEmail;
-    Notes.Data := memEmailRetailSalesConfirm.Text;
+    Notes.DataInfo := memEmailRetailSalesConfirm.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -950,7 +950,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iPurchaseOrderEmail;
-    Notes.Data := memEmailPurchaseOrder.Text;
+    Notes.DataInfo := memEmailPurchaseOrder.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally

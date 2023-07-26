@@ -27,14 +27,14 @@ type
   private
     dtmdlNotes: TdtmdlNotes;
     FdbKey: integer;
-    FData: string;
+    FDataInfo: string;
     FUpdated: boolean;
     procedure AddZero;
     procedure DeleteZero;
     function ReserveASlot: integer;
     function GetNextSlot: integer;
     procedure SetdbKey(const Value: integer);
-    procedure SetData(const Value: string);
+    procedure SetDataInfo(const Value: string);
     procedure SetUpdated(const Value: Boolean);
   public
     constructor Create;
@@ -43,7 +43,7 @@ type
     procedure LoadfromDB;
     procedure SavetoDB;
     property DBKey: integer read FDbKey write SetDbKey;
-    property Data: string read FData write SetData;
+    property DataInfo: string read FDataInfo write SetDataInfo;
     property Updated: Boolean read FUpdated write SetUpdated;
   end;
 
@@ -102,7 +102,7 @@ begin
       Next;
     end;
     Close;
-    Self.Data := sTemp;
+    Self.DataInfo := sTemp;
   end;
 end;
 
@@ -159,7 +159,7 @@ begin
   { Narrative Data is stored in lumps of 100 characters }
   if DbKey <> 0 then
     Delete;
-  if Data = '' then
+  if DataInfo = '' then
   begin
     DbKey := 0;
   end
@@ -174,14 +174,14 @@ begin
 //    DbKey := GetNextSlot;
 
     dtmdlNotes.qryUpdateLine1.ParamByName('Notes_code').AsInteger := DbKey;
-    dtmdlNotes.qryUpdateLine1.ParamByName('Notes_Text').AsString := Copy(Data, 1, Data_Lump_Length);
+    dtmdlNotes.qryUpdateLine1.ParamByName('Notes_Text').AsString := Copy(DataInfo, 1, Data_Lump_Length);
     dtmdlNotes.qryUpdateLine1.ParamByname('Notes_Line_Updated').AsString := upChar;
     dtmdlNotes.qryUpdateLine1.ExecSQL;
 
-    if Length(Data) > Data_Lump_Length then
+    if Length(DataInfo) > Data_Lump_Length then
     begin
       i := 2;
-      lump := Copy(Data, Data_Lump_Length+1, Max_Copy_Length);
+      lump := Copy(DataInfo, Data_Lump_Length+1, Max_Copy_Length);
       while Length(Lump) > 0 do
       begin
         with dtmdlNotes.qryAddLine do
@@ -204,9 +204,9 @@ begin
   FDbKey := Value;
 end;
 
-procedure TNotes.SetData(const Value: string);
+procedure TNotes.SetDataInfo(const Value: string);
 begin
-  FData := Trim(Value);
+  FDataInfo := Trim(Value);
 end;
 
 procedure TNotes.SetUpdated(const Value: Boolean);

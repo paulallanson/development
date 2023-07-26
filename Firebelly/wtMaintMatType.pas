@@ -517,7 +517,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iWarranty;
-    Notes.Data := memWarranty.Text;
+    Notes.DataInfo := memWarranty.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -532,7 +532,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iMaintenance;
-    Notes.Data := memMaintenance.Text;
+    Notes.DataInfo := memMaintenance.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -548,7 +548,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -562,7 +562,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;

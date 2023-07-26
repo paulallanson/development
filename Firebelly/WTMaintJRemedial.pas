@@ -235,7 +235,7 @@ begin
     
     edtPrice.text := formatfloat('0.00',jRemedial.Price);
     memMaterials.text := jRemedial.MaterialsRequired;
-    memRemedials.text := jRemedial.Narrative.Data;
+    memRemedials.text := jRemedial.Narrative.DataInfo;
     dblkpRemedialType.KeyValue := JRemedial.RemedialType;
     dblkpRemedialDept.KeyValue := JRemedial.RemedialDept;
     dblkpRemedialCategory.KeyValue := JREmedial.RemedialCategory;
@@ -301,7 +301,7 @@ var
 begin
   jRemedial.Operator := dblkpOperator.KeyValue;
   jRemedial.Fitter := dblkpFitters.KeyValue;
-  jRemedial.Narrative.Data := memRemedials.Text;
+  jRemedial.Narrative.DataInfo := memRemedials.Text;
   jRemedial.FitterName := dblkpFitters.Text;
   jRemedial.InstallDate := paDateStr(edtInstallDate.text);
   jRemedial.DateRaised := paDateStr(edtDateRaised.text);

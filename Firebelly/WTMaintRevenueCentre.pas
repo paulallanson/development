@@ -353,7 +353,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    Result := Narrative.Data;
+    Result := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -367,7 +367,7 @@ begin
   Narrative := TNotes.Create;
   try
     Narrative.DbKey := iNarrative;
-    Narrative.Data := Data;
+    Narrative.DataInfo := Data;
     Narrative.SaveToDB;
     iNarrative := Narrative.DbKey;
   finally

@@ -11,14 +11,12 @@ object frmWTMaintParams: TfrmWTMaintParams
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label8: TLabel
     Left = 16
@@ -711,11 +709,11 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 6
       end
       object GroupBox1: TGroupBox
-        ParentBackground = False
         Left = 408
         Top = 8
         Width = 273
         Height = 129
+        ParentBackground = False
         TabOrder = 7
         object Label77: TLabel
           Left = 24
@@ -812,7 +810,6 @@ object frmWTMaintParams: TfrmWTMaintParams
         Top = 152
         Width = 145
         Height = 21
-        ItemHeight = 13
         TabOrder = 13
         Text = 'dblkpNominalLevel'
         Items.Strings = (
@@ -830,12 +827,12 @@ object frmWTMaintParams: TfrmWTMaintParams
         TabOrder = 14
       end
       object grpbxRemedials: TGroupBox
-        ParentBackground = False
         Left = 16
         Top = 352
         Width = 393
         Height = 65
         Enabled = False
+        ParentBackground = False
         TabOrder = 15
         object Label5: TLabel
           Left = 24
@@ -993,11 +990,11 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button3Click
       end
       object grpbxCosting: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 280
         Width = 481
         Height = 153
+        ParentBackground = False
         TabOrder = 6
         object Label37: TLabel
           Left = 24
@@ -1221,12 +1218,12 @@ object frmWTMaintParams: TfrmWTMaintParams
         OnClick = Button11Click
       end
       object GroupBox2: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 440
         Width = 681
         Height = 137
         Caption = 'Scheduling'
+        ParentBackground = False
         TabOrder = 21
         object Label53: TLabel
           Left = 16
@@ -1243,11 +1240,11 @@ object frmWTMaintParams: TfrmWTMaintParams
           Caption = 'Shared Folder'
         end
         object grpbxDocumentTransfer: TGroupBox
-          ParentBackground = False
           Left = 368
           Top = 15
           Width = 305
           Height = 113
+          ParentBackground = False
           TabOrder = 5
           object Label65: TLabel
             Left = 24
@@ -1316,9 +1313,6 @@ object frmWTMaintParams: TfrmWTMaintParams
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-          OnClick = DirectClrBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1333,6 +1327,9 @@ object frmWTMaintParams: TfrmWTMaintParams
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 1
+          OnClick = DirectClrBitBtnClick
         end
         object BitBtn1: TBitBtn
           Left = 318
@@ -1345,9 +1342,6 @@ object frmWTMaintParams: TfrmWTMaintParams
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-          OnClick = BitBtn1Click
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1362,6 +1356,9 @@ object frmWTMaintParams: TfrmWTMaintParams
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 2
+          OnClick = BitBtn1Click
         end
         object edtSharedFolder: TEdit
           Left = 120
@@ -1656,8 +1653,14 @@ object frmWTMaintParams: TfrmWTMaintParams
             Top = 30
             Width = 601
             Height = 225
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
             Lines.Strings = (
               'memEmailPurchaseOrder')
+            ParentFont = False
             ScrollBars = ssBoth
             TabOrder = 0
           end
@@ -1812,10 +1815,10 @@ object frmWTMaintParams: TfrmWTMaintParams
         Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
+        NumGlyphs = 2
         ParentFont = False
         TabOrder = 3
         OnClick = btnSalesLeadClick
-        NumGlyphs = 2
       end
       object Button9: TButton
         Left = 502
@@ -1869,13 +1872,13 @@ object frmWTMaintParams: TfrmWTMaintParams
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 669
     Width = 752
     Height = 36
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object btnOK: TBitBtn
       Left = 283
@@ -1885,9 +1888,9 @@ object frmWTMaintParams: TfrmWTMaintParams
       Caption = 'OK'
       Default = True
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 371
@@ -1897,8 +1900,8 @@ object frmWTMaintParams: TfrmWTMaintParams
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object edtCompanyName: TEdit
@@ -1939,74 +1942,46 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Retail_Payment_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Availability'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Payment_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Retail_Payment_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Factored_Payment_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Retail_Quote_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Quotation_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Invoice_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Sales_Confirm_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Fitting_Confirm_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Retail_SO_Confirm_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Purchase_Order_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Confirmation_Notes'
-        ParamType = ptUnknown
       end>
   end
   object lkpThickness: TFDQuery
@@ -2087,9 +2062,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsOperator: TDataSource
@@ -2109,9 +2082,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 592
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsAccountManager: TDataSource
@@ -2133,9 +2104,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Lead_Source'
-        ParamType = ptUnknown
       end>
   end
   object dtsSalesSource: TDataSource
@@ -2253,449 +2222,293 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Company_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_City'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_State'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Web_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unique_Tax_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Install_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Survey_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Underslip_Thickness'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Upstand_Polish_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Upstand_Polish_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Prefix'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Prefix'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal_Level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Sales_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Purchase_Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Accounts_Package'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Data_Export_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_File_No_Inv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Production_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Document_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Mileage_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Labour_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Handling_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Waste_Cost_Multiplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Schedule_Package'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Shared_Folder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Conditions_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Terms_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Availability_File'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Account_Manager'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Lead_Source'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer_Sales_Lead_Source'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Website_Image_Directory'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Terms'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Retail_Payment_Terms'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Availability'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_Payment_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Retail_Payment_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Factored_Payment_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Retail_Quote_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Quotation_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Invoice_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Sales_Confirm_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Fitting_Confirm_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Retail_SO_Confirm_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Email_Purchase_Order_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Order_Confirmation_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Purchase_Ordering'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Contract_Quoting'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote_By_Slab'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Prices_Are_Trade'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Balance_Required_Before_Fit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Onstop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mandatory_Temp_Fit_Dates'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Trade_Layout'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Costing_System'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Revenue_Centres'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Quote_Valid_days'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Default_Quote_Follow_Up_days'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Drawing_Folder_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Contract_Inactive_Reason'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Def_Remedial_Product_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Docs_Out'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Template_Docs_In'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Docs_Out'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fitting_Docs_In'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Document_Transfer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quotation_Document_Folder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Safety_Document_Folder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Document_Folder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Remedials_As_Orders'
-        ParamType = ptUnknown
       end>
   end
   object qryCustSalesSource: TFDQuery
@@ -2712,9 +2525,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 488
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Lead_Source'
-        ParamType = ptUnknown
       end>
   end
   object dtsCustSalesSource: TDataSource
@@ -2746,9 +2557,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
 end

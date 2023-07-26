@@ -651,7 +651,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;
@@ -664,7 +664,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Job.InstallAddress;
-    Notes.Data := memInstallAdd.Text;
+    Notes.DataInfo := memInstallAdd.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -679,7 +679,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Job.RiskNotes;
-    Notes.Data := memRiskNotes.Text;
+    Notes.DataInfo := memRiskNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -694,7 +694,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Job.ExtraNotes;
-    Notes.Data := memNotes.Text;
+    Notes.DataInfo := memNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -992,7 +992,7 @@ begin
       for i := 0 to pred(Job.Remedials.count) do
         begin
         cells[0,i+1] := inttostr(Job.Remedials[i].RemedialNumber);
-        cells[1,i+1] := copy(Job.Remedials[i].Narrative.data,1,30);
+        cells[1,i+1] := copy(Job.Remedials[i].Narrative.DataInfo,1,30);
         cells[2,i+1] := Job.Remedials[i].FitterName;
         cells[3,i+1] := padatestr(Job.Remedials[i].InstallDate);
         cells[4,i+1] := formatfloat('0.00',Job.Remedials[i].Price);
@@ -2068,7 +2068,7 @@ begin
   try
     inx := Job.Events.IndexOf(inx);
     JEvent := Job.Events[inx];
-    memEventNotes.Text := JEvent.Narrative.Data;
+    memEventNotes.Text := JEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;

@@ -91,7 +91,7 @@ begin
   begin
     edtOperator.text := JEvent.OperatorName;
     dtpckdate.date := JEvent.DateEntered;
-    memDetails.text := JEvent.Narrative.Data;
+    memDetails.text := JEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -113,7 +113,7 @@ begin
   JEvent.Operator := Operator;
   JEvent.OperatorName := OperatorName;
   JEvent.DateEntered := dtpckDate.Date;
-  JEvent.Narrative.data := memDetails.text;
+  JEvent.Narrative.DataInfo := memDetails.text;
   if Mode = jevAdd then
   begin
     JEvent.Narrative.dbkey := 0;

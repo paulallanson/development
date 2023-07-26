@@ -701,7 +701,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Contract.ExtraNotes;
-    Notes.Data := memNotes.Text;
+    Notes.DataInfo := memNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -716,7 +716,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := 0;
-    Notes.Data := tempNotes;
+    Notes.DataInfo := tempNotes;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -2243,7 +2243,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    memNotes.Text := Narrative.Data;
+    memNotes.Text := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;
@@ -2856,7 +2856,7 @@ begin
   try
     inx := Contract.Events.IndexOf(inx);
     aEvent := Contract.Events[inx];
-    memEventNotes.Text := aEvent.Narrative.Data;
+    memEventNotes.Text := aEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;

@@ -946,7 +946,7 @@ begin
   try
     inx := POrder.Events.IndexOf(inx);
     POEvent := POrder.Events[inx];
-    memEventNotes.Text := POEvent.Narrative.Data;
+    memEventNotes.Text := POEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;

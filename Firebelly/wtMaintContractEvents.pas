@@ -86,7 +86,7 @@ begin
   begin
     edtOperator.text := ContractEvent.OperatorName;
     dtpckdate.date := ContractEvent.DateEntered;
-    memDetails.text := ContractEvent.Narrative.Data;
+    memDetails.text := ContractEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -108,7 +108,7 @@ begin
   ContractEvent.Operator := Operator;
   ContractEvent.OperatorName := OperatorName;
   ContractEvent.DateEntered := dtpckDate.Date;
-  ContractEvent.Narrative.data := memDetails.text;
+  ContractEvent.Narrative.DataInfo := memDetails.text;
   if Mode = cqevAdd then
   begin
     ContractEvent.Narrative.dbkey := 0;

@@ -1476,7 +1476,7 @@ object frmWTMaintJob: TfrmWTMaintJob
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 1036
+        Width = 1032
         Height = 17
         Align = alTop
         BevelOuter = bvNone
@@ -1492,10 +1492,10 @@ object frmWTMaintJob: TfrmWTMaintJob
         end
       end
       object ToolBar1: TToolBar
-        Left = 1007
+        Left = 1003
         Top = 17
         Width = 29
-        Height = 242
+        Height = 241
         Align = alRight
         ButtonHeight = 30
         ButtonWidth = 30
@@ -1555,7 +1555,7 @@ object frmWTMaintJob: TfrmWTMaintJob
         Left = 0
         Top = 17
         Width = 161
-        Height = 242
+        Height = 241
         ObjectTypes = [otFolders]
         Root = 'C:\'
         ShellListView = slvDocuments
@@ -1587,8 +1587,6 @@ object frmWTMaintJob: TfrmWTMaintJob
         OnMouseMove = slvDocumentsMouseMove
         TabOrder = 3
         ViewStyle = vsReport
-        ExplicitWidth = 850
-        ExplicitHeight = 242
       end
     end
     object tbNotes: TTabSheet
@@ -1607,7 +1605,7 @@ object frmWTMaintJob: TfrmWTMaintJob
           1032
           17)
         object Label13: TLabel
-          Left = -18
+          Left = -30
           Top = 0
           Width = 28
           Height = 13

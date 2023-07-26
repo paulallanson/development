@@ -1087,7 +1087,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;
@@ -1227,7 +1227,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := SOrder.InstallAddress;
-    Notes.Data := memInstallAddress.Text;
+    Notes.DataInfo := memInstallAddress.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1997,7 +1997,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := SOrder.ExtraNotes;
-    Notes.Data := memNotes.Text;
+    Notes.DataInfo := memNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -3250,7 +3250,7 @@ begin
   try
     inx := SOrder.Events.IndexOf(inx);
     SOEvent := SOrder.Events[inx];
-    memEventNotes.Text := SOEvent.Narrative.Data;
+    memEventNotes.Text := SOEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;
@@ -5074,7 +5074,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := iCode;
-    Notes.Data := sAddress;
+    Notes.DataInfo := sAddress;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally

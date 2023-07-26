@@ -86,7 +86,7 @@ begin
   begin
     edtOperator.text := POEvent.OperatorName;
     dtpckdate.date := POEvent.DateEntered;
-    memDetails.text := POEvent.Narrative.Data;
+    memDetails.text := POEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -108,7 +108,7 @@ begin
   POEvent.Operator := Operator;
   POEvent.OperatorName := OperatorName;
   POEvent.DateEntered := dtpckDate.Date;
-  POEvent.Narrative.data := memDetails.text;
+  POEvent.Narrative.DataInfo := memDetails.text;
   if Mode = poevAdd then
   begin
     POEvent.Narrative.dbkey := 0;

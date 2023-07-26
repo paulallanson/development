@@ -80,8 +80,8 @@ begin
     try
       Narrative.DbKey := NarrNo;
       Narrative.LoadFromDB;
-      DataMemo.Text := Narrative.Data;
-      DispMemo.Text := Narrative.Data;
+      DataMemo.Text := Narrative.DataInfo;
+      DispMemo.Text := Narrative.DataInfo;
     finally
       Narrative.Free;
     end;
@@ -103,7 +103,7 @@ begin
   Narrative := TNotes.Create;
   try
     Narrative.DbKey := iNarr;
-    Narrative.Data := DataMemo.Text;
+    Narrative.DataInfo := DataMemo.Text;
     Narrative.SaveToDB;
     iNarr := Narrative.DbKey;
   finally

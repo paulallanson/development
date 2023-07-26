@@ -140,7 +140,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;

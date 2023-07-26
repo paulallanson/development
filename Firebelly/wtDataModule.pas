@@ -1298,7 +1298,7 @@ begin
   try
     Notes.DbKey := iNotes;
     Notes.LoadFromDB;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.Free;
   end;

@@ -1026,7 +1026,7 @@ begin
   try
     Notes.DbKey := TempNotes;
     Notes.LoadfromDb;
-    Result := Notes.Data;
+    Result := Notes.DataInfo;
   finally
     Notes.free;
   end;
@@ -1039,7 +1039,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Quote.InstallAddress;
-    Notes.Data := memInstallAdd.Text;
+    Notes.DataInfo := memInstallAdd.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -1054,7 +1054,7 @@ begin
   Notes := TNotes.Create;
   try
     Notes.DbKey := Quote.ExtraNotes;
-    Notes.Data := memNotes.Text;
+    Notes.DataInfo := memNotes.Text;
     Notes.SaveToDB;
     Result := Notes.DbKey;
   finally
@@ -2750,7 +2750,7 @@ begin
   try
     inx := Quote.Events.IndexOf(inx);
     QEvent := Quote.Events[inx];
-    memEventNotes.Text := QEvent.Narrative.Data;
+    memEventNotes.Text := QEvent.Narrative.DataInfo;
   except
     memEventNotes.Lines.Clear;
   end;
@@ -4224,7 +4224,7 @@ begin
   try
     Narrative.DbKey := iNarrative;
     Narrative.LoadFromDB;
-    memNotes.Text := Narrative.Data;
+    memNotes.Text := Narrative.DataInfo;
   finally
     Narrative.Free;
   end;

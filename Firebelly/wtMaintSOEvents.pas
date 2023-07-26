@@ -86,7 +86,7 @@ begin
   begin
     edtOperator.text := SOEvent.OperatorName;
     dtpckdate.date := SOEvent.DateEntered;
-    memDetails.text := SOEvent.Narrative.Data;
+    memDetails.text := SOEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -108,7 +108,7 @@ begin
   SOEvent.Operator := Operator;
   SOEvent.OperatorName := OperatorName;
   SOEvent.DateEntered := dtpckDate.Date;
-  SOEvent.Narrative.data := memDetails.text;
+  SOEvent.Narrative.DataInfo := memDetails.text;
   if Mode = soevAdd then
   begin
     SOEvent.Narrative.dbkey := 0;

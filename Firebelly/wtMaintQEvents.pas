@@ -91,7 +91,7 @@ begin
   begin
     edtOperator.text := QEvent.OperatorName;
     dtpckdate.date := QEvent.DateEntered;
-    memDetails.text := QEvent.Narrative.Data;
+    memDetails.text := QEvent.Narrative.DataInfo;
   end
   else
   begin
@@ -113,7 +113,7 @@ begin
   QEvent.Operator := Operator;
   QEvent.OperatorName := OperatorName;
   QEvent.DateEntered := dtpckDate.Date;
-  QEvent.Narrative.data := memDetails.text;
+  QEvent.Narrative.DataInfo := memDetails.text;
   if Mode = qevAdd then
   begin
     QEvent.Narrative.dbkey := 0;
