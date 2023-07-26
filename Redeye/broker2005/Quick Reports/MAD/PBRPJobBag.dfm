@@ -1725,21 +1725,6 @@ object frmPBRPJobBag: TfrmPBRPJobBag
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    HTML.Author = 'Pragnaan'
-    HTML.Keywords = 'gtQrFilters'
-    HTML.ImageDir = 'Images'
-    PDF.Author = 'Pragnaan'
-    PDF.Keywords = 'QuickReport, Export, Filters'
-    RTF.Author = 'Pragnaan'
-    RTF.Keywords = 'QuickReport, Export, Filters'
-    RTF.ImagePixelFormat = pf32bit
-    RTF.ExportImageFormat = ifBMP
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkExcel, fkText, fkGIF, fkJPEG, fkBMP, fkEMF, fkWMF]
-    Left = 440
-    Top = 128
-  end
   object GetNarrSQL: TQuery
     DatabaseName = 'PB'
     SQL.Strings = (

@@ -2736,10 +2736,4 @@ object PBRPDelivFrm: TPBRPDelivFrm
         ParamType = ptUnknown
       end>
   end
-  object gtQRFilters1: TgtQRFilters
-    Text.XScaleFactor = 1.000000000000000000
-    VisibleFilters = [fkHTML, fkPDF, fkRTF, fkExcel, fkText, fkGIF, fkJPEG, fkBMP, fkEMF, fkWMF]
-    Left = 429
-    Top = 106
-  end
 end
