@@ -3,8 +3,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   Top = 211
   BorderStyle = bsDialog
   Caption = 'Print Purchase Order'
-  ClientHeight = 174
-  ClientWidth = 367
+  ClientHeight = 173
+  ClientWidth = 363
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    367
-    174)
+    363
+    173)
   TextHeight = 13
   object memSelection: TMemo
     Left = 8
@@ -49,7 +49,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 135
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -61,7 +61,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   end
   object btnPreview: TButton
     Left = 99
-    Top = 135
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -73,7 +73,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   end
   object btnEmail: TButton
     Left = 191
-    Top = 135
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -85,7 +85,7 @@ object frmWTRSPOrder: TfrmWTRSPOrder
   end
   object Button4: TButton
     Left = 283
-    Top = 135
+    Top = 134
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

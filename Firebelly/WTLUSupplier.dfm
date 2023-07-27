@@ -2,8 +2,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 397
-  ClientWidth = 913
+  ClientHeight = 396
+  ClientWidth = 909
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,13 +22,14 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 913
+    Width = 909
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
+    ExplicitWidth = 913
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
@@ -39,7 +40,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 905
+          Width = 909
         end>
       object Panel3: TPanel
         Left = 11
@@ -69,15 +70,16 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 913
+    Width = 909
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 907
+        Width = 911
       end>
+    ExplicitWidth = 913
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -143,8 +145,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 913
-    Height = 264
+    Width = 909
+    Height = 263
     Align = alClient
     DataSource = dtsSuppliers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -221,8 +223,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 378
-    Width = 913
+    Top = 377
+    Width = 909
     Height = 19
     Panels = <
       item
@@ -231,14 +233,18 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       item
         Width = 50
       end>
+    ExplicitTop = 378
+    ExplicitWidth = 913
   end
   object Panel2: TPanel
     Left = 0
-    Top = 337
-    Width = 913
+    Top = 336
+    Width = 909
     Height = 41
     Align = alBottom
     TabOrder = 4
+    ExplicitTop = 337
+    ExplicitWidth = 913
     object Label1: TLabel
       Left = 8
       Top = 12

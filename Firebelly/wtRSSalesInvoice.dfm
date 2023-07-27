@@ -3,8 +3,8 @@ object frmwtRSSalesInvoice: TfrmwtRSSalesInvoice
   Top = 138
   BorderStyle = bsDialog
   Caption = 'Print Sales Invoices'
-  ClientHeight = 144
-  ClientWidth = 309
+  ClientHeight = 143
+  ClientWidth = 305
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

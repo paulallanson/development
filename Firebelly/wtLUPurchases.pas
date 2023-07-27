@@ -80,8 +80,9 @@ var
 
 implementation
 
-uses WtMaintPurchaseOrder, WTRSPOrder, AllCommon, WTPOrderSearch,
-  WTLUPOrderRpts, WTMaintPurchaseOrderReceipts;
+uses
+  WtMaintPurchaseOrder, WTRSPOrder, AllCommon, WTPOrderSearch,
+  WTLUPOrderRpts, WTMaintPurchaseOrderReceipts, wtMain;
 
 {$R *.DFM}
 
@@ -95,8 +96,7 @@ end;
 procedure TfrmwtLUPurchases.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'PurchasesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'PurchasesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -110,8 +110,7 @@ var
   IniFile : TIniFile;
   sShowLive: string;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -131,7 +130,7 @@ begin
   else
     dtmdlAllPurchases.ShowLive := true;
 
-  AllCommon.SetDBGridCols('', 'PurchasesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'PurchasesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmwtLUPurchases.FormDestroy(Sender: TObject);
@@ -144,8 +143,7 @@ begin
   else
     sShowLive := 'None';
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

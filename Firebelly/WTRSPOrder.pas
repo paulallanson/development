@@ -53,7 +53,7 @@ var
 implementation
 
 uses
-  wtDataModule, wtRPPOrder, AllEmailHandler, System.UITypes, AllCommon;
+  wtDataModule, wtRPPOrder, AllEmailHandler, System.UITypes, AllCommon, wtMain;
 
 const
   SQLCore =
@@ -237,11 +237,10 @@ procedure TfrmWTRSPOrder.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
-  with IniFile do
+    with IniFile do
     begin
       chkbxPrintLogo.Checked := (ReadString('Purchase Order', 'Print Logo', 'N') = 'Y');
     end;
@@ -254,8 +253,7 @@ procedure TfrmWTRSPOrder.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     with IniFile do
     begin

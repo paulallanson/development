@@ -3,8 +3,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Invoice Re-Print Selection'
-  ClientHeight = 188
-  ClientWidth = 368
+  ClientHeight = 187
+  ClientWidth = 364
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -17,8 +17,8 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   OnDeactivate = FormDeactivate
   OnShow = FormShow
   DesignSize = (
-    368
-    188)
+    364
+    187)
   TextHeight = 13
   object selectionGrp: TGroupBox
     Left = 8
@@ -49,7 +49,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnClose: TBitBtn
     Left = 273
-    Top = 151
+    Top = 150
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -71,7 +71,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnPrint: TBitBtn
     Left = 9
-    Top = 151
+    Top = 150
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -83,7 +83,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnPreview: TBitBtn
     Left = 97
-    Top = 151
+    Top = 150
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -95,7 +95,7 @@ object frmWTRSSalesInvoiceReprint: TfrmWTRSSalesInvoiceReprint
   end
   object btnEmail: TBitBtn
     Left = 185
-    Top = 151
+    Top = 150
     Width = 80
     Height = 25
     Anchors = [akLeft, akBottom]

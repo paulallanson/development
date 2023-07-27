@@ -3,8 +3,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   Top = 243
   BorderStyle = bsDialog
   Caption = 'Print Sales Order'
-  ClientHeight = 211
-  ClientWidth = 368
+  ClientHeight = 210
+  ClientWidth = 364
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    368
-    211)
+    364
+    210)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -38,7 +38,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPrint: TButton
     Left = 8
-    Top = 175
+    Top = 174
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -50,7 +50,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object Button4: TButton
     Left = 283
-    Top = 175
+    Top = 174
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -71,7 +71,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnPreview: TButton
     Left = 99
-    Top = 175
+    Top = 174
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -83,7 +83,7 @@ object frmWTRSSOrder: TfrmWTRSSOrder
   end
   object btnEmail: TButton
     Left = 191
-    Top = 175
+    Top = 174
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

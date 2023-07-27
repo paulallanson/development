@@ -32,7 +32,6 @@ var
   TempArray: array[0..255] of Char;
   sgList: TStringList;
   sDatabase, LocalDrive, LocalDir: string;
-  AppIniFile: Array [0..255] of char;
 begin
   try
     ReportImage.Picture.LoadFromFile(LocalDir+sDatabase+'\wtHeadLogo.bmp');

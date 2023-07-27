@@ -79,8 +79,9 @@ var
 
 implementation
 
-uses AllCommon, WTContractSearch, WtMaintContract, wtRSContract,
-  WTLUContractsRpts;
+uses
+  AllCommon, WTContractSearch, WtMaintContract, wtRSContract,
+  WTLUContractsRpts, wtMain;
 
 {$R *.dfm}
 
@@ -98,8 +99,7 @@ procedure TfrmWTLUContracts.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -124,7 +124,7 @@ begin
   dtmdlAllContract.dtsAllContracts.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllContract.dtsAllContracts;
 
-  AllCommon.SetDBGridCols('', 'ContractsLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'ContractsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 
 end;
 
@@ -132,8 +132,7 @@ procedure TfrmWTLUContracts.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     IniFile.WriteString('Contract', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
@@ -422,8 +421,7 @@ end;
 procedure TfrmWTLUContracts.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'ContractsLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'ContractsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 

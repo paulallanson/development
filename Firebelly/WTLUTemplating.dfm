@@ -30,13 +30,12 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1286
+        Width = 1272
       end>
-    ExplicitWidth = 1290
     object Panel3: TPanel
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1273
+      Width = 1263
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -59,7 +58,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1020
+        Left = 1010
         Top = 7
         Width = 69
         Height = 13
@@ -89,7 +88,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1100
+        Left = 1090
         Top = 3
         Width = 145
         Height = 21
@@ -97,12 +96,6 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
-        Items.Strings = (
-          'All'
-          'Trade'
-          'Retail'
-          'Commercial')
-        ExplicitLeft = 1110
       end
     end
   end
@@ -131,8 +124,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 345
-    ExplicitWidth = 1290
+    ExplicitTop = 335
+    ExplicitWidth = 1274
     DesignSize = (
       1278
       41)
@@ -144,7 +137,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1039
+      Left = 1035
       Top = 15
       Width = 55
       Height = 13
@@ -161,7 +154,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1199
+      Left = 1195
       Top = 9
       Width = 75
       Height = 25
@@ -180,7 +173,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1100
+      Left = 1096
       Top = 11
       Width = 73
       Height = 21

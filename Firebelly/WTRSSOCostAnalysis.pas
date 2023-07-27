@@ -75,7 +75,8 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPSOCostAnalysis;
+uses
+  allCommon, WTSrchCustomer, DateSelV5, WTRPSOCostAnalysis, wtMain;
 
 {$R *.dfm}
 
@@ -267,8 +268,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -434,8 +434,7 @@ procedure TfrmWTRSSOCostAnalysis.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     IniFile.WriteString('Sales Order Cost Analysis Report', 'Select By', inttostr(rdgrpSelectBy.itemindex));

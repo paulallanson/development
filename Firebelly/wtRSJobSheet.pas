@@ -93,7 +93,7 @@ implementation
 uses
   wtRPQuote, WtRPJobSheet, wtRPJobAccSheet, WTRPJobCutSched, WtRPJobFitting,
   wtRPJob, AllEmailHandler, wtDataModule, WtRPJobFittingTrade, wtRPJobSheetClient,
-  Printer.Tools;
+  wtMain, Printer.Tools;
 
 const
   SQLFitting =
@@ -1093,8 +1093,7 @@ procedure TfrmWTRSJobSheet.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -1162,8 +1161,7 @@ var
 begin
   if not FActivated then
     begin
-      var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-      IniFile := TIniFile.Create(fileName);
+      IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
       try
         with IniFile do
           begin

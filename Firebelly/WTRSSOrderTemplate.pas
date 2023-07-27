@@ -70,7 +70,8 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5,
+uses
+  allCommon, WTSrchCustomer, DateSelV5, wtMain,
   WTRPSOrderTemplate;
 
 {$R *.dfm}
@@ -243,8 +244,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -374,8 +374,7 @@ procedure TfrmWTRSSOrderTemplate.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

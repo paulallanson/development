@@ -11,7 +11,7 @@ uses
 type
   TfrmWTMain = class(TForm)
     CoolBar1: TCoolBar;
-    ToolBar1: TToolBar;                                         
+    ToolBar1: TToolBar;
     btnCustomers: TToolButton;
     btnQuotes: TToolButton;
     btnJobs: TToolButton;
@@ -321,7 +321,7 @@ type
     bEndUser: boolean;
     WorkStation, MaxUsers: Integer;
     EmailApplication, EmailLocation, EmailAccount: string;
-    AppIniFile: Array [0..255] of char;
+    class var AppIniFile: array [0..255] of Char;
     procedure ShowHints( Sender: TObject );
     property ComputerName: string read FComputerName write SetComputerName;
     property DataBaseDescr: string read FDataBaseDescr write SetDataBaseDescr;
@@ -418,16 +418,19 @@ end;
 procedure TfrmWTMain.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
-  TempUser                    : array[0..255] of Char;
-  TempUserSize                : DWORD;
+  TempUser : array[0..255] of Char;
+  TempUserSize : DWORD;
 begin
   LocalDrive := copy(GetWinSysDir,1,2);
-	LocalDir := extractfilepath(application.ExeName);
+	LocalDir := ExtractFilePath(Application.ExeName);
+  StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
 
+  (* GDK ToDo: remove after tests
   if pos('Application Data',LocalDir) > 0 then
     StrPCopy(AppIniFile,LocalDir+myWorktops_INIFILE)
   else
     StrPCopy(AppIniFile,myWorktops_INIFILE);
+  *)
 
 {$IFDEF DEMO}
 //  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
@@ -1384,7 +1387,7 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -1512,8 +1515,7 @@ begin
   if messagedlg('Reset your Firebelly screen settings?',
     mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
-    var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-    IniFile := TIniFile.Create(fileName);
+    IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
     try
       IniFile.EraseSection('FormPositions');

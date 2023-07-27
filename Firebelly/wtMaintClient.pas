@@ -64,7 +64,8 @@ var
 
 implementation
 
-uses  AllCommon, wtDataModule, wtMain;
+uses
+  AllCommon, wtDataModule, wtMain;
 
 {$R *.DFM}
 
@@ -115,7 +116,7 @@ begin
   sAliasName := dtmdlWorktops.dtbsWorktops.ConnectionDefName;
 
   GetPrivateProfileString('Email',  pchar(sAliasName + ' Email Account'), '', TempArray,
-    sizeof(TempArray), frmWTMain.AppIniFile);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   AccountName := TempArray;
 
@@ -132,8 +133,7 @@ var
 begin
   sAliasName := dtmdlWorktops.dtbsWorktops.ConnectionDefName;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

@@ -3,8 +3,8 @@ object frmWTRSContract: TfrmWTRSContract
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Contract Quotes'
-  ClientHeight = 220
-  ClientWidth = 437
+  ClientHeight = 219
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSContract: TfrmWTRSContract
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    437
-    220)
+    433
+    219)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -38,7 +38,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPrint: TButton
     Left = 8
-    Top = 183
+    Top = 182
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -50,7 +50,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object Button4: TButton
     Left = 360
-    Top = 183
+    Top = 182
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -79,7 +79,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPreview: TButton
     Left = 96
-    Top = 183
+    Top = 182
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -91,7 +91,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnEmail: TButton
     Left = 184
-    Top = 183
+    Top = 182
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -112,8 +112,8 @@ object frmWTRSContract: TfrmWTRSContract
     TabOrder = 7
   end
   object btnExcel: TBitBtn
-    Left = 266
-    Top = 183
+    Left = 258
+    Top = 182
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]

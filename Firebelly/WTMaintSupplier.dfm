@@ -43,7 +43,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       1004
       42)
     object lblDelete: TLabel
-      Left = 651
+      Left = 647
       Top = 15
       Width = 163
       Height = 13
@@ -58,7 +58,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ExplicitLeft = 655
     end
     object btnOK: TBitBtn
-      Left = 830
+      Left = 826
       Top = 9
       Width = 75
       Height = 25
@@ -72,7 +72,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ExplicitLeft = 834
     end
     object BitBtn2: TBitBtn
-      Left = 916
+      Left = 912
       Top = 9
       Width = 75
       Height = 25

@@ -105,8 +105,7 @@ end;
 procedure TfrmWTLUTemplating.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'TemplatingLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'TemplatingLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -120,8 +119,7 @@ var
   IniFile : TIniFile;
   sShowLive, sShowOnSchedule: string;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   dtmdlTemplating := TdtmdlSalesOrder.create(Application);
   dtmdlTemplating.dtsAllSales.OnDataChange := SetButtons;
@@ -189,7 +187,7 @@ begin
 
   chkbxShowOnlyScheduled.checked := dtmdlTemplating.ShowOnSchedule;
 
-  AllCommon.SetDBGridCols('', 'TemplatingLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'TemplatingLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUTemplating.FormDestroy(Sender: TObject);
@@ -207,8 +205,7 @@ begin
   else
     sShowOnSchedule := 'None';
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

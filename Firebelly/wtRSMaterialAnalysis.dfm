@@ -3,8 +3,8 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   Top = 91
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Material Analysis'
-  ClientHeight = 418
-  ClientWidth = 635
+  ClientHeight = 417
+  ClientWidth = 631
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    635
-    418)
+    631
+    417)
   TextHeight = 13
   object btnPrint: TButton
     Left = 16
-    Top = 379
+    Top = 378
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -31,7 +31,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object Button4: TButton
     Left = 534
-    Top = 379
+    Top = 378
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -163,7 +163,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnExcel: TBitBtn
     Left = 198
-    Top = 379
+    Top = 378
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -217,7 +217,7 @@ object frmWTRSMaterialAnalysis: TfrmWTRSMaterialAnalysis
   end
   object btnPreview: TButton
     Left = 104
-    Top = 379
+    Top = 378
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

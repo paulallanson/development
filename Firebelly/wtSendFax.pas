@@ -129,8 +129,7 @@ var
   zFaxDir: array[0..255] of char;
 begin
   {Search the INI file for Email Application}
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

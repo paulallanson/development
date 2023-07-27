@@ -96,7 +96,9 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, wtDataModule, WTRPMaterialAnalysis;
+uses
+  allCommon, WTSrchCustomer, DateSelV5, wtDataModule, WTRPMaterialAnalysis,
+  wtMain;
 
 {$R *.dfm}
 
@@ -577,8 +579,7 @@ procedure TfrmWTRSMaterialAnalysis.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -721,8 +722,7 @@ procedure TfrmWTRSMaterialAnalysis.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     IniFile.WriteString('Material Analysis Report', 'Value By', inttostr(rdgrpValueBy.itemindex))

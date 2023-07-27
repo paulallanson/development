@@ -81,15 +81,16 @@ var
 
 implementation
 
-uses wtDataModule, WTMaintSupplier, WTSupplierSearch, WTLUSupplierContacts;
+uses
+  wtDataModule, WTMaintSupplier, WTSupplierSearch, WTLUSupplierContacts,
+  wtMain;
 
 {$R *.dfm}
 
 procedure TfrmWTLUSupplier.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'SupplierLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SupplierLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree
 end;
 
@@ -98,8 +99,7 @@ begin
   dtsSuppliers.OnDataChange := SetButtons;
   FChildLeft := -1;
   FChildTop := -1;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SetDBGridCols('', 'SupplierLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SupplierLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSupplier.FormShow(Sender: TObject);

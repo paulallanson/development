@@ -3,8 +3,8 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   Top = 221
   BorderStyle = bsDialog
   Caption = 'Contract Orders Report'
-  ClientHeight = 369
-  ClientWidth = 500
+  ClientHeight = 368
+  ClientWidth = 496
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    500
-    369)
+    496
+    368)
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -29,7 +29,7 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   end
   object btnPrint: TButton
     Left = 8
-    Top = 332
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,7 +40,7 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   end
   object Button4: TButton
     Left = 416
-    Top = 332
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -213,7 +213,7 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   end
   object btnPreview: TButton
     Left = 96
-    Top = 332
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -224,7 +224,7 @@ object frmWTRSContractOrders: TfrmWTRSContractOrders
   end
   object btnExcel: TButton
     Left = 184
-    Top = 332
+    Top = 331
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

@@ -3,8 +3,8 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   Top = 172
   BorderStyle = bsDialog
   Caption = 'Print Job Sheet'
-  ClientHeight = 332
-  ClientWidth = 520
+  ClientHeight = 330
+  ClientWidth = 512
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,15 +18,17 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 243
-    Width = 520
+    Top = 241
+    Width = 512
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 243
+    ExplicitWidth = 520
     DesignSize = (
-      520
+      512
       89)
     object btnPrint: TButton
       Left = 8
@@ -91,13 +93,14 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 520
+    Width = 512
     Height = 49
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 520
     DesignSize = (
-      520
+      512
       49)
     object Label1: TLabel
       Left = 8
@@ -107,7 +110,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       Caption = 'Job No.'
     end
     object Label2: TLabel
-      Left = 348
+      Left = 332
       Top = 8
       Width = 75
       Height = 13
@@ -125,7 +128,7 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
       OnChange = EnableRun
     end
     object memSOrderNumber: TMemo
-      Left = 348
+      Left = 332
       Top = 24
       Width = 130
       Height = 21
@@ -139,12 +142,14 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 49
-    Width = 520
-    Height = 44
+    Width = 512
+    Height = 42
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 520
+    ExplicitHeight = 44
     object Label3: TLabel
       Left = 8
       Top = 5
@@ -168,13 +173,15 @@ object frmWTRSJobSheet: TfrmWTRSJobSheet
   end
   object Panel3: TPanel
     Left = 0
-    Top = 93
-    Width = 520
+    Top = 91
+    Width = 512
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 93
+    ExplicitWidth = 520
     object lstbxDocuments: TListBox
       Left = 8
       Top = 14

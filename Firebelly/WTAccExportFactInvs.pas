@@ -536,7 +536,7 @@ var
 begin
   tempStr := edtExpFile.text;
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     IniFile.WriteString('Invoice Factoring', 'File Path', tempStr);
   finally
@@ -548,7 +548,7 @@ function TfrmWTAccExportFactInvs.GetPath: string;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     Result := IniFile.ReadString('Invoice Factoring', 'File Path', '');
   finally

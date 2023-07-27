@@ -2,8 +2,8 @@ object frmWTMaintLogins: TfrmWTMaintLogins
   Left = 364
   Top = 119
   Caption = 'Maintain Currently Logged in Users'
-  ClientHeight = 522
-  ClientWidth = 693
+  ClientHeight = 521
+  ClientWidth = 689
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,15 +17,15 @@ object frmWTMaintLogins: TfrmWTMaintLogins
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 462
-    Width = 693
+    Top = 461
+    Width = 689
     Height = 41
     Align = alBottom
     TabOrder = 0
     ExplicitTop = 470
     ExplicitWidth = 701
     DesignSize = (
-      693
+      689
       41)
     object btnDelete: TButton
       Left = 96
@@ -46,7 +46,7 @@ object frmWTMaintLogins: TfrmWTMaintLogins
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 613
+      Left = 605
       Top = 8
       Width = 75
       Height = 25
@@ -54,13 +54,14 @@ object frmWTMaintLogins: TfrmWTMaintLogins
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 613
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 693
-    Height = 462
+    Width = 689
+    Height = 461
     Align = alClient
     DataSource = dtsWorkstation
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -110,8 +111,8 @@ object frmWTMaintLogins: TfrmWTMaintLogins
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 503
-    Width = 693
+    Top = 502
+    Width = 689
     Height = 19
     Panels = <
       item

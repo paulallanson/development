@@ -3,8 +3,8 @@ object frmWTLogin: TfrmWTLogin
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Logon'
-  ClientHeight = 180
-  ClientWidth = 401
+  ClientHeight = 179
+  ClientWidth = 397
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

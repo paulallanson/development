@@ -3,8 +3,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Template Sheet Print'
-  ClientHeight = 452
-  ClientWidth = 517
+  ClientHeight = 451
+  ClientWidth = 513
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,8 +28,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 372
-    Width = 517
+    Top = 371
+    Width = 513
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
@@ -37,7 +37,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     ExplicitTop = 375
     ExplicitWidth = 529
     DesignSize = (
-      517
+      513
       80)
     object btnPrint: TButton
       Left = 8
@@ -94,7 +94,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 517
+    Width = 513
     Height = 62
     Align = alTop
     BevelOuter = bvNone
@@ -124,7 +124,7 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 517
+    Width = 513
     Height = 138
     Align = alTop
     TabOrder = 3
@@ -176,8 +176,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
   object pnlDocumentDetails: TPanel
     Left = 0
     Top = 200
-    Width = 517
-    Height = 172
+    Width = 513
+    Height = 171
     Align = alClient
     Caption = 'pnlDocumentDetails'
     TabOrder = 4
@@ -186,8 +186,8 @@ object frmWTRSTemplateSheet: TfrmWTRSTemplateSheet
     object pgDocumentDetails: TPageControl
       Left = 1
       Top = 1
-      Width = 519
-      Height = 171
+      Width = 515
+      Height = 170
       ActivePage = TabSheet2
       Align = alClient
       TabOrder = 0

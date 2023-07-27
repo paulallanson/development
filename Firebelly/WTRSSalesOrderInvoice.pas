@@ -74,7 +74,8 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrderInvoice;
+uses
+  allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrderInvoice, wtMain;
 
 {$R *.dfm}
 
@@ -257,8 +258,7 @@ var
   DateFrom, DateTo: TDateTime;
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -409,8 +409,7 @@ procedure TfrmWTRSSalesOrderInvoice.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

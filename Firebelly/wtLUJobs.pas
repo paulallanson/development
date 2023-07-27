@@ -110,8 +110,7 @@ end;
 procedure TfrmwtLUJobs.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'JobsLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'JobsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -129,8 +128,7 @@ begin
   dtmdlAllJobs.dtsAllJobs.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllJobs.dtsAllJobs;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -159,7 +157,7 @@ begin
   else
     dtmdlAllJobs.ShowWIP := true;
 
-  AllCommon.SetDBGridCols('', 'JobsLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'JobsLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmwtLUJobs.FormDestroy(Sender: TObject);
@@ -172,8 +170,7 @@ begin
   else
     sShowLive := 'None';
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

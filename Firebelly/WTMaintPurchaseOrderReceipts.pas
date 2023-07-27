@@ -73,7 +73,7 @@ var
 implementation
 
 uses
-  AllCommon, System.UITypes;
+  AllCommon, wtMain, System.UITypes;
 
 {$R *.dfm}
 
@@ -82,8 +82,7 @@ procedure TfrmWTMaintPurchaseOrderReceipts.FormClose(Sender: TObject;
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     with IniFile do
     begin
@@ -103,8 +102,7 @@ begin
   bOK := false;
   SetGridHeaders;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintPurchaseOrderReceipts.FormActivate(Sender: TObject);

@@ -123,17 +123,12 @@ end;
 
 procedure TfrmWTMaintLogins.FormCreate(Sender: TObject);
 begin
-  AllCommon.LoadFormLayout(frmWTMain.AppIniFile, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintLogins.FormDestroy(Sender: TObject);
-var
-  fileName: string;
 begin
-  if Pos('\', frmwtMain.AppIniFile) > 0 then
-    fileName := frmwtMain.AppIniFile else
-    fileName := ExtractFilePath(Application.ExeName) + frmwtMain.AppIniFile;
-  AllCommon.SaveFormLayout(frmWTMain.AppIniFile, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 end.

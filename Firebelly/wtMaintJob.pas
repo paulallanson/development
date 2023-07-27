@@ -1077,8 +1077,7 @@ begin
   bOK := false;
   pgDetails.ActivePage := tbCustomer;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintJob.btnOKClick(Sender: TObject);
@@ -1893,8 +1892,7 @@ end;
 procedure TfrmWTMaintJob.FormDestroy(Sender: TObject);
 begin
   dtmdlNotes.free;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintJob.edtContactChange(Sender: TObject);
@@ -2741,7 +2739,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

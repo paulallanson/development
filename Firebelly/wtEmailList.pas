@@ -140,7 +140,7 @@ begin
 
   //check for email attachment type default
   //if none set rtf as default.
-  IniFile := TIniFile.Create(frmwtMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     defAttach := IniFile.ReadString('Email', 'Def Attach Type', 'RTF');
   finally

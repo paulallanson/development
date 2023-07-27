@@ -3,8 +3,8 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Sales Invoice Payment Comparison Report'
-  ClientHeight = 289
-  ClientWidth = 474
+  ClientHeight = 288
+  ClientWidth = 470
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    474
-    289)
+    470
+    288)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 254
+    Top = 253
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -31,7 +31,7 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object Button4: TButton
     Left = 384
-    Top = 254
+    Top = 253
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -205,7 +205,7 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object btnPreview: TButton
     Left = 96
-    Top = 254
+    Top = 253
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -216,7 +216,7 @@ object frmWTRSSalesInvoicePayments: TfrmWTRSSalesInvoicePayments
   end
   object btnExcel: TButton
     Left = 184
-    Top = 254
+    Top = 253
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

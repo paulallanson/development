@@ -115,7 +115,7 @@ end;
 procedure TfrmWTLUSalesInvoiceRFP.FormCreate(Sender: TObject);
 begin
   ApplicationList := TStringList.create;
-  allCommon.LoadFormLayout(frmwtMain.AppIniFile, self);
+  allCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
   customer := 0;
   InitialiseDate(self);
 end;
@@ -382,10 +382,7 @@ var
   fileName: string;
 begin
   ApplicationList.Free;
-  if Pos('\', frmwtMain.AppIniFile) > 0 then
-    fileName := frmwtMain.AppIniFile else
-    fileName := ExtractFilePath(Application.ExeName) + frmwtMain.AppIniFile;
-  allCommon.SaveFormLayout(fileName, self);
+  allCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTLUSalesInvoiceRFP.btnClearClick(Sender: TObject);

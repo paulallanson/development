@@ -2,7 +2,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   Left = 32
   Top = 77
   Caption = 'Customer details'
-  ClientHeight = 355
+  ClientHeight = 354
   ClientWidth = 704
   Color = clBtnFace
   Constraints.MinHeight = 390
@@ -124,7 +124,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 336
+    Top = 335
     Width = 704
     Height = 19
     Panels = <
@@ -141,7 +141,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
     Left = 0
     Top = 73
     Width = 704
-    Height = 222
+    Height = 221
     Align = alClient
     DataSource = dtsCustomers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -268,7 +268,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
   end
   object Panel2: TPanel
     Left = 0
-    Top = 295
+    Top = 294
     Width = 704
     Height = 41
     Align = alBottom
@@ -322,7 +322,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
       OnClick = chkbxShowProspectsClick
     end
     object Button1: TButton
-      Left = 614
+      Left = 610
       Top = 8
       Width = 75
       Height = 25
@@ -385,7 +385,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           ParentFont = False
         end
         object Label3: TLabel
-          Left = 442
+          Left = 436
           Top = 7
           Width = 69
           Height = 13
@@ -400,7 +400,7 @@ object frmWTLUCustomer: TfrmWTLUCustomer
           ExplicitLeft = 464
         end
         object cmbCustomerFilter: TComboBox
-          Left = 522
+          Left = 516
           Top = 3
           Width = 145
           Height = 21

@@ -3,8 +3,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Cost Analysis Report'
-  ClientHeight = 366
-  ClientWidth = 496
+  ClientHeight = 365
+  ClientWidth = 492
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    496
-    366)
+    492
+    365)
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -43,7 +43,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPrint: TButton
     Left = 8
-    Top = 329
+    Top = 328
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -54,7 +54,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object Button4: TButton
     Left = 416
-    Top = 329
+    Top = 328
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -229,7 +229,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnPreview: TButton
     Left = 96
-    Top = 329
+    Top = 328
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -240,7 +240,7 @@ object frmWTRSSOCostAnalysis: TfrmWTRSSOCostAnalysis
   end
   object btnExcel: TButton
     Left = 184
-    Top = 329
+    Top = 328
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

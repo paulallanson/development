@@ -482,8 +482,7 @@ begin
   pgdetails.Pages[5].TabVisible := pgdetails.Pages[2].TabVisible;
   pgdetails.Pages[6].TabVisible := pgdetails.Pages[2].TabVisible;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWtMaintCustomer.ShowDetails;
@@ -990,8 +989,7 @@ end;
 procedure TfrmWtMaintCustomer.FormDestroy(Sender: TObject);
 begin
   frmWTDBMemo.Free;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWtMaintCustomer.btnAddEvClick(Sender: TObject);
@@ -2050,7 +2048,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

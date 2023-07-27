@@ -3,8 +3,8 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   Top = 166
   BorderStyle = bsDialog
   Caption = 'Anticipated Invoicing Report'
-  ClientHeight = 328
-  ClientWidth = 471
+  ClientHeight = 327
+  ClientWidth = 467
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    471
-    328)
+    467
+    327)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -230,7 +230,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object btnExcel: TBitBtn
     Left = 190
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -284,7 +284,7 @@ object frmWTRSSOAntInvoice: TfrmWTRSSOAntInvoice
   end
   object btnPreview: TButton
     Left = 96
-    Top = 289
+    Top = 288
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

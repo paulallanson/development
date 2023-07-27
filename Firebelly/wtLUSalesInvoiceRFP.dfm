@@ -2,8 +2,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   Left = 175
   Top = 90
   Caption = 'Request for Payment'
-  ClientHeight = 535
-  ClientWidth = 1061
+  ClientHeight = 534
+  ClientWidth = 1057
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   TextHeight = 13
   object SIStatusBar: TStatusBar
     Left = 0
-    Top = 516
-    Width = 1061
+    Top = 515
+    Width = 1057
     Height = 19
     Panels = <
       item
@@ -30,15 +30,15 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 463
-    Width = 1061
+    Top = 462
+    Width = 1057
     Height = 53
     Align = alBottom
     TabOrder = 1
     ExplicitTop = 471
     ExplicitWidth = 1069
     DesignSize = (
-      1061
+      1057
       53)
     object btnPrint: TButton
       Left = 96
@@ -52,7 +52,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnPrintClick
     end
     object Button4: TButton
-      Left = 957
+      Left = 949
       Top = 16
       Width = 75
       Height = 25
@@ -60,6 +60,7 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       Caption = 'Close'
       TabOrder = 1
       OnClick = Button4Click
+      ExplicitLeft = 957
     end
     object btnSweep: TButton
       Left = 8
@@ -76,8 +77,8 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   object dbgDetails: TDBGrid
     Left = 0
     Top = 89
-    Width = 1061
-    Height = 374
+    Width = 1057
+    Height = 373
     Align = alClient
     DataSource = dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -155,13 +156,13 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1061
+    Width = 1057
     Height = 89
     Align = alTop
     TabOrder = 3
     ExplicitWidth = 1069
     DesignSize = (
-      1061
+      1057
       89)
     object CustomerLbl: TLabel
       Left = 8
@@ -244,12 +245,13 @@ object frmWTLUSalesInvoiceRFP: TfrmWTLUSalesInvoiceRFP
       OnClick = btnClearClick
     end
     object grpInvDate: TGroupBox
-      Left = 802
+      Left = 794
       Top = 5
       Width = 233
       Height = 73
       Anchors = [akTop, akRight]
       TabOrder = 4
+      ExplicitLeft = 802
       DesignSize = (
         233
         73)

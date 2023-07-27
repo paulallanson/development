@@ -137,7 +137,8 @@ implementation
 
 {$R *.dfm}
 
-uses AllCommon, WTSrchCustomer, WTLUCustomerSite;
+uses
+  AllCommon, WTSrchCustomer, WTLUCustomerSite, wtMain;
 
 { TfrmWTMaintContractConvertOrder }
 
@@ -161,10 +162,9 @@ procedure TfrmWTMaintContractConvertOrder.FormActivate(Sender: TObject);
 var
   sText: string;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
   if FMode = 'C' then
     begin
-      AllCommon.LoadFormLayout(fileName, self);
+      AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
       self.Caption := 'Convert to Order';
       dbgDetails.visible := false;
       self.Height := 532;
@@ -173,7 +173,7 @@ begin
     end
   else
     begin
-      AllCommon.LoadFormLayout(fileName, self);
+      AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
       self.Caption := 'Add to Order';
       dbgDetails.visible := true;
       pnlReference.Visible := false;
@@ -369,9 +369,8 @@ end;
 
 procedure TfrmWTMaintContractConvertOrder.FormDestroy(Sender: TObject);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
 //  if Mode = 'A' then
-    AllCommon.SaveFormLayout(fileName, self);
+    AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintContractConvertOrder.SetSalesOrder(

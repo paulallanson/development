@@ -65,7 +65,7 @@ var
 implementation
 
 uses
-  UITypes, wtDataModule, WTEnvSel, AllCommon;
+  UITypes, wtDataModule, WTEnvSel, AllCommon, wtMain;
 
 {$R *.DFM}
 
@@ -283,8 +283,7 @@ procedure TfrmWTLogin.FormDeactivate(Sender: TObject);
 var
   IniFile: TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     IniFile.WriteString('Quaystone', 'LoginAlias', cmbAliasList.text);
   finally

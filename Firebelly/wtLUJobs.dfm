@@ -2,8 +2,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 358
-  ClientWidth = 888
+  ClientHeight = 357
+  ClientWidth = 884
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 339
-    Width = 888
+    Top = 338
+    Width = 884
     Height = 19
     Panels = <
       item
@@ -40,8 +40,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 298
-    Width = 888
+    Top = 297
+    Width = 884
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -49,7 +49,7 @@ object frmwtLUJobs: TfrmwtLUJobs
     ExplicitTop = 299
     ExplicitWidth = 892
     DesignSize = (
-      888
+      884
       41)
     object Label1: TLabel
       Left = 8
@@ -59,7 +59,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 658
+      Left = 650
       Top = 12
       Width = 57
       Height = 13
@@ -69,7 +69,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ExplicitLeft = 670
     end
     object Button1: TButton
-      Left = 809
+      Left = 801
       Top = 6
       Width = 75
       Height = 25
@@ -88,7 +88,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 721
+      Left = 713
       Top = 8
       Width = 73
       Height = 21
@@ -110,7 +110,7 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 888
+    Width = 884
     Height = 45
     Bands = <
       item
@@ -230,8 +230,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 888
-    Height = 221
+    Width = 884
+    Height = 220
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -376,7 +376,7 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 888
+    Width = 884
     Height = 32
     Bands = <
       item
@@ -397,7 +397,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        873
+        869
         28)
       object Label2: TLabel
         Left = 0
@@ -428,7 +428,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 638
+        Left = 626
         Top = 7
         Width = 69
         Height = 13
@@ -443,7 +443,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ExplicitLeft = 656
       end
       object cmbCustomerFilter: TComboBox
-        Left = 718
+        Left = 706
         Top = 3
         Width = 145
         Height = 21

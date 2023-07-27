@@ -2,8 +2,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Left = 137
   Top = 109
   Caption = 'Purchase details'
-  ClientHeight = 358
-  ClientWidth = 983
+  ClientHeight = 356
+  ClientWidth = 975
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 339
-    Width = 983
+    Top = 337
+    Width = 975
     Height = 19
     Panels = <
       item
@@ -40,16 +40,14 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   end
   object Panel1: TPanel
     Left = 0
-    Top = 298
-    Width = 983
+    Top = 296
+    Width = 975
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 299
-    ExplicitWidth = 987
     DesignSize = (
-      983
+      975
       41)
     object Label1: TLabel
       Left = 8
@@ -59,7 +57,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 724
+      Left = 708
       Top = 13
       Width = 74
       Height = 13
@@ -69,7 +67,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       ExplicitLeft = 740
     end
     object Button1: TButton
-      Left = 900
+      Left = 884
       Top = 7
       Width = 75
       Height = 25
@@ -88,7 +86,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 804
+      Left = 788
       Top = 9
       Width = 73
       Height = 21
@@ -110,7 +108,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 983
+    Width = 975
     Height = 45
     Bands = <
       item
@@ -222,8 +220,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 983
-    Height = 221
+    Width = 975
+    Height = 219
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
@@ -308,7 +306,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 983
+    Width = 975
     Height = 32
     Bands = <
       item

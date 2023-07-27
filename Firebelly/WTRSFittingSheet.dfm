@@ -186,11 +186,13 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     object pcDocumentDetails: TPageControl
       Left = 1
       Top = 1
-      Width = 528
-      Height = 170
+      Width = 524
+      Height = 169
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 528
+      ExplicitHeight = 170
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox

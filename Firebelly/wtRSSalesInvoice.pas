@@ -31,7 +31,8 @@ var
 
 implementation
 
-uses wtRPSalesInvoice;
+uses
+  wtRPSalesInvoice, wtMain;
 
 {$R *.dfm}
 
@@ -103,8 +104,7 @@ procedure TfrmwtRSSalesInvoice.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -123,8 +123,7 @@ procedure TfrmwtRSSalesInvoice.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do

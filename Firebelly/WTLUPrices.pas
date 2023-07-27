@@ -108,8 +108,7 @@ end;
 procedure TfrmWTLUPrices.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'PricesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'PricesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -124,8 +123,7 @@ begin
   dtmdlAllPrices.dtsAllPrices.OnDataChange := SetButtons;
   dbgDetails.DataSource := dtmdlAllPrices.dtsAllPrices;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SetDBGridCols('', 'PricesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'PricesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUPrices.FormDestroy(Sender: TObject);

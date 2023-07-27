@@ -3385,23 +3385,23 @@ procedure TfrmWTAccExport3.GetDataSource;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     cbSource.itemindex := cbsource.Items.Indexof(IniFile .ReadString('Centrereed Broker', 'DataSource', 'None'));
   finally
     IniFile.Free;
   end;
 (*  GetPrivateProfileString('Email', 'Application', '', TempArray,
-    sizeof(TempArray), frmWTMain.AppIniFile);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   Applic := TempArray;
 
   GetPrivateProfileString('Email', 'DEF Attach Type', '', TempArray,
-    sizeof(TempArray), frmWTMain.AppIniFile);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   AttachType := TempArray;
   GetPrivateProfileString('Email', 'Def Attach Direc', '', TempArray,
-    sizeof(TempArray), frmWTMain.AppIniFile);
+    sizeof(TempArray), TfrmWTMain.AppIniFile);
 
   Direc := TempArray;
 
@@ -3416,7 +3416,7 @@ procedure TfrmWTAccExport3.WriteDataSource;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     IniFile.WriteString('Centrereed Broker', 'DataSource',cbSource.text);

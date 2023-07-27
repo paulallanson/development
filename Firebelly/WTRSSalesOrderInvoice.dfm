@@ -3,8 +3,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   Top = 223
   BorderStyle = bsDialog
   Caption = 'Sales Order Invoice Comparison Report'
-  ClientHeight = 363
-  ClientWidth = 518
+  ClientHeight = 362
+  ClientWidth = 514
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    518
-    363)
+    514
+    362)
   TextHeight = 13
   object lstbxCustomersCode: TListBox
     Left = 96
@@ -43,7 +43,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object btnPrint: TButton
     Left = 8
-    Top = 326
+    Top = 325
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -54,7 +54,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object Button4: TButton
     Left = 432
-    Top = 326
+    Top = 325
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -228,7 +228,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object btnPreview: TButton
     Left = 96
-    Top = 326
+    Top = 325
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -239,7 +239,7 @@ object frmWTRSSalesOrderInvoice: TfrmWTRSSalesOrderInvoice
   end
   object btnExcel: TButton
     Left = 184
-    Top = 326
+    Top = 325
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

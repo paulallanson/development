@@ -1518,8 +1518,7 @@ begin
   pcDetails.Pages[11].TabVisible := pcDetails.Pages[6].TabVisible;
 
   pcDetails.ActivePage := tbCustomer;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 
   GetPrivateProfileString('Email', 'Application', '', TempArray,
     sizeof(TempArray), myWorktops_INIFILE);
@@ -2530,8 +2529,7 @@ end;
 procedure TfrmWTMaintQuote.FormDestroy(Sender: TObject);
 begin
   dtmdlNotes.free;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintQuote.edtContactChange(Sender: TObject);
@@ -3768,7 +3766,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

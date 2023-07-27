@@ -3,8 +3,8 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   Top = 143
   BorderStyle = bsDialog
   Caption = 'Sales Order templating report'
-  ClientHeight = 325
-  ClientWidth = 460
+  ClientHeight = 324
+  ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,12 +15,12 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    460
-    325)
+    456
+    324)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 288
+    Top = 287
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -31,7 +31,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   end
   object Button4: TButton
     Left = 376
-    Top = 288
+    Top = 287
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -208,7 +208,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   end
   object btnPreview: TButton
     Left = 96
-    Top = 288
+    Top = 287
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -219,7 +219,7 @@ object frmWTRSSOrderTemplate: TfrmWTRSSOrderTemplate
   end
   object btnExcel: TButton
     Left = 184
-    Top = 288
+    Top = 287
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]

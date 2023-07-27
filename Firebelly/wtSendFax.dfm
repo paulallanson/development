@@ -2,8 +2,8 @@ object frmWTSendFax: TfrmWTSendFax
   Left = 200
   Top = 108
   Caption = 'Fax Send Form'
-  ClientHeight = 273
-  ClientWidth = 360
+  ClientHeight = 272
+  ClientWidth = 356
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

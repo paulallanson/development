@@ -100,17 +100,17 @@ var
 
 implementation
 
-uses AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
+uses
+  AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
-  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP;
+  wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtMain;
 
 {$R *.DFM}
 
 procedure TfrmWTLUSalesInvoices.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -123,8 +123,7 @@ procedure TfrmWTLUSalesInvoices.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do
@@ -157,7 +156,7 @@ begin
   edtInvoiceDate.text := paDateStr(date);
 
   dtmdlAllSInvoices.dsSIHeaderGrid.dataset.AfterScroll := SetSalesInvoiceEdit;
-  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'SalesInvoicesLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUSalesInvoices.SetButtons(Sender: TObject; Field: TField);
@@ -645,8 +644,7 @@ procedure TfrmWTLUSalesInvoices.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do

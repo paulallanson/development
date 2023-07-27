@@ -105,7 +105,7 @@ var
 
 implementation
 
-uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon;
+uses UITypes, wtNotesDM, wtDataModule, WTSrchCustContacts, AllCommon, wtMain;
 
 {$R *.dfm}
 
@@ -515,14 +515,12 @@ end;
 
 procedure TfrmWTMaintBranch.FormCreate(Sender: TObject);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintBranch.FormDestroy(Sender: TObject);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintBranch.ParseMessage(const AFileName: string; var ATo, AFrom,

@@ -67,8 +67,9 @@ var
 
 implementation
 
-uses wtRPQuote, wtDataModule, wtSendFax, wtFaxList, wtRPSOrder, AllEmailHandler,
-  wtRPTemplate;
+uses
+  wtRPQuote, wtDataModule, wtSendFax, wtFaxList, wtRPSOrder, AllEmailHandler,
+  wtRPTemplate, wtMain;
 
 const
   SQLCore =
@@ -578,8 +579,7 @@ procedure TfrmWTRSSOrder.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     with IniFile do
     begin
@@ -612,8 +612,7 @@ procedure TfrmWTRSSOrder.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     with IniFile do
     begin

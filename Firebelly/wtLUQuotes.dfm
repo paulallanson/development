@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 562
-  ClientWidth = 1355
+  ClientHeight = 561
+  ClientWidth = 1351
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 543
-    Width = 1355
+    Top = 542
+    Width = 1351
     Height = 19
     Panels = <
       item
@@ -40,12 +40,14 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   end
   object Panel1: TPanel
     Left = 0
-    Top = 502
-    Width = 1355
+    Top = 501
+    Width = 1351
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 502
+    ExplicitWidth = 1355
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -125,7 +127,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1355
+    Width = 1351
     Height = 45
     Bands = <
       item
@@ -254,8 +256,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1355
-    Height = 425
+    Width = 1351
+    Height = 424
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
@@ -394,15 +396,16 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1355
+    Width = 1351
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1349
+        Width = 1353
       end>
+    ExplicitWidth = 1355
     object Panel3: TPanel
       Left = 11
       Top = 0
@@ -414,7 +417,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1340
+        1336
         28)
       object Label2: TLabel
         Left = 0
@@ -445,7 +448,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1080
+        Left = 1076
         Top = 7
         Width = 69
         Height = 13
@@ -460,7 +463,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1112
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1160
+        Left = 1156
         Top = 3
         Width = 145
         Height = 21

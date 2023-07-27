@@ -119,7 +119,7 @@ implementation
 
 uses wtMaintCustomer, WTSrchCustContacts, WTCustomerSearch, wtDataModule,
   WTLUCustomerRpts, wtMaintCustomerConts, WTLUCustWTGroups,
-  WTLUCustEdgeCutOutGroup, WTLUCustomerSite;
+  WTLUCustEdgeCutOutGroup, WTLUCustomerSite, wtMain;
 
 {$R *.DFM}
 
@@ -135,8 +135,7 @@ begin
   if assigned(frmwtluCustJobs) then
     PostMessage(frmwtluCustJobs.Handle, luCustomers_ParentClosed, 0, 0);
 *)
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveDBGridCols('', 'CustomerLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'CustomerLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
   Action := caFree;
 end;
 
@@ -144,8 +143,7 @@ procedure TfrmWTLUCustomer.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -170,7 +168,7 @@ begin
   FChildLeft := -1;
   FChildTop := -1;
   includeprospects := true;
-  AllCommon.SetDBGridCols('', 'CustomerLU Col Order', fileName, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'CustomerLU Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
 end;
 
 procedure TfrmWTLUCustomer.btnAddClick(Sender: TObject);
@@ -595,8 +593,7 @@ procedure TfrmWTLUCustomer.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
     IniFile.WriteString('Customer', 'Customer Filter', inttostr(cmbCustomerFilter.itemindex));
   finally

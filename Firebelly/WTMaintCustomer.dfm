@@ -2,7 +2,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Left = 322
   Top = 35
   Caption = 'Customer details'
-  ClientHeight = 624
+  ClientHeight = 623
   ClientWidth = 834
   Color = clBtnFace
   Constraints.MinHeight = 459
@@ -21,7 +21,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 563
+    Top = 562
     Width = 834
     Height = 42
     Align = alBottom
@@ -33,7 +33,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       834
       42)
     object lblDelete: TLabel
-      Left = 473
+      Left = 469
       Top = 15
       Width = 163
       Height = 13
@@ -48,7 +48,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ExplicitLeft = 488
     end
     object btnOK: TBitBtn
-      Left = 652
+      Left = 648
       Top = 9
       Width = 75
       Height = 25
@@ -62,7 +62,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ExplicitLeft = 667
     end
     object BitBtn2: TBitBtn
-      Left = 738
+      Left = 734
       Top = 9
       Width = 75
       Height = 25
@@ -116,7 +116,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
     Left = 0
     Top = 0
     Width = 834
-    Height = 563
+    Height = 562
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 1
@@ -128,7 +128,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 830
-        Height = 536
+        Height = 535
         Align = alClient
         ParentBackground = False
         TabOrder = 0
@@ -136,7 +136,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         ExplicitHeight = 537
         DesignSize = (
           826
-          535)
+          534)
         object Label1: TLabel
           Left = 8
           Top = 12
@@ -725,7 +725,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Tag = 200
           Left = 383
           Top = 213
-          Width = 427
+          Width = 423
           Height = 111
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
@@ -1723,7 +1723,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 737
         Top = 0
         Width = 93
-        Height = 403
+        Height = 402
         Align = alRight
         ParentBackground = False
         TabOrder = 0
@@ -1761,7 +1761,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Left = 0
         Top = 0
         Width = 737
-        Height = 403
+        Height = 402
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 1
@@ -1810,7 +1810,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       end
       object TPanel
         Left = 0
-        Top = 403
+        Top = 402
         Width = 830
         Height = 133
         Align = alBottom
@@ -2122,7 +2122,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 605
+    Top = 604
     Width = 834
     Height = 19
     Panels = <

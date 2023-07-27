@@ -65,7 +65,8 @@ var
 
 implementation
 
-uses wtDataModule, AllEmailHandler, wtRPContract, AllCommon;
+uses
+  wtDataModule, AllEmailHandler, wtRPContract, AllCommon, wtMain;
 
 const
 
@@ -423,8 +424,7 @@ procedure TfrmWTRSContract.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
     with IniFile do
@@ -453,8 +453,7 @@ procedure TfrmWTRSContract.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  IniFile := TIniFile.Create(fileName);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
 
   try
   with IniFile do

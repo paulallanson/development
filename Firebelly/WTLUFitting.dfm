@@ -59,7 +59,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1020
+        Left = 1010
         Top = 7
         Width = 69
         Height = 13
@@ -89,7 +89,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1100
+        Left = 1090
         Top = 3
         Width = 145
         Height = 21
@@ -102,7 +102,7 @@ object frmWTLUFitting: TfrmWTLUFitting
           'Trade'
           'Retail'
           'Commercial')
-        ExplicitLeft = 1110
+        ExplicitLeft = 1100
       end
     end
   end

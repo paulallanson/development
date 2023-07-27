@@ -348,10 +348,9 @@ procedure TfrmWTMaintSupplier.FormCreate(Sender: TObject);
 begin
   dtmdlOneSupplier := TdtmdlSuppliers.create(application);
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
-  AllCommon.SetDBGridCols('', 'Supplier Material Costs Col Order', fileName, self.dbgDetails);
-  AllCommon.SetDBGridCols('', 'Supplier Product Costs Col Order', fileName, self.dbgProductDetails);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
+  AllCommon.SetDBGridCols('', 'Supplier Material Costs Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  AllCommon.SetDBGridCols('', 'Supplier Product Costs Col Order', TfrmWTMain.AppIniFile, self.dbgProductDetails);
 end;
 
 procedure TfrmWTMaintSupplier.ShowDetails;
@@ -423,10 +422,9 @@ end;
 
 procedure TfrmWTMaintSupplier.FormDestroy(Sender: TObject);
 begin
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
-  AllCommon.SaveDBGridCols('', 'Supplier Material Costs Col Order', fileName, self.dbgDetails);
-  AllCommon.SaveDBGridCols('', 'Supplier Product Costs Col Order', fileName, self.dbgProductDetails);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
+  AllCommon.SaveDBGridCols('', 'Supplier Material Costs Col Order', TfrmWTMain.AppIniFile, self.dbgDetails);
+  AllCommon.SaveDBGridCols('', 'Supplier Product Costs Col Order', TfrmWTMain.AppIniFile, self.dbgProductDetails);
 end;
 
 procedure TfrmWTMaintSupplier.FormClose(Sender: TObject;
@@ -1959,7 +1957,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

@@ -2,8 +2,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Left = 206
   Top = 114
   Caption = 'Maintain Purchase Order Receipts'
-  ClientHeight = 439
-  ClientWidth = 846
+  ClientHeight = 437
+  ClientWidth = 838
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 420
-    Width = 846
+    Top = 418
+    Width = 838
     Height = 19
     Panels = <
       item
@@ -34,18 +34,18 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   end
   object Panel2: TPanel
     Left = 0
-    Top = 379
-    Width = 846
+    Top = 377
+    Width = 838
     Height = 41
     Align = alBottom
     TabOrder = 1
     ExplicitTop = 381
     ExplicitWidth = 854
     DesignSize = (
-      846
+      838
       41)
     object btbtnClose: TBitBtn
-      Left = 760
+      Left = 744
       Top = 8
       Width = 75
       Height = 25
@@ -56,7 +56,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       ExplicitLeft = 776
     end
     object btnOK: TBitBtn
-      Left = 672
+      Left = 656
       Top = 8
       Width = 75
       Height = 25
@@ -90,7 +90,7 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 846
+    Width = 838
     Height = 145
     Align = alTop
     TabOrder = 2
@@ -199,8 +199,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   object dbgLines: TStringGrid
     Left = 0
     Top = 145
-    Width = 846
-    Height = 234
+    Width = 838
+    Height = 232
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20

@@ -683,8 +683,7 @@ begin
   tbPurchases.TabVisible := dtmdlWorktops.UsePurchaseOrdering;
   btnGenerateDocs.Visible := dtmdlWorktops.UseDocumentTransfer;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 
   lblNotes.left := memNotes.Left;
   lblApplianceDetails.left := edtApplianceDetails.Left;
@@ -2573,8 +2572,7 @@ begin
   except
   end;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintSalesOrder.chkbxMaterialRequiredClick(
@@ -2954,7 +2952,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

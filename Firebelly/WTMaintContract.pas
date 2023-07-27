@@ -409,8 +409,7 @@ begin
   pcDetails.ActivePage := tsQuotes;
   pnlRevenueCentre.Visible := dtmdlWorktops.UseRevenueCentres;
 
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.LoadFormLayout(fileName, self);
+  AllCommon.LoadFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintContract.SetGridHeaders;
@@ -851,8 +850,7 @@ end;
 procedure TfrmWTMaintContract.FormDestroy(Sender: TObject);
 begin
   dtmdlAllQuote.free;
-  var fileName := ExtractFilePath(Application.ExeName) + myWorktops_INIFILE;
-  AllCommon.SaveFormLayout(fileName, self);
+  AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
 procedure TfrmWTMaintContract.mnuEditOptionClick(Sender: TObject);
@@ -2010,7 +2008,7 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmWTMain.AppIniFile);
+  IniFile := TIniFile.Create(TfrmWTMain.AppIniFile);
   try
 
   finally

@@ -3,8 +3,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   Top = 115
   BorderStyle = bsDialog
   Caption = 'Fitting Confirmation'
-  ClientHeight = 424
-  ClientWidth = 540
+  ClientHeight = 423
+  ClientWidth = 536
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,8 +28,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 344
-    Width = 540
+    Top = 343
+    Width = 536
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
@@ -37,7 +37,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
     ExplicitTop = 346
     ExplicitWidth = 548
     DesignSize = (
-      540
+      536
       80)
     object btnPrint: TButton
       Left = 8
@@ -93,8 +93,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   end
   object pnlDocumentDetails: TPanel
     Left = 0
-    Top = 194
-    Width = 540
+    Top = 193
+    Width = 536
     Height = 150
     Align = alBottom
     BevelOuter = bvNone
@@ -124,8 +124,8 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlDocuments: TPanel
     Left = 0
     Top = 138
-    Width = 540
-    Height = 56
+    Width = 536
+    Height = 55
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
@@ -155,7 +155,7 @@ object frmWTRSFittingConfirm: TfrmWTRSFittingConfirm
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 540
+    Width = 536
     Height = 138
     Align = alTop
     TabOrder = 4
