@@ -18,6 +18,7 @@
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 309
     Top = 0
     Width = 105
@@ -26,6 +27,7 @@
     BevelOuter = bvNone
     TabOrder = 0
     object FuncGrpBox: TGroupBox
+      ParentBackground = False
       Left = 10
       Top = 132
       Width = 87
@@ -190,6 +192,7 @@
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 309
@@ -198,6 +201,7 @@
     BevelOuter = bvNone
     TabOrder = 1
     object Panel3: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 309
@@ -248,6 +252,7 @@
       end
     end
     object Panel4: TPanel
+      ParentBackground = False
       Left = 0
       Top = 265
       Width = 309

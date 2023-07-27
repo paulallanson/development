@@ -783,7 +783,7 @@ object dmSalesInvoice: TdmSalesInvoice
   end
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select TOP 2000'
       #9#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
@@ -900,40 +900,24 @@ object dmSalesInvoice: TdmSalesInvoice
         ParamType = ptInput
       end
       item
-        Name = 'UnFactored'
+        Name = 'Invoice_or_Credit'
         DataType = ftString
         ParamType = ptInput
-      end
-      item
-        Name = 'Invoice_or_Credit'
-        ParamType = ptInput
-      end
-      item
-        Name = 'Invoice_or_Credit'
-        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Customer'
+        DataType = ftString
         ParamType = ptInput
-      end
-      item
-        Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
-        Name = 'Rep'
-        DataType = ftInteger
-        ParamType = ptInput
+        Size = 2
+        Value = Null
       end
       item
         Name = 'Rep'
-        DataType = ftInteger
+        DataType = ftString
         ParamType = ptInput
-      end
-      item
-        Name = 'Sub_Rep'
-        DataType = ftInteger
-        ParamType = ptInput
+        Size = 2
+        Value = Null
       end
       item
         Name = 'Sub_Rep'
@@ -942,16 +926,9 @@ object dmSalesInvoice: TdmSalesInvoice
       end
       item
         Name = 'Operator'
+        DataType = ftInteger
         ParamType = ptInput
-      end
-      item
-        Name = 'Operator'
-        ParamType = ptInput
-      end
-      item
-        Name = 'Code_From'
-        DataType = ftString
-        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Code_From'
@@ -961,16 +938,6 @@ object dmSalesInvoice: TdmSalesInvoice
       item
         Name = 'Status'
         DataType = ftInteger
-        ParamType = ptInput
-      end
-      item
-        Name = 'Status'
-        DataType = ftInteger
-        ParamType = ptInput
-      end
-      item
-        Name = 'Inactive'
-        DataType = ftString
         ParamType = ptInput
       end
       item
@@ -995,163 +962,173 @@ object dmSalesInvoice: TdmSalesInvoice
       end
       item
         Name = 'Status_Name'
+        DataType = ftString
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Paid_Status'
+        DataType = ftString
         ParamType = ptInput
-      end
-      item
-        Name = 'Paid_Status'
-        ParamType = ptInput
+        Value = Null
       end>
-    object qrySIHeaderGridInvoice_Date: TDateTimeField
+    object qrySIHeaderGridInvoice_Date: TSQLTimeStampField
       FieldName = 'Invoice_Date'
+      Origin = 'Invoice_Date'
     end
     object qrySIHeaderGridCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qrySIHeaderGridBranch_no: TIntegerField
       FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+      Required = True
     end
-    object qrySIHeaderGridInactive: TStringField
+    object qrySIHeaderGridInactive: TWideStringField
       FieldName = 'Inactive'
-      FixedChar = True
-      Size = 2
+      Origin = 'Inactive'
+      Size = 1
     end
-    object qrySIHeaderGridInvoice_or_Credit: TStringField
+    object qrySIHeaderGridInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
-      FixedChar = True
-      Size = 2
+      Origin = 'Invoice_or_Credit'
+      Size = 1
     end
-    object qrySIHeaderGridCustomer_Name: TStringField
+    object qrySIHeaderGridCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Customer_Name'
+      Required = True
+      Size = 100
     end
-    object qrySIHeaderGridBranch_Name: TStringField
+    object qrySIHeaderGridBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Branch_Name'
+      Size = 50
     end
-    object qrySIHeaderGridStatus_Description: TStringField
+    object qrySIHeaderGridStatus_Description: TWideStringField
       FieldName = 'Status_Description'
-      FixedChar = True
-      Size = 80
+      Origin = 'Status_Description'
+      Required = True
+      Size = 40
     end
     object qrySIHeaderGridInv_to_Customer: TIntegerField
       FieldName = 'Inv_to_Customer'
+      Origin = 'Inv_to_Customer'
     end
     object qrySIHeaderGridInv_to_Branch: TIntegerField
       FieldName = 'Inv_to_Branch'
+      Origin = 'Inv_to_Branch'
+    end
+    object qrySIHeaderGridAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+      Origin = 'Account_Code'
+      Size = 10
     end
     object qrySIHeaderGridGoods_Value: TCurrencyField
       FieldName = 'Goods_Value'
+      Origin = 'Goods_Value'
+      Required = True
     end
     object qrySIHeaderGridVat_Value: TCurrencyField
       FieldName = 'Vat_Value'
+      Origin = 'Vat_Value'
+      Required = True
     end
-    object qrySIHeaderGridSales_Invoice_no: TStringField
+    object qrySIHeaderGridSales_Invoice_no: TWideStringField
       FieldName = 'Sales_Invoice_no'
-      FixedChar = True
-      Size = 30
+      Origin = 'Sales_Invoice_no'
+      Size = 15
     end
     object qrySIHeaderGridSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
+      Origin = 'Sales_invoice_status'
+      Required = True
     end
     object qrySIHeaderGridSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
+      Origin = 'Sales_Invoice'
+      Required = True
     end
-    object qrySIHeaderGridInvoice_Status: TStringField
-      DisplayWidth = 30
-      FieldKind = fkCalculated
-      FieldName = 'Invoice_Status'
-      Size = 30
-      Calculated = True
-    end
-    object qrySIHeaderGridTotal_Value: TCurrencyField
-      FieldKind = fkCalculated
-      FieldName = 'Total_Value'
-      currency = False
-      Calculated = True
-    end
-    object qrySIHeaderGridSales_invoice_type: TStringField
+    object qrySIHeaderGridSales_invoice_type: TWideStringField
       FieldName = 'Sales_invoice_type'
-      FixedChar = True
-      Size = 2
+      Origin = 'Sales_invoice_type'
+      Size = 1
     end
-    object qrySIHeaderGridReference: TStringField
+    object qrySIHeaderGridReference: TWideStringField
       FieldName = 'Reference'
-      FixedChar = True
-      Size = 120
-    end
-    object qrySIHeaderGridInvoice_Description: TStringField
-      FieldName = 'Invoice_Description'
-      FixedChar = True
-      Size = 160
-    end
-    object qrySIHeaderGridfactoring_filename: TStringField
-      FieldName = 'factoring_filename'
-      FixedChar = True
+      Origin = 'Reference'
       Size = 60
     end
-    object qrySIHeaderGridfactoring_date: TDateTimeField
+    object qrySIHeaderGridInvoice_Description: TWideStringField
+      FieldName = 'Invoice_Description'
+      Origin = 'Invoice_Description'
+      Size = 80
+    end
+    object qrySIHeaderGridfactoring_filename: TWideStringField
+      FieldName = 'factoring_filename'
+      Origin = 'factoring_filename'
+      Size = 30
+    end
+    object qrySIHeaderGridfactoring_date: TSQLTimeStampField
       FieldName = 'factoring_date'
+      Origin = 'factoring_date'
     end
-    object qrySIHeaderGridpaid_status: TStringField
+    object qrySIHeaderGridpaid_status: TWideStringField
       FieldName = 'paid_status'
-      FixedChar = True
-      Size = 2
+      Origin = 'paid_status'
+      Size = 1
     end
-    object qrySIHeaderGridcash_sales: TStringField
+    object qrySIHeaderGridcash_sales: TWideStringField
       FieldName = 'cash_sales'
-      FixedChar = True
-      Size = 2
-    end
-    object qrySIHeaderGridPaid_status_Description: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Paid_status_Description'
-      Calculated = True
+      Origin = 'cash_sales'
+      Size = 1
     end
     object qrySIHeaderGridrep: TIntegerField
       FieldName = 'rep'
+      Origin = 'rep'
     end
-    object qrySIHeaderGridRep_Name: TStringField
-      FieldName = 'Rep_Name'
-      FixedChar = True
-      Size = 80
+    object qrySIHeaderGridSub_Rep: TIntegerField
+      FieldName = 'Sub_Rep'
+      Origin = 'Sub_Rep'
     end
-    object qrySIHeaderGridInvoice_Format: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Invoice_Format'
-      Size = 10
-      Calculated = True
-    end
-    object qrySIHeaderGridElectronic_Invoice: TStringField
-      FieldName = 'Electronic_Invoice'
-      Size = 0
-    end
-    object qrySIHeaderGridAccount_Code: TStringField
-      FieldName = 'Account_Code'
-    end
-    object qrySIHeaderGridSub_Rep_Name: TStringField
-      FieldName = 'Sub_Rep_Name'
-      Size = 50
-    end
-    object qrySIHeaderGridEnd_User_Name: TStringField
-      FieldName = 'End_User_Name'
-      Size = 50
-    end
-    object qrySIHeaderGridAlt_Sales_Invoice_no: TStringField
+    object qrySIHeaderGridAlt_Sales_Invoice_no: TWideStringField
       FieldName = 'Alt_Sales_Invoice_no'
+      Origin = 'Alt_Sales_Invoice_no'
+      Size = 15
     end
-    object qrySIHeaderGridPack_Format_Description: TStringField
+    object qrySIHeaderGridRep_Name: TWideStringField
+      FieldName = 'Rep_Name'
+      Origin = 'Rep_Name'
+      Size = 40
+    end
+    object qrySIHeaderGridSub_Rep_Name: TWideStringField
+      FieldName = 'Sub_Rep_Name'
+      Origin = 'Sub_Rep_Name'
+      Size = 40
+    end
+    object qrySIHeaderGridElectronic_Invoice: TWideStringField
+      FieldName = 'Electronic_Invoice'
+      Origin = 'Electronic_Invoice'
+      Size = 1
+    end
+    object qrySIHeaderGridEnd_User_Name: TWideStringField
+      FieldName = 'End_User_Name'
+      Origin = 'End_User_Name'
+      Size = 100
+    end
+    object qrySIHeaderGridPack_Format_Description: TWideStringField
       FieldName = 'Pack_Format_Description'
+      Origin = 'Pack_Format_Description'
+      ReadOnly = True
       Size = 50
     end
-    object qrySIHeaderGridEnclosing_Type: TStringField
+    object qrySIHeaderGridEnclosing_Type: TWideStringField
       FieldName = 'Enclosing_Type'
-      Size = 25
+      Origin = 'Enclosing_Type'
+      ReadOnly = True
     end
   end
   object qryOperator: TFDQuery

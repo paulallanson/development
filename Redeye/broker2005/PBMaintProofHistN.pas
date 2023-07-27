@@ -157,7 +157,7 @@ var
 
 implementation
 
-uses DateSelV5, PBLUProofHistN, PBDatabase, pbMainMenu;
+uses UITypes, DateSelV5, PBLUProofHistN, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

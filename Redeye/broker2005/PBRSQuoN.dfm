@@ -21,6 +21,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 115
     Width = 447
@@ -116,6 +117,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       OnClick = PrintBitBtnClick
     end
     object TypeRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 245
       Top = 42
       Width = 164
@@ -157,6 +159,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 64
       Width = 217
@@ -214,6 +217,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     end
   end
   object pnlReminder: TPanel
+    ParentBackground = False
     Left = 0
     Top = 71
     Width = 447
@@ -224,6 +228,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     ExplicitWidth = 459
     ExplicitHeight = 57
     object GroupBox2: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 0
       Width = 272
@@ -248,6 +253,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 447
@@ -257,6 +263,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     TabOrder = 2
     ExplicitWidth = 459
     object gbLayouts: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = -1
       Width = 272

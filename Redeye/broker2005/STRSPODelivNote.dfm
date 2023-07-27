@@ -23,6 +23,7 @@
     260)
   TextHeight = 13
   object selectionGrp: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 361
@@ -141,6 +142,7 @@
     OnClick = EmailBitBtnClick
   end
   object rdgrpLogo: TRadioGroup
+    ParentBackground = False
     Left = 11
     Top = 152
     Width = 214

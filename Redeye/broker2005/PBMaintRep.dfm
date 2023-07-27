@@ -600,6 +600,7 @@
       TabOrder = 21
     end
     object pnlSubReps: TPanel
+      ParentBackground = False
       Left = 2
       Top = 256
       Width = 404

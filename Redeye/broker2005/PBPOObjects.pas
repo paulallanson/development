@@ -1211,7 +1211,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   Dialogs, SysUtils, PBPODataMod;
 
 function PBIntStr(const vIn: variant): variant;
@@ -1292,8 +1292,7 @@ begin
   except
     if VarType(Qty) = VarString then
       MessageDlg('Invalid quantity - ' + Qty, mtError, [mbOK], 0)
-    else
-      MessageDlg('Invalid quantity', mtError, [mbOK], 0);
+    else MessageDlg('Invalid quantity', mtError, [mbOK], 0);
     Result := 'X';
   end;
 end;
@@ -4202,4 +4201,3 @@ begin
 end;
 
 end.
-

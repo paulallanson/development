@@ -43,6 +43,7 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 24
     Width = 353

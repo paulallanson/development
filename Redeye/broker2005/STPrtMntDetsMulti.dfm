@@ -288,6 +288,7 @@
       TabOrder = 15
     end
     object rdgrpClass: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 143
       Width = 129
@@ -624,6 +625,7 @@
       NumGlyphs = 2
     end
     object rdgrpClassTo: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 143
       Width = 129

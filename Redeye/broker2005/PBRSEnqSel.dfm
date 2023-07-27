@@ -93,6 +93,7 @@
     Kind = bkCancel
   end
   object rgRep: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 10
     Width = 145
@@ -106,6 +107,7 @@
     OnClick = rgRepClick
   end
   object pnlRepSearch: TPanel
+    ParentBackground = False
     Left = 168
     Top = 15
     Width = 313
@@ -144,6 +146,7 @@
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 16
     Top = 155
     Width = 265
@@ -233,6 +236,7 @@
     TabOrder = 6
   end
   object rgOperator: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 82
     Width = 145
@@ -246,6 +250,7 @@
     OnClick = rgOperatorClick
   end
   object pnlOperator: TPanel
+    ParentBackground = False
     Left = 168
     Top = 87
     Width = 313
@@ -284,6 +289,7 @@
     end
   end
   object rdgrpSortBy: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 150
     Width = 113
@@ -348,6 +354,7 @@
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 125
     Top = 123
     Width = 289

@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUPaymentTerms;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUPaymentTerms;
 
 {$R *.DFM}
 
@@ -159,8 +159,7 @@ begin
       mbYes], 0) = mrYes then
       try
         DoDelete;
-      except
-        messagedlg('Cannot delete, this Payment Type is associated with a customer.', mtError, [mbOk], 0);
+      except messagedlg('Cannot delete, this Payment Type is associated with a customer.', mtError, [mbOk], 0);
         exit;
       end;
   end;

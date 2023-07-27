@@ -108,6 +108,7 @@
     OnClick = PreviewBitBtnClick
   end
   object SelectionGroup: TRadioGroup
+    ParentBackground = False
     Left = 24
     Top = 16
     Width = 345

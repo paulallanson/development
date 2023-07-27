@@ -36,6 +36,7 @@
     Caption = 'CountLabel'
   end
   object pnlImport: TPanel
+    ParentBackground = False
     Left = 24
     Top = 112
     Width = 377
@@ -91,6 +92,7 @@
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 242
     Width = 313
@@ -148,6 +150,7 @@
     OnClick = ThisChkBoxClick
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 120
     Width = 89
@@ -225,6 +228,7 @@
     end
   end
   object GoToGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 8
     Width = 89
@@ -302,6 +306,7 @@
     end
   end
   object DispPanel: TPanel
+    ParentBackground = False
     Left = 9
     Top = 340
     Width = 313

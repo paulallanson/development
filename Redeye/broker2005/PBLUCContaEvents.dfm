@@ -131,6 +131,7 @@
     Kind = bkClose
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 341
     Top = 168
     Width = 87
@@ -234,6 +235,7 @@
     end
   end
   object DispPanel: TPanel
+    ParentBackground = False
     Left = 13
     Top = 334
     Width = 321

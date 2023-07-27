@@ -121,6 +121,7 @@
     Visible = False
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 121
@@ -218,6 +219,7 @@
     OnChange = DaysSpinEditChange
   end
   object customerrg: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 80
     Width = 121
@@ -327,6 +329,7 @@
     ExplicitLeft = 100
   end
   object pnlExportPrgrss: TPanel
+    ParentBackground = False
     Left = 82
     Top = 68
     Width = 289
@@ -350,6 +353,7 @@
     end
   end
   object Operatorrg: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 152
     Width = 121

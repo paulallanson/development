@@ -52,6 +52,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 procedure TSTMaintCourierServFrm.FormShow(Sender: TObject);

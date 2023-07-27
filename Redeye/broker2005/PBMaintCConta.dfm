@@ -239,6 +239,7 @@
     object tsDetails: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
+        ParentBackground = False
         Left = 5
         Top = -4
         Width = 404
@@ -535,6 +536,7 @@
           TabOrder = 14
         end
         object grpbxContactInfo: TGroupBox
+          ParentBackground = False
           Left = 9
           Top = 316
           Width = 353

@@ -22,6 +22,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   OnShow = FormShow
   TextHeight = 13
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 109
     Width = 417
@@ -131,6 +132,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = -3
       Width = 225
@@ -181,6 +183,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 417
@@ -190,6 +193,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     TabOrder = 1
     ExplicitWidth = 429
     object gbLayouts: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 4
       Width = 265
@@ -230,6 +234,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     end
   end
   object pnlReminder: TPanel
+    ParentBackground = False
     Left = 0
     Top = 81
     Width = 417
@@ -240,6 +245,7 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     ExplicitWidth = 429
     ExplicitHeight = 41
     object GroupBox2: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = -5
       Width = 266

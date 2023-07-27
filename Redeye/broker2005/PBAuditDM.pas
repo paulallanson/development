@@ -39,7 +39,7 @@ var
 
 implementation
 
-uses pbMainMenu;
+uses UITypes, pbMainMenu;
 
 {$R *.DFM}
 
@@ -258,8 +258,7 @@ For iCount := 0 to SQLTo.ParamCount -1 do
                                                 sTempFrom := FloatToStr(TempField.AsFloat) ;
                                                 sTempTo := FloatToStr(TempParam.AsFloat) ;
                                                 end
-                                        else
-                                                MessageDlg('Audit trail does not know type: ',mtinformation,[mbOK],0) ;
+                                        else MessageDlg('Audit trail does not know type: ',mtinformation,[mbOK],0) ;
         {Compare the field with the parameter} ;
         If sTempFrom <> sTempTo then
                 begin

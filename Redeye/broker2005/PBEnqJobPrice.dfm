@@ -35,6 +35,7 @@
     OnClick = EnquiryLineListBoxClick
   end
   object GroupBox1: TGroupBox
+    ParentBackground = False
     Left = 568
     Top = 96
     Width = 81
@@ -126,6 +127,7 @@
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 556
     Width = 742
@@ -283,6 +285,7 @@
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 427
     Width = 742
@@ -291,6 +294,7 @@
     BevelOuter = bvNone
     TabOrder = 3
     object Panel9: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 742
@@ -320,6 +324,7 @@
           OnExit = PUnitComboExit
         end
         object Panel10: TPanel
+          ParentBackground = False
           Left = 2
           Top = 15
           Width = 619
@@ -360,6 +365,7 @@
         end
       end
       object Panel8: TPanel
+        ParentBackground = False
         Left = 623
         Top = 0
         Width = 119
@@ -375,6 +381,7 @@
           Align = alClient
           TabOrder = 0
           object Panel12: TPanel
+            ParentBackground = False
             Left = 2
             Top = 15
             Width = 115
@@ -405,6 +412,7 @@
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 742
@@ -416,6 +424,7 @@
       742
       123)
     object GroupBox4: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = -8
       Width = 727
@@ -527,6 +536,7 @@
     end
   end
   object Panel4: TPanel
+    ParentBackground = False
     Left = 0
     Top = 123
     Width = 742
@@ -535,6 +545,7 @@
     BevelOuter = bvNone
     TabOrder = 5
     object Panel5: TPanel
+      ParentBackground = False
       Left = 623
       Top = 0
       Width = 119
@@ -551,6 +562,7 @@
         Caption = 'Run On Quantity'
         TabOrder = 0
         object Panel11: TPanel
+          ParentBackground = False
           Left = 2
           Top = 15
           Width = 115
@@ -575,6 +587,7 @@
       end
     end
     object Panel6: TPanel
+      ParentBackground = False
       Left = 0
       Top = 0
       Width = 623
@@ -591,6 +604,7 @@
         Caption = 'Supplier Price Responses'
         TabOrder = 0
         object Panel7: TPanel
+          ParentBackground = False
           Left = 2
           Top = 15
           Width = 619

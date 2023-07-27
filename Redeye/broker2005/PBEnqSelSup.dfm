@@ -360,6 +360,7 @@
     OnClick = SelSuppBitBtnClick
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 453
     Width = 321

@@ -133,6 +133,7 @@
     Kind = bkClose
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 72
     Width = 87
@@ -210,6 +211,7 @@
     end
   end
   object TypeRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 0
     Width = 185

@@ -21,6 +21,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 272
     Width = 476
@@ -135,6 +136,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 476
@@ -143,6 +145,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     TabOrder = 1
     ExplicitWidth = 488
     object gbLayouts: TGroupBox
+      ParentBackground = False
       Left = 1
       Top = 6
       Width = 256
@@ -189,6 +192,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object pnlButtons: TPanel
+    ParentBackground = False
     Left = 0
     Top = 81
     Width = 476
@@ -217,6 +221,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       OnClick = cbPrintLogoClick
     end
     object SelOneGrpBox: TGroupBox
+      ParentBackground = False
       Left = 10
       Top = 2
       Width = 209
@@ -255,6 +260,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       end
     end
     object TypeRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 256
       Top = 2
       Width = 217
@@ -306,6 +312,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object pnlLabels: TPanel
+    ParentBackground = False
     Left = 0
     Top = 178
     Width = 476
@@ -322,6 +329,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Caption = 'Label Logo'
     end
     object grpbxLabels: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 4
       Width = 177

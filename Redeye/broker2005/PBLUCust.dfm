@@ -37,6 +37,7 @@
     OnClick = ThisChkBoxClick
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 14
     Top = 291
     Width = 331
@@ -178,6 +179,7 @@
     NumGlyphs = 2
   end
   object GoToGrpBox: TGroupBox
+    ParentBackground = False
     Left = 360
     Top = 8
     Width = 97
@@ -209,6 +211,7 @@
     end
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 360
     Top = 112
     Width = 97
@@ -286,6 +289,7 @@
     end
   end
   object DispPanel: TPanel
+    ParentBackground = False
     Left = 14
     Top = 358
     Width = 331

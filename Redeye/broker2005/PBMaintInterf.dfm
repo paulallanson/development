@@ -111,6 +111,7 @@
     object TabSheet1: TTabSheet
       Caption = 'Accounts'
       object GroupBox1: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521
@@ -255,6 +256,7 @@
       Caption = 'Scheduling'
       ImageIndex = 1
       object GroupBox3: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521
@@ -319,6 +321,7 @@
       Caption = 'Data Transfer'
       ImageIndex = 2
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 521

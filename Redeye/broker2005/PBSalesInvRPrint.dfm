@@ -22,6 +22,7 @@
     313)
   TextHeight = 13
   object selectionGrp: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 457

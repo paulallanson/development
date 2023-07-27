@@ -132,7 +132,7 @@ var
 
 implementation
 
-uses PBLUPrdTypCap, ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses UITypes, PBLUPrdTypCap, ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 
@@ -385,4 +385,3 @@ begin
 end;
 
 end.
-

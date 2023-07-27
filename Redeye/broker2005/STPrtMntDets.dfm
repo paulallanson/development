@@ -461,6 +461,7 @@
     TabOrder = 22
   end
   object RadGrpPrdClass: TRadioGroup
+    ParentBackground = False
     Left = 112
     Top = 104
     Width = 129

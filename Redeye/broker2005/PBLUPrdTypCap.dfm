@@ -62,6 +62,7 @@
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 240
     Width = 321
@@ -173,6 +174,7 @@
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 128
     Width = 87

@@ -91,6 +91,7 @@
     TabOrder = 1
   end
   object SelectRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 16
     Top = 16
     Width = 145
@@ -134,6 +135,7 @@
     OnClick = FaxBitBtnClick
   end
   object SelectionGroup: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 128
     Width = 393

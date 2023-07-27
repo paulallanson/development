@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses ComObj,ActiveX, pbDatabase;
+uses UITypes, ComObj,ActiveX, pbDatabase;
 {$R *.DFM}
 
 procedure TSTMaintCourierFrm.FormActivate(Sender: TObject);

@@ -47,7 +47,7 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, ccscommon;
+uses UITypes, pbMainMenu, pbDatabase, ccscommon;
 
 {$R *.DFM}
 
@@ -86,8 +86,7 @@ begin
       {Check that they have NOT gone out of document directory} ;
       If Lowercase(Copy(FileName,1, Length(docDir))) <> Lowercase(docDir) then
       begin
-        MessageDlg('You can''t select a document outside the Document Directory',
-                                                mtError,[mbOK],0) ;
+        MessageDlg('You can''t select a document outside the Document Directory', mtError,[mbOK],0) ;
       end
       else
       begin

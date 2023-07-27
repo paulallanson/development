@@ -15,6 +15,7 @@ object PBEmailListFrm: TPBEmailListFrm
   OnShow = FormShow
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 697
@@ -76,6 +77,7 @@ object PBEmailListFrm: TPBEmailListFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 230
     Width = 697

@@ -117,7 +117,7 @@ var
 
 implementation
 
-uses PBMaintPriceUnit, pbMainMenu, PBDatabase;
+uses UITypes, PBMaintPriceUnit, pbMainMenu, PBDatabase;
 
 {$R *.DFM}
 

@@ -15,6 +15,7 @@ object CCSEmailListFrm: TCCSEmailListFrm
   OnShow = FormShow
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 745
@@ -59,6 +60,7 @@ object CCSEmailListFrm: TCCSEmailListFrm
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 229
     Width = 745

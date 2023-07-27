@@ -200,6 +200,7 @@
     object TabSheet1: TTabSheet
       Caption = 'Details'
       object DetsGrpBox: TGroupBox
+        ParentBackground = False
         Left = 5
         Top = 1
         Width = 397

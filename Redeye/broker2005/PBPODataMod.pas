@@ -362,7 +362,7 @@ var
 
 implementation
 
-uses PBNarrativeDM, PBAuditDM, PBIntSelDM, pbMainMenu, pbDatabase,
+uses UITypes, PBNarrativeDM, PBAuditDM, PBIntSelDM, pbMainMenu, pbDatabase,
   PBMaintProofHistN;
 
 {$R *.DFM}
@@ -2840,8 +2840,7 @@ begin
             sTempFrom := FloatToStr(TempField.AsFloat) ;
             sTempTo := FloatToStr(TempParam.AsFloat) ;
           end
-      else
-          MessageDlg('Audit trail does not know type: ',mtinformation,[mbOK],0) ;
+      else MessageDlg('Audit trail does not know type: ',mtinformation,[mbOK],0) ;
 
       {Compare the field with the parameter} ;
       if sTempFrom <> sTempTo then

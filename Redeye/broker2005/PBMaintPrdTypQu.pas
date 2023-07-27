@@ -149,7 +149,7 @@ var
 
 implementation
 
-uses PBLUPrdTypQu, ComObj, ActiveX, PBLUPrdTypQuList, PBDatabase,
+uses UITypes, PBLUPrdTypQu, ComObj, ActiveX, PBLUPrdTypQuList, PBDatabase,
   pbMainMenu;
 
 {$R *.DFM}
@@ -284,9 +284,7 @@ begin
             ParamByName('Question').AsInteger := iCode;
             ExecSQL;
           end;
-      except
-        messagedlg('This question has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg('This question has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
   end;
@@ -446,4 +444,3 @@ begin
 end;
 
 end.
-

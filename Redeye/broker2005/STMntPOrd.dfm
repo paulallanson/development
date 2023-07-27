@@ -273,6 +273,7 @@
       OnChange = SuppNameEditChange
     end
     object StoreFromGroupBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 76
       Width = 321
@@ -306,6 +307,7 @@
       OnChange = DescrEditChange
     end
     object pnlStoreDetails: TPanel
+      ParentBackground = False
       Left = 392
       Top = 16
       Width = 377
@@ -331,6 +333,7 @@
       end
     end
     object pnlSalesDetails: TPanel
+      ParentBackground = False
       Left = 368
       Top = 192
       Width = 377
@@ -353,6 +356,7 @@
       end
     end
     object SuppGroupBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 76
       Width = 353
@@ -443,6 +447,7 @@
       91)
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 486
     Width = 802

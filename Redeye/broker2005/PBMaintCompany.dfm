@@ -222,6 +222,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Text = 'EMailEdit'
       end
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 248
         Top = 168
         Width = 185
@@ -524,6 +525,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 6
       end
       object grpbxAuthorisePO: TGroupBox
+        ParentBackground = False
         Left = 3
         Top = 354
         Width = 265
@@ -863,6 +865,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = btbtnClearProdTypeClick
       end
       object rdgrpJobBag: TRadioGroup
+        ParentBackground = False
         Left = 16
         Top = 80
         Width = 201
@@ -1029,6 +1032,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 21
       end
       object grpbxReorderReminder: TGroupBox
+        ParentBackground = False
         Left = 272
         Top = 80
         Width = 281
@@ -1446,6 +1450,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'Stock'
       ImageIndex = 2
       object GroupBox1: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 16
         Width = 369
@@ -1602,6 +1607,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 2
       end
       object GroupBox5: TGroupBox
+        ParentBackground = False
         Left = 12
         Top = 16
         Width = 597
@@ -1986,6 +1992,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'Web Ordering'
       ImageIndex = 7
       object GroupBox3: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 8
         Width = 369
@@ -2082,6 +2089,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
       end
       object GroupBox4: TGroupBox
+        ParentBackground = False
         Left = 8
         Top = 184
         Width = 369
@@ -2472,6 +2480,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     end
   end
   object pnlBottom: TPanel
+    ParentBackground = False
     Left = 0
     Top = 537
     Width = 630
@@ -2508,6 +2517,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     end
   end
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 630

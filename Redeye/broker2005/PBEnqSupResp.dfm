@@ -373,6 +373,7 @@
       282)
   end
   object SelectedSuppliersGroup: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 130
     Width = 369

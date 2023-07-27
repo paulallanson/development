@@ -184,6 +184,7 @@
     NumGlyphs = 2
   end
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 9
     Top = 12
     Width = 312

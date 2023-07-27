@@ -18,6 +18,7 @@
   OnDestroy = FormDestroy
   TextHeight = 13
   object BottomPanel: TPanel
+    ParentBackground = False
     Left = 0
     Top = 551
     Width = 628
@@ -198,6 +199,7 @@
     end
   end
   object pnlFormRef: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 628
@@ -306,6 +308,7 @@
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
+        ParentBackground = False
         Left = 0
         Top = 352
         Width = 620
@@ -330,6 +333,7 @@
         end
       end
       object Panel1: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 620
@@ -360,6 +364,7 @@
           Caption = 'Cust req'#39'd date'
         end
         object AddrTypeRadGrp: TRadioGroup
+          ParentBackground = False
           Left = 8
           Top = 24
           Width = 105
@@ -375,6 +380,7 @@
           OnClick = AddrTypeRadGrpClick
         end
         object AddrGrpBox: TGroupBox
+          ParentBackground = False
           Left = 160
           Top = 24
           Width = 377
@@ -588,6 +594,7 @@
           end
         end
         object QtysGrpBox: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 138
           Width = 145
@@ -895,6 +902,7 @@
         end
       end
       object pnlCourierService: TPanel
+        ParentBackground = False
         Left = 0
         Top = 316
         Width = 620

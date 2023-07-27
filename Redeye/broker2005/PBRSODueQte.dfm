@@ -62,6 +62,7 @@
     OnClick = DateSpeedButtonClick
   end
   object AllOrOneRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -169,6 +170,7 @@
     OnKeyUp = DateEditKeyUp
   end
   object RepGrpBox: TGroupBox
+    ParentBackground = False
     Left = 120
     Top = 8
     Width = 265

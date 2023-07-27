@@ -20,6 +20,7 @@
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 517
     Top = 73
     Width = 108
@@ -39,6 +40,7 @@
       Caption = 'CountLabel'
     end
     object FuncGrpBox: TGroupBox
+      ParentBackground = False
       Left = 8
       Top = 88
       Width = 89
@@ -146,6 +148,7 @@
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 625
@@ -154,6 +157,7 @@
     BevelOuter = bvNone
     TabOrder = 1
     object GroupBox1: TGroupBox
+      ParentBackground = False
       Left = 0
       Top = 4
       Width = 625
@@ -202,6 +206,7 @@
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 73
     Width = 517

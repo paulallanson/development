@@ -109,6 +109,7 @@ object PBRSProofNFrm: TPBRSProofNFrm
     TabOrder = 2
   end
   object SelOneGrpBox: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 0
     Width = 265

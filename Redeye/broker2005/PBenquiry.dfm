@@ -86,6 +86,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     ExplicitWidth = 819
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 530
     Width = 823
@@ -235,6 +236,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     end
   end
   object pnlLineDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 273
     Width = 823
@@ -617,6 +619,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           OnDblClick = AddDetailsListDblClick
         end
         object GroupBox2: TGroupBox
+          ParentBackground = False
           Left = 308
           Top = 16
           Width = 437
@@ -916,6 +919,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
         Caption = 'Documents'
         ImageIndex = 7
         object pnlDocs: TPanel
+          ParentBackground = False
           Left = 0
           Top = 0
           Width = 813
@@ -1975,6 +1979,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     end
   end
   object pnlLines: TPanel
+    ParentBackground = False
     Left = 0
     Top = 170
     Width = 823
@@ -1985,6 +1990,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     ExplicitWidth = 819
     ExplicitHeight = 102
     object Panel1: TPanel
+      ParentBackground = False
       Left = 728
       Top = 1
       Width = 94
@@ -2104,6 +2110,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 823
@@ -2230,6 +2237,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     end
   end
   object pnlCustomer: TPanel
+    ParentBackground = False
     Left = 0
     Top = 41
     Width = 823
@@ -2406,6 +2414,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 778
     end
     object rdgType: TRadioGroup
+      ParentBackground = False
       Left = 9
       Top = 2
       Width = 78

@@ -20,6 +20,7 @@
   OnKeyPress = FormKeyPress
   TextHeight = 13
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 710
@@ -179,6 +180,7 @@
     end
   end
   object Panel2: TPanel
+    ParentBackground = False
     Left = 0
     Top = 397
     Width = 710
@@ -251,6 +253,7 @@
     end
   end
   object Panel3: TPanel
+    ParentBackground = False
     Left = 0
     Top = 45
     Width = 710

@@ -385,6 +385,7 @@
         OnExit = memCreditLimitExit
       end
       object rdgrpMinPO: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 141
         Width = 185
@@ -398,6 +399,7 @@
         OnClick = rdgrpMinPOClick
       end
       object GroupBox1: TGroupBox
+        ParentBackground = False
         Left = 224
         Top = 142
         Width = 185
@@ -448,6 +450,7 @@
         TabOrder = 6
       end
       object rdgrpAuthorise: TRadioGroup
+        ParentBackground = False
         Left = 8
         Top = 202
         Width = 185
@@ -599,6 +602,7 @@
         TabOrder = 0
       end
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 16
         Top = 40
         Width = 185

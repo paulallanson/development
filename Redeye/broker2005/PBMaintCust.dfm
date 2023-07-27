@@ -48,6 +48,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Visible = False
       end
       object pnlGeneralDetails: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 481
@@ -59,6 +60,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           481
           623)
         object grpbxAnalysis: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 314
           Width = 465
@@ -364,6 +366,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxDetails: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 2
           Width = 465
@@ -625,6 +628,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxAccountCode: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 273
           Width = 465
@@ -706,6 +710,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlHOContacts: TPanel
+        ParentBackground = False
         Left = 481
         Top = 0
         Width = 693
@@ -716,6 +721,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 697
         ExplicitHeight = 624
         object Panel26: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 695
@@ -726,6 +732,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 0
         end
         object Panel27: TPanel
+          ParentBackground = False
           Left = 687
           Top = 57
           Width = 9
@@ -798,6 +805,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactDetails: TPanel
+          ParentBackground = False
           Left = 511
           Top = 57
           Width = 176
@@ -805,6 +813,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           TabOrder = 3
           object Panel31: TPanel
+            ParentBackground = False
             Left = 1
             Top = 1
             Width = 174
@@ -826,6 +835,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel28: TPanel
+          ParentBackground = False
           Left = 486
           Top = 57
           Width = 21
@@ -836,6 +846,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ExplicitHeight = 566
         end
         object Panel29: TPanel
+          ParentBackground = False
           Left = 1
           Top = 57
           Width = 485
@@ -917,6 +928,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               end>
           end
           object Panel30: TPanel
+            ParentBackground = False
             Left = 1
             Top = 400
             Width = 487
@@ -1032,6 +1044,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Financials/Credit Details/GDPR'
       ImageIndex = 12
       object pnlInvoiceDetails: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 673
@@ -1304,6 +1317,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 8
           end
           object rdgrpCostCentre: TRadioGroup
+            ParentBackground = False
             Tag = 200
             Left = 7
             Top = 352
@@ -1525,6 +1539,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxGDPR: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 478
           Width = 662
@@ -1604,6 +1619,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlCreditDetails: TPanel
+        ParentBackground = False
         Left = 673
         Top = 0
         Width = 501
@@ -1823,6 +1839,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Value = 100
           end
           object rdgrpCreditRating: TRadioGroup
+            ParentBackground = False
             Tag = 100
             Left = 364
             Top = 11
@@ -2103,6 +2120,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Options'
       ImageIndex = 2
       object GroupBox2: TGroupBox
+        ParentBackground = False
         Left = 454
         Top = 0
         Width = 390
@@ -2188,6 +2206,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 1
         ExplicitHeight = 624
         object GroupBox1: TGroupBox
+          ParentBackground = False
           Left = 16
           Top = 101
           Width = 409
@@ -2334,6 +2353,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 1
           end
           object rdgrpProtocol: TRadioGroup
+            ParentBackground = False
             Left = 296
             Top = 56
             Width = 105
@@ -2438,6 +2458,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 4
         end
         object grpbxOnline: TGroupBox
+          ParentBackground = False
           Left = 16
           Top = 23
           Width = 409
@@ -2500,6 +2521,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object GroupBox4: TGroupBox
+        ParentBackground = False
         Left = 857
         Top = 0
         Width = 240
@@ -2542,6 +2564,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnExit = tbBranchesExit
       OnShow = tbBranchesShow
       object pnlBranchTop: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1178
@@ -2549,6 +2572,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alTop
         TabOrder = 0
         object Panel13: TPanel
+          ParentBackground = False
           Left = 1
           Top = 232
           Width = 1176
@@ -2722,6 +2746,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlContacts: TPanel
+        ParentBackground = False
         Left = 0
         Top = 273
         Width = 1178
@@ -2801,6 +2826,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel14: TPanel
+          ParentBackground = False
           Left = 1
           Top = 310
           Width = 1176
@@ -2844,6 +2870,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel15: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 1176
@@ -2865,6 +2892,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactFunctions: TPanel
+          ParentBackground = False
           Left = 1084
           Top = 25
           Width = 93
@@ -3140,6 +3168,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel12: TPanel
+        ParentBackground = False
         Left = 0
         Top = 564
         Width = 1178
@@ -3446,6 +3475,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel2: TPanel
+        ParentBackground = False
         Left = 0
         Top = 564
         Width = 1178
@@ -3521,6 +3551,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
       end
       object Panel3: TPanel
+        ParentBackground = False
         Left = 0
         Top = 563
         Width = 1174
@@ -4095,6 +4126,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel4: TPanel
+        ParentBackground = False
         Left = 0
         Top = 583
         Width = 1178
@@ -4117,6 +4149,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtJobSearchChange
         end
         object Panel5: TPanel
+          ParentBackground = False
           Left = 904
           Top = 1
           Width = 273
@@ -4180,6 +4213,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
       end
       object Panel7: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
@@ -4400,6 +4434,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel8: TPanel
+          ParentBackground = False
           Left = 1
           Top = 562
           Width = 1172
@@ -4430,6 +4465,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnChange = edtStockSearchChange
           end
           object Panel9: TPanel
+            ParentBackground = False
             Left = 986
             Top = 1
             Width = 185
@@ -4600,6 +4636,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel10: TPanel
+        ParentBackground = False
         Left = 0
         Top = 585
         Width = 1174
@@ -4624,6 +4661,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtInvoiceSearchChange
         end
         object Panel11: TPanel
+          ParentBackground = False
           Left = 894
           Top = 1
           Width = 283
@@ -4661,6 +4699,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Documents'
       ImageIndex = 4
       object Panel1: TPanel
+        ParentBackground = False
         Left = 0
         Top = 583
         Width = 1178
@@ -4786,6 +4825,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnExit = tbActivityExit
       OnShow = tbActivityShow
       object pnlActivityDetails: TPanel
+        ParentBackground = False
         Left = 0
         Top = 321
         Width = 1174
@@ -4795,6 +4835,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
         ExplicitHeight = 303
         object Panel17: TPanel
+          ParentBackground = False
           Left = 1
           Top = 1
           Width = 1172
@@ -4817,6 +4858,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel18: TPanel
+          ParentBackground = False
           Left = 1
           Top = 25
           Width = 821
@@ -4846,6 +4888,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel19: TPanel
+          ParentBackground = False
           Left = 822
           Top = 25
           Width = 351
@@ -4857,6 +4900,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlActivityList: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
@@ -4914,6 +4958,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel16: TPanel
+          ParentBackground = False
           Left = 1
           Top = 280
           Width = 1176
@@ -5023,6 +5068,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ImageIndex = 11
       OnShow = tbCrossSellingShow
       object Panel6: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
@@ -5032,6 +5078,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
       end
       object Panel20: TPanel
+        ParentBackground = False
         Left = 0
         Top = 25
         Width = 585
@@ -5040,6 +5087,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 1
         ExplicitHeight = 599
         object Panel21: TPanel
+          ParentBackground = False
           Left = 1
           Top = 405
           Width = 583
@@ -5067,6 +5115,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel25: TPanel
+          ParentBackground = False
           Left = 1
           Top = 381
           Width = 583
@@ -5113,6 +5162,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel22: TPanel
+          ParentBackground = False
           Left = 480
           Top = 1
           Width = 104
@@ -5183,6 +5233,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object Panel23: TPanel
+        ParentBackground = False
         Left = 585
         Top = 25
         Width = 192
@@ -5281,6 +5332,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ExplicitWidth = 1180
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 692
     Width = 1182
@@ -5549,6 +5601,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object pnlHeader: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1182

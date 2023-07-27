@@ -50,7 +50,7 @@ var
 
 implementation
 
-uses PBLUPriceUnit, ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses UITypes, PBLUPriceUnit, ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

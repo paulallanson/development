@@ -58,6 +58,7 @@
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 300
     Width = 337
@@ -168,6 +169,7 @@
     Kind = bkClose
   end
   object GoToGrpBox: TGroupBox
+    ParentBackground = False
     Left = 360
     Top = 8
     Width = 97
@@ -199,6 +201,7 @@
     end
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 366
     Top = 104
     Width = 87
@@ -276,6 +279,7 @@
     end
   end
   object DispPanel: TPanel
+    ParentBackground = False
     Left = 8
     Top = 372
     Width = 337

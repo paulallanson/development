@@ -25,6 +25,7 @@
   PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
+    ParentBackground = False
     Left = 0
     Top = 0
     Width = 800
@@ -201,6 +202,7 @@
     end
   end
   object pnlFooter: TPanel
+    ParentBackground = False
     Left = 0
     Top = 491
     Width = 800
@@ -433,6 +435,7 @@
     end
   end
   object pnlAddCharges: TPanel
+    ParentBackground = False
     Left = 0
     Top = 379
     Width = 800
@@ -529,6 +532,7 @@
     end
   end
   object pnlDetails: TPanel
+    ParentBackground = False
     Left = 0
     Top = 61
     Width = 800
@@ -537,6 +541,7 @@
     Caption = 'pnlDetails'
     TabOrder = 1
     object pnlLines: TPanel
+      ParentBackground = False
       Left = 1
       Top = 145
       Width = 798
@@ -577,6 +582,7 @@
       end
     end
     object pnlHead: TPanel
+      ParentBackground = False
       Left = 1
       Top = 1
       Width = 798
@@ -646,6 +652,7 @@
         Caption = 'Deliver to'
       end
       object pnlWarehouse: TPanel
+        ParentBackground = False
         Left = 384
         Top = 88
         Width = 401
@@ -797,6 +804,7 @@
         OnClick = dblkpReplTypeClick
       end
       object pnlDeliveryType: TPanel
+        ParentBackground = False
         Left = 486
         Top = 2
         Width = 307
@@ -842,6 +850,7 @@
         end
       end
       object pnlSupplier: TPanel
+        ParentBackground = False
         Left = 392
         Top = 88
         Width = 401
@@ -898,6 +907,7 @@
         end
       end
       object pnlCostCentre: TPanel
+        ParentBackground = False
         Left = 0
         Top = 59
         Width = 329

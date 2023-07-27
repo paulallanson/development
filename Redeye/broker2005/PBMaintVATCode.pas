@@ -110,7 +110,7 @@ var
 
 implementation
 
-uses PBLUPriceUnit, PBLUVATCode, PBDatabase, pbMainMenu;
+uses UITypes, PBLUPriceUnit, PBLUVATCode, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 
@@ -327,8 +327,7 @@ begin
         Result := 'X';
       end;
     end;
-  except
-    MessageDlg('Invalid financial value - ' + TempQty, mtError, [mbOK], 0);
+  except MessageDlg('Invalid financial value - ' + TempQty, mtError, [mbOK], 0);
     Result := 'X';
   end;
 end;

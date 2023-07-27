@@ -18,6 +18,7 @@
   PixelsPerInch = 96
   TextHeight = 13
   object DetsGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 4
     Width = 451
@@ -117,6 +118,7 @@
     end
   end
   object Panel1: TPanel
+    ParentBackground = False
     Left = 0
     Top = 135
     Width = 468

@@ -232,6 +232,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
     object tbGeneral: TTabSheet
       Caption = 'General Details'
       object pnlDets: TPanel
+        ParentBackground = False
         Left = 0
         Top = 0
         Width = 425
@@ -488,6 +489,7 @@ object PBMaintBranchFrm: TPBMaintBranchFrm
           OnExit = AccCodeEditExit
         end
         object InvToGrpBox: TGroupBox
+          ParentBackground = False
           Left = 8
           Top = 363
           Width = 409

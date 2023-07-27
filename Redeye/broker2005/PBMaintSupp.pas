@@ -150,7 +150,7 @@ var
 
 implementation
 
-uses PBDBMemo, PBMaintSuppCap, pbDatabase, PBImages, PBLUPrdTyp,
+uses FireDAC.Stan.Param, UITypes, PBDBMemo, PBMaintSuppCap, pbDatabase, PBImages, PBLUPrdTyp,
   pbMainMenu, ComObj, ActiveX, CCSPrint, pbLuVatCode, PBMaintSuppCharges,
   STLUCourier, PBMaintDocument, CCSCommon, PBLUPaymentTerms;
 
@@ -376,8 +376,7 @@ begin
       ParamByName('Name').AsString := NameEdit.Text + '';
       if ActiveChkBox.Checked then
         ParamByName('Acc_Active').AsString := 'Y'
-      else
-        ParamByName('Acc_Active').AsString := 'N';
+      else ParamByName('Acc_Active').AsString := 'N';
       ParamByName('Discount').AsFloat := StrToFloat(DiscountMemo.Text);
       ParamByName('Intrastat_Id').AsInteger :=
         IntrastatDBLookupComboBox.KeyValue;
@@ -913,7 +912,7 @@ begin
     if PBMaintSuppChargesfrm.bOK then
       begin
         ShowCharges;
-        if Mode in ['A','C'] then
+        if CharInSet(Mode, ['A','C']) then
           iCharge := PBMaintSuppChargesfrm.iCharge
         else
         if Mode = 'D' then

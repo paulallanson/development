@@ -224,6 +224,7 @@
       OnChange = NameEditChange
     end
     object ReplenRadioGroup: TRadioGroup
+      ParentBackground = False
       Left = 8
       Top = 64
       Width = 113

@@ -93,7 +93,7 @@ var
 
 implementation
 
-uses PBDBMemo, PBMaintSuppCap, pbDatabase, pbMainMenu, PBImages, CCSPrint;
+uses UITypes, PBDBMemo, PBMaintSuppCap, pbDatabase, pbMainMenu, PBImages, CCSPrint;
 
 {$R *.DFM}
 
@@ -388,9 +388,7 @@ begin
     First;
     if (not EOF) then
     begin
-      MessageDlg('The account code: ' + AccCodeEdit.Text +
-        ' is already in use on supplier: ' +
-        FieldByName('Name').AsString, mtError, [mbOK], 0);
+      MessageDlg('The account code: ' + AccCodeEdit.Text + ' is already in use on supplier: ' + FieldByName('Name').AsString, mtError, [mbOK], 0);
       AccCodeEdit.Text := sOldValue;
       AccCodeEdit.SetFocus;
     end;

@@ -140,6 +140,7 @@
     Kind = bkClose
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 336
     Top = 8
     Width = 87

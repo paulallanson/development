@@ -54,7 +54,7 @@ var
 
 implementation
 
-uses CCSCommon;
+uses UITypes, CCSCommon;
 
 {$R *.DFM}
 
@@ -94,7 +94,7 @@ begin
   end;
 
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in ['D','V']);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, ['D','V']);
   DelLabel.Visible := (FFuncMode = 'D');
   OKBitBtn.Visible := (FFuncMode <> 'V');
   CheckOK(Self);
@@ -115,7 +115,7 @@ end;
 
 procedure TPBMaintSuppChargesFrm.OKBitBtnClick(Sender: TObject);
 begin
-  if FFuncMode in ['A','C'] then
+  if CharInSet(FFuncMode, ['A','C']) then
   begin
     if FFuncMode = 'A' then
       begin

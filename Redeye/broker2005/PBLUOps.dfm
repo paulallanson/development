@@ -151,6 +151,7 @@
     ExplicitTop = 327
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 337
     Top = 144
     Width = 90
@@ -230,6 +231,7 @@
     end
   end
   object grpbxReport: TGroupBox
+    ParentBackground = False
     Left = 337
     Top = 12
     Width = 90
@@ -286,6 +288,7 @@
     end
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 288
     Width = 321

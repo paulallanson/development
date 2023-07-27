@@ -104,7 +104,7 @@ var
 
 implementation
 
-uses PBDBMemo, PBLUPrdTyp, PBImages, PBNarrativeDM, ComObj, ActiveX,
+uses UITypes, PBDBMemo, PBLUPrdTyp, PBImages, PBNarrativeDM, ComObj, ActiveX,
   PBMaintGroups, PBDatabase, pbMainMenu;
 
 {$R *.DFM}

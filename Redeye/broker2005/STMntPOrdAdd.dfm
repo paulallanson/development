@@ -73,6 +73,7 @@
       end>
   end
   object SearchGroupBox: TGroupBox
+    ParentBackground = False
     Left = 16
     Top = 312
     Width = 345
@@ -148,6 +149,7 @@
     NumGlyphs = 2
   end
   object SuppRadioGroup: TRadioGroup
+    ParentBackground = False
     Left = 368
     Top = 312
     Width = 281

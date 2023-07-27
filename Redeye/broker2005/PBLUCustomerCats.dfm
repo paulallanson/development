@@ -83,6 +83,7 @@
       end>
   end
   object SearchGrpBox: TGroupBox
+    ParentBackground = False
     Left = 8
     Top = 280
     Width = 321
@@ -107,6 +108,7 @@
     Kind = bkClose
   end
   object FuncGrpBox: TGroupBox
+    ParentBackground = False
     Left = 480
     Top = 144
     Width = 87

@@ -186,7 +186,7 @@ var
 
 implementation
 
-uses PBLUSupp, PBLUSConta, ComObj, ActiveX, PBMaintGroups, PBDBMemo,
+uses UITypes, PBLUSupp, PBLUSConta, ComObj, ActiveX, PBMaintGroups, PBDBMemo,
   PBImages, PBDatabase, pbMainMenu;
 
 {$R *.DFM}

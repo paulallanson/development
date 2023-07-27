@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX;
+uses UITypes, ComObj, ActiveX;
 
 {$R *.DFM}
 

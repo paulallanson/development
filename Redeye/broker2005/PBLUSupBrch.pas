@@ -151,7 +151,7 @@ var
 
 implementation
 
-uses PBMaintSupp, PBMaintSupBrch, PBLUSConta, 
+uses UITypes, PBMaintSupp, PBMaintSupBrch, PBLUSConta, 
   pbMainMenu, PBDatabase;
 
 {$R *.DFM}
@@ -289,8 +289,7 @@ begin
   if (sTempFuncMode = 'D') and
     (DetsSRC.DataSet.FieldByName('Branch_No').AsInteger = 0) then
   begin
-    MessageDlg('You can''t delete the main (head office) address details',
-      mtError, [mbOK], 0);
+    MessageDlg('You can''t delete the main (head office) address details', mtError, [mbOK], 0);
     Exit;
   end;
   PBMaintSupBrchFrm := TPBMaintSupBrchFrm.Create(Self);
