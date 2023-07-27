@@ -179,7 +179,7 @@ var
 
 implementation
 
-uses PBLUCust, PBMaintBranch, PBLUBranch, PBLUCConta, ComObj, ActiveX,
+uses UITypes, PBLUCust, PBMaintBranch, PBLUBranch, PBLUCConta, ComObj, ActiveX,
   PBMaintGroups, PBImages, PBDatabase, pbMainMenu;
 
 {$R *.DFM}

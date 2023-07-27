@@ -46,7 +46,7 @@ var
 
 implementation
 
-uses PBLUCustCstCntr;
+uses UITypes, PBLUCustCstCntr;
 
 {$R *.DFM}
 

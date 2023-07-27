@@ -149,7 +149,7 @@ var
 
 implementation
 
-uses CCSPrint, PBAuditDM, PBLUBranch, pbDatabase,
+uses UITypes, CCSPrint, PBAuditDM, PBLUBranch, pbDatabase,
   PBImages, PBLUCust, pbLuBranches, pbMainMenu, PBMaintCConta,
   PBMaintBranchCstCntr, PBLUCConta;
 
@@ -744,9 +744,7 @@ begin
     First;
     if (not EOF) then
     begin
-      MessageDlg('The account code: ' + AccCodeEdit.Text +
-        ' is already in use on customer: ' +
-        FieldByName('Name').AsString, mtError, [mbOK], 0);
+      MessageDlg('The account code: ' + AccCodeEdit.Text + ' is already in use on customer: ' + FieldByName('Name').AsString, mtError, [mbOK], 0);
       AccCodeEdit.Text := sOldValue;
       AccCodeEdit.SetFocus;
     end;

@@ -204,7 +204,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDBMemo, pbMainMenu, PBLUCContaEvents, PBDatabase;
+uses UITypes, ComObj, ActiveX, PBDBMemo, pbMainMenu, PBLUCContaEvents, PBDatabase;
 
 {$R *.DFM}
 
