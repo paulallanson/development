@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, Inifiles, ImgList, ToolWin, ClipBrd, ActnList;
+  Dialogs, StdCtrls, ExtCtrls, Buttons, ComCtrls, Inifiles, ImgList, ToolWin, ClipBrd, ActnList,
+  System.ImageList;
 
 type
   TPBMaintainEmailfrm = class(TForm)
@@ -247,7 +248,7 @@ begin
 //  CurrText.Name := DefFontData.Name;
   CurrText.Name := Font;
   CurrText.Size := -MulDiv(DefFontData.Height, 72, Screen.PixelsPerInch);
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 function EnumFontsProc(var LogFont: TLogFont; var TextMetric: TTextMetric;
@@ -271,15 +272,17 @@ procedure TPBMaintainEmailfrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Email', 'Email Font',Font);
       WriteString('Email', 'Email Font Size',inttostr(FontSize));
-      Free;
     end;
-    
+  finally
+    IniFile.Free;
+  end;
+
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 

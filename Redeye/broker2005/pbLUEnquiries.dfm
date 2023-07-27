@@ -2,8 +2,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   Left = 59
   Top = 161
   Caption = 'Enquiries'
-  ClientHeight = 360
-  ClientWidth = 887
+  ClientHeight = 359
+  ClientWidth = 883
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 341
-    Width = 887
+    Top = 340
+    Width = 883
     Height = 19
     Panels = <
       item
@@ -35,15 +35,19 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       item
         Width = 50
       end>
+    ExplicitTop = 341
+    ExplicitWidth = 887
   end
   object Panel1: TPanel
     Left = 0
-    Top = 300
-    Width = 887
+    Top = 299
+    Width = 883
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 300
+    ExplicitWidth = 887
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -111,8 +115,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 887
-    Height = 225
+    Width = 883
+    Height = 224
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -217,15 +221,16 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 887
+    Width = 883
     Height = 45
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 881
+        Width = 885
       end>
+    ExplicitWidth = 887
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -236,7 +241,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 860
+        Width = 872
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59
@@ -371,7 +376,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 887
+    Width = 883
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -379,6 +384,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 887
     object Label3: TLabel
       Left = 8
       Top = 3

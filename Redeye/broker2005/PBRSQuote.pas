@@ -485,12 +485,12 @@ var
   IniFile : TIniFile;
   sShowDetails: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      sShowDetails := ReadString('Quoting', 'Show Quote Cost Breakdown', 'None');
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    sShowDetails := IniFile.ReadString('Quoting', 'Show Quote Cost Breakdown', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   if (sShowDetails = 'None') or (sShowDetails = 'N') then
     chkbxShowDetails.checked := false
@@ -510,13 +510,13 @@ begin
   else
     sShowDetails := 'N';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Quoting', 'Show Quote Cost Breakdown', sShowDetails);
+  finally
+    IniFile.Free;
+  end;
 
-  with IniFile do
-    begin
-      WriteString('Quoting', 'Show Quote Cost Breakdown', sShowDetails);
-      Free;
-    end;
   FEmailAttachment.Free;
 end;
 

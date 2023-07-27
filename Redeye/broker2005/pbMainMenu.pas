@@ -377,7 +377,7 @@ type
     WorkStation: Integer;
     sCompName: string;
     EmailApplication, EmailLocation, EmailAccount, InvoiceEmailAccount: string;
-    AppIniFile: Array [0..255] of char;
+    class var AppIniFile: array [0..255] of Char;
     property EnquiryReminder: boolean read FEnquiryReminder write SetEnquiryReminder;
     property QuoteReminder: boolean read FQuoteReminder write SetQuoteReminder;
     property ProofReminder: boolean read FProofReminder write SetProofReminder;
@@ -516,12 +516,15 @@ var
   iActivityInterval: integer;
 begin
   LocalDrive := copy(GetWinSysDir,1,2);
-	LocalDir := extractfilepath(application.ExeName);
+	LocalDir := ExtractFilePath(Application.ExeName);
+  StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
 
+  (* GDK ToDo: remove after tests
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+'Redeye.ini')
+    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
   else
-    StrPCopy(AppIniFile,'Redeye.ini');
+    StrPCopy(AppIniFile,myRedeye_INIFILE);
+  *)
 
 {$IFDEF FORMPRO} {Setup the directories}
 	ServDir := '\\FPSERVER1\MIS\Centrereed\Broker' ;
@@ -932,7 +935,7 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin

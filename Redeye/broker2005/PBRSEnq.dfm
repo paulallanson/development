@@ -1,11 +1,11 @@
-﻿object PBRSEnqFrm: TPBRSEnqFrm
+object PBRSEnqFrm: TPBRSEnqFrm
   Left = 196
   Top = 124
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Enquiry Print'
-  ClientHeight = 328
-  ClientWidth = 411
+  ClientHeight = 327
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -113,12 +113,14 @@
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 160
-    Width = 411
+    Top = 159
+    Width = 407
     Height = 168
     Align = alBottom
     Anchors = [akLeft, akBottom]
     TabOrder = 3
+    ExplicitTop = 160
+    ExplicitWidth = 411
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 135
@@ -358,34 +360,22 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'iintselcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetEnqSuppSQL: TFDQuery
@@ -462,24 +452,18 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'iintselcode'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -505,14 +489,12 @@
     Top = 76
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -525,9 +507,7 @@
     Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -552,19 +532,16 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
 end

@@ -2,8 +2,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   Left = 211
   Top = 165
   Caption = 'Works Instructions'
-  ClientHeight = 332
-  ClientWidth = 880
+  ClientHeight = 311
+  ClientWidth = 876
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,13 +24,14 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 880
+    Width = 876
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
+    ExplicitWidth = 880
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -63,15 +64,16 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 880
+    Width = 876
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 874
+        Width = 878
       end>
+    ExplicitWidth = 880
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -166,8 +168,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 880
-    Height = 197
+    Width = 876
+    Height = 176
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -266,11 +268,13 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 272
-    Width = 880
+    Top = 251
+    Width = 876
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 272
+    ExplicitWidth = 880
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -345,8 +349,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 313
-    Width = 880
+    Top = 292
+    Width = 876
     Height = 19
     Panels = <
       item
@@ -358,6 +362,8 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       item
         Width = 50
       end>
+    ExplicitTop = 313
+    ExplicitWidth = 880
   end
   object tmrSearch: TTimer
     Enabled = False

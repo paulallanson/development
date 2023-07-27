@@ -82,8 +82,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       item
         Width = 300
       end>
-    ExplicitTop = 558
-    ExplicitWidth = 817
+    ExplicitTop = 566
+    ExplicitWidth = 819
   end
   object pnlFooter: TPanel
     Left = 0
@@ -92,8 +92,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Height = 37
     Align = alBottom
     TabOrder = 4
-    ExplicitTop = 521
-    ExplicitWidth = 817
+    ExplicitTop = 529
+    ExplicitWidth = 819
     DesignSize = (
       823
       37)
@@ -163,7 +163,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 627
+      ExplicitLeft = 629
     end
     object CancelBitBtn: TBitBtn
       Left = 729
@@ -231,7 +231,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 723
+      ExplicitLeft = 725
     end
   end
   object pnlLineDetails: TPanel
@@ -242,8 +242,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Align = alBottom
     Caption = 'pnlLineDetails'
     TabOrder = 3
-    ExplicitTop = 264
-    ExplicitWidth = 817
+    ExplicitTop = 272
+    ExplicitWidth = 819
     object EnquiryLinePage: TPageControl
       Tag = 180
       Left = 1
@@ -253,7 +253,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ActivePage = TabSheet6
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 815
+      ExplicitWidth = 817
       object PartTabSheet: TTabSheet
         Caption = 'Part Details'
         DesignSize = (
@@ -795,7 +795,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           TabOrder = 0
           OnDblClick = SupplierGridDblClick
           OnDrawCell = SupplierGridDrawCell
-          ExplicitWidth = 683
+          ExplicitWidth = 685
           ColWidths = (
             204
             182
@@ -837,7 +837,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             FFFFFFFFFFFFFFFFFFFFFF3F00007F0000FFFFFFFFFFFFFFFFFF}
           TabOrder = 1
           OnClick = BitBtn4Click
-          ExplicitLeft = 710
+          ExplicitLeft = 712
         end
         object ContactSelBitBtn: TBitBtn
           Left = 716
@@ -862,7 +862,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           NumGlyphs = 2
           TabOrder = 2
           OnClick = ContactSelBitBtnClick
-          ExplicitLeft = 710
+          ExplicitLeft = 712
         end
       end
       object OptionsTabSheet: TTabSheet
@@ -991,7 +991,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C000000000000046000000000000000000000000C07943A0F2BED901
+              00000000C0000000000000460000000000000000000000005016A96D1EC0D901
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1167,7 +1167,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              00000000000000000000000000000000C07943A0F2BED901C07943A0F2BED901
+              000000000000000000000000000000005016A96D1EC0D9015016A96D1EC0D901
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1644,7 +1644,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C000000000000046000000000000000000000000C07943A0F2BED901
+              00000000C0000000000000460000000000000000000000005016A96D1EC0D901
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1982,8 +1982,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Align = alClient
     Caption = 'pnlLines'
     TabOrder = 2
-    ExplicitWidth = 817
-    ExplicitHeight = 94
+    ExplicitWidth = 819
+    ExplicitHeight = 102
     object Panel1: TPanel
       Left = 728
       Top = 1
@@ -1991,8 +1991,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Height = 101
       Align = alRight
       TabOrder = 0
-      ExplicitLeft = 722
-      ExplicitHeight = 92
+      ExplicitLeft = 724
+      ExplicitHeight = 100
       DesignSize = (
         94
         101)
@@ -2093,8 +2093,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
       OnClick = EnquiryLineGridClick
       OnDblClick = EnquiryLineGridDblClick
-      ExplicitWidth = 721
-      ExplicitHeight = 92
+      ExplicitWidth = 723
+      ExplicitHeight = 100
       ColWidths = (
         40
         213
@@ -2110,7 +2110,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 817
+    ExplicitWidth = 819
     DesignSize = (
       823
       41)
@@ -2207,7 +2207,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Style = csDropDownList
       Anchors = [akTop, akRight]
       TabOrder = 1
-      ExplicitLeft = 636
+      ExplicitLeft = 638
     end
     object ReqByDateEdit: TEdit
       Left = 440
@@ -2217,7 +2217,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Anchors = [akTop, akRight]
       TabOrder = 2
       OnExit = ReqByDateEditExit
-      ExplicitLeft = 434
+      ExplicitLeft = 436
     end
     object edtEnquiryNo: TEdit
       Left = 72
@@ -2236,7 +2236,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Height = 129
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 817
+    ExplicitWidth = 819
     DesignSize = (
       823
       129)
@@ -2287,7 +2287,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ReadOnly = True
       TabOrder = 0
       OnChange = CustomerEditChange
-      ExplicitWidth = 269
+      ExplicitWidth = 271
     end
     object CustRepCombo: TComboBox
       Left = 594
@@ -2299,7 +2299,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
       OnChange = CustRepComboChange
       OnDropDown = CustRepComboDropDown
-      ExplicitLeft = 588
+      ExplicitLeft = 590
     end
     object ContactCombo: TComboBox
       Left = 166
@@ -2311,7 +2311,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 2
       OnChange = ContactComboChange
       OnDropDown = ContactComboDropDown
-      ExplicitWidth = 269
+      ExplicitWidth = 271
     end
     object BranchEdit: TEdit
       Left = 166
@@ -2323,7 +2323,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ReadOnly = True
       TabOrder = 3
       OnChange = BranchEditChange
-      ExplicitWidth = 269
+      ExplicitWidth = 271
     end
     object DescriptionEdit: TEdit
       Left = 166
@@ -2334,7 +2334,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       MaxLength = 80
       TabOrder = 4
       OnChange = DescriptionEditChange
-      ExplicitWidth = 599
+      ExplicitWidth = 601
     end
     object CustomerSpeedButton: TButton
       Left = 450
@@ -2351,7 +2351,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 5
       OnClick = CustomerSpeedButtonClick
-      ExplicitLeft = 444
+      ExplicitLeft = 446
     end
     object BranchSpeedButton: TButton
       Left = 450
@@ -2368,7 +2368,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 6
       OnClick = BranchSpeedButtonClick
-      ExplicitLeft = 444
+      ExplicitLeft = 446
     end
     object ContactSpeedButton: TButton
       Left = 450
@@ -2385,7 +2385,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 7
       OnClick = ContactSpeedButtonClick
-      ExplicitLeft = 444
+      ExplicitLeft = 446
     end
     object RepSpeedButton: TButton
       Left = 782
@@ -2403,7 +2403,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ParentFont = False
       TabOrder = 8
       OnClick = RepSpeedButtonClick
-      ExplicitLeft = 776
+      ExplicitLeft = 778
     end
     object rdgType: TRadioGroup
       Left = 9
@@ -2447,19 +2447,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object QuestionSQL: TFDQuery
@@ -2473,9 +2467,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
   object InsEnqLineQtySQL: TFDQuery
@@ -2491,19 +2483,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLineCapSQL: TFDQuery
@@ -2525,24 +2511,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cap'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLineQSQL: TFDQuery
@@ -2562,29 +2540,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Answer'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLineAddSQL: TFDQuery
@@ -2606,29 +2574,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FAO'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLinePartSQL: TFDQuery
@@ -2683,89 +2641,66 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Heading'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Same_as'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Brand'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Material'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Weight'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Colour'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Face'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Reverse'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'L_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'L_Width'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'R_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'R_Width'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Plates'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end>
   end
   object UpCompanySQL: TFDQuery
@@ -2792,9 +2727,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddEnqSupplierSQL: TFDQuery
@@ -2818,34 +2752,23 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 170
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Run_on_Quantity'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqLineSQL: TFDQuery
@@ -2856,9 +2779,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqLineQtySQL: TFDQuery
@@ -2869,9 +2790,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqQStSQL: TFDQuery
@@ -2882,9 +2801,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqLineAddSQL: TFDQuery
@@ -2895,9 +2812,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqPartSQL: TFDQuery
@@ -2910,9 +2825,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqCapSQL: TFDQuery
@@ -2923,9 +2836,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSuppSQL: TFDQuery
@@ -2936,9 +2847,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSuppQtySQL: TFDQuery
@@ -2949,9 +2858,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSuppAddSQL: TFDQuery
@@ -2962,9 +2869,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object GetLastNarrSQL: TFDQuery
@@ -2990,19 +2895,14 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Narrative_Text'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddEnqLineSQL: TFDQuery
@@ -3062,103 +2962,66 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'NCR'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'D_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Width'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'W_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Artwork'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Forms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Plates'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Response'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Firm_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Run_on_Quantity'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Run_on_Quantity'
+      end
+      item
         Name = 'job_type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -3174,24 +3037,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 154
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object DelAllEnqSuppQtysSQL: TFDQuery
@@ -3206,24 +3061,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 178
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object CheckEnqSuppSQL: TFDQuery
@@ -3239,24 +3086,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 146
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object CheckEnqSuppQtySQL: TFDQuery
@@ -3273,29 +3112,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 170
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object CheckEnqQtySQL: TFDQuery
@@ -3309,19 +3138,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object PaperDetailSQL: TFDQuery
@@ -3349,24 +3172,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqSupplierSQL: TFDQuery
@@ -3384,34 +3199,23 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 264
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Run_on_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object QuestListSQL: TFDQuery
@@ -3425,14 +3229,10 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object OptionsSQL: TFDQuery
@@ -3445,9 +3245,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLineOptSQL: TFDQuery
@@ -3471,24 +3269,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Optional_Charge'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqOptSQL: TFDQuery
@@ -3499,9 +3289,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end>
   end
   object AddEnqSuppOChgsSQL: TFDQuery
@@ -3521,34 +3309,22 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 346
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end>
   end
   object GetLastAddChgSQL: TFDQuery
@@ -3564,24 +3340,16 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 362
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object CheckEnqSuppOChgsSQL: TFDQuery
@@ -3598,29 +3366,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 354
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSuppOChgsSQL: TFDQuery
@@ -3636,29 +3394,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 410
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end>
   end
   object svDlgOfficeDoc: TSaveDialog
@@ -3676,14 +3424,10 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 298
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryDelEnqLineParts: TFDQuery
@@ -3697,19 +3441,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 308
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetActiveCustomerContact: TFDQuery
@@ -3727,19 +3465,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 600
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object custreps: TFDQuery
@@ -3758,14 +3490,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 26
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'custid'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'branchid'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object QCustomer: TFDQuery
@@ -3778,14 +3508,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 18
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object ContactSQL: TFDQuery
@@ -3804,19 +3532,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object AddEnqSuppQtySQL: TFDQuery
@@ -3844,34 +3566,22 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 66
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty'
-        ParamType = ptUnknown
       end>
   end
   object CustRepSQL: TFDQuery
@@ -3889,14 +3599,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object OperatorSQL: TFDQuery
@@ -3942,69 +3650,43 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Req_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqLineSQL: TFDQuery
@@ -4037,104 +3719,67 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'NCR'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Depth'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'D_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Width'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'W_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Artwork'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Forms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Plates'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Response'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Firm_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Run_on_Quantity'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Run_on_Quantity'
+      end
+      item
         Name = 'job_type'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqHeaderSQL: TFDQuery
@@ -4159,69 +3804,43 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Req_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Office_Contact'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Prospect_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object GetEnqSupplierSQL: TFDQuery
@@ -4236,14 +3855,10 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 98
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSupplierQtySQL: TFDQuery
@@ -4259,29 +3874,19 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 122
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqQtySQL: TFDQuery
@@ -4295,19 +3900,13 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 218
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object qryProductType: TFDQuery
@@ -4319,9 +3918,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object DocOpenDialog: TOpenDialog
@@ -4340,9 +3937,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -278,13 +278,9 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
-    begin
-      chkbxPrintLogo.Checked := (ReadString('Redeye', 'Delivery Note - Print Logo', 'N') = 'Y');
-    end;
+    chkbxPrintLogo.Checked := IniFile.ReadString('Redeye', 'Delivery Note - Print Logo', 'N') = 'Y';
   finally
     IniFile.Free;
   end;
@@ -327,14 +323,14 @@ procedure TPBRSJobBagDelivNoteFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Delivery Note Bin',inttostr(DefaultBin));
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Delivery Note Bin',inttostr(DefaultBin));
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;
@@ -399,17 +395,16 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      if chkbxPrintLogo.checked then
-        WriteString('Redeye', 'Delivery Note - Print Logo', 'Y')
-      else
-        WriteString('Redeye', 'Delivery Note - Print Logo', 'N');
-
-      Free;
-    end;
+  try
+    if chkbxPrintLogo.checked then
+      WriteString('Redeye', 'Delivery Note - Print Logo', 'Y')
+    else
+      WriteString('Redeye', 'Delivery Note - Print Logo', 'N');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSJobBagDelivNoteFrm.SetJobBag(const Value: integer);

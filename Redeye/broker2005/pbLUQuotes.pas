@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ExtCtrls, ImgList, ComCtrls, Buttons, StdCtrls, Grids,
-  DBGrids, ToolWin, DB, pbQuotesDM, IniFiles, pbJobBagDM;
+  DBGrids, ToolWin, DB, pbQuotesDM, IniFiles, pbJobBagDM, System.ImageList;
 
 type
   TfrmPBLUQuotes = class(TForm)
@@ -129,14 +129,16 @@ var
   stempDate: string;
   sShowLive: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       stempdate := ReadString('Centrereed Broker', 'Quote Search Date', 'None');
       sShowLive := ReadString('Centrereed Broker', 'Show Live Quotes', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllQuotes := TdtmdlQuotes.create(self);
 
@@ -166,14 +168,16 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlAllQuotes.QuoteDate));
       WriteString('Centrereed Broker', 'Show Live Quotes', sShowLive);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllQuotes.free;
 end;

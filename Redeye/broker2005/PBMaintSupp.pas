@@ -883,7 +883,7 @@ end;
 procedure TPBMaintSuppFrm.FormCreate(Sender: TObject);
 begin
   dtmdlOneSupplier := TdtmdlSuppliers.create(self);
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBMaintSuppFrm.btnAddChgClick(Sender: TObject);

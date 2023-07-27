@@ -1,27 +1,25 @@
 object PBLUJobLogFrm: TPBLUJobLogFrm
   Left = 143
   Top = 112
-  Width = 870
-  Height = 480
   Caption = 'Shop Floor Data Capture Raw Data'
+  ClientHeight = 441
+  ClientWidth = 854
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 862
-    Height = 350
+    Width = 854
+    Height = 345
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 0
@@ -156,13 +154,15 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 350
-    Width = 862
+    Top = 345
+    Width = 854
     Height = 36
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 350
+    ExplicitWidth = 862
     DesignSize = (
-      862
+      854
       36)
     object Label1: TLabel
       Left = 696
@@ -239,19 +239,21 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       Top = 8
       Width = 89
       Height = 21
-      Date = 39825.441564409720000000
-      Time = 39825.441564409720000000
+      Date = 39825.000000000000000000
+      Time = 0.441564409717102500
       TabOrder = 3
       OnChange = dtmDateFromChange
     end
   end
   object Panel1: TPanel
     Left = 0
-    Top = 386
-    Width = 862
+    Top = 381
+    Width = 854
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 386
+    ExplicitWidth = 862
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -303,8 +305,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Excel'
-        TabOrder = 1
-        OnClick = btnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -348,13 +348,15 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 1
+        OnClick = btnExcelClick
       end
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 427
-    Width = 862
+    Top = 422
+    Width = 854
     Height = 19
     Panels = <
       item
@@ -363,6 +365,8 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       item
         Width = 200
       end>
+    ExplicitTop = 427
+    ExplicitWidth = 862
   end
   object tmrSearch: TTimer
     OnTimer = tmrSearchTimer

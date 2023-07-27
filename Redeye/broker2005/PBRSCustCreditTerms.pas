@@ -201,10 +201,9 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       chkbxPrintLogo.Checked := (ReadString('Redeye', 'Credit Terms Letter - Print Logo', 'N') = 'Y');
       iOperator := strtoint(ReadString('Redeye', 'Credit Terms Letter - Operator', '0'));
@@ -219,9 +218,9 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       if chkbxPrintLogo.checked then
         WriteString('Redeye', 'Credit Terms Letter - Print Logo', 'Y')
@@ -229,8 +228,10 @@ begin
         WriteString('Redeye', 'Credit Terms Letter - Print Logo', 'N');
 
       WriteString('Redeye', 'Credit Terms Letter - Operator', inttostr(dblkpOperator.KeyValue));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

@@ -638,16 +638,16 @@ procedure TPBRSBoxLabelsfrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Label Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Label Printer Bin',inttostr(DefaultBin));
-      WriteString('Centrereed Broker', 'Label Printer Paper',inttostr(DefaultPaper));
-      WriteString('Centrereed Broker', 'Label Printer Format',sFormat);
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Label Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Label Printer Bin',inttostr(DefaultBin));
+    WriteString('Centrereed Broker', 'Label Printer Paper',inttostr(DefaultPaper));
+    WriteString('Centrereed Broker', 'Label Printer Format',sFormat);
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

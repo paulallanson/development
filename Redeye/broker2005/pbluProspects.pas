@@ -8,7 +8,7 @@ uses
   ImgList, pbCustomerDM, Buttons, db, pbluCustEvents, Inifiles,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TfrmPBLUProspects = class(TForm)
@@ -178,10 +178,9 @@ procedure TfrmPBLUProspects.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       if (ReadString('Prospect', 'Colour Coding', '0') = '0') then
         cmbColourCoding.itemindex := 0
@@ -331,13 +330,12 @@ procedure TfrmPBLUProspects.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
-
-  with IniFile do
-    begin
-      WriteString('Prospect', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Prospect', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlProspects.free;
 end;

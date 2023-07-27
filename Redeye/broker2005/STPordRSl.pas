@@ -792,7 +792,7 @@ begin
 
   DefaultPrinter := TempArray;
 
-(*  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+(*  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin
@@ -840,7 +840,7 @@ procedure TSTPordRSlFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   try
     IniFile.WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);

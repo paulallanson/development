@@ -67,13 +67,13 @@ begin
 	CopyIfNewer('ticktock.exe', 'Data Capture Program') ;
 
 (*  {Create the INI file}
-  CreateINIfile('redeye.ini');
+  CreateINIfile(myRedeye_INIFILE);
 
   {Do the Broker ini file} ;
 	try
     StatusNarr('Checking Broker INI File') ;
 	  CopyIfNewerINI('Broker.ini', 'Broker.ini', 'Broker INI File') ;
-    AppendtoINIfile('Broker.ini','redeye.ini');
+    AppendtoINIfile('Broker.ini',myRedeye_INIFILE);
   except
   end;
 

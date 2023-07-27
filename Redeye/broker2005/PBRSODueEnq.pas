@@ -519,15 +519,17 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       FEmailApplication := ReadString('Email', 'Application', 'None');
       FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
       FEmailAttachmentType := ReadString ('Email', 'Def Attach Type', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSODueEnqFrm.PrintToAttachment(Sender: TObject);

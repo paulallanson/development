@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 371
-  ClientWidth = 683
+  ClientHeight = 370
+  ClientWidth = 679
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 683
+    Width = 679
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 677
+        Width = 681
       end>
+    ExplicitWidth = 683
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -94,8 +95,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 683
-    Height = 236
+    Width = 679
+    Height = 235
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -214,12 +215,14 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 311
-    Width = 683
+    Top = 310
+    Width = 679
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 311
+    ExplicitWidth = 683
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -286,8 +289,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 352
-    Width = 683
+    Top = 351
+    Width = 679
     Height = 19
     Panels = <
       item
@@ -299,11 +302,13 @@ object frmPBluNCA: TfrmPBluNCA
       item
         Width = 50
       end>
+    ExplicitTop = 352
+    ExplicitWidth = 683
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 683
+    Width = 679
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -311,6 +316,7 @@ object frmPBluNCA: TfrmPBluNCA
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 683
     object Label3: TLabel
       Left = 8
       Top = 3

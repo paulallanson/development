@@ -11,10 +11,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
@@ -297,19 +295,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'DateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InvOrCred'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvByNumber: TFDQuery
@@ -346,14 +338,10 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'IntSel'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'InvOrCred'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvs: TFDQuery
@@ -388,14 +376,10 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_InvNum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_InvNum'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -408,9 +392,7 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -435,19 +417,15 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -464,14 +442,10 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -495,19 +469,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Factoring_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Factoring_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
 end

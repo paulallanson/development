@@ -3,21 +3,19 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Print Job Bag Delivery Note'
-  ClientHeight = 195
-  ClientWidth = 403
+  ClientHeight = 194
+  ClientWidth = 399
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object CancelBitBtn: TBitBtn
     Left = 6
@@ -30,9 +28,10 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
-    Kind = bkCancel
   end
   object Previewbitbtn: TBitBtn
     Left = 141
@@ -45,9 +44,6 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PreviewbitbtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -62,6 +58,9 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PreviewbitbtnClick
   end
   object SetupBitBtn: TBitBtn
     Left = 317
@@ -75,9 +74,6 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = SetupBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -92,6 +88,9 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
       07557777777F55557F5555000005555707555577777FF5557F55553000075557
       0755557F7777FFF5755555335000005555555577577777555555}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = SetupBitBtnClick
   end
   object OrderGroupBox: TGroupBox
     Left = 8
@@ -164,8 +163,6 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
       Top = 48
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -180,6 +177,8 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
     object QtyEdit: TEdit
       Left = 88
@@ -211,9 +210,6 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -228,5 +224,8 @@ object PBRSJobBagDelivNoteFrm: TPBRSJobBagDelivNoteFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 5
+    OnClick = PrintBitBtnClick
   end
 end

@@ -613,7 +613,7 @@ begin
   else
     sPrintCopy := 'N';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin

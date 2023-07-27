@@ -3,26 +3,26 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   Top = 131
   BorderStyle = bsSingle
   Caption = 'Export Invoice Direct Debit details'
-  ClientHeight = 404
-  ClientWidth = 533
+  ClientHeight = 403
+  ClientWidth = 529
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
-    Top = 363
-    Width = 533
+    Top = 362
+    Width = 529
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 363
+    ExplicitWidth = 533
     object btnExport: TButton
       Left = 352
       Top = 8
@@ -45,11 +45,13 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   object pnlRight: TPanel
     Left = 0
     Top = 0
-    Width = 533
-    Height = 319
+    Width = 529
+    Height = 318
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 533
+    ExplicitHeight = 319
     object pnlNumberRange: TPanel
       Left = 153
       Top = 0
@@ -194,10 +196,11 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
       Left = 0
       Top = 0
       Width = 153
-      Height = 319
+      Height = 318
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 2
+      ExplicitHeight = 319
       object rdgrpExportBy: TRadioGroup
         Left = 8
         Top = 8
@@ -215,11 +218,13 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
   end
   object pnlExpFile: TPanel
     Left = 0
-    Top = 319
-    Width = 533
+    Top = 318
+    Width = 529
     Height = 44
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 319
+    ExplicitWidth = 533
     object lblExpTo: TLabel
       Left = 8
       Top = 16
@@ -296,14 +301,10 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'DateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateTo'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvByNumber: TFDQuery
@@ -357,9 +358,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'IntSel'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvs: TFDQuery
@@ -394,14 +393,10 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_InvNum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_InvNum'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -414,9 +409,7 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -441,19 +434,15 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -470,14 +459,10 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -503,19 +488,13 @@ object PBAccExportDirectDebitFrm: TPBAccExportDirectDebitFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'direct_debit_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'direct_debit_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
 end

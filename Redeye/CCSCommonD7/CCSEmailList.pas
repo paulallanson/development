@@ -64,7 +64,7 @@ type
     ExFilterSQL: TFDQuery;
     ExFilterSRC: TDataSource;
     procedure FormCreate(Sender: TObject);
-    procedure EmailListGridSelectCell(Sender: TObject; Col, Row: Longint;
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
       var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -93,10 +93,10 @@ begin
   EmailListgrid.cells[3,0] := 'Attachment File type';
 end;
 
-procedure TCCSEmailListFrm.EmailListGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
+procedure TCCSEmailListFrm.EmailListGridSelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
 begin
-	if (Col = 1) or (Col = 3) then
+	if (ACol = 1) or (ACol = 3) then
     EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
   else
     EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
@@ -140,11 +140,11 @@ begin
 
   //check for email attachment type default in Broker.ini
   //if none set rtf as default.
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    defAttach := ReadString('Email', 'Def Attach Type', 'RTF');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    defAttach := IniFile.ReadString('Email', 'Def Attach Type', 'RTF');
+  finally
+    IniFile.Free;
   end;
 
   cmbExportFilter.keyvalue := defAttach;

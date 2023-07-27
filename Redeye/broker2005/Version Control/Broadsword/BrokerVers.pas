@@ -77,18 +77,18 @@ begin
 	CopyIfNewer('Redeye.exe', 'Redeye Program') ;
 
   {Create the INI file}
-(*  CreateINIfile('Redeye.ini');
+(*  CreateINIfile(myRedeye_INIFILE);
 
   {Do the Broker ini file} ;
 	StatusNarr('Checking Broker INI File') ;
 	CopyIfNewerINI('Broker.ini', 'Broker.ini', 'Broker INI File') ;
-  AppendtoINIfile('Broker.ini','Redeye.ini');
+  AppendtoINIfile('Broker.ini',myRedeye_INIFILE);
 
   {Do the Broker stock ini file} ;
   try
 	  StatusNarr('Checking Broker Stock INI File') ;
 	  CopyIfNewerINI('Brokerst.ini', 'Brokerst.ini', 'Broker Stock INI File') ;
-    AppendtoINIfile('Brokerst.ini','Redeye.ini');
+    AppendtoINIfile('Brokerst.ini',myRedeye_INIFILE);
   except
   end;
 
@@ -96,7 +96,7 @@ begin
   try
 	  StatusNarr('Checking myPrintMan INI File') ;
 	  CopyIfNewerINI('myPrintMan.ini', 'myPrintMan.ini', 'Broker INI File') ;
-    AppendtoINIfile('myPrintMan.ini','Redeye.ini');
+    AppendtoINIfile('myPrintMan.ini',myRedeye_INIFILE);
   except
   end;
 *)

@@ -513,15 +513,15 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      FEmailApplication := ReadString('Email', 'Application', 'None');
-      FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      Free;
-    end;
-
+  try
+    FEmailApplication := ReadString('Email', 'Application', 'None');
+    FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSEnqNFrm.CancelBitBtnClick(Sender: TObject);
@@ -845,10 +845,9 @@ begin
 
   LoadCombos;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       sPageLayout := ReadString('Enquiries', 'Page Layout', '');
       sLetterLayout := ReadString('Enquiries', 'Letter Layout', '');
@@ -909,13 +908,15 @@ procedure TPBRSEnqNFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      WriteString('Enquiries', 'Page Layout', cmbPageLayout.text);
-      WriteString('Enquiries', 'Letter Layout', cmbLetterLayout.text);
-    end;
+  try
+    WriteString('Enquiries', 'Page Layout', cmbPageLayout.text);
+    WriteString('Enquiries', 'Letter Layout', cmbLetterLayout.text);
+  finally
+    IniFile.Free;
+  end;
 
   FEmailAttachment.free;
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
@@ -953,14 +954,15 @@ procedure TPBRSEnqNFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Enquiry Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Enquiry Bin',inttostr(DefaultBin));
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Enquiry Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Enquiry Bin',inttostr(DefaultBin));
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

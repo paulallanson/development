@@ -532,7 +532,7 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   try
   with IniFile do
@@ -551,7 +551,7 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin

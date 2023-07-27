@@ -154,14 +154,16 @@ procedure TfrmPBLUSalesInvoices.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Invoice Printer',DefaultPrinter);
       WriteString('Centrereed Broker', 'Invoice Bin',inttostr(DefaultBin));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

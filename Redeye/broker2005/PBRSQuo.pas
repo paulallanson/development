@@ -587,15 +587,15 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      FEmailApplication := ReadString('Email', 'Application', 'None');
-      FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      Free;
-    end;
-
+  try
+    FEmailApplication := ReadString('Email', 'Application', 'None');
+    FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSQuoFrm.SelectionMemoKeyUp(Sender: TObject; var Key: Word;
@@ -1170,14 +1170,15 @@ procedure TPBRSQuoFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Quotation Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Quotation Bin',inttostr(DefaultBin));
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Quotation Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Quotation Bin',inttostr(DefaultBin));
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

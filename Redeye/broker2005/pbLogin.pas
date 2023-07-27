@@ -62,7 +62,7 @@ var
 implementation
 
 uses
-  PBDatabase, System.UITypes;
+  PBDatabase, System.UITypes, CCSCommon;
 
 {$R *.DFM}
 
@@ -232,11 +232,11 @@ begin
   {$ENDIF}
 
   IniFile := TIniFile.Create(AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'LoginAlias', cmbAliasList.text);
-    end;
+  try
+    IniFile.WriteString('Centrereed Broker', 'LoginAlias', cmbAliasList.text);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TfrmpbLogin.CancelBitBtnClick(Sender: TObject);
@@ -246,13 +246,15 @@ end;
 
 procedure TfrmpbLogin.FormCreate(Sender: TObject);
 begin
-	LocalDir := extractfilepath(application.ExeName);
+	LocalDir := ExtractFilePath(Application.ExeName);
+  StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
 
+  (* GDK ToDo: remove after tests
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+'Redeye.ini')
+    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
   else
-    StrPCopy(AppIniFile,'Redeye.ini');
-
+    StrPCopy(AppIniFile,myRedeye_INIFILE);
+  *)
 end;
 
 procedure TfrmpbLogin.SetOperator_Email(const Value: string);

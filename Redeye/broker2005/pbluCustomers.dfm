@@ -1,9 +1,10 @@
 object frmpbluCustomers: TfrmpbluCustomers
   Left = 61
   Top = 99
+  ActiveControl = Panel1
   Caption = 'Customer details'
-  ClientHeight = 373
-  ClientWidth = 1136
+  ClientHeight = 372
+  ClientWidth = 1132
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +23,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 354
-    Width = 1136
+    Top = 353
+    Width = 1132
     Height = 19
     Panels = <
       item
@@ -32,11 +33,13 @@ object frmpbluCustomers: TfrmpbluCustomers
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 1136
   end
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1136
+    Width = 1132
     Height = 46
     Bands = <
       item
@@ -51,6 +54,7 @@ object frmpbluCustomers: TfrmpbluCustomers
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    ExplicitWidth = 1136
     object Toolbar1: TToolBar
       Left = 9
       Top = 0
@@ -199,8 +203,8 @@ object frmpbluCustomers: TfrmpbluCustomers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 76
-    Width = 1136
-    Height = 237
+    Width = 1132
+    Height = 236
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -379,13 +383,15 @@ object frmpbluCustomers: TfrmpbluCustomers
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 313
-    Width = 1136
+    Top = 312
+    Width = 1132
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 313
+    ExplicitWidth = 1136
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -402,13 +408,13 @@ object frmpbluCustomers: TfrmpbluCustomers
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 950
       Top = 1
       Width = 185
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object btnClose: TButton
         Left = 96
@@ -450,16 +456,17 @@ object frmpbluCustomers: TfrmpbluCustomers
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 1136
+    Width = 1132
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
+    ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1136
     object Label1: TLabel
       Left = 8
       Top = 3
@@ -474,7 +481,6 @@ object frmpbluCustomers: TfrmpbluCustomers
       ParentFont = False
     end
     object Panel4: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 400
@@ -483,6 +489,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       BevelInner = bvLowered
       BevelOuter = bvNone
       Color = clSilver
+      ParentBackground = False
       TabOrder = 0
       object lblTitle: TLabel
         Left = 8
@@ -499,7 +506,6 @@ object frmpbluCustomers: TfrmpbluCustomers
       end
     end
     object Panel5: TPanel
-      ParentBackground = False
       Left = 885
       Top = 1
       Width = 250
@@ -508,6 +514,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       BevelInner = bvLowered
       BevelOuter = bvNone
       Caption = 'Panel5'
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         250
@@ -547,11 +554,12 @@ object frmpbluCustomers: TfrmpbluCustomers
     object PageScroller2: TPageScroller
       Left = 401
       Top = 1
-      Width = 484
+      Width = 480
       Height = 28
       Align = alClient
       Control = clbrDashboard
       TabOrder = 2
+      ExplicitWidth = 484
       object clbrDashboard: TCoolBar
         Left = 0
         Top = 0
@@ -565,6 +573,7 @@ object frmpbluCustomers: TfrmpbluCustomers
             Width = 478
           end>
         Visible = False
+        ExplicitWidth = 488
         object ToolBar2: TToolBar
           Left = 11
           Top = 0

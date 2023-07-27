@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ImgList, Grids, DBGrids, ComCtrls, ToolWin, Buttons, DB, ExtCtrls, IniFiles, PBActivityDM, DateUtils;
+  Dialogs, StdCtrls, ImgList, Grids, DBGrids, ComCtrls, ToolWin, Buttons, DB, ExtCtrls, IniFiles, PBActivityDM, DateUtils,
+  System.ImageList;
 
 type
   TfrmPBLUActivities = class(TForm)
@@ -106,15 +107,17 @@ var
   stempDate: string;
   sShowLive, sShowAllOperators: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       stempdate := ReadString('Centrereed Broker', 'Activity Search Date', 'None');
       sShowLive := ReadString('Centrereed Broker', 'Show Live Activities', 'None');
       sShowAllOperators := ReadString('Centrereed Broker', 'Show All Operator Activities', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllActivities := TdtmdlActivity.create(self);
   dtmdlAllActivities.AssignedTo := frmPBMainMenu.iOperator;
@@ -162,15 +165,17 @@ begin
   else
     sShowAllOperators := 'None';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Activity Search Date', pbdatestr(dtmdlAllActivities.ActivityDate));
       WriteString('Centrereed Broker', 'Show Live Activities', sShowLive);
       WriteString('Centrereed Broker', 'Show All Operator Activities', sShowAllOperators);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllActivities.free;
 end;

@@ -1879,7 +1879,7 @@ end;
 
 procedure TPBMaintCompanyFrm.FormCreate(Sender: TObject);
 begin
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBMaintCompanyFrm.FormDestroy(Sender: TObject);

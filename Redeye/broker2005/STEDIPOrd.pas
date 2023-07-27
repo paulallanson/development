@@ -89,7 +89,7 @@ var
   IniFile : TIniFile;
   tempStr : string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
   begin
     tempStr := 'Supplier No: ';
@@ -127,7 +127,7 @@ begin
   if not bUpdateIni then
     exit;
   tempStr := lblKingfieldSupplier.Caption;
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
   begin
     sSupplNo := Copy(tempStr, (Pos(': ',tempStr)+2), (Pos(', ', tempStr)-(Pos(': ',tempStr)+2)));

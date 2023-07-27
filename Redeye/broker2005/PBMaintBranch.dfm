@@ -1,30 +1,28 @@
-﻿object PBMaintBranchFrm: TPBMaintBranchFrm
+object PBMaintBranchFrm: TPBMaintBranchFrm
   Left = 172
   Top = 18
   BorderStyle = bsDialog
   Caption = 'Maintain Branches'
-  ClientHeight = 615
-  ClientWidth = 456
+  ClientHeight = 614
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    456
-    615)
-  PixelsPerInch = 96
+    452
+    614)
   TextHeight = 13
   object DelLabel: TLabel
     Left = 136
-    Top = 588
+    Top = 587
     Width = 145
     Height = 15
     Anchors = [akLeft, akBottom]
@@ -35,6 +33,7 @@
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 588
   end
   object Label1: TLabel
     Left = 8
@@ -58,15 +57,12 @@
   end
   object OKBitBtn: TBitBtn
     Left = 292
-    Top = 582
+    Top = 581
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -131,19 +127,20 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
+    ExplicitTop = 582
   end
   object CancelBitBtn: TBitBtn
     Left = 372
-    Top = 582
+    Top = 581
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 4
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -208,17 +205,22 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = CancelBitBtnClick
+    ExplicitTop = 582
   end
   object PrintBitBtn: TBitBtn
     Left = 8
-    Top = 582
+    Top = 581
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
     TabOrder = 5
     OnClick = PrintBitBtnClick
+    ExplicitTop = 582
   end
   object pgBranches: TPageControl
     Left = 8
@@ -376,9 +378,6 @@
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 16
-          OnClick = NotesBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -393,6 +392,9 @@
             3333333373FF7333333333333000333333333333377733333333333333333333
             3333333333333333333333333333333333333333333333333333}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 16
+          OnClick = NotesBitBtnClick
         end
         object BuildingEdit: TEdit
           Left = 95
@@ -586,7 +588,6 @@
           Width = 155
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           TabOrder = 10
           Items.Strings = (
             'Prospect'
@@ -604,9 +605,6 @@
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 17
-          OnClick = DelivNotesBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -621,6 +619,9 @@
             3333333373FF7333333333333000333333333333377733333333333333333333
             3333333333333333333333333333333333333333333333333333}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 17
+          OnClick = DelivNotesBitBtnClick
         end
         object ChkBxBrnchNm: TCheckBox
           Left = 16
@@ -703,9 +704,9 @@
         Width = 75
         Height = 25
         Caption = 'Add'
+        NumGlyphs = 2
         TabOrder = 0
         OnClick = btnAddContactClick
-        NumGlyphs = 2
       end
       object btnChgContact: TBitBtn
         Left = 341
@@ -714,9 +715,9 @@
         Height = 25
         Caption = 'Change'
         Enabled = False
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnChgContactClick
-        NumGlyphs = 2
       end
       object btnDelContact: TBitBtn
         Left = 341
@@ -725,9 +726,9 @@
         Height = 25
         Caption = 'Delete'
         Enabled = False
+        NumGlyphs = 2
         TabOrder = 2
         OnClick = btnDelContactClick
-        NumGlyphs = 2
       end
       object dbgContacts: TDBGrid
         Left = 8
@@ -784,9 +785,9 @@
         Width = 75
         Height = 25
         Caption = 'Add'
+        NumGlyphs = 2
         TabOrder = 0
         OnClick = btnAddCostCentreClick
-        NumGlyphs = 2
       end
       object btnChgCostCentre: TBitBtn
         Left = 341
@@ -795,9 +796,9 @@
         Height = 25
         Caption = 'Change'
         Enabled = False
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnChgCostCentreClick
-        NumGlyphs = 2
       end
       object btnDelCostCentre: TBitBtn
         Left = 341
@@ -806,9 +807,9 @@
         Height = 25
         Caption = 'Delete'
         Enabled = False
+        NumGlyphs = 2
         TabOrder = 2
         OnClick = btnDelCostCentreClick
-        NumGlyphs = 2
       end
       object dbgCostCentres: TDBGrid
         Left = 8
@@ -874,24 +875,26 @@
   object CustNameEdit: TEdit
     Left = 87
     Top = 14
-    Width = 299
+    Width = 291
     Height = 21
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     ReadOnly = True
     TabOrder = 0
     Text = 'CustNameEdit'
+    ExplicitWidth = 299
   end
   object NameEdit: TEdit
     Left = 87
     Top = 43
-    Width = 299
+    Width = 291
     Height = 21
     Anchors = [akLeft, akTop, akRight]
     MaxLength = 40
     TabOrder = 1
     Text = 'NameEdit'
     OnChange = NameEditChange
+    ExplicitWidth = 299
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -903,9 +906,7 @@
     Top = 436
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -970,129 +971,87 @@
     Top = 436
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Account_Code_On_Ledger'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Account_Code_On_Ledger'
+      end
+      item
         Name = 'Delivery_Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Branch_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'short_code'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'HODept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Use_HO_Delivery_Notes'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Online_Ordering_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdSQL: TFDQuery
@@ -1136,129 +1095,87 @@
     Top = 436
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Account_Code_on_Ledger'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Account_Code_on_Ledger'
+      end
+      item
         Name = 'Delivery_Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Branch_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'short_code'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'HODept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Use_HO_Delivery_Notes'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Online_Ordering_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Inv_to_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -1272,14 +1189,10 @@
     Top = 436
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetCustNameSQL: TFDQuery
@@ -1291,9 +1204,7 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object GetBranchNameSQL: TFDQuery
@@ -1306,14 +1217,10 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object FlashTimer: TTimer
@@ -1334,14 +1241,10 @@
     Top = 276
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Code'
-        ParamType = ptUnknown
       end>
   end
   object GetCompSQL: TFDQuery
@@ -1363,9 +1266,8 @@
     Top = 212
     ParamData = <
       item
-        DataType = ftString
         Name = 'Acc_Code'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object FlashDelivTimer: TTimer
@@ -1389,19 +1291,13 @@
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Delivery_Narrative'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdNotesOnlySQL: TFDQuery
@@ -1417,19 +1313,14 @@
     Top = 220
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetBranch: TFDQuery
@@ -1445,14 +1336,10 @@
     Top = 111
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCostCentres: TFDQuery
@@ -1466,14 +1353,10 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object dtsCostCentres: TDataSource
@@ -1496,19 +1379,13 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object dtsContacts: TDataSource
@@ -1527,19 +1404,13 @@
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
 end

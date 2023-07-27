@@ -1,7 +1,6 @@
-﻿object PBEmailListFrm: TPBEmailListFrm
+object PBEmailListFrm: TPBEmailListFrm
   Left = 726
   Top = 485
-  AutoScroll = False
   Caption = 'PBEmailListFrm'
   ClientHeight = 271
   ClientWidth = 697
@@ -11,11 +10,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -25,6 +22,8 @@
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 693
+    ExplicitHeight = 229
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -40,6 +39,8 @@
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
+      ExplicitWidth = 691
+      ExplicitHeight = 227
       ColWidths = (
         64
         186
@@ -81,22 +82,26 @@
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 229
+    ExplicitWidth = 693
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = BitBtn1Click
-      Kind = bkOK
     end
     object BitBtn2: TBitBtn
       Left = 605
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object ExFilterSQL: TFDQuery
@@ -125,29 +130,19 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ExportFilter'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object UpCustSQL: TFDQuery
@@ -163,29 +158,19 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ExportFilter'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qryContacts: TFDQuery
@@ -203,14 +188,10 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object dtsContacts: TDataSource
@@ -233,14 +214,10 @@
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object UpInvoiceSQL: TFDQuery
@@ -256,14 +233,10 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_No'
-        ParamType = ptUnknown
       end>
   end
 end

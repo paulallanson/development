@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, ComCtrls, ToolWin, StdCtrls, ExtCtrls, ImgList,
-  Buttons, DB, PBContractDM, IniFiles, Menus;
+  Buttons, DB, PBContractDM, IniFiles, Menus, System.ImageList;
 
 type
   TfrmPBLUContracts = class(TForm)
@@ -116,14 +116,16 @@ var
   stempDate: string;
   sShowLive: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       stempdate := ReadString('Centrereed Broker', 'Contract Search Date', 'None');
       sShowLive := ReadString('Centrereed Broker', 'Show Live Contracts', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllContracts := TdtmdlContract.create(self);
 
@@ -153,14 +155,16 @@ begin
   else
     sShowLive := 'None';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Contract Search Date', pbdatestr(dtmdlAllContracts.ContractDate));
       WriteString('Centrereed Broker', 'Show Live Contracts', sShowLive);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllContracts.free;
 end;

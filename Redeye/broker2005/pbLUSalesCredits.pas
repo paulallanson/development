@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, pbSalesInvoiceDM,
-  Db, Inifiles, Buttons;
+  Db, Inifiles, Buttons, System.ImageList;
 
 type
   TfrmPBLUSalesCredits = class(TForm)
@@ -830,14 +830,16 @@ procedure TfrmPBLUSalesCredits.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Invoice Printer',DefaultPrinter);
       WriteString('Centrereed Broker', 'Invoice Bin',inttostr(DefaultBin));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

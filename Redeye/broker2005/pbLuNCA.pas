@@ -124,14 +124,16 @@ var
   stempDate: string;
   sShowWIP: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       stempdate := ReadString('Centrereed Broker', 'Job Bag NCA Search Date', 'None');
       sShowWIP := ReadString('Centrereed Broker', 'Show Job Bag Live NCA', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlNCAJobs := TdtmdlJobs.create(self);
 
@@ -161,14 +163,16 @@ begin
   else
     sShowLiveNCA := 'None';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Job Bag NCA Search Date', pbdatestr(dtmdlNCAJobs.NCADate));
       WriteString('Centrereed Broker', 'Show Job Bag Live NCA', sShowLiveNCA);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlNCAJobs.free;
 end;

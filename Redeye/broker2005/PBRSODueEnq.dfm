@@ -1,11 +1,11 @@
-﻿object PBRSODueEnqFrm: TPBRSODueEnqFrm
+object PBRSODueEnqFrm: TPBRSODueEnqFrm
   Left = 390
   Top = 166
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Overdue Enquiry Print'
-  ClientHeight = 229
-  ClientWidth = 468
+  ClientHeight = 228
+  ClientWidth = 464
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -306,9 +306,7 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

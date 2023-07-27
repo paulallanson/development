@@ -2,8 +2,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 394
-  ClientWidth = 1208
+  ClientHeight = 393
+  ClientWidth = 1204
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmPBLUJobs: TfrmPBLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1208
+    Width = 1204
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1202
+        Width = 1206
       end>
+    ExplicitWidth = 1208
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -129,8 +130,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1208
-    Height = 248
+    Width = 1204
+    Height = 247
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -300,12 +301,14 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 323
-    Width = 1208
+    Top = 322
+    Width = 1204
     Height = 52
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 323
+    ExplicitWidth = 1208
     object Label1: TLabel
       Left = 8
       Top = 26
@@ -411,8 +414,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 375
-    Width = 1208
+    Top = 374
+    Width = 1204
     Height = 19
     Panels = <
       item
@@ -424,11 +427,13 @@ object frmPBLUJobs: TfrmPBLUJobs
       item
         Width = 50
       end>
+    ExplicitTop = 375
+    ExplicitWidth = 1208
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1208
+    Width = 1204
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -436,6 +441,7 @@ object frmPBLUJobs: TfrmPBLUJobs
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 1208
     object Label3: TLabel
       Left = 8
       Top = 3

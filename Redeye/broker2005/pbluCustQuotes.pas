@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Grids, DBGrids, ImgList, ComCtrls, StdCtrls, ExtCtrls, ToolWin, Db, Menus,
-  IniFiles, Buttons, pbJobBagDM, pbQuotesDM;
+  IniFiles, Buttons, pbJobBagDM, pbQuotesDM, System.ImageList;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}
@@ -180,12 +180,11 @@ var
   IniFile : TIniFile;
   stempDate: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-  begin
-    stempdate := ReadString('Centrereed Broker', 'Quote Search Date', 'None');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    stempdate := IniFile.ReadString('Centrereed Broker', 'Quote Search Date', 'None');
+  finally
+    IniFile.Free;
   end;
 
   dtmdlQuotes := TdtmdlQuotes.create(self);
@@ -208,12 +207,11 @@ procedure TfrmpbluCustQuotes.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-  begin
-    WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlQuotes.QuoteDate));
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlQuotes.QuoteDate));
+  finally
+    IniFile.Free;
   end;
 
   dtmdlQuotes.free;

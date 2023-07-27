@@ -485,14 +485,15 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      FEmailApplication := ReadString('Email', 'Application', 'None');
-      FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      Free;
-    end;
+  try
+    FEmailApplication := ReadString('Email', 'Application', 'None');
+    FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSQuoNFrm.EnquiryMemoKeyUp(Sender: TObject; var Key: Word;
@@ -800,10 +801,9 @@ begin
     ClientHeight := ClientHeight - gbLayouts.Height;
   end;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       sPageLayout := ReadString('Quotes', 'Page Layout', '');
       sLetterLayout := ReadString('Quotes', 'Letter Layout', '');
@@ -825,6 +825,7 @@ begin
   finally
     IniFile.Free;
   end;
+
   CCSCommon.LoadFormLayout(frmPBMainMenu.AppIniFile, self);
 end;
 
@@ -937,13 +938,15 @@ procedure TPBRSQuoNFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      WriteString('Quotes', 'Page Layout', cmbPageLayout.text);
-      WriteString('Quotes', 'Letter Layout', cmbLetterLayout.text);
-    end;
+  try
+    WriteString('Quotes', 'Page Layout', cmbPageLayout.text);
+    WriteString('Quotes', 'Letter Layout', cmbLetterLayout.text);
+  finally
+    IniFile.Free;
+  end;
 
   FEmailAttachment.free;
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
@@ -976,14 +979,15 @@ procedure TPBRSQuoNFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Quotation Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Quotation Bin',inttostr(DefaultBin));
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Quotation Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Quotation Bin',inttostr(DefaultBin));
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

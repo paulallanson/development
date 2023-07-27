@@ -190,13 +190,9 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
-    begin
-      chkbxPrintLogo.Checked := (ReadString('Redeye', 'Proof Approval - Print Logo', 'N') = 'Y');
-    end;
+    chkbxPrintLogo.Checked := IniFile.ReadString('Redeye', 'Proof Approval - Print Logo', 'N') = 'Y';
   finally
     IniFile.Free;
   end;
@@ -207,17 +203,16 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      if chkbxPrintLogo.checked then
-        WriteString('Redeye', 'Proof Approval - Print Logo', 'Y')
-      else
-        WriteString('Redeye', 'Proof Approval - Print Logo', 'N');
-
-      Free;
-    end;
+  try
+    if chkbxPrintLogo.checked then
+      WriteString('Redeye', 'Proof Approval - Print Logo', 'Y')
+    else
+      WriteString('Redeye', 'Proof Approval - Print Logo', 'N');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSProofNFrm.EmailBitBtnClick(Sender: TObject);

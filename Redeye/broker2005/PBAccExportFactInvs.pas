@@ -537,11 +537,12 @@ var
 begin
   tempStr := edtExpFile.text;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-  begin
+  try
     WriteString('Invoice Factoring', 'File Path', tempStr);
-    Free;
+  finally
+    IniFile.Free;
   end;
 end;
 
@@ -549,11 +550,12 @@ function TPBAccExportFactInvsFrm.GetPath: string;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-  begin
+  try
     Result := ReadString('Invoice Factoring', 'File Path', '');
-    Free;
+  finally
+    IniFile.Free;
   end;
 end;
 

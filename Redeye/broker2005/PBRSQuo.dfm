@@ -1,11 +1,11 @@
-﻿object PBRSQuoFrm: TPBRSQuoFrm
+object PBRSQuoFrm: TPBRSQuoFrm
   Left = 217
   Top = 141
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Quotation Print'
-  ClientHeight = 365
-  ClientWidth = 434
+  ClientHeight = 364
+  ClientWidth = 430
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -56,11 +56,13 @@
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 152
-    Width = 434
+    Top = 151
+    Width = 430
     Height = 213
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 152
+    ExplicitWidth = 434
     object cbPrintLogo: TCheckBox
       Left = 14
       Top = 8
@@ -378,24 +380,19 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'iintselcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -420,19 +417,16 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -450,14 +444,12 @@
     Top = 76
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -470,9 +462,7 @@
     Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery

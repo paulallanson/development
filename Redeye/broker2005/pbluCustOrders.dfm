@@ -2,8 +2,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   Left = 111
   Top = 91
   Caption = 'Customer order details'
-  ClientHeight = 552
-  ClientWidth = 807
+  ClientHeight = 551
+  ClientWidth = 803
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 807
+    Width = 803
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 801
+        Width = 805
       end>
+    ExplicitWidth = 807
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -42,9 +43,9 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 780
+        Width = 792
         Height = 41
-        ButtonHeight = 44
+        ButtonHeight = 29
         ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstOrders
@@ -187,14 +188,16 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 492
-    Width = 807
+    Top = 491
+    Width = 803
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 492
+    ExplicitWidth = 807
     DesignSize = (
-      807
+      803
       41)
     object Label1: TLabel
       Left = 8
@@ -204,7 +207,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 549
+      Left = 541
       Top = 16
       Width = 64
       Height = 13
@@ -213,7 +216,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       ExplicitLeft = 557
     end
     object btnClose: TButton
-      Left = 725
+      Left = 717
       Top = 10
       Width = 75
       Height = 25
@@ -221,6 +224,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 725
     end
     object edtSearch: TEdit
       Left = 104
@@ -231,13 +235,14 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 627
+      Left = 619
       Top = 12
       Width = 90
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 1
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 627
     end
     object chkbxShowUnauthorised: TCheckBox
       Left = 368
@@ -260,8 +265,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 533
-    Width = 807
+    Top = 532
+    Width = 803
     Height = 19
     Panels = <
       item
@@ -270,12 +275,14 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       item
         Width = 50
       end>
+    ExplicitTop = 533
+    ExplicitWidth = 807
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 807
-    Height = 418
+    Width = 803
+    Height = 417
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -408,27 +415,26 @@ object frmpbluCustOrders: TfrmpbluCustOrders
         Expanded = False
         FieldName = 'Rep_Name'
         Title.Caption = 'Rep'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Operator_Name'
         Title.Caption = 'Operator'
-        Width = 64
         Visible = True
       end>
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 807
+    Width = 803
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 807
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -465,21 +471,22 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 386
+        Width = 398
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 380
+            Width = 396
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 371
+          Width = 383
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonHeight = 19
+          ButtonWidth = 47
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

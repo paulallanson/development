@@ -3,15 +3,14 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   Top = 100
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 408
-  ClientWidth = 420
+  ClientHeight = 407
+  ClientWidth = 416
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -19,17 +18,16 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    420
-    408)
-  PixelsPerInch = 96
+    416
+    407)
   TextHeight = 13
   object POGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 0
     Width = 393
     Height = 89
     Caption = 'Order: '
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
@@ -75,12 +73,12 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 142
     Width = 209
     Height = 160
     Caption = 'Box Quantities'
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 49
@@ -159,7 +157,6 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       Width = 82
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = cmbFormatChange
       Items.Strings = (
@@ -168,12 +165,12 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox3: TGroupBox
-    ParentBackground = False
     Left = 224
     Top = 142
     Width = 177
     Height = 75
     Caption = 'Numbering'
+    ParentBackground = False
     TabOrder = 2
     object Label6: TLabel
       Left = 24
@@ -206,7 +203,7 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 369
+    Top = 368
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -216,13 +213,15 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
+    ExplicitTop = 369
   end
   object PreviewBitBtn: TBitBtn
     Left = 144
-    Top = 369
+    Top = 368
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -233,9 +232,6 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -250,13 +246,17 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
+    ExplicitTop = 369
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 90
     Width = 393
     Height = 45
+    ParentBackground = False
     TabOrder = 5
     object Label9: TLabel
       Left = 8
@@ -280,8 +280,6 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -296,11 +294,13 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
   end
   object PrintBitBtn: TBitBtn
     Left = 232
-    Top = 369
+    Top = 368
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -312,9 +312,6 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 6
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -329,14 +326,18 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 6
+    OnClick = PrintBitBtnClick
+    ExplicitTop = 369
   end
   object GroupBox4: TGroupBox
-    ParentBackground = False
     Left = 224
     Top = 219
     Width = 177
     Height = 82
     Caption = 'Address'
+    ParentBackground = False
     TabOrder = 7
     object chkAddressOnly: TCheckBox
       Left = 8
@@ -366,11 +367,11 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     end
   end
   object GroupBox5: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 306
     Width = 393
     Height = 45
+    ParentBackground = False
     TabOrder = 8
     object Label12: TLabel
       Left = 56
@@ -395,10 +396,6 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
       Width = 23
       Height = 23
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 1
-      OnClick = FormRefClrBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -413,6 +410,10 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      OnClick = FormRefClrBitBtnClick
     end
   end
   object CountSQL: TFDQuery
@@ -444,8 +445,8 @@ object PBRSBoxLabelsfrm: TPBRSBoxLabelsfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end

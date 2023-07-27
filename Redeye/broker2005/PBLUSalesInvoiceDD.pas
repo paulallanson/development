@@ -506,11 +506,11 @@ begin
 
   tempStr := self.ParsePathName(edtExpFile.Text);
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    WriteString('Invoice Direct Debit', 'File Path', tempStr);
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Invoice Direct Debit', 'File Path', tempStr);
+  finally
+    IniFile.Free;
   end;
 end;
 
@@ -518,11 +518,11 @@ function TPBLUSalesInvoiceDDFrm.GetPath: string;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    Result := ReadString('Invoice Direct Debit', 'File Path', '');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    Result := IniFile.ReadString('Invoice Direct Debit', 'File Path', '');
+  finally
+    IniFile.Free;
   end;
 end;
 

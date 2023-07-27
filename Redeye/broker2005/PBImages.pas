@@ -41,7 +41,8 @@ type
 var
   PBImagesFrm: TPBImagesFrm;
 
-implementation
+implementation
+
 
 uses
   FireDAC.Comp.Client;
@@ -58,9 +59,9 @@ begin
   LocalDir := extractfilepath(application.ExeName);
 
   if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+'Redeye.ini')
+    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
   else
-    StrPCopy(AppIniFile,'Redeye.ini');
+    StrPCopy(AppIniFile,myRedeye_INIFILE);
 
   GetPrivateProfileString('Centrereed Broker', 'LoginAlias', 'Broker', TempArray,
     sizeof(TempArray), AppIniFile);

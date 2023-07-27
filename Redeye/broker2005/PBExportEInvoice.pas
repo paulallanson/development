@@ -500,11 +500,11 @@ var
 begin
   tempStr := edtExpFile.text;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    WriteString('Electronic Invoicing', 'File Path', tempStr);
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Electronic Invoicing', 'File Path', tempStr);
+  finally
+    IniFile.Free;
   end;
 end;
 
@@ -512,11 +512,11 @@ function TPBExportEInvoiceFrm.GetPath: string;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    Result := ReadString('Electronic Invoicing', 'File Path', '');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    Result := IniFile.ReadString('Electronic Invoicing', 'File Path', '');
+  finally
+    IniFile.Free;
   end;
 end;
 

@@ -363,13 +363,9 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
-    begin
-      chkbxPrintLogo.Checked := (ReadString('Redeye', 'Delivery Note - Print Logo', 'N') = 'Y');
-    end;
+    chkbxPrintLogo.Checked := IniFile.ReadString('Redeye', 'Delivery Note - Print Logo', 'N') = 'Y';
   finally
     IniFile.Free;
   end;
@@ -400,14 +396,13 @@ begin
     DefaultBin := 15;
   end;
 
-(*  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+(*  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
-  with IniFile do
-    begin
-      DefaultPrinter := ReadString('Centrereed Broker', 'Delivery Note Printer', 'None');
-      Free;
-    end;
-
+  try
+    DefaultPrinter := IniFile.ReadString('Centrereed Broker', 'Delivery Note Printer', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   {Find the default printer in the list of printers }
   Printers.Printer.PrinterIndex := -1;
@@ -429,14 +424,14 @@ procedure TPBRSDelivNoteFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
-      WriteString('Centrereed Broker', 'Delivery Note Bin',inttostr(DefaultBin));
-      Free;
-    end;
+  try
+    WriteString('Centrereed Broker', 'Delivery Note Printer',DefaultPrinter);
+    WriteString('Centrereed Broker', 'Delivery Note Bin',inttostr(DefaultBin));
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;
@@ -512,17 +507,16 @@ var
   IniFile : TIniFile;
   sPrintLogo: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      if chkbxPrintLogo.checked then
-        WriteString('Redeye', 'Delivery Note - Print Logo', 'Y')
-      else
-        WriteString('Redeye', 'Delivery Note - Print Logo', 'N');
-
-      Free;
-    end;
+  try
+    if chkbxPrintLogo.checked then
+      WriteString('Redeye', 'Delivery Note - Print Logo', 'Y')
+    else
+      WriteString('Redeye', 'Delivery Note - Print Logo', 'N');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 end.

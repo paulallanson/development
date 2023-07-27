@@ -56,8 +56,6 @@ type
     qrySuppliers: TFDQuery;
     UpInvoiceSQL: TFDQuery;
     procedure FormCreate(Sender: TObject);
-    procedure EmailListGridSelectCell(Sender: TObject; Col, Row: Longint;
-      var CanSelect: Boolean);
     procedure EmailListGridClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure cmbExportFilterClick(Sender: TObject);
@@ -66,6 +64,8 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure cmbContactsClick(Sender: TObject);
     procedure cmbContactsEnter(Sender: TObject);
+    procedure EmailListGridSelectCell(Sender: TObject; ACol, ARow: Integer;
+      var CanSelect: Boolean);
   private
     FCodeType: string;
     { Private declarations }
@@ -103,15 +103,6 @@ begin
   begin
     self.UseBranchAddr[inx] := false;
   end;
-end;
-
-procedure TPBEmailListFrm.EmailListGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
-begin
-	if (Col = 2) or (Col = 3) or (Col = 4) then
-    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
-  else
-    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
 procedure TPBEmailListFrm.EmailListGridClick(Sender: TObject);
@@ -168,11 +159,11 @@ begin
 
   //check for email attachment type default
   //if none set rtf as default.
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    defAttach := ReadString('Email', 'Def Attach Type', 'RTF');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    defAttach := IniFile.ReadString('Email', 'Def Attach Type', 'RTF');
+  finally
+    IniFile.Free;
   end;
 
   cmbExportFilter.keyvalue := defAttach;
@@ -230,6 +221,15 @@ begin
   cmbExportFilter.width := EmailListGrid.colwidths[Acol];
 
   cmbContacts.width := EmailListGrid.colwidths[Acol];
+end;
+
+procedure TPBEmailListFrm.EmailListGridSelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
+begin
+	if (ACol = 2) or (ACol = 3) or (ACol = 4) then
+    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+  else
+    EmailListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
 procedure TPBEmailListFrm.BitBtn1Click(Sender: TObject);

@@ -362,15 +362,17 @@ procedure TPBRSCusSupLabsfrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Address Label Printer',DefaultPrinter);
       WriteString('Centrereed Broker', 'Address Label Printer Bin',inttostr(DefaultBin));
       WriteString('Centrereed Broker', 'Address Label Printer Paper',inttostr(DefaultPaper));
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

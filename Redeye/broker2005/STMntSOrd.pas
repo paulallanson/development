@@ -720,7 +720,7 @@ procedure TSTMntSOrdFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
     begin
       WriteString('Redeye', 'Replenishment Type', inttostr(dblkpReplType.keyvalue));
@@ -744,7 +744,7 @@ var
   IniFile : TIniFile;
   iReplenishType: integer;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   with IniFile do
     begin

@@ -202,7 +202,7 @@ begin
   dmSupplierInvoice.qryPOsSalesInvd.AfterScroll := SetPurchaseOrderEdit;
 
 (*
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     with IniFile do
       begin
@@ -425,14 +425,14 @@ procedure TPBLUSupplierInvoicePOFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      WriteString('Redeye', 'Purchase Invoice Supplier Code', inttostr(iSupplier));
-      WriteString('Redeye', 'Purchase Invoice Supplier Name', sSupplierName);
-      Free;
-    end;
+  try
+    WriteString('Redeye', 'Purchase Invoice Supplier Code', inttostr(iSupplier));
+    WriteString('Redeye', 'Purchase Invoice Supplier Name', sSupplierName);
+  finally
+    IniFile.Free;
+  end;
 
   dmSupplierInvoice.free;
   CCSCommon.SaveDBGridCols('', 'SupplierInvoicePOLU Col Order', frmPBMainMenu.AppIniFile, self.dbgDetails);

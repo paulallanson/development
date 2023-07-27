@@ -1923,10 +1923,12 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    FEmailApplication := ReadString('Email', 'Application', 'None');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    FEmailApplication := IniFile.ReadString('Email', 'Application', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   sBody := '';
   sfilePath := docdir;

@@ -1,25 +1,23 @@
 object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
   Left = 192
   Top = 107
-  Width = 928
-  Height = 480
   Caption = 'Direct Debit Export'
+  ClientHeight = 441
+  ClientWidth = 912
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 430
-    Width = 920
+    Top = 422
+    Width = 912
     Height = 19
     Panels = <
       item
@@ -28,14 +26,17 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       item
         Width = 250
       end>
+    ExplicitTop = 430
+    ExplicitWidth = 920
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 920
+    Width = 912
     Height = 113
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 920
     object GroupBox2: TGroupBox
       Left = 16
       Top = 8
@@ -143,8 +144,8 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
   object DBGrid1: TDBGrid
     Left = 0
     Top = 113
-    Width = 920
-    Height = 276
+    Width = 912
+    Height = 268
     Align = alClient
     DataSource = dtsSalesInv
     TabOrder = 2
@@ -210,11 +211,13 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 389
-    Width = 920
+    Top = 381
+    Width = 912
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 389
+    ExplicitWidth = 920
     object lblExpTo: TLabel
       Left = 8
       Top = 16
@@ -317,19 +320,13 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'DateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_All'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesInvByNumber: TFDQuery
@@ -383,9 +380,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'IntSel'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdInvs: TFDQuery
@@ -401,19 +396,13 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'direct_debit_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'direct_debit_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -440,14 +429,10 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetInvRngSQL: TFDQuery
@@ -471,14 +456,10 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_InvNum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_InvNum'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -503,19 +484,15 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -528,9 +505,7 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object OpenDialog1: TOpenDialog

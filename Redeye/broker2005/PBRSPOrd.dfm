@@ -1,11 +1,11 @@
-﻿object PBRSPOrdFrm: TPBRSPOrdFrm
+object PBRSPOrdFrm: TPBRSPOrdFrm
   Left = 210
   Top = 138
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Purchase Order Print'
-  ClientHeight = 346
-  ClientWidth = 424
+  ClientHeight = 345
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -96,8 +96,8 @@
   end
   object pnlButtons: TPanel
     Left = 0
-    Top = 145
-    Width = 424
+    Top = 144
+    Width = 420
     Height = 201
     Align = alBottom
     TabOrder = 3
@@ -401,29 +401,23 @@
     Top = 10
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'iintselcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetAcksSQL: TFDQuery
@@ -480,34 +474,22 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'iintselcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -530,9 +512,7 @@
     Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -549,14 +529,10 @@
     Top = 76
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -581,19 +557,15 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'text100'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object GetPORngSQL: TFDQuery
@@ -618,24 +590,16 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_PONum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_PONum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
 end

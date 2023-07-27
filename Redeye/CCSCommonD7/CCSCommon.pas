@@ -183,7 +183,7 @@ resourcestring
   BDE_KEY = 'Software\Borland\Database Engine'; { path to BDE settings }
 
 const
-  myRedEye_INIFILE = 'Redeye.ini';
+  myRedeye_INIFILE = 'Redeye.ini';
 
 implementation
 

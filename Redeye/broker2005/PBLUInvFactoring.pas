@@ -8,7 +8,7 @@ uses
   DBGrids, StdCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TPBLUInvFactoringFrm = class(TForm)
@@ -147,11 +147,11 @@ function TPBLUInvFactoringFrm.GetPath: string;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-  with IniFile do
-  begin
-    Result := ReadString('Invoice Factoring', 'File Path', '');
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    Result := IniFile.ReadString('Invoice Factoring', 'File Path', '');
+  finally
+    IniFile.Free;
   end;
 end;
 

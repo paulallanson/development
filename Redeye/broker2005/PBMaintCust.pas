@@ -855,6 +855,7 @@ function TPBMaintCustFrm.GetActivePageIndex: integer;
 var
   TempArray: array[0..255] of Char;
 begin
+  FillChar(TempArray, SizeOf(TempArray), #0);
   {Search the INI file for Default Branch tab}
   if Prospect then
     GetPrivateProfileString('Prospects', 'Default Customer Tab', '', TempArray,
@@ -867,7 +868,7 @@ begin
     GetPrivateProfileString('Customers', 'Default Customer Tab', '', TempArray,
         sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
-  Result := strtoint(TempArray);
+  TryStrToInt(TempArray, Result);
 end;
 
 procedure TPBMaintCustFrm.FormActivate(Sender: TObject);
@@ -2979,7 +2980,7 @@ begin
   CCSCommon.SetDBGridCols('', 'CustomerJobLU Col Order', frmPBMainMenu.AppIniFile, self.dbgJobDetails);
   CCSCommon.SetDBGridCols('', 'CustomerStockLU Col Order', frmPBMainMenu.AppIniFile, self.dbgStockDetails);
   CCSCommon.SetDBGridCols('', 'CustomerInvoicesLU Col Order', frmPBMainMenu.AppIniFile, self.dbgInvoiceDetails);
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBMaintCustFrm.edtProdPrefixChange(Sender: TObject);
@@ -3199,7 +3200,7 @@ var
   iTabIndex: integer;
   sTabName: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     iTabIndex := pgCustomer.ActivePageIndex;
 //    sTabName := pgCustomer.pages[iTabIndex].name;
@@ -3939,7 +3940,6 @@ procedure TPBMaintCustFrm.SendAndSaveEmail(sTo, sSubject: string);
 var
   sBody, sFilePath: string;
   okToSave: boolean;
-  IniFile: TIniFile;
   docdir, compdir, docExt: string;
 begin
   docDir := dmBroker.GetCompanyCustomerDirectory + '\' + NameEdit.text;
@@ -3947,8 +3947,6 @@ begin
 
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
-
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
 
   sBody := '';
   sfilePath := docdir;
@@ -4476,12 +4474,11 @@ begin
       {Get the button statuses} ;
       iMnuMaint := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator, 'mnuEnquiries') ;
 
-      IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-      with IniFile do
-      begin
-        stempdate := ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');
-        Free;
+      IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+      try
+        stempdate := IniFile.ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');
+      finally
+        IniFile.Free;
       end;
 
       if stempdate = 'None' then
@@ -4968,12 +4965,11 @@ begin
 
 //      dmBroker.iAccCtrlMenu := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator,'mnuOrders') ;
 
-      IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-      with IniFile do
-      begin
-        stempdate := ReadString('Centrereed Broker', 'Customer Order Search Date', 'None');
-        Free;
+      IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+      try
+        stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Order Search Date', 'None');
+      finally
+        IniFile.Free;
       end;
 
       if stempdate = 'None' then
@@ -5563,13 +5559,12 @@ begin
 
 //      dmBroker.iAccCtrlMenu := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator,'mnuJobs') ;
 
-      IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-      with IniFile do
-        begin
-          stempdate := ReadString('Centrereed Broker', 'Customer Job Bag Search Date', 'None');
-          Free;
-        end;
+      IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+      try
+        stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Job Bag Search Date', 'None');
+      finally
+        IniFile.Free;
+      end;
 
       if stempdate = 'None' then
         dtmdlCustJobs.JobDate := Date - 365
@@ -6732,13 +6727,12 @@ procedure TPBMaintCustFrm.tbJobsExit(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Customer Job Bag Search Date', pbdatestr(dtmdlCustJobs.JobDate));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Customer Job Bag Search Date', pbdatestr(dtmdlCustJobs.JobDate));
+  finally
+    IniFile.Free;
+  end;
 
   try
     ActiveJobcode := dbgJobDetails.datasource.DataSet.FieldByName('Job_Bag').asinteger;
@@ -7071,13 +7065,12 @@ procedure TPBMaintCustFrm.tbOrdersExit(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Customer Order Search Date', pbdatestr(dtmdlCustOrders.OrderDate));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Customer Order Search Date', pbdatestr(dtmdlCustOrders.OrderDate));
+  finally
+    IniFile.Free;
+  end;
 
   try
     ActiveOrdercode := dbgOrderDetails.datasource.DataSet.FieldByName('Sales_Order').asfloat;
@@ -7127,12 +7120,11 @@ procedure TPBMaintCustFrm.tbEnquiriesExit(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-  begin
-    WriteString('Centrereed Broker', 'Enquiry Search Date', pbdatestr(dtmdlCustEnqs.EnquiryDate));
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Enquiry Search Date', pbdatestr(dtmdlCustEnqs.EnquiryDate));
+  finally
+    IniFile.Free;
   end;
 
   try
@@ -7466,12 +7458,11 @@ begin
 
 //      dmBroker.iAccCtrlMenu := dmBroker.GetButtonStatus(frmpbMainMenu.iOperator,'mnuQuotes') ;
 
-      IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-      with IniFile do
-      begin
-        stempdate := ReadString('Centrereed Broker', 'Quote Search Date', 'None');
-        Free;
+      IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+      try
+        stempdate := IniFile.ReadString('Centrereed Broker', 'Quote Search Date', 'None');
+      finally
+        IniFile.Free;
       end;
 
       if stempdate = 'None' then
@@ -7516,13 +7507,12 @@ procedure TPBMaintCustFrm.tbQuotesExit(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlCustQuotes.QuoteDate));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Quote Search Date', pbdatestr(dtmdlCustQuotes.QuoteDate));
+  finally
+    IniFile.Free;
+  end;
 
   try
     ActiveQuotecode := dbgQuoteDetails.datasource.DataSet.FieldByName('Quote').asinteger;

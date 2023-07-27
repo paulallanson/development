@@ -3139,13 +3139,12 @@ procedure TPBAccExport3Frm.GetDataSource;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      cbSource.itemindex := cbsource.Items.Indexof(ReadString('Centrereed Broker', 'DataSource', 'None'));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    cbSource.itemindex := cbsource.Items.Indexof(IniFile.ReadString('Centrereed Broker', 'DataSource', 'None'));
+  finally
+    IniFile.Free;
+  end;
 (*  GetPrivateProfileString('Email', 'Application', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
@@ -3171,13 +3170,12 @@ procedure TPBAccExport3Frm.WriteDataSource;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'DataSource',cbSource.text);
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'DataSource',cbSource.text);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBAccExport3Frm.FormDestroy(Sender: TObject);

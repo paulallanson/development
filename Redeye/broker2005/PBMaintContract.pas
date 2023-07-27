@@ -7,7 +7,8 @@ uses
   Dialogs, PBContractDM, ComCtrls, StdCtrls, DBCtrls, Buttons, ExtCtrls,
   DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm,
   PBPOObjects, Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus,
-  DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM;
+  DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
+  System.ImageList;
 
 type
   TPBMaintContractFrm = class(TForm)
@@ -1919,10 +1920,12 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    FEmailApplication := ReadString('Email', 'Application', 'None');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    FEmailApplication := IniFile.ReadString('Email', 'Application', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   sBody := '';
   sfilePath := docdir;
@@ -2393,7 +2396,7 @@ end;
 
 procedure TPBMaintContractFrm.FormCreate(Sender: TObject);
 begin
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBMaintContractFrm.AddToContract(iJobBag: integer);

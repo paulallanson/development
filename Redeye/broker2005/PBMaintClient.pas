@@ -205,9 +205,9 @@ var
 begin
   sAliasName := dmBroker.PBLDatabase.ConnectionDefName;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Email', 'Application',Applic);
       WriteString('Email', 'Def Attach Type',AttachType);
@@ -217,10 +217,11 @@ begin
       WriteString('Email', 'Email Font',Font);
       WriteString('Email', 'Email Font Size',inttostr(FontSize));
       WriteString('Activity','Reminder Interval',Interval);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 end;
-
 
 procedure TPBMaintClientFrm.btnOKClick(Sender: TObject);
 begin

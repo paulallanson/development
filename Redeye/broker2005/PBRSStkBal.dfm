@@ -3,8 +3,8 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
   Top = 160
   BorderStyle = bsDialog
   Caption = 'Stock Report'
-  ClientHeight = 226
-  ClientWidth = 445
+  ClientHeight = 225
+  ClientWidth = 441
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -237,14 +237,10 @@ object PBRSStkBalFrm: TPBRSStkBalFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object GetPartsSQL: TFDQuery

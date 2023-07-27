@@ -234,8 +234,6 @@ type
       Shift: TShiftState);
     procedure SameAsPartEditKeyPress(Sender: TObject; var Key: Char);
     procedure SameAsPartSpinClick(Sender: TObject; Button: TUDBtnType);
-    procedure SupplierGridDrawCell(Sender: TObject; Col, Row: Longint;
-      Rect: TRect; State: TGridDrawState);
     procedure CustomerEditChange(Sender: TObject);
     procedure BranchEditChange(Sender: TObject);
     procedure ContactComboChange(Sender: TObject);
@@ -271,6 +269,8 @@ type
     procedure btbtnExcelSheetClick(Sender: TObject);
     procedure strgrdDocsDblClick(Sender: TObject);
     procedure rdgTypeClick(Sender: TObject);
+    procedure SupplierGridDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     { Private declarations }
     DroppedEmailFile: string;
@@ -3934,22 +3934,6 @@ begin
   UpdatePartDetails(PartList.Itemindex);
 end;
 
-procedure TPBEnquiryFrm.SupplierGridDrawCell(Sender: TObject; Col,
-  Row: Longint; Rect: TRect; State: TGridDrawState);
-begin
-(*  {Code extracted from the Delphi Info base No 609}
-  if Sender = ActiveControl then Exit;
-  if not (gdSelected in State) then Exit;
-  with Sender as TStringGrid do
-  begin
-    Canvas.Brush.Color := Color;
-    Canvas.Font.Color := Font.Color;
-    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2,
-      Cells[Col, Row]);
-  end;
-*)
-end;
-
 procedure TPBEnquiryFrm.CustomerEditChange(Sender: TObject);
 begin
   EnableOK;
@@ -4137,6 +4121,22 @@ begin
         ContactSelBitBtnClick(self);
 end;
 
+procedure TPBEnquiryFrm.SupplierGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
+begin
+//(*  {Code extracted from the Delphi Info base No 609}
+//  if Sender = ActiveControl then Exit;
+//  if not (gdSelected in State) then Exit;
+//  with Sender as TStringGrid do
+//  begin
+//    Canvas.Brush.Color := Color;
+//    Canvas.Font.Color := Font.Color;
+//    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2,
+//      Cells[Col, Row]);
+//  end;
+//*)
+end;
+
 procedure TPBEnquiryFrm.ContactSelBitBtnClick(Sender: TObject);
 var
   irow: integer;
@@ -4322,7 +4322,7 @@ begin
   PBEnqDataModFrm := TPBEnqDataModFrm.Create(Self);
   dmPBDocObjects := TdmPBDocObjects.Create(self);
   Enquiry := TEnquiry.Create;
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBEnquiryFrm.AddNotesMemoChange(Sender: TObject);
@@ -4586,10 +4586,12 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    FEmailApplication := ReadString('Email', 'Application', 'None');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    FEmailApplication := IniFile.ReadString('Email', 'Application', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   sBody := '';
   sfilePath := docdir;

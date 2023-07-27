@@ -78,14 +78,16 @@ var
   sTmpDateFrom, stmpDateTo, sEmployeeName: string;
 begin
   IniFile := TIniFile.Create('datacollect.ini');
-
-  with IniFile do
+  try
+    with IniFile do
     begin
       stmpDateFrom := ReadString('Shop Floor Data Collection', 'Search Date From', 'None');
       stmpDateTo := ReadString('Shop Floor Data Collection', 'Search Date To', 'None');
       sEmployeeName := ReadString('Shop Floor Data Collection', 'Employee Name', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlJobBagLog := TdtmdlJobBagLog.create(self);
   dtmdlJobBagLog.dtsJobLogGrid.OnDataChange := SetButtons;
@@ -161,14 +163,17 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create('datacollect.ini');
-
-  with IniFile do
+  try
+    with IniFile do
     begin
       WriteString('Shop Floor Data Collection', 'Search Date From', pbdatestr(dtmdlJobBagLog.DateFrom));
       WriteString('Shop Floor Data Collection', 'Search Date To', pbdatestr(dtmdlJobBagLog.DateTo));
       WriteString('Shop Floor Data Collection', 'Employee Name', dtmdlJobBagLog.WCOperatorName);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
+
   dtmdlJobBagLog.free;
 end;
 

@@ -373,30 +373,30 @@ type
     procedure LineAddBitBtnClick(Sender: TObject);
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; Col,
-      Row: Longint; Rect: TRect; State: TGridDrawState);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure ShowDelivGrid(Sender: TObject);
     procedure DelivAddBitBtnClick(Sender: TObject);
     procedure DelivChgBitBtnClick(Sender: TObject);
     procedure DelivDelBitBtnClick(Sender: TObject);
     procedure LineDetsStringGridDblClick(Sender: TObject);
     procedure DelivDetsStringGridDblClick(Sender: TObject);
-    procedure DelivDetsStringGridDrawCell(Sender: TObject; Col,
-      Row: Longint; Rect: TRect; State: TGridDrawState);
+    procedure DelivDetsStringGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure ShowCallOffGrid(Sender: TObject);
     procedure ShowExtChgGrid(Sender: TObject);
     procedure ExtChgAddBitBtnClick(Sender: TObject);
     procedure ExtChgChgBitBtnClick(Sender: TObject);
     procedure ExtChgDelBitBtnClick(Sender: TObject);
     procedure ExtChgDetsStringGridDblClick(Sender: TObject);
-    procedure ExtChgDetsStringGridDrawCell(Sender: TObject; Col,
-      Row: Longint; Rect: TRect; State: TGridDrawState);
-    procedure DelivDetsStringGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
-    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
+    procedure ExtChgDetsStringGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure DelivDetsStringGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
+    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
     procedure FormCreate(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
     procedure SetJobTypeAbilities;
@@ -428,7 +428,7 @@ type
     procedure CallOffAddBtnClick(Sender: TObject);
     procedure CallOffChgBtnClick(Sender: TObject);
     procedure CallOffDelBtnClick(Sender: TObject);
-    procedure sgCallOffDrawCell(Sender: TObject; Col, Row: Integer;
+    procedure sgCallOffDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgCallOffDblClick(Sender: TObject);
     procedure NoCallOffEditChange(Sender: TObject);
@@ -485,7 +485,7 @@ type
     procedure AddPartDetails;
     procedure sgPartDetailsClick(Sender: TObject);
     procedure ColourComboBoxKeyPress(Sender: TObject; var Key: Char);
-    procedure sgPartDetailsDrawCell(Sender: TObject; Col, Row: Integer;
+    procedure sgPartDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure MaterialComboBoxClick(Sender: TObject);
     procedure MaterialComboBoxKeyPress(Sender: TObject; var Key: Char);
@@ -538,7 +538,7 @@ type
     procedure AddNotesMemoChange(Sender: TObject);
     procedure NewOfficeDoc(Sender: TObject);
     procedure tbInvoicingResize(Sender: TObject);
-    procedure InvsGridsDrawCell(Sender: TObject; Col, Row: Integer;
+    procedure InvsGridsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure strgrdSalesInvsDblClick(Sender: TObject);
     procedure strgrdPurchInvsDblClick(Sender: TObject);
@@ -2407,15 +2407,15 @@ begin
 end;
 
 procedure TPBMaintPOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 (*  if FSelectedLineIndex = Row - 1 then Exit;
   FSelectedLineIndex := Row - 1;
   SelectionChanged;
 *)end;
 
-procedure TPBMaintPOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; Col,
-  Row: Longint; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintPOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 //var
 //  Txt: array[0..255] of Char;
 begin
@@ -3143,15 +3143,15 @@ begin
 end;
 
 procedure TPBMaintPOrdFrm.DelivDetsStringGridDrawCell(Sender: TObject;
-  Col, Row: Longint; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {The following is code extracted from the Delphi Info Base}
   {Display the Columns Right justified in the cells}
-  if (Col = 1) then
+  if (ACol = 1) then
   begin
-    StrPCopy(Txt, DelivDetsStringGrid.Cells[Col, Row]);
+    StrPCopy(Txt, DelivDetsStringGrid.Cells[ACol, ARow]);
     SetTextAlign(DelivDetsStringGrid.Canvas.Handle,
       GetTextAlign(DelivDetsStringGrid.Canvas.Handle)
       and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -3160,7 +3160,7 @@ begin
   end
   else
   begin
-    StrPCopy(Txt, DelivDetsStringGrid.Cells[Col, Row]);
+    StrPCopy(Txt, DelivDetsStringGrid.Cells[ACol, ARow]);
     SetTextAlign(DelivDetsStringGrid.Canvas.Handle,
       GetTextAlign(DelivDetsStringGrid.Canvas.Handle)
       and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -3363,7 +3363,7 @@ begin
 end;
 
 procedure TPBMaintPOrdFrm.ExtChgDetsStringGridDrawCell(Sender: TObject;
-  Col, Row: Longint; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
@@ -3380,9 +3380,9 @@ begin
         Cells[Col, Row]);
     end;
   end;
-  if (Col = 1) or (Col = 2) then
+  if (ACol = 1) or (ACol = 2) then
   begin
-    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[Col, Row]);
+    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[ACol, ARow]);
     SetTextAlign(ExtChgDetsStringGrid.Canvas.Handle,
       GetTextAlign(ExtChgDetsStringGrid.Canvas.Handle)
       and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -3391,7 +3391,7 @@ begin
   end
   else
   begin
-    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[Col, Row]);
+    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[ACol, ARow]);
     SetTextAlign(ExtChgDetsStringGrid.Canvas.Handle,
       GetTextAlign(ExtChgDetsStringGrid.Canvas.Handle)
       and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -3485,7 +3485,7 @@ begin
 end;
 
 procedure TPBMaintPOrdFrm.DelivDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 begin
 (*  FSelectedDeliveryIndex := Row - 1;
   if Assigned(SelectedDelivery) then
@@ -3597,9 +3597,9 @@ begin
 end;
 
 procedure TPBMaintPOrdFrm.ExtChgDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-  FSelectedChargeIndex := Row - 1;
+  FSelectedChargeIndex := ARow - 1;
 end;
 
 procedure TPBMaintPOrdFrm.FormCreate(Sender: TObject);
@@ -5353,24 +5353,24 @@ begin
   ShowLineGrid(nil);
 end;
 
-procedure TPBMaintPOrdFrm.sgCallOffDrawCell(Sender: TObject; Col,
-  Row: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintPOrdFrm.sgCallOffDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
   CallOffOrder: TCallOffOrder;
 begin
-  if (row <> 0) and (trim(sgCallOff.Cells[Col, 1]) <> '') then
+  if (ARow <> 0) and (trim(sgCallOff.Cells[ACol, 1]) <> '') then
     begin
-      FSelectedCallOffIndex := row-1;
+      FSelectedCallOffIndex := ARow-1;
       CallOffOrder := SelectedCallOffOrder.Clone;
       if CallOffOrder.Inactive = 'Y' then
         sgCallOff.Canvas.font.Color := clRed;
     end;
   {The following is code extracted from the Delphi Info Base}
   {Display the Columns Right justified in the cells}
-  if (Col = 3) then
+  if (ACol = 3) then
   begin
-    StrPCopy(Txt, sgCallOff.Cells[Col, Row]);
+    StrPCopy(Txt, sgCallOff.Cells[ACol, ARow]);
     SetTextAlign(sgCallOff.Canvas.Handle,
       GetTextAlign(sgCallOff.Canvas.Handle)
       and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -5379,7 +5379,7 @@ begin
   end
   else
   begin
-    StrPCopy(Txt, sgCallOff.Cells[Col, Row]);
+    StrPCopy(Txt, sgCallOff.Cells[ACol, ARow]);
     SetTextAlign(sgCallOff.Canvas.Handle,
       GetTextAlign(sgCallOff.Canvas.Handle)
       and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -6443,8 +6443,8 @@ begin
 
 end;
 
-procedure TPBMaintPOrdFrm.sgPartDetailsDrawCell(Sender: TObject; Col,
-  Row: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintPOrdFrm.sgPartDetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Code extracted from the Delphi Info base No 609}
   if Sender = ActiveControl then Exit;
@@ -7991,15 +7991,15 @@ begin
 //  OnHoldChkBox.Enabled := (SelectedLine.POLineStatus <> 30) or (strgrdPurchInvs.cells[1,1] = '');
 end;
 
-procedure TPBMaintPOrdFrm.InvsGridsDrawCell(Sender: TObject; Col,
-  Row: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintPOrdFrm.InvsGridsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
   strGrid: TStringGrid;
   lrow, lcol: Longint;
 begin
-  lRow := Row;
-  lCol := Col;
+  lRow := ARow;
+  lCol := ACol;
   strGrid := Sender as TStringGrid;
 
   with strGrid, Canvas do
@@ -8041,7 +8041,7 @@ begin
   if (lCol = 3) or (lCol = 4) or (lCol = 5) or (lCol = 6) or (lCol = 7)  or (lCol = 8) then
   begin
     //right align
-    StrPCopy(Txt, strGrid.Cells[Col, Row]);
+    StrPCopy(Txt, strGrid.Cells[ACol, ARow]);
     SetTextAlign(strGrid.Canvas.Handle,
       GetTextAlign(strGrid.Canvas.Handle)
       and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -8051,7 +8051,7 @@ begin
   else
   begin
     //left align
-    StrPCopy(Txt, strGrid.Cells[Col, Row]);
+    StrPCopy(Txt, strGrid.Cells[ACol, ARow]);
     SetTextAlign(strGrid.Canvas.Handle,
       GetTextAlign(strGrid.Canvas.Handle)
       and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -8231,10 +8231,12 @@ begin
   docExt := '.msg';
   svDlgOfficeDoc.Filter := 'Outlook Email (*.msg)|*.msg';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    FEmailApplication := ReadString('Email', 'Application', 'None');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    FEmailApplication := IniFile.ReadString('Email', 'Application', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   sBody := '';
   sfilePath := docdir;
@@ -8274,6 +8276,7 @@ begin
       end;
     end;
 end;
+
 procedure TPBMaintPOrdFrm.dblkpJobTypeClick(Sender: TObject);
 begin
   UpdateOrderLine;

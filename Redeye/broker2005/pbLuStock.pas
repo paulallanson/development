@@ -223,14 +223,16 @@ procedure TfrmPBLUStock.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       bShowOnlyStock := (ReadString('Redeye', 'Show Only Stock', 'N')= 'Y');
       bShowPositiveStock := (ReadString('Redeye', 'Show Only Positive Stock', 'N')= 'Y');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllStock := TdtmdlStock.create(self);
 
@@ -359,7 +361,6 @@ var
   IniFile : TIniFile;
   ShowOnlyStock, ShowPositiveStock: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
   if chkbxShowStocked.checked then
     ShowOnlyStock := 'Y'
   else
@@ -370,12 +371,16 @@ begin
   else
     ShowPositiveStock := 'N';
 
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Redeye', 'Show Only Stock', ShowOnlyStock);
       WriteString('Redeye', 'Show Only Positive Stock', ShowPositiveStock);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllStock.free;
 end;

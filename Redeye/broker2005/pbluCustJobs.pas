@@ -161,13 +161,12 @@ var
   IniFile : TIniFile;
   stempDate: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      stempdate := ReadString('Centrereed Broker', 'Customer Job Bag Search Date', 'None');
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    stempdate := IniFile.ReadString('Centrereed Broker', 'Customer Job Bag Search Date', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlJobs := TdtmdlJobs.create(self);
 
@@ -260,13 +259,12 @@ procedure TfrmpbluCustJobs.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      WriteString('Centrereed Broker', 'Customer Job Bag Search Date', pbdatestr(dtmdlJobs.JobDate));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Customer Job Bag Search Date', pbdatestr(dtmdlJobs.JobDate));
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlJobs.free;
 end;

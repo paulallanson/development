@@ -4,22 +4,20 @@ object PBMaintClientFrm: TPBMaintClientFrm
   Anchors = [akLeft, akTop, akBottom]
   BorderStyle = bsDialog
   Caption = 'Maintain Client Parameters'
-  ClientHeight = 426
-  ClientWidth = 458
+  ClientHeight = 425
+  ClientWidth = 454
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    458
-    426)
-  PixelsPerInch = 96
+    454
+    425)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -139,7 +137,7 @@ object PBMaintClientFrm: TPBMaintClientFrm
   end
   object btnOK: TBitBtn
     Left = 288
-    Top = 391
+    Top = 390
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -148,14 +146,16 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkOK
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 10
     OnClick = btnOKClick
-    Kind = bkOK
+    ExplicitTop = 391
   end
   object btnCancel: TBitBtn
     Left = 368
-    Top = 391
+    Top = 390
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -164,9 +164,11 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 11
-    Kind = bkCancel
+    ExplicitTop = 391
   end
   object ApplicDBLCB: TDBLookupComboBox
     Left = 16
@@ -208,8 +210,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Width = 25
     Height = 25
     Hint = 'Clear Deafult Client Application'
-    TabOrder = 1
-    OnClick = ApplicClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -224,6 +224,8 @@ object PBMaintClientFrm: TPBMaintClientFrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = ApplicClrBitBtnClick
   end
   object AttachClrBitBtn: TBitBtn
     Left = 270
@@ -231,8 +233,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Width = 25
     Height = 25
     Hint = 'Clear Default Attachment file type'
-    TabOrder = 3
-    OnClick = AttachClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -247,6 +247,8 @@ object PBMaintClientFrm: TPBMaintClientFrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = AttachClrBitBtnClick
   end
   object DirectClrBitBtn: TBitBtn
     Left = 326
@@ -254,8 +256,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Width = 25
     Height = 25
     Hint = 'Clear Default Attachment Storage Directory'
-    TabOrder = 7
-    OnClick = DirectClrBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -270,6 +270,8 @@ object PBMaintClientFrm: TPBMaintClientFrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = DirectClrBitBtnClick
   end
   object edtEMailAccount: TEdit
     Left = 16
@@ -317,7 +319,6 @@ object PBMaintClientFrm: TPBMaintClientFrm
     Hint = 'Font Name|Select font name'
     Ctl3D = False
     DropDownCount = 10
-    ItemHeight = 13
     ParentCtl3D = False
     TabOrder = 12
     OnClick = FontNameClick

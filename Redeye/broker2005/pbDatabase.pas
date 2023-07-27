@@ -66,6 +66,7 @@ type
       AParams: TFDConnectionDefParams);
     procedure EmailDatabaseLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
+    procedure PBLDatabaseBeforeConnect(Sender: TObject);
   private
     FUserName: string;
     FPassword: string;
@@ -300,6 +301,13 @@ begin
   DriverName := PBLDatabase.DriverName;
   if DriverName = 'MSSQL' then
     FIsSQL := true;
+end;
+
+procedure TdmBroker.PBLDatabaseBeforeConnect(Sender: TObject);
+begin
+  PBLDatabase.FormatOptions.OwnMapRules := True;
+  PBLDatabase.FormatOptions.MapRules.Clear;
+  PBLDatabase.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
 end;
 
 procedure TdmBroker.PBLDatabaseLogin(AConnection: TFDCustomConnection;

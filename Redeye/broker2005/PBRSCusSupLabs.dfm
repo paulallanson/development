@@ -3,21 +3,19 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Print Cust/Supp Labels'
-  ClientHeight = 187
-  ClientWidth = 411
+  ClientHeight = 186
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label5: TLabel
     Left = 17
@@ -58,9 +56,10 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 168
@@ -74,9 +73,6 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -91,6 +87,9 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 256
@@ -105,9 +104,6 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -122,6 +118,9 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PrintBitBtnClick
   end
   object NoofBoxesSpinEdit: TSpinEdit
     Left = 99
@@ -169,8 +168,6 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Width = 25
     Height = 25
     Hint = 'Clear contact details'
-    TabOrder = 7
-    OnClick = ContactBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -185,6 +182,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = ContactBitBtnClick
   end
   object CountSQL: TFDQuery
     ConnectionName = 'PB'
@@ -215,8 +214,8 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -231,9 +230,7 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SelCode'
-        ParamType = ptUnknown
       end>
   end
   object GetCustBranchesSQL: TFDQuery
@@ -247,9 +244,7 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SelCode'
-        ParamType = ptUnknown
       end>
   end
   object BranchesDS: TDataSource
@@ -269,14 +264,10 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SelCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object GetCustContactsSQL: TFDQuery
@@ -292,14 +283,10 @@ object PBRSCusSupLabsfrm: TPBRSCusSupLabsfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SelCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object ContactsDS: TDataSource

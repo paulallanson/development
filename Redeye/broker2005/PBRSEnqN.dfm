@@ -1,10 +1,10 @@
-﻿object PBRSEnqNFrm: TPBRSEnqNFrm
+object PBRSEnqNFrm: TPBRSEnqNFrm
   Left = 212
   Top = 187
   BorderIcons = [biSystemMenu]
   Caption = 'Enquiry Print'
-  ClientHeight = 226
-  ClientWidth = 421
+  ClientHeight = 225
+  ClientWidth = 417
   Color = clBtnFace
   Constraints.MaxHeight = 400
   Constraints.MaxWidth = 610
@@ -23,8 +23,8 @@
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
-    Top = 110
-    Width = 421
+    Top = 109
+    Width = 417
     Height = 97
     Align = alBottom
     BevelOuter = bvNone
@@ -183,7 +183,7 @@
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 421
+    Width = 417
     Height = 81
     Align = alTop
     BevelOuter = bvNone
@@ -232,8 +232,8 @@
   object pnlReminder: TPanel
     Left = 0
     Top = 81
-    Width = 421
-    Height = 29
+    Width = 417
+    Height = 28
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
@@ -265,8 +265,8 @@
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 207
-    Width = 421
+    Top = 206
+    Width = 417
     Height = 19
     Panels = <
       item
@@ -320,34 +320,22 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetEnqSuppSQL: TFDQuery
@@ -422,24 +410,16 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
 end

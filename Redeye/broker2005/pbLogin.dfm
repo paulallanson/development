@@ -1,4 +1,4 @@
-﻿object frmpbLogin: TfrmpbLogin
+object frmpbLogin: TfrmpbLogin
   Left = 267
   Top = 201
   BorderStyle = bsDialog
@@ -11,12 +11,10 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 32
@@ -78,9 +76,9 @@
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = OKBitBtnClick
-    NumGlyphs = 2
   end
   object CancelBitBtn: TBitBtn
     Left = 344
@@ -90,9 +88,9 @@
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = CancelBitBtnClick
-    NumGlyphs = 2
   end
   object Edit1: TEdit
     Left = 384
@@ -110,7 +108,6 @@
     Width = 161
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 2
   end
   object GetOperatorSQL: TFDQuery
@@ -122,9 +119,7 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Login_Name'
-        ParamType = ptUnknown
       end>
   end
 end

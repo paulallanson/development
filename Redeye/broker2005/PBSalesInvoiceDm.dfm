@@ -897,89 +897,113 @@ object dmSalesInvoice: TdmSalesInvoice
       item
         Name = 'UnFactored'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'UnFactored'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_or_Credit'
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_or_Credit'
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Customer'
+        ParamType = ptInput
       end
       item
         Name = 'Rep'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Rep'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Sub_Rep'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Sub_Rep'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
+        ParamType = ptInput
       end
       item
         Name = 'Operator'
+        ParamType = ptInput
       end
       item
         Name = 'Code_From'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Code_From'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Status'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Status'
         DataType = ftInteger
+        ParamType = ptInput
       end
       item
         Name = 'Inactive'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Inactive'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Invoice_Description'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Rep_Name'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Sub_Rep_Name'
         DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Status_Name'
+        ParamType = ptInput
       end
       item
         Name = 'Paid_Status'
+        ParamType = ptInput
       end
       item
         Name = 'Paid_Status'
+        ParamType = ptInput
       end>
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'

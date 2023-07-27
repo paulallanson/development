@@ -219,13 +219,13 @@ procedure TfrmpbluCustomers.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Customer', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
+  finally
+    IniFile.Free;
+  end;
 
-  with IniFile do
-    begin
-      WriteString('Customer', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
-      Free;
-    end;
   dtmdlCustomers.free;
 end;
 
@@ -322,10 +322,9 @@ procedure TfrmpbluCustomers.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       if (ReadString('Customer', 'Colour Coding', '0') = '0') then
         cmbColourCoding.itemindex := 0

@@ -1,24 +1,22 @@
-﻿object PBRSProofNFrm: TPBRSProofNFrm
+object PBRSProofNFrm: TPBRSProofNFrm
   Left = 260
   Top = 159
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Proof Approval Print'
-  ClientHeight = 184
-  ClientWidth = 359
+  ClientHeight = 183
+  ClientWidth = 355
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -46,9 +44,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -63,6 +58,9 @@
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 96
@@ -76,9 +74,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -93,6 +88,9 @@
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 8
@@ -105,9 +103,10 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object SelOneGrpBox: TGroupBox
     Left = 16
@@ -199,8 +198,6 @@
     Height = 25
     Caption = '&Email'
     Enabled = False
-    TabOrder = 7
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -215,6 +212,8 @@
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = EmailBitBtnClick
   end
   object GetPOsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -266,14 +265,11 @@
     Top = 98
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOSQL: TFDQuery
@@ -287,19 +283,13 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Proof_Revision'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object ProofStatusSQL: TFDQuery

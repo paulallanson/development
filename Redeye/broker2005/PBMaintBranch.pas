@@ -958,11 +958,11 @@ procedure TPBMaintBranchFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
     IniFile.WriteString('Centrereed Broker', 'Default Branch Tab', inttostr(pgBranches.TabIndex));
   finally
-    inifile.free;
+    Inifile.free;
   end;
 end;
 

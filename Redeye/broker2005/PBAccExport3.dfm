@@ -1,23 +1,20 @@
 object PBAccExport3Frm: TPBAccExport3Frm
   Left = 145
   Top = 140
-  AutoScroll = False
   Caption = 'Export & Import Wizard'
-  ClientHeight = 299
-  ClientWidth = 347
+  ClientHeight = 298
+  ClientWidth = 343
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object AliasLbl: TLabel
     Left = 8
@@ -61,7 +58,6 @@ object PBAccExport3Frm: TPBAccExport3Frm
     Width = 177
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 7
     OnChange = cbsourceChange
   end

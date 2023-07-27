@@ -1,10 +1,10 @@
-﻿object PBRSPOrdNFrm: TPBRSPOrdNFrm
+object PBRSPOrdNFrm: TPBRSPOrdNFrm
   Left = 398
   Top = 120
   BorderIcons = [biSystemMenu]
   Caption = 'Purchase Order Print'
-  ClientHeight = 333
-  ClientWidth = 480
+  ClientHeight = 332
+  ClientWidth = 476
   Color = clBtnFace
   Constraints.MaxHeight = 510
   Constraints.MaxWidth = 620
@@ -22,8 +22,8 @@
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 273
-    Width = 480
+    Top = 272
+    Width = 476
     Height = 41
     Align = alBottom
     TabOrder = 0
@@ -137,7 +137,7 @@
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 480
+    Width = 476
     Height = 81
     Align = alTop
     TabOrder = 1
@@ -191,15 +191,15 @@
   object pnlButtons: TPanel
     Left = 0
     Top = 81
-    Width = 480
-    Height = 98
+    Width = 476
+    Height = 97
     Align = alClient
     TabOrder = 2
     ExplicitWidth = 488
     ExplicitHeight = 106
     DesignSize = (
-      480
-      98)
+      476
+      97)
     object cbPrintLogo: TCheckBox
       Left = 16
       Top = 10
@@ -257,7 +257,7 @@
     object TypeRadioGroup: TRadioGroup
       Left = 256
       Top = 2
-      Width = 225
+      Width = 217
       Height = 65
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -272,6 +272,7 @@
       ParentFont = False
       TabOrder = 2
       OnClick = TypeRadioGroupClick
+      ExplicitWidth = 225
     end
     object chkbxAttachDelNote: TCheckBox
       Left = 10
@@ -306,8 +307,8 @@
   end
   object pnlLabels: TPanel
     Left = 0
-    Top = 179
-    Width = 480
+    Top = 178
+    Width = 476
     Height = 94
     Align = alBottom
     TabOrder = 3
@@ -392,8 +393,8 @@
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 314
-    Width = 480
+    Top = 313
+    Width = 476
     Height = 19
     Panels = <
       item
@@ -474,24 +475,20 @@
     Top = 22
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetAcksSQL: TFDQuery
@@ -561,24 +558,16 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPODelivs: TFDQuery
@@ -592,14 +581,10 @@
     Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'PONum'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPO: TFDQuery
@@ -612,9 +597,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryLogos: TFDQuery

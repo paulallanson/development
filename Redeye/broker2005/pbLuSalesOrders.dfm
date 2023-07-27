@@ -2,8 +2,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 382
-  ClientWidth = 934
+  ClientHeight = 361
+  ClientWidth = 930
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,15 +24,16 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 934
+    Width = 930
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 928
+        Width = 932
       end>
+    ExplicitWidth = 934
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -44,9 +45,9 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 907
+        Width = 919
         Height = 40
-        ButtonHeight = 44
+        ButtonHeight = 29
         ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstOrders
@@ -186,12 +187,14 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 322
-    Width = 934
+    Top = 301
+    Width = 930
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 322
+    ExplicitWidth = 934
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -278,8 +281,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 363
-    Width = 934
+    Top = 342
+    Width = 930
     Height = 19
     Panels = <
       item
@@ -288,11 +291,13 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       item
         Width = 50
       end>
+    ExplicitTop = 363
+    ExplicitWidth = 934
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 934
+    Width = 930
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -300,6 +305,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 934
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -332,8 +338,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 934
-    Height = 248
+    Width = 930
+    Height = 227
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnfunctions

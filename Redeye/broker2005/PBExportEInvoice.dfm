@@ -1,29 +1,28 @@
 object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
   Left = 192
   Top = 114
-  Width = 870
-  Height = 478
   Caption = 'Export Electronic Invoices'
+  ClientHeight = 439
+  ClientWidth = 854
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 854
     Height = 81
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 862
     object Label1: TLabel
       Left = 8
       Top = 20
@@ -103,21 +102,25 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 425
-    Width = 862
+    Top = 420
+    Width = 854
     Height = 19
     Panels = <>
+    ExplicitTop = 425
+    ExplicitWidth = 862
   end
   object Panel3: TPanel
-    Left = 768
+    Left = 760
     Top = 81
     Width = 94
-    Height = 344
+    Height = 339
     Align = alRight
     TabOrder = 2
+    ExplicitLeft = 768
+    ExplicitHeight = 344
     DesignSize = (
       94
-      344)
+      339)
     object btnSelect: TBitBtn
       Left = 11
       Top = 27
@@ -127,10 +130,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Anchors = [akTop, akRight]
       Caption = 'Select All'
       Enabled = False
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 0
-      OnClick = btnSelectClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -145,6 +144,10 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         05557F7F7F77777775550F0F0000000555557F7F7777777555550F0000000555
         55557F7777777555555500000005555555557777777555555555}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = btnSelectClick
     end
     object btnOK: TBitBtn
       Left = 11
@@ -155,8 +158,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Caption = 'Send'
       Default = True
       Enabled = False
-      TabOrder = 1
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -175,6 +176,8 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 11
@@ -182,8 +185,9 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
     end
     object btnExcel: TBitBtn
       Left = 11
@@ -193,8 +197,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       Anchors = [akTop, akRight]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 3
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -238,16 +240,20 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 3
+      OnClick = btnExcelClick
     end
   end
   object Panel4: TPanel
     Left = 0
     Top = 81
-    Width = 768
-    Height = 344
+    Width = 760
+    Height = 339
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 3
+    ExplicitWidth = 768
+    ExplicitHeight = 344
     object Panel5: TPanel
       Left = 1
       Top = 183
@@ -335,20 +341,19 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
       object lstbxStatus: TListBox
         Left = 249
         Top = 0
-        Width = 517
+        Width = 509
         Height = 160
         Hint = 'Transaction Log'
         Style = lbOwnerDrawFixed
         Align = alClient
-        ItemHeight = 16
         TabOrder = 1
       end
     end
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 766
-      Height = 182
+      Width = 758
+      Height = 177
       Hint = 
         'to select multiple invoices press the CTRL button and click the ' +
         'required invoices'
@@ -531,23 +536,20 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Status_To'
-        ParamType = ptUnknown
       end>
   end
   object FTP: TIdFTP
-    AutoLogin = True
+    ConnectTimeout = 0
+    NATKeepAlive.UseKeepAlive = False
+    NATKeepAlive.IdleTimeMS = 0
+    NATKeepAlive.IntervalMS = 0
     ProxySettings.ProxyType = fpcmNone
     ProxySettings.Host = 'webscan'
     ProxySettings.UserName = 'MAILMARKETING\BrokerFTP'
@@ -574,9 +576,7 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSIStatus: TFDQuery
@@ -590,14 +590,10 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdCustomer: TFDQuery
@@ -610,14 +606,10 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_File_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSInvoice: TFDQuery
@@ -631,19 +623,13 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
 end

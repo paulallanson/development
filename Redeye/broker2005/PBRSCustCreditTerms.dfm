@@ -1,24 +1,22 @@
 object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
   Left = 520
   Top = 147
-  Width = 400
-  Height = 223
   Caption = 'Credit Terms Letter'
+  ClientHeight = 184
+  ClientWidth = 384
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    392
-    196)
-  PixelsPerInch = 96
+    384
+    184)
   TextHeight = 13
   object lblCustomerName: TLabel
     Left = 8
@@ -46,9 +44,10 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
-    Kind = bkCancel
   end
   object EmailBitBtn: TBitBtn
     Left = 288
@@ -57,8 +56,6 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Email'
-    TabOrder = 1
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -73,6 +70,8 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = EmailBitBtnClick
   end
   object Previewbitbtn: TBitBtn
     Left = 105
@@ -86,9 +85,6 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PreviewbitbtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -103,6 +99,9 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PreviewbitbtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 196
@@ -117,9 +116,6 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -134,6 +130,9 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PrintBitBtnClick
   end
   object edtCustomerName: TEdit
     Left = 72
@@ -181,9 +180,7 @@ object PBRSCustCreditTermsFrm: TPBRSCustCreditTermsFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsOperators: TDataSource

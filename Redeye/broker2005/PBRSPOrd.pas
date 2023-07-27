@@ -1029,15 +1029,16 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       FEmailApplication := ReadString('Email', 'Application', 'None');
       FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      Free;
     end;
-
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSPOrdFrm.FormActivate(Sender: TObject);
@@ -1624,26 +1625,27 @@ procedure TPBRSPOrdFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  if TypeRadioGroup.itemindex = 0 then
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    if TypeRadioGroup.itemindex = 0 then
     begin
       with IniFile do
         begin
           WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
           WriteString('Centrereed Broker', 'Purchase Order Bin',inttostr(DefaultBin));
-          Free;
         end
     end
-  else
+    else
     begin
       with IniFile do
         begin
           WriteString('Centrereed Broker', 'Acknowledgement Printer',DefaultPrinter);
           WriteString('Centrereed Broker', 'Acknowledgement Bin',inttostr(DefaultBin));
-          Free;
         end
     end;
+  finally
+    IniFile.Free;
+  end;
 
   Printers.Printer.PrinterIndex := -1;
 end;

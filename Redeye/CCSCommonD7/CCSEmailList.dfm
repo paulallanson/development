@@ -1,30 +1,29 @@
-﻿object CCSEmailListFrm: TCCSEmailListFrm
+object CCSEmailListFrm: TCCSEmailListFrm
   Left = 41
   Top = 205
-  AutoScroll = False
   Caption = 'CCSEmailListFrm'
-  ClientHeight = 271
-  ClientWidth = 749
+  ClientHeight = 270
+  ClientWidth = 745
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 749
-    Height = 230
+    Width = 745
+    Height = 229
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 749
+    ExplicitHeight = 230
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -61,26 +60,30 @@
   end
   object Panel2: TPanel
     Left = 0
-    Top = 230
-    Width = 749
+    Top = 229
+    Width = 745
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 230
+    ExplicitWidth = 749
     object BitBtn1: TBitBtn
       Left = 445
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 0
       Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object BitBtn2: TBitBtn
       Left = 525
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object ExFilterSQL: TFDQuery

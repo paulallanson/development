@@ -140,7 +140,7 @@ begin
 
   //check for email attachment type default in Broker.ini
   //if none set rtf as default.
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
   begin
     defAttach := ReadString('Email', 'Def Attach Type', 'RTF');

@@ -162,14 +162,16 @@ var
   stempDate: string;
   sShowWIP: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       stempdate := ReadString('Centrereed Broker', 'Works Order Search Date', 'None');
       sShowWIP := ReadString('Centrereed Broker', 'Show Works Order WIP', 'None');
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllWOrders := TdtmdlWOrders.create(self);
 
@@ -238,14 +240,16 @@ begin
   else
     sShowWIP := 'None';
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    with IniFile do
     begin
       WriteString('Centrereed Broker', 'Works Order Search Date', pbdatestr(dtmdlAllWOrders.OrderDate));
       WriteString('Centrereed Broker', 'Show Works Order WIP', sShowWIP);
-      Free;
     end;
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllWOrders.free;
 end;

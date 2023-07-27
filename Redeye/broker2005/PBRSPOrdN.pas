@@ -881,15 +881,14 @@ var
   IniFile : TIniFile;
 begin
   {Search the INI file for Email Application}
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      FEmailApplication := ReadString('Email', 'Application', 'None');
-      FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
-      Free;
-    end;
-
+  try
+    FEmailApplication := ReadString('Email', 'Application', 'None');
+    FEmailLocation := ReadString('Email', 'Def Attach Direc', 'None');
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure TPBRSPOrdNFrm.FormActivate(Sender: TObject);
@@ -1311,27 +1310,27 @@ var
   IniFile : TIniFile;
   sAttach: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   with IniFile do
-    begin
-      WriteString('Purchase Orders', 'Page Layout', sPOPageLayout);
-      WriteString('Purchase Orders', 'Letter Layout', sPOLetterLayout);
+  try
+    WriteString('Purchase Orders', 'Page Layout', sPOPageLayout);
+    WriteString('Purchase Orders', 'Letter Layout', sPOLetterLayout);
 
-      WriteString('Acknowledgement', 'Page Layout', sAckPageLayout);
-      WriteString('Acknowledgement', 'Letter Layout', sAckLetterLayout);
+    WriteString('Acknowledgement', 'Page Layout', sAckPageLayout);
+    WriteString('Acknowledgement', 'Letter Layout', sAckLetterLayout);
 
-      if chkbxAttachDelNote.checked then
-        WriteString('Redeye', 'Attach Delivery Note', 'Y')
-      else
-        WriteString('Redeye', 'Attach Delivery Note', 'N');
+    if chkbxAttachDelNote.checked then
+      WriteString('Redeye', 'Attach Delivery Note', 'Y')
+    else
+      WriteString('Redeye', 'Attach Delivery Note', 'N');
 
-      if chkbxAttachLabels.checked then
-        WriteString('Redeye', 'Attach Delivery Labels', 'Y')
-      else
-        WriteString('Redeye', 'Attach Delivery Labels', 'N');
-      Free;
-    end;
+    if chkbxAttachLabels.checked then
+      WriteString('Redeye', 'Attach Delivery Labels', 'Y')
+    else
+      WriteString('Redeye', 'Attach Delivery Labels', 'N');
+  finally
+    IniFile.Free;
+  end;
 
   FEmailAttachment.free;
   CCSCommon.SaveFormLayout(frmPBMainMenu.AppIniFile, self);
@@ -1384,25 +1383,27 @@ procedure TPBRSPOrdNFrm.SaveDefaultPrinter;
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
 
   if TypeRadioGroup.itemindex = 0 then
     begin
       with IniFile do
-        begin
-          WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
-          WriteString('Centrereed Broker', 'Purchase Order Bin',inttostr(DefaultBin));
-          Free;
-        end
+      try
+        WriteString('Centrereed Broker', 'Purchase Order Printer',DefaultPrinter);
+        WriteString('Centrereed Broker', 'Purchase Order Bin',inttostr(DefaultBin));
+      finally
+        IniFile.Free;
+      end
     end
   else
     begin
       with IniFile do
-        begin
-          WriteString('Centrereed Broker', 'Acknowledgement Printer',DefaultPrinter);
-          WriteString('Centrereed Broker', 'Acknowledgement Bin',inttostr(DefaultBin));
-          Free;
-        end
+      try
+        WriteString('Centrereed Broker', 'Acknowledgement Printer',DefaultPrinter);
+        WriteString('Centrereed Broker', 'Acknowledgement Bin',inttostr(DefaultBin));
+      finally
+        IniFile.Free;
+      end
     end;
 
   Printers.Printer.PrinterIndex := -1;
@@ -1477,9 +1478,9 @@ begin
 
   iDefaultPageLayout := cmbPageLayout.itemindex;
 
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       sPOPageLayout := ReadString('Purchase Orders', 'Page Layout', '');
       sPOLetterLayout := ReadString('Purchase Orders', 'Letter Layout', '');

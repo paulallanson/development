@@ -81,7 +81,7 @@ var
   colOrder, colName, colCaption : String;
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   userPrefExist := IniFile.ReadBool('BinLotsLU Col Order', 'UserPrefs', false);
   if (userPrefExist=true) then
   begin

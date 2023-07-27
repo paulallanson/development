@@ -3,8 +3,8 @@ object frmPBRSQuote: TfrmPBRSQuote
   Top = 188
   BorderStyle = bsDialog
   Caption = 'Print Quote Details'
-  ClientHeight = 244
-  ClientWidth = 418
+  ClientHeight = 243
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,16 +19,18 @@ object frmPBRSQuote: TfrmPBRSQuote
   object pnlButtons: TPanel
     Left = 0
     Top = 0
-    Width = 418
-    Height = 244
+    Width = 414
+    Height = 243
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 418
+    ExplicitHeight = 244
     DesignSize = (
-      418
-      244)
+      414
+      243)
     object CancelBitBtn: TBitBtn
       Left = 9
-      Top = 210
+      Top = 209
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -42,10 +44,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
+      ExplicitTop = 210
     end
     object PreviewBitBtn: TBitBtn
       Left = 97
-      Top = 210
+      Top = 209
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -72,10 +75,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
+      ExplicitTop = 210
     end
     object PrintBitBtn: TBitBtn
       Left = 177
-      Top = 210
+      Top = 209
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -103,10 +107,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitTop = 210
     end
     object FaxBitBtn: TBitBtn
       Left = 257
-      Top = 210
+      Top = 209
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -133,10 +138,11 @@ object frmPBRSQuote: TfrmPBRSQuote
       ParentFont = False
       TabOrder = 3
       Visible = False
+      ExplicitTop = 210
     end
     object EmailBitBtn: TBitBtn
       Left = 336
-      Top = 210
+      Top = 209
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -157,6 +163,7 @@ object frmPBRSQuote: TfrmPBRSQuote
       NumGlyphs = 2
       TabOrder = 4
       OnClick = EmailBitBtnClick
+      ExplicitTop = 210
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -298,14 +305,10 @@ object frmPBRSQuote: TfrmPBRSQuote
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Works_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetQuote: TFDQuery
@@ -330,9 +333,7 @@ object frmPBRSQuote: TfrmPBRSQuote
     Top = 42
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryBlank: TFDQuery

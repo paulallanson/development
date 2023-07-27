@@ -133,13 +133,12 @@ var
   IniFile : TIniFile;
   stempDate: string;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-    begin
-      stempdate := ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    stempdate := IniFile.ReadString('Centrereed Broker', 'Enquiry Search Date', 'None');
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlAllEnqs := TdtmdlEnqs.create(self);
 
@@ -160,12 +159,11 @@ procedure TfrmPBLuEnquiries.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create(frmPBMainMenu.AppIniFile);
-
-  with IniFile do
-  begin
-    WriteString('Centrereed Broker', 'Enquiry Search Date', pbdatestr(dtmdlAllEnqs.EnquiryDate));
-    Free;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('Centrereed Broker', 'Enquiry Search Date', pbdatestr(dtmdlAllEnqs.EnquiryDate));
+  finally
+    IniFile.Free;
   end;
 
   dtmdlAllEnqs.free;

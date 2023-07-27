@@ -4,9 +4,11 @@ object dmBroker: TdmBroker
   object PBLDatabase: TFDConnection
     ConnectionName = 'PB'
     Params.Strings = (
-      'ConnectionDef=Redeye')
+      'ConnectionDef=Broker')
+    Connected = True
     OnLogin = PBLDatabaseLogin
     AfterConnect = PBLDatabaseAfterConnect
+    BeforeConnect = PBLDatabaseBeforeConnect
     Left = 48
     Top = 16
   end

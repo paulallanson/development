@@ -3,22 +3,20 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
   Top = 74
   BorderStyle = bsDialog
   Caption = 'Print Box Labels'
-  ClientHeight = 346
-  ClientWidth = 411
+  ClientHeight = 345
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object POGroupBox: TGroupBox
     Left = 8
@@ -140,7 +138,6 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
       Width = 82
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cmbFormatChange
       Items.Strings = (
@@ -195,9 +192,10 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 232
@@ -211,9 +209,6 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -228,6 +223,9 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -257,8 +255,6 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -273,6 +269,8 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
   end
   object PrintBitBtn: TBitBtn
@@ -288,9 +286,6 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 6
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -305,6 +300,9 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 6
+    OnClick = PrintBitBtnClick
   end
   object GroupBox4: TGroupBox
     Left = 224
@@ -360,8 +358,8 @@ object PBRSJobBagBoxLabelsfrm: TPBRSJobBagBoxLabelsfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end

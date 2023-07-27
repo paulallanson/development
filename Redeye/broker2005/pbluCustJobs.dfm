@@ -2,8 +2,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   Left = 0
   Top = 0
   Caption = 'Customer job details'
-  ClientHeight = 552
-  ClientWidth = 810
+  ClientHeight = 551
+  ClientWidth = 806
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 533
-    Width = 810
+    Top = 532
+    Width = 806
     Height = 19
     Panels = <
       item
@@ -35,15 +35,19 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       item
         Width = 50
       end>
+    ExplicitTop = 533
+    ExplicitWidth = 810
   end
   object Panel1: TPanel
     Left = 0
-    Top = 492
-    Width = 810
+    Top = 491
+    Width = 806
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 492
+    ExplicitWidth = 810
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -111,15 +115,16 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 810
+    Width = 806
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 804
+        Width = 808
       end>
+    ExplicitWidth = 810
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -206,8 +211,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 810
-    Height = 417
+    Width = 806
+    Height = 416
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -304,13 +309,14 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 810
+    Width = 806
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 810
     object Panel4: TPanel
       Left = 0
       Top = 0
@@ -347,21 +353,22 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 389
+        Width = 401
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 383
+            Width = 399
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 374
+          Width = 386
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonHeight = 19
+          ButtonWidth = 47
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

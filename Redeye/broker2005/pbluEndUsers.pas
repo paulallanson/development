@@ -8,7 +8,7 @@ uses
   StdCtrls, Buttons, DB, pbCustomerDM, Inifiles,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TfrmPBLUEndUsers = class(TForm)
@@ -175,10 +175,9 @@ procedure TfrmPBLUEndUsers.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
-
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
-  with IniFile do
+    with IniFile do
     begin
       if (ReadString('End User', 'Colour Coding', '0') = '0') then
         cmbColourCoding.itemindex := 0
@@ -336,16 +335,14 @@ procedure TfrmPBLUEndUsers.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create('Redeye.ini');
-
-  with IniFile do
-    begin
-      WriteString('End User', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
-      Free;
-    end;
+  IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
+  try
+    IniFile.WriteString('End User', 'Colour Coding', inttostr(cmbColourCoding.itemindex));
+  finally
+    IniFile.Free;
+  end;
 
   dtmdlEndUsers.free;
-
 end;
 
 procedure TfrmPBLUEndUsers.ShowColumns;

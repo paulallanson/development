@@ -1,10 +1,10 @@
-﻿object PBRSQuoNFrm: TPBRSQuoNFrm
+object PBRSQuoNFrm: TPBRSQuoNFrm
   Left = 434
   Top = 183
   BorderIcons = [biSystemMenu]
   Caption = 'Quotation Print'
-  ClientHeight = 307
-  ClientWidth = 451
+  ClientHeight = 306
+  ClientWidth = 447
   Color = clBtnFace
   Constraints.MaxHeight = 400
   Constraints.MaxWidth = 625
@@ -22,8 +22,8 @@
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
-    Top = 116
-    Width = 451
+    Top = 115
+    Width = 447
     Height = 172
     Align = alBottom
     BevelOuter = bvNone
@@ -216,8 +216,8 @@
   object pnlReminder: TPanel
     Left = 0
     Top = 71
-    Width = 451
-    Height = 45
+    Width = 447
+    Height = 44
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
@@ -250,7 +250,7 @@
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 451
+    Width = 447
     Height = 71
     Align = alTop
     BevelOuter = bvNone
@@ -298,8 +298,8 @@
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 288
-    Width = 451
+    Top = 287
+    Width = 447
     Height = 19
     Panels = <
       item
@@ -366,24 +366,20 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

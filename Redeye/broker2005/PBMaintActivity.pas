@@ -782,7 +782,7 @@ procedure TPBMaintActivityFrm.FormCreate(Sender: TObject);
 begin
   FEmailAttachment := TStringList.create;
   pgActivities.ActivePage := tbCurrent;
-  CCSCommon.LoadFormLayout('redeye.ini', self);
+  CCSCommon.LoadFormLayout(myRedeye_INIFILE, self);
 end;
 
 procedure TPBMaintActivityFrm.FormDestroy(Sender: TObject);
