@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLULevelOfImportance;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLULevelOfImportance;
 
 {$R *.DFM}
 

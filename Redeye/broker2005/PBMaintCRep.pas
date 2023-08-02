@@ -63,7 +63,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBLUReps;
+uses UITypes, pbDatabase, pbMainMenu, PBLUReps;
 
 {$R *.dfm}
 
@@ -172,8 +172,7 @@ begin
   begin
     if ((frmPBLUReps.totalpercentage + spnPercentage.value) > 100) then
       begin
-        MessageDlg('The total of all reps responsibility cannot be greater than 100%', mtInformation,
-          [mbOk], 0);
+        MessageDlg('The total of all reps responsibility cannot be greater than 100%', mtInformation, [mbOk], 0);
         exit;
       end;
     if IsRepInactive(repsdblcb.KeyValue) then

@@ -165,7 +165,7 @@ var
 
 implementation
 
-uses PBLUSupp;
+uses UITypes, PBLUSupp;
 
 const
   supplierLimit = 20;
@@ -756,8 +756,7 @@ end;
 
 procedure TPBEnqSelSupFrm.displaySupplierLimitWarning;
 begin
-  messageDlg('You cannot assign more than ' + IntToStr(supplierLimit)
-    + ' suppliers to an enquiry.', mtWarning, [mbOK], 0);
+  messageDlg('You cannot assign more than ' + IntToStr(supplierLimit) + ' suppliers to an enquiry.', mtWarning, [mbOK], 0);
 end;
 
 end.

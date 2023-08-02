@@ -98,7 +98,7 @@ var
 
 implementation
 
-uses PBLUArtwrkTyp, ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses UITypes, PBLUArtwrkTyp, ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 

@@ -92,7 +92,7 @@ var
 
 implementation
 
-uses PBLUEnqAddChg;
+uses FireDAC.Stan.Param, PBLUEnqAddChg;
 
 {$R *.DFM}
 

@@ -250,7 +250,7 @@ var
 
 implementation
 
-uses PBLUFormRef, PBLUCust, PBLUPrdTyp, PBLUStandSize, PBLUArtwrkTyp,
+uses UITypes, FireDAC.Stan.Param, PBLUFormRef, PBLUCust, PBLUPrdTyp, PBLUStandSize, PBLUArtwrkTyp,
   PBLUCConta, PBLUCRep, DateSelV5, PBEnqQuantities, PBEnqSelSup, PBEnqNote,
   PBEnqSuppRespns;
 
@@ -1262,8 +1262,7 @@ begin
   //check that required fields have been entered
   if Enquiry.Customer.CustomerNo = 0 then
   begin
-    MessageDlg('You must select a customer before saving.',
-        mtWarning, [mbOK], 0);
+    MessageDlg('You must select a customer before saving.', mtWarning, [mbOK], 0);
     Self.ModalResult := mrCancel;
     exit;
   end;

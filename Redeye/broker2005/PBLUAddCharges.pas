@@ -235,7 +235,7 @@ begin
   try
     PBMaintAddChrgsFrm.sFuncMode := sTempFuncMode;
 
-    if sTempFuncMode[1] in ['C', 'D'] then
+    if CharInSet(sTempFuncMode[1], ['C', 'D']) then
     begin
       PBMaintAddChrgsFrm.SelCode := DetsSRC.DataSet.FieldByName('Additional_Charge').AsInteger;
       PBMaintAddChrgsFrm.edtdescription.Text :=

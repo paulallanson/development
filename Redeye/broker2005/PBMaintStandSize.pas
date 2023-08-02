@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses PBLUPriceUnit, PBLUStandSize, ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses UITypes, PBLUPriceUnit, PBLUStandSize, ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 
@@ -241,8 +241,7 @@ begin
         Result := 'X';
       end;
     end;
-  except
-    MessageDlg('Invalid quantity - ' + TempQty, mtError, [mbOK], 0);
+  except MessageDlg('Invalid quantity - ' + TempQty, mtError, [mbOK], 0);
     Result := 'X';
   end;
 end;

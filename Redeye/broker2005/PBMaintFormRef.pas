@@ -84,7 +84,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUProd;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUProd;
 
 var
   sPrefix: string;
@@ -178,8 +178,7 @@ begin
 
             if (trim(sPrefix) = trim(StockRefEdit.Text)) then
               begin
-                TempWord := MessageDlg('The product code cannot just be the customer product prefix, a code must follow the prefix',
-                    mtError,[mbOk], 0);
+                TempWord := MessageDlg('The product code cannot just be the customer product prefix, a code must follow the prefix', mtError,[mbOk], 0);
                 exit;
               end;
 
@@ -546,4 +545,3 @@ begin
 end;
 
 end.
-

@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses PBLUSICCode, PBDatabase, pbMainMenu;
+uses UITypes, PBLUSICCode, PBDatabase, pbMainMenu;
 
 {$R *.DFM}
 
@@ -236,8 +236,7 @@ begin
         Result := 'X';
       end;
     end;
-  except
-    MessageDlg('Invalid financial value - ' + TempQty, mtError, [mbOK], 0);
+  except MessageDlg('Invalid financial value - ' + TempQty, mtError, [mbOK], 0);
     Result := 'X';
   end;
 end;

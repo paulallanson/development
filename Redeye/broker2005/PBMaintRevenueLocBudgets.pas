@@ -80,7 +80,7 @@ implementation
 
 {$R *.DFM}
 
-uses PBLURevenueLoc;
+uses UITypes, PBLURevenueLoc;
 
 procedure TPBMaintRevenueLocBudgetsFrm.FormActivate(Sender: TObject);
 var

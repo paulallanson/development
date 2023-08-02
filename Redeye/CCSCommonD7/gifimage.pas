@@ -216,7 +216,7 @@ interface
   (but too fast) animation timing.
   Since our paint routines are much faster and
   more precise timed than Mozilla's, the standard
-  GIF and Mozilla values causes animations to loop
+uses Types, nd Mozilla values causes animations to loop
   faster than they would in Mozilla.
   If the symbol is _not_ defined, an alternative
   set of tweaked timing values will be used.

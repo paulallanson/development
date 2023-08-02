@@ -783,7 +783,7 @@ object dmSalesInvoice: TdmSalesInvoice
   end
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
-    Connection = dmBroker.PBLDatabase
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select TOP 2000'
       #9#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
