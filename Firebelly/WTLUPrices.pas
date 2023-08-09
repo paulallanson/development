@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ImgList, ComCtrls, StdCtrls, ToolWin, Grids, Db, DBGrids,
-  Buttons, WTPricesDM, AllCommon, IniFiles, System.ImageList;
+  Buttons, WTPricesDM, AllCommon, IniFiles, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmWTLUPrices = class(TForm)

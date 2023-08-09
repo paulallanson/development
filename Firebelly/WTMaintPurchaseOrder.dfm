@@ -24,7 +24,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Height = 36
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 894
     DesignSize = (
       886
       36)
@@ -156,8 +155,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       item
         Width = 50
       end>
-    ExplicitTop = 590
-    ExplicitWidth = 894
   end
   object pnlBottom: TPanel
     Left = 0
@@ -166,8 +163,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 549
-    ExplicitWidth = 894
     DesignSize = (
       886
       41)
@@ -250,7 +245,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Align = alTop
     Anchors = [akRight, akBottom]
     TabOrder = 3
-    ExplicitWidth = 894
     DesignSize = (
       886
       197)
@@ -484,15 +478,13 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 4
-    ExplicitWidth = 894
-    ExplicitHeight = 188
     object tbDetails: TTabSheet
       Caption = 'Details'
       object dbgLines: TStringGrid
         Left = 0
         Top = 0
-        Width = 801
-        Height = 160
+        Width = 793
+        Height = 152
         Align = alClient
         ColCount = 10
         DefaultColWidth = 40
@@ -514,10 +506,10 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
           83)
       end
       object pnlFunctions: TPanel
-        Left = 801
+        Left = 793
         Top = 0
         Width = 85
-        Height = 160
+        Height = 152
         Align = alRight
         TabOrder = 1
         object btnAdd: TBitBtn
@@ -664,7 +656,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
         Height = 152
         Align = alLeft
         TabOrder = 0
-        ExplicitHeight = 160
         object memNotes: TMemo
           Left = 1
           Top = 1
@@ -685,8 +676,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
     Height = 128
     Align = alBottom
     TabOrder = 5
-    ExplicitTop = 421
-    ExplicitWidth = 894
     object Panel5: TPanel
       Left = 719
       Top = 1
@@ -696,7 +685,6 @@ object frmWTMaintPurchaseOrder: TfrmWTMaintPurchaseOrder
       Anchors = [akRight, akBottom]
       BevelOuter = bvLowered
       TabOrder = 0
-      ExplicitLeft = 727
       DesignSize = (
         166
         126)

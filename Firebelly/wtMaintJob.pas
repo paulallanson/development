@@ -8,7 +8,7 @@ uses
   CRControls, AllCommon, DB, Spin, wtSalesOrderDM,
   ImgList, ShellAPI, QrCtrls, Menus, ToolWin, Inifiles,
   taoMapi, Activex, AxCtrls, Clipbrd, ComObj,
-  ShellCtrls, System.ImageList;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintJob = class(TForm)

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, Grids, DBGrids, ComCtrls, ExtCtrls, wtSalesOrderDM,
-  WTPurchasesDM, Data.DB;
+  WTPurchasesDM, Data.DB, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintSalesOrderRaisePO = class(TForm)

@@ -8,7 +8,7 @@ uses
   ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM,
   ToolWin, IniFiles, DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB,
   Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -467,7 +467,9 @@ var
 
 implementation
 
-uses taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
+uses
+  System.UITypes, System.Types,
+  taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
   WTSrchCustContacts, wtNotesDM, wtDBMemo, WTLUSalesOrderQuotes, WTMaintSOEvents, wtLUReps, DateSelV5,
   wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE,
   WTExcelOLE, wtLUFitters, WTMaintCustomer, WtMaintPurchaseOrder, WTMaintPurchaseOrderReceipts, WTRSPOrder,
@@ -611,9 +613,10 @@ begin
 end;
 
 procedure TfrmWTMaintSalesOrder.CheckIfSpeculative;
-var
+(*var
   OldCursor : TCursor;
   iCustomer: integer;
+*)
 begin
   if SOrder.Speculative then
     begin
@@ -731,8 +734,6 @@ end;
 procedure TfrmWTMaintSalesOrder.ShowDetails;
 var
   Year, Month, Day, DOW: Word;
-  InstallAddress: TStringList;
-  icount: integer;
   tmpDate: TDateTime;
 begin
   if Mode = sopAdd then
@@ -1126,7 +1127,9 @@ begin
           ListItem.SubItems.Add(FileInfo.szTypeName);
           // Get The DateModified
           try
-            ListItem.SubItems.Add(DatetimeToStr(FileDateToDateTime(fileage(strPath + ListItem.Caption))));
+            var Stamp: TDateTime;
+            FileAge(strPath + ListItem.Caption, Stamp);
+            ListItem.SubItems.Add(DateTimeToStr(Stamp));
           except
             ListItem.SubItems.Add('');
           end;
@@ -3932,10 +3935,11 @@ begin
 end;
 
 procedure TfrmWTMaintSalesOrder.pmnuDeleteClick(Sender: TObject);
-var
+(*var
   iRow: integer;
   sPath, sFileName: string;
   ListItem: TListItem;
+*)
 begin
 (*  iRow := lstvwDocuments.ItemIndex;
   if iRow = -1 then exit;
@@ -3959,8 +3963,9 @@ begin
 end;
 
 procedure TfrmWTMaintSalesOrder.pmnuSelectAllClick(Sender: TObject);
-var
+(*var
   icount: integer;
+*)
 begin
 (*  with lstvwDocuments do
     begin
@@ -3982,7 +3987,7 @@ end;
 
 procedure TfrmWTMaintSalesOrder.Button5Click(Sender: TObject);
 var
-  sFile, sFullFile, docDir: string;
+  docDir: string;
 begin
   docDir := dtmdlWorktops.GetCompanySalesDirectory + '\' + inttostr(Sorder.dbKey);
 
@@ -4005,7 +4010,7 @@ end;
 
 procedure TfrmWTMaintSalesOrder.edtPlansDocumentDblClick(Sender: TObject);
 var
-  sPath, sDoc: string;
+  sDoc: string;
   FiName, Params: Array [0..255] of char ;
   itempResult: integer;
   sTempError: String ;
@@ -5287,7 +5292,7 @@ end;
 
 procedure TfrmWTMaintSalesOrder.MoveSiteDocuments(iSOrder: integer);
 var
-  sDest, sSource, sSafetyFolder, SiteName: string;
+  sDest, sSource, sSafetyFolder: string;
   irow: integer;
   SearchRec: TSearchRec;
   FileInfo: SHFILEINFO;

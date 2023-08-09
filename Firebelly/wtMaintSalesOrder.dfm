@@ -2,8 +2,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   Left = 176
   Top = 4
   Caption = ';'#39
-  ClientHeight = 762
-  ClientWidth = 1154
+  ClientHeight = 753
+  ClientWidth = 1152
   Color = clBtnFace
   Constraints.MinHeight = 550
   Constraints.MinWidth = 1170
@@ -22,13 +22,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 1154
+    Width = 1152
     Height = 36
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1154
     DesignSize = (
-      1154
+      1152
       36)
     object Label1: TLabel
       Left = 16
@@ -57,7 +58,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ParentFont = False
     end
     object Label9: TLabel
-      Left = 881
+      Left = 873
       Top = 12
       Width = 83
       Height = 13
@@ -80,7 +81,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       TabOrder = 0
     end
     object dblkpOperator: TDBLookupComboBox
-      Left = 977
+      Left = 969
       Top = 8
       Width = 145
       Height = 21
@@ -104,14 +105,15 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   object pnlHeader: TPanel
     Left = 0
     Top = 36
-    Width = 1154
+    Width = 1152
     Height = 269
     Align = alTop
     Anchors = [akRight, akBottom]
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1154
     DesignSize = (
-      1154
+      1152
       269)
     object Label11: TLabel
       Left = 17
@@ -134,7 +136,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       Caption = 'Contact'
     end
     object Label12: TLabel
-      Left = 747
+      Left = 739
       Top = 12
       Width = 60
       Height = 13
@@ -149,7 +151,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 767
     end
     object Label13: TLabel
-      Left = 746
+      Left = 738
       Top = 38
       Width = 74
       Height = 13
@@ -233,7 +235,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object pnlAddress: TPanel
       Left = 75
       Top = 1
-      Width = 602
+      Width = 594
       Height = 121
       Anchors = [akLeft, akTop, akRight]
       BevelOuter = bvNone
@@ -242,7 +244,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       TabOrder = 0
       ExplicitWidth = 622
       DesignSize = (
-        602
+        594
         121)
       object Label24: TLabel
         Left = 108
@@ -254,7 +256,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object edtCustomerName: TEdit
         Left = 14
         Top = 8
-        Width = 580
+        Width = 572
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 0
@@ -264,7 +266,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object edtStreet: TEdit
         Left = 14
         Top = 27
-        Width = 580
+        Width = 572
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 1
@@ -273,7 +275,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object edtLocale: TEdit
         Left = 14
         Top = 47
-        Width = 580
+        Width = 572
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
@@ -282,7 +284,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object edtTown: TEdit
         Left = 14
         Top = 68
-        Width = 580
+        Width = 572
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 3
@@ -299,7 +301,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object edtCounty: TEdit
         Left = 152
         Top = 91
-        Width = 440
+        Width = 432
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
@@ -307,7 +309,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object grpMaterials: TGroupBox
-      Left = 926
+      Left = 918
       Top = 181
       Width = 193
       Height = 77
@@ -400,7 +402,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object btnCustomer: TBitBtn
-      Left = 678
+      Left = 670
       Top = 6
       Width = 25
       Height = 25
@@ -431,7 +433,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       OnClick = CheckOK
     end
     object edtReference: TEdit
-      Left = 843
+      Left = 835
       Top = 8
       Width = 274
       Height = 21
@@ -441,7 +443,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 863
     end
     object edtCustOrderNo: TEdit
-      Left = 843
+      Left = 835
       Top = 34
       Width = 274
       Height = 21
@@ -451,7 +453,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 863
     end
     object BitBtn3: TBitBtn
-      Left = 681
+      Left = 673
       Top = 128
       Width = 25
       Height = 25
@@ -491,7 +493,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object edtContact: TEdit
       Left = 89
       Top = 130
-      Width = 580
+      Width = 572
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 2
@@ -501,7 +503,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object edtDescription: TMemo
       Left = 89
       Top = 197
-      Width = 620
+      Width = 612
       Height = 60
       Anchors = [akLeft, akTop, akRight, akBottom]
       MaxLength = 255
@@ -511,7 +513,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitWidth = 640
     end
     object chkbxMaterialRequired: TCheckBox
-      Left = 926
+      Left = 918
       Top = 168
       Width = 105
       Height = 17
@@ -522,7 +524,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 946
     end
     object rdgrpDateType: TRadioGroup
-      Left = 732
+      Left = 724
       Top = 61
       Width = 185
       Height = 77
@@ -544,7 +546,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 752
     end
     object grpDates: TGroupBox
-      Left = 926
+      Left = 918
       Top = 61
       Width = 194
       Height = 77
@@ -637,7 +639,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object rdgrpJobType: TRadioGroup
-      Left = 732
+      Left = 724
       Top = 142
       Width = 185
       Height = 116
@@ -664,7 +666,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object pnlRevenueCentre: TPanel
       Left = 376
       Top = 155
-      Width = 332
+      Width = 324
       Height = 41
       Anchors = [akLeft, akTop, akRight]
       BevelOuter = bvNone
@@ -672,7 +674,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       TabOrder = 14
       ExplicitWidth = 352
       DesignSize = (
-        332
+        324
         41)
       object Label59: TLabel
         Left = 27
@@ -688,7 +690,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentFont = False
       end
       object SpeedButton2: TSpeedButton
-        Left = 307
+        Left = 299
         Top = 7
         Width = 23
         Height = 22
@@ -722,7 +724,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object dblkpRevenueCentre: TDBLookupComboBox
         Left = 116
         Top = 8
-        Width = 180
+        Width = 172
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Revenue_Centre'
@@ -732,7 +734,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       end
     end
     object edtProject: TEdit
-      Left = 712
+      Left = 704
       Top = 8
       Width = 21
       Height = 21
@@ -744,18 +746,19 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 702
-    Width = 1154
+    Top = 693
+    Width = 1152
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
     ExplicitTop = 705
+    ExplicitWidth = 1154
     DesignSize = (
-      1154
+      1152
       41)
     object lblDeleteprompt: TLabel
-      Left = 802
+      Left = 794
       Top = 12
       Width = 149
       Height = 16
@@ -770,7 +773,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 822
     end
     object btnOK: TBitBtn
-      Left = 962
+      Left = 954
       Top = 8
       Width = 75
       Height = 25
@@ -801,7 +804,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       ExplicitLeft = 982
     end
     object BitBtn2: TBitBtn
-      Left = 1050
+      Left = 1042
       Top = 8
       Width = 75
       Height = 25
@@ -839,8 +842,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 743
-    Width = 1154
+    Top = 734
+    Width = 1152
     Height = 19
     Panels = <
       item
@@ -850,18 +853,20 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Width = 50
       end>
     ExplicitTop = 746
+    ExplicitWidth = 1154
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 508
-    Width = 1154
+    Top = 499
+    Width = 1152
     Height = 194
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
     ExplicitTop = 511
+    ExplicitWidth = 1154
     object Panel5: TPanel
-      Left = 800
+      Left = 804
       Top = 1
       Width = 353
       Height = 192
@@ -870,6 +875,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
+      ExplicitLeft = 800
       DesignSize = (
         353
         192)
@@ -1064,13 +1070,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     object pnlFitters: TPanel
       Left = 578
       Top = 1
-      Width = 222
+      Width = 220
       Height = 192
       Align = alClient
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 222
       DesignSize = (
-        222
+        220
         192)
       object Label29: TLabel
         Left = 9
@@ -1512,11 +1519,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
   object pcDetails: TPageControl
     Left = 0
     Top = 305
-    Width = 1154
-    Height = 203
+    Width = 1152
+    Height = 194
     ActivePage = tbRemedials
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 1154
     ExplicitHeight = 206
     object tbDetails: TTabSheet
       Caption = 'Details'
@@ -1554,13 +1562,12 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 1146
+        Width = 1150
         Height = 17
         Align = alTop
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1150
         object Label44: TLabel
           Left = 2
           Top = 0
@@ -1570,7 +1577,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object tbrDocuments: TToolBar
-        Left = 1113
+        Left = 1117
         Top = 17
         Width = 33
         Height = 158
@@ -1583,7 +1590,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
-        ExplicitLeft = 1117
         ExplicitHeight = 162
         object btnExcel: TToolButton
           Left = 0
@@ -1632,26 +1638,24 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object pnlDocuments: TPanel
         Left = 0
         Top = 17
-        Width = 1113
+        Width = 1117
         Height = 158
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
-        ExplicitWidth = 1117
         ExplicitHeight = 162
         object pnlPlanDocument: TPanel
           Left = 0
           Top = 117
-          Width = 1113
+          Width = 1117
           Height = 41
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
           ExplicitTop = 121
-          ExplicitWidth = 1117
           DesignSize = (
-            1113
+            1111
             41)
           object Label32: TLabel
             Left = 8
@@ -1663,7 +1667,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           object edtPlansDocument: TEdit
             Left = 128
             Top = 12
-            Width = 573
+            Width = 565
             Height = 21
             Anchors = [akLeft, akTop, akRight]
             ReadOnly = True
@@ -1673,7 +1677,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             ExplicitWidth = 597
           end
           object Button5: TButton
-            Left = 712
+            Left = 704
             Top = 10
             Width = 75
             Height = 25
@@ -1684,7 +1688,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             ExplicitLeft = 736
           end
           object btnGenerateDocs: TButton
-            Left = 1016
+            Left = 1008
             Top = 8
             Width = 75
             Height = 25
@@ -1699,14 +1703,14 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           Left = 0
           Top = 0
           Width = 185
-          Height = 117
+          Height = 108
           ObjectTypes = [otFolders]
           Root = 'C:\'
           ShellListView = slvDocuments
           UseShellImages = True
           Align = alLeft
           AutoRefresh = False
-          Indent = 19
+          Indent = 23
           ParentColor = False
           RightClickSelect = True
           ShowRoot = False
@@ -1717,8 +1721,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         object slvDocuments: TShellListView
           Left = 185
           Top = 0
-          Width = 928
-          Height = 117
+          Width = 926
+          Height = 108
           AutoRefresh = True
           ObjectTypes = [otFolders, otNonFolders]
           Root = 'C:\'
@@ -1731,6 +1735,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnMouseMove = stvDocumentsMouseMove
           TabOrder = 2
           ViewStyle = vsReport
+          ExplicitWidth = 934
+          ExplicitHeight = 117
         end
       end
     end
@@ -1747,7 +1753,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentBackground = False
         TabOrder = 0
         DesignSize = (
-          1146
+          1144
           17)
         object lblApplianceDetails: TLabel
           Left = 0
@@ -1759,7 +1765,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ExplicitHeight = 13
         end
         object lblNotes: TLabel
-          Left = 510
+          Left = 504
           Top = 0
           Width = 28
           Height = 13
@@ -1772,7 +1778,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Left = 0
         Top = 17
         Width = 449
-        Height = 158
+        Height = 149
         Align = alLeft
         MaxLength = 255
         TabOrder = 1
@@ -1783,7 +1789,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         Left = 449
         Top = 17
         Width = 16
-        Height = 158
+        Height = 149
         Align = alLeft
         BevelOuter = bvNone
         ParentBackground = False
@@ -1793,8 +1799,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object memNotes: TMemo
         Left = 465
         Top = 17
-        Width = 681
-        Height = 158
+        Width = 679
+        Height = 149
         Align = alClient
         TabOrder = 3
         ExplicitWidth = 685
@@ -2487,7 +2493,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentBackground = False
         TabOrder = 2
         DesignSize = (
-          1146
+          1144
           28)
         object Label42: TLabel
           Left = 430
@@ -2512,10 +2518,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object Panel7: TPanel
-        Left = 1061
+        Left = 1059
         Top = 25
         Width = 85
-        Height = 122
+        Height = 113
         Align = alRight
         ParentBackground = False
         TabOrder = 3
@@ -2641,7 +2647,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end>
       end

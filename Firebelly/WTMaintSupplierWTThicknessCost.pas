@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, CRControls, Buttons;
+  Dialogs, StdCtrls, CRControls, Buttons, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintSupplierWTThicknessCost = class(TForm)

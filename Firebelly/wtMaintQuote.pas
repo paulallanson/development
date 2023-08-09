@@ -8,7 +8,7 @@ uses
   CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin,
   ImgList, ShellAPI, Menus, Inifiles, DBGrids,
   Activex, AxCtrls, Clipbrd, ComObj, taoMAPI,
-  ShellCtrls, System.ImageList;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintQuote = class(TForm)

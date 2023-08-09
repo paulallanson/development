@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ImgList, ComCtrls, ToolWin, IniFiles, StdActns, ActnList,
   ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions,
-  System.ImageList, Vcl.StdCtrls;
+  System.ImageList, Vcl.StdCtrls, FireDAC.Stan.Param;
 
 type
   TfrmWTMain = class(TForm)

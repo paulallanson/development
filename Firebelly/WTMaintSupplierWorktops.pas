@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DBCtrls, StdCtrls, Grids, DBGrids, Buttons, ExtCtrls, ComCtrls,
-  WTSupplierDM, Data.DB;
+  WTSupplierDM, Data.DB, FireDAC.Stan.Param;
 
 type
   TfrmWTMaintSupplierWorktops = class(TForm)
