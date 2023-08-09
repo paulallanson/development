@@ -116,7 +116,7 @@ begin
           Close;
           parambyname('Customer').asinteger := iCustomer;
           parambyname('Material_Type').asinteger := dblkpMaterialType.keyvalue;
-          parambyname('Retail_Multiplier').asfloat := strtofloat(edtRetailMultiplier.Text);
+          parambyname('Retail_Multiplier').asfloat := StrToFloatDef(edtRetailMultiplier.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'
@@ -134,7 +134,7 @@ begin
           Close;
           parambyname('ID').asinteger := iCode;
 
-          parambyname('Retail_Multiplier').asfloat := strtofloat(edtRetailMultiplier.Text);
+          parambyname('Retail_Multiplier').asfloat := StrToFloatDef(edtRetailMultiplier.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'

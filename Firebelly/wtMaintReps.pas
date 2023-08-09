@@ -221,7 +221,7 @@ begin
         end;
 
       parambyname('Commission_type').Asinteger := cmbCommissionType.ItemIndex;
-      parambyname('Commission_Rate').Asfloat := strtofloat(edtCommissionRate.text);
+      parambyname('Commission_Rate').Asfloat := StrToFloatDef(edtCommissionRate.text, 0, FormatSettings);
 
       if chkbxInactive.Checked then
         ParamByName('inActive').asstring := 'Y'

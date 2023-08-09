@@ -248,7 +248,7 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -328,7 +328,7 @@ begin
   jElement.Depth := strtoint(edtDepth.text);
   jElement.Length := strtoint(edtLength.text);
   jElement.Quantity := spnQuantity.Value;
-  jElement.UnitPrice := strtofloat(edtUnitPrice.text);
+  jElement.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = jelAdd then
   begin
     jElement.jENumber := jElement.Parent.Elements.Count + 1;

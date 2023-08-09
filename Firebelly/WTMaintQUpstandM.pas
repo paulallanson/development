@@ -312,7 +312,7 @@ procedure TfrmWTMaintQUpstandM.btnOKClick(Sender: TObject);
 begin
   if frmWTMain.bEndUser then
     begin
-      if (strtofloat(edtUnitPrice.text) = 0) then
+      if (StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) = 0) then
         begin
           messagedlg('A zero unit price is not allowed.', mterror, [mbOk], 0);
           edtUnitPrice.setfocus;
@@ -328,7 +328,7 @@ begin
     QUpstand.worktopDesc := dblkpWorktop.Text;
     QUpstand.thickness := dblkpWTThickness.keyvalue;
     QUpstand.thicknessDesc := dblkpWTThickness.Text;
-    QUpstand.UnitPrice := strtofloat(edtUnitPrice.text);
+    QUpstand.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
     ModalResult := mrOK;
   end;
 end;

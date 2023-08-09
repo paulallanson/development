@@ -89,14 +89,14 @@ begin
       dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 2;
       dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
       dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
-      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	    dtmdlWorktops.qryAddPrice.execSQL;
     end
   else
     begin
-      if (strtofloat(edtmnySell.text) <> SellPrice) or
-         (strtofloat(edtmnyCost.text) <> CostPrice) then
+      if (StrToFloatDef(edtmnySell.text, 0, FormatSettings) <> SellPrice) or
+         (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
       begin
 	      dtmdlWorktops.qryAddPrice.Close;
         dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;
@@ -105,8 +105,8 @@ begin
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 2;
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
-        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	      dtmdlWorktops.qryAddPrice.execSQL;
       end;
     end;

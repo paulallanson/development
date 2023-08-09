@@ -4042,7 +4042,7 @@ begin
     if frmWTMaintContractMarkup.ModalResult = mrOK then
       begin
         iMarkupType := frmWTMaintContractMarkup.rdgrpMarkupType.Itemindex;
-        rMarkup := strtofloat(frmWTMaintContractMarkup.edtMarkup.text);
+        rMarkup := StrToFloatDef(frmWTMaintContractMarkup.edtMarkup.text, 0, FormatSettings);
         bMarkupCutOuts := frmWTMaintContractMarkup.MarkupCutOuts;
         bMarkupEdges := frmWTMaintContractMarkup.MarkupEdges;
         bMarkupMaterials := frmWTMaintContractMarkup.MarkupMaterials;

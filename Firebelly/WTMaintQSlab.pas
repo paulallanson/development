@@ -472,7 +472,8 @@ begin
           edtAdhesiveDescription.Text := fieldbyname('Adhesive_Description').asstring;
           edtAdhesiveCost.text := formatfloat('0.00',fieldbyname('Unit_Cost').asfloat);
           edtAdhesiveCostUnit.text := inttostr(fieldbyname('Cost_Pack_Quantity').asinteger);
-          spnAdhesiveQuantity.Value := ceil((fieldbyname('Adhesive_Quantity_Per_Slab').asinteger*strtofloat(edtQuantity.text)));
+          spnAdhesiveQuantity.Value := ceil((fieldbyname('Adhesive_Quantity_Per_Slab').asinteger *
+                                       StrToFloatDef(edtQuantity.text, 0, FormatSettings)));
         end
       else
         begin
@@ -497,7 +498,7 @@ begin
   end;
 
   try
-    rUnitCost := strtofloat(edtAdhesiveCost.text);
+    rUnitCost := StrToFloatDef(edtAdhesiveCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -567,7 +568,7 @@ begin
   end;
 
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -614,7 +615,7 @@ begin
   iWasteMultiplier := spnWasteMultiplier.value;
 
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -650,13 +651,13 @@ begin
   end;
 
   try
-    rMarkupPercentage := strtofloat(edtMarkupPercentage.text);
+    rMarkupPercentage := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
   except
     rMarkupPercentage := 0;
   end;
 
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -678,13 +679,13 @@ var
   rMarkupPercentage: real;
 begin
   try
-    rMarkupPercentage := strtofloat(edtMarkupPercentage.text);
+    rMarkupPercentage := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
   except
     rMarkupPercentage := 0;
   end;
 
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -721,16 +722,15 @@ begin
   end;
 
   try
-    rUnitprice := strtofloat(edtUnitPrice.text) ;
+    rUnitprice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) ;
   except
     rUnitprice := 0;
   end;
 
-  try
-    rMarkupPercentage := ((strtofloat(edtUnitPrice.text)/strtofloat(edtUnitCost.text))-1) * 100;
-  except
-    rMarkupPercentage := 0;
-  end;
+  rMarkupPercentage := 0;
+  var Value := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  if Value <> 0 then
+    rMarkupPercentage := ((StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) / Value) - 1) * 100;
 
   edtMarkupPercentage.text := formatfloat('0.00',rMarkupPercentage);
   enableOK(self)
@@ -838,23 +838,23 @@ begin
   QSlab.thicknessDesc := dblkpWTThickness.Text;
   QSlab.Depth := strtoint(edtDepth.text);
   QSlab.Length := strtoint(edtLength.text);
-  QSlab.UnitCost := strtofloat(edtUnitCost.text);
-  QSlab.Quantity := strtofloat(edtQuantity.text);
+  QSlab.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  QSlab.Quantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   QSlab.WasteMultiplier := spnWasteMultiplier.Value;
   QSlab.WastePercentage := Strtoint(edtWastePercentage.text);
-  QSlab.WasteValue := strtofloat(edtTotalWasteCost.text);
+  QSlab.WasteValue := StrToFloatDef(edtTotalWasteCost.text, 0, FormatSettings);
 
   QSlab.AdhesiveProductCode := edtAdhesiveProduct.Text;
   QSlab.AdhesiveDescription := edtAdhesiveDescription.Text;
   QSlab.AdhesiveQuantity := spnAdhesiveQuantity.value;
-  QSlab.AdhesiveUnitCost := strtofloat(edtAdhesiveCost.text);
+  QSlab.AdhesiveUnitCost := StrToFloatDef(edtAdhesiveCost.text, 0, FormatSettings);
   QSlab.AdhesiveCostPackQuantity := strtoint(edtAdhesiveCostUnit.text);
 
 //  if dtmdlWorktops.UseSlabContractQuoting then
   if pnlPrices.visible then
     begin
-      QSlab.MarkupPercentage := Strtofloat(edtMarkupPercentage.text);
-      QSlab.UnitPrice := Strtofloat(edtUnitPrice.text);
+      QSlab.MarkupPercentage := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
+      QSlab.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
 
       if dblkpSlabSize.Text <> '' then
         QSlab.SlabSize := dblkpSlabSize.KeyValue
@@ -1001,7 +1001,7 @@ begin
   if FChangeCost or FChangeLength or FChangeDepth or FChangeQuantity then exit;
   
   try
-    rQuantity := strtofloat(edtQuantity.text);
+    rQuantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   except
     rQuantity := 1;
   end;
@@ -1019,7 +1019,7 @@ begin
   end;
 
   try
-    rSlabCost := strtofloat(edtSlabCost.text);
+    rSlabCost := StrToFloatDef(edtSlabCost.text, 0, FormatSettings);
   except
     rSlabCost := 0.00;
   end;
@@ -1093,7 +1093,7 @@ begin
   if FChangeMarkupRate or FChangePrice or FChangeSlab then exit;
 
   try
-    rQuantity := strtofloat(edtQuantity.text);
+    rQuantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   except
     rQuantity := 1;
   end;
@@ -1111,7 +1111,7 @@ begin
   end;
 
   try
-    rSlabPrice := strtofloat(edtSlabPrice.text);
+    rSlabPrice := StrToFloatDef(edtSlabPrice.text, 0, FormatSettings);
   except
     rSlabPrice := 0.00;
   end;
@@ -1251,7 +1251,7 @@ var
   rTotal: real;
 begin
   try
-    rTotal := strtofloat(edtTotalCost.text) + strtofloat(edtAdhesiveTotalCost.text)
+    rTotal := StrToFloatDef(edtTotalCost.text, 0, FormatSettings) + StrToFloatDef(edtAdhesiveTotalCost.text, 0, FormatSettings)
   except
     rTotal := 0;
   end;

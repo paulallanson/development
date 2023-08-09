@@ -167,8 +167,8 @@ var
   inx : integer;
   UnitCost, UnitPrice: real;
 begin
-  UnitCost := strtofloat(edtUnitCost.text);
-  UnitPrice := strtofloat(edtUnitPrice.text);
+  UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
 
   if Mode = 'A' then
     begin

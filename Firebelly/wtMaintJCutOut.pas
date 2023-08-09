@@ -165,7 +165,7 @@ var
   iQuantity: integer;
 begin
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -198,7 +198,7 @@ begin
   JCutOut.EdgeType := dblkpEdgeType.keyvalue;
   JCutOut.EdgeTypeDesc := dblkpEdgeType.Text;
   JCutOut.Quantity := spnQuantity.Value;
-  JCutOut.UnitPrice := strtofloat(edtUnitPrice.text);
+  JCutOut.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = jcoAdd then
   begin
     JCutOut.jCONumber := JCutOut.Parent.CutOuts.Count + 1;

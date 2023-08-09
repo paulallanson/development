@@ -11,10 +11,8 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 8
@@ -62,9 +60,9 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 248
@@ -74,8 +72,8 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 3
     NumGlyphs = 2
+    TabOrder = 3
   end
   object edtDescription: TEdit
     Left = 80
@@ -96,14 +94,10 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryAddUpstand: TFDQuery
@@ -117,24 +111,16 @@ object frmWTMaintMaterialTypeUpstands: TfrmWTMaintMaterialTypeUpstands
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
 end

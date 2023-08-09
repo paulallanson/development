@@ -138,8 +138,8 @@ begin
       dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
       dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
       dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
-      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	    dtmdlWorktops.qryAddPrice.execSQL;
 
       if MessageDlg('Do you want to update the worktops in this group with the new thickness prices?',
@@ -153,8 +153,8 @@ begin
     end
   else
     begin
-      if (strtofloat(edtmnySell.text) <> SellPrice) or
-         (strtofloat(edtmnyCost.text) <> CostPrice) then
+      if (StrToFloatDef(edtmnySell.text, 0, FormatSettings) <> SellPrice) or
+         (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
       begin
         if MessageDlg('Do you want to update the associated worktops with the new prices?',
           mtConfirmation, [mbYes, mbNo], 0) = mrYes then
@@ -168,8 +168,8 @@ begin
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
         dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
-        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	      dtmdlWorktops.qryAddPrice.execSQL;
 
         if bUpdate then
@@ -205,8 +205,8 @@ begin
   dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := TempPrice;
   dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := now;
   dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'M';
-  dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := strtofloat(edtmnySell.text);
-  dtmdlWorktops.qryAddPrice.PArambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+  dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+  dtmdlWorktops.qryAddPrice.PArambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
   dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
   dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
   dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.operator;

@@ -194,7 +194,7 @@ begin
         begin
           Close;
           parambyname('Payment_Description').asstring := edtPaymentDescription.Text;
-          parambyname('Paid_Amount').asfloat := strtofloat(edtPaidAmount.text);
+          parambyname('Paid_Amount').asfloat := StrToFloatDef(edtPaidAmount.text, 0, FormatSettings);
           parambyname('Payment_Date').asdatetime := padatestr(edtDate.text);
           parambyname('Payment_Method').asinteger := dblkpPaymentMethod.keyvalue;
 
@@ -216,7 +216,7 @@ begin
           parambyname('Payment').asinteger := iCode;
 
           parambyname('Payment_Description').asstring := edtPaymentDescription.Text;
-          parambyname('Paid_Amount').asfloat := strtofloat(edtPaidAmount.text);
+          parambyname('Paid_Amount').asfloat := StrToFloatDef(edtPaidAmount.text, 0, FormatSettings);
           parambyname('Payment_Date').asdatetime := padatestr(edtDate.text);
           parambyname('Payment_Method').asinteger := dblkpPaymentMethod.keyvalue;
 

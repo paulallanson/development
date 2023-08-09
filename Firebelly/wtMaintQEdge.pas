@@ -220,7 +220,7 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -242,7 +242,7 @@ begin
   end;
 
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -359,7 +359,7 @@ begin
           parambyName('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
           open;
 
-          rDiscount := fieldbyname('Unit_Price').asfloat * (strtofloat(edtDiscount.text)/100.0000);
+          rDiscount := fieldbyname('Unit_Price').asfloat * (StrToFloatDef(edtDiscount.text, 0, FormatSettings) / 100.0000);
 
           dtsEdgePrice.DataSet := qryOneEdgeThickness;
 
@@ -398,11 +398,11 @@ begin
 
   try
     if QEdge.Parent.ContractQuote then
-      QEdge.Discount := strtofloat(edtDiscount.text)
+      QEdge.Discount := StrToFloatDef(edtDiscount.text, 0, FormatSettings)
     else
       begin
-        QEdge.Discount := ((strtofloat(edtSellPrice.Text) - strtofloat(edtUnitPrice.Text))/
-                            strtofloat(edtSellPrice.Text)) * 100.0000;
+        QEdge.Discount := ((StrToFloatDef(edtSellPrice.Text, 0, FormatSettings) - StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings)) /
+                            StrToFloatDef(edtSellPrice.Text, 0, FormatSettings)) * 100.0000;
       end;
   except
     QEdge.Discount := 0.00;
@@ -410,9 +410,9 @@ begin
 
   QEdge.edgetype := dblkpedgeType.keyvalue;
   QEdge.EdgeTypeDesc := dblkpEdgeType.Text;
-  QEdge.Length := strtofloat(edtLength.text);
-  QEdge.UnitCost := strtofloat(edtUnitCost.text);
-  QEdge.UnitPrice := strtofloat(edtUnitPrice.text);
+  QEdge.Length := StrToFloatDef(edtLength.text, 0, FormatSettings);
+  QEdge.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  QEdge.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = qedgAdd then
   begin
     QEdge.QEdgNumber := QEdge.Parent.Edges.Count + 1;
@@ -450,13 +450,14 @@ var
   rDiscount: real;
 begin
   try
-    rDiscount := strtofloat(edtSellPrice.text) * (strtofloat(edtDiscount.text)/100.0000);
+    rDiscount := StrToFloatDef(edtSellPrice.text, 0, FormatSettings) *
+                 (StrToFloatDef(edtDiscount.text, 0, FormatSettings) / 100.0000);
   except
     rDiscount := 0;
   end;
 
   try
-    edtUnitPrice.Text := formatfloat('0.00',(strtofloat(edtSellPrice.text) - rDiscount));
+    edtUnitPrice.Text := formatfloat('0.00',(StrToFloatDef(edtSellPrice.text, 0, FormatSettings) - rDiscount));
   except
     edtUnitPrice.Text := formatfloat('0.00',0.00);
   end;

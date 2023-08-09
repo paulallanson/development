@@ -1814,7 +1814,7 @@ end;
 procedure TfrmWTMaintQuote.edtInstallPriceChange(Sender: TObject);
 begin
   try
-    Quote.InstallPrice := strtofloat(edtInstallPrice.text);
+    Quote.InstallPrice := StrToFloatDef(edtInstallPrice.text, 0, FormatSettings);
   except
     Quote.InstallPrice := 0.00;
   end;
@@ -1825,7 +1825,7 @@ end;
 procedure TfrmWTMaintQuote.edtSurveyPriceChange(Sender: TObject);
 begin
   try
-    Quote.SurveyPrice := strtofloat(edtSurveyPrice.text);
+    Quote.SurveyPrice := StrToFloatDef(edtSurveyPrice.text, 0, FormatSettings);
   except
     Quote.SurveyPrice := 0.00;
   end;
@@ -1836,7 +1836,7 @@ end;
 procedure TfrmWTMaintQuote.edtDeliveryPriceChange(Sender: TObject);
 begin
   try
-    Quote.DeliveryPrice := strtofloat(edtDeliveryPrice.text);
+    Quote.DeliveryPrice := StrToFloatDef(edtDeliveryPrice.text, 0, FormatSettings);
   except
     Quote.DeliveryPrice := 0.00;
   end;
@@ -2577,13 +2577,13 @@ begin
     begin
       if self.UseMarkup then
         begin
-          Quote.MarkupRate := strtofloat(edtDiscountRate.text);
+          Quote.MarkupRate := StrToFloatDef(edtDiscountRate.text, 0, FormatSettings);
           rDiscount := Quote.TotalPrice * (Quote.MarkupRate/100);
           Quote.MarkupValue := rDiscount;
         end
       else
         begin
-          Quote.DiscountRate := strtofloat(edtDiscountRate.text);
+          Quote.DiscountRate := StrToFloatDef(edtDiscountRate.text, 0, FormatSettings);
           rDiscount := Quote.TotalPrice * (Quote.DiscountRate/100);
           rDiscount := Quote.TotalDiscountablePrice * (Quote.DiscountRate/100);
           edtDiscountValue.text := formatfloat('0.00',rDiscount);
@@ -2606,14 +2606,14 @@ begin
     begin
       if self.UseMarkup then
         begin
-          Quote.MarkupValue := strtofloat(edtDiscountValue.text);
+          Quote.MarkupValue := StrToFloatDef(edtDiscountValue.text, 0, FormatSettings);
           rDiscount := ((Quote.MarkupValue / Quote.TotalPrice)*100);
           Quote.MarkupRate := rDiscount;
           ShowTotals;
         end
       else
         begin
-          Quote.DiscountValue := strtofloat(edtDiscountValue.text);
+          Quote.DiscountValue := StrToFloatDef(edtDiscountValue.text, 0, FormatSettings);
 //          rDiscount := ((Quote.DiscountValue / Quote.TotalPrice)*100);
           rDiscount := ((Quote.DiscountValue / Quote.TotalDiscountablePrice)*100);
           Quote.DiscountRate := rDiscount;
@@ -2815,7 +2815,7 @@ end;
 procedure TfrmWTMaintQuote.edtDepositPaidChange(Sender: TObject);
 begin
   try
-    Quote.DepositAmount := strtofloat(edtDepositPaid.text);
+    Quote.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
   except
     Quote.DepositAmount := 0.00;
   end;
@@ -3252,13 +3252,13 @@ begin
   if bChangeRate then
     begin
       try
-        Quote.FittingLabourHours := strtofloat(memFitLabour.text);
+        Quote.FittingLabourHours := StrToFloatDef(memFitLabour.text, 0, FormatSettings);
       except
         Quote.FittingLabourHours := 0;
       end;
 
       try
-        Quote.FittingLabourRate := strtofloat(memFitLabourRate.text);
+        Quote.FittingLabourRate := StrToFloatDef(memFitLabourRate.text, 0, FormatSettings);
       except
         Quote.FittingLabourRate := 0;
       end;
@@ -3282,13 +3282,13 @@ begin
   if bChangeRate then
     begin
       try
-        Quote.TemplateLabourHours := strtofloat(memTempLabour.text);
+        Quote.TemplateLabourHours := StrToFloatDef(memTempLabour.text, 0, FormatSettings);
       except
         Quote.TemplateLabourHours := 0;
       end;
 
       try
-        Quote.TemplateLabourRate := strtofloat(memTempLabourRate.text);
+        Quote.TemplateLabourRate := StrToFloatDef(memTempLabourRate.text, 0, FormatSettings);
       except
         Quote.TemplateLabourRate := 0;
       end;
@@ -3389,7 +3389,7 @@ begin
   if bChangeRate then
     begin
       try
-        Quote.HandlingRate := strtofloat(memHandlingRate.text);
+        Quote.HandlingRate := StrToFloatDef(memHandlingRate.text, 0, FormatSettings);
       except
         Quote.HandlingRate := 0;
       end;
@@ -3407,13 +3407,13 @@ begin
   if bChangeRate then
     begin
       try
-        Quote.DeliveryLabourHours := strtofloat(memDelLabour.text);
+        Quote.DeliveryLabourHours := StrToFloatDef(memDelLabour.text, 0, FormatSettings);
       except
         Quote.DeliveryLabourHours := 0;
       end;
 
       try
-        Quote.DeliveryLabourRate := strtofloat(memDelLabourRate.text);
+        Quote.DeliveryLabourRate := StrToFloatDef(memDelLabourRate.text, 0, FormatSettings);
       except
         Quote.DeliveryLabourRate := 0;
       end;

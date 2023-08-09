@@ -12,13 +12,11 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     322
     213)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 24
@@ -80,9 +78,9 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 165
@@ -93,8 +91,8 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object edtmnyCost: TCREditMoney
     Left = 120
@@ -134,19 +132,13 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'thickness'
-        ParamType = ptUnknown
       end>
   end
   object srclkpThickness: TDataSource
@@ -178,29 +170,19 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Markup_Percentage'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -216,24 +198,16 @@ object frmWTMaintCustWTGroupPrices: TfrmWTMaintCustWTGroupPrices
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Markup_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
 end

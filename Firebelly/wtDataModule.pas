@@ -3,22 +3,19 @@ unit wtDataModule;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Db, ActiveX, Outlook_TLB,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
-  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
-  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
+  Windows, Messages, SysUtils, Classes, Controls, Forms, Dialogs,
+  Data.Db,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
   FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait,
-  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef;
+  FireDAC.Phys.MSSQL, FireDAC.Phys.MSSQLDef, FireDAC.Phys.ODBCBase;
 
 type
   TdtmdlWorktops = class(TDataModule)
     dtbsWorktops: TFDConnection;
     qryNewPrice: TFDQuery;
     lkpPriceBasis: TFDTable;
-    lkpPriceBasisPrice_Basis: TStringField;
-    lkpPriceBasisDescription: TStringField;
-    lkpPriceBasisQty_Basis_Required: TStringField;
     qryAddPrice: TFDQuery;
     qryAddPointer: TFDQuery;
     qryDelPrice: TFDQuery;
@@ -54,10 +51,14 @@ type
     qryGetProduct: TFDQuery;
     qryGetCustomerBranch: TFDQuery;
     qryGetBranches: TFDQuery;
+    lkpPriceBasisPrice_Basis: TWideStringField;
+    lkpPriceBasisDescription: TWideStringField;
+    lkpPriceBasisQty_Basis_Required: TWideStringField;
     procedure dtbsWorktopsAfterConnect(Sender: TObject);
     procedure dtbsWorktopsLogin(AConnection: TFDCustomConnection;
       AParams: TFDConnectionDefParams);
     procedure dtbsWorktopsBeforeConnect(Sender: TObject);
+    procedure DataModuleCreate(Sender: TObject);
   private
     FIsSQL: Boolean;
     FUserName: string;
@@ -179,11 +180,19 @@ const
 implementation
 
 uses
+  System.UITypes,
   WTLogin, wtNotesDM, wtMain;
 
 {$R *.DFM}
 
 { TdtmdlWorktops }
+
+procedure TdtmdlWorktops.DataModuleCreate(Sender: TObject);
+begin
+  FormatSettings := TFormatSettings.Create;
+  FormatSettings.ThousandSeparator := #00;
+  FormatSettings.DecimalSeparator := '.';
+end;
 
 procedure TdtmdlWorktops.DeletePointer(TempPointer: integer);
 begin
@@ -342,10 +351,7 @@ begin
 end;
 
 function TdtmdlWorktops.GetQuoteFollowUpReminder(tmpCode: integer): integer;
-var
-  ifield: integer;
 begin
-  result := 0;
   with qryGetOperator do
     begin
       close;
@@ -356,10 +362,7 @@ begin
 end;
 
 function TdtmdlWorktops.GetOperatorRevenueCentre(tmpCode: integer): integer;
-var
-  ifield: integer;
 begin
-  result := 0;
   with qryGetOperator do
     begin
       close;
@@ -370,8 +373,6 @@ begin
 end;
 
 function TdtmdlWorktops.IsOutlookRunning: boolean;
-var
-	Unknown		 : IUnknown;
 begin
   {Check if Outlook is already running, this uses Outlook 2000}
   if FindWindow('mspim_wnd32','Microsoft Outlook') <> 0 then
@@ -382,7 +383,6 @@ end;
 
 function TdtmdlWorktops.OperatorCanUpdateSchedule(tmpCode: integer): boolean;
 begin
-  result := false;
   with qryGetOperator do
     begin
       close;
@@ -782,7 +782,7 @@ procedure TdtmdlWorktops.dtbsWorktopsBeforeConnect(Sender: TObject);
 begin
   dtbsWorktops.FormatOptions.OwnMapRules := True;
   dtbsWorktops.FormatOptions.MapRules.Clear;
-  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTimeStamp, dtDateTime);
+  dtbsWorktops.FormatOptions.MapRules.Add(dtDateTime, dtDateTimeStamp);
 end;
 
 procedure TdtmdlWorktops.dtbsWorktopsLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
@@ -802,38 +802,32 @@ end;
 
 function TdtmdlWorktops.UseRemedialsAsOrders: boolean;
 begin
-  try
-    with qryCompany do
-      begin
-        close;
-        open;
-        result := (fieldbyname('Use_Remedials_As_Orders').asstring = 'Y');
-      end;
-  except
+  with qryCompany do
+  begin
+    close;
+    open;
+    result := (fieldbyname('Use_Remedials_As_Orders').asstring = 'Y');
   end;
 end;
 
 function TdtmdlWorktops.UseRevenueCentres: boolean;
 begin
-  try
-    with qryCompany do
-      begin
-        close;
-        open;
-        result := (fieldbyname('Use_Revenue_Centres').asstring = 'Y');
-      end;
-  except
+  with qryCompany do
+  begin
+    close;
+    open;
+    result := (fieldbyname('Use_Revenue_Centres').asstring = 'Y');
   end;
 end;
 
 function TdtmdlWorktops.UseCostingSystem: boolean;
 begin
   with qryCompany do
-    begin
-      close;
-      open;
-      result := (fieldbyname('Use_Costing_System').asstring = 'Y');
-    end;
+  begin
+    close;
+    open;
+    result := (fieldbyname('Use_Costing_System').asstring = 'Y');
+  end;
 end;
 
 function TdtmdlWorktops.UseDocumentTransfer: boolean;
@@ -1014,9 +1008,7 @@ function TdtmdlWorktops.LockAppointment(key1, tmpTable, Email:string; tmpWorksta
                           bCanView: boolean): integer;
 var
   icount: integer;
-  iLastRecord: integer;
 begin
-  result := 0;
   // First of all check that the record isn't already locked
   with qryCheckSOLock do
     begin
@@ -1089,6 +1081,8 @@ begin
 //      parambyname('User').asstring := Email;
       parambyname('Workstation').asinteger := frmWTMain.Workstation;
       execsql;
+
+      Result := qryDeleteSOLock.RowsAffected;
     end;
 end;
 
@@ -1098,7 +1092,6 @@ var
   icount: integer;
   iLastRecord: integer;
 begin
-  result := 0;
   // First of all check that the record isn't already locked
   with qryCheckWSLock do
     begin
@@ -1187,6 +1180,8 @@ begin
       parambyname('Key_Value_4').asstring := key4;
       parambyname('Key_Value_5').asstring := key5;
       execsql;
+
+      Result := qryDeleteWSLock.RowsAffected;
     end;
 end;
 

@@ -164,7 +164,7 @@ uses
   wtRPQuoteSummary in '..\Aire\Reports\wtRPQuoteSummary.pas' {frmwtRPQuoteSummary},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
-  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas';
+  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas', System.SysUtils;
 
 {$R *.RES}
 
@@ -172,6 +172,7 @@ begin
   {$IFDEF DEBUG}
   ReportMemoryLeaksOnShutdown := True;
   {$ENDIF}
+
   Application.Initialize;
   frmWTSplash := TfrmWTSplash.Create( Application );
   frmWTSplash.Show;

@@ -11,10 +11,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblPriceChange: TLabel
     Left = 16
@@ -134,8 +132,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Top = 336
     Width = 101
     Height = 21
-    Date = 37563.834117939810000000
-    Time = 37563.834117939810000000
+    Date = 37563.000000000000000000
+    Time = 0.834117939812131200
     TabOrder = 5
   end
   object edtTime: TMaskEdit
@@ -156,8 +154,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 7
     NumGlyphs = 2
+    TabOrder = 7
   end
   object btnOK: TBitBtn
     Left = 119
@@ -167,9 +165,9 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 8
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object dblkpProductGroup: TDBLookupComboBox
     Left = 16
@@ -209,14 +207,10 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryPrice: TFDQuery
@@ -231,9 +225,8 @@ object frmWTProductPriceChange: TfrmWTProductPriceChange
     Top = 352
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Price_pointer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

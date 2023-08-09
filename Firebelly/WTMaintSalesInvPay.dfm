@@ -11,13 +11,11 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     494
     294)
-  PixelsPerInch = 96
   TextHeight = 13
   object btnOK: TBitBtn
     Left = 165
@@ -28,8 +26,6 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 0
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -48,6 +44,8 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
     Left = 253
@@ -55,8 +53,9 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Width = 75
     Height = 28
     Anchors = [akLeft, akBottom]
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -302,9 +301,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryUpInvoice: TFDQuery
@@ -320,29 +317,22 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 171
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Paid_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Paid_Status'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSILines: TFDQuery
@@ -355,9 +345,7 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBag: TFDQuery
@@ -371,14 +359,10 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdJobBag: TFDQuery
@@ -391,14 +375,10 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOdelivLines: TFDQuery
@@ -413,14 +393,10 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPODeliv: TFDQuery
@@ -436,24 +412,16 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPO: TFDQuery
@@ -467,14 +435,10 @@ object frmWTMaintSalesInvPay: TfrmWTMaintSalesInvPay
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

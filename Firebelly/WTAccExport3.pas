@@ -1951,8 +1951,8 @@ begin
         dmAccExport.qryUpSageInvs.Parambyname('Vat_Code').asinteger := strtoint(sVat_Code);
         dmAccExport.qryUpSageInvs.Parambyname('Nominal').asstring := sNomCode;
         dmAccExport.qryUpSageInvs.Parambyname('Department').asstring := '1';
-        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := strtofloat(sValue);
-        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := strtofloat(sVatValue);
+        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := StrToFloatDef(sVatValue, 0, FormatSettings);
         dmAccExport.qryUpSageInvs.Parambyname('Invoice_Code').asinteger := iInvoiceCode;
         dmAccExport.qryUpSageInvs.execsql;
         end;
@@ -2075,7 +2075,7 @@ begin
         dmAccExport.qryUpXeroInvs.Parambyname('Reference').asstring := sOrderReference;
 
         dmAccExport.qryUpXeroInvs.Parambyname('Quantity').asfloat := rQuantity;
-        dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := strtofloat(sValue);
+        dmAccExport.qryUpXeroInvs.Parambyname('Unit_Price').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
 
         dmAccExport.qryUpXeroInvs.Parambyname('Nominal').asstring := sNomCode;
 
@@ -2427,8 +2427,8 @@ begin
         dmAccExport.qryUpSageInvs.Parambyname('Vat_Code').asinteger := strtoint(sVat_Code);
         dmAccExport.qryUpSageInvs.Parambyname('Nominal').asstring := sNomCode;
         dmAccExport.qryUpSageInvs.Parambyname('Department').asstring := '1';
-        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := strtofloat(sValue);
-        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := strtofloat(sVatValue);
+        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := StrToFloatDef(sVatValue, 0, FormatSettings);
         dmAccExport.qryUpSageInvs.Parambyname('Invoice_Code').asinteger := iInvoiceCode;
         dmAccExport.qryUpSageInvs.execsql;
         end;
@@ -2499,8 +2499,8 @@ begin
               dmAccExport.qryUpSageInvs.Parambyname('Vat_Code').asinteger := strtoint(sVat_Code);
               dmAccExport.qryUpSageInvs.Parambyname('Nominal').asstring := sNomCode;
               dmAccExport.qryUpSageInvs.Parambyname('Department').asstring := '1';
-              dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := strtofloat(sValue);
-              dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := strtofloat(sVatValue);
+              dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+              dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := StrToFloatDef(sVatValue, 0, FormatSettings);
               dmAccExport.qryUpSageInvs.Parambyname('Invoice_Code').asinteger := iInvoiceCode;
               dmAccExport.qryUpSageInvs.execsql;
               end;
@@ -3150,7 +3150,7 @@ begin
           ParamByName('Code').AsInteger := StrToInt(sCode);
           ParamByName('Description').AsString := sDescription;
           ParamByName('Symbol').AsString := sSymbol;
-          ParamByName('Rate').AsFloat := StrToFloat(sRate);
+          ParamByName('Rate').AsFloat := StrToFloatDef(sRate, 0, FormatSettings);
           ExecSQL;
         end;
     end;
@@ -3285,8 +3285,8 @@ begin
       begin
         Close;
         ParamByName('Customer').AsInteger := iCustomer;
-        ParamByName('credit_limit').AsFloat := StrToFloat(sCredit);
-        ParamByName('available_credit').AsFloat := StrToFloat(sAvCredit);
+        ParamByName('credit_limit').AsFloat := StrToFloatDef(sCredit, 0, FormatSettings);
+        ParamByName('available_credit').AsFloat := StrToFloatDef(sAvCredit, 0, FormatSettings);
         if sStatus = '2' then
           ParamByName('Credit_Status').AsString := 'S'
         else
@@ -3859,8 +3859,8 @@ begin
         dmAccExport.qryUpSageInvs.Parambyname('Vat_Code').asinteger := strtoint(sVat_Code);
         dmAccExport.qryUpSageInvs.Parambyname('Nominal').asstring := sNomCode;
         dmAccExport.qryUpSageInvs.Parambyname('Department').asstring := '1';
-        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := strtofloat(sValue);
-        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := strtofloat(sVatValue);
+        dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+        dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := StrToFloatDef(sVatValue, 0, FormatSettings);
         dmAccExport.qryUpSageInvs.Parambyname('Invoice_Code').asinteger := iInvoiceCode;
         dmAccExport.qryUpSageInvs.execsql;
         end;
@@ -3931,8 +3931,8 @@ begin
               dmAccExport.qryUpSageInvs.Parambyname('Vat_Code').asinteger := strtoint(sVat_Code);
               dmAccExport.qryUpSageInvs.Parambyname('Nominal').asstring := sNomCode;
               dmAccExport.qryUpSageInvs.Parambyname('Department').asstring := '1';
-              dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := strtofloat(sValue);
-              dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := strtofloat(sVatValue);
+              dmAccExport.qryUpSageInvs.Parambyname('Goods_Value').asfloat := StrToFloatDef(sValue, 0, FormatSettings);
+              dmAccExport.qryUpSageInvs.Parambyname('Vat_Value').asfloat := StrToFloatDef(sVatValue, 0, FormatSettings);
               dmAccExport.qryUpSageInvs.Parambyname('Invoice_Code').asinteger := iInvoiceCode;
               dmAccExport.qryUpSageInvs.execsql;
               end;
@@ -4123,7 +4123,7 @@ begin
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
           sGrossValue := sValue;
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
-            sValue := floattostr(strtofloat(sValue) * -1);
+            sValue := floattostr(StrToFloatDef(sValue, 0, FormatSettings) * -1);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Goods Gross Value in Base Currency}
@@ -4131,7 +4131,7 @@ begin
           sValue := Copy(formatfloat('0.00',
             (dmAccExport.GetInvoiceGrossTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
-            sValue := floattostr(strtofloat(sValue) * -1);
+            sValue := floattostr(StrToFloatDef(sValue, 0, FormatSettings) * -1);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sValue,false,true));
 
           {Accounts Currency Rate}
@@ -4186,10 +4186,10 @@ begin
 //          sVatValue := Copy(formatfloat('0.00', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 18);
           sVatValue := Copy(formatfloat('0.00',
             (dmAccExport.GetInvoiceVatTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
-//          sGoodsValue := floattostr(strtofloat(sGrossValue) - strtofloat(sVatValue));
-          sGoodsValue := formatfloat('0.00',(strtofloat(sGrossValue) - strtofloat(sVatValue)));
+//          sGoodsValue := floattostr(StrToFloatDef(sGrossValue) - strtofloat(sVatValue), 0, FormatSettings);
+          sGoodsValue := formatfloat('0.00',(StrToFloatDef(sGrossValue, 0, FormatSettings) - StrToFloatDef(sVatValue, 0, FormatSettings)));
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
-            sVatValue := floattostr(strtofloat(sVatValue) * -1);
+            sVatValue := floattostr(StrToFloatDef(sVatValue, 0, FormatSettings) * -1);
           sSageMMSText := trim(sSageMMSText) + trim(Sage50Format(sVatValue,false,false));
 
           {Reason Code}

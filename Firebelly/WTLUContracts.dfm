@@ -109,16 +109,15 @@ object frmWTLUContracts: TfrmWTLUContracts
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 916
+        Width = 906
       end>
-    ExplicitWidth = 920
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 903
+      Width = 897
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -132,7 +131,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -141,7 +140,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -150,7 +149,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -158,7 +157,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -167,7 +166,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 310
+        Left = 280
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -176,7 +175,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 372
+        Left = 336
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -184,7 +183,7 @@ object frmWTLUContracts: TfrmWTLUContracts
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 380
+        Left = 344
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -353,8 +352,6 @@ object frmWTLUContracts: TfrmWTLUContracts
       item
         Width = 50
       end>
-    ExplicitTop = 349
-    ExplicitWidth = 920
   end
   object imgLstHot: TImageList
     Left = 176

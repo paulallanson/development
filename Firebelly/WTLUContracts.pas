@@ -80,6 +80,7 @@ var
 implementation
 
 uses
+  System.UITypes, System.Types,
   AllCommon, WTContractSearch, WtMaintContract, wtRSContract,
   WTLUContractsRpts, wtMain;
 
@@ -216,6 +217,7 @@ begin
   else
     Key := dtmdlAllContract.CurrentContract;
 
+  bOK := False;
   try
     aContract := TContract.Create(dtmdlAllContract);
     try

@@ -166,13 +166,13 @@ var
   rQuantity: real;
 begin
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
 
   try
-    rQuantity := strtofloat(edtQuantity.text);
+    rQuantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   except
     rQuantity := 1.00;
   end;
@@ -188,13 +188,13 @@ var
   rQuantity: real;
 begin
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
 
   try
-    rQuantity := strtofloat(edtQuantity.text);
+    rQuantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   except
     rQuantity := 1.00;
   end;
@@ -211,9 +211,9 @@ begin
   QExtra.DoNotDiscount := chkbxDoNotDiscount.Checked;
   QExtra.Extra := dblkpExtras.KeyValue;
   QExtra.ExtraDesc := dblkpExtras.Text;
-  QExtra.Quantity := strtofloat(edtQuantity.text);
-  QExtra.UnitCost := strtofloat(edtUnitCost.text);
-  QExtra.UnitPrice := strtofloat(edtUnitPrice.text);
+  QExtra.Quantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
+  QExtra.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  QExtra.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = qexAdd then
   begin
     QExtra.QExNumber := QExtra.Parent.Extras.Count + 1;

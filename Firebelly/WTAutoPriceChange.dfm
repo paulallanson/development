@@ -1,4 +1,4 @@
-﻿object frmWTAutoPriceChange: TfrmWTAutoPriceChange
+object frmWTAutoPriceChange: TfrmWTAutoPriceChange
   Left = 199
   Top = 66
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblPriceChange: TLabel
     Left = 16
@@ -83,10 +81,10 @@
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
     OnExit = edtChangeChange
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 192
@@ -96,16 +94,16 @@
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 3
     NumGlyphs = 2
+    TabOrder = 3
   end
   object dtpckEffective: TDateTimePicker
     Left = 104
     Top = 312
     Width = 105
     Height = 21
-    Date = 37563.834117939810000000
-    Time = 37563.834117939810000000
+    Date = 37563.000000000000000000
+    Time = 0.834117939812131200
     TabOrder = 4
   end
   object edtChange: TCREditFloat
@@ -221,29 +219,19 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryPrice: TFDQuery
@@ -258,9 +246,8 @@
     Top = 312
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Price_pointer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryEdge: TFDQuery
@@ -274,9 +261,7 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryCutOut: TFDQuery
@@ -290,9 +275,7 @@
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -315,9 +298,7 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsWTGroup: TDataSource
@@ -352,29 +333,19 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryThickness: TFDQuery

@@ -70,7 +70,7 @@ function PostoNegQty(const Qty: variant): integer;
 function PosToNegMoney(const Money: variant): double;
 function ShowInPacks(iSinglesQty, iPackSize: Integer): String;
 function InpToSing(sInpStr: String; iPackSize: Integer): Integer;
-function FormatDoubleTo2DP(const double: variant): string;
+function FormatDoubleTo2DP(const Value: variant): string;
 function FormatQty(const Qty: variant): string;
 function FormatMoney(const Money: variant): string;
 function ShellFileOperation(const fromFileOrFolder, toFileOrFolder: string; Flag: Integer): boolean;
@@ -1135,7 +1135,7 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := (StrToFloat(Money)*-1)
+        Result := (StrToFloatDef(Money, 0, FormatSettings)*-1)
       else
         Result := (Money*-1);
     end;
@@ -1198,10 +1198,10 @@ begin
   try
     begin
       if VarType(Qty) = VarString then
-        Result := FormatFloat('######0', StrToFloat(Qty))
+        Result := FormatFloat('######0', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0', Qty);
-      if StrToFloat(Result) < 0 then
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';
@@ -1216,11 +1216,11 @@ begin
   end;
 end;
 
-function FormatDoubleTo2DP(const double: variant): string;
+function FormatDoubleTo2DP(const Value: variant): string;
 begin
-  if VarType(double) = VarString then
+  if VarType(Value) = VarString then
   begin
-    if Trim(double) = '' then
+    if Trim(Value) = '' then
     begin
       MessageDlg('Value must be entered', mtError, [mbOK], 0);
       Result := 'X';
@@ -1229,14 +1229,14 @@ begin
   end;
   try
     begin
-      if VarType(double) = VarString then
-        Result := FormatFloat('######0.00', StrToFloat(double))
+      if VarType(Value) = VarString then
+        Result := FormatFloat('######0.00', StrToFloatDef(Value, 0, FormatSettings))
       else
-        Result := FormatFloat('######0.00', double);
+        Result := FormatFloat('######0.00', Value);
     end;
   except
-    if VarType(double) = VarString then
-      MessageDlg('Invalid entry - ' + double, mtError, [mbOK], 0)
+    if VarType(Value) = VarString then
+      MessageDlg('Invalid entry - ' + Value, mtError, [mbOK], 0)
     else
       MessageDlg('Invalid entry ', mtError, [mbOK], 0);
     Result := 'X';
@@ -1256,7 +1256,7 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := FormatFloat('######0.00', StrToFloat(Money))
+        Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
     end;

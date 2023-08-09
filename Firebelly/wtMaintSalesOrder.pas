@@ -2485,7 +2485,7 @@ end;
 procedure TfrmWTMaintSalesOrder.edtDepositPaidChange(Sender: TObject);
 begin
    try
-    SOrder.DepositAmount := strtofloat(edtDepositPaid.text);
+    SOrder.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
    except
     SOrder.DepositAmount := 0;
    end;
@@ -2817,7 +2817,7 @@ begin
     (Sender as TCREditMoney).Text := '0.00';
   if bChangeValue then
     begin
-      rValue := strtofloat((Sender as TCREditMoney).text);
+      rValue := StrToFloatDef((Sender as TCREditMoney).text, 0, FormatSettings);
       rDeposit := (rValue / (SOrder.TotalGoods + SOrder.TotalVat))*100;
       edtDepositTerms.text := formatfloat('0.00',rDeposit);
       SOrder.DepositTerms := rDeposit;
@@ -2842,7 +2842,7 @@ begin
     (Sender as TEdit).Text := '0.00';
   if bChangeRate then
     begin
-      SOrder.DepositTerms := strtofloat(edtDepositTerms.text);
+      SOrder.DepositTerms := StrToFloatDef(edtDepositTerms.text, 0, FormatSettings);
       rDeposit := (SOrder.TotalGoods + Sorder.TotalVat) * (SOrder.DepositTerms/100);
       edtDepositReqd.text := formatfloat('0.00',rDeposit);
     end;
@@ -4151,7 +4151,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
         try
-            sValue := formatfloat('?#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('?#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end

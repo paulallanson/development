@@ -126,7 +126,7 @@ begin
           parambyname('Customer').asinteger := Customer;
           parambyname('Group_Number').asinteger := GroupCode;
           parambyname('Thickness').asinteger := dblkpThickness.KeyValue;
-          parambyname('Markup_Percentage').asfloat := strtofloat(edtMarkupPercentage.text);
+          parambyname('Markup_Percentage').asfloat := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
 
           paramByName('Price_Pointer').Asinteger := PricePointer;
           ExecSQL;
@@ -137,8 +137,8 @@ begin
       dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := now;
       dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'M';
       dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
-      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
       dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
       dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
 	    dtmdlWorktops.qryAddPrice.ExecSQl;
@@ -150,19 +150,19 @@ begin
           parambyname('Customer').asinteger := Customer;
           parambyname('Group_Number').asinteger := GroupCode;
           parambyname('Thickness').asinteger := Thickness;
-          parambyname('Markup_Percentage').asfloat := strtofloat(edtMarkupPercentage.text);
+          parambyname('Markup_Percentage').asfloat := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
           execsql;
         end;
 
-      if (strtofloat(edtmnySell.text) <> SellPrice) or (strtofloat(edtmnyCost.text) <> CostPrice) then
+      if (StrToFloatDef(edtmnySell.text, 0, FormatSettings) <> SellPrice) or (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
       begin
 	      dtmdlWorktops.qryAddPrice.Close;
         dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;
         dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'M';
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
-        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
 	      dtmdlWorktops.qryAddPrice.execSQL;
@@ -243,13 +243,13 @@ var
   rMarkupPercentage: real;
 begin
   try
-    rMarkupPercentage := strtofloat(edtMarkupPercentage.text);
+    rMarkupPercentage := StrToFloatDef(edtMarkupPercentage.text, 0, FormatSettings);
   except
     rMarkupPercentage := 0;
   end;
 
   try
-    rUnitCost := strtofloat(edtmnyCost.text);
+    rUnitCost := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -280,13 +280,13 @@ var
   rMarkupPercentage: real;
 begin
   try
-    rUnitprice := strtofloat(edtmnySell.text) ;
+    rUnitprice := StrToFloatDef(edtmnySell.text, 0, FormatSettings) ;
   except
     rUnitprice := 0;
   end;
 
   try
-    rMarkupPercentage := ((strtofloat(edtmnySell.text)/strtofloat(edtmnyCost.text))-1) * 100;
+    rMarkupPercentage := ((StrToFloatDef(edtmnySell.text, 0, FormatSettings) / StrToFloatDef(edtmnyCost.text, 0, FormatSettings))-1) * 100;
   except
     rMarkupPercentage := 0;
   end;

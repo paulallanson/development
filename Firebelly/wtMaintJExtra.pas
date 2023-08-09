@@ -151,13 +151,13 @@ var
   rQuantity: real;
 begin
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
 
   try
-    rQuantity := strtofloat(edtQuantity.text);
+    rQuantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
   except
     rQuantity := 1;
   end;
@@ -174,8 +174,8 @@ begin
   JExtra.DoNotDiscount := chkbxDoNotDiscount.Checked;
   jExtra.Extra := dblkpExtras.KeyValue;
   jExtra.ExtraDesc := dblkpExtras.Text;
-  jExtra.Quantity := strtofloat(edtQuantity.text);
-  jExtra.UnitPrice := strtofloat(edtUnitPrice.text);
+  jExtra.Quantity := StrToFloatDef(edtQuantity.text, 0, FormatSettings);
+  jExtra.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = jexAdd then
   begin
     jExtra.jExNumber := jExtra.Parent.Extras.Count + 1;

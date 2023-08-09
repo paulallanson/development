@@ -1,24 +1,28 @@
 object dtmdlCustomers: TdtmdlCustomers
-  Height = 555
-  Width = 725
+  Height = 694
+  Width = 906
+  PixelsPerInch = 120
   object qryBranches: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select *'
       'from Customer_Branch'
       'where Customer = :Customer'
       'order by Branch_Name')
-    Left = 36
-    Top = 16
+    Left = 45
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsBranches: TDataSource
     DataSet = qryBranches
-    Left = 108
-    Top = 16
+    Left = 135
+    Top = 20
   end
   object qryRep: TFDQuery
     ConnectionName = 'WT'
@@ -26,50 +30,50 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from rep'
       'order by Rep_Name')
-    Left = 40
-    Top = 264
+    Left = 50
+    Top = 330
   end
   object dtsRep: TDataSource
     DataSet = qryRep
-    Left = 104
-    Top = 264
+    Left = 130
+    Top = 330
   end
   object lkpCustomerType: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select * from customer_type'
       'order by description')
-    Left = 40
-    Top = 72
+    Left = 50
+    Top = 90
   end
   object dtsCustomerType: TDataSource
     DataSet = lkpCustomerType
-    Left = 104
-    Top = 72
+    Left = 130
+    Top = 90
   end
   object dtsVAT: TDataSource
     DataSet = lkpVAT
-    Left = 104
-    Top = 136
+    Left = 130
+    Top = 170
   end
   object lkpVAT: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from VAT')
-    Left = 40
-    Top = 136
+    Left = 50
+    Top = 170
   end
   object lkpCreditStatus: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from credit_status')
-    Left = 40
-    Top = 200
+    Left = 50
+    Top = 250
   end
   object dtsCreditStatus: TDataSource
     DataSet = lkpCreditStatus
-    Left = 104
-    Top = 200
+    Left = 130
+    Top = 250
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'Worktop'
@@ -123,43 +127,20 @@ object dtmdlCustomers: TdtmdlCustomers
         'tor.Operator_Name like :Description) OR (Quote.Quote like :descr' +
         'iption))'
       'ORDER BY Quote.Quote desc')
-    Left = 40
-    Top = 320
+    Left = 50
+    Top = 400
     ParamData = <
       item
         Name = 'Customer'
         DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'description'
         DataType = ftString
         ParamType = ptInput
-      end
-      item
-        Name = 'description'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'description'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'Description'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'Description'
-        DataType = ftString
-        ParamType = ptInput
-      end
-      item
-        Name = 'description'
-        DataType = ftString
-        ParamType = ptInput
+        Value = Null
       end>
     object qryQuotesQuote: TIntegerField
       FieldName = 'Quote'
@@ -292,7 +273,7 @@ object dtmdlCustomers: TdtmdlCustomers
     end
   end
   object qryEvents: TFDQuery
-    ConnectionName = 'wt'
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Customer_Event.Customer_Event_no,'
       '        Customer_Event.Customer,'
@@ -318,25 +299,28 @@ object dtmdlCustomers: TdtmdlCustomers
         'ospect_Action'
       'WHERE Customer_event.customer = :Customer'
       'ORDER BY Customer_Event_no desc')
-    Left = 192
-    Top = 16
+    Left = 240
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsEvents: TDataSource
     DataSet = qryEvents
-    Left = 280
-    Top = 16
+    Left = 350
+    Top = 20
   end
   object dtsQuotes: TDataSource
     DataSet = qryQuotes
-    Left = 104
-    Top = 320
+    Left = 130
+    Top = 400
   end
   object qrySOrders: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select sales_order.*,'
       '  Customer.Customer_name as original_customer_name,'
@@ -358,133 +342,323 @@ object dtmdlCustomers: TdtmdlCustomers
         'sales_order.sales_order_status = sales_order_status.sales_order_' +
         'status'
       'ORDER BY Sales_Order.Sales_Order desc')
-    Left = 40
-    Top = 384
+    Left = 50
+    Top = 480
     ParamData = <
       item
         Name = 'Customer'
         DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'description'
-      end
-      item
-        Name = 'description'
-      end
-      item
-        Name = 'description'
-      end
-      item
-        Name = 'Description'
-      end
-      item
-        Name = 'description'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qrySOrdersSales_Order: TIntegerField
       FieldName = 'Sales_Order'
+      Origin = 'Sales_Order'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qrySOrdersDate_Raised: TDateTimeField
+    object qrySOrdersDate_Raised: TSQLTimeStampField
       FieldName = 'Date_Raised'
+      Origin = 'Date_Raised'
+      Required = True
     end
-    object qrySOrdersDate_Required: TDateTimeField
+    object qrySOrdersDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
+      Origin = 'Date_Required'
+      Required = True
     end
     object qrySOrdersCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qrySOrdersReference: TStringField
+    object qrySOrdersReference: TWideStringField
       FieldName = 'Reference'
-      Size = 30
+      Origin = 'Reference'
+      Required = True
+      Size = 50
     end
     object qrySOrdersExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
+      Origin = 'Extra_Notes'
     end
     object qrySOrdersOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      Required = True
     end
-    object qrySOrdersContact_Name: TStringField
-      FieldName = 'Contact_Name'
+    object qrySOrdersContact_name: TWideStringField
+      FieldName = 'Contact_name'
+      Origin = 'Contact_name'
       Size = 50
     end
-    object qrySOrdersOrder_ref_no: TStringField
+    object qrySOrdersOrder_ref_no: TWideStringField
       FieldName = 'Order_ref_no'
+      Origin = 'Order_ref_no'
+      Required = True
       Size = 30
     end
     object qrySOrdersSales_Order_Status: TIntegerField
       FieldName = 'Sales_Order_Status'
+      Origin = 'Sales_Order_Status'
+      Required = True
     end
     object qrySOrdersDeposit_amount: TFloatField
       FieldName = 'Deposit_amount'
-      DisplayFormat = '0.00'
+      Origin = 'Deposit_amount'
     end
     object qrySOrdersDeposit_Terms: TFloatField
       FieldName = 'Deposit_Terms'
+      Origin = 'Deposit_Terms'
     end
     object qrySOrdersGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Goods_Value'
     end
     object qrySOrdersVAT_Value: TFloatField
       FieldName = 'VAT_Value'
-      DisplayFormat = '0.00'
+      Origin = 'VAT_Value'
     end
     object qrySOrdersRep: TIntegerField
       FieldName = 'Rep'
+      Origin = 'Rep'
     end
     object qrySOrdersInstall_Address: TIntegerField
       FieldName = 'Install_Address'
+      Origin = 'Install_Address'
     end
-    object qrySOrdersInactive: TStringField
+    object qrySOrdersInactive: TWideStringField
       FieldName = 'Inactive'
+      Origin = 'Inactive'
       Size = 1
     end
-    object qrySOrdersCustomer_Name: TStringField
+    object qrySOrdersCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
       Size = 50
     end
     object qrySOrdersInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
+      Origin = 'Inactive_Reason'
     end
     object qrySOrdersAddress: TIntegerField
       FieldName = 'Address'
+      Origin = 'Address'
     end
-    object qrySOrdersTemplate_Date: TDateTimeField
+    object qrySOrdersTemplate_Date: TSQLTimeStampField
       FieldName = 'Template_Date'
+      Origin = 'Template_Date'
     end
-    object qrySOrdersoriginal_customer_name: TStringField
+    object qrySOrdersDate_Type: TWideStringField
+      FieldName = 'Date_Type'
+      Origin = 'Date_Type'
+      Size = 1
+    end
+    object qrySOrdersMaterials_Required: TWideStringField
+      FieldName = 'Materials_Required'
+      Origin = 'Materials_Required'
+      Size = 1
+    end
+    object qrySOrdersMaterials_Reqd_Date: TSQLTimeStampField
+      FieldName = 'Materials_Reqd_Date'
+      Origin = 'Materials_Reqd_Date'
+    end
+    object qrySOrdersMaterials_Recd_Date: TSQLTimeStampField
+      FieldName = 'Materials_Recd_Date'
+      Origin = 'Materials_Recd_Date'
+    end
+    object qrySOrdersInstall_Name: TWideStringField
+      FieldName = 'Install_Name'
+      Origin = 'Install_Name'
+      Size = 30
+    end
+    object qrySOrdersInstall_Phone: TWideStringField
+      FieldName = 'Install_Phone'
+      Origin = 'Install_Phone'
+      Size = 30
+    end
+    object qrySOrdersOn_Hold: TWideStringField
+      FieldName = 'On_Hold'
+      Origin = 'On_Hold'
+      Size = 1
+    end
+    object qrySOrdersEmail_Address: TWideStringField
+      FieldName = 'Email_Address'
+      Origin = 'Email_Address'
+      Size = 100
+    end
+    object qrySOrdersAccount_Manager: TIntegerField
+      FieldName = 'Account_Manager'
+      Origin = 'Account_Manager'
+    end
+    object qrySOrdersDescriptive_Reference: TWideStringField
+      FieldName = 'Descriptive_Reference'
+      Origin = 'Descriptive_Reference'
+      Size = 255
+    end
+    object qrySOrdersTemplate_Duration: TIntegerField
+      FieldName = 'Template_Duration'
+      Origin = 'Template_Duration'
+    end
+    object qrySOrdersFitting_Duration: TIntegerField
+      FieldName = 'Fitting_Duration'
+      Origin = 'Fitting_Duration'
+    end
+    object qrySOrdersFitter: TIntegerField
+      FieldName = 'Fitter'
+      Origin = 'Fitter'
+    end
+    object qrySOrdersIs_In_Outlook: TWideStringField
+      FieldName = 'Is_In_Outlook'
+      Origin = 'Is_In_Outlook'
+      Size = 1
+    end
+    object qrySOrdersIsFittingInOutlook: TWideStringField
+      FieldName = 'IsFittingInOutlook'
+      Origin = 'IsFittingInOutlook'
+      Size = 1
+    end
+    object qrySOrdersIsTemplateInOutlook: TWideStringField
+      FieldName = 'IsTemplateInOutlook'
+      Origin = 'IsTemplateInOutlook'
+      Size = 1
+    end
+    object qrySOrdersTemplater: TIntegerField
+      FieldName = 'Templater'
+      Origin = 'Templater'
+    end
+    object qrySOrdersSupply_Only: TWideStringField
+      FieldName = 'Supply_Only'
+      Origin = 'Supply_Only'
+      Size = 1
+    end
+    object qrySOrdersProject_Reference: TWideStringField
+      FieldName = 'Project_Reference'
+      Origin = 'Project_Reference'
+      Size = 100
+    end
+    object qrySOrdersPaid_Status: TWideStringField
+      FieldName = 'Paid_Status'
+      Origin = 'Paid_Status'
+      Size = 1
+    end
+    object qrySOrdersContact_no: TIntegerField
+      FieldName = 'Contact_no'
+      Origin = 'Contact_no'
+    end
+    object qrySOrdersAppliance_Details: TWideStringField
+      FieldName = 'Appliance_Details'
+      Origin = 'Appliance_Details'
+      Size = 255
+    end
+    object qrySOrdersLocation_Plan_Document: TWideStringField
+      FieldName = 'Location_Plan_Document'
+      Origin = 'Location_Plan_Document'
+      Size = 200
+    end
+    object qrySOrdersSSMA_TimeStamp: TBytesField
+      AutoGenerateValue = arDefault
+      FieldName = 'SSMA_TimeStamp'
+      Origin = 'SSMA_TimeStamp'
+      ReadOnly = True
+      Required = True
+      Size = 8
+    end
+    object qrySOrdersCollection_Only: TWideStringField
+      FieldName = 'Collection_Only'
+      Origin = 'Collection_Only'
+      Size = 1
+    end
+    object qrySOrdersInstallation_Address: TIntegerField
+      FieldName = 'Installation_Address'
+      Origin = 'Installation_Address'
+    end
+    object qrySOrdersTemplate_Docs_Returned: TWideStringField
+      FieldName = 'Template_Docs_Returned'
+      Origin = 'Template_Docs_Returned'
+      Size = 1
+    end
+    object qrySOrdersFitting_Docs_Returned: TWideStringField
+      FieldName = 'Fitting_Docs_Returned'
+      Origin = 'Fitting_Docs_Returned'
+      Size = 1
+    end
+    object qrySOrdersRevenue_Centre: TIntegerField
+      FieldName = 'Revenue_Centre'
+      Origin = 'Revenue_Centre'
+    end
+    object qrySOrdersRemedial_Production: TWideStringField
+      FieldName = 'Remedial_Production'
+      Origin = 'Remedial_Production'
+      Size = 1
+    end
+    object qrySOrdersRemedial_No_Production: TWideStringField
+      FieldName = 'Remedial_No_Production'
+      Origin = 'Remedial_No_Production'
+      Size = 1
+    end
+    object qrySOrdersSales_Order_Number: TFloatField
+      FieldName = 'Sales_Order_Number'
+      Origin = 'Sales_Order_Number'
+    end
+    object qrySOrdersOriginal_Sales_Order: TIntegerField
+      FieldName = 'Original_Sales_Order'
+      Origin = 'Original_Sales_Order'
+    end
+    object qrySOrdersRemedial_ID: TIntegerField
+      FieldName = 'Remedial_ID'
+      Origin = 'Remedial_ID'
+    end
+    object qrySOrdersInv_Customer: TIntegerField
+      FieldName = 'Inv_Customer'
+      Origin = 'Inv_Customer'
+    end
+    object qrySOrdersBranch_no: TIntegerField
+      FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+    end
+    object qrySOrdersDo_not_invoice: TWideStringField
+      FieldName = 'Do_not_invoice'
+      Origin = 'Do_not_invoice'
+      Size = 1
+    end
+    object qrySOrdersoriginal_customer_name: TWideStringField
       FieldName = 'original_customer_name'
-      Size = 50
+      Origin = 'original_customer_name'
+      Required = True
+      Size = 100
     end
-    object qrySOrdersOperator_name: TStringField
+    object qrySOrdersOperator_name: TWideStringField
       FieldName = 'Operator_name'
+      Origin = 'Operator_name'
+      Required = True
       Size = 30
     end
     object qrySOrdersTotal_Value: TFloatField
       FieldName = 'Total_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Total_Value'
+      ReadOnly = True
     end
-    object qrySOrderssales_order_status_desc: TStringField
+    object qrySOrderssales_order_status_desc: TWideStringField
       FieldName = 'sales_order_status_desc'
+      Origin = 'sales_order_status_desc'
+      Required = True
       Size = 30
-    end
-    object qrySOrdersOn_Hold: TStringField
-      FieldName = 'On_Hold'
-      Size = 1
-    end
-    object qrySOrdersStatus_Text: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Status_Text'
-      Size = 50
-      Calculated = True
     end
   end
   object dtsSOrders: TDataSource
     DataSet = qrySOrders
-    Left = 104
-    Top = 384
+    Left = 130
+    Top = 480
   end
   object qryJobs: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -513,186 +687,287 @@ object dtmdlCustomers: TdtmdlCustomers
         'like :Description) OR (Material_Type.Description like :Descripti' +
         'on) OR (Job.Job like :description))'
       'ORDER BY Job.Quote desc')
-    Left = 192
-    Top = 72
+    Left = 240
+    Top = 90
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'description'
-      end
-      item
-        Name = 'description'
-      end
-      item
-        Name = 'description'
-      end
-      item
-        Name = 'Description'
-      end
-      item
-        Name = 'Description'
-      end
-      item
-        Name = 'Description'
-      end
-      item
-        Name = 'description'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qryJobsJob: TFloatField
       FieldName = 'Job'
+      Origin = 'Job'
+      Required = True
     end
     object qryJobsJob_Status: TIntegerField
       FieldName = 'Job_Status'
+      Origin = 'Job_Status'
+      Required = True
     end
     object qryJobsQuote: TIntegerField
       FieldName = 'Quote'
+      Origin = 'Quote'
     end
     object qryJobsCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qryJobsContact_name: TStringField
+    object qryJobsContact_name: TWideStringField
       FieldName = 'Contact_name'
+      Origin = 'Contact_name'
       Size = 50
     end
-    object qryJobsOrder_ref_no: TStringField
+    object qryJobsOrder_ref_no: TWideStringField
       FieldName = 'Order_ref_no'
+      Origin = 'Order_ref_no'
+      Required = True
       Size = 30
     end
-    object qryJobsDate_Raised: TDateTimeField
+    object qryJobsDate_Raised: TSQLTimeStampField
       FieldName = 'Date_Raised'
+      Origin = 'Date_Raised'
+      Required = True
     end
-    object qryJobsDate_Required: TDateTimeField
+    object qryJobsDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
+      Origin = 'Date_Required'
+      Required = True
     end
-    object qryJobsPayment_due: TDateTimeField
+    object qryJobsPayment_due: TSQLTimeStampField
       FieldName = 'Payment_due'
+      Origin = 'Payment_due'
     end
-    object qryJobsProduction_date: TDateTimeField
+    object qryJobsProduction_date: TSQLTimeStampField
       FieldName = 'Production_date'
+      Origin = 'Production_date'
     end
-    object qryJobsTemplate_date: TDateTimeField
+    object qryJobsTemplate_date: TSQLTimeStampField
       FieldName = 'Template_date'
+      Origin = 'Template_date'
     end
-    object qryJobsInstallation_date: TDateTimeField
+    object qryJobsInstallation_date: TSQLTimeStampField
       FieldName = 'Installation_date'
+      Origin = 'Installation_date'
     end
-    object qryJobsDeposit_amount: TFloatField
+    object qryJobsDeposit_amount: TCurrencyField
       FieldName = 'Deposit_amount'
-      currency = True
+      Origin = 'Deposit_amount'
     end
-    object qryJobsDelivery_Price: TFloatField
+    object qryJobsDelivery_Price: TCurrencyField
       FieldName = 'Delivery_Price'
-      currency = True
+      Origin = 'Delivery_Price'
     end
-    object qryJobsInstallation_price: TFloatField
+    object qryJobsInstallation_price: TCurrencyField
       FieldName = 'Installation_price'
-      currency = True
+      Origin = 'Installation_price'
     end
-    object qryJobsSurvey_price: TFloatField
+    object qryJobsSurvey_price: TCurrencyField
       FieldName = 'Survey_price'
-      currency = True
+      Origin = 'Survey_price'
+      Required = True
     end
     object qryJobsOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object qryJobsProduction_date_Actual: TDateTimeField
+    object qryJobsProduction_date_Actual: TSQLTimeStampField
       FieldName = 'Production_date_Actual'
+      Origin = 'Production_date_Actual'
     end
-    object qryJobsTemplate_date_actual: TDateTimeField
+    object qryJobsTemplate_date_actual: TSQLTimeStampField
       FieldName = 'Template_date_actual'
+      Origin = 'Template_date_actual'
     end
-    object qryJobsInstallation_date_actual: TDateTimeField
+    object qryJobsInstallation_date_actual: TSQLTimeStampField
       FieldName = 'Installation_date_actual'
+      Origin = 'Installation_date_actual'
     end
-    object qryJobsDescription: TStringField
+    object qryJobsDescription: TWideStringField
       FieldName = 'Description'
-      Size = 50
+      Origin = 'Description'
+      Size = 255
     end
     object qryJobsMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
     end
     object qryJobsExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
+      Origin = 'Extra_Notes'
     end
     object qryJobsAvailability: TIntegerField
       FieldName = 'Availability'
+      Origin = 'Availability'
     end
     object qryJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
+      Origin = 'Payment_Terms'
     end
-    object qryJobsReference: TStringField
+    object qryJobsReference: TWideStringField
       FieldName = 'Reference'
+      Origin = 'Reference'
       Size = 50
     end
-    object qryJobsNett_Price: TFloatField
+    object qryJobsNett_Price: TCurrencyField
       FieldName = 'Nett_Price'
-      currency = True
+      Origin = 'Nett_Price'
     end
-    object qryJobsInactive: TStringField
+    object qryJobsInactive: TWideStringField
       FieldName = 'Inactive'
+      Origin = 'Inactive'
       Size = 1
     end
     object qryJobsInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
+      Origin = 'Inactive_Reason'
     end
     object qryJobsAddress: TIntegerField
       FieldName = 'Address'
+      Origin = 'Address'
     end
     object qryJobsDiscount_Rate: TFloatField
       FieldName = 'Discount_Rate'
+      Origin = 'Discount_Rate'
     end
-    object qryJobsDiscount_Value: TFloatField
+    object qryJobsDiscount_Value: TCurrencyField
       FieldName = 'Discount_Value'
-      currency = True
+      Origin = 'Discount_Value'
     end
-    object qryJobsCustomer_Name: TStringField
+    object qryJobsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
       Size = 50
-    end
-    object qryJobsMaterial_Description: TStringField
-      FieldName = 'Material_Description'
-    end
-    object qryJobsStatus_Description: TStringField
-      FieldName = 'Status_Description'
-      Size = 50
-    end
-    object qryJobsOperator_Name: TStringField
-      FieldName = 'Operator_Name'
-      Size = 30
-    end
-    object qryJobsGross_Price: TFloatField
-      FieldName = 'Gross_Price'
-      currency = True
     end
     object qryJobsInstall_Address: TIntegerField
       FieldName = 'Install_Address'
+      Origin = 'Install_Address'
     end
     object qryJobsDeposit_Terms: TFloatField
       FieldName = 'Deposit_Terms'
+      Origin = 'Deposit_Terms'
     end
     object qryJobsVAT: TIntegerField
       FieldName = 'VAT'
+      Origin = 'VAT'
     end
-    object qryJobsQuote_Nett_Price: TFloatField
+    object qryJobsQuote_Nett_Price: TCurrencyField
       FieldName = 'Quote_Nett_Price'
+      Origin = 'Quote_Nett_Price'
+    end
+    object qryJobsFitter: TIntegerField
+      FieldName = 'Fitter'
+      Origin = 'Fitter'
+    end
+    object qryJobsInstall_Name: TWideStringField
+      FieldName = 'Install_Name'
+      Origin = 'Install_Name'
+      Size = 30
+    end
+    object qryJobsInstall_Phone: TWideStringField
+      FieldName = 'Install_Phone'
+      Origin = 'Install_Phone'
+      Size = 30
+    end
+    object qryJobsDesigner: TIntegerField
+      FieldName = 'Designer'
+      Origin = 'Designer'
+    end
+    object qryJobsBranch_no: TIntegerField
+      FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+    end
+    object qryJobsRisk_Notes: TIntegerField
+      FieldName = 'Risk_Notes'
+      Origin = 'Risk_Notes'
+    end
+    object qryJobsDescriptive_Reference: TWideStringField
+      FieldName = 'Descriptive_Reference'
+      Origin = 'Descriptive_Reference'
+      Size = 100
+    end
+    object qryJobsMarkup_Rate: TFloatField
+      FieldName = 'Markup_Rate'
+      Origin = 'Markup_Rate'
+    end
+    object qryJobsMarkup_Value: TFloatField
+      FieldName = 'Markup_Value'
+      Origin = 'Markup_Value'
+    end
+    object qryJobsContract_Quote: TWideStringField
+      FieldName = 'Contract_Quote'
+      Origin = 'Contract_Quote'
+      Size = 1
+    end
+    object qryJobsWaste_Percentage: TFloatField
+      FieldName = 'Waste_Percentage'
+      Origin = 'Waste_Percentage'
+    end
+    object qryJobsWaste_Value: TFloatField
+      FieldName = 'Waste_Value'
+      Origin = 'Waste_Value'
+    end
+    object qryJobsProject_Reference: TWideStringField
+      FieldName = 'Project_Reference'
+      Origin = 'Project_Reference'
+      Size = 100
+    end
+    object qryJobsSpecification: TIntegerField
+      FieldName = 'Specification'
+      Origin = 'Specification'
+    end
+    object qryJobsRisk_Assessment: TIntegerField
+      FieldName = 'Risk_Assessment'
+      Origin = 'Risk_Assessment'
+    end
+    object qryJobsMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object qryJobsStatus_Description: TWideStringField
+      FieldName = 'Status_Description'
+      Origin = 'Status_Description'
+      Size = 50
+    end
+    object qryJobsOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 30
+    end
+    object qryJobsIs_retail_customer: TWideStringField
+      FieldName = 'Is_retail_customer'
+      Origin = 'Is_retail_customer'
+      Size = 1
+    end
+    object qryJobsGross_Price: TCurrencyField
+      FieldName = 'Gross_Price'
+      Origin = 'Gross_Price'
+      ReadOnly = True
     end
     object qryJobsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-    end
-    object qryJobsis_retail_customer: TStringField
-      FieldName = 'is_retail_customer'
-      Size = 1
+      Origin = 'Sales_Order'
+      ReadOnly = True
     end
   end
   object dtsJobs: TDataSource
     DataSet = qryJobs
-    Left = 280
-    Top = 72
+    Left = 350
+    Top = 90
   end
   object qryInvoices: TFDQuery
-    ConnectionName = 'wt'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select '#9'Sales_Invoice.Invoice_Date,Sales_Invoice.Customer,'
       '        Sales_Invoice.Inactive,'
@@ -730,85 +1005,108 @@ object dtmdlCustomers: TdtmdlCustomers
         '_invoice_Status)'
       'order by Sales_Invoice.Sales_Invoice desc'
       '')
-    Left = 192
-    Top = 136
+    Left = 240
+    Top = 170
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'description'
-      end
-      item
-        Name = 'description'
-      end
-      item
-        Name = 'description'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Inactive'
         DataType = ftString
-      end
-      item
-        Name = 'Inactive'
-        DataType = ftString
+        ParamType = ptInput
       end>
-    object qryInvoicesInvoice_Date: TDateTimeField
+    object qryInvoicesInvoice_Date: TSQLTimeStampField
       FieldName = 'Invoice_Date'
+      Origin = 'Invoice_Date'
+      Required = True
     end
     object qryInvoicesCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qryInvoicesInactive: TStringField
+    object qryInvoicesInactive: TWideStringField
       FieldName = 'Inactive'
+      Origin = 'Inactive'
       Size = 1
     end
-    object qryInvoicesInvoice_or_Credit: TStringField
+    object qryInvoicesInvoice_or_Credit: TWideStringField
       FieldName = 'Invoice_or_Credit'
+      Origin = 'Invoice_or_Credit'
       Size = 1
     end
-    object qryInvoicesCustomer_Name: TStringField
-      FieldName = 'Customer_Name'
-      Size = 50
+    object qryInvoicesOriginal_Name: TWideStringField
+      FieldName = 'Original_Name'
+      Origin = 'Original_Name'
+      Required = True
+      Size = 100
     end
-    object qryInvoicesStatus_Description: TStringField
+    object qryInvoicesStatus_Description: TWideStringField
       FieldName = 'Status_Description'
+      Origin = 'Status_Description'
+      Required = True
       Size = 30
     end
-    object qryInvoicesGoods_Value: TFloatField
+    object qryInvoicesGoods_Value: TCurrencyField
       FieldName = 'Goods_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Goods_Value'
+      Required = True
     end
-    object qryInvoicesVat_Value: TFloatField
+    object qryInvoicesVat_Value: TCurrencyField
       FieldName = 'Vat_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Vat_Value'
+      Required = True
     end
-    object qryInvoicesTotal_Value: TFloatField
+    object qryInvoicesTotal_Value: TCurrencyField
       FieldName = 'Total_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Total_Value'
+      ReadOnly = True
     end
-    object qryInvoicesInvoice_no: TStringField
+    object qryInvoicesInvoice_no: TWideStringField
       FieldName = 'Invoice_no'
+      Origin = 'Invoice_no'
       Size = 10
     end
     object qryInvoicesSales_invoice_status: TIntegerField
       FieldName = 'Sales_invoice_status'
+      Origin = 'Sales_invoice_status'
+      Required = True
     end
     object qryInvoicesSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
+      Origin = 'Sales_Invoice'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryInvoicesReference: TStringField
+    object qryInvoicesReference: TWideStringField
       FieldName = 'Reference'
+      Origin = 'Reference'
     end
-    object qryInvoicesDescription: TStringField
+    object qryInvoicesDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Size = 255
+    end
+    object qryInvoicesCustomer_Name: TWideStringField
+      FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
       Size = 50
     end
   end
   object dtsInvoices: TDataSource
     DataSet = qryInvoices
-    Left = 280
-    Top = 136
+    Left = 350
+    Top = 170
   end
   object qryAction: TFDQuery
     ConnectionName = 'WT'
@@ -816,13 +1114,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'select *'
       'from Prospect_Action'
       'order by Prospect_Action_Description')
-    Left = 40
-    Top = 448
+    Left = 50
+    Top = 560
   end
   object dtsAction: TDataSource
     DataSet = qryAction
-    Left = 104
-    Top = 448
+    Left = 130
+    Top = 560
   end
   object qryOperator: TFDQuery
     ConnectionName = 'WT'
@@ -831,13 +1129,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Operator'
       'where Operator_can_login = '#39'Y'#39
       'order by Operator_Name')
-    Left = 192
-    Top = 200
+    Left = 240
+    Top = 250
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 280
-    Top = 200
+    Left = 350
+    Top = 250
   end
   object qryCustContact: TFDQuery
     ConnectionName = 'wt'
@@ -847,42 +1145,45 @@ object dtmdlCustomers: TdtmdlCustomers
       'where customer = :customer and'
       '((inactive is NULL) or (inactive = '#39#39') or (inactive = '#39'N'#39'))'
       'order by Customer_contact.contact_name')
-    Left = 192
-    Top = 264
+    Left = 240
+    Top = 330
     ParamData = <
       item
         Name = 'customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsCustContact: TDataSource
     DataSet = qryCustContact
-    Left = 280
-    Top = 264
+    Left = 350
+    Top = 330
   end
   object qryProspectStatus: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Prospect_Status')
-    Left = 192
-    Top = 320
+    Left = 240
+    Top = 400
   end
   object dtsProspectStatus: TDataSource
     DataSet = qryProspectStatus
-    Left = 280
-    Top = 320
+    Left = 350
+    Top = 400
   end
   object qryPaymentTerms: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Payment_Terms'
       'order by Payment_Terms_Description')
-    Left = 192
-    Top = 376
+    Left = 240
+    Top = 470
   end
   object dtsPaymentTerms: TDataSource
     DataSet = qryPaymentTerms
-    Left = 280
-    Top = 376
+    Left = 350
+    Top = 470
   end
   object qryWorkGroups: TFDQuery
     ConnectionName = 'wt'
@@ -891,11 +1192,14 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Customer_Worktop_Group'
       'where customer = :Customer'
       'Order by Group_Description')
-    Left = 364
-    Top = 16
+    Left = 455
+    Top = 20
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object qryGetAddress: TFDQuery
@@ -903,11 +1207,14 @@ object dtmdlCustomers: TdtmdlCustomers
     SQL.Strings = (
       'SELECT * from Address'
       'WHERE Address = :Address')
-    Left = 368
-    Top = 64
+    Left = 460
+    Top = 88
     ParamData = <
       item
         Name = 'Address'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object qryLevelofImportance: TFDQuery
@@ -917,13 +1224,13 @@ object dtmdlCustomers: TdtmdlCustomers
       'from Level_of_Importance'
       'order by Level_of_Importance'
       '')
-    Left = 184
-    Top = 448
+    Left = 230
+    Top = 560
   end
   object dtsLeveloFImportance: TDataSource
     DataSet = qryLevelofImportance
-    Left = 280
-    Top = 448
+    Left = 350
+    Top = 560
   end
   object qryMaterialTypes: TFDQuery
     ConnectionName = 'WT'
@@ -946,19 +1253,25 @@ object dtmdlCustomers: TdtmdlCustomers
         'ctive = '#39'N'#39'))'
       'ORDER BY Material_Type.Description'
       '')
-    Left = 468
-    Top = 16
+    Left = 473
+    Top = 172
     ParamData = <
       item
         Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'inactive'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsMaterialTypes: TDataSource
     DataSet = qryMaterialTypes
-    Left = 532
-    Top = 16
+    Left = 601
+    Top = 172
   end
 end

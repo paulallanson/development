@@ -11,10 +11,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -107,9 +105,9 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 246
@@ -119,8 +117,8 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object Button1: TButton
     Left = 264
@@ -157,19 +155,13 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'worktop_group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'thickness'
-        ParamType = ptUnknown
       end>
   end
   object srclkpThickness: TDataSource
@@ -191,14 +183,10 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end>
   end
   object stclkpWTGroup: TDataSource
@@ -219,19 +207,13 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryGetGroupWT: TFDQuery
@@ -253,14 +235,10 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckWTThickness: TFDQuery
@@ -274,14 +252,10 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWTThickness: TFDQuery
@@ -295,19 +269,13 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -332,24 +300,16 @@ object frmWTMaintWTGPrices: TfrmWTMaintWTGPrices
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
 end

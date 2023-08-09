@@ -658,12 +658,12 @@ begin
             dbgDetails.DataSource.DataSet.GotoBookmark(TBookmark(dbgDetails.SelectedRows[iCount]));
 
             if frmWTMaintSupplierWorktopCost.BasisGroup.itemindex = 1 then
-  	          rCost := dbgDetails.DataSource.DataSet.fieldbyname('Unit_Cost').asfloat * (1+(strtofloat(frmWTMaintSupplierWorktopCost.edtChange.text)/100))
+  	          rCost := dbgDetails.DataSource.DataSet.fieldbyname('Unit_Cost').asfloat * (1+(StrToFloatDef(frmWTMaintSupplierWorktopCost.edtChange.text, 0, FormatSettings)/100))
             else
             if frmWTMaintSupplierWorktopCost.BasisGroup.itemindex = 2 then
-  	          rCost := dbgDetails.DataSource.DataSet.fieldbyname('Unit_Cost').asfloat * (1-(strtofloat(frmWTMaintSupplierWorktopCost.edtChange.text)/100))
+  	          rCost := dbgDetails.DataSource.DataSet.fieldbyname('Unit_Cost').asfloat * (1-(StrToFloatDef(frmWTMaintSupplierWorktopCost.edtChange.text, 0, FormatSettings)/100))
             else
-  	          rCost := strtofloat(frmWTMaintSupplierWorktopCost.edtChange.text);
+  	          rCost := StrToFloatDef(frmWTMaintSupplierWorktopCost.edtChange.text, 0, FormatSettings);
 
             AddSupplierWorktopsCost(dbgDetails.datasource.dataset.fieldbyname('Price_Pointer').asinteger, rCost);
           end;
@@ -841,7 +841,7 @@ begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end
@@ -973,7 +973,7 @@ begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end
@@ -1207,7 +1207,7 @@ begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end
@@ -2004,7 +2004,7 @@ begin
       parambyname('Web_Address').asstring := edtWebAddress.Text;
       parambyname('Email_Address').asstring := edtEmailAddress.Text;
 
-      parambyname('Discount_Percentage').asfloat := strtofloat(edtDiscountPercentage.Text);
+      parambyname('Discount_Percentage').asfloat := StrToFloatDef(edtDiscountPercentage.Text, 0, FormatSettings);
 
       parambyname('Account_Code').asstring := edtAccountCode.Text;
 

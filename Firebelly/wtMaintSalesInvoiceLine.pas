@@ -213,15 +213,15 @@ begin
   SalesInvoiceLine.SellUnit := 1;
   if SalesInvoiceLine.PackQty = 0 then
     begin
-      SalesInvoiceLine.Quantity := strtofloat(Trim(memQuantity.Text));
-      SalesInvoiceLine.UnitPrice := StrTofloat(memPrice.Text);
-      SalesInvoiceLine.CostPrice := StrTofloat(memCost.Text);
+      SalesInvoiceLine.Quantity := StrToFloatDef(Trim(memQuantity.Text), 0, FormatSettings);
+      SalesInvoiceLine.UnitPrice := StrToFloatDef(memPrice.Text, 0, FormatSettings);
+      SalesInvoiceLine.CostPrice := StrToFloatDef(memCost.Text, 0, FormatSettings);
     end
   else
     begin
       SalesInvoiceLine.Quantity := strtoint(Trim(memQuantity.Text));
-      SalesInvoiceLine.UnitPrice := (StrTofloat(memPrice.Text));
-      SalesInvoiceLine.CostPrice := (StrTofloat(memCost.Text));
+      SalesInvoiceLine.UnitPrice := StrToFloatDef(memPrice.Text, 0, FormatSettings);
+      SalesInvoiceLine.CostPrice := StrToFloatDef(memCost.Text, 0, FormatSettings);
     end;
 
   SalesInvoiceLine.Nominal := edtNominal.Text;
@@ -231,7 +231,7 @@ begin
   SalesInvoiceLine.VATDescription := dblkpVAT.Text;
   SalesInvoiceLine.VATReverseCharge := SalesInvoiceLine.Parent.DataModule.GetVatReverseCharge(SalesInvoiceLine.VATCode);
   SalesInvoiceLine.VATRate := SalesInvoiceLine.Parent.DataModule.GetVatRate(SalesInvoiceLine.VATCode);
-  SalesInvoiceLine.VatValue := StrTofloat(memVatValue.Text);
+  SalesInvoiceLine.VatValue := StrToFloatDef(memVatValue.Text, 0, FormatSettings);
   if (SalesInvoiceLine.Parent.DBKey = 0) and (SalesInvoiceLine.Parent.InvoiceOrCredit = 'C') then
     SalesInvoiceLine.OriginalQty := 0;
   if Mode = silAdd then

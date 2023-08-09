@@ -220,10 +220,10 @@ procedure TfrmWTMaintPurchaseOrderLineProd.btnOKClick(Sender: TObject);
 var
   inx : integer;
 begin
-  POLine.UnitCost := strtofloat(edtUnitCost.text);
+  POLine.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   POLine.SlabUnitCost := 0;
   POLine.CostUnit := strtoint(edtCostUnit.text);
-  POLine.DiscountPercentage := strtofloat(edtDiscount.text);
+  POLine.DiscountPercentage := StrToFloatDef(edtDiscount.text, 0, FormatSettings);
   POLine.Quantity := strtoint(edtOrderQty.text);
   POLine.QtyDelivered := strtoint(edtDeliveredQty.text) * POLine.CostUnit;
   POLine.QtyInvoiced := strtoint(edtInvoicedQty.text) * POLine.CostUnit;

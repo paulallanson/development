@@ -11,10 +11,8 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -111,9 +109,9 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 288
@@ -123,8 +121,8 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object lkpEdges: TFDQuery
     ConnectionName = 'WT'
@@ -139,14 +137,10 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object srclkpEdges: TDataSource
@@ -175,24 +169,16 @@ object frmWTMaintCustEdge: TfrmWTMaintCustEdge
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
 end

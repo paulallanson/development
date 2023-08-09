@@ -100,7 +100,7 @@ begin
           Close;
           parambyname('Discount_Label').asstring := edtDiscountLabel.Text;
           parambyname('Discount_Type').asstring := dblkpDiscountType.text;
-          parambyname('Amount').asfloat := strtofloat(edtAmount.Text);
+          parambyname('Amount').asfloat := StrToFloatDef(edtAmount.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'
@@ -120,7 +120,7 @@ begin
 
           parambyname('Discount_Label').asstring := edtDiscountLabel.Text;
           parambyname('Discount_Type').asstring := dblkpDiscountType.text;
-          parambyname('Amount').asfloat := strtofloat(edtAmount.Text);
+          parambyname('Amount').asfloat := StrToFloatDef(edtAmount.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'

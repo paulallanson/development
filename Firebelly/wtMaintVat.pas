@@ -135,11 +135,11 @@ begin
       Close;
       parambyname('VAT').asinteger := iCode;
 
-      parambyname('Vat_Rate').asfloat := strtofloat(edtVATRate.Text);
+      parambyname('Vat_Rate').asfloat := StrToFloatDef(edtVATRate.Text, 0, FormatSettings);
       parambyname('Description').asstring := edtDescription.Text;
       parambyname('Vat_Code').asstring := edtVATCode.Text;
       parambyname('Invoice_Text').asstring := edtInvoiceText.Text;
-      parambyname('Reverse_Charge_Vat_Rate').asfloat := strtofloat(edtRCVateRate.Text);
+      parambyname('Reverse_Charge_Vat_Rate').asfloat := StrToFloatDef(edtRCVateRate.Text, 0, FormatSettings);
 
       if chkbxReverseCharge.Checked then
         ParamByName('Reverse_Charge').asstring := 'Y'

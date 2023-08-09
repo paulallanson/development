@@ -185,7 +185,7 @@ begin
   CustomerTotal := CustomerTotal + JobTotal+VATTotal;
   CustomerNett := CustomerNett + JobTotal;
   CustomerVat := CustomerVat + VATTotal;
-  CustomerCost := CustomerCost + strtofloat(qrlCost.caption);
+  CustomerCost := CustomerCost + StrToFloatDef(qrlCost.caption, 0, FormatSettings);
 end;
 
 procedure TfrmWTRPJobValue.qrbCustomerFooterAfterPrint(

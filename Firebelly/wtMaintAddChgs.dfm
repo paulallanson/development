@@ -1,21 +1,19 @@
 object frmwtMaintAddChgs: TfrmwtMaintAddChgs
   Left = 267
   Top = 198
-  Width = 385
-  Height = 234
   Caption = 'Other charges'
+  ClientHeight = 187
+  ClientWidth = 367
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -82,9 +80,9 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -94,8 +92,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 6
     NumGlyphs = 2
+    TabOrder = 6
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -149,29 +147,19 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Do_Not_Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Allow_Bespoke_Detail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Extra_Charge'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -189,14 +177,12 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Top = 104
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -209,8 +195,8 @@ object frmwtMaintAddChgs: TfrmwtMaintAddChgs
     Top = 104
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

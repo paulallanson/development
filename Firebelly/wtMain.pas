@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Menus, ImgList, ComCtrls, ToolWin, IniFiles, StdActns, ActnList,
   ShellAPI, AllCommon, DB, Grids, DBGrids, System.Actions,
-  System.ImageList;
+  System.ImageList, Vcl.StdCtrls;
 
 type
   TfrmWTMain = class(TForm)
@@ -341,7 +341,9 @@ var
 
 implementation
 
-uses wtDatabase, WTLogin, WTMaintParams, WTLUQuotes,
+uses
+  System.UITypes,
+  wtDatabase, WTLogin, WTMaintParams, WTLUQuotes,
   wtLUMatType, wtLUThickness, wtLUworktops, wtLUCutOuts,
   wtLUAddChgs, wtLUCustomer, WTAutoPriceChange,
   wtAboutBox, wtLUEdges, wtLUCustType, wtLUVat,
@@ -2326,7 +2328,7 @@ begin
   if sRet <> '' then
   begin
     try
-      dDate := strtofloat(sRet);
+      dDate := StrToFloatDef(sRet, 0, FormatSettings);
     except
       dDate := 0;
     end;
@@ -2440,7 +2442,7 @@ begin
   if sRet <> '' then
   begin
     try
-      dDate := strtofloat(sRet);
+      dDate := StrToFloatDef(sRet, 0, FormatSettings);
     except
       dDate := 0;
     end;

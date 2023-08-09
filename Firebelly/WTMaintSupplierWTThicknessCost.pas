@@ -46,7 +46,7 @@ procedure TfrmWTMaintSupplierWTThicknessCost.btnOKClick(Sender: TObject);
 var
   iPricePointer: integer;
 begin
-  if (strtofloat(edtmnyCost.text) <> CostPrice) then
+  if (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
     begin
 	    dtmdlWorktops.qryAddPrice.Close;
       dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := self.PricePointer;
@@ -56,7 +56,7 @@ begin
       dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
       dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;
       dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := 0.00;
-      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	    dtmdlWorktops.qryAddPrice.execSQL;
 
       bOK := true;

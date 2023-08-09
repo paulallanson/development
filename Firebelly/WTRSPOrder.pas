@@ -303,7 +303,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -364,8 +364,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Purchase_Order').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Purchase_Order').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Purchase_Order').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Purchase_Order').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do

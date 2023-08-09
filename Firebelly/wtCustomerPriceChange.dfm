@@ -11,10 +11,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblPriceChange: TLabel
     Left = 16
@@ -55,8 +53,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 392
     Width = 103
     Height = 21
-    Date = 37563.834117939810000000
-    Time = 37563.834117939810000000
+    Date = 37563.000000000000000000
+    Time = 0.834117939812131200
     TabOrder = 7
   end
   object edtTime: TMaskEdit
@@ -78,8 +76,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 10
     NumGlyphs = 2
+    TabOrder = 10
   end
   object btnOK: TBitBtn
     Left = 119
@@ -89,9 +87,9 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 9
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object edtChange: TCREditFloat
     Left = 104
@@ -243,9 +241,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryEdgeGroups: TFDQuery
@@ -260,9 +256,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryWTGroups: TFDQuery
@@ -276,9 +270,7 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryPrice: TFDQuery
@@ -293,9 +285,8 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 352
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Price_pointer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryWorktop: TFDQuery
@@ -315,24 +306,16 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryCutOut: TFDQuery
@@ -354,14 +337,10 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryEdge: TFDQuery
@@ -383,14 +362,10 @@ object frmwtCustomerPriceChange: TfrmwtCustomerPriceChange
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -231,13 +231,13 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
 
   try
-    rPolishPrice := strtofloat(edtPolishPrice.text);
+    rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
   except
     rPolishPrice := 0.00;
   end;
@@ -326,8 +326,8 @@ begin
   JUpstand.Depth := strtoint(edtDepth.text);
   JUpstand.Length := strtoint(edtLength.text);
   JUpstand.Quantity := spnQuantity.Value;
-  JUpstand.UnitPrice := strtofloat(edtUnitPrice.text);
-  JUpstand.PolishPrice := strtofloat(edtPolishPrice.text);
+  JUpstand.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+  JUpstand.PolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
   JUpstand.NoOfDepths := spnNoOfDepths.Value;
   JUpstand.NoOfLengths := spnNoOfLengths.Value;
   JUpstand.TotalUpstandPieces := spnNoofPieces.value;

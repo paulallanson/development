@@ -1277,7 +1277,7 @@ end;
 procedure TfrmWTMaintJob.edtInstallPriceChange(Sender: TObject);
 begin
   try
-    Job.InstallPrice := strtofloat(edtInstallPrice.text);
+    Job.InstallPrice := StrToFloatDef(edtInstallPrice.text, 0, FormatSettings);
   except
     Job.InstallPrice := 0.00;
   end;
@@ -1287,7 +1287,7 @@ end;
 procedure TfrmWTMaintJob.edtSurveyPriceChange(Sender: TObject);
 begin
   try
-    Job.SurveyPrice := strtofloat(edtSurveyPrice.text);
+    Job.SurveyPrice := StrToFloatDef(edtSurveyPrice.text, 0, FormatSettings);
   except
     Job.SurveyPrice := 0.00;
   end;
@@ -1297,7 +1297,7 @@ end;
 procedure TfrmWTMaintJob.edtDeliveryPriceChange(Sender: TObject);
 begin
   try
-    Job.DeliveryPrice := strtofloat(edtDeliveryPrice.text);
+    Job.DeliveryPrice := StrToFloatDef(edtDeliveryPrice.text, 0, FormatSettings);
   except
     Job.DeliveryPrice := 0.00;
   end;
@@ -1935,7 +1935,7 @@ begin
     (Sender as TEdit).Text := '0.00';
   if bChangeRate then
     begin
-      Job.DiscountRate := strtofloat(edtDiscountRate.text);
+      Job.DiscountRate := StrToFloatDef(edtDiscountRate.text, 0, FormatSettings);
       rDiscount := Job.TotalPrice * (Job.DiscountRate/100);
       edtDiscountValue.text := formatfloat('0.00',rDiscount);
       Job.DiscountValue := rDiscount;
@@ -1951,7 +1951,7 @@ begin
     (Sender as TMemo).Text := '0.00';
   if bChangeValue then
     begin
-      Job.DiscountValue := strtofloat(edtDiscountValue.text);
+      Job.DiscountValue := StrToFloatDef(edtDiscountValue.text, 0, FormatSettings);
       rDiscount := ((Job.DiscountValue / Job.TotalPrice)*100);
       edtDiscountRate.text := formatfloat('0.00',rDiscount);
       Job.DiscountRate := rDiscount;
@@ -2238,7 +2238,7 @@ end;
 procedure TfrmWTMaintJob.edtDepositPaidChange(Sender: TObject);
 begin
   try
-    Job.DepositAmount := strtofloat(edtDepositPaid.text);
+    Job.DepositAmount := StrToFloatDef(edtDepositPaid.text, 0, FormatSettings);
   except
     Job.DepositAmount := 0.00;
   end;

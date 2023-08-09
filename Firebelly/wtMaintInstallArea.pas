@@ -144,8 +144,8 @@ begin
             parambyname('Country').clear
           else
             parambyname('Country').asinteger := dblkpCountry.keyvalue;
-          parambyname('Templating_Price').asfloat := strtofloat(edtTemplatingPrice.Text);
-          parambyname('Fitting_Price').asfloat := strtofloat(edtFittingPrice.Text);
+          parambyname('Templating_Price').asfloat := StrToFloatDef(edtTemplatingPrice.Text, 0, FormatSettings);
+          parambyname('Fitting_Price').asfloat := StrToFloatDef(edtFittingPrice.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'
@@ -169,8 +169,8 @@ begin
           else
             parambyname('Country').asinteger := dblkpCountry.keyvalue;
 
-          parambyname('Templating_Price').asfloat := strtofloat(edtTemplatingPrice.Text);
-          parambyname('Fitting_Price').asfloat := strtofloat(edtFittingPrice.Text);
+          parambyname('Templating_Price').asfloat := StrToFloatDef(edtTemplatingPrice.Text, 0, FormatSettings);
+          parambyname('Fitting_Price').asfloat := StrToFloatDef(edtFittingPrice.Text, 0, FormatSettings);
 
           if chkbxInactive.Checked then
             ParamByName('inActive').asstring := 'Y'

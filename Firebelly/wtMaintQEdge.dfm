@@ -1,22 +1,20 @@
 object frmWTMaintQEdge: TfrmWTMaintQEdge
   Left = 381
   Top = 145
-  Width = 530
-  Height = 304
   Caption = 'Maintain Edges'
+  ClientHeight = 257
+  ClientWidth = 512
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    522
-    273)
-  PixelsPerInch = 96
+    512
+    257)
   TextHeight = 13
   object lblDelete: TLabel
     Left = 40
@@ -42,9 +40,9 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 270
@@ -55,18 +53,19 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 522
+    Width = 512
     Height = 233
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 522
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -265,9 +264,7 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsEdgeType: TDataSource
@@ -293,19 +290,14 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'edge_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end>
   end
   object dtsEdgeThickness: TDataSource
@@ -342,19 +334,13 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_profile'
-        ParamType = ptUnknown
       end>
   end
   object qryContractEdge: TFDQuery
@@ -395,24 +381,17 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end>
   end
   object qryOneCustomerPrice: TFDQuery
@@ -453,24 +432,16 @@ object frmWTMaintQEdge: TfrmWTMaintQEdge
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end>
   end
   object dtsEdgePrice: TDataSource

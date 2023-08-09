@@ -171,17 +171,17 @@ procedure TfrmWTMaintSalesOrderJobLine.btnOKClick(Sender: TObject);
 var
   inx : integer;
 begin
-  SOLine.InstallPrice := strtofloat(memFixing.text);
-  SOLine.SurveyPrice := strtofloat(memTemplate.text);
-  SOLine.DeliveryPrice := strtofloat(memDelivery.text);
-  SOLine.NettPrice := strtofloat(memSupply.text);
-  SOLine.DiscountValue := strtofloat(memDiscount.text);
+  SOLine.InstallPrice := StrToFloatDef(memFixing.text, 0, FormatSettings);
+  SOLine.SurveyPrice := StrToFloatDef(memTemplate.text, 0, FormatSettings);
+  SOLine.DeliveryPrice := StrToFloatDef(memDelivery.text, 0, FormatSettings);
+  SOLine.NettPrice := StrToFloatDef(memSupply.text, 0, FormatSettings);
+  SOLine.DiscountValue := StrToFloatDef(memDiscount.text, 0, FormatSettings);
   SOLine.UnitPrice := SOLine.TotalGoods;
   SOLine.SellUnit := strtoint(edtPackSize.text);
   SOLine.Quantity := strtoint(edtQtyPacks.text) * SOLine.SellUnit;
   SOLine.Description := edtDescription.Text;
   SOLine.VAT := dblkpVat.keyvalue;
-  SOLine.VATRate := strtofloat(dblkpVat.text);
+  SOLine.VATRate := StrToFloatDef(dblkpVat.text, 0, FormatSettings);
 
   if Mode = solAdd then
   begin
@@ -252,27 +252,27 @@ procedure TfrmWTMaintSalesOrderJobLine.UpdateOrderLine(Sender: TObject);
 begin
   if not FActivated then exit;
   try
-    SOLine.InstallPrice := strtofloat(memFixing.text);
+    SOLine.InstallPrice := StrToFloatDef(memFixing.text, 0, FormatSettings);
   except
     SOLine.InstallPrice := 0;
   end;
   try
-    SOLine.SurveyPrice := strtofloat(memTemplate.text);
+    SOLine.SurveyPrice := StrToFloatDef(memTemplate.text, 0, FormatSettings);
   except
     SOLine.SurveyPrice := 0;
   end;
   try
-  SOLine.DeliveryPrice := strtofloat(memDelivery.text);
+  SOLine.DeliveryPrice := StrToFloatDef(memDelivery.text, 0, FormatSettings);
   except
     SOLine.DeliveryPrice := 0;
   end;
   try
-  SOLine.NettPrice := strtofloat(memSupply.text);
+  SOLine.NettPrice := StrToFloatDef(memSupply.text, 0, FormatSettings);
   except
     SOLine.NettPrice := 0;
   end;
   try
-  SOLine.DiscountValue := strtofloat(memDiscount.text);
+  SOLine.DiscountValue := StrToFloatDef(memDiscount.text, 0, FormatSettings);
   except
     SOLine.DiscountValue := 0;
   end;

@@ -246,17 +246,17 @@ begin
     POLine.SalesOrder := 0;
   end;
 
-  POLine.UnitCost := strtofloat(edtUnitCost.text);
-  POLine.SlabUnitCost := strtofloat(edtSlabUnitCost.text);
+  POLine.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  POLine.SlabUnitCost := StrToFloatDef(edtSlabUnitCost.text, 0, FormatSettings);
   POLine.CostUnit := strtoint(edtCostUnit.text);
-  POLine.DiscountPercentage := strtofloat(edtDiscount.text);
-  POLine.Quantity := strtofloat(edtOrderQty.text);
-(*  POLine.QtyDelivered := strtofloat(edtDeliveredQty.text) * POLine.CostUnit;
-  POLine.QtyInvoiced := strtofloat(edtInvoicedQty.text) * POLine.CostUnit;
+  POLine.DiscountPercentage := StrToFloatDef(edtDiscount.text, 0, FormatSettings);
+  POLine.Quantity := StrToFloatDef(edtOrderQty.text, 0, FormatSettings);
+(*  POLine.QtyDelivered := StrToFloatDef(edtDeliveredQty.text, 0, FormatSettings) * POLine.CostUnit;
+  POLine.QtyInvoiced := StrToFloatDef(edtInvoicedQty.text, 0, FormatSettings) * POLine.CostUnit;
 *)
 
-  POLine.QtyDelivered := strtofloat(edtDeliveredQty.text);
-  POLine.QtyInvoiced := strtofloat(edtInvoicedQty.text);
+  POLine.QtyDelivered := StrToFloatDef(edtDeliveredQty.text, 0, FormatSettings);
+  POLine.QtyInvoiced := StrToFloatDef(edtInvoicedQty.text, 0, FormatSettings);
   
   POLine.Notes := memNotes.Text;
 
@@ -444,7 +444,7 @@ begin
       end;
 
       try
-        rUnitCost := strtofloat(edtSlabUnitCost.text);
+        rUnitCost := StrToFloatDef(edtSlabUnitCost.text, 0, FormatSettings);
       except
         rUnitCost := 0.00;
       end;

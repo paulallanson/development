@@ -861,7 +861,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
     TabOrder = 3
     ExplicitTop = 511
     object Panel5: TPanel
-      Left = 804
+      Left = 800
       Top = 1
       Width = 353
       Height = 192
@@ -870,7 +870,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 3
-      ExplicitLeft = 800
       DesignSize = (
         353
         192)
@@ -1555,12 +1554,13 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 1150
+        Width = 1146
         Height = 17
         Align = alTop
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 1150
         object Label44: TLabel
           Left = 2
           Top = 0
@@ -1570,10 +1570,10 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         end
       end
       object tbrDocuments: TToolBar
-        Left = 1117
+        Left = 1113
         Top = 17
         Width = 33
-        Height = 159
+        Height = 158
         Align = alRight
         ButtonHeight = 30
         ButtonWidth = 30
@@ -1583,6 +1583,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         ParentShowHint = False
         ShowHint = True
         TabOrder = 1
+        ExplicitLeft = 1117
         ExplicitHeight = 162
         object btnExcel: TToolButton
           Left = 0
@@ -1631,22 +1632,24 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
       object pnlDocuments: TPanel
         Left = 0
         Top = 17
-        Width = 1117
-        Height = 159
+        Width = 1113
+        Height = 158
         Align = alClient
         BevelOuter = bvNone
         ParentBackground = False
         TabOrder = 2
+        ExplicitWidth = 1117
         ExplicitHeight = 162
         object pnlPlanDocument: TPanel
           Left = 0
-          Top = 118
-          Width = 1117
+          Top = 117
+          Width = 1113
           Height = 41
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
           ExplicitTop = 121
+          ExplicitWidth = 1117
           DesignSize = (
             1113
             41)
@@ -1728,8 +1731,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           OnMouseMove = stvDocumentsMouseMove
           TabOrder = 2
           ViewStyle = vsReport
-          ExplicitWidth = 932
-          ExplicitHeight = 118
         end
       end
     end
@@ -1758,7 +1759,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           ExplicitHeight = 13
         end
         object lblNotes: TLabel
-          Left = 514
+          Left = 510
           Top = 0
           Width = 28
           Height = 13
@@ -2640,6 +2641,7 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
+            Width = 64
             Visible = True
           end>
       end

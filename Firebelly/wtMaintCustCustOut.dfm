@@ -11,10 +11,8 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -111,9 +109,9 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 288
@@ -123,8 +121,8 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object lkpCutOuts: TFDQuery
     ConnectionName = 'WT'
@@ -139,14 +137,10 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object srclkpCutOuts: TDataSource
@@ -175,24 +169,16 @@ object frmWTMaintCustCutOut: TfrmWTMaintCustCutOut
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cutout'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
 end

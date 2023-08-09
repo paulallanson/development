@@ -81,8 +81,8 @@ begin
       dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;
       dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := date;
       dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'Q';
-      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+      dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+      dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
       dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 2;
       dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
       dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := 1;
@@ -90,15 +90,15 @@ begin
     end
   else
     begin
-      if (strtofloat(edtmnySell.text) <> SellPrice) or
-         (strtofloat(edtmnyCost.text) <> CostPrice) then
+      if (StrToFloatDef(edtmnySell.text, 0, FormatSettings) <> SellPrice) or
+         (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
       begin
 	      dtmdlWorktops.qryAddPrice.Close;
         dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;
         dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'L';
-        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 3;
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := date;
         dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := 1;

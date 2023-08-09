@@ -11,13 +11,11 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     497
     244)
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 32
@@ -43,9 +41,9 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 255
@@ -56,17 +54,17 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 497
     Height = 193
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
@@ -269,9 +267,7 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsEdgeType: TDataSource
@@ -296,19 +292,14 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Left = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'CutOut'
-        ParamType = ptUnknown
       end>
   end
   object qryOneCOThickness: TFDQuery
@@ -346,19 +337,13 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cutout'
-        ParamType = ptUnknown
       end>
   end
   object dtsCOThickness: TDataSource
@@ -401,24 +386,17 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'CutOut'
-        ParamType = ptUnknown
       end>
   end
   object qryOneCustomerPrice: TFDQuery
@@ -459,24 +437,16 @@ object frmWTMaintQCutOut: TfrmWTMaintQCutOut
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cutout'
-        ParamType = ptUnknown
       end>
   end
   object dtsCutOutPrice: TDataSource

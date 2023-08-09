@@ -329,13 +329,13 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
 
   try
-    rPolishPrice := strtofloat(edtPolishPrice.text);
+    rPolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
   except
     rPolishPrice := 0.00;
   end;
@@ -440,7 +440,7 @@ begin
     end;
 
   if frmWTMain.bEndUSer then
-    edtUnitPrice.enabled := (strtofloat(edtUnitPrice.Text) = 0);
+    edtUnitPrice.enabled := (StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings) = 0);
 end;
 
 procedure TfrmWTMaintQUpstand.edtDepthChange(Sender: TObject);
@@ -459,7 +459,7 @@ var
 begin
   if frmWTMain.bEndUser then
     begin
-      if (strtofloat(edtUnitPrice.text) = 0) then
+      if (StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) = 0) then
         begin
           messagedlg('A zero worktop unit price is not allowed.', mterror, [mbOk], 0);
           edtUnitPrice.setfocus;
@@ -477,9 +477,9 @@ begin
   QUpstand.Depth := strtoint(edtDepth.text);
   QUpstand.Length := strtoint(edtLength.text);
   QUpstand.Quantity := spnQuantity.Value;
-  QUpstand.UnitPrice := strtofloat(edtUnitPrice.text);
-  QUpstand.PolishCost := strtofloat(edtPolishCost.text);
-  QUpstand.PolishPrice := strtofloat(edtPolishPrice.text);
+  QUpstand.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
+  QUpstand.PolishCost := StrToFloatDef(edtPolishCost.text, 0, FormatSettings);
+  QUpstand.PolishPrice := StrToFloatDef(edtPolishPrice.text, 0, FormatSettings);
   QUpstand.NoOfDepths := spnNoOfDepths.Value;
   QUpstand.NoOfLengths := spnNoOfLengths.Value;
   QUpstand.TotalUpstandPieces := spnNoofPieces.value;

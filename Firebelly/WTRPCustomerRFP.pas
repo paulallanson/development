@@ -214,7 +214,7 @@ begin
  //     lblUnitPrice.caption := formatfloat('0.00',fieldbyname('unit_price').asfloat);
       lblTotal.caption := formatfloat('0.00',fieldbyname('Goods_value').asfloat +
          fieldbyname('vat_value').asfloat);
-      rGoods := rGoods + StrToFloat(LblGoods.Caption);
+      rGoods := rGoods + StrToFloatDef(LblGoods.Caption, 0, FormatSettings);
       rvat := rVat + fieldbyname('vat_value').asfloat;
     end;
 end;

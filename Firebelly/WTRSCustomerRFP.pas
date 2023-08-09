@@ -159,7 +159,7 @@ begin
     frmWTRPCustomerRFP.DateTo := DateTo;
     frmWTRPCustomerRFP.ApplicationNo := edtApplicationNo.text;
     frmWTRPCustomerRFP.SiteName := edtSiteName.text;
-    frmWTRPCustomerRFP.LabourValue := strtofloat(memValue.text);
+    frmWTRPCustomerRFP.LabourValue := StrToFloatDef(memValue.text, 0, FormatSettings);
 
     if (frmWTRPCustomerRFP.GetDetails(Self) = 0) then
       MessageDlg('There is nothing to print', mtError, [mbAbort], 0)
@@ -203,7 +203,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.strings[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.strings[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.strings[icount];
           execSQL;
           end;
@@ -348,7 +348,7 @@ begin
     frmWTRPCustomerRFP.DateTo := DateTo;
     frmWTRPCustomerRFP.ApplicationNo := edtApplicationNo.text;
     frmWTRPCustomerRFP.SiteName := edtSiteName.text;
-    frmWTRPCustomerRFP.LabourValue := strtofloat(memValue.text);
+    frmWTRPCustomerRFP.LabourValue := StrToFloatDef(memValue.text, 0, FormatSettings);
 
     if (frmWTRPCustomerRFP.GetDetails(self) = 0) then
       begin

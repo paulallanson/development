@@ -11,10 +11,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -96,9 +94,9 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Caption = 'OK'
     Default = True
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 288
@@ -108,8 +106,8 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object edtmnyCost: TCREditMoney
     Left = 104
@@ -152,14 +150,10 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object srclkpThickness: TDataSource
@@ -177,14 +171,10 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -209,24 +199,16 @@ object frmWTMaintWTThickness: TfrmWTMaintWTThickness
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
 end

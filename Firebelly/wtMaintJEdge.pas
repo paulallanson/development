@@ -171,7 +171,7 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -235,8 +235,8 @@ begin
   jEdge.EdgeDesc := dblkpEdge.Text;
   jEdge.EdgeType := dblkpEdgeType.keyvalue;
   jEdge.EdgeTypeDesc := dblkpEdgeType.Text;
-  jEdge.Length := strtofloat(edtLength.text);
-  jEdge.UnitPrice := strtofloat(edtUnitPrice.text);
+  jEdge.Length := StrToFloatDef(edtLength.text, 0, FormatSettings);
+  jEdge.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = jedgAdd then
   begin
     jEdge.jEdgNumber := jEdge.Parent.Edges.Count + 1;

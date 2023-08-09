@@ -149,16 +149,16 @@ begin
     begin
       close;
       parambyname('Sales_Invoice').asinteger := SalesInvoice;
-      parambyname('Paid_Amount').asfloat := strtofloat(memTotalPaid.text);
-      parambyname('Deposit_Amount').asfloat := strtofloat(memDepositPaid.text);
+      parambyname('Paid_Amount').asfloat := StrToFloatDef(memTotalPaid.text, 0, FormatSettings);
+      parambyname('Deposit_Amount').asfloat := StrToFloatDef(memDepositPaid.text, 0, FormatSettings);
       parambyname('Paid_Date').asdatetime := paDateStr(edtDatePaid.text);
-      if (strtofloat(memTotalPaid.text) = 0) and (strtofloat(edtTotalGoods.Text) <> 0) then
+      if (StrToFloatDef(memTotalPaid.text, 0, FormatSettings) = 0) and (StrToFloatDef(edtTotalGoods.Text, 0, FormatSettings) <> 0) then
         begin
           parambyname('Paid_Status').asstring := '';
           parambyname('Paid_Date').clear;
         end
       else
-      if strtofloat(memTotalPaid.text) = strtofloat(edtTotalGoods.text) then
+      if StrToFloatDef(memTotalPaid.text, 0, FormatSettings) = StrToFloatDef(edtTotalGoods.text, 0, FormatSettings) then
         parambyname('Paid_Status').asstring := 'Y'
       else
         parambyname('Paid_Status').asstring := 'p';
@@ -280,7 +280,7 @@ begin
             begin
               qryUpdJobBag.close;
               qryUpdJobBag.parambyname('Job_Bag').asinteger := qryGetJobBag.fieldbyname('Job_Bag').asinteger;
-              if strtofloat(memTotalPaid.text) = strtofloat(edtTotalGoods.text) then
+              if StrToFloatDef(memTotalPaid.text, 0, FormatSettings) = StrToFloatDef(edtTotalGoods.text, 0, FormatSettings) then
                 qryUpdJobBag.parambyname('On_Hold').asstring := 'N'
               else
                 qryUpdJobBag.parambyname('On_Hold').asstring := 'P';

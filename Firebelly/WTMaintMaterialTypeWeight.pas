@@ -111,7 +111,7 @@ begin
           close;
           parambyname('Worktop_Type').asinteger := WorktopType;
           parambyname('Thickness').asinteger := dblkpThickness.keyvalue;
-          parambyname('Weight_kg').asfloat := strtofloat(edtWeight.text);
+          parambyname('Weight_kg').asfloat := StrToFloatDef(edtWeight.text, 0, FormatSettings);
           execsql;
         end;
     end
@@ -121,7 +121,7 @@ begin
         begin
           close;
           parambyname('ID').asinteger := IDPointer;
-          parambyname('Weight_kg').asfloat := strtofloat(edtWeight.text);
+          parambyname('Weight_kg').asfloat := StrToFloatDef(edtWeight.text, 0, FormatSettings);
           execsql;
         end;
     end;

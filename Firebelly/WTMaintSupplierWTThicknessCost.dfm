@@ -1,18 +1,16 @@
 object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
   Left = 371
   Top = 143
-  Width = 395
-  Height = 250
   Caption = 'Maintain Worktop Thickness Cost'
+  ClientHeight = 203
+  ClientWidth = 377
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -114,9 +112,9 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
     Caption = 'OK'
     Default = True
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 288
@@ -126,9 +124,9 @@ object frmWTMaintSupplierWTThicknessCost: TfrmWTMaintSupplierWTThicknessCost
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
   object edtmnyCost: TCREditMoney
     Left = 104

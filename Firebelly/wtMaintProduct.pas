@@ -222,15 +222,15 @@ begin
     end;
 
     {Action Price Change if there has been a change to cost or sell}
-    if (strtofloat(edtSellPrice.text) <> SellPrice) or
-         (strtofloat(edtCostPrice.text) <> CostPrice) then
+    if (StrToFloatDef(edtSellPrice.text, 0, FormatSettings) <> SellPrice) or
+         (StrToFloatDef(edtCostPrice.text, 0, FormatSettings) <> CostPrice) then
       begin
 	      dtmdlWorktops.qryAddPrice.Close;
         dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;
         dtmdlWorktops.qryAddPrice.PArambyname('Date').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := 'L';
-        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtSellPrice.text);
-        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtCostPrice.text);
+        dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtSellPrice.text, 0, FormatSettings);
+        dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtCostPrice.text, 0, FormatSettings);
         dtmdlWorktops.qryAddPrice.PArambyname('Unit').asinteger := 1;
         dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
         dtmdlWorktops.qryAddPrice.PArambyname('By').asinteger := frmWTMain.Operator;

@@ -11,14 +11,12 @@ object frmWtMaintProduct: TfrmWtMaintProduct
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
     438
     353)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -118,9 +116,9 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 12
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 226
@@ -131,8 +129,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 13
     NumGlyphs = 2
+    TabOrder = 13
   end
   object dblkpProductGroup: TDBLookupComboBox
     Left = 112
@@ -199,10 +197,10 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
     OnClick = BitBtn1Click
-    NumGlyphs = 2
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -293,44 +291,32 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Product_Group'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Default_Sales_Nominal'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Default_Purchase_Nominal'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -350,19 +336,15 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Top = 264
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -375,8 +357,8 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     Top = 264
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

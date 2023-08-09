@@ -414,7 +414,7 @@ begin
                 1: begin
                     Thickness := HeadThickness1;
                     try
-                      Price := strtofloat(Thickness1);
+                      Price := StrToFloatDef(Thickness1, 0, FormatSettings);
                     except
                       Price := 0.00
                     end;
@@ -422,7 +422,7 @@ begin
                 2: begin
                     Thickness := HeadThickness2;
                     try
-                      Price := strtofloat(Thickness2);
+                      Price := StrToFloatDef(Thickness2, 0, FormatSettings);
                     except
                       Price := 0.00
                     end;
@@ -430,7 +430,7 @@ begin
                 3: begin
                     Thickness := HeadThickness3;
                     try
-                      Price := strtofloat(Thickness3);
+                      Price := StrToFloatDef(Thickness3, 0, FormatSettings);
                     except
                       Price := 0.00
                     end;
@@ -438,7 +438,7 @@ begin
                 4: begin
                     Thickness := HeadThickness4;
                     try
-                      Price := strtofloat(Thickness4);
+                      Price := StrToFloatDef(Thickness4, 0, FormatSettings);
                     except
                       Price := 0.00
                     end;

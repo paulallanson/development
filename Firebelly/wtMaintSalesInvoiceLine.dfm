@@ -11,18 +11,16 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 178
     Width = 518
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       518
@@ -47,9 +45,10 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Height = 25
       Anchors = [akTop, akRight]
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object BitBtn2: TBitBtn
       Left = 432
@@ -57,17 +56,18 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 518
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object lblOrderType: TLabel
       Left = 8
@@ -114,12 +114,12 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 57
     Width = 518
     Height = 121
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 5
@@ -226,7 +226,6 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = cmbCreditTypeChange
       Items.Strings = (
@@ -271,27 +270,21 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end>
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
-
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
       DisplayFormat = '0.00'
     end
     object qryVATDescription: TStringField
       FieldName = 'Description'
-
       Size = 40
     end
     object qryVATVat_Code: TStringField
       FieldName = 'Vat_Code'
-
       Size = 1
     end
   end

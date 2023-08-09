@@ -248,7 +248,7 @@ begin
     JElement.worktopDesc := dblkpWorktop.Text;
     JElement.thickness := dblkpWTThickness.keyvalue;
     JElement.thicknessDesc := dblkpWTThickness.Text;
-    JElement.UnitPrice := strtofloat(edtUnitPrice.text);
+    JElement.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
     ModalResult := mrOK;
   end;
 end;

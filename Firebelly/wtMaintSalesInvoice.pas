@@ -1035,7 +1035,7 @@ end;
 procedure TfrmWTMaintSalesInvoice.memDepositChange(Sender: TObject);
 begin
   try
-    SalesInvoice.DepositAmount := strtofloat((Sender as TMemo).text);
+    SalesInvoice.DepositAmount := StrToFloatDef((Sender as TMemo).text, 0, FormatSettings);
   except
     SalesInvoice.DepositAmount := 0;
   end;

@@ -211,7 +211,7 @@ var
   iQuantity: integer;
 begin
   try
-    rUnitCost := strtofloat(edtUnitCost.text);
+    rUnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
   except
     rUnitCost := 0.00;
   end;
@@ -229,7 +229,7 @@ var
   iQuantity: integer;
 begin
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -310,11 +310,11 @@ begin
 
   try
     if QCutOut.Parent.ContractQuote then
-      QCutOut.Discount := strtofloat(edtDiscount.text)
+      QCutOut.Discount := StrToFloatDef(edtDiscount.text, 0, FormatSettings)
     else
       begin
-        QCutOut.Discount := ((strtofloat(edtSellPrice.Text) - strtofloat(edtUnitPrice.Text))/
-                            strtofloat(edtSellPrice.Text)) * 100.0000;
+        QCutOut.Discount := ((StrToFloatDef(edtSellPrice.Text, 0, FormatSettings) - StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings)) /
+                              StrToFloatDef(edtSellPrice.Text, 0, FormatSettings)) * 100.0000;
       end;
   except
     QCutOut.Discount := 0.00;
@@ -323,8 +323,8 @@ begin
   QCutOut.EdgeType := dblkpEdgeType.keyvalue;
   QCutOut.EdgeTypeDesc := dblkpEdgeType.Text;
   QCutOut.Quantity := spnQuantity.Value;
-  QCutOut.UnitCost := strtofloat(edtUnitCost.text);
-  QCutOut.UnitPrice := strtofloat(edtUnitPrice.text);
+  QCutOut.UnitCost := StrToFloatDef(edtUnitCost.text, 0, FormatSettings);
+  QCutOut.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = qcoAdd then
   begin
     QCutOut.QCONumber := QCutOut.Parent.CutOuts.Count + 1;
@@ -387,7 +387,7 @@ begin
           parambyName('Edge_Type').asinteger := dblkpEdgeType.keyvalue;
           open;
 
-          rDiscount := fieldbyname('Unit_Price').asfloat * (strtofloat(edtDiscount.text)/100.0000);
+          rDiscount := fieldbyname('Unit_Price').asfloat * (StrToFloatDef(edtDiscount.text, 0, FormatSettings) / 100.0000);
 
           dtsCutOutPrice.DataSet := qryOneCOThickness;
 
@@ -438,13 +438,14 @@ var
   rDiscount: real;
 begin
   try
-    rDiscount := strtofloat(edtSellPrice.text) * (strtofloat(edtDiscount.text)/100.0000);
+    rDiscount := StrToFloatDef(edtSellPrice.text, 0, FormatSettings) *
+                 (StrToFloatDef(edtDiscount.text, 0, FormatSettings) / 100.0000);
   except
     rDiscount := 0;
   end;
 
   try
-    edtUnitPrice.Text := formatfloat('0.00',(strtofloat(edtSellPrice.text) - rDiscount));
+    edtUnitPrice.Text := formatfloat('0.00',(StrToFloatDef(edtSellPrice.text, 0, FormatSettings) - rDiscount));
   except
     edtUnitPrice.Text := formatfloat('0.00',0.00);
   end;

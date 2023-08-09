@@ -30,13 +30,12 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 942
+        Width = 938
       end>
-    ExplicitWidth = 944
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 929
+      Width = 925
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 929
+        Width = 925
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56
@@ -304,8 +303,6 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 298
-    ExplicitWidth = 952
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -322,7 +319,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 668
+      Left = 656
       Top = 1
       Width = 283
       Height = 54

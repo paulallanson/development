@@ -368,7 +368,9 @@ var
 
 implementation
 
-uses  wtLUCustType, wtLUVat, wtLUReps, wtMain, WTMaintBranch,
+uses
+  System.UITypes,
+  wtLUCustType, wtLUVat, wtLUReps, wtMain, WTMaintBranch,
   wtDataModule, AllCommon, WTMaintContactEvents, WTEventsDM,
   WtMaintQuote, WtMaintSalesOrder, WtMaintJob, wtRSQuote, DateSelV5,
   wtLUProspectAction, wtMaintCustomerConts, WTSrchCustContacts, WTDBMemo,
@@ -2610,8 +2612,8 @@ begin
       else
         parambyname('Level_of_Importance').asinteger := dblkpLevelOfImportance.keyvalue;
 
-      parambyname('Discount_Rate').asfloat := strtofloat(edtDiscountRate.Text);
-      parambyname('Deposit_Terms').asfloat := strtofloat(edtDepositTerms.Text);
+      parambyname('Discount_Rate').asfloat := StrToFloatDef(edtDiscountRate.Text, 0, FormatSettings);
+      parambyname('Deposit_Terms').asfloat := StrToFloatDef(edtDepositTerms.Text, 0, FormatSettings);
       parambyname('Vat').asinteger := dblkpVat.keyvalue;
 
       if dblkpPaymentTerms.keyvalue = 0 then
@@ -2629,7 +2631,7 @@ begin
       if trim(edtCreditLimit.Text) = '' then
         parambyname('Credit_Limit').asstring := '0'
       else
-        parambyname('Credit_Limit').asfloat := strtofloat(edtCreditLimit.Text);
+        parambyname('Credit_Limit').asfloat := StrToFloatDef(edtCreditLimit.Text, 0, FormatSettings);
 
       parambyname('Invoice_Label').asstring := edtInvoiceLabel.Text;
 
@@ -2649,7 +2651,7 @@ begin
       if trim(edtEndUserMarkup.Text) = '' then
         parambyname('End_User_Markup_Percentage').asfloat := 0.00
       else
-        parambyname('End_User_Markup_Percentage').asfloat := strtofloat(edtEndUserMarkup.Text);
+        parambyname('End_User_Markup_Percentage').asfloat := StrToFloatDef(edtEndUserMarkup.Text, 0, FormatSettings);
 
       if chkbxInactive.Checked then
         parambyname('Not_Active').asstring := 'Y'
@@ -2697,14 +2699,14 @@ begin
       else
         parambyname('Narrative').AsInteger := frmWTDBMemo.iNarr;
 
-      parambyname('CutOut_Discount').asfloat := strtofloat(edtCutOutDiscount.Text);
-      parambyname('Edge_Discount').asfloat := strtofloat(edtEdgeDiscount.Text);
-      parambyname('Worktop_Discount').asfloat := strtofloat(edtWorktopDiscount.Text);
-      parambyname('Survey_Price').asfloat := strtofloat(edtSurveyPrice.Text);
-      parambyname('Installation_Price').asfloat := strtofloat(edtInstallationPrice.Text);
-      parambyname('Delivery_Price').asfloat := strtofloat(edtDeliveryPrice.Text);
+      parambyname('CutOut_Discount').asfloat := StrToFloatDef(edtCutOutDiscount.Text, 0, FormatSettings);
+      parambyname('Edge_Discount').asfloat := StrToFloatDef(edtEdgeDiscount.Text, 0, FormatSettings);
+      parambyname('Worktop_Discount').asfloat := StrToFloatDef(edtWorktopDiscount.Text, 0, FormatSettings);
+      parambyname('Survey_Price').asfloat := StrToFloatDef(edtSurveyPrice.Text, 0, FormatSettings);
+      parambyname('Installation_Price').asfloat := StrToFloatDef(edtInstallationPrice.Text, 0, FormatSettings);
+      parambyname('Delivery_Price').asfloat := StrToFloatDef(edtDeliveryPrice.Text, 0, FormatSettings);
 
-      parambyname('Unit_Cost').asfloat := strtofloat(edtUnitCost.Text);
+      parambyname('Unit_Cost').asfloat := StrToFloatDef(edtUnitCost.Text, 0, FormatSettings);
 
       if dblkpProspectStatus.keyvalue = 0 then
         parambyname('Prospect_Status').clear

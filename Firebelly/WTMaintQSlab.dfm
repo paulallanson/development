@@ -11,11 +11,9 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
     Left = 0
@@ -408,8 +406,6 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
         Top = 7
         Width = 25
         Height = 25
-        TabOrder = 5
-        OnClick = btnClearClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -424,6 +420,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
           B0557777FF577777F7F500000E055550805577777F7555575755500000555555
           05555777775555557F5555000555555505555577755555557555}
         NumGlyphs = 2
+        TabOrder = 5
+        OnClick = btnClearClick
       end
       object edtAdhesiveCostUnit: TMemo
         Left = 640
@@ -602,9 +600,9 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       Default = True
       Enabled = False
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 377
@@ -615,8 +613,8 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object qryWorktops: TFDQuery
@@ -633,19 +631,16 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 96
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'material_type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryWTThickness: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsWorktops
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -658,9 +653,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktops: TDataSource
@@ -700,19 +693,13 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryMaterial: TFDQuery
@@ -742,14 +729,10 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Left = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsSupplier: TDataSource
@@ -790,9 +773,7 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryContractWorktops: TFDQuery
@@ -826,19 +807,13 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryContractPrice: TFDQuery
@@ -884,19 +859,13 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryGetContractSupplier: TFDQuery
@@ -910,14 +879,10 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierWorktop: TFDQuery
@@ -972,14 +937,10 @@ object frmWTMaintQSlab: TfrmWTMaintQSlab
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
 end

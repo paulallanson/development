@@ -306,7 +306,7 @@ begin
   jRemedial.InstallDate := paDateStr(edtInstallDate.text);
   jRemedial.DateRaised := paDateStr(edtDateRaised.text);
   jRemedial.MaterialsRequired := memMaterials.text;
-  jRemedial.Price := strtofloat(edtPrice.text);
+  jRemedial.Price := StrToFloatDef(edtPrice.text, 0, FormatSettings);
 
   jRemedial.OriginalFitter := dblkpOriginalFitter.KeyValue;
   jRemedial.OriginalTemplater := dblkpOriginalTemplater.KeyValue;

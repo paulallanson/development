@@ -65,8 +65,8 @@ begin
   else
     dtmdlDatabase.tblEdge.FieldByName('in_use').asstring := 'N';
   dtmdlDatabase.tblEdge.Post;
-  dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := strtofloat(edtmnySell.text);
-  dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := strtofloat(edtmnyCost.text);
+  dtmdlWorktops.qryAddPrice.Parambyname('Price').asfloat := StrToFloatDef(edtmnySell.text, 0, FormatSettings);
+  dtmdlWorktops.qryAddPrice.Parambyname('Cost').asfloat := StrToFloatDef(edtmnyCost.text, 0, FormatSettings);
 	dtmdlWorktops.qryAddPrice.execSQL;
   dtmdlDatabase.lkpCurrentPrice.active := false;
   dtmdlDatabase.lkpCurrentPrice.active := true;

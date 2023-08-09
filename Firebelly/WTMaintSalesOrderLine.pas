@@ -258,7 +258,7 @@ procedure TfrmWTMaintSalesOrderLine.btnOKClick(Sender: TObject);
 var
   inx : integer;
 begin
-  SOLine.UnitPrice := strtofloat(memSellPrice.text);
+  SOLine.UnitPrice := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
   SOLine.SellUnit := strtoint(edtPackSize.text);
   SOLine.Quantity := strtoint(edtQtyPacks.text) * SOLine.SellUnit;
   SOLine.QtyDelivered := strtoint(edtDelivered.text) * SOLine.SellUnit;
@@ -268,7 +268,7 @@ begin
   SOLine.VATRate := SOLine.parent.datamodule.dtsVAT.dataset.fieldbyname('Vat_Rate').asfloat;
   SOLine.VATDescription := SOLine.parent.datamodule.dtsVAT.dataset.fieldbyname('Description').asstring;
   if edtJobNumber.text <> '' then
-    SOLine.Job := strtofloat(edtJobNumber.text)
+    SOLine.Job := StrToFloatDef(edtJobNumber.text, 0, FormatSettings)
   else
     SOLine.Job := 0;
 

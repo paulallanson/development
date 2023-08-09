@@ -569,18 +569,18 @@ begin
       parambyname('Vat_Number').asstring := edtVatNumber.Text;
       parambyname('Unique_Tax_Reference').asstring := edtUniqueTaxReference.Text;
 
-      parambyname('Install_Rate').asfloat := strtofloat(edtInstallRate.Text);
-      parambyname('Survey_Rate').asfloat := strtofloat(edtSurveyRate.Text);
-      parambyname('Delivery_Rate').asfloat := strtofloat(edtDeliveryRate.Text);
-      parambyname('Discount_Rate').asfloat := strtofloat(edtDiscountRate.Text);
-      parambyname('Deposit_Terms').asfloat := strtofloat(edtDepositTerms.Text);
+      parambyname('Install_Rate').asfloat := StrToFloatDef(edtInstallRate.Text, 0, FormatSettings);
+      parambyname('Survey_Rate').asfloat := StrToFloatDef(edtSurveyRate.Text, 0, FormatSettings);
+      parambyname('Delivery_Rate').asfloat := StrToFloatDef(edtDeliveryRate.Text, 0, FormatSettings);
+      parambyname('Discount_Rate').asfloat := StrToFloatDef(edtDiscountRate.Text, 0, FormatSettings);
+      parambyname('Deposit_Terms').asfloat := StrToFloatDef(edtDepositTerms.Text, 0, FormatSettings);
       if dblkpUpstand.keyvalue = 0 then
         parambyname('Underslip_Thickness').clear
       else
         parambyname('Underslip_Thickness').asinteger := dblkpUpstand.KeyValue;
 
-      parambyname('Upstand_Polish_Price').asfloat := strtofloat(edtUpstandPolishPrice.Text);
-      parambyname('Upstand_Polish_Cost').asfloat := strtofloat(edtUpstandPolishCost.Text);
+      parambyname('Upstand_Polish_Price').asfloat := StrToFloatDef(edtUpstandPolishPrice.Text, 0, FormatSettings);
+      parambyname('Upstand_Polish_Cost').asfloat := StrToFloatDef(edtUpstandPolishCost.Text, 0, FormatSettings);
       parambyname('Quote_Prefix').asstring := edtQuotePrefix.Text;
       parambyname('Job_Prefix').asstring := edtJobPrefix.Text;
 
@@ -614,10 +614,10 @@ begin
       parambyname('Sales_Document_Directory').asstring := edtSalesDocumentDirectory.Text;
       parambyname('Job_Document_Directory').asstring := edtJobDocumentDirectory.Text;
       parambyname('Contract_Document_Directory').asstring := edtContractDocumentDirectory.Text;
-      parambyname('Default_Mileage_Rate').asfloat := strtofloat(edtDefaultMileageRate.Text);
-      parambyname('Default_Labour_Rate').asfloat := strtofloat(edtDefaultLabourRate.Text);
-      parambyname('Default_Handling_Rate').asfloat := strtofloat(edtDefaultHandlingRate.Text);
-      parambyname('Waste_Cost_Multiplier').asfloat := strtofloat(edtWasteCostMultiplier.Text);
+      parambyname('Default_Mileage_Rate').asfloat := StrToFloatDef(edtDefaultMileageRate.Text, 0, FormatSettings);
+      parambyname('Default_Labour_Rate').asfloat := StrToFloatDef(edtDefaultLabourRate.Text, 0, FormatSettings);
+      parambyname('Default_Handling_Rate').asfloat := StrToFloatDef(edtDefaultHandlingRate.Text, 0, FormatSettings);
+      parambyname('Waste_Cost_Multiplier').asfloat := StrToFloatDef(edtWasteCostMultiplier.Text, 0, FormatSettings);
       if dblkpSchedulePackage.keyvalue = '' then
         parambyname('Schedule_Package').clear
       else

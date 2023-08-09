@@ -352,7 +352,7 @@ begin
     end;
 
   if frmWTMain.bEndUSer then
-    edtUnitPrice.enabled := (strtofloat(edtUnitPrice.Text) = 0);
+    edtUnitPrice.enabled := (StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings) = 0);
 end;
 
 procedure TfrmWTMaintQElementM.GetUpStandUnitPrice;
@@ -398,7 +398,7 @@ begin
     end;
 
   if frmWTMain.bEndUser then
-    edtUpUnitPrice.enabled := (strtofloat(edtUpUnitPrice.Text) = 0);
+    edtUpUnitPrice.enabled := (StrToFloatDef(edtUpUnitPrice.Text, 0, FormatSettings) = 0);
 end;
 
 procedure TfrmWTMaintQElementM.FormCreate(Sender: TObject);
@@ -439,7 +439,7 @@ procedure TfrmWTMaintQElementM.btnOKClick(Sender: TObject);
 begin
   if frmWTMain.bEndUser then
     begin
-      if (strtofloat(edtUnitPrice.text) = 0) then
+      if (StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) = 0) then
         begin
           messagedlg('A zero worktop unit price is not allowed.', mterror, [mbOk], 0);
           edtUnitPrice.setfocus;
@@ -460,10 +460,10 @@ begin
     QElement.worktopDesc := dblkpWorktop.Text;
     QElement.thickness := dblkpWTThickness.keyvalue;
     QElement.thicknessDesc := dblkpWTThickness.Text;
-    QElement.UnitPrice := strtofloat(edtUnitPrice.text);
+    QElement.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
     self.UpThickness := dblkpUPThickness.keyvalue;
     self.UpThicknessDesc := dblkpUPThickness.text;
-    self.UpUnitPrice := strtofloat(edtUpUnitPrice.text);
+    self.UpUnitPrice := StrToFloatDef(edtUpUnitPrice.text, 0, FormatSettings);
     ModalResult := mrOK;
   end;
 end;

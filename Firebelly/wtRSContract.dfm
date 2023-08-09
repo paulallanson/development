@@ -3,8 +3,8 @@ object frmWTRSContract: TfrmWTRSContract
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Print Contract Quotes'
-  ClientHeight = 219
-  ClientWidth = 433
+  ClientHeight = 210
+  ClientWidth = 427
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTRSContract: TfrmWTRSContract
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    433
-    219)
+    427
+    210)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -38,7 +38,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPrint: TButton
     Left = 8
-    Top = 182
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -46,18 +46,18 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 1
     OnClick = btnPrintClick
-    ExplicitTop = 184
+    ExplicitTop = 182
   end
   object Button4: TButton
     Left = 360
-    Top = 182
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     TabOrder = 2
     OnClick = Button4Click
-    ExplicitTop = 184
+    ExplicitTop = 182
   end
   object chkbxprintLogo: TCheckBox
     Left = 8
@@ -79,7 +79,7 @@ object frmWTRSContract: TfrmWTRSContract
   end
   object btnPreview: TButton
     Left = 96
-    Top = 182
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -87,11 +87,11 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 5
     OnClick = btnPreviewClick
-    ExplicitTop = 184
+    ExplicitTop = 182
   end
   object btnEmail: TButton
     Left = 184
-    Top = 182
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -99,7 +99,7 @@ object frmWTRSContract: TfrmWTRSContract
     Enabled = False
     TabOrder = 6
     OnClick = btnEmailClick
-    ExplicitTop = 184
+    ExplicitTop = 182
   end
   object chkbxIncludeTemplating: TCheckBox
     Left = 8
@@ -112,8 +112,8 @@ object frmWTRSContract: TfrmWTRSContract
     TabOrder = 7
   end
   object btnExcel: TBitBtn
-    Left = 258
-    Top = 182
+    Left = 240
+    Top = 173
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -163,8 +163,8 @@ object frmWTRSContract: TfrmWTRSContract
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 8
     OnClick = btnExcelClick
-    ExplicitLeft = 274
-    ExplicitTop = 184
+    ExplicitLeft = 252
+    ExplicitTop = 182
   end
   object pnlExportPrgrss: TPanel
     Left = 84

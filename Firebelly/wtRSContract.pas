@@ -42,7 +42,6 @@ type
     procedure btnExcelClick(Sender: TObject);
   private
     iIntselcode: integer;
-    FPrintType: string;
     procedure RunReport(const bPreview: boolean);
     procedure EmailReport;
     procedure BuildEmailDetails;
@@ -65,7 +64,10 @@ var
 
 implementation
 
+{$R *.dfm}
+
 uses
+  System.UITypes,
   wtDataModule, AllEmailHandler, wtRPContract, AllCommon, wtMain;
 
 const
@@ -85,8 +87,6 @@ const
   '      LEFT JOIN Customer_contact ' +
   '        ON (Contract_Quote.Customer = Customer_contact.Customer) AND (Contract_Quote.Contact_Name = Customer_contact.Contact_name) ' +
   'WHERE 1 = 1 AND ';
-
-{$R *.dfm}
 
 procedure TfrmWTRSContract.Button4Click(Sender: TObject);
 begin
@@ -289,7 +289,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -350,8 +350,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Quote').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Quote').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Quote').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Quote').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do

@@ -343,7 +343,7 @@ begin
   end;
 
   try
-    rUnitPrice := strtofloat(edtUnitPrice.text);
+    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   except
     rUnitPrice := 0.00;
   end;
@@ -444,7 +444,7 @@ begin
     end;
 
   if frmWTMain.bEndUSer then
-    edtUnitPrice.enabled := (strtofloat(edtUnitPrice.Text) = 0);
+    edtUnitPrice.enabled := (StrToFloatDef(edtUnitPrice.Text, 0, FormatSettings) = 0);
 end;
 
 procedure TfrmWTMaintQElement.edtDepthChange(Sender: TObject);
@@ -463,7 +463,7 @@ var
 begin
   if frmWTMain.bEndUser then
     begin
-      if (strtofloat(edtUnitPrice.text) = 0) then
+      if (StrToFloatDef(edtUnitPrice.text, 0, FormatSettings) = 0) then
         begin
           messagedlg('A zero worktop unit price is not allowed.', mterror, [mbOk], 0);
           edtUnitPrice.setfocus;
@@ -480,7 +480,7 @@ begin
   QElement.Depth := strtoint(edtDepth.text);
   QElement.Length := strtoint(edtLength.text);
   QElement.Quantity := spnQuantity.Value;
-  QElement.UnitPrice := strtofloat(edtUnitPrice.text);
+  QElement.UnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   if Mode = qelAdd then
   begin
     QElement.QENumber := QElement.Parent.Elements.Count + 1;

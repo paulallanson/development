@@ -211,12 +211,12 @@ begin
 
   dtmdlWorktops.qryAddPrice.PArambyname('Basis').asstring := qryPrice.fieldbyname('Price_Basis').asstring;
   if BasisGroup.itemindex = 0 then
-  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := qryPrice.fieldbyname('Unit_Price').asfloat * (1+(strtofloat(edtChange.Text)/100))
+  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := qryPrice.fieldbyname('Unit_Price').asfloat * (1+(StrToFloatDef(edtChange.Text, 0, FormatSettings)/100))
   else
   if BasisGroup.itemindex = 1 then
-  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := qryPrice.fieldbyname('Unit_Price').asfloat * (1-(strtofloat(edtChange.Text)/100))
+  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := qryPrice.fieldbyname('Unit_Price').asfloat * (1-(StrToFloatDef(edtChange.Text, 0, FormatSettings)/100))
   else
-  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := strtofloat(edtChange.Text);
+  	dtmdlWorktops.qryAddPrice.PArambyname('Price').asfloat := StrToFloatDef(edtChange.Text, 0, FormatSettings);
     
   dtmdlWorktops.qryAddPrice.PArambyname('Cost').asfloat := qryPrice.fieldbyname('Unit_Cost').asfloat;
   dtmdlWorktops.qryAddPrice.PArambyname('Change').asdatetime := now;
