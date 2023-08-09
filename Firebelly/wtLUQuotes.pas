@@ -91,7 +91,9 @@ var
 
 implementation
 
-uses WtMaintQuote, wtRSQuote, WtMaintJob, WTJobsDM, WTQuoteSearch,
+uses
+  System.UITypes,
+  WtMaintQuote, wtRSQuote, WtMaintJob, WTJobsDM, WTQuoteSearch,
   WTLUQuoteRpts, WTSalesOrderDM, wtMaintSalesOrder, wtMain, WTSrchCustomer;
 
 {$R *.DFM}
@@ -178,7 +180,6 @@ begin
       WriteString('Quote', 'Show Records', inttostr(dtmdlAllQuote.ShowRecords));
       WriteString('Quote', 'Show Months', inttostr(dtmdlAllQuote.ShowMonths));
       WriteString('Quote', 'Show From Date', paDateStr(dtmdlAllQuote.QuoteDate));
-      Free;
     end;
   finally
     IniFile.Free;
@@ -255,6 +256,7 @@ var
   aQuote : TQuote;
   bOK: boolean;
 begin
+  bOk := False;
   if aMode = qAdd then
     Key := 0
   else
@@ -831,7 +833,9 @@ begin
                                         and (Column.Title.Caption <> 'Quote Reference') and (Column.Title.Caption <> 'Original Quote')
                                         and (Column.Title.Caption <> 'Sales Order') then
   	begin
-      StrPCopy(txt, Column.field.text);
+      if Assigned(Column.Field) then
+        StrPCopy(Txt, Column.field.text) else
+        StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -840,7 +844,9 @@ begin
     end
   else
   	begin
-  		StrPCopy(Txt, Column.field.text);
+      if Assigned(Column.Field) then
+        StrPCopy(Txt, Column.field.text) else
+        StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);

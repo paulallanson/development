@@ -1,4 +1,4 @@
-﻿object frmWTMaintContactEvents: TfrmWTMaintContactEvents
+object frmWTMaintContactEvents: TfrmWTMaintContactEvents
   Left = 246
   Top = 49
   BorderIcons = [biSystemMenu, biMinimize]
@@ -270,6 +270,7 @@
       Top = 72
       Width = 81
       Height = 21
+      Date = 45147.000000000000000000
       Time = 0.434360891202231900
       ShowCheckbox = True
       Kind = dtkTime
@@ -341,24 +342,18 @@
     Top = 240
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -383,44 +378,30 @@
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Event_Title'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Prospect_Action'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Operator'
+      end
+      item
+        Name = 'Event_Title'
+      end
+      item
+        Name = 'Contact_No'
+      end
+      item
+        Name = 'Customer'
+      end
+      item
+        Name = 'Prospect_Action'
+        DataType = ftInteger
+      end
+      item
         Name = 'Customer_Event_No'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -436,19 +417,13 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Event_No'
-        ParamType = ptUnknown
       end>
   end
   object qryContacts: TFDQuery
@@ -462,9 +437,8 @@
     Top = 116
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsContacts: TDataSource
@@ -494,34 +468,22 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_GUID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -536,9 +498,7 @@
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Event_Title'
-        ParamType = ptUnknown
       end>
   end
   object qryEvent: TFDQuery
@@ -572,9 +532,7 @@
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer_Event_no'
-        ParamType = ptUnknown
       end>
   end
   object qryAction: TFDQuery

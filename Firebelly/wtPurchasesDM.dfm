@@ -1,8 +1,9 @@
 object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
-  Height = 565
-  Width = 1024
+  Height = 706
+  Width = 1280
+  PixelsPerInch = 120
   object qryAllPurchases: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT  Purchase_Order.Purchase_Order,'
       '        Purchase_Order.Supplier,'
@@ -43,81 +44,115 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE (1=1)')
-    Left = 32
-    Top = 24
+    Left = 40
+    Top = 30
     object qryAllPurchasesPurchase_Order: TIntegerField
       FieldName = 'Purchase_Order'
+      Origin = 'Purchase_Order'
+      Required = True
     end
     object qryAllPurchasesSupplier: TIntegerField
       FieldName = 'Supplier'
+      Origin = 'Supplier'
+      Required = True
     end
-    object qryAllPurchasesDescriptive_Reference: TStringField
+    object qryAllPurchasesDescriptive_Reference: TWideStringField
       FieldName = 'Descriptive_Reference'
+      Origin = 'Descriptive_Reference'
       Size = 255
     end
-    object qryAllPurchasesSupplier_Name: TStringField
+    object qryAllPurchasesSupplier_Name: TWideStringField
       FieldName = 'Supplier_Name'
+      Origin = 'Supplier_Name'
+      Required = True
       Size = 50
     end
-    object qryAllPurchasesDate_Raised: TDateTimeField
+    object qryAllPurchasesDate_Raised: TSQLTimeStampField
       FieldName = 'Date_Raised'
+      Origin = 'Date_Raised'
+      Required = True
     end
-    object qryAllPurchasesDate_Required: TDateTimeField
+    object qryAllPurchasesDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
+      Origin = 'Date_Required'
+      Required = True
     end
     object qryAllPurchasesOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryAllPurchasesReference: TStringField
+    object qryAllPurchasesReference: TWideStringField
       FieldName = 'Reference'
+      Origin = 'Reference'
       Size = 50
     end
-    object qryAllPurchasesOn_Hold: TStringField
+    object qryAllPurchasesOn_Hold: TWideStringField
       FieldName = 'On_Hold'
+      Origin = 'On_Hold'
       Size = 1
     end
-    object qryAllPurchasesinactive: TStringField
+    object qryAllPurchasesinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
     end
     object qryAllPurchasesGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Goods_Value'
     end
-    object qryAllPurchasesOperator_Name: TStringField
+    object qryAllPurchasesOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
       Size = 30
     end
-    object qryAllPurchasesGoods_Receipt_Number: TStringField
+    object qryAllPurchasesGoods_Receipt_Number: TWideStringField
       FieldName = 'Goods_Receipt_Number'
+      Origin = 'Goods_Receipt_Number'
       Size = 10
     end
     object qryAllPurchasesPurchase_Order_Status: TIntegerField
       FieldName = 'Purchase_Order_Status'
+      Origin = 'Purchase_Order_Status'
     end
-    object qryAllPurchasesStatus_Description: TStringField
+    object qryAllPurchasesStatus_Description: TWideStringField
       FieldName = 'Status_Description'
+      Origin = 'Status_Description'
+      Required = True
       Size = 50
     end
-    object qryAllPurchasesCut_Off_Date: TDateTimeField
+    object qryAllPurchasesCut_Off_Date: TSQLTimeStampField
       FieldName = 'Cut_Off_Date'
+      Origin = 'Cut_Off_Date'
     end
     object qryAllPurchasesContact_No: TIntegerField
       FieldName = 'Contact_No'
+      Origin = 'Contact_No'
     end
-    object qryAllPurchasesContact_name: TStringField
+    object qryAllPurchasesContact_name: TWideStringField
       FieldName = 'Contact_name'
+      Origin = 'Contact_name'
+      Required = True
       Size = 30
     end
-    object qryAllPurchasesOffice_Contact_Name: TStringField
+    object qryAllPurchasesNotes: TWideStringField
+      FieldName = 'Notes'
+      Origin = 'Notes'
+      Size = 4000
+    end
+    object qryAllPurchasesOffice_Contact_Name: TWideStringField
       FieldName = 'Office_Contact_Name'
+      Origin = 'Office_Contact_Name'
+      Required = True
       Size = 30
     end
   end
   object dtsAllPurchases: TDataSource
     DataSet = qryAllPurchases
-    Left = 128
-    Top = 24
+    Left = 160
+    Top = 30
   end
   object qryPOHeader: TFDQuery
     ConnectionName = 'WT'
@@ -163,13 +198,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE Purchase_Order.Purchase_Order = :Purchase_Order')
-    Left = 32
-    Top = 184
+    Left = 40
+    Top = 230
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryOperator: TFDQuery
@@ -177,18 +210,18 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
     SQL.Strings = (
       'select *'
       'from Operator')
-    Left = 528
-    Top = 24
+    Left = 660
+    Top = 30
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 584
-    Top = 24
+    Left = 730
+    Top = 30
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 248
-    Top = 24
+    Left = 310
+    Top = 30
   end
   object qryGetSupplier: TFDQuery
     ConnectionName = 'wt'
@@ -202,13 +235,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        Fax_number,'
       '        web_address'
       'from Supplier where Supplier = :Supplier')
-    Left = 528
-    Top = 88
+    Left = 660
+    Top = 110
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAddHeader: TFDQuery
@@ -254,98 +285,71 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        :On_Hold,'
       '        :Descriptive_Reference'
       ')')
-    Left = 32
-    Top = 72
+    Left = 40
+    Top = 90
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Raised'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Required'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Operator'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Goods_Receipt_Number'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purchase_Order_Status'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
+        Name = 'Operator'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Goods_Receipt_Number'
+        DataType = ftString
+      end
+      item
+        Name = 'Purchase_Order_Status'
+      end
+      item
         Name = 'Cut_Off_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Contact_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Notes'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Office_Contact'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Notes'
+      end
+      item
+        Name = 'Office_Contact'
+      end
+      item
+        Name = 'Reference'
+      end
+      item
+        Name = 'Inactive'
+      end
+      item
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Goods_Value'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
         Name = 'VAT_Value'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryPOUpHeader: TFDQuery
@@ -370,98 +374,65 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '        On_Hold = :On_Hold,'
       '        Descriptive_Reference = :Descriptive_Reference'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 32
-    Top = 128
+    Left = 40
+    Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Raised'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Receipt_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Cut_Off_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Notes'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Office_Contact'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Notes'
+      end
+      item
+        Name = 'Office_Contact'
+      end
+      item
+        Name = 'Reference'
+      end
+      item
+        Name = 'Inactive'
+      end
+      item
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Descriptive_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryPOGetLast: TFDQuery
@@ -470,8 +441,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'select Last_Purchase_Order_number'
       'from Company'
       'where company = 1')
-    Left = 312
-    Top = 24
+    Left = 390
+    Top = 30
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'WT'
@@ -479,13 +450,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'update company'
       'set last_purchase_order_number = :last_purchase_order_number'
       'where company = 1')
-    Left = 392
-    Top = 24
+    Left = 490
+    Top = 30
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'last_purchase_order_number'
-        ParamType = ptUnknown
       end>
   end
   object qryPOUpStatus: TFDQuery
@@ -494,18 +463,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'update Purchase_order'
       'set Purchase_order_status = :Purchase_order_Status'
       'where Purchase_order = :Purchase_order')
-    Left = 32
-    Top = 240
+    Left = 40
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end>
   end
   object qryVAT: TFDQuery
@@ -514,32 +479,28 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'select *'
       'from VAt'
       'order by Vat_Rate')
-    Left = 528
-    Top = 152
+    Left = 660
+    Top = 190
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
-
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-
       DisplayFormat = '0.00'
     end
     object qryVATDescription: TStringField
       FieldName = 'Description'
-
       Size = 40
     end
     object qryVATVat_Code: TStringField
       FieldName = 'Vat_Code'
-
       Size = 1
     end
   end
   object dtsVAT: TDataSource
     DataSet = qryVAT
-    Left = 576
-    Top = 152
+    Left = 720
+    Top = 190
   end
   object qryGetContacts: TFDQuery
     ConnectionName = 'WT'
@@ -549,19 +510,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Contact'
       'WHERE Supplier = :Supplier AND '
       '((inactive = '#39'N'#39') OR (inactive IS NULL))')
-    Left = 528
-    Top = 208
+    Left = 660
+    Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsMaterial: TDataSource
     DataSet = qryMaterial
-    Left = 760
-    Top = 24
+    Left = 950
+    Top = 30
   end
   object qryMaterial: TFDQuery
     ConnectionName = 'wt'
@@ -570,8 +529,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'from Material_Type'
       'where (inactive = '#39'N'#39' or inactive is null) '
       'order by Description')
-    Left = 704
-    Top = 24
+    Left = 880
+    Top = 30
   end
   object qryWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -583,24 +542,22 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where (worktop = :worktop and'
       '  worktop_thickness.thickness = thickness.thickness)'
       'order by thickness_mm')
-    Left = 704
-    Top = 144
+    Left = 880
+    Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 760
-    Top = 80
+    Left = 950
+    Top = 100
   end
   object dtsWTThickness: TDataSource
     DataSet = qryWTThickness
-    Left = 760
-    Top = 144
+    Left = 950
+    Top = 180
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'wt'
@@ -612,18 +569,15 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '(worktop.inactive = '#39'N'#39' or worktop.inactive is null) OR worktop ' +
         '= :worktop'
       'Order by Description')
-    Left = 704
-    Top = 80
+    Left = 880
+    Top = 100
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'material_type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAllLines: TFDQuery
@@ -684,18 +638,16 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Stock_item.Stock_item = Purchase_orderline.Stock_it' +
         'em'
       'WHERE Purchase_OrderLine.Purchase_Order = :Purchase_Order')
-    Left = 120
-    Top = 184
+    Left = 150
+    Top = 230
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryMaterialSlab: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsMaterial
+    ConnectionName = 'wt'
     SQL.Strings = (
       'SELECT Material_Type_Slab_Size.Slab_Size,'
       '       Material_Type_Slab_Size.Length,'
@@ -708,19 +660,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Material_Type_Slab_Size'
       'WHERE Material_Type = :Material_Type'
       'ORDER BY Length')
-    Left = 704
-    Top = 208
+    Left = 880
+    Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsMaterialSlab: TDataSource
     DataSet = qryMaterialSlab
-    Left = 768
-    Top = 208
+    Left = 960
+    Top = 260
   end
   object qryOneWTThickness: TFDQuery
     ConnectionName = 'wt'
@@ -746,23 +696,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where Supplier = :Supplier AND'
       '      Worktop = :Worktop and'
       '      Thickness = :Thickness')
-    Left = 880
-    Top = 144
+    Left = 1100
+    Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAddLine: TFDQuery
@@ -826,138 +770,92 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ':GRN_Number,'
       ':DEL_Number'
       ')')
-    Left = 32
-    Top = 296
+    Left = 40
+    Top = 370
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Worktop'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Thickness'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Depth'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Length'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Unit_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Slab_Depth'
+      end
+      item
+        Name = 'Slab_Length'
+      end
+      item
+        Name = 'Slab_Unit_Cost'
+      end
+      item
+        Name = 'Slab_Description'
+      end
+      item
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DEL_NUmber'
-        ParamType = ptUnknown
       end>
   end
   object qryPOUpdLine: TFDQuery
@@ -992,138 +890,92 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'WHERE Purchase_Order = :Purchase_Order AND'
       '      Line_no = :Line_no'
       '')
-    Left = 32
-    Top = 352
+    Left = 40
+    Top = 440
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Stock_Item'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Worktop'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Thickness'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Depth'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Length'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Unit_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Slab_Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Slab_Depth'
+      end
+      item
+        Name = 'Slab_Length'
+      end
+      item
+        Name = 'Slab_Unit_Cost'
+      end
+      item
+        Name = 'Slab_Description'
+      end
+      item
         Name = 'Vat'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DEL_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryQHeader: TFDQuery
@@ -1146,13 +998,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '      ON Operator.Operator = Quote.Operator)'
       '      ON Supplier.Supplier = Material_Type.Preferred_Supplier'
       'WHERE Quote.Quote = :Quote')
-    Left = 32
-    Top = 408
+    Left = 40
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierContact: TFDQuery
@@ -1163,13 +1013,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Contact'
       'WHERE Supplier = :Supplier AND '
       '((inactive = '#39'N'#39') OR (inactive IS NULL))')
-    Left = 528
-    Top = 272
+    Left = 660
+    Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryQSlab: TFDQuery
@@ -1189,18 +1037,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE Quote_Slab.Quote = :Quote AND Quote_Slab.Supplier = :Suppl' +
         'ier')
-    Left = 32
-    Top = 464
+    Left = 40
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteLines: TFDQuery
@@ -1238,13 +1082,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '  Worktop.Description,'
       '  Quote_Element.Thickness,'
       '  Thickness.Thickness_mm')
-    Left = 112
-    Top = 408
+    Left = 140
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qrySupplierWorktopCost: TFDQuery
@@ -1271,23 +1113,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'where supplier = :supplier and'
       'worktop = :Worktop and'
       'thickness = :Thickness')
-    Left = 528
-    Top = 408
+    Left = 660
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryMaterialSlabs: TFDQuery
@@ -1299,13 +1135,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'From Material_Type_Slab_Size'
       'Where Material_Type = :Material_Type'
       'Order By Length')
-    Left = 528
-    Top = 464
+    Left = 660
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteSlabs: TFDQuery
@@ -1338,18 +1172,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE Quote_Slab.Quote = :Quote AND Quote_Slab.Supplier = :Suppl' +
         'ier')
-    Left = 112
-    Top = 464
+    Left = 140
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOStatus: TFDQuery
@@ -1358,18 +1188,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'UPDATE Purchase_Order'
       'SET Purchase_Order_Status = :Purchase_Order_Status'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 200
-    Top = 408
+    Left = 250
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOLines: TFDQuery
@@ -1378,18 +1204,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'UPDATE Purchase_OrderLine'
       'SET Quantity_Delivered = (Quantity * :Multiplier)'
       'WHERE Purchase_Order = :Purchase_Order')
-    Left = 288
-    Top = 408
+    Left = 360
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Multiplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProducts: TFDQuery
@@ -1399,19 +1221,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'FROM Supplier_Product'
       'WHERE Supplier = :Supplier AND (Inactive = '#39'N'#39')'
       'ORDER BY Supplier_Product_Code')
-    Left = 720
-    Top = 408
+    Left = 900
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetProducts: TDataSource
     DataSet = qryGetProducts
-    Left = 792
-    Top = 408
+    Left = 990
+    Top = 510
   end
   object qryGetProduct: TFDQuery
     ConnectionName = 'WT'
@@ -1434,18 +1254,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'WHERE (Supplier = :Supplier) AND'
       '      (Supplier_Product_Code = :Supplier_Product_Code) AND'
       '      (Inactive = '#39'N'#39')')
-    Left = 720
-    Top = 464
+    Left = 900
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -1488,8 +1304,8 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         '          ON Office_Contact.Operator = Purchase_Order.Office_Con' +
         'tact'
       'WHERE (1=1)')
-    Left = 200
-    Top = 24
+    Left = 250
+    Top = 30
   end
   object qryGetSOLines: TFDQuery
     ConnectionName = 'WT'
@@ -1564,34 +1380,26 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       '      (Sales_Order.Sales_order = :Sales_Order)'
       '      )'
       'ORDER BY Sales_Order_Line.Sales_Order DESC')
-    Left = 200
-    Top = 80
+    Left = 250
+    Top = 100
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetSOLines: TDataSource
     DataSet = qryGetSOLines
-    Left = 128
-    Top = 80
+    Left = 160
+    Top = 100
   end
   object qryQuoteSlab: TFDQuery
     ConnectionName = 'WT'
@@ -1623,18 +1431,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE quote_Slab.Quote = :Quote and Quote_Slab.Slab_Number = :Sl' +
         'ab_Number')
-    Left = 200
-    Top = 464
+    Left = 250
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Slab_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy_old: TFDQuery
@@ -1690,33 +1494,23 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         ' = 0)) and'
       '      (Sales_Order.Customer_Name LIKE :Customer_Name)'
       'ORDER BY Sales_Order_Line.Sales_Order DESC')
-    Left = 272
-    Top = 80
+    Left = 340
+    Top = 100
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOLines: TFDQuery
@@ -1738,28 +1532,20 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ' where POL.Purchase_Order = :Purchase_Order) as total_Delivered'
       'from Purchase_OrderLine'
       'where Purchase_OrderLine.Purchase_Order = :Purchase_Order')
-    Left = 120
-    Top = 240
+    Left = 150
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOStatus: TFDQuery
@@ -1781,23 +1567,17 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         'ctive = '#39'N'#39'))) as total_Purchased'
       'From Sales_Order'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 528
-    Top = 336
+    Left = 660
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSOStatus: TFDQuery
@@ -1806,18 +1586,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'Update Sales_Order'
       'Set Sales_Order_Status = :Sales_Order_Status'
       'WHERE Sales_Order = :Sales_Order')
-    Left = 608
-    Top = 336
+    Left = 760
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryQuoteAdhesives: TFDQuery
@@ -1861,18 +1637,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       
         'WHERE quote_Slab.Quote = :Quote AND quote_Slab.Supplier = :Suppl' +
         'ier AND quote_Slab.Adhesive_Product_Code <> '#39#39)
-    Left = 288
-    Top = 464
+    Left = 360
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAllEvents: TFDQuery
@@ -1882,13 +1654,11 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       'from Purchase_Order_internal_Note, Operator'
       'where Purchase_Order = :Purchase_Order and'
       'Purchase_Order_internal_Note.Operator = Operator.Operator')
-    Left = 208
-    Top = 184
+    Left = 260
+    Top = 230
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryPOEvent: TFDQuery
@@ -1900,18 +1670,14 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
         'where Purchase_Order = :Purchase_Order and Internal_Note = :Inte' +
         'rnal_Note and'
       'Purchase_Order_internal_Note.Operator = Operator.Operator')
-    Left = 272
-    Top = 184
+    Left = 340
+    Top = 230
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Note'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAddEvent: TFDQuery
@@ -1929,33 +1695,23 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 272
-    Top = 232
+    Left = 340
+    Top = 290
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
 end

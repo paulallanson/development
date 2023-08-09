@@ -369,7 +369,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, System.Types,
   wtLUCustType, wtLUVat, wtLUReps, wtMain, WTMaintBranch,
   wtDataModule, AllCommon, WTMaintContactEvents, WTEventsDM,
   WtMaintQuote, WtMaintSalesOrder, WtMaintJob, wtRSQuote, DateSelV5,
@@ -1006,7 +1006,7 @@ var
 begin
   frmWTMaintContactEvents := TfrmWTMaintContactEvents.Create(Self);
   try
-    frmWTMaintContactEvents.sFuncMode := sTempFuncMode;
+    frmWTMaintContactEvents.sFuncMode := AnsiString(sTempFuncMode);
     frmWTMaintContactEvents.iCust := Customer;
     if sTempFuncMode <> 'A' then
       begin
@@ -1619,7 +1619,6 @@ var
   Key : integer;
   frm : TfrmWtMaintSalesInvoice;
   aInvoice : TSalesInvoice;
-  sWarning: string;
   dtmdlCustInvoices: TdtmdlSalesInvoice;
 begin
   dtmdlCustInvoices := TdtmdlSalesInvoice.create(application);
@@ -1814,11 +1813,12 @@ end;
 
 procedure TfrmWtMaintCustomer.btnWordClick(Sender: TObject);
 var
-  compdir, docdir, jobBagDir, docExt, sPAth: string;
+  compdir, docdir, docExt, sPAth: string;
   sFullFile, sFileName: string;
   iLength, ipos, i: integer;
   okToSave, userCancelled, docsaved: boolean;
 begin
+  i := 0;
   docDir := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + edtCustomerName.text;
   compDir := dtmdlWorktops.GetCompanyCustomerDirectory;
 
@@ -1944,6 +1944,7 @@ var
   i, ipos, ilength, icount: integer;
   sFile, sFullFile, docDir: string;
 begin
+  i := 0;
   docDir := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + edtCustomerName.text;
   {Find a document} ;
 
@@ -2014,7 +2015,7 @@ end;
 
 procedure TfrmWtMaintCustomer.btnEmailClick(Sender: TObject);
 var
-  sTo, sSubject, sBody, sFilePath: string;
+  sTo, sSubject: string;
 begin
   WTMaintEmailFrm := TWTMaintEmailFrm.create(self);
   try
@@ -2226,7 +2227,6 @@ end;
 procedure TfrmWtMaintCustomer.ParseMessage(const AFileName: string; var ATo, AFrom,
   ASubject, ADate, ABody: string);
 var
-  iLength: integer;
   MyUnicode: Boolean;
   MyFileStream: TFileStream;
   MyFileSize: Integer;
@@ -2471,6 +2471,7 @@ var
   sFile, sFullFile, docdir: string;
   iCount, iPos, iLength: integer;
 begin
+  iPos := 0;
   docDir := dtmdlWorktops.GetCompanyCustomerDirectory + '\' + edtCustomerName.text;
   {Find a document} ;
 
@@ -2562,7 +2563,7 @@ procedure TfrmWtMaintCustomer.SaveToDB;
 var
   iPathLength, iFileLength: integer;
 begin
-  if FunctionMode[1] in ['A', 'C', 'S'] then
+  if CharInSet(FunctionMode[1], ['A', 'C', 'S']) then
   begin
     if (FunctionMode = 'A') or (FunctionMode = 'S') then
     begin

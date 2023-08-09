@@ -74,7 +74,7 @@ var
 implementation
 
 uses UITypes, ComObj, ActiveX, wtMain,
-  wtSrchCustContacts, WTEventsDM, wtLUProspectAction;
+  wtSrchCustContacts, WTEventsDM, wtLUProspectAction, System.Variants;
 
 {$R *.DFM}
 
@@ -329,7 +329,8 @@ end;
 
 procedure TfrmWTMaintContactEvents.dblkpContactClick(Sender: TObject);
 begin
-  iContact := dblkpContact.keyvalue;
+  if not VarIsNull(dblkpContact.KeyValue) then
+    iContact := dblkpContact.keyvalue;
   CheckOK(self);
 end;
 

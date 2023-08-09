@@ -1,11 +1,9 @@
 object dtmdlPrices: TdtmdlPrices
-  OldCreateOrder = False
-  Left = 214
-  Top = 105
-  Height = 361
-  Width = 794
+  Height = 451
+  Width = 993
+  PixelsPerInch = 120
   object qryAllPrices: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT'
       '    Worktop_thickness.Worktop,'
@@ -22,28 +20,28 @@ object dtmdlPrices: TdtmdlPrices
       
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       '      order by Prices.effective_date desc) AS Effective_Date,'
       '    (select top 1 Date_Changed'
       '      from Prices'
       
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       '      order by Prices.effective_date desc) AS Date_Changed,'
       '    (select top 1 Unit_price'
       '      from Prices'
       
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       '      order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '      from Prices'
       
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       '      order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '      from Prices, Price_unit'
@@ -51,7 +49,7 @@ object dtmdlPrices: TdtmdlPrices
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
       '            Prices.Price_unit = Price_Unit.Price_Unit and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       
         '      order by Prices.effective_date desc) AS Price_Unit_Descrip' +
         'tion,'
@@ -61,7 +59,7 @@ object dtmdlPrices: TdtmdlPrices
         '      where Prices.Price_pointer = worktop_thickness.price_point' +
         'er and'
       '            Prices.Operator = Operator.Operator and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= GetDate()'
       '      order by Prices.effective_date desc) AS Operator_Name'
       'FROM (Worktop_Group'
       '      RIGHT JOIN (Material_Type'
@@ -73,69 +71,89 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 24
-    Top = 8
+    Left = 30
+    Top = 10
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
+      Origin = 'Worktop'
+      Required = True
     end
-    object qryAllPricesWorktop_Description: TStringField
+    object qryAllPricesWorktop_Description: TWideStringField
       FieldName = 'Worktop_Description'
+      Origin = 'Worktop_Description'
+      Required = True
       Size = 40
     end
     object qryAllPricesThickness: TIntegerField
       FieldName = 'Thickness'
+      Origin = 'Thickness'
+      Required = True
     end
-    object qryAllPricesThickness_mm: TStringField
+    object qryAllPricesThickness_mm: TWideStringField
       FieldName = 'Thickness_mm'
-      Size = 10
+      Origin = 'Thickness_mm'
+      Required = True
+      Size = 50
     end
     object qryAllPricesPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
     object qryAllPricesMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
     end
-    object qryAllPricesMaterial_Type_Description: TStringField
+    object qryAllPricesMaterial_Type_Description: TWideStringField
       FieldName = 'Material_Type_Description'
+      Origin = 'Material_Type_Description'
       Size = 100
     end
     object qryAllPricesWorktop_Group: TIntegerField
       FieldName = 'Worktop_Group'
+      Origin = 'Worktop_Group'
     end
-    object qryAllPricesWorktop_Group_Description: TStringField
+    object qryAllPricesWorktop_Group_Description: TWideStringField
       FieldName = 'Worktop_Group_Description'
-      Size = 30
+      Origin = 'Worktop_Group_Description'
+      Size = 50
     end
-    object qryAllPricesEffective_Date: TDateTimeField
+    object qryAllPricesEffective_Date: TSQLTimeStampField
       FieldName = 'Effective_Date'
+      Origin = 'Effective_Date'
+      ReadOnly = True
     end
-    object qryAllPricesDate_Changed: TDateTimeField
+    object qryAllPricesDate_Changed: TSQLTimeStampField
       FieldName = 'Date_Changed'
+      Origin = 'Date_Changed'
+      ReadOnly = True
     end
-    object qryAllPricesUnit_Price: TFloatField
+    object qryAllPricesUnit_Price: TCurrencyField
       FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Unit_Price'
+      ReadOnly = True
     end
-    object qryAllPricesUnit_Cost: TFloatField
+    object qryAllPricesUnit_Cost: TCurrencyField
       FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
     end
-    object qryAllPricesPrice_Unit_Description: TStringField
+    object qryAllPricesPrice_Unit_Description: TWideStringField
       FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
-    object qryAllPricesOperator_Name: TStringField
+    object qryAllPricesOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      ReadOnly = True
       Size = 30
-    end
-    object qryAllPricesinactive: TStringField
-      FieldName = 'inactive'
-      Size = 1
     end
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 80
-    Top = 8
+    Left = 100
+    Top = 10
   end
   object qryDummyCurrent: TFDQuery
     SQL.Strings = (
@@ -213,8 +231,8 @@ object dtmdlPrices: TdtmdlPrices
       '        LEFT JOIN Worktop_thickness'
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 152
-    Top = 8
+    Left = 190
+    Top = 10
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -270,8 +288,8 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 240
-    Top = 8
+    Left = 300
+    Top = 10
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -280,18 +298,14 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 24
-    Top = 72
+    Left = 30
+    Top = 90
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Effective_Date'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -14,23 +14,22 @@ type
     dtsAllPrices: TDataSource;
     qryDummyCurrent: TFDQuery;
     qryDummyFuture: TFDQuery;
+    qryDeletePrices: TFDQuery;
     qryAllPricesWorktop: TIntegerField;
-    qryAllPricesWorktop_Description: TStringField;
+    qryAllPricesWorktop_Description: TWideStringField;
     qryAllPricesThickness: TIntegerField;
-    qryAllPricesThickness_mm: TStringField;
+    qryAllPricesThickness_mm: TWideStringField;
     qryAllPricesPrice_pointer: TIntegerField;
     qryAllPricesMaterial_Type: TIntegerField;
-    qryAllPricesMaterial_Type_Description: TStringField;
+    qryAllPricesMaterial_Type_Description: TWideStringField;
     qryAllPricesWorktop_Group: TIntegerField;
-    qryAllPricesWorktop_Group_Description: TStringField;
-    qryAllPricesEffective_Date: TDateTimeField;
-    qryAllPricesDate_Changed: TDateTimeField;
-    qryAllPricesUnit_Price: TFloatField;
-    qryAllPricesUnit_Cost: TFloatField;
-    qryAllPricesPrice_Unit_Description: TStringField;
-    qryAllPricesOperator_Name: TStringField;
-    qryDeletePrices: TFDQuery;
-    qryAllPricesinactive: TStringField;
+    qryAllPricesWorktop_Group_Description: TWideStringField;
+    qryAllPricesEffective_Date: TSQLTimeStampField;
+    qryAllPricesDate_Changed: TSQLTimeStampField;
+    qryAllPricesUnit_Price: TCurrencyField;
+    qryAllPricesUnit_Cost: TCurrencyField;
+    qryAllPricesPrice_Unit_Description: TWideStringField;
+    qryAllPricesOperator_Name: TWideStringField;
   private
     function GetHeaderCountAll: integer;
     { Private declarations }
