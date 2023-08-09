@@ -29,16 +29,26 @@ implementation
 
 procedure TfrmAllImages.LoadReportLogo(Sender: TObject);
 var
-  TempArray: array[0..255] of Char;
-  sgList: TStringList;
-  sDatabase, LocalDrive, LocalDir: string;
+  FileName, LocalDir: string;
 begin
+  LocalDir := ExtractFileDir(Application.ExeName);
   try
-    ReportImage.Picture.LoadFromFile(LocalDir+sDatabase+'\wtHeadLogo.bmp');
-    DefaultLogo := LocalDir+sDatabase+'\wtHeadLogo.bmp';
+    FileName := LocalDir + '\wtHeadLogo.bmp';
+    if FileExists(FileName) then
+    begin
+      ReportImage.Picture.LoadFromFile(FileName);
+      DefaultLogo := FileName;
+    end else
+    begin
+      FileName := '\wtHeadLogo.bmp';
+      ReportImage.Picture.LoadFromFile(FileName);
+      DefaultLogo := FileName;
+    end;
   except
-    ReportImage.Picture.LoadFromFile('wtHeadLogo.bmp');
-    DefaultLogo := 'wtHeadLogo.bmp';
+    on E: Exception do
+    begin
+      raise Exception.Create('Head logo image file not found. ' + E.Message);
+    end;
   end;
 end;
 
