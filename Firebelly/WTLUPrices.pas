@@ -283,7 +283,9 @@ begin
 
   if  (Column.Title.Caption <> 'Unit Price') and (Column.Title.Caption <> 'Unit Cost') then
   	begin
-      StrPCopy(txt, Column.field.text);
+      if Assigned(Column.Field) then 
+	  StrPCopy(txt, Column.field.text) else
+	  StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -292,7 +294,9 @@ begin
     end
   else
   	begin
-  		StrPCopy(Txt, Column.field.text);
+  		if Assigned(Column.Field) then 
+	  StrPCopy(Txt, Column.field.text) else
+	  StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);

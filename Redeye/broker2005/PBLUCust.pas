@@ -614,7 +614,9 @@ begin
   if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 40) then
     (Sender as TDBGrid).Canvas.Brush.color := clRed;
 
-  StrPCopy(txt, Column.field.text);
+  if Assigned(Column.Field) then 
+	  StrPCopy(txt, Column.field.text) else
+	  StrPCopy(Txt, '');
   SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);

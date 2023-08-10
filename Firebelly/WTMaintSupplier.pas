@@ -858,7 +858,9 @@ begin
   		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
     			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end;
-(*      StrPCopy(txt, Column.field.text);
+(*      if Assigned(Column.Field) then 
+	  StrPCopy(txt, Column.field.text) else
+	  StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);

@@ -834,7 +834,9 @@ begin
                                         and (Column.Title.Caption <> 'Sales Order') then
   	begin
       if Assigned(Column.Field) then
-        StrPCopy(Txt, Column.field.text) else
+        if Assigned(Column.Field) then 
+	  StrPCopy(Txt, Column.field.text) else
+	  StrPCopy(Txt, '') else
         StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
@@ -845,7 +847,9 @@ begin
   else
   	begin
       if Assigned(Column.Field) then
-        StrPCopy(Txt, Column.field.text) else
+        if Assigned(Column.Field) then 
+	  StrPCopy(Txt, Column.field.text) else
+	  StrPCopy(Txt, '') else
         StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)

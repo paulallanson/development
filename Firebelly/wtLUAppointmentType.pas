@@ -122,7 +122,9 @@ begin
 //  (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('AppointmentColour').asinteger;
 //  (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Font_Colour').asinteger;
 
-  StrPCopy(txt, Column.field.text);
+  if Assigned(Column.Field) then 
+	  StrPCopy(txt, Column.field.text) else
+	  StrPCopy(Txt, '');
   SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
