@@ -151,7 +151,7 @@ type
     procedure pmnLinesPopup(Sender: TObject);
     procedure sgDetailsSelectCell(Sender: TObject; Col, Row: Integer;
       var CanSelect: Boolean);
-    procedure sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormDestroy(Sender: TObject);
@@ -725,36 +725,36 @@ begin
   end;
 end;
 
-procedure TfrmWTMaintContract.sgDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TfrmWTMaintContract.sgDetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
   irow, iCol: integer;
   bShowDocuments: boolean;
   ContractOption: TContractOption;
 begin
-  bShowDocuments := (iLine <> vRow) and (Mode <> cqCopy);
+  bShowDocuments := (iLine <> ARow) and (Mode <> cqCopy);
 
-  iLine := vRow;
+  iLine := ARow;
 
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
 
   {If Heading Display Left justified in the cells}
   with sgDetails do
   begin
-    if (vCol = 0) or (vCol = 1) then
+    if (ACol = 0) or (ACol = 1) then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -764,7 +764,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -787,7 +787,7 @@ begin
                 point(rect.left+1,rect.bottom-2),
                 point(rect.left+1,rect.top+1)]);
     end;
-    if (vRow = 0) then
+    if (ARow = 0) then
     begin
       //default drawing has been switched off in the grid so we have
       //to draw the highlight and shadow on 3d boxes
@@ -802,20 +802,15 @@ begin
     end;
   end;
 
-  with sgDetails do
+  irow := sgDetails.Row;
+  iCol := sgDetails.Col;
+
+  edtMarkup.Text := '';
+  ContractLine := Contract.Lines[irow-1];
+  if iCol > 1 then
   begin
-    irow := row;
-    iCol := col;
-
-    ContractLine := Contract.Lines[irow-1];
-    try
-      ContractOption := ContractLine.Options[iCol-2];
-
-      edtMarkup.Text := formatfloat('0.00%',ContractOption.QuoteMarkup);
-    except
-      edtMarkup.Text := '';
-    end;
-
+    ContractOption := ContractLine.Options[iCol-2];
+    edtMarkup.Text := formatfloat('0.00%',ContractOption.QuoteMarkup);
   end;
 
   if bShowDocuments then
@@ -2852,14 +2847,13 @@ var
   aEvent: TContractEvent;
   inx: integer;
 begin
-  inx := sgEvents.row;
-  try
-    inx := Contract.Events.IndexOf(inx);
-    aEvent := Contract.Events[inx];
-    memEventNotes.Text := aEvent.Narrative.DataInfo;
-  except
-    memEventNotes.Lines.Clear;
-  end;
+  memEventNotes.Lines.Clear;
+  if not Assigned(Contract.Events) then Exit;
+  if Contract.Events.Count = 0 then Exit;
+
+  inx := Contract.Events.IndexOf(sgEvents.row);
+  aEvent := Contract.Events[inx];
+  memEventNotes.Text := aEvent.Narrative.DataInfo;
 end;
 
 procedure TfrmWTMaintContract.sgEventsDblClick(Sender: TObject);
@@ -2888,11 +2882,7 @@ var
   aEvent : TContractEvent;
   frm: TfrmWTMaintContractEvents;
 begin
-  try
-    inx := strtoint(sgEvents.cells[0,sgEvents.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgEvents.cells[0,sgEvents.row], 1);
 
   try
     frm := TfrmWTMaintContractEvents.Create(Self);

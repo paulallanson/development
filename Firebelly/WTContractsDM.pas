@@ -66,6 +66,28 @@ type
     qryGetMaterialSlab: TFDQuery;
     qryRevenueCentre: TFDQuery;
     dtsRevenueCentre: TDataSource;
+    qryAllContractsContract_Quote: TIntegerField;
+    qryAllContractsContract_Date: TSQLTimeStampField;
+    qryAllContractsExpiry_Date: TSQLTimeStampField;
+    qryAllContractsContract_Quote_Number: TFloatField;
+    qryAllContractsCustomer: TIntegerField;
+    qryAllContractsContract_Description: TWideStringField;
+    qryAllContractsDeveloper: TWideStringField;
+    qryAllContractsSite_Location: TWideStringField;
+    qryAllContractsNotes: TIntegerField;
+    qryAllContractsCustomer_Name: TWideStringField;
+    qryAllContractsOperator: TIntegerField;
+    qryAllContractsQuote_Number: TFloatField;
+    qryAllContractsOriginal_Quote: TIntegerField;
+    qryAllContractsOperator_Name: TWideStringField;
+    qryAllContractsAccount_Manager: TIntegerField;
+    qryAllContractsAccount_Manager_Name: TWideStringField;
+    qryAllContractsinactive: TWideStringField;
+    qryAllContractsinactive_1: TWideStringField;
+    qryAllContractsinactive_reason: TIntegerField;
+    qryAllContractsInactive_reason_Descr: TWideStringField;
+    qryAllContractsIs_Retail_Customer: TWideStringField;
+    qryAllContractsCustomer_is_Speculative: TWideStringField;
   private
     function GetNextContractID: integer;
     function GetNextCQNumber: integer;

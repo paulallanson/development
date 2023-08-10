@@ -1,9 +1,9 @@
 object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   Left = 269
   Top = 166
-  Width = 759
-  Height = 420
   Caption = 'Maintain Edge Details'
+  ClientHeight = 382
+  ClientWidth = 747
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -12,18 +12,16 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 751
-    Height = 248
+    Width = 747
+    Height = 241
     Align = alClient
     DataSource = srclkpEdgeThickness
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -84,8 +82,8 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 370
-    Width = 751
+    Top = 363
+    Width = 747
     Height = 19
     Panels = <
       item
@@ -94,20 +92,24 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 741
   end
   object pnlFoot: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 313
-    Width = 751
+    Top = 306
+    Width = 747
     Height = 57
     Align = alBottom
     BevelOuter = bvNone
     Constraints.MinHeight = 57
-    Constraints.MinWidth = 751
+    Constraints.MinWidth = 741
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 297
+    ExplicitWidth = 741
     DesignSize = (
-      751
+      747
       57)
     object Label4: TLabel
       Left = 16
@@ -117,18 +119,19 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = 'Search'
     end
     object BitBtn4: TBitBtn
-      Left = 665
+      Left = 671
       Top = 9
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 0
       NumGlyphs = 2
+      TabOrder = 0
+      ExplicitLeft = 665
     end
     object btnDelete: TBitBtn
-      Left = 489
+      Left = 495
       Top = 9
       Width = 75
       Height = 25
@@ -137,9 +140,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 1
       OnClick = btnDeleteClick
+      ExplicitLeft = 489
     end
     object btnEdit: TBitBtn
-      Left = 401
+      Left = 407
       Top = 9
       Width = 75
       Height = 25
@@ -148,9 +152,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
+      ExplicitLeft = 401
     end
     object BitBtn1: TBitBtn
-      Left = 313
+      Left = 319
       Top = 9
       Width = 75
       Height = 25
@@ -158,6 +163,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = '&Add'
       TabOrder = 3
       OnClick = BitBtn1Click
+      ExplicitLeft = 313
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -177,7 +183,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 577
+      Left = 583
       Top = 9
       Width = 75
       Height = 25
@@ -186,19 +192,21 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
+      ExplicitLeft = 577
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 751
+    Width = 747
     Height = 65
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 741
     DesignSize = (
-      751
+      747
       65)
     object Label1: TLabel
       Left = 16
@@ -215,12 +223,13 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 490
+      Left = 496
       Top = 16
       Width = 113
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Edge Details from '
+      ExplicitLeft = 490
     end
     object SpeedButton2: TSpeedButton
       Left = 165
@@ -301,7 +310,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 490
+      Left = 496
       Top = 32
       Width = 145
       Height = 21
@@ -311,9 +320,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
+      ExplicitLeft = 490
     end
     object btnGo: TButton
-      Left = 666
+      Left = 672
       Top = 30
       Width = 75
       Height = 25
@@ -322,6 +332,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
+      ExplicitLeft = 666
     end
   end
   object qryDelEdgeThick: TFDQuery
@@ -333,13 +344,11 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object lkpEdgeThickness: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT'
       '  Edge_thickness.Edge_profile,'
@@ -355,14 +364,14 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       
         '    where Prices.Price_pointer = Edge_Thickness.price_pointer an' +
         'd'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = Edge_Thickness.price_pointer an' +
         'd'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -370,7 +379,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
         '    where Prices.Price_pointer = Edge_thickness.price_pointer an' +
         'd'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -398,86 +407,94 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       
         'ORDER BY Material_Type.Description, Edge_Type_Description, Edge_' +
         'Profile.Description')
-    Left = 64
-    Top = 216
+    Left = 40
+    Top = 214
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
-        Name = 'Material_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
         Name = 'Edge_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Edge_Type'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpEdgeThicknessEdge_profile: TIntegerField
       FieldName = 'Edge_profile'
+      Origin = 'Edge_profile'
+      Required = True
     end
     object lkpEdgeThicknessEdge_Type: TIntegerField
       FieldName = 'Edge_Type'
+      Origin = 'Edge_Type'
+      Required = True
     end
     object lkpEdgeThicknessMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
+      Required = True
     end
     object lkpEdgeThicknessPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
-    object lkpEdgeThicknessDescription: TStringField
+    object lkpEdgeThicknessDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 50
     end
-    object lkpEdgeThicknessUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-      currency = True
-    end
-    object lkpEdgeThicknessUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-      currency = True
-    end
-    object lkpEdgeThicknessPrice_Unit_Description: TStringField
-      FieldName = 'Price_Unit_Description'
-    end
-    object lkpEdgeThicknessinactive: TStringField
+    object lkpEdgeThicknessinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
     end
-    object lkpEdgeThicknessMaterial_Description: TStringField
-      FieldName = 'Material_Description'
+    object lkpEdgeThicknessEdge_Type_Description: TWideStringField
+      FieldName = 'Edge_Type_Description'
+      Origin = 'Edge_Type_Description'
       Size = 50
     end
-    object lkpEdgeThicknessEdge_Type_Description: TStringField
-      FieldName = 'Edge_Type_Description'
-      Size = 50
+    object lkpEdgeThicknessMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object lkpEdgeThicknessUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpEdgeThicknessUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpEdgeThicknessPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
   object srclkpEdgeThickness: TDataSource
     DataSet = lkpEdgeThickness
     OnDataChange = srclkpEdgeThicknessDataChange
-    Left = 112
-    Top = 216
+    Left = 148
+    Top = 214
   end
   object lkpMatType: TFDQuery
     ConnectionName = 'WT'
@@ -549,14 +566,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAddEdgeThickness: TFDQuery
@@ -572,24 +585,16 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteEdgeThickness: TFDQuery
@@ -602,14 +607,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object tmrRefresh: TTimer

@@ -11,13 +11,11 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     388
     234)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -50,9 +48,9 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 272
@@ -63,8 +61,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 5
     NumGlyphs = 2
+    TabOrder = 5
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -129,29 +127,19 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Colour_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Colour_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -168,8 +156,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Top = 104
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -183,8 +171,8 @@ object frmWtMaintColourGroup: TfrmWtMaintColourGroup
     Top = 104
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

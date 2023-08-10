@@ -1916,12 +1916,12 @@ end;
 
 procedure TfrmWTMain.mnuSalesCreditsClick(Sender: TObject);
 begin
-  mnuSalesCreditsClick(self);
+  btnSalesCreditsClick(Self);
 end;
 
 procedure TfrmWTMain.mnuPricesClick(Sender: TObject);
 begin
-  mnuPricesClick(self);
+  btnPricesClick(self);
 end;
 
 procedure TfrmWTMain.mnuFittersClick(Sender: TObject);

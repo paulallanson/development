@@ -11,11 +11,9 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -78,16 +76,20 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       item
         Width = 50
       end>
+    ExplicitTop = 374
+    ExplicitWidth = 684
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 320
     Width = 690
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 311
+    ExplicitWidth = 684
     object Label4: TLabel
       Left = 16
       Top = 16
@@ -138,8 +140,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       Height = 25
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 4
       NumGlyphs = 2
+      TabOrder = 4
     end
     object btnExcel: TBitBtn
       Left = 518
@@ -166,24 +168,24 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     Top = 160
   end
   object lkpExtras: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select Extra_Charge.*,'
       ' (select top 1 Unit_price'
       '    from Prices'
       '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
       '    where Prices.Price_pointer = Extra_Charge.price_pointer and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -198,43 +200,63 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpExtrasExtra_Charge: TIntegerField
       FieldName = 'Extra_Charge'
+      Origin = 'Extra_Charge'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object lkpExtrasDescription: TStringField
+    object lkpExtrasDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 50
     end
     object lkpExtrasPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
-    object lkpExtrasUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-    end
-    object lkpExtrasUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-    end
-    object lkpExtrasPrice_Unit_Description: TStringField
-      FieldName = 'Price_Unit_Description'
-    end
-    object lkpExtrasinactive: TStringField
+    object lkpExtrasinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
     end
-    object lkpExtrasDo_Not_Discount: TStringField
+    object lkpExtrasDo_Not_Discount: TWideStringField
       FieldName = 'Do_Not_Discount'
+      Origin = 'Do_Not_Discount'
       Size = 1
+    end
+    object lkpExtrasAllow_Bespoke_Detail: TWideStringField
+      FieldName = 'Allow_Bespoke_Detail'
+      Origin = 'Allow_Bespoke_Detail'
+      Size = 1
+    end
+    object lkpExtrasUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpExtrasUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpExtrasPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
   object qryDelete: TFDQuery

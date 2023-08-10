@@ -1,6 +1,5 @@
 inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
   Caption = 'Cut out details'
-  PixelsPerInch = 96
   TextHeight = 13
   inherited dbgDetails: TDBGrid
     DataSource = srclkpCOutThickness
@@ -37,21 +36,55 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
         Visible = True
       end>
   end
-  object tblCOutThickness: TFDTable [25]
+  inherited Panel1: TPanel
+    inherited BitBtn1: TBitBtn
+      Left = 198
+      ExplicitLeft = 198
+    end
+    inherited btnEdit: TBitBtn
+      Left = 286
+      ExplicitLeft = 286
+    end
+    inherited btnDelete: TBitBtn
+      Left = 374
+      ExplicitLeft = 374
+    end
+    inherited BitBtn4: TBitBtn
+      Left = 462
+      ExplicitLeft = 462
+    end
+    inherited btnThickness: TBitBtn
+      Left = 243
+      ExplicitLeft = 243
+    end
+    inherited btnExcel: TBitBtn
+      Left = 588
+      ExplicitLeft = 588
+    end
+  end
+  inherited lkpEdgeThickness: TFDQuery
+    Left = 40
+    Top = 142
+  end
+  inherited srclkpEdgeThickness: TDataSource
+    Left = 148
+    Top = 142
+  end
+  object tblCOutThickness: TFDTable
     BeforePost = tblCOutThicknessBeforePost
     OnNewRecord = tblCOutThicknessNewRecord
-    ConnectionName = 'WT'
     IndexFieldNames = 'Cutout'
+    ConnectionName = 'WT'
     TableName = 'Cutout_thickness'
     Left = 312
     Top = 256
   end
-  object srcCOutThickness: TDataSource [26]
+  object srcCOutThickness: TDataSource
     DataSet = tblCOutThickness
     Left = 352
     Top = 256
   end
-  object lkpCOutThickness: TFDQuery [27]
+  object lkpCOutThickness: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'select Cutout_Thickness.*,'
@@ -89,14 +122,12 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Edge_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object lkpCOutThicknessCutout: TIntegerField
       FieldName = 'Cutout'
@@ -128,13 +159,13 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
       FieldName = 'Price_Unit_Description'
     end
   end
-  object srclkpCOutThickness: TDataSource [28]
+  object srclkpCOutThickness: TDataSource
     DataSet = lkpCOutThickness
     OnDataChange = srclkpCOutThicknessDataChange
     Left = 216
     Top = 256
   end
-  object qryDelCOutThick: TFDQuery [29]
+  object qryDelCOutThick: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'delete from cutout_thickness'
@@ -143,12 +174,10 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
-  object qryDelCOThick: TFDQuery [30]
+  object qryDelCOThick: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'Delete from CutOut_thickness'
@@ -157,9 +186,7 @@ inherited frmWtLUCutOutDtls: TfrmWtLUCutOutDtls
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
 end

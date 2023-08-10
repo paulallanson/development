@@ -3,19 +3,17 @@ object frmWTMaintJElement: TfrmWTMaintJElement
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Maintain Element'
-  ClientHeight = 265
-  ClientWidth = 538
+  ClientHeight = 247
+  ClientWidth = 526
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 24
@@ -39,9 +37,9 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 288
@@ -51,17 +49,17 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 538
+    Width = 526
     Height = 217
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 16
@@ -281,7 +279,6 @@ object frmWTMaintJElement: TfrmWTMaintJElement
       Top = 184
       Width = 185
       Height = 21
-      ItemHeight = 13
       TabOrder = 9
       Text = 'cmbMaterialUse'
     end
@@ -298,24 +295,19 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'material_type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'worktop_group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'worktop_group'
-        ParamType = ptUnknown
       end>
   end
   object qryWTThickness: TFDQuery
-    ConnectionName = 'wt'
     MasterSource = dtsWorktops
+    ConnectionName = 'wt'
     SQL.Strings = (
       'select'
       '  worktop_thickness.thickness,'
@@ -328,9 +320,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'worktop'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktops: TDataSource
@@ -369,14 +359,10 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryWTGroup: TFDQuery
@@ -392,9 +378,7 @@ object frmWTMaintJElement: TfrmWTMaintJElement
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end>
   end
   object dtsWTGroup: TDataSource

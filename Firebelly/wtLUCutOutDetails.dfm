@@ -1,9 +1,9 @@
 object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
   Left = 192
   Top = 114
-  Width = 751
-  Height = 420
   Caption = 'Maintain Cut Out Details'
+  ClientHeight = 382
+  ClientWidth = 739
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -12,18 +12,16 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 743
-    Height = 228
+    Width = 739
+    Height = 221
     Align = alClient
     DataSource = srclkpCOutThickness
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -80,16 +78,18 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 301
-    Width = 743
+    Top = 294
+    Width = 739
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 285
+    ExplicitWidth = 733
     DesignSize = (
-      743
+      739
       69)
     object Label4: TLabel
       Left = 16
@@ -116,7 +116,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnChange = edtNameChange
     end
     object BitBtn1: TBitBtn
-      Left = 309
+      Left = 315
       Top = 14
       Width = 75
       Height = 25
@@ -124,9 +124,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
+      ExplicitLeft = 309
     end
     object btnEdit: TBitBtn
-      Left = 397
+      Left = 403
       Top = 14
       Width = 75
       Height = 25
@@ -135,9 +136,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
+      ExplicitLeft = 397
     end
     object btnDelete: TBitBtn
-      Left = 485
+      Left = 491
       Top = 14
       Width = 75
       Height = 25
@@ -146,20 +148,22 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
+      ExplicitLeft = 485
     end
     object BitBtn4: TBitBtn
-      Left = 661
+      Left = 667
       Top = 14
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
+      ExplicitLeft = 661
     end
     object btnExcel: TBitBtn
-      Left = 573
+      Left = 579
       Top = 14
       Width = 75
       Height = 25
@@ -168,12 +172,13 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
+      ExplicitLeft = 573
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 370
-    Width = 743
+    Top = 363
+    Width = 739
     Height = 19
     Panels = <
       item
@@ -182,18 +187,21 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       item
         Width = 50
       end>
+    ExplicitTop = 354
+    ExplicitWidth = 733
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 743
+    Width = 739
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 733
     DesignSize = (
-      743
+      739
       73)
     object Label1: TLabel
       Left = 16
@@ -210,12 +218,13 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 501
+      Left = 507
       Top = 16
       Width = 124
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
+      ExplicitLeft = 501
     end
     object SpeedButton2: TSpeedButton
       Left = 165
@@ -296,7 +305,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 501
+      Left = 507
       Top = 32
       Width = 145
       Height = 21
@@ -306,9 +315,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
+      ExplicitLeft = 501
     end
     object btnGo: TButton
-      Left = 662
+      Left = 668
       Top = 30
       Width = 75
       Height = 25
@@ -317,6 +327,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
+      ExplicitLeft = 662
     end
   end
   object srclkpCOutThickness: TDataSource
@@ -326,7 +337,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 256
   end
   object lkpCOutThickness: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT'
       '    Cutout_thickness.Cutout,'
@@ -342,14 +353,14 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       
         '    where Prices.Price_pointer = Cutout_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = Cutout_Thickness.price_pointer ' +
         'and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -357,7 +368,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
         '    where Prices.Price_pointer = Cutout_thickness.price_pointer ' +
         'and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -388,75 +399,84 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
-        Name = 'Material_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
         Name = 'Edge_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Edge_Type'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpCOutThicknessCutout: TIntegerField
       FieldName = 'Cutout'
+      Origin = 'Cutout'
+      Required = True
     end
     object lkpCOutThicknessEdge_Type: TIntegerField
       FieldName = 'Edge_Type'
+      Origin = 'Edge_Type'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object lkpCOutThicknessMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
+      Required = True
     end
     object lkpCOutThicknessPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
-    object lkpCOutThicknessDescription: TStringField
+    object lkpCOutThicknessDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 40
     end
-    object lkpCOutThicknessUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-      currency = True
-    end
-    object lkpCOutThicknessUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-      currency = True
-    end
-    object lkpCOutThicknessPrice_Unit_Description: TStringField
-      FieldName = 'Price_Unit_Description'
-    end
-    object lkpCOutThicknessinactive: TStringField
+    object lkpCOutThicknessinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
     end
-    object lkpCOutThicknessMaterial_Description: TStringField
-      FieldName = 'Material_Description'
+    object lkpCOutThicknessEdge_Type_Description: TWideStringField
+      FieldName = 'Edge_Type_Description'
+      Origin = 'Edge_Type_Description'
       Size = 50
     end
-    object lkpCOutThicknessEdge_Type_Description: TStringField
-      FieldName = 'Edge_Type_Description'
-      Size = 50
+    object lkpCOutThicknessMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object lkpCOutThicknessUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpCOutThicknessUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpCOutThicknessPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
   object lkpMatType: TFDQuery
@@ -483,9 +503,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCutOutThickness: TFDQuery
@@ -526,14 +544,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCutOutThickness: TFDQuery
@@ -547,24 +561,16 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'CutOut'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteCutOutThickness: TFDQuery
@@ -577,14 +583,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object tmrRefresh: TTimer

@@ -121,6 +121,9 @@ end;
 
 function TfrmWtMaintColourGroup.HexToTColor( sColor : string ): TColor;
 begin
+  Result := clWhite;
+  if sColor.Trim = '' then Exit;
+
   Result :=
     RGB(
       { get red value }

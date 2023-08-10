@@ -164,18 +164,8 @@ var
   rUnitPrice, rTotal: real;
   iLength: integer;
 begin
-  try
-    iLength := strtoint(edtLength.text);
-  except
-    iLength := 0;
-  end;
-
-  try
-    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
-  except
-    rUnitPrice := 0.00;
-  end;
-
+  iLength := StrToIntDef(edtLength.text, 0);
+  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   rTotal := (iLength/1000)*rUnitPrice;
   edtTotalPrice.text := formatfloat('0.00',rTotal);
   enableOK(self)

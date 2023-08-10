@@ -235,24 +235,9 @@ var
   rUnitPrice, rTotal: real;
   idepth,iLength,iQuantity: integer;
 begin
-  try
-    iDepth := strtoint(edtDepth.text);
-  except
-    iDepth := 0
-  end;
-
-  try
-    iLength := strtoint(edtLength.text);
-  except
-    iLength := 0;
-  end;
-
-  try
-    rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
-  except
-    rUnitPrice := 0.00;
-  end;
-
+  iDepth := StrToIntDef(edtDepth.text, 0);
+  iLength := StrToIntDef(edtLength.text, 0);
+  rUnitPrice := StrToFloatDef(edtUnitPrice.text, 0, FormatSettings);
   iQuantity := spnQuantity.value;
 
   rTotal := ((idepth * iLength)/1000000)*iQuantity*rUnitPrice;

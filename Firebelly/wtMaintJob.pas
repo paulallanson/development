@@ -388,6 +388,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   wtCommon, WTSrchCustomer, wtMain, wtNotesDM, wtDataModule,
   WTSrchCustContacts, wtMaintJElement, wtMaintJUpstand, wtMaintJEdge, wtMaintJExtra,
   wtMaintJCutOut, wtMaintJEvents, DateSelV5, wtLUMatType, wtMaintJElementM, WTMaintJRemedial,
@@ -1498,12 +1499,7 @@ var
   frm: TfrmWTMaintJUpstand;
 begin
 //  inx := sgUpstands.row+1000;
-
-  try
-    inx := strtoint(sgUpstands.cells[0,sgUpstands.row])+1000;
-  except
-    inx := 1000;
-  end;
+  inx := StrToIntDef(sgUpstands.cells[0,sgUpstands.row], 1000) + 1000;
 
   try
     frm := TfrmWTMaintJUpstand.Create(Self);
@@ -1590,12 +1586,7 @@ var
   frm: TfrmWTMaintjCutOut;
 begin
 //  inx := sgCutOuts.row;
-
-  try
-    inx := strtoint(sgCutOuts.cells[0,sgCutOuts.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgCutOuts.cells[0,sgCutOuts.row], 1);
 
   try
     frm := TfrmWTMaintJCutOut.Create(Self);
@@ -1711,11 +1702,7 @@ var
 begin
 //  inx := sgExtras.row;
 
-  try
-    inx := strtoint(sgExtras.cells[0,sgExtras.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgExtras.cells[0,sgExtras.row], 1);
 
   try
     frm := TfrmWTMaintjExtra.Create(Self);
@@ -1818,12 +1805,7 @@ var
   frm: TfrmWTMaintJRemedial;
 begin
 //  inx := sgRemedials.row;
-
-  try
-    inx := strtoint(sgRemedials.cells[0,sgRemedials.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgRemedials.cells[0,sgRemedials.row], 1);
 
   try
     frm := TfrmWTMaintjRemedial.Create(Self);
@@ -2062,14 +2044,14 @@ var
   JEvent: TJEvent;
   inx: integer;
 begin
-  inx := sgEvents.row;
-  try
-    inx := Job.Events.IndexOf(inx);
-    JEvent := Job.Events[inx];
-    memEventNotes.Text := JEvent.Narrative.DataInfo;
-  except
-    memEventNotes.Lines.Clear;
-  end;
+  memEventNotes.Lines.Clear;
+
+  if not Assigned(Job.Events) then Exit;
+  if Job.Events.Count = 0 then Exit;
+
+  inx := Job.Events.IndexOf(sgEvents.row);
+  JEvent := Job.Events[inx];
+  memEventNotes.Text := JEvent.Narrative.DataInfo;
 end;
 
 procedure TfrmWTMaintJob.sgEventsDblClick(Sender: TObject);
@@ -2427,7 +2409,9 @@ begin
           ListItem.SubItems.Add(FileInfo.szTypeName);
           // Get The DateModified
           try
-            ListItem.SubItems.Add(DatetimeToStr(FileDateToDateTime(fileage(strPath + ListItem.Caption))));
+            var Stamp: TDateTime;
+            FileAge(strPath + ListItem.Caption, Stamp);
+            ListItem.SubItems.Add(DatetimeToStr(Stamp));
           except
             ListItem.SubItems.Add('');
           end;
@@ -2520,11 +2504,12 @@ begin
 end;
 
 procedure TfrmWTMaintJob.lstvwDocumentsDblClick(Sender: TObject);
-var
+(*var
   sPath, sDoc: string;
   FiName, Params: Array [0..255] of char ;
   itempResult: integer;
   sTempError: String ;
+*)
 begin
 (*  sPath := dtmdlWorktops.GetCompanyJobDirectory + '\' + inttostr(Job.dbKey) + '\';
   if sPath = '' then
@@ -2605,10 +2590,11 @@ begin
 end;
 
 procedure TfrmWTMaintJob.mnuDeleteDocumentClick(Sender: TObject);
-var
+(*var
   iRow: integer;
   sPath, sFileName: string;
   ListItem: TListItem;
+*)
 begin
 (*  iRow := lstvwDocuments.ItemIndex;
   if iRow = -1 then exit;
@@ -3149,6 +3135,7 @@ var
   sFile, sFullFile, docdir: string;
   iCount, iPos, iLength: integer;
 begin
+  iPos := 0;
   docDir := dtmdlWorktops.GetCompanyJobDirectory + '\' + inttostr(job.dbkey);
   {Find a document} ;
 
@@ -3195,10 +3182,11 @@ begin
 end;
 
 procedure TfrmWTMaintJob.pmnuDeleteClick(Sender: TObject);
-var
+(*var
   iRow: integer;
   sPath, sFileName: string;
   ListItem: TListItem;
+*)
 begin
 (*  iRow := lstvwDocuments.ItemIndex;
   if iRow = -1 then exit;
@@ -3222,8 +3210,9 @@ begin
 end;
 
 procedure TfrmWTMaintJob.pmnuSelectAllClick(Sender: TObject);
-var
+(*var
   icount: integer;
+*)
 begin
 (*  with lstvwDocuments do
     begin

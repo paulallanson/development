@@ -11,11 +11,9 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -132,8 +130,8 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
     end
     object btnExcel: TBitBtn
       Left = 516
@@ -142,9 +140,9 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Excel'
+      NumGlyphs = 2
       TabOrder = 6
       OnClick = btnExcelClick
-      NumGlyphs = 2
     end
     object edtName: TEdit
       Left = 56
@@ -162,7 +160,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
   end
   object qryMaterialUse: TFDQuery
     OnCalcFields = qryMaterialUseCalcFields
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT *'
       'FROM Material_Use'
@@ -176,34 +174,43 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qryMaterialUseMaterial_Use: TIntegerField
       FieldName = 'Material_Use'
+      Origin = 'Material_Use'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryMaterialUseUse_Description: TStringField
+    object qryMaterialUseUse_Description: TWideStringField
       FieldName = 'Use_Description'
+      Origin = 'Use_Description'
+      Required = True
       Size = 50
     end
-    object qryMaterialUseinactive: TStringField
-      FieldName = 'inactive'
+    object qryMaterialUseInactive: TWideStringField
+      FieldName = 'Inactive'
+      Origin = 'Inactive'
+      Required = True
       Size = 1
+    end
+    object qryMaterialUseUse_Type: TIntegerField
+      FieldName = 'Use_Type'
+      Origin = 'Use_Type'
     end
     object qryMaterialUseUse_Type_Description: TStringField
       FieldKind = fkCalculated
       FieldName = 'Use_Type_Description'
-      Size = 50
       Calculated = True
-    end
-    object qryMaterialUseUse_Type: TIntegerField
-      FieldName = 'Use_Type'
     end
   end
   object qryDelete: TFDQuery

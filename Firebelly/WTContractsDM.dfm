@@ -1,13 +1,11 @@
 object dtmdlContract: TdtmdlContract
-  OldCreateOrder = False
-  Left = 232
-  Top = 107
-  Height = 522
-  Width = 1084
+  Height = 653
+  Width = 1355
+  PixelsPerInch = 120
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 216
-    Top = 8
+    Left = 270
+    Top = 10
   end
   object qryCQHeader: TFDQuery
     ConnectionName = 'wt'
@@ -57,13 +55,11 @@ object dtmdlContract: TdtmdlContract
       '  Contract_Quote.Contract_Quote = :Contract_Quote'
       ''
       '')
-    Left = 24
-    Top = 120
+    Left = 30
+    Top = 150
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryCQAddHeader: TFDQuery
@@ -116,113 +112,86 @@ object dtmdlContract: TdtmdlContract
       '        :Revenue_Centre'
       ')'
       '')
-    Left = 104
-    Top = 120
+    Left = 130
+    Top = 150
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Contract_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Contract_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Inactive'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Inactive_Reason'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Notes'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Customer_Name'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Account_Manager'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Contract_Quote_Number'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Developer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Site_Contact'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Site_Location'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Site_Phone'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_Name'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Address'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Inactive'
+        DataType = ftString
+      end
+      item
+        Name = 'Inactive_Reason'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Notes'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Customer_Name'
+        DataType = ftString
+      end
+      item
+        Name = 'Account_Manager'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Contract_Quote_Number'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Developer'
+        DataType = ftString
+      end
+      item
+        Name = 'Site_Contact'
+      end
+      item
+        Name = 'Site_Location'
+        DataType = ftString
+      end
+      item
+        Name = 'Site_Phone'
+      end
+      item
+        Name = 'Contact_Name'
+      end
+      item
+        Name = 'Address'
+        DataType = ftInteger
+      end
+      item
         Name = 'Expiry_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quote_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryCQUpHeader: TFDQuery
@@ -247,98 +216,74 @@ object dtmdlContract: TdtmdlContract
       '    Quote_Number = :Quote_Number,'
       '    Revenue_Centre = :Revenue_Centre'
       'WHERE Contract_Quote = :Contract_Quote')
-    Left = 200
-    Top = 120
+    Left = 250
+    Top = 150
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Account_Manager'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Contract_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Customer_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Developer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Site_Contact'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Site_Contact'
+      end
+      item
         Name = 'Site_Location'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Site_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Expiry_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quote_Number'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Expiry_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Quote_Number'
+      end
+      item
+        Name = 'Revenue_Centre'
+        DataType = ftInteger
+      end
+      item
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryCQGetLast: TFDQuery
@@ -346,11 +291,11 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'select Last_Contract_Quote_Number'
       'from Company')
-    Left = 272
-    Top = 8
+    Left = 340
+    Top = 10
   end
   object qryAllContracts: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT  Contract_Quote.Contract_Quote,'
       '        Contract_Quote.Contract_Date,'
@@ -388,13 +333,120 @@ object dtmdlContract: TdtmdlContract
         '        ON Inactive_reason.Inactive_reason = Contract_Quote.Inac' +
         'tive_Reason'
       'WHERE 1=1')
-    Left = 24
-    Top = 8
+    Left = 30
+    Top = 10
+    object qryAllContractsContract_Quote: TIntegerField
+      FieldName = 'Contract_Quote'
+      Origin = 'Contract_Quote'
+      Required = True
+    end
+    object qryAllContractsContract_Date: TSQLTimeStampField
+      FieldName = 'Contract_Date'
+      Origin = 'Contract_Date'
+      Required = True
+    end
+    object qryAllContractsExpiry_Date: TSQLTimeStampField
+      FieldName = 'Expiry_Date'
+      Origin = 'Expiry_Date'
+    end
+    object qryAllContractsContract_Quote_Number: TFloatField
+      FieldName = 'Contract_Quote_Number'
+      Origin = 'Contract_Quote_Number'
+      Required = True
+    end
+    object qryAllContractsCustomer: TIntegerField
+      FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
+    end
+    object qryAllContractsContract_Description: TWideStringField
+      FieldName = 'Contract_Description'
+      Origin = 'Contract_Description'
+      Required = True
+      Size = 255
+    end
+    object qryAllContractsDeveloper: TWideStringField
+      FieldName = 'Developer'
+      Origin = 'Developer'
+      Size = 100
+    end
+    object qryAllContractsSite_Location: TWideStringField
+      FieldName = 'Site_Location'
+      Origin = 'Site_Location'
+      Size = 150
+    end
+    object qryAllContractsNotes: TIntegerField
+      FieldName = 'Notes'
+      Origin = 'Notes'
+    end
+    object qryAllContractsCustomer_Name: TWideStringField
+      FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
+      Size = 100
+    end
+    object qryAllContractsOperator: TIntegerField
+      FieldName = 'Operator'
+      Origin = 'Operator'
+    end
+    object qryAllContractsQuote_Number: TFloatField
+      FieldName = 'Quote_Number'
+      Origin = 'Quote_Number'
+    end
+    object qryAllContractsOriginal_Quote: TIntegerField
+      FieldName = 'Original_Quote'
+      Origin = 'Original_Quote'
+    end
+    object qryAllContractsOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 30
+    end
+    object qryAllContractsAccount_Manager: TIntegerField
+      FieldName = 'Account_Manager'
+      Origin = 'Account_Manager'
+    end
+    object qryAllContractsAccount_Manager_Name: TWideStringField
+      FieldName = 'Account_Manager_Name'
+      Origin = 'Account_Manager_Name'
+      Required = True
+      Size = 30
+    end
+    object qryAllContractsinactive: TWideStringField
+      FieldName = 'inactive'
+      Origin = 'inactive'
+      Size = 1
+    end
+    object qryAllContractsinactive_1: TWideStringField
+      FieldName = 'inactive_1'
+      Origin = 'inactive'
+      Size = 1
+    end
+    object qryAllContractsinactive_reason: TIntegerField
+      FieldName = 'inactive_reason'
+      Origin = 'inactive_reason'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object qryAllContractsInactive_reason_Descr: TWideStringField
+      FieldName = 'Inactive_reason_Descr'
+      Origin = 'Inactive_reason_Descr'
+      Size = 50
+    end
+    object qryAllContractsIs_Retail_Customer: TWideStringField
+      FieldName = 'Is_Retail_Customer'
+      Origin = 'Is_Retail_Customer'
+      Size = 1
+    end
+    object qryAllContractsCustomer_is_Speculative: TWideStringField
+      FieldName = 'Customer_is_Speculative'
+      Origin = 'Customer_is_Speculative'
+      Size = 1
+    end
   end
   object dtsAllContracts: TDataSource
     DataSet = qryAllContracts
-    Left = 96
-    Top = 8
+    Left = 120
+    Top = 10
   end
   object qrydummy: TFDQuery
     SQL.Strings = (
@@ -435,8 +487,8 @@ object dtmdlContract: TdtmdlContract
         '        ON Inactive_reason.Inactive_reason = Contract_Quote.Inac' +
         'tive_Reason'
       'WHERE 1=1')
-    Left = 160
-    Top = 8
+    Left = 200
+    Top = 10
   end
   object qryCustContracts: TFDQuery
     ConnectionName = 'WT'
@@ -446,24 +498,22 @@ object dtmdlContract: TdtmdlContract
       'where Customer = :Customer and'
       'Description LIKE :Description'
       'order by Quote desc')
-    Left = 24
-    Top = 64
+    Left = 30
+    Top = 80
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dtsContracts: TDataSource
     DataSet = qryCustContracts
-    Left = 96
-    Top = 64
+    Left = 120
+    Top = 80
   end
   object qryOperator: TFDQuery
     ConnectionName = 'wt'
@@ -471,13 +521,13 @@ object dtmdlContract: TdtmdlContract
       'select *'
       'from Operator'
       'ORDER BY Operator.Operator_Name')
-    Left = 688
-    Top = 72
+    Left = 860
+    Top = 90
   end
   object dtsOperator: TDataSource
     DataSet = qryOperator
-    Left = 760
-    Top = 72
+    Left = 950
+    Top = 90
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'wt'
@@ -485,13 +535,11 @@ object dtmdlContract: TdtmdlContract
       'update company'
       'set last_Contract_Quote_number = :last_Contract_Quote_number'
       'where company = 1')
-    Left = 272
-    Top = 56
+    Left = 340
+    Top = 70
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'last_Contract_Quote_number'
-        ParamType = ptUnknown
       end>
   end
   object qryCQAddLine: TFDQuery
@@ -513,33 +561,23 @@ object dtmdlContract: TdtmdlContract
       ':Supplier_Reference,'
       ':Number_of_Units'
       ')')
-    Left = 24
-    Top = 208
+    Left = 30
+    Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Drawing_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Number_of_Units'
-        ParamType = ptUnknown
       end>
   end
   object qryCQAllLines: TFDQuery
@@ -553,13 +591,11 @@ object dtmdlContract: TdtmdlContract
       'FROM Contract_Quote_Line'
       'WHERE Contract_Quote = :Contract_Quote'
       'ORDER BY Line_Number')
-    Left = 96
-    Top = 208
+    Left = 120
+    Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCQLOptions: TFDQuery
@@ -603,18 +639,14 @@ object dtmdlContract: TdtmdlContract
         'D'
       '  Contract_Quote_Line_Option.Line_Number = :Line_Number'
       'ORDER BY Option_Number')
-    Left = 32
-    Top = 272
+    Left = 40
+    Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryCQLAddOption: TFDQuery
@@ -658,94 +690,64 @@ object dtmdlContract: TdtmdlContract
       ':Markup_Percentage,'
       ':Original_Quote'
       ')')
-    Left = 128
-    Top = 272
+    Left = 160
+    Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Option_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Option_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Quote'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quote_Description'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Nett_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Installation_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Delivery_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Survey_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Discount_Value'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Markup_Value'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Quote_Description'
+      end
+      item
+        Name = 'Nett_Price'
+      end
+      item
+        Name = 'Installation_Price'
+      end
+      item
+        Name = 'Delivery_Price'
+      end
+      item
+        Name = 'Survey_Price'
+      end
+      item
+        Name = 'Discount_Value'
+      end
+      item
+        Name = 'Markup_Value'
+      end
+      item
         Name = 'Thickness'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Markup_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end>
   end
   object dsCustQuotes: TDataSource
     DataSet = qryCustQuotes
-    Left = 760
-    Top = 136
+    Left = 950
+    Top = 170
   end
   object qryCustQuotes: TFDQuery
     ConnectionName = 'wt'
@@ -799,18 +801,16 @@ object dtmdlContract: TdtmdlContract
       'WHERE Quote.Customer = :customer AND'
       'Quote.Contract_Quote <> '#39'Y'#39
       'ORDER BY Quote.Quote desc')
-    Left = 680
-    Top = 136
+    Left = 850
+    Top = 170
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object dsDummy: TDataSource
-    Left = 832
-    Top = 136
+    Left = 1040
+    Top = 170
   end
   object qryGetCustomerWorktop: TFDQuery
     ConnectionName = 'WT'
@@ -818,18 +818,14 @@ object dtmdlContract: TdtmdlContract
       'SELECT Top 1 Worktop'
       'FROM Customer_Worktop'
       'WHERE Customer = :Customer AND Group_Number = :Group_Number')
-    Left = 48
-    Top = 336
+    Left = 60
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerPrice: TFDQuery
@@ -863,23 +859,17 @@ object dtmdlContract: TdtmdlContract
       'where Customer = :Customer and'
       'Group_Number = :Group_Number and'
       'Thickness = :Thickness')
-    Left = 152
-    Top = 336
+    Left = 190
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryCQAllEvents: TFDQuery
@@ -889,13 +879,11 @@ object dtmdlContract: TdtmdlContract
       'from Contract_Quote_internal_Note, Operator'
       'where Contract_Quote = :Contract_Quote and'
       'Contract_Quote_internal_Note.Operator = Operator.Operator')
-    Left = 416
-    Top = 224
+    Left = 520
+    Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryCQAddEvent: TFDQuery
@@ -913,33 +901,23 @@ object dtmdlContract: TdtmdlContract
       ':Date_Time_Entered,'
       ':Operator,'
       ':Narrative)')
-    Left = 416
-    Top = 160
+    Left = 520
+    Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Internal_Note'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCutOutPrice: TFDQuery
@@ -974,23 +952,17 @@ object dtmdlContract: TdtmdlContract
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'cutout = :cutout')
-    Left = 48
-    Top = 392
+    Left = 60
+    Top = 490
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cutout'
-        ParamType = ptUnknown
       end>
   end
   object qryGetEdgePrice: TFDQuery
@@ -1019,23 +991,17 @@ object dtmdlContract: TdtmdlContract
       'where Material_Type = :Material_type and'
       'Edge_Type = :Edge_Type and'
       'Edge_profile = :Edge_profile')
-    Left = 48
-    Top = 440
+    Left = 60
+    Top = 550
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_profile'
-        ParamType = ptUnknown
       end>
   end
   object qryGetAddress: TFDQuery
@@ -1044,13 +1010,11 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Address'
       'WHERE Address = :Address')
-    Left = 488
-    Top = 160
+    Left = 610
+    Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextAdd: TFDQuery
@@ -1058,8 +1022,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'select max(address) as Last_Address'
       'from Address')
-    Left = 488
-    Top = 8
+    Left = 610
+    Top = 10
   end
   object qryAddAddress: TFDQuery
     ConnectionName = 'wT'
@@ -1084,53 +1048,35 @@ object dtmdlContract: TdtmdlContract
       ':County_state,'
       ':Telephone_number,'
       ':email_address)')
-    Left = 488
-    Top = 64
+    Left = 610
+    Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address_name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_city'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_state'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_address'
-        ParamType = ptUnknown
       end>
   end
   object qryUpAddress: TFDQuery
@@ -1147,53 +1093,35 @@ object dtmdlContract: TdtmdlContract
       '  Telephone_number = :Telephone_number,'
       '  Email_Address = :email_Address'
       'where Address = :Address')
-    Left = 488
-    Top = 112
+    Left = 610
+    Top = 140
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Address_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town_City'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Postcode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'County_State'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Telephone_number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'email_Address'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Address'
-        ParamType = ptUnknown
       end>
   end
   object qryDelAddress: TFDQuery
@@ -1201,13 +1129,11 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'delete from Address'
       'where address = :address')
-    Left = 488
-    Top = 216
+    Left = 610
+    Top = 270
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'address'
-        ParamType = ptUnknown
       end>
   end
   object qryUpQuoteAddress: TFDQuery
@@ -1218,28 +1144,21 @@ object dtmdlContract: TdtmdlContract
       '    Address = :Address,'
       '    Customer_Name = :Customer_Name'
       'where Address = :Original_Address')
-    Left = 584
-    Top = 8
+    Left = 730
+    Top = 10
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Address'
-        ParamType = ptUnknown
       end>
   end
   object qryUpContractAddress: TFDQuery
@@ -1250,28 +1169,21 @@ object dtmdlContract: TdtmdlContract
       '    Address = :Address,'
       '    Customer_Name = :Customer_Name'
       'where Address = :Original_Address')
-    Left = 584
-    Top = 64
+    Left = 730
+    Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Address'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerWG: TFDQuery
@@ -1281,18 +1193,14 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop_Group'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 192
+    Left = 860
+    Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCustomerWG: TFDQuery
@@ -1302,28 +1210,20 @@ object dtmdlContract: TdtmdlContract
       
         'Values (:Customer, :Group_Number, :Group_Description, :Material_' +
         'Type, '#39'N'#39')')
-    Left = 688
-    Top = 240
+    Left = 860
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerWT: TFDQuery
@@ -1333,18 +1233,14 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 288
+    Left = 860
+    Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCustomerWT: TFDQuery
@@ -1352,23 +1248,17 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'INSERT INTO Customer_Worktop'
       'Values (:Customer, :Group_Number, :Worktop, '#39'N'#39')')
-    Left = 688
-    Top = 336
+    Left = 860
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerTH: TFDQuery
@@ -1385,18 +1275,14 @@ object dtmdlContract: TdtmdlContract
       'FROM Customer_Worktop_Group_Thick'
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number')
-    Left = 688
-    Top = 384
+    Left = 860
+    Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCustomerTH: TFDQuery
@@ -1404,28 +1290,20 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'INSERT INTO Customer_Worktop_Group_Thick'
       'Values (:Customer, :Group_Number, :Thickness, :Price_Pointer)')
-    Left = 688
-    Top = 440
+    Left = 860
+    Top = 550
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustGroupWorktop: TFDQuery
@@ -1436,23 +1314,17 @@ object dtmdlContract: TdtmdlContract
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number AND'
       '               Worktop = :Worktop')
-    Left = 784
-    Top = 296
+    Left = 980
+    Top = 370
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustGroupThickness: TFDQuery
@@ -1463,23 +1335,17 @@ object dtmdlContract: TdtmdlContract
       'WHERE Customer = :Customer AND'
       '               Group_Number = :Group_Number AND'
       '               Thickness = :Thickness')
-    Left = 792
-    Top = 392
+    Left = 990
+    Top = 490
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryReQuoteCount: TFDQuery
@@ -1488,13 +1354,11 @@ object dtmdlContract: TdtmdlContract
       'SELECT max(Quote_Number) as Last_ReQuote'
       'FROM Contract_Quote'
       'WHERE Original_Quote = :Original_Quote')
-    Left = 352
-    Top = 8
+    Left = 440
+    Top = 10
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Quote'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -1503,12 +1367,12 @@ object dtmdlContract: TdtmdlContract
       'Select Contract_Quote'
       'From Contract_Quote'
       'Where Contract_Description = :GUID')
-    Left = 328
-    Top = 424
+    Left = 410
+    Top = 530
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1518,13 +1382,14 @@ object dtmdlContract: TdtmdlContract
       'Delete From Contract_Quote'
       'Where'
       '(Contract_Quote = :Contract_Quote)')
-    Left = 392
-    Top = 424
+    Left = 490
+    Top = 530
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object AddSQL: TFDQuery
@@ -1541,18 +1406,16 @@ object dtmdlContract: TdtmdlContract
       ''
       ''
       ' ')
-    Left = 452
-    Top = 424
+    Left = 565
+    Top = 530
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryCQUpdateHeader: TFDQuery
@@ -1580,113 +1443,84 @@ object dtmdlContract: TdtmdlContract
       '    Quote_Number = :Quote_Number,'
       '    Revenue_Centre = :Revenue_Centre'
       'WHERE Contract_Quote = :Contract_Quote')
-    Left = 304
-    Top = 120
+    Left = 380
+    Top = 150
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Account_Manager'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Contract_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract_Quote_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Customer_Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Developer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Site_Contact'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Site_Contact'
+      end
+      item
         Name = 'Site_Location'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Site_Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Address'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Expiry_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Original_Quote'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quote_Number'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Revenue_Centre'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Expiry_Date'
+        DataType = ftDateTime
+      end
+      item
+        Name = 'Original_Quote'
+      end
+      item
+        Name = 'Quote_Number'
+      end
+      item
+        Name = 'Revenue_Centre'
+        DataType = ftInteger
+      end
+      item
         Name = 'Contract_Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerSupplier: TFDQuery
@@ -1695,18 +1529,14 @@ object dtmdlContract: TdtmdlContract
       'SELECT Supplier'
       'FROM Customer_Worktop_Group'
       'WHERE Customer = :Customer AND Group_Number = :Group_Number')
-    Left = 152
-    Top = 392
+    Left = 190
+    Top = 490
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerCutOutPrice: TFDQuery
@@ -1744,28 +1574,20 @@ object dtmdlContract: TdtmdlContract
       '  Customer_Cutout_Edge_Group.Material_Type = :Material_type and'
       '  Customer_Cutout.Edge_Type = :Edge_Type and'
       '  Customer_Cutout.Cutout = :cutout')
-    Left = 336
-    Top = 336
+    Left = 420
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cutout'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomerEdgePrice: TFDQuery
@@ -1803,28 +1625,20 @@ object dtmdlContract: TdtmdlContract
       '  Customer_Cutout_Edge_Group.Material_Type = :Material_type and'
       '  Customer_Edge.Edge_Type = :Edge_Type and'
       '  Customer_Edge.Edge_Profile = :Edge_Profile')
-    Left = 448
-    Top = 336
+    Left = 560
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end>
   end
   object qryGetMaterialSlab: TFDQuery
@@ -1833,18 +1647,14 @@ object dtmdlContract: TdtmdlContract
       'SELECT Length, Depth'
       'FROM Material_Type_Slab_Size'
       'WHERE Material_Type = :Material_Type AND Length >= :Length')
-    Left = 416
-    Top = 280
+    Left = 520
+    Top = 350
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Length'
-        ParamType = ptUnknown
       end>
   end
   object qryRevenueCentre: TFDQuery
@@ -1853,12 +1663,12 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 856
-    Top = 24
+    Left = 1070
+    Top = 30
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 944
-    Top = 24
+    Left = 1180
+    Top = 30
   end
 end

@@ -7,7 +7,8 @@ uses
   wtLUworktops, StdCtrls, Buttons, Grids, DBGrids, DBCtrls, DB, QrCtrls,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.ExtCtrls,
+  Vcl.ComCtrls;
 
 type
   TfrmWtLUEdgeDtls = class(TfrmWtLUWorktops)
@@ -25,10 +26,10 @@ type
     lkpEdgeThicknessEdge_Type: TIntegerField;
     lkpEdgeThicknessMaterial_Type: TIntegerField;
     lkpEdgeThicknessPrice_pointer: TIntegerField;
-    lkpEdgeThicknessDescription: TStringField;
-    lkpEdgeThicknessUnit_Price: TFloatField;
-    lkpEdgeThicknessUnit_Cost: TFloatField;
-    lkpEdgeThicknessPrice_Unit_Description: TStringField;
+    lkpEdgeThicknessDescription: TWideStringField;
+    lkpEdgeThicknessUnit_Price: TCurrencyField;
+    lkpEdgeThicknessUnit_Cost: TCurrencyField;
+    lkpEdgeThicknessPrice_Unit_Description: TWideStringField;
     procedure FormCreate(Sender: TObject);
     procedure dblkpMaterialTypeClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);

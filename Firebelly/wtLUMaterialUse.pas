@@ -28,10 +28,10 @@ type
     edtName: TEdit;
     tmrRefresh: TTimer;
     qryMaterialUseMaterial_Use: TIntegerField;
-    qryMaterialUseUse_Description: TStringField;
-    qryMaterialUseinactive: TStringField;
-    qryMaterialUseUse_Type_Description: TStringField;
+    qryMaterialUseUse_Description: TWideStringField;
+    qryMaterialUseInactive: TWideStringField;
     qryMaterialUseUse_Type: TIntegerField;
+    qryMaterialUseUse_Type_Description: TStringField;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
     procedure btnEditClick(Sender: TObject);

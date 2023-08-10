@@ -11,11 +11,9 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -78,16 +76,20 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       item
         Width = 50
       end>
+    ExplicitTop = 305
+    ExplicitWidth = 602
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 263
     Width = 608
     Height = 51
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 254
+    ExplicitWidth = 602
     object BitBtn1: TBitBtn
       Left = 8
       Top = 17
@@ -124,8 +126,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       Height = 25
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object btnExcel: TBitBtn
       Left = 446
@@ -139,13 +141,14 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 608
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 602
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -233,9 +236,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object srclkpWTGPrices: TDataSource
@@ -245,7 +246,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Top = 128
   end
   object lkpWTGPrices: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT'
       '    Worktop_Group_Prices.*,'
@@ -257,14 +258,14 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       
         '    where Prices.Price_pointer = Worktop_Group_Prices.price_poin' +
         'ter and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = Worktop_Group_Prices.price_poin' +
         'ter and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -272,7 +273,7 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
         '    where Prices.Price_pointer = Worktop_Group_Prices.price_poin' +
         'ter and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -298,49 +299,62 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Material_Type'
-        ParamType = ptUnknown
+        ParamType = ptInput
+        Value = Null
       end>
-    object lkpWTGPricesWorktop_group: TIntegerField
-      FieldName = 'Worktop_group'
-    end
     object lkpWTGPricesMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
+      Required = True
+    end
+    object lkpWTGPricesWorktop_Group: TIntegerField
+      FieldName = 'Worktop_Group'
+      Origin = 'Worktop_Group'
+      Required = True
     end
     object lkpWTGPricesThickness: TIntegerField
       FieldName = 'Thickness'
+      Origin = 'Thickness'
+      Required = True
     end
     object lkpWTGPricesPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
-    object lkpWTGPricesThickness_mm: TStringField
+    object lkpWTGPricesThickness_mm: TWideStringField
       FieldName = 'Thickness_mm'
-      Size = 10
-    end
-    object lkpWTGPricesWorktop_Group_Description: TStringField
-      FieldName = 'Worktop_Group_Description'
-      Size = 30
-    end
-    object lkpWTGPricesUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      currency = True
-    end
-    object lkpWTGPricesUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      currency = True
-    end
-    object lkpWTGPricesPrice_Unit_Description: TStringField
-      FieldName = 'Price_Unit_Description'
-    end
-    object lkpWTGPricesMaterial_Description: TStringField
-      FieldName = 'Material_Description'
+      Origin = 'Thickness_mm'
+      Required = True
       Size = 50
+    end
+    object lkpWTGPricesWorktop_Group_Description: TWideStringField
+      FieldName = 'Worktop_Group_Description'
+      Origin = 'Worktop_Group_Description'
+      Required = True
+      Size = 50
+    end
+    object lkpWTGPricesMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object lkpWTGPricesUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpWTGPricesUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpWTGPricesPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
 end

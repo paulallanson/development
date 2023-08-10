@@ -1,19 +1,17 @@
 object frmWTMaintJEdge: TfrmWTMaintJEdge
   Left = 159
   Top = 142
-  Width = 507
-  Height = 226
   Caption = 'Maintain Edges'
+  ClientHeight = 179
+  ClientWidth = 489
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 32
@@ -37,9 +35,9 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 247
@@ -49,18 +47,19 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 499
+    Width = 489
     Height = 137
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 499
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -209,14 +208,11 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsEdgeThickness: TDataSource
@@ -248,19 +244,13 @@ object frmWTMaintJEdge: TfrmWTMaintJEdge
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_profile'
-        ParamType = ptUnknown
       end>
   end
 end
