@@ -30,13 +30,12 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1166
+        Width = 1154
       end>
-    ExplicitWidth = 1168
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1153
+      Width = 1145
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +43,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1153
+        Width = 1133
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56
@@ -64,7 +63,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnAddClick
         end
         object btnChange: TToolButton
-          Left = 62
+          Left = 56
           Top = 0
           Hint = 'Change order details'
           Caption = '  &Change  '
@@ -73,7 +72,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnChangeClick
         end
         object btnDelete: TToolButton
-          Left = 124
+          Left = 112
           Top = 0
           Caption = '&Delete'
           Enabled = False
@@ -81,7 +80,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnDeleteClick
         end
         object ToolButton3: TToolButton
-          Left = 186
+          Left = 168
           Top = 0
           Width = 8
           Caption = 'ToolButton3'
@@ -89,7 +88,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           Style = tbsSeparator
         end
         object btnPreview: TToolButton
-          Left = 194
+          Left = 176
           Top = 0
           Caption = 'Pre&view'
           Enabled = False
@@ -97,7 +96,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPreviewClick
         end
         object btnPrint: TToolButton
-          Left = 256
+          Left = 232
           Top = 0
           Caption = '&Print'
           Enabled = False
@@ -105,7 +104,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPrintClick
         end
         object btnReprint: TToolButton
-          Left = 318
+          Left = 288
           Top = 0
           Caption = '&Reprint'
           Enabled = False
@@ -113,14 +112,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnReprintClick
         end
         object btnEInvoice: TToolButton
-          Left = 380
+          Left = 344
           Top = 0
           Caption = 'e-Invoice'
           ImageIndex = 7
           OnClick = btnEInvoiceClick
         end
         object btnPayments: TToolButton
-          Left = 442
+          Left = 400
           Top = 0
           Caption = 'Taken?'
           Enabled = False
@@ -128,7 +127,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           OnClick = btnPaymentsClick
         end
         object ToolButton6: TToolButton
-          Left = 504
+          Left = 456
           Top = 0
           Width = 8
           Caption = 'ToolButton6'
@@ -136,14 +135,14 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
           Style = tbsSeparator
         end
         object btnReports: TToolButton
-          Left = 512
+          Left = 464
           Top = 0
           Caption = 'Reports'
           ImageIndex = 3
           OnClick = btnReportsClick
         end
         object ToolButton1: TToolButton
-          Left = 574
+          Left = 520
           Top = 0
           Caption = 'Refresh'
           ImageIndex = 8
@@ -379,8 +378,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     Height = 56
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 328
-    ExplicitWidth = 1168
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -397,7 +394,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 872
+      Left = 864
       Top = 1
       Width = 295
       Height = 54
@@ -496,8 +493,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       item
         Width = 50
       end>
-    ExplicitTop = 384
-    ExplicitWidth = 1168
   end
   object Panel3: TPanel
     Left = 0
@@ -509,7 +504,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 4
-    ExplicitWidth = 1168
     object Label4: TLabel
       Left = 8
       Top = 3

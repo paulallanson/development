@@ -11,9 +11,7 @@ object frmWTExpiryDate: TfrmWTExpiryDate
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -79,9 +77,7 @@ object frmWTExpiryDate: TfrmWTExpiryDate
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Software_CheckSum'
-        ParamType = ptUnknown
       end>
   end
 end

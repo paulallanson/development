@@ -319,8 +319,6 @@ var
 	MI			 : MailItem;
   bOutlookRunning: boolean;
   i: integer;
-  iPos: integer;
-  sHTML: string;
 //	Insp		 : Inspector;
 //  NmSpace: NameSpace;
 //  Folder: MAPIFolder;

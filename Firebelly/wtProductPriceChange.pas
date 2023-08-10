@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses wtLUProducts, wtDataModule, wtMain;
+uses
+  System.UITypes,
+  wtLUProducts, wtDataModule, wtMain;
 
 {$R *.dfm}
 

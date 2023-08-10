@@ -29,8 +29,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     ActivePage = tbFinancials
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1180
-    ExplicitHeight = 643
+    ExplicitWidth = 1176
+    ExplicitHeight = 642
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -48,25 +48,25 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Visible = False
       end
       object pnlGeneralDetails: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 481
         Height = 623
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         ExplicitHeight = 624
         DesignSize = (
           481
           623)
         object grpbxAnalysis: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 314
           Width = 465
           Height = 299
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Analysis  '
+          ParentBackground = False
           TabOrder = 2
           ExplicitHeight = 300
           DesignSize = (
@@ -366,12 +366,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxDetails: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 2
           Width = 465
           Height = 271
           Anchors = [akLeft, akTop, akRight]
+          ParentBackground = False
           TabOrder = 0
           DesignSize = (
             465
@@ -628,12 +628,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxAccountCode: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 273
           Width = 465
           Height = 38
           Anchors = [akLeft, akTop, akRight]
+          ParentBackground = False
           TabOrder = 1
           object Label11: TLabel
             Left = 7
@@ -710,18 +710,17 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlHOContacts: TPanel
-        ParentBackground = False
         Left = 481
         Top = 0
         Width = 693
         Height = 623
         Align = alClient
         Caption = 'pnlHOContacts'
+        ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 697
         ExplicitHeight = 624
         object Panel26: TPanel
-          ParentBackground = False
           Left = 1
           Top = 1
           Width = 695
@@ -729,16 +728,17 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alTop
           BevelOuter = bvNone
           Caption = 'Head Office Contacts'
+          ParentBackground = False
           TabOrder = 0
         end
         object Panel27: TPanel
-          ParentBackground = False
           Left = 687
           Top = 57
           Width = 9
           Height = 566
           Align = alRight
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
         end
         object CoolBar9: TCoolBar
@@ -805,15 +805,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactDetails: TPanel
-          ParentBackground = False
           Left = 511
           Top = 57
           Width = 176
           Height = 566
           Align = alRight
+          ParentBackground = False
           TabOrder = 3
           object Panel31: TPanel
-            ParentBackground = False
             Left = 1
             Top = 1
             Width = 174
@@ -821,6 +820,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Align = alTop
             BevelOuter = bvNone
             Caption = 'Product Categories'
+            ParentBackground = False
             TabOrder = 0
           end
           object dblstContactCategories: TDBListBox
@@ -835,24 +835,24 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel28: TPanel
-          ParentBackground = False
           Left = 486
           Top = 57
           Width = 21
           Height = 565
           Align = alRight
+          ParentBackground = False
           TabOrder = 4
           ExplicitLeft = 490
           ExplicitHeight = 566
         end
         object Panel29: TPanel
-          ParentBackground = False
           Left = 1
           Top = 57
           Width = 485
           Height = 565
           Align = alClient
           Caption = 'Panel29'
+          ParentBackground = False
           TabOrder = 5
           ExplicitWidth = 489
           ExplicitHeight = 566
@@ -928,13 +928,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
               end>
           end
           object Panel30: TPanel
-            ParentBackground = False
             Left = 1
             Top = 400
             Width = 487
             Height = 165
             Align = alBottom
             BevelOuter = bvNone
+            ParentBackground = False
             TabOrder = 1
             object LabelName: TLabel
               Left = 4
@@ -1044,14 +1044,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Financials/Credit Details/GDPR'
       ImageIndex = 12
       object pnlInvoiceDetails: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 673
         Height = 623
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 615
+        ExplicitHeight = 614
         DesignSize = (
           673
           623)
@@ -1065,7 +1065,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Color = clBtnFace
           ParentColor = False
           TabOrder = 0
-          ExplicitHeight = 522
+          ExplicitHeight = 521
           DesignSize = (
             662
             530)
@@ -1317,7 +1317,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 8
           end
           object rdgrpCostCentre: TRadioGroup
-            ParentBackground = False
             Tag = 200
             Left = 7
             Top = 352
@@ -1330,6 +1329,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               'None'
               'by Customer'
               'by Branch')
+            ParentBackground = False
             TabOrder = 15
           end
           object ProspectComboBox: TComboBox
@@ -1539,7 +1539,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object grpbxGDPR: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 478
           Width = 662
@@ -1551,10 +1550,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = [fsBold]
+          ParentBackground = False
           ParentFont = False
           TabOrder = 1
           Visible = False
-          ExplicitHeight = 127
+          ExplicitHeight = 126
           object lblGDPRSignedOperatorName: TLabel
             Left = 308
             Top = 50
@@ -1619,30 +1619,30 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlCreditDetails: TPanel
-        ParentBackground = False
         Left = 673
         Top = 0
         Width = 501
         Height = 623
         Align = alClient
+        ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 499
-        ExplicitHeight = 615
+        ExplicitWidth = 495
+        ExplicitHeight = 614
         DesignSize = (
           501
           623)
         object grpbxCredit: TGroupBox
           Left = 6
           Top = 2
-          Width = 465
+          Width = 459
           Height = 589
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
-          ExplicitWidth = 467
-          ExplicitHeight = 581
+          ExplicitWidth = 453
+          ExplicitHeight = 580
           DesignSize = (
-            465
+            459
             589)
           object Label5: TLabel
             Tag = 100
@@ -1746,7 +1746,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 223
-            Width = 466
+            Width = 460
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -1756,7 +1756,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 358
-            Width = 466
+            Width = 460
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -1839,7 +1839,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Value = 100
           end
           object rdgrpCreditRating: TRadioGroup
-            ParentBackground = False
             Tag = 100
             Left = 364
             Top = 11
@@ -1852,6 +1851,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               'Moderate'
               'High Risk'
               'Very High Risk')
+            ParentBackground = False
             TabOrder = 2
           end
           object edtLastReturnDate: TEdit
@@ -2112,7 +2112,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Convert Prospect to Customer'
           TabOrder = 1
           Visible = False
-          ExplicitTop = 588
+          ExplicitTop = 587
         end
       end
     end
@@ -2120,12 +2120,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Options'
       ImageIndex = 2
       object GroupBox2: TGroupBox
-        ParentBackground = False
         Left = 454
         Top = 0
         Width = 390
         Height = 515
         Caption = 'Stock Options'
+        ParentBackground = False
         TabOrder = 0
         object lblFormRefPref: TLabel
           Left = 16
@@ -2206,12 +2206,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 1
         ExplicitHeight = 624
         object GroupBox1: TGroupBox
-          ParentBackground = False
           Left = 16
           Top = 101
           Width = 409
           Height = 113
           Caption = 'Ordering'
+          ParentBackground = False
           TabOrder = 0
           object Label6: TLabel
             Left = 23
@@ -2353,7 +2353,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 1
           end
           object rdgrpProtocol: TRadioGroup
-            ParentBackground = False
             Left = 296
             Top = 56
             Width = 105
@@ -2365,6 +2364,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               'FTP'
               'HTTPS'
               'None')
+            ParentBackground = False
             TabOrder = 5
           end
           object edtSiteURL: TEdit
@@ -2458,13 +2458,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 4
         end
         object grpbxOnline: TGroupBox
-          ParentBackground = False
           Left = 16
           Top = 23
           Width = 409
           Height = 73
           Caption = 'grpbxOnline'
           Enabled = False
+          ParentBackground = False
           TabOrder = 5
           object chkbxCreateBranchOnline: TCheckBox
             Left = 24
@@ -2521,12 +2521,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object GroupBox4: TGroupBox
-        ParentBackground = False
         Left = 857
         Top = 0
         Width = 240
         Height = 137
         Caption = 'Production'
+        ParentBackground = False
         TabOrder = 2
         object Label70: TLabel
           Left = 16
@@ -2564,20 +2564,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnExit = tbBranchesExit
       OnShow = tbBranchesShow
       object pnlBranchTop: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1178
         Height = 273
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
         object Panel13: TPanel
-          ParentBackground = False
           Left = 1
           Top = 232
           Width = 1176
           Height = 40
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
           object Label57: TLabel
             Left = 8
@@ -2746,13 +2746,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object pnlContacts: TPanel
-        ParentBackground = False
         Left = 0
         Top = 273
         Width = 1178
         Height = 351
         Align = alClient
         Caption = 'pnlContacts'
+        ParentBackground = False
         TabOrder = 1
         object dbgContactDetails: TDBGrid
           Left = 1
@@ -2826,12 +2826,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel14: TPanel
-          ParentBackground = False
           Left = 1
           Top = 310
           Width = 1176
           Height = 40
           Align = alBottom
+          ParentBackground = False
           TabOrder = 1
           object Label58: TLabel
             Left = 8
@@ -2870,12 +2870,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel15: TPanel
-          ParentBackground = False
           Left = 1
           Top = 1
           Width = 1176
           Height = 24
           Align = alTop
+          ParentBackground = False
           TabOrder = 2
           object Label59: TLabel
             Left = 9
@@ -2892,12 +2892,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactFunctions: TPanel
-          ParentBackground = False
           Left = 1084
           Top = 25
           Width = 93
           Height = 285
           Align = alRight
+          ParentBackground = False
           TabOrder = 3
           DesignSize = (
             93
@@ -3168,12 +3168,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel12: TPanel
-        ParentBackground = False
         Left = 0
         Top = 564
         Width = 1178
         Height = 41
         Align = alBottom
+        ParentBackground = False
         TabOrder = 3
         DesignSize = (
           1174
@@ -3186,7 +3186,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label56: TLabel
-          Left = 984
+          Left = 980
           Top = 16
           Width = 69
           Height = 13
@@ -3203,7 +3203,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtQuoteSearchChange
         end
         object edtQuoteNumber: TEdit
-          Left = 1064
+          Left = 1060
           Top = 12
           Width = 90
           Height = 21
@@ -3475,12 +3475,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel2: TPanel
-        ParentBackground = False
         Left = 0
         Top = 564
         Width = 1178
         Height = 41
         Align = alBottom
+        ParentBackground = False
         TabOrder = 3
         DesignSize = (
           1174
@@ -3493,7 +3493,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label47: TLabel
-          Left = 984
+          Left = 980
           Top = 16
           Width = 75
           Height = 13
@@ -3510,7 +3510,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtEnqSearchChange
         end
         object edtEnqNumber: TEdit
-          Left = 1064
+          Left = 1060
           Top = 12
           Width = 90
           Height = 21
@@ -3551,12 +3551,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
       end
       object Panel3: TPanel
-        ParentBackground = False
         Left = 0
         Top = 563
         Width = 1174
         Height = 41
         Align = alBottom
+        ParentBackground = False
         TabOrder = 1
         ExplicitTop = 564
         ExplicitWidth = 1178
@@ -3571,7 +3571,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label49: TLabel
-          Left = 974
+          Left = 968
           Top = 16
           Width = 64
           Height = 13
@@ -3588,7 +3588,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtOrderSearchChange
         end
         object edtOrderNumber: TEdit
-          Left = 1052
+          Left = 1046
           Top = 12
           Width = 90
           Height = 21
@@ -4126,12 +4126,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel4: TPanel
-        ParentBackground = False
         Left = 0
         Top = 583
         Width = 1178
         Height = 41
         Align = alBottom
+        ParentBackground = False
         TabOrder = 3
         object Label50: TLabel
           Left = 8
@@ -4149,13 +4149,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtJobSearchChange
         end
         object Panel5: TPanel
-          ParentBackground = False
           Left = 904
           Top = 1
           Width = 273
           Height = 39
           Align = alRight
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
           DesignSize = (
             273
@@ -4213,13 +4213,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitWidth = 1178
       end
       object Panel7: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
         Height = 604
         Align = alClient
         Caption = 'Panel7'
+        ParentBackground = False
         TabOrder = 1
         object CoolBar4: TCoolBar
           Left = 1
@@ -4434,12 +4434,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel8: TPanel
-          ParentBackground = False
           Left = 1
           Top = 562
           Width = 1172
           Height = 41
           Align = alBottom
+          ParentBackground = False
           TabOrder = 2
           ExplicitTop = 563
           ExplicitWidth = 1176
@@ -4465,13 +4465,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnChange = edtStockSearchChange
           end
           object Panel9: TPanel
-            ParentBackground = False
             Left = 986
             Top = 1
             Width = 185
             Height = 39
             Align = alRight
             BevelOuter = bvNone
+            ParentBackground = False
             TabOrder = 1
             ExplicitLeft = 990
           end
@@ -4636,12 +4636,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end>
       end
       object Panel10: TPanel
-        ParentBackground = False
         Left = 0
         Top = 585
         Width = 1174
         Height = 38
         Align = alBottom
+        ParentBackground = False
         TabOrder = 3
         ExplicitTop = 586
         ExplicitWidth = 1178
@@ -4661,13 +4661,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtInvoiceSearchChange
         end
         object Panel11: TPanel
-          ParentBackground = False
           Left = 894
           Top = 1
           Width = 283
           Height = 36
           Align = alRight
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 1
           object Label54: TLabel
             Left = 88
@@ -4699,12 +4699,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Caption = 'Documents'
       ImageIndex = 4
       object Panel1: TPanel
-        ParentBackground = False
         Left = 0
         Top = 583
         Width = 1178
         Height = 41
         Align = alBottom
+        ParentBackground = False
         TabOrder = 0
         object Label33: TLabel
           Left = 8
@@ -4825,22 +4825,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnExit = tbActivityExit
       OnShow = tbActivityShow
       object pnlActivityDetails: TPanel
-        ParentBackground = False
         Left = 0
         Top = 321
         Width = 1174
         Height = 302
         Align = alClient
+        ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 1178
         ExplicitHeight = 303
         object Panel17: TPanel
-          ParentBackground = False
           Left = 1
           Top = 1
           Width = 1172
           Height = 24
           Align = alTop
+          ParentBackground = False
           TabOrder = 0
           ExplicitWidth = 1176
           object Label61: TLabel
@@ -4858,13 +4858,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel18: TPanel
-          ParentBackground = False
           Left = 1
           Top = 25
           Width = 821
           Height = 276
           Align = alLeft
           Caption = 'Panel18'
+          ParentBackground = False
           TabOrder = 1
           ExplicitHeight = 277
           object memNarrative: TMemo
@@ -4884,29 +4884,28 @@ object PBMaintCustFrm: TPBMaintCustFrm
               'Memo1')
             ParentFont = False
             TabOrder = 0
-            ExplicitHeight = 275
           end
         end
         object Panel19: TPanel
-          ParentBackground = False
           Left = 822
           Top = 25
           Width = 351
           Height = 276
           Align = alClient
+          ParentBackground = False
           TabOrder = 2
           ExplicitWidth = 355
           ExplicitHeight = 277
         end
       end
       object pnlActivityList: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
         Height = 321
         Align = alTop
         Caption = 'pnlActivityList'
+        ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 1178
         object CoolBar7: TCoolBar
@@ -4958,12 +4957,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel16: TPanel
-          ParentBackground = False
           Left = 1
           Top = 280
           Width = 1176
           Height = 40
           Align = alBottom
+          ParentBackground = False
           TabOrder = 1
           object Label60: TLabel
             Left = 8
@@ -5068,31 +5067,31 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ImageIndex = 11
       OnShow = tbCrossSellingShow
       object Panel6: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 1174
         Height = 25
         Align = alTop
+        ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 1178
       end
       object Panel20: TPanel
-        ParentBackground = False
         Left = 0
         Top = 25
         Width = 585
         Height = 598
         Align = alLeft
+        ParentBackground = False
         TabOrder = 1
         ExplicitHeight = 599
         object Panel21: TPanel
-          ParentBackground = False
           Left = 1
           Top = 405
           Width = 583
           Height = 192
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
           ExplicitTop = 406
           object memCategoryNarrative: TMemo
@@ -5115,12 +5114,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel25: TPanel
-          ParentBackground = False
           Left = 1
           Top = 381
           Width = 583
           Height = 24
           Align = alBottom
+          ParentBackground = False
           TabOrder = 1
           ExplicitTop = 382
           object Label64: TLabel
@@ -5162,12 +5161,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end>
         end
         object Panel22: TPanel
-          ParentBackground = False
           Left = 480
           Top = 1
           Width = 104
           Height = 380
           Align = alRight
+          ParentBackground = False
           TabOrder = 3
           ExplicitHeight = 381
           object Button1: TButton
@@ -5233,12 +5232,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object Panel23: TPanel
-        ParentBackground = False
         Left = 585
         Top = 25
         Width = 192
         Height = 598
         Align = alLeft
+        ParentBackground = False
         TabOrder = 2
         ExplicitHeight = 599
         object Label62: TLabel
@@ -5328,24 +5327,24 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 725
-    ExplicitWidth = 1180
+    ExplicitTop = 724
+    ExplicitWidth = 1176
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 692
     Width = 1182
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 684
-    ExplicitWidth = 1180
+    ExplicitTop = 683
+    ExplicitWidth = 1176
     DesignSize = (
       1182
       41)
     object DelLabel: TLabel
-      Left = 841
+      Left = 835
       Top = 16
       Width = 125
       Height = 13
@@ -5360,7 +5359,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ExplicitLeft = 867
     end
     object OKBitBtn: TBitBtn
-      Left = 987
+      Left = 981
       Top = 10
       Width = 75
       Height = 25
@@ -5434,10 +5433,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
-      ExplicitLeft = 989
+      ExplicitLeft = 975
     end
     object CancelBitBtn: TBitBtn
-      Left = 1067
+      Left = 1061
       Top = 10
       Width = 75
       Height = 25
@@ -5512,7 +5511,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 1069
+      ExplicitLeft = 1055
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5601,14 +5600,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 1182
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1180
+    ExplicitWidth = 1176
     DesignSize = (
       1182
       41)
@@ -5628,7 +5627,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     object NameEdit: TEdit
       Left = 108
       Top = 8
-      Width = 571
+      Width = 565
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite
@@ -5637,7 +5636,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
-      ExplicitWidth = 573
+      ExplicitWidth = 559
     end
   end
   object FlashTimer: TTimer

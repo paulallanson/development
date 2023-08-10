@@ -35,7 +35,9 @@ var
 
 implementation
 
-uses wtDataModule;
+uses
+  System.UITypes,
+  wtDataModule;
 
 {$R *.dfm}
 

@@ -1,9 +1,9 @@
 object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   Left = 20
   Top = 57
-  Width = 901
-  Height = 528
   Caption = 'Sales By Invoice Number'
+  ClientHeight = 490
+  ClientWidth = 889
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 790
@@ -12,20 +12,20 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
-    ParentBackground = False
     Left = 0
     Top = 225
-    Width = 893
-    Height = 212
+    Width = 889
+    Height = 205
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 883
+    ExplicitHeight = 196
     object OleContainer1: TOleContainer
       Left = 416
       Top = 200
@@ -39,8 +39,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 891
-      Height = 210
+      Width = 887
+      Height = 203
       Align = alClient
       DataSource = dtsrcSalesByInv
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -141,13 +141,14 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     end
   end
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 893
+    Width = 889
     Height = 225
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 883
     object Label3: TLabel
       Left = 8
       Top = 183
@@ -226,7 +227,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnClick = DateFromButtonClick
     end
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 80
       Width = 100
@@ -236,15 +236,16 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      ParentBackground = False
       Left = 120
       Top = 83
       Width = 305
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -295,7 +296,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -310,7 +310,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -330,7 +329,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnExit = DateFromEditExit
     end
     object TotByRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 584
       Top = 8
       Width = 145
@@ -343,6 +341,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         'by Rep'
         'by Account Manager'
         'Do not total')
+      ParentBackground = False
       TabOrder = 5
       OnClick = TotByRadioGroupClick
     end
@@ -352,7 +351,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Width = 217
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       OnChange = cbValuesChange
       Items.Strings = (
@@ -390,7 +388,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       OnExit = DateToEditExit
     end
     object rgRep: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 100
@@ -400,15 +397,16 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Items.Strings = (
         'All Reps'
         'One Rep')
+      ParentBackground = False
       TabOrder = 10
       OnClick = rgRepClick
     end
     object RepPanel: TPanel
-      ParentBackground = False
       Left = 121
       Top = 14
       Width = 304
       Height = 50
+      ParentBackground = False
       TabOrder = 11
       Visible = False
       object lblRep: TLabel
@@ -443,7 +441,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       end
     end
     object RdGrpRepTyp: TRadioGroup
-      ParentBackground = False
       Left = 760
       Top = 8
       Width = 75
@@ -453,6 +450,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Items.Strings = (
         'Detail'
         'Summary')
+      ParentBackground = False
       TabOrder = 12
     end
     object chkbxExcludePaid: TCheckBox
@@ -484,33 +482,34 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 437
-    Width = 893
+    Top = 430
+    Width = 889
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 421
+    ExplicitWidth = 883
     DesignSize = (
-      893
+      889
       41)
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 660
+      Left = 656
       Top = 1
       Width = 232
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 650
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -525,6 +524,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -532,8 +533,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -548,6 +547,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -556,18 +557,17 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 583
+      Left = 589
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Excel'
-      TabOrder = 2
-      OnClick = btbtnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -611,14 +611,17 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 2
+      OnClick = btbtnExcelClick
+      ExplicitLeft = 583
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 300
     Top = 292
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblExporting: TLabel
@@ -639,8 +642,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 478
-    Width = 893
+    Top = 471
+    Width = 889
     Height = 19
     Panels = <
       item
@@ -652,6 +655,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       item
         Width = 50
       end>
+    ExplicitTop = 462
+    ExplicitWidth = 883
   end
   object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields
@@ -814,9 +819,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
     Top = 289
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

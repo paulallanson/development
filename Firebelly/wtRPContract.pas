@@ -468,9 +468,6 @@ begin
 end;
 
 procedure TfrmWTRPContract.ExporttoFile(filename: string);
-var
-  TempName: string;
-  tempStr: string;
 begin
   self.exporting := true;
   assignFile(self.exportFile, fileName);

@@ -45,7 +45,9 @@ var
 
 implementation
 
-uses wtMain, wtMaintCountry;
+uses
+  System.UITypes, System.Types,
+  wtMain, wtMaintCountry;
 
 {$R *.dfm}
 

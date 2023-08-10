@@ -89,7 +89,9 @@ var
 
 implementation
 
-uses wtDataModule, wtMain, WtMaintSalesOrder, wtRSTemplateSheet,
+uses
+  System.UITypes, System.Types,
+  wtDataModule, wtMain, WtMaintSalesOrder, wtRSTemplateSheet,
   wtLUSOLines, WTJobsDM, WtMaintJob, WTLUTemplatingRpts;
 
 {$R *.dfm}

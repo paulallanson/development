@@ -284,7 +284,9 @@ var
 
 implementation
 
-uses WTSrchCustomer, wtMain, wtDataModule, AllCommon, WTMaintContractOption, WtMaintQuote, WTMaintContractConvertOrder,
+uses
+  System.UITypes, System.Types,
+  WTSrchCustomer, wtMain, wtDataModule, AllCommon, WTMaintContractOption, WtMaintQuote, WTMaintContractConvertOrder,
   WTSalesOrderDM, wtMaintSalesOrder, WTWordOLE, WTExcelOLE, WTMaintEmail, WTLUSpecialInstruction, WTLUContractQuotes,
   WTSrchCustContacts, WTMaintContractEvents, WTMaintContractAddress,
   WTMaintContractLines, WTMaintContractMarkup, WTLUCustomerSite;

@@ -1,9 +1,9 @@
 object PBRSSalesCommFrm: TPBRSSalesCommFrm
   Left = 7
   Top = 29
-  Width = 792
-  Height = 518
   Caption = 'Reps Commission report'
+  ClientHeight = 480
+  ClientWidth = 780
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,25 +12,25 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
-    ParentBackground = False
     Left = 0
     Top = 145
-    Width = 784
-    Height = 298
+    Width = 780
+    Height = 294
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 774
+    ExplicitHeight = 285
     object dbgrdSalesInvoice: TDBGrid
       Left = 1
       Top = 1
-      Width = 782
-      Height = 296
+      Width = 778
+      Height = 292
       Align = alClient
       DataSource = dtsrcSalesComm
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -119,13 +119,14 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
   end
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 784
+    Width = 780
     Height = 145
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 774
     object Label3: TLabel
       Left = 8
       Top = 84
@@ -197,7 +198,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Caption = 'To Payment Date:'
     end
     object rdgrpRep: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 16
       Width = 113
@@ -207,15 +207,16 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Items.Strings = (
         'All Reps'
         'One Rep')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpRepClick
     end
     object pnlRepSearch: TPanel
-      ParentBackground = False
       Left = 128
       Top = 16
       Width = 257
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -255,7 +256,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -270,7 +270,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -289,7 +288,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       OnExit = DateFromEditExit
     end
     object rdgrpCommType: TRadioGroup
-      ParentBackground = False
       Left = 392
       Top = 10
       Width = 185
@@ -299,11 +297,11 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Items.Strings = (
         'Rep'
         'Rep and Product Category')
+      ParentBackground = False
       TabOrder = 5
       OnClick = rdgrpCommTypeClick
     end
     object RdGrpRepTyp: TRadioGroup
-      ParentBackground = False
       Left = 392
       Top = 74
       Width = 185
@@ -313,6 +311,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Items.Strings = (
         'Detailed'
         'Summary')
+      ParentBackground = False
       TabOrder = 6
       OnClick = RdGrpRepTypClick
     end
@@ -327,15 +326,17 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 443
-    Width = 784
+    Top = 439
+    Width = 780
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 430
+    ExplicitWidth = 774
     DesignSize = (
-      784
+      780
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -351,14 +352,15 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 551
+      Left = 547
       Top = 1
       Width = 232
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 541
       DesignSize = (
         232
         39)
@@ -369,8 +371,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -385,6 +385,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -392,8 +394,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -408,6 +408,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -415,18 +417,17 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 485
+      Left = 491
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
-      TabOrder = 2
-      OnClick = btbtnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -470,6 +471,9 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 2
+      OnClick = btbtnExcelClick
+      ExplicitLeft = 485
     end
   end
   object DateToEdit: TEdit
@@ -492,11 +496,11 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 268
     Top = 215
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
@@ -728,9 +732,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sel_rep'
-        ParamType = ptUnknown
       end>
   end
 end

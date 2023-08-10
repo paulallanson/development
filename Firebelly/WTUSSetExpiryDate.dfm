@@ -11,9 +11,7 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Label62: TLabel
     Left = 8
@@ -84,8 +82,6 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
       Top = 22
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -100,14 +96,14 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 50
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -122,6 +118,8 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object btnOK: TBitBtn
@@ -133,9 +131,9 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 128
@@ -145,8 +143,8 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object spnExpiryDays: TSpinEdit
     Left = 112
@@ -169,19 +167,13 @@ object frmWTUSSetExpiryDate: TfrmWTUSSetExpiryDate
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Expiry_Days'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
 end

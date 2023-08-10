@@ -96,7 +96,9 @@ var
 
 implementation
 
-uses wtMain, DateSelV5, wtMaintWT, wtLUWTThickness;
+uses
+  System.UITypes, System.Types,
+  wtMain, DateSelV5, wtMaintWT, wtLUWTThickness;
 
 {$R *.dfm}
 

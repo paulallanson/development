@@ -525,7 +525,9 @@ begin
 
 (*  if  (Column.Title.Caption <> 'Bag No') then
   	begin
-      StrPCopy(txt, Column.field.asstring);
+      if Assigned(Column.Field) then
+	      StrPCopy(Txt, Column.Field.AsString) else
+        StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -534,7 +536,9 @@ begin
     end
   else
   	begin
-  		StrPCopy(Txt, Column.field.asstring);
+      if Assigned(Column.Field) then
+	      StrPCopy(Txt, Column.Field.AsString) else
+        StrPCopy(Txt, '');
 
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)

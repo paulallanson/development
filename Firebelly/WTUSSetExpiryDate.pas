@@ -43,7 +43,9 @@ var
 
 implementation
 
-uses AllCommon, DateSelV5;
+uses
+  System.UITypes,
+  AllCommon, DateSelV5;
 
 {$R *.dfm}
 

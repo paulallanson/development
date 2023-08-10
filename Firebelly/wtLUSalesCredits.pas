@@ -517,7 +517,9 @@ begin
       (Column.Title.Caption <> 'Goods') and
       (Column.Title.Caption <> 'VAT') then
   	begin
-  		StrPCopy(txt, Column.field.asstring);
+      if Assigned(Column.Field) then
+    		StrPCopy(Txt, Column.Field.AsString) else
+        StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -544,7 +546,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'VAT') then
         try
-            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
+          sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end

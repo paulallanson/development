@@ -40,7 +40,9 @@ var
 
 implementation
 
-uses wtMain, wtMaintAppointmentDateType;
+uses
+  System.Types,
+  wtMain, wtMaintAppointmentDateType;
 
 {$R *.dfm}
 

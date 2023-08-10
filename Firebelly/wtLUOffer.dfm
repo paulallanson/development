@@ -11,10 +11,8 @@ object frmwtLUOffer: TfrmwtLUOffer
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -116,9 +114,9 @@ object frmwtLUOffer: TfrmwtLUOffer
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -159,9 +157,7 @@ object frmwtLUOffer: TfrmwtLUOffer
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

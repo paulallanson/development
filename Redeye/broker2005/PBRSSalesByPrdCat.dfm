@@ -1,9 +1,9 @@
 object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   Left = 3
   Top = 40
-  Width = 790
-  Height = 560
   Caption = 'Sales By Product Category'
+  ClientHeight = 522
+  ClientWidth = 778
   Color = clBtnFace
   Constraints.MinHeight = 560
   Constraints.MinWidth = 790
@@ -12,25 +12,25 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
-    ParentBackground = False
     Left = 0
     Top = 185
-    Width = 782
-    Height = 300
+    Width = 778
+    Height = 296
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 772
+    ExplicitHeight = 287
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
-      Width = 780
-      Height = 298
+      Width = 776
+      Height = 294
       Align = alClient
       DataSource = dtsrcSalesByInv
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -122,13 +122,14 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     end
   end
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 782
+    Width = 778
     Height = 185
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 772
     object Label3: TLabel
       Left = 8
       Top = 145
@@ -212,7 +213,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnChange = cbSortChange
       Items.Strings = (
@@ -227,7 +227,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = cbSortChange
       Items.Strings = (
@@ -252,7 +251,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Width = 217
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbValuesChange
       Items.Strings = (
@@ -280,7 +278,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       OnExit = DateToEditExit
     end
     object rgPrdCat: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 137
@@ -290,15 +287,16 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Items.Strings = (
         'All Product Categories'
         'One Product Category')
+      ParentBackground = False
       TabOrder = 6
       OnClick = rgPrdCatClick
     end
     object RepPanel: TPanel
-      ParentBackground = False
       Left = 168
       Top = 14
       Width = 321
       Height = 50
+      ParentBackground = False
       TabOrder = 7
       Visible = False
       object lblPrdCat: TLabel
@@ -333,7 +331,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       end
     end
     object RdGrpRepTyp: TRadioGroup
-      ParentBackground = False
       Left = 656
       Top = 8
       Width = 115
@@ -343,6 +340,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Items.Strings = (
         'Summary'
         'Detail')
+      ParentBackground = False
       TabOrder = 8
       OnClick = RdGrpRepTypClick
     end
@@ -355,7 +353,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       TabOrder = 9
     end
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 80
       Width = 137
@@ -365,15 +362,16 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 10
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      ParentBackground = False
       Left = 168
       Top = 83
       Width = 321
       Height = 57
+      ParentBackground = False
       TabOrder = 11
       Visible = False
       object lblCustBran: TLabel
@@ -419,15 +417,17 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 485
-    Width = 782
+    Top = 481
+    Width = 778
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 472
+    ExplicitWidth = 772
     DesignSize = (
-      782
+      778
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -443,22 +443,21 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 549
+      Left = 545
       Top = 1
       Width = 232
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 539
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -473,6 +472,8 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -480,8 +481,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -496,26 +495,28 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 376
+      Left = 382
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
+      ExplicitLeft = 376
     end
     object btbtnExcel: TBitBtn
-      Left = 472
+      Left = 478
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Excel'
-      TabOrder = 2
-      OnClick = btbtnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -559,14 +560,17 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 2
+      OnClick = btbtnExcelClick
+      ExplicitLeft = 472
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 260
     Top = 252
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblExporting: TLabel
@@ -757,9 +761,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
     Top = 289
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

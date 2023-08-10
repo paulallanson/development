@@ -43,7 +43,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       1004
       42)
     object lblDelete: TLabel
-      Left = 647
+      Left = 641
       Top = 15
       Width = 163
       Height = 13
@@ -58,7 +58,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       ExplicitLeft = 655
     end
     object btnOK: TBitBtn
-      Left = 826
+      Left = 820
       Top = 9
       Width = 75
       Height = 25
@@ -69,10 +69,9 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
-      ExplicitLeft = 834
     end
     object BitBtn2: TBitBtn
-      Left = 912
+      Left = 906
       Top = 9
       Width = 75
       Height = 25
@@ -82,7 +81,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtn2Click
-      ExplicitLeft = 920
     end
     object chkbxInactive: TCheckBox
       Left = 13

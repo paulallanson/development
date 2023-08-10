@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, StdCtrls, Grids, DBGrids, ExtCtrls, ImgList, ToolWin, pbSalesInvoiceDM,
-  Db;
+  Db, System.ImageList;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}
@@ -576,7 +576,9 @@ begin
       (Column.Title.Caption <> 'Goods') and
       (Column.Title.Caption <> 'VAT') then
   	begin
-  		StrPCopy(txt, Column.field.asstring);
+      if Assigned(Column.Field) then
+	      StrPCopy(Txt, Column.Field.AsString) else
+        StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);

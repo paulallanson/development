@@ -23,10 +23,10 @@ type
     function GetLocation: string;
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
     procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string);
-    constructor Create;
-    destructor Destroy; override;
   public
     { Public declarations }
+    constructor Create;
+    destructor Destroy; override;
     class function New: IPrinterToAttachment;
     procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
     procedure PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
@@ -93,7 +93,6 @@ end;
 
 procedure TPrinterTools.PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
 var
-  fileType: TPrinterFileType;
   Location,
   targetFileName: string;
 begin

@@ -48,6 +48,7 @@ var
 implementation
 
 uses
+  System.UITypes, System.Types,
   WTMaintTextureGroup, wtMain;
 
 {$R *.DFM}

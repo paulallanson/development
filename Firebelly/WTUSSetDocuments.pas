@@ -41,7 +41,9 @@ var
 
 implementation
 
-uses AllCommon, DateSelV5, wtDataModule, wtRPQuote;
+uses
+  System.UITypes,
+  AllCommon, DateSelV5, wtDataModule, wtRPQuote;
 
 {$R *.dfm}
 

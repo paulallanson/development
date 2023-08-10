@@ -93,7 +93,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, System.Types,
   wtDataModule, wtMain, WtMaintSalesOrder, wtRSTemplateSheet, WTRSSODeliveryNote,
   wtLUSOLines, WTJobsDM, WtMaintJob, WTRSFittingSheet, WtMaintJobComplete, WTLUFittingRpts;
 
@@ -305,7 +305,6 @@ begin
       except
       end;
     end;
-
 end;
 
 function TfrmWTLUFitting.CheckInput: boolean;

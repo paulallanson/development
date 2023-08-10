@@ -3,21 +3,19 @@ object frmwtMaintOffer: TfrmwtMaintOffer
   Top = 181
   BorderStyle = bsDialog
   Caption = 'Offers'
-  ClientHeight = 279
-  ClientWidth = 787
+  ClientHeight = 270
+  ClientWidth = 781
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    787
-    279)
-  PixelsPerInch = 96
+    781
+    270)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -56,7 +54,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
   end
   object btnOK: TBitBtn
     Left = 308
-    Top = 241
+    Top = 232
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -64,21 +62,23 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 11
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 241
   end
   object BitBtn2: TBitBtn
     Left = 404
-    Top = 241
+    Top = 232
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 12
     NumGlyphs = 2
+    TabOrder = 12
+    ExplicitTop = 241
   end
   object chkbxInactive: TCheckBox
     Left = 16
@@ -1167,8 +1167,6 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Top = 138
     Width = 25
     Height = 25
-    TabOrder = 3
-    OnClick = btnEffectiveDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1183,14 +1181,14 @@ object frmwtMaintOffer: TfrmwtMaintOffer
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnEffectiveDateClick
   end
   object BitBtn5: TBitBtn
     Left = 240
     Top = 138
     Width = 25
     Height = 25
-    TabOrder = 4
-    OnClick = BitBtn5Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1205,14 +1203,14 @@ object frmwtMaintOffer: TfrmwtMaintOffer
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = BitBtn5Click
   end
   object BitBtn1: TBitBtn
     Left = 206
     Top = 170
     Width = 25
     Height = 25
-    TabOrder = 6
-    OnClick = BitBtn1Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -1227,14 +1225,14 @@ object frmwtMaintOffer: TfrmwtMaintOffer
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = BitBtn1Click
   end
   object BitBtn3: TBitBtn
     Left = 240
     Top = 170
     Width = 25
     Height = 25
-    TabOrder = 7
-    OnClick = BitBtn3Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1249,9 +1247,11 @@ object frmwtMaintOffer: TfrmwtMaintOffer
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = BitBtn3Click
   end
   object edtEffectiveDate: TEdit
-    Left = 104
+    Left = 92
     Top = 140
     Width = 89
     Height = 21
@@ -1259,9 +1259,10 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     TabOrder = 2
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
+    ExplicitLeft = 104
   end
   object edtInEffectiveDate: TEdit
-    Left = 104
+    Left = 92
     Top = 172
     Width = 89
     Height = 21
@@ -1269,6 +1270,7 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     TabOrder = 5
     OnChange = EnableOK
     OnExit = edtEffectiveDateExit
+    ExplicitLeft = 104
   end
   object edtDescription: TEdit
     Left = 104
@@ -1315,39 +1317,27 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'ineffective_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'effective_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sale_Offer'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1376,34 +1366,24 @@ object frmwtMaintOffer: TfrmwtMaintOffer
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Ineffective_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
-        Name = 'effective_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'effective_Date'
+        DataType = ftDateTime
+      end
+      item
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

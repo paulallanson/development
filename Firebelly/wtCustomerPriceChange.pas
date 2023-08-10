@@ -69,7 +69,9 @@ var
 
 implementation
 
-uses wtSrchCustomer, wtDataModule, wtMain;
+uses
+  System.UITypes,
+  wtSrchCustomer, wtDataModule, wtMain;
 
 {$R *.dfm}
 

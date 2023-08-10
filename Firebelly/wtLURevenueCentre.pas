@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses WTMaintRevenueCentre, wtMain;
+uses
+  System.UITypes, System.Types,
+  WTMaintRevenueCentre, wtMain;
 
 {$R *.dfm}
 

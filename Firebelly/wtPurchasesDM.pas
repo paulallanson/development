@@ -465,7 +465,6 @@ end;
 procedure TdtmdlPurchaseOrder.RefreshAlldata;
 var
   sTemp: string;
-  i: integer;
 begin
   sTemp := '';
   with qryAllPurchases do

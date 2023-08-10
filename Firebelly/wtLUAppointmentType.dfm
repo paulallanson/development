@@ -11,10 +11,8 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -84,9 +82,9 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -123,9 +121,7 @@ object frmwtLUAppointmentType: TfrmwtLUAppointmentType
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Level_of_Importance'
-        ParamType = ptUnknown
       end>
   end
   object qryDefaults: TFDQuery

@@ -3,8 +3,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   Top = 153
   BorderStyle = bsDialog
   Caption = 'Allocate Documents'
-  ClientHeight = 268
-  ClientWidth = 247
+  ClientHeight = 259
+  ClientWidth = 241
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,8 +13,8 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   Font.Style = []
   Position = poScreenCenter
   DesignSize = (
-    247
-    268)
+    241
+    259)
   TextHeight = 13
   object Label3: TLabel
     Left = 8
@@ -83,7 +83,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
   end
   object btnOK: TBitBtn
     Left = 40
-    Top = 224
+    Top = 215
     Width = 75
     Height = 26
     Anchors = [akLeft, akBottom]
@@ -94,10 +94,11 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
+    ExplicitTop = 224
   end
   object BitBtn2: TBitBtn
     Left = 128
-    Top = 224
+    Top = 215
     Width = 75
     Height = 26
     Anchors = [akLeft, akBottom]
@@ -106,6 +107,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 224
   end
   object prgbrRecords: TProgressBar
     Left = 8
@@ -145,9 +147,7 @@ object frmWTUSSetDocuments: TfrmWTUSSetDocuments
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end>
   end
 end

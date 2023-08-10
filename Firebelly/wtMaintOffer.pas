@@ -61,7 +61,9 @@ var
 
 implementation
 
-uses wtLUOffer, DateSelV5, Allcommon;
+uses
+  System.UITypes,
+  wtLUOffer, DateSelV5, Allcommon;
 
 {$R *.dfm}
 

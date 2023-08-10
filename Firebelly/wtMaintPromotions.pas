@@ -92,7 +92,9 @@ var
 
 implementation
 
-uses wtLUPromotions;
+uses
+  System.UITypes,
+  wtLUPromotions;
 
 {$R *.dfm}
 

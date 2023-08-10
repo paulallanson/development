@@ -1,27 +1,26 @@
 object frmWTMaintPromotions: TfrmWTMaintPromotions
   Left = 344
   Top = 48
-  Width = 595
-  Height = 511
   Caption = 'Promotions'
+  ClientHeight = 464
+  ClientWidth = 577
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 587
+    Width = 577
     Height = 73
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 587
     object Label3: TLabel
       Left = 8
       Top = 16
@@ -71,10 +70,12 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   object Panel3: TPanel
     Left = 0
     Top = 73
-    Width = 587
-    Height = 366
+    Width = 577
+    Height = 350
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 587
+    ExplicitHeight = 366
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -130,8 +131,6 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       Height = 25
       Caption = '&Add'
       Enabled = False
-      TabOrder = 2
-      OnClick = btnAddClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -146,6 +145,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnAddClick
     end
     object btnRemove: TBitBtn
       Left = 253
@@ -154,8 +155,6 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       Height = 25
       Caption = '&Remove'
       Enabled = False
-      TabOrder = 3
-      OnClick = btnRemoveClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -170,6 +169,8 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnRemoveClick
     end
     object lstbxNonMembers: TListBox
       Left = 344
@@ -214,11 +215,13 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
   end
   object Panel2: TPanel
     Left = 0
-    Top = 439
-    Width = 587
+    Top = 423
+    Width = 577
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 439
+    ExplicitWidth = 587
     object btnOK: TBitBtn
       Left = 212
       Top = 8
@@ -226,8 +229,6 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -246,14 +247,17 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 300
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object chkbxInactive: TCheckBox
       Left = 13
@@ -273,9 +277,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWT: TFDQuery
@@ -296,19 +298,13 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Entry_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryMembers: TFDQuery
@@ -331,9 +327,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryNonMembers: TFDQuery
@@ -354,9 +348,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsNonMembers: TDataSource
@@ -387,14 +379,10 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsMaterialType: TDataSource
@@ -431,9 +419,7 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 393
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -450,24 +436,16 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Entries'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Promotion_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -490,19 +468,13 @@ object frmWTMaintPromotions: TfrmWTMaintPromotions
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Promotion_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Entries'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

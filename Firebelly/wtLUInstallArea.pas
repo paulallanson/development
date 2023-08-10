@@ -51,7 +51,9 @@ var
 
 implementation
 
-uses wtMain, wtMaintInstallArea;
+uses
+  System.UITypes, System.Types,
+  wtMain, wtMaintInstallArea;
 
 {$R *.dfm}
 

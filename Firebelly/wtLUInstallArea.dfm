@@ -11,10 +11,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -111,8 +109,8 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 6
       NumGlyphs = 2
+      TabOrder = 6
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -175,14 +173,10 @@ object frmWTLUInstallArea: TfrmWTLUInstallArea
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
