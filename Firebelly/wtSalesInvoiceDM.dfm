@@ -1477,6 +1477,9 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     ParamData = <
       item
         Name = 'Sales_order'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object qryJBHeader: TFDQuery

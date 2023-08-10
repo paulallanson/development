@@ -1,9 +1,9 @@
 object frmWTLUSOLines: TfrmWTLUSOLines
   Left = 230
   Top = 146
-  Width = 650
-  Height = 296
   Caption = 'Convert quote to job - sales order line selection'
+  ClientHeight = 258
+  ClientWidth = 638
   Color = clBtnFace
   Constraints.MinHeight = 250
   Constraints.MinWidth = 570
@@ -12,24 +12,24 @@ object frmWTLUSOLines: TfrmWTLUSOLines
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 228
-    Width = 642
+    Top = 217
+    Width = 638
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 208
+    ExplicitWidth = 632
     DesignSize = (
-      642
+      638
       41)
     object btnSelect: TButton
-      Left = 457
+      Left = 453
       Top = 8
       Width = 75
       Height = 25
@@ -38,9 +38,10 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Enabled = False
       TabOrder = 0
       OnClick = btnSelectClick
+      ExplicitLeft = 447
     end
     object btnCancel: TButton
-      Left = 553
+      Left = 549
       Top = 8
       Width = 75
       Height = 25
@@ -48,13 +49,14 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       Caption = 'Cancel'
       TabOrder = 1
       OnClick = btnCancelClick
+      ExplicitLeft = 543
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 41
-    Width = 642
-    Height = 187
+    Width = 638
+    Height = 176
     Align = alClient
     DataSource = dtsSOLines
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -106,13 +108,14 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 642
+    Width = 638
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 632
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -159,91 +162,128 @@ object frmWTLUSOLines: TfrmWTLUSOLines
       'where sales_order = :sales_order and'
       'quote <> NULL and Job is NULL'
       'order by sales_order_line_no')
-    Left = 256
-    Top = 64
+    Left = 288
+    Top = 80
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'sales_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
     object qrySOLinesSales_order_Line_no: TIntegerField
       FieldName = 'Sales_order_Line_no'
+      Origin = 'Sales_order_Line_no'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qrySOLinesSales_Order: TIntegerField
       FieldName = 'Sales_Order'
+      Origin = 'Sales_Order'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qrySOLinesJob: TFloatField
       FieldName = 'Job'
+      Origin = 'Job'
     end
-    object qrySOLinesUnit_price: TFloatField
+    object qrySOLinesUnit_price: TCurrencyField
       FieldName = 'Unit_price'
-      DisplayFormat = '0.00'
+      Origin = 'Unit_price'
+      Required = True
     end
     object qrySOLinesQuantity: TIntegerField
       FieldName = 'Quantity'
+      Origin = 'Quantity'
+      Required = True
     end
-    object qrySOLinesUnit_cost: TFloatField
+    object qrySOLinesUnit_cost: TCurrencyField
       FieldName = 'Unit_cost'
-      DisplayFormat = '0.00'
+      Origin = 'Unit_cost'
+      Required = True
     end
     object qrySOLinesQuantity_Allocated: TIntegerField
       FieldName = 'Quantity_Allocated'
+      Origin = 'Quantity_Allocated'
+      Required = True
     end
     object qrySOLinesQuantity_Delivered: TIntegerField
       FieldName = 'Quantity_Delivered'
+      Origin = 'Quantity_Delivered'
+      Required = True
     end
     object qrySOLinesQuantity_Invoiced: TIntegerField
       FieldName = 'Quantity_Invoiced'
+      Origin = 'Quantity_Invoiced'
+      Required = True
     end
     object qrySOLinesSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
+      Origin = 'Sell_Unit'
+      Required = True
     end
     object qrySOLinesCost_Unit: TIntegerField
       FieldName = 'Cost_Unit'
+      Origin = 'Cost_Unit'
+      Required = True
     end
-    object qrySOLinesNett_Price: TFloatField
+    object qrySOLinesNett_Price: TCurrencyField
       FieldName = 'Nett_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Nett_Price'
     end
-    object qrySOLinesDiscount_Value: TFloatField
+    object qrySOLinesDiscount_Value: TCurrencyField
       FieldName = 'Discount_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Discount_Value'
     end
-    object qrySOLinesInstallation_price: TFloatField
+    object qrySOLinesInstallation_price: TCurrencyField
       FieldName = 'Installation_price'
-      DisplayFormat = '0.00'
+      Origin = 'Installation_price'
     end
-    object qrySOLinesSurvey_price: TFloatField
+    object qrySOLinesSurvey_price: TCurrencyField
       FieldName = 'Survey_price'
-      DisplayFormat = '0.00'
+      Origin = 'Survey_price'
     end
-    object qrySOLinesDelivery_Price: TFloatField
+    object qrySOLinesDelivery_Price: TCurrencyField
       FieldName = 'Delivery_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Delivery_Price'
     end
     object qrySOLinesVat: TIntegerField
       FieldName = 'Vat'
+      Origin = 'Vat'
     end
-    object qrySOLinesDescription: TStringField
+    object qrySOLinesDescription: TWideStringField
       FieldName = 'Description'
-      Size = 50
+      Origin = 'Description'
+      Size = 255
     end
     object qrySOLinesProduct: TIntegerField
       FieldName = 'Product'
+      Origin = 'Product'
     end
     object qrySOLinesQuote: TIntegerField
       FieldName = 'Quote'
+      Origin = 'Quote'
     end
     object qrySOLinesMarkup_Value: TFloatField
       FieldName = 'Markup_Value'
+      Origin = 'Markup_Value'
     end
     object qrySOLinesWaste_Value: TFloatField
       FieldName = 'Waste_Value'
+      Origin = 'Waste_Value'
+    end
+    object qrySOLinesSSMA_TimeStamp: TBytesField
+      AutoGenerateValue = arDefault
+      FieldName = 'SSMA_TimeStamp'
+      Origin = 'SSMA_TimeStamp'
+      ReadOnly = True
+      Required = True
+      Size = 8
     end
     object qrySOLinesSupply_Price: TFloatField
       FieldName = 'Supply_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Supply_Price'
+      ReadOnly = True
     end
   end
   object dtsSOLines: TDataSource

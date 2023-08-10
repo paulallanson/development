@@ -368,6 +368,9 @@ begin
     begin
       chkbxMerge.Checked := false;
       chkbxMerge.enabled := false;
+      {$IFDEF DEBUG}
+      raise Exception.Create('Please install AzSDK PDF Split Merge ActiveX DLL first.');
+      {$ENDIF}
 //      ShowMessage('Please install AzSDK PDF Split Merge ActiveX DLL first.');
 //      Exit;
     end;

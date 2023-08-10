@@ -2,8 +2,8 @@ object frmwtRPSOrder: TfrmwtRPSOrder
   Left = 41
   Top = 104
   Caption = 'Sales Order Print'
-  ClientHeight = 557
-  ClientWidth = 1227
+  ClientHeight = 548
+  ClientWidth = 1221
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1688,70 +1688,92 @@ object frmwtRPSOrder: TfrmwtRPSOrder
       item
         Name = 'Sales_Order'
         DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
     object qrySOLineSales_Order: TIntegerField
       FieldName = 'Sales_Order'
+      Origin = 'Sales_Order'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qrySOLineSales_order_Line_no: TIntegerField
       FieldName = 'Sales_order_Line_no'
+      Origin = 'Sales_order_Line_no'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qrySOLineJob: TFloatField
       FieldName = 'Job'
+      Origin = 'Job'
     end
-    object qrySOLineUnit_price: TFloatField
+    object qrySOLineUnit_price: TCurrencyField
       FieldName = 'Unit_price'
-      DisplayFormat = '0.00'
+      Origin = 'Unit_price'
+      Required = True
     end
     object qrySOLineQuantity: TIntegerField
       FieldName = 'Quantity'
+      Origin = 'Quantity'
+      Required = True
     end
     object qrySOLineSell_Unit: TIntegerField
       FieldName = 'Sell_Unit'
+      Origin = 'Sell_Unit'
+      Required = True
     end
-    object qrySOLineTotal_Price: TFloatField
+    object qrySOLineTotal_Price: TCurrencyField
       FieldName = 'Total_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Total_Price'
+      ReadOnly = True
     end
-    object qrySOLineNett_Price: TFloatField
+    object qrySOLineNett_Price: TCurrencyField
       FieldName = 'Nett_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Nett_Price'
     end
-    object qrySOLineDiscount_Value: TFloatField
+    object qrySOLineDiscount_Value: TCurrencyField
       FieldName = 'Discount_Value'
-      DisplayFormat = '0.00'
+      Origin = 'Discount_Value'
     end
-    object qrySOLineInstallation_price: TFloatField
+    object qrySOLineInstallation_price: TCurrencyField
       FieldName = 'Installation_price'
-      DisplayFormat = '0.00'
+      Origin = 'Installation_price'
     end
-    object qrySOLineSurvey_price: TFloatField
+    object qrySOLineSurvey_price: TCurrencyField
       FieldName = 'Survey_price'
-      DisplayFormat = '0.00'
+      Origin = 'Survey_price'
     end
-    object qrySOLineDelivery_Price: TFloatField
+    object qrySOLineDelivery_Price: TCurrencyField
       FieldName = 'Delivery_Price'
-      DisplayFormat = '0.00'
+      Origin = 'Delivery_Price'
     end
-    object qrySOLineDescription: TStringField
+    object qrySOLineDescription: TWideStringField
       FieldName = 'Description'
-      Size = 50
+      Origin = 'Description'
+      Size = 255
     end
     object qrySOLineProduct: TIntegerField
       FieldName = 'Product'
-    end
-    object qrySOLineVat: TIntegerField
-      FieldName = 'Vat'
-    end
-    object qrySOLineVat_Rate: TFloatField
-      FieldName = 'Vat_Rate'
-      DisplayFormat = '0.00'
-    end
-    object qrySOLineVAT_Description: TStringField
-      FieldName = 'VAT_Description'
-      Size = 40
+      Origin = 'Product'
     end
     object qrySOLineQuote: TIntegerField
       FieldName = 'Quote'
+      Origin = 'Quote'
+    end
+    object qrySOLineVat: TIntegerField
+      FieldName = 'Vat'
+      Origin = 'Vat'
+    end
+    object qrySOLineVat_Rate: TFloatField
+      FieldName = 'Vat_Rate'
+      Origin = 'Vat_Rate'
+      Required = True
+    end
+    object qrySOLineVAT_Description: TWideStringField
+      FieldName = 'VAT_Description'
+      Origin = 'VAT_Description'
+      Required = True
+      Size = 40
     end
   end
   object qryQElements: TFDQuery

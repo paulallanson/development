@@ -34,8 +34,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 373
-    ExplicitWidth = 530
     DesignSize = (
       526
       80)
@@ -99,7 +97,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitWidth = 530
     object Label2: TLabel
       Left = 8
       Top = 5
@@ -128,7 +125,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Height = 138
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 530
     object selectionGrp: TGroupBox
       Left = 8
       Top = 7
@@ -181,8 +177,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
     Height = 171
     Align = alClient
     TabOrder = 4
-    ExplicitWidth = 530
-    ExplicitHeight = 172
     object pcDocumentDetails: TPageControl
       Left = 1
       Top = 1
@@ -191,8 +185,6 @@ object frmWTRSFittingSheet: TfrmWTRSFittingSheet
       ActivePage = TabSheet1
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 528
-      ExplicitHeight = 170
       object TabSheet1: TTabSheet
         Caption = 'Order Documents'
         object lstbxDocuments: TListBox

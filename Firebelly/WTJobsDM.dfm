@@ -8,7 +8,7 @@ object dtmdlJob: TdtmdlJob
     Top = 30
   end
   object qryAllJobs: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT Job.*,'
       '      Material_Type.Description AS Material_Description,'
@@ -31,167 +31,256 @@ object dtmdlJob: TdtmdlJob
     Top = 30
     object qryAllJobsJob: TFloatField
       FieldName = 'Job'
+      Origin = 'Job'
+      Required = True
     end
     object qryAllJobsJob_Status: TIntegerField
       FieldName = 'Job_Status'
+      Origin = 'Job_Status'
+      Required = True
     end
     object qryAllJobsQuote: TIntegerField
       FieldName = 'Quote'
+      Origin = 'Quote'
     end
     object qryAllJobsCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qryAllJobsContact_name: TStringField
+    object qryAllJobsContact_name: TWideStringField
       FieldName = 'Contact_name'
+      Origin = 'Contact_name'
       Size = 50
     end
-    object qryAllJobsOrder_ref_no: TStringField
+    object qryAllJobsOrder_ref_no: TWideStringField
       FieldName = 'Order_ref_no'
+      Origin = 'Order_ref_no'
+      Required = True
       Size = 30
     end
-    object qryAllJobsDate_Raised: TDateTimeField
+    object qryAllJobsDate_Raised: TSQLTimeStampField
       FieldName = 'Date_Raised'
+      Origin = 'Date_Raised'
+      Required = True
     end
-    object qryAllJobsDate_Required: TDateTimeField
+    object qryAllJobsDate_Required: TSQLTimeStampField
       FieldName = 'Date_Required'
+      Origin = 'Date_Required'
+      Required = True
     end
-    object qryAllJobsPayment_due: TDateTimeField
+    object qryAllJobsPayment_due: TSQLTimeStampField
       FieldName = 'Payment_due'
+      Origin = 'Payment_due'
     end
-    object qryAllJobsProduction_date: TDateTimeField
+    object qryAllJobsProduction_date: TSQLTimeStampField
       FieldName = 'Production_date'
+      Origin = 'Production_date'
     end
-    object qryAllJobsTemplate_date: TDateTimeField
+    object qryAllJobsTemplate_date: TSQLTimeStampField
       FieldName = 'Template_date'
+      Origin = 'Template_date'
     end
-    object qryAllJobsInstallation_date: TDateTimeField
+    object qryAllJobsInstallation_date: TSQLTimeStampField
       FieldName = 'Installation_date'
+      Origin = 'Installation_date'
     end
-    object qryAllJobsDeposit_amount: TFloatField
+    object qryAllJobsDeposit_amount: TCurrencyField
       FieldName = 'Deposit_amount'
-      currency = True
+      Origin = 'Deposit_amount'
     end
-    object qryAllJobsDelivery_Price: TFloatField
+    object qryAllJobsDelivery_Price: TCurrencyField
       FieldName = 'Delivery_Price'
-      currency = True
+      Origin = 'Delivery_Price'
     end
-    object qryAllJobsInstallation_price: TFloatField
+    object qryAllJobsInstallation_price: TCurrencyField
       FieldName = 'Installation_price'
-      currency = True
+      Origin = 'Installation_price'
     end
-    object qryAllJobsSurvey_price: TFloatField
+    object qryAllJobsSurvey_price: TCurrencyField
       FieldName = 'Survey_price'
-      currency = True
+      Origin = 'Survey_price'
+      Required = True
     end
     object qryAllJobsOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object qryAllJobsProduction_date_Actual: TDateTimeField
+    object qryAllJobsProduction_date_Actual: TSQLTimeStampField
       FieldName = 'Production_date_Actual'
+      Origin = 'Production_date_Actual'
     end
-    object qryAllJobsTemplate_date_actual: TDateTimeField
+    object qryAllJobsTemplate_date_actual: TSQLTimeStampField
       FieldName = 'Template_date_actual'
+      Origin = 'Template_date_actual'
     end
-    object qryAllJobsInstallation_date_actual: TDateTimeField
+    object qryAllJobsInstallation_date_actual: TSQLTimeStampField
       FieldName = 'Installation_date_actual'
+      Origin = 'Installation_date_actual'
     end
-    object qryAllJobsDescription: TStringField
+    object qryAllJobsDescription: TWideStringField
       FieldName = 'Description'
-      Size = 50
+      Origin = 'Description'
+      Size = 255
     end
     object qryAllJobsMaterial_Type: TIntegerField
       FieldName = 'Material_Type'
+      Origin = 'Material_Type'
     end
     object qryAllJobsExtra_Notes: TIntegerField
       FieldName = 'Extra_Notes'
+      Origin = 'Extra_Notes'
     end
     object qryAllJobsAvailability: TIntegerField
       FieldName = 'Availability'
+      Origin = 'Availability'
     end
     object qryAllJobsPayment_Terms: TIntegerField
       FieldName = 'Payment_Terms'
+      Origin = 'Payment_Terms'
     end
-    object qryAllJobsReference: TStringField
+    object qryAllJobsReference: TWideStringField
       FieldName = 'Reference'
+      Origin = 'Reference'
       Size = 50
     end
-    object qryAllJobsNett_Price: TFloatField
+    object qryAllJobsNett_Price: TCurrencyField
       FieldName = 'Nett_Price'
-      currency = True
+      Origin = 'Nett_Price'
     end
-    object qryAllJobsInactive: TStringField
+    object qryAllJobsInactive: TWideStringField
       FieldName = 'Inactive'
+      Origin = 'Inactive'
       Size = 1
     end
     object qryAllJobsInactive_Reason: TIntegerField
       FieldName = 'Inactive_Reason'
+      Origin = 'Inactive_Reason'
     end
     object qryAllJobsAddress: TIntegerField
       FieldName = 'Address'
+      Origin = 'Address'
     end
     object qryAllJobsDiscount_Rate: TFloatField
       FieldName = 'Discount_Rate'
+      Origin = 'Discount_Rate'
     end
-    object qryAllJobsDiscount_Value: TFloatField
+    object qryAllJobsDiscount_Value: TCurrencyField
       FieldName = 'Discount_Value'
-      currency = True
+      Origin = 'Discount_Value'
     end
-    object qryAllJobsCustomer_Name: TStringField
+    object qryAllJobsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
       Size = 50
-    end
-    object qryAllJobsMaterial_Description: TStringField
-      FieldName = 'Material_Description'
-    end
-    object qryAllJobsStatus_Description: TStringField
-      FieldName = 'Status_Description'
-      Size = 50
-    end
-    object qryAllJobsOperator_Name: TStringField
-      FieldName = 'Operator_Name'
-      Size = 30
-    end
-    object qryAllJobsGross_Price: TFloatField
-      FieldName = 'Gross_Price'
-      currency = True
     end
     object qryAllJobsInstall_Address: TIntegerField
       FieldName = 'Install_Address'
+      Origin = 'Install_Address'
     end
     object qryAllJobsDeposit_Terms: TFloatField
       FieldName = 'Deposit_Terms'
+      Origin = 'Deposit_Terms'
     end
     object qryAllJobsVAT: TIntegerField
       FieldName = 'VAT'
+      Origin = 'VAT'
     end
-    object qryAllJobsQuote_Nett_Price: TFloatField
+    object qryAllJobsQuote_Nett_Price: TCurrencyField
       FieldName = 'Quote_Nett_Price'
+      Origin = 'Quote_Nett_Price'
+    end
+    object qryAllJobsFitter: TIntegerField
+      FieldName = 'Fitter'
+      Origin = 'Fitter'
+    end
+    object qryAllJobsInstall_Name: TWideStringField
+      FieldName = 'Install_Name'
+      Origin = 'Install_Name'
+      Size = 30
+    end
+    object qryAllJobsInstall_Phone: TWideStringField
+      FieldName = 'Install_Phone'
+      Origin = 'Install_Phone'
+      Size = 30
+    end
+    object qryAllJobsDesigner: TIntegerField
+      FieldName = 'Designer'
+      Origin = 'Designer'
+    end
+    object qryAllJobsBranch_no: TIntegerField
+      FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+    end
+    object qryAllJobsRisk_Notes: TIntegerField
+      FieldName = 'Risk_Notes'
+      Origin = 'Risk_Notes'
+    end
+    object qryAllJobsDescriptive_Reference: TWideStringField
+      FieldName = 'Descriptive_Reference'
+      Origin = 'Descriptive_Reference'
+      Size = 100
+    end
+    object qryAllJobsMarkup_Rate: TFloatField
+      FieldName = 'Markup_Rate'
+      Origin = 'Markup_Rate'
+    end
+    object qryAllJobsMarkup_Value: TFloatField
+      FieldName = 'Markup_Value'
+      Origin = 'Markup_Value'
+    end
+    object qryAllJobsContract_Quote: TWideStringField
+      FieldName = 'Contract_Quote'
+      Origin = 'Contract_Quote'
+      Size = 1
+    end
+    object qryAllJobsWaste_Percentage: TFloatField
+      FieldName = 'Waste_Percentage'
+      Origin = 'Waste_Percentage'
+    end
+    object qryAllJobsWaste_Value: TFloatField
+      FieldName = 'Waste_Value'
+      Origin = 'Waste_Value'
+    end
+    object qryAllJobsProject_Reference: TWideStringField
+      FieldName = 'Project_Reference'
+      Origin = 'Project_Reference'
+      Size = 100
+    end
+    object qryAllJobsSpecification: TIntegerField
+      FieldName = 'Specification'
+      Origin = 'Specification'
+    end
+    object qryAllJobsRisk_Assessment: TIntegerField
+      FieldName = 'Risk_Assessment'
+      Origin = 'Risk_Assessment'
+    end
+    object qryAllJobsMaterial_Description: TWideStringField
+      FieldName = 'Material_Description'
+      Origin = 'Material_Description'
+      Size = 100
+    end
+    object qryAllJobsStatus_Description: TWideStringField
+      FieldName = 'Status_Description'
+      Origin = 'Status_Description'
+      Size = 50
+    end
+    object qryAllJobsOperator_Name: TWideStringField
+      FieldName = 'Operator_Name'
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 30
+    end
+    object qryAllJobsGross_Price: TCurrencyField
+      FieldName = 'Gross_Price'
+      Origin = 'Gross_Price'
+      ReadOnly = True
     end
     object qryAllJobsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-    end
-    object qryAllJobsis_retail_customer: TStringField
-      FieldName = 'is_retail_customer'
-      Size = 1
-    end
-    object qryAllJobsGross_Price_Incl_Vat: TFloatField
-      FieldName = 'Gross_Price_Incl_Vat'
-      DisplayFormat = #163'##,##0.00'
-    end
-    object qryAllJobsProject_Reference: TStringField
-      FieldName = 'Project_Reference'
-      Size = 100
-    end
-    object qryAllJobsCredit_Status: TStringField
-      FieldName = 'Credit_Status'
-      Size = 1
-    end
-    object qryAllJobsCredit_Limit: TFloatField
-      FieldName = 'Credit_Limit'
-    end
-    object qryAllJobsWorktop_Weight: TFloatField
-      FieldName = 'Worktop_Weight'
-      EditFormat = '#,##0'
+      Origin = 'Sales_Order'
+      ReadOnly = True
     end
   end
   object qrydummy: TFDQuery

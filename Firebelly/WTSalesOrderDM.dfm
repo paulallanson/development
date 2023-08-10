@@ -7,9 +7,12 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
     SQL.Strings = (
       'select sales_order.*,'
       '  Customer.Customer_name as original_customer_name,'
-      '    Operator.Operator_name,'
-      '    (Goods_Value + VAt_Value) as Total_Value,'
-      '    sales_order_status.sales_order_status_desc'
+      '  Customer.is_retail_customer,'
+      '  Customer.Customer_is_Speculative,'
+      '  Customer.Account_code,'
+      '  Operator.Operator_name,'
+      '  (Goods_Value + VAt_Value) as Total_Value,'
+      '  sales_order_status.sales_order_status_desc'
       'from sales_order, customer, operator, sales_order_status'
       'where sales_order.customer = customer.customer and'
       'sales_order.operator = operator.operator and'
@@ -294,6 +297,21 @@ object dtmdlSalesOrder: TdtmdlSalesOrder
       Origin = 'original_customer_name'
       Required = True
       Size = 100
+    end
+    object qryAllSalesis_retail_customer: TWideStringField
+      FieldName = 'is_retail_customer'
+      Origin = 'is_retail_customer'
+      Size = 1
+    end
+    object qryAllSalesCustomer_is_Speculative: TWideStringField
+      FieldName = 'Customer_is_Speculative'
+      Origin = 'Customer_is_Speculative'
+      Size = 1
+    end
+    object qryAllSalesAccount_code: TWideStringField
+      FieldName = 'Account_code'
+      Origin = 'Account_code'
+      Size = 10
     end
     object qryAllSalesOperator_name: TWideStringField
       FieldName = 'Operator_name'

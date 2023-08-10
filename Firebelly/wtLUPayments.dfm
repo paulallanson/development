@@ -11,11 +11,9 @@ object frmwtLUPayments: TfrmwtLUPayments
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -131,15 +129,15 @@ object frmwtLUPayments: TfrmwtLUPayments
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 693
+      Left = 687
       Top = 10
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Close'
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -163,7 +161,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       791
       79)
     object Label1: TLabel
-      Left = 584
+      Left = 578
       Top = 13
       Width = 92
       Height = 13
@@ -175,14 +173,16 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 584
     end
     object lblTotalPayments: TLabel
-      Left = 688
+      Left = 682
       Top = 13
       Width = 80
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblTotalPayments'
+      ExplicitLeft = 688
     end
     object lblDeposit: TLabel
       Left = 8
@@ -225,7 +225,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       Caption = 'lblOrderValue'
     end
     object Label3: TLabel
-      Left = 584
+      Left = 578
       Top = 61
       Width = 73
       Height = 13
@@ -237,17 +237,19 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 584
     end
     object lblOutstanding: TLabel
-      Left = 688
+      Left = 682
       Top = 61
       Width = 67
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblOutstanding'
+      ExplicitLeft = 688
     end
     object lblCredits: TLabel
-      Left = 584
+      Left = 578
       Top = 38
       Width = 73
       Height = 13
@@ -259,14 +261,16 @@ object frmwtLUPayments: TfrmwtLUPayments
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 584
     end
     object lblTotalCredits: TLabel
-      Left = 688
+      Left = 682
       Top = 38
       Width = 66
       Height = 13
       Anchors = [akRight, akBottom]
       Caption = 'lblTotalCredits'
+      ExplicitLeft = 688
     end
   end
   object pnlHeader: TPanel
@@ -371,14 +375,14 @@ object frmwtLUPayments: TfrmwtLUPayments
       end
       item
         Expanded = False
-        FieldName = 'Invoice_No'
+        FieldName = 'Invoice_no'
         Title.Caption = 'Credit Note No.'
         Width = 84
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Description'
+        FieldName = 'description'
         Width = 378
         Visible = True
       end
@@ -432,13 +436,11 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Payment'
-        ParamType = ptUnknown
       end>
   end
   object qryPayments: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT  Payment.Payment,'
       '        Payment.Payment_date,'
@@ -466,68 +468,74 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryPaymentsPayment: TIntegerField
+    object qryPaymentsPayment: TFDAutoIncField
       FieldName = 'Payment'
-
+      Origin = 'Payment'
+      ReadOnly = True
     end
-    object qryPaymentsPayment_date: TDateTimeField
+    object qryPaymentsPayment_date: TSQLTimeStampField
       FieldName = 'Payment_date'
-
+      Origin = 'Payment_date'
+      Required = True
     end
-    object qryPaymentsPaid_Amount: TFloatField
+    object qryPaymentsPaid_Amount: TCurrencyField
       FieldName = 'Paid_Amount'
-
-      DisplayFormat = '0.00'
+      Origin = 'Paid_Amount'
+      Required = True
     end
     object qryPaymentsPayment_Method: TIntegerField
       FieldName = 'Payment_Method'
-
+      Origin = 'Payment_Method'
+      Required = True
     end
-    object qryPaymentsPayment_Description: TStringField
+    object qryPaymentsPayment_Description: TWideStringField
       FieldName = 'Payment_Description'
-
+      Origin = 'Payment_Description'
       Size = 255
     end
-    object qryPaymentsPayment_Method_Description: TStringField
+    object qryPaymentsPayment_Method_Description: TWideStringField
       FieldName = 'Payment_Method_Description'
-
+      Origin = 'Payment_Method_Description'
       Size = 30
     end
     object qryPaymentsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-
+      Origin = 'Sales_Order'
     end
     object qryPaymentsSales_Invoice: TIntegerField
       FieldName = 'Sales_Invoice'
-
+      Origin = 'Sales_Invoice'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object qryPaymentsAccount_Number: TStringField
+    object qryPaymentsAccount_Number: TWideStringField
       FieldName = 'Account_Number'
-
+      Origin = 'Account_Number'
       Size = 30
     end
-    object qryPaymentsAccount_Month: TStringField
+    object qryPaymentsAccount_Month: TWideStringField
       FieldName = 'Account_Month'
-
+      Origin = 'Account_Month'
       Size = 2
     end
-    object qryPaymentsAccount_Year: TStringField
+    object qryPaymentsAccount_Year: TWideStringField
       FieldName = 'Account_Year'
-
+      Origin = 'Account_Year'
       Size = 4
     end
-    object qryPaymentsInvoice_no: TStringField
+    object qryPaymentsInvoice_no: TWideStringField
       FieldName = 'Invoice_no'
-
+      Origin = 'Invoice_no'
       Size = 10
     end
   end
@@ -541,9 +549,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSOPayments: TFDQuery
@@ -556,14 +562,10 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Deposit_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSINVPayments: TFDQuery
@@ -578,24 +580,16 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deposit_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetTotalPayments: TFDQuery
@@ -610,18 +604,14 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditNotes: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT Sales_invoice.Invoice_no,'
       '  Sales_invoice.Invoice_date,'
@@ -648,32 +638,47 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryCreditNotesInvoice_No: TStringField
-      FieldName = 'Invoice_No'
+    object qryCreditNotesInvoice_no: TWideStringField
+      FieldName = 'Invoice_no'
+      Origin = 'Invoice_no'
       Size = 10
     end
-    object qryCreditNotesTotal_Value: TFloatField
-      FieldName = 'Total_Value'
-      DisplayFormat = '0.00'
+    object qryCreditNotesInvoice_date: TSQLTimeStampField
+      FieldName = 'Invoice_date'
+      Origin = 'Invoice_date'
     end
-    object qryCreditNotesDescription: TStringField
-      FieldName = 'Description'
-      Size = 100
+    object qryCreditNotesGoods_value: TCurrencyField
+      FieldName = 'Goods_value'
+      Origin = 'Goods_value'
     end
-    object qryCreditNotesReference: TStringField
+    object qryCreditNotesVat_Value: TCurrencyField
+      FieldName = 'Vat_Value'
+      Origin = 'Vat_Value'
+    end
+    object qryCreditNotesReference: TWideStringField
       FieldName = 'Reference'
+      Origin = 'Reference'
     end
-    object qryCreditNotesInvoice_Date: TDateTimeField
-      FieldName = 'Invoice_Date'
+    object qryCreditNotesdescription: TWideStringField
+      FieldName = 'description'
+      Origin = 'description'
+      Size = 255
+    end
+    object qryCreditNotesTotal_Value: TCurrencyField
+      FieldName = 'Total_Value'
+      Origin = 'Total_Value'
+      ReadOnly = True
     end
   end
   object srcCreditNotes: TDataSource
@@ -703,14 +708,10 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetTotalSICredits: TFDQuery
@@ -735,9 +736,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_No'
-        ParamType = ptUnknown
       end>
   end
 end
