@@ -3,32 +3,28 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Remedial Reason Type Report'
-  ClientHeight = 349
-  ClientWidth = 627
+  ClientHeight = 340
+  ClientWidth = 621
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    627
-    349)
-  PixelsPerInch = 96
+    621
+    340)
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 541
-    Top = 316
+    Top = 307
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
-    TabOrder = 11
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -43,16 +39,17 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = PrintBitBtnClick
+    ExplicitTop = 316
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
-    Top = 316
+    Top = 307
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Preview'
-    TabOrder = 10
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -67,6 +64,9 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = PreviewBitBtnClick
+    ExplicitTop = 316
   end
   object pnlReasonSearch: TPanel
     Left = 139
@@ -90,7 +90,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reasons'
@@ -101,12 +100,14 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 316
+    Top = 307
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 12
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 12
+    ExplicitTop = 316
   end
   object GroupBox1: TGroupBox
     Left = 5
@@ -142,8 +143,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Top = 23
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btbtnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -158,6 +157,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnDateFromClick
     end
     object edtDateTo: TEdit
       Left = 48
@@ -172,8 +173,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Top = 55
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btbtnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -188,6 +187,8 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btbtnDateToClick
     end
   end
   object rdgrpReason: TRadioGroup
@@ -225,7 +226,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Caused By'
@@ -307,13 +307,11 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
   end
   object btnExcel: TBitBtn
     Left = 354
-    Top = 316
+    Top = 307
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 9
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -357,6 +355,9 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 9
+    OnClick = btnExcelClick
+    ExplicitTop = 316
   end
   object rdgrpCategory: TRadioGroup
     Left = 5
@@ -393,7 +394,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       Style = csDropDownList
       Color = clBtnFace
       Enabled = False
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Reported By'

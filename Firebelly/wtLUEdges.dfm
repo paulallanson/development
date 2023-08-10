@@ -11,10 +11,8 @@ object frmwtLUEdges: TfrmwtLUEdges
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -53,16 +51,20 @@ object frmwtLUEdges: TfrmwtLUEdges
       item
         Width = 50
       end>
+    ExplicitTop = 419
+    ExplicitWidth = 739
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 337
     Width = 745
     Height = 91
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 328
+    ExplicitWidth = 739
     DesignSize = (
       745
       91)
@@ -111,9 +113,9 @@ object frmwtLUEdges: TfrmwtLUEdges
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -172,14 +174,10 @@ object frmwtLUEdges: TfrmwtLUEdges
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

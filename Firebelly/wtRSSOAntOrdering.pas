@@ -65,6 +65,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   allCommon, WTSrchCustomer, DateSelV5, WTRPSOAntOrdering, wtMain;
 
 {$R *.dfm}

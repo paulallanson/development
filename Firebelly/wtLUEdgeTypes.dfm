@@ -3,25 +3,23 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
   Top = 159
   BorderStyle = bsDialog
   Caption = 'Edge types'
-  ClientHeight = 235
-  ClientWidth = 415
+  ClientHeight = 226
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 415
-    Height = 160
+    Width = 409
+    Height = 151
     Align = alClient
     DataSource = srcEdgeType
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 216
-    Width = 415
+    Top = 207
+    Width = 409
     Height = 19
     Panels = <
       item
@@ -59,18 +57,22 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
       item
         Width = 50
       end>
+    ExplicitTop = 216
+    ExplicitWidth = 415
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 160
-    Width = 415
+    Top = 151
+    Width = 409
     Height = 56
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 160
+    ExplicitWidth = 415
     DesignSize = (
-      415
+      409
       56)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -155,9 +157,7 @@ object frmWTLUEdgeTypes: TfrmWTLUEdgeTypes
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

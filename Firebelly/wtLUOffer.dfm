@@ -3,8 +3,8 @@ object frmwtLUOffer: TfrmwtLUOffer
   Top = 158
   BorderStyle = bsDialog
   Caption = 'Offers'
-  ClientHeight = 326
-  ClientWidth = 462
+  ClientHeight = 317
+  ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmwtLUOffer: TfrmwtLUOffer
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 462
-    Height = 233
+    Width = 456
+    Height = 224
     Align = alClient
     DataSource = srcSaleOffer
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,8 +54,8 @@ object frmwtLUOffer: TfrmwtLUOffer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 307
-    Width = 462
+    Top = 298
+    Width = 456
     Height = 19
     Panels = <
       item
@@ -64,17 +64,21 @@ object frmwtLUOffer: TfrmwtLUOffer
       item
         Width = 50
       end>
+    ExplicitTop = 307
+    ExplicitWidth = 462
   end
   object Panel1: TPanel
     Left = 0
-    Top = 233
-    Width = 462
+    Top = 224
+    Width = 456
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 233
+    ExplicitWidth = 462
     DesignSize = (
-      462
+      456
       74)
     object BitBtn1: TBitBtn
       Left = 8

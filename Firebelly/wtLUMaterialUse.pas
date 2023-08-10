@@ -58,7 +58,9 @@ var
 
 implementation
 
-uses wtMaintMaterialUse, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintMaterialUse, wtMain;
 
 {$R *.DFM}
 

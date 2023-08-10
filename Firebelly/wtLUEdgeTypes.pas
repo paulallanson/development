@@ -48,7 +48,9 @@ var
 
 implementation
 
-uses wtMaintEdgeType, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintEdgeType, wtMain;
 
 {$R *.dfm}
 

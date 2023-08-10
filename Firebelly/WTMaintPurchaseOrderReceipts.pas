@@ -73,7 +73,8 @@ var
 implementation
 
 uses
-  AllCommon, wtMain, System.UITypes;
+  System.UITypes, System.Types,
+  AllCommon, wtMain;
 
 {$R *.dfm}
 

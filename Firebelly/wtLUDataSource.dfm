@@ -3,24 +3,22 @@ object frmWTLUDataSource: TfrmWTLUDataSource
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Data Source'
-  ClientHeight = 324
-  ClientWidth = 381
+  ClientHeight = 315
+  ClientWidth = 375
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 381
-    Height = 224
+    Width = 375
+    Height = 215
     Align = alClient
     DataSource = srcDataSource
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -44,8 +42,8 @@ object frmWTLUDataSource: TfrmWTLUDataSource
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 305
-    Width = 381
+    Top = 296
+    Width = 375
     Height = 19
     Panels = <
       item
@@ -54,16 +52,20 @@ object frmWTLUDataSource: TfrmWTLUDataSource
       item
         Width = 50
       end>
+    ExplicitTop = 305
+    ExplicitWidth = 381
   end
   object Panel1: TPanel
     Left = 0
-    Top = 224
-    Width = 381
+    Top = 215
+    Width = 375
     Height = 81
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 224
+    ExplicitWidth = 381
     DesignSize = (
-      381
+      375
       81)
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -114,9 +116,9 @@ object frmWTLUDataSource: TfrmWTLUDataSource
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
   end
   object srcDataSource: TDataSource
@@ -139,9 +141,7 @@ object frmWTLUDataSource: TfrmWTLUDataSource
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

@@ -59,7 +59,9 @@ var
 
 implementation
 
-uses wtLUPayments, DateSelV5;
+uses
+  System.UITypes,
+  wtLUPayments, DateSelV5;
 
 {$R *.dfm}
 

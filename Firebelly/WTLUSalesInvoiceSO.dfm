@@ -1,25 +1,23 @@
 object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
   Left = 215
   Top = 81
-  Width = 1008
-  Height = 490
   Caption = 'Sales order selection'
+  ClientHeight = 443
+  ClientWidth = 990
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 440
-    Width = 1000
+    Top = 424
+    Width = 990
     Height = 19
     Panels = <
       item
@@ -28,12 +26,14 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       item
         Width = 100
       end>
+    ExplicitTop = 440
+    ExplicitWidth = 1000
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 1000
-    Height = 302
+    Width = 990
+    Height = 286
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -94,15 +94,17 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 302
-    Width = 1000
+    Top = 286
+    Width = 990
     Height = 138
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 302
+    ExplicitWidth = 1000
     DesignSize = (
-      1000
+      990
       138)
     object Label1: TLabel
       Left = 660
@@ -153,12 +155,12 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       OnClick = chkbxShowClick
     end
     object CustomerGroupBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 82
       Width = 385
       Height = 49
       Caption = 'Type here to narrow the search'
+      ParentBackground = False
       TabOrder = 4
       object Label2: TLabel
         Left = 24
@@ -202,8 +204,6 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
       Height = 25
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 6
-      OnClick = btnExcelClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -218,6 +218,8 @@ object frmWTLUSalesInvoiceSO: TfrmWTLUSalesInvoiceSO
         C8807FF7777777777FF700000000000000007777777777777777333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnExcelClick
     end
   end
   object tmrSearch: TTimer

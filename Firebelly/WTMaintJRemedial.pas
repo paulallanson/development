@@ -127,7 +127,9 @@ var
 
 implementation
 
-uses wtLUFitters, wtMain, AllCommon, DateSelV5, WTLURemedialType, wtDBMemo,
+uses
+  System.UITypes,
+  wtLUFitters, wtMain, AllCommon, DateSelV5, WTLURemedialType, wtDBMemo,
   wtLURemedialCategory, wtLURemedialDept, WTSrchCustomer, wtDataModule,
   AllImages;
 

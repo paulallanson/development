@@ -65,7 +65,9 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrder, WTRPSIPayments;
+uses
+  System.UITypes,
+  allCommon, WTSrchCustomer, DateSelV5, WTRPSalesOrder, WTRPSIPayments;
 
 {$R *.dfm}
 

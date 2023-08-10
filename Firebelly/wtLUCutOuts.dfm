@@ -11,10 +11,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
@@ -28,16 +26,20 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       item
         Width = 50
       end>
+    ExplicitTop = 337
+    ExplicitWidth = 720
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 259
     Width = 726
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 250
+    ExplicitWidth = 720
     DesignSize = (
       726
       87)
@@ -86,8 +88,8 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -177,14 +179,10 @@ object frmWTLUCutOuts: TfrmWTLUCutOuts
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

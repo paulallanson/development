@@ -3,8 +3,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Delivery Note'
-  ClientHeight = 216
-  ClientWidth = 361
+  ClientHeight = 207
+  ClientWidth = 355
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -28,8 +28,8 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 136
-    Width = 361
+    Top = 127
+    Width = 355
     Height = 80
     Align = alBottom
     BevelOuter = bvNone
@@ -37,7 +37,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
     ExplicitTop = 137
     ExplicitWidth = 365
     DesignSize = (
-      361
+      355
       80)
     object btnPrint: TButton
       Left = 8
@@ -86,7 +86,7 @@ object frmWTRSSODeliveryNote: TfrmWTRSSODeliveryNote
   object pnlSelection: TPanel
     Left = 0
     Top = 0
-    Width = 361
+    Width = 355
     Height = 138
     Align = alTop
     BevelOuter = bvNone

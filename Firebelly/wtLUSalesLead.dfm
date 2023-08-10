@@ -3,24 +3,22 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
   Top = 136
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Leads'
-  ClientHeight = 318
-  ClientWidth = 440
+  ClientHeight = 309
+  ClientWidth = 434
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 440
-    Height = 226
+    Width = 434
+    Height = 217
     Align = alClient
     DataSource = srcSalesLead
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 299
-    Width = 440
+    Top = 290
+    Width = 434
     Height = 19
     Panels = <
       item
@@ -59,18 +57,22 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 440
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 226
-    Width = 440
+    Top = 217
+    Width = 434
     Height = 73
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 226
+    ExplicitWidth = 440
     DesignSize = (
-      440
+      434
       73)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -121,9 +123,9 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 266
@@ -157,9 +159,7 @@ object frmWTLUSalesLead: TfrmWTLUSalesLead
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

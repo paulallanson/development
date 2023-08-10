@@ -138,6 +138,7 @@ implementation
 {$R *.dfm}
 
 uses
+  System.UITypes,
   AllCommon, WTSrchCustomer, WTLUCustomerSite, wtMain;
 
 { TfrmWTMaintContractConvertOrder }

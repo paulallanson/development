@@ -3,22 +3,20 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
   Top = 187
   BorderStyle = bsDialog
   Caption = 'Historical Records'
-  ClientHeight = 222
-  ClientWidth = 263
+  ClientHeight = 213
+  ClientWidth = 257
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    263
-    222)
-  PixelsPerInch = 96
+    257
+    213)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -54,9 +52,9 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Height = 25
     Caption = 'Run'
     Default = True
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 138
@@ -66,8 +64,8 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Cancel = True
     Caption = 'Close'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object prgbrRecords: TProgressBar
     Left = 16
@@ -96,7 +94,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     TabOrder = 4
   end
   object edtDateRequired: TEdit
-    Left = 134
+    Left = 122
     Top = 48
     Width = 89
     Height = 21
@@ -104,15 +102,14 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     TabOrder = 5
     OnChange = CheckOK
     OnExit = edtDateRequiredExit
+    ExplicitLeft = 134
   end
   object btnDateRequired: TBitBtn
-    Left = 230
+    Left = 218
     Top = 46
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 6
-    OnClick = btnDateRequiredClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -127,6 +124,9 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btnDateRequiredClick
+    ExplicitLeft = 230
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'
@@ -148,14 +148,10 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote_status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end>
   end
   object qrySOL: TFDQuery
@@ -172,9 +168,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qrySIL: TFDQuery
@@ -190,9 +184,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -215,9 +207,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end>
   end
   object qryQintNotes: TFDQuery
@@ -230,9 +220,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryJSOL: TFDQuery
@@ -246,9 +234,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJIntNotes: TFDQuery
@@ -261,9 +247,7 @@ object frmWTDeleteHistory: TfrmWTDeleteHistory
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
 end

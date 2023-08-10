@@ -2,8 +2,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   Left = 171
   Top = 170
   Caption = 'Sales Credits'
-  ClientHeight = 361
-  ClientWidth = 934
+  ClientHeight = 352
+  ClientWidth = 928
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 934
+    Width = 928
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 928
+        Width = 932
       end>
+    ExplicitWidth = 934
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -43,7 +44,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 907
+        Width = 919
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56
@@ -124,8 +125,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 934
-    Height = 212
+    Width = 928
+    Height = 203
     Align = alClient
     DataSource = dtmdlSalesInvoice.dsSCHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -297,12 +298,14 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object Panel1: TPanel
     Left = 0
-    Top = 286
-    Width = 934
+    Top = 277
+    Width = 928
     Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 286
+    ExplicitWidth = 934
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -400,8 +403,8 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 342
-    Width = 934
+    Top = 333
+    Width = 928
     Height = 19
     Panels = <
       item
@@ -410,11 +413,13 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       item
         Width = 50
       end>
+    ExplicitTop = 342
+    ExplicitWidth = 934
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 934
+    Width = 928
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -422,8 +427,9 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 934
     DesignSize = (
-      934
+      928
       30)
     object Label4: TLabel
       Left = 2
@@ -439,7 +445,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 692
+      Left = 680
       Top = 7
       Width = 69
       Height = 13
@@ -454,7 +460,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       ExplicitLeft = 728
     end
     object cmbCustomerFilter: TComboBox
-      Left = 772
+      Left = 760
       Top = 3
       Width = 145
       Height = 21

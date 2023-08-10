@@ -1,9 +1,9 @@
 object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Left = 297
   Top = 42
-  Width = 916
-  Height = 723
   Caption = 'Remedial details'
+  ClientHeight = 676
+  ClientWidth = 898
   Color = clBtnFace
   Constraints.MinHeight = 660
   Font.Charset = DEFAULT_CHARSET
@@ -11,10 +11,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object SpeedButton1: TSpeedButton
     Left = 482
@@ -38,13 +36,15 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Caption = 'Tools Required?'
   end
   object pnlbottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 616
-    Width = 908
+    Top = 600
+    Width = 898
     Height = 57
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 616
+    ExplicitWidth = 908
     object lblDelete: TLabel
       Left = 245
       Top = 22
@@ -67,9 +67,9 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Default = True
       Enabled = False
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 461
@@ -79,8 +79,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
     object chkbxProduction: TCheckBox
       Left = 8
@@ -109,9 +109,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-      OnClick = btnInternalNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -126,18 +123,22 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnInternalNotesClick
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 908
+    Width = 898
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 908
     DesignSize = (
-      908
+      898
       81)
     object Label6: TLabel
       Left = 8
@@ -207,8 +208,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 2
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -223,6 +222,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateRequiredClick
     end
     object dblkpRemedialType: TDBLookupComboBox
       Left = 368
@@ -267,10 +268,10 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 6
       OnClick = BitBtn1Click
-      NumGlyphs = 2
     end
     object BitBtn3: TBitBtn
       Left = 240
@@ -284,10 +285,10 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 7
       OnClick = BitBtn3Click
-      NumGlyphs = 2
     end
     object BitBtn4: TBitBtn
       Left = 872
@@ -302,22 +303,24 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 8
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
   end
   object pnlfooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 511
-    Width = 908
+    Top = 495
+    Width = 898
     Height = 105
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 511
+    ExplicitWidth = 908
     DesignSize = (
-      908
+      898
       105)
     object Label3: TLabel
       Left = 677
@@ -430,8 +433,6 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Top = 43
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnInstallDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -446,6 +447,8 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnInstallDateClick
     end
     object BitBtn5: TBitBtn
       Left = 869
@@ -459,10 +462,10 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 4
       OnClick = BitBtn5Click
-      NumGlyphs = 2
     end
     object dblkpOriginalTemplater: TDBLookupComboBox
       Left = 110
@@ -522,28 +525,30 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 9
       OnClick = BitBtn5Click
-      NumGlyphs = 2
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 81
-    Width = 908
-    Height = 430
+    Width = 898
+    Height = 414
     Align = alClient
     Caption = 'Panel2'
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 908
+    ExplicitHeight = 430
     object pnlLeft: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 448
       Height = 428
       Align = alLeft
+      ParentBackground = False
       TabOrder = 0
       object Label8: TLabel
         Left = 8
@@ -617,12 +622,12 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
       end
     end
     object pnlRight: TPanel
-      ParentBackground = False
       Left = 449
       Top = 1
       Width = 458
       Height = 428
       Align = alClient
+      ParentBackground = False
       TabOrder = 1
       object Label9: TLabel
         Left = 10
@@ -698,10 +703,12 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 673
-    Width = 908
+    Top = 657
+    Width = 898
     Height = 19
     Panels = <>
+    ExplicitTop = 673
+    ExplicitWidth = 908
   end
   object qryFitter: TFDQuery
     ConnectionName = 'wt'
@@ -714,9 +721,7 @@ object frmWTMaintJRemedial: TfrmWTMaintJRemedial
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Fitter'
-        ParamType = ptUnknown
       end>
   end
   object srcFitter: TDataSource

@@ -38,6 +38,9 @@ var
 
 implementation
 
+uses
+  System.UITypes;
+
 {$R *.dfm}
 
 procedure TfrmWTLUContractQuotes.SetQuoteEdit(Dataset: TDataset);

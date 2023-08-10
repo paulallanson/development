@@ -2,8 +2,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   Left = 182
   Top = 105
   Caption = 'Sales Invoices'
-  ClientHeight = 353
-  ClientWidth = 934
+  ClientHeight = 344
+  ClientWidth = 928
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 934
+    Width = 928
     Height = 44
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 928
+        Width = 932
       end>
+    ExplicitWidth = 934
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
@@ -137,8 +138,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 934
-    Height = 204
+    Width = 928
+    Height = 195
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -284,12 +285,14 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 278
-    Width = 934
+    Top = 269
+    Width = 928
     Height = 56
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 278
+    ExplicitWidth = 934
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -387,8 +390,8 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 334
-    Width = 934
+    Top = 325
+    Width = 928
     Height = 19
     Panels = <
       item
@@ -397,11 +400,13 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       item
         Width = 50
       end>
+    ExplicitTop = 334
+    ExplicitWidth = 934
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 934
+    Width = 928
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -409,8 +414,9 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 934
     DesignSize = (
-      934
+      928
       30)
     object Label4: TLabel
       Left = 0
@@ -426,7 +432,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 690
+      Left = 678
       Top = 7
       Width = 69
       Height = 13
@@ -441,7 +447,7 @@ object frmWTLUSalesInvoices: TfrmWTLUSalesInvoices
       ExplicitLeft = 730
     end
     object cmbCustomerFilter: TComboBox
-      Left = 770
+      Left = 758
       Top = 3
       Width = 145
       Height = 21

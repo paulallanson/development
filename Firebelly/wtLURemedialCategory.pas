@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses WTMaintRemedialCategory, wtMain;
+uses
+  System.UITypes, System.Types,
+  WTMaintRemedialCategory, wtMain;
 
 {$R *.dfm}
 

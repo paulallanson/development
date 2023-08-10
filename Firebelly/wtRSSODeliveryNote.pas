@@ -83,6 +83,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const

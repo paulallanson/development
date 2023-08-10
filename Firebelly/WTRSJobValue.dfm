@@ -3,35 +3,34 @@ object frmWTRSJobValue: TfrmWTRSJobValue
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Job Value Report'
-  ClientHeight = 217
-  ClientWidth = 349
+  ClientHeight = 208
+  ClientWidth = 343
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    349
-    217)
-  PixelsPerInch = 96
+    343
+    208)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 186
   end
   object Button4: TButton
     Left = 264
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -39,6 +38,7 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 186
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -97,8 +97,6 @@ object frmWTRSJobValue: TfrmWTRSJobValue
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -113,14 +111,14 @@ object frmWTRSJobValue: TfrmWTRSJobValue
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -135,6 +133,8 @@ object frmWTRSJobValue: TfrmWTRSJobValue
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
@@ -187,14 +187,12 @@ object frmWTRSJobValue: TfrmWTRSJobValue
     TabOrder = 5
   end
   object btnExcel: TBitBtn
-    Left = 178
-    Top = 186
+    Left = 166
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Excel'
-    TabOrder = 6
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -238,6 +236,10 @@ object frmWTRSJobValue: TfrmWTRSJobValue
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 6
+    OnClick = btnExcelClick
+    ExplicitLeft = 178
+    ExplicitTop = 186
   end
   object OleContainer1: TOleContainer
     Left = 140
@@ -274,12 +276,13 @@ object frmWTRSJobValue: TfrmWTRSJobValue
   end
   object btnPreview: TButton
     Left = 96
-    Top = 186
+    Top = 177
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 9
     OnClick = btnPreviewClick
+    ExplicitTop = 186
   end
 end

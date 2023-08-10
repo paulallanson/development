@@ -11,13 +11,11 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     451
     152)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -64,9 +62,9 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 360
@@ -77,8 +75,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object edtNumberofDays: TCREditInt
     Left = 112
@@ -110,19 +108,14 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Payment_Terms_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Number_of_Days'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Terms'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -138,8 +131,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -153,8 +146,8 @@ object frmWTMaintPaymentTerms: TfrmWTMaintPaymentTerms
     Top = 40
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses  WTMaintEdges, wtMain;
+uses
+  System.UITypes, System.Types,
+  WTMaintEdges, wtMain;
 
 {$R *.dfm}
 

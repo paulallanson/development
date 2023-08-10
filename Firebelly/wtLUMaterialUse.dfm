@@ -41,7 +41,7 @@ object frmWTLUMaterialUse: TfrmWTLUMaterialUse
       end
       item
         Expanded = False
-        FieldName = 'inactive'
+        FieldName = 'Inactive'
         Visible = False
       end
       item

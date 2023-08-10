@@ -2,8 +2,8 @@ object frmWTLUProducts: TfrmWTLUProducts
   Left = 298
   Top = 121
   Caption = 'Products'
-  ClientHeight = 505
-  ClientWidth = 845
+  ClientHeight = 496
+  ClientWidth = 839
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmWTLUProducts: TfrmWTLUProducts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 755
-    Height = 418
+    Width = 749
+    Height = 409
     Align = alClient
     DataSource = srcLkpProducts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -74,8 +74,8 @@ object frmWTLUProducts: TfrmWTLUProducts
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 486
-    Width = 845
+    Top = 477
+    Width = 839
     Height = 19
     Panels = <
       item
@@ -89,8 +89,8 @@ object frmWTLUProducts: TfrmWTLUProducts
   end
   object Panel1: TPanel
     Left = 0
-    Top = 418
-    Width = 845
+    Top = 409
+    Width = 839
     Height = 68
     Align = alBottom
     ParentBackground = False
@@ -98,7 +98,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     ExplicitTop = 417
     ExplicitWidth = 841
     DesignSize = (
-      845
+      839
       68)
     object Label1: TLabel
       Left = 8
@@ -125,7 +125,7 @@ object frmWTLUProducts: TfrmWTLUProducts
       OnClick = chkbxShowInactiveClick
     end
     object BitBtn4: TBitBtn
-      Left = 762
+      Left = 750
       Top = 6
       Width = 75
       Height = 25
@@ -134,6 +134,7 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 2
+      ExplicitLeft = 762
     end
     object BitBtn2: TBitBtn
       Left = 264
@@ -146,10 +147,10 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
   end
   object Panel2: TPanel
-    Left = 755
+    Left = 749
     Top = 0
     Width = 90
-    Height = 418
+    Height = 409
     Align = alRight
     ParentBackground = False
     TabOrder = 3
@@ -157,7 +158,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     ExplicitHeight = 417
     DesignSize = (
       90
-      418)
+      409)
     object BitBtn1: TBitBtn
       Left = 7
       Top = 16
@@ -179,7 +180,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
     object btnSelect: TBitBtn
       Left = 7
-      Top = 388
+      Top = 379
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]

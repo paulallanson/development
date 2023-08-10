@@ -84,7 +84,9 @@ var
 
 implementation
 
-uses wtLURemedialType, wtLURemedialDept, WTRPRemedialType, wtLURemedialCategory, AllCommon;
+uses
+  System.UITypes,
+  wtLURemedialType, wtLURemedialDept, WTRPRemedialType, wtLURemedialCategory, AllCommon;
 
 {$R *.DFM}
 

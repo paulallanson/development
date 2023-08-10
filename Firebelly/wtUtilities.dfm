@@ -3,17 +3,15 @@ object frmWTUtilities: TfrmWTUtilities
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Database Utilities'
-  ClientHeight = 148
-  ClientWidth = 252
+  ClientHeight = 139
+  ClientWidth = 246
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object btnOK: TBitBtn
     Left = 40
@@ -22,9 +20,9 @@ object frmWTUtilities: TfrmWTUtilities
     Height = 25
     Caption = 'OK'
     Default = True
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 128
@@ -34,11 +32,10 @@ object frmWTUtilities: TfrmWTUtilities
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object rdgUtilities: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 233
@@ -50,6 +47,7 @@ object frmWTUtilities: TfrmWTUtilities
       'Check order integrity'
       'Delete historical data'
       'Delete Unattached Contract Quotes')
+    ParentBackground = False
     TabOrder = 2
   end
   object qryCheckPrices: TFDQuery

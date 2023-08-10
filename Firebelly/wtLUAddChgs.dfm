@@ -3,8 +3,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Additional charges'
-  ClientHeight = 402
-  ClientWidth = 690
+  ClientHeight = 393
+  ClientWidth = 684
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 690
-    Height = 320
+    Width = 684
+    Height = 311
     Align = alClient
     DataSource = srclkpExtras
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -66,8 +66,8 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 383
-    Width = 690
+    Top = 374
+    Width = 684
     Height = 19
     Panels = <
       item
@@ -76,20 +76,16 @@ object frmWTLUAddChgs: TfrmWTLUAddChgs
       item
         Width = 50
       end>
-    ExplicitTop = 374
-    ExplicitWidth = 684
   end
   object Panel1: TPanel
     Left = 0
-    Top = 320
-    Width = 690
+    Top = 311
+    Width = 684
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 311
-    ExplicitWidth = 684
     object Label4: TLabel
       Left = 16
       Top = 16

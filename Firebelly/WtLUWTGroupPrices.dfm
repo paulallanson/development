@@ -3,8 +3,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   Top = 113
   BorderStyle = bsDialog
   Caption = 'Worktop Group Prices'
-  ClientHeight = 333
-  ClientWidth = 608
+  ClientHeight = 324
+  ClientWidth = 602
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 608
-    Height = 206
+    Width = 602
+    Height = 197
     Align = alClient
     DataSource = srclkpWTGPrices
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -66,8 +66,8 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 314
-    Width = 608
+    Top = 305
+    Width = 602
     Height = 19
     Panels = <
       item
@@ -76,20 +76,16 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
       item
         Width = 50
       end>
-    ExplicitTop = 305
-    ExplicitWidth = 602
   end
   object Panel1: TPanel
     Left = 0
-    Top = 263
-    Width = 608
+    Top = 254
+    Width = 602
     Height = 51
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 254
-    ExplicitWidth = 602
     object BitBtn1: TBitBtn
       Left = 8
       Top = 17
@@ -143,12 +139,11 @@ object frmWtLUWTGroupPrices: TfrmWtLUWTGroupPrices
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 608
+    Width = 602
     Height = 57
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 602
     object Label1: TLabel
       Left = 8
       Top = 8

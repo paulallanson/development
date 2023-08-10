@@ -1,6 +1,7 @@
 object frmWTLUFitting: TfrmWTLUFitting
   Left = 186
   Top = 121
+  ActiveControl = cmbCustomerFilter
   Caption = 'Fitting Details'
   ClientHeight = 378
   ClientWidth = 1266
@@ -30,12 +31,13 @@ object frmWTLUFitting: TfrmWTLUFitting
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1260
+        Width = 1254
       end>
+    ExplicitWidth = 1260
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1251
+      Width = 1245
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -96,11 +98,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
-        Items.Strings = (
-          'All'
-          'Trade'
-          'Retail'
-          'Commercial')
+        ExplicitLeft = 1024
       end
     end
   end
@@ -127,6 +125,8 @@ object frmWTLUFitting: TfrmWTLUFitting
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 309
+    ExplicitWidth = 1260
     DesignSize = (
       1266
       41)
@@ -138,7 +138,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1009
+      Left = 1003
       Top = 15
       Width = 55
       Height = 13
@@ -155,7 +155,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = 'Fitting Date:'
     end
     object btnClose: TButton
-      Left = 1169
+      Left = 1163
       Top = 9
       Width = 75
       Height = 25
@@ -163,6 +163,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 1169
     end
     object edtSearch: TEdit
       Left = 56
@@ -173,13 +174,14 @@ object frmWTLUFitting: TfrmWTLUFitting
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1070
+      Left = 1064
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
+      ExplicitLeft = 1070
     end
     object BitBtn2: TBitBtn
       Left = 240
@@ -279,7 +281,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1260
+        Width = 1264
       end>
     object ToolBar1: TToolBar
       Left = 11
@@ -483,7 +485,7 @@ object frmWTLUFitting: TfrmWTLUFitting
       end
       item
         Expanded = False
-        FieldName = 'Is_Retail_Customer'
+        FieldName = 'is_retail_customer'
         Title.Caption = 'Retail'
         Width = 50
         Visible = True

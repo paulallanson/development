@@ -70,6 +70,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   WTSrchCustomer, WTRPSalesInvoicePayments, Allcommon, DateSelV5,
   wtMain;
 

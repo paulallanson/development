@@ -96,7 +96,9 @@ var
 
 implementation
 
-uses wtMaintCutOutDetails, wtDataModule, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintCutOutDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
 

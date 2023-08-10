@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses WTRPJobValue, allCommon, WTSrchCustomer, DateSelV5;
+uses
+  System.UITypes,
+  WTRPJobValue, allCommon, WTSrchCustomer, DateSelV5;
 
 {$R *.dfm}
 

@@ -48,7 +48,8 @@ var
 implementation
 
 uses
-  wtMain, wtMaintColourGroup, System.UITypes;
+  System.UITypes, System.Types,
+  wtMain, wtMaintColourGroup;
 
 {$R *.DFM}
 

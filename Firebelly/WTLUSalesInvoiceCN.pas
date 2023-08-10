@@ -65,6 +65,7 @@ var
 implementation
 
 uses
+  System.UITypes, System.Types,
   wtMaintSalesInvoice, AllCommon;
 
 {$R *.DFM}

@@ -11,11 +11,9 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -94,8 +92,8 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
     object edtName: TEdit
       Left = 56
@@ -226,19 +224,13 @@ object frmWTLUCustomerSite: TfrmWTLUCustomerSite
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

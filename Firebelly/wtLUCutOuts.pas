@@ -52,7 +52,9 @@ var
 
 implementation
 
-uses wtMaintCutOuts, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintCutOuts, wtMain;
 
 {$R *.dfm}
 

@@ -3,8 +3,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   Top = 119
   BorderStyle = bsDialog
   Caption = 'Worktop Groups'
-  ClientHeight = 306
-  ClientWidth = 426
+  ClientHeight = 297
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object dbgDetails: TDBGrid
     Left = 0
     Top = 57
-    Width = 426
-    Height = 175
+    Width = 420
+    Height = 166
     Align = alClient
     DataSource = srcWTGroup
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -46,8 +46,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 287
-    Width = 426
+    Top = 278
+    Width = 420
     Height = 19
     Panels = <
       item
@@ -61,8 +61,8 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   end
   object Panel1: TPanel
     Left = 0
-    Top = 232
-    Width = 426
+    Top = 223
+    Width = 420
     Height = 55
     Align = alBottom
     BevelOuter = bvNone
@@ -132,7 +132,7 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 426
+    Width = 420
     Height = 57
     Align = alTop
     BevelOuter = bvNone
@@ -210,14 +210,10 @@ object frmWTLUWTGroup: TfrmWTLUWTGroup
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

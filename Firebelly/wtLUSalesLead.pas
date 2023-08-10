@@ -48,7 +48,9 @@ var
 
 implementation
 
-uses UITypes, wtMaintSalesLead, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintSalesLead, wtMain;
 
 {$R *.dfm}
 

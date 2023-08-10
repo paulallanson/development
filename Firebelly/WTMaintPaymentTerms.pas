@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, Mask, DBCtrls, CRControls, DB,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
@@ -98,14 +98,8 @@ begin
     begin
       Close;
       parambyname('Payment_terms').asinteger := iCode;
-
       parambyname('Payment_terms_Description').asstring := edtPaymentTermsDescription.Text;
-      try
-        parambyname('Number_of_Days').asinteger := strtoint(edtNumberOfDays.Text);
-      except
-        parambyname('Number_of_Days').clear;
-      end;
-
+      parambyname('Number_of_Days').asinteger := StrToIntDef(edtNumberOfDays.Text, 0);
       ExecSQL;
     end;
   end;

@@ -59,7 +59,9 @@ var
 
 implementation
 
-uses WTMaintSupplierProduct, wtDataModule;
+uses
+  System.UITypes,
+  WTMaintSupplierProduct, wtDataModule;
 
 {$R *.dfm}
 

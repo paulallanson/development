@@ -51,7 +51,9 @@ var
 
 implementation
 
-uses WTUtilitiesDM, wtDataModule, AllCommon, DateSelV5;
+uses
+  System.UITypes,
+  WTUtilitiesDM, wtDataModule, AllCommon, DateSelV5;
 
 {$R *.dfm}
 

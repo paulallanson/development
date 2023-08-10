@@ -3,22 +3,20 @@ object frmWTMaintPayments: TfrmWTMaintPayments
   Top = 143
   BorderStyle = bsDialog
   Caption = 'Payment Details'
-  ClientHeight = 205
-  ClientWidth = 458
+  ClientHeight = 196
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
   DesignSize = (
-    458
-    205)
-  PixelsPerInch = 96
+    452
+    196)
   TextHeight = 13
   object lblName: TLabel
     Left = 8
@@ -50,7 +48,7 @@ object frmWTMaintPayments: TfrmWTMaintPayments
   end
   object btnOK: TBitBtn
     Left = 148
-    Top = 166
+    Top = 157
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -58,21 +56,23 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    NumGlyphs = 2
+    ExplicitTop = 166
   end
   object BitBtn2: TBitBtn
     Left = 236
-    Top = 166
+    Top = 157
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 6
     NumGlyphs = 2
+    TabOrder = 6
+    ExplicitTop = 166
   end
   object dblkpPaymentMethod: TDBLookupComboBox
     Left = 96
@@ -99,8 +99,6 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Top = 18
     Width = 25
     Height = 25
-    TabOrder = 1
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -115,6 +113,8 @@ object frmWTMaintPayments: TfrmWTMaintPayments
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnDateClick
   end
   object edtPaymentDescription: TEdit
     Left = 96
@@ -173,34 +173,24 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Payment_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Method'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpdate: TFDQuery
@@ -220,39 +210,27 @@ object frmWTMaintPayments: TfrmWTMaintPayments
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Payment_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paid_Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Payment_Method'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Sales_Invoice'
+        DataType = ftInteger
+      end
+      item
         Name = 'Payment'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

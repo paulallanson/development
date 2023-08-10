@@ -89,7 +89,9 @@ var
 
 implementation
 
-uses WtMaintSalesOrder, wtRSSOrder, WTJobsDM, WtMaintJob, wtLUSOLines,
+uses
+  System.UITypes, System.Types,
+  WtMaintSalesOrder, wtRSSOrder, WTJobsDM, WtMaintJob, wtLUSOLines,
   WTLUSOrderRpts, WTSOrderSearch, wtRSTemplateSheet, wtDataModule,
   wtLUPayments, wtMain, wtRSFittingConfirm;
 

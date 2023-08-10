@@ -95,7 +95,9 @@ var
 
 implementation
 
-uses wtMaintEdgeDetails, wtDataModule, wtMain;
+uses
+  System.UITypes,
+  wtMaintEdgeDetails, wtDataModule, wtMain;
 
 {$R *.dfm}
 

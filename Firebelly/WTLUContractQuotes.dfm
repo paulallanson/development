@@ -1,26 +1,24 @@
 object frmWTLUContractQuotes: TfrmWTLUContractQuotes
   Left = 296
   Top = 59
-  Width = 750
-  Height = 468
   Caption = 'Quotes Lookup'
+  ClientHeight = 421
+  ClientWidth = 732
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 422
-    Width = 742
+    Top = 402
+    Width = 732
     Height = 19
     Panels = <
       item
@@ -29,16 +27,20 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
       item
         Width = 100
       end>
+    ExplicitTop = 422
+    ExplicitWidth = 742
   end
   object Panel2: TPanel
     Left = 0
-    Top = 371
-    Width = 742
+    Top = 351
+    Width = 732
     Height = 51
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 371
+    ExplicitWidth = 742
     DesignSize = (
-      742
+      732
       51)
     object Label1: TLabel
       Left = 402
@@ -100,8 +102,8 @@ object frmWTLUContractQuotes: TfrmWTLUContractQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 742
-    Height = 371
+    Width = 732
+    Height = 351
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 2

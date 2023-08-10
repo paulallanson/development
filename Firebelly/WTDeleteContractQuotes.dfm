@@ -3,21 +3,19 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
   Top = 191
   BorderStyle = bsDialog
   Caption = 'Delete Contract Quotes'
-  ClientHeight = 216
-  ClientWidth = 266
+  ClientHeight = 207
+  ClientWidth = 260
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    266
-    216)
-  PixelsPerInch = 96
+    260
+    207)
   TextHeight = 13
   object Label2: TLabel
     Left = 16
@@ -67,9 +65,9 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Height = 25
     Caption = 'Run'
     Default = True
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 138
@@ -79,11 +77,11 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Cancel = True
     Caption = 'Close'
     ModalResult = 2
-    TabOrder = 6
     NumGlyphs = 2
+    TabOrder = 6
   end
   object edtDateTo: TEdit
-    Left = 134
+    Left = 122
     Top = 80
     Width = 89
     Height = 21
@@ -91,15 +89,14 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 2
     OnChange = CheckOK
     OnExit = edtDateToExit
+    ExplicitLeft = 134
   end
   object btnDateRequired: TBitBtn
-    Left = 230
+    Left = 218
     Top = 78
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 3
-    OnClick = btnDateRequiredClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -114,9 +111,12 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnDateRequiredClick
+    ExplicitLeft = 230
   end
   object edtDateFrom: TEdit
-    Left = 134
+    Left = 122
     Top = 48
     Width = 89
     Height = 21
@@ -124,15 +124,14 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     TabOrder = 0
     OnChange = CheckOK
     OnExit = edtDateToExit
+    ExplicitLeft = 134
   end
   object BitBtn1: TBitBtn
-    Left = 230
+    Left = 218
     Top = 46
     Width = 25
     Height = 25
     Anchors = [akTop, akRight]
-    TabOrder = 1
-    OnClick = BitBtn1Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -147,6 +146,9 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = BitBtn1Click
+    ExplicitLeft = 230
   end
   object qryQuotes: TFDQuery
     ConnectionName = 'WT'
@@ -168,14 +170,10 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
   object qryQintNotes: TFDQuery
@@ -188,9 +186,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
   object qryJSOL: TFDQuery
@@ -204,9 +200,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qryJIntNotes: TFDQuery
@@ -219,9 +213,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job'
-        ParamType = ptUnknown
       end>
   end
   object qrySIL: TFDQuery
@@ -237,9 +229,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -257,9 +247,7 @@ object frmWTDeleteContractQuotes: TfrmWTDeleteContractQuotes
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quote'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -69,7 +69,9 @@ var
 
 implementation
 
-uses wtLUMatType, WTLUSupplierProduct, AllCommon, wtDataModule;
+uses
+  System.UITypes,
+  wtLUMatType, WTLUSupplierProduct, AllCommon, wtDataModule;
 
 {$R *.dfm}
 

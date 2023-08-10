@@ -46,7 +46,9 @@ var
 
 implementation
 
-uses wtMaintDataSource;
+uses
+  System.UITypes, System.Types,
+  wtMaintDataSource;
 
 {$R *.dfm}
 

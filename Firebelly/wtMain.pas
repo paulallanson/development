@@ -561,7 +561,7 @@ begin
   try
     frmWTLUOffer.showmodal;
   finally
-    frmWtLUSpecialInstruction.free;
+    frmWTLUOffer.free;
   end;
 end;
 

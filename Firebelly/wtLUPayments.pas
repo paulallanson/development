@@ -110,7 +110,9 @@ var
 
 implementation
 
-uses wtMain, wtMaintPayments;
+uses
+  System.UITypes,
+  wtMain, wtMaintPayments;
 
 {$R *.dfm}
 

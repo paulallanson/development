@@ -55,7 +55,9 @@ var
 
 implementation
 
-uses WTRPOutQuote, allCommon, WTSrchCustomer, DateSelV5, WTRPOutJobs;
+uses
+  System.UITypes,
+  WTRPOutQuote, allCommon, WTSrchCustomer, DateSelV5, WTRPOutJobs;
 
 {$R *.dfm}
 

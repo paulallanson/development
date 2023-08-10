@@ -47,7 +47,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, System.Types,
   wtMain, wtMaintOffer;
 
 {$R *.dfm}

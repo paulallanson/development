@@ -3,35 +3,34 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Work in Progress Report'
-  ClientHeight = 192
-  ClientWidth = 492
+  ClientHeight = 183
+  ClientWidth = 486
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
-    492
-    192)
-  PixelsPerInch = 96
+    486
+    183)
   TextHeight = 13
   object btnRun: TButton
     Left = 8
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnRunClick
+    ExplicitTop = 159
   end
   object Button4: TButton
     Left = 400
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -39,9 +38,9 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 159
   end
   object rdgrpCustomer: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 105
@@ -51,16 +50,17 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Items.Strings = (
       'All'
       'One Customer')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpCustomerClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 72
     Width = 225
     Height = 73
     Caption = 'Fitting Date selection'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 16
@@ -99,8 +99,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -115,14 +113,14 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -137,15 +135,17 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object grpbxCustomer: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 8
     Width = 233
     Height = 57
     Enabled = False
+    ParentBackground = False
     TabOrder = 4
     object Label4: TLabel
       Left = 8
@@ -182,7 +182,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     end
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 8
     Width = 113
@@ -194,6 +193,7 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
       'Fitting Date'
       'Customer'
       'Status')
+    ParentBackground = False
     TabOrder = 5
   end
   object chkbxPageBreak: TCheckBox
@@ -205,7 +205,6 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     TabOrder = 6
   end
   object rdgrpValueBy: TRadioGroup
-    ParentBackground = False
     Left = 240
     Top = 72
     Width = 113
@@ -215,27 +214,30 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Items.Strings = (
       'Quoted Price'
       'Actual Job Price')
+    ParentBackground = False
     TabOrder = 7
   end
   object Button1: TButton
     Left = 96
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 8
     OnClick = Button1Click
+    ExplicitTop = 159
   end
   object Button2: TButton
     Left = 184
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Excel'
     TabOrder = 9
     OnClick = Button2Click
+    ExplicitTop = 159
   end
   object OleContainer1: TOleContainer
     Left = 212
@@ -248,11 +250,11 @@ object frmWTRSOutJobs: TfrmWTRSOutJobs
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 100
     Top = 55
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel

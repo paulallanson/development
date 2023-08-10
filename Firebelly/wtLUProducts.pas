@@ -81,7 +81,9 @@ var
 
 implementation
 
-uses UITypes, wtMaintProduct, wtDataModule, wtMain, AllCommon;
+uses
+  System.UITypes, System.Types,
+  wtMaintProduct, wtDataModule, wtMain, AllCommon;
 
 {$R *.dfm}
 

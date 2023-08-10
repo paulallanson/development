@@ -58,7 +58,9 @@ var
 
 implementation
 
-uses allCommon, DateSelV5, WTRPJobRemedial;
+uses
+  System.UITypes,
+  allCommon, DateSelV5, WTRPJobRemedial;
 
 {$R *.dfm}
 

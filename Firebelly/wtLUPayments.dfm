@@ -3,8 +3,8 @@ object frmwtLUPayments: TfrmwtLUPayments
   Top = 71
   BorderStyle = bsDialog
   Caption = 'Payments'
-  ClientHeight = 533
-  ClientWidth = 791
+  ClientHeight = 524
+  ClientWidth = 785
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmwtLUPayments: TfrmwtLUPayments
   object dbgDetails: TDBGrid
     Left = 0
     Top = 89
-    Width = 791
-    Height = 174
+    Width = 785
+    Height = 165
     Align = alClient
     DataSource = srcPayments
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -76,8 +76,8 @@ object frmwtLUPayments: TfrmwtLUPayments
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 514
-    Width = 791
+    Top = 505
+    Width = 785
     Height = 19
     Panels = <
       item
@@ -86,17 +86,21 @@ object frmwtLUPayments: TfrmwtLUPayments
       item
         Width = 50
       end>
+    ExplicitTop = 514
+    ExplicitWidth = 791
   end
   object Panel1: TPanel
     Left = 0
-    Top = 471
-    Width = 791
+    Top = 462
+    Width = 785
     Height = 43
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 471
+    ExplicitWidth = 791
     DesignSize = (
-      791
+      785
       43)
     object btnAdd: TBitBtn
       Left = 8
@@ -129,7 +133,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       OnClick = btnDeleteClick
     end
     object BitBtn4: TBitBtn
-      Left = 687
+      Left = 675
       Top = 10
       Width = 75
       Height = 25
@@ -138,6 +142,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
+      ExplicitLeft = 687
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -152,16 +157,18 @@ object frmwtLUPayments: TfrmwtLUPayments
   end
   object Panel2: TPanel
     Left = 0
-    Top = 392
-    Width = 791
+    Top = 383
+    Width = 785
     Height = 79
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 392
+    ExplicitWidth = 791
     DesignSize = (
-      791
+      785
       79)
     object Label1: TLabel
-      Left = 578
+      Left = 566
       Top = 13
       Width = 92
       Height = 13
@@ -176,7 +183,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       ExplicitLeft = 584
     end
     object lblTotalPayments: TLabel
-      Left = 682
+      Left = 670
       Top = 13
       Width = 80
       Height = 13
@@ -225,7 +232,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       Caption = 'lblOrderValue'
     end
     object Label3: TLabel
-      Left = 578
+      Left = 566
       Top = 61
       Width = 73
       Height = 13
@@ -240,7 +247,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       ExplicitLeft = 584
     end
     object lblOutstanding: TLabel
-      Left = 682
+      Left = 670
       Top = 61
       Width = 67
       Height = 13
@@ -249,7 +256,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       ExplicitLeft = 688
     end
     object lblCredits: TLabel
-      Left = 578
+      Left = 566
       Top = 38
       Width = 73
       Height = 13
@@ -264,7 +271,7 @@ object frmwtLUPayments: TfrmwtLUPayments
       ExplicitLeft = 584
     end
     object lblTotalCredits: TLabel
-      Left = 682
+      Left = 670
       Top = 38
       Width = 66
       Height = 13
@@ -276,11 +283,12 @@ object frmwtLUPayments: TfrmwtLUPayments
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 791
+    Width = 785
     Height = 89
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 4
+    ExplicitWidth = 791
     object lblSalesOrder: TLabel
       Left = 674
       Top = 14
@@ -353,8 +361,8 @@ object frmwtLUPayments: TfrmwtLUPayments
   end
   object dbgCredits: TDBGrid
     Left = 0
-    Top = 296
-    Width = 791
+    Top = 287
+    Width = 785
     Height = 96
     Align = alBottom
     DataSource = srcCreditNotes
@@ -369,7 +377,7 @@ object frmwtLUPayments: TfrmwtLUPayments
     Columns = <
       item
         Expanded = False
-        FieldName = 'Invoice_Date'
+        FieldName = 'Invoice_date'
         Title.Caption = 'Date'
         Visible = True
       end
@@ -403,11 +411,13 @@ object frmwtLUPayments: TfrmwtLUPayments
   end
   object pnlCreditNotes: TPanel
     Left = 0
-    Top = 263
-    Width = 791
+    Top = 254
+    Width = 785
     Height = 33
     Align = alBottom
     TabOrder = 6
+    ExplicitTop = 263
+    ExplicitWidth = 791
     object lblCreditNotes: TLabel
       Left = 8
       Top = 13

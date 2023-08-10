@@ -66,7 +66,9 @@ var
 
 implementation
 
-uses WTMaintWTGPrices, wtDataModule, wtMain, wtLUMatType;
+uses
+  System.UITypes,
+  WTMaintWTGPrices, wtDataModule, wtMain, wtLUMatType;
 
 {$R *.dfm}
 

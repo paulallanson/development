@@ -101,6 +101,7 @@ var
 implementation
 
 uses
+  System.UITypes, System.Types,
   AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice, WTLUSalesInvoiceRpts,
   WTLUSalesInvoiceSO, wtRSSalesInvoiceReprint, wtAccExport1, WTMaintSalesInvPay,
   wtLUPayments, WTSInvoiceSearch, wtLUSalesInvoiceRFP, wtMain;

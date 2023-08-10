@@ -29,7 +29,9 @@ var
 
 implementation
 
-uses wtMain;
+uses
+  System.UITypes,
+  wtMain;
 
 {$R *.DFM}
 

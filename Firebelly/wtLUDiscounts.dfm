@@ -3,8 +3,8 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
   Top = 107
   BorderStyle = bsDialog
   Caption = 'Discounts'
-  ClientHeight = 277
-  ClientWidth = 484
+  ClientHeight = 268
+  ClientWidth = 478
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 484
-    Height = 184
+    Width = 478
+    Height = 175
     Align = alClient
     DataSource = srcDiscounts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -54,8 +54,8 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 258
-    Width = 484
+    Top = 249
+    Width = 478
     Height = 19
     Panels = <
       item
@@ -64,17 +64,21 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
       item
         Width = 50
       end>
+    ExplicitTop = 258
+    ExplicitWidth = 484
   end
   object Panel1: TPanel
     Left = 0
-    Top = 184
-    Width = 484
+    Top = 175
+    Width = 478
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 184
+    ExplicitWidth = 484
     DesignSize = (
-      484
+      478
       74)
     object BitBtn1: TBitBtn
       Left = 8
@@ -157,9 +161,7 @@ object frmwtLUDiscounts: TfrmwtLUDiscounts
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

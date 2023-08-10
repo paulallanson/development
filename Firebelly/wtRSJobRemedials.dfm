@@ -3,36 +3,35 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
   Top = 120
   BorderStyle = bsDialog
   Caption = 'Job Remedials'
-  ClientHeight = 198
-  ClientWidth = 356
+  ClientHeight = 189
+  ClientWidth = 350
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    356
-    198)
-  PixelsPerInch = 96
+    350
+    189)
   TextHeight = 13
   object btnPrint: TButton
     Left = 8
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
+    ExplicitTop = 159
   end
   object Button4: TButton
     Left = 264
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -40,6 +39,7 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
+    ExplicitTop = 159
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -85,8 +85,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       Top = 14
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDatefromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -101,14 +99,14 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDatefromClick
     end
     object btnDateTo: TBitBtn
       Left = 168
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -123,6 +121,8 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateToClick
     end
   end
   object OleContainer1: TOleContainer
@@ -160,13 +160,11 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
   end
   object btnExcel: TBitBtn
     Left = 177
-    Top = 160
+    Top = 151
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 5
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -210,16 +208,20 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 5
+    OnClick = btnExcelClick
+    ExplicitTop = 160
   end
   object btnPreview: TButton
     Left = 93
-    Top = 159
+    Top = 150
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'P&review'
     TabOrder = 6
     OnClick = btnPreviewClick
+    ExplicitTop = 159
   end
   object rdgrpContacts: TRadioGroup
     Left = 8
@@ -255,7 +257,6 @@ object frmWTRSJobRemedials: TfrmWTRSJobRemedials
       Height = 21
       Style = csDropDownList
       Color = clBtnFace
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = 'All Contacts'

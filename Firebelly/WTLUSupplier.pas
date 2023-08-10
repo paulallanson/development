@@ -82,6 +82,7 @@ var
 implementation
 
 uses
+  System.UITypes, System.Types,
   wtDataModule, WTMaintSupplier, WTSupplierSearch, WTLUSupplierContacts,
   wtMain;
 

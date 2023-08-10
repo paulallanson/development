@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses WTMaintSalesInvoice, wtMain;
+uses
+  System.UITypes,
+  WTMaintSalesInvoice, wtMain;
 
 {$R *.dfm}
 

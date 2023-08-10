@@ -48,7 +48,9 @@ var
 
 implementation
 
-uses UITypes, wtMaintProductGroup, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintProductGroup, wtMain;
 
 {$R *.dfm}
 

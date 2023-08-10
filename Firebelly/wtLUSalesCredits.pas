@@ -109,6 +109,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   AllCommon, WtMaintSalesInvoice, printers, wtRSSalesInvoice,
   WTLUSalesInvoiceCN, wtRSSalesInvoiceReprint, WTSInvoiceSearch,
   wtMain;

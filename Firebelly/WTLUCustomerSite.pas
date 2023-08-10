@@ -84,7 +84,9 @@ var
 
 implementation
 
-uses wtMain, WTMaintBranch, wtDataModule;
+uses
+  System.UITypes,
+  wtMain, WTMaintBranch, wtDataModule;
 
 {$R *.DFM}
 

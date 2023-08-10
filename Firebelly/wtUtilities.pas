@@ -33,7 +33,9 @@ var
 
 implementation
 
-uses WTDeleteHistory, WTDeleteContractQuotes;
+uses
+  System.UITypes,
+  WTDeleteHistory, WTDeleteContractQuotes;
 
 {$R *.dfm}
 

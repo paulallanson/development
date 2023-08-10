@@ -162,7 +162,9 @@ var
 
 implementation
 
-uses wtMain, DateSelV5, WTSrchCustomer, wtMaintSalesInvoiceLine, wtDBMemo,
+uses
+  System.UITypes, System.Types,
+  wtMain, DateSelV5, WTSrchCustomer, wtMaintSalesInvoiceLine, wtDBMemo,
   AllImages, WTLUPaymentTerms, wtDataModule, WTLUCustomerSite;
 
 {$R *.DFM}

@@ -2,8 +2,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   Left = 425
   Top = 59
   Caption = 'Convert to Order'
-  ClientHeight = 630
-  ClientWidth = 600
+  ClientHeight = 621
+  ClientWidth = 594
   Color = clBtnFace
   Constraints.MinWidth = 560
   Font.Charset = DEFAULT_CHARSET
@@ -18,17 +18,19 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 585
-    Width = 600
+    Top = 576
+    Width = 594
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 4
+    ExplicitTop = 585
+    ExplicitWidth = 600
     DesignSize = (
-      600
+      594
       45)
     object btnOK: TBitBtn
-      Left = 387
+      Left = 375
       Top = 4
       Width = 75
       Height = 25
@@ -56,9 +58,10 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 387
     end
     object BitBtn2: TBitBtn
-      Left = 475
+      Left = 463
       Top = 4
       Width = 75
       Height = 25
@@ -67,16 +70,19 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
       NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
+      ExplicitLeft = 475
     end
   end
   object pnlReference: TPanel
     Left = 0
-    Top = 523
-    Width = 600
+    Top = 514
+    Width = 594
     Height = 62
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 523
+    ExplicitWidth = 600
     object Label1: TLabel
       Left = 16
       Top = 8
@@ -125,11 +131,12 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 600
+    Width = 594
     Height = 129
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 600
     object Label2: TLabel
       Left = 16
       Top = 16
@@ -270,8 +277,8 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object dbgDetails: TDBGrid
     Left = 0
     Top = 393
-    Width = 600
-    Height = 130
+    Width = 594
+    Height = 121
     Align = alClient
     DataSource = dtsSalesOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -312,11 +319,12 @@ object frmWTMaintContractConvertOrder: TfrmWTMaintContractConvertOrder
   object pnlSiteLocation: TPanel
     Left = 0
     Top = 129
-    Width = 600
+    Width = 594
     Height = 264
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 600
     object Label4: TLabel
       Left = 16
       Top = 8

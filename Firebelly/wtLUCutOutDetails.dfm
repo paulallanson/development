@@ -116,7 +116,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnChange = edtNameChange
     end
     object BitBtn1: TBitBtn
-      Left = 315
+      Left = 309
       Top = 14
       Width = 75
       Height = 25
@@ -124,10 +124,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = '&Add'
       TabOrder = 2
       OnClick = BitBtn1Click
-      ExplicitLeft = 309
+      ExplicitLeft = 303
     end
     object btnEdit: TBitBtn
-      Left = 403
+      Left = 397
       Top = 14
       Width = 75
       Height = 25
@@ -136,10 +136,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnEditClick
-      ExplicitLeft = 397
+      ExplicitLeft = 391
     end
     object btnDelete: TBitBtn
-      Left = 491
+      Left = 485
       Top = 14
       Width = 75
       Height = 25
@@ -148,10 +148,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 4
       OnClick = btnDeleteClick
-      ExplicitLeft = 485
+      ExplicitLeft = 479
     end
     object BitBtn4: TBitBtn
-      Left = 667
+      Left = 661
       Top = 14
       Width = 75
       Height = 25
@@ -160,10 +160,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 5
-      ExplicitLeft = 661
+      ExplicitLeft = 655
     end
     object btnExcel: TBitBtn
-      Left = 579
+      Left = 573
       Top = 14
       Width = 75
       Height = 25
@@ -172,7 +172,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 573
+      ExplicitLeft = 567
     end
   end
   object stsbrDetails: TStatusBar
@@ -218,13 +218,12 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 507
+      Left = 501
       Top = 16
       Width = 124
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Cut Out Details from '
-      ExplicitLeft = 501
     end
     object SpeedButton2: TSpeedButton
       Left = 165
@@ -305,7 +304,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 507
+      Left = 501
       Top = 32
       Width = 145
       Height = 21
@@ -315,10 +314,10 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
-      ExplicitLeft = 501
+      ExplicitLeft = 495
     end
     object btnGo: TButton
-      Left = 668
+      Left = 662
       Top = 30
       Width = 75
       Height = 25
@@ -327,7 +326,7 @@ object frmWTLUCutOutDetails: TfrmWTLUCutOutDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 662
+      ExplicitLeft = 656
     end
   end
   object srclkpCOutThickness: TDataSource

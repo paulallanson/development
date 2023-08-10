@@ -859,11 +859,9 @@ begin
           SOrder := dbgDetails.datasource.dataset.fieldbyname('Sales_Order').asinteger;
 
           dtmdlFittingJobs := TdtmdlJob.create(Application);
-
           try
+            aJob := TJob.Create(dtmdlFittingJobs);
             try
-              aJob := TJob.Create(dtmdlFittingJobs);
-
               aJob.DbKey := key;
               aJob.LoadFromDB;
               aJob.Status := 50;

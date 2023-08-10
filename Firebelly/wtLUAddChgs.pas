@@ -63,7 +63,9 @@ var
 
 implementation
 
-uses wtMaintAddChgs, wtDataModule, wtMain;
+uses
+  System.UITypes, System.Types,
+  wtMaintAddChgs, wtDataModule, wtMain;
 
 {$R *.DFM}
 

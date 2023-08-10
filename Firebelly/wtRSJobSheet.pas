@@ -91,6 +91,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   wtRPQuote, WtRPJobSheet, wtRPJobAccSheet, WTRPJobCutSched, WtRPJobFitting,
   wtRPJob, AllEmailHandler, wtDataModule, WtRPJobFittingTrade, wtRPJobSheetClient,
   wtMain, Printer.Tools;
