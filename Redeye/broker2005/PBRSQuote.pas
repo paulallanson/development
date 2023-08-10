@@ -708,7 +708,7 @@ begin
   if EndUser then
     fileName := 'RSP' + tempcode else
     fileName := 'QUOTE' + tempcode;
-  PrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, tempCode);
 end;
 
 (* GDK ToDo: remove after tests

@@ -35,7 +35,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btnPreviewClick(Sender: TObject);
   private
-    rep, customer: integer;
+    customer: integer;
     procedure RunReport(const bPreview: boolean);
     function InputDate(TempDate: TDateTime): TDateTime;
   public
@@ -47,7 +47,9 @@ var
 
 implementation
 
-uses allCommon, WTSrchCustomer, DateSelV5,
+uses
+  System.UITypes,
+  allCommon, WTSrchCustomer, DateSelV5,
   WTRPSOrderSchedule;
 
 {$R *.dfm}

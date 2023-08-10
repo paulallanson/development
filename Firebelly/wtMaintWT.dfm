@@ -11,13 +11,11 @@ object frmWTMaintWT: TfrmWTMaintWT
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     740
     410)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -51,9 +49,9 @@ object frmWTMaintWT: TfrmWTMaintWT
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 352
@@ -64,8 +62,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 4
     NumGlyphs = 2
+    TabOrder = 4
   end
   object pgDetails: TPageControl
     Left = 8
@@ -158,8 +156,6 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 78
         Width = 25
         Height = 25
-        TabOrder = 5
-        OnClick = btnClearClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -174,6 +170,8 @@ object frmWTMaintWT: TfrmWTMaintWT
           B0557777FF577777F7F500000E055550805577777F7555575755500000555555
           05555777775555557F5555000555555505555577755555557555}
         NumGlyphs = 2
+        TabOrder = 5
+        OnClick = btnClearClick
       end
       object dblkpWorktopFinish: TDBLookupComboBox
         Left = 88
@@ -1306,8 +1304,6 @@ object frmWTMaintWT: TfrmWTMaintWT
         Top = 187
         Width = 25
         Height = 25
-        TabOrder = 11
-        OnClick = btnClearDiscountClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1322,6 +1318,8 @@ object frmWTMaintWT: TfrmWTMaintWT
           B0557777FF577777F7F500000E055550805577777F7555575755500000555555
           05555777775555557F5555000555555505555577755555557555}
         NumGlyphs = 2
+        TabOrder = 11
+        OnClick = btnClearDiscountClick
       end
     end
     object tbColourGroups: TTabSheet
@@ -1368,8 +1366,6 @@ object frmWTMaintWT: TfrmWTMaintWT
         Height = 25
         Caption = '&Add'
         Enabled = False
-        TabOrder = 2
-        OnClick = btnAddClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1384,6 +1380,8 @@ object frmWTMaintWT: TfrmWTMaintWT
           3333333333333333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = btnAddClick
       end
       object btnRemove: TBitBtn
         Left = 173
@@ -1392,8 +1390,6 @@ object frmWTMaintWT: TfrmWTMaintWT
         Height = 25
         Caption = '&Remove'
         Enabled = False
-        TabOrder = 3
-        OnClick = btnRemoveClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -1408,6 +1404,8 @@ object frmWTMaintWT: TfrmWTMaintWT
           3333333333773333333333333333333333333333333333333333333333333333
           3333333333333333333333333333333333333333333333333333}
         NumGlyphs = 2
+        TabOrder = 3
+        OnClick = btnRemoveClick
       end
       object lstbxNonMembers: TListBox
         Left = 272
@@ -1510,9 +1508,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object srclkpMatType: TDataSource
@@ -1555,14 +1551,10 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'worktop_group'
-        ParamType = ptUnknown
       end>
   end
   object qryAddWTThickness: TFDQuery
@@ -1576,19 +1568,13 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object srclkpWTThickness: TDataSource
@@ -1597,7 +1583,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 192
   end
   object lkpWTThickness: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT Worktop_thickness.Worktop,'
       '      Worktop_thickness.Thickness,'
@@ -1608,14 +1594,14 @@ object frmWTMaintWT: TfrmWTMaintWT
       
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -1623,7 +1609,7 @@ object frmWTMaintWT: TfrmWTMaintWT
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -1637,33 +1623,47 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 200
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Worktop'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpWTThicknessWorktop: TIntegerField
       FieldName = 'Worktop'
+      Origin = 'Worktop'
+      Required = True
     end
     object lkpWTThicknessThickness: TIntegerField
       FieldName = 'Thickness'
+      Origin = 'Thickness'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object lkpWTThicknessThickness_mm: TStringField
+    object lkpWTThicknessThickness_mm: TWideStringField
       FieldName = 'Thickness_mm'
-      Size = 10
-    end
-    object lkpWTThicknessUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-    end
-    object lkpWTThicknessUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-    end
-    object lkpWTThicknessPrice_unit_description: TStringField
-      FieldName = 'Price_unit_description'
+      Origin = 'Thickness_mm'
+      Required = True
+      Size = 50
     end
     object lkpWTThicknessPrice_Pointer: TIntegerField
       FieldName = 'Price_Pointer'
+      Origin = 'Price_Pointer'
+      Required = True
+    end
+    object lkpWTThicknessUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpWTThicknessUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpWTThicknessPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
   object qryDelWTThick: TFDQuery
@@ -1675,9 +1675,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object lkpWorktopFinish: TFDQuery
@@ -1692,15 +1690,13 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 237
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Finish'
-        ParamType = ptUnknown
       end>
   end
   object srclkpWorktopFinsih: TDataSource
     DataSet = lkpWorktopFinish
-    Left = 80
-    Top = 184
+    Left = 76
+    Top = 198
   end
   object qryCheckWTThickness: TFDQuery
     ConnectionName = 'wT'
@@ -1713,14 +1709,10 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 157
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteColour: TFDQuery
@@ -1732,9 +1724,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryAddColour: TFDQuery
@@ -1752,14 +1742,10 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Colour'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -1791,9 +1777,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsNonMembers: TDataSource
@@ -1820,9 +1804,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object OpenPictureDialog1: TOpenPictureDialog
@@ -1847,9 +1829,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 13
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end>
   end
   object scrlkpDiscounts: TDataSource
@@ -1867,9 +1847,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -1893,59 +1871,41 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Worktop_Finish'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Discount'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Long_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1961,8 +1921,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 336
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1976,9 +1936,7 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery
@@ -1991,8 +1949,8 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 336
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -2016,14 +1974,10 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsGroup: TDataSource
@@ -2046,14 +2000,10 @@ object frmWTMaintWT: TfrmWTMaintWT
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Colour'
-        ParamType = ptUnknown
       end>
   end
 end

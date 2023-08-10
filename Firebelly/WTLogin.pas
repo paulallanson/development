@@ -30,6 +30,7 @@ type
     procedure CompLogoImageDblClick(Sender: TObject);
     procedure ShowDataBase(Sender: TObject);
     procedure FormDeactivate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -98,7 +99,7 @@ begin
   end;
 
   Edit1.Text := TempArray;
-  sDBase := Edit1.Text;
+  sDBase := AnsiString(Edit1.Text);
   ShowDataBAse(Self);
   GetPrivateProfileString('Quaystone', 'Fax System', 'S', TempArray,
     sizeof(TempArray), myWorktops_INIFILE);
@@ -227,7 +228,7 @@ begin
       1: TempAlias := 'T';
     end;
     Edit1.Text := TempAlias;
-    sDBase := Edit1.Text;
+    sDBase := AnsiString(Edit1.Text);
     ShowDataBase(Self);
     WritePrivateProfileString('Quaystone', 'DBAlias', TempAlias,
       myWorktops_INIFILE);
@@ -289,6 +290,14 @@ begin
   finally
     IniFile.Free;
   end;
+end;
+
+procedure TfrmWTLogin.FormShow(Sender: TObject);
+begin
+  {$IF DEFINED(GDK) AND DEFINED(DEBUG)}
+  UserEdit.Text := 'bsadmin';
+  PasswordEdit.Text := 'firebelly';
+  {$ENDIF}
 end;
 
 procedure TfrmWTLogin.SetEndUser(const Value: boolean);

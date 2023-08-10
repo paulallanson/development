@@ -21,13 +21,6 @@ type
     qryAddWTThickness: TFDQuery;
     srclkpWTThickness: TDataSource;
     lkpWTThickness: TFDQuery;
-    lkpWTThicknessWorktop: TIntegerField;
-    lkpWTThicknessThickness: TIntegerField;
-    lkpWTThicknessThickness_mm: TStringField;
-    lkpWTThicknessUnit_Price: TFloatField;
-    lkpWTThicknessUnit_Cost: TFloatField;
-    lkpWTThicknessPrice_unit_description: TStringField;
-    lkpWTThicknessPrice_Pointer: TIntegerField;
     qryDelWTThick: TFDQuery;
     pgDetails: TPageControl;
     tbDetails: TTabSheet;
@@ -87,6 +80,13 @@ type
     lkpGroup: TFDQuery;
     dtsGroup: TDataSource;
     qryAddColourSQL: TFDQuery;
+    lkpWTThicknessWorktop: TIntegerField;
+    lkpWTThicknessThickness: TIntegerField;
+    lkpWTThicknessThickness_mm: TWideStringField;
+    lkpWTThicknessPrice_Pointer: TIntegerField;
+    lkpWTThicknessUnit_Price: TCurrencyField;
+    lkpWTThicknessUnit_Cost: TCurrencyField;
+    lkpWTThicknessPrice_Unit_Description: TWideStringField;
     procedure btnOKClick(Sender: TObject);
     procedure btnWorktopGroupClick(Sender: TObject);
     procedure EnableOK(Sender: TObject);

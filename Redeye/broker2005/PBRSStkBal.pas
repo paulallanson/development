@@ -558,7 +558,7 @@ end;
 procedure TPBRSStkBalFrm.PrintToAttachment(PBRPStkBalfrm: TPBRPStkBalfrm);
 begin
   var fileName := 'StkBal';
-  PrinterTools.New.PrintToAttachment(PBRPStkBalfrm.QuickReport, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PBRPStkBalfrm.QuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

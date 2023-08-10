@@ -679,7 +679,7 @@ end;
 procedure TPBRSPODueFrm.PrintToAttachment(PBRPPODueFrm: TPBRPPODueFrm);
 begin
   var fileName := 'OrdersDue' + '-' + PBRPPODueFrm.PONumberQRLabel.Caption;
-  PrinterTools.New.PrintToAttachment(PBRPPODueFrm.PrintPOsDueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PBRPPODueFrm.PrintPOsDueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

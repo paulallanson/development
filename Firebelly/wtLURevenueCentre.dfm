@@ -3,24 +3,22 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   Top = 133
   BorderStyle = bsDialog
   Caption = 'Maintain Revenue Centre'
-  ClientHeight = 416
-  ClientWidth = 706
+  ClientHeight = 407
+  ClientWidth = 700
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 706
-    Height = 310
+    Width = 700
+    Height = 301
     Align = alClient
     DataSource = srcRevenueCentre
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 397
-    Width = 706
+    Top = 388
+    Width = 700
     Height = 19
     Panels = <
       item
@@ -59,17 +57,21 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       item
         Width = 50
       end>
+    ExplicitTop = 397
+    ExplicitWidth = 706
   end
   object Panel1: TPanel
     Left = 0
-    Top = 310
-    Width = 706
+    Top = 301
+    Width = 700
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 310
+    ExplicitWidth = 706
     DesignSize = (
-      706
+      700
       87)
     object Label4: TLabel
       Left = 8
@@ -118,9 +120,9 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -172,14 +174,10 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

@@ -17,8 +17,8 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
   object qrpDetails: TQuickRep
     Left = 16
     Top = 16
-    Width = 1123
-    Height = 794
+    Width = 1403
+    Height = 992
     ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     DataSet = qrySalesOrders
@@ -78,31 +78,31 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
     PreviewLeft = 0
     PreviewTop = 0
     object qrbGroupHeader: TQRGroup
-      Left = 38
-      Top = 128
-      Width = 1047
+      Left = 47
+      Top = 160
+      Width = 1309
       Height = 32
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666670000
-        2770.187500000000000000)
+        67.733333333333330000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
       ReprintOnNewPage = False
       object qrlblSortBy: TQRLabel
         Left = 0
-        Top = 8
-        Width = 47
-        Height = 17
+        Top = 10
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
           21.166666666666670000
-          124.354166666666700000)
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -112,7 +112,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -123,15 +123,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object qrGroupbyText: TQRDBText
-        Left = 96
-        Top = 8
-        Width = 80
-        Height = 17
+        Left = 120
+        Top = 10
+        Width = 98
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           254.000000000000000000
           21.166666666666670000
-          211.666666666666700000)
+          207.433333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -142,7 +142,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -156,31 +156,31 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       end
     end
     object QRBand1: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 90
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 113
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        238.125000000000000000
-        2770.187500000000000000)
+        239.183333333333300000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblCaption: TQRLabel
-        Left = 460
-        Top = 2
-        Width = 114
-        Height = 19
+        Left = 572
+        Top = 3
+        Width = 148
+        Height = 24
         Size.Values = (
-          50.270833333333330000
-          1217.083333333333000000
-          5.291666666666667000
-          301.625000000000000000)
+          50.800000000000000000
+          1210.733333333333000000
+          6.350000000000000000
+          313.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -190,7 +190,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -16
+        Font.Height = -20
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -201,15 +201,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 12
       end
       object QRSysData1: TQRSysData
-        Left = 968
-        Top = 23
-        Width = 69
-        Height = 17
+        Left = 1212
+        Top = 29
+        Width = 84
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2561.166666666667000000
-          60.854166666666670000
-          182.562500000000000000)
+          44.450000000000000000
+          2565.400000000000000000
+          61.383333333333330000
+          177.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -219,7 +219,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Data = qrsPageNumber
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -231,14 +231,14 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       end
       object QRLabel3: TQRLabel
         Left = 0
-        Top = 71
-        Width = 59
-        Height = 17
+        Top = 89
+        Width = 70
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           0.000000000000000000
-          187.854166666666700000
-          156.104166666666700000)
+          188.383333333333300000
+          148.166666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -248,7 +248,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -259,15 +259,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRLabel5: TQRLabel
-        Left = 136
-        Top = 71
-        Width = 47
-        Height = 17
+        Left = 170
+        Top = 89
+        Width = 57
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           359.833333333333300000
-          187.854166666666700000
-          124.354166666666700000)
+          188.383333333333300000
+          120.650000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -277,7 +277,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -288,15 +288,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRLabel6: TQRLabel
-        Left = 296
-        Top = 71
-        Width = 52
-        Height = 17
+        Left = 370
+        Top = 89
+        Width = 59
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           783.166666666666700000
-          187.854166666666700000
-          137.583333333333300000)
+          188.383333333333300000
+          124.883333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -306,7 +306,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -317,15 +317,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object qrlblDateRange: TQRLabel
-        Left = 475
-        Top = 25
-        Width = 74
-        Height = 15
+        Left = 596
+        Top = 31
+        Width = 89
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1256.770833333333000000
-          66.145833333333330000
-          195.791666666666700000)
+          40.216666666666670000
+          1261.533333333333000000
+          65.616666666666670000
+          188.383333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -335,7 +335,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -346,15 +346,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRSysData2: TQRSysData
-        Left = 982
-        Top = 8
-        Width = 56
-        Height = 17
+        Left = 1229
+        Top = 10
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2598.208333333333000000
+          44.450000000000000000
+          2601.383333333333000000
           21.166666666666670000
-          148.166666666666700000)
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -364,7 +364,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Data = qrsDateTime
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -375,15 +375,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRLabel1: TQRLabel
-        Left = 440
-        Top = 71
-        Width = 20
-        Height = 17
+        Left = 550
+        Top = 89
+        Width = 24
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1164.166666666667000000
-          187.854166666666700000
-          52.916666666666670000)
+          188.383333333333300000
+          50.800000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -393,7 +393,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -404,15 +404,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object qrlblSelection: TQRLabel
-        Left = 479
-        Top = 45
-        Width = 65
-        Height = 15
+        Left = 600
+        Top = 56
+        Width = 79
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1267.354166666667000000
-          119.062500000000000000
-          171.979166666666700000)
+          40.216666666666670000
+          1270.000000000000000000
+          118.533333333333300000
+          167.216666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -422,7 +422,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -433,15 +433,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object gtQRLabel1: TQRLabel
-        Left = 64
-        Top = 71
-        Width = 54
-        Height = 17
+        Left = 80
+        Top = 89
+        Width = 68
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           169.333333333333300000
-          187.854166666666700000
-          142.875000000000000000)
+          188.383333333333300000
+          143.933333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -451,7 +451,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -462,15 +462,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object gtQRLabel4: TQRLabel
-        Left = 960
-        Top = 71
-        Width = 32
-        Height = 17
+        Left = 1200
+        Top = 89
+        Width = 39
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           2540.000000000000000000
-          187.854166666666700000
-          84.666666666666670000)
+          188.383333333333300000
+          82.550000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -480,7 +480,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -491,15 +491,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object gtQRLabel2: TQRLabel
-        Left = 552
-        Top = 71
-        Width = 55
-        Height = 17
+        Left = 690
+        Top = 89
+        Width = 66
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1460.500000000000000000
-          187.854166666666700000
-          145.520833333333300000)
+          188.383333333333300000
+          139.700000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -509,7 +509,7 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -521,10 +521,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       end
     end
     object qrsbDetails: TQRSubDetail
-      Left = 38
-      Top = 160
-      Width = 1047
-      Height = 25
+      Left = 47
+      Top = 192
+      Width = 1309
+      Height = 31
       AfterPrint = qrsbDetailsAfterPrint
       AlignToBottom = False
       BeforePrint = qrsbDetailsBeforePrint
@@ -538,8 +538,8 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        66.145833333333330000
-        2770.187500000000000000)
+        65.616666666666670000
+        2770.716666666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = qrpDetails
@@ -548,13 +548,13 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
       object QRDBText2: TQRDBText
         Left = 0
         Top = 1
-        Width = 62
-        Height = 15
+        Width = 73
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           0.000000000000000000
-          2.645833333333333000
-          164.041666666666700000)
+          2.116666666666667000
+          154.516666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -563,6 +563,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Sales_Order'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -572,10 +578,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRDBText5: TQRDBText
-        Left = 296
+        Left = 370
         Top = 1
-        Width = 137
-        Height = 15
+        Width = 171
+        Height = 19
         Size.Values = (
           39.687500000000000000
           783.166666666666700000
@@ -590,6 +596,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Reference'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -599,10 +611,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRDBText6: TQRDBText
-        Left = 136
+        Left = 170
         Top = 1
-        Width = 153
-        Height = 15
+        Width = 191
+        Height = 19
         Size.Values = (
           39.687500000000000000
           359.833333333333300000
@@ -617,6 +629,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Customer_Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -626,10 +644,10 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object QRDBText10: TQRDBText
-        Left = 440
+        Left = 550
         Top = 1
-        Width = 97
-        Height = 15
+        Width = 121
+        Height = 19
         Size.Values = (
           39.687500000000000000
           1164.166666666667000000
@@ -644,6 +662,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Rep_Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -653,15 +677,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object qrlblFittingDate: TQRLabel
-        Left = 66
+        Left = 83
         Top = 1
-        Width = 71
-        Height = 15
+        Width = 88
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          174.625000000000000000
-          2.645833333333333000
-          187.854166666666700000)
+          40.216666666666670000
+          175.683333333333300000
+          2.116666666666667000
+          186.266666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -669,6 +693,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         AlignToBand = False
         Caption = 'qrlblFittingDate'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -676,15 +706,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object qrlblDescription: TQRLabel
-        Left = 552
+        Left = 690
         Top = 1
-        Width = 75
-        Height = 15
+        Width = 90
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1460.500000000000000000
-          2.645833333333333000
-          198.437500000000000000)
+          2.116666666666667000
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -692,6 +722,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         AlignToBand = False
         Caption = 'qrlblDescription'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -699,15 +735,15 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         FontSize = 8
       end
       object gtQRDBText2: TQRDBText
-        Left = 960
+        Left = 1200
         Top = 1
-        Width = 130
-        Height = 15
+        Width = 155
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           2540.000000000000000000
-          2.645833333333333000
-          343.958333333333300000)
+          2.116666666666667000
+          328.083333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -716,6 +752,12 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         Color = clWhite
         DataSet = qrySalesOrders
         DataField = 'Sales_Order_Status_Desc'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
         ExportAs = exptText
         WrapStyle = BreakOnSpaces
@@ -780,43 +822,38 @@ object frmWTRPSOWarranty: TfrmWTRPSOWarranty
         'ustomer.Is_Commercial_Customer = :Is_Commercial_Customer)) or (:' +
         'Is_Retail_Customer = '#39'A'#39'))'
       '')
-    Left = 200
-    Top = 40
+    Left = 114
+    Top = 266
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
-        Name = 'Rep'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
         Name = 'Date_From'
-        ParamType = ptUnknown
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftString
         Name = 'Date_To'
-        ParamType = ptUnknown
+        DataType = ftDateTime
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Commercial_Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Is_Retail_Customer'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
   end
 end

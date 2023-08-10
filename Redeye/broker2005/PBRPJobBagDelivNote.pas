@@ -403,7 +403,7 @@ end;
 
 function TPBRPJobBagDelivNoteFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
 begin
-  PrinterTools.New.PrintToFileDelivery(JBDelivQuickReport, Result, PONo, PoLine, DelLine, attachmentType);
+  TPrinterTools.New.PrintToFileDelivery(JBDelivQuickReport, Result, PONo, PoLine, DelLine, attachmentType);
 end;
 
 (* GDK ToDo: remove after tests

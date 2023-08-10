@@ -860,7 +860,7 @@ end;
 procedure TSTPordRSlFrm.PrintToAttachment(STPOrdRepFrm: TSTPOrdRepFrm);
 begin
   var fileName := 'PO' + trim(SelectionMemo.Text);
-  PrinterTools.New.PrintToAttachment(STPOrdRepFrm.PurchOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STPOrdRepFrm.PurchOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

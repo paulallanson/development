@@ -11,6 +11,8 @@ uses
 
 type
   TPrinterTools = class(TInterfacedObject, IPrinterToAttachment)
+  private
+    { Private declarations }
     gtQRExportInterface1: TgtQRExportInterface;
     gtHTMLEngine1: TgtHTMLEngine;
     gtPDFEngine1: TgtPDFEngine;
@@ -18,23 +20,19 @@ type
     gtRTFEngine1: TgtRTFEngine;
     gtGIFEngine1: TgtGIFEngine;
     gtJPEGEngine1: TgtJPEGEngine;
-  private
-    { Private declarations }
     function GetLocation: string;
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
-    procedure PrintToFile(const Report: TQuickRep; const fileName, attachmentType: string);
+    procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string);
+    constructor Create;
+    destructor Destroy; override;
   public
     { Public declarations }
-    constructor Create;
     class function New: IPrinterToAttachment;
     procedure PrintToAttachment(const Report: TQuickRep; const FEmailAttachment: TStringList; const fileName, attachmentType: string);
     procedure PrintToFileQuote(const Report: TQuickRep; const ListFiles: TStringList; const ReferenceNo: integer; const attachmentType: string);
     procedure PrintToFileDelivery(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
     procedure PrintToFileLabel(const Report: TQuickRep; const ListFiles: TStringList; const PONo: Real; const POLine, DelLine: integer; const attachmentType: string);
   end;
-
-var
-  PrinterTools: TPrinterTools;
 
 implementation
 
@@ -67,6 +65,19 @@ begin
   Result := Self.Create;
 end;
 
+destructor TPrinterTools.Destroy;
+begin
+  if Assigned(gtQRExportInterface1) then gtQRExportInterface1.Free;
+  if Assigned(gtHTMLEngine1) then gtHTMLEngine1.Free;
+  if Assigned(gtPDFEngine1) then gtPDFEngine1.Free;
+  if Assigned(gtBMPEngine1) then gtBMPEngine1.Free;
+  if Assigned(gtRTFEngine1) then gtRTFEngine1.Free;
+  if Assigned(gtGIFEngine1) then gtGIFEngine1.Free;
+  if Assigned(gtJPEGEngine1) then gtJPEGEngine1.Free;
+
+  inherited Destroy;
+end;
+
 function TPrinterTools.GetLocation: string;
 begin
   {$IFDEF FIREBELLY}
@@ -87,7 +98,7 @@ var
   targetFileName: string;
 begin
   Location := GetLocation;
-  targetFileName := Location + fileName + '.' + attachmentType;
+  targetFileName := Location + fileName;
 
   PrintToFile(Report, targetFileName, attachmentType);
 
@@ -95,7 +106,7 @@ begin
   FEmailAttachment.Add(targetFileName);
 end;
 
-procedure TPrinterTools.PrintToFile(const Report: TQuickRep; const fileName, attachmentType: string);
+procedure TPrinterTools.PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string);
 var
   fileType: TPrinterFileType;
 begin
@@ -103,20 +114,24 @@ begin
 
   case fileType of
     pftHTML : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftPDF : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftBMP : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftRTF : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftGIF : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftJPEG : gtQRExportInterface1.Engine := gtHTMLEngine1;
+    pftPDF : gtQRExportInterface1.Engine := gtPDFEngine1;
+    pftBMP : gtQRExportInterface1.Engine := gtBMPEngine1;
+    pftRTF : gtQRExportInterface1.Engine := gtRTFEngine1;
+    pftGIF : gtQRExportInterface1.Engine := gtGIFEngine1;
+    pftJPEG : gtQRExportInterface1.Engine := gtJPEGEngine1;
     else raise Exception.Create('Invalid file type.');
   end;
 
-  IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := FileName;
+  IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := fileName;
   IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.UseImagesAsResources := True;
   IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ProcessAfterEachPage := True;
   IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.OpenAfterCreate := False;
   IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ShowSetupDialog := False;
-  gtQRExportInterface1.RenderDocument(Report, True);
+
+  gtQRExportInterface1.Engine.FileExtension := attachmentType;
+  gtQRExportInterface1.RenderDocument(Report, False);
+
+  fileName := fileName + '.' + gtQRExportInterface1.Engine.FileExtension;
 end;
 
 procedure TPrinterTools.PrintToFileDelivery(const Report: TQuickRep; const ListFiles: TStringList;

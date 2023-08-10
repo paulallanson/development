@@ -292,7 +292,7 @@ end;
 procedure TSTRSSalesOrdfrm.PrintToAttachment(STRPSordFrm: TSTRPSordFrm);
 begin
   var fileName := 'SO' + SONumber.ToString;
-  PrinterTools.New.PrintToAttachment(STRPSordFrm.SalesOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STRPSordFrm.SalesOrdQuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

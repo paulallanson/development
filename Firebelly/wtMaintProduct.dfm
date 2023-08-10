@@ -119,6 +119,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     NumGlyphs = 2
     TabOrder = 12
     OnClick = btnOKClick
+    ExplicitTop = 299
   end
   object BitBtn2: TBitBtn
     Left = 226
@@ -131,6 +132,7 @@ object frmWtMaintProduct: TfrmWtMaintProduct
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 13
+    ExplicitTop = 299
   end
   object dblkpProductGroup: TDBLookupComboBox
     Left = 112

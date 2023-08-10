@@ -80,7 +80,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
       end
       item
         Expanded = False
-        FieldName = 'Price_unit_description'
+        FieldName = 'Price_Unit_Description'
         Title.Caption = 'Price Unit'
         Width = 91
         Visible = True
@@ -141,7 +141,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Top = 16
   end
   object lkpWTThickness: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT Worktop_thickness.Worktop,'
       '      Worktop_thickness.Thickness,'
@@ -153,14 +153,14 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
       
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
@@ -168,7 +168,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
         '    where Prices.Price_pointer = worktop_thickness.price_pointer' +
         ' and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on'
@@ -185,42 +185,58 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Worktop'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpWTThicknessWorktop: TIntegerField
       FieldName = 'Worktop'
+      Origin = 'Worktop'
+      Required = True
     end
     object lkpWTThicknessThickness: TIntegerField
       FieldName = 'Thickness'
+      Origin = 'Thickness'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object lkpWTThicknessThickness_mm: TStringField
+    object lkpWTThicknessinactive: TWideStringField
+      FieldName = 'inactive'
+      Origin = 'inactive'
+      Size = 1
+    end
+    object lkpWTThicknessThickness_mm: TWideStringField
       FieldName = 'Thickness_mm'
-      Size = 10
-    end
-    object lkpWTThicknessUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-    end
-    object lkpWTThicknessUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-    end
-    object lkpWTThicknessPrice_unit_description: TStringField
-      FieldName = 'Price_unit_description'
+      Origin = 'Thickness_mm'
+      Required = True
+      Size = 50
     end
     object lkpWTThicknessPrice_Pointer: TIntegerField
       FieldName = 'Price_Pointer'
+      Origin = 'Price_Pointer'
+      Required = True
     end
-    object lkpWTThicknessinactive: TStringField
-      FieldName = 'inactive'
-      Size = 1
+    object lkpWTThicknessUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpWTThicknessUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpWTThicknessPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
   end
   object qryDelWTThick: TFDQuery
@@ -232,9 +248,7 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -247,14 +261,10 @@ object frmWTLUWTThickness: TfrmWTLUWTThickness
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
 end

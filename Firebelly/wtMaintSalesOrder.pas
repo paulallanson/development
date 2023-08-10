@@ -4108,7 +4108,6 @@ procedure TfrmWTMaintSalesOrder.dbgSalesInvoicesDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 var
-  TempRect: TRect;
   Txt: array [0..255] of Char;
   sValue: string;
 begin

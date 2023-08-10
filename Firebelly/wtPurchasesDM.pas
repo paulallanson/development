@@ -27,10 +27,6 @@ type
     qryUpCompany: TFDQuery;
     qryPOUpStatus: TFDQuery;
     qryVAT: TFDQuery;
-    qryVATVat: TIntegerField;
-    qryVATVat_Rate: TFloatField;
-    qryVATDescription: TStringField;
-    qryVATVat_Code: TStringField;
     dtsVAT: TDataSource;
     qryGetContacts: TFDQuery;
     dtsMaterial: TDataSource;
@@ -89,6 +85,10 @@ type
     qryAllPurchasesContact_name: TWideStringField;
     qryAllPurchasesNotes: TWideStringField;
     qryAllPurchasesOffice_Contact_Name: TWideStringField;
+    qryVATVat: TIntegerField;
+    qryVATVat_Rate: TFloatField;
+    qryVATDescription: TWideStringField;
+    qryVATVat_Code: TWideStringField;
   private
     function GetCurrentPOrder: integer;
     function GetNextPONumber: integer;

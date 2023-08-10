@@ -314,7 +314,7 @@ end;
 
 function TPBRPDelivFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
 begin
-  PrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+  TPrinterTools.New.PrintToFileDelivery(PBDelivQuickReport, Result, PONo, POLine, DelLine, attachmentType);
 end;
 
 (* GDK ToDo: remove after tests

@@ -79,8 +79,6 @@ type
     Button4: TButton;
     Label42: TLabel;
     memRetailPayment: TMemo;
-    qryVatVat_Rate: TFloatField;
-    qryVatVat: TIntegerField;
     Label43: TLabel;
     TabSheet1: TTabSheet;
     Label44: TLabel;
@@ -256,6 +254,8 @@ type
     btnLUProducts: TButton;
     btnClearProduct: TSpeedButton;
     chkbxUseRemedialsAsOrders: TCheckBox;
+    qryVatVat: TIntegerField;
+    qryVatVat_Rate: TFloatField;
     procedure EnableOK(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);

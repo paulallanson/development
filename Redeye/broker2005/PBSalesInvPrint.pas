@@ -590,7 +590,7 @@ begin
     sPrefix := 'SC' else
     sPrefix := 'SI';
   fileName := sPrefix + PBRPSalesInvFrm.InvoiceNumberlbl.Caption;
-  PrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
 end;
 
 (*

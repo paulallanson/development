@@ -185,7 +185,7 @@ end;
 
 procedure TemailHandler.PrintToAttachment(report: TQuickRep; attachmentType: string);
 begin
-  PrinterTools.New.PrintToAttachment(Report, FEmailAttachment, Self.fileName, attachmentType);
+  TPrinterTools.New.PrintToAttachment(Report, FEmailAttachment, Self.fileName, attachmentType);
 end;
 
 (*

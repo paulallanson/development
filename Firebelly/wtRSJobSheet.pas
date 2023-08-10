@@ -470,7 +470,7 @@ begin
                     frmWTRPJobRemedialSheet.bPreview := false;
                     sAttachmentType := 'PDF';
                     var printFileName := 'RS' + memSelection.text + '-J' + memSOrderNumber.text;
-                    PrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, AttachmentList, printFileName, sAttachmentType);
+                    TPrinterTools.New.PrintToAttachment(frmWTRPJobRemedialSheet.qrpJobSheet, AttachmentList, printFileName, sAttachmentType);
                   end;
               finally
                 frmWTRPJobRemedialSheet.Free;

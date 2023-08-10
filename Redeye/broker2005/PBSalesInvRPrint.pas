@@ -806,7 +806,7 @@ begin
   if self.CreditNotePrint then
     fileName := 'SC' + tempcode else
     fileName := 'SI' + tempcode;
-  PrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
+  TPrinterTools.New.PrintToAttachment(PBRPSalesInvFrm.InvoiceReport, FEmailAttachment, fileName, tempCode);
 end;
 
 (*

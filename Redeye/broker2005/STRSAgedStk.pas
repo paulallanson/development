@@ -886,7 +886,7 @@ end;
 procedure TSTRSAgedStkFrm.PrintToAttachment(STRPAgedStkfrm: TSTRPAgedStkfrm);
 begin
   var fileName := 'AgedStk' +'-' + STRPAgedStkfrm.RepNo.ToString;
-  PrinterTools.New.PrintToAttachment(STRPAgedStkfrm.qrAgedStk, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STRPAgedStkfrm.qrAgedStk, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

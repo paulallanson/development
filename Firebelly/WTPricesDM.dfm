@@ -60,7 +60,8 @@ object dtmdlPrices: TdtmdlPrices
         'er and'
       '            Prices.Operator = Operator.Operator and'
       '            Prices.effective_date <= GetDate()'
-      '      order by Prices.effective_date desc) AS Operator_Name'
+      '      order by Prices.effective_date desc) AS Operator_Name,'
+      '      Worktop_Group.inactive'
       'FROM (Worktop_Group'
       '      RIGHT JOIN (Material_Type'
       '      INNER JOIN Worktop'
@@ -71,8 +72,8 @@ object dtmdlPrices: TdtmdlPrices
       '        ON Thickness.Thickness = Worktop_thickness.Thickness)'
       '        ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 30
-    Top = 10
+    Left = 54
+    Top = 42
     object qryAllPricesWorktop: TIntegerField
       FieldName = 'Worktop'
       Origin = 'Worktop'
@@ -149,11 +150,16 @@ object dtmdlPrices: TdtmdlPrices
       ReadOnly = True
       Size = 30
     end
+    object qryAllPricesinactive: TWideStringField
+      FieldName = 'inactive'
+      Origin = 'inactive'
+      Size = 1
+    end
   end
   object dtsAllPrices: TDataSource
     DataSet = qryAllPrices
-    Left = 100
-    Top = 10
+    Left = 164
+    Top = 42
   end
   object qryDummyCurrent: TFDQuery
     SQL.Strings = (
@@ -231,8 +237,8 @@ object dtmdlPrices: TdtmdlPrices
       '        LEFT JOIN Worktop_thickness'
       '          ON Worktop.Worktop = Worktop_thickness.Worktop'
       'WHERE 1=1')
-    Left = 190
-    Top = 10
+    Left = 286
+    Top = 42
   end
   object qryDummyFuture: TFDQuery
     SQL.Strings = (
@@ -288,8 +294,8 @@ object dtmdlPrices: TdtmdlPrices
       '            ON Operator.Operator = Prices.Operator)'
       '            ON Price_unit.Price_unit = Prices.Price_unit'
       'WHERE 1=1')
-    Left = 300
-    Top = 10
+    Left = 420
+    Top = 42
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
@@ -298,8 +304,8 @@ object dtmdlPrices: TdtmdlPrices
       
         'WHERE Price_Pointer = :Price_Pointer AND Effective_Date = :Effec' +
         'tive_Date')
-    Left = 30
-    Top = 90
+    Left = 54
+    Top = 122
     ParamData = <
       item
         Name = 'Price_Pointer'

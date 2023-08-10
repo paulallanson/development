@@ -919,7 +919,7 @@ end;
 procedure TPBRSEnqFrm.PrintToAttachment(PrintingPress: TfrmPrintingPress);
 begin
   var fileName := 'ENQ' + FEnquiry.ToString;
-  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

@@ -2269,6 +2269,9 @@ object dtmdlQuote: TdtmdlQuote
     ParamData = <
       item
         Name = 'vat'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsVat: TDataSource

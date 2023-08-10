@@ -30,7 +30,7 @@ object frmWTMaintParams: TfrmWTMaintParams
     Top = 40
     Width = 705
     Height = 609
-    ActivePage = TabSheet5
+    ActivePage = TabSheet6
     TabOrder = 0
     object tsGeneral: TTabSheet
       Caption = 'General'
@@ -1880,6 +1880,8 @@ object frmWTMaintParams: TfrmWTMaintParams
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 660
+    ExplicitWidth = 746
     object btnOK: TBitBtn
       Left = 283
       Top = 4
@@ -2019,12 +2021,16 @@ object frmWTMaintParams: TfrmWTMaintParams
       'order by Vat_Rate')
     Left = 452
     Top = 448
-    object qryVatVat_Rate: TFloatField
-      FieldName = 'Vat_Rate'
-      DisplayFormat = '0.00%'
-    end
     object qryVatVat: TIntegerField
       FieldName = 'Vat'
+      Origin = 'Vat'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryVatVat_Rate: TFloatField
+      FieldName = 'Vat_Rate'
+      Origin = 'Vat_Rate'
+      Required = True
     end
   end
   object dtsVat: TDataSource

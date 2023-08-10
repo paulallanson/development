@@ -1151,7 +1151,7 @@ begin
   if TypeRadioGroup.ItemIndex = 0 then
     fileName := 'PO' + floattostr(dbPOrdLtr.PONumber) else
     fileName := 'Ack' + floattostr(dbPOrdLtr.PONumber);
-  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

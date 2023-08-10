@@ -535,7 +535,7 @@ end;
 procedure TPBRSODueEnqFrm.PrintToAttachment(Sender: TObject);
 begin
   var filename := 'OverdueEnqs' + '-' + PBRPODueEnqFrm.RepNo.ToString;
-  PrinterTools.New.PrintToAttachment(PBRPODueEnqFrm.PrintODueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PBRPODueEnqFrm.PrintODueEnqQuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

@@ -737,7 +737,7 @@ end;
 procedure TSTRSStkBalRepfrm.PrintToAttachment(STRPStkBalRepfrm: TSTRPStkBalRepfrm);
 begin
   var fileName := 'StkBal' + '-' + STRPStkBalRepfrm.RepNo.ToString;
-  PrinterTools.New.PrintToAttachment(STRPStkBalRepfrm.qrStkBal, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STRPStkBalRepfrm.qrStkBal, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

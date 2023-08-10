@@ -608,7 +608,7 @@ begin
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
           var printFileName := 'OC' + sAttachmentType;
-          PrinterTools.New.Printtoattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
+          TPrinterTools.New.Printtoattachment(frmWTRPSOrder.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
           {Create the Terms and Conditions as an attachment}
           if self.chkbxAttachTerms.checked and (sTermsAndConditionsFile <> '') then

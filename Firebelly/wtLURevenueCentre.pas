@@ -67,7 +67,7 @@ begin
   iCode := dbgDetails.datasource.dataset.fieldbyname('Revenue_Centre').asinteger;
   try
     frmWTMaintRevenueCentre := TfrmWTMaintRevenueCentre.create(Application);
-    frmWTMaintRevenueCentre.FunctionMode := FuncMode;
+    frmWTMaintRevenueCentre.FunctionMode := AnsiString(FuncMode);
     frmWTMaintRevenueCentre.showmodal;
     iCode := frmWTMaintRevenueCentre.iCode;
     refresh;

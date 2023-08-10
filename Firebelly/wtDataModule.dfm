@@ -261,7 +261,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'Select WorkStation from WorkStation'
       'Where WorkStation = :WorkStation')
     Left = 506
-    Top = 112
+    Top = 113
     ParamData = <
       item
         Name = 'WorkStation'
@@ -307,7 +307,7 @@ object dtmdlWorktops: TdtmdlWorktops
       'from address'
       'where address = :address')
     Left = 648
-    Top = 12
+    Top = 13
     ParamData = <
       item
         Name = 'address'

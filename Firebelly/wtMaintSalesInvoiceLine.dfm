@@ -22,6 +22,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 169
+    ExplicitWidth = 512
     DesignSize = (
       518
       41)
@@ -39,7 +41,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       ParentFont = False
     end
     object btnOK: TBitBtn
-      Left = 344
+      Left = 338
       Top = 8
       Width = 75
       Height = 25
@@ -49,9 +51,10 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
+      ExplicitLeft = 332
     end
     object BitBtn2: TBitBtn
-      Left = 432
+      Left = 426
       Top = 8
       Width = 75
       Height = 25
@@ -59,6 +62,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 420
     end
   end
   object Panel2: TPanel
@@ -69,6 +73,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 512
     object lblOrderType: TLabel
       Left = 8
       Top = 8
@@ -121,6 +126,8 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     Align = alClient
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 512
+    ExplicitHeight = 112
     object Label2: TLabel
       Left = 5
       Top = 16
@@ -261,7 +268,7 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     end
   end
   object qryVAT: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select * from VAT'
       'where (inactive  = '#39'N'#39' or inactive is NULL) OR Vat = :Vat'
@@ -271,21 +278,31 @@ object frmWTMaintSalesInvoiceLine: TfrmWTMaintSalesInvoiceLine
     ParamData = <
       item
         Name = 'Vat'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
+      Origin = 'Vat'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      DisplayFormat = '0.00'
+      Origin = 'Vat_Rate'
+      Required = True
     end
-    object qryVATDescription: TStringField
+    object qryVATDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 40
     end
-    object qryVATVat_Code: TStringField
+    object qryVATVat_Code: TWideStringField
       FieldName = 'Vat_Code'
-      Size = 1
+      Origin = 'Vat_Code'
+      Size = 2
     end
   end
   object dsVAT: TDataSource

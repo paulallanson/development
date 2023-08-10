@@ -320,7 +320,7 @@ end;
 
 function TPBRPLabelsReelsFrm.PrintToFile(PONo: real; POLine, DelLine: integer; attachmentType: string): TStringList;
 begin
-  PrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
+  TPrinterTools.New.PrintToFileLabel(PBLabelsQuickReport, Result, PONo, POLine, DelLine, attachmentType);
 end;
 
 (* GDK ToDo: remove after tests

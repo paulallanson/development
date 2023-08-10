@@ -74,6 +74,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
@@ -340,11 +341,11 @@ Numbers := '01234567890' ;
 StrLength := Length(StartStr) ;
 For Count := StrLength downto 1 do
     begin
-    CurrChar := Copy(StartStr,Count,1) ;
+    CurrChar := PChar(Copy(StartStr, Count, 1));
     Id := Pos(CurrChar,Numbers) ;
     if Id > 0 then
        begin
-       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Numbers, (Id + 1), 1) +
+       StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Numbers), (Id + 1), 1) +
                    Copy(StartStr,(Count + 1), (StrLength - Count));
        IncrementNo := StartStr ;
        if Id < 10 then exit ;
@@ -354,7 +355,7 @@ For Count := StrLength downto 1 do
         Id := Pos(CurrChar,Alphas) ;
         if Id > 0 then
                begin
-               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(Alphas, (Id + 1), 1) +
+               StartStr := Copy(StartStr, 1, (Count - 1)) + Copy(string(Alphas), (Id + 1), 1) +
                    Copy(StartStr,(Count + 1), (StrLength - Count));
         IncrementNo := StartStr ;
         if Id < 27 then exit ;
@@ -508,7 +509,7 @@ end;
 
 procedure TfrmWTRSSalesInvoiceReprint.EmailReport;
 var
-  sEmail, sTemp, sSubject, sTo, sBodyText: string;
+  sEmail, sSubject, sTo, sBodyText: string;
   i, icount, irow, iInvoiceCount: integer;
   sFilename: array[0..255] of Char;
   printFileName: string;
@@ -613,7 +614,8 @@ begin
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := 'SI' + sAttachmentType;
-                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, EmailArray[irow,1]);
+
+                  TPrinterTools.New.PrintToAttachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, sAttachmentType);
 
                   if iInvoiceCount = 1 then
                     begin
@@ -681,7 +683,7 @@ begin
 
                   sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
                   printFileName := 'SI' + sAttachmentType;
-                  PrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, EmailArray[irow,1]);
+                  TPrinterTools.New.Printtoattachment(frmWTRPSalesInvoice.InvoiceReport, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
                   sSubject := sSubject + ', ' + EmailArray[irow,1];
 

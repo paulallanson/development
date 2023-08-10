@@ -679,7 +679,7 @@ begin
   sFileName := 'EST' + EnqNumber.ToString;
   {$ENDIF}
 
-  PrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(PrintingPress.QuickR, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

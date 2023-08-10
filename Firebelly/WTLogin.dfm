@@ -3,8 +3,8 @@ object frmWTLogin: TfrmWTLogin
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Logon'
-  ClientHeight = 179
-  ClientWidth = 397
+  ClientHeight = 175
+  ClientWidth = 403
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,6 +14,7 @@ object frmWTLogin: TfrmWTLogin
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
+  OnShow = FormShow
   TextHeight = 13
   object Label1: TLabel
     Left = 32
@@ -68,7 +69,7 @@ object frmWTLogin: TfrmWTLogin
     OnChange = PasswordEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 320
+    Left = 316
     Top = 16
     Width = 75
     Height = 25
@@ -80,7 +81,7 @@ object frmWTLogin: TfrmWTLogin
     OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
-    Left = 320
+    Left = 316
     Top = 48
     Width = 75
     Height = 25
@@ -112,8 +113,8 @@ object frmWTLogin: TfrmWTLogin
     SQL.Strings = (
       'Select * From Operator'
       'Where Login_Name = :Login_Name')
-    Left = 296
-    Top = 40
+    Left = 330
+    Top = 114
     ParamData = <
       item
         Name = 'Login_Name'

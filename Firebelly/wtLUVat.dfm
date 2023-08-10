@@ -62,8 +62,8 @@ object frmwtLUVat: TfrmwtLUVat
       item
         Width = 50
       end>
-    ExplicitTop = 258
-    ExplicitWidth = 424
+    ExplicitTop = 248
+    ExplicitWidth = 414
   end
   object Panel1: TPanel
     Left = 0
@@ -74,8 +74,8 @@ object frmwtLUVat: TfrmwtLUVat
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 184
-    ExplicitWidth = 424
+    ExplicitTop = 174
+    ExplicitWidth = 414
     DesignSize = (
       420
       74)
@@ -147,7 +147,7 @@ object frmwtLUVat: TfrmwtLUVat
     Top = 64
   end
   object qryVat: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT *'
       'FROM Vat'
@@ -159,38 +159,59 @@ object frmwtLUVat: TfrmwtLUVat
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryVatDescription: TStringField
-      FieldName = 'Description'
+    object qryVatVat: TIntegerField
+      FieldName = 'Vat'
+      Origin = 'Vat'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qryVatVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      DisplayFormat = '0.000'
+      Origin = 'Vat_Rate'
+      Required = True
     end
-    object qryVatinactive: TStringField
+    object qryVatDescription: TWideStringField
+      FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
+      Size = 40
+    end
+    object qryVatVat_Code: TWideStringField
+      FieldName = 'Vat_Code'
+      Origin = 'Vat_Code'
+      Size = 2
+    end
+    object qryVatinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
     end
-    object qryVatVat: TIntegerField
-      FieldName = 'Vat'
-    end
-    object qryVatVat_Code: TStringField
-      FieldName = 'Vat_Code'
-      Size = 10
-    end
-    object qryVatInvoice_Text: TStringField
+    object qryVatInvoice_Text: TWideStringField
       FieldName = 'Invoice_Text'
+      Origin = 'Invoice_Text'
       Size = 100
     end
-    object qryVatReverse_Charge: TStringField
+    object qryVatReverse_Charge: TWideStringField
       FieldName = 'Reverse_Charge'
+      Origin = 'Reverse_Charge'
       Size = 1
     end
-    object qryVatReverse_Charge_Vat_Rate: TFloatField
-      FieldName = 'Reverse_Charge_Vat_Rate'
+    object qryVatSSMA_TimeStamp: TBytesField
+      AutoGenerateValue = arDefault
+      FieldName = 'SSMA_TimeStamp'
+      Origin = 'SSMA_TimeStamp'
+      ReadOnly = True
+      Required = True
+      Size = 8
+    end
+    object qryVatReverse_Charge_VAT_Rate: TFloatField
+      FieldName = 'Reverse_Charge_VAT_Rate'
+      Origin = 'Reverse_Charge_VAT_Rate'
     end
   end
   object qryDelete: TFDQuery

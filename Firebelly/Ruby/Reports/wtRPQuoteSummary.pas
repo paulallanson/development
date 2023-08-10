@@ -506,7 +506,7 @@ end;
 
 function TfrmwtRPQuoteSummary.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 begin
-  PrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
+  TPrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
 end;
 
 (*

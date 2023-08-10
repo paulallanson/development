@@ -578,7 +578,9 @@ begin
       (Column.Title.Caption <> 'Deposit Paid') and
       (Column.Title.Caption <> 'VAT') then
   	begin
-  		StrPCopy(txt, Column.field.asstring);
+      if Assigned(Column.Field) then
+    		StrPCopy(txt, Column.field.asstring) else
+        StrPCopy(txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);

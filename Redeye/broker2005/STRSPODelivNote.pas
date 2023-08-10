@@ -525,7 +525,7 @@ end;
 procedure TSTRSPODelivNoteFrm.PrintToAttachment(STRPPODelivNoteFrm: TSTRPPODelivNoteFrm);
 begin
   var fileName := 'PO_Delivery_Note' + STRPPODelivNoteFrm.DeliveryNo.ToString;
-  PrinterTools.New.PrintToAttachment(STRPPODelivNoteFrm.qrpDetails, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STRPPODelivNoteFrm.qrpDetails, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests

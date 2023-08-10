@@ -311,7 +311,7 @@ begin
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
           var printFileName := 'TS' + sAttachmentType;
-          PrinterTools.New.Printtoattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
+          TPrinterTools.New.Printtoattachment(frmWTRPSODeliveryNote.qrpDetails, FEmailAttachment, printFileName, EmailArray[irow,1]);
 
           EmailViaOutlook(sTo,sSubject,sBodyText, FEmailAttachment, frmWTMain.EmailApplication, frmWTMain.EmailAccount);
         finally

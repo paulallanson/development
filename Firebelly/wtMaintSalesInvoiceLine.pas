@@ -37,11 +37,11 @@ type
     memVatValue: TMemo;
     lblCost: TLabel;
     memCost: TMemo;
+    edtDescription: TEdit;
     qryVATVat: TIntegerField;
     qryVATVat_Rate: TFloatField;
-    qryVATDescription: TStringField;
-    qryVATVat_Code: TStringField;
-    edtDescription: TEdit;
+    qryVATDescription: TWideStringField;
+    qryVATVat_Code: TWideStringField;
     procedure ValidateMoney(Sender: TObject);
     procedure ValidateQty(Sender: TObject);
     procedure SaveValue(Sender: TObject);

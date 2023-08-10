@@ -125,8 +125,8 @@ object frmWTLUProducts: TfrmWTLUProducts
       OnClick = chkbxShowInactiveClick
     end
     object BitBtn4: TBitBtn
-      Left = 771
-      Top = 11
+      Left = 762
+      Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -134,7 +134,6 @@ object frmWTLUProducts: TfrmWTLUProducts
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 2
-      ExplicitLeft = 767
     end
     object BitBtn2: TBitBtn
       Left = 264
@@ -212,24 +211,24 @@ object frmWTLUProducts: TfrmWTLUProducts
     end
   end
   object lkpProducts: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'select Product.*,'
       ' (select top 1 Unit_price'
       '    from Prices'
       '    where Prices.Price_pointer = Product.price_pointer and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '    from Prices'
       '    where Prices.Price_pointer = Product.price_pointer and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       '    order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '    from Prices, Price_unit'
       '    where Prices.Price_pointer = Product.price_pointer and'
       '    Prices.Price_unit = Price_Unit.Price_Unit and'
-      '    Prices.effective_date <= now()'
+      '    Prices.effective_date <= GetDate()'
       
         '    order by Prices.effective_date desc) AS Price_Unit_Descripti' +
         'on,'
@@ -248,85 +247,111 @@ object frmWTLUProducts: TfrmWTLUProducts
         '((Product_Description like :Description) OR (Product_Code LIKE :' +
         'Description))'
       'ORDER BY Product.Product_Code')
-    Left = 104
-    Top = 128
+    Left = 64
+    Top = 136
     ParamData = <
       item
         Name = 'inactive'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Description'
-      end
-      item
-        Name = 'Description'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object lkpProductsProduct: TIntegerField
       FieldName = 'Product'
+      Origin = 'Product'
+      Required = True
     end
-    object lkpProductsProduct_Description: TStringField
+    object lkpProductsProduct_Description: TWideStringField
       FieldName = 'Product_Description'
+      Origin = 'Product_Description'
+      Required = True
       Size = 50
     end
-    object lkpProductsProduct_code: TStringField
+    object lkpProductsProduct_code: TWideStringField
       FieldName = 'Product_code'
+      Origin = 'Product_code'
+      Required = True
     end
     object lkpProductsPrice_pointer: TIntegerField
       FieldName = 'Price_pointer'
+      Origin = 'Price_pointer'
+      Required = True
     end
-    object lkpProductsDefault_sales_nominal: TStringField
+    object lkpProductsDefault_sales_nominal: TWideStringField
       FieldName = 'Default_sales_nominal'
+      Origin = 'Default_sales_nominal'
       Size = 10
     end
-    object lkpProductsDefault_purchase_nominal: TStringField
+    object lkpProductsDefault_purchase_nominal: TWideStringField
       FieldName = 'Default_purchase_nominal'
+      Origin = 'Default_purchase_nominal'
       Size = 10
     end
     object lkpProductsVat: TIntegerField
       FieldName = 'Vat'
+      Origin = 'Vat'
+      Required = True
     end
     object lkpProductsProduct_Group: TIntegerField
       FieldName = 'Product_Group'
+      Origin = 'Product_Group'
     end
-    object lkpProductsUnit_Price: TFloatField
-      FieldName = 'Unit_Price'
-      DisplayFormat = '0.00'
-    end
-    object lkpProductsUnit_Cost: TFloatField
-      FieldName = 'Unit_Cost'
-      DisplayFormat = '0.00'
-    end
-    object lkpProductsPrice_Unit_Description: TStringField
-      FieldName = 'Price_Unit_Description'
-    end
-    object lkpProductsinactive: TStringField
+    object lkpProductsinactive: TWideStringField
       FieldName = 'inactive'
+      Origin = 'inactive'
       Size = 1
+    end
+    object lkpProductsUnit_Price: TCurrencyField
+      FieldName = 'Unit_Price'
+      Origin = 'Unit_Price'
+      ReadOnly = True
+    end
+    object lkpProductsUnit_Cost: TCurrencyField
+      FieldName = 'Unit_Cost'
+      Origin = 'Unit_Cost'
+      ReadOnly = True
+    end
+    object lkpProductsPrice_Unit_Description: TWideStringField
+      FieldName = 'Price_Unit_Description'
+      Origin = 'Price_Unit_Description'
+      ReadOnly = True
     end
     object lkpProductsVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
+      Origin = 'Vat_Rate'
+      Required = True
     end
-    object lkpProductsVat_Description: TStringField
+    object lkpProductsVat_Description: TWideStringField
       FieldName = 'Vat_Description'
-      Size = 30
+      Origin = 'Vat_Description'
+      Required = True
+      Size = 40
     end
-    object lkpProductsProduct_Group_Description: TStringField
+    object lkpProductsProduct_Group_Description: TWideStringField
       FieldName = 'Product_Group_Description'
+      Origin = 'Product_Group_Description'
       Size = 50
     end
   end
   object srcLkpProducts: TDataSource
     DataSet = lkpProducts
     OnDataChange = SetButtons
-    Left = 192
-    Top = 128
+    Left = 176
+    Top = 136
   end
   object qryDelProduct: TFDQuery
     ConnectionName = 'wt'
     SQL.Strings = (
       'delete from product'
       'where price_pointer = :price_pointer')
-    Left = 264
-    Top = 160
+    Left = 296
+    Top = 136
     ParamData = <
       item
         Name = 'price_pointer'
@@ -336,7 +361,7 @@ object frmWTLUProducts: TfrmWTLUProducts
     Enabled = False
     Interval = 250
     OnTimer = tmrSearchTimer
-    Left = 368
-    Top = 72
+    Left = 680
+    Top = 48
   end
 end

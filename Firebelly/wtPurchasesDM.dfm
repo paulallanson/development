@@ -483,18 +483,25 @@ object dtmdlPurchaseOrder: TdtmdlPurchaseOrder
     Top = 190
     object qryVATVat: TIntegerField
       FieldName = 'Vat'
+      Origin = 'Vat'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qryVATVat_Rate: TFloatField
       FieldName = 'Vat_Rate'
-      DisplayFormat = '0.00'
+      Origin = 'Vat_Rate'
+      Required = True
     end
-    object qryVATDescription: TStringField
+    object qryVATDescription: TWideStringField
       FieldName = 'Description'
+      Origin = 'Description'
+      Required = True
       Size = 40
     end
-    object qryVATVat_Code: TStringField
+    object qryVATVat_Code: TWideStringField
       FieldName = 'Vat_Code'
-      Size = 1
+      Origin = 'Vat_Code'
+      Size = 2
     end
   end
   object dtsVAT: TDataSource

@@ -788,7 +788,7 @@ end;
 procedure TSTRSSlwMvngStkRepfrm.PrintToAttachment(STRPSlwMvngStkRepFrm: TSTRPSlwMvngStkRepFrm);
 begin
   var fileName := 'SlowMoving' + '-' + STRPSlwMvngStkRepFrm.RepNo.ToString;
-  PrinterTools.New.PrintToAttachment(STRPSlwMvngStkRepFrm.qrDetails, FEmailAttachment, fileName, sAttachmentType);
+  TPrinterTools.New.PrintToAttachment(STRPSlwMvngStkRepFrm.qrDetails, FEmailAttachment, fileName, sAttachmentType);
 end;
 
 (* GDK ToDo: remove after tests
