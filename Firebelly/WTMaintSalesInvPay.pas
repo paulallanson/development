@@ -75,7 +75,9 @@ var
 
 implementation
 
-uses AllCommon, wtDataModule, DateSelV5;
+uses
+  System.UITypes,
+  AllCommon, wtDataModule, DateSelV5;
 
 {$R *.DFM}
 

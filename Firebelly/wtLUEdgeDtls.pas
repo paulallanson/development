@@ -59,7 +59,9 @@ var
 
 implementation
 
-uses wtMaintEdgeDetails, wtDataModule;
+uses
+  System.UITypes,
+  wtMaintEdgeDetails, wtDataModule;
 
 {$R *.DFM}
 

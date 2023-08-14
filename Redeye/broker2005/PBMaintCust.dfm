@@ -26,11 +26,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1182
     Height = 651
-    ActivePage = tbFinancials
+    ActivePage = tbInvoices
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1176
-    ExplicitHeight = 642
+    ExplicitWidth = 1178
+    ExplicitHeight = 650
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -55,7 +55,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 624
         DesignSize = (
           481
           623)
@@ -68,7 +67,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Analysis  '
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 300
           DesignSize = (
             465
             299)
@@ -352,7 +350,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a Reseller Customer'
             TabOrder = 13
-            ExplicitTop = 248
           end
           object chkbxCTRLPCustomer: TCheckBox
             Left = 8
@@ -362,7 +359,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a CTRL-P Master Customer'
             TabOrder = 14
-            ExplicitTop = 272
           end
         end
         object grpbxDetails: TGroupBox
@@ -718,12 +714,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Caption = 'pnlHOContacts'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 697
-        ExplicitHeight = 624
         object Panel26: TPanel
           Left = 1
           Top = 1
-          Width = 695
+          Width = 691
           Height = 24
           Align = alTop
           BevelOuter = bvNone
@@ -732,10 +726,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 0
         end
         object Panel27: TPanel
-          Left = 687
+          Left = 683
           Top = 57
           Width = 9
-          Height = 566
+          Height = 565
           Align = alRight
           BevelOuter = bvNone
           ParentBackground = False
@@ -744,20 +738,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object CoolBar9: TCoolBar
           Left = 1
           Top = 25
-          Width = 695
+          Width = 691
           Height = 32
           Bands = <
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 693
+              Width = 687
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
           object ToolBar2: TToolBar
-            Left = 9
+            Left = 11
             Top = 0
-            Width = 680
+            Width = 678
             Height = 25
             Align = alBottom
             Caption = 'ToolBar2'
@@ -767,7 +761,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             TabOrder = 0
             object btnHOContactAdd: TToolButton
               Left = 0
-              Top = 2
+              Top = 0
               Hint = 'New'
               Caption = 'Add'
               ImageIndex = 0
@@ -775,7 +769,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object btnHOContactChange: TToolButton
               Left = 23
-              Top = 2
+              Top = 0
               Hint = 'Change'
               Caption = 'Chnage'
               ImageIndex = 1
@@ -783,21 +777,21 @@ object PBMaintCustFrm: TPBMaintCustFrm
             end
             object btnHOContactDelete: TToolButton
               Left = 46
-              Top = 2
+              Top = 0
               Hint = 'Delete'
               ImageIndex = 3
               OnClick = btnHOContactDeleteClick
             end
             object btnHOContactOnline: TToolButton
               Left = 69
-              Top = 2
+              Top = 0
               Hint = 'Online'
               Caption = 'btnHOContactOnline'
               ImageIndex = 9
             end
             object btnHOContactEmail: TToolButton
               Left = 92
-              Top = 2
+              Top = 0
               Hint = 'Email'
               Caption = 'btnHOContactEmail'
               ImageIndex = 10
@@ -805,10 +799,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactDetails: TPanel
-          Left = 511
+          Left = 507
           Top = 57
           Width = 176
-          Height = 566
+          Height = 565
           Align = alRight
           ParentBackground = False
           TabOrder = 3
@@ -842,8 +836,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 4
-          ExplicitLeft = 490
-          ExplicitHeight = 566
         end
         object Panel29: TPanel
           Left = 1
@@ -854,13 +846,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Panel29'
           ParentBackground = False
           TabOrder = 5
-          ExplicitWidth = 489
-          ExplicitHeight = 566
           object dbgHOContactDetails: TDBGrid
             Left = 1
             Top = 1
-            Width = 487
-            Height = 399
+            Width = 483
+            Height = 398
             Align = alClient
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 0
@@ -929,8 +919,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object Panel30: TPanel
             Left = 1
-            Top = 400
-            Width = 487
+            Top = 399
+            Width = 483
             Height = 165
             Align = alBottom
             BevelOuter = bvNone
@@ -1051,7 +1041,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 614
+        ExplicitHeight = 622
         DesignSize = (
           673
           623)
@@ -1065,7 +1055,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Color = clBtnFace
           ParentColor = False
           TabOrder = 0
-          ExplicitHeight = 521
+          ExplicitHeight = 529
           DesignSize = (
             662
             530)
@@ -1554,7 +1544,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 1
           Visible = False
-          ExplicitHeight = 126
+          ExplicitHeight = 134
           object lblGDPRSignedOperatorName: TLabel
             Left = 308
             Top = 50
@@ -1626,23 +1616,23 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 495
-        ExplicitHeight = 614
+        ExplicitWidth = 497
+        ExplicitHeight = 622
         DesignSize = (
           501
           623)
         object grpbxCredit: TGroupBox
           Left = 6
           Top = 2
-          Width = 459
+          Width = 455
           Height = 589
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
-          ExplicitWidth = 453
-          ExplicitHeight = 580
+          ExplicitWidth = 451
+          ExplicitHeight = 588
           DesignSize = (
-            459
+            455
             589)
           object Label5: TLabel
             Tag = 100
@@ -1746,7 +1736,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 223
-            Width = 460
+            Width = 456
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -1756,7 +1746,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 358
-            Width = 460
+            Width = 456
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -2112,7 +2102,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Convert Prospect to Customer'
           TabOrder = 1
           Visible = False
-          ExplicitTop = 587
+          ExplicitTop = 595
         end
       end
     end
@@ -2204,7 +2194,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         Caption = 'Ecommerce'
         TabOrder = 1
-        ExplicitHeight = 624
         object GroupBox1: TGroupBox
           Left = 16
           Top = 101
@@ -2566,7 +2555,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object pnlBranchTop: TPanel
         Left = 0
         Top = 0
-        Width = 1178
+        Width = 1174
         Height = 273
         Align = alTop
         ParentBackground = False
@@ -2574,7 +2563,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel13: TPanel
           Left = 1
           Top = 232
-          Width = 1176
+          Width = 1172
           Height = 40
           Align = alBottom
           ParentBackground = False
@@ -2609,22 +2598,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object CoolBar8: TCoolBar
           Left = 1
           Top = 1
-          Width = 1176
+          Width = 1172
           Height = 45
           Bands = <
             item
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1172
+              Width = 1166
             end>
           object ToolBar9: TToolBar
-            Left = 9
+            Left = 11
             Top = 0
-            Width = 1159
+            Width = 1157
             Height = 41
             ButtonHeight = 36
-            ButtonWidth = 62
+            ButtonWidth = 56
             Caption = 'ToolBar1'
             Images = imglstjobs
             ShowCaptions = True
@@ -2637,7 +2626,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnBranchAddClick
             end
             object btnBranchChange: TToolButton
-              Left = 62
+              Left = 56
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -2645,7 +2634,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnBranchChangeClick
             end
             object btnBranchDelete: TToolButton
-              Left = 124
+              Left = 112
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -2657,7 +2646,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object dbgBranchDetails: TDBGrid
           Left = 1
           Top = 46
-          Width = 1176
+          Width = 1172
           Height = 186
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2748,8 +2737,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object pnlContacts: TPanel
         Left = 0
         Top = 273
-        Width = 1178
-        Height = 351
+        Width = 1174
+        Height = 350
         Align = alClient
         Caption = 'pnlContacts'
         ParentBackground = False
@@ -2757,8 +2746,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object dbgContactDetails: TDBGrid
           Left = 1
           Top = 25
-          Width = 1083
-          Height = 285
+          Width = 1079
+          Height = 284
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 0
@@ -2827,8 +2816,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel14: TPanel
           Left = 1
-          Top = 310
-          Width = 1176
+          Top = 309
+          Width = 1172
           Height = 40
           Align = alBottom
           ParentBackground = False
@@ -2872,7 +2861,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel15: TPanel
           Left = 1
           Top = 1
-          Width = 1176
+          Width = 1172
           Height = 24
           Align = alTop
           ParentBackground = False
@@ -2892,10 +2881,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object pnlContactFunctions: TPanel
-          Left = 1084
+          Left = 1080
           Top = 25
           Width = 93
-          Height = 285
+          Height = 284
           Align = alRight
           ParentBackground = False
           TabOrder = 3
@@ -2966,8 +2955,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnShow = tbQuotesShow
       object stsBrQuoteDetails: TStatusBar
         Left = 0
-        Top = 605
-        Width = 1178
+        Top = 604
+        Width = 1174
         Height = 19
         Panels = <
           item
@@ -2983,22 +2972,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object CoolBar6: TCoolBar
         Left = 0
         Top = 0
-        Width = 1178
+        Width = 1174
         Height = 45
         Bands = <
           item
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1053
+            Width = 1168
           end>
         object tbrQuotes: TToolBar
-          Left = 9
+          Left = 11
           Top = 0
-          Width = 1040
+          Width = 1159
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 62
+          ButtonWidth = 56
           Caption = 'ToolBar1'
           HotImages = imglstButtons
           Images = imglstButtons
@@ -3012,7 +3001,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteAddClick
           end
           object btnQuoteChange: TToolButton
-            Left = 62
+            Left = 56
             Top = 0
             Caption = '  &Change  '
             Enabled = False
@@ -3020,7 +3009,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteChangeClick
           end
           object btnQuoteCopy: TToolButton
-            Left = 124
+            Left = 112
             Top = 0
             Caption = '&Copy'
             Enabled = False
@@ -3028,7 +3017,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteCopyClick
           end
           object btnQuoteReQuote: TToolButton
-            Left = 186
+            Left = 168
             Top = 0
             Caption = 'Re-Quote'
             Enabled = False
@@ -3036,7 +3025,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteReQuoteClick
           end
           object btnQuoteDelete: TToolButton
-            Left = 248
+            Left = 224
             Top = 0
             Caption = '&Delete'
             Enabled = False
@@ -3044,7 +3033,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuoteDeleteClick
           end
           object btnQuotePrint: TToolButton
-            Left = 310
+            Left = 280
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -3052,7 +3041,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnQuotePrintClick
           end
           object ToolButton5: TToolButton
-            Left = 372
+            Left = 336
             Top = 0
             Width = 8
             Caption = 'ToolButton1'
@@ -3060,7 +3049,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnQuoteConvert: TToolButton
-            Left = 380
+            Left = 344
             Top = 0
             Caption = 'Con&vert'
             Enabled = False
@@ -3072,8 +3061,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object dbgQuoteDetails: TDBGrid
         Left = 0
         Top = 45
-        Width = 1178
-        Height = 519
+        Width = 1174
+        Height = 518
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
@@ -3169,8 +3158,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       end
       object Panel12: TPanel
         Left = 0
-        Top = 564
-        Width = 1178
+        Top = 563
+        Width = 1174
         Height = 41
         Align = alBottom
         ParentBackground = False
@@ -3186,7 +3175,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label56: TLabel
-          Left = 980
+          Left = 976
           Top = 16
           Width = 69
           Height = 13
@@ -3203,14 +3192,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtQuoteSearchChange
         end
         object edtQuoteNumber: TEdit
-          Left = 1060
+          Left = 1056
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtQuoteNumberKeyPress
-          ExplicitLeft = 1076
         end
         object BitBtn11: TBitBtn
           Left = 296
@@ -3230,8 +3218,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnShow = tbEnquiriesShow
       object stsBrEnqDetails: TStatusBar
         Left = 0
-        Top = 605
-        Width = 1178
+        Top = 604
+        Width = 1174
         Height = 19
         Panels = <
           item
@@ -3247,22 +3235,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object CoolBar1: TCoolBar
         Left = 0
         Top = 0
-        Width = 1178
+        Width = 1174
         Height = 45
         Bands = <
           item
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 950
+            Width = 1168
           end>
         object tbrEnquiries: TToolBar
-          Left = 9
+          Left = 11
           Top = 0
-          Width = 937
+          Width = 1159
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 62
+          ButtonWidth = 56
           Caption = 'Toolbar1'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
@@ -3285,7 +3273,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqQuickClick
           end
           object btnEnqAdd: TToolButton
-            Left = 62
+            Left = 56
             Top = 0
             Hint = 'Add Enquiry'
             Caption = '&Add'
@@ -3295,7 +3283,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqAddClick
           end
           object btnEnqChange: TToolButton
-            Left = 124
+            Left = 112
             Top = 0
             Hint = 'Change enquiry'
             Caption = '  &Change  '
@@ -3306,7 +3294,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqChangeClick
           end
           object btnEnqCopy: TToolButton
-            Left = 186
+            Left = 168
             Top = 0
             Caption = 'Cop&y'
             Enabled = False
@@ -3316,7 +3304,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqCopyClick
           end
           object btnEnqDecline: TToolButton
-            Left = 248
+            Left = 224
             Top = 0
             Caption = '&Decline'
             Enabled = False
@@ -3324,7 +3312,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqDeclineClick
           end
           object ToolButton4: TToolButton
-            Left = 310
+            Left = 280
             Top = 0
             Width = 8
             Caption = 'ToolButton4'
@@ -3332,7 +3320,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnEnqPrint: TToolButton
-            Left = 318
+            Left = 288
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -3342,7 +3330,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqPrintClick
           end
           object btnRepliesSpacer: TToolButton
-            Left = 380
+            Left = 344
             Top = 0
             Width = 8
             Caption = 'btnRepliesSpacer'
@@ -3350,7 +3338,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnEnqReplies: TToolButton
-            Left = 388
+            Left = 352
             Top = 0
             Caption = '&Replies'
             Enabled = False
@@ -3358,7 +3346,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqRepliesClick
           end
           object btnEnqPricing: TToolButton
-            Left = 450
+            Left = 408
             Top = 0
             Caption = 'Pri&cing'
             Enabled = False
@@ -3366,7 +3354,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqPricingClick
           end
           object btnEnqQuote: TToolButton
-            Left = 512
+            Left = 464
             Top = 0
             Caption = 'Quo&te'
             Enabled = False
@@ -3374,7 +3362,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnEnqQuoteClick
           end
           object btnEnqConvert: TToolButton
-            Left = 574
+            Left = 520
             Top = 0
             Caption = 'Con&vert'
             Enabled = False
@@ -3386,8 +3374,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object dbgEnquiryDetails: TDBGrid
         Left = 0
         Top = 45
-        Width = 1178
-        Height = 519
+        Width = 1174
+        Height = 518
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
         TabOrder = 2
@@ -3476,8 +3464,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       end
       object Panel2: TPanel
         Left = 0
-        Top = 564
-        Width = 1178
+        Top = 563
+        Width = 1174
         Height = 41
         Align = alBottom
         ParentBackground = False
@@ -3493,7 +3481,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label47: TLabel
-          Left = 980
+          Left = 976
           Top = 16
           Width = 75
           Height = 13
@@ -3510,14 +3498,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtEnqSearchChange
         end
         object edtEnqNumber: TEdit
-          Left = 1060
+          Left = 1056
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtEnqNumberKeyPress
-          ExplicitLeft = 1076
         end
         object btnSearch: TBitBtn
           Left = 296
@@ -3547,8 +3534,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 605
-        ExplicitWidth = 1178
       end
       object Panel3: TPanel
         Left = 0
@@ -3558,8 +3543,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 564
-        ExplicitWidth = 1178
         DesignSize = (
           1174
           41)
@@ -3571,7 +3554,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label49: TLabel
-          Left = 968
+          Left = 964
           Top = 16
           Width = 64
           Height = 13
@@ -3588,14 +3571,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtOrderSearchChange
         end
         object edtOrderNumber: TEdit
-          Left = 1046
+          Left = 1042
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtOrderNumberKeyPress
-          ExplicitLeft = 1078
         end
         object chkbxShowUnauthorised: TCheckBox
           Left = 376
@@ -3626,7 +3608,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1172
+            Width = 1168
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3638,9 +3620,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1159
+            Width = 1147
             Height = 41
-            ButtonHeight = 29
+            ButtonHeight = 44
             ButtonWidth = 62
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3916,14 +3898,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
-            Width = 64
             Visible = True
           end>
       end
@@ -3935,8 +3915,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       OnShow = tbJobsShow
       object stsbrJobDetails: TStatusBar
         Left = 0
-        Top = 564
-        Width = 1178
+        Top = 563
+        Width = 1174
         Height = 19
         Panels = <
           item
@@ -3952,22 +3932,22 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object CoolBar3: TCoolBar
         Left = 0
         Top = 0
-        Width = 1178
+        Width = 1174
         Height = 45
         Bands = <
           item
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1053
+            Width = 1168
           end>
         object tbrJobs: TToolBar
-          Left = 9
+          Left = 11
           Top = 0
-          Width = 1040
+          Width = 1159
           Height = 41
           ButtonHeight = 36
-          ButtonWidth = 62
+          ButtonWidth = 56
           Caption = 'ToolBar1'
           Images = imglstjobs
           ShowCaptions = True
@@ -3980,7 +3960,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobAddClick
           end
           object btnJobChange: TToolButton
-            Left = 62
+            Left = 56
             Top = 0
             Caption = '  &Change  '
             Enabled = False
@@ -3988,7 +3968,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobChangeClick
           end
           object btnJobRepeat: TToolButton
-            Left = 124
+            Left = 112
             Top = 0
             Caption = '&Repeat'
             Enabled = False
@@ -3996,7 +3976,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobRepeatClick
           end
           object btnJobDelete: TToolButton
-            Left = 186
+            Left = 168
             Top = 0
             Caption = '&Delete'
             Enabled = False
@@ -4004,7 +3984,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobDeleteClick
           end
           object btnJobPrint: TToolButton
-            Left = 248
+            Left = 224
             Top = 0
             Caption = '&Print'
             Enabled = False
@@ -4012,7 +3992,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnClick = btnJobPrintClick
           end
           object ToolButton2: TToolButton
-            Left = 310
+            Left = 280
             Top = 0
             Width = 8
             Caption = 'ToolButton2'
@@ -4020,7 +4000,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Style = tbsSeparator
           end
           object btnJobDraft: TToolButton
-            Left = 318
+            Left = 288
             Top = 0
             Caption = 'Dra&ft'
             Enabled = False
@@ -4032,8 +4012,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object dbgJobDetails: TDBGrid
         Left = 0
         Top = 45
-        Width = 1178
-        Height = 519
+        Width = 1174
+        Height = 518
         Align = alClient
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         TabOrder = 2
@@ -4127,8 +4107,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       end
       object Panel4: TPanel
         Left = 0
-        Top = 583
-        Width = 1178
+        Top = 582
+        Width = 1174
         Height = 41
         Align = alBottom
         ParentBackground = False
@@ -4149,7 +4129,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtJobSearchChange
         end
         object Panel5: TPanel
-          Left = 904
+          Left = 900
           Top = 1
           Width = 273
           Height = 39
@@ -4209,8 +4189,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 300
           end>
-        ExplicitTop = 605
-        ExplicitWidth = 1178
       end
       object Panel7: TPanel
         Left = 0
@@ -4231,7 +4209,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1170
+              Width = 1166
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4243,7 +4221,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1157
+              Width = 1145
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 66
@@ -4441,8 +4419,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 2
-          ExplicitTop = 563
-          ExplicitWidth = 1176
           DesignSize = (
             1172
             41)
@@ -4473,7 +4449,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 990
           end
           object chkbxShowNotinUse: TCheckBox
             Left = 360
@@ -4504,8 +4479,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
-        ExplicitTop = 567
-        ExplicitWidth = 1178
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4517,7 +4490,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1172
+            Width = 1168
           end>
         object PageScroller3: TPageScroller
           Left = 11
@@ -4530,7 +4503,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1159
+            Width = 1147
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 51
@@ -4552,7 +4525,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnInvoiceChangeClick
             end
             object btnInvoiceReprint: TToolButton
-              Left = 57
+              Left = 51
               Top = 0
               Caption = '&Reprint'
               Enabled = False
@@ -4643,8 +4616,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 586
-        ExplicitWidth = 1178
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4661,7 +4632,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtInvoiceSearchChange
         end
         object Panel11: TPanel
-          Left = 894
+          Left = 890
           Top = 1
           Width = 283
           Height = 36
@@ -4700,8 +4671,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ImageIndex = 4
       object Panel1: TPanel
         Left = 0
-        Top = 583
-        Width = 1178
+        Top = 582
+        Width = 1174
         Height = 41
         Align = alBottom
         ParentBackground = False
@@ -4731,10 +4702,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
       end
       object ToolBar1: TToolBar
-        Left = 1139
+        Left = 1135
         Top = 0
         Width = 39
-        Height = 583
+        Height = 582
         Align = alRight
         ButtonHeight = 36
         ButtonWidth = 38
@@ -4747,7 +4718,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 1
         object btnWord: TToolButton
           Left = 0
-          Top = 2
+          Top = 0
           Hint = 'Word'
           Caption = 'Word'
           ImageIndex = 1
@@ -4758,7 +4729,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object btnExcel: TToolButton
           Left = 0
-          Top = 38
+          Top = 36
           Hint = 'Excel'
           Caption = 'Excel'
           ImageIndex = 0
@@ -4769,7 +4740,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object btnAttach: TToolButton
           Left = 0
-          Top = 74
+          Top = 72
           Hint = 'Attach Documents'
           Caption = 'Attach'
           ImageIndex = 3
@@ -4780,7 +4751,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object btnEmail: TToolButton
           Left = 0
-          Top = 110
+          Top = 108
           Hint = 'Email'
           Caption = 'Email'
           ImageIndex = 2
@@ -4792,8 +4763,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object lstvwDocuments: TListView
         Left = 0
         Top = 0
-        Width = 1139
-        Height = 583
+        Width = 1135
+        Height = 582
         Align = alClient
         Columns = <
           item
@@ -4832,8 +4803,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1178
-        ExplicitHeight = 303
         object Panel17: TPanel
           Left = 1
           Top = 1
@@ -4842,7 +4811,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alTop
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 1176
           object Label61: TLabel
             Left = 9
             Top = 4
@@ -4866,7 +4834,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Panel18'
           ParentBackground = False
           TabOrder = 1
-          ExplicitHeight = 277
           object memNarrative: TMemo
             Left = 1
             Top = 1
@@ -4894,8 +4861,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alClient
           ParentBackground = False
           TabOrder = 2
-          ExplicitWidth = 355
-          ExplicitHeight = 277
         end
       end
       object pnlActivityList: TPanel
@@ -4907,26 +4872,25 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Caption = 'pnlActivityList'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 1178
         object CoolBar7: TCoolBar
           Left = 1
           Top = 1
-          Width = 1176
+          Width = 1172
           Height = 45
           Bands = <
             item
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1172
+              Width = 1166
             end>
           object ToolBar8: TToolBar
-            Left = 9
+            Left = 11
             Top = 0
-            Width = 1159
+            Width = 1157
             Height = 41
             ButtonHeight = 36
-            ButtonWidth = 62
+            ButtonWidth = 56
             Caption = 'ToolBar1'
             Images = imglstjobs
             ShowCaptions = True
@@ -4939,7 +4903,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnActivityAddClick
             end
             object btnActivityChange: TToolButton
-              Left = 62
+              Left = 56
               Top = 0
               Caption = '  &Change  '
               Enabled = False
@@ -4947,7 +4911,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               OnClick = btnActivityChangeClick
             end
             object btnActivityDelete: TToolButton
-              Left = 124
+              Left = 112
               Top = 0
               Caption = '&Delete'
               Enabled = False
@@ -4959,7 +4923,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel16: TPanel
           Left = 1
           Top = 280
-          Width = 1176
+          Width = 1172
           Height = 40
           Align = alBottom
           ParentBackground = False
@@ -4982,7 +4946,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object dbgActivityDetails: TDBGrid
           Left = 1
           Top = 46
-          Width = 1176
+          Width = 1172
           Height = 234
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -5074,7 +5038,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alTop
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 1178
       end
       object Panel20: TPanel
         Left = 0
@@ -5084,7 +5047,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 599
         object Panel21: TPanel
           Left = 1
           Top = 405
@@ -5093,7 +5055,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 406
           object memCategoryNarrative: TMemo
             Left = 1
             Top = 1
@@ -5121,7 +5082,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 382
           object Label64: TLabel
             Left = 8
             Top = 8
@@ -5168,7 +5128,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 3
-          ExplicitHeight = 381
           object Button1: TButton
             Left = 16
             Top = 16
@@ -5239,7 +5198,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 2
-        ExplicitHeight = 599
         object Label62: TLabel
           Left = 8
           Top = 22
@@ -5327,8 +5285,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 724
-    ExplicitWidth = 1176
+    ExplicitTop = 732
+    ExplicitWidth = 1178
   end
   object pnlFooter: TPanel
     Left = 0
@@ -5338,13 +5296,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 683
-    ExplicitWidth = 1176
+    ExplicitTop = 691
+    ExplicitWidth = 1178
     DesignSize = (
       1182
       41)
     object DelLabel: TLabel
-      Left = 835
+      Left = 831
       Top = 16
       Width = 125
       Height = 13
@@ -5359,7 +5317,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ExplicitLeft = 867
     end
     object OKBitBtn: TBitBtn
-      Left = 981
+      Left = 977
       Top = 10
       Width = 75
       Height = 25
@@ -5433,10 +5391,10 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
-      ExplicitLeft = 975
+      ExplicitLeft = 973
     end
     object CancelBitBtn: TBitBtn
-      Left = 1061
+      Left = 1057
       Top = 10
       Width = 75
       Height = 25
@@ -5511,7 +5469,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 1055
+      ExplicitLeft = 1053
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5607,7 +5565,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1176
+    ExplicitWidth = 1178
     DesignSize = (
       1182
       41)
@@ -5627,7 +5585,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     object NameEdit: TEdit
       Left = 108
       Top = 8
-      Width = 565
+      Width = 561
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite
@@ -5636,7 +5594,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
-      ExplicitWidth = 559
+      ExplicitWidth = 557
     end
   end
   object FlashTimer: TTimer

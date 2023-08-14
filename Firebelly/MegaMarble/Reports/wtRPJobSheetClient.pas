@@ -332,7 +332,7 @@ begin
   sNett := formatfloat('0.00',rNettTotal);
   sVat := formatfloat('0.00',rVATTotal);
 
-  rGrossTotal := StrToFloatDef(sNett) + strtofloat(sVat, 0, FormatSettings);
+  rGrossTotal := StrToFloatDef(sNett, 0, FormatSettings) + StrToFloatDef(sVat, 0, FormatSettings);
   qrlblGross.Caption := formatfloat('£#,##0.00',rGrossTotal);
 
 end;

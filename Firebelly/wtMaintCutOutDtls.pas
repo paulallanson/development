@@ -60,8 +60,8 @@ begin
     end
   else
     begin
-      if (StrToFloatDef(edtmnySell.text) <> SellPrice, 0, FormatSettings) or
-         (StrToFloatDef(edtmnyCost.text) <> CostPrice, 0, FormatSettings) then
+      if (StrToFloatDef(edtmnySell.text, 0, FormatSettings) <> SellPrice) or
+         (StrToFloatDef(edtmnyCost.text, 0, FormatSettings) <> CostPrice) then
       begin
 	      dtmdlWorktops.qryAddPrice.Close;
         dtmdlWorktops.qryAddPrice.PArambyname('Pointer').asinteger := PricePointer;

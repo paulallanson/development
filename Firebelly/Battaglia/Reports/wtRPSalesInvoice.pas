@@ -326,7 +326,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := StrToFloatDef(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption, 0, FormatSettings);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 
   iToPay := iTotal - iDeposit;
@@ -447,7 +447,7 @@ begin
         rVatValue := InvLineSRC.Dataset.FieldByName('Vat_Value').AsFloat * -1
     end
   else
-    rVatValue := StrToFloatDef(GoodsLbl.Caption) * (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100, 0, FormatSettings);
+    rVatValue := StrToFloatDef(GoodsLbl.Caption, 0, FormatSettings) * (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100);
 
   VatTotalLbl.Caption := formatfloat('0.00', rVatValue);
 

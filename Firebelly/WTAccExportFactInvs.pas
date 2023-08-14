@@ -80,6 +80,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   DateSelV5, AllCommon, wtMain;
 
 {$R *.DFM}

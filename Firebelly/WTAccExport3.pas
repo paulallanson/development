@@ -4188,7 +4188,7 @@ begin
 //          sVatValue := Copy(formatfloat('0.00', (FieldByName('Total_VAT_Value').AsFloat)) + sfiller, 1, 18);
           sVatValue := Copy(formatfloat('0.00',
             (dmAccExport.GetInvoiceVatTotal(fieldbyname('Invoice_Code').asinteger,fieldbyname('Transaction_type').asstring))) + sfiller, 1, 20);
-//          sGoodsValue := floattostr(StrToFloatDef(sGrossValue) - strtofloat(sVatValue), 0, FormatSettings);
+//          sGoodsValue := floattostr(StrToFloatDef(sGrossValue) - StrToFloatDef(sVatValue), 0, FormatSettings);
           sGoodsValue := formatfloat('0.00',(StrToFloatDef(sGrossValue, 0, FormatSettings) - StrToFloatDef(sVatValue, 0, FormatSettings)));
           if (fieldbyname('Transaction_type').asstring = 'SC') or (fieldbyname('Transaction_type').asstring = 'PC') then
             sVatValue := floattostr(StrToFloatDef(sVatValue, 0, FormatSettings) * -1);

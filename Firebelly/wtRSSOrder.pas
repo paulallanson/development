@@ -68,6 +68,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   wtRPQuote, wtDataModule, wtSendFax, wtFaxList, wtRPSOrder, AllEmailHandler,
   wtRPTemplate, wtMain;
 

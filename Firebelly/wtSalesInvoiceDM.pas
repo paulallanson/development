@@ -2552,9 +2552,8 @@ end;
 
 procedure TdtmdlSalesInvoice.qrySIHeaderGridCalcFields(DataSet: TDataSet);
 begin
-  DataSet['Total_Value'] := StrToFloat(formatfloat('0.00',
-      Dataset['Goods_Value'])) + StrToFloat(formatfloat('0.00',
-      Dataset['VAT_Value']));
+  DataSet['Total_Value'] := StrToFloatDef(formatfloat('0.00', Dataset['Goods_Value']), 0, FormatSettings) +
+                            StrToFloatDef(formatfloat('0.00', Dataset['VAT_Value']), 0, FormatSettings);
 
   if Dataset.fieldbyname('Inactive').asstring = 'Y' then
     Dataset.FieldByName('Invoice_Status').asstring := 'Deleted'

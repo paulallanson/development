@@ -352,7 +352,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := StrToFloatDef(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption, 0, FormatSettings);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 
   iToPay := iTotal - iDeposit;

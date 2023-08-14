@@ -1,10 +1,9 @@
 object dtmdlSalesInvoice: TdtmdlSalesInvoice
-  Height = 676
-  Width = 1294
-  PixelsPerInch = 120
+  Height = 541
+  Width = 1035
   object dsDummy: TDataSource
-    Left = 520
-    Top = 420
+    Left = 416
+    Top = 336
   end
   object qryPEnd: TFDQuery
     ConnectionName = 'wt'
@@ -12,8 +11,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from Sales_Profit'
       'where Sales_invoice = :Sales_invoice')
-    Left = 20
-    Top = 15
+    Left = 16
+    Top = 12
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -28,8 +27,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Purchase_Order = :Purchase_Order AND'
       '      Line = :Line'
       ' ')
-    Left = 20
-    Top = 130
+    Left = 16
+    Top = 104
     ParamData = <
       item
         Name = 'Purch_Ord_Line_Status'
@@ -92,8 +91,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         '_invoice_Status) and'
       '(Sales_Invoice.Operator = Operator.Operator)'
       ' ')
-    Left = 540
-    Top = 90
+    Left = 432
+    Top = 72
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -109,8 +108,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Sales_invoice_line, VAT'
       'where Sales_Invoice = :Sales_invoice and'
       'Sales_Invoice_Line.VAT = VAT.VAT')
-    Left = 450
-    Top = 160
+    Left = 360
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -132,8 +131,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ') and'
       '(Sales_invoice_Line.Price_Unit = Price_unit.Price_unit) and'
       '(Sales_Invoice_Line.VAT_Code = VAT_Code.VAT_Code)')
-    Left = 380
-    Top = 160
+    Left = 304
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -180,8 +179,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '   :Cost_Price,'
       '   :Description)'
       '')
-    Left = 540
-    Top = 160
+    Left = 432
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -242,8 +241,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     SQL.Strings = (
       'select max(Sales_Invoice) as Last_Sales_invoice'
       'from Sales_invoice')
-    Left = 220
-    Top = 10
+    Left = 176
+    Top = 8
   end
   object qrySIAddHeader: TFDQuery
     ConnectionName = 'wt'
@@ -302,8 +301,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '      :Payment_Terms,'
       '      :Revenue_Centre)'
       '')
-    Left = 630
-    Top = 90
+    Left = 504
+    Top = 72
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -396,8 +395,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object qryZero: TFDQuery
     ConnectionName = 'wt'
-    Left = 380
-    Top = 80
+    Left = 304
+    Top = 64
   end
   object qrySICharges: TFDQuery
     ConnectionName = 'wt'
@@ -408,8 +407,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Sales_invoice = :Sales_Invoice and'
       'Additional_Charge = :Additional_Charge and'
       'Sales_invoice_Add_Charge.Vat_Code = Vat_Code.Vat_Code')
-    Left = 720
-    Top = 160
+    Left = 576
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -440,8 +439,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ''
       ''
       ' ')
-    Left = 380
-    Top = 230
+    Left = 304
+    Top = 184
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -489,8 +488,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       
         '      sales_inv_line_add_chg.Additional_Charge = :Additional_Cha' +
         'rge     ')
-    Left = 470
-    Top = 230
+    Left = 376
+    Top = 184
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -523,8 +522,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '     :Amount,'
       '     :Nominal,'
       '     :Vat_Code) ')
-    Left = 640
-    Top = 230
+    Left = 512
+    Top = 184
     ParamData = <
       item
         Name = 'Invoice'
@@ -559,8 +558,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Sales_invoice_Add_Charge, VAT_Code'
       'where Sales_invoice = :Sales_Invoice and'
       'Sales_invoice_Add_Charge.Vat_Code = Vat_Code.Vat_Code')
-    Left = 630
-    Top = 160
+    Left = 504
+    Top = 128
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -568,8 +567,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsSIHeaderGrid: TDataSource
     DataSet = qrySIHeaderGrid
-    Left = 470
-    Top = 10
+    Left = 376
+    Top = 8
   end
   object qrySIHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
@@ -627,8 +626,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         'il_Customer = '#39'A'#39'))'
       'order by Sales_Invoice.Sales_Invoice desc'
       '')
-    Left = 380
-    Top = 10
+    Left = 304
+    Top = 8
     ParamData = <
       item
         Name = 'Code_From'
@@ -758,13 +757,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     SQL.Strings = (
       'select * from Operator'
       'Order By Operator_Name')
-    Left = 660
-    Top = 10
+    Left = 528
+    Top = 8
   end
   object dsOperator: TDataSource
     DataSet = qryOperator
-    Left = 730
-    Top = 10
+    Left = 584
+    Top = 8
   end
   object qryGetCustomer: TFDQuery
     ConnectionName = 'wt'
@@ -778,8 +777,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '          Account_code'
       'from Customer'
       'where Customer = :Customer')
-    Left = 380
-    Top = 290
+    Left = 304
+    Top = 232
     ParamData = <
       item
         Name = 'Customer'
@@ -792,8 +791,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Purchase_orderLine'
       'where Purchase_Order = :Purchase_order and'
       'Line = :Line')
-    Left = 380
-    Top = 360
+    Left = 304
+    Top = 288
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -813,8 +812,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Sales_Order = :Sales_order and'
       'Sales_order_line_no = :Sales_Order_Line_no and'
       'Sales_Order_line.Product = Product.Product')
-    Left = 450
-    Top = 360
+    Left = 360
+    Top = 288
     ParamData = <
       item
         Name = 'Sales_order'
@@ -830,8 +829,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag and'
       'Job_Bag_Line = :Job_Bag_Line')
-    Left = 520
-    Top = 360
+    Left = 416
+    Top = 288
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -870,8 +869,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '        Payment_Terms = :Payment_Terms,'
       '        Revenue_Centre = :Revenue_Centre'
       'WHERE Sales_Invoice = :Sales_Invoice')
-    Left = 720
-    Top = 90
+    Left = 576
+    Top = 72
     ParamData = <
       item
         Name = 'Goods_Value'
@@ -970,8 +969,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Customer = :Customer and '
       'Branch_no =:Branch_no and'
       'Reps_Branches.Rep = Rep.Rep')
-    Left = 480
-    Top = 290
+    Left = 384
+    Top = 232
     ParamData = <
       item
         Name = 'Customer'
@@ -1001,8 +1000,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'WHERE'
       '      sales_inv_line_add_chg.Sales_Invoice = :Sales_invoice and'
       '      sales_inv_line_add_chg.Invoice_line_no = :Invoice_Line_no')
-    Left = 560
-    Top = 230
+    Left = 448
+    Top = 184
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -1017,8 +1016,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from VAT'
       'where VAT = :VAT')
-    Left = 590
-    Top = 360
+    Left = 472
+    Top = 288
     ParamData = <
       item
         Name = 'VAT'
@@ -1030,8 +1029,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from Price_unit'
       'where Price_Unit = :Price_Unit')
-    Left = 670
-    Top = 360
+    Left = 536
+    Top = 288
     ParamData = <
       item
         Name = 'Price_Unit'
@@ -1041,8 +1040,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from company')
-    Left = 560
-    Top = 290
+    Left = 448
+    Top = 232
   end
   object qryPOAllLines: TFDQuery
     ConnectionName = 'wt'
@@ -1108,8 +1107,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '(Purchase_OrderLine.Sell_Unit = Price_Unit.Price_Unit)'
       'ORDER BY Purchase_OrderLine.Purchase_Order desc, Line'
       ' ')
-    Left = 380
-    Top = 420
+    Left = 304
+    Top = 336
     ParamData = <
       item
         Name = 'Code_From'
@@ -1130,8 +1129,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsPOLine: TDataSource
     DataSet = qryPOAllLines
-    Left = 450
-    Top = 420
+    Left = 360
+    Top = 336
   end
   object qryPOAll: TFDQuery
     ConnectionName = 'wt'
@@ -1191,8 +1190,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 590
-    Top = 420
+    Left = 472
+    Top = 336
   end
   object qryPODeliv: TFDQuery
     ConnectionName = 'wt'
@@ -1266,8 +1265,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 660
-    Top = 420
+    Left = 528
+    Top = 336
   end
   object oldqryPOLine: TFDQuery
     ConnectionName = 'wt'
@@ -1331,8 +1330,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Purchase_Order = :Purchase_order and'
       'Line = :Line'
       ' ')
-    Left = 380
-    Top = 480
+    Left = 304
+    Top = 384
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1347,8 +1346,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from Sales_invoice_Status'
       'where Sales_invoice_Status = :sales_invoice_Status')
-    Left = 590
-    Top = 480
+    Left = 472
+    Top = 384
     ParamData = <
       item
         Name = 'sales_invoice_Status'
@@ -1356,8 +1355,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsSOAll: TDataSource
     DataSet = qrySOAll
-    Left = 120
-    Top = 190
+    Left = 96
+    Top = 152
   end
   object qryJBAll: TFDQuery
     ConnectionName = 'wt'
@@ -1377,8 +1376,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ')'
       'ORDER BY Job_Bag.Job_Bag desc'
       ' ')
-    Left = 20
-    Top = 330
+    Left = 16
+    Top = 264
     ParamData = <
       item
         Name = 'Code_From'
@@ -1387,8 +1386,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsJBAll: TDataSource
     DataSet = qryJBAll
-    Left = 80
-    Top = 330
+    Left = 64
+    Top = 264
   end
   object qrySOHeader: TFDQuery
     ConnectionName = 'wt'
@@ -1414,8 +1413,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '  Customer.Customer = Sales_Order.Customer'
       'WHERE'
       '(Sales_Order.Sales_order = :Sales_order)')
-    Left = 20
-    Top = 260
+    Left = 16
+    Top = 208
     ParamData = <
       item
         Name = 'Sales_order'
@@ -1472,8 +1471,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         'der_line_no'
       ' '
       '')
-    Left = 100
-    Top = 260
+    Left = 80
+    Top = 208
     ParamData = <
       item
         Name = 'Sales_order'
@@ -1513,8 +1512,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ')'
       ''
       ' ')
-    Left = 150
-    Top = 330
+    Left = 120
+    Top = 264
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1574,8 +1573,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ''
       ' '
       ' ')
-    Left = 220
-    Top = 330
+    Left = 176
+    Top = 264
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1588,8 +1587,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select * '
       'from Product_Type'
       'where Product_Type = :Product_Type')
-    Left = 670
-    Top = 480
+    Left = 536
+    Top = 384
     ParamData = <
       item
         Name = 'Product_Type'
@@ -1602,8 +1601,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Purchase_Orderline'
       'where Purchase_Order = :Purchase_Order and'
       '           Purch_Ord_Line_Status <> :Purch_Ord_Line_Status')
-    Left = 120
-    Top = 133
+    Left = 96
+    Top = 106
     ParamData = <
       item
         Name = 'Purchase_Order'
@@ -1618,8 +1617,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'Update Purchase_Order'
       'set Purch_Ord_Head_Status = :Purch_Ord_Head_Status'
       'where Purchase_Order = :Purchase_Order')
-    Left = 220
-    Top = 130
+    Left = 176
+    Top = 104
     ParamData = <
       item
         Name = 'Purch_Ord_Head_Status'
@@ -1639,8 +1638,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 20
-    Top = 70
+    Left = 16
+    Top = 56
     ParamData = <
       item
         Name = 'Quantity_Invoiced'
@@ -1678,8 +1677,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 850
-    Top = 555
+    Left = 680
+    Top = 444
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1691,8 +1690,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'Update Sales_Order'
       'Set Sales_Order_Status = :Sales_Order_Status'
       'where Sales_Order = :Sales_order')
-    Left = 220
-    Top = 70
+    Left = 176
+    Top = 56
     ParamData = <
       item
         Name = 'Sales_Order_Status'
@@ -1708,8 +1707,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'set Job_Bag_Line_Invoiced = :Job_Bag_Line_Invoiced'
       'where Job_Bag = :Job_Bag and'
       'Job_Bag_Line = :Job_Bag_Line')
-    Left = 20
-    Top = 390
+    Left = 16
+    Top = 312
     ParamData = <
       item
         Name = 'Job_Bag_Line_Invoiced'
@@ -1725,13 +1724,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
     ConnectionName = 'wt'
     SQL.Strings = (
       'select * from Rep')
-    Left = 20
-    Top = 460
+    Left = 16
+    Top = 368
   end
   object dsRep: TDataSource
     DataSet = qryRep
-    Left = 70
-    Top = 460
+    Left = 56
+    Top = 368
   end
   object qryJBChkStatus: TFDQuery
     ConnectionName = 'wt'
@@ -1758,8 +1757,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 120
-    Top = 395
+    Left = 96
+    Top = 316
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1771,8 +1770,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
       'where Job_Bag = :Job_Bag')
-    Left = 220
-    Top = 390
+    Left = 176
+    Top = 312
     ParamData = <
       item
         Name = 'Job_Bag_Status'
@@ -1799,8 +1798,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'where Sales_Order = :Sales_order and'
       'Sales_order_line_no = :Sales_Order_Line_no'
       ' ')
-    Left = 450
-    Top = 480
+    Left = 360
+    Top = 384
     ParamData = <
       item
         Name = 'Sales_order'
@@ -1818,8 +1817,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag and'
       'Job_Bag_Line = :Job_Bag_Line')
-    Left = 520
-    Top = 480
+    Left = 416
+    Top = 384
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -1858,8 +1857,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '  Purch_Ord_Line_Add_Chg.Purchase_order = :Purchase_order and'
       '  Purch_Ord_Line_Add_Chg.Line = :Line and'
       '  Purch_Ord_Line_Add_Chg.Quotation_Price <> 0')
-    Left = 380
-    Top = 540
+    Left = 304
+    Top = 432
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1887,8 +1886,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '(Customer_Branch.Inv_to_Customer = CustB.Customer) and'
       '(Customer_Branch.Inv_to_Branch = CustB.Branch_no)'
       ')')
-    Left = 640
-    Top = 290
+    Left = 512
+    Top = 232
     ParamData = <
       item
         Name = 'Customer'
@@ -1969,8 +1968,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 290
-    Top = 480
+    Left = 232
+    Top = 384
     ParamData = <
       item
         Name = 'Purchase_order'
@@ -1985,8 +1984,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from Rep'
       'where Rep = :Rep')
-    Left = 760
-    Top = 360
+    Left = 608
+    Top = 288
     ParamData = <
       item
         Name = 'Rep'
@@ -2027,8 +2026,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' Purch_Ord_Line_Add_Chg.Quotation_Price <> 0 and'
       ' Purchase_orderLine.purch_ord_line_Status <= 25'
       ' ')
-    Left = 450
-    Top = 540
+    Left = 360
+    Top = 432
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2036,8 +2035,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsJBLines: TDataSource
     DataSet = qryJBLines
-    Left = 290
-    Top = 330
+    Left = 232
+    Top = 264
   end
   object qrySCHeaderGrid: TFDQuery
     OnCalcFields = qrySIHeaderGridCalcFields
@@ -2092,8 +2091,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         'il_Customer = '#39'A'#39'))'
       'order by Sales_Invoice.Sales_Invoice desc'
       '')
-    Left = 30
-    Top = 530
+    Left = 24
+    Top = 424
     ParamData = <
       item
         Name = 'Code_From'
@@ -2217,8 +2216,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
   end
   object dsSCHeaderGrid: TDataSource
     DataSet = qrySCHeaderGrid
-    Left = 100
-    Top = 530
+    Left = 80
+    Top = 424
   end
   object qrySOChgs: TFDQuery
     ConnectionName = 'wt'
@@ -2233,8 +2232,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'from Sales_order_Add_Charge, Vat_Code'
       'where Sales_order = :Sales_order and'
       'Sales_order_add_Charge.Vat_Code = Vat_Code.vat_code')
-    Left = 170
-    Top = 260
+    Left = 136
+    Top = 208
     ParamData = <
       item
         Name = 'Sales_order'
@@ -2247,8 +2246,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '          Replenish_source'
       'from Sales_order'
       'where sales_order = :sales_order')
-    Left = 750
-    Top = 480
+    Left = 600
+    Top = 384
     ParamData = <
       item
         Name = 'sales_order'
@@ -2352,8 +2351,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' '
       ' '
       ' ')
-    Left = 290
-    Top = 420
+    Left = 232
+    Top = 336
   end
   object qryPeriodEnd: TFDQuery
     ConnectionName = 'wt'
@@ -2361,8 +2360,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select *'
       'from period'
       'order by Period desc')
-    Left = 120
-    Top = 10
+    Left = 96
+    Top = 8
   end
   object qrySOAll: TFDQuery
     ConnectionName = 'WT'
@@ -2391,8 +2390,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
         '_Invoice = '#39'N'#39')) AND'
       '    (Sales_Order.Date_Required <= :Date_Required)'
       'ORDER BY Sales_Order.Sales_Order desc')
-    Left = 30
-    Top = 200
+    Left = 24
+    Top = 160
     ParamData = <
       item
         Name = 'Code_From'
@@ -2415,8 +2414,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '          Postcode'
       'from Address'
       'where Address = :Address')
-    Left = 730
-    Top = 290
+    Left = 584
+    Top = 232
     ParamData = <
       item
         Name = 'Address'
@@ -2448,8 +2447,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       
         '      Sales_Order_Line.Sales_Order_Line_no = :Sales_Order_Line_n' +
         'o')
-    Left = 870
-    Top = 360
+    Left = 696
+    Top = 288
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2464,13 +2463,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'select * '
       'from Payment_Terms'
       'Order by Payment_Terms_Description')
-    Left = 840
-    Top = 10
+    Left = 672
+    Top = 8
   end
   object dsPaymentTerms: TDataSource
     DataSet = qryPaymentTerms
-    Left = 950
-    Top = 10
+    Left = 760
+    Top = 8
   end
   object qryGetCustTypeNominal: TFDQuery
     ConnectionName = 'wt'
@@ -2483,8 +2482,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '      INNER JOIN Customer'
       '        ON Customer_Type.Customer_Type = Customer.Customer_type'
       'WHERE Customer = :Customer')
-    Left = 840
-    Top = 90
+    Left = 672
+    Top = 72
     ParamData = <
       item
         Name = 'Customer'
@@ -2499,8 +2498,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'Invoice_no <> '#39' '#39' AND'
       'Sales_Invoice <> :Sales_Invoice AND'
       'Sales_Invoice.Inactive <> '#39'Y'#39)
-    Left = 860
-    Top = 170
+    Left = 688
+    Top = 136
     ParamData = <
       item
         Name = 'Invoice_No'
@@ -2571,8 +2570,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ' where Payment.Sales_Order = :sales_order) as total_Paid'
       'from Sales_order_line'
       'where Sales_order_line.sales_order = :sales_order')
-    Left = 750
-    Top = 550
+    Left = 600
+    Top = 440
     ParamData = <
       item
         Name = 'sales_order'
@@ -2619,8 +2618,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       '    INNER JOIN Customer'
       '      ON Vat.Vat = Customer.Vat'
       'WHERE Customer = :Customer')
-    Left = 800
-    Top = 290
+    Left = 640
+    Top = 232
     ParamData = <
       item
         Name = 'Customer'
@@ -2703,8 +2702,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ')'
       ''
       '')
-    Left = 560
-    Top = 10
+    Left = 448
+    Top = 8
     ParamData = <
       item
         Name = 'Is_Retail_Customer'
@@ -2778,8 +2777,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ')'
       ''
       '')
-    Left = 200
-    Top = 530
+    Left = 160
+    Top = 424
     ParamData = <
       item
         Name = 'Is_Retail_Customer'
@@ -2797,13 +2796,13 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       'SELECT *'
       'FROM Revenue_Centre'
       'ORDER BY Revenue_Centre_Descr')
-    Left = 1070
-    Top = 10
+    Left = 856
+    Top = 8
   end
   object dtsRevenueCentre: TDataSource
     DataSet = qryRevenueCentre
-    Left = 1180
-    Top = 10
+    Left = 944
+    Top = 8
   end
   object qrySIHeaderBaseOld: TFDQuery
     SQL.Strings = (
@@ -2869,8 +2868,8 @@ object dtmdlSalesInvoice: TdtmdlSalesInvoice
       ')'
       ''
       '')
-    Left = 1180
-    Top = 90
+    Left = 944
+    Top = 72
     ParamData = <
       item
         Name = 'Is_Retail_Customer'

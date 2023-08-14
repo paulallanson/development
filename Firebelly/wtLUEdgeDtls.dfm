@@ -5,10 +5,8 @@ inherited frmWtLUEdgeDtls: TfrmWtLUEdgeDtls
   ClientHeight = 347
   ClientWidth = 571
   Position = poMainFormCenter
-  ExplicitLeft = 3
-  ExplicitTop = 3
-  ExplicitWidth = 589
-  ExplicitHeight = 394
+  ExplicitWidth = 587
+  ExplicitHeight = 386
   TextHeight = 13
   object Label2: TLabel [0]
     Left = 224

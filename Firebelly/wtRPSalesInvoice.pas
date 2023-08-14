@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   QuickRpt, QRExpr, Qrctrls, StdCtrls, DB, ExtCtrls, AllCommon, Math,
-   QrExport, qrprntr, printers,
+  QrExport, qrprntr, printers,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
@@ -324,7 +324,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := StrToFloatDef(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption, 0, FormatSettings);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 
   iToPay := iTotal - iDeposit;
