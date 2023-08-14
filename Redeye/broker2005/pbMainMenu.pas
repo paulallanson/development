@@ -399,7 +399,9 @@ var
 
 implementation
 
-uses pbluCustomers, pbluSuppliers, pbLogin, PBMaintCompany, PBLUPrdTyp,
+uses
+  System.UITypes,
+  pbluCustomers, pbluSuppliers, pbLogin, PBMaintCompany, PBLUPrdTyp,
   PBLURep, PBLUAdHoc, PBMaintGroups, PBLUSpecIns, PBLUAddCharges,
   PBLUPriceUnit, PBLUStandSize, PBMaintPaper, PBLUArtwrkTyp, PBLUOps,
   PBMaintLastNos, PBMaintInterf, PBAuditControl, pbDatabase, pbLUVatCode,

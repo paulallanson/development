@@ -15,6 +15,7 @@ object frmpbLogin: TfrmpbLogin
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
+  OnShow = FormShow
   TextHeight = 13
   object Label1: TLabel
     Left = 32

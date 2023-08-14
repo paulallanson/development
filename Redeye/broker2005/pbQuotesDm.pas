@@ -3157,6 +3157,10 @@ end;
 procedure TdtmdlQuotes.DataModuleCreate(Sender: TObject);
 begin
   showInactive := 'Y';
+
+  FormatSettings := TFormatSettings.Create;
+  FormatSettings.ThousandSeparator := #00;
+  FormatSettings.DecimalSeparator := '.';
 end;
 
 function TdtmdlQuotes.GetWorkCentre(tempCode: string): integer;

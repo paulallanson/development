@@ -31,6 +31,7 @@ type
     procedure FormDeactivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     iLoginTries: Integer;
     sDBase: string[1];
@@ -237,6 +238,14 @@ begin
   finally
     IniFile.Free;
   end;
+end;
+
+procedure TfrmpbLogin.FormShow(Sender: TObject);
+begin
+  {$IF DEFINED(GDK) AND DEFINED(DEBUG)}
+  UserEdit.Text := 'sa';
+  PasswordEdit.Text := ' ';
+  {$ENDIF}
 end;
 
 procedure TfrmpbLogin.CancelBitBtnClick(Sender: TObject);

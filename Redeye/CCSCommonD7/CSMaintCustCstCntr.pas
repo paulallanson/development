@@ -43,7 +43,9 @@ var
 
 implementation
 
-uses CSLUCustCstCntr;
+uses
+  System.UITypes,
+  CSLUCustCstCntr;
 
 {$R *.DFM}
 
