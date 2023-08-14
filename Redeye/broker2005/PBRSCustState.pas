@@ -177,7 +177,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.strings[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.strings[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.strings[icount];
           execSQL;
           end;

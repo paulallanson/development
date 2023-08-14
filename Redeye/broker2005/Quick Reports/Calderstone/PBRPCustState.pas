@@ -175,8 +175,8 @@ begin
       lblGoods.caption := formatfloat('0.00',fieldbyname('Goods_value').asfloat);
       lblVAT.caption := formatfloat('0.00',fieldbyname('vat_value').asfloat);
       lblUnitPrice.caption := formatfloat('0.00',fieldbyname('unit_price').asfloat)+ ' '+fieldbyname('Price_Descr').asstring;
-      rGoods := rGoods + StrToFloat(LblGoods.Caption);
-      rvat := rVat + StrToFloat(LblVat.Caption);
+      rGoods := rGoods + StrToFloatDef(LblGoods.Caption, 0, FormatSettings);
+      rvat := rVat + StrToFloatDef(LblVat.Caption, 0, FormatSettings);
       if fieldbyname('Form_reference_id').asstring = '' then
         InvDetailBand.height := 19
       else
@@ -251,7 +251,7 @@ procedure TPBRPCustStateFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
 begin
       TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
       TotVatQRLbl.caption := formatfloat('0.00',rVat);
-      InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloat(TotGoodsQRLbl.Caption)+StrToFloat(TotVatQRlbl.caption)));
+      InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloatDef(TotGoodsQRLbl.Caption, 0, FormatSettings)+StrToFloatDef(TotVatQRlbl.caption)), 0, FormatSettings);
 end;
 
 procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;

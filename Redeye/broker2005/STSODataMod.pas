@@ -1073,7 +1073,7 @@ begin
         Details := FieldByName('Details').AsString;
         Amount := FieldByName('Amount').AsFloat;
         ChgVatCode := FieldByName('Vat_Code').AsInteger;
-        Vat := Amount * (StrToFloat(getVatCodeVatRate(ChgVatCode))/100);
+        Vat := Amount * (StrToFloatDef(getVatCodeVatRate(ChgVatCode), 0, FormatSettings) / 100);
         Cost := FieldByName('Cost').AsFloat;
         end;
       SalesOrder.ExtraCharges.Add(aCharge);
@@ -1112,7 +1112,7 @@ begin
         Details := FieldByName('Details').AsString;
         Amount := FieldByName('Amount').AsFloat;
         ChgVatCode := FieldByName('Vat_Code').AsInteger;
-        Vat := Amount * (StrToFloat(getVatCodeVatRate(ChgVatCode))/100);
+        Vat := Amount * (StrToFloatDef(getVatCodeVatRate(ChgVatCode), 0, FormatSettings) / 100);
       end;
       SalesOrder.ExtraCharges.Add(aCharge);
       Next;

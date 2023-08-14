@@ -485,21 +485,21 @@ margins}
    if QuickReport.Page.Orientation = poPortrait then
    begin
       if BottomMar > QuickReport.Page.BottomMargin then
-         if StrToFloat(FormatFloat('0.0', BottomMar)) > BottomMar then
-            QuickReport.Page.BottomMargin := StrToFloat(FormatFloat('0.0',
+         if StrToFloatDef(FormatFloat('0.0', BottomMar), 0, FormatSettings) > BottomMar then
+            QuickReport.Page.BottomMargin := StrToFloatDef(FormatFloat('0.0',
 BottomMar))
          else
-            QuickReport.Page.BottomMargin := StrToFloat(FormatFloat('0.0',
+            QuickReport.Page.BottomMargin := StrToFloatDef(FormatFloat('0.0',
 BottomMar)) + 0.1;
    end
    else
    begin
       if BottomMar > QuickReport.Page.RightMargin then
-         if StrToFloat(FormatFloat('0.0', BottomMar)) > BottomMar then
-            QuickReport.Page.RightMargin := StrToFloat(FormatFloat('0.0',
+         if StrToFloatDef(FormatFloat('0.0', BottomMar), 0, FormatSettings) > BottomMar then
+            QuickReport.Page.RightMargin := StrToFloatDef(FormatFloat('0.0',
 BottomMar))
          else
-            QuickReport.Page.RightMargin := StrToFloat(FormatFloat('0.0',
+            QuickReport.Page.RightMargin := StrToFloatDef(FormatFloat('0.0',
 BottomMar)) + 0.1;
    end;
 *)

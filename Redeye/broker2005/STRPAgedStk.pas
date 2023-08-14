@@ -305,7 +305,7 @@ end;
 procedure TSTRPAgedStkFrm.qrbndDetailAfterPrint(Sender: TQRCustomBand;
   BandPrinted: Boolean);
 begin
-    RunningTotal := RunningTotal + StrToFloat(qrlblVal.Caption);
+    RunningTotal := RunningTotal + StrToFloatDef(qrlblVal.Caption, 0, FormatSettings);
 end;
 
 procedure TSTRPAgedStkFrm.QRBand2BeforePrint(Sender: TQRCustomBand;

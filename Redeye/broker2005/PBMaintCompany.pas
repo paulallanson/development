@@ -706,7 +706,7 @@ begin
 
     ParamByName('Purch_Nom_Def').AsString := PNDefEdit.Text + '';
     ParamByName('Sales_Nom_Def').AsString := SNDefEdit.Text + '';
-    ParamByName('Default_PO_Limit').Asfloat := strtofloat(memCreditLimit.text);
+    ParamByName('Default_PO_Limit').Asfloat := StrToFloatDef(memCreditLimit.text, 0, FormatSettings);
 
     if PayTermsDBLookupComboBox.text <> '' then
       ParamByName('Default_Payment_Terms').AsInteger :=
@@ -793,7 +793,7 @@ begin
       ParamByName('Use_Reorder_Reminder').AsString := 'N';
 
     Parambyname('Reorder_Reminder_Interval').asinteger := spnReorderReminderInterval.value;
-    ParamByName('Reorder_Reminder_Min_Value').Asfloat := strtofloat(memReorderValue.text);
+    ParamByName('Reorder_Reminder_Min_Value').Asfloat := StrToFloatDef(memReorderValue.text, 0, FormatSettings);
 
     if chkbxConfirmProduction.Checked then
       ParamByName('Confirm_Production').AsString := 'Y'
@@ -1214,17 +1214,17 @@ begin
     if memDeliveryThreshold.Text = '' then
       Parambyname('Online_Delivery_Threshold').clear
     else
-      Parambyname('Online_Delivery_Threshold').asfloat := strtofloat(memDeliveryThreshold.Text);
+      Parambyname('Online_Delivery_Threshold').asfloat := StrToFloatDef(memDeliveryThreshold.Text, 0, FormatSettings);
 
     if memDeliveryCharge.Text = '' then
       Parambyname('Online_Delivery_Charge').clear
     else
-      Parambyname('Online_Delivery_Charge').asfloat := strtofloat(memDeliveryCharge.Text);
+      Parambyname('Online_Delivery_Charge').asfloat := StrToFloatDef(memDeliveryCharge.Text, 0, FormatSettings);
 
     if memDeliveryCost.Text = '' then
       Parambyname('Online_Delivery_Cost').clear
     else
-      Parambyname('Online_Delivery_Cost').asfloat := strtofloat(memDeliveryCost.Text);
+      Parambyname('Online_Delivery_Cost').asfloat := StrToFloatDef(memDeliveryCost.Text, 0, FormatSettings);
       
     if dblkpDeliveryVat.text = '' then
       Parambyname('Online_Delivery_Vat_Code').clear
@@ -1249,7 +1249,7 @@ begin
     if trim(memQuoteCostMarkup.text) = '' then
       Parambyname('Default_Quote_Cost_markup_perc').asfloat := 0
     else
-      Parambyname('Default_Quote_Cost_markup_perc').asfloat := strtofloat(memQuoteCostMarkup.Text);
+      Parambyname('Default_Quote_Cost_markup_perc').asfloat := StrToFloatDef(memQuoteCostMarkup.Text, 0, FormatSettings);
     ExecSQL;
   end;
 end;
@@ -1495,7 +1495,7 @@ begin
   if memCreditLimit.Text <> '' then
   begin
     try
-      memCreditLimit.Text := FormatFloat('######0.00', StrToFloat(memCreditLimit.Text))
+      memCreditLimit.Text := FormatFloat('######0.00', StrToFloatDef(memCreditLimit.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       memCreditLimit.SetFocus;
@@ -1845,7 +1845,7 @@ begin
   if memReorderValue.Text <> '' then
   begin
     try
-      memReorderValue.Text := FormatFloat('######0.00', StrToFloat(memReorderValue.Text))
+      memReorderValue.Text := FormatFloat('######0.00', StrToFloatDef(memReorderValue.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       memReorderValue.SetFocus;
@@ -1936,7 +1936,7 @@ begin
   if (Sender as TMemo).Text <> '' then
   begin
     try
-      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloat((Sender as TMemo).Text))
+      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloatDef((Sender as TMemo).Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       (Sender as TMemo).SetFocus;

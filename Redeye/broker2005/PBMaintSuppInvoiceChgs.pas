@@ -73,13 +73,13 @@ var
   inx : integer;
 begin
   SuppInvoiceChg.Details := edtDetails.Text;
-  SuppInvoiceChg.Amount := StrTofloat(memPrice.Text);
+  SuppInvoiceChg.Amount := StrToFloatDef(memPrice.Text, 0, FormatSettings);
   SuppInvoiceChg.Nominal := edtNominal.Text;
 
   SuppInvoiceChg.VATCode := dblkpVAT.keyvalue;
   SuppInvoiceChg.VATRate := SuppInvoiceChg.Parent.DataModule.GetVatRate(SuppInvoiceChg.VATCode);
 
-  SuppInvoiceChg.PONumber := strtofloat(cmbPurchaseOrders.text);
+  SuppInvoiceChg.PONumber := StrToFloatDef(cmbPurchaseOrders.text, 0, FormatSettings);
   SuppInvoiceChg.POLine := 1;
 
   if Mode = picAdd then

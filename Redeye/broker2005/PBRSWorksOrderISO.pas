@@ -92,7 +92,7 @@ procedure TPBRSWorksOrderISOfrm.RunReport(Preview: boolean);
 begin
   PBRPWorksOrderISOfrm := TPBRPWorksOrderISOfrm.create(self);
   try
-    PBRPWorksOrderISOfrm.WorksOrder := strtofloat(memSelection.text);
+    PBRPWorksOrderISOfrm.WorksOrder := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (PBRPWorksOrderISOfrm.GetDetails = 0) then
       MessageDlg('There are no works instructions to print', mtError, [mbAbort], 0)
@@ -123,7 +123,7 @@ begin
   emailHandler := TemailHandler.Create(self);
   PBRPWorksOrderISOfrm := TPBRPWorksOrderISOfrm.create(self);
   try
-    PBRPWorksOrderISOfrm.WorksOrder := strtofloat(memSelection.text);
+    PBRPWorksOrderISOfrm.WorksOrder := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (PBRPWorksOrderISOfrm.GetDetails = 0) then
       MessageDlg('There are no works instructions to print', mtError, [mbAbort], 0)
@@ -131,7 +131,7 @@ begin
       begin
         PBRPWorksOrderISOfrm.Preview := false;
         sTemp := BuildQueryString;
-        sSubject := inttostr(round(strtofloat(memSelection.text))) + ' ' + edtCustomer.Text + ' ' + memDescription.text;;
+        sSubject := inttostr(round(StrToFloatDef(memSelection.text, 0, FormatSettings))) + ' ' + edtCustomer.Text + ' ' + memDescription.text;;
         emailHandler.Body := 'Please find attached, Works Instruction ISO document: ' + memSelection.text + '.'#13#10#13#10;
         emailHandler.ccEmail := '';
         emailHandler.CreateOneEmail(PBRPWorksOrderISOfrm.qrpDetails, sTemp, 'ISO'+memSelection.text, sSubject);
@@ -187,7 +187,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -248,8 +248,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Works_Order').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Works_Order').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Works_Order').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Works_Order').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do

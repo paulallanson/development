@@ -1048,8 +1048,8 @@ begin
   {Calculate New Minimum Sell Value}
   if SellLimitType = 'C' then
     begin
-      rNewSellLimit := strtofloat(TotOrderMemo.text) * (1+(rSellLimit/100));
-      myNewSellLimit := strtofloat(TotOrderMemo.text) * (1+(mySellLimit/100));
+      rNewSellLimit := StrToFloatDef(TotOrderMemo.text, 0, FormatSettings) * (1+(rSellLimit/100));
+      myNewSellLimit := StrToFloatDef(TotOrderMemo.text, 0, FormatSettings) * (1+(mySellLimit/100));
     end
   else
     begin
@@ -1153,19 +1153,19 @@ begin
     end;
 
   if  (FFuncMode <> poDelete) and (dmBroker.AuthorisePOs = 'Y') and
-      (StrTofloat(TotOrderMemo.text) > rOrderLimit) and (not chkbxAuthorised.checked) and
+      (StrToFloatDef(TotOrderMemo.text, 0, FormatSettings) > rOrderLimit) and (not chkbxAuthorised.checked) and
       (PurchaseOrder.OrderLines[0].POLineStatus <= 20) then
     begin
-      MessageDlg('The value of this purchase order is ' + FloatToStrF(StrTofloat(TotOrderMemo.text), ffCurrency, 15, 3) + ', which is over your '
+      MessageDlg('The value of this purchase order is ' + FloatToStrF(StrToFloatDef(TotOrderMemo.text, 0, FormatSettings), ffCurrency, 15, 3) + ', which is over your '
               + 'order limit of ' + FloatToStrF(rOrderLimit, ffCurrency, 15, 3) +  ', please obtain the necessary authorisation.', mterror, [mbOk], 0);
       bNeedsAuthorising := true
     end
   else
   if  (FFuncMode <> poDelete) and (not chkbxAuthorised.checked) and
-      (StrTofloat(TotSellMemo.text) < rNewSellLimit) and
+      (StrToFloatDef(TotSellMemo.text, 0, FormatSettings) < rNewSellLimit) and
       (PurchaseOrder.OrderLines[0].POLineStatus <= 20) then
     begin
-      MessageDlg('The sales value of this purchase order is ' + FloatToStrF(StrTofloat(TotSellMemo.text), ffCurrency, 15, 3) + ', which is less than your '
+      MessageDlg('The sales value of this purchase order is ' + FloatToStrF(StrToFloatDef(TotSellMemo.text, 0, FormatSettings), ffCurrency, 15, 3) + ', which is less than your '
               + 'minimum total sales value for this order, of ' + FloatToStrF(rNewSellLimit, ffCurrency, 15, 3) +  ', please obtain the necessary authorisation.', mterror, [mbOk], 0);
       bNeedsAuthorising := true;
     end
@@ -1173,10 +1173,10 @@ begin
   if  (FFuncMode <> poDelete) and (chkbxAuthorised.checked) and
 //      (dmBroker.CanAuthorise(frmpbMainMenu.iOperator) <> 'F') and
       (frmPBMainMenu.iOperator = PurchaseOrder.AuthorisedBy) and
-      (StrTofloat(TotOrderMemo.text) > myOrderLimit) and
+      (StrToFloatDef(TotOrderMemo.text, 0, FormatSettings) > myOrderLimit) and
       (PurchaseOrder.OrderLines[0].POLineStatus <= 20) then
     begin
-      MessageDlg('The value of this purchase order is ' + FloatToStrF(StrTofloat(TotOrderMemo.text), ffCurrency, 15, 3) + ', which is over your '
+      MessageDlg('The value of this purchase order is ' + FloatToStrF(StrToFloatDef(TotOrderMemo.text, 0, FormatSettings), ffCurrency, 15, 3) + ', which is over your '
               + 'order limit of ' + FloatToStrF(myOrderLimit, ffCurrency, 15, 3) +  ', someone else needs to authorise this order.', mterror, [mbOk], 0);
       exit;
     end
@@ -1184,15 +1184,15 @@ begin
   if  (FFuncMode <> poDelete) and (chkbxAuthorised.checked) and
 //      (dmBroker.CanAuthorise(frmpbMainMenu.iOperator) <> 'F') and
       (frmPBMainMenu.iOperator = PurchaseOrder.AuthorisedBy) and
-      (StrTofloat(TotSellMemo.text) < myNewSellLimit) and
+      (StrToFloatDef(TotSellMemo.text, 0, FormatSettings) < myNewSellLimit) and
       (PurchaseOrder.OrderLines[0].POLineStatus <= 20) then
     begin
-      MessageDlg('The sales value of this purchase order is ' + FloatToStrF(StrTofloat(TotSellMemo.text), ffCurrency, 15, 3) + ', which is less than '
+      MessageDlg('The sales value of this purchase order is ' + FloatToStrF(StrToFloatDef(TotSellMemo.text, 0, FormatSettings), ffCurrency, 15, 3) + ', which is less than '
               + 'your minimum total sales value for this order, of ' + FloatToStrF(myNewSellLimit, ffCurrency, 15, 3) +  ', someone else needs to authorise this order.', mterror, [mbOk], 0);
       exit;
     end
   else
-  if (FFuncMode <> poDelete) and (StrTofloat(TotSellMemo.text) < StrTofloat(TotOrderMemo.Text)) then
+  if (FFuncMode <> poDelete) and (StrToFloatDef(TotSellMemo.text, 0, FormatSettings) < StrToFloatDef(TotOrderMemo.Text, 0, FormatSettings)) then
     begin
       if MessageDlg('Total Sales value of this order is less than the Total Cost value, '+
         'do you want to continue?', mtWarning, [mbNo, mbYes], 0) <> mrYes then
@@ -1213,7 +1213,7 @@ begin
         end
       else
         begin
-          if (StrTofloat(TotSellMemo.text) >= dmBroker.MinimumReorderLimit) then
+          if (StrToFloatDef(TotSellMemo.text, 0, FormatSettings) >= dmBroker.MinimumReorderLimit) then
             begin
               iMonths := dmBroker.GetReorderReminderInterval;
               TempWord := MessageDlg('No expected reorder date has been entered, do you want to set a reminder for ' + inttostr(iMonths) + ' months time?', mtConfirmation,
@@ -1533,7 +1533,7 @@ begin
       ParamByName('Invoice_Upfront').Asstring := 'N';
 
     Parambyname('Calloff_invoiced_upfront').asstring := CallOffInvoicedUpfront;
-    parambyName('Qty_in_Stock').asfloat := strtofloat(InstockQtyMemo.text);
+    parambyName('Qty_in_Stock').asfloat := StrToFloatDef(InstockQtyMemo.text, 0, FormatSettings);
     ParamByName('Purch_Ord_Line_Status').AsInteger := LineStatus;
     if JobType = 0 then
       ParambyName('Job_Type').clear
@@ -6116,11 +6116,11 @@ begin
     end;
 
   if iFactor = 0 then
-    rValue := strtofloat(OrdPriceMemo.text)
+    rValue := StrToFloatDef(OrdPriceMemo.text, 0, FormatSettings)
   else
-    rValue := ((strtoInt(OrderQtyMemo.text)/iFactor)*strtofloat(OrdPriceMemo.text));
+    rValue := ((strtoInt(OrderQtyMemo.text)/iFactor) * StrToFloatDef(OrdPriceMemo.text, 0, FormatSettings));
 
-  rvalue := rvalue + strtofloat(OrdChrgMemo.text);
+  rvalue := rvalue + StrToFloatDef(OrdChrgMemo.text, 0, FormatSettings);
   TotOrderMemo.text := formatfloat('0.00',rValue);
 end;
 
@@ -6146,11 +6146,11 @@ begin
     end;
 
   if iFactor = 0 then
-    rValue := strtofloat(SellPriceMemo.text)
+    rValue := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings)
   else
-    rValue := ((strtoInt(OrderQtyMemo.text)/iFactor)*strtofloat(SellPriceMemo.text));
+    rValue := ((strtoInt(OrderQtyMemo.text)/iFactor) * StrToFloatDef(SellPriceMemo.text, 0, FormatSettings));
 
-   rvalue := rvalue + strtofloat(SlsChrgMemo.text);
+   rvalue := rvalue + StrToFloatDef(SlsChrgMemo.text, 0, FormatSettings);
    {for TempCount := 0 to Pred(SelectedLine.ExtraCharges.Count) do
       with SelectedLine.ExtraCharges[TempCount] do
       begin
@@ -6684,13 +6684,13 @@ begin
 *)
 
 //  if ValueMemo.Text <> '' then
-//    rvalue := StrToFloat(TotSellMemo.Text) - StrToFloat(TotOrderMemo.Text) - StrToFloat(ValueMemo.Text)
+//    rvalue := StrToFloatDef(TotSellMemo.Text, 0, FormatSettings) - StrToFloatDef(TotOrderMemo.Text, 0, FormatSettings) - StrToFloatDef(ValueMemo.Text, 0, FormatSettings)
 //  else
 // Bug : addit costs already included in total cost/total sell so profit calc is the same regardless 
-    rvalue := StrToFloat(TotSellMemo.Text) - StrToFloat(TotOrderMemo.Text);
+    rvalue := StrToFloatDef(TotSellMemo.Text, 0, FormatSettings) - StrToFloatDef(TotOrderMemo.Text, 0, FormatSettings);
   ProfMemo.Text := formatfloat('0.00',rValue);
   try
-    rvalue2 := (rvalue*100. / StrToFloat(TotSellMemo.Text));
+    rvalue2 := (rvalue * 100 / StrToFloatDef(TotSellMemo.Text, 0, FormatSettings));
   except
     rvalue2 := -99999.99
   end;
@@ -7844,26 +7844,26 @@ begin
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
 
       hashPos := pos('#', tempStr);
-      qty := StrToFloat(copy(tempStr, 1, hashPos-1));
+      qty := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       qtyTot := qtyTot + qty;
 
       hashPos := pos('#', tempStr);
-      goodsVal := StrToFloat(copy(tempStr, 1, hashPos-1));
+      goodsVal := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       goodsTot := goodsTot + goodsVal;
 
       hashPos := pos('#', tempStr);
-      vatVal := StrToFloat(copy(tempStr, 1, hashPos-1));
+      vatVal := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
 
       hashPos := pos('#', tempStr);
-      addchgs := StrToFloat(copy(tempStr, 1, hashPos-1));
+      addchgs := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       goodsTot := goodsTot + addchgs;
 
       hashPos := pos('#', tempStr);
-      addchgsVAT := StrToFloat(copy(tempStr, 1, hashPos-1));
+      addchgsVAT := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       vatVal := vatVal + addchgsVAT;
 
@@ -7920,26 +7920,26 @@ begin
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
 
       hashPos := pos('#', tempStr);
-      qty := StrToFloat(copy(tempStr, 1, hashPos-1));
+      qty := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       qtyTot := qtyTot + qty;
 
       hashPos := pos('#', tempStr);
-      goodsVal := StrToFloat(copy(tempStr, 1, hashPos-1));
+      goodsVal := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       goodsTot := goodsTot + goodsVal;
 
       hashPos := pos('#', tempStr);
-      vatVal := StrToFloat(copy(tempStr, 1, hashPos-1));
+      vatVal := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
 
       hashPos := pos('#', tempStr);
-      addchgs := StrToFloat(copy(tempStr, 1, hashPos-1));
+      addchgs := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       goodsTot := goodsTot + addchgs;
 
       hashPos := pos('#', tempStr);
-      addchgsVAT := StrToFloat(copy(tempStr, 1, hashPos-1));
+      addchgsVAT := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       vatVal := vatVal + addchgsVAT;
 
@@ -8018,7 +8018,7 @@ begin
     else
     if (strGrid.Cells[8, lRow]) <> '' then
     begin
-      if  strToFloat(strGrid.Cells[8, lRow]) < 0.00 then
+      if  StrToFloatDef(strGrid.Cells[8, lRow], 0, FormatSettings) < 0.00 then
       begin
         //Show in red and white if the goods value is negative (ie its a credit note)
         brush.color := clred;

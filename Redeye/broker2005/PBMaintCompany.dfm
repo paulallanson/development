@@ -2,8 +2,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   Left = 307
   Top = 7
   Caption = 'Company Details'
-  ClientHeight = 597
-  ClientWidth = 630
+  ClientHeight = 596
+  ClientWidth = 626
   Color = clBtnFace
   Constraints.MinHeight = 626
   Constraints.MinWidth = 642
@@ -22,8 +22,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   object tbSettings: TPageControl
     Left = 0
     Top = 39
-    Width = 630
-    Height = 498
+    Width = 626
+    Height = 497
     ActivePage = tbsProduction
     Align = alClient
     TabOrder = 0
@@ -222,12 +222,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         Text = 'EMailEdit'
       end
       object GroupBox2: TGroupBox
-        ParentBackground = False
         Left = 248
         Top = 168
         Width = 185
         Height = 81
         Caption = 'Supplier'
+        ParentBackground = False
         TabOrder = 11
         object Label13: TLabel
           Left = 13
@@ -525,12 +525,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 6
       end
       object grpbxAuthorisePO: TGroupBox
-        ParentBackground = False
         Left = 3
         Top = 354
         Width = 265
         Height = 47
         Caption = 'grpbxAuthorisePO'
+        ParentBackground = False
         TabOrder = 15
         object Label20: TLabel
           Left = 8
@@ -865,7 +865,6 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         OnClick = btbtnClearProdTypeClick
       end
       object rdgrpJobBag: TRadioGroup
-        ParentBackground = False
         Left = 16
         Top = 80
         Width = 201
@@ -875,6 +874,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
           'Never create a Job Bag'
           'Prompt to create a Job Bag'
           'Always create a Job Bag')
+        ParentBackground = False
         TabOrder = 3
       end
       object JobBagsCheckBox: TCheckBox
@@ -1032,11 +1032,11 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 21
       end
       object grpbxReorderReminder: TGroupBox
-        ParentBackground = False
         Left = 272
         Top = 80
         Width = 281
         Height = 73
+        ParentBackground = False
         TabOrder = 22
         object Label49: TLabel
           Left = 198
@@ -1450,12 +1450,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'Stock'
       ImageIndex = 2
       object GroupBox1: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 16
         Width = 369
         Height = 89
         Caption = 'Default Call Off Supplier'
+        ParentBackground = False
         TabOrder = 0
         object Label11: TLabel
           Left = 16
@@ -1607,12 +1607,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 2
       end
       object GroupBox5: TGroupBox
-        ParentBackground = False
         Left = 12
         Top = 16
         Width = 597
         Height = 201
         Caption = 'Quoting - Default Cost Charge'
+        ParentBackground = False
         TabOrder = 3
         object Label62: TLabel
           Left = 25
@@ -1847,11 +1847,13 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       object PageControl1: TPageControl
         Left = 0
         Top = 0
-        Width = 626
-        Height = 471
+        Width = 622
+        Height = 470
         ActivePage = TabSheet1
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 626
+        ExplicitHeight = 471
         object TabSheet1: TTabSheet
           Caption = 'Enquiries'
           object Label29: TLabel
@@ -1992,12 +1994,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'Web Ordering'
       ImageIndex = 7
       object GroupBox3: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 8
         Width = 369
         Height = 161
         Caption = 'Delivery Charge'
+        ParentBackground = False
         TabOrder = 0
         object Label34: TLabel
           Left = 16
@@ -2089,12 +2091,12 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         end
       end
       object GroupBox4: TGroupBox
-        ParentBackground = False
         Left = 8
         Top = 184
         Width = 369
         Height = 89
         Caption = 'Web2Print Ordering'
+        ParentBackground = False
         TabOrder = 1
         object Label45: TLabel
           Left = 16
@@ -2350,8 +2352,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
       Caption = 'CRM'
       ImageIndex = 10
       DesignSize = (
-        622
-        470)
+        618
+        469)
       object Label52: TLabel
         Left = 16
         Top = 56
@@ -2406,7 +2408,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
         TabOrder = 0
       end
       object btnActivityType: TButton
-        Left = 413
+        Left = 405
         Top = 19
         Width = 22
         Height = 22
@@ -2480,18 +2482,18 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     end
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 537
-    Width = 630
+    Top = 536
+    Width = 626
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     ExplicitTop = 538
     ExplicitWidth = 634
     DesignSize = (
-      630
+      626
       41)
     object BitBtn1: TBitBtn
       Left = 231
@@ -2517,17 +2519,17 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 630
+    Width = 626
     Height = 39
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     ExplicitWidth = 634
     DesignSize = (
-      630
+      626
       39)
     object Label1: TLabel
       Left = 11
@@ -2545,7 +2547,7 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
     object NameEdit: TEdit
       Left = 121
       Top = 8
-      Width = 400
+      Width = 392
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Font.Charset = ANSI_CHARSET
@@ -2562,8 +2564,8 @@ object PBMaintCompanyFrm: TPBMaintCompanyFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 578
-    Width = 630
+    Top = 577
+    Width = 626
     Height = 19
     Panels = <
       item

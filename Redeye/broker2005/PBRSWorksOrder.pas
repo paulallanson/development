@@ -36,11 +36,11 @@ type
     procedure PrintBitBtnClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure EmailBitBtnClick(Sender: TObject);
-    procedure IdHTTP1WorkBegin(ASender: TObject; AWorkMode: TWorkMode;
-      AWorkCountMax: Integer);
     procedure IdHTTP1WorkEnd(ASender: TObject; AWorkMode: TWorkMode);
     procedure FormCreate(Sender: TObject);
     procedure imgPlanningDblClick(Sender: TObject);
+    procedure IdHTTP1WorkBegin(ASender: TObject; AWorkMode: TWorkMode;
+      AWorkCountMax: Int64);
   private
     bReadPage: boolean;
     iIntselcode: integer;
@@ -117,7 +117,7 @@ procedure TfrmPBRSWorksOrder.RunReport(Preview: boolean);
 begin
   frmPBRPWorksOrder := TfrmPBRPWorksOrder.create(self);
   try
-    frmPBRPWorksOrder.WorksOrder := strtofloat(memSelection.text);
+    frmPBRPWorksOrder.WorksOrder := StrToFloatDef(memSelection.text, 0, FormatSettings);
     frmPBRPWorksOrder.ForceNewPage := chkbxProcessNewPage.checked;
 
     if (frmPBRPWorksOrder.GetDetails = 0) then
@@ -149,7 +149,7 @@ begin
   emailHandler := TemailHandler.Create(self);
   frmPBRPWorksOrder := TfrmPBRPWorksOrder.create(self);
   try
-    frmPBRPWorksOrder.WorksOrder := strtofloat(memSelection.text);
+    frmPBRPWorksOrder.WorksOrder := StrToFloatDef(memSelection.text, 0, FormatSettings);
     frmPBRPWorksOrder.ForceNewPage := chkbxProcessNewPage.checked;
 
     if (frmPBRPWorksOrder.GetDetails = 0) then
@@ -159,7 +159,7 @@ begin
         frmPBRPWorksOrder.bPreview := false;
         sTemp := BuildQueryString;
 //        sSubject := 'Works Instruction: ' + memSelection.text;
-        sSubject := inttostr(round(strtofloat(memSelection.text))) + ' ' + edtCustomer.Text + ' ' + memDescription.text + ' - New Job';
+        sSubject := inttostr(round(StrToFloatDef(memSelection.text, 0, FormatSettings))) + ' ' + edtCustomer.Text + ' ' + memDescription.text + ' - New Job';
         emailHandler.Body := 'Please find attached, Works Instruction: ' + memSelection.text + '.'#13#10#13#10;
         emailHandler.ccEmail := '';
 //        emailHandler.CreateEmail(frmPBRPWorksOrder.qrpDetails, sTemp, 'WIN'+memSelection.text, sSubject);
@@ -285,7 +285,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -346,8 +346,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Works_Order').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Works_Order').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Works_Order').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Works_Order').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do
@@ -528,7 +528,7 @@ begin
 end;
 
 procedure TfrmPBRSWorksOrder.IdHTTP1WorkBegin(ASender: TObject;
-  AWorkMode: TWorkMode; AWorkCountMax: Integer);
+  AWorkMode: TWorkMode; AWorkCountMax: Int64);
 begin
   lblSchedule.visible := true;
 end;

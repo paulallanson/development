@@ -149,7 +149,7 @@ begin
       ParamByName('Customer').AsInteger := iCust;
       ParamByName('Branch_No').AsInteger := iBranch;
       ParamByName('Rep').AsInteger := RepsDBLCB.KeyValue;
-      ParamByName('Percentage').AsFloat := StrToFloat(PercMemo.Text);
+      ParamByName('Percentage').AsFloat := StrToFloatDef(PercMemo.Text, 0, FormatSettings);
       ExecSQL;
     end;
     iCode := RepsDBLCB.KeyValue;
@@ -163,7 +163,7 @@ begin
       ParamByName('Customer').AsInteger := iCust;
       ParamByName('Branch_No').AsInteger := iBranch;
       ParamByName('Rep').AsInteger := iCode;
-      ParamByName('Percentage').AsFloat := StrToFloat(PercMemo.Text);
+      ParamByName('Percentage').AsFloat := StrToFloatDef(PercMemo.Text, 0, FormatSettings);
       ExecSQL;
       ExecSQL;
     end;
@@ -207,7 +207,7 @@ begin
   if PercMemo.Text <> '' then
   begin
     try
-      PercMemo.Text := FormatFloat('##0.00', StrToFloat(PercMemo.Text))
+      PercMemo.Text := FormatFloat('##0.00', StrToFloatDef(PercMemo.Text), 0, FormatSettings)
     except
       MessageDlg('Invalid percentage', mtError, [mbOK], 0);
       PercMemo.SetFocus;

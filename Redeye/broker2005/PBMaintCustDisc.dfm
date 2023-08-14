@@ -1,20 +1,18 @@
-﻿object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
+object PBMaintCustDiscFrm: TPBMaintCustDiscFrm
   Left = 353
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Customer Discounts'
-  ClientHeight = 336
-  ClientWidth = 322
+  ClientHeight = 335
+  ClientWidth = 318
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 6
@@ -61,10 +59,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 1
-    ParentFont = False
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -129,7 +123,11 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 238
@@ -143,10 +141,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ModalResult = 2
-    ParentFont = False
-    TabOrder = 4
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -211,7 +205,11 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -303,9 +301,6 @@
       Font.Height = -12
       Font.Name = 'Arial'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 4
-      OnClick = DatefromBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -320,6 +315,9 @@
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 4
+      OnClick = DatefromBitBtnClick
     end
     object DateToEdit: TEdit
       Left = 112
@@ -340,8 +338,6 @@
       Top = 176
       Width = 25
       Height = 25
-      TabOrder = 6
-      OnClick = DateToBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -356,6 +352,8 @@
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = DateToBitBtnClick
     end
     object DiscDBLookupComboBox: TDBLookupComboBox
       Left = 112
@@ -468,39 +466,31 @@
     Top = 240
     ParamData = <
       item
-        DataType = ftString
         Name = 'Disc_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftFloat
         Name = 'Disc_Val'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftDateTime
         Name = 'Date_effec'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_Ineffec'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Cust_Disc'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddSQL: TFDQuery
@@ -532,54 +522,42 @@
     Left = 240
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer_Discount'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Part_Group'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Part_Group'
+        DataType = ftInteger
+      end
+      item
         Name = 'Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftFloat
         Name = 'Disc_Val'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Effec'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_Ineffec'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -599,14 +577,10 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cust_disc'
-        ParamType = ptUnknown
       end>
   end
   object GetLastCodeSql: TFDQuery
@@ -643,14 +617,10 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'cust_disc'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -625,7 +625,7 @@ begin
   memGoods.text := FloatToStrF(SalesInvoice.TotalGoods, ffCurrency, 15, 2);
   memVAT.text := FloatToStrF(SalesInvoice.TotalVAT, ffCurrency, 15, 2);
 //  memTotal.text := FloatToStrF((SalesInvoice.TotalGoods+SalesInvoice.TotalVAT), ffCurrency, 15, 2);
-  memTotal.text := FloatToStrF((strtofloat(sGoods)+strtofloat(sVat)), ffCurrency, 15, 2);
+  memTotal.text := FloatToStrF((StrToFloatDef(sGoods, 0, FormatSettings)+StrToFloatDef(sVat, 0, FormatSettings)), ffCurrency, 15, 2);
   ShowUnitPrice;
 end;
 

@@ -94,7 +94,7 @@ procedure TfrmPBRSJobBag.RunReport(Preview: boolean);
 begin
   frmPBRPJobBag := TfrmPBRPJobBag.create(self);
   try
-    frmPBRPJobBag.Key := strtofloat(memSelection.text);
+    frmPBRPJobBag.Key := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (frmPBRPJobBag.GetDetails = 0) then
       MessageDlg('There are no job bags to print', mtError, [mbAbort], 0)
@@ -126,7 +126,7 @@ begin
   emailHandler := TemailHandler.Create(self);
   frmPBRPJobBag := TfrmPBRPJobBag.create(self);
   try
-    frmPBRPJobBag.key := strtofloat(memSelection.text);
+    frmPBRPJobBag.key := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (frmPBRPJobBag.GetDetails = 0) then
       MessageDlg('There are no job bags to print', mtError, [mbAbort], 0)
@@ -151,7 +151,7 @@ begin
   emailHandler := TemailHandler.Create(self);
   frmPBRPJobBagSched := TfrmPBRPJobBagSched.create(self);
   try
-    frmPBRPJobBagSched.key := strtofloat(memSelection.text);
+    frmPBRPJobBagSched.key := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (frmPBRPJobBagSched.GetDetails = 0) then
       MessageDlg('There are no job bags to print', mtError, [mbAbort], 0)
@@ -173,7 +173,7 @@ procedure TfrmPBRSJobBag.RunScheduleReport(Preview: boolean);
 begin
   frmPBRPJobBagSched := TfrmPBRPJobBagSched.create(self);
   try
-    frmPBRPJobBagSched.Key := strtofloat(memSelection.text);
+    frmPBRPJobBagSched.Key := StrToFloatDef(memSelection.text, 0, FormatSettings);
 
     if (frmPBRPJobBagSched.GetDetails = 0) then
       MessageDlg('There is no schedule to print for this job bag', mtError, [mbAbort], 0)
@@ -249,7 +249,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -310,8 +310,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Job_Bag').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Job_Bag').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Job_Bag').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Job_Bag').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do

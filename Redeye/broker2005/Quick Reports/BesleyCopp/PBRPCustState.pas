@@ -220,7 +220,7 @@ begin
  //     lblUnitPrice.caption := formatfloat('0.00',fieldbyname('unit_price').asfloat);
       lblTotal.caption := formatfloat('0.00',fieldbyname('Goods_value').asfloat +
          fieldbyname('vat_value').asfloat);
-      rGoods := rGoods + StrToFloat(LblGoods.Caption);
+      rGoods := rGoods + StrToFloatDef(LblGoods.Caption, 0, FormatSettings);
       rvat := rVat + fieldbyname('vat_value').asfloat;
     end;
 end;
@@ -230,7 +230,7 @@ begin
   with qryGetPO do
     begin
       close;
-      parambyname('Purchase_Order').asfloat := strtofloat(sTemp);
+      parambyname('Purchase_Order').asfloat := StrToFloatDef(sTemp, 0, FormatSettings);
       parambyname('Line').asinteger := 1;
       open;
       result := fieldbyname('Cust_Order_no').asstring;

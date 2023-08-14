@@ -129,7 +129,7 @@ begin
     with ExtraCharge do
     begin
       Details := DetailsEdit.Text;
-      Amount := StrToFloat(CostMemo.Text);
+      Amount := StrToFloatDef(CostMemo.Text, 0, FormatSettings);
       VatCode := VatDBLookupComboBox.KeyValue;
       Vat := Amount * (STPODM.GetVatRate(VatCode)/100);
       if FFuncMode = poAdd then

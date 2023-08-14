@@ -310,7 +310,7 @@ begin
                 if trim(sPrice) = '' then
                   rPrice := 0.00
                 else
-                  rPrice := strtofloat(sPrice);
+                  rPrice := StrToFloatDef(sPrice, 0, FormatSettings);
 
                 sOrigQuantity := ChildNode.ChildNodes.Nodes['OriginalQuantity'].ChildNodes.Nodes['Amount'].Text;
                 if trim(sOrigQuantity) = '' then
@@ -328,7 +328,7 @@ begin
                 if trim(sOrigPrice) = '' then
                   rOrigPrice := 0.00
                 else
-                  rOrigPrice := strtofloat(sOrigPrice);
+                  rOrigPrice := StrToFloatDef(sOrigPrice, 0, FormatSettings);
 
                 sOrigLine := ChildNode.ChildNodes.Nodes['OriginalLineNumber'].Text;
                 if trim(sOrigLine) = '' then

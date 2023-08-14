@@ -363,8 +363,8 @@ begin
   NonConform.QAOperator := dblkpQAOperator.KeyValue;
   NonConform.QAOperatorName := dblkpQAOperator.text;
   NonConform.QASignOffDate := pbdatestr(edtQASignOff.text);
-  NonConform.TotalCost := strtofloat(memTotalCost.Text);
-  NonConform.CosttoClient := strtofloat(memCosttoClient.Text);
+  NonConform.TotalCost := StrToFloatDef(memTotalCost.Text, 0, FormatSettings);
+  NonConform.CosttoClient := StrToFloatDef(memCosttoClient.Text, 0, FormatSettings);
 
   case rdgrpJobReprinted.itemindex of
     0: NonConform.JobRePrinted := 'Y';

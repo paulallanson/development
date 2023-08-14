@@ -1,9 +1,9 @@
 object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
   Left = 175
   Top = 106
-  Width = 1250
-  Height = 478
   Caption = 'Maintain Production Costs'
+  ClientHeight = 439
+  ClientWidth = 1234
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,29 +11,27 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 403
-    Width = 1242
+    Top = 398
+    Width = 1234
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 403
+    ExplicitWidth = 1242
     object OKBitBtn: TBitBtn
       Left = 536
       Top = 7
       Width = 75
       Height = 25
       Caption = 'OK'
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -99,6 +97,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 632
@@ -107,9 +107,6 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -174,14 +171,17 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
   end
   object sgDetails: TStringGrid
     Left = 0
     Top = 41
-    Width = 1242
-    Height = 362
+    Width = 1234
+    Height = 357
     Align = alClient
     ColCount = 11
     DefaultColWidth = 20
@@ -194,6 +194,8 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     OnKeyPress = sgDetailsKeyPress
     OnKeyUp = sgDetailsKeyUp
     OnSelectCell = sgDetailsSelectCell
+    ExplicitWidth = 1242
+    ExplicitHeight = 362
     ColWidths = (
       20
       139
@@ -238,10 +240,11 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1242
+    Width = 1234
     Height = 41
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 1242
   end
   object dblkpVAT: TDBLookupComboBox
     Left = 488
@@ -308,9 +311,7 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -340,49 +341,31 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryCostUnit: TFDQuery
@@ -438,14 +421,10 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object dtsOperation: TDataSource
@@ -465,19 +444,13 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsCategory: TDataSource
@@ -498,24 +471,16 @@ object PBMaintJobBagProcessCostsFrm: TPBMaintJobBagProcessCostsFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end>
   end
   object dtsSubCategory: TDataSource

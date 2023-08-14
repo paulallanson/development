@@ -291,9 +291,9 @@ begin
 
     sValue := stringreplace(lblValue.Caption,'£','',[rfReplaceAll]);
     sValue := stringreplace(sValue,',','',[rfReplaceAll]);
-    iGoods := iGoods + StrToFloat(sValue);
+    iGoods := iGoods + StrToFloatDef(sValue, 0, FormatSettings);
 
-    rVatValue := StrToFloat(sValue) * (FieldByName('Vat_Rate').AsFloat / 100);
+    rVatValue := StrToFloatDef(sValue) * (FieldByName('Vat_Rate', 0, FormatSettings).AsFloat / 100);
     lblVat.Caption := CurrencyDisp('£###,##0.00',floattostr(rVatValue));
     ivat := ivat + rVatValue;
   end;
@@ -433,7 +433,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := strtofloat(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
 
 
   GoodsValueLbl.Caption := formatfloat('£#,##0.00', iGoods);
@@ -649,9 +649,9 @@ begin
 (*  lblAddDescription.caption := qryJBLineChgs.fieldbyname('Details').asstring;
   lblAddValue.caption := CurrencyDisp(frmPBMainMenu.sCurrencyMask,FloatToStr(qryJBLineChgs.fieldbyname('Quotation_Price').asfloat));
   if qryJBLineChgs.FieldByName('Vat_Rate').Asstring = '' then
-    rVatValue := StrToFloat(lblAddValue.Caption) * (qryJBLineChgs.FieldByName('Customer_Vat_Rate').AsFloat / 100)
+    rVatValue := StrToFloatDef(lblAddValue.Caption, 0, FormatSettings) * (qryJBLineChgs.FieldByName('Customer_Vat_Rate').AsFloat / 100)
   else
-    rVatValue := StrToFloat(lblAddValue.Caption) * (qryJBLineChgs.FieldByName('Vat_Rate').AsFloat / 100);
+    rVatValue := StrToFloatDef(lblAddValue.Caption, 0, FormatSettings) * (qryJBLineChgs.FieldByName('Vat_Rate').AsFloat / 100);
 *)
   lblAddDescription.caption := qryPOLineChgs.fieldbyname('Details').asstring;
   lblAddValue.caption := CurrencyDisp('£###,##0.00',FloatToStr(qryPOLineChgs.fieldbyname('Quotation_Price').asfloat));
@@ -660,12 +660,12 @@ begin
   sValue := stringreplace(sValue,',','',[rfReplaceAll]);
 
   if qryPOLineChgs.FieldByName('Vat_Rate').Asstring = '' then
-    rVatValue := StrToFloat(sValue) * (qryPOLineChgs.FieldByName('Customer_Vat_Rate').AsFloat / 100)
+    rVatValue := StrToFloatDef(sValue, 0, FormatSettings) * (qryPOLineChgs.FieldByName('Customer_Vat_Rate').AsFloat / 100)
   else
-    rVatValue := StrToFloat(sValue) * (qryPOLineChgs.FieldByName('Vat_Rate').AsFloat / 100);
+    rVatValue := StrToFloatDef(sValue, 0, FormatSettings) * (qryPOLineChgs.FieldByName('Vat_Rate').AsFloat / 100);
 
   lblAddVat.Caption := formatFloat('0.00',rVatValue);
-  iGoods := iGoods + StrToFloat(sValue);
+  iGoods := iGoods + StrToFloatDef(sValue, 0, FormatSettings);
   ivat := ivat + rVatValue;
 end;
 

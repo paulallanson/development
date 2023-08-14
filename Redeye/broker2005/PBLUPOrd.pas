@@ -561,7 +561,7 @@ begin
   {Find the Purchase Order initially entered}
   if not bmulti_select then
   begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -629,7 +629,7 @@ var
   rNOrderNo: real;
 begin
   result := true;
-  rNOrderNo := strtofloat(formatfloat('0.00',rOrderNo)) ;
+  rNOrderNo := StrToFloatDef(formatfloat('0.00',rOrderNo), 0, FormatSettings) ;
   FindinGrid(rNOrderNo, iOrderLine);
   if floattostr(rNOrderNo) <> PONumEdit.text then
     begin
@@ -642,7 +642,7 @@ end;
 
 procedure TPBLUPOrdFrm.ChgBitBtnClick(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
         SearchBtnClick(self);
@@ -656,7 +656,7 @@ end;
 
 procedure TPBLUPOrdFrm.DelBitBtnClick(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -902,7 +902,7 @@ end;
 
 procedure TPBLUPOrdFrm.CopyBitBtnClick(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -915,7 +915,7 @@ end;
 
 procedure TPBLUPOrdFrm.ViewBitBtnClick(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1118,7 +1118,7 @@ procedure TPBLUPOrdFrm.CancelToolButtonClick(Sender: TObject);
 var
   btempok: boolean;
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1155,7 +1155,7 @@ end;
 
 procedure TPBLUPOrdFrm.ToolButton3Click(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1171,7 +1171,7 @@ procedure TPBLUPOrdFrm.ToolButtonDelivClick(Sender: TObject);
 var
   tempPONum: double;
 begin
-   if not FindOrder(strtofloat(PONumEdit.text),selline) then
+   if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1183,7 +1183,7 @@ begin
   PBLUDelivFrm.SearchBitBtn.Visible := False;
 
   dmLookUpDeliv.DetsSRC.DataSet := dmLookUpDeliv.GetPODelivsSQL;
-  dmLookUpDeliv.GetPODelivsSQL.Params[0].AsFloat := StrToFloat(PONumEdit.text);
+  dmLookUpDeliv.GetPODelivsSQL.Params[0].AsFloat := StrToFloatDef(PONumEdit.text, 0, FormatSettings);
   dmLookUpDeliv.GetPODelivsSQL.open;
   try
     PBLUDelivFrm.ShowModal;
@@ -1192,7 +1192,7 @@ begin
     PBLUDelivFrm.Free;
   end;
 
-  tempPONum := StrToFloat(PONumEdit.text);
+  tempPONum := StrToFloatDef(PONumEdit.text, 0, FormatSettings);
   ShowGrid;
 
   FindInGrid(tempPONum,1);
@@ -1251,7 +1251,7 @@ var
   bTempOK: Boolean;
   rTempSel: real;
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1263,7 +1263,7 @@ begin
     PBRSPOrdNFrm.EnquiryMemo.text := PONumEdit.Text;
     PBRSPOrdNFrm.ShowModal;
     bTempOK := PBRSPOrdNFrm.bOK;
-    rTempSel := strtofloat(PONumEdit.Text);
+    rTempSel := StrToFloatDef(PONumEdit.Text, 0, FormatSettings);
   finally
     PBRSPOrdNFrm.Free;
   end;
@@ -1290,7 +1290,7 @@ end;
 
 procedure TPBLUPOrdFrm.RepeatBitBtnClick(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1302,7 +1302,7 @@ end;
 
 procedure TPBLUPOrdFrm.PrintApprovalForm1Click(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1329,7 +1329,7 @@ end;
 
 procedure TPBLUPOrdFrm.ProofHistory1Click(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
        exit;
@@ -1337,7 +1337,7 @@ begin
   {Purchase order Print/Fax}
   PBLUProofHistNFrm := TPBLUProofHistNFrm.Create(Self);
   try
-    PBLUProofHistNFrm.rpurchord := strtofloat(PONumEdit.Text);
+    PBLUProofHistNFrm.rpurchord := StrToFloatDef(PONumEdit.Text, 0, FormatSettings);
     PBLUProofHistNFrm.ipurchordline := 1;
     PBLUProofHistNFrm.bAllow_Upd := true;
     PBLUProofHistNFrm.bAllow_Add := true;
@@ -1408,7 +1408,7 @@ var
   rTempSel: real;
   stext: string;
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
         SearchBtnClick(self);
@@ -1447,7 +1447,7 @@ begin
             parambyname('On_Hold').asstring := 'Y';
           execsql;
         end;
-      rTempSel := strtofloat(PONumEdit.Text);
+      rTempSel := StrToFloatDef(PONumEdit.Text, 0, FormatSettings);
       ShowGrid;
       FindInGrid(rTempSel,1);
     end;
@@ -1460,7 +1460,7 @@ end;
 
 procedure TPBLUPOrdFrm.Currentperiodcharges1Click(Sender: TObject);
 begin
-  if not FindOrder(strtofloat(PONumEdit.text),selline) then
+  if not FindOrder(StrToFloatDef(PONumEdit.text),selline, 0, FormatSettings) then
      begin
        PONumEdit.SetFocus;
         SearchBtnClick(self);
@@ -1472,7 +1472,7 @@ begin
 
   PBLUPOLAddChgsfrm := TPBLUPOLAddChgsfrm.create(self);
   try
-    PBLUPOLAddChgsfrm.PONumber := strtofloat(PONumEdit.text);
+    PBLUPOLAddChgsfrm.PONumber := StrToFloatDef(PONumEdit.text, 0, FormatSettings);
     PBLUPOLAddChgsfrm.Line := selline;
 
     PBLUPOLAddChgsfrm.showmodal;

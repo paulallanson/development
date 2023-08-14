@@ -26,7 +26,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1182
     Height = 651
-    ActivePage = tbInvoices
+    ActivePage = tbStock
     Align = alClient
     TabOrder = 1
     ExplicitWidth = 1178
@@ -1041,7 +1041,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 622
         DesignSize = (
           673
           623)
@@ -1055,7 +1054,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Color = clBtnFace
           ParentColor = False
           TabOrder = 0
-          ExplicitHeight = 529
           DesignSize = (
             662
             530)
@@ -1544,7 +1542,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 1
           Visible = False
-          ExplicitHeight = 134
           object lblGDPRSignedOperatorName: TLabel
             Left = 308
             Top = 50
@@ -1616,8 +1613,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alClient
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 497
-        ExplicitHeight = 622
         DesignSize = (
           501
           623)
@@ -1629,8 +1624,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
-          ExplicitWidth = 451
-          ExplicitHeight = 588
           DesignSize = (
             455
             589)
@@ -2102,7 +2095,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Convert Prospect to Customer'
           TabOrder = 1
           Visible = False
-          ExplicitTop = 595
         end
       end
     end
@@ -4479,6 +4471,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
+        ExplicitTop = 565
+        ExplicitWidth = 1170
       end
       object CoolBar5: TCoolBar
         Left = 0
@@ -4492,6 +4486,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             MinHeight = 40
             Width = 1168
           end>
+        ExplicitWidth = 1170
         object PageScroller3: TPageScroller
           Left = 11
           Top = 0
@@ -4515,6 +4510,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowHint = True
             TabOrder = 0
             Wrapable = False
+            ExplicitWidth = 1143
             object btnInvoiceChange: TToolButton
               Left = 0
               Top = 0
@@ -4616,6 +4612,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alBottom
         ParentBackground = False
         TabOrder = 3
+        ExplicitTop = 584
+        ExplicitWidth = 1170
         object Label53: TLabel
           Left = 8
           Top = 13
@@ -4640,6 +4638,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 886
           object Label54: TLabel
             Left = 88
             Top = 13
@@ -4779,6 +4778,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Date modified'
             Width = 200
           end>
+        Items.ItemData = {}
         LargeImages = imgDocuments
         MultiSelect = True
         RowSelect = True

@@ -1,10 +1,9 @@
-﻿object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
+object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   Left = 465
   Top = 67
-  AutoScroll = False
   Caption = 'Job Pricing'
-  ClientHeight = 591
-  ClientWidth = 742
+  ClientHeight = 589
+  ClientWidth = 734
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 750
@@ -14,7 +13,6 @@
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -22,7 +20,6 @@
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object EnquiryLineListBox: TListBox
     Left = 344
@@ -35,12 +32,12 @@
     OnClick = EnquiryLineListBoxClick
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 568
     Top = 96
     Width = 81
     Height = 49
     Caption = 'GroupBox1'
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object Label10: TLabel
@@ -127,26 +124,26 @@
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 556
-    Width = 742
+    Top = 554
+    Width = 734
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 556
+    ExplicitWidth = 742
     DesignSize = (
-      742
+      734
       35)
     object SaveBitBtn: TBitBtn
-      Left = 567
+      Left = 551
       Top = 7
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Save'
-      TabOrder = 0
-      OnClick = SaveBitBtnClick
       Glyph.Data = {
         BE060000424DBE06000000000000360400002800000024000000120000000100
         0800000000008802000000000000000000000001000000000000000000000000
@@ -204,17 +201,18 @@
         0303030303030303030303030303030303030303030303030303030303030303
         0303}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = SaveBitBtnClick
+      ExplicitLeft = 567
     end
     object CancelBitBtn: TBitBtn
-      Left = 655
+      Left = 639
       Top = 7
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         BE060000424DBE06000000000000360400002800000024000000120000000100
         0800000000008802000000000000000000000001000000000000000000000000
@@ -272,9 +270,12 @@
         0303030303030303030303030303030303030303030303030303030303030303
         0303}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
+      ExplicitLeft = 655
     end
     object PrintBitBtn: TBitBtn
-      Left = 477
+      Left = 461
       Top = 7
       Width = 75
       Height = 25
@@ -282,25 +283,28 @@
       Caption = 'Print'
       TabOrder = 2
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 477
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 427
-    Width = 742
+    Top = 425
+    Width = 734
     Height = 129
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 427
+    ExplicitWidth = 742
     object Panel9: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 742
       Height = 129
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object GroupBox2: TGroupBox
         Left = 0
@@ -315,7 +319,6 @@
           Width = 77
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           TabOrder = 0
           Visible = False
           OnChange = PUnitComboChange
@@ -324,13 +327,14 @@
           OnExit = PUnitComboExit
         end
         object Panel10: TPanel
-          ParentBackground = False
           Left = 2
           Top = 15
-          Width = 619
+          Width = 611
           Height = 112
           Align = alClient
+          ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 619
           object SelectedPricesGrid: TStringGrid
             Left = 1
             Top = 1
@@ -365,14 +369,15 @@
         end
       end
       object Panel8: TPanel
-        ParentBackground = False
-        Left = 623
+        Left = 615
         Top = 0
         Width = 119
         Height = 129
         Align = alRight
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 623
         object grpBxSelectedRunOn: TGroupBox
           Left = 0
           Top = 0
@@ -381,12 +386,12 @@
           Align = alClient
           TabOrder = 0
           object Panel12: TPanel
-            ParentBackground = False
             Left = 2
             Top = 15
             Width = 115
             Height = 112
             Align = alClient
+            ParentBackground = False
             TabOrder = 0
             object SelectedROPricesGrid: TStringGrid
               Left = 1
@@ -412,27 +417,29 @@
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 742
+    Width = 734
     Height = 123
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 742
     DesignSize = (
-      742
+      734
       123)
     object GroupBox4: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = -8
-      Width = 727
+      Width = 711
       Height = 122
       Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 727
       DesignSize = (
-        727
+        711
         122)
       object Label1: TLabel
         Left = 8
@@ -456,12 +463,13 @@
         Caption = 'Lines'
       end
       object Label6: TLabel
-        Left = 613
+        Left = 597
         Top = 72
         Width = 51
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Price Units'
+        ExplicitLeft = 613
       end
       object Label3: TLabel
         Left = 520
@@ -494,7 +502,7 @@
       object EnquiryLineGrid: TStringGrid
         Left = 56
         Top = 41
-        Width = 513
+        Width = 497
         Height = 74
         Anchors = [akLeft, akTop, akRight]
         ColCount = 2
@@ -504,6 +512,7 @@
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
         TabOrder = 2
         OnClick = EnquiryLineGridClick
+        ExplicitWidth = 513
         ColWidths = (
           40
           285)
@@ -512,13 +521,12 @@
           20)
       end
       object JobUnitcombo: TComboBox
-        Left = 613
+        Left = 597
         Top = 92
         Width = 105
         Height = 21
         Style = csDropDownList
         Anchors = [akTop, akRight]
-        ItemHeight = 13
         TabOrder = 3
         OnClick = JobUnitcomboClick
         OnDropDown = JobUnitcomboDropDown
@@ -536,22 +544,24 @@
     end
   end
   object Panel4: TPanel
-    ParentBackground = False
     Left = 0
     Top = 123
-    Width = 742
-    Height = 304
+    Width = 734
+    Height = 302
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 742
+    ExplicitHeight = 304
     object Panel5: TPanel
-      ParentBackground = False
       Left = 623
       Top = 0
       Width = 119
       Height = 304
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object grpBxSupplierRunOn: TGroupBox
         Left = 0
@@ -562,12 +572,12 @@
         Caption = 'Run On Quantity'
         TabOrder = 0
         object Panel11: TPanel
-          ParentBackground = False
           Left = 2
           Top = 15
           Width = 115
           Height = 287
           Align = alClient
+          ParentBackground = False
           TabOrder = 0
           object SupplierROPricesGrid: TStringGrid
             Left = 1
@@ -587,13 +597,13 @@
       end
     end
     object Panel6: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 623
       Height = 304
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object GroupBox3: TGroupBox
         Left = 0
@@ -604,12 +614,12 @@
         Caption = 'Supplier Price Responses'
         TabOrder = 0
         object Panel7: TPanel
-          ParentBackground = False
           Left = 2
           Top = 15
           Width = 619
           Height = 287
           Align = alClient
+          ParentBackground = False
           TabOrder = 0
           object SupplierPricesGrid: TStringGrid
             Left = 1
@@ -658,14 +668,12 @@
     Top = 424
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqQtySQL: TFDQuery
@@ -685,14 +693,12 @@
     Top = 424
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SelectPopUpMenu: TPopupMenu
@@ -724,44 +730,33 @@
     Top = 400
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'Cost'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
         Name = 'Price'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object EnqHeadSQL: TFDQuery
@@ -774,9 +769,8 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpEnqLineSQL: TFDQuery
@@ -792,29 +786,19 @@
     Top = 368
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Run_On_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Run_on_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqHeadSQL: TFDQuery
@@ -827,14 +811,10 @@
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object UpSuppEnqQtySQL: TFDQuery
@@ -853,34 +833,22 @@
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object PUnitSQL: TFDQuery
@@ -914,14 +882,10 @@
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object ResetSuppEnqQtySQL: TFDQuery
@@ -936,19 +900,13 @@
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnit: TFDQuery
@@ -961,9 +919,7 @@
     Top = 226
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end>
   end
   object qryPTPriceUnit: TFDQuery
@@ -980,9 +936,7 @@
     Top = 250
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryProdType: TFDQuery
@@ -997,9 +951,7 @@
     Top = 162
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'product_type'
-        ParamType = ptUnknown
       end>
   end
 end

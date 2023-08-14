@@ -1,7 +1,4 @@
 object dtmdlStockMove: TdtmdlStockMove
-  OldCreateOrder = False
-  Left = 22
-  Top = 66
   Height = 479
   Width = 741
   object GetStoresSQL: TFDQuery
@@ -35,14 +32,10 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object GetPartSql: TFDQuery
@@ -56,9 +49,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object UpdLastLotSQL: TFDQuery
@@ -72,14 +63,10 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreStockIntSQL: TFDQuery
@@ -98,9 +85,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreSQL: TFDQuery
@@ -115,9 +100,8 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 16
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdStockSQL: TFDQuery
@@ -142,39 +126,27 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Cost_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Store_Stock_Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Invoice_Upfront'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Sets_per_Pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object DelStockSQL: TFDQuery
@@ -189,9 +161,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreStockSQL: TFDQuery
@@ -212,34 +182,22 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreBinSQL: TFDQuery
@@ -256,14 +214,10 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object AddStoreBinSQL: TFDQuery
@@ -281,19 +235,13 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_Can_Pick'
-        ParamType = ptUnknown
       end>
   end
   object GetNextStockSQL: TFDQuery
@@ -338,89 +286,57 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Received'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Part'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Part_Store'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Date_Received'
+      end
+      item
+        Name = 'Store_Cost'
+      end
+      item
+        Name = 'Store_Quantity'
+      end
+      item
+        Name = 'Quantity_Allocated'
+      end
+      item
+        Name = 'Part'
+      end
+      item
+        Name = 'Part_Store'
+      end
+      item
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Up_front'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sets_per_pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pallet_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_is_Overs'
-        ParamType = ptUnknown
       end>
   end
   object GetNextMoveSQL: TFDQuery
@@ -470,109 +386,69 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Movement'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Movement_Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Print_On_Audit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pallet_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreStockNoSQL: TFDQuery
@@ -589,24 +465,19 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 248
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Part_Store_Lot'
+        DataType = ftString
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object CheckPartExistsQuery: TFDQuery
@@ -618,9 +489,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddPartQuery: TFDQuery
@@ -667,119 +536,74 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 301
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Class'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Mixed_Percentage'
-        ParamType = ptUnknown
       end>
   end
   object UpdPartQuery: TFDQuery
@@ -802,54 +626,34 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Mixed_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object PriceUnitSQL: TFDQuery
@@ -862,9 +666,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 301
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
   object AddStStkSerial: TFDQuery
@@ -880,24 +682,16 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Serial_Item_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Serial_item_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_to'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStoreStock: TFDQuery
@@ -916,19 +710,13 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 365
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryPartInactive: TFDQuery
@@ -941,9 +729,7 @@ object dtmdlStockMove: TdtmdlStockMove
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

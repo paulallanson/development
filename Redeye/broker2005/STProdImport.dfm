@@ -12,10 +12,8 @@ object STProdImportFrm: TSTProdImportFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object mmErrorRecords: TMemo
     Left = 0
@@ -28,13 +26,13 @@ object STProdImportFrm: TSTProdImportFrm
     TabOrder = 0
   end
   object pnlImportFile: TPanel
-    ParentBackground = False
     Left = 0
     Top = 65
     Width = 386
     Height = 56
     Align = alTop
     Enabled = False
+    ParentBackground = False
     TabOrder = 1
     object lblStep2: TLabel
       Left = 8
@@ -61,12 +59,12 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlProgress: TPanel
-    ParentBackground = False
     Left = 0
     Top = 177
     Width = 386
     Height = 76
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 8
@@ -107,12 +105,12 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlSupplier: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 386
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object lblStep1: TLabel
       Left = 8
@@ -145,12 +143,12 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlImport: TPanel
-    ParentBackground = False
     Left = 0
     Top = 121
     Width = 386
     Height = 56
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
     object lblStep4: TLabel
       Left = 8
@@ -181,12 +179,12 @@ object STProdImportFrm: TSTProdImportFrm
     end
   end
   object pnlCancel: TPanel
-    ParentBackground = False
     Left = 0
     Top = 353
     Width = 386
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 5
     object Cancel2BitBtn: TBitBtn
       Left = 288
@@ -194,8 +192,9 @@ object STProdImportFrm: TSTProdImportFrm
       Width = 75
       Height = 25
       Caption = 'Close'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
   end
   object opndlgImportFile: TOpenDialog

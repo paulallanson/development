@@ -3315,7 +3315,7 @@ begin
     with self.datamodule.qryGetPO do
       begin
         close;
-        parambyname('Purchase_order').asfloat := strtofloat(trim(reference));
+        parambyname('Purchase_order').asfloat := StrToFloatDef(trim(reference), 0, FormatSettings);
         parambyname('Line').asinteger := 1;
         open;
         result := fieldbyname('Cust_Order_no').asstring;
@@ -4910,8 +4910,8 @@ end;
 
 procedure TdmSalesInvoice.qrySIHeaderGridCalcFields(DataSet: TDataSet);
 begin
-(*  DataSet['Total_Value'] := StrToFloat(formatfloat('0.00',
-      Dataset['Goods_Value'])) + StrToFloat(formatfloat('0.00',
+(*  DataSet['Total_Value'] := StrToFloatDef(formatfloat('0.00',
+      Dataset['Goods_Value'])) + StrToFloatDef(formatfloat('0.00',
       Dataset['VAT_Value']));
 *)
   DataSet['Total_Value'] := roundfloat(Dataset['Goods_Value'],2) + roundfloat(Dataset['VAT_Value'],2);
@@ -5710,13 +5710,11 @@ end;
 
 procedure TdmSalesInvoice.qrySCHeaderGridCalcFields(DataSet: TDataSet);
 begin
-  DataSet['Total_Value'] := StrToFloat(formatfloat('0.00',
-      Dataset['Goods_Value'])) + StrToFloat(formatfloat('0.00',
-      Dataset['VAT_Value']));
+  DataSet['Total_Value'] := StrToFloatDef(formatfloat('0.00', Dataset['Goods_Value']), 0, FormatSettings) +
+                            StrToFloatDef(formatfloat('0.00', Dataset['VAT_Value']), 0, FormatSettings);
 
-  DataSet['Total_Credit'] := StrToFloat(formatfloat('0.00',
-      Dataset['Goods_Credit'])) + StrToFloat(formatfloat('0.00',
-      Dataset['VAT_Credit']));
+  DataSet['Total_Credit'] := StrToFloatDef(formatfloat('0.00', Dataset['Goods_Credit']), 0, FormatSettings) +
+                             StrToFloatDef(formatfloat('0.00', Dataset['VAT_Credit']), 0, FormatSettings);
 
   {Invoice Format}
   if Dataset.fieldbyname('Electronic_Invoice').asstring = 'Y' then
@@ -6046,7 +6044,7 @@ begin
     with qryGetPO do
       begin
         close;
-        parambyname('Purchase_order').asfloat := strtofloat(trim(SIreference));
+        parambyname('Purchase_order').asfloat := StrToFloatDef(trim(SIreference), 0, FormatSettings);
         parambyname('Line').asinteger := 1;
         open;
         result := fieldbyname('Cust_Order_no').asstring;

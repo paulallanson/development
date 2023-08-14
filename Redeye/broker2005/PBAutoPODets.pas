@@ -579,8 +579,8 @@ begin
                              QtysSRC.DataSet.FieldByName('Sell_Unit_Factor').Asinteger)*
                              FSellPrice)));
 
-      FOrderPrice := strtofloat(OrdPriceMemo.Text);
-      FSellPrice := strtofloat(SellPriceMemo.Text);
+      FOrderPrice := StrToFloatDef(OrdPriceMemo.Text, 0, FormatSettings);
+      FSellPrice := StrToFloatDef(SellPriceMemo.Text, 0, FormatSettings);
 
       ListPriceMemo.Text := FormatMoneyTo3DP(FloatToStr(0));
       SuppLabel.Caption := 'Supplier/Branch: ' +

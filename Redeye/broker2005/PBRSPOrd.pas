@@ -490,7 +490,7 @@ begin
           if Trim(PBFaxListFrm.FaxListgrid.Cells[2, irow]) = '' then Continue;
 
           {Now fax the individual enquiries to the individual suppliers}
-          dbPOrdLtr.PONumber := StrToFloat(FaxArray[irow, 1]);
+          dbPOrdLtr.PONumber := StrToFloatDef(FaxArray[irow, 1], 0, FormatSettings);
           dbPOrdLtr.Account := StrToInt(FaxArray[irow, 2]);
           dbPOrdLtr.Branch := StrToInt(FaxArray[irow, 3]);
           DisplayPrintDialog := false;
@@ -1384,8 +1384,8 @@ begin
  	With GetPORngSQL do
     begin
     Close;
-    ParamByName('From_PONum').AsFloat := StrtoFloat(sFirst);
-    ParamByName('To_PONum').AsFloat := StrtoFloat(sLast);
+    ParamByName('From_PONum').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+    ParamByName('To_PONum').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
     if MyOrAllRadioGroup.ItemIndex = 1 then
       ParamByName('Operator').AsInteger := 0
     else
@@ -1527,7 +1527,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;

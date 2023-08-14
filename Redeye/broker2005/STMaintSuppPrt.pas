@@ -186,7 +186,7 @@ begin
               parambyname('Discount_This_Part').asstring := 'Y'
             else
               parambyname('Discount_This_Part').asstring := 'N';
-            parambyname('Discount').asfloat := strtofloat(memDiscount.text);
+            parambyname('Discount').asfloat := StrToFloatDef(memDiscount.text, 0, FormatSettings);
 
             ExecSQL;
           end;
@@ -201,7 +201,7 @@ begin
         parambyname('Discount_This_Part').asstring := 'Y'
       else
         parambyname('Discount_This_Part').asstring := 'N';
-      parambyname('Discount').asfloat := strtofloat(memDiscount.text);
+      parambyname('Discount').asfloat := StrToFloatDef(memDiscount.text, 0, FormatSettings);
       ExecSQL;
     end;
   end

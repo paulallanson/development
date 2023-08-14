@@ -3,20 +3,18 @@ object STMaintParamFrm: TSTMaintParamFrm
   Top = 111
   BorderStyle = bsDialog
   Caption = 'Maintain Stock System Parameters'
-  ClientHeight = 361
-  ClientWidth = 585
+  ClientHeight = 360
+  ClientWidth = 581
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object LblCour: TLabel
     Left = 288
@@ -26,12 +24,12 @@ object STMaintParamFrm: TSTMaintParamFrm
     Caption = 'Default Courier'
   end
   object SeqNoGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 273
     Height = 121
     Caption = 'Sequence Numbers'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -86,12 +84,12 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object ReplGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 136
     Width = 273
     Height = 217
     Caption = 'Replenishment'
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 8
@@ -197,12 +195,12 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 288
     Top = 8
     Width = 289
     Height = 57
     Caption = 'Look-Ups'
+    ParentBackground = False
     TabOrder = 2
     object Label7: TLabel
       Left = 8
@@ -224,12 +222,12 @@ object STMaintParamFrm: TSTMaintParamFrm
     end
   end
   object ProdLUGridGroupBox: TGroupBox
-    ParentBackground = False
     Left = 288
     Top = 72
     Width = 289
     Height = 105
     Caption = 'Fields On Product Look-Up Grid'
+    ParentBackground = False
     TabOrder = 3
     object DescrCheckBox: TCheckBox
       Left = 8
@@ -271,8 +269,6 @@ object STMaintParamFrm: TSTMaintParamFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 4
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -291,22 +287,25 @@ object STMaintParamFrm: TSTMaintParamFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 504
     Top = 326
     Width = 75
     Height = 25
-    TabOrder = 5
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 288
     Top = 184
     Width = 289
     Height = 49
     Caption = 'Invoicing'
+    ParentBackground = False
     TabOrder = 6
     object Label8: TLabel
       Left = 8
@@ -356,8 +355,6 @@ object STMaintParamFrm: TSTMaintParamFrm
     Top = 243
     Width = 25
     Height = 25
-    TabOrder = 8
-    OnClick = btbtnClearCourierClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -372,6 +369,8 @@ object STMaintParamFrm: TSTMaintParamFrm
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
+    TabOrder = 8
+    OnClick = btbtnClearCourierClick
   end
   object UpdCompSQL: TFDQuery
     ConnectionName = 'PB'
@@ -402,74 +401,51 @@ object STMaintParamFrm: TSTMaintParamFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_PO_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Last_SO_Number'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Store_Ord_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Perc_Pack'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Ord_Perc_Pack'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Default_Warehouse'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Search_Timer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_LUG_Fields'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Use_Stock_System'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Allow_Overpicking'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Allocate_Stock'
-        ParamType = ptUnknown
       end>
   end
 end

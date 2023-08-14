@@ -143,7 +143,7 @@ begin
         Parambyname('Job_Bag_Line').asinteger := PBLUPOLAddChgsfrm.JobBagLine;
 
         parambyname('Total_Sales_Value').asfloat := 0.00;
-        parambyname('Total_Cost_Value').asfloat := strtofloat(memCost.text);
+        parambyname('Total_Cost_Value').asfloat := StrToFloatDef(memCost.text, 0, FormatSettings);
         ExecSQL;
       end;
       with AddSQL do
@@ -154,7 +154,7 @@ begin
         ParamByName('Additional_Charge').AsInteger := iCode;
 
         ParamByName('Details').AsString := edtDetails.text;
-        ParamByName('Amount').Asfloat := strtofloat(memCost.text);
+        ParamByName('Amount').Asfloat := StrToFloatDef(memCost.text, 0, FormatSettings);
         ParamByName('Quotation_price').Asfloat := 0.00;
         ParamByName('Sales_Profit').Asfloat := iSalesProfit;
         ExecSQL;
@@ -168,7 +168,7 @@ begin
         begin
         close;
         ParamByName('Sales_Profit').AsInteger := iSalesProfit;
-        parambyname('Total_Cost_Value').asfloat := strtofloat(memCost.text);
+        parambyname('Total_Cost_Value').asfloat := StrToFloatDef(memCost.text, 0, FormatSettings);
         ExecSQL;
         end;
 
@@ -180,7 +180,7 @@ begin
         ParamByName('Additional_Charge').AsInteger := iCode;
 
         ParamByName('Details').AsString := edtDetails.text;
-        ParamByName('Amount').Asfloat := strtofloat(memCost.text);
+        ParamByName('Amount').Asfloat := StrToFloatDef(memCost.text, 0, FormatSettings);
         ParamByName('Quotation_price').Asfloat := 0.00;
         ExecSQL;
       end;

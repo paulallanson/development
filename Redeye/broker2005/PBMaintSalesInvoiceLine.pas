@@ -275,17 +275,17 @@ var
 begin
   if SalesInvoiceLine.PackQty = 0 then
     begin
-      SalesInvoiceLine.Quantity := strtofloat(Trim(memQuantity.Text));
-      SalesInvoiceLine.GoodsValue := StrTofloat(memPrice.Text);
-      SalesInvoiceLine.ResellerPrice := StrTofloat(memResellerPrice.Text);
-      SalesInvoiceLine.CostPrice := StrTofloat(memCost.Text);
+      SalesInvoiceLine.Quantity := StrToFloatDef(Trim(memQuantity.Text), 0, FormatSettings);
+      SalesInvoiceLine.GoodsValue := StrToFloatDef(memPrice.Text, 0, FormatSettings);
+      SalesInvoiceLine.ResellerPrice := StrToFloatDef(memResellerPrice.Text, 0, FormatSettings);
+      SalesInvoiceLine.CostPrice := StrToFloatDef(memCost.Text, 0, FormatSettings);
     end
   else
     begin
       SalesInvoiceLine.Quantity := InpToSing(Trim(memQuantity.Text),SalesInvoiceLine.packQty);
-      SalesInvoiceLine.GoodsValue := (StrTofloat(memPrice.Text)/SalesInvoiceLine.PackQty);
-      SalesInvoiceLine.ResellerPrice := (StrTofloat(memResellerPrice.Text)/SalesInvoiceLine.PackQty);
-      SalesInvoiceLine.CostPrice := (StrTofloat(memCost.Text)/SalesInvoiceLine.PackQty);
+      SalesInvoiceLine.GoodsValue := (StrToFloatDef(memPrice.Text, 0, FormatSettings)/SalesInvoiceLine.PackQty);
+      SalesInvoiceLine.ResellerPrice := (StrToFloatDef(memResellerPrice.Text, 0, FormatSettings)/SalesInvoiceLine.PackQty);
+      SalesInvoiceLine.CostPrice := (StrToFloatDef(memCost.Text, 0, FormatSettings)/SalesInvoiceLine.PackQty);
     end;
 
   if  (NominalType = 'P') or
@@ -302,7 +302,7 @@ begin
   SalesInvoiceLine.PriceUnitFactor := SalesInvoiceLine.Parent.DataModule.GetPUnitFactor(SalesInvoiceLine.PriceUnit);
   SalesInvoiceLine.VATCode := dblkpVAT.keyvalue;
   SalesInvoiceLine.VATRate := SalesInvoiceLine.Parent.DataModule.GetVatRate(SalesInvoiceLine.VATCode);
-  SalesInvoiceLine.VatValue := StrTofloat(memVatValue.Text);
+  SalesInvoiceLine.VatValue := StrToFloatDef(memVatValue.Text, 0, FormatSettings);
   if SalesInvoiceLine.TotalGoods <> 0 then
     SalesInvoiceLine.NotPrinted := 'N';
     

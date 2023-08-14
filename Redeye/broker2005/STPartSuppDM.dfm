@@ -1,7 +1,4 @@
 object STPartSDM: TSTPartSDM
-  OldCreateOrder = False
-  Left = 3
-  Top = 34
   Height = 636
   Width = 941
   object PartSuppSQL: TFDQuery
@@ -37,24 +34,20 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part_From'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Part_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Preference_From'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Preference_To'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PartNoSuppSQL: TFDQuery
@@ -77,14 +70,12 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_To'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object PartWithSuppSQL: TFDQuery
@@ -117,24 +108,16 @@ object STPartSDM: TSTPartSDM
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Preference_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Preference_To'
-        ParamType = ptUnknown
       end>
   end
   object qryInsertPart: TFDQuery
@@ -176,119 +159,94 @@ object STPartSDM: TSTPartSDM
     Top = 200
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Updated'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftInteger
         Name = 'Vat_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftCurrency
+      end
+      item
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftDateTime
         Name = 'Part_Last_Move_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Last_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Auto_Update'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Class'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Price_unit'
+        DataType = ftInteger
+      end
+      item
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryInsertPartSupp: TFDQuery
@@ -307,34 +265,22 @@ object STPartSDM: TSTPartSDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Preference_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Part_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_this_Part'
-        ParamType = ptUnknown
       end>
   end
   object qryPartDtls: TFDQuery
@@ -347,9 +293,7 @@ object STPartSDM: TSTPartSDM
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object dtsrcImportQueries: TDataSource
@@ -366,9 +310,7 @@ object STPartSDM: TSTPartSDM
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdatePart: TFDQuery
@@ -393,69 +335,56 @@ object STPartSDM: TSTPartSDM
     Top = 288
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part_Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftCurrency
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Vat_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Part_Group'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftCurrency
+      end
+      item
+        Name = 'Vat_Code'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Part_Group'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Purch_Pack_Quantity'
+        DataType = ftInteger
+      end
+      item
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
+        DataType = ftCurrency
       end
       item
-        DataType = ftString
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Branch_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'unit_of_Measure'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Sell_Pack_Quantity'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Branch_no'
+        DataType = ftInteger
+      end
+      item
+        Name = 'unit_of_Measure'
+        DataType = ftInteger
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryDeletePart: TFDQuery
@@ -467,9 +396,7 @@ object STPartSDM: TSTPartSDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryDeletePartSupplier: TFDQuery
@@ -483,14 +410,10 @@ object STPartSDM: TSTPartSDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SUpplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSuppDtls: TFDQuery
@@ -503,9 +426,7 @@ object STPartSDM: TSTPartSDM
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdatePartPurchPrice: TFDQuery
@@ -518,14 +439,10 @@ object STPartSDM: TSTPartSDM
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryDoesPartExist: TFDQuery
@@ -538,9 +455,7 @@ object STPartSDM: TSTPartSDM
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPartSuppDisc: TFDQuery
@@ -555,24 +470,16 @@ object STPartSDM: TSTPartSDM
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Discount_this_Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryFindPartGroup: TFDQuery
@@ -584,9 +491,7 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_group_descr_short'
-        ParamType = ptUnknown
       end>
   end
   object qryNewPartGroup: TFDQuery
@@ -598,19 +503,13 @@ object STPartSDM: TSTPartSDM
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part_group_descr_short'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'part_group_descr'
-        ParamType = ptUnknown
       end>
   end
   object qryGetHighestPartGroup: TFDQuery
@@ -657,49 +556,31 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stocked_item'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryGetUOM: TFDQuery
@@ -712,9 +593,7 @@ object STPartSDM: TSTPartSDM
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'UOM_Description'
-        ParamType = ptUnknown
       end>
   end
   object qryAddUOM: TFDQuery
@@ -726,14 +605,10 @@ object STPartSDM: TSTPartSDM
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'UOM_Description'
-        ParamType = ptUnknown
       end>
   end
   object qryLastUOM: TFDQuery
@@ -765,34 +640,22 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryInsertStkLevels: TFDQuery
@@ -821,39 +684,26 @@ object STPartSDM: TSTPartSDM
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Minimum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_Level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_or_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetPartStore: TFDQuery
@@ -866,9 +716,7 @@ object STPartSDM: TSTPartSDM
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object qryLastStoreStock: TFDQuery
@@ -893,39 +741,25 @@ object STPartSDM: TSTPartSDM
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Minimum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_Level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_or_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustWithAccCode: TFDQuery
@@ -939,9 +773,7 @@ object STPartSDM: TSTPartSDM
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetContract: TFDQuery
@@ -954,9 +786,7 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCustDisc: TFDQuery
@@ -977,44 +807,28 @@ object STPartSDM: TSTPartSDM
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Effective'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Ineffective'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end>
   end
   object qryDelCustDisc: TFDQuery
@@ -1027,14 +841,10 @@ object STPartSDM: TSTPartSDM
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPartAlloc: TFDQuery
@@ -1049,19 +859,13 @@ object STPartSDM: TSTPartSDM
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStoreStock: TFDQuery
@@ -1080,34 +884,22 @@ object STPartSDM: TSTPartSDM
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPartGroup: TFDQuery
@@ -1120,9 +912,7 @@ object STPartSDM: TSTPartSDM
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Group_Descr_Short'
-        ParamType = ptUnknown
       end>
   end
   object qryDelCustStockDisc: TFDQuery
@@ -1135,9 +925,7 @@ object STPartSDM: TSTPartSDM
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckPartSuppDisc: TFDQuery
@@ -1152,19 +940,13 @@ object STPartSDM: TSTPartSDM
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnit: TFDQuery
@@ -1177,9 +959,7 @@ object STPartSDM: TSTPartSDM
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit_Factor'
-        ParamType = ptUnknown
       end>
   end
   object qryGetVatCode: TFDQuery
@@ -1193,9 +973,7 @@ object STPartSDM: TSTPartSDM
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Vat_Ref'
-        ParamType = ptUnknown
       end>
   end
 end

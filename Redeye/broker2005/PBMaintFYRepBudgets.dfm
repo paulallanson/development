@@ -12,13 +12,11 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -62,8 +60,6 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Caption = 'Save'
     Default = True
     Enabled = False
-    TabOrder = 2
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -82,15 +78,18 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 232
     Top = 424
     Width = 75
     Height = 25
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = CancelBitBtnClick
-    Kind = bkCancel
   end
   object grdDetails: TStringGrid
     Left = 8
@@ -122,9 +121,7 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object dtsPeriods: TDataSource
@@ -166,14 +163,10 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryFirstPeriod: TFDQuery
@@ -187,9 +180,7 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckBudget: TFDQuery
@@ -203,14 +194,10 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdBudget: TFDQuery
@@ -226,24 +213,16 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object qryAddBudget: TFDQuery
@@ -255,24 +234,16 @@ object PBMaintFYRepBudgetsFrm: TPBMaintFYRepBudgetsFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end>
   end
 end

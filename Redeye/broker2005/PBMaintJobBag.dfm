@@ -229,7 +229,6 @@ object PBMaintJobBagFrm: TPBMaintJobBagFrm
       Items.Strings = (
         'Job ON HOLD'
         'Postage Pay Reqd')
-      ExplicitLeft = 902
     end
     object BitBtn3: TBitBtn
       Left = 1040

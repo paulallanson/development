@@ -753,7 +753,7 @@ end;
 
 procedure TPBMaintEnquiryFrm.edtDepthChange(Sender: TObject);
 begin
-  Enquiry.Line.Depth := StrToFloat(edtDepth.Text);
+  Enquiry.Line.Depth := StrToFloatDef(edtDepth.Text, 0, FormatSettings);
   Enquiry.DetailsModified := true;
   Enquiry.Line.modified := true;
 end;
@@ -800,7 +800,7 @@ end;
 
 procedure TPBMaintEnquiryFrm.edtWidthChange(Sender: TObject);
 begin
-  Enquiry.Line.Width := StrToFloat(edtWidth.Text);
+  Enquiry.Line.Width := StrToFloatDef(edtWidth.Text, 0, FormatSettings);
   Enquiry.DetailsModified := true;
   Enquiry.Line.modified := true;
 end;
@@ -1352,12 +1352,12 @@ begin
   if edtDepthUnit.Text = 'mm' then
   begin
     edtDepthUnit.Text := 'inch';
-    edtDepth.Text := FloatToStr(StrToFloat(edtDepth.Text)/25.4);
+    edtDepth.Text := FloatToStr(StrToFloatDef(edtDepth.Text, 0, FormatSettings) / 25.4);
   end
   else
   begin
     edtDepthUnit.Text := 'mm';
-    edtDepth.Text := FloatToStr(StrToFloat(edtDepth.Text)*25.4);
+    edtDepth.Text := FloatToStr(StrToFloatDef(edtDepth.Text, 0, FormatSettings) * 25.4);
   end;
 end;
 
@@ -1367,12 +1367,12 @@ begin
   if edtWidthUnit.Text = 'mm' then
   begin
     edtWidthUnit.Text := 'inch';
-    edtWidth.Text := FloatToStr(StrToFloat(edtWidth.Text)/25.4);
+    edtWidth.Text := FloatToStr(StrToFloatDef(edtWidth.Text, 0, FormatSettings) / 25.4);
   end
   else
   begin
     edtWidthUnit.Text := 'mm';
-    edtWidth.Text := FloatToStr(StrToFloat(edtWidth.Text)*25.4);
+    edtWidth.Text := FloatToStr(StrToFloatDef(edtWidth.Text, 0, FormatSettings) * 25.4);
   end;
 end;
 
@@ -1551,25 +1551,25 @@ begin
     if QuantitiesFrm.ModalResult = mrOK then
     begin
       if QuantitiesFrm.edit0.Text <> '' then
-        QuantitiesEntered[0] := StrToFloat(QuantitiesFrm.edit0.Text);
+        QuantitiesEntered[0] := StrToFloatDef(QuantitiesFrm.edit0.Text, 0, FormatSettings);
       if QuantitiesFrm.edit1.Text <> '' then
-        QuantitiesEntered[1] := StrToFloat(QuantitiesFrm.edit1.Text);
+        QuantitiesEntered[1] := StrToFloatDef(QuantitiesFrm.edit1.Text, 0, FormatSettings);
       if QuantitiesFrm.edit2.Text <> '' then
-        QuantitiesEntered[2] := StrToFloat(QuantitiesFrm.edit2.Text);
+        QuantitiesEntered[2] := StrToFloatDef(QuantitiesFrm.edit2.Text, 0, FormatSettings);
       if QuantitiesFrm.edit3.Text <> '' then
-        QuantitiesEntered[3] := StrToFloat(QuantitiesFrm.edit3.Text);
+        QuantitiesEntered[3] := StrToFloatDef(QuantitiesFrm.edit3.Text, 0, FormatSettings);
       if QuantitiesFrm.edit4.Text <> '' then
-        QuantitiesEntered[4] := StrToFloat(QuantitiesFrm.edit4.Text);
+        QuantitiesEntered[4] := StrToFloatDef(QuantitiesFrm.edit4.Text, 0, FormatSettings);
       if QuantitiesFrm.edit5.Text <> '' then
-        QuantitiesEntered[5] := StrToFloat(QuantitiesFrm.edit5.Text);
+        QuantitiesEntered[5] := StrToFloatDef(QuantitiesFrm.edit5.Text, 0, FormatSettings);
       if QuantitiesFrm.edit6.Text <> '' then
-        QuantitiesEntered[6] := StrToFloat(QuantitiesFrm.edit6.Text);
+        QuantitiesEntered[6] := StrToFloatDef(QuantitiesFrm.edit6.Text, 0, FormatSettings);
       if QuantitiesFrm.edit7.Text <> '' then
-        QuantitiesEntered[7] := StrToFloat(QuantitiesFrm.edit7.Text);
+        QuantitiesEntered[7] := StrToFloatDef(QuantitiesFrm.edit7.Text, 0, FormatSettings);
       if QuantitiesFrm.edit8.Text <> '' then
-        QuantitiesEntered[8] := StrToFloat(QuantitiesFrm.edit8.Text);
+        QuantitiesEntered[8] := StrToFloatDef(QuantitiesFrm.edit8.Text, 0, FormatSettings);
       if QuantitiesFrm.edit9.Text <> '' then
-        QuantitiesEntered[9] := StrToFloat(QuantitiesFrm.edit9.Text);
+        QuantitiesEntered[9] := StrToFloatDef(QuantitiesFrm.edit9.Text, 0, FormatSettings);
 
       //step thru existing quantities looking for deletions
       for x := 0 to (Enquiry.Line.NoOfQuantities - 1) do
@@ -1655,7 +1655,7 @@ begin
   qtyExists := false;
   if InputQuery('Quantity Input', 'Please input the new Quantity', QtyString) then
   begin
-    Quant := StrToFloat(QtyString);
+    Quant := StrToFloatDef(QtyString, 0, FormatSettings);
     for x := 0 to (Enquiry.Line.NoOfQuantities - 1) do
     begin
       if Quant = Enquiry.Line.Quantities[x].Quantity then
@@ -1749,15 +1749,15 @@ begin
     if iRow = 1 then
     begin
       try
-        StrToFloat(Cells[iCol, iRow])
+        StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings)
       except
         exit;
       end;
 
       if Pos('£', Cells[iCol, iRow]) <> 0 then
-        Enquiry.Line.Quantities[iCol - 1].QuotePrice := StrToFloat(Copy(Cells[iCol, iRow], 2, 256))
+        Enquiry.Line.Quantities[iCol - 1].QuotePrice := StrToFloatDef(Copy(Cells[iCol, iRow], 2, 256), 0, FormatSettings)
       else
-        Enquiry.Line.Quantities[iCol - 1].QuotePrice := StrToFloat(Cells[iCol, iRow]);
+        Enquiry.Line.Quantities[iCol - 1].QuotePrice := StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings);
 
       if Enquiry.Line.Quantities[iCol - 1].SupplierPrice <> 0 then
         Cells[iCol, 2] := FloatToStrF((((Enquiry.Line.Quantities[iCol - 1].QuotePrice - Enquiry.Line.Quantities[iCol - 1].SupplierPrice)*100) / Enquiry.Line.Quantities[iCol - 1].SupplierPrice),  ffFixed, 15, 2)
@@ -1775,20 +1775,20 @@ begin
     else if iRow = 2 then
     begin
       try
-        StrToFloat(Cells[iCol, iRow])
+        StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings)
       except
         exit;
       end;
 
       if chkbxMarkUpAll.Checked then
       begin
-        Self.ApplyMarkUpToAll(StrToFloat(Cells[iCol, iRow]), iCol);
+        Self.ApplyMarkUpToAll(StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings), iCol);
       end
       else
       begin
         Enquiry.Line.Quantities[iCol - 1].QuotePrice :=
           (Enquiry.Line.Quantities[iCol - 1].SupplierPrice *
-          ((StrToFloat(Cells[iCol, iRow]))/100)) +
+          ((StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings)) / 100)) +
           Enquiry.Line.Quantities[iCol - 1].SupplierPrice;
 
         if Enquiry.Line.Quantities[iCol - 1].QuotePrice <> 0.00 then
@@ -1808,14 +1808,14 @@ begin
     else if iRow = 3 then
     begin
       try
-        StrToFloat(Cells[iCol, iRow])
+        StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings)
       except
         exit;
       end;
 
       Enquiry.Line.Quantities[iCol - 1].QuotePrice :=
         Enquiry.Line.Quantities[iCol - 1].SupplierPrice +
-        StrToFloat(Cells[iCol, iRow]);
+        StrToFloatDef(Cells[iCol, iRow], 0, FormatSettings);
 
       if Enquiry.Line.Quantities[iCol - 1].QuotePrice <> 0.00 then
         Cells[iCol, 1] := FloatToStrF(Enquiry.Line.Quantities[iCol - 1].QuotePrice, ffFixed, 15, 2)
@@ -1878,7 +1878,7 @@ begin
       for irow := 1 to 3 do
       begin
         if cells[icol, irow] = '' then continue;
-        cells[icol, irow] := formatfloat('0.00',strtofloat(cells[icol,irow]));
+        cells[icol, irow] := formatfloat('0.00',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
       end;
   end;
 end;
@@ -1947,7 +1947,7 @@ begin
       for irow := 1 to 3 do
       begin
         if cells[icol, irow] = '' then continue;
-        cells[icol, irow] := formatfloat('0.00',strtofloat(cells[icol,irow]));
+        cells[icol, irow] := formatfloat('0.00',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
       end;
   end;
 end;
@@ -2001,7 +2001,7 @@ begin
   with strgrdRunOns do
   begin
     try
-      tempRunOnPrice := StrToFloat(cells[Col, Row]);
+      tempRunOnPrice := StrToFloatDef(cells[Col, Row], 0, FormatSettings);
     except
       MessageDlg('Not a valid number.', mtWarning, [mbOK], 0);
       exit;
@@ -2188,7 +2188,7 @@ begin
     if InputQuery('Quantity Input', 'Please input the Run-On Quantity', QtyString) then
     begin
       try
-        QtyFloat := StrToFloat(QtyString);
+        QtyFloat := StrToFloatDef(QtyString, 0, FormatSettings);
       except
         messageDlg('Not a valid value!', mtWarning, [mbOK], 0);
         exit;
@@ -2360,7 +2360,7 @@ begin
   if InputQuery('Delete Quantity', 'Which quantity do you want to remove?', QtyString) then
   begin
     try
-      QtyFloat := StrToFloat(QtyString);
+      QtyFloat := StrToFloatDef(QtyString, 0, FormatSettings);
     except
       MessageDlg('Not a valid value!', mtWarning, [mbOK], 0);
       exit
@@ -2765,7 +2765,7 @@ begin
     for irow := 1 to 3 do
     begin
       if cells[0, irow] = '' then continue;
-      cells[0, irow] := formatfloat('0.00',strtofloat(cells[0,irow]));
+      cells[0, irow] := formatfloat('0.00',StrToFloatDef(cells[0,irow], 0, FormatSettings));
     end;
   end;
 end;
@@ -2782,15 +2782,15 @@ begin
     if irow = 1 then
     begin
       try
-        StrToFloat(Cells[0, iRow])
+        StrToFloatDef(Cells[0, iRow], 0, FormatSettings)
       except
         exit;
       end;
 
       if Pos('£', Cells[0, iRow]) <> 0 then
-        Enquiry.Line.RunOnPrice := StrToFloat(Copy(Cells[0, iRow], 2, 256))
+        Enquiry.Line.RunOnPrice := StrToFloatDef(Copy(Cells[0, iRow], 2, 256), 0, FormatSettings)
       else
-        Enquiry.Line.RunOnPrice := StrToFloat(Cells[0, iRow]);
+        Enquiry.Line.RunOnPrice := StrToFloatDef(Cells[0, iRow], 0, FormatSettings);
 
       if Enquiry.Line.RunOnCost <> 0 then
         Cells[0, 2] := FloatToStrF((((Enquiry.Line.RunOnPrice - Enquiry.Line.RunOnCost)*100) / Enquiry.Line.RunOnCost),  ffFixed, 15, 2)
@@ -2806,12 +2806,12 @@ begin
     else if irow = 2 then
     begin
       try
-        StrToFloat(Cells[0, iRow])
+        StrToFloatDef(Cells[0, iRow], 0, FormatSettings)
       except
         exit;
       end;
 
-      Enquiry.Line.RunOnPrice := (Enquiry.Line.RunOnCost * (StrToFloat(Cells[0,2])/100))
+      Enquiry.Line.RunOnPrice := (Enquiry.Line.RunOnCost * (StrToFloatDef(Cells[0,2], 0, FormatSettings) / 100))
          + Enquiry.Line.RunOnCost;
 
       if Enquiry.Line.RunOnCost <> 0 then
@@ -2828,14 +2828,14 @@ begin
     else if irow = 3 then
     begin
       try
-        StrToFloat(Cells[0, iRow])
+        StrToFloatDef(Cells[0, iRow], 0, FormatSettings)
       except
         exit;
       end;
       
       Enquiry.Line.RunOnPrice :=
         Enquiry.Line.RunOnCost +
-        StrToFloat(Cells[0, iRow]);
+        StrToFloatDef(Cells[0, iRow], 0, FormatSettings);
 
       if Enquiry.Line.RunOnCost <> 0.00 then
         Cells[0, 1] := FloatToStrF(Enquiry.Line.RunOnPrice, ffFixed, 15, 2)
@@ -2875,7 +2875,7 @@ begin
     for irow := 1 to 3 do
     begin
       if cells[0, irow] = '' then continue;
-      cells[0, irow] := formatfloat('0.00',strtofloat(cells[0,irow]));
+      cells[0, irow] := formatfloat('0.00',StrToFloatDef(cells[0,irow], 0, FormatSettings));
     end;
   end;
 end;
@@ -2992,7 +2992,7 @@ begin
     tempStr := Value;
 
   try
-    tempFlt := StrToFloat(tempStr);
+    tempFlt := StrToFloatDef(tempStr, 0, FormatSettings);
   except
     tempFlt := 0.00;
   end;
@@ -3013,7 +3013,7 @@ begin
   tempStr := InputBox('Add Quantity', 'Enter the quantity to add.', '');
 
   try
-    newQty := StrToFloat(tempStr);
+    newQty := StrToFloatDef(tempStr, 0, FormatSettings);
   except
     newQty := 0.00;
   end;

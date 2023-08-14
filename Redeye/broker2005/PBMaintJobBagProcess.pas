@@ -289,7 +289,7 @@ begin
     2: JobBagProcess.SimplexDuplex := 'D';
   end;
 
-  JobBagProcess.NoOfHours := strtofloat(memHours.text) ;
+  JobBagProcess.NoOfHours := StrToFloatDef(memHours.text, 0, FormatSettings) ;
   JobBagProcess.Quantity := strtoint(memQuantity.text) ;
   JobBagProcess.NoOfElements := spnElements.value ;
   JobBagProcess.WorkCentreGroup := dblkpWorkCentreGroup.KeyValue;

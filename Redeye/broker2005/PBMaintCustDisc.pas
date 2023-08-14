@@ -174,8 +174,8 @@ If sFuncMode = 'A' then
       ParamByName('Customer').AsInteger := PBLUCustDiscFrm.icust;
       ParamByName('Supplier').AsInteger := PBLUCustDiscFrm.iSupp;
       ParamByName('Type').AsString := DiscDBLookupComboBox.keyValue;
-      ParamByName('Disc_Val').AsFloat := strtofloat(DiscValMemo.Text);
-      ParamByName('Part_Purchase_Price').AsFloat := strtofloat(memPurchasePrice.Text);
+      ParamByName('Disc_Val').AsFloat := StrToFloatDef(DiscValMemo.Text, 0, FormatSettings);
+      ParamByName('Part_Purchase_Price').AsFloat := StrToFloatDef(memPurchasePrice.Text, 0, FormatSettings);
       ParamByName('Date_Effec').AsDateTime :=StrToDate(DateFromEdit.Text);
       if datetoedit.text = '' then
         ParamByName('Date_Ineffec').clear
@@ -193,9 +193,9 @@ If sFuncMode = 'C' then
       ParamByName('Cust_Disc').AsInteger := PBLUCustDiscFrm.ddTemp.Rec;
       ParamByName('Customer').AsInteger := PBLUCustDiscFrm.ddTemp.cust;
       ParamByName('Disc_Type').AsString := DiscDBLookupComboBox.keyValue;
-      ParamByName('Disc_Val').AsFloat := strtofloat(DiscValMemo.Text);
+      ParamByName('Disc_Val').AsFloat := StrToFloatDef(DiscValMemo.Text, 0, FormatSettings);
       ParamByName('Date_Effec').AsDateTime :=StrToDate(DateFromEdit.Text);
-      ParamByName('Part_Purchase_Price').Asfloat := strtofloat(memPurchasePrice.Text);
+      ParamByName('Part_Purchase_Price').Asfloat := StrToFloatDef(memPurchasePrice.Text, 0, FormatSettings);
       if datetoedit.text = '' then
         ParamByName('Date_Ineffec').clear
       else
@@ -360,8 +360,8 @@ procedure TPBMaintCustDiscFrm.DiscValMemoExit(Sender: TObject);
 begin
   with Sender as TMemo do
   begin
-    Text := formatfloat('0.000', StrToFloat(Text));
-    PBLUCustDiscFrm.ddTemp.Disc_Val := strtofloat(Text);
+    Text := formatfloat('0.000', StrToFloatDef(Text, 0, FormatSettings));
+    PBLUCustDiscFrm.ddTemp.Disc_Val := StrToFloatDef(Text, 0, FormatSettings);
   end;
 
 end;
@@ -413,8 +413,8 @@ procedure TPBMaintCustDiscFrm.memPurchasePriceExit(Sender: TObject);
 begin
   with Sender as TMemo do
   begin
-    Text := formatfloat('0.000', StrToFloat(Text));
-    PBLUCustDiscFrm.ddTemp.Purch_Price := strtofloat(Text);
+    Text := formatfloat('0.000', StrToFloatDef(Text, 0, FormatSettings));
+    PBLUCustDiscFrm.ddTemp.Purch_Price := StrToFloatDef(Text, 0, FormatSettings);
   end;
 
 end;

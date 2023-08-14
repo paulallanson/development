@@ -126,8 +126,8 @@ begin
             parambyname('Supplier').asinteger := iSupplier;
             parambyname('Charge_no').asinteger := iCharge;
             parambyname('Details').asstring := DetailsEdit.text;
-            parambyname('Amount').asfloat := strtofloat(CostMemo.Text);
-            parambyname('Quotation_Price').asfloat := strtofloat(PriceMemo.Text);
+            parambyname('Amount').asfloat := StrToFloatDef(CostMemo.Text, 0, FormatSettings);
+            parambyname('Quotation_Price').asfloat := StrToFloatDef(PriceMemo.Text, 0, FormatSettings);
             parambyname('Vat_code').asinteger := dblkpVatRate.KeyValue;
             execsql;
           end;
@@ -140,8 +140,8 @@ begin
             parambyname('Supplier').asinteger := iSupplier;
             parambyname('Charge_no').asinteger := iCharge;
             parambyname('Details').asstring := DetailsEdit.text;
-            parambyname('Amount').asfloat := strtofloat(CostMemo.Text);
-            parambyname('Quotation_Price').asfloat := strtofloat(PriceMemo.Text);
+            parambyname('Amount').asfloat := StrToFloatDef(CostMemo.Text, 0, FormatSettings);
+            parambyname('Quotation_Price').asfloat := StrToFloatDef(PriceMemo.Text, 0, FormatSettings);
             parambyname('Vat_code').asinteger := dblkpVatRate.KeyValue;
             execsql;
           end;

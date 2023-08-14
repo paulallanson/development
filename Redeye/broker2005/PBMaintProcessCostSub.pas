@@ -194,8 +194,8 @@ begin
       ParamByName('Category_Number').AsInteger := CatNumber;
       ParamByName('Sub_Category').AsInteger := iCode;
       ParamByName('Cost_Description').AsString := memDescription.Text + '';
-      ParamByName('Unit_Cost').Asfloat := strtofloat(memCostPrice.text);
-      ParamByName('Unit_Sell').Asfloat := strtofloat(memSellPrice.text);
+      ParamByName('Unit_Cost').Asfloat := StrToFloatDef(memCostPrice.text, 0, FormatSettings);
+      ParamByName('Unit_Sell').Asfloat := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
       ParamByName('Price_Unit').Asinteger := dblkpPriceUnit.keyvalue;
       ExecSQL;
     end;

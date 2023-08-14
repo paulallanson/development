@@ -1,4 +1,4 @@
-﻿object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
+object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   Left = 320
   Top = 60
   BorderStyle = bsDialog
@@ -11,14 +11,12 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   DesignSize = (
     531
     569)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -145,8 +143,6 @@
     Anchors = [akRight, akBottom]
     Caption = 'OK'
     Default = True
-    TabOrder = 12
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -212,6 +208,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 12
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 445
@@ -219,8 +217,9 @@
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 13
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 13
   end
   object RepComboBox: TDBLookupComboBox
     Left = 94
@@ -280,7 +279,6 @@
           Width = 113
           Height = 21
           Style = csDropDownList
-          ItemHeight = 13
           TabOrder = 0
           OnChange = AllComboBoxChange
           Items.Strings = (
@@ -385,7 +383,6 @@
         OnExit = memCreditLimitExit
       end
       object rdgrpMinPO: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 141
         Width = 185
@@ -395,15 +392,16 @@
         Items.Strings = (
           'Fixed Value'
           '% Uplift on Cost')
+        ParentBackground = False
         TabOrder = 2
         OnClick = rdgrpMinPOClick
       end
       object GroupBox1: TGroupBox
-        ParentBackground = False
         Left = 224
         Top = 142
         Width = 185
         Height = 55
+        ParentBackground = False
         TabOrder = 3
         object lblValue: TLabel
           Left = 22
@@ -450,7 +448,6 @@
         TabOrder = 6
       end
       object rdgrpAuthorise: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 202
         Width = 185
@@ -461,6 +458,7 @@
           'No'
           'Only POs > zero sales value'
           'Fully')
+        ParentBackground = False
         TabOrder = 7
       end
       object chkbxCanDeleteJobBags: TCheckBox
@@ -602,12 +600,12 @@
         TabOrder = 0
       end
       object GroupBox2: TGroupBox
-        ParentBackground = False
         Left = 16
         Top = 40
         Width = 185
         Height = 185
         Caption = 'Set Activity Reminders'
+        ParentBackground = False
         TabOrder = 1
         object chkbxEnquiryReminder: TCheckBox
           Left = 16
@@ -677,8 +675,6 @@
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = 'Change Password'
-    TabOrder = 11
-    OnClick = ChgPassBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -693,6 +689,8 @@
       555575F7755557F5555550BB33BBB0555555575F555557F555555507BBBB0755
       55555575FFFF7755555555570000755555555557777775555555}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = ChgPassBitBtnClick
   end
   object PhoneEdit: TEdit
     Left = 94
@@ -750,9 +748,7 @@
     Top = 150
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object CheckExistsSQL: TFDQuery
@@ -766,14 +762,10 @@
     Top = 262
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Login_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetLastOpSQL: TFDQuery
@@ -784,8 +776,8 @@
     Top = 302
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -798,8 +790,8 @@
     Top = 214
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -851,194 +843,119 @@
     Top = 262
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Login_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator_Can_Login'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'security_user'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Max_Unauthorised_PO_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Authorised_PO_Cost_Limit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Min_PO_Sales_Value_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Min_PO_Sales_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delete_PO_From_Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maintain_PO_in_Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Pass_Purchase_Invoices'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Override_Paid_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Authorise_PO'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cannot_View_Enq_Prices'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Convert_Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Mobile_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Delete_Purchase_Orders'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Delete_Job_Bags'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Deactivate_Products'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Web_Ordering_Email'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Confirm_Production'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cannot_Change_Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Change_Invoiced_Orders'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Update_Credit_Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Administrator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Enquiry_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Quote_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Proof_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Reorder_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Order_Ack_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Set_Delivery_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Delete_Quote_Costs'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object DelOpChecksSQL: TFDQuery
@@ -1051,9 +968,7 @@
     Top = 182
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object DelOpSQL: TFDQuery
@@ -1065,9 +980,7 @@
     Top = 310
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object AddCheckSQL: TFDQuery
@@ -1083,19 +996,13 @@
     Top = 182
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Button_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Button_Status'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -1107,8 +1014,8 @@
     Top = 150
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1120,9 +1027,7 @@
     Top = 34
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'User_Code'
-        ParamType = ptUnknown
       end>
   end
   object ChangePassSQL: TFDQuery
@@ -1136,19 +1041,13 @@
     Top = 6
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Old_Pass'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'New_Pass'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'User_Code'
-        ParamType = ptUnknown
       end>
   end
   object GetRepsSQL: TFDQuery
@@ -1177,14 +1076,10 @@
     Top = 278
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Short_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryRevCodes: TFDQuery
@@ -1205,9 +1100,7 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryDelRevCodes: TFDQuery
@@ -1219,9 +1112,7 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryAddRevCodes: TFDQuery
@@ -1234,14 +1125,10 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_location'
-        ParamType = ptUnknown
       end>
   end
 end

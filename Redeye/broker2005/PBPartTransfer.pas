@@ -7,7 +7,7 @@ uses
   DBCtrls, StdCtrls, ComCtrls, Buttons, ExtCtrls, ImgList, Db,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, 
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, 
-  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList;
 
 type
   TStockDet     = class;
@@ -577,8 +577,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat(TempFormat, StrToFloat(TempQty));
-      if (StrToFloat(Result) < 0) and (TempNeg = False) then
+      Result := FormatFloat(TempFormat, StrToFloatDef(TempQty, 0, FormatSettings));
+      if (StrToFloatDef(Result, 0, FormatSettings) < 0) and (TempNeg = False) then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';
@@ -942,11 +942,11 @@ begin
 //       iTempQty := InpToSing(STPrtTransQtyFrm.QtyMemo.Text,iTempPack) ;
        iTempQty := strtoint(STPrtTransQtyFrm.MemoQty.Text) ;
        sTempBin := STPrtTransQtyFrm.BinEdit.Text ;
-       fTempCost := StrToFloat(STPrtTransQtyFrm.CostMemo.Text) / iTempPack;
+       fTempCost := StrToFloatDef(STPrtTransQtyFrm.CostMemo.Text, 0, FormatSettings) / iTempPack;
 //       if sMoveType = 'O' then
         begin
           SDFrom.StockDesc := STPrtTransQtyFrm.edtStckDsc.text;
-          SDFrom.PONumber := strtofloat(STPrtTransQtyFrm.memPO.text);
+          SDFrom.PONumber := StrToFloatDef(STPrtTransQtyFrm.memPO.text, 0, FormatSettings);
           SDFrom.PalletID := strtoint(STPrtTransQtyFrm.edtPalletID.text);
           try
             SDFrom.JobBag := strtoint(STPrtTransQtyFrm.edtJobNumber.text);
@@ -1001,7 +1001,7 @@ begin
         sTempBin := 'Non Stocked'
        else
         sTempBin := STPrtTransRecvFrm.BinEdit.Text ;
-       fTempCost := StrToFloat(STPrtTransRecvFrm.CostMemo.Text) / iTempPack ;
+       fTempCost := StrToFloatDef(STPrtTransRecvFrm.CostMemo.Text, 0, FormatSettings) / iTempPack ;
        If STPrtTransRecvFrm.FRCheckBox.Checked then
           sTempFR := 'Y'
        else

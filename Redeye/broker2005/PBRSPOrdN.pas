@@ -178,7 +178,7 @@ begin
     if TypeRadioGroup.itemindex = 1 then
       dbPOrdLtr.Acknowledgement := True;
 
-    dbPOrdLtr.PONumber := StrTofloat(EnquiryMemo.Text);
+    dbPOrdLtr.PONumber := StrToFloatDef(EnquiryMemo.Text, 0, FormatSettings);
     dbPOrdLtr.OnlyMine := false;
     dbPOrdLtr.ByAccount := 'N';
     dbPOrdLtr.ByBranch := 'N';
@@ -222,7 +222,7 @@ begin
   with GetPOsSQL do
   begin
     Close;
-    ParamByName('Purchase_Order').asfloat := StrToFloat(EnquiryMemo.Text);
+    ParamByName('Purchase_Order').asfloat := StrToFloatDef(EnquiryMemo.Text, 0, FormatSettings);
     ParamByName('Operator').AsInteger := 0;
     Open;
 
@@ -267,7 +267,7 @@ begin
           if Trim(PBFaxListFrm.FaxListgrid.Cells[2, irow]) = '' then Continue;
 
           {Now fax the individual enquiries to the individual suppliers}
-          dbPOrdLtr.PONumber := StrToFloat(FaxArray[irow, 1]);
+          dbPOrdLtr.PONumber := StrToFloatDef(FaxArray[irow, 1], 0, FormatSettings);
           dbPOrdLtr.Account := StrToInt(FaxArray[irow, 2]);
           dbPOrdLtr.Branch := StrToInt(FaxArray[irow, 3]);
           DisplayPrintDialog := false;
@@ -383,7 +383,7 @@ begin
   with GetPOsSQL do
   begin
     Close;
-    ParamByName('Purchase_Order').asfloat := StrTofloat(EnquiryMemo.Text);
+    ParamByName('Purchase_Order').asfloat := StrToFloatDef(EnquiryMemo.Text, 0, FormatSettings);
     ParamByName('Operator').AsInteger := 0;
     Open;
 
@@ -440,7 +440,7 @@ begin
           if Trim(PBEmailListFrm.EmailListGrid.Cells[3, irow]) = '' then Continue;
 
           {Now fax the individual enquiries to the individual suppliers}
-          dbPOrdLtr.PONumber := StrTofloat(EMailArray[irow, 1]);
+          dbPOrdLtr.PONumber := StrToFloatDef(EMailArray[irow, 1], 0, FormatSettings);
           dbPOrdLtr.Account := StrToInt(EmailArray[irow, 2]);
           dbPOrdLtr.Branch := StrToInt(EmailArray[irow, 3]);
           FCustSupplierName := PBEmailListFrm.EmailListGrid.Cells[1, irow];
@@ -612,7 +612,7 @@ begin
   with GetAcksSQL do
   begin
     Close;
-    ParamByName('Purchase_Order').asfloat := StrToFloat(EnquiryMemo.Text);
+    ParamByName('Purchase_Order').asfloat := StrToFloatDef(EnquiryMemo.Text, 0, FormatSettings);
     ParamByName('Operator').AsInteger := 0;
     Open;
 
@@ -668,7 +668,7 @@ begin
           if Trim(PBEmailListFrm.EmailListgrid.Cells[3, irow]) = '' then Continue;
 
           {Now fax the individual enquiries to the individual suppliers}
-          dbPOrdLtr.PONumber := StrToFloat(EmailArray[irow, 1]);
+          dbPOrdLtr.PONumber := StrToFloatDef(EmailArray[irow, 1], 0, FormatSettings);
 //          dbPOrdLtr.Account := StrToInt(EmailArray[irow, 2]);
 //          dbPOrdLtr.Branch := StrToInt(EmailArray[irow, 3]);
           FCustSupplierName := PBEmailListFrm.EmailListGrid.Cells[1, irow];
@@ -1567,7 +1567,7 @@ begin
   with qryGetPO do
     begin
       close;
-      parambyname('Purchase_Order').asfloat := strtofloat(trim(EnquiryMemo.Text));
+      parambyname('Purchase_Order').asfloat := StrToFloatDef(trim(EnquiryMemo.Text), 0, FormatSettings);
       open;
     end;
 

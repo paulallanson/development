@@ -372,16 +372,16 @@ begin
     PurchPackQuantity := CostPackSize;
     SellPackQuantity := SellPackSize;
     OrdQty := inptosing(QtyEdit.Text,SellPackQuantity);
-    Sell_Price := strtofloat(SellPriceMemo.text);
-    Part_Cost := strtofloat(PurchPriceMemo.text);
+    Sell_Price := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings);
+    Part_Cost := StrToFloatDef(PurchPriceMemo.text, 0, FormatSettings);
     VatCode := VatRateCode;
 
     PartClass := STSalesOrdDM.GetPartClass(Part);
 
     MarkupType := dblkpMarkupType.keyvalue;
-    MarkupValue := strtofloat(MarkupValueMemo.text);
+    MarkupValue := StrToFloatDef(MarkupValueMemo.text, 0, FormatSettings);
 
-    OriginalSellPrice := strtofloat(SellPriceMemo.text);
+    OriginalSellPrice := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings);
     DelQty := OrdQty;
     OrdQtyinPacks := ShowinPacks(OrdQty,SellPackSize);
     if ActnTkn <> 'A' then

@@ -206,9 +206,9 @@ begin
     SuppliersDesc := SuppDescEdit.Text;
     CustomersDesc := CustDescEdit.Text;
     Quantity := FOrderQty;
-    OrderPrice := StrToFloat(OrdPriceMemo.Text);
-    SellingPrice := StrToFloat(SellPriceMemo.Text);
-    ListPrice := StrToFloat(ListPriceMemo.Text);
+    OrderPrice := StrToFloatDef(OrdPriceMemo.Text, 0, FormatSettings);
+    SellingPrice := StrToFloatDef(SellPriceMemo.Text, 0, FormatSettings);
+    ListPrice := StrToFloatDef(ListPriceMemo.Text, 0, FormatSettings);
     ProductType := GetEnqSQL.FieldByName('Product_Type').AsInteger;
     PrintedPO := False;
     OrderUnit := FOrderUnit;

@@ -91,9 +91,9 @@ type
     DelBitBtn: TBitBtn;
     Button1: TButton;
     procedure FormShow(Sender: TObject);
-    procedure AddChargesGridDrawCell(Sender: TObject; vCol, vRow: Longint;
+    procedure AddChargesGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
-    procedure AddChargesGridSelectCell(Sender: TObject; Col, Row: Longint;
+    procedure AddChargesGridSelectCell(Sender: TObject; ACol, ARow: Integer;
       var CanSelect: Boolean);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure AddChargesGridClick(Sender: TObject);
@@ -146,17 +146,17 @@ begin
   EnableBtns;
 end;
 
-procedure TPBLUEnqAddChgFrm.AddChargesGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TPBLUEnqAddChgFrm.AddChargesGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {If Heading Display Left justified in the cells}
   with AddChargesGrid do
   begin
-    if vCol = 0 then
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -166,7 +166,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -177,8 +177,8 @@ begin
 
 end;
 
-procedure TPBLUEnqAddChgFrm.AddChargesGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
+procedure TPBLUEnqAddChgFrm.AddChargesGridSelectCell(Sender: TObject; ACol,
+  ARow: Integer; var CanSelect: Boolean);
 //var
 //  ifloat: Real;
 begin
@@ -189,34 +189,34 @@ begin
       goColSizing, goEditing];
 
     {Don't display if any of these}
-    if Col = 1 then
+    if ACol = 1 then
     begin
-      if ((Cells[1, Row] = '') and (Cells[0, Row] = '')) or
+      if ((Cells[1, ARow] = '') and (Cells[0, ARow] = '')) or
         (Row = 0) then Exit;
 
-      if (Cells[1, Row] = '') then
+      if (Cells[1, ARow] = '') then
       begin
-        Cells[1, Row] := '0.00';
+        Cells[1, ARow] := '0.00';
         Exit;
       end;
 
-      ifloat := StrToFloat(Cells[1, Row]);
-      Cells[1, Row] := formatfloat('0.00', ifloat);
+      ifloat := StrToFloatDef(Cells[1, ARow], 0, FormatSettings);
+      Cells[1, ARow] := formatfloat('0.00', ifloat);
     end
     else
-      if Col = 2 then
+      if ACol = 2 then
       begin
-        if ((Cells[2, Row] = '') and (Cells[0, Row] = '')) or
-          (Row = 0) then Exit;
+        if ((Cells[2, ARow] = '') and (Cells[0, ARow] = '')) or
+          (ARow = 0) then Exit;
 
-        if (Cells[2, Row] = '') then
+        if (Cells[2, ARow] = '') then
         begin
-          Cells[2, Row] := '0.00';
+          Cells[2, ARow] := '0.00';
           Exit;
         end;
 
-        ifloat := StrToFloat(Cells[2, Row]);
-        Cells[2, Row] := formatfloat('0.00', ifloat);
+        ifloat := StrToFloatDef(Cells[2, ARow], 0, FormatSettings);
+        Cells[2, ARow] := formatfloat('0.00', ifloat);
       end
   end;
 
@@ -367,8 +367,8 @@ begin
           iLine := GetNewLine;
 
         AddChargesGrid.cells[0,iline] := PBMaintEnqAddChgsFrm.DescriptionEdit.text;
-        AddChargesGrid.cells[1,iline] := formatfloat('0.00',strtofloat(PBMaintEnqAddChgsFrm.CostMemo.Lines[0]));
-        AddChargesGrid.cells[2,iline] := formatfloat('0.00',strtofloat(PBMaintEnqAddChgsFrm.PriceMemo.Lines[0]));
+        AddChargesGrid.cells[1,iline] := formatfloat('0.00',StrToFloatDef(PBMaintEnqAddChgsFrm.CostMemo.Lines[0], 0, FormatSettings));
+        AddChargesGrid.cells[2,iline] := formatfloat('0.00',StrToFloatDef(PBMaintEnqAddChgsFrm.PriceMemo.Lines[0], 0, FormatSettings));
 
       end;
   finally

@@ -505,9 +505,9 @@ begin
           begin
             if cells[icol, irow] = '' then continue;
               if pos('.',cells[icol, irow]) > 0 then
-                cells[icol, irow] := formatfloat('0',(strtofloat(cells[icol,irow])*1000))
+                cells[icol, irow] := formatfloat('0',(StrToFloatDef(cells[icol,irow], 0, FormatSettings)*1000))
               else
-                cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+                cells[icol, irow] := formatfloat('0',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           end;
     end;
 end;
@@ -595,9 +595,9 @@ begin
           begin
             if cells[icol, irow] = '' then continue;
               if pos('.',cells[icol, irow]) > 0 then
-                cells[icol, irow] := formatfloat('0',(strtofloat(cells[icol,irow])*1000))
+                cells[icol, irow] := formatfloat('0',(StrToFloatDef(cells[icol,irow], 0, FormatSettings) * 1000))
               else
-                cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+                cells[icol, irow] := formatfloat('0',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           end;
     end;
 end;
@@ -625,8 +625,8 @@ begin
             0:  parambyname('Bonus_Type').asstring := 'P';
             1:  parambyname('Bonus_Type').asstring := 'A';
           end;
-          parambyname('Commission_Rate').asfloat := strtofloat(memCommission.text);
-          parambyname('Bonus_Rate').asfloat := strtofloat(memBonus.text);
+          parambyname('Commission_Rate').asfloat := StrToFloatDef(memCommission.text, 0, FormatSettings);
+          parambyname('Bonus_Rate').asfloat := StrToFloatDef(memBonus.text, 0, FormatSettings);
           execsql;
         end;
     end
@@ -651,8 +651,8 @@ begin
             0:  parambyname('Bonus_Type').asstring := 'P';
             1:  parambyname('Bonus_Type').asstring := 'A';
           end;
-          parambyname('Commission_Rate').asfloat := strtofloat(memCommission.text);
-          parambyname('Bonus_Rate').asfloat := strtofloat(memBonus.text);
+          parambyname('Commission_Rate').asfloat := StrToFloatDef(memCommission.text, 0, FormatSettings);
+          parambyname('Bonus_Rate').asfloat := StrToFloatDef(memBonus.text, 0, FormatSettings);
           execsql;
         end;
     end;
@@ -677,9 +677,9 @@ begin
               close;
               parambyname('Period').asinteger := strtoint(cells[4,icount]);
               parambyname('Rep').asinteger := iRep;
-              parambyname('Turnover_Value').asfloat := strtofloat(cells[1,icount]);
-              parambyname('Operating_Profit_Value').asfloat := strtofloat(cells[2,icount]);
-              parambyname('Profit_Value').asfloat := strtofloat(cells[3,icount]);
+              parambyname('Turnover_Value').asfloat := StrToFloatDef(cells[1,icount], 0, FormatSettings);
+              parambyname('Operating_Profit_Value').asfloat := StrToFloatDef(cells[2,icount], 0, FormatSettings);
+              parambyname('Profit_Value').asfloat := StrToFloatDef(cells[3,icount], 0, FormatSettings);
               execsql;
             end;
         end;
@@ -711,10 +711,10 @@ begin
             parambyname('Financial_Year').asinteger := iCode;
             parambyname('Rep').asinteger := iRep;
             parambyname('Category').asinteger := category[icategory];
-            parambyname('Commission_Rate').asfloat := strtofloat(cells[1,icategory]);
-            parambyname('Bonus_Rate').asfloat := strtofloat(cells[2,icategory]);
+            parambyname('Commission_Rate').asfloat := StrToFloatDef(cells[1,icategory], 0, FormatSettings);
+            parambyname('Bonus_Rate').asfloat := StrToFloatDef(cells[2,icategory], 0, FormatSettings);
             parambyname('Commission_Basis').asstring := copy(cells[3,icategory],1,1);
-            parambyname('New_Business_Rate').asfloat := strtofloat(cells[4,icategory]);
+            parambyname('New_Business_Rate').asfloat := StrToFloatDef(cells[4,icategory], 0, FormatSettings);
             execsql;
           end;
         end;
@@ -903,7 +903,7 @@ begin
             if (icol < 3) or (icol = 4) then
               begin
                 if cells[icol, irow] = '' then continue;
-                  cells[icol, irow] := formatfloat('#0.00',strtofloat(cells[icol,irow]));
+                  cells[icol, irow] := formatfloat('#0.00',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
               end;
           end;
     end;
@@ -924,7 +924,7 @@ begin
             if (icol < 3) or (icol = 4) then
               begin
                 if cells[icol, irow] = '' then continue;
-                  cells[icol, irow] := formatfloat('#0.00',strtofloat(cells[icol,irow]));
+                  cells[icol, irow] := formatfloat('#0.00',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
               end;
           end;
     end;

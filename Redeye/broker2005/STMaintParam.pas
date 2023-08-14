@@ -142,7 +142,7 @@ begin
     (Sender as TMemo).Text := sOldValue
   else
     begin
-    If (StrToFloat(TempVal) < 0) or (StrToFloat(TempVal) >= 100) then
+    If (StrToFloatDef(TempVal, 0, FormatSettings) < 0) or (StrToFloatDef(TempVal, 0, FormatSettings) >= 100) then
        begin
        MessageDlg('Must be between 0.00% and 99.99%', mtError, [mbOK],0) ;
        (Sender as TMemo).Text := sOldValue ;
@@ -173,8 +173,8 @@ With UpdCompSQL do
      ParamByName('Last_PO_Number').AsInteger := PONoSpinEdit.Value ;
      ParamByName('Last_Store_Ord_No').AsInteger := SONoSpinEdit.Value ;
      ParamByName('Last_SO_Number').AsInteger := SOPNOSpinEdit.Value;
-     ParamByName('Purch_Ord_Perc_Pack').AsFloat := StrToFloat(POPercMemo.Text) ;
-     ParamByName('Store_Ord_Perc_Pack').AsFloat := StrToFloat(SOPercMemo.Text) ;
+     ParamByName('Purch_Ord_Perc_Pack').AsFloat := StrToFloatDef(POPercMemo.Text, 0, FormatSettings) ;
+     ParamByName('Store_Ord_Perc_Pack').AsFloat := StrToFloatDef(SOPercMemo.Text, 0, FormatSettings) ;
      If WhouseDBLookupComboBox.text = '' then
            ParamByName('Default_Warehouse').Clear
      else

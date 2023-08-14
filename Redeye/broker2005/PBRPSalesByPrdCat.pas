@@ -455,7 +455,7 @@ begin
   end
   else
   begin
-    rVatValue := StrToFloat(QRLblGoods.Caption) *
+    rVatValue := StrToFloatDef(QRLblGoods.Caption, 0, FormatSettings) *
       (qryGetInvLine.fieldByname('Vat_Rate').AsFloat / 100);
   end;
   QRLblVat.Caption := formatfloat('0.00',(rVATValue));

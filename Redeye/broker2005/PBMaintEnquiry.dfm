@@ -1059,7 +1059,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             Left = 8
             Top = 24
             Width = 137
-            Height = 125
+            Height = 89
             Anchors = [akLeft, akTop, akRight, akBottom]
             ItemHeight = 15
             TabOrder = 2
@@ -1186,7 +1186,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           737
           41)
         object btnAddSuppCustNotes: TBitBtn
-          Left = 654
+          Left = 630
           Top = 7
           Width = 70
           Height = 25

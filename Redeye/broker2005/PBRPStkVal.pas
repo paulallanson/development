@@ -209,11 +209,11 @@ begin
   CostQRLabel.Caption := formatfloat('0.00',rcost);
   rRepCost := rRepCost + rcost;
   rRepSell := rRepSell + rSell;
-  rReportCost := rReportCost + StrToFloat(CostQRLabel.Caption);
-  rReportSell := rReportSell + StrToFloat(ValueQRLabel.Caption);
+  rReportCost := rReportCost + StrToFloatDef(CostQRLabel.Caption, 0, FormatSettings);
+  rReportSell := rReportSell + StrToFloatDef(ValueQRLabel.Caption, 0, FormatSettings);
 
-  rCustCost := rCustCost + StrToFloat(CostQRLabel.Caption);
-  rCustSel := rCustSel + StrToFloat(ValueQRLabel.Caption);
+  rCustCost := rCustCost + StrToFloatDef(CostQRLabel.Caption, 0, FormatSettings);
+  rCustSel := rCustSel + StrToFloatDef(ValueQRLabel.Caption, 0, FormatSettings);
 end;
 procedure TPBRPStkValfrm.FooterQRBandBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);

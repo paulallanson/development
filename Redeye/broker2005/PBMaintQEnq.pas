@@ -72,8 +72,6 @@ type
     procedure PriceUnitSpeedBtnClick(Sender: TObject);
     procedure btbtnOKClick(Sender: TObject);
     procedure SupplierSpeedBtnClick(Sender: TObject);
-    procedure PriceGridDrawCell(Sender: TObject;
-        vCol, vRow: Longint; Rect: TRect; State: TGridDrawState);
     procedure PriceGridKeyPress(Sender: TObject; var Key: Char);
     procedure PriceGridSelectCell(Sender: TObject; ACol, ARow: Integer;
       var CanSelect: Boolean);
@@ -97,6 +95,8 @@ type
     procedure edtRunOnPriceChange(Sender: TObject);
     procedure edtRunOnCostChange(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure PriceGridDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     loadingDetails: boolean; //set to true when the form is being filled with enquiry data
     //this stops the onChange event handlers firing and setting TEnquiry.modified to true
@@ -585,7 +585,7 @@ begin
           //push the selling prices from the grid thru to the marked up prices
           //for responses for each quantity
           try
-            tempFlt := StrToFloat(PriceGrid.Cells[2, qtyInx+1])
+            tempFlt := StrToFloatDef(PriceGrid.Cells[2, qtyInx+1], 0, FormatSettings)
           except
             tempFlt := 0.00;
           end;
@@ -606,28 +606,28 @@ begin
   EnableOK;
 end;
 
-procedure TPBMaintQEnqFrm.PriceGridDrawCell(Sender: TObject;
-    vCol, vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintQEnqFrm.PriceGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vcol <> 0) then
+    if (ARow <> 0) and (Acol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with PriceGrid do
   begin
-    if vCol = 0 then
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -637,7 +637,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -700,7 +700,7 @@ begin
       for irow := 1 to 50 do
       begin
         if cells[icol, irow] = '' then continue;
-        cells[icol, irow] := formatfloat('0.00',strtofloat(cells[icol,irow]));
+        cells[icol, irow] := formatfloat('0.00',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
       end;
   end;
 
@@ -1107,7 +1107,7 @@ var
   qtyInx, suppInx: integer;
 begin
   try
-    tempFlt := StrToFloat(value);
+    tempFlt := StrToFloatDef(value, 0, FormatSettings);
   except
     tempFlt := 0.00
   end;
@@ -1498,8 +1498,8 @@ begin
     suppInx := Self.Enquiry.Line.NoOfQuotingSuppliers - 1;
     if edtRunOnQty.Text <> '' then
     begin
-      self.Enquiry.Line.RunOnQuantity := strToFloat(edtRunOnQty.Text);
-      self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.RunOnQuantity := strToFloat(edtRunOnQty.Text);
+      self.Enquiry.Line.RunOnQuantity := StrToFloatDef(edtRunOnQty.Text, 0, FormatSettings);
+      self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.RunOnQuantity := StrToFloatDef(edtRunOnQty.Text, 0, FormatSettings);
       self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.Modified := true;
       self.Enquiry.DetailsModified := true;
     end
@@ -1518,7 +1518,7 @@ begin
   begin
     if edtRunOnPrice.Text <> '' then
     begin
-      self.Enquiry.Line.RunOnPrice := strToFloat(edtRunOnPrice.Text);
+      self.Enquiry.Line.RunOnPrice := StrToFloatDef(edtRunOnPrice.Text, 0, FormatSettings);
     end
     else
     begin
@@ -1538,9 +1538,9 @@ begin
     suppInx := Self.Enquiry.Line.NoOfQuotingSuppliers - 1;
     if edtRunOnCost.Text <> '' then
     begin
-      self.Enquiry.Line.RunOnCost := strToFloat(edtRunOnCost.Text);
+      self.Enquiry.Line.RunOnCost := StrToFloatDef(edtRunOnCost.Text, 0, FormatSettings);
 
-      self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.RunOnPrice := strToFloat(edtRunOnCost.Text);
+      self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.RunOnPrice := StrToFloatDef(edtRunOnCost.Text, 0, FormatSettings);
       self.Enquiry.Line.QuotingSuppliers[suppInx].SupplierResponse.Modified := true;
       self.Enquiry.DetailsModified := true;
     end

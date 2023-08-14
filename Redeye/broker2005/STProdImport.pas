@@ -750,8 +750,8 @@ begin
       Prod_Status := 'N';
 
     Part_Pack_Quantity := StrToInt(LineData[13]);
-    Part_Cost_List := ((StrToFloat(LineData[11]))/1000);
-    Part_Purchase_Price := ((StrToFloat(LineData[12]))/1000);
+    Part_Cost_List := (StrToFloatDef(LineData[11], 0, FormatSettings) / 1000);
+    Part_Purchase_Price := (StrToFloatDef(LineData[12], 0, FormatSettings) / 1000);
 
     Cat_Discount_Flag := StrToInt(LineData[17]);
     if (LineData[17] = '6') or (LineData[17] = '4') then
@@ -816,8 +816,8 @@ begin
     Prod_Status := 'N';
 
     Part_Pack_Quantity := StrToInt(LineData[7]);
-    Part_Cost_List := StrToFloat(LineData[25]);
-    Part_Purchase_Price := StrToFloat(LineData[26]);
+    Part_Cost_List := StrToFloatDef(LineData[25], 0, FormatSettings);
+    Part_Purchase_Price := StrToFloatDef(LineData[26], 0, FormatSettings);
     if LineData[32] = '0' then
     begin
       //apply discount
@@ -904,8 +904,8 @@ begin
     Prod_Status := 'N';
 
     Part_Pack_Quantity := StrToInt(LineData[8]);
-    Part_Cost_List := StrToFloat(LineData[7])*StrToInt(LineData[8]);
-    Part_Purchase_Price := StrToFloat(LineData[6])*StrToInt(LineData[8]);
+    Part_Cost_List := StrToFloatDef(LineData[7], 0, FormatSettings) * StrToIntDef(LineData[8], 0);
+    Part_Purchase_Price := StrToFloatDef(LineData[6], 0, FormatSettings) * StrToIntDef(LineData[8], 0);
     //no discount
     Discount_this_Part := 'N';
 
@@ -929,7 +929,7 @@ begin
   Delete(ProdLine, 1, CommaPos);
 
   CommaPos := Pos(',', ProdLine);
-  Part_Purchase_Price := StrToFloat(Copy(ProdLine, 0, CommaPos-1));
+  Part_Purchase_Price := StrToFloatDef(Copy(ProdLine, 0, CommaPos-1), 0, FormatSettings);
   Result := True;
 end;
 
@@ -1001,19 +1001,19 @@ begin
 
     Part := trim(stringreplace(LineData[1],'"','',[rfReplaceAll]));
     try
-      Discount_Value := strtofloat(trim(stringreplace(LineData[4],'"','',[rfReplaceAll])));
+      Discount_Value := StrToFloatDef(trim(stringreplace(LineData[4],'"','',[rfReplaceAll])), 0, FormatSettings);
     except
       Discount_Value := 0.00;
     end;
 
     try
-      Part_Purchase_Price := strtofloat(trim(stringreplace(LineData[5],'"','',[rfReplaceAll])));
+      Part_Purchase_Price := StrToFloatDef(trim(stringreplace(LineData[5],'"','',[rfReplaceAll])), 0, FormatSettings);
     except
       Part_Purchase_Price := 0.00;
     end;
 
     try
-      Pack_Size := strtoint(trim(stringreplace(LineData[6],'"','',[rfReplaceAll])));
+      Pack_Size := StrTointDef(trim(stringreplace(LineData[6],'"','',[rfReplaceAll])), 0);
     except
       Pack_Size := 1;
     end;

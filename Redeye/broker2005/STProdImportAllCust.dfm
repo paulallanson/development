@@ -12,12 +12,10 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object mmErrorRecords: TMemo
     Left = 0
@@ -182,8 +180,9 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
       Width = 75
       Height = 25
       Caption = 'Close'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
   end
   object pnlPrefix: TPanel
@@ -248,8 +247,6 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
       Width = 25
       Height = 25
       Enabled = False
-      TabOrder = 2
-      OnClick = btnBinClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -264,6 +261,8 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnBinClick
     end
   end
   object opndlgImportFile: TOpenDialog
@@ -306,9 +305,7 @@ object STProdImportAllCustFrm: TSTProdImportAllCustFrm
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

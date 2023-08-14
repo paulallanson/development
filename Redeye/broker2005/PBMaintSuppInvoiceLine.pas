@@ -210,8 +210,8 @@ var
   inx : integer;
 begin
   SuppInvoiceLine.Quantity := InpToSing(Trim(memQuantity.Text),SuppInvoiceLine.packQty);
-//  SuppInvoiceLine.Quantity := strtofloat(Trim(memQuantity.Text));
-  SuppInvoiceLine.GoodsValue := (StrTofloat(memPrice.Text)/SuppInvoiceLine.PackQty);
+//  SuppInvoiceLine.Quantity := StrToFloatDef(Trim(memQuantity.Text), 0, FormatSettings);
+  SuppInvoiceLine.GoodsValue := (StrToFloatDef(memPrice.Text, 0, FormatSettings)/SuppInvoiceLine.PackQty);
   SuppInvoiceLine.Nominal := edtNominal.Text;
 
   SuppInvoiceLine.PriceUnit := dblkpPriceUnit.keyvalue;
@@ -219,7 +219,7 @@ begin
   SuppInvoiceLine.PriceUnitFactor := SuppInvoiceLine.Parent.DataModule.GetPUnitFactor(SuppInvoiceLine.PriceUnit);
   SuppInvoiceLine.VATCode := dblkpVAT.keyvalue;
   SuppInvoiceLine.VATRate := SuppInvoiceLine.Parent.DataModule.GetVatRate(SuppInvoiceLine.VATCode);
-  SuppInvoiceLine.VatValue := StrTofloat(memVatValue.Text);
+  SuppInvoiceLine.VatValue := StrToFloatDef(memVatValue.Text, 0, FormatSettings);
   if (SuppInvoiceLine.Parent.DBKey = 0) and (SuppInvoiceLine.Parent.InvoiceOrCredit = 'C') then
     SuppInvoiceLine.OriginalQty := 0;
   if Mode = pilAdd then

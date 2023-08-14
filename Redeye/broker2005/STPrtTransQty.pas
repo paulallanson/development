@@ -100,7 +100,7 @@ begin
     edtStckDsc.Color := clbtnFace;
 
   self.CheckBinCount;
-  rUnitCost := strtofloat(sCost) / strtofloat(sPackSize);
+  rUnitCost := StrToFloatDef(sCost, 0, FormatSettings) / StrToFloatDef(sPackSize, 0, FormatSettings);
 
   If sCost <> '' then
     CostMemo.Text := CurrencyDisp(frmpbMainMEnu.sCurrencyMask,sCost)

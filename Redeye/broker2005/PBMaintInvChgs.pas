@@ -87,8 +87,8 @@ var
   inx : integer;
 begin
   SalesInvoiceChg.Details := self.cmbbxAddChrg.Text;
-  SalesInvoiceChg.Amount := StrTofloat(memPrice.Text);
-  SalesInvoiceChg.Cost := StrTofloat(memCost.Text);
+  SalesInvoiceChg.Amount := StrToFloatDef(memPrice.Text, 0, FormatSettings);
+  SalesInvoiceChg.Cost := StrToFloatDef(memCost.Text, 0, FormatSettings);
   SalesInvoiceChg.Nominal := edtNominal.Text;
 
   SalesInvoiceChg.SILine := strtoint(cmbLines.Text);

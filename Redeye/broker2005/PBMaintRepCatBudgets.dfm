@@ -1,9 +1,9 @@
 object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   Left = 178
   Top = 91
-  Width = 790
-  Height = 538
   Caption = 'Maintain Rep, Product Category Budgets'
+  ClientHeight = 499
+  ClientWidth = 774
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -11,27 +11,29 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 485
-    Width = 782
+    Top = 480
+    Width = 774
     Height = 19
     Panels = <>
+    ExplicitTop = 485
+    ExplicitWidth = 782
   end
   object Panel1: TPanel
     Left = 0
-    Top = 444
-    Width = 782
+    Top = 439
+    Width = 774
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 444
+    ExplicitWidth = 782
     object OKBitBtn: TBitBtn
       Left = 312
       Top = 8
@@ -40,8 +42,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
       Caption = 'Save'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -60,24 +60,28 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 400
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      Kind = bkCancel
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 782
+    Width = 774
     Height = 73
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 782
     object Label1: TLabel
       Left = 16
       Top = 14
@@ -116,8 +120,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   object grdDetails: TStringGrid
     Left = 0
     Top = 95
-    Width = 782
-    Height = 349
+    Width = 774
+    Height = 344
     Align = alClient
     ColCount = 25
     DefaultColWidth = 70
@@ -129,6 +133,8 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     OnKeyPress = grdDetailsKeyPress
     OnSelectCell = grdDetailsSelectCell
     OnTopLeftChanged = grdDetailsTopLeftChanged
+    ExplicitWidth = 782
+    ExplicitHeight = 349
     ColWidths = (
       211
       70
@@ -165,11 +171,12 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
   object Panel5: TPanel
     Left = 0
     Top = 73
-    Width = 782
+    Width = 774
     Height = 22
     Align = alTop
     Caption = 'Panel5'
     TabOrder = 4
+    ExplicitWidth = 782
     object Label3: TLabel
       Left = 6
       Top = 3
@@ -212,9 +219,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryReps: TFDQuery
@@ -254,14 +259,10 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryFirstPeriod: TFDQuery
@@ -275,9 +276,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckBudget: TFDQuery
@@ -291,19 +290,13 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdBudget: TFDQuery
@@ -320,29 +313,19 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryAddBudget: TFDQuery
@@ -356,29 +339,19 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end>
   end
   object qryCategory: TFDQuery

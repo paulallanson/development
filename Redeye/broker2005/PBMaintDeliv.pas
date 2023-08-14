@@ -2019,7 +2019,7 @@ begin
         break
       else
         begin
-          rOrder := strtofloat(PBMaintDelivFrm.pickarray[icount,1]);
+          rOrder := StrToFloatDef(PBMaintDelivFrm.pickarray[icount,1], 0, FormatSettings);
           iLine := strtoint(PBMaintDelivFrm.pickarray[icount,2]);
           iDelivery := strtoint(PBMaintDelivFrm.pickarray[icount,3]);
           iLocation := strtoint(PBMaintDelivFrm.pickarray[icount,4]);
@@ -2155,7 +2155,7 @@ begin
         with sgStock do
           begin
             irow := row;
-            PBDelivStockFrm.rUnitCost := strtofloat(cells[3,irow])/strtofloat(cells[2,irow]);
+            PBDelivStockFrm.rUnitCost := StrToFloatDef(cells[3,irow], 0, FormatSettings) / StrToFloatDef(cells[2,irow], 0, FormatSettings);
             PBDelivStockfrm.BinEdit.text := cells[0,irow];
             PBDelivStockfrm.Memoqty.text := cells[1,irow];
             PBDelivStockfrm.MemoPackSize.text := cells[2,irow];
@@ -2525,7 +2525,7 @@ begin
     fTempCost := 0.00
   else
 //    fTempCost := (Purch_Price/iTempPackSize)*iTempQty;
-    fTempCost := (strtofloat(sgStock.cells[3,currRow])/iTempPackSize)*iTempQty;
+    fTempCost := (StrToFloatDef(sgStock.cells[3,currRow], 0, FormatSettings) / iTempPackSize) * iTempQty;
 
   iTempCode := dtmdlStockMove.GetStoreStock(iTempStore, sTempPart, sTempBin, sTempLot);
  //         if iTempQty <> 0 then

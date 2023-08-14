@@ -62,7 +62,7 @@ Uses CCSCommon, pbMainMenu;
 
 procedure TSTMntPOrdQtyFrm.OKBitBtnClick(Sender: TObject);
 begin
-fCost_Price := StrToFloat(CostPriceEdit.Text) ;
+fCost_Price := StrToFloatDef(CostPriceEdit.Text, 0, FormatSettings) ;
 bOK := True ;
 Close ;
 end;
@@ -72,7 +72,7 @@ begin
   CostLabel.Visible := bAllow_Cost ;
   CostPriceEdit.Visible := bAllow_Cost ;
   CostPriceEdit.Text := CurrencyDisp(frmpbMainMEnu.sCurrencyMask,FloatToStr(fCost_Price)) ;
-// fSell_Price := (fCost_Price*100)/(100 - (StrToFloat(EdtDiscount.text)));
+// fSell_Price := (fCost_Price*100)/(100 - (StrToFloatDef(EdtDiscount.text)), 0, FormatSettings);
   bOK := False ;
 
   PackSizeEdit.Enabled := not self.bGoodsRecvd;
@@ -150,7 +150,7 @@ begin
      (trim(sOldValue) = '') then
      exit;
 
-  rSellPrice := strtofloat(CostPriceEdit.text);
+  rSellPrice := StrToFloatDef(CostPriceEdit.text, 0, FormatSettings);
   rPurchPrice := fOrig_Cost;
 
   if (rSellPrice > fOrig_Cost) or (rSellPrice = 0) then

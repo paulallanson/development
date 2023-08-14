@@ -67,7 +67,7 @@ procedure TPBMaintEnqAddChgsfrm.CostMemoExit(Sender: TObject);
 begin
   with Sender as TMemo do
   begin
-    Lines[0] := formatfloat('0.00', StrToFloat(Lines[0]));
+    Lines[0] := formatfloat('0.00', StrToFloatDef(Lines[0], 0, FormatSettings));
   end;
 end;
 

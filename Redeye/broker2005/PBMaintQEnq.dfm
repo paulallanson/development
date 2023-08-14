@@ -2,7 +2,6 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   Left = 31
   Top = 75
   ActiveControl = edtCustomer
-  AutoScroll = False
   Caption = 'Quick Quotation screen'
   ClientHeight = 489
   ClientWidth = 715
@@ -12,11 +11,9 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label12: TLabel
     Left = 8
@@ -125,11 +122,11 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Caption = 'lblEnqNo'
   end
   object GroupBox3: TGroupBox
-    ParentBackground = False
     Left = 0
     Top = 112
     Width = 697
     Height = 321
+    ParentBackground = False
     TabOrder = 6
     object Label8: TLabel
       Left = 8
@@ -389,8 +386,6 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Caption = 'Save'
     Default = True
     Enabled = False
-    TabOrder = 7
-    OnClick = btbtnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -409,14 +404,17 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = btbtnOKClick
   end
   object CancelBitBtn: TBitBtn
     Left = 608
     Top = 440
     Width = 75
     Height = 25
-    TabOrder = 8
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 8
   end
   object spdbtnLURep: TButton
     Left = 660
@@ -439,7 +437,6 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Width = 267
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 9
     OnChange = cmbbxContactListChange
   end
@@ -449,7 +446,6 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Width = 156
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 10
     OnChange = cmbbxRepListChange
   end
@@ -459,7 +455,6 @@ object PBMaintQEnqFrm: TPBMaintQEnqFrm
     Width = 156
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 11
     OnChange = cmbbxOperatorsChange
   end

@@ -3469,7 +3469,7 @@ begin
       with qryGetPOInvoice do
         begin
           close;
-          parambyname('Purchase_order').asfloat := strtofloat(tempPONum);
+          parambyname('Purchase_order').asfloat := StrToFloatDef(tempPONum, 0, FormatSettings);
           open;
           tempInvoiceNo := fieldbyname('Sales_Invoice_no').asstring;
           if recordcount > 1 then

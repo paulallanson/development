@@ -185,9 +185,9 @@ var
 begin
   QuoteSupply.Description := Trim(edtDescription.Text);
   QuoteSupply.Quantity := strtoint(memQuantity.text);
-  QuoteSupply.UnitSell := strtofloat(memSellPrice.text);
+  QuoteSupply.UnitSell := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
   QuoteSupply.PriceUnit := dblkpPriceUnit.KeyValue;
-  QuoteSupply.UnitCost := strtofloat(memCostPrice.text);
+  QuoteSupply.UnitCost := StrToFloatDef(memCostPrice.text, 0, FormatSettings);
   QuoteSupply.PriceUnitDesc := dblkpPriceUnit.Text;
   QuoteSupply.PriceUnitFactor := GetPriceUnit(QuoteSupply.PriceUnit);
   QuoteSupply.VatCode := dblkpVat.KeyValue;

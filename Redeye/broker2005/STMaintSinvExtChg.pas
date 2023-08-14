@@ -147,10 +147,10 @@ begin
     with ExtraCharge do
     begin
       Details := cmbbxAddChrg.Text;
-      Amount := StrToFloat(CostMemo.Text);
-      Cost := StrToFloat(MemoCst.Text);
+      Amount := StrToFloatDef(CostMemo.Text, 0, FormatSettings);
+      Cost := StrToFloatDef(MemoCst.Text, 0, FormatSettings);
       ChgVatCode := VatDBLookupComboBox.KeyValue;
-      Vat := Amount * (StrToFloat(StSalesOrdDM.getVatCodeVatRate(ChgVatCode))/100) ;
+      Vat := Amount * (StrToFloatDef(StSalesOrdDM.getVatCodeVatRate(ChgVatCode), 0, FormatSettings) / 100);
     end;
   end
   else

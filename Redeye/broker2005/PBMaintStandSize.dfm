@@ -1,7 +1,6 @@
-﻿object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
+object PBMaintStandSizeFrm: TPBMaintStandSizeFrm
   Left = 152
   Top = 121
-  AutoScroll = False
   Caption = 'Maintain Standard Sizes'
   ClientHeight = 248
   ClientWidth = 433
@@ -11,9 +10,7 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 120
@@ -29,7 +26,6 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 8
     Width = 393
@@ -40,6 +36,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -153,9 +150,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -220,7 +214,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -229,9 +226,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -296,7 +290,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -307,8 +304,8 @@
     Left = 208
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -324,8 +321,8 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -345,34 +342,22 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Width_mm'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Depth_mm'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'A4_multiplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -385,9 +370,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -414,24 +397,16 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Width_mm'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Depth_mm'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -1844,10 +1844,10 @@ begin
       ParamByName('NCR').AsString := 'X'
     else
       ParamByName('NCR').AsString := LineGrid.Cells[11, iNewLine] + '';
-    ParamByName('Depth').AsFloat := StrToFloat(LineGrid.Cells[3, iNewLine]);
+    ParamByName('Depth').AsFloat := StrToFloatDef(LineGrid.Cells[3, iNewLine], 0, FormatSettings);
     ParamByName('D_Unit').AsString := Copy(LineGrid.Cells[5, iNewLine], 1, 2) +
       '';
-    ParamByName('Width').AsFloat := StrToFloat(LineGrid.Cells[4, iNewLine]);
+    ParamByName('Width').AsFloat := StrToFloatDef(LineGrid.Cells[4, iNewLine], 0, FormatSettings);
     ParamByName('W_Unit').AsString := Copy(LineGrid.Cells[6, iNewLine], 1, 2) +
       '';
     ParamByName('Artwork').AsString := LineGrid.Cells[9, iNewLine] + '';
@@ -2087,7 +2087,7 @@ begin
       Close;
       ParamByName('Enquiry').AsInteger := StrToInt(EnquiryLbl.Caption);
       ParamByName('Line').AsInteger := iLine + 1;
-      ParamByName('Qty').AsFloat := StrToFloat(LineGrid.Cells[icol, iline]);
+      ParamByName('Qty').AsFloat := StrToFloatDef(LineGrid.Cells[icol, iline], 0, FormatSettings);
       ExecSQL;
     end;
   end;
@@ -2154,7 +2154,7 @@ begin
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[1, irow]);
           ParamByName('Branch').AsInteger :=
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[2, irow]);
-          ParamByName('Qty').AsFloat := StrToFloat(LineGrid.Cells[icol, iline]);
+          ParamByName('Qty').AsFloat := StrToFloatDef(LineGrid.Cells[icol, iline], 0, FormatSettings);
           ExecSQL;
         end;
 
@@ -2320,8 +2320,7 @@ begin
       Close;
       ParamByName('Enquiry').AsInteger := StrToInt(EnquiryLbl.Caption);
       ParamByName('Line').AsInteger := iLine + 1;
-      ParamByName('Quantity').AsFloat := StrToFloat(LineGrid.Cells[icol,
-        iline]);
+      ParamByName('Quantity').AsFloat := StrToFloatDef(LineGrid.Cells[icol,iline], 0, FormatSettings);
       Open;
 
       if CheckEnqQtySQl.RecordCount > 0 then
@@ -2334,7 +2333,7 @@ begin
       Close;
       ParamByName('Enquiry').AsInteger := StrToInt(EnquiryLbl.Caption);
       ParamByName('Line').AsInteger := iLine + 1;
-      ParamByName('Qty').AsFloat := StrToFloat(LineGrid.Cells[icol, iline]);
+      ParamByName('Qty').AsFloat := StrToFloatDef(LineGrid.Cells[icol, iline], 0, FormatSettings);
       ExecSQL;
     end;
   end;
@@ -2505,8 +2504,7 @@ begin
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[1, irow]);
           ParamByName('Branch_no').AsInteger :=
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[2, irow]);
-          ParamByName('Quantity').AsFloat := StrToFloat(LineGrid.Cells[icol,
-            iline]);
+          ParamByName('Quantity').AsFloat := StrToFloatDef(LineGrid.Cells[icol,iline], 0, FormatSettings);
           Open;
 
           if CheckEnqSuppQtySQL.RecordCount > 0 then Continue;
@@ -2521,7 +2519,7 @@ begin
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[1, irow]);
           ParamByName('Branch').AsInteger :=
             StrToInt(PBenqLineTmp.SupplierGrid.Cells[2, irow]);
-          ParamByName('Qty').AsFloat := StrToFloat(LineGrid.Cells[icol, iline]);
+          ParamByName('Qty').AsFloat := StrToFloatDef(LineGrid.Cells[icol, iline], 0, FormatSettings);
           ExecSQL;
         end;
       end;

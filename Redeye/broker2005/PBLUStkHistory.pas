@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, Menus, pbFormReferenceDM;
+  Grids, DBGrids, ExtCtrls, StdCtrls, Buttons, Menus, pbFormReferenceDM,
+  Data.DB;
 
 type
   TPBLUStkHistoryfrm = class(TForm)
@@ -348,7 +349,7 @@ begin
           (Column.Title.Caption = 'Move In') or
           (Column.Title.Caption = 'Move Out') then
         try
-          sValue := formatfloat('######0;(######0)',strtofloat(sTemp))
+          sValue := formatfloat('######0;(######0)',StrToFloatDef(sTemp, 0, FormatSettings))
         except
           sValue := ''
         end

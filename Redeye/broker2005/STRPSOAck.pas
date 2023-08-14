@@ -214,8 +214,8 @@ begin
     PackQTYQrLabel.Caption := ShowInPacks(QtyOrd,Packsize);
     PackSizeQRLabel.Caption := IntToStr(Packsize) ;
     QRLblValue.Caption := CurrencyDisp(frmPBMainMenu.sCurrencyMask,FloatToStr((QtyOrd * GetDetsQuery.FieldByName('Part_Sales_Price').AsFloat)/Packsize));
-    iGoods := iGoods + StrToFloat(QRLblValue.Caption);
-     rVatValue := StrToFloat(QRLblValue.Caption) *
+    iGoods := iGoods + StrToFloatDef(QRLblValue.Caption, 0, FormatSettings);
+     rVatValue := StrToFloatDef(QRLblValue.Caption, 0, FormatSettings) *
     (FieldByName('Vat_Rate').AsFloat / 100);
   VatQRLabel.Caption := formatFloat('0.00',rVatValue);
   ivat := ivat + rVatValue;
@@ -404,7 +404,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := strtofloat(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 end;
 

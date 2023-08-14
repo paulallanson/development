@@ -283,13 +283,13 @@ begin
           parambyname('Part').asstring := SelCode;
           parambyname('Quantity').asinteger := strtoint(cells[1,icount]);
           try
-            parambyname('Sell_Price').asfloat := strtofloat(cells[2,icount]);
+            parambyname('Sell_Price').asfloat := StrToFloatDef(cells[2,icount], 0, FormatSettings);
           except
             parambyname('Sell_Price').asfloat := 0.00;
           end;
 
           try
-            parambyname('Cost_Price').asfloat := strtofloat(cells[4,icount]);
+            parambyname('Cost_Price').asfloat := StrToFloatDef(cells[4,icount], 0, FormatSettings);
           except
             parambyname('Cost_Price').asfloat := 0.00;
           end;
@@ -359,7 +359,7 @@ begin
           for irow := 1 to 100 do
             begin
               if cells[icol, irow] = '' then continue;
-              cells[icol, irow] := formatfloat('0.00', strtofloat(cells[icol,irow]));
+              cells[icol, irow] := formatfloat('0.00', StrToFloatDef(cells[icol,irow], 0, FormatSettings));
             end;
       end;
     end;

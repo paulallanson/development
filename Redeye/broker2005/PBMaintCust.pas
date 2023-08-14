@@ -1580,7 +1580,7 @@ begin
         ParamByName('Override_Cost_Markup_Perc').AsString := 'N';
 
       try
-        ParambyName('Default_Quote_Cost_Markup_Perc').asfloat := strtofloat(memQuoteCostMarkup.text);
+        ParambyName('Default_Quote_Cost_Markup_Perc').asfloat := StrToFloatDef(memQuoteCostMarkup.text, 0, FormatSettings);
       except
         ParambyName('Default_Quote_Cost_Markup_Perc').asfloat := 0.00;
       end;
@@ -1595,11 +1595,11 @@ begin
       else
         ParamByName('CTRLP_Master_Customer').AsString := 'N';
 
-      ParamByName('Credit_Limit').AsFloat := StrToFloat(CredLimMemo.Text);
+      ParamByName('Credit_Limit').AsFloat := StrToFloatDef(CredLimMemo.Text, 0, FormatSettings);
       ParamByName('Settlement_Days').AsInteger := StrToInt(SettDaysMemo.Text);
       ParamByName('Settlement_Discount').AsFloat :=
-        StrToFloat(SettDiscMemo.Text);
-      ParamByName('Pre_Pay_Balance').AsFloat := StrToFloat(memPrePayBalance.Text);
+        StrToFloatDef(SettDiscMemo.Text, 0, FormatSettings);
+      ParamByName('Pre_Pay_Balance').AsFloat := StrToFloatDef(memPrePayBalance.Text, 0, FormatSettings);
       if dblkpPaymentTerms.text = '' then
         ParamByName('Payment_Terms').clear
       else
@@ -1630,7 +1630,7 @@ begin
       else
         ParamByName('Level_of_importance').AsInteger := dblkpLevelOfImportance.KeyValue;
 
-      ParamByName('Available_Credit').AsFloat := StrToFloat(CredAvailMemo.Text);
+      ParamByName('Available_Credit').AsFloat := StrToFloatDef(CredAvailMemo.Text, 0, FormatSettings);
       ParamByName('VAT_Reference').AsString := VATRefEdit.Text + '';
       if DefVATDBLookupComboBox.text = '' then
         ParamByName('VAT_Code_Def').Clear
@@ -1910,7 +1910,7 @@ begin
       else
         ParamByName('Override_Cost_Markup_Perc').AsString := 'N';
 
-      ParambyName('Default_Quote_Cost_Markup_Perc').asfloat := strtofloat(memQuoteCostMarkup.text);
+      ParambyName('Default_Quote_Cost_Markup_Perc').asfloat := StrToFloatDef(memQuoteCostMarkup.text, 0, FormatSettings);
 
       if ChkBxAcquiredCompany.Checked then
         ParamByname('Customer_is_Acquired').ASString := 'Y'
@@ -1922,11 +1922,11 @@ begin
       else
         ParamByName('CTRLP_Master_Customer').AsString := 'N';
 
-      ParamByName('Credit_Limit').AsFloat := StrToFloat(CredLimMemo.Text);
+      ParamByName('Credit_Limit').AsFloat := StrToFloatDef(CredLimMemo.Text, 0, FormatSettings);
       ParamByName('Settlement_Days').AsInteger := StrToInt(SettDaysMemo.Text);
       ParamByName('Settlement_Discount').AsFloat :=
-        StrToFloat(SettDiscMemo.Text);
-      ParamByName('Pre_Pay_Balance').AsFloat := StrToFloat(memPrePayBalance.Text);
+        StrToFloatDef(SettDiscMemo.Text, 0, FormatSettings);
+      ParamByName('Pre_Pay_Balance').AsFloat := StrToFloatDef(memPrePayBalance.Text, 0, FormatSettings);
       if dblkpPaymentTerms.text = '' then
         Parambyname('Payment_Terms').clear
       else
@@ -1990,7 +1990,7 @@ begin
       else
         ParamByName('Level_of_importance').AsInteger := dblkpLevelOfImportance.KeyValue;
 
-      ParamByName('Available_Credit').AsFloat := StrToFloat(CredAvailMemo.Text);
+      ParamByName('Available_Credit').AsFloat := StrToFloatDef(CredAvailMemo.Text, 0, FormatSettings);
       ParamByName('VAT_Reference').AsString := VATRefEdit.Text + '';
       if DefVATDBLookupComboBox.text = '' then
         ParamByName('VAT_Code_Def').Clear
@@ -2222,7 +2222,7 @@ begin
   if SettDiscMemo.Text <> '' then
   begin
     try
-      SettDiscMemo.Text := FormatFloat('##0.00', StrToFloat(SettDiscMemo.Text))
+      SettDiscMemo.Text := FormatFloat('##0.00', StrToFloatDef(SettDiscMemo.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid settlement discount', mtError, [mbOK], 0);
       SettDiscMemo.SetFocus;
@@ -2236,7 +2236,7 @@ begin
   if CredLimMemo.Text <> '' then
   begin
     try
-      CredLimMemo.Text := FormatFloat('######0', StrToFloat(CredLimMemo.Text))
+      CredLimMemo.Text := FormatFloat('######0', StrToFloatDef(CredLimMemo.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       CredLimMemo.SetFocus;
@@ -3391,7 +3391,7 @@ begin
   if memPrePayBalance.Text <> '' then
   begin
     try
-      memPrePayBalance.Text := FormatFloat('######0.00', StrToFloat(memPrePayBalance.Text))
+      memPrePayBalance.Text := FormatFloat('######0.00', StrToFloatDef(memPrePayBalance.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       memPrePayBalance.SetFocus;
@@ -6295,33 +6295,38 @@ begin
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
   		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
     			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
+    end
+    else
   	begin
-    		WITH Sender AS TDBGrid DO
-      		BEGIN
-           	if  (Column.Title.Caption <> 'Invoice No.') and
-              (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
-               (Column.Title.Caption <> 'VAT') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
-      		END;
+      WITH Sender AS TDBGrid DO
+        BEGIN
+          if  (Column.Title.Caption <> 'Invoice No.') and
+            (Column.Title.Caption <> 'Goods') and
+            (Column.Title.Caption <> 'Total') and
+             (Column.Title.Caption <> 'VAT') then
+              begin
+            Canvas.Brush.Color := Color;
+            Canvas.Font.Color  := Font.Color;
+            Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
+              Column.field.asstring);
+               end;
+        END;
 			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Goods') or
-          (Column.Title.Caption = 'Total') or
-          (Column.Title.Caption = 'VAT') then
-        try
-          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.AsString, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+      if Assigned(Column.Field) then
+      begin
+        if  (Column.Title.Caption = 'Goods') or
+            (Column.Title.Caption = 'Total') or
+            (Column.Title.Caption = 'VAT') then
+          try
+            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.AsString, 0, FormatSettings))
+          except
+            sValue := ''
+          end
+        else
+          sValue := Column.field.asstring;
+      end else
+        Svalue := '';
+
   		StrPCopy(Txt, sValue);
 
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
@@ -6329,7 +6334,7 @@ begin
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
   		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
     			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+    end;
 end;
 
 procedure TPBMaintCustFrm.edtInvoiceNumberKeyPress(Sender: TObject;
@@ -6883,7 +6888,7 @@ begin
 
   {Get the Picking Refererence}
   sPickRef := dtmdlCustOrders.GetPickingRef(selcode);
-  dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+  dmBroker.AddIntSelCode(iIntSelCode,StrToFloatDef(sPickRef, 0, FormatSettings),sPickRef);
   
   stPickDM := TstpickDm.Create(self);
   stStockDataMod := TstStockDataMod.Create(self);
@@ -8733,7 +8738,7 @@ begin
   if (Sender as TMemo).Text <> '' then
   begin
     try
-      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloat((Sender as TMemo).Text))
+      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloatDef((Sender as TMemo).Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       (Sender as TMemo).SetFocus;

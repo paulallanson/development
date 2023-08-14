@@ -323,9 +323,9 @@ begin
         end;
     end;
 
-  GTValue := GTValue + StrToFloat(lblGoods.caption);
-  GTVat := GTVat + StrToFloat(lblVAT.caption);
-  GTTotal := GTTotal + StrToFloat(lblTotal.caption);
+  GTValue := GTValue + StrToFloatDef(lblGoods.caption, 0, FormatSettings);
+  GTVat := GTVat + StrToFloatDef(lblVAT.caption, 0, FormatSettings);
+  GTTotal := GTTotal + StrToFloatDef(lblTotal.caption, 0, FormatSettings);
 end;
 
 procedure TPBRPCustStateFrm.SetReprint(const Value: boolean);

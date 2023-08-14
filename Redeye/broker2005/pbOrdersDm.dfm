@@ -87,24 +87,19 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qryOrdersCustomer: TIntegerField
       FieldName = 'Customer'
@@ -380,24 +375,19 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
+        Name = 'Customer'
+        DataType = ftInteger
+      end
+      item
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryPOrders: TFDQuery
@@ -517,24 +507,16 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryperiodEnd: TFDQuery
@@ -554,14 +536,10 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryOnHold: TFDQuery
@@ -575,19 +553,13 @@ object dtmdlOrders: TdtmdlOrders
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'On_Hold'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -608,9 +580,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetPickRefSQL: TFDQuery
@@ -623,9 +593,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryInvoicePO: TFDQuery
@@ -643,14 +611,10 @@ object dtmdlOrders: TdtmdlOrders
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryInvoiceSO: TFDQuery
@@ -670,9 +634,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryJBOrders: TFDQuery
@@ -783,19 +745,13 @@ object dtmdlOrders: TdtmdlOrders
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qrySelectedPO: TFDQuery
@@ -832,9 +788,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsCallOffs: TDataSource
@@ -922,19 +876,16 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object qryCallOffscustomer: TIntegerField
       FieldName = 'customer'
@@ -1074,9 +1025,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object qrySOHeaders: TFDQuery
@@ -1181,19 +1130,15 @@ object dtmdlOrders: TdtmdlOrders
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qrySelectedSO: TFDQuery
@@ -1215,9 +1160,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryOperator: TFDQuery
@@ -1230,9 +1173,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'operator'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPicking: TFDQuery
@@ -1245,9 +1186,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSInvoice: TFDQuery
@@ -1260,9 +1199,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryPOProofStatus: TFDQuery
@@ -1280,14 +1217,10 @@ object dtmdlOrders: TdtmdlOrders
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qrySetSOInvoice: TFDQuery
@@ -1300,9 +1233,7 @@ object dtmdlOrders: TdtmdlOrders
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOLines: TFDQuery
@@ -1418,24 +1349,16 @@ object dtmdlOrders: TdtmdlOrders
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
 end

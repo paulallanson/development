@@ -331,7 +331,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('?0.00', iGoods);
   VatValueLbl.Caption := formatfloat('?0.00', ivat);
 
-  itotal := strtofloat(sGoods) + strtofloat(sVat);
+  itotal := StrToFloatDef(sGoods) + StrToFloatDef(sVat, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('?0.00', iTotal);
 *)
   if bInvoice then
@@ -340,7 +340,7 @@ begin
     sVat := formatfloat('#00.00',InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat);
     GoodsValueLbl.Caption := FloatToStrF(InvHeadSRC.Dataset.fieldbyname('Goods_Value').asfloat, ffCurrency, 15, 2);
     VatValueLbl.Caption := FloatToStrF(InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat, ffCurrency, 15, 2);
-    TotalValueLbl.Caption := FloatToStrF((strtofloat(sGoods) + strtofloat(sVat)), ffCurrency, 15, 2);
+    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods) + StrToFloatDef(sVat), 0, FormatSettings), ffCurrency, 15, 2);
   end
   else
   begin
@@ -348,7 +348,7 @@ begin
     sVat := formatfloat('#00.00',InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat);
     GoodsValueLbl.Caption := FloatToStrF((InvHeadSRC.Dataset.fieldbyname('Goods_Value').asfloat*-1), ffCurrency, 15, 2);
     VatValueLbl.Caption := FloatToStrF((InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat*-1), ffCurrency, 15, 2);
-    TotalValueLbl.Caption := FloatToStrF((strtofloat(sGoods) + strtofloat(sVat))*-1, ffCurrency, 15, 2);
+    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods) + StrToFloatDef(sVat), 0, FormatSettings)*-1, ffCurrency, 15, 2);
   end
 end;
 
@@ -540,12 +540,12 @@ begin
   if InvLineSRC.Dataset.FieldByName('Price_Unit_Factor').AsInteger = 0 then
     rGoodsTotal := rGoodsTotal
   else
-    rGoodsTotal := (strtofloat(QtyInvoicedLbl.Caption) /
+    rGoodsTotal := (StrToFloatDef(QtyInvoicedLbl.Caption, 0, FormatSettings) /
       InvLineSRC.Dataset.FieldByName('Price_Unit_Factor').AsInteger)
       * rGoodsTotal;
 
   GoodsTotalLbl.Caption := formatfloat('0.00', rGoodsTotal);
-  iGoods := iGoods + StrToFloat(GoodsTotalLbl.Caption);
+  iGoods := iGoods + StrToFloatDef(GoodsTotalLbl.Caption, 0, FormatSettings);
   if InvLineSRC.Dataset.FieldByName('Vat_Value').AsFloat <> 0.00 then
     begin
       if bInvoice then
@@ -554,7 +554,7 @@ begin
         rVatValue := InvLineSRC.Dataset.FieldByName('Vat_Value').AsFloat * -1
     end
   else
-    rVatValue := StrToFloat(GoodsTotalLbl.Caption) * (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100);
+    rVatValue := StrToFloatDef(GoodsTotalLbl.Caption, 0, FormatSettings) * (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100);
 
   ivat := ivat + rVatValue;
 
@@ -1326,8 +1326,8 @@ begin
   else
     ExtrasVATLbl.Caption := formatfloat('0.00',(rVATValue));
 
-  iGoods := iGoods + strtofloat(lblAmount.caption);
-  ivat := ivat + strtofloat(ExtrasVATLbl.Caption);
+  iGoods := iGoods + StrToFloatDef(lblAmount.caption, 0, FormatSettings);
+  ivat := ivat + StrToFloatDef(ExtrasVATLbl.Caption, 0, FormatSettings);
 end;
 
 function TPBRPSalesInvFrm.GetSOLinePUnit(tempCode: integer;
@@ -1367,7 +1367,7 @@ begin
   with qryPOLine do
     begin
       close;
-      parambyname('Purchase_order').asfloat := strtofloat(trim(tempcode));
+      parambyname('Purchase_order').asfloat := StrToFloatDef(trim(tempcode), 0, FormatSettings);
       parambyname('Line').asinteger := 1;
       open;
       result := fieldbyname('Cust_Order_no').asstring;
@@ -1407,7 +1407,7 @@ begin
   with qryPOLine do
     begin
       close;
-      parambyname('Purchase_order').asfloat := strtofloat(trim(tempcode));
+      parambyname('Purchase_order').asfloat := StrToFloatDef(trim(tempcode), 0, FormatSettings);
       parambyname('Line').asinteger := 1;
       open;
       result := fieldbyname('Cost_Centre').asstring;

@@ -334,8 +334,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat(TempFormat, StrToFloat(TempQty));
-      if (StrToFloat(Result) < 0) and (TempNeg = False) then
+      Result := FormatFloat(TempFormat, StrToFloatDef(TempQty, 0, FormatSettings));
+      if (StrToFloatDef(Result, 0, FormatSettings) < 0) and (TempNeg = False) then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

@@ -107,7 +107,7 @@ end;
 
 procedure TSTStoreStockFrm.edtCostChange(Sender: TObject);
 begin
-  storeStock.storeCost := strToFloat(edtCost.text);
+  storeStock.storeCost := StrToFloatDef(edtCost.text, 0, FormatSettings);
   storeStock.modified := true;
 end;
 

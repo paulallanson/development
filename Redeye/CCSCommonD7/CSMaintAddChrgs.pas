@@ -89,8 +89,8 @@ begin
       SelCode := GetNextAddChrg();
       ParamByName('Additional_Charge').asInteger := SelCode;
       ParamByName('Details').asString := edtDescription.Text;
-      ParamByName('Amount').asFloat := StrToFloat(memCost.text);
-      ParamByName('Quotation_Price').asFloat := StrToFloat(memSell.Text);
+      ParamByName('Amount').asFloat := StrToFloatDef(memCost.text, 0, FormatSettings);
+      ParamByName('Quotation_Price').asFloat := StrToFloatDef(memSell.Text, 0, FormatSettings);
       ExecSQL;
     end;
   end
@@ -99,8 +99,8 @@ begin
     with Self.qryUpdAddChrg do
     begin
       ParamByName('Details').asString := edtDescription.Text;
-      ParamByName('Amount').asFloat := StrToFloat(memCost.Text);
-      ParamByName('Quotation_Price').asFloat := StrToFloat(memSell.Text);
+      ParamByName('Amount').asFloat := StrToFloatDef(memCost.Text, 0, FormatSettings);
+      ParamByName('Quotation_Price').asFloat := StrToFloatDef(memSell.Text, 0, FormatSettings);
       ParamByName('Additional_Charge').asInteger := SelCode;
       ExecSQL;
     end;

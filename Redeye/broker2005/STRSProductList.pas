@@ -145,7 +145,7 @@ begin
     STRPProductListfrm.sPartFrom := edtPartFrom.Text;
     STRPProductListfrm.sPartTo := edtPartTo.Text;
     STRPProductListfrm.iPartGroup := SelGroup;
-    STRPProductListfrm.rDiscount := strtofloat(edtDiscount.text);
+    STRPProductListfrm.rDiscount := StrToFloatDef(edtDiscount.text, 0, FormatSettings);
     STRPProductListfrm.bIncludeCosts := chkbxIncludeCosts.checked;
 
     STRPProductListfrm.totalBy := totbyRadioGroup.itemindex;
@@ -230,7 +230,7 @@ begin
     STRPProductListfrm.sPartFrom := edtPartFrom.Text;
     STRPProductListfrm.sPartTo := edtPartTo.Text;
     STRPProductListfrm.iPartGroup := SelGroup;
-    STRPProductListfrm.rDiscount := strtofloat(edtDiscount.text);
+    STRPProductListfrm.rDiscount := StrToFloatDef(edtDiscount.text, 0, FormatSettings);
     STRPProductListfrm.bIncludeCosts := chkbxIncludeCosts.checked;
 
     STRPProductListFrm.Totalby := TotByRadioGroup.itemindex;
@@ -273,7 +273,7 @@ procedure TSTRSProductListFrm.edtDiscountExit(Sender: TObject);
 begin
   with Sender as TEdit do
   begin
-    Text := formatfloat('0.00', StrToFloat(Text));
+    Text := formatfloat('0.00', StrToFloatDef(Text, 0, FormatSettings));
   end;
 
 end;

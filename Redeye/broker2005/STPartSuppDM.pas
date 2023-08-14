@@ -333,7 +333,9 @@ begin
           sTempLot := STStockDataMod.GetNextLot(Part);
 
         STStockDataMod.AddStoreStock(Part, Warehouse, Bin, sTempLot,
-          sTempType, sTempRef, sTempDate, sTempDate, Stock_Bal, 0, Purch_Pack_Quantity, ((Stock_Bal/Purch_Pack_Quantity)*Part_Purchase_Price), sDescription, Paid_Stock, 1, strtofloat(Purchase_Order), 0, 'N');
+          sTempType, sTempRef, sTempDate, sTempDate, Stock_Bal, 0, Purch_Pack_Quantity,
+          ((Stock_Bal/Purch_Pack_Quantity)*Part_Purchase_Price), sDescription, Paid_Stock, 1,
+          StrToFloatDef(Purchase_Order, 0, FormatSettings), 0, 'N');
 
       end;
     InsertCustPart := True;

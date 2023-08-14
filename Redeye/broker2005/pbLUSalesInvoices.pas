@@ -804,7 +804,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'VAT') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end

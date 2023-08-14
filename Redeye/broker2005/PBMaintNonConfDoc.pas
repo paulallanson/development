@@ -511,7 +511,7 @@ begin
         end
       else
         begin
-          parambyname('Purchase_order').asfloat := strtofloat(trim(edtPurchaseOrder.text));
+          parambyname('Purchase_order').asfloat := StrToFloatDef(trim(edtPurchaseOrder.text), 0, FormatSettings);
           parambyname('Line').asinteger := 1;
         end;
 
@@ -531,8 +531,8 @@ begin
       else
         parambyname('QA_Operator').asinteger := dblkpQAOperator.KeyValue;
       parambyname('QA_Sign_Off_Date').asdatetime := pbdatestr(edtQASignOff.text);
-      parambyname('Total_Cost').asfloat := strtofloat(memTotalCost.Text);
-      parambyname('Total_Cost_to_Client').asfloat := strtofloat(memCosttoClient.Text);
+      parambyname('Total_Cost').asfloat := StrToFloatDef(memTotalCost.Text, 0, FormatSettings);
+      parambyname('Total_Cost_to_Client').asfloat := StrToFloatDef(memCosttoClient.Text, 0, FormatSettings);
 
       iTempNarr := iNarrative;
       SaveNarrative(iTempNarr,memDetails.text);
@@ -636,7 +636,7 @@ begin
         end
       else
         begin
-          parambyname('Purchase_order').asfloat := strtofloat(trim(edtPurchaseOrder.text));
+          parambyname('Purchase_order').asfloat := StrToFloatDef(trim(edtPurchaseOrder.text), 0, FormatSettings);
           parambyname('Line').asinteger := 1;
         end;
 
@@ -656,8 +656,8 @@ begin
       else
         parambyname('QA_Operator').asinteger := dblkpQAOperator.KeyValue;
       parambyname('QA_Sign_Off_Date').asdatetime := pbdatestr(edtQASignOff.text);
-      parambyname('Total_Cost').asfloat := strtofloat(memTotalCost.Text);
-      parambyname('Total_Cost_to_Client').asfloat := strtofloat(memCosttoClient.Text);
+      parambyname('Total_Cost').asfloat := StrToFloatDef(memTotalCost.Text, 0, FormatSettings);
+      parambyname('Total_Cost_to_Client').asfloat := StrToFloatDef(memCosttoClient.Text, 0, FormatSettings);
 
       iTempNarr := iNarrative;
       SaveNarrative(iTempNarr,memDetails.text);
@@ -672,8 +672,8 @@ begin
       else
         parambyname('QA_Operator').asinteger := dblkpQAOperator.KeyValue;
       parambyname('QA_Sign_Off_Date').asdatetime := pbdatestr(edtQASignOff.text);
-      parambyname('Total_Cost').asfloat := strtofloat(memTotalCost.Text);
-      parambyname('Total_Cost_to_Client').asfloat := strtofloat(memCosttoClient.Text);
+      parambyname('Total_Cost').asfloat := StrToFloatDef(memTotalCost.Text, 0, FormatSettings);
+      parambyname('Total_Cost_to_Client').asfloat := StrToFloatDef(memCosttoClient.Text, 0, FormatSettings);
 
       iTempNarr := iNarrative;
       SaveNarrative(iTempNarr,memDetails.text);

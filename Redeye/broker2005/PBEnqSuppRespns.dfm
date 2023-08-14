@@ -1,7 +1,6 @@
 object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
   Left = 312
   Top = 123
-  AutoScroll = False
   Caption = 'Supplier Response'
   ClientHeight = 427
   ClientWidth = 543
@@ -11,19 +10,17 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object pnlPriceGrid: TPanel
-    ParentBackground = False
     Left = 0
     Top = 274
     Width = 543
     Height = 153
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       543
@@ -77,8 +74,9 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 3
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 3
     end
     object btbtnAddQuantity: TBitBtn
       Left = 40
@@ -86,10 +84,6 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       Width = 23
       Height = 25
       Hint = 'Insert a new quantity.'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 4
-      OnClick = btbtnAddQuantityClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -104,34 +98,38 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         333333333337733333FF3333333C333330003333333733333777333333333333
         3000333333333333377733333333333333333333333333333333}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      OnClick = btbtnAddQuantityClick
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 41
     Width = 543
     Height = 233
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object pnlHeader: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
       Width = 241
       Height = 233
       Align = alLeft
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object pnlHeaderTop: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 241
         Height = 97
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object lblContact: TLabel
           Left = 16
@@ -159,8 +157,8 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
           Top = 36
           Width = 153
           Height = 23
-          Date = 37497.394036342600000000
-          Time = 37497.394036342600000000
+          Date = 37497.000000000000000000
+          Time = 0.394036342600884400
           TabOrder = 0
           OnChange = dtpckrRespDateChange
         end
@@ -186,13 +184,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         end
       end
       object pnlHeaderLeft: TPanel
-        ParentBackground = False
         Left = 0
         Top = 97
         Width = 65
         Height = 136
         Align = alLeft
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
         object lblDelComm2: TLabel
           Left = 6
@@ -210,13 +208,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         end
       end
       object pnlDelComm: TPanel
-        ParentBackground = False
         Left = 65
         Top = 97
         Width = 176
         Height = 136
         Align = alClient
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
         DesignSize = (
           176
@@ -235,13 +233,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       end
     end
     object pnlExChrgs: TPanel
-      ParentBackground = False
       Left = 241
       Top = 0
       Width = 302
       Height = 233
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         302
@@ -264,13 +262,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         TabOrder = 0
       end
       object pnlExChrgBtns: TPanel
-        ParentBackground = False
         Left = 0
         Top = 192
         Width = 302
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
         DesignSize = (
           302
@@ -311,13 +309,13 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
     end
   end
   object pnlSupplier: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 543
     Height = 41
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     object lblSupplierlbl: TLabel
       Left = 8
@@ -331,7 +329,6 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       Top = 8
       Width = 393
       Height = 23
-      ItemHeight = 15
       TabOrder = 0
       Text = 'cmbbxSupplierList'
       OnChange = cmbbxSupplierListChange
@@ -341,8 +338,6 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
       Top = 7
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btnPrevSuppClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -357,14 +352,14 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         33333333337F7F33333333333309033333333333337373333333333333303333
         333333333337F333333333333330333333333333333733333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnPrevSuppClick
     end
     object btbtnNextSupp: TBitBtn
       Left = 504
       Top = 7
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btbtnNextSuppClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -379,6 +374,8 @@ object PBEnqSuppRespnsFrm: TPBEnqSuppRespnsFrm
         33333333337F7F33333333333309033333333333337F7F333333333333090333
         33333333337F7F33333333333300033333333333337773333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btbtnNextSuppClick
     end
   end
 end

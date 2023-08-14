@@ -3,27 +3,27 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
   Top = 153
   BorderStyle = bsDialog
   Caption = 'Transfer Details'
-  ClientHeight = 394
-  ClientWidth = 342
+  ClientHeight = 393
+  ClientWidth = 338
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object PnlActn: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 353
-    Width = 342
+    Top = 352
+    Width = 338
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 353
+    ExplicitWidth = 342
     object OKBitBtn: TBitBtn
       Left = 91
       Top = 8
@@ -31,8 +31,6 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -51,22 +49,25 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 177
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 329
     Height = 169
+    ParentBackground = False
     TabOrder = 0
     object Label5: TLabel
       Left = 9
@@ -176,11 +177,11 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 177
     Width = 329
     Height = 136
+    ParentBackground = False
     TabOrder = 1
     object Label3: TLabel
       Left = 9
@@ -271,20 +272,22 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     end
   end
   object pnlJobNumber: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 315
-    Width = 342
+    Top = 314
+    Width = 338
     Height = 38
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 315
+    ExplicitWidth = 342
     object grpbxJobNumber: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = -2
       Width = 329
       Height = 34
+      ParentBackground = False
       TabOrder = 0
       object Label8: TLabel
         Left = 9
@@ -315,14 +318,10 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckBinCount: TFDQuery
@@ -337,9 +336,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_store'
-        ParamType = ptUnknown
       end>
   end
   object qryJobBag: TFDQuery
@@ -353,9 +350,7 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
 end

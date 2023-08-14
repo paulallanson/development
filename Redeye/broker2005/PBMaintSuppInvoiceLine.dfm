@@ -11,18 +11,16 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 168
     Width = 569
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       569
@@ -47,9 +45,10 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
       Height = 25
       Anchors = [akTop, akRight]
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object BitBtn2: TBitBtn
       Left = 483
@@ -57,22 +56,23 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 569
     Height = 57
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     object lblOrderType: TLabel
       Left = 8
       Top = 8
-      Width = 73
+      Width = 72
       Height = 15
       Caption = 'lblOrderType'
       Font.Charset = ANSI_CHARSET
@@ -111,12 +111,12 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 57
     Width = 569
     Height = 111
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 5
@@ -226,7 +226,6 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = cmbCreditTypeChange
       Items.Strings = (
@@ -256,6 +255,7 @@ object PBMaintSuppInvoiceLinefrm: TPBMaintSuppInvoiceLinefrm
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
       TabOrder = 6
+      Text = ''
       OnChange = edtNominalChange
     end
   end

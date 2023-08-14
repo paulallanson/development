@@ -83,19 +83,19 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormDestroy(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure SupplierPricesGridDrawCell(Sender: TObject; vCol,
-      vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure SupplierPricesGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SupplierPricesGridClick(Sender: TObject);
-    procedure SelectedPricesGridDrawCell(Sender: TObject; vCol,
-      vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure SelectedPricesGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure mnuSelectThis1Click(Sender: TObject);
     procedure SupplierPricesGridMouseDown(Sender: TObject;
       Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure SelectedPricesGridKeyPress(Sender: TObject; var Key: Char);
     procedure SelectedPricesGridKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure SelectedPricesGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
+    procedure SelectedPricesGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
     procedure SaveBitBtnClick(Sender: TObject);
     procedure AddCostsSpeedBtnClick(Sender: TObject);
     procedure SupplierPricesGridTopLeftChanged(Sender: TObject);
@@ -111,18 +111,18 @@ type
     procedure JobUnitcomboDropDown(Sender: TObject);
     procedure JobUnitcomboClick(Sender: TObject);
     procedure mnuSelectAllClick(Sender: TObject);
-    procedure SupplierPricesGridSelectCell(Sender: TObject; vCol,
-      vRow: Longint; var CanSelect: Boolean);
+    procedure SupplierPricesGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
     procedure SelectedPricesGridExit(Sender: TObject);
     procedure PrintBitBtnClick(Sender: TObject);
     procedure SupplierPricesGridDblClick(Sender: TObject);
     procedure ApplysamemarkupClick(Sender: TObject);
     procedure ApplysamePriceUnitClick(Sender: TObject);
     procedure PricesPopUpPopup(Sender: TObject);
-    procedure SupplierROPricesGridDrawCell(Sender: TObject; vCol,
-      vRow: Integer; Rect: TRect; State: TGridDrawState);
-    procedure SelectedROPricesGridDrawCell(Sender: TObject; vCol,
-      vRow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure SupplierROPricesGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
+    procedure SelectedROPricesGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelectedROPricesGridExit(Sender: TObject);
     procedure SelectedROPricesGridKeyPress(Sender: TObject; var Key: Char);
     procedure SelectedROPricesGridKeyUp(Sender: TObject; var Key: Word;
@@ -513,7 +513,7 @@ begin
 
     {        if PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Price_Unit_Factor').asinteger <> 0 then
              QtyGrid.cells[2,icount] := formatfloat('0.000',((PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Response_Quantity').asinteger /
-                        PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Price_Unit_Factor').asinteger) * strtofloat(QtyGrid.cells[2,icount])));
+                        PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Price_Unit_Factor').asinteger) * StrToFloatDef(QtyGrid.cells[2,icount])), 0, FormatSettings);
 
             QtyGrid.cells[3,icount] := PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Price_Unit_Description').asstring;
             QtyGrid.cells[4,icount] := PBEnqSuppDataModFrm.EnqSuppQtySQL.fieldbyname('Price_Unit').asstring;
@@ -843,7 +843,7 @@ begin
               SupplierPricesGrid.Cells[iqtycol, irow] := QtyGrid.Cells[2, icol]
             else
               SupplierPricesGrid.Cells[iqtycol, irow] := formatfloat('0.000',
-                StrToFloat(QtyGrid.Cells[2, icol]));
+                StrToFloatDef(QtyGrid.Cells[2, icol], 0, FormatSettings));
             if SuppGrid.cells[8,irow] = 'Y' then
               SupplierPricesGrid.Cells[iqtycol, irow] := 'DTQ';
            Continue;
@@ -943,13 +943,13 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SupplierPricesGridDrawCell(Sender: TObject;
-  vCol, vRow: Longint; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
   lrow, lcol: Longint;
 begin
-  lRow := vRow;
-  lCol := vCol;
+  lRow := ARow;
+  lCol := ACol;
 
   with Sender as TStringGrid, Canvas do
   //set the background colour of the box and the text style depending
@@ -964,7 +964,7 @@ begin
       font.style := [];
     end
     else
-    if suppgrid.cells[8,lRow] = 'Y' then   
+    if suppgrid.cells[8,lRow] = 'Y' then
     begin
       //Show in red if declined to quote
       brush.color := clred;
@@ -989,9 +989,9 @@ begin
   {If Heading Display Left justified in the cells}
   with SupplierPricesGrid do
   begin
-    if vCol = 0 then
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -1001,7 +1001,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -1076,30 +1076,30 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedPricesGridDrawCell(Sender: TObject;
-  vCol, vRow: Longint; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Longint; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vcol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
-      if (vRow = 1) then
+      if (ARow = 1) then
         Canvas.font.Color := clRed
       else
         Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with SelectedPricesGrid do
   begin
-    if vCol = 0 then
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -1109,7 +1109,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -1193,8 +1193,8 @@ begin
     {Change Run On Markup if being used}
     if (irow = 2) and (SameMarkupForAll) and (SelectedROPricesGrid.Cells[0, 0]<>'') then
       begin
-        SelectedROPricesGrid.Cells[0, 2] := formatfloat('0.000',strtofloat(cells[icol,irow]));
-        CalcROMarkup(2,strtofloat(SelectedROPricesGrid.Cells[0, 2]),0);
+        SelectedROPricesGrid.Cells[0, 2] := formatfloat('0.000',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
+        CalcROMarkup(2,StrToFloatDef(SelectedROPricesGrid.Cells[0, 2], 0, FormatSettings), 0);
         EnquiryLineGrid.Cells[3,iline] := SelectedROPricesGrid.cells[0,0];
         EnquiryLineGrid.Cells[4,iline] := SelectedROPricesGrid.cells[0,1];
       end;
@@ -1203,14 +1203,14 @@ begin
       CalcMarkup(1, 0.000, 0)
     else
       if iRow = 2 then {Changing Markup %}
-        CalcMarkup(2, StrToFloat(Cells[icol, irow]), icol)
+        CalcMarkup(2, StrToFloatDef(Cells[icol, irow], 0, FormatSettings), icol)
       else
         CalcMarkup(3, 0.000, 0); {Changing Markup Value}
   end;
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedPricesGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 var
   irow, icol: integer;
 begin
@@ -1231,7 +1231,7 @@ begin
       for irow := 1 to 3 do
         begin
           if cells[icol, irow] = '' then continue;
-          cells[icol, irow] := formatfloat('0.000',strtofloat(cells[icol,irow]));
+          cells[icol, irow] := formatfloat('0.000',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
         end;
     end;
 end;
@@ -1277,9 +1277,9 @@ begin
       UpEnqQtySQL.ParamByName('Quantity').AsInteger :=
         StrToInt(PriceGrid.Cells[icol, 6]);
       UpEnqQtySQL.ParamByName('Cost').AsFloat :=
-        StrToFloat(PriceGrid.Cells[icol, 0]);
+        StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings);
       UpEnqQtySQL.ParamByName('Price').AsFloat :=
-        StrToFloat(PriceGrid.Cells[icol, 1]);
+        StrToFloatDef(PriceGrid.Cells[icol, 1], 0, FormatSettings);
       UpEnqQtySQL.ParamByName('Supplier').AsInteger :=
         StrToInt(PriceGrid.Cells[icol, 4]);
       UpEnqQtySQL.ParamByName('Branch').AsInteger :=
@@ -1303,7 +1303,7 @@ begin
       UpSuppEnqQtySQL.ParamByName('Quantity').AsInteger :=
         StrToInt(PriceGrid.Cells[icol, 6]);
       UpSuppEnqQtySQL.ParamByName('Price').AsFloat :=
-        StrToFloat(PriceGrid.Cells[icol, 1]);
+        StrToFloatDef(PriceGrid.Cells[icol, 1], 0, FormatSettings);
       UpSuppEnqQtySQL.ParamByName('Supplier').AsInteger :=
         StrToInt(PriceGrid.Cells[icol, 4]);
       UpSuppEnqQtySQL.ParamByName('Branch').AsInteger :=
@@ -1325,8 +1325,8 @@ begin
     if strtoint(EnquiryLineGrid.cells[5,iLine]) >= UpEnqLineSQL.ParamByName('status').AsInteger then
       UpEnqLineSQL.ParamByName('Status').AsInteger := strtoint(EnquiryLineGrid.cells[5,iLine]);
 
-    UpEnqLineSQL.ParamByName('Run_on_Cost').Asfloat := strtofloat(EnquiryLineGrid.cells[3,iLine]);
-    UpEnqLineSQL.ParamByName('Run_on_Price').Asfloat := strtofloat(EnquiryLineGrid.cells[4,iLine]);
+    UpEnqLineSQL.ParamByName('Run_on_Cost').Asfloat := StrToFloatDef(EnquiryLineGrid.cells[3,iLine], 0, FormatSettings);
+    UpEnqLineSQL.ParamByName('Run_on_Price').Asfloat := StrToFloatDef(EnquiryLineGrid.cells[4,iLine], 0, FormatSettings);
 
     UpEnqLineSQL.ExecSQL;
   end;
@@ -1362,7 +1362,7 @@ begin
     if  (PriceGrid.Cells[icol, 0] = '') then
       continue;
 
-    if strtofloat(PriceGrid.Cells[icol, 0]) = 0.000 then
+    if StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings) = 0.000 then
       begin
         PriceGrid.Cells[icol, 2] := '99999.999';
         SelectedPricesGrid.Cells[icol, 2] := '99999.999';
@@ -1382,12 +1382,12 @@ begin
     if iType = 1 then
     begin
       {Calculate Markup}
-      ivalue := StrToFloat(PriceGrid.Cells[icol, 1]) -
-        StrToFloat(PriceGrid.Cells[icol, 0]);
+      ivalue := StrToFloatDef(PriceGrid.Cells[icol, 1], 0, FormatSettings) -
+        StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings);
       SelectedPricesGrid.Cells[icol, 3] := formatfloat('0.000', iValue);
       PriceGrid.Cells[icol, 3] := formatfloat('0.000', iValue);
 
-      if StrToFloat(PriceGrid.Cells[icol, 1]) = 0 then
+      if StrToFloatDef(PriceGrid.Cells[icol, 1], 0, FormatSettings) = 0 then
       begin
         {Calculate Markup %}
         ivalue := -99999.999;
@@ -1397,7 +1397,7 @@ begin
       else
       begin
         {Calculate Markup %}
-        ivalue := ((ivalue / StrToFloat(PriceGrid.Cells[icol, 0])) * 100);
+        ivalue := ((ivalue / StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings)) * 100);
         SelectedPricesGrid.Cells[icol, 2] := formatfloat('0.000', iValue);
         PriceGrid.Cells[icol, 2] := formatfloat('0.000', iValue);
       end;
@@ -1414,15 +1414,15 @@ begin
           end;
 
         {Calculate the Sell Price from the Markup %}
-        ivalue := (StrToFloat(PriceGrid.Cells[icol, 0]) *
-          (1 + StrToFloat(PriceGrid.Cells[iCol, 2]) / 100));
+        ivalue := (StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings) *
+          (1 + StrToFloatDef(PriceGrid.Cells[iCol, 2], 0, FormatSettings) / 100));
 
         SelectedPricesGrid.Cells[icol, 1] := formatfloat('0.000', iValue);
         PriceGrid.Cells[iCol, 1] := formatfloat('0.000', ivalue);
 
         {Calculate the Markup}
-        ivalue := StrToFloat(PriceGrid.Cells[iCol, 1]) -
-          StrToFloat(PriceGrid.Cells[icol, 0]);
+        ivalue := StrToFloatDef(PriceGrid.Cells[iCol, 1], 0, FormatSettings) -
+          StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings);
         SelectedPricesGrid.Cells[icol, 3] := formatfloat('0.000', iValue);
         PriceGrid.Cells[icol, 3] := formatfloat('0.000', ivalue);
       end
@@ -1430,13 +1430,13 @@ begin
         if iType = 3 then
         begin
           {Calculate the total Price}
-          ivalue := StrToFloat(PriceGrid.Cells[icol, 0]) +
-            StrToFloat(PriceGrid.Cells[icol, 3]);
+          ivalue := StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings) +
+            StrToFloatDef(PriceGrid.Cells[icol, 3], 0, FormatSettings);
           SelectedPricesGrid.Cells[icol, 1] := formatfloat('0.000', iValue);
           PriceGrid.Cells[iCol, 1] := formatfloat('0.000', ivalue);
 
           {Calculate the Markup %}
-          if StrToFloat(PriceGrid.Cells[icol, 1]) = 0 then
+          if StrToFloatDef(PriceGrid.Cells[icol, 1], 0, FormatSettings) = 0 then
           begin
             {Calculate Markup %}
             ivalue := -99999.999;
@@ -1445,11 +1445,11 @@ begin
           end
           else
           begin
-            {     					ivalue := ((strtofloat(PriceGrid.Cells[iCol,1]) - strtofloat(PriceGrid.cells[icol,0]))
-                          / strtofloat(PriceGrid.Cells[iCol,1]) * 100);
-                     } ivalue := ((StrToFloat(PriceGrid.Cells[iCol, 1]) -
-              StrToFloat(PriceGrid.Cells[icol, 0]))
-              / StrToFloat(PriceGrid.Cells[iCol, 0]) * 100);
+            {     					ivalue := ((StrToFloatDef(PriceGrid.Cells[iCol,1], 0, FormatSettings) - StrToFloatDef(PriceGrid.cells[icol,0]), 0, FormatSettings)
+                          / StrToFloatDef(PriceGrid.Cells[iCol,1]) * 100, 0, FormatSettings);
+                     } ivalue := ((StrToFloatDef(PriceGrid.Cells[iCol, 1], 0, FormatSettings) -
+                                   StrToFloatDef(PriceGrid.Cells[icol, 0], 0, FormatSettings)) /
+                                   StrToFloatDef(PriceGrid.Cells[iCol, 0], 0, FormatSettings) * 100);
 
             SelectedPricesGrid.Cells[icol, 2] := formatfloat('0.000', iValue);
             PriceGrid.Cells[iCol, 2] := formatfloat('0.000', ivalue);
@@ -1471,15 +1471,15 @@ begin
     if  (Cells[0, 0] = '') then
       exit;
 
-    if (strtofloat(Cells[0, 0]) = 0.000) and
-       (strtofloat(Cells[0, 0]) <> 0.000) then
+    if (StrToFloatDef(Cells[0, 0], 0, FormatSettings) = 0.000) and
+       (StrToFloatDef(Cells[0, 0], 0, FormatSettings) <> 0.000) then
       begin
         Cells[0, 2] := '99999.999';
         Cells[0, 3] := Cells[0, 1];
         exit;
       end;
 
-    if (strtofloat(Cells[0, 0]) = 0.000) then
+    if (StrToFloatDef(Cells[0, 0], 0, FormatSettings) = 0.000) then
       begin
         Cells[0, 2] := '0.000';
         Cells[0, 3] := Cells[0, 1];
@@ -1496,11 +1496,11 @@ begin
     if iType = 1 then
     begin
       {Calculate Markup}
-      ivalue := StrToFloat(Cells[0, 1]) -
-        StrToFloat(Cells[0, 0]);
+      ivalue := StrToFloatDef(Cells[0, 1], 0, FormatSettings) -
+        StrToFloatDef(Cells[0, 0], 0, FormatSettings);
       Cells[0, 3] := formatfloat('0.000', iValue);
 
-      if StrToFloat(Cells[0, 1]) = 0 then
+      if StrToFloatDef(Cells[0, 1], 0, FormatSettings) = 0 then
       begin
         {Calculate Markup %}
         ivalue := -99999.999;
@@ -1509,7 +1509,7 @@ begin
       else
       begin
         {Calculate Markup %}
-        ivalue := ((ivalue / StrToFloat(Cells[0, 0])) * 100);
+        ivalue := ((ivalue / StrToFloatDef(Cells[0, 0], 0, FormatSettings)) * 100);
         Cells[0, 2] := formatfloat('0.000', iValue);
       end;
     end
@@ -1522,26 +1522,26 @@ begin
           end;
 *)
         {Calculate the Sell Price from the Markup %}
-        ivalue := (StrToFloat(Cells[0, 0]) *
-          (1 + StrToFloat(Cells[0, 2]) / 100));
+        ivalue := (StrToFloatDef(Cells[0, 0], 0, FormatSettings) *
+          (1 + StrToFloatDef(Cells[0, 2], 0, FormatSettings) / 100));
 
         Cells[0, 1] := formatfloat('0.000', ivalue);
 
         {Calculate the Markup}
-        ivalue := StrToFloat(Cells[0, 1]) -
-          StrToFloat(Cells[0, 0]);
+        ivalue := StrToFloatDef(Cells[0, 1], 0, FormatSettings) -
+          StrToFloatDef(Cells[0, 0], 0, FormatSettings);
         Cells[0, 3] := formatfloat('0.000', ivalue);
       end
       else {Changing Markup Value}
         if iType = 3 then
         begin
           {Calculate the total Price}
-          ivalue := StrToFloat(Cells[0, 0]) +
-            StrToFloat(Cells[0, 3]);
+          ivalue := StrToFloatDef(Cells[0, 0], 0, FormatSettings) +
+            StrToFloatDef(Cells[0, 3], 0, FormatSettings);
           Cells[0, 1] := formatfloat('0.000', ivalue);
 
           {Calculate the Markup %}
-          if StrToFloat(Cells[0, 1]) = 0 then
+          if StrToFloatDef(Cells[0, 1], 0, FormatSettings) = 0 then
           begin
             {Calculate Markup %}
             ivalue := -99999.999;
@@ -1549,9 +1549,9 @@ begin
           end
           else
           begin
-            ivalue := ((StrToFloat(Cells[0, 1]) -
-              StrToFloat(Cells[0, 0]))
-              / StrToFloat(Cells[0, 0]) * 100);
+            ivalue := ((StrToFloatDef(Cells[0, 1], 0, FormatSettings) -
+                        StrToFloatDef(Cells[0, 0], 0, FormatSettings)) /
+                        StrToFloatDef(Cells[0, 0], 0, FormatSettings) * 100);
 
             Cells[0, 2] := formatfloat('0.000', ivalue);
           end;
@@ -1748,16 +1748,16 @@ begin
   PUnitSQL.First;
   PUnitSQl.moveby(iOldUnitIndex);
 
-  icost := StrToFloat(SelectedPricesGrid.Cells[icol, 0]);
-  isell := StrToFloat(SelectedPricesGrid.Cells[icol, 1]);
+  icost := StrToFloatDef(SelectedPricesGrid.Cells[icol, 0], 0, FormatSettings);
+  isell := StrToFloatDef(SelectedPricesGrid.Cells[icol, 1], 0, FormatSettings);
 
   if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
   begin
-    icost := StrToFloat(SelectedPricesGrid.Cells[icol, 0]) *
-      (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+    icost := StrToFloatDef(SelectedPricesGrid.Cells[icol, 0], 0, FormatSettings) *
+      (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
       PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
-    isell := StrToFloat(SelectedPricesGrid.Cells[icol, 1]) *
-      (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+    isell := StrToFloatDef(SelectedPricesGrid.Cells[icol, 1], 0, FormatSettings) *
+      (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
       PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
   end;
 
@@ -1767,9 +1767,9 @@ begin
 
   if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
   begin
-    icost := icost / (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+    icost := icost / (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
       PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
-    isell := isell / (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+    isell := isell / (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
       PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
   end;
 
@@ -1810,21 +1810,21 @@ begin
     if trim(SelectedPricesGrid.Cells[icol, 0]) = '' then
       continue
     else
-      icost := StrToFloat(SelectedPricesGrid.Cells[icol, 0]);
+      icost := StrToFloatDef(SelectedPricesGrid.Cells[icol, 0], 0, FormatSettings);
 
     if trim(SelectedPricesGrid.Cells[icol, 1]) = '' then
       continue
     else
-      isell := StrToFloat(SelectedPricesGrid.Cells[icol, 1]);
+      isell := StrToFloatDef(SelectedPricesGrid.Cells[icol, 1], 0, FormatSettings);
 
     if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
     begin
-      icost := StrToFloat(SelectedPricesGrid.Cells[icol, 0]) *
-        (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+      icost := StrToFloatDef(SelectedPricesGrid.Cells[icol, 0], 0, FormatSettings) *
+        (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
         PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
 
-      isell := StrToFloat(SelectedPricesGrid.Cells[icol, 1]) *
-        (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+      isell := StrToFloatDef(SelectedPricesGrid.Cells[icol, 1], 0, FormatSettings) *
+        (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
         PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
     end;
 
@@ -1834,9 +1834,9 @@ begin
 
     if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
     begin
-      icost := icost / (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+      icost := icost / (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
         PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
-      isell := isell / (StrToFloat(SupplierPricesGrid.Cells[icol, 0]) /
+      isell := isell / (StrToFloatDef(SupplierPricesGrid.Cells[icol, 0], 0, FormatSettings) /
         PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
     end;
 
@@ -1948,21 +1948,21 @@ begin
             if (SupplierPricesGrid.Cells[iqtycol, irow] = '') or
                (SupplierPricesGrid.Cells[iqtycol, irow] = 'DTQ') then Break;
 
-            icost := StrToFloat(SupplierPricesGrid.Cells[iqtycol, irow]);
+            icost := StrToFloatDef(SupplierPricesGrid.Cells[iqtycol, irow], 0, FormatSettings);
 
             {Determine the Total based on the original Price Unit}
             PunitSQl.First;
             PUnitSQl.moveby(JobUnitArray[iline]);
             if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
-              icost := StrToFloat(QtyGrid.Cells[2, icol]) *
-                (StrToFloat(SupplierPricesGrid.Cells[iqtycol, 0]) /
+              icost := StrToFloatDef(QtyGrid.Cells[2, icol], 0, FormatSettings) *
+                (StrToFloatDef(SupplierPricesGrid.Cells[iqtycol, 0], 0, FormatSettings) /
                 PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
 
             {Determine the Total based on the new Price Unit}
             PunitSQl.First;
             PUnitSQl.moveby(JobUnitCombo.Itemindex);
             if PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger <> 0 then
-              icost := icost / (StrToFloat(SupplierPricesGrid.Cells[iqtycol, 0])
+              icost := icost / (StrToFloatDef(SupplierPricesGrid.Cells[iqtycol, 0], 0, FormatSettings)
                 / PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
 
             QtyGrid.Cells[2, icol] := formatfloat('0.000000', icost);
@@ -1972,10 +1972,9 @@ begin
               PUnitSQL.FieldByName('Price_Unit').AsString;
             QtyGrid.Cells[5, icol] :=
               IntToStr(PUnitSQL.FieldByName('Price_Unit_Factor').AsInteger);
-            if StrToFloat(formatfloat('0.000', icost)) < CheapestArray[iline,
+            if StrToFloatDef(formatfloat('0.000', icost), 0, FormatSettings) < CheapestArray[iline,
               iqtycol] then
-              CheapestArray[iline, iqtycol] := StrToFloat(formatfloat('0.000',
-                icost));
+              CheapestArray[iline, iqtycol] := StrToFloatDef(formatfloat('0.000',icost), 0, FormatSettings);
 
             SupplierPricesGrid.Cells[iqtycol, irow] := formatfloat('0.000',
               icost);
@@ -2021,10 +2020,9 @@ begin
           if QtyGrid.Cells[0, icol] = SupplierPricesGrid.Cells[iqtycol, 0] then
           begin
             if QtyGrid.Cells[2, icol] <> '' then
-              if StrToFloat(QtyGrid.Cells[2, icol]) < CheapestArray[iline,
+              if StrToFloatDef(QtyGrid.Cells[2, icol], 0, FormatSettings) < CheapestArray[iline,
                 iqtycol] then
-                CheapestArray[iline, iqtycol] := StrToFloat(QtyGrid.Cells[2,
-                  icol]);
+                CheapestArray[iline, iqtycol] := StrToFloatDef(QtyGrid.Cells[2,icol], 0, FormatSettings);
             Continue;
           end;
         end;
@@ -2117,7 +2115,7 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SupplierPricesGridSelectCell(Sender: TObject;
-  vCol, vRow: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   with SupplierPricesGrid do
   begin
@@ -2126,7 +2124,7 @@ begin
     else
       MnuSelectThis1.Enabled := True;
 
-    Hint := 'Supplier: '+SupplierPricesGrid.cells[0,vRow] + ', Phone Number: '+GetSupplierPhone(strtoint(SuppGrid.Cells[1,vRow]),strtoint(SuppGrid.Cells[2,vRow]));
+    Hint := 'Supplier: '+SupplierPricesGrid.cells[0,ARow] + ', Phone Number: '+GetSupplierPhone(strtoint(SuppGrid.Cells[1,ARow]),strtoint(SuppGrid.Cells[2,ARow]));
   end;
 end;
 
@@ -2141,7 +2139,7 @@ begin
       for irow := 1 to 3 do
         begin
           if cells[icol, irow] = '' then continue;
-          cells[icol, irow] := formatfloat('0.000',strtofloat(cells[icol,irow]));
+          cells[icol, irow] := formatfloat('0.000',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           PriceGrid.Cells[icol, irow] := cells[icol, irow];
         end;
     end;
@@ -2354,26 +2352,26 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SupplierROPricesGridDrawCell(Sender: TObject;
-  vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) then
+    if (ARow <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with SupplierROPricesGrid do
   begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -2383,22 +2381,22 @@ begin
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedROPricesGridDrawCell(Sender: TObject;
-  vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) then
+    if (ARow <> 0) then
     begin
       Canvas.Brush.Color := Color;
-      if (vRow = 1) then
+      if (ARow = 1) then
         Canvas.font.Color := clRed
       else
         Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
 
@@ -2406,7 +2404,7 @@ begin
   with SelectedROPricesGrid do
   begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -2427,7 +2425,7 @@ begin
       for irow := 1 to 3 do
         begin
           if cells[icol, irow] = '' then continue;
-          cells[icol, irow] := formatfloat('0.000',strtofloat(cells[icol,irow]));
+          cells[icol, irow] := formatfloat('0.000',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
         end;
     end;
 
@@ -2478,7 +2476,7 @@ begin
       CalcROMarkup(1, 0.000, 0)
     else
       if iRow = 2 then {Changing Markup %}
-        CalcROMarkup(2, StrToFloat(Cells[icol, irow]), icol)
+        CalcROMarkup(2, StrToFloatDef(Cells[icol, irow], 0, FormatSettings), icol)
       else
         CalcROMarkup(3, 0.000, 0); {Changing Markup Value}
     EnquiryLineGrid.Cells[3,iline] := cells[0,0];
@@ -2508,7 +2506,7 @@ begin
       for irow := 1 to 3 do
         begin
           if cells[icol, irow] = '' then continue;
-          cells[icol, irow] := formatfloat('0.000',strtofloat(cells[icol,irow]));
+          cells[icol, irow] := formatfloat('0.000',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
         end;
     end;
 end;

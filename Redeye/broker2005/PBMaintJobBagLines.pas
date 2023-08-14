@@ -295,9 +295,9 @@ begin
   JobBagLine.Process := 0;
   JobBagLine.JBLineDescr := Trim(edtDescription.Text);
   JobBagLine.JBQuantity := strtoint(memQuantity.text);
-  JobBagLine.CostPrice := strtofloat(memCostPrice.text);
-  JobBagLine.SellPrice := strtofloat(memSellPrice.text);
-  JobBagLine.ReSellerPrice := strtofloat(memResellerPrice.text);
+  JobBagLine.CostPrice := StrToFloatDef(memCostPrice.text, 0, FormatSettings);
+  JobBagLine.SellPrice := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
+  JobBagLine.ReSellerPrice := StrToFloatDef(memResellerPrice.text, 0, FormatSettings);
   JobBagLine.PriceUnit := dblkpPriceUnit.KeyValue;
 //  JobBagLine.JBLineCost := 0.00;
   JobBagLine.JBLineCost := CalculateSellPrice(JobBagLine.JBQuantity, JobBagLine.PriceUnit, JobBagLine.CostPrice);
@@ -305,7 +305,7 @@ begin
   JobBagLine.JBLineReseller := CalculateSellPrice(JobBagLine.JBQuantity, JobBagLine.PriceUnit, JobBagLine.ResellerPrice);
   JobBagLine.JBLineType := 'A';
 
-  JobBagLine.InternalCostMarkupPercentage := strtofloat(memMarkupPerc.text);
+  JobBagLine.InternalCostMarkupPercentage := StrToFloatDef(memMarkupPerc.text, 0, FormatSettings);
   JobBagLine.JBLineInactive := chkbxInactive.checked;
 
   if (Mode <> jblRestrict) and (Mode <> jblView) then

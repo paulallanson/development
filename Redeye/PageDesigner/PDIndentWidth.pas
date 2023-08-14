@@ -87,11 +87,11 @@ begin
   if Trim(edtIndent.Text) = '' then
     rIndent := 0
   else
-    rIndent := StrToFloat(edtIndent.Text);
+    rIndent := StrToFloatDef(edtIndent.Text, 0, FormatSettings);
   if Trim(edtWidth.Text) = '' then
     rWidth := 0
   else
-    rWidth := StrToFloat(edtWidth.Text);
+    rWidth := StrToFloatDef(edtWidth.Text, 0, FormatSettings);
   if cbUnits.ItemIndex = 0 then   { inches }
   begin
     iIndent := Trunc(rIndent * Screen.PixelsPerInch);
@@ -135,12 +135,12 @@ var
   dIndent, dWidth : double;
 begin
   try
-    dIndent := StrToFloat(edtIndent.Text);
+    dIndent := StrToFloatDef(edtIndent.Text, 0, FormatSettings);
   except
     dIndent := 0;
   end;
   try
-    dWidth := StrToFloat(edtWidth.Text);
+    dWidth := StrToFloatDef(edtWidth.Text, 0, FormatSettings);
   except
     dWidth := 0;
   end;

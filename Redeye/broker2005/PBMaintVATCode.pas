@@ -199,7 +199,7 @@ begin
     begin
       Close;
       ParamByName('VAT_Code').AsInteger := iTempNewCode;
-      ParamByName('VAT_Rate').AsFloat := StrToFloat(VATRateMemo.Text);
+      ParamByName('VAT_Rate').AsFloat := StrToFloatDef(VATRateMemo.Text, 0, FormatSettings);
       ParamByName('Description').AsString := DescrEdit.Text + '';
       ParamByName('VAT_Ref').AsString := RefEdit.Text;
       ParamByName('Sales_Ledger_Description').AsString := edtSalesLedgerDescr.Text + '';
@@ -217,7 +217,7 @@ begin
     begin
       Close;
       ParamByName('VAT_Code').AsInteger := iCode;
-      ParamByName('VAT_Rate').AsFloat := StrToFloat(VATRateMemo.Text);
+      ParamByName('VAT_Rate').AsFloat := StrToFloatDef(VATRateMemo.Text, 0, FormatSettings);
       ParamByName('Description').AsString := DescrEdit.Text + '';
       ParamByName('VAT_Ref').AsString := RefEdit.Text;
       ParamByName('Sales_Ledger_Description').AsString := edtSalesLedgerDescr.Text + '';
@@ -320,8 +320,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat('######0.00', StrToFloat(TempQty));
-      if StrToFloat(Result) < 0 then
+      Result := FormatFloat('######0.00', StrToFloatDef(TempQty, 0, FormatSettings));
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

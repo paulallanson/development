@@ -242,10 +242,10 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := FormatFloat('######0.00', StrToFloat(Money))
+        Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
-      if StrToFloat(Result) < 0 then
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

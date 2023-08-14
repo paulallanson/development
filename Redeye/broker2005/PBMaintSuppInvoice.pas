@@ -873,7 +873,7 @@ begin
   if FActivated then
     begin
       try
-        SupplierInvoice.GoodsValue := strtofloat(memGoods.text);
+        SupplierInvoice.GoodsValue := StrToFloatDef(memGoods.text, 0, FormatSettings);
       except
         SupplierInvoice.GoodsValue := 0.00;
       end;
@@ -935,7 +935,7 @@ begin
   if FActivated then
     begin
       try
-        SupplierInvoice.VATValue := strtofloat(memVAT.text);
+        SupplierInvoice.VATValue := StrToFloatDef(memVAT.text, 0, FormatSettings);
       except
         SupplierInvoice.VATValue := 0.00
       end;

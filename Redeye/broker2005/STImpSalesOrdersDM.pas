@@ -837,10 +837,10 @@ begin
     else
       begin
         Product := trim(stringreplace(LineData[2],'"','',[rfReplaceAll]));
-        NetPrice := strtofloat(trim(stringreplace(LineData[3],'"','',[rfReplaceAll])));
-        OrderQty := strtoint(trim(stringreplace(LineData[4],'"','',[rfReplaceAll])));
+        NetPrice := StrToFloatDef(trim(stringreplace(LineData[3],'"','',[rfReplaceAll])), 0, FormatSettings);
+        OrderQty := StrToIntDef(trim(stringreplace(LineData[4],'"','',[rfReplaceAll])), 0);
         CostCentre := trim(stringreplace(LineData[5],'"','',[rfReplaceAll]));
-        LineNumber := strtoint(trim(stringreplace(LineData[1],'"','',[rfReplaceAll])));
+        LineNumber := StrToIntDef(trim(stringreplace(LineData[1],'"','',[rfReplaceAll])), 0);
       end;
     Result := True;
     LineData := nil;

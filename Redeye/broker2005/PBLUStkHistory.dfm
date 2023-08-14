@@ -1,9 +1,9 @@
 object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
   Left = 259
   Top = 145
-  Width = 751
-  Height = 464
   Caption = 'Stock Movements'
+  ClientHeight = 425
+  ClientWidth = 735
   Color = clBtnFace
   Constraints.MinHeight = 460
   Constraints.MinWidth = 750
@@ -12,21 +12,21 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 89
-    Width = 743
-    Height = 300
+    Width = 735
+    Height = 295
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
+    ExplicitWidth = 743
+    ExplicitHeight = 300
     object detsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -178,7 +178,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 743
+    Width = 735
     Height = 89
     Align = alTop
     Anchors = [akTop, akRight]
@@ -189,8 +189,9 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 743
     DesignSize = (
-      743
+      735
       89)
     object Label1: TLabel
       Left = 8
@@ -207,20 +208,22 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Caption = 'Description'
     end
     object Label3: TLabel
-      Left = 536
+      Left = 528
       Top = 44
       Width = 67
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Reorder Level'
+      ExplicitLeft = 536
     end
     object Label4: TLabel
-      Left = 536
+      Left = 528
       Top = 19
       Width = 67
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Total In Stock'
+      ExplicitLeft = 536
     end
     object Label5: TLabel
       Left = 8
@@ -257,7 +260,7 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       TabOrder = 2
     end
     object memoReorder: TMemo
-      Left = 624
+      Left = 616
       Top = 36
       Width = 97
       Height = 23
@@ -266,9 +269,10 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       ReadOnly = True
       TabOrder = 3
       WantReturns = False
+      ExplicitLeft = 624
     end
     object memoStock: TMemo
-      Left = 624
+      Left = 616
       Top = 11
       Width = 97
       Height = 23
@@ -277,12 +281,13 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       ReadOnly = True
       TabOrder = 4
       WantReturns = False
+      ExplicitLeft = 624
     end
   end
   object Panel3: TPanel
     Left = 0
-    Top = 389
-    Width = 743
+    Top = 384
+    Width = 735
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -293,11 +298,13 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 389
+    ExplicitWidth = 743
     DesignSize = (
-      743
+      735
       41)
     object CancelBitBtn: TBitBtn
-      Left = 640
+      Left = 632
       Top = 9
       Width = 75
       Height = 25
@@ -307,9 +314,11 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkClose
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkClose
+      ExplicitLeft = 640
     end
     object RepeatBitBtn: TBitBtn
       Left = 16
@@ -318,9 +327,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Repeat'
-      TabOrder = 1
-      Visible = False
-      OnClick = RepeatBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -335,6 +341,9 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
         99337F3FF7F3733777F30F08F0F0337999337F7737F73F7777330FFFF0039999
         93337FFFF7737777733300000033333333337777773333333333}
       NumGlyphs = 2
+      TabOrder = 1
+      Visible = False
+      OnClick = RepeatBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 104
@@ -343,9 +352,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Change'
-      TabOrder = 2
-      Visible = False
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -360,6 +366,9 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 2
+      Visible = False
+      OnClick = ChgBitBtnClick
     end
     object DeliveryBitBtn: TBitBtn
       Left = 192
@@ -368,9 +377,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Delivery'
-      TabOrder = 3
-      Visible = False
-      OnClick = DeliveryBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -385,6 +391,9 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
         33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
         3333777777333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      Visible = False
+      OnClick = DeliveryBitBtnClick
     end
   end
   object pMnuStock: TPopupMenu

@@ -438,17 +438,17 @@ begin
       ParamByName('Part').AsString := edtProductCode.Text;
       ParamByName('Part_Description').AsString := edtDescription.Text;
       ParamByName('Part_Cost_List').AsFloat := 0.00 ;
-      ParamByName('Part_Cost_Cat').AsFloat := StrToFloat(memCatPrice.Text);
+      ParamByName('Part_Cost_Cat').AsFloat := StrToFloatDef(memCatPrice.Text, 0, FormatSettings);
       ParamByName('VAT').AsInteger := dblkpVAT.KeyValue;
       if dblkpPartGroup.text = '' then
         ParamByName('Part_Group').Clear
       else
         ParamByName('Part_Group').AsInteger := dblkpPartGroup.KeyValue ;
-      ParamByName('Part_Purchase_Price').AsFloat := StrToFloat(memPurchPrice.Text) ;
-      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloat('0.00') ;
-      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloat(memCatMarkup.Text) ;
-      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloat(memPurchPackQty.Text) ;
-      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloat(memSellPackQty.Text) ;
+      ParamByName('Part_Purchase_Price').AsFloat := StrToFloatDef(memPurchPrice.Text, 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloatDef(memCatMarkup.Text, 0, FormatSettings) ;
+      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloatDef(memPurchPackQty.Text, 0, FormatSettings) ;
+      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloatDef(memSellPackQty.Text, 0, FormatSettings) ;
       ParamByName('Track_Serial_No').AsString := 'N';
 
       if ChkBxHasBOM.Checked then
@@ -533,7 +533,7 @@ begin
       if (rdGrpClass.ItemIndex = 1) and (dblkpCostUplift.text <> '') then
       begin
         ParamByName('MarkUp_Type').AsString := dblkpCostUplift.Keyvalue;
-        ParamByName('MarkUp_Val').ASFloat := StrToFloat(memCostUplift.Text);
+        ParamByName('MarkUp_Val').ASFloat := StrToFloatDef(memCostUplift.Text, 0, FormatSettings);
       end;
 
       Parambyname('Product_ID').asinteger := dmBroker.GetNextProductID;
@@ -580,18 +580,18 @@ begin
       Close;
       ParamByName('Part').AsString := edtProductCode.Text;
       ParamByName('Part_Description').AsString := edtDescription.Text;
-      ParamByName('Part_Cost_List').AsFloat := StrToFloat('0.00');
-      ParamByName('Part_Cost_Cat').AsFloat := StrToFloat(memCatPrice.Text);
+      ParamByName('Part_Cost_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings);
+      ParamByName('Part_Cost_Cat').AsFloat := StrToFloatDef(memCatPrice.Text, 0, FormatSettings);
       ParamByName('VAT').AsInteger := dblkpVat.KeyValue;
       if dblkpPartGroup.text = '' then
         ParamByName('Part_Group').Clear
       else
         ParamByName('Part_Group').AsInteger := dblkpPartGroup.KeyValue ;
-      ParamByName('Part_Purchase_Price').AsFloat := StrToFloat(memPurchPrice.Text) ;
-      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloat('0.00') ;
-      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloat(memCatMarkup.Text) ;
-      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloat(memPurchPackQty.Text) ;
-      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloat(memSellPackQty.Text) ;
+      ParamByName('Part_Purchase_Price').AsFloat := StrToFloatDef(memPurchPrice.Text, 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloatDef(memCatMarkup.Text, 0, FormatSettings) ;
+      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloatDef(memPurchPackQty.Text, 0, FormatSettings) ;
+      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloatDef(memSellPackQty.Text, 0, FormatSettings) ;
       ParamByName('Track_Serial_No').AsString := 'N';
       if ChkBxNumbered.Checked then
         ParamByName('Numbered').AsString := 'Y'
@@ -678,7 +678,7 @@ begin
       if (rdgrpClass.ItemIndex = 1) and (dblkpCostUplift.KeyValue <> 0) then
       begin
         ParamByName('MarkUp_Type').AsString := dblkpCostUplift.Keyvalue;
-        ParamByName('MarkUp_Val').ASFloat := StrToFloat(memCostUplift.Text);
+        ParamByName('MarkUp_Val').ASFloat := StrToFloatDef(memCostUplift.Text, 0, FormatSettings);
       end;
       ExecSQL;
     end;
@@ -810,8 +810,8 @@ begin
   iSellPack := strtoint(trim(memSellPackQty.text));
   iPurchPack := strtoint(trim(memPurchPackQty.text));
 
-  rSellPrice := strtofloat(memCatPrice.text);
-  rPurchPrice := strtofloat(memPurchPrice.text);
+  rSellPrice := StrToFloatDef(memCatPrice.text, 0, FormatSettings);
+  rPurchPrice := StrToFloatDef(memPurchPrice.text, 0, FormatSettings);
 
   if rSellPrice = 0 then
     memCatMarkup.Text := '0.00'
@@ -843,8 +843,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat(TempFormat, StrToFloat(TempQty));
-      if (StrToFloat(Result) < 0) and (TempNeg = False) then
+      Result := FormatFloat(TempFormat, StrToFloatDef(TempQty, 0, FormatSettings));
+      if (StrToFloatDef(Result, 0, FormatSettings) < 0) and (TempNeg = False) then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

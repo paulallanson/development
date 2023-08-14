@@ -1,10 +1,9 @@
-﻿object PBEnqSupRespFrm: TPBEnqSupRespFrm
+object PBEnqSupRespFrm: TPBEnqSupRespFrm
   Left = 58
   Top = 126
-  AutoScroll = False
   Caption = 'Update Supplier Responses'
-  ClientHeight = 506
-  ClientWidth = 754
+  ClientHeight = 505
+  ClientWidth = 750
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -12,7 +11,6 @@
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -20,7 +18,6 @@
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Bevel3: TBevel
     Left = 384
@@ -187,8 +184,6 @@
     Width = 75
     Height = 25
     Caption = 'Save'
-    TabOrder = 11
-    OnClick = SaveBitBtnClick
     Glyph.Data = {
       BE060000424DBE06000000000000360400002800000024000000120000000100
       0800000000008802000000000000000000000001000000000000000000000000
@@ -246,6 +241,8 @@
       0303030303030303030303030303030303030303030303030303030303030303
       0303}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = SaveBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 664
@@ -253,8 +250,6 @@
     Width = 75
     Height = 25
     Caption = 'Cancel'
-    TabOrder = 13
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       BE060000424DBE06000000000000360400002800000024000000120000000100
       0800000000008802000000000000000000000001000000000000000000000000
@@ -312,16 +307,19 @@
       0303030303030303030303030303030303030303030303030303030303030303
       0303}
     NumGlyphs = 2
+    TabOrder = 13
+    OnClick = CancelBitBtnClick
   end
   object BitBtn3: TBitBtn
     Left = 376
     Top = 456
     Width = 75
     Height = 25
+    Kind = bkClose
+    NumGlyphs = 2
     TabOrder = 9
     Visible = False
     OnClick = BitBtn3Click
-    Kind = bkClose
   end
   object PUnitCombo: TComboBox
     Left = 504
@@ -329,7 +327,6 @@
     Width = 129
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 12
     Visible = False
     OnClick = PUnitComboClick
@@ -373,12 +370,12 @@
       282)
   end
   object SelectedSuppliersGroup: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 130
     Width = 369
     Height = 319
     Enabled = False
+    ParentBackground = False
     TabOrder = 5
     object Label6: TLabel
       Left = 8
@@ -449,7 +446,6 @@
       Width = 313
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnChange = SupplierComboChange
     end
@@ -548,9 +544,6 @@
     Font.Height = -11
     Font.Name = 'Arial'
     Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 7
-    OnClick = SpeedButton2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -565,6 +558,9 @@
       333333377F33333333FF3333C333333330003333733333333777333333333333
       3000333333333333377733333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 7
+    OnClick = SpeedButton2Click
   end
   object AddChargesGrid: TStringGrid
     Left = 140
@@ -637,49 +633,35 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Comment'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Reference'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftFloat
         Name = 'Run_on_Price'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Decline_to_Quote'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqSuppQtySQL: TFDQuery
@@ -698,44 +680,32 @@
     Top = 240
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'Price'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftString
         Name = 'Unit'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Response'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object EnqHeadSQL: TFDQuery
@@ -748,9 +718,8 @@
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object AddEnqSuppQtySQL: TFDQuery
@@ -779,44 +748,28 @@
     Top = 238
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Response'
-        ParamType = ptUnknown
       end>
   end
   object AddEnqQtySQL: TFDQuery
@@ -834,19 +787,16 @@
     Top = 244
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Quantity'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpEnqLineSQL: TFDQuery
@@ -860,19 +810,13 @@
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpEnqHeadSQL: TFDQuery
@@ -885,14 +829,10 @@
     Top = 330
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object DelEnqSuppQtySQL: TFDQuery
@@ -908,29 +848,19 @@
     Top = 242
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
 end

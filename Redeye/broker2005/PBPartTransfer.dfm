@@ -1,9 +1,9 @@
 object PBPartTransferFrm: TPBPartTransferFrm
   Left = 118
   Top = 44
-  Width = 805
-  Height = 536
   Caption = 'Product Transfers'
+  ClientHeight = 497
+  ClientWidth = 789
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 782
@@ -12,13 +12,11 @@ object PBPartTransferFrm: TPBPartTransferFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object ToDataTreeView: TTreeView
     Left = 416
@@ -31,8 +29,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 483
-    Width = 797
+    Top = 478
+    Width = 789
     Height = 19
     Panels = <
       item
@@ -41,16 +39,20 @@ object PBPartTransferFrm: TPBPartTransferFrm
       item
         Width = 50
       end>
+    ExplicitTop = 483
+    ExplicitWidth = 797
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 442
-    Width = 797
+    Top = 437
+    Width = 789
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 442
+    ExplicitWidth = 797
     DesignSize = (
-      797
+      789
       41)
     object ToPart2Label: TLabel
       Left = 8
@@ -75,8 +77,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Anchors = [akRight, akBottom]
       Caption = '&OK'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -95,6 +95,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 631
@@ -104,8 +106,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Anchors = [akRight, akBottom]
       Cancel = True
       Caption = 'Ca&ncel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -124,6 +124,8 @@ object PBPartTransferFrm: TPBPartTransferFrm
         3333333333333333333888330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
     object CloseBitBtn: TBitBtn
       Left = 711
@@ -131,20 +133,22 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
-      Kind = bkClose
     end
   end
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 797
+    Width = 789
     Height = 141
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 797
     DesignSize = (
-      797
+      789
       141)
     object QtyLabel: TLabel
       Left = 11
@@ -390,9 +394,6 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 5
-      OnClick = DateBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -407,6 +408,9 @@ object PBPartTransferFrm: TPBPartTransferFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 5
+      OnClick = DateBitBtnClick
     end
     object edtReference: TEdit
       Left = 632
@@ -431,23 +435,27 @@ object PBPartTransferFrm: TPBPartTransferFrm
   object pnlcentre: TPanel
     Left = 0
     Top = 141
-    Width = 797
-    Height = 301
+    Width = 789
+    Height = 296
     Align = alClient
     Caption = 'pnlcentre'
     TabOrder = 4
+    ExplicitWidth = 797
+    ExplicitHeight = 301
     object pnlCentreRight: TPanel
       Left = 401
       Top = 1
-      Width = 395
-      Height = 299
+      Width = 387
+      Height = 294
       Align = alClient
       BevelOuter = bvNone
       Caption = 'pnlCentreRight'
       TabOrder = 0
+      ExplicitWidth = 395
+      ExplicitHeight = 299
       DesignSize = (
-        395
-        299)
+        387
+        294)
       object ToGroupBox: TGroupBox
         Left = 9
         Top = 9
@@ -509,14 +517,15 @@ object PBPartTransferFrm: TPBPartTransferFrm
       Left = 1
       Top = 1
       Width = 400
-      Height = 299
+      Height = 294
       Align = alLeft
       BevelOuter = bvNone
       Caption = 'pnlCentreLeft'
       TabOrder = 1
+      ExplicitHeight = 299
       DesignSize = (
         400
-        299)
+        294)
       object FromGroupBox: TGroupBox
         Left = 9
         Top = 9
@@ -630,86 +639,86 @@ object PBPartTransferFrm: TPBPartTransferFrm
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      FF000000FF000000FF000000FF000000FF000000FF000000FF00000000000000
-      0000000000000000000000000000000000000000000000000000848484000000
-      0000000000000000000000000000000000000000000000000000848484008484
-      840000000000FFFFFF0000000000000000000000000000000000000000000000
-      0000FFFFFF008484840084848400848484008484840084848400848484000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000000000000FF000000
-      FF000000FF000000FF000000FF000000FF000000FF000000FF00000000000000
-      8400000000000000000000000000000000000000000084848400FFFFFF000000
-      000000000000000000000000000000000000000000000000000084848400FFFF
-      FF008484840000000000FFFFFF0000000000000000000000000000000000FFFF
-      FF00FFFFFF0000000000C6C6C60000000000C6C6C60000000000848484008484
-      840000000000000000000000000000000000000000000000000084848400FFFF
-      FF000000000084848400FFFFFF0084848400FFFFFF0084848400FFFFFF000000
-      000084848400FFFFFF0000000000000000000000000000000000000084000000
-      8400000084000000840000008400000084000000840000008400000000000000
-      8400000084000000000000000000000000008484840084848400FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0084848400FFFF
-      FF00FFFFFF008484840000000000FFFFFF00000000000000000000000000FFFF
-      FF00FFFFFF0000000000C6C6C600000000008484840000000000848484008484
-      8400000000000000000000000000000000000000000000000000848484000000
-      000000000000848484000000000084848400FFFFFF008484840000000000FFFF
-      FF008484840000000000FFFFFF00000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      0000000084000000840000000000000000008484840084848400848484008484
-      8400848484008484840084848400848484008484840084848400848484008484
-      840000000000FFFFFF0084848400000000000000000000000000FFFFFF00FFFF
-      FF008484840084848400C6C6C60000000000C6C6C60084848400000000008484
-      8400848484000000000000000000000000000000000084848400FFFFFF000000
-      000084848400FFFFFF000000000084848400FFFFFF000000000084848400FFFF
-      FF000000000084848400FFFFFF00000000000000000000000000848484000000
-      0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFF
-      FF00000000000000840000008400000000000000000084848400848484008484
-      8400FFFFFF00000000000000000000000000000000000000000084848400FFFF
-      FF0084848400FFFFFF00FFFFFF00848484000000000000000000FFFFFF00FFFF
-      FF0000000000C6C6C600C6C6C6000000000084848400C6C6C600000000008484
-      8400848484000000000000000000000000000000000084848400FFFFFF000000
-      000084848400FFFFFF000000000084848400FFFFFF000000000084848400FFFF
-      FF000000000084848400FFFFFF00848484000000000000000000000000000000
-      0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFF
-      FF00000000000000000000008400000000000000000000000000848484008484
-      8400FFFFFF00000000000000000000000000FFFFFF00FFFFFF0084848400FFFF
-      FF00848484008484840000000000848484000000000000000000FFFFFF00FFFF
-      FF0000000000C6C6C600C6C6C60000000000C6C6C60084848400000000008484
-      8400848484000000000000000000000000008484840084848400FFFFFF000000
-      000084848400000000000000000084848400FFFFFF000000000084848400FFFF
-      FF00000000008484840084848400000000000000000000000000000000000000
-      0000FFFFFF00FFFFFF008484840000000000000000000000000000000000FFFF
-      FF0000000000FFFFFF0000000000000000000000000000000000000000008484
-      840000000000FFFFFF00FFFFFF00848484008484840084848400848484000000
-      000084848400FFFFFF0084848400848484000000000000000000FFFFFF00FFFF
-      FF008484840084848400C6C6C6000000000084848400C6C6C600000000008484
-      840084848400000000000000000000000000000000008484840000000000FFFF
-      FF008484840000000000FFFFFF0084848400FFFFFF0000000000848484000000
-      0000000000008484840000000000000000000000000000000000000000000000
-      0000000000000000000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF0000000000FFFFFF0000000000000000000000000000000000000000000000
-      0000848484008484840084848400000000000000000000000000FFFFFF00FFFF
-      FF0084848400FFFFFF008484840084848400000000000000000000000000FFFF
-      FF00FFFFFF0000000000C6C6C60000000000C6C6C60000000000848484008484
-      840000000000000000000000000000000000000000000000000084848400FFFF
-      FF000000000084848400FFFFFF0084848400FFFFFF0084848400FFFFFF000000
-      000084848400FFFFFF0000000000000000000000000000000000000000000000
-      00000000000000000000FFFFFF00FFFFFF008484840000000000000000000000
-      000000000000FFFFFF0000000000000000000000000000000000000000000000
-      0000000000008484840000000000FFFFFF00FFFFFF0084848400848484008484
-      8400848484000000000084848400FFFFFF00000000000000000000000000FFFF
-      FF00FFFFFF0000000000C6C6C600000000008484840000000000848484008484
-      840000000000000000000000000000000000000000000000000084848400FFFF
-      FF00FFFFFF0084848400FFFFFF0084848400FFFFFF0084848400FFFFFF00FFFF
-      FF0084848400FFFFFF0000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
-      0000000000000000000084848400848484008484840000000000000000000000
-      0000FFFFFF00FFFFFF0084848400FFFFFF000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000848484008484
-      8400848484008484840084848400848484008484840084848400848484008484
-      840084848400FFFFFF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008484
       8400848484008484840084848400848484008484840084848400848484008484
@@ -967,11 +976,11 @@ object PBPartTransferFrm: TPBPartTransferFrm
       8400848484008484840084848400848484008484840084848400848484008484
       840084848400000000000000000000000000424D3E000000000000003E000000
       2800000040000000300000000100010000000000800100000000000000000000
-      000000000000000000000000FFFFFF0000000040000000400000004000000040
-      0000004000000040000000400000004000000040000000400000004000000040
-      0000004000000040000000400000004000000040000000400000004000000040
-      000000400000004000000040000000400040000000000000000000007E200000
-      01012000DF4960000000180018000400E00FE007FFFFF00FE00FED4BE01FE007
+      000000000000000000000000FFFFFF0000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000E00FE007FFFFF00FE00FED4BE01FE007
       C007C813C00FDFCBC007DA2580079FC580039249000300028002924800010009
       00011649800087C08003A45BC000C702C007C813E000E810C007C003F000F1C0
       C007C003F801FA04C007C003FC01FC70C007C007FE01FE81F83FF81FFF1FFF1F
@@ -1022,19 +1031,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 220
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOLineSQL: TFDQuery
@@ -1057,34 +1060,22 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fully_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckPOStatusSQL: TFDQuery
@@ -1112,19 +1103,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 204
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOStatusSQL: TFDQuery
@@ -1141,14 +1126,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object GetPartPackSQL: TFDQuery
@@ -1164,9 +1145,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetOrdAllocsSQL: TFDQuery
@@ -1192,14 +1171,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdPFJStatusSQL: TFDQuery
@@ -1218,14 +1193,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 228
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object DelOrdAllocSQL: TFDQuery
@@ -1247,24 +1218,16 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object GetSOTransSQL: TFDQuery
@@ -1294,19 +1257,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 164
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object GetSOTranSQL: TFDQuery
@@ -1324,9 +1281,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 236
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object DelSOTranSQL: TFDQuery
@@ -1343,9 +1298,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 148
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object UpdSOTranSQL: TFDQuery
@@ -1366,24 +1319,16 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -1404,24 +1349,16 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_to'
-        ParamType = ptUnknown
       end>
   end
   object GetStStkSIqry: TFDQuery
@@ -1434,9 +1371,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPArt: TFDQuery
@@ -1458,14 +1393,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 138
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomer: TFDQuery
@@ -1478,9 +1409,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPODelivery: TFDQuery
@@ -1496,29 +1425,19 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 287
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckPart: TFDQuery
@@ -1531,9 +1450,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 375
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPart: TFDQuery
@@ -1576,104 +1493,65 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 373
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPart: TFDQuery
@@ -1694,44 +1572,28 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckStoreLevels: TFDQuery
@@ -1745,9 +1607,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAddStoreLevels: TFDQuery
@@ -1769,29 +1629,21 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'MinMax_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'MinMax_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'MinMax_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'rep_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpPOQtyToDeliver: TFDQuery
@@ -1806,24 +1658,16 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 367
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_to_Deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextPODelivery: TFDQuery
@@ -1836,14 +1680,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 327
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPODelivery: TFDQuery
@@ -1875,49 +1715,31 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 438
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_to_deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_to_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Company_Branch'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPartTransfer: TFDQuery
@@ -1932,19 +1754,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 450
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPartTransfer: TFDQuery
@@ -1961,9 +1777,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 444
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object qryOvers: TFDQuery
@@ -1980,14 +1794,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPicking: TFDQuery
@@ -2008,19 +1818,13 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPODelivery: TFDQuery
@@ -2035,14 +1839,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 383
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryMovetype: TFDQuery
@@ -2057,14 +1857,10 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 55
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Move_Type_In'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Move_Type_Out'
-        ParamType = ptUnknown
       end>
   end
   object dtsMoveType: TDataSource
@@ -2101,9 +1897,7 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 434
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsVersions: TDataSource
@@ -2125,24 +1919,16 @@ object PBPartTransferFrm: TPBPartTransferFrm
     Top = 335
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Code_No'
-        ParamType = ptUnknown
       end>
   end
 end

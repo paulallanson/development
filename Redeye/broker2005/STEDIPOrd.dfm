@@ -1,28 +1,28 @@
 object STEDIPOrdFrm: TSTEDIPOrdFrm
   Left = 179
   Top = 123
-  Width = 413
-  Height = 431
   Caption = 'EDI Purchase Order Generation'
+  ClientHeight = 392
+  ClientWidth = 397
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
     Left = 0
     Top = 129
-    Width = 405
-    Height = 227
+    Width = 397
+    Height = 222
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 405
+    ExplicitHeight = 227
     object strgrdPOsCreated: TStringGrid
       Left = 1
       Top = 1
@@ -40,10 +40,11 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
   object pnlMain: TPanel
     Left = 0
     Top = 0
-    Width = 405
+    Width = 397
     Height = 129
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 405
     object rdgrpSupplier: TRadioGroup
       Left = 16
       Top = 8
@@ -111,10 +112,11 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
   object pnlResponseDtls: TPanel
     Left = 0
     Top = 129
-    Width = 405
+    Width = 397
     Height = 0
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 405
     object mmResponseDtls: TMemo
       Left = 1
       Top = 1
@@ -127,33 +129,34 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
   end
   object pnlClose: TPanel
     Left = 0
-    Top = 356
-    Width = 405
+    Top = 351
+    Width = 397
     Height = 41
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 356
+    ExplicitWidth = 405
     DesignSize = (
-      405
+      397
       41)
     object BitBtn1: TBitBtn
-      Left = 319
+      Left = 311
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
+      ExplicitLeft = 319
     end
     object btbtnPrint: TBitBtn
-      Left = 228
+      Left = 220
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Print'
-      TabOrder = 1
-      Visible = False
-      OnClick = btbtnPrintClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -168,6 +171,10 @@ object STEDIPOrdFrm: TSTEDIPOrdFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 1
+      Visible = False
+      OnClick = btbtnPrintClick
+      ExplicitLeft = 228
     end
   end
   object PrintDialog1: TPrintDialog

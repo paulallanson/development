@@ -934,14 +934,14 @@ begin
               Parambyname('Laser_Format').clear;
             end;
 
-            ParamByName('Quantity').AsFloat := StrToFloat(edtQuantity.Text);
+            ParamByName('Quantity').AsFloat := StrToFloatDef(edtQuantity.Text, 0, FormatSettings);
             ParamByName('Operator').Asinteger := frmFPMainMenu.iOperator;
             ParamByName('Audit_Workstation').Asstring := frmFPMainMenu.sCompName;
             ParamByName('Labour_Time_From').asdatetime := StartDate;
             ParamByName('Labour_Time_to').asdatetime := FinishDate;
             ParambyName('Labour_Overtime_Hours').asfloat := 0;
             ParamByName('Labour_Hours').Asfloat := hourspan(StartDate, FinishDate);
-            ParamByName('Machine_Hours').Asfloat := strtofloat(edtMachineHrs.text);
+            ParamByName('Machine_Hours').Asfloat := StrToFloatDef(edtMachineHrs.text, 0, FormatSettings);
             ParamByName('Team_Count').AsInteger := 0;
             ParamByName('Work_Centre_Operator').asinteger := iWCOperator;
             ParamByName('Operation').AsInteger := dblkpOperation.keyvalue;
@@ -1012,7 +1012,7 @@ begin
                   Parambyname('Laser_Format').clear;
                 end;
 
-                ParamByName('Quantity').AsFloat := StrToFloat(edtQuantity.Text);
+                ParamByName('Quantity').AsFloat := StrToFloatDef(edtQuantity.Text, 0, FormatSettings);
                 ParamByName('Operator').Asinteger := frmFPMainMenu.iOperator;
                 ParamByName('Audit_Workstation').Asstring := frmFPMainMenu.sCompName;
                 ParamByName('Labour_Time_From').asdatetime := StartDate;
@@ -1062,13 +1062,13 @@ begin
 //              continue;
 
             try
-              rLabour := strtofloat(trim(sgManDetails.cells[2,irow]));
+              rLabour := StrToFloatDef(trim(sgManDetails.cells[2,irow]), 0, FormatSettings);
             except
               rLabour := 0;
             end;
 
             try
-              rOvertime := strtofloat(trim(sgManDetails.cells[3,irow]));
+              rOvertime := StrToFloatDef(trim(sgManDetails.cells[3,irow]), 0, FormatSettings);
             except
               rOvertime := 0;
             end;
@@ -1115,14 +1115,14 @@ begin
 
                 {normal hours}
                 try
-                  ParamByName('Labour_Hours').Asfloat := strtofloat(sgManDetails.cells[2,irow]);
+                  ParamByName('Labour_Hours').Asfloat := StrToFloatDef(sgManDetails.cells[2,irow], 0, FormatSettings);
                 except
                   ParamByName('Labour_Hours').Asfloat := 0;
                 end;
 
                 {overtime hours}
                 try
-                  ParamByName('Labour_Overtime_Hours').Asfloat := strtofloat(sgManDetails.cells[3,irow]);
+                  ParamByName('Labour_Overtime_Hours').Asfloat := StrToFloatDef(sgManDetails.cells[3,irow], 0, FormatSettings);
                 except
                   ParamByName('Labour_Overtime_Hours').Asfloat := 0;
                 end;
@@ -1210,7 +1210,7 @@ begin
       end;
 
       try
-        ParamByName('Quantity').AsFloat := StrToFloat(edtQuantity.Text);
+        ParamByName('Quantity').AsFloat := StrToFloatDef(edtQuantity.Text, 0, FormatSettings);
       except
         ParamByName('Quantity').AsFloat := 0;
       end;
@@ -1228,7 +1228,7 @@ begin
 
           if self.bWCAssistant then
             begin
-              ParamByName('Labour_Hours').Asfloat := strtofloat(edtLabourHrs.text);
+              ParamByName('Labour_Hours').Asfloat := StrToFloatDef(edtLabourHrs.text, 0, FormatSettings);
             end
           else
             begin
@@ -1240,7 +1240,7 @@ begin
             end;
 
           try
-            ParamByName('Machine_Hours').Asfloat := strtofloat(edtMachineHrs.text);
+            ParamByName('Machine_Hours').Asfloat := StrToFloatDef(edtMachineHrs.text, 0, FormatSettings);
           except
             ParamByName('Machine_Hours').Asfloat := 0;
           end;
@@ -1256,7 +1256,7 @@ begin
           ParamByName('Labour_Time_to').clear;
 
           try
-            ParamByName('Labour_Hours').Asfloat := strtofloat(cmbLabourHours.text);
+            ParamByName('Labour_Hours').Asfloat := StrToFloatDef(cmbLabourHours.text, 0, FormatSettings);
           except
             ParamByName('Labour_Hours').Asfloat := 0;
           end;
@@ -1264,7 +1264,7 @@ begin
           ParamByName('Machine_Hours').Asfloat := 0;
 
           try
-            ParamByName('Labour_Overtime_Hours').Asfloat := strtofloat(cmbOvertimeHours.text);
+            ParamByName('Labour_Overtime_Hours').Asfloat := StrToFloatDef(cmbOvertimeHours.text, 0, FormatSettings);
           except
             ParamByName('Labour_Overtime_Hours').Asfloat := 0;
           end;

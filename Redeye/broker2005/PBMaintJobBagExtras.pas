@@ -247,7 +247,7 @@ begin
 //  JobBagLine.Process := dblkpProcess.KeyValue;
   JobBagLine.JBLineDescr := Trim(edtDescription.Text);
   JobBagLine.JBQuantity := strtoint(memQuantity.text);
-  JobBagLine.SellPrice := strtofloat(memSellPrice.text);
+  JobBagLine.SellPrice := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
   JobBagLine.PriceUnit := dblkpPriceUnit.KeyValue;
   JobBagLine.JBLineCost := 0.00;
   JobBagLine.JBLineSell := CalculateSellPrice(JobBagLine.JBQuantity, JobBagLine.PriceUnit, JobBagLine.SellPrice);

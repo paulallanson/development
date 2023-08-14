@@ -731,7 +731,7 @@ begin
         PBRPSalesInvFrm.InvHeadSRC.dataset := InvRPrintSQL;
         sTemp := BuildQueryString;
         sSubject := dmBroker.GetCompanyName + ' - Invoice No: ' + SelectionMemo.text;
-//        sSubject := inttostr(round(strtofloat(memSelection.text))) + ' ' + edtCustomer.Text + ' ' + memDescription.text + ' - New Job';
+//        sSubject := inttostr(round(StrToFloatDef(memSelection.text)), 0, FormatSettings) + ' ' + edtCustomer.Text + ' ' + memDescription.text + ' - New Job';
 
         sBodyText := dmBroker.GetEmailInvoiceText;
         if trim(sBodytext) = '' then
@@ -1120,8 +1120,8 @@ begin
         WriteLn(CSVFile, tempStr);
 
         {Recalculate line totals to add to invoice totals}
-        rResellerLineTotal := strtofloat(formatfloat('##0.00',rResellerLineTotal));
-        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+        rResellerLineTotal := StrToFloatDef(formatfloat('##0.00',rResellerLineTotal), 0, FormatSettings);
+        rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
         rResellerTotal := rResellerTotal + rResellerLineTotal;
@@ -1319,7 +1319,7 @@ begin
         WriteLn(CSVFile, tempStr);
 
         {Recalculate line totals to add to invoice totals}
-        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+        rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
         next;
@@ -1521,7 +1521,7 @@ begin
         WriteLn(CSVFile, tempStr);
 
         {Recalculate line totals to add to invoice totals}
-        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+        rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
         next;

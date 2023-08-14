@@ -3,28 +3,28 @@ object frmSTMaintProduct: TfrmSTMaintProduct
   Top = 18
   BorderStyle = bsDialog
   Caption = 'Maintain product details'
-  ClientHeight = 602
-  ClientWidth = 535
+  ClientHeight = 601
+  ClientWidth = 531
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 535
-    Height = 561
+    Width = 531
+    Height = 560
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 535
+    ExplicitHeight = 561
     object tsGeneral: TTabSheet
       Caption = 'General'
       object grpbxDetails: TGroupBox
@@ -35,8 +35,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         Align = alClient
         TabOrder = 0
         DesignSize = (
-          527
-          533)
+          523
+          532)
         object Label1: TLabel
           Left = 8
           Top = 40
@@ -233,9 +233,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 115
           Width = 25
           Height = 23
-          TabOrder = 9
-          TabStop = False
-          OnClick = btnClearPartGroupClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -250,6 +247,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 9
+          TabStop = False
+          OnClick = btnClearPartGroupClick
         end
         object btnPartGroup: TBitBtn
           Left = 376
@@ -275,8 +275,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 12
           Width = 25
           Height = 23
-          TabOrder = 1
-          OnClick = btnClearCustomerClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -291,6 +289,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 1
+          OnClick = btnClearCustomerClick
         end
         object btnCustomer: TBitBtn
           Left = 376
@@ -308,7 +308,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           OnClick = btnCustomerClick
         end
         object rdgrpClass: TRadioGroup
-          ParentBackground = False
           Left = 112
           Top = 138
           Width = 129
@@ -319,6 +318,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             'Non stocked'
             'Service item'
             'Print On Demand')
+          ParentBackground = False
           TabOrder = 10
           OnClick = rdgrpClassClick
         end
@@ -468,9 +468,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 435
           Width = 25
           Height = 23
-          TabOrder = 31
-          TabStop = False
-          OnClick = btnClearPriceUnitClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -485,6 +482,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 31
+          TabStop = False
+          OnClick = btnClearPriceUnitClick
         end
         object dblkpPriceUnit: TDBLookupComboBox
           Left = 112
@@ -552,9 +552,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 404
           Width = 25
           Height = 23
-          TabOrder = 28
-          TabStop = False
-          OnClick = btnClearUOMClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -569,6 +566,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 28
+          TabStop = False
+          OnClick = btnClearUOMClick
         end
         object dblkpProductType: TDBLookupComboBox
           Left = 112
@@ -601,9 +601,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 238
           Width = 25
           Height = 23
-          TabOrder = 14
-          TabStop = False
-          OnClick = btnClearPTypeClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -618,6 +615,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 14
+          TabStop = False
+          OnClick = btnClearPTypeClick
         end
         object edtFormReference: TEdit
           Left = 112
@@ -651,8 +651,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Top = 88
           Width = 25
           Height = 23
-          TabOrder = 6
-          OnClick = btnClearFormRefClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -667,6 +665,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          TabOrder = 6
+          OnClick = btnClearFormRefClick
         end
         object chkbxOrderOnline: TCheckBox
           Left = 352
@@ -685,6 +685,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
           TabOrder = 33
+          Text = ''
         end
         object edtSalesNominal: TMaskEdit
           Left = 112
@@ -695,6 +696,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           EditMask = '!90009999/900/000;0;_'
           MaxLength = 16
           TabOrder = 32
+          Text = ''
         end
         object chkbxStockZero: TCheckBox
           Left = 352
@@ -705,14 +707,15 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           TabOrder = 36
         end
         object pnlFSCClaim: TPanel
-          ParentBackground = False
           Left = 1
-          Top = 264
+          Top = 263
           Width = 506
           Height = 25
           Anchors = [akLeft, akBottom]
           BevelOuter = bvNone
+          ParentBackground = False
           TabOrder = 15
+          ExplicitTop = 264
           object lblFSCClaim: TLabel
             Left = 8
             Top = 6
@@ -752,8 +755,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             Top = 1
             Width = 25
             Height = 23
-            TabOrder = 2
-            OnClick = btnClearClaimClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -768,6 +769,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
               BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
               50BB555555555555575F555555555555550B5555555555555575}
             NumGlyphs = 2
+            TabOrder = 2
+            OnClick = btnClearClaimClick
           end
         end
         object chkbxHasBOM: TCheckBox
@@ -793,12 +796,12 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Caption = 'Bill of Materials'
       ImageIndex = 1
       object pnlComponents: TPanel
-        ParentBackground = False
         Left = 432
         Top = 0
         Width = 95
         Height = 533
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnAdd: TBitBtn
           Left = 14
@@ -806,8 +809,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Width = 75
           Height = 25
           Caption = 'Add'
-          TabOrder = 0
-          OnClick = btnAddClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000130B0000130B00001000000000000000000000000000
@@ -822,6 +823,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
             3BB33773333773333773B333333B3333333B7333333733333337}
           NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnAddClick
         end
         object btnChange: TBitBtn
           Left = 14
@@ -829,8 +832,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Width = 75
           Height = 25
           Caption = 'Change'
-          TabOrder = 1
-          OnClick = btnChangeClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -845,6 +846,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
             00333377737FFFFF773333303300000003333337337777777333}
           NumGlyphs = 2
+          TabOrder = 1
+          OnClick = btnChangeClick
         end
         object btnDelete: TBitBtn
           Left = 14
@@ -852,8 +855,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           Width = 75
           Height = 25
           Caption = 'Delete'
-          TabOrder = 2
-          OnClick = btnDeleteClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -868,6 +869,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
             0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
             3333333337FFF7F3333333333000003333333333377777333333}
           NumGlyphs = 2
+          TabOrder = 2
+          OnClick = btnDeleteClick
         end
       end
       object dbgComponents: TDBGrid
@@ -903,13 +906,15 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 561
-    Width = 535
+    Top = 560
+    Width = 531
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 561
+    ExplicitWidth = 535
     object lblDelete: TLabel
       Left = 190
       Top = 16
@@ -930,8 +935,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Height = 25
       Caption = 'Image'
       Enabled = False
-      TabOrder = 0
-      OnClick = btnImageClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -946,6 +949,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         EE33337F333377F3337F33EEEEEE00EEEE33337F33337733337F33EEEEEEEEEE
         EE33337FFFFFFFFFFF7F33EEEEEEEEEEEE333377777777777773}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnImageClick
     end
     object btnOKSupp: TBitBtn
       Left = 278
@@ -954,9 +959,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Height = 25
       Caption = 'OK+Supp'
       Default = True
-      TabOrder = 1
-      TabStop = False
-      OnClick = btnOKSuppClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -975,6 +977,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      TabStop = False
+      OnClick = btnOKSuppClick
     end
     object btnOK: TBitBtn
       Left = 366
@@ -983,8 +988,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 2
-      OnClick = btnOKClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -1050,6 +1053,8 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
       Left = 446
@@ -1058,8 +1063,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 3
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -1124,7 +1127,9 @@ object frmSTMaintProduct: TfrmSTMaintProduct
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 3
     end
   end
   object qryProduct: TFDQuery
@@ -1145,9 +1150,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryPartGroup: TFDQuery
@@ -1221,19 +1224,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPart: TFDQuery
@@ -1246,9 +1243,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPart: TFDQuery
@@ -1304,159 +1299,109 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Order_Part_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Sales_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Purch_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Markup_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Markup_Val'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Markup_Val'
+        DataType = ftFloat
+      end
+      item
         Name = 'Prod_Class'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive_When_Balance_Zero'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Inactive_When_Balance_Zero'
+      end
+      item
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Mixed_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Has_Children'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Global_Product'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPart: TFDQuery
@@ -1514,164 +1459,112 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Sales_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Purch_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Markup_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Markup_Val'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Markup_Val'
+        DataType = ftFloat
+      end
+      item
         Name = 'Prod_Class'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Unit_of_Measure'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Order_Part_Online'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Inactive_When_Balance_Zero'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Product_ID'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Order_Part_Online'
+      end
+      item
+        Name = 'Inactive_When_Balance_Zero'
+      end
+      item
+        Name = 'Product_ID'
+      end
+      item
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'FSC_Mixed_Percentage'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Has_Children'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Global_Product'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckProductCode: TFDQuery
@@ -1683,9 +1576,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAddLevels: TFDQuery
@@ -1700,14 +1591,10 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Levels'
-        ParamType = ptUnknown
       end>
   end
   object qryUOM: TFDQuery
@@ -1749,14 +1636,10 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryUpFormRef: TFDQuery
@@ -1769,9 +1652,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPartLevels: TFDQuery
@@ -1783,9 +1664,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryFSCClaim: TFDQuery
@@ -1812,9 +1691,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetBOM: TDataSource
@@ -1832,9 +1709,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelStoreStockSN: TFDQuery
@@ -1852,9 +1727,7 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Top = 440
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

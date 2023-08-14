@@ -303,8 +303,8 @@ begin
     part := partedit.text;
     PurchPackQuantity := CostPackSize;
     SellPackQuantity := SellPackSize;
-    Sell_Price := strtofloat(SellPriceMemo.text);
-    Part_Cost := strtofloat(PurchPriceMemo.text);
+    Sell_Price := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings);
+    Part_Cost := StrToFloatDef(PurchPriceMemo.text, 0, FormatSettings);
     VatCode := dblkpVat.KeyValue;
 
     PurchPackQuantity := strtoint(purchPackmemo.text);
@@ -312,7 +312,7 @@ begin
 
     PartClass := STSalesOrdDM.GetPartClass(Part);
 
-    OriginalSellPrice := strtofloat(SellPriceMemo.text);
+    OriginalSellPrice := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings);
 
     OrdQty := strtoint(memOrderQuantity.text);
     DelQty := strtoint(memDeliveryQuantity.text);

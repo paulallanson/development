@@ -134,8 +134,8 @@ var
 begin
   JobBagLine.JBLineDescr := Trim(DescrEdit.Text);
   JobBagLine.JBQuantity := 1;
-  JobBagLine.JBLineCost := StrToFloat(CostValMemo.Text);
-  JobBagLine.JBLineSell := StrToFloat(SellValMemo.Text);
+  JobBagLine.JBLineCost := StrToFloatDef(CostValMemo.Text, 0, FormatSettings);
+  JobBagLine.JBLineSell := StrToFloatDef(SellValMemo.Text, 0, FormatSettings);
   if JobBagLine.JBLineSell - JobBagLine.JBLineCost >= 0 then
     JobBagLine.JBLineType := 'R'
   else
@@ -238,8 +238,8 @@ begin
   else
   try
     begin
-      Result := FormatFloat('######0', StrToFloat(TempQty));
-      if StrToFloat(Result) < 0 then
+      Result := FormatFloat('######0', StrToFloatDef(TempQty, 0, FormatSettings));
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

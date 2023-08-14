@@ -1,9 +1,9 @@
 object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Left = 300
   Top = 93
-  Width = 661
-  Height = 555
   Caption = 'Maintain Rep Commissions and Budgets'
+  ClientHeight = 516
+  ClientWidth = 645
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 658
@@ -13,55 +13,60 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 502
-    Width = 653
+    Top = 497
+    Width = 645
     Height = 19
     Panels = <>
+    ExplicitTop = 502
+    ExplicitWidth = 653
   end
   object Panel1: TPanel
     Left = 0
-    Top = 461
-    Width = 653
+    Top = 456
+    Width = 645
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 461
+    ExplicitWidth = 653
     object OKBitBtn: TBitBtn
       Left = 243
       Top = 8
       Width = 75
       Height = 25
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      Kind = bkOK
     end
     object CancelBitBtn: TBitBtn
       Left = 331
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      Kind = bkCancel
     end
   end
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 653
+    Width = 645
     Height = 83
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 653
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
@@ -158,18 +163,20 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pgBudgets: TPageControl
     Left = 0
     Top = 153
-    Width = 653
-    Height = 308
+    Width = 645
+    Height = 303
     ActivePage = tbshtCategory
     Align = alClient
     TabOrder = 3
+    ExplicitWidth = 653
+    ExplicitHeight = 308
     object tbshtCategory: TTabSheet
       Caption = 'Category Commission Rates'
       object grdCategory: TStringGrid
         Left = 0
         Top = 0
         Width = 633
-        Height = 280
+        Height = 275
         Align = alLeft
         DefaultColWidth = 200
         DefaultRowHeight = 19
@@ -181,6 +188,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
+        ExplicitHeight = 280
         ColWidths = (
           200
           94
@@ -200,7 +208,6 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         Width = 145
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 1
         Visible = False
         OnClick = cmbxCommissionBasisClick
@@ -306,10 +313,11 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 653
+    Width = 645
     Height = 70
     Align = alTop
     TabOrder = 4
+    ExplicitWidth = 653
     object Label2: TLabel
       Left = 16
       Top = 7
@@ -412,9 +420,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryReps: TFDQuery
@@ -454,14 +460,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryFirstPeriod: TFDQuery
@@ -475,9 +477,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckBudget: TFDQuery
@@ -491,19 +491,13 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdBudget: TFDQuery
@@ -520,29 +514,19 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryAddBudget: TFDQuery
@@ -556,29 +540,19 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end>
   end
   object qryCategory: TFDQuery
@@ -600,9 +574,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 298
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckExists: TFDQuery
@@ -615,14 +587,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 354
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryAddRepCats: TFDQuery
@@ -648,39 +616,25 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 410
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Basis'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'New_Business_Rate'
-        ParamType = ptUnknown
       end>
   end
   object qryDelRepCats: TFDQuery
@@ -693,14 +647,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 354
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryGetRepCategory: TFDQuery
@@ -721,19 +671,13 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 282
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryAddFinancials: TFDQuery
@@ -751,39 +695,25 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 154
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdFinancials: TFDQuery
@@ -801,39 +731,25 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
     Top = 202
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Commission_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Commission_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bonus_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object pmuBudgets: TPopupMenu

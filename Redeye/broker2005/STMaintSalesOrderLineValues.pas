@@ -109,9 +109,9 @@ procedure TfrmSTMaintSalesOrderLineValues.btnOKClick(Sender: TObject);
 begin
   OrderLine.ProducedQty := strtoint(memProduced.text);
   OrderLine.InvQty := strtoint(memInvoiced.text);
-  OrderLine.Sell_Price := strtofloat(memPrice.text);
+  OrderLine.Sell_Price := StrToFloatDef(memPrice.text, 0, FormatSettings);
   OrderLine.SellPackQuantity := strtoint(memPackSize.text);
-  OrderLine.Part_Cost := strtofloat(memCost.text);
+  OrderLine.Part_Cost := StrToFloatDef(memCost.text, 0, FormatSettings);
   OrderLine.PurchPackQuantity := strtoint(memCostPackSize.text);
   ModalResult := mrOK;
 end;

@@ -291,7 +291,7 @@ begin
 
     Quantity := StrToInt(LineData[8]);
     Status := LineData[9];
-    No_of_hours := StrTofloat(LineData[10]);
+    No_of_hours := StrToFloatDef(LineData[10], 0, FormatSettings);
     Printer_Name := LineData[11];
 
     Result := True;

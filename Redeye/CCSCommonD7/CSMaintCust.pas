@@ -481,10 +481,10 @@ begin
         ParamByName('Invoice_upfront').AsString := 'Y'
       else
         ParamByName('Invoice_Upfront').AsString := 'N';
-      ParamByName('Credit_Limit').AsFloat := StrToFloat(CredLimMemo.Text);
+      ParamByName('Credit_Limit').AsFloat := StrToFloatDef(CredLimMemo.Text, 0, FormatSettings);
       ParamByName('Settlement_Days').AsInteger := StrToInt(SettDaysMemo.Text);
       ParamByName('Settlement_Discount').AsFloat :=
-        StrToFloat(SettDiscMemo.Text);
+        StrToFloatDef(SettDiscMemo.Text, 0, FormatSettings);
       ParamByName('Credit_Status').AsString := CredStatDBLCB.KeyValue;
       ParamByName('Intrastat_Id').AsInteger :=
         IntrastatDBLookupComboBox.KeyValue;
@@ -497,7 +497,7 @@ begin
       else
         ParamByName('Currency_Code_Def').AsInteger :=
           DefCurrDBLookupComboBox.KeyValue;
-      ParamByName('Available_Credit').AsFloat := StrToFloat(CredAvailMemo.Text);
+      ParamByName('Available_Credit').AsFloat := StrToFloatDef(CredAvailMemo.Text, 0, FormatSettings);
       ParamByName('VAT_Reference').AsString := VATRefEdit.Text + '';
       ParamByName('Email_Ord').AsString := EdtEmailOrder.Text + '';
       if DefVATDBLookupComboBox.KeyValue = Null then
@@ -582,10 +582,10 @@ begin
         ParamByName('Acc_Active').AsString := 'Y'
       else
         ParamByName('Acc_Active').AsString := 'N';
-      ParamByName('Credit_Limit').AsFloat := StrToFloat(CredLimMemo.Text);
+      ParamByName('Credit_Limit').AsFloat := StrToFloatDef(CredLimMemo.Text, 0, FormatSettings);
       ParamByName('Settlement_Days').AsInteger := StrToInt(SettDaysMemo.Text);
       ParamByName('Settlement_Discount').AsFloat :=
-        StrToFloat(SettDiscMemo.Text);
+        StrToFloatDef(SettDiscMemo.Text, 0, FormatSettings);
       ParamByName('Credit_Status').AsString := CredStatDBLCB.KeyValue;
       ParamByName('Intrastat_Id').AsInteger :=
         IntrastatDBLookupComboBox.KeyValue;
@@ -598,7 +598,7 @@ begin
       else
         ParamByName('Currency_Code_Def').AsInteger :=
           DefCurrDBLookupComboBox.KeyValue;
-      ParamByName('Available_Credit').AsFloat := StrToFloat(CredAvailMemo.Text);
+      ParamByName('Available_Credit').AsFloat := StrToFloatDef(CredAvailMemo.Text, 0, FormatSettings);
       ParamByName('VAT_Reference').AsString := VATRefEdit.Text + '';
       ParamByName('Email_Ord').AsString := EdtEmailOrder.Text + '';
       if DefVATDBLookupComboBox.KeyValue = Null then
@@ -711,7 +711,7 @@ begin
   if SettDiscMemo.Text <> '' then
   begin
     try
-      SettDiscMemo.Text := FormatFloat('##0.00', StrToFloat(SettDiscMemo.Text))
+      SettDiscMemo.Text := FormatFloat('##0.00', StrToFloatDef(SettDiscMemo.Text), 0, FormatSettings)
     except
       MessageDlg('Invalid settlement discount', mtError, [mbOK], 0);
       SettDiscMemo.SetFocus;
@@ -725,7 +725,7 @@ begin
   if CredLimMemo.Text <> '' then
   begin
     try
-      CredLimMemo.Text := FormatFloat('######0', StrToFloat(CredLimMemo.Text))
+      CredLimMemo.Text := FormatFloat('######0', StrToFloatDef(CredLimMemo.Text), 0, FormatSettings)
     except
       MessageDlg('Invalid credit limit', mtError, [mbOK], 0);
       CredLimMemo.SetFocus;

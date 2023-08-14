@@ -317,7 +317,7 @@ begin
       ParamByName('Mobile_No').AsString := MobileEdt.Text + '';
       ParamByName('EMail').AsString := EMailEdit.Text + '';
       ParamByName('Salutation').AsString := SalutationEdit.Text + '';
-      ParamByName('Def_Markup_Perc').Asfloat := strtofloat(memMarkup.Text);
+      ParamByName('Def_Markup_Perc').Asfloat := StrToFloatDef(memMarkup.Text, 0, FormatSettings);
       ParamByName('Contact_Type').AsInteger := TypeDBLCB.KeyValue;
       if (LevelDBLCB.KeyValue = null) then
         ParamByName('Contact_Level').Clear

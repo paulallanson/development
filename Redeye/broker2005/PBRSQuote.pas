@@ -129,7 +129,7 @@ procedure TfrmPBRSQuote.RunReport(Preview: boolean);
 begin
   frmPBRPQuote := TfrmPBRPQuote.create(self);
   try
-    frmPBRPQuote.Key := strtofloat(memSelection.text);
+    frmPBRPQuote.Key := StrToFloatDef(memSelection.text, 0, FormatSettings);
     frmPBRPQuote.bPrintLogo := true;
     frmPBRPQuote.ShowBreakdown := chkbxShowDetails.Checked;
     frmPBRPQuote.EndUserVersion := chkbxEndUSer.checked;
@@ -165,7 +165,7 @@ begin
   emailHandler := TemailHandler.Create(self);
   frmPBRPQuote := TfrmPBRPQuote.create(self);
   try
-    frmPBRPQuote.key := strtofloat(memSelection.text);
+    frmPBRPQuote.key := StrToFloatDef(memSelection.text, 0, FormatSettings);
     frmPBRPQuote.EndUserVersion := chkbxEndUser.checked;
 
     if (frmPBRPQuote.GetDetails = 0) then
@@ -346,7 +346,7 @@ begin
           begin
           Close;
           ParamByName('Int_sel_Code').AsInteger := iIntselCode;
-          ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+          ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
           ParamByName('Text100').AsString := SelectLst.Items[icount];
           execSQL;
           end;
@@ -407,8 +407,8 @@ begin
  	with qryGetRange do
     begin
       Close;
-      ParamByName('From_Quote').AsFloat := StrtoFloat(sFirst);
-      ParamByName('To_Quote').AsFloat := StrtoFloat(sLast);
+      ParamByName('From_Quote').AsFloat := StrToFloatDef(sFirst, 0, FormatSettings);
+      ParamByName('To_Quote').AsFloat := StrToFloatDef(sLast, 0, FormatSettings);
       Open;
       First;
       While Not EOF do
@@ -618,7 +618,7 @@ begin
 
         frmPBRPQuote := TfrmPBRPQuote.Create(Self);
         try
-          frmPBRPQuote.Key := strtofloat(memSelection.text);
+          frmPBRPQuote.Key := StrToFloatDef(memSelection.text, 0, FormatSettings);
           frmPBRPQuote.bPreview := false;
           frmPBRPQuote.bPrintLogo := true;
           frmPBRPQuote.ShowBreakdown := chkbxShowDetails.Checked;

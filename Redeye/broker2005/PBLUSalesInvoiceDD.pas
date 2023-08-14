@@ -411,7 +411,7 @@ begin
     begin
       Close;
       ParamByName('Int_sel_Code').AsInteger := self.intSel;
-      ParamByName('Sel1').AsFloat := strtoFloat(SelectLst.Items[icount]);
+      ParamByName('Sel1').AsFloat := StrToFloatDef(SelectLst.Items[icount], 0, FormatSettings);
       ParamByName('Text100').AsString := SelectLst.Items[icount];
       execSQL;
     end;

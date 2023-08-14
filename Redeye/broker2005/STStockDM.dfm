@@ -1,8 +1,5 @@
 object STStockDataMod: TSTStockDataMod
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 103
-  Top = 119
   Height = 637
   Width = 922
   object AddMoveSQL: TFDQuery
@@ -44,104 +41,66 @@ object STStockDataMod: TSTStockDataMod
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Movement'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Movement_Bin'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_User'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Print_On_Audit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Total_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pallet_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end>
   end
   object GetNextMoveSQL: TFDQuery
@@ -201,14 +160,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetPartSQL: TFDQuery
@@ -221,9 +176,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object UpdLastLotSQL: TFDQuery
@@ -237,14 +190,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddStockSQL: TFDQuery
@@ -272,59 +221,39 @@ object STStockDataMod: TSTStockDataMod
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Received'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Cost'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Part'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Part_Store'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Date_Received'
+      end
+      item
+        Name = 'Store_Cost'
+      end
+      item
+        Name = 'Store_Quantity'
+      end
+      item
+        Name = 'Quantity_Allocated'
+      end
+      item
+        Name = 'Part'
+      end
+      item
+        Name = 'Part_Store'
+      end
+      item
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object GetNextStockSQL: TFDQuery
@@ -356,24 +285,16 @@ object STStockDataMod: TSTStockDataMod
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Cost_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated_Adj'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object DelStockSQL: TFDQuery
@@ -387,9 +308,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetMoveTypeSQL: TFDQuery
@@ -404,9 +323,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Movement_Type'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreSQL: TFDQuery
@@ -421,9 +338,8 @@ object STStockDataMod: TSTStockDataMod
     Top = 264
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetFreeStoreStockSQL: TFDQuery
@@ -456,54 +372,38 @@ object STStockDataMod: TSTStockDataMod
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Allocation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Overs'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Over_Picked'
-        ParamType = ptUnknown
       end>
   end
   object GetNextAllocSQL: TFDQuery
@@ -532,9 +432,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetAllocStockByRefSQL: TFDQuery
@@ -577,34 +475,24 @@ object STStockDataMod: TSTStockDataMod
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sales_order'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Purch_Ord'
+      end
+      item
         Name = 'Sales_order'
-        ParamType = ptUnknown
+      end
+      item
+        Name = 'Sales_order_Line_No'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Sales_order'
       end>
   end
   object UpdAllocSQL: TFDQuery
@@ -626,24 +514,16 @@ object STStockDataMod: TSTStockDataMod
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Overs'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Over_Picked'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Allocation'
-        ParamType = ptUnknown
       end>
   end
   object DelAllocSQL: TFDQuery
@@ -658,9 +538,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Allocation'
-        ParamType = ptUnknown
       end>
   end
   object AddTransferSQL: TFDQuery
@@ -707,84 +585,58 @@ object STStockDataMod: TSTStockDataMod
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_Line_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Purch_Ord'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
-        Name = 'Part_Store_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Received'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Cost'
-        ParamType = ptUnknown
-      end
-      item
+        Name = 'Purch_Ord'
         DataType = ftString
+      end
+      item
+        Name = 'Purch_Ord_Line_No'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Part_Store_From'
+      end
+      item
+        Name = 'Store_Quantity'
+      end
+      item
+        Name = 'Date_Received'
+      end
+      item
+        Name = 'Store_Cost'
+      end
+      item
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Upfront'
-        ParamType = ptUnknown
       end>
   end
   object NextTransfer: TFDQuery
@@ -807,19 +659,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Alloc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreStockSQL: TFDQuery
@@ -840,34 +686,22 @@ object STStockDataMod: TSTStockDataMod
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end>
   end
   object GetStoreBinSQL: TFDQuery
@@ -884,14 +718,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object AddStoreBinSQL: TFDQuery
@@ -909,19 +739,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_Can_Pick'
-        ParamType = ptUnknown
       end>
   end
   object GetDefPartStoreSQL: TFDQuery
@@ -959,14 +783,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 292
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -978,9 +798,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object UpdSalesOrderAllocSQL: TFDQuery
@@ -995,19 +813,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Alloc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object GetPriceUnitSQL: TFDQuery
@@ -1058,89 +870,58 @@ object STStockDataMod: TSTStockDataMod
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Store_Stock_Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Stock_Pack_Quantity'
+      end
+      item
+        Name = 'Store_Stock_Description'
+      end
+      item
         Name = 'Invoice_Upfront'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Sets_Per_Pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Pallet_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_is_Overs'
-        ParamType = ptUnknown
       end>
   end
   object GetCouriersSQL: TFDQuery
@@ -1176,14 +957,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetStkSerialSQL: TFDQuery
@@ -1198,19 +975,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object ResetStockSNSQl: TFDQuery
@@ -1229,14 +1000,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 386
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdStockBin: TFDQuery
@@ -1254,14 +1021,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object GetSalesOrderLineSQL: TFDQuery
@@ -1275,14 +1038,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetTransferStStk: TFDQuery
@@ -1302,14 +1061,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNonTransferStStk: TFDQuery
@@ -1331,24 +1086,16 @@ object STStockDataMod: TSTStockDataMod
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStoreStock: TFDQuery
@@ -1367,19 +1114,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBagRtn: TFDQuery
@@ -1409,29 +1150,20 @@ object STStockDataMod: TSTStockDataMod
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Return'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Store_stock'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetReturns: TFDQuery
@@ -1482,14 +1214,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryPartInactive: TFDQuery
@@ -1502,9 +1230,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetAllocStockbyStoreStockSQL: TFDQuery
@@ -1540,9 +1266,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBag: TFDQuery
@@ -1557,9 +1281,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSO: TFDQuery
@@ -1633,144 +1355,112 @@ object STStockDataMod: TSTStockDataMod
     Top = 400
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Office_Contact'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Reqd'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Date_Ordrd'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftString
         Name = 'Cust_Order_no'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Cost_Centre'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer0'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Order_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order_Head_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Contact_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Delivery_Notes'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Delivery_Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Delivery_Branch'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Replenish_Source'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Supplier'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'Branch_no0'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Delivery_Customer'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Delivery_Branch'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Replenish_Source'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Supplier'
+        DataType = ftInteger
+      end
+      item
+        Name = 'Branch_no0'
+        DataType = ftInteger
+      end
+      item
         Name = 'Supp_Order_type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Ad_Hoc_Address'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Production_Location'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Contact_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cash_Sales'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetBin: TFDQuery
@@ -1783,9 +1473,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
   object UpdLastSQL: TFDQuery
@@ -1799,9 +1487,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 448
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_SO_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -1843,19 +1529,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Percentage'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSOLine: TFDQuery
@@ -1904,114 +1584,81 @@ object STStockDataMod: TSTStockDataMod
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Line'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_pack_quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Sales_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Ordered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Contract'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Contract_Line_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sales_Order_Line_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Discount_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Discount_Value'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Vat_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftCurrency
-        Name = 'Original_Sell_Price'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Markup_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Markup_Value'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Quantity_Overs'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Sales_Order_Line_Status'
+      end
+      item
+        Name = 'Quantity_Invoiced'
+      end
+      item
+        Name = 'Discount_Type'
+        DataType = ftString
+      end
+      item
+        Name = 'Discount_Value'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Vat_Code'
+      end
+      item
+        Name = 'Original_Sell_Price'
+        DataType = ftCurrency
+      end
+      item
+        Name = 'Markup_Type'
+        DataType = ftString
+      end
+      item
+        Name = 'Markup_Value'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Quantity_Overs'
+        DataType = ftInteger
+      end
+      item
         Name = 'Line_is_Sample'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPart: TFDQuery
@@ -2030,9 +1677,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAddJobBagRequest: TFDQuery
@@ -2048,24 +1693,16 @@ object STStockDataMod: TSTStockDataMod
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSalesOrderLines: TFDQuery
@@ -2089,9 +1726,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 456
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSOStatus: TFDQuery
@@ -2104,14 +1739,10 @@ object STStockDataMod: TSTStockDataMod
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Head_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextPickNo: TFDQuery
@@ -2187,9 +1818,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 449
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSOPick: TFDQuery
@@ -2236,89 +1865,56 @@ object STStockDataMod: TSTStockDataMod
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_To_Pick'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Picked'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Allocation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Pick_Note_Confirmed'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sets_Per_Pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSODelivNote: TFDQuery
@@ -2348,44 +1944,30 @@ object STStockDataMod: TSTStockDataMod
     Top = 396
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Desp_Note_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Del_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Del_Dt'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryAddSODelivLine: TFDQuery
@@ -2407,19 +1989,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 452
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Deliv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPickNote: TFDQuery
@@ -2432,9 +2008,7 @@ object STStockDataMod: TSTStockDataMod
     Top = 504
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPartStoreBin: TFDQuery
@@ -2448,19 +2022,13 @@ object STStockDataMod: TSTStockDataMod
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Bin_Can_Pick'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
 end

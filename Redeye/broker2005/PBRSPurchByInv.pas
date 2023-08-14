@@ -680,7 +680,7 @@ begin
           (Column.Title.Caption = 'Vat Value') or
           (Column.Title.Caption = 'Invoice Total') then
         try
-          sValue := formatfloat('£#,###,##0.00;(£#,###,##0.00)',strtofloat(Column.field.asstring))
+          sValue := formatfloat('£#,###,##0.00;(£#,###,##0.00)',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end

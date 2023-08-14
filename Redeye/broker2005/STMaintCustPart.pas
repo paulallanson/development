@@ -132,7 +132,7 @@ begin
             Parambyname('Customer').asinteger := iCust;
             ParamByName('Part').Asstring := sCode;
             ParamByName('Customer_Part_Code').AsString := edtProductCode.Text + '';
-            parambyname('Sell_Price').asfloat := strtofloat(memSellPrice.text);
+            parambyname('Sell_Price').asfloat := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
             parambyname('Sell_PAck_Quantity').asinteger := strtoint(memPackSize.text);
             ExecSQL;
           end;
@@ -142,7 +142,7 @@ begin
       Parambyname('Customer').asinteger := iCust;
       ParamByName('Part').Asstring := sCode;
       ParamByName('Customer_Part_Code').AsString := edtProductCode.Text + '';
-      parambyname('Sell_Price').asfloat := strtofloat(memSellPrice.text);
+      parambyname('Sell_Price').asfloat := StrToFloatDef(memSellPrice.text, 0, FormatSettings);
       parambyname('Sell_PAck_Quantity').asinteger := strtoint(memPackSize.text);
       ExecSQL;
     end;

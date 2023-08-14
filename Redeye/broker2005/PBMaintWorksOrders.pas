@@ -1563,7 +1563,7 @@ begin
   if FActivated then
     begin
       try
-        WOrder.EstimatedSellPrice := strtofloat((Sender as TMemo).text);
+        WOrder.EstimatedSellPrice := StrToFloatDef((Sender as TMemo).text, 0, FormatSettings);
       except
         WOrder.EstimatedSellPrice := 0.00;
       end;
@@ -1574,7 +1574,7 @@ end;
 procedure TfrmPBMaintWorksOrders.memEstimatedQtyChange(Sender: TObject);
 begin
   try
-    WOrder.QuantityEst := strtofloat((Sender as TMemo).text);
+    WOrder.QuantityEst := StrToFloatDef((Sender as TMemo).text, 0, FormatSettings);
   except
     WOrder.QuantityEst := 1;
   end;
@@ -1801,7 +1801,7 @@ end;
 procedure TfrmPBMaintWorksOrders.edtPreviousWINChange(Sender: TObject);
 begin
   try
-    WOrder.WONumberPrevious := strtofloat((Sender as TEdit).text);
+    WOrder.WONumberPrevious := StrToFloatDef((Sender as TEdit).text, 0, FormatSettings);
   except
     WOrder.WONumberPrevious := 0;
   end;
@@ -1899,7 +1899,7 @@ begin
       WOrder.Processes[icount].NumberUp := tempspn.Value;
       WOrder.Processes[icount].PaperSize := tempDBlkp.KeyValue;
       try
-        WOrder.Processes[icount].NoOfHours := strtofloat(tempHours.Text);
+        WOrder.Processes[icount].NoOfHours := StrToFloatDef(tempHours.Text, 0, FormatSettings);
       except
         WOrder.Processes[icount].NoOfHours := 0;
       end;
@@ -2369,7 +2369,7 @@ end;
 procedure TfrmPBMaintWorksOrders.memActualQtyChange(Sender: TObject);
 begin
   try
-    WOrder.QuantityAct := strtofloat((Sender as TMemo).text);
+    WOrder.QuantityAct := StrToFloatDef((Sender as TMemo).text, 0, FormatSettings);
   except
     WOrder.QuantityAct := 1;
   end;

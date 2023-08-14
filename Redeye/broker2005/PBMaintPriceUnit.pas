@@ -131,7 +131,7 @@ begin
       ParamByName('Price_Unit').AsInteger := iCode;
       ParamByName('Description').AsString := DescrEdit.Text + '';
       ParamByName('Price_Unit_Factor').AsFloat :=
-        StrToFloat(UnitFactorEdit.Text);
+        StrToFloatDef(UnitFactorEdit.Text, 0, FormatSettings);
       if ChkBxActive.checked then
         ParamByName('InActive').AsString := 'N'
       else

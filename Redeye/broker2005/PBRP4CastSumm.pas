@@ -238,20 +238,20 @@ begin
   totcst := totcst+percost[loop]
 end;
 QRLblm14cst.caption := formatfloat('0.00',totcst);
-repcost[0] := repcost[0]+strToFloat(QRLblm1cst.caption);
-repcost[1] := repcost[1]+strToFloat(QRLblm2cst.caption);
-repcost[2] := repcost[2]+strToFloat(QRLblm3cst.caption);
-repcost[3] := repcost[3]+strToFloat(QRLblm4cst.caption);
-repcost[4] := repcost[4]+strToFloat(QRLblm5cst.caption);
-repcost[5] := repcost[5]+strToFloat(QRLblm6cst.caption);
-repcost[6] := repcost[6]+strToFloat(QRLblm7cst.caption);
-repcost[7] := repcost[7]+strToFloat(QRLblm8cst.caption);
-repcost[8] := repcost[8]+strToFloat(QRLblm9cst.caption);
-repcost[9] := repcost[9]+strToFloat(QRLblm10cst.caption);
-repcost[10] := repcost[10]+strToFloat(QRLblm11cst.caption);
-repcost[11] := repcost[11]+strToFloat(QRLblm12cst.caption);
-repcost[12] := repcost[12]+strToFloat(QRLblm13cst.caption);
-repcost[13] := repcost[13]+strToFloat(QRLblm14cst.caption);
+repcost[0] := repcost[0]+StrToFloatDef(QRLblm1cst.caption, 0, FormatSettings);
+repcost[1] := repcost[1]+StrToFloatDef(QRLblm2cst.caption, 0, FormatSettings);
+repcost[2] := repcost[2]+StrToFloatDef(QRLblm3cst.caption, 0, FormatSettings);
+repcost[3] := repcost[3]+StrToFloatDef(QRLblm4cst.caption, 0, FormatSettings);
+repcost[4] := repcost[4]+StrToFloatDef(QRLblm5cst.caption, 0, FormatSettings);
+repcost[5] := repcost[5]+StrToFloatDef(QRLblm6cst.caption, 0, FormatSettings);
+repcost[6] := repcost[6]+StrToFloatDef(QRLblm7cst.caption, 0, FormatSettings);
+repcost[7] := repcost[7]+StrToFloatDef(QRLblm8cst.caption, 0, FormatSettings);
+repcost[8] := repcost[8]+StrToFloatDef(QRLblm9cst.caption, 0, FormatSettings);
+repcost[9] := repcost[9]+StrToFloatDef(QRLblm10cst.caption, 0, FormatSettings);
+repcost[10] := repcost[10]+StrToFloatDef(QRLblm11cst.caption, 0, FormatSettings);
+repcost[11] := repcost[11]+StrToFloatDef(QRLblm12cst.caption, 0, FormatSettings);
+repcost[12] := repcost[12]+StrToFloatDef(QRLblm13cst.caption, 0, FormatSettings);
+repcost[13] := repcost[13]+StrToFloatDef(QRLblm14cst.caption, 0, FormatSettings);
 for loop := 0 to 14 do
   percost[loop] := 0;
 

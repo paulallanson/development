@@ -2369,7 +2369,7 @@ begin
                     QuoteLine.ProductType := iProductType;
                     QuoteLine.ProductTypeDesc := Quote.DataModule.GetProductType(iProductType);
 
-                    rFactor := strtofloat(AdoQuery1.fields[12].AsString) / strtofloat(AdoQuery1.fields[11].AsString);
+                    rFactor := StrToFloatDef(AdoQuery1.fields[12].AsString, 0, FormatSettings) / StrToFloatDef(AdoQuery1.fields[11].AsString, 0, FormatSettings);
                     QuoteLine.PriceUnitFactor := round(strtoint(AdoQuery1.fields[10].AsString)/rFactor);
                     QuoteLine.PriceUnit := Quote.DataModule.GetPriceUnitFromFactor(QuoteLine.PriceUnitFactor);
 
@@ -2382,7 +2382,7 @@ begin
 
                     // Number of hours
                     try
-                      QuoteLine.NoOfHours := strtofloat(trim(AdoQuery1.fields[18].asstring))
+                      QuoteLine.NoOfHours := StrToFloatDef(trim(AdoQuery1.fields[18].asstring), 0, FormatSettings)
                     except
                       QuoteLine.NoOfHours := 0
                     end;
@@ -2396,35 +2396,35 @@ begin
 
                     // Actual Selling Price
                     try
-                      QuoteLine.UnitSell := strtofloat(AdoQuery1.fields[11].AsString);
+                      QuoteLine.UnitSell := StrToFloatDef(AdoQuery1.fields[11].AsString, 0, FormatSettings);
                     except
                       QuoteLine.UnitSell := 0;
                     end;
 
                     // Direct Cost
                     try
-                      QuoteLine.UnitCost := strtofloat(AdoQuery1.fields[16].AsString)/rFactor;
+                      QuoteLine.UnitCost := StrToFloatDef(AdoQuery1.fields[16].AsString, 0, FormatSettings)/rFactor;
                     except
                       QuoteLine.UnitCost := 0;
                     end;
 
                     // SSP
                     try
-                      QuoteLine.UnitSSP := strtofloat(AdoQuery1.fields[14].AsString)/rFactor;
+                      QuoteLine.UnitSSP := StrToFloatDef(AdoQuery1.fields[14].AsString, 0, FormatSettings)/rFactor;
                     except
                       QuoteLine.UnitSSP := 0;
                     end;
 
                     // Direct Cost plus Overhead
                     try
-                      QuoteLine.UnitCostOHD := strtofloat(AdoQuery1.fields[15].AsString)/rFactor;
+                      QuoteLine.UnitCostOHD := StrToFloatDef(AdoQuery1.fields[15].AsString, 0, FormatSettings)/rFactor;
                     except
                       QuoteLine.UnitCostOHD := 0;
                     end;
 
                     // SSP original
                     try
-                      QuoteLine.UnitSSPOrig := strtofloat(AdoQuery1.fields[17].AsString)/rFactor;
+                      QuoteLine.UnitSSPOrig := StrToFloatDef(AdoQuery1.fields[17].AsString, 0, FormatSettings)/rFactor;
                     except
                       QuoteLine.UnitSSPOrig := 0;
                     end;

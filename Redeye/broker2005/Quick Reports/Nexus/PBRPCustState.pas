@@ -220,7 +220,8 @@ procedure TPBRPCustStateFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
 begin
   TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
   TotVatQRLbl.caption := formatfloat('0.00',rVat);
-  InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloat(TotGoodsQRLbl.Caption)+StrToFloat(TotVatQRlbl.caption)));
+  InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloatDef(TotGoodsQRLbl.Caption, 0, FormatSettings) +
+                                             StrToFloatDef(TotVatQRlbl.Caption, 0, FormatSettings)));
 end;
 
 procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;
@@ -238,8 +239,8 @@ begin
       lblGoods.caption := formatfloat('0.00',fieldbyname('Goods_value').asfloat);
       lblVAT.caption := formatfloat('0.00',fieldbyname('vat_value').asfloat);
 //      lblUnitPrice.caption := formatfloat('0.00',fieldbyname('unit_price').asfloat)+ ' '+fieldbyname('Price_Descr').asstring;
-      rGoods := rGoods + StrToFloat(LblGoods.Caption);
-      rvat := rVat + StrToFloat(LblVat.Caption);
+      rGoods := rGoods + StrToFloatDef(LblGoods.Caption, 0, FormatSettings);
+      rvat := rVat + StrToFloatDef(LblVat.Caption, 0, FormatSettings);
       if fieldbyname('Sales_Invoice_Type').asstring = 'S' then
         qrlblReference.caption := GetOrderRef(fieldbyname('Sales_Order').asinteger,'S')
       else
@@ -342,8 +343,8 @@ begin
       * rGoodsTotal;
 
   qrlblGoodsValue.Caption := formatfloat('0.00', rGoodsTotal);
-//  iGoods := iGoods + StrToFloat(qrlblGoodsValue.Caption);
-  rVatValue := StrToFloat(qrlblGoodsValue.Caption) *
+//  iGoods := iGoods + StrToFloatDef(qrlblGoodsValue.Caption, 0, FormatSettings);
+  rVatValue := StrToFloatDef(qrlblGoodsValue.Caption, 0, FormatSettings) *
     (SalesInvSQL.FieldByName('Vat_Rate').AsFloat / 100);
 //  ivat := ivat + rVatValue;
   qrlblVatValue.Caption := formatfloat('0.00', rVatValue);

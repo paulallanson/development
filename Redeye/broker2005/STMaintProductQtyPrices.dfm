@@ -1,9 +1,9 @@
 object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
   Left = 311
   Top = 114
-  Width = 824
-  Height = 562
   Caption = 'Maintain Product Quantity Prices'
+  ClientHeight = 523
+  ClientWidth = 808
   Color = clBtnFace
   Constraints.MinHeight = 562
   Constraints.MinWidth = 824
@@ -13,29 +13,27 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 487
-    Width = 816
+    Top = 482
+    Width = 808
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 487
+    ExplicitWidth = 816
     object OKBitBtn: TBitBtn
       Left = 320
       Top = 7
       Width = 75
       Height = 25
       Caption = 'OK'
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -101,6 +99,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 416
@@ -109,9 +109,6 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -176,14 +173,17 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
   end
   object sgDetails: TStringGrid
     Left = 0
     Top = 57
-    Width = 816
-    Height = 430
+    Width = 808
+    Height = 425
     Align = alClient
     ColCount = 7
     DefaultColWidth = 20
@@ -196,6 +196,8 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     OnKeyPress = sgDetailsKeyPress
     OnKeyUp = sgDetailsKeyUp
     OnSelectCell = sgDetailsSelectCell
+    ExplicitWidth = 816
+    ExplicitHeight = 430
     ColWidths = (
       20
       96
@@ -208,10 +210,11 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 816
+    Width = 808
     Height = 57
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 816
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -310,9 +313,7 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -324,9 +325,7 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -356,49 +355,31 @@ object STMaintProductQtyPricesFrm: TSTMaintProductQtyPricesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qrySuppliers: TFDQuery

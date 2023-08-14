@@ -1374,7 +1374,7 @@ var
               OrderLine.SOLineStatus := slNotYetSent;
               OrderLine.ActnTkn := 'A';
               OrderLine.Part := cells[1,row];
-              OrderLine.Sell_Price := StrToFloat(cells[5,row]);
+              OrderLine.Sell_Price := StrToFloatDef(cells[5,row], 0, FormatSettings);
               OrderLine.OrdQty := inptoSing((cells[4,row]),OrderLine.SellPackQuantity);
               SalesOrder.OrderLines.Add(OrderLine);
               LineChgBitBtn.Enabled := True ;
@@ -1397,7 +1397,7 @@ var
 
         if Col = 4 then
           begin
-            cells[col+2,row] := formatmoney(strToInt(cells[col,row]) * StrToFloat(cells[col+1,row]));
+            cells[col+2,row] := formatmoney(strToInt(cells[col,row]) * StrToFloatDef(cells[col+1,row]), 0, FormatSettings);
             salesorder.OrderLines.Lines[row-1].Ordqty := InptoSing(cells[4,row],salesorder.OrderLines.Lines[row-1].SellPackQuantity);
             if salesorder.orderlines.lines[row-1].ActnTkn <> 'A' then
               salesorder.orderlines.lines[row-1].ActnTkn := 'C';
@@ -1410,8 +1410,8 @@ var
 
         if col = 5 then
           begin
-            cells[col+1,row] := formatmoney(strToInt(cells[col-1,row]) * StrToFloat(cells[col,row]));
-            salesorder.OrderLines.Lines[row-1].Sell_Price := strToFloat(cells[5,row]);
+            cells[col+1,row] := formatmoney(strToInt(cells[col-1,row]) * StrToFloatDef(cells[col,row]), 0, FormatSettings);
+            salesorder.OrderLines.Lines[row-1].Sell_Price := StrToFloatDef(cells[5,row], 0, FormatSettings);
             if salesorder.orderlines.lines[row-1].ActnTkn <> 'A' then
               salesorder.orderlines.lines[row-1].ActnTkn := 'C';
              memoTotal.text := CurrencyDisp(FloatToStr(getOrderValue)) ;
@@ -1446,7 +1446,7 @@ begin
         LineDetsStringGrid.cells[3,irow] := fieldbyname('Sell_Pack_Quantity').asstring;
         LineDetsStringGrid.cells[4,irow] := '1';
         LineDetsStringGrid.cells[5,irow] := formatmoney(getsellprice(spart));
-        LineDetsStringGrid.cells[6,irow] := formatmoney(strToFloat(LineDetsStringGrid.cells[5,irow]) * StrToInt(LineDetsStringGrid.cells[4,irow]));
+        LineDetsStringGrid.cells[6,irow] := formatmoney(StrToFloatDef(LineDetsStringGrid.cells[5,irow], 0, FormatSettings) * StrToInt(LineDetsStringGrid.cells[4,irow]));
         end;
     end;
 end;

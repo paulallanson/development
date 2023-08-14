@@ -599,9 +599,9 @@ If bPassChanged then
       ParamByName('Short_Name').AsString := ShortNameEdit.Text;
       ParamByName('Email').AsString := EmailEdit.Text;
       ParamByName('Web_Ordering_Email').AsString := WebEmailEdit.Text;
-      ParamByName('Max_Unauthorised_PO_Value').Asfloat := strtofloat(memCreditLimit.Text);
-      ParamByName('Authorised_PO_Cost_Limit').Asfloat := strtofloat(memAuthLimit.Text);
-      ParamByName('Min_PO_Sales_Value').Asfloat := strtofloat(memMinValue.Text);
+      ParamByName('Max_Unauthorised_PO_Value').Asfloat := StrToFloatDef(memCreditLimit.Text, 0, FormatSettings);
+      ParamByName('Authorised_PO_Cost_Limit').Asfloat := StrToFloatDef(memAuthLimit.Text, 0, FormatSettings);
+      ParamByName('Min_PO_Sales_Value').Asfloat := StrToFloatDef(memMinValue.Text, 0, FormatSettings);
 
       if rdgrpAuthorise.ItemIndex = 0 then
         ParamByName('Can_Authorise_PO').Asstring := 'N'
@@ -1068,7 +1068,7 @@ begin
   if (Sender as TMemo).Text <> '' then
   begin
     try
-      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloat((Sender as TMemo).Text))
+      (Sender as TMemo).Text := FormatFloat('######0.00', StrToFloatDef((Sender as TMemo).Text, 0, FormatSettings))
     except
       MessageDlg('Invalid value', mtError, [mbOK], 0);
       (Sender as TMemo).SetFocus;

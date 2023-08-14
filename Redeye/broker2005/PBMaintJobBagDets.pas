@@ -942,7 +942,7 @@ procedure TPBMaintJobBagDetsFrm.SelectWorksOrder(Sender: TObject);
 var
   tempCode: real;
 begin
-  tempCode := strtofloat(cmbJobBagWO.Text);
+  tempCode := StrToFloatDef(cmbJobBagWO.Text, 0, FormatSettings);
   with dtmdlJBWOrders.qrySelectedWO do
     begin
       Close;
@@ -1842,7 +1842,7 @@ begin
 
     {Get the Picking Refererence}
     sPickRef := dtmdlJBOrders.GetPickingRef(SONumber);
-    dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+    dmBroker.AddIntSelCode(iIntSelCode,StrToFloatDef(sPickRef, 0, FormatSettings), sPickRef);
   
     stPickDM := TstpickDm.Create(self);
     stStockDataMod := TstStockDataMod.Create(self);

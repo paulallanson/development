@@ -174,8 +174,8 @@ type
     DelEnqSuppQtySQL: TFDQuery;
     chkbxDecline: TCheckBox;
     procedure FormShow(Sender: TObject);
-    procedure SupplierPricesGridDrawCell(Sender: TObject; vCol,
-      vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure SupplierPricesGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure PUnitComboDropDown(Sender: TObject);
     procedure SupplierPricesGridClick(Sender: TObject);
     procedure PUnitComboClick(Sender: TObject);
@@ -199,8 +199,8 @@ type
     procedure PUnitComboKeyPress(Sender: TObject; var Key: Char);
     procedure EnquiryEditKeyPress(Sender: TObject; var Key: Char);
     procedure SupplierPricesGridKeyPress(Sender: TObject; var Key: Char);
-    procedure SupplierPricesGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
+    procedure SupplierPricesGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
     procedure SpeedButton3Click(Sender: TObject);
     procedure EnquiryLineGridClick(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
@@ -306,28 +306,28 @@ begin
   }
 end;
 
-procedure TPBEnqSupRespFrm.SupplierPricesGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TPBEnqSupRespFrm.SupplierPricesGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
       Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+        Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with SupplierPricesGrid do
   begin
-    if vCol = 0 then
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
@@ -337,7 +337,7 @@ begin
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
+      StrPCopy(Txt, Cells[ACol, ARow]);
       SetTextAlign(Canvas.Handle,
         GetTextAlign(Canvas.Handle)
         and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
@@ -986,7 +986,7 @@ begin
       AddChargesGrid.Cells[2, icount] := ChargesGrid.Cells[2, icount];
       AddChargesGrid.Cells[3, icount] := ChargesGrid.Cells[3, icount];
       AddChargesGrid.Cells[4, icount] := ChargesGrid.Cells[4, icount];
-      iTotValue := iTotValue + StrToFloat(AddChargesGrid.Cells[2, icount]);
+      iTotValue := iTotValue + StrToFloatDef(AddChargesGrid.Cells[2, icount], 0, FormatSettings);
     end;
   end;
   AddChargesEdit.Text := formatfloat('0.000',iTotValue);
@@ -1134,7 +1134,7 @@ begin
       if SuppGrid.Cells[9, irow] = '' then
         UpEnqSuppSQL.ParamByName('Run_on_Price').clear
       else
-        UpEnqSuppSQL.ParamByName('Run_on_Price').Asfloat := strtofloat(SuppGrid.Cells[9, irow]);
+        UpEnqSuppSQL.ParamByName('Run_on_Price').Asfloat := StrToFloatDef(SuppGrid.Cells[9, irow], 0, FormatSettings);
 
       UpEnqSuppSQL.ParamByName('Decline_to_Quote').asstring := SuppGrid.cells[11,irow];
       UpEnqSuppSQL.ExecSQL;
@@ -1227,9 +1227,9 @@ begin
       PBEnqSuppDataModfrm.AddEnqSuppChgsSQL.ParamByName('Details').Asstring :=
         ChargesGrid.Cells[1, i];
       PBEnqSuppDataModfrm.AddEnqSuppChgsSQL.ParamByName('Amount').Asfloat :=
-        strtofloat(ChargesGrid.Cells[2, i]);
+        StrToFloatDef(ChargesGrid.Cells[2, i], 0, FormatSettings);
       PBEnqSuppDataModfrm.AddEnqSuppChgsSQL.ParamByName('Quotation_Price').Asfloat :=
-        StrTofloat(ChargesGrid.Cells[3, i]);
+        StrToFloatDef(ChargesGrid.Cells[3, i], 0, FormatSettings);
       PBEnqSuppDataModfrm.AddEnqSuppChgsSQL.ParamByName('Charge_type').Asstring :=
         ChargesGrid.Cells[4, i];
       PBEnqSuppDataModfrm.AddEnqSuppChgsSQL.ExecSQL;
@@ -1285,7 +1285,7 @@ begin
       AddEnqSuppQtySQL.ParamByName('Quantity').AsInteger :=
         StrToInt(QtyGrid.Cells[0, iqty]);
       AddEnqSuppQtySQL.ParamByName('Price').AsFloat :=
-        StrToFloat(QtyGrid.Cells[1, iqty]);
+        StrToFloatDef(QtyGrid.Cells[1, iqty], 0, FormatSettings);
       AddEnqSuppQtySQL.ParamByName('Unit').AsString := QtyGrid.Cells[3, iqty];
       AddEnqSuppQtySQL.ParamByName('Response').AsInteger :=
         StrToInt(QtyGrid.Cells[0, iqty]);
@@ -1302,7 +1302,7 @@ begin
       if QtyGrid.Cells[1, iqty] = '' then
         UpEnqSuppQtySQL.ParamByName('Price').clear
       else
-        UpEnqSuppQtySQL.ParamByName('Price').AsFloat := StrToFloat(QtyGrid.Cells[1, iqty]);
+        UpEnqSuppQtySQL.ParamByName('Price').AsFloat := StrToFloatDef(QtyGrid.Cells[1, iqty], 0, FormatSettings);
       if QtyGrid.cells[3, iqty] = '' then
         UpEnqSuppQtySQL.ParamByName('Unit').clear
       else
@@ -1400,7 +1400,7 @@ begin
 end;
 
 procedure TPBEnqSupRespFrm.SupplierPricesGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  ACol, ARow: Integer; var CanSelect: Boolean);
 var
 //  ifloat: Real;
   irow: integer;
@@ -1411,20 +1411,20 @@ begin
       for irow := 1 to pred(rowcount) do
         begin
           if cells[1, irow] = '' then continue;
-          cells[1, irow] := formatfloat('0.000',strtofloat(cells[1,irow]));
+          cells[1, irow] := formatfloat('0.000',StrToFloatDef(cells[1,irow], 0, FormatSettings));
         end;
     end;
 
 (*  with SupplierPricesGrid do
   begin
     {Don't display if any of these}
-    if (Cells[1, Row] = '') or
-      (Row = 0) or
-      (Col = 0) then Exit;
+    if (Cells[1, ARow] = '') or
+      (ARow = 0) or
+      (ACol = 0) then Exit;
 
-    ifloat := StrToFloat(Cells[1, Row]);
-    Cells[1, Row] := formatfloat('0.000', ifloat);
-    QtyGrid.Cells[1, Row] := formatfloat('0.000', ifloat);
+    ifloat := StrToFloatDef(Cells[1, ARow], 0, FormatSettings);
+    Cells[1, ARow] := formatfloat('0.000', ifloat);
+    QtyGrid.Cells[1, ARow] := formatfloat('0.000', ifloat);
   end;
 *)
 end;
@@ -1512,7 +1512,7 @@ begin
     ChargesGrid.Cells[4, irow] := PBLUEnqAddChgFrm.AddChargesGrid.Cells[3,
       irow];
     iTotValue := iTotValue +
-      StrToFloat(PBLUEnqAddChgFrm.AddChargesGrid.Cells[1, irow]);
+      StrToFloatDef(PBLUEnqAddChgFrm.AddChargesGrid.Cells[1, irow], 0, FormatSettings);
   end;
   AddChargesGrid.RowCount := PBLUEnqAddChgFrm.AddChargesGrid.RowCount;
   ChargesGrid.RowCount := PBLUEnqAddChgFrm.AddChargesGrid.RowCount;
@@ -1669,7 +1669,7 @@ begin
       for irow := 1 to pred(rowcount) do
         begin
           if cells[1, irow] = '' then continue;
-          cells[1, irow] := formatfloat('0.000',strtofloat(cells[1,irow]));
+          cells[1, irow] := formatfloat('0.000',StrToFloatDef(cells[1,irow], 0, FormatSettings));
         end;
     end;
 end;

@@ -1021,7 +1021,7 @@ begin
   try
     begin
       if VarType(Qty) = VarString then
-        Result := FormatFloat('######0.00', StrToFloat(Qty))
+        Result := FormatFloat('######0.00', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Qty);
     end;
@@ -1048,7 +1048,7 @@ begin
   try
     begin
       if VarType(Qty) = VarString then
-        Result := FormatFloat('######0.000', StrToFloat(Qty))
+        Result := FormatFloat('######0.000', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0.000', Qty);
     end;
@@ -1075,10 +1075,10 @@ begin
   try
     begin
       if VarType(Qty) = VarString then
-        Result := FormatFloat('######0', StrToFloat(Qty))
+        Result := FormatFloat('######0', StrToFloatDef(Qty, 0, FormatSettings))
       else
         Result := FormatFloat('######0', Qty);
-      if StrToFloat(Result) < 0 then
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';
@@ -1106,7 +1106,7 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := FormatFloat('######0.00', StrToFloat(Money))
+        Result := FormatFloat('######0.00', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.00', Money);
     end;
@@ -1132,7 +1132,7 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := FormatFloat('######0.000', StrToFloat(Money))
+        Result := FormatFloat('######0.000', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.000', Money);
     end;
@@ -1158,7 +1158,7 @@ begin
   try
     begin
       if VarType(Money) = VarString then
-        Result := FormatFloat('######0.0000', StrToFloat(Money))
+        Result := FormatFloat('######0.0000', StrToFloatDef(Money, 0, FormatSettings))
       else
         Result := FormatFloat('######0.0000', Money);
     end;
@@ -1202,7 +1202,7 @@ function CurrencyDisp(DisplayMask,CurrVal: string): string;
 begin
   if CurrVal = '' then CurrVal := '0';
   try
-    CurrencyDisp := FormatFloat(DisplayMask, StrToFloat(CurrVal));
+    CurrencyDisp := FormatFloat(DisplayMask, StrToFloatDef(CurrVal, 0, FormatSettings));
   except
     on EConvertError do
     begin

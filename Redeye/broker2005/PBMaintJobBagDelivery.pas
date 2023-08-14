@@ -287,11 +287,11 @@ begin
   JobBagDelivery.DeliverViaCompany := 'N';
 
 
-  JobBagdelivery.QtyToDeliver := strtofloat(QtyToDeliverMemo.text);
+  JobBagdelivery.QtyToDeliver := StrToFloatDef(QtyToDeliverMemo.text, 0, FormatSettings);
   JobBagdelivery.QtyDelivered := 0;
   JobBagdelivery.BoxQuantity := strtoint(BoxQtyMemo.text);
   JobBagdelivery.NumberOfBoxes := strtoint(NoOfBoxesMemo.text);
-  JobBagdelivery.DeliveryWeightKilos := strtofloat(WeightMemo.text);
+  JobBagdelivery.DeliveryWeightKilos := StrToFloatDef(WeightMemo.text, 0, FormatSettings);
   JobBagdelivery.DateRequired := PBDateStr(DatePointEdit.text);
   JobBagDelivery.DeliveryInstructions := DelInstructMemo.Text;
 

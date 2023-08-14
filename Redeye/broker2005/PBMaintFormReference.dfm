@@ -1,4 +1,4 @@
-﻿object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
+object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   Left = 178
   Top = 122
   BorderStyle = bsDialog
@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -229,8 +227,6 @@
       Height = 25
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -296,6 +292,8 @@
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 384
@@ -304,9 +302,6 @@
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -371,7 +366,10 @@
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
   end
   object btnImage: TBitBtn
@@ -381,8 +379,6 @@
     Height = 25
     Caption = 'Image'
     Enabled = False
-    TabOrder = 2
-    OnClick = btnImageClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -397,6 +393,8 @@
       EE33337F333377F3337F33EEEEEE00EEEE33337F33337733337F33EEEEEEEEEE
       EE33337FFFFFFFFFFF7F33EEEEEEEEEEEE333377777777777773}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = btnImageClick
   end
   object AddSQL: TFDQuery
     ConnectionName = 'PB'
@@ -419,18 +417,18 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
         ParamType = ptInput
       end
       item
-        DataType = ftString
+        Name = 'Branch_No'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -449,34 +447,22 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_ID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stocked_Item'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_Level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -490,9 +476,7 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object GetFormRefSQL: TFDQuery
@@ -529,8 +513,8 @@
     Top = 124
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -545,19 +529,13 @@
     Top = 4
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Form_Reference_ID'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -571,8 +549,8 @@
     Top = 124
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -606,19 +584,13 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'form_reference_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Old_Form_Reference_id'
-        ParamType = ptUnknown
       end>
   end
   object CheckFormRef3SQL: TFDQuery
@@ -636,14 +608,10 @@
     Left = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object CheckFormRef4SQL: TFDQuery
@@ -659,19 +627,13 @@
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'form_reference_id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryDelEComm: TFDQuery
@@ -683,9 +645,7 @@
     Top = 108
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryECommStockRef: TFDQuery
@@ -697,9 +657,7 @@
     Top = 92
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'stock_reference'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckFormRef5: TFDQuery
@@ -724,14 +682,10 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
   object qryCustProdPrefix: TFDQuery
@@ -744,9 +698,7 @@
     Top = 44
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
 end

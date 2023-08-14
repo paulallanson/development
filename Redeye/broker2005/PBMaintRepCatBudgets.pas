@@ -315,7 +315,7 @@ begin
         for icol := 1 to pred(colcount) do
           begin
             if cells[icol, irow] = '' then continue;
-              cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+              cells[icol, irow] := formatfloat('0', StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           end;
     end;
 end;
@@ -402,9 +402,9 @@ begin
         for icol := 1 to pred(colcount) do
           begin
             if cells[icol, irow] = '' then continue;
-              cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+              cells[icol, irow] := formatfloat('0', StrToFloatDef(cells[icol,irow], 0, FormatSettings));
 (*            if cells[2, irow] = '' then continue;
-              cells[2, irow] := formatfloat('0.00',strtofloat(cells[2,irow]));
+              cells[2, irow] := formatfloat('0.00',StrToFloatDef(cells[2,irow], 0, FormatSettings));
 *)        end;
     end;
 end;
@@ -434,9 +434,9 @@ begin
                 parambyname('Period').asinteger := periods[iperiod];
                 parambyname('Rep').asinteger := dblkpReps.keyvalue;
                 parambyname('Category').asinteger := category[icategory];
-                parambyname('Turnover_Value').asfloat := strtofloat(cells[icount,icategory]);
+                parambyname('Turnover_Value').asfloat := StrToFloatDef(cells[icount,icategory], 0, FormatSettings);
                 inc(icount);
-                parambyname('Profit_Value').asfloat := strtofloat(cells[icount,icategory]);
+                parambyname('Profit_Value').asfloat := StrToFloatDef(cells[icount,icategory], 0, FormatSettings);
                 inc(icount);
                 execsql;
               end;

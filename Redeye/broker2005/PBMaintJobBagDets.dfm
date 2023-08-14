@@ -1,10 +1,9 @@
 object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   Left = 94
   Top = 70
-  AutoScroll = False
   Caption = 'Job Bag Details'
-  ClientHeight = 553
-  ClientWidth = 789
+  ClientHeight = 552
+  ClientWidth = 785
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 797
@@ -13,25 +12,24 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 789
+    Width = 785
     Height = 169
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 789
     DesignSize = (
-      789
+      785
       169)
     object Label2: TLabel
       Left = 8
@@ -41,12 +39,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Caption = 'Customer'
     end
     object Label3: TLabel
-      Left = 333
+      Left = 325
       Top = 12
       Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Date Required'
+      ExplicitLeft = 333
     end
     object Label4: TLabel
       Left = 176
@@ -63,12 +62,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Caption = 'Job Bag No.'
     end
     object Label5: TLabel
-      Left = 534
+      Left = 526
       Top = 12
       Width = 85
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Manager'
+      ExplicitLeft = 534
     end
     object Label6: TLabel
       Left = 8
@@ -85,20 +85,22 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Caption = 'Description'
     end
     object Label7: TLabel
-      Left = 526
+      Left = 518
       Top = 66
       Width = 93
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Customer Order Ref'
+      ExplicitLeft = 526
     end
     object Label8: TLabel
-      Left = 580
+      Left = 572
       Top = 92
       Width = 39
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Quantity'
+      ExplicitLeft = 580
     end
     object Label9: TLabel
       Left = 8
@@ -108,12 +110,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Caption = 'Rep'
     end
     object Label10: TLabel
-      Left = 549
+      Left = 541
       Top = 38
       Width = 70
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Team'
+      ExplicitLeft = 549
     end
     object Label11: TLabel
       Left = 8
@@ -123,12 +126,13 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Caption = 'Reference'
     end
     object Label12: TLabel
-      Left = 539
+      Left = 531
       Top = 140
       Width = 83
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Works Instruction'
+      ExplicitLeft = 539
     end
     object edtDate: TEdit
       Left = 208
@@ -139,13 +143,14 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnExit = edtDateExit
     end
     object edtDateReq: TEdit
-      Left = 413
+      Left = 405
       Top = 8
       Width = 81
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 3
       OnExit = edtDateReqExit
+      ExplicitLeft = 413
     end
     object edtCustomer: TEdit
       Left = 80
@@ -171,13 +176,11 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 501
+      Left = 493
       Top = 6
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 4
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -192,14 +195,15 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = BitBtn2Click
+      ExplicitLeft = 501
     end
     object BitBtn3: TBitBtn
       Left = 296
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = BitBtn3Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -214,6 +218,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = BitBtn3Click
     end
     object BitBtn4: TBitBtn
       Left = 296
@@ -258,16 +264,17 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnClick = dblkpCustomerContactClick
     end
     object edtCustOrderNo: TEdit
-      Left = 629
+      Left = 621
       Top = 62
       Width = 132
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 16
       OnChange = CheckOK
+      ExplicitLeft = 629
     end
     object memQuantity: TMemo
-      Left = 629
+      Left = 621
       Top = 87
       Width = 81
       Height = 23
@@ -277,6 +284,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnEnter = memQuantityEnter
       OnExit = ValidateQty
       OnKeyPress = memQuantityKeyPress
+      ExplicitLeft = 629
     end
     object dblkpRep: TDBLookupComboBox
       Left = 80
@@ -305,7 +313,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnClick = BitBtn5Click
     end
     object edtAccountTeam: TEdit
-      Left = 629
+      Left = 621
       Top = 34
       Width = 115
       Height = 21
@@ -313,9 +321,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 7
+      ExplicitLeft = 629
     end
     object btnAccountManager: TBitBtn
-      Left = 752
+      Left = 744
       Top = 6
       Width = 25
       Height = 25
@@ -329,9 +338,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       ParentFont = False
       TabOrder = 6
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 752
     end
     object edtAccountManager: TEdit
-      Left = 629
+      Left = 621
       Top = 8
       Width = 115
       Height = 21
@@ -340,6 +350,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 5
+      ExplicitLeft = 629
     end
     object edtDescriptiveRef: TEdit
       Left = 80
@@ -350,7 +361,7 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       OnChange = CheckOK
     end
     object btnWorksOrders: TBitBtn
-      Left = 752
+      Left = 744
       Top = 134
       Width = 25
       Height = 25
@@ -363,17 +374,16 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 18
+      ExplicitLeft = 752
     end
     object btnShowWO: TBitBtn
-      Left = 720
+      Left = 712
       Top = 134
       Width = 25
       Height = 25
       Hint = 'Show Works Instruction'
       Anchors = [akTop, akRight]
       Enabled = False
-      TabOrder = 19
-      OnClick = btnShowWOClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -388,43 +398,47 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 19
+      OnClick = btnShowWOClick
+      ExplicitLeft = 720
     end
     object cmbJobBagWo: TComboBox
-      Left = 632
+      Left = 624
       Top = 136
       Width = 81
       Height = 21
       Style = csDropDownList
       Anchors = [akTop, akRight]
-      ItemHeight = 13
       TabOrder = 20
     end
   end
   object PageControl1: TPageControl
     Left = 0
     Top = 169
-    Width = 789
-    Height = 326
+    Width = 785
+    Height = 325
     ActivePage = tsOrders
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 789
+    ExplicitHeight = 326
     object tsOrders: TTabSheet
       Caption = 'Orders'
       object Panel1: TPanel
-        ParentBackground = False
         Left = 681
         Top = 0
         Width = 100
         Height = 227
         Align = alRight
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
         object FuncGrpBox: TGroupBox
-          ParentBackground = False
           Left = 6
           Top = -5
           Width = 83
           Height = 224
+          ParentBackground = False
           TabOrder = 0
           object btnAdd: TBitBtn
             Left = 4
@@ -433,10 +447,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Add a new sundry item'
             Caption = 'Sundries'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 4
-            OnClick = btnAddClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -451,6 +461,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               05555575FF5555777F55555003B3B3B00555555775FF55577FF55555500B3B3B
               005555555775FFFF77F555555570000000555555555777777755}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 4
+            OnClick = btnAddClick
           end
           object btnDelete: TBitBtn
             Left = 4
@@ -459,8 +473,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Delete the selected job bag item'
             Caption = '&Delete'
-            TabOrder = 6
-            OnClick = btnDeleteClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -475,6 +487,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
               3333333337FFF7F3333333333000003333333333377777333333}
             NumGlyphs = 2
+            TabOrder = 6
+            OnClick = btnDeleteClick
           end
           object btnChange: TBitBtn
             Left = 4
@@ -483,10 +497,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Change the selected job bag item'
             Caption = '&Change'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 2
-            OnClick = btnChangeClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -501,6 +511,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
               00333377737FFFFF773333303300000003333337337777777333}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = btnChangeClick
           end
           object btnAddPO: TBitBtn
             Left = 4
@@ -509,10 +523,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Insert an existing purchase order'
             Caption = '&Insert'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 0
-            OnClick = btnAddPOClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -527,6 +537,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               555577F7F7F7F7F75F5550707070700B055557F7F7F7F7757FF5507070707050
               9055575757575757775505050505055505557575757575557555}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            OnClick = btnAddPOClick
           end
           object btnNew: TBitBtn
             Left = 4
@@ -535,10 +549,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Create a new purchase order'
             Caption = '&New'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 1
-            OnClick = btnNewClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -553,6 +563,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
               3BB33773333773333773B333333B3333333B7333333733333337}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            OnClick = btnNewClick
           end
           object btnStock: TBitBtn
             Left = 4
@@ -561,10 +575,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Add a new stock call off item'
             Caption = '&Stock'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 3
-            OnClick = btnStockClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -579,6 +589,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               33307777F37777FF33370999007B700333037777F3373773FF73099900000030
               00337777FFFFF7F7773300000000003333337777777777333333}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+            OnClick = btnStockClick
           end
           object btnExtras: TBitBtn
             Left = 4
@@ -587,10 +601,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             Height = 25
             Hint = 'Add DMS charges'
             Caption = 'DMS'
-            ParentShowHint = False
-            ShowHint = True
-            TabOrder = 5
-            OnClick = btnExtrasClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000120B0000120B00001000000000000000000000000000
@@ -605,17 +615,21 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
               0005555555575FF7777555555555000555555555555577755555555555555555
               5555555555555555555555555555555555555555555555555555}
             NumGlyphs = 2
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 5
+            OnClick = btnExtrasClick
           end
         end
       end
       object Panel5: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 681
         Height = 227
         Align = alClient
         Caption = 'Panel5'
+        ParentBackground = False
         TabOrder = 1
         object dbgLines: TDBGrid
           Left = 1
@@ -699,84 +713,92 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         end
       end
       object Panel3: TPanel
-        ParentBackground = False
         Left = 0
         Top = 227
         Width = 781
         Height = 71
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 2
         DesignSize = (
-          781
+          777
           71)
         object labCosts: TLabel
-          Left = 616
+          Left = 612
           Top = 3
           Width = 53
           Height = 13
           Anchors = [akRight, akBottom]
           Caption = 'Total Costs'
+          ExplicitLeft = 616
         end
         object labSales: TLabel
-          Left = 617
+          Left = 613
           Top = 21
           Width = 53
           Height = 13
           Anchors = [akRight, akBottom]
           Caption = 'Total Sales'
+          ExplicitLeft = 617
         end
         object labMargin: TLabel
-          Left = 608
+          Left = 604
           Top = 39
           Width = 62
           Height = 13
           Anchors = [akRight, akBottom]
           Caption = 'Margin Value'
+          ExplicitLeft = 608
         end
         object LabMarginPerc: TLabel
-          Left = 628
+          Left = 624
           Top = 55
           Width = 43
           Height = 13
           Anchors = [akRight, akBottom]
           Caption = 'Margin %'
+          ExplicitLeft = 628
         end
         object labTotalCost: TLabel
-          Left = 701
+          Left = 697
           Top = 3
           Width = 66
           Height = 13
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitLeft = 701
         end
         object labTotalSell: TLabel
-          Left = 701
+          Left = 697
           Top = 21
           Width = 66
           Height = 13
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitLeft = 701
         end
         object LabTotalMargin: TLabel
-          Left = 701
+          Left = 697
           Top = 39
           Width = 66
           Height = 13
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitLeft = 701
         end
         object labTotalMarginPerc: TLabel
-          Left = 701
+          Left = 697
           Top = 55
           Width = 66
           Height = 13
           Alignment = taRightJustify
           Anchors = [akRight, akBottom]
           Caption = 'TotalsGoHere'
+          ExplicitLeft = 701
         end
         object btnPrint: TBitBtn
           Left = 96
@@ -784,8 +806,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           Width = 75
           Height = 25
           Caption = 'Print'
-          TabOrder = 0
-          OnClick = btnPrintClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000130B0000130B00001000000000000000000000000000
@@ -800,6 +820,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
             33333337FFFF7733333333300000033333333337777773333333}
           NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnPrintClick
         end
         object chkbxReadytoInvoice: TCheckBox
           Left = 11
@@ -820,9 +842,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           Font.Height = -11
           Font.Name = 'MS Sans Serif'
           Font.Style = []
-          ParentFont = False
-          TabOrder = 2
-          OnClick = btnNotesClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -837,26 +856,31 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
             8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
             3333333773FFFF77333333333000003333333333377777333333}
           NumGlyphs = 2
+          ParentFont = False
+          TabOrder = 2
+          OnClick = btnNotesClick
         end
       end
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 495
-    Width = 789
+    Top = 494
+    Width = 785
     Height = 39
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 495
+    ExplicitWidth = 789
     object Panel4: TPanel
-      ParentBackground = False
       Left = 397
       Top = 1
       Width = 391
       Height = 37
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         391
@@ -870,8 +894,6 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Caption = 'OK'
         Default = True
         Enabled = False
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -890,6 +912,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 300
@@ -897,9 +921,10 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
+        Kind = bkCancel
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnCancelClick
-        Kind = bkCancel
       end
     end
     object chkbxInactive: TCheckBox
@@ -913,8 +938,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 534
-    Width = 789
+    Top = 533
+    Width = 785
     Height = 19
     Panels = <
       item
@@ -923,6 +948,8 @@ object PBMaintJobBagDetsFrm: TPBMaintJobBagDetsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 534
+    ExplicitWidth = 789
   end
   object PrinterSetupDialog1: TPrinterSetupDialog
     Left = 124

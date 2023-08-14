@@ -159,8 +159,8 @@ begin
       ParamByName('Work_Centre').AsInteger := iCode;
       ParamByName('Work_Centre_Name').AsString := edtName.Text + '';
       ParamByName('Work_Centre_Short_Name').AsString := edtShortName.Text + '';
-      ParamByName('Hourly_Rate').Asfloat := strtofloat(memHourlyRate.text);
-      ParamByName('Click_Charge').Asfloat := strtofloat(memClickCharge.text);
+      ParamByName('Hourly_Rate').Asfloat := StrToFloatDef(memHourlyRate.text, 0, FormatSettings);
+      ParamByName('Click_Charge').Asfloat := StrToFloatDef(memClickCharge.text, 0, FormatSettings);
       ParamByName('Feed_Method').Asstring := dblkpFeedMethod.KeyValue;
       ParamByName('Work_Centre_Description').AsString := memDescription.Text + '';
       ParamByName('Estimating_Name').AsString := edtEstimateName.Text + '';

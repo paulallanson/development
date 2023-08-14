@@ -272,9 +272,9 @@ procedure TSTStkValRepFrm.QRSubDetail1AfterPrint(Sender: TQRCustomBand;
   BandPrinted: Boolean);
 begin
 (* if AtActual then
-         ftotalCost := fTotalCost +  strtofloat(formatfloat('######0.00', GetDetsQuery.fieldbyname('Store_Cost').asFloat))
+         ftotalCost := fTotalCost +  StrToFloatDef(formatfloat('######0.00', GetDetsQuery.fieldbyname('Store_Cost').asFloat))
   else
-          ftotalCost := fTotalCost +  strtofloat(formatfloat('######0.00', GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat* GetDetsQuery.FieldByName('Store_Quantity').AsInteger / GetDetsQuery.FieldByName('Stock_Pack_Quantity').AsInteger));
+          ftotalCost := fTotalCost +  StrToFloatDef(formatfloat('######0.00', GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat* GetDetsQuery.FieldByName('Store_Quantity').AsInteger / GetDetsQuery.FieldByName('Stock_Pack_Quantity').AsInteger));
 *)
 end;
 
@@ -334,8 +334,8 @@ begin
   if getdetsquery.fieldByName('Store_Quantity').asInteger = 0 then
   begin
     StockQTyQRLabel.Caption := '0';
-    CstQRLbl.Caption := '£0.00';
-    AVCstQRLbl.Caption := '£0.000';
+    CstQRLbl.Caption := '?0.00';
+    AVCstQRLbl.Caption := '?0.000';
   end
   else
  begin
@@ -359,25 +359,25 @@ begin
             if (getdetsquery.FieldByName('Stock_Take_Prior_Qty').AsInteger = 0)  then
               begin
                  rCost := 0.00;
-                 CstQRLbl.Caption := formatfloat('£######0.00',0.00)
+                 CstQRLbl.Caption := formatfloat('?######0.00',0.00)
               end
             else
               begin
                  rCost := (getdetsquery.FieldByName('Store_Cost').AsFloat / (getdetsquery.FieldByName('Stock_Take_Prior_Qty').AsInteger) *
                                       GetDetsQuery.FieldByName('Store_quantity').AsInteger);
-                 CstQRLbl.Caption := formatfloat('£######0.00',rCost);
+                 CstQRLbl.Caption := formatfloat('?######0.00',rCost);
               end;
             if ((getdetsquery.FieldByName('Stock_Take_Prior_Qty').AsInteger = 0) or (GetDetsQuery.FieldByName('Stock_Pack_Quantity').AsInteger = 0)) then
-              AvCstQRLbl.Caption :=  formatfloat('£######0.000',0.00)
+              AvCstQRLbl.Caption :=  formatfloat('?######0.000',0.00)
             else
-              AvCstQRLbl.Caption := formatfloat('£######0.000',(getdetsquery.FieldByName('Store_Cost').AsFloat / (getdetsquery.FieldByName('Stock_Take_Prior_Qty').AsInteger /
+              AvCstQRLbl.Caption := formatfloat('?######0.000',(getdetsquery.FieldByName('Store_Cost').AsFloat / (getdetsquery.FieldByName('Stock_Take_Prior_Qty').AsInteger /
                                       GetDetsQuery.FieldByName('Stock_Pack_Quantity').AsInteger)));
           end
         else
          begin
            rCost := GetDetsQuery.FieldByName('Store_Cost').AsFloat;
-          CstQRLbl.Caption := formatfloat('£######0.00',rCost);
-          AvCstQRLbl.Caption := formatfloat('£######0.000',(getdetsquery.FieldByName('Store_Cost').AsFloat / (getdetsquery.FieldByName('Store_Quantity').AsInteger /
+          CstQRLbl.Caption := formatfloat('?######0.00',rCost);
+          AvCstQRLbl.Caption := formatfloat('?######0.000',(getdetsquery.FieldByName('Store_Cost').AsFloat / (getdetsquery.FieldByName('Store_Quantity').AsInteger /
             GetDetsQuery.FieldByName('Stock_Pack_Quantity').AsInteger)));
          end;
       end
@@ -386,15 +386,15 @@ begin
         ValueQRLabel.Caption := 'Valued at Current';
         rCost := (GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat * GetDetsQuery.FieldByName('store_quantity').AsInteger
                  / GetDetsQuery.FieldByName('Purch_Pack_Quantity').ASInteger);
-        CstQRLbl.Caption := formatfloat('£######0.00',rCost);
-        AvCstQRLbl.Caption := formatfloat('£######0.000',(GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat));
+        CstQRLbl.Caption := formatfloat('?######0.00',rCost);
+        AvCstQRLbl.Caption := formatfloat('?######0.000',(GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat));
       end;
   end;
 
   if (getDetsQuery.fieldByName('Invoice_upfront').AsString = 'Y') then
     begin
       rCost := 0;
-      cstQrlbl.caption := formatfloat('£######0.00',0);
+      cstQrlbl.caption := formatfloat('?######0.00',0);
     end;
 
   rTotal := rTotal + rCost;
@@ -442,13 +442,13 @@ begin
     if ATActual then
     begin
       rCost := GetDetsQuery.FieldByName('Store_Cost').AsFloat;
-      tempStr := tempStr + ',"' + formatfloat('£######0.00',rCost) + '"';
+      tempStr := tempStr + ',"' + formatfloat('?######0.00',rCost) + '"';
     end
     else
     begin
       rCost := (GetDetsQuery.FieldByName('Part_Purchase_Price').AsFloat * GetDetsQuery.FieldByName('store_quantity').AsInteger
                  / GetDetsQuery.FieldByName('Purch_Pack_Quantity').ASInteger);
-      tempStr := tempStr + ',"' + formatfloat('£######0.00',rCost) + '"';
+      tempStr := tempStr + ',"' + formatfloat('?######0.00',rCost) + '"';
     end;
 
     //Bin Location
@@ -484,21 +484,21 @@ end;
 procedure TSTStkValRepFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-// TotCostQRlabel.Caption := formatfloat('£######0.00',fTotalCost)
-  TotCostQRlabel.Caption := formatfloat('£######0.00',rTotal);
+// TotCostQRlabel.Caption := formatfloat('?######0.00',fTotalCost)
+  TotCostQRlabel.Caption := formatfloat('?######0.00',rTotal);
   self.gtValue := self.gtValue + rTotal;
 end;
 
 procedure TSTStkValRepFrm.rbSummaryBeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-  self.qrlblGrandTotalValue.Caption := formatfloat('£######0.00',self.gtValue);
+  self.qrlblGrandTotalValue.Caption := formatfloat('?######0.00',self.gtValue);
 end;
 
 procedure TSTStkValRepFrm.QRBand2BeforePrint(Sender: TQRCustomBand;
   var PrintBand: Boolean);
 begin
-QRLblTotBinCst.Caption := formatfloat('£######0.00',binValue)
+QRLblTotBinCst.Caption := formatfloat('?######0.00',binValue)
 end;
 
 procedure TSTStkValRepFrm.QRBand2AfterPrint(Sender: TQRCustomBand;

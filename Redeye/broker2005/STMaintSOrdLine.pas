@@ -264,7 +264,7 @@ begin
             Exit;
           end;
 
-    if strtofloat(DiscPriceMemo.text) < strtofloat(DiscCostMemo.text) then
+    if StrToFloatDef(DiscPriceMemo.text, 0, FormatSettings) < StrToFloatDef(DiscCostMemo.text, 0, FormatSettings) then
       if MessageDlg('The Selling Price is less than the Purchase Price, would you like to continue?', mtWarning,
         [mbNo, mbYes], 0) <> mrYes then
           begin
@@ -289,7 +289,7 @@ begin
         STMaintSOrdSerialNosfrm.SONumber := SalesOrder.SONumber;
         STMaintSOrdSerialNosFrm.Product := trim(PartEdit.text);
         STMaintSOrdSerialNosFrm.lblProductCode.caption := trim(PartEdit.text) + ' - ' + (DescriptionEdit.text);
-        STMaintSOrdSerialNosFrm.Quantity := strtofloat(QtySinglesMemo.text);
+        STMaintSOrdSerialNosFrm.Quantity := StrToFloatDef(QtySinglesMemo.text, 0, FormatSettings);
         STMaintSOrdSerialNosFrm.showmodal;
         if STMaintSOrdSerialNosFrm.modalresult <> idOK then
           exit;
@@ -482,11 +482,11 @@ begin
     //SellPackSize;
     OrdQty := inptosing(QtyEdit.Text,SellPackQuantity);
     OversQty := strtoint(QtyOversMemo.text);
-    Sell_Price := strtofloat(DiscPriceMemo.text);
+    Sell_Price := StrToFloatDef(DiscPriceMemo.text, 0, FormatSettings);
     Part_Cost := CostPrice;
     VatCode := VatRateCode;
 
-    OriginalSellPrice := strtofloat(SellPriceMemo.text);
+    OriginalSellPrice := StrToFloatDef(SellPriceMemo.text, 0, FormatSettings);
     Disc_val := DiscountValue;
     Disc_Type := DiscountType;
 
@@ -826,7 +826,7 @@ begin
   if (trim((Sender as TMemo).text) = '') then
     DiscountValue := 0.00
   else
-    DiscountValue := strtofloat((Sender as TMemo).text);
+    DiscountValue := StrToFloatDef((Sender as TMemo).text, 0, FormatSettings);
 
   Price := GetDiscountedPrice;
   DiscPriceMemo.text := formatmoneyto3dp(price);

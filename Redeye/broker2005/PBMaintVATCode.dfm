@@ -1,4 +1,4 @@
-﻿object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
+object PBMaintVATCodeFrm: TPBMaintVATCodeFrm
   Left = 486
   Top = 190
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 120
@@ -30,7 +28,6 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 8
     Width = 393
@@ -41,6 +38,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -142,8 +140,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -209,6 +205,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 336
@@ -217,9 +215,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -284,7 +279,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -310,34 +308,22 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Ledger_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Ledger_Description'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -355,34 +341,22 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Ledger_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Ledger_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -395,9 +369,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -416,14 +388,10 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Ref'
-        ParamType = ptUnknown
       end>
   end
 end

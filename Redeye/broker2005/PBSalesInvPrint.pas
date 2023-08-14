@@ -896,8 +896,8 @@ begin
         WriteLn(CSVFile, tempStr);
 
         {Recalculate line totals to add to invoice totals}
-        rResellerLineTotal := strtofloat(formatfloat('##0.00',rResellerLineTotal));
-        rLineTotal := strtofloat(formatfloat('##0.00',rLineTotal));
+        rResellerLineTotal := StrToFloatDef(formatfloat('##0.00',rResellerLineTotal), 0, FormatSettings);
+        rLineTotal := StrToFloatDef(formatfloat('##0.00',rLineTotal), 0, FormatSettings);
 
         rTotal := rTotal + rLineTotal;
         rResellerTotal := rResellerTotal + rResellerLineTotal;

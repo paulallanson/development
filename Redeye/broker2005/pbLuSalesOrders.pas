@@ -715,7 +715,7 @@ begin
 
       {Get the Picking Refererence}
       sPickRef := dtmdlSOOrders.GetPickingRef(selcode);
-      dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+      dmBroker.AddIntSelCode(iIntSelCode, StrToFloatDef(sPickRef, 0, FormatSettings), sPickRef);
 
       stPickDM := TstpickDm.Create(self);
       stStockDataMod := TstStockDataMod.Create(self);
@@ -1209,7 +1209,7 @@ begin
 
       {Get the Picking Refererence}
       sPickRef := dtmdlSOOrders.GetPickingRef(selcode);
-      dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+      dmBroker.AddIntSelCode(iIntSelCode, StrToFloatDef(sPickRef, 0, FormatSettings), sPickRef);
 
       stPickDM := TstpickDm.Create(self);
       stStockDataMod := TstStockDataMod.Create(self);

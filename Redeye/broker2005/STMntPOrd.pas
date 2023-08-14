@@ -1436,7 +1436,7 @@ for iTempCount := 0 to LinesListView.Items.Count - 1 do
                   STMntPOrdQtyFrm.bStore_Ord := bStore_Ord ;
                   STMntPOrdQtyFrm.iTransType := iTransType ;
                   STMntPOrdQtyFrm.QtyEdit.Text := ShowInPacks(TempPOLine.QtyOrd,TempPOLine.PartPack) ;
-                  STMntPOrdQtyFrm.fCost_Price := StrToFloat(TempLine.Subitems[3]) ;
+                  STMntPOrdQtyFrm.fCost_Price := StrToFloatDef(TempLine.Subitems[3], 0, FormatSettings) ;
                   STMntPOrdQtyFrm.bAllow_Cost := LinesListView.SelCount = 1 ;
                   STMntPordQtyFrm.EdtDiscount.Text := FormatFloat('0.00',TempPOLine.Discount);
                   STMntPordQtyFrm.fOrig_Cost := TempPOLine.Cost;
@@ -1460,7 +1460,7 @@ for iTempCount := 0 to LinesListView.Items.Count - 1 do
                   iTempQty := InpToSing(STMntPOrdQtyFrm.QtyEdit.Text,iTempPack) ;
                   TempCost := STMntPOrdQtyFrm.fCost_Price ;
                   iTempPFJ := STMntPOrdQtyFrm.iAllocPFJ ;
-                  TempDisc := StrToFloat(STMntPOrdQtyFrm.EdtDiscount.Text);
+                  TempDisc := StrToFloatDef(STMntPOrdQtyFrm.EdtDiscount.Text, 0, FormatSettings);
                   sNotes := STMntPOrdQtyFrm.memNotes.text;
                   bSample := STMntPOrdQtyFrm.chkbxSample.checked;
               Finally

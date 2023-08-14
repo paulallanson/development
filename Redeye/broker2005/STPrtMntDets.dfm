@@ -1,4 +1,4 @@
-﻿object STPrtMntDetsFrm: TSTPrtMntDetsFrm
+object STPrtMntDetsFrm: TSTPrtMntDetsFrm
   Left = 172
   Top = 38
   BorderStyle = bsDialog
@@ -11,11 +11,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -188,18 +186,20 @@
     Top = 456
     Width = 75
     Height = 25
-    TabOrder = 26
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 26
   end
   object OKBitBtn: TBitBtn
     Left = 248
     Top = 456
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 25
     TabStop = False
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object PurchPriceMemo: TMemo
     Left = 112
@@ -248,9 +248,6 @@
     Top = 80
     Width = 25
     Height = 23
-    TabOrder = 6
-    TabStop = False
-    OnClick = GroupClearBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -265,6 +262,9 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 6
+    TabStop = False
+    OnClick = GroupClearBitBtnClick
   end
   object NotInUseCheckBox: TCheckBox
     Left = 416
@@ -280,10 +280,11 @@
     Width = 89
     Height = 25
     Caption = 'OK+Supp'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 24
     TabStop = False
     OnClick = OKSuppBitBtnClick
-    Kind = bkOK
   end
   object VatMaintBitBtn: TBitBtn
     Left = 288
@@ -369,9 +370,6 @@
     Top = 338
     Width = 25
     Height = 23
-    TabOrder = 19
-    TabStop = False
-    OnClick = BitBtn2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -386,6 +384,9 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 19
+    TabStop = False
+    OnClick = BitBtn2Click
   end
   object CustNameEdit: TEdit
     Left = 112
@@ -418,9 +419,6 @@
     Top = 56
     Width = 25
     Height = 23
-    TabOrder = 3
-    TabStop = False
-    OnClick = BitBtnClrCustClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -435,6 +433,9 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 3
+    TabStop = False
+    OnClick = BitBtnClrCustClick
   end
   object ChkBxNumbrd: TCheckBox
     Left = 256
@@ -461,7 +462,6 @@
     TabOrder = 22
   end
   object RadGrpPrdClass: TRadioGroup
-    ParentBackground = False
     Left = 112
     Top = 104
     Width = 129
@@ -471,6 +471,7 @@
       'Stocked'
       'Non stocked'
       'Service item')
+    ParentBackground = False
     TabOrder = 8
     OnClick = RadGrpPrdClassClick
   end
@@ -531,9 +532,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddPartQuery: TFDQuery
@@ -579,119 +578,82 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Sales_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Purch_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Markup_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Markup_Val'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Markup_Val'
+        DataType = ftFloat
+      end
+      item
         Name = 'Prod_Class'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object UpdPartQuery: TFDQuery
@@ -739,119 +701,82 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Track_Serial_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Price_Unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Sales_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Purch_Nom'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Markup_Type'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftFloat
-        Name = 'Markup_Val'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Prod_Class'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Markup_Val'
+        DataType = ftFloat
+      end
+      item
+        Name = 'Prod_Class'
+        DataType = ftString
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object DelPartQuery: TFDQuery
@@ -864,9 +789,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetGroupsQuery: TFDQuery

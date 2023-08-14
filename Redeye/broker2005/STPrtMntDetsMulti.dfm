@@ -1,4 +1,4 @@
-﻿object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
+object STPrtMntDetsMultiFrm: TSTPrtMntDetsMultiFrm
   Left = 232
   Top = 53
   BorderStyle = bsDialog
@@ -10,11 +10,9 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label5: TLabel
     Left = 8
@@ -107,8 +105,9 @@
     Top = 560
     Width = 75
     Height = 25
-    TabOrder = 0
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 0
   end
   object OKBitBtn: TBitBtn
     Left = 352
@@ -116,9 +115,10 @@
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object FromGroupBox: TGroupBox
     Left = 104
@@ -288,7 +288,6 @@
       TabOrder = 15
     end
     object rdgrpClass: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 143
       Width = 129
@@ -299,6 +298,7 @@
         'Non stocked'
         'Service item'
         'Print On Demand')
+      ParentBackground = False
       TabOrder = 16
     end
   end
@@ -505,10 +505,6 @@
       Width = 25
       Height = 25
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 17
-      OnClick = BitBtnClrCustClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -523,6 +519,10 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 17
+      OnClick = BitBtnClrCustClick
     end
     object GroupClearBitBtn: TBitBtn
       Left = 226
@@ -530,10 +530,6 @@
       Width = 25
       Height = 25
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 18
-      OnClick = GroupClearBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -548,6 +544,10 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 18
+      OnClick = GroupClearBitBtnClick
     end
     object TypeClearBitBtn: TBitBtn
       Left = 226
@@ -555,10 +555,6 @@
       Width = 25
       Height = 25
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 19
-      OnClick = TypeClearBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -573,6 +569,10 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 19
+      OnClick = TypeClearBitBtnClick
     end
     object BitBtn1: TBitBtn
       Left = 170
@@ -580,10 +580,6 @@
       Width = 25
       Height = 25
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 20
-      OnClick = BitBtn1Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -598,6 +594,10 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 20
+      OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
       Left = 170
@@ -605,10 +605,6 @@
       Width = 25
       Height = 25
       Hint = 'Clear'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 21
-      OnClick = BitBtn2Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -623,9 +619,12 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 21
+      OnClick = BitBtn2Click
     end
     object rdgrpClassTo: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 143
       Width = 129
@@ -635,6 +634,7 @@
         'Non stocked'
         'Service item'
         'Print On Demand')
+      ParentBackground = False
       TabOrder = 22
     end
   end
@@ -676,9 +676,7 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddPartQuery: TFDQuery
@@ -716,84 +714,56 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Part_Primary_Product'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdPartQuery: TFDQuery
@@ -826,84 +796,56 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Vat_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Auto_Update'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Part_Group'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Part_Primary_Product'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_Cat'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Mark_Up_List'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Not_In_Use'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Numbered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Branch'
+        DataType = ftInteger
+      end
+      item
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object DelPartQuery: TFDQuery
@@ -916,9 +858,7 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryPriceUnit: TFDQuery

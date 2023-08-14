@@ -310,14 +310,14 @@ begin
           qrlblQuantity.Caption := formatfloat('##0',iQuantity);
         end;
 
-      rGrpLabour := rGrpLabour + strtofloat(qrlblLabourHours.Caption);
-      rGrpOvertime := rGrpOvertime + strtofloat(qrlblOvertimeHours.Caption);
-      rGrpMachine := rGrpMachine + strtofloat(qrlblMachineHours.Caption);
+      rGrpLabour := rGrpLabour + StrToFloatDef(qrlblLabourHours.Caption, 0, FormatSettings);
+      rGrpOvertime := rGrpOvertime + StrToFloatDef(qrlblOvertimeHours.Caption, 0, FormatSettings);
+      rGrpMachine := rGrpMachine + StrToFloatDef(qrlblMachineHours.Caption, 0, FormatSettings);
       rGrpVolume := rGrpVolume + iQuantity;
 
-      rTotLabour := rTotLabour + strtofloat(qrlblLabourHours.Caption);
-      rTotOvertime := rTotOvertime + strtofloat(qrlblOvertimeHours.Caption);
-      rTotMachine := rTotMachine + strtofloat(qrlblMachineHours.Caption);
+      rTotLabour := rTotLabour + StrToFloatDef(qrlblLabourHours.Caption, 0, FormatSettings);
+      rTotOvertime := rTotOvertime + StrToFloatDef(qrlblOvertimeHours.Caption, 0, FormatSettings);
+      rTotMachine := rTotMachine + StrToFloatDef(qrlblMachineHours.Caption, 0, FormatSettings);
       rTotVolume := rTotVolume + iQuantity;
 
     end;

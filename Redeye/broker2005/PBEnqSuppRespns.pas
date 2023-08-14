@@ -155,9 +155,9 @@ begin
           anExtraCharge.Details :=
             PBLUEnqAddChgFrm.AddChargesGrid.Cells[0, rowInx];
           anExtraCharge.Cost :=
-            StrToFloat(PBLUEnqAddChgFrm.AddChargesGrid.Cells[1, rowInx]);
+            StrToFloatDef(PBLUEnqAddChgFrm.AddChargesGrid.Cells[1, rowInx], 0, FormatSettings);
           anExtraCharge.Price :=
-            StrToFloat(PBLUEnqAddChgFrm.AddChargesGrid.Cells[2, rowInx]);
+            StrToFloatDef(PBLUEnqAddChgFrm.AddChargesGrid.Cells[2, rowInx], 0, FormatSettings);
           AddExtraCharge(anExtraCharge);
         end;
 
@@ -316,7 +316,7 @@ begin
     1:
       begin
         try
-          tempFlt := StrToFloat(value);
+          tempFlt := StrToFloatDef(value, 0, FormatSettings);
         except
           tempFlt := 0.00;
         end;
@@ -466,7 +466,7 @@ begin
   tempStr := InputBox('Add Quantity', 'Enter the quantity to add.', '');
 
   try
-    newQty := StrToFloat(tempStr);
+    newQty := StrToFloatDef(tempStr, 0, FormatSettings);
   except
     newQty := 0.00;
   end;
@@ -534,7 +534,7 @@ var
   tmpFlt: double;
 begin
   try
-    tmpFlt := strToFloat(edtRunOn.Text);
+    tmpFlt := StrToFloatDef(edtRunOn.Text, 0, FormatSettings);
   except
     tmpFlt := 0.00;
   end;

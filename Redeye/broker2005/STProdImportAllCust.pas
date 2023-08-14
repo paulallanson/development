@@ -411,12 +411,12 @@ begin
     Prod_Status := 'Y';
 
     try
-      Part_Pack_Quantity := round(strtofloat(LineData[7]));
+      Part_Pack_Quantity := round(StrToFloatDef(LineData[7], 0, FormatSettings));
     except
       Part_Pack_Quantity := 1;
     end;
 
-    Part_Cost_List := StrToFloat('0'+LineData[3]);
+    Part_Cost_List := StrToFloatDef('0'+LineData[3], 0, FormatSettings);
     Part_Purchase_Price := 0.00;
     Discount_this_Part := 'N';
 
@@ -424,8 +424,8 @@ begin
 
     UOM := LineData[4];
 
-    Min_Stock := round(strtofloat(LineData[5]));
-    Stock_Bal := round(strtofloat(LineData[6]));
+    Min_Stock := round(StrToFloatDef(LineData[5], 0, FormatSettings));
+    Stock_Bal := round(StrToFloatDef(LineData[6], 0, FormatSettings));
 
     Result := True;
     LineData := nil;
@@ -492,7 +492,7 @@ begin
     UOM := 'PACK';
 
     Min_Stock := 1000;
-    Stock_Bal := round(strtofloat(LineData[6]));
+    Stock_Bal := round(StrToFloatDef(LineData[6], 0, FormatSettings));
 
     Result := True;
     LineData := nil;
@@ -559,7 +559,7 @@ begin
     UOM := 'PACK';
 
     Min_Stock := 0;
-    Stock_Bal := round(strtofloat(LineData[3]));
+    Stock_Bal := round(StrToFloatDef(LineData[3], 0, FormatSettings));
 
     Result := True;
     LineData := nil;
@@ -578,7 +578,7 @@ begin
   Delete(ProdLine, 1, CommaPos);
 
   CommaPos := Pos(',', ProdLine);
-  Part_Purchase_Price := StrToFloat(Copy(ProdLine, 0, CommaPos-1));
+  Part_Purchase_Price := StrToFloatDef(Copy(ProdLine, 0, CommaPos-1), 0, FormatSettings);
   Result := True;
 end;
 
@@ -720,12 +720,12 @@ begin
     if trim(LineData[10]) = '' then
       Part_Purchase_Price := 0.00
     else
-      Part_Purchase_Price := strtofloat(LineData[10]);
+      Part_Purchase_Price := StrToFloatDef(LineData[10], 0, FormatSettings);
 
     if trim(LineData[11]) = '' then
       Part_Cost_List := 0
     else
-      Part_Cost_List := strtofloat(LineData[11]);
+      Part_Cost_List := StrToFloatDef(LineData[11], 0, FormatSettings);
 
     if trim(LineData[12]) = '' then
       Price_Unit := 1

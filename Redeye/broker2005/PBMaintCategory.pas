@@ -168,7 +168,7 @@ begin
       ParamByName('Category').AsInteger := iCode;
       ParamByName('Description').AsString := DescrEdit.Text + '';
       Parambyname('Analysis_Code').asstring := trim(edtAnalysis.text) ;
-      ParamByName('Commission_Rate').Asfloat := strtofloat(memoCommRt.text);
+      ParamByName('Commission_Rate').Asfloat := StrToFloatDef(memoCommRt.text, 0, FormatSettings);
       if PBDBMemoFrm.iNarr = 0 then
         ParamByName('Inv_Narrative').Clear
       else

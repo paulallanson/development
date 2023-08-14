@@ -11,13 +11,11 @@ object STRSProductListFrm: TSTRSProductListFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     541
     270)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 8
@@ -44,7 +42,6 @@ object STRSProductListFrm: TSTRSProductListFrm
     Visible = False
   end
   object grpbxRange: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 92
     Width = 305
@@ -55,6 +52,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -119,7 +117,6 @@ object STRSProductListFrm: TSTRSProductListFrm
     end
   end
   object rdgrpGroups: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 16
     Width = 105
@@ -133,12 +130,12 @@ object STRSProductListFrm: TSTRSProductListFrm
     Items.Strings = (
       'All Groups'
       'One Group')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     OnClick = rdgrpGroupsClick
   end
   object grpbxGroups: TGroupBox
-    ParentBackground = False
     Left = 120
     Top = 16
     Width = 265
@@ -148,6 +145,7 @@ object STRSProductListFrm: TSTRSProductListFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     Visible = False
@@ -191,8 +189,6 @@ object STRSProductListFrm: TSTRSProductListFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 3
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -236,6 +232,8 @@ object STRSProductListFrm: TSTRSProductListFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 3
+    OnClick = btbtnExcelClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 360
@@ -244,8 +242,6 @@ object STRSProductListFrm: TSTRSProductListFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Pre&view'
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -260,6 +256,8 @@ object STRSProductListFrm: TSTRSProductListFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 443
@@ -268,8 +266,6 @@ object STRSProductListFrm: TSTRSProductListFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
-    TabOrder = 5
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -284,6 +280,8 @@ object STRSProductListFrm: TSTRSProductListFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = PrintBitBtnClick
   end
   object CloseBitBtn: TBitBtn
     Left = 14
@@ -296,12 +294,12 @@ object STRSProductListFrm: TSTRSProductListFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 6
-    Kind = bkCancel
   end
   object TotByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 395
     Top = 14
     Width = 126
@@ -312,6 +310,7 @@ object STRSProductListFrm: TSTRSProductListFrm
       'by Product Group'
       'by Customer'
       'by Product')
+    ParentBackground = False
     TabOrder = 7
     OnClick = TotByRadioGroupClick
   end
@@ -325,11 +324,11 @@ object STRSProductListFrm: TSTRSProductListFrm
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 132
     Top = 79
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 9
     Visible = False
     object lblExporting: TLabel

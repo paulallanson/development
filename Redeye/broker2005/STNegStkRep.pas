@@ -154,9 +154,9 @@ procedure TSTNegStkRepFrm.QRSubDetail1AfterPrint(Sender: TQRCustomBand;
   BandPrinted: Boolean);
 begin
   fTotalCost := fTotalCost+
-  strtofloat(formatfloat('######0.00', GetdetsQuery.fieldbyname('Part_Purchase_Price').AsFloat *
-  GetdetsQuery.fieldByName('Store_Quantity_Pos').AsFloat /
-  GetdetsQuery.fieldByName('Purch_Pack_Quantity').asFloat));
+  StrToFloatDef(formatfloat('######0.00', GetdetsQuery.fieldbyname('Part_Purchase_Price').AsFloat *
+                                          GetdetsQuery.fieldByName('Store_Quantity_Pos').AsFloat /
+                                          GetdetsQuery.fieldByName('Purch_Pack_Quantity').asFloat), 0, FormatSettings);
 end;
 
 procedure TSTNegStkRepFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;

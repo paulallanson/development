@@ -368,7 +368,7 @@ begin
           end;
 
           try
-            ParamByName('Purchase_Order').asfloat := strtofloat(sgDetails.cells[15,i]);
+            ParamByName('Purchase_Order').asfloat := StrToFloatDef(sgDetails.cells[15,i], 0, FormatSettings);
           except
             ParamByName('Purchase_Order').asfloat := 0;
           end;

@@ -1,9 +1,10 @@
 object frmpbluCustOrders: TfrmpbluCustOrders
   Left = 111
   Top = 91
+  ActiveControl = PageScroller1
   Caption = 'Customer order details'
-  ClientHeight = 551
-  ClientWidth = 803
+  ClientHeight = 550
+  ClientWidth = 799
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,27 +24,27 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 803
+    Width = 799
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 805
+        Width = 797
       end>
-    ExplicitWidth = 807
+    ExplicitWidth = 803
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 792
+      Width = 788
       Height = 41
       Control = ToolBar1
       TabOrder = 0
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 792
+        Width = 776
         Height = 41
         ButtonHeight = 29
         ButtonWidth = 62
@@ -53,6 +54,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
         ShowCaptions = True
         ShowHint = True
         TabOrder = 0
+        ExplicitWidth = 788
         object btnAdd: TToolButton
           Left = 0
           Top = 0
@@ -188,8 +190,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 491
-    Width = 803
+    Top = 490
+    Width = 799
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -197,7 +199,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     ExplicitTop = 492
     ExplicitWidth = 807
     DesignSize = (
-      803
+      799
       41)
     object Label1: TLabel
       Left = 8
@@ -207,7 +209,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       Caption = 'Description Search'
     end
     object Label2: TLabel
-      Left = 541
+      Left = 533
       Top = 16
       Width = 64
       Height = 13
@@ -216,7 +218,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       ExplicitLeft = 557
     end
     object btnClose: TButton
-      Left = 717
+      Left = 709
       Top = 10
       Width = 75
       Height = 25
@@ -235,7 +237,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 619
+      Left = 611
       Top = 12
       Width = 90
       Height = 21
@@ -265,8 +267,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 532
-    Width = 803
+    Top = 531
+    Width = 799
     Height = 19
     Panels = <
       item
@@ -281,8 +283,8 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 803
-    Height = 417
+    Width = 799
+    Height = 416
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -427,14 +429,14 @@ object frmpbluCustOrders: TfrmpbluCustOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 803
+    Width = 799
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 807
+    ExplicitWidth = 803
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -463,7 +465,7 @@ object frmpbluCustOrders: TfrmpbluCustOrders
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 398
+      Width = 394
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -471,22 +473,22 @@ object frmpbluCustOrders: TfrmpbluCustOrders
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 398
+        Width = 394
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 396
+            Width = 388
           end>
+        ExplicitWidth = 398
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 383
+          Width = 379
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 47
+          ButtonWidth = 62
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

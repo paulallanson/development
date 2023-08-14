@@ -194,7 +194,7 @@ begin
       close;
       parambyname('Enquiry').asinteger := EnquiryNo;
       parambyname('Line').asinteger := EnquiryLine;
-      parambyname('Enq_inactive_Winning_price').asfloat := strtofloat(memunitPrice.text);
+      parambyname('Enq_inactive_Winning_price').asfloat := StrToFloatDef(memunitPrice.text, 0, FormatSettings);
       parambyname('Enq_inactive_Price_Unit').asinteger := dblkpPriceUnit.keyvalue;
       parambyname('Enq_inactive_Winning_Company').asstring := edtCompetitor.text;
       parambyname('Enq_InActive_Reason').asinteger := dblkpReasons.keyvalue;

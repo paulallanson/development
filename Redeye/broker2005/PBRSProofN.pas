@@ -109,7 +109,7 @@ begin
     else
       PBRPProofFrm.PrintLogo := False;
 
-    PBRPProofFrm.PONumber := StrTofloat(OrderMemo.Text);
+    PBRPProofFrm.PONumber := StrToFloatDef(OrderMemo.Text, 0, FormatSettings);
     PBRPProofFrm.ProofRevision := edtProofRevision.text;
     PBRPProofFrm.ProofDefault := dblkpProofStatus.keyvalue;
     PBRPProofFrm.OnlyMine := false;
@@ -158,7 +158,7 @@ begin
   with GetPOsSQl do
     begin
       close;
-      parambyname('Purchase_order').asfloat := strtofloat(OrderMemo.text);
+      parambyname('Purchase_order').asfloat := StrToFloatDef(OrderMemo.text, 0, FormatSettings);
       parambyname('Line').asinteger := iLine;
       open;
       first;
@@ -248,7 +248,7 @@ begin
       PBRPProofFrm.Preview := false;
       PBRPProofFrm.PrintLogo := True;
 
-      PBRPProofFrm.PONumber := StrTofloat(OrderMemo.Text);
+      PBRPProofFrm.PONumber := StrToFloatDef(OrderMemo.Text, 0, FormatSettings);
       PBRPProofFrm.ProofRevision := edtProofRevision.text;
       PBRPProofFrm.ProofDefault := dblkpProofStatus.keyvalue;
       PBRPProofFrm.OnlyMine := false;

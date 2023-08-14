@@ -107,7 +107,7 @@ begin
   OrderLine.ProducedQty := strtoint(memProduced.text);
   OrderLine.ReturnsQty := strtoint(memReturns.text);
   OrderLine.WasteQty := strtoint(memWastage.text);
-  OrderLine.Sell_Price := strtofloat(memPrice.text);
+  OrderLine.Sell_Price := StrToFloatDef(memPrice.text, 0, FormatSettings);
   OrderLine.SellPackQuantity := strtoint(memPackSize.text);
   ModalResult := mrOK;
 end;

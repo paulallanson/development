@@ -559,15 +559,15 @@ begin
               OrdQty := 0;
             end;
             //add new line relating to replacement product
-            lineNo := IntToStr(PurchaseOrder.AddLine(ReplProdCode, LineNo, StrToInt(OrdQty), StrToInt(DelQty), StrToInt(SaleUnit), StrToFloat(PackCost)));
-            SalesOrder.OrderLines.Add(ReplProdCode, StrToInt(LineNo), StrToInt(OrdQty), StrToInt(SaleUnit), SellPackQty, StrToFloat(PackCost), SellPackPrice);
+            lineNo := IntToStr(PurchaseOrder.AddLine(ReplProdCode, LineNo, StrToInt(OrdQty), StrToInt(DelQty), StrToInt(SaleUnit), StrToFloatDef(PackCost, 0, FormatSettings)));
+            SalesOrder.OrderLines.Add(ReplProdCode, StrToInt(LineNo), StrToInt(OrdQty), StrToInt(SaleUnit), SellPackQty, StrToFloatDef(PackCost, 0, FormatSettings), SellPackPrice);
           end;
         end;
         if PriceDiffFlg = 'Y' then
         begin
           with PurchaseOrder.POLines[LineCount -1] do
           begin
-            PurchasePrice := StrToFloat(PackCost);
+            PurchasePrice := StrToFloatDef(PackCost, 0, FormatSettings);
             Discount := (((CostPrice - PurchasePrice)/CostPrice)*100);
           end;
           PriceDiffFlg := 'N';
@@ -816,15 +816,15 @@ begin
               OrdQty := 0;
             end;
             //add new line relating to replacement product
-            lineNo := IntToStr(PurchaseOrder.AddLine(ReplProdCode, LineNo, StrToInt(OrdQty), StrToInt(DelQty), StrToInt(SaleUnit), StrToFloat(PackCost)));
-            SalesOrder.OrderLines.Add(ReplProdCode, StrToInt(LineNo), StrToInt(OrdQty), StrToInt(SaleUnit), SellPackQty, StrToFloat(PackCost), SellPackPrice);
+            lineNo := IntToStr(PurchaseOrder.AddLine(ReplProdCode, LineNo, StrToInt(OrdQty), StrToInt(DelQty), StrToInt(SaleUnit), StrToFloatDef(PackCost, 0, FormatSettings)));
+            SalesOrder.OrderLines.Add(ReplProdCode, StrToInt(LineNo), StrToInt(OrdQty), StrToInt(SaleUnit), SellPackQty, StrToFloatDef(PackCost, 0, FormatSettings), SellPackPrice);
           end;
         end;
         if PriceDiffFlg = 'Y' then
         begin
           with PurchaseOrder.POLines[LineCount -1] do
           begin
-            PurchasePrice := StrToFloat(PackCost);
+            PurchasePrice := StrToFloatDef(PackCost, 0, FormatSettings);
             Discount := (((CostPrice - PurchasePrice)/CostPrice)*100);
           end;
           PriceDiffFlg := 'N';

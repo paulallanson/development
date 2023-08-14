@@ -1,9 +1,9 @@
-﻿object PBMaintDelivFrm: TPBMaintDelivFrm
+object PBMaintDelivFrm: TPBMaintDelivFrm
   Left = 129
   Top = 4
   Caption = 'Maintain Purchase Order Line Deliveries'
-  ClientHeight = 611
-  ClientWidth = 628
+  ClientHeight = 610
+  ClientWidth = 624
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 610
@@ -18,20 +18,20 @@
   OnDestroy = FormDestroy
   TextHeight = 13
   object BottomPanel: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 551
-    Width = 628
+    Top = 550
+    Width = 624
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     ExplicitTop = 563
     ExplicitWidth = 636
     DesignSize = (
-      628
+      624
       41)
     object DelLabel: TLabel
-      Left = 277
+      Left = 269
       Top = 11
       Width = 145
       Height = 15
@@ -43,9 +43,10 @@
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 277
     end
     object OKBitBtn: TBitBtn
-      Left = 437
+      Left = 429
       Top = 6
       Width = 75
       Height = 25
@@ -119,9 +120,10 @@
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
+      ExplicitLeft = 437
     end
     object CancelBitBtn: TBitBtn
-      Left = 525
+      Left = 517
       Top = 6
       Width = 75
       Height = 25
@@ -196,15 +198,16 @@
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
+      ExplicitLeft = 525
     end
   end
   object pnlFormRef: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 628
+    Width = 624
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 636
     object POrderLbl: TLabel
@@ -298,8 +301,8 @@
   object pgDeliveryDetails: TPageControl
     Left = 0
     Top = 81
-    Width = 628
-    Height = 470
+    Width = 624
+    Height = 469
     ActivePage = tbshtDetails
     Align = alClient
     TabOrder = 2
@@ -308,12 +311,12 @@
     object tbshtDetails: TTabSheet
       Caption = 'Details'
       object DelInstructPanel: TPanel
-        ParentBackground = False
         Left = 0
         Top = 352
         Width = 620
         Height = 90
         Align = alClient
+        ParentBackground = False
         TabOrder = 0
         ExplicitWidth = 628
         ExplicitHeight = 102
@@ -333,13 +336,13 @@
         end
       end
       object Panel1: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 620
         Height = 316
         Align = alTop
         Caption = 'Panel1'
+        ParentBackground = False
         TabOrder = 1
         ExplicitWidth = 628
         object Label9: TLabel
@@ -364,7 +367,6 @@
           Caption = 'Cust req'#39'd date'
         end
         object AddrTypeRadGrp: TRadioGroup
-          ParentBackground = False
           Left = 8
           Top = 24
           Width = 105
@@ -376,16 +378,17 @@
             'Rep'
             'Customer'
             'Company')
+          ParentBackground = False
           TabOrder = 0
           OnClick = AddrTypeRadGrpClick
         end
         object AddrGrpBox: TGroupBox
-          ParentBackground = False
           Left = 160
           Top = 24
           Width = 377
           Height = 225
           Caption = 'Address Details'
+          ParentBackground = False
           TabOrder = 1
           object AddrTypeLabel: TLabel
             Left = 8
@@ -594,12 +597,12 @@
           end
         end
         object QtysGrpBox: TGroupBox
-          ParentBackground = False
           Left = 8
           Top = 138
           Width = 145
           Height = 171
           Caption = 'Quantities'
+          ParentBackground = False
           TabOrder = 2
           object Label5: TLabel
             Left = 8
@@ -902,12 +905,12 @@
         end
       end
       object pnlCourierService: TPanel
-        ParentBackground = False
         Left = 0
         Top = 316
         Width = 620
         Height = 36
         Align = alTop
+        ParentBackground = False
         TabOrder = 2
         ExplicitWidth = 628
         object lblCourier: TLabel
@@ -1160,8 +1163,8 @@
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 592
-    Width = 628
+    Top = 591
+    Width = 624
     Height = 19
     Panels = <
       item
@@ -1234,14 +1237,10 @@
     Top = 163
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'OrderNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'OrderLine'
-        ParamType = ptUnknown
       end>
   end
   object GetMoveRecsSQL: TFDQuery
@@ -1263,19 +1262,13 @@
     Top = 243
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'MoveRef'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'MoveType'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store'
-        ParamType = ptUnknown
       end>
   end
   object UpdStoreLvlSQL: TFDQuery
@@ -1295,24 +1288,18 @@
     Top = 184
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'MinMax_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'MinMax_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'rep_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object StoreLvlSQL: TFDQuery
@@ -1326,9 +1313,7 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object FlashDelivTimer: TTimer
@@ -1351,9 +1336,7 @@
     Top = 267
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object UpdOrdQtySQL: TFDQuery
@@ -1373,19 +1356,13 @@
     Top = 323
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'deliv_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryVersions: TFDQuery
@@ -1417,9 +1394,7 @@
     Top = 18
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsVersions: TDataSource
@@ -1441,24 +1416,16 @@
     Top = 79
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Code_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPODelivery: TFDQuery
@@ -1473,14 +1440,10 @@
     Top = 455
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPODelivery: TFDQuery
@@ -1512,49 +1475,31 @@
     Top = 454
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_to_deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_to_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Company_Branch'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextPODelivery: TFDQuery
@@ -1567,14 +1512,10 @@
     Top = 455
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

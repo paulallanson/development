@@ -353,8 +353,8 @@ begin
   FLetter.Name := edtLayout.Text;
   FLetter.IsDefault := cbDefault.Checked;
   FLetter.TabUnit := cbTabUnit.Text;
-  FLetter.TabStop1 := StrToFloat(edtTabStop1.Text);
-  FLetter.TabStop2 := StrToFloat(edtTabStop2.Text);
+  FLetter.TabStop1 := StrToFloatDef(edtTabStop1.Text, 0, FormatSettings);
+  FLetter.TabStop2 := StrToFloatDef(edtTabStop2.Text, 0, FormatSettings);
   if Updating then
     dmLetter.UpdateLetter(FLetter)
   else
@@ -631,8 +631,8 @@ procedure TPDLetterMaintFrm.btnSaveClick(Sender: TObject);
 var
   Valid1, Valid2 : integer;
 begin
-  if (StrToFloat(edtTabStop2.Text) > 0) and
-     (StrToFloat(edtTabStop1.Text) > StrToFloat(edtTabStop2.Text)) then
+  if (StrToFloatDef(edtTabStop2.Text) > 0, 0, FormatSettings) and
+     (StrToFloatDef(edtTabStop1.Text, 0, FormatSettings) > StrToFloatDef(edtTabStop2.Text), 0, FormatSettings) then
   begin
     MessageDlg('Tab Stop 1 cannot be greater than Tab Stop 2', mtError,
       [mbOK], 0);
@@ -650,7 +650,7 @@ begin
     Valid1 := 8;
     Valid2 := 12;
   end;
-  if StrToFloat(edtTabStop1.Text) > Valid1 then
+  if StrToFloatDef(edtTabStop1.Text, 0, FormatSettings) > Valid1 then
   begin
     if MessageDlg('The value of Tab Stop 1 is probably too high. ' + #13 +
       'Click OK to confirm or Cancel to change.', mtConfirmation,
@@ -660,7 +660,7 @@ begin
       Exit;
     end;
   end;
-  if StrToFloat(edtTabStop2.Text) > Valid2 then
+  if StrToFloatDef(edtTabStop2.Text, 0, FormatSettings) > Valid2 then
   begin
     if MessageDlg('The value of Tab Stop 2 is probably too high. ' + #13 +
       'Click OK to confirm or Cancel to change.', mtConfirmation,

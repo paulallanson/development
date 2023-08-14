@@ -131,7 +131,7 @@ begin
       ParamByName('Process_Group').AsInteger := iCode;
       ParamByName('Process_Group_Description').AsString := DescrEdit.Text + '';
       ParamByName('Email').AsString := EmailEdit.Text + '';
-      ParamByName('Hourly_Rate').Asfloat := strtofloat(memHourlyRate.Text);
+      ParamByName('Hourly_Rate').Asfloat := StrToFloatDef(memHourlyRate.Text, 0, FormatSettings);
       ParamByName('cc_Email').AsString := ccEmailEdit.Text + '';
       ExecSQL;
     end;

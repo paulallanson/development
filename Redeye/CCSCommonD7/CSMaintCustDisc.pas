@@ -167,7 +167,7 @@ If sFuncMode = 'A' then
       ParamByName('Customer_Discount').AsInteger := iTempNewCode;
       ParamByName('Customer').AsInteger := CSLUCustDiscFrm.icust;
       ParamByName('Type').AsString := DiscDBLookupComboBox.keyValue;
-      ParamByName('Disc_Val').AsFloat := strtofloat(DiscValMemo.Text);
+      ParamByName('Disc_Val').AsFloat := StrToFloatDef(DiscValMemo.Text, 0, FormatSettings);
       ParamByName('Date_Effec').AsDateTime :=StrToDate(DateFromEdit.Text);
       if datetoedit.text = '' then
         ParamByName('Date_Ineffec').clear
@@ -185,7 +185,7 @@ If sFuncMode = 'C' then
       ParamByName('Cust_Disc').AsInteger := CSLUCustDiscFrm.ddTemp.Rec;
       ParamByName('Customer').AsInteger := CSLUCustDiscFrm.ddTemp.cust;
       ParamByName('Disc_Type').AsString := DiscDBLookupComboBox.keyValue;
-      ParamByName('Disc_Val').AsFloat := strtofloat(DiscValMemo.Text);
+      ParamByName('Disc_Val').AsFloat := StrToFloatDef(DiscValMemo.Text, 0, FormatSettings);
       ParamByName('Date_Effec').AsDateTime :=StrToDate(DateFromEdit.Text);
       if datetoedit.text = '' then
         ParamByName('Date_Ineffec').clear
@@ -350,8 +350,8 @@ procedure TCsMaintCustDiscFrm.DiscValMemoExit(Sender: TObject);
 begin
   with Sender as TMemo do
   begin
-    Text := formatfloat('0.00', StrToFloat(Text));
-    CSLUCustDiscFrm.ddTemp.Disc_Val := strtofloat(Text);
+    Text := formatfloat('0.00', StrToFloatDef(Text), 0, FormatSettings);
+    CSLUCustDiscFrm.ddTemp.Disc_Val := StrToFloatDef(Text, 0, FormatSettings);
   end;
 
 end;

@@ -174,7 +174,7 @@ begin
       else
         ParamByName('InActive').AsString := 'Y';
 
-      parambyname('Hourly_Rate').asfloat := strtofloat(memHourlyRate.text);
+      parambyname('Hourly_Rate').asfloat := StrToFloatDef(memHourlyRate.text, 0, FormatSettings);
       parambyname('Operator_Count').asinteger := spnNoOperators.Value;
 
       ExecSQL;

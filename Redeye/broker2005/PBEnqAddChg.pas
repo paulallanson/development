@@ -221,7 +221,7 @@ begin
         Exit;
       end;
 
-      ifloat := StrToFloat(Cells[1, Row]);
+      ifloat := StrToFloatDef(Cells[1, Row], 0, FormatSettings);
       Cells[1, Row] := formatfloat('0.00', ifloat);
     end
     else
@@ -236,7 +236,7 @@ begin
           Exit;
         end;
 
-        ifloat := StrToFloat(Cells[2, Row]);
+        ifloat := StrToFloatDef(Cells[2, Row], 0, FormatSettings);
         Cells[2, Row] := formatfloat('0.00', ifloat);
       end
   end;
@@ -290,11 +290,11 @@ begin
       ParamByName('Branch').AsInteger := ibranch;
       ParamByName('Charges').AsInteger := irow;
       ParamByName('Details').AsString := AddChargesGrid.Cells[0, irow];
-      ParamByName('Cost').AsFloat := StrToFloat(AddChargesGrid.Cells[1, irow]);
-      ParamByName('Price').AsFloat := StrToFloat(AddChargesGrid.Cells[2, irow]);
+      ParamByName('Cost').AsFloat := StrToFloatDef(AddChargesGrid.Cells[1, irow], 0, FormatSettings);
+      ParamByName('Price').AsFloat := StrToFloatDef(AddChargesGrid.Cells[2, irow], 0, FormatSettings);
       ExecSQL;
     end;
-    iTotValue := iTotValue + StrToFloat(AddChargesGrid.Cells[1, irow]);
+    iTotValue := iTotValue + StrToFloatDef(AddChargesGrid.Cells[1, irow], 0, FormatSettings);
   end;
 end;
 
@@ -314,10 +314,10 @@ begin
       ParamByName('Supplier').AsInteger := iSupplier;
       ParamByName('Branch').AsInteger := ibranch;
       ParamByName('Charges').AsInteger := irow;
-      ParamByName('Price').AsFloat := StrToFloat(AddChargesGrid.Cells[2, irow]);
+      ParamByName('Price').AsFloat := StrToFloatDef(AddChargesGrid.Cells[2, irow], 0, FormatSettings);
       ExecSQL;
     end;
-    iTotValue := iTotValue + StrToFloat(AddChargesGrid.Cells[1, irow]);
+    iTotValue := iTotValue + StrToFloatDef(AddChargesGrid.Cells[1, irow], 0, FormatSettings);
   end;
 end;
 

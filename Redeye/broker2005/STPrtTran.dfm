@@ -2,8 +2,8 @@ object STPrtTranFrm: TSTPrtTranFrm
   Left = 16
   Top = 126
   Caption = 'Product Transfers'
-  ClientHeight = 380
-  ClientWidth = 738
+  ClientHeight = 379
+  ClientWidth = 734
   Color = clBtnFace
   Constraints.MinHeight = 418
   Constraints.MinWidth = 750
@@ -31,7 +31,7 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 738
+    Width = 734
     Height = 89
     Align = alTop
     ParentBackground = False
@@ -203,8 +203,8 @@ object STPrtTranFrm: TSTPrtTranFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 339
-    Width = 738
+    Top = 338
+    Width = 734
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -212,7 +212,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     ExplicitTop = 330
     ExplicitWidth = 732
     DesignSize = (
-      738
+      734
       41)
     object ToPart2Label: TLabel
       Left = 20
@@ -229,7 +229,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       AutoSize = False
     end
     object OKBitBtn: TBitBtn
-      Left = 500
+      Left = 492
       Top = 8
       Width = 75
       Height = 25
@@ -259,7 +259,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitLeft = 494
     end
     object CancelBitBtn: TBitBtn
-      Left = 580
+      Left = 572
       Top = 8
       Width = 75
       Height = 25
@@ -289,7 +289,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitLeft = 574
     end
     object CloseBitBtn: TBitBtn
-      Left = 660
+      Left = 652
       Top = 8
       Width = 75
       Height = 25
@@ -304,8 +304,8 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlCentre: TPanel
     Left = 0
     Top = 89
-    Width = 738
-    Height = 250
+    Width = 734
+    Height = 249
     Align = alClient
     ParentBackground = False
     TabOrder = 3
@@ -323,12 +323,12 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitHeight = 239
       DesignSize = (
         370
-        248)
+        247)
       object FromGroupBox: TGroupBox
         Left = 8
         Top = 8
         Width = 358
-        Height = 256
+        Height = 255
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move From'
         ParentBackground = False
@@ -336,7 +336,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         ExplicitHeight = 247
         DesignSize = (
           358
-          256)
+          255)
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
@@ -366,7 +366,7 @@ object STPrtTranFrm: TSTPrtTranFrm
           Left = 8
           Top = 74
           Width = 338
-          Height = 164
+          Height = 163
           Anchors = [akLeft, akTop, akRight, akBottom]
           AutoExpand = True
           DragMode = dmAutomatic
@@ -381,15 +381,14 @@ object STPrtTranFrm: TSTPrtTranFrm
           OnChange = FromTreeViewChange
           OnDblClick = FromTreeViewDblClick
           OnStartDrag = FromTreeViewStartDrag
-          ExplicitHeight = 155
         end
       end
     end
     object pnlCentreRight: TPanel
       Left = 371
       Top = 1
-      Width = 366
-      Height = 248
+      Width = 362
+      Height = 247
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
@@ -397,13 +396,13 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitWidth = 360
       ExplicitHeight = 239
       DesignSize = (
-        366
-        248)
+        362
+        247)
       object ToGroupBox: TGroupBox
         Left = 4
         Top = 8
-        Width = 368
-        Height = 256
+        Width = 360
+        Height = 255
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
         ParentBackground = False
@@ -411,8 +410,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ExplicitWidth = 362
         ExplicitHeight = 247
         DesignSize = (
-          368
-          256)
+          360
+          255)
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
@@ -441,8 +440,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         object ToTreeView: TTreeView
           Left = 8
           Top = 74
-          Width = 349
-          Height = 164
+          Width = 341
+          Height = 163
           Anchors = [akLeft, akTop, akRight, akBottom]
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -456,8 +455,6 @@ object STPrtTranFrm: TSTPrtTranFrm
           OnDragDrop = ToTreeViewDragDrop
           OnDragOver = ToTreeViewDragOver
           OnStartDrag = ToTreeViewStartDrag
-          ExplicitWidth = 343
-          ExplicitHeight = 155
         end
       end
     end
@@ -909,19 +906,13 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 244
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOLineSQL: TFDQuery
@@ -944,34 +935,22 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fully_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckPOStatusSQL: TFDQuery
@@ -999,19 +978,13 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 204
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOStatusSQL: TFDQuery
@@ -1028,14 +1001,10 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 116
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object GetPartPackSQL: TFDQuery
@@ -1051,9 +1020,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 260
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetOrdAllocsSQL: TFDQuery
@@ -1079,14 +1046,10 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdPFJStatusSQL: TFDQuery
@@ -1105,14 +1068,10 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 228
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object DelOrdAllocSQL: TFDQuery
@@ -1134,24 +1093,16 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object GetSOTransSQL: TFDQuery
@@ -1181,19 +1132,13 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 164
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object GetSOTranSQL: TFDQuery
@@ -1211,9 +1156,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 236
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object DelSOTranSQL: TFDQuery
@@ -1230,9 +1173,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 148
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object UpdSOTranSQL: TFDQuery
@@ -1253,24 +1194,16 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Transfer'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -1291,24 +1224,16 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'serial_item_to'
-        ParamType = ptUnknown
       end>
   end
   object GetStStkSIqry: TFDQuery
@@ -1321,9 +1246,7 @@ object STPrtTranFrm: TSTPrtTranFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_stock'
-        ParamType = ptUnknown
       end>
   end
 end

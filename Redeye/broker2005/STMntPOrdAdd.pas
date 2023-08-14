@@ -182,7 +182,7 @@ Try
    fTempCost := STMntPOrdQtyFrm.fCost_Price ;
    fTempOrigCost := STMntPordQtyFrm.fOrig_Cost;
    iTempPFJ := STMntPOrdQtyFrm.iAllocPFJ ;
-   fTempDisc := StrToFloat(STMntPordQtyFrm.EdtDiscount.Text);
+   fTempDisc := StrToFloatDef(STMntPordQtyFrm.EdtDiscount.Text, 0, FormatSettings);
    sNotes := STMntPOrdQtyFrm.memNotes.text;
    bSample := STMntPOrdQtyFrm.chkbxSample.checked;
 Finally

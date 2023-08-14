@@ -12,13 +12,11 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
@@ -131,18 +129,20 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
       Width = 75
       Height = 25
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      Kind = bkOK
     end
     object CancelBitBtn: TBitBtn
       Left = 342
       Top = 7
       Width = 75
       Height = 25
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      Kind = bkCancel
     end
   end
   object PageControl1: TPageControl
@@ -197,9 +197,7 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object dtsPeriods: TDataSource
@@ -229,14 +227,10 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end>
   end
   object qryFirstPeriod: TFDQuery
@@ -250,9 +244,7 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckBudget: TFDQuery
@@ -266,14 +258,10 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdBudget: TFDQuery
@@ -290,29 +278,19 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operating_Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object qryAddBudget: TFDQuery
@@ -326,29 +304,19 @@ object PBMaintRevenueLocBudgetsFrm: TPBMaintRevenueLocBudgetsFrm
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Turnover_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Profit_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operating_Profit_Value'
-        ParamType = ptUnknown
       end>
   end
   object pmnFill: TPopupMenu

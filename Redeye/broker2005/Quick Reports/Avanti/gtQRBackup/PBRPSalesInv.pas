@@ -494,7 +494,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('0.00', iGoods);
   VatValueLbl.Caption := formatfloat('0.00', ivat);
 
-  itotal := strtofloat(GoodsValueLbl.Caption) + strtofloat(VatValueLbl.Caption);
+  itotal := StrToFloatDef(GoodsValueLbl.Caption, 0, FormatSettings) + StrToFloatDef(VatValueLbl.Caption, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('0.00', iTotal);
 
 end;
@@ -629,13 +629,13 @@ begin
   if InvLineSRC.Dataset.FieldByName('Price_Unit_Factor').AsInteger = 0 then
     rGoodsTotal := rGoodsTotal
   else
-    rGoodsTotal := (strtofloat(QtyInvoicedLbl.Caption) /
+    rGoodsTotal := (StrToFloatDef(QtyInvoicedLbl.Caption, 0, FormatSettings) /
       InvLineSRC.Dataset.FieldByName('Price_Unit_Factor').AsInteger)
       * rGoodsTotal;
 
   GoodsTotalLbl.Caption := formatfloat('0.00', rGoodsTotal);
-  iGoods := iGoods + StrToFloat(GoodsTotalLbl.Caption);
-  rVatValue := StrToFloat(GoodsTotalLbl.Caption) *
+  iGoods := iGoods + StrToFloatDef(GoodsTotalLbl.Caption, 0, FormatSettings);
+  rVatValue := StrToFloatDef(GoodsTotalLbl.Caption, 0, FormatSettings) *
     (InvLineSRC.Dataset.FieldByName('Vat_Rate').AsFloat / 100);
   ivat := ivat + rVatValue;
 
@@ -1186,8 +1186,8 @@ begin
   else
     ExtrasVATLbl.Caption := formatfloat('0.00',(rVATValue));
 
-  iGoods := iGoods + strtofloat(lblAmount.Caption);
-  ivat := ivat + strtofloat(ExtrasVATLbl.Caption);
+  iGoods := iGoods + StrToFloatDef(lblAmount.Caption, 0, FormatSettings);
+  ivat := ivat + StrToFloatDef(ExtrasVATLbl.Caption, 0, FormatSettings);
 end;
 
 function TPBRPSalesInvFrm.GetSOLinePUnit(tempCode: integer;
@@ -1225,7 +1225,7 @@ begin
   with qryPOLine do
     begin
       close;
-      parambyname('Purchase_order').asfloat := strtofloat(trim(tempcode));
+      parambyname('Purchase_order').asfloat := StrToFloatDef(trim(tempcode), 0, FormatSettings);
       parambyname('Line').asinteger := 1;
       open;
       result := fieldbyname('Cust_Order_no').asstring;

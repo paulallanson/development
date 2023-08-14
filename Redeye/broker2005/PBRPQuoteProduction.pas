@@ -415,13 +415,13 @@ begin
       qrlblTotalMarkup.caption := formatfloat('0.00%',rMarkup);
     end;
 
-  repTotalCost := repTotalCost + strtofloat(formatfloat('0.00',repCost));
-  repTotalSSP := repTotalSSP + strtofloat(formatfloat('0.00',repSSP));
-  repTotalASP := repTotalASP + strtofloat(formatfloat('0.00',repASP));
+  repTotalCost := repTotalCost + StrToFloatDef(formatfloat('0.00',repCost), 0, FormatSettings);
+  repTotalSSP := repTotalSSP + StrToFloatDef(formatfloat('0.00',repSSP), 0, FormatSettings);
+  repTotalASP := repTotalASP + StrToFloatDef(formatfloat('0.00',repASP), 0, FormatSettings);
 
-  grandTotalCost := grandTotalCost + strtofloat(formatfloat('0.00',repCost));
-  grandTotalSSP := grandTotalSSP + strtofloat(formatfloat('0.00',repSSP));
-  grandTotalASP := grandTotalASP + strtofloat(formatfloat('0.00',repASP));
+  grandTotalCost := grandTotalCost + StrToFloatDef(formatfloat('0.00',repCost), 0, FormatSettings);
+  grandTotalSSP := grandTotalSSP + StrToFloatDef(formatfloat('0.00',repSSP), 0, FormatSettings);
+  grandTotalASP := grandTotalASP + StrToFloatDef(formatfloat('0.00',repASP), 0, FormatSettings);
 end;
 
 procedure TPBRPQuoteProductionFrm.qrbndReasFtrAfterPrint(

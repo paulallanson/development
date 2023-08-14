@@ -343,17 +343,17 @@ begin
       ParamByName('Part').AsString := CodeEdit.Text;
       ParamByName('Part_Description').AsString := DescrEdit.Text;
       ParamByName('Part_Cost_List').AsFloat := 0.00 ;
-      ParamByName('Part_Cost_Cat').AsFloat := StrToFloat(CatMemo.Text);
+      ParamByName('Part_Cost_Cat').AsFloat := StrToFloatDef(CatMemo.Text, 0, FormatSettings);
       ParamByName('VAT').AsInteger := VATDBLookupComboBox.KeyValue;
       If PartGroupDBLookUpComboBox.KeyValue = 0 then
               ParamByName('Part_Group').Clear
       else
               ParamByName('Part_Group').AsInteger := PartGroupDBLookUpComboBox.KeyValue ;
-      ParamByName('Part_Purchase_Price').AsFloat := StrToFloat(PurchPriceMemo.Text) ;
-      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloat('0.00') ;
-      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloat(CatMUMemo.Text) ;
-      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloat(PurchPackQtyMemo.Text) ;
-      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloat(SellPackQtyMemo.Text) ;
+      ParamByName('Part_Purchase_Price').AsFloat := StrToFloatDef(PurchPriceMemo.Text, 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloatDef(CatMUMemo.Text, 0, FormatSettings) ;
+      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloatDef(PurchPackQtyMemo.Text, 0, FormatSettings) ;
+      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloatDef(SellPackQtyMemo.Text, 0, FormatSettings) ;
       ParamByName('Track_Serial_No').AsString := 'N';
       if ChkBxNumbrd.Checked then
         ParamByName('Numbered').AsString := 'Y'
@@ -391,7 +391,7 @@ begin
       if (RadGrpPrdClass.ItemIndex <> 0) and (DBLuCmbBxCstUplft.KeyValue <> 0) then
       begin
         ParamByName('MarkUp_Type').AsString := DBLUcmbBxCstUpLft.Keyvalue;
-        ParamByName('MarkUp_Val').ASFloat := StrToFloat(MemoUpLift.Text);
+        ParamByName('MarkUp_Val').ASFloat := StrToFloatDef(MemoUpLift.Text, 0, FormatSettings);
       end;
       ExecSQL;
     end;
@@ -403,18 +403,18 @@ begin
       Close;
       ParamByName('Part').AsString := CodeEdit.Text;
       ParamByName('Part_Description').AsString := DescrEdit.Text;
-      ParamByName('Part_Cost_List').AsFloat := StrToFloat('0.00');
-      ParamByName('Part_Cost_Cat').AsFloat := StrToFloat(CatMemo.Text);
+      ParamByName('Part_Cost_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings);
+      ParamByName('Part_Cost_Cat').AsFloat := StrToFloatDef(CatMemo.Text, 0, FormatSettings);
       ParamByName('VAT').AsInteger := VATDBLookupComboBox.KeyValue;
       If PartGroupDBLookUpComboBox.KeyValue = 0 then
               ParamByName('Part_Group').Clear
       else
               ParamByName('Part_Group').AsInteger := PartGroupDBLookUpComboBox.KeyValue ;
-     ParamByName('Part_Purchase_Price').AsFloat := StrToFloat(PurchPriceMemo.Text) ;
-      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloat('0.00') ;
-      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloat(CatMUMemo.Text) ;
-      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloat(PurchPackQtyMemo.Text) ;
-      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloat(SellPackQtyMemo.Text) ;
+     ParamByName('Part_Purchase_Price').AsFloat := StrToFloatDef(PurchPriceMemo.Text, 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_List').AsFloat := StrToFloatDef('0.00', 0, FormatSettings) ;
+      ParamByName('Part_Mark_Up_Cat').AsFloat := StrToFloatDef(CatMUMemo.Text, 0, FormatSettings) ;
+      ParamByName('Purch_Pack_Quantity').AsFloat := StrToFloatDef(PurchPackQtyMemo.Text, 0, FormatSettings) ;
+      ParamByName('Sell_Pack_Quantity').AsFloat := StrToFloatDef(SellPackQtyMemo.Text, 0, FormatSettings) ;
       ParamByName('Track_Serial_No').AsString := 'N';
       if ChkBxNumbrd.Checked then
         ParamByName('Numbered').AsString := 'Y'
@@ -454,7 +454,7 @@ begin
       if (RadGrpPrdClass.ItemIndex <> 0) and (DBLuCmbBxCstUplft.KeyValue <> 0) then
       begin
         ParamByName('MarkUp_Type').AsString := DBLUcmbBxCstUpLft.Keyvalue;
-        ParamByName('MarkUp_Val').ASFloat := StrToFloat(MemoUpLift.Text);
+        ParamByName('MarkUp_Val').ASFloat := StrToFloatDef(MemoUpLift.Text, 0, FormatSettings);
       end;
        ExecSQL;
     end;
@@ -486,8 +486,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat(TempFormat, StrToFloat(TempQty));
-      if (StrToFloat(Result) < 0) and (TempNeg = False) then
+      Result := FormatFloat(TempFormat, StrToFloatDef(TempQty, 0, FormatSettings));
+      if (StrToFloatDef(Result, 0, FormatSettings) < 0) and (TempNeg = False) then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';
@@ -701,8 +701,8 @@ begin
   iSellPack := strtoint(trim(SellPackQtyMemo.text));
   iPurchPack := strtoint(trim(PurchPackQtyMemo.text));
 
-  rSellPrice := strtofloat(ListMemo.text);
-  rPurchPrice := strtofloat(PurchPriceMemo.text);
+  rSellPrice := StrToFloatDef(ListMemo.text, 0, FormatSettings);
+  rPurchPrice := StrToFloatDef(PurchPriceMemo.text, 0, FormatSettings);
 
   if rSellPrice = 0 then
     ListMUMemo.Text := '0.00'
@@ -729,8 +729,8 @@ begin
   iSellPack := strtoint(trim(SellPackQtyMemo.text));
   iPurchPack := strtoint(trim(PurchPackQtyMemo.text));
 
-  rSellPrice := strtofloat(CatMemo.text);
-  rPurchPrice := strtofloat(PurchPriceMemo.text);
+  rSellPrice := StrToFloatDef(CatMemo.text, 0, FormatSettings);
+  rPurchPrice := StrToFloatDef(PurchPriceMemo.text, 0, FormatSettings);
 
   if rSellPrice = 0 then
     CatMUMemo.Text := '0.00'

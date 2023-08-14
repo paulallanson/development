@@ -327,13 +327,13 @@ var
 begin
   QuoteLine.Description := Trim(edtDescription.Text);
   QuoteLine.Quantity := strtoint(memQuantity.text);
-  QuoteLine.UnitSell := strtofloat(memASPrice.text);
-  QuoteLine.UnitResellerPrice := strtofloat(memResellerPrice.text);
-  QuoteLine.UnitSSP := strtofloat(memSSPrice.text);
+  QuoteLine.UnitSell := StrToFloatDef(memASPrice.text, 0, FormatSettings);
+  QuoteLine.UnitResellerPrice := StrToFloatDef(memResellerPrice.text, 0, FormatSettings);
+  QuoteLine.UnitSSP := StrToFloatDef(memSSPrice.text, 0, FormatSettings);
   QuoteLine.PriceUnit := dblkpPriceUnit.KeyValue;
-  QuoteLine.UnitCost := strtofloat(memCostPrice.text);
-  QuoteLine.UnitCostOHD := strtofloat(memDCOHD.text);
-  QuoteLine.UnitSSPOrig := strtofloat(memSSPOrig.text);
+  QuoteLine.UnitCost := StrToFloatDef(memCostPrice.text, 0, FormatSettings);
+  QuoteLine.UnitCostOHD := StrToFloatDef(memDCOHD.text, 0, FormatSettings);
+  QuoteLine.UnitSSPOrig := StrToFloatDef(memSSPOrig.text, 0, FormatSettings);
   QuoteLine.Process := dblkpProcess.KeyValue;
   QuoteLine.ProcessDesc := dblkpProcess.Text;
   QuoteLine.ProcessGroup := dblkpProcessGroup.KeyValue;
@@ -341,7 +341,7 @@ begin
 //  QuoteLine.ProductTypeDesc := edtProductType.text;
   QuoteLine.PriceUnitDesc := dblkpPriceUnit.Text;
   QuoteLine.PriceUnitFactor := GetPriceUnit(QuoteLine.PriceUnit);
-  QuoteLine.NoOfHours := strtofloat(memHours.text);
+  QuoteLine.NoOfHours := StrToFloatDef(memHours.text, 0, FormatSettings);
   QuoteLine.TeamCount := strtoint(memStaff.text);
   QuoteLine.VatCode := dblkpVat.KeyValue;
   if dblkpWorkCentreGroup.Text = '' then
@@ -354,7 +354,7 @@ begin
   else
     QuoteLine.WorkCentre := dblkpWorkCentre.keyvalue;
 
-  QuoteLine.InternalCostMarkupPercentage := strtofloat(memMarkupPerc.text);
+  QuoteLine.InternalCostMarkupPercentage := StrToFloatDef(memMarkupPerc.text, 0, FormatSettings);
 
   if Mode = qlAdd then
   begin

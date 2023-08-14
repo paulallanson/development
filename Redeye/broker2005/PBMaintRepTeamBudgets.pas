@@ -330,9 +330,9 @@ begin
           begin
             if cells[icol, irow] = '' then continue;
               if pos('.',cells[icol, irow]) > 0 then
-                cells[icol, irow] := formatfloat('0',(strtofloat(cells[icol,irow])*1000))
+                cells[icol, irow] := formatfloat('0',(StrToFloatDef(cells[icol,irow], 0, FormatSettings) * 1000))
               else
-                cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+                cells[icol, irow] := formatfloat('0',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           end;
     end;
 end;
@@ -420,9 +420,9 @@ begin
           begin
             if cells[icol, irow] = '' then continue;
               if pos('.',cells[icol, irow]) > 0 then
-                cells[icol, irow] := formatfloat('0',(strtofloat(cells[icol,irow])*1000))
+                cells[icol, irow] := formatfloat('0',(StrToFloatDef(cells[icol,irow], 0, FormatSettings) * 1000))
               else
-                cells[icol, irow] := formatfloat('0',strtofloat(cells[icol,irow]));
+                cells[icol, irow] := formatfloat('0',StrToFloatDef(cells[icol,irow], 0, FormatSettings));
           end;
     end;
 end;
@@ -449,9 +449,9 @@ begin
               close;
               parambyname('Period').asinteger := strtoint(cells[4,icount]);
               parambyname('Rep_Team').asinteger := iRepTeam;
-              parambyname('Turnover_Value').asfloat := strtofloat(cells[1,icount]);
-              parambyname('Operating_Profit_Value').asfloat := strtofloat(cells[2,icount]);
-              parambyname('Profit_Value').asfloat := strtofloat(cells[3,icount]);
+              parambyname('Turnover_Value').asfloat := StrToFloatDef(cells[1,icount], 0, FormatSettings);
+              parambyname('Operating_Profit_Value').asfloat := StrToFloatDef(cells[2,icount], 0, FormatSettings);
+              parambyname('Profit_Value').asfloat := StrToFloatDef(cells[3,icount], 0, FormatSettings);
               execsql;
             end;
         end;

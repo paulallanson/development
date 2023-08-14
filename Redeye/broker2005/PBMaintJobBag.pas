@@ -3958,7 +3958,7 @@ begin
 
         {Get the Picking Refererence}
         sPickRef := dtmdlJBOrders.GetPickingRef(SONumber);
-        dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+        dmBroker.AddIntSelCode(iIntSelCode,StrToFloatDef(sPickRef, 0, FormatSettings), sPickRef);
 
         stPickDM := TstpickDm.Create(self);
         stStockDataMod := TstStockDataMod.Create(self);
@@ -4997,8 +4997,8 @@ begin
           aWOrder.CustomerName := JobBag.CustomerName;
           aWOrder.BranchName := JobBag.BranchName;
           aWorder.CustomerPO := JobBag.CustOrderNo;
-          aWorder.QuantityAct := strtofloat(memQuantity.text);
-          aWOrder.QuantityEst := strtofloat(memQuantity.text);
+          aWorder.QuantityAct := StrToFloatDef(memQuantity.text, 0, FormatSettings);
+          aWOrder.QuantityEst := StrToFloatDef(memQuantity.text, 0, FormatSettings);
           aWorder.Contact := JobBag.ContactNo;
           aWOrder.Rep := JobBag.Rep;
           aWOrder.OfficeContact := JobBag.OfficeContact;
@@ -6091,25 +6091,25 @@ begin
 
       {Total labour}
       hashPos := pos('#', tempStr);
-      rLabour := StrToFloat(copy(tempStr, 1, hashPos-1));
+      rLabour := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       rLabourTot := rLabourTot + rLabour;
 
       {Total overtime}
       hashPos := pos('#', tempStr);
-      rOvertime := StrToFloat(copy(tempStr, 1, hashPos-1));
+      rOvertime := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       rOvertimeTot := rOvertimeTot + rOvertime;
 
       {Total machine charge}
       hashPos := pos('#', tempStr);
-      rMachine := StrToFloat(copy(tempStr, 1, hashPos-1));
+      rMachine := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       rMachineTot := rmachineTot + rMachine;
 
       {Total click charge}
       hashPos := pos('#', tempStr);
-      rClick := StrToFloat(copy(tempStr, 1, hashPos-1));
+      rClick := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
       tempStr := copy(tempStr, hashPos + 1, length(tempStr));
       rClickTot := rClicktot + rClick;
 
@@ -6120,7 +6120,7 @@ begin
       {Total Estimated}
       try
         hashPos := pos('#', tempStr);
-        rEstimated := StrToFloat(copy(tempStr, 1, hashPos-1));
+        rEstimated := StrToFloatDef(copy(tempStr, 1, hashPos-1), 0, FormatSettings);
         tempStr := copy(tempStr, hashPos + 1, length(tempStr));
         rEstimatedTot := rEstimatedTot + rEstimated;
       except
@@ -6309,7 +6309,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end
@@ -7126,7 +7126,7 @@ begin
 
         {Get the Picking Refererence}
         sPickRef := dtmdlJBOrders.GetPickingRef(SONumber);
-        dmBroker.AddIntSelCode(iIntSelCode,strtofloat(sPickRef),sPickRef);
+        dmBroker.AddIntSelCode(iIntSelCode,StrToFloatDef(sPickRef, 0, FormatSettings), sPickRef);
 
         stPickDM := TstpickDm.Create(self);
         stStockDataMod := TstStockDataMod.Create(self);
@@ -8028,7 +8028,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
         try
-            sValue := formatfloat('£#,###,##0.00',strtofloat(Column.field.asstring))
+            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
         except
           sValue := ''
         end

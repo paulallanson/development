@@ -321,7 +321,7 @@ begin
  //     lblUnitPrice.caption := formatfloat('0.00',fieldbyname('unit_price').asfloat);
       lblTotal.caption := formatfloat('0.00',fieldbyname('Goods_value').asfloat +
          fieldbyname('vat_value').asfloat);
-      rGoods := rGoods + StrToFloat(LblGoods.Caption);
+      rGoods := rGoods + StrToFloatDef(LblGoods.Caption, 0, FormatSettings);
       rvat := rVat + fieldbyname('vat_value').asfloat;
     end;
 end;
@@ -331,7 +331,7 @@ begin
   with qryGetPO do
     begin
       close;
-      parambyname('Purchase_Order').asfloat := strtofloat(sTemp);
+      parambyname('Purchase_Order').asfloat := StrToFloatDef(sTemp, 0, FormatSettings);
       parambyname('Line').asinteger := 1;
       open;
       result := fieldbyname('Cust_Order_no').asstring;
@@ -408,7 +408,7 @@ procedure TPBRPCustStateFrm.GrpFootQRBandBeforePrint(Sender: TQRCustomBand;
 begin
       TotGoodsQRLbl.caption := formatfloat('0.00',rGoods);
       TotVatQRLbl.caption := formatfloat('0.00',rVat);
-      InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloat(TotGoodsQRLbl.Caption)+StrToFloat(TotVatQRlbl.caption)));
+      InvTotQRLbl.Caption := FormatFloat('0.00',(StrToFloatDef(TotGoodsQRLbl.Caption, 0, FormatSettings)+StrToFloatDef(TotVatQRlbl.caption)), 0, FormatSettings);
 end;
 
 procedure TPBRPCustStateFrm.GrpFootQRBandAfterPrint(Sender: TQRCustomBand;

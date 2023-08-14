@@ -1,7 +1,4 @@
 object dtmdlSuppliers: TdtmdlSuppliers
-  OldCreateOrder = False
-  Left = 302
-  Top = 110
   Height = 613
   Width = 696
   object qrySuppliers: TFDQuery
@@ -43,19 +40,16 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Active_Only'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dtsSuppliers: TDataSource
@@ -81,44 +75,31 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Intrastat_Id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Reference'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'VAT_Code_Def'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'VAT_Reference'
+      end
+      item
+        Name = 'VAT_Code_Def'
+        DataType = ftInteger
+      end
+      item
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object CurrSRC: TDataSource
@@ -136,8 +117,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -151,9 +132,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object GetIntrastatSQL: TFDQuery
@@ -177,8 +156,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -194,8 +173,8 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 96
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Supplier'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -249,59 +228,38 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'EMail'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object UpdNotesOnlySQL: TFDQuery
@@ -318,14 +276,11 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 192
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object CheckCustAccExistsSQL: TFDQuery
@@ -339,9 +294,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Acc_Code'
-        ParamType = ptUnknown
       end>
   end
   object DelBranchSQL: TFDQuery
@@ -355,9 +308,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object CheckSuppAccExistsSQL: TFDQuery
@@ -372,14 +323,10 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 164
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Code'
-        ParamType = ptUnknown
       end>
   end
   object VATSRC: TDataSource
@@ -412,79 +359,55 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Acc_Active'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Intrastat_Id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'VAT_Code_Def'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'EAN_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Our_Account_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Our_Account_Password'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Transfer_Site_URL'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Transfer_Protocol_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Payment_Terms'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Payment_Terms'
+        DataType = ftInteger
+      end
+      item
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object GetCurrSQL: TFDQuery
@@ -545,9 +468,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryCharges: TFDQuery
@@ -561,9 +482,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsCharges: TDataSource
@@ -596,9 +515,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsDocuments: TDataSource
@@ -627,29 +544,19 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLastDoc: TFDQuery
@@ -662,9 +569,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryDelDocument: TFDQuery
@@ -676,14 +581,10 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_no'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdDocument: TFDQuery
@@ -696,24 +597,16 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Document'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_Title'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Document_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetInvoices: TFDQuery
@@ -727,9 +620,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryAddReplEntity: TFDQuery
@@ -746,29 +637,19 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Entity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Replicate_Action'
-        ParamType = ptUnknown
       end>
   end
   object qrySuppliersBase: TFDQuery
@@ -813,14 +694,12 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryTerms: TFDQuery
@@ -875,14 +754,12 @@ object dtmdlSuppliers: TdtmdlSuppliers
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
 end

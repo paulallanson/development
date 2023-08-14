@@ -306,7 +306,7 @@ procedure TPBOrderImportFrm.DoOneOrder(OrderNo, OrderDate, CustAccount, SuppAcco
                                       SellPrice, Vatable, RequiredDate, InvoiceDate: string);
 begin
   try
-    dmAccImport.PONumber := strtofloat(OrderNo);
+    dmAccImport.PONumber := StrToFloatDef(OrderNo, 0, FormatSettings);
     try
       if OrderDate = '' then
         dmAccImport.OrderDate := date
@@ -327,13 +327,13 @@ begin
       dmAccImport.Quantity := 1;
     end;
     try
-      dmAccImport.CostPrice := strtofloat(CostPrice);
+      dmAccImport.CostPrice := StrToFloatDef(CostPrice, 0, FormatSettings);
     except
       dmAccImport.CostPrice := 0.00;
     end;
 
     try
-      dmAccImport.SellPrice := strtofloat(SellPrice)
+      dmAccImport.SellPrice := StrToFloatDef(SellPrice, 0, FormatSettings)
     except
       dmAccImport.SellPrice := 0.00;
     end;
@@ -363,7 +363,7 @@ begin
   if (trim(SuppInvoiceNo) = '') or (trim(SuppInvoiceNo) = '*') then exit;
 
   try
-    dmAccImport.PONumber := strtofloat(OrderNo);
+    dmAccImport.PONumber := StrToFloatDef(OrderNo, 0, FormatSettings);
     try
       if OrderDate = '' then
         dmAccImport.OrderDate := date
@@ -384,13 +384,13 @@ begin
       dmAccImport.Quantity := 1;
     end;
     try
-      dmAccImport.CostPrice := strtofloat(CostPrice);
+      dmAccImport.CostPrice := StrToFloatDef(CostPrice, 0, FormatSettings);
     except
       dmAccImport.CostPrice := 0.00;
     end;
 
     try
-      dmAccImport.SellPrice := strtofloat(SellPrice)
+      dmAccImport.SellPrice := StrToFloatDef(SellPrice, 0, FormatSettings)
     except
       dmAccImport.SellPrice := 0.00;
     end;
@@ -429,7 +429,7 @@ begin
   end;
 
   try
-    dmAccImport.PONumber := strtofloat(OrderNo);
+    dmAccImport.PONumber := StrToFloatDef(OrderNo, 0, FormatSettings);
     try
       if OrderDate = '' then
         dmAccImport.OrderDate := date
@@ -450,13 +450,13 @@ begin
       dmAccImport.Quantity := 1;
     end;
     try
-      dmAccImport.CostPrice := strtofloat(CostPrice);
+      dmAccImport.CostPrice := StrToFloatDef(CostPrice, 0, FormatSettings);
     except
       dmAccImport.CostPrice := 0.00;
     end;
 
     try
-      dmAccImport.SellPrice := strtofloat(SellPrice)
+      dmAccImport.SellPrice := StrToFloatDef(SellPrice, 0, FormatSettings)
     except
       dmAccImport.SellPrice := 0.00;
     end;

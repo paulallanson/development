@@ -1,7 +1,6 @@
 object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
   Left = 70
   Top = 27
-  AutoScroll = False
   Caption = 'Sales Invoice Details'
   ClientHeight = 581
   ClientWidth = 908
@@ -13,12 +12,10 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object stbrDetails: TStatusBar
     Left = 0
@@ -34,12 +31,12 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       end>
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
     Top = 521
     Width = 908
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
       908
@@ -66,8 +63,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -86,6 +81,8 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 824
@@ -93,9 +90,10 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = BitBtn2Click
-      Kind = bkCancel
     end
     object btnNotes: TBitBtn
       Left = 8
@@ -108,9 +106,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = btnNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -125,6 +120,9 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btnNotesClick
     end
     object btnInternalNotes: TBitBtn
       Left = 93
@@ -137,9 +135,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btnInternalNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -154,9 +149,11 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnInternalNotesClick
     end
     object pnlCreditReason: TPanel
-      ParentBackground = False
       Left = 168
       Top = 8
       Width = 432
@@ -164,6 +161,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Anchors = [akLeft, akTop, akRight]
       BevelOuter = bvNone
       Caption = 'pnlCreditReason'
+      ParentBackground = False
       TabOrder = 4
       Visible = False
       DesignSize = (
@@ -210,12 +208,12 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 908
     Height = 36
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       908
@@ -295,8 +293,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnInvDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -311,6 +307,8 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnInvDateClick
     end
     object dblkpOperator: TDBLookupComboBox
       Left = 743
@@ -334,18 +332,17 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 401
     Width = 908
     Height = 120
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     DesignSize = (
       908
       120)
     object Panel5: TPanel
-      ParentBackground = False
       Left = 448
       Top = 1
       Width = 459
@@ -353,6 +350,7 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         459
@@ -419,13 +417,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         TabOrder = 2
       end
       object pnlPackPrice: TPanel
-        ParentBackground = False
         Left = 0
         Top = 89
         Width = 459
         Height = 29
         Align = alBottom
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 3
         DesignSize = (
           459
@@ -465,10 +463,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           Height = 23
           Hint = 'Clear'
           Anchors = [akRight, akBottom]
-          ParentShowHint = False
-          ShowHint = True
-          TabOrder = 1
-          OnClick = FormRefClrBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -483,6 +477,10 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
             BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
             50BB555555555555575F555555555555550B5555555555555575}
           NumGlyphs = 2
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          OnClick = FormRefClrBitBtnClick
         end
         object memQuantity: TMemo
           Left = 195
@@ -499,13 +497,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       end
     end
     object Panel7: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 440
       Height = 118
       Align = alLeft
       Caption = 'Panel7'
+      ParentBackground = False
       TabOrder = 1
       object sgCharges: TStringGrid
         Left = 1
@@ -529,13 +527,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           80)
       end
       object Panel8: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 438
         Height = 22
         Align = alTop
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 1
         object Label10: TLabel
           Left = 6
@@ -567,10 +565,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      Visible = False
-      OnClick = btnDetailsClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -585,6 +579,10 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
         3333777777333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      Visible = False
+      OnClick = btnDetailsClick
     end
     object chkbxDelNote: TCheckBox
       Left = 451
@@ -598,13 +596,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 36
     Width = 908
     Height = 197
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 4
     DesignSize = (
       908
@@ -877,13 +875,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       OnClick = chkbxCashSaleClick
     end
     object pnlSubReps: TPanel
-      ParentBackground = False
       Left = 0
       Top = 138
       Width = 329
       Height = 27
       BevelOuter = bvNone
       Caption = 'pnlSubReps'
+      ParentBackground = False
       TabOrder = 9
       object Label15: TLabel
         Left = 8
@@ -908,8 +906,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
         Top = 3
         Width = 23
         Height = 23
-        TabOrder = 1
-        OnClick = btnClearClaimClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -924,6 +920,8 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
           BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
           50BB555555555555575F555555555555550B5555555555555575}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnClearClaimClick
       end
     end
     object btnReps: TBitBtn
@@ -982,13 +980,13 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       98)
   end
   object pnlHeaderDesc: TPanel
-    ParentBackground = False
     Left = 0
     Top = 233
     Width = 908
     Height = 27
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 6
     DesignSize = (
       908
@@ -1045,9 +1043,6 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
     Top = 262
     Width = 15
     Height = 15
-    TabOrder = 7
-    TabStop = False
-    OnClick = btnDeleteClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -1066,15 +1061,18 @@ object PBMaintSalesInvoicefrm: TPBMaintSalesInvoicefrm
       3333333333333333333888330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 7
+    TabStop = False
+    OnClick = btnDeleteClick
   end
   object pnlEndUser: TPanel
-    ParentBackground = False
     Left = 0
     Top = 260
     Width = 908
     Height = 31
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     DesignSize = (

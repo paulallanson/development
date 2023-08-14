@@ -232,7 +232,7 @@ var
   rCost: real;
 begin
   try
-    rCost := strtofloat(memoPackSize.text)*rUnitCost;
+    rCost := StrToFloatDef(memoPackSize.text, 0, FormatSettings)*rUnitCost;
   except
     rcost := 0.000;
   end;

@@ -921,7 +921,7 @@ begin
     else
       dmAccImport.OnHold := 'N';
 
-    dmAccImport.CreditLimit := strtofloat(CreditLimit);
+    dmAccImport.CreditLimit := StrToFloatDef(CreditLimit, 0, FormatSettings);
     dmAccImport.VatCode := VatCode;
     dmAccImport.SICCode := SICCode;
 
@@ -1114,7 +1114,7 @@ begin
   try
     dmAccImport.CustomerAccount := AccountCode;
 
-    dmAccImport.PONumber := strtofloat(PONumber);
+    dmAccImport.PONumber := StrToFloatDef(PONumber, 0, FormatSettings);
     dmAccImport.OrderDate := PBDatestr(OrderDate);
     dmAccImport.Operator := dmAccImport.GetOperatorByInitials(RaisedBy);
     dmAccImport.CustomerContactName := ContactName;
@@ -1135,10 +1135,10 @@ begin
 
     dmAccImport.DescriptiveReference := SONumber;
     dmAccImport.LineNumber := strtoint(ItemNumber);
-    dmAccImport.Quantity := round(strtofloat(QtyOrdered));
+    dmAccImport.Quantity := round(StrToFloatDef(QtyOrdered, 0, FormatSettings));
     dmAccImport.PriceUnit := dmAccImport.GetPriceUnitByDescription(PriceUnit);
-    dmAccImport.CostPrice := strtofloat(UnitCost);
-    dmAccImport.SellPrice := strtofloat(UnitPrice);
+    dmAccImport.CostPrice := StrToFloatDef(UnitCost, 0, FormatSettings);
+    dmAccImport.SellPrice := StrToFloatDef(UnitPrice, 0, FormatSettings);
 
     if pos('Inv',OrderStatus) > 0 then
       dmAccImport.OrderStatus := 30
@@ -1171,7 +1171,7 @@ begin
     if PONumber <> '0' then
       dmAccImport.SupplierAccount := dmAccImport.GetSupplierAccountCode(PONumber);
 
-    dmAccImport.PONumber := strtofloat(PONumber);
+    dmAccImport.PONumber := StrToFloatDef(PONumber, 0, FormatSettings);
     dmAccImport.OrderDate := PBDatestr(OrderDate);
     dmAccImport.Operator := dmAccImport.GetOperatorByInitials(RaisedBy);
     dmAccImport.CustomerContactName := ContactName;
@@ -1184,16 +1184,16 @@ begin
     dmAccImport.InvoiceDate := PBDateStr(CompletedDate);
     dmAccImport.Vatable := IncludesVAT;
     dmAccImport.VatCode := TaxCode;
-    if strtofloat(PONumber) <> 0 then
+    if StrToFloatDef(PONumber, 0, FormatSettings) <> 0 then
       dmAccImport.Description := Subject
     else
       dmAccImport.Description := trim(ProductCode) + ' - ' + trim(ProductDescription);
     dmAccImport.LineNumber := strtoint(ItemNumber);
-    dmAccImport.Quantity := round(strtofloat(QtyOrdered));
+    dmAccImport.Quantity := round(StrToFloatDef(QtyOrdered, 0, FormatSettings));
     iPriceUnit := dmAccImport.GetPriceUnitByDescription(PriceUnit);
     dmAccImport.PriceUnit := iPriceUnit;
-    dmAccImport.CostPrice := strtofloat(UnitCost);
-    dmAccImport.SellPrice := strtofloat(UnitPrice);
+    dmAccImport.CostPrice := StrToFloatDef(UnitCost, 0, FormatSettings);
+    dmAccImport.SellPrice := StrToFloatDef(UnitPrice, 0, FormatSettings);
 
     if pos('Inv',OrderStatus) > 0 then
       dmAccImport.OrderStatus := 30
@@ -1223,7 +1223,7 @@ begin
     dmAccImport.CustomerAccount := AccountCode;
     dmAccImport.SupplierAccount := dmAccImport.GetSupplierAccountCode(PONumber);
 
-    dmAccImport.PONumber := strtofloat(PONumber);
+    dmAccImport.PONumber := StrToFloatDef(PONumber, 0, FormatSettings);
     dmAccImport.OrderDate := PBDatestr(OrderDate);
     dmAccImport.Operator := dmAccImport.GetOperatorByInitials(RaisedBy);
     dmAccImport.CustomerContactName := ContactName;
@@ -1243,8 +1243,8 @@ begin
       dmAccImport.Description := Subject;
     dmAccImport.Quantity := strtoint(QtyOrdered);
     dmAccImport.PriceUnit := dmAccImport.GetPriceUnitByDescription(PriceUnit);
-    dmAccImport.CostPrice := strtofloat(UnitCost);
-    dmAccImport.SellPrice := strtofloat(UnitPrice);
+    dmAccImport.CostPrice := StrToFloatDef(UnitCost, 0, FormatSettings);
+    dmAccImport.SellPrice := StrToFloatDef(UnitPrice, 0, FormatSettings);
 
     if pos('Inv',OrderStatus) > 0 then
       dmAccImport.OrderStatus := 30
@@ -1260,7 +1260,7 @@ begin
     else
       dmAccImport.OrderStatus := 22;
 
-    if dmAccImport.OrderExists(strtofloat(PONumber)) then
+    if dmAccImport.OrderExists(StrToFloatDef(PONumber, 0, FormatSettings)) then
       begin
         dmAccImport.UpdateOrder;
         Result := false;
@@ -1373,7 +1373,7 @@ begin
     dmAccImport.SalesInvoiceNo := InvoiceNumber;
     dmAccImport.SalesInvoiceDate := PBDatestr(InvoiceDate);
 
-    dmAccImport.SellPrice := strtofloat(TotalValue);
+    dmAccImport.SellPrice := StrToFloatDef(TotalValue, 0, FormatSettings);
 
     dmAccImport.Operator := dmAccImport.GetOperatorByInitials(RaisedBy);
     dmAccImport.OfficeContact := dmAccImport.GetOperatorByInitials(RaisedBy);
@@ -1407,8 +1407,8 @@ var
   iPriceUnit: integer;
 begin
   try
-    dmAccImport.Quantity := round(strtofloat(QtyOrdered));
-    dmAccImport.SellPrice := strtofloat(UnitPrice);
+    dmAccImport.Quantity := round(StrToFloatDef(QtyOrdered, 0, FormatSettings));
+    dmAccImport.SellPrice := StrToFloatDef(UnitPrice, 0, FormatSettings);
     dmAccImport.VatCode := TaxCode;
 
     dmAccImport.ProductType := 'Imported Product';

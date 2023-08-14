@@ -11,11 +11,9 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
@@ -47,9 +45,10 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkCancel
     end
     object PreviewBitBtn: TBitBtn
       Left = 169
@@ -63,9 +62,6 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -80,6 +76,9 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 249
@@ -94,9 +93,6 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -111,6 +107,9 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = PrintBitBtnClick
     end
     object EmailBitBtn: TBitBtn
       Left = 328
@@ -119,8 +118,6 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Email'
-      TabOrder = 3
-      OnClick = EmailBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -135,6 +132,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
       Left = 8
@@ -172,8 +171,8 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
       object imgPlanning: TImage
         Left = 359
         Top = 11
-        Width = 32
-        Height = 32
+        Width = 24
+        Height = 24
         AutoSize = True
         Picture.Data = {
           055449636F6E0000010003001818000001000800C80600003600000018180000
@@ -444,14 +443,10 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'From_Works_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'To_Works_order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetWorksOrder: TFDQuery
@@ -481,21 +476,23 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Top = 42
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object IdHTTP1: TIdHTTP
     OnWorkBegin = IdHTTP1WorkBegin
     OnWorkEnd = IdHTTP1WorkEnd
-    AllowCookies = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
     Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
     Request.Accept = 'text/html, */*'
     Request.BasicAuthentication = False
     Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
     HTTPOptions = [hoForceEncodeParams]
     Left = 264
     Top = 104
@@ -510,9 +507,7 @@ object frmPBRSWorksOrder: TfrmPBRSWorksOrder
     Top = 45
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
 end

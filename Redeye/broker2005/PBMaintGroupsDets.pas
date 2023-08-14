@@ -195,7 +195,7 @@ begin
       if sFuncMode = 'D' then
         DeleteCategory(iCode)
       else
-        SaveCategory(iCode, edtDescription.Text, StrToFloat(memoCommRt.Lines[0]));
+        SaveCategory(iCode, edtDescription.Text, StrToFloatDef(memoCommRt.Lines[0], 0, FormatSettings));
 
       {If replicating Category details then save details to Replicate_Entity table}
       if dmBroker.GetReplicateDBAlias <> '' then

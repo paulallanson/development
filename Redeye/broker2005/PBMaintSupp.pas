@@ -377,7 +377,7 @@ begin
       if ActiveChkBox.Checked then
         ParamByName('Acc_Active').AsString := 'Y'
       else ParamByName('Acc_Active').AsString := 'N';
-      ParamByName('Discount').AsFloat := StrToFloat(DiscountMemo.Text);
+      ParamByName('Discount').AsFloat := StrToFloatDef(DiscountMemo.Text, 0, FormatSettings);
       ParamByName('Intrastat_Id').AsInteger :=
         IntrastatDBLookupComboBox.KeyValue;
       if CurrencyDBLookupComboBox.KeyValue = 0 then
@@ -480,7 +480,7 @@ begin
   if DiscountMemo.Text <> '' then
   begin
     try
-      DiscountMemo.Text := FormatFloat('##0.00', StrToFloat(DiscountMemo.Text))
+      DiscountMemo.Text := FormatFloat('##0.00', StrToFloatDef(DiscountMemo.Text, 0, FormatSettings))
     except
       MessageDlg('Invalid settlement discount', mtError, [mbOK], 0);
       DiscountMemo.SetFocus;

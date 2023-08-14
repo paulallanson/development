@@ -878,17 +878,17 @@ begin
 
 (*      with TQRLabel(Findcomponent('JobBasic'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 
       with TQRLabel(Findcomponent('JobOvertime'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 
       with TQRLabel(Findcomponent('JobTotal'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 *)
     end;
@@ -911,17 +911,17 @@ begin
 
 (*      with TQRLabel(Findcomponent('JobBasic'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 
       with TQRLabel(Findcomponent('JobOvertime'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 
       with TQRLabel(Findcomponent('JobTotal'+qryReport.fieldbyname('Activity_code').asstring+qryReport.fieldbyname('Customer').asstring)) do
       begin
-        Caption := formatfloat('##0.00',(strtofloat(caption) + OperatorJob[idx]));
+        Caption := formatfloat('##0.00',(StrToFloatDef(caption) + OperatorJob[idx]), 0, FormatSettings);
       end;
 *)
     end;

@@ -11,18 +11,16 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 305
     Width = 572
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       572
@@ -47,9 +45,10 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       Height = 25
       Anchors = [akTop, akRight]
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object BitBtn2: TBitBtn
       Left = 486
@@ -57,17 +56,18 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 572
     Height = 137
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object lblOrderType: TLabel
       Left = 8
@@ -153,12 +153,12 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 137
     Width = 572
     Height = 168
     Align = alClient
+    ParentBackground = False
     TabOrder = 1
     object Label2: TLabel
       Left = 5
@@ -294,7 +294,6 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       OnChange = cmbCreditTypeChange
       Items.Strings = (
@@ -334,7 +333,6 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 10
       OnChange = cmbInvoiceTypeChange
       Items.Strings = (
@@ -350,6 +348,7 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
       EditMask = '!90009999/900/000;0;_'
       MaxLength = 16
       TabOrder = 5
+      Text = ''
       OnChange = edtNominalChange
     end
     object memResellerPrice: TMemo
@@ -400,9 +399,7 @@ object PBMaintSalesInvoiceLinefrm: TPBMaintSalesInvoiceLinefrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object dsNominal: TDataSource

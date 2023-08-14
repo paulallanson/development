@@ -410,21 +410,21 @@ begin
     Prod_Status := 'N';
 
     try
-      Part_Pack_Quantity := round(strtofloat(LineData[7]));
+      Part_Pack_Quantity := round(StrToFloatDef(LineData[7], 0, FormatSettings));
     except
       Part_Pack_Quantity := 1;
     end;
-    
-    Part_Cost_List := StrToFloat('0'+LineData[3]);
-    Part_Purchase_Price := StrToFloat('0'+LineData[8]);
+
+    Part_Cost_List := StrToFloatDef('0'+LineData[3], 0, FormatSettings);
+    Part_Purchase_Price := StrToFloatDef('0'+LineData[8], 0, FormatSettings);
     Discount_this_Part := 'N';
 
     Cat_Discount_Flag := 0;
 
     UOM := LineData[4];
 
-    Min_Stock := round(strtofloat(LineData[5]));
-    Stock_Bal := round(strtofloat(LineData[6]));
+    Min_Stock := round(StrToFloatDef(LineData[5], 0, FormatSettings));
+    Stock_Bal := round(StrToFloatDef(LineData[6], 0, FormatSettings));
 
     Result := True;
     LineData := nil;
@@ -443,7 +443,7 @@ begin
   Delete(ProdLine, 1, CommaPos);
 
   CommaPos := Pos(',', ProdLine);
-  Part_Purchase_Price := StrToFloat(Copy(ProdLine, 0, CommaPos-1));
+  Part_Purchase_Price := StrToFloatDef(Copy(ProdLine, 0, CommaPos-1), 0, FormatSettings);
   Result := True;
 end;
 

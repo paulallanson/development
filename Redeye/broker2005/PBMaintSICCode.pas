@@ -229,8 +229,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat('######0.00', StrToFloat(TempQty));
-      if StrToFloat(Result) < 0 then
+      Result := FormatFloat('######0.00', StrToFloatDef(TempQty, 0, FormatSettings));
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

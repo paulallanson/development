@@ -141,7 +141,7 @@ begin
       Parambyname('Short_Description').asstring := edtShort.Text;
       ParamByName('Paper_Width_mm').AsInteger := StrToInt(WidthMemo.Text);
       ParamByName('Paper_Depth_mm').AsInteger := StrToInt(DepthMemo.Text);
-      ParamByName('A4_Multiplier').Asfloat := StrToFloat(MultiplierMemo.Text);
+      ParamByName('A4_Multiplier').Asfloat := StrToFloatDef(MultiplierMemo.Text, 0, FormatSettings);
       ExecSQL;
     end;
   end
@@ -234,8 +234,8 @@ begin
   end;
   try
     begin
-      Result := FormatFloat('######0', StrToFloat(TempQty));
-      if StrToFloat(Result) < 0 then
+      Result := FormatFloat('######0', StrToFloatDef(TempQty, 0, FormatSettings));
+      if StrToFloatDef(Result, 0, FormatSettings) < 0 then
       begin
         MessageDlg('Cannot be -ve', mtError, [mbOK], 0);
         Result := 'X';

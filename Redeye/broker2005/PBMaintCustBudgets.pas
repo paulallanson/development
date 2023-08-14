@@ -244,7 +244,7 @@ begin
               parambyname('Customer').asinteger := strtoint(cells[iperiods+2,icount]);
               parambyname('Period').asinteger := iStartPeriod+(icol-1);
               parambyname('Turnover_Value').asfloat := 0.00;
-              parambyname('Profit_Value').asfloat := strtofloat(cells[icol,icount]);
+              parambyname('Profit_Value').asfloat := StrToFloatDef(cells[icol,icount], 0, FormatSettings);
               execsql;
             end;
         end;
