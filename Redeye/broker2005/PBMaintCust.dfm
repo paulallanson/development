@@ -26,11 +26,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Top = 41
     Width = 1182
     Height = 651
-    ActivePage = tbStock
+    ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1178
-    ExplicitHeight = 650
+    ExplicitWidth = 1176
+    ExplicitHeight = 642
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -744,7 +744,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 687
+              Width = 691
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
@@ -2597,7 +2597,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar9
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1170
             end>
           object ToolBar9: TToolBar
             Left = 11
@@ -2971,7 +2971,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrQuotes
             ImageIndex = -1
             MinHeight = 41
-            Width = 1168
+            Width = 1172
           end>
         object tbrQuotes: TToolBar
           Left = 11
@@ -3234,7 +3234,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrEnquiries
             ImageIndex = -1
             MinHeight = 41
-            Width = 1168
+            Width = 1172
           end>
         object tbrEnquiries: TToolBar
           Left = 11
@@ -3600,7 +3600,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller1
             ImageIndex = -1
             MinHeight = 41
-            Width = 1168
+            Width = 1172
           end>
         object PageScroller1: TPageScroller
           Left = 11
@@ -3612,9 +3612,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrOrders: TToolBar
             Left = 0
             Top = 0
-            Width = 1147
+            Width = 1159
             Height = 41
-            ButtonHeight = 44
+            ButtonHeight = 29
             ButtonWidth = 62
             Caption = 'ToolBar1'
             Images = imglstOrders
@@ -3890,12 +3890,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
+            Width = 64
             Visible = True
           end>
       end
@@ -3920,6 +3922,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 50
           end>
+        ExplicitTop = 554
+        ExplicitWidth = 1168
       end
       object CoolBar3: TCoolBar
         Left = 0
@@ -3931,8 +3935,9 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = tbrJobs
             ImageIndex = -1
             MinHeight = 41
-            Width = 1168
+            Width = 1172
           end>
+        ExplicitWidth = 1168
         object tbrJobs: TToolBar
           Left = 11
           Top = 0
@@ -4181,6 +4186,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           item
             Width = 300
           end>
+        ExplicitTop = 595
+        ExplicitWidth = 1168
       end
       object Panel7: TPanel
         Left = 0
@@ -4201,7 +4208,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = PageScroller2
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1170
             end>
           object PageScroller2: TPageScroller
             Left = 11
@@ -4213,7 +4220,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             object tbrStock: TToolBar
               Left = 0
               Top = 0
-              Width = 1145
+              Width = 1157
               Height = 41
               ButtonHeight = 44
               ButtonWidth = 66
@@ -4441,6 +4448,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
+            ExplicitLeft = 980
           end
           object chkbxShowNotinUse: TCheckBox
             Left = 360
@@ -4484,9 +4492,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Control = PageScroller3
             ImageIndex = -1
             MinHeight = 40
-            Width = 1168
+            Width = 1172
           end>
-        ExplicitWidth = 1170
         object PageScroller3: TPageScroller
           Left = 11
           Top = 0
@@ -4498,7 +4505,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           object tbrInvoices: TToolBar
             Left = 0
             Top = 0
-            Width = 1147
+            Width = 1159
             Height = 40
             ButtonHeight = 36
             ButtonWidth = 51
@@ -4510,7 +4517,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             ShowHint = True
             TabOrder = 0
             Wrapable = False
-            ExplicitWidth = 1143
             object btnInvoiceChange: TToolButton
               Left = 0
               Top = 0
@@ -4778,7 +4784,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Caption = 'Date modified'
             Width = 200
           end>
-        Items.ItemData = {}
         LargeImages = imgDocuments
         MultiSelect = True
         RowSelect = True
@@ -4882,7 +4887,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
               Control = ToolBar8
               ImageIndex = -1
               MinHeight = 41
-              Width = 1166
+              Width = 1170
             end>
           object ToolBar8: TToolBar
             Left = 11
@@ -5285,8 +5290,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 732
-    ExplicitWidth = 1178
+    ExplicitTop = 724
+    ExplicitWidth = 1176
   end
   object pnlFooter: TPanel
     Left = 0
@@ -5296,8 +5301,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 691
-    ExplicitWidth = 1178
     DesignSize = (
       1182
       41)
@@ -5391,7 +5394,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = OKBitBtnClick
-      ExplicitLeft = 973
+      ExplicitLeft = 971
     end
     object CancelBitBtn: TBitBtn
       Left = 1057
@@ -5469,7 +5472,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       NumGlyphs = 2
       TabOrder = 5
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 1053
+      ExplicitLeft = 1051
     end
     object PrintBitBtn: TBitBtn
       Left = 9
@@ -5565,7 +5568,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1178
     DesignSize = (
       1182
       41)
@@ -5594,7 +5596,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       Text = 'NameEdit'
       OnChange = NameEditChange
       OnExit = NameEditExit
-      ExplicitWidth = 557
+      ExplicitWidth = 555
     end
   end
   object FlashTimer: TTimer

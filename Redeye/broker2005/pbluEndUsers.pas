@@ -119,7 +119,9 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, CCSCommon, PBMaintCust, pbLuBranches,
+uses
+  System.UITypes, System.Types,
+  pbMainMenu, pbDatabase, CCSCommon, PBMaintCust, pbLuBranches,
   pbluContacts, pbluCustomerSearch, PBMaintCConta, PBMaintCRep, PBLUReps,
   PBMaintCustAccMgr, PBRSCusSupLabs, PBMaintCustMulti;
 
@@ -417,7 +419,7 @@ begin
     else
       PBMaintCustFrm.iCustomer := dbgDetails.datasource.dataset.fieldbyname('Customer').asinteger;
 
-    PBMaintCustFrm.sFuncMode := Mode;
+    PBMaintCustFrm.sFuncMode := ShortString(Mode);
     PBMaintCustFrm.Prospect := (dbgDetails.datasource.dataset.fieldbyname('Customer_Status').asinteger = 80);
     PBMaintCustFrm.EndUser := (dbgDetails.datasource.dataset.fieldbyname('Customer_Status').asinteger = 200);
     PBMaintCustFrm.CreditCheck := false;

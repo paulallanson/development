@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses PBLUProcessGroup, CCSCommon, DateSelV5, CCSPrint, Printers,
+uses
+  System.UITypes,
+  PBLUProcessGroup, CCSCommon, DateSelV5, CCSPrint, Printers,
   PBRPProdWeekly;
 
 {$R *.dfm}

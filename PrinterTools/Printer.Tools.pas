@@ -22,7 +22,8 @@ type
     gtJPEGEngine1: TgtJPEGEngine;
     function GetLocation: string;
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
-    procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string);
+    procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList);
+    procedure FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
   public
     { Public declarations }
     constructor Create;
@@ -98,14 +99,10 @@ var
 begin
   Location := GetLocation;
   targetFileName := Location + fileName;
-
-  PrintToFile(Report, targetFileName, attachmentType);
-
-  FEmailAttachment.Clear;
-  FEmailAttachment.Add(targetFileName);
+  PrintToFile(Report, targetFileName, attachmentType, FEmailAttachment);
 end;
 
-procedure TPrinterTools.PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string);
+procedure TPrinterTools.PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList);
 var
   fileType: TPrinterFileType;
 begin
@@ -116,7 +113,16 @@ begin
     pftPDF : gtQRExportInterface1.Engine := gtPDFEngine1;
     pftBMP : gtQRExportInterface1.Engine := gtBMPEngine1;
     pftRTF : gtQRExportInterface1.Engine := gtRTFEngine1;
-    pftGIF : gtQRExportInterface1.Engine := gtGIFEngine1;
+    pftGIF :
+    begin
+      gtQRExportInterface1.Engine := gtGIFEngine1;
+      {$IFDEF DEBUG}
+      raise Exception.Create('GIF image is not supported.' + #13#10 +
+                             'Check the conditions of Create and EndPage methods of the gtGIFEng.pas unit.');
+      {$ELSE}
+      raise Exception.Create('GIF image is not supported.');
+      {$ENDIF}
+    end;
     pftJPEG : gtQRExportInterface1.Engine := gtJPEGEngine1;
     else raise Exception.Create('Invalid file type.');
   end;
@@ -130,7 +136,25 @@ begin
   gtQRExportInterface1.Engine.FileExtension := attachmentType;
   gtQRExportInterface1.RenderDocument(Report, False);
 
-  fileName := fileName + '.' + gtQRExportInterface1.Engine.FileExtension;
+  if Assigned(FEmailAttachment) then
+    FindAndAttachAllFiles(fileName, gtQRExportInterface1.Engine.FileExtension, FEmailAttachment);
+end;
+
+procedure TPrinterTools.FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
+var
+  SearchRec: TSearchRec;
+  Path: string;
+begin
+  FEmailAttachment.Clear;
+  Path := ExtractFilePath(fileName);
+
+  if FindFirst(fileName + '*' + '.' + Extension, faAnyFile, SearchRec) = 0 then
+    FEmailAttachment.Add(Path + SearchRec.Name);
+
+  while FindNext(SearchRec) = 0 do
+    FEmailAttachment.Add(Path + SearchRec.Name);
+
+  FindClose(SearchRec);
 end;
 
 procedure TPrinterTools.PrintToFileDelivery(const Report: TQuickRep; const ListFiles: TStringList;
@@ -142,7 +166,7 @@ begin
   Location := GetLocation;
   targetFileName := 'DEL' + FloatToStr(PONo)+ '_' + DelLine.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType);
+  PrintToFile(Report, targetFileName, attachmentType, nil);
   ListFiles.Add(targetFileName);
 end;
 
@@ -155,7 +179,7 @@ begin
   Location := GetLocation;
   targetFileName := 'LABEL' + FloatToStr(PONo)+ '_' + DelLine.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType);
+  PrintToFile(Report, targetFileName, attachmentType, nil);
   ListFiles.Add(targetFileName);
 end;
 
@@ -168,7 +192,7 @@ begin
   Location := GetLocation;
   targetFileName := Location + 'Q' + ReferenceNo.ToString + '.' + attachmentType;
 
-  PrintToFile(Report, targetFileName, attachmentType);
+  PrintToFile(Report, targetFileName, attachmentType, nil);
   ListFiles.Add(targetFileName);
 end;
 
@@ -180,7 +204,7 @@ begin
     fileType := pftGIF else
   if attachmentType = 'HTML' then
     fileType := pftHTML else
-  if attachmentType = 'JPG' then
+  if (attachmentType = 'JPG') or (attachmentType = 'JPEG') then
     fileType := pftJPEG else
   if attachmentType = 'PDF' then
     fileType := pftPDF else

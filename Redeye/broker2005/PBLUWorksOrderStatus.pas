@@ -57,7 +57,9 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBMaintWorksOrderStatus;
+uses
+  System.UITypes, System.Types,
+  pbDatabase, pbMainMenu, PBMaintWorksOrderStatus;
 
 {$R *.DFM}
 

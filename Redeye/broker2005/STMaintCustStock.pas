@@ -77,7 +77,9 @@ var
 
 implementation
 
-uses PBLUCust, CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  PBLUCust, CCSCommon, pbMainMenu;
 
 {$R *.dfm}
 

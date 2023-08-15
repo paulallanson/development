@@ -134,7 +134,9 @@ var
 
 implementation
 
-uses PBDatabase, PBLUQuestn,ComObj, ActiveX, PBLUPrdTypQuList, PBLUCap,
+uses
+  System.UITypes,
+  PBDatabase, PBLUQuestn,ComObj, ActiveX, PBLUPrdTypQuList, PBLUCap,
   pbMainMenu;
 
 {$R *.DFM}

@@ -24,7 +24,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     360)
   TextHeight = 13
   object Label4: TLabel
-    Left = 13
+    Left = 7
     Top = 7
     Width = 75
     Height = 13
@@ -36,6 +36,7 @@ object frmPBLUProspects: TfrmPBLUProspects
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    ExplicitLeft = 13
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -529,18 +530,17 @@ object frmPBLUProspects: TfrmPBLUProspects
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 573
+            Width = 561
           end>
         Visible = False
-        ExplicitWidth = 575
+        ExplicitWidth = 573
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 560
+          Width = 552
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 49
+          ButtonWidth = 64
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -553,7 +553,7 @@ object frmPBLUProspects: TfrmPBLUProspects
           Wrapable = False
           object btnEvents: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Caption = '  Calls   '
             ImageIndex = 0
             OnClick = btnEventsClick

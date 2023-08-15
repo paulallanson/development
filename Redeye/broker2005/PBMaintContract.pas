@@ -8,7 +8,7 @@ uses
   DBGrids, Grids, ToolWin, ImgList, DB, ShellAPI, PBJobBagDM, pbOrdersdm,
   PBPOObjects, Clipbrd, ComObj, AxCtrls, taoMapi, ActiveX, Menus,
   DateUtils, IniFiles, Spin, pbSalesInvoiceDM, printers, pbJobsDM,
-  System.ImageList;
+  System.ImageList, FireDAC.Stan.Param;
 
 type
   TPBMaintContractFrm = class(TForm)
@@ -254,7 +254,9 @@ var
 
 implementation
 
-uses PBLUOps, pbMainMenu, PBLUCust, CCSCommon, PBDBMemo, PBLUCConta, PBDocObjects,
+uses
+  System.UITypes,
+  PBLUOps, pbMainMenu, PBLUCust, CCSCommon, PBDBMemo, PBLUCConta, PBDocObjects,
   PBLUCRep, pbDatabase, DateSelV5, PBLUPaymentTerms, PBMaintJobBag,
   PBLUContractCustomerJobs, PBImages, PBWordOLE, PBExcelOLE, PBMaintEmail,
   PBMaintPOrd, PBMaintPOrdInactive, PBSendtoExcel, PBMaintSalesInvoice, PBSalesInvrPrint;

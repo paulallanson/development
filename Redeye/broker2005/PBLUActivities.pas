@@ -71,7 +71,9 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, PBMaintActivity, pbDatabase,
+uses
+  System.UITypes, System.Types,
+  pbMainMenu, CCSCommon, PBMaintActivity, pbDatabase,
   PBLUActivitiesSearch, PBLUActivityReports;
 
 {$R *.dfm}

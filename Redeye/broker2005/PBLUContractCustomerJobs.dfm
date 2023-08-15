@@ -1,7 +1,6 @@
 object PBLUContractCustomerJobsFrm: TPBLUContractCustomerJobsFrm
   Left = 288
   Top = 127
-  AutoScroll = False
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Insert Contract Job Bags'
   ClientHeight = 373
@@ -12,12 +11,10 @@ object PBLUContractCustomerJobsFrm: TPBLUContractCustomerJobsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0

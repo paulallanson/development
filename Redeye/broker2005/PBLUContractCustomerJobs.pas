@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, pbJobsDm;
+  ComCtrls, StdCtrls, ExtCtrls, Grids, DBGrids, Db, pbJobsDm, FireDAC.Stan.Param;
 
 type
   TPBLUContractCustomerJobsFrm = class(TForm)
@@ -63,6 +63,9 @@ var
   PBLUContractCustomerJobsFrm: TPBLUContractCustomerJobsFrm;
 
 implementation
+
+uses
+  System.UITypes;
 
 {$R *.DFM}
 

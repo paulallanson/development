@@ -124,7 +124,9 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, CCSCommon, PBMaintCust, pbLuBranches,
+uses
+  System.UITypes, System.Types,
+  pbMainMenu, pbDatabase, CCSCommon, PBMaintCust, pbLuBranches,
   pbluContacts, PBRSCusSupLabs, pbluCustomerSearch, PBMaintCConta,
   PBMaintCRep, pbEventsDM, PBMaintCustMulti, PBLUProspectRpts, PBLUReps, PBMaintCustAccMgr;
 

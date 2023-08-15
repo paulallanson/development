@@ -3,7 +3,7 @@ object dtmdlStock: TdtmdlStock
   Width = 976
   PixelsPerInch = 120
   object qryCustStock: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -74,6 +74,7 @@ object dtmdlStock: TdtmdlStock
       
         '                      (store_stock.invoice_upfront is null))) as' +
         ' not_paid_for,'
+      '       Part_Store_Levels.Reorder_Level,'
       '       Not_in_Use'
       
         'from (part left join part_store_levels on (part.part = part_stor' +
@@ -86,6 +87,7 @@ object dtmdlStock: TdtmdlStock
       '      part_store_levels.part,'
       '      Part.Sell_Pack_Quantity,'
       '      store_stock.part,'
+      '      Part_Store_Levels.Reorder_Level,'
       '      Part.Not_in_Use'
       'HAVING ((Part.Customer = :Customer) or (:Customer = 0)) and'
       '      ('
@@ -113,111 +115,90 @@ object dtmdlStock: TdtmdlStock
       item
         Name = 'Customer'
         DataType = ftInteger
-      end
-      item
-        Name = 'Customer'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Description'
-        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Description'
         DataType = ftString
-      end
-      item
-        Name = 'Description'
-        DataType = ftString
+        ParamType = ptInput
       end
       item
         Name = 'Not_in_Use'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryCustStockPart: TStringField
+    object qryCustStockPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Origin = 'Part'
+      Required = True
+      Size = 25
     end
     object qryCustStockCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
     end
-    object qryCustStockdescription: TStringField
+    object qryCustStockdescription: TWideStringField
       FieldName = 'description'
-      FixedChar = True
-      Size = 100
+      Origin = 'description'
+      Size = 150
     end
-    object qryCustStockstore_qty: TIntegerField
-      FieldName = 'store_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockqty_alloc: TIntegerField
-      FieldName = 'qty_alloc'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockqty_free: TIntegerField
-      FieldName = 'qty_free'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockpurch_ord_qty: TIntegerField
-      FieldName = 'purch_ord_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockprod_ord_qty: TFloatField
-      FieldName = 'prod_ord_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockpaid_for: TIntegerField
-      FieldName = 'paid_for'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStocknot_paid_for: TIntegerField
-      FieldName = 'not_paid_for'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object qryCustStockform_reference_id: TStringField
+    object qryCustStockform_reference_id: TWideStringField
       FieldName = 'form_reference_id'
-      FixedChar = True
-      Size = 100
+      Origin = 'form_reference_id'
+      ReadOnly = True
+      Size = 50
     end
     object qryCustStockform_reference: TIntegerField
       FieldName = 'form_reference'
+      Origin = 'form_reference'
+      ReadOnly = True
     end
-    object qryCustStockCustomer_Name: TStringField
-      FieldName = 'Customer_Name'
-      Size = 100
+    object qryCustStockstore_qty: TIntegerField
+      FieldName = 'store_qty'
+      Origin = 'store_qty'
+      ReadOnly = True
     end
-    object qryCustStockMinimum_Stock: TIntegerField
-      FieldName = 'Minimum_Stock'
+    object qryCustStockqty_alloc: TIntegerField
+      FieldName = 'qty_alloc'
+      Origin = 'qty_alloc'
+      ReadOnly = True
     end
-    object qryCustStockMaximum_Stock: TIntegerField
-      FieldName = 'Maximum_Stock'
+    object qryCustStockqty_free: TIntegerField
+      FieldName = 'qty_free'
+      Origin = 'qty_free'
+      ReadOnly = True
+    end
+    object qryCustStockpurch_ord_qty: TIntegerField
+      FieldName = 'purch_ord_qty'
+      Origin = 'purch_ord_qty'
+      ReadOnly = True
+    end
+    object qryCustStockprod_ord_qty: TFloatField
+      FieldName = 'prod_ord_qty'
+      Origin = 'prod_ord_qty'
+      ReadOnly = True
+    end
+    object qryCustStockpaid_for: TIntegerField
+      FieldName = 'paid_for'
+      Origin = 'paid_for'
+      ReadOnly = True
+    end
+    object qryCustStocknot_paid_for: TIntegerField
+      FieldName = 'not_paid_for'
+      Origin = 'not_paid_for'
+      ReadOnly = True
     end
     object qryCustStockReorder_Level: TIntegerField
       FieldName = 'Reorder_Level'
+      Origin = 'Reorder_Level'
     end
-    object qryCustStockForward_Qty: TIntegerField
-      FieldName = 'Forward_Qty'
-    end
-    object qryCustStockNot_In_Use: TStringField
-      FieldName = 'Not_In_Use'
+    object qryCustStockNot_in_Use: TWideStringField
+      FieldName = 'Not_in_Use'
+      Origin = 'Not_in_Use'
+      Required = True
       Size = 1
-    end
-    object qryCustStockSO_unallocated: TIntegerField
-      FieldName = 'SO_unallocated'
-    end
-    object qryCustStockFuture_Stock: TIntegerField
-      FieldKind = fkCalculated
-      FieldName = 'Future_Stock'
-      OnGetText = qryCustStockFuture_StockGetText
-      Calculated = True
-    end
-    object qryCustStockProduct_Class_Description: TStringField
-      FieldName = 'Product_Class_Description'
-      Size = 30
-    end
-    object qryCustStockProduct_Class: TStringField
-      FieldName = 'Product_Class'
-      Size = 10
     end
   end
   object dtsStock: TDataSource
@@ -226,7 +207,7 @@ object dtmdlStock: TdtmdlStock
     Top = 20
   end
   object qryPartMvmnts: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select   part_movement.Date_received,'
       '         part_store.Part_Store_Name,'
@@ -263,53 +244,61 @@ object dtmdlStock: TdtmdlStock
         Name = 'part'
         DataType = ftString
         ParamType = ptInput
+        Value = Null
       end>
-    object qryPartMvmntsDate_received: TDateTimeField
+    object qryPartMvmntsDate_received: TSQLTimeStampField
       FieldName = 'Date_received'
+      Origin = 'Date_received'
     end
-    object qryPartMvmntsPart_Store_Name: TStringField
+    object qryPartMvmntsPart_Store_Name: TWideStringField
       FieldName = 'Part_Store_Name'
-      FixedChar = True
-      Size = 60
+      Origin = 'Part_Store_Name'
+      Required = True
+      Size = 30
     end
-    object qryPartMvmntsPart_Movement_Bin: TStringField
+    object qryPartMvmntsPart_Movement_Bin: TWideStringField
       FieldName = 'Part_Movement_Bin'
-      FixedChar = True
+      Origin = 'Part_Movement_Bin'
+      Size = 10
     end
-    object qryPartMvmntsPart_Store_Lot: TStringField
+    object qryPartMvmntsPart_Store_Lot: TWideStringField
       FieldName = 'Part_Store_Lot'
-      FixedChar = True
-      Size = 40
+      Origin = 'Part_Store_Lot'
     end
-    object qryPartMvmntsPart_Move_Type_Descr: TStringField
+    object qryPartMvmntsPart_Move_Type_Descr: TWideStringField
       FieldName = 'Part_Move_Type_Descr'
-      FixedChar = True
-      Size = 40
+      Origin = 'Part_Move_Type_Descr'
     end
-    object qryPartMvmntsPart_Movement_Reference: TStringField
+    object qryPartMvmntsPart_Movement_Reference: TWideStringField
       FieldName = 'Part_Movement_Reference'
-      FixedChar = True
-      Size = 60
+      Origin = 'Part_Movement_Reference'
+      Size = 30
     end
     object qryPartMvmntsStock_Pack_Quantity: TIntegerField
       FieldName = 'Stock_Pack_Quantity'
+      Origin = 'Stock_Pack_Quantity'
     end
     object qryPartMvmntsStore_Quantity: TIntegerField
       FieldName = 'Store_Quantity'
-      OnGetText = qryPartMvmntsStore_QuantityGetText
+      Origin = 'Store_Quantity'
     end
     object qryPartMvmntsStore_cost: TCurrencyField
       FieldName = 'Store_cost'
+      Origin = 'Store_cost'
     end
     object qryPartMvmntsPart_Store_Total_Quantity: TFloatField
       FieldName = 'Part_Store_Total_Quantity'
+      Origin = 'Part_Store_Total_Quantity'
     end
-    object qryPartMvmntsAudit_User: TStringField
+    object qryPartMvmntsAudit_User: TWideStringField
       FieldName = 'Audit_User'
+      Origin = 'Audit_User'
+      Size = 15
     end
-    object qryPartMvmntsAudit_Workstation: TStringField
+    object qryPartMvmntsAudit_Workstation: TWideStringField
       FieldName = 'Audit_Workstation'
-      Size = 30
+      Origin = 'Audit_Workstation'
+      Size = 15
     end
   end
   object dtsrcPartMvmnts: TDataSource
@@ -516,7 +505,7 @@ object dtmdlStock: TdtmdlStock
     Top = 220
   end
   object qryPartSales: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select sales_order_line.part,'
       '       part.part_description,'
@@ -568,80 +557,82 @@ object dtmdlStock: TdtmdlStock
       item
         Name = 'part'
         DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryPartSalespart: TStringField
+    object qryPartSalespart: TWideStringField
       FieldName = 'part'
-      FixedChar = True
-      Size = 30
+      Origin = 'part'
+      Required = True
+      Size = 25
     end
-    object qryPartSalespart_description: TStringField
+    object qryPartSalespart_description: TWideStringField
       FieldName = 'part_description'
-      FixedChar = True
-      Size = 100
+      Origin = 'part_description'
+      Size = 150
     end
     object qryPartSalessales_order: TIntegerField
       FieldName = 'sales_order'
+      Origin = 'sales_order'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryPartSalesCustomer: TStringField
+    object qryPartSalesCustomer: TWideStringField
       FieldName = 'Customer'
-      FixedChar = True
-      Size = 80
+      Origin = 'Customer'
+      Required = True
+      Size = 100
     end
-    object qryPartSalesdate_ordered: TDateTimeField
+    object qryPartSalesdate_ordered: TSQLTimeStampField
       FieldName = 'date_ordered'
+      Origin = 'date_ordered'
+      Required = True
     end
     object qryPartSalesquantity_ordered: TIntegerField
       FieldName = 'quantity_ordered'
-      OnGetText = qryPartSalesquantity_orderedGetText
+      Origin = 'quantity_ordered'
+      Required = True
+    end
+    object qryPartSalesquantity_delivered: TIntegerField
+      FieldName = 'quantity_delivered'
+      Origin = 'quantity_delivered'
+      Required = True
+    end
+    object qryPartSalesquantity_invoiced: TIntegerField
+      FieldName = 'quantity_invoiced'
+      Origin = 'quantity_invoiced'
+      Required = True
     end
     object qryPartSalessell_pack_quantity: TIntegerField
       FieldName = 'sell_pack_quantity'
+      Origin = 'sell_pack_quantity'
+      Required = True
     end
     object qryPartSalesPart_Sales_Price: TCurrencyField
       FieldName = 'Part_Sales_Price'
+      Origin = 'Part_Sales_Price'
+      Required = True
     end
     object qryPartSalesPart_Cost: TCurrencyField
       FieldName = 'Part_Cost'
+      Origin = 'Part_Cost'
+      Required = True
     end
-    object qryPartSalesSellValue: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'SellValue'
-      OnGetText = qryPartSalesSellValueGetText
-      Calculated = True
-    end
-    object qryPartSalesCost: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'Cost'
-      OnGetText = qryPartSalesCostGetText
-      Calculated = True
-    end
-    object qryPartSalesQuantity: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'Quantity'
-      OnGetText = qryPartSalesQuantityGetText
-      Calculated = True
-    end
-    object qryPartSalesJob_Bag: TIntegerField
-      FieldName = 'Job_Bag'
-    end
-    object qryPartSalesJob_Bag_Req: TIntegerField
-      FieldName = 'Job_Bag_Req'
-    end
-    object qryPartSalesJob_Bag_No: TIntegerField
-      FieldKind = fkCalculated
-      FieldName = 'Job_Bag_No'
-      OnGetText = qryPartSalesJob_Bag_NoGetText
-      Calculated = True
-    end
-    object qryPartSalesSales_Order_Status: TStringField
+    object qryPartSalesSales_Order_Status: TWideStringField
       FieldName = 'Sales_Order_Status'
-      Size = 100
+      Origin = 'Sales_Order_Status'
+      Required = True
+      Size = 50
     end
-    object qryPartSalesQuantity_Delivered: TIntegerField
-      FieldName = 'Quantity_Delivered'
+    object qryPartSalesjob_bag: TIntegerField
+      FieldName = 'job_bag'
+      Origin = 'job_bag'
+      ReadOnly = True
     end
-    object qryPartSalesQuantity_Invoiced: TIntegerField
-      FieldName = 'Quantity_Invoiced'
+    object qryPartSalesjob_bag_Req: TIntegerField
+      FieldName = 'job_bag_Req'
+      Origin = 'job_bag_Req'
+      ReadOnly = True
     end
   end
   object dtsrcPartSales: TDataSource
@@ -650,7 +641,7 @@ object dtmdlStock: TdtmdlStock
     Top = 290
   end
   object qryPartProduction: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select purchase_orderline.Form_Reference,'
       '       form_reference.stock_reference as Part,'
@@ -729,87 +720,90 @@ object dtmdlStock: TdtmdlStock
     ParamData = <
       item
         Name = 'Part'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qryPartProductionForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
+      Origin = 'Form_Reference'
     end
-    object qryPartProductionPart: TStringField
+    object qryPartProductionPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Origin = 'Part'
+      Size = 25
     end
-    object qryPartProductionDescription: TStringField
+    object qryPartProductionDescription: TWideStringField
       FieldName = 'Description'
-      FixedChar = True
-      Size = 100
+      Origin = 'Description'
+      Size = 150
     end
     object qryPartProductionPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
+      Origin = 'Purchase_Order'
+      Required = True
     end
-    object qryPartProductionSupplier: TStringField
+    object qryPartProductionSupplier: TWideStringField
       FieldName = 'Supplier'
-      FixedChar = True
-      Size = 80
+      Origin = 'Supplier'
+      Required = True
+      Size = 100
     end
-    object qryPartProductionOrder_Date: TDateTimeField
+    object qryPartProductionOrder_Date: TSQLTimeStampField
       FieldName = 'Order_Date'
+      Origin = 'Order_Date'
+      Required = True
     end
-    object qryPartProductionOrder_Status: TStringField
+    object qryPartProductionOrder_Status: TWideStringField
       FieldName = 'Order_Status'
-      FixedChar = True
-      Size = 80
+      Origin = 'Order_Status'
+      Size = 40
     end
     object qryPartProductionQuantity_Ordered: TFloatField
       FieldName = 'Quantity_Ordered'
+      Origin = 'Quantity_Ordered'
     end
     object qryPartProductionDelivered_to_Stock: TFloatField
       FieldName = 'Delivered_to_Stock'
+      Origin = 'Delivered_to_Stock'
+      ReadOnly = True
     end
     object qryPartProductionDelivered: TFloatField
       FieldName = 'Delivered'
-      OnGetText = qryPartMvmntsStore_QuantityGetText
+      Origin = 'Delivered'
+      ReadOnly = True
     end
     object qryPartProductionAwaiting_Delivery: TFloatField
       FieldName = 'Awaiting_Delivery'
+      Origin = 'Awaiting_Delivery'
+      ReadOnly = True
     end
     object qryPartProductionPack_Size: TStringField
       FieldName = 'Pack_Size'
-      FixedChar = True
+      Origin = 'Pack_Size'
       Size = 40
     end
     object qryPartProductionSelling_Price: TCurrencyField
       FieldName = 'Selling_Price'
+      Origin = 'Selling_Price'
     end
     object qryPartProductionOrder_price: TCurrencyField
       FieldName = 'Order_price'
+      Origin = 'Order_price'
     end
     object qryPartProductionsell_unit_factor: TFloatField
       FieldName = 'sell_unit_factor'
+      Origin = 'sell_unit_factor'
+      ReadOnly = True
     end
     object qryPartProductionord_unit_factor: TFloatField
       FieldName = 'ord_unit_factor'
-    end
-    object qryPartProductionQuantity: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'Quantity'
-      OnGetText = qryPartProductionQuantityGetText
-      Calculated = True
-    end
-    object qryPartProductiontot_sell_price: TCurrencyField
-      FieldKind = fkCalculated
-      FieldName = 'tot_sell_price'
-      OnGetText = qryPartProductiontot_sell_priceGetText
-      Calculated = True
-    end
-    object qryPartProductiontot_ord_price: TFloatField
-      FieldKind = fkCalculated
-      FieldName = 'tot_ord_price'
-      OnGetText = qryPartProductiontot_ord_priceGetText
-      Calculated = True
+      Origin = 'ord_unit_factor'
+      ReadOnly = True
     end
   end
   object qryPartPOs: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select purch_ord_line.part,'
       '       part.part_description as Description,'
@@ -840,44 +834,55 @@ object dtmdlStock: TdtmdlStock
     ParamData = <
       item
         Name = 'Part'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryPartPOspart: TStringField
+    object qryPartPOspart: TWideStringField
       FieldName = 'part'
-      Visible = False
-      FixedChar = True
-      Size = 30
+      Origin = 'part'
+      Required = True
+      Size = 25
     end
-    object qryPartPOsDescription: TStringField
+    object qryPartPOsDescription: TWideStringField
       FieldName = 'Description'
-      Visible = False
-      FixedChar = True
+      Origin = 'Description'
+      Size = 150
+    end
+    object qryPartPOsPurchase_Order: TIntegerField
+      FieldName = 'Purchase_Order'
+      Origin = 'Purchase_Order'
+      Required = True
+    end
+    object qryPartPOsSupplier: TWideStringField
+      FieldName = 'Supplier'
+      Origin = 'Supplier'
+      Required = True
       Size = 100
     end
-    object qryPartPOsPurchaseOrder: TIntegerField
-      FieldName = 'Purchase_Order'
-    end
-    object qryPartPOsSupplier: TStringField
-      FieldName = 'Supplier'
-      FixedChar = True
-      Size = 80
-    end
-    object qryPartPOsOrderDate: TDateTimeField
+    object qryPartPOsOrder_Date: TSQLTimeStampField
       FieldName = 'Order_Date'
+      Origin = 'Order_Date'
+      Required = True
     end
-    object qryPartPOsOrderStatus: TStringField
+    object qryPartPOsOrder_Status: TWideStringField
       FieldName = 'Order_Status'
-      FixedChar = True
-      Size = 24
+      Origin = 'Order_Status'
+      Size = 12
     end
-    object qryPartPOsQuantityOrdered: TIntegerField
+    object qryPartPOsQuantity_Ordered: TIntegerField
       FieldName = 'Quantity_Ordered'
-      OnGetText = qryPartPOsQuantityOrderedGetText
+      Origin = 'Quantity_Ordered'
+      Required = True
     end
-    object qryPartPOsPackSize: TIntegerField
+    object qryPartPOsPack_Size: TIntegerField
       FieldName = 'Pack_Size'
+      Origin = 'Pack_Size'
     end
     object qryPartPOsCost: TCurrencyField
       FieldName = 'Cost'
+      Origin = 'Cost'
+      Required = True
     end
   end
   object dtsrcPartProduction: TDataSource
@@ -1009,7 +1014,7 @@ object dtmdlStock: TdtmdlStock
     Top = 100
   end
   object qryStock: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select TOP 10000 part.Part,'
       '        Part.Customer,'
@@ -1182,69 +1187,77 @@ object dtmdlStock: TdtmdlStock
         DataType = ftString
         ParamType = ptInput
       end>
-    object StringField1: TStringField
+    object qryStockPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Required = True
+      Size = 25
     end
-    object IntegerField1: TIntegerField
+    object qryStockCustomer: TIntegerField
       FieldName = 'Customer'
     end
-    object StringField2: TStringField
-      FieldName = 'description'
-      FixedChar = True
-      Size = 100
-    end
-    object IntegerField2: TIntegerField
-      FieldName = 'store_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object IntegerField3: TIntegerField
-      FieldName = 'qty_alloc'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object IntegerField4: TIntegerField
-      FieldName = 'qty_free'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object IntegerField5: TIntegerField
-      FieldName = 'purch_ord_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object FloatField1: TFloatField
-      FieldName = 'prod_ord_qty'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object IntegerField6: TIntegerField
-      FieldName = 'paid_for'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object IntegerField7: TIntegerField
-      FieldName = 'not_paid_for'
-      OnGetText = qryCustStockstore_qtyGetText
-    end
-    object StringField3: TStringField
-      FieldName = 'form_reference_id'
-      FixedChar = True
-      Size = 100
-    end
-    object IntegerField8: TIntegerField
-      FieldName = 'form_reference'
-    end
-    object qryStockCustomer_Name: TStringField
+    object qryStockCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
-      FixedChar = True
-      Size = 92
+      ReadOnly = True
+      Size = 100
     end
-    object qryStockNot_in_Use: TStringField
+    object qryStockdescription: TWideStringField
+      FieldName = 'description'
+      Size = 150
+    end
+    object qryStockform_reference_id: TWideStringField
+      FieldName = 'form_reference_id'
+      ReadOnly = True
+      Size = 50
+    end
+    object qryStockform_reference: TIntegerField
+      FieldName = 'form_reference'
+      ReadOnly = True
+    end
+    object qryStockstore_qty: TIntegerField
+      FieldName = 'store_qty'
+      ReadOnly = True
+    end
+    object qryStockqty_alloc: TIntegerField
+      FieldName = 'qty_alloc'
+      ReadOnly = True
+    end
+    object qryStockqty_free: TIntegerField
+      FieldName = 'qty_free'
+      ReadOnly = True
+    end
+    object qryStockSO_Unallocated: TIntegerField
+      FieldName = 'SO_Unallocated'
+      ReadOnly = True
+    end
+    object qryStockpurch_ord_qty: TIntegerField
+      FieldName = 'purch_ord_qty'
+      ReadOnly = True
+    end
+    object qryStockprod_ord_qty: TFloatField
+      FieldName = 'prod_ord_qty'
+      ReadOnly = True
+    end
+    object qryStockpaid_for: TIntegerField
+      FieldName = 'paid_for'
+      ReadOnly = True
+    end
+    object qryStocknot_paid_for: TIntegerField
+      FieldName = 'not_paid_for'
+      ReadOnly = True
+    end
+    object qryStockNot_in_Use: TWideStringField
       FieldName = 'Not_in_Use'
-      FixedChar = True
-      Size = 2
+      Required = True
+      Size = 1
     end
-    object qryStockProduct_Class: TStringField
+    object qryStockProduct_Class: TWideStringField
       FieldName = 'Product_Class'
-      FixedChar = True
-      Size = 10
+      Size = 5
+    end
+    object qryStockProduct_Class_Description: TStringField
+      FieldName = 'Product_Class_Description'
+      ReadOnly = True
+      Size = 15
     end
     object qryStockMinimum_Stock: TIntegerField
       FieldName = 'Minimum_Stock'
@@ -1254,16 +1267,13 @@ object dtmdlStock: TdtmdlStock
     end
     object qryStockReorder_Level: TIntegerField
       FieldName = 'Reorder_Level'
+      ReadOnly = True
+      Required = True
     end
     object qryStockForward_qty: TIntegerField
       FieldName = 'Forward_qty'
-    end
-    object qryStockSO_Unallocated: TIntegerField
-      FieldName = 'SO_Unallocated'
-    end
-    object qryStockProduct_Class_Description: TStringField
-      FieldName = 'Product_Class_Description'
-      Size = 30
+      ReadOnly = True
+      Required = True
     end
   end
   object qryPartDeliveries: TFDQuery

@@ -77,7 +77,9 @@ var
 
 implementation
 
-uses PBDatabase, PBPOObjects, CCSCommon, PBRPNCAReason, PBLUNonConformType, PBLUNonConformDept,
+uses
+  System.UITypes,
+  PBDatabase, PBPOObjects, CCSCommon, PBRPNCAReason, PBLUNonConformType, PBLUNonConformDept,
   PBLUNonConformCat;
 
 {$R *.DFM}

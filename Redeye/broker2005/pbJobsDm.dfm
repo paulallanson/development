@@ -1,11 +1,9 @@
 object dtmdlJobs: TdtmdlJobs
-  OldCreateOrder = False
-  Left = 140
-  Top = 107
-  Height = 562
-  Width = 588
+  Height = 703
+  Width = 735
+  PixelsPerInch = 120
   object qryJobs: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       
         'SELECT DISTINCT TOP 2000 Job_Bag.Job_Bag, Job_Bag.Job_Bag_Descr,' +
@@ -43,177 +41,144 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Rep = Rep.Rep) AND'
       '      (Job_Bag.Operator = Operator.Operator) and'
       '      (Job_Bag.Office_Contact = AM.Operator)')
-    Left = 32
-    Top = 40
+    Left = 40
+    Top = 50
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qryJobsJob_Bag: TIntegerField
       FieldName = 'Job_Bag'
+      Origin = 'Job_Bag'
+      Required = True
     end
-    object qryJobsJob_Bag_Descr: TStringField
+    object qryJobsJob_Bag_Descr: TWideStringField
       FieldName = 'Job_Bag_Descr'
-      FixedChar = True
-      Size = 160
+      Origin = 'Job_Bag_Descr'
+      Size = 80
     end
-    object qryJobsDate_Point: TDateTimeField
-      FieldName = 'Date_Point'
-    end
-    object qryJobsBranch_Name: TStringField
-      FieldName = 'Branch_Name'
-      FixedChar = True
+    object qryJobsCustomer_Name: TWideStringField
+      FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
+      Required = True
       Size = 100
+    end
+    object qryJobsDate_Point: TSQLTimeStampField
+      FieldName = 'Date_Point'
+      Origin = 'Date_Point'
+      Required = True
+    end
+    object qryJobsBranch_Name: TWideStringField
+      FieldName = 'Branch_Name'
+      Origin = 'Branch_Name'
+      Size = 50
     end
     object qryJobsCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
     object qryJobsBranch_No: TIntegerField
       FieldName = 'Branch_No'
+      Origin = 'Branch_No'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryJobsCust_Order_no: TStringField
+    object qryJobsAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+      Origin = 'Account_Code'
+      Size = 10
+    end
+    object qryJobsCust_Order_no: TWideStringField
       FieldName = 'Cust_Order_no'
-      FixedChar = True
-      Size = 80
+      Origin = 'Cust_Order_no'
+      Size = 40
     end
-    object qryJobsGoods_Required: TDateTimeField
+    object qryJobsGoods_Required: TSQLTimeStampField
       FieldName = 'Goods_Required'
+      Origin = 'Goods_Required'
     end
     object qryJobsQuantity: TFloatField
       FieldName = 'Quantity'
+      Origin = 'Quantity'
     end
-    object qryJobsJob_Bag_Status_descr: TStringField
+    object qryJobsJob_Bag_Status_descr: TWideStringField
       FieldName = 'Job_Bag_Status_descr'
-      FixedChar = True
-      Size = 80
+      Origin = 'Job_Bag_Status_descr'
+      Required = True
+      Size = 40
     end
     object qryJobsJob_Bag_Status: TIntegerField
       FieldName = 'Job_Bag_Status'
+      Origin = 'Job_Bag_Status'
     end
-    object qryJobsinactive: TStringField
+    object qryJobsinactive: TWideStringField
       FieldName = 'inactive'
-      FixedChar = True
-      Size = 2
+      Origin = 'inactive'
+      Size = 1
     end
     object qryJobsrep: TIntegerField
       FieldName = 'rep'
+      Origin = 'rep'
     end
-    object qryJobsRep_Name: TStringField
+    object qryJobsRep_Name: TWideStringField
       FieldName = 'Rep_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Rep_Name'
+      Required = True
+      Size = 40
     end
     object qryJobsOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
     end
-    object qryJobsOperator_Name: TStringField
+    object qryJobsOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 40
     end
     object qryJobsOffice_Contact: TIntegerField
       FieldName = 'Office_Contact'
+      Origin = 'Office_Contact'
     end
-    object qryJobsAccount_Manager: TStringField
+    object qryJobsAccount_Manager: TWideStringField
       FieldName = 'Account_Manager'
-      FixedChar = True
-      Size = 80
+      Origin = 'Account_Manager'
+      Required = True
+      Size = 40
     end
-    object qryJobsDescription_Reference: TStringField
+    object qryJobsDescription_Reference: TWideStringField
       FieldName = 'Description_Reference'
-      FixedChar = True
-      Size = 60
-    end
-    object qryJobsOn_Hold: TStringField
-      FieldName = 'On_Hold'
-      FixedChar = True
-      Size = 2
-    end
-    object qryJobsStatus_Text: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Status_Text'
-      OnGetText = qryJobsStatus_TextGetText
-      Size = 50
-      Calculated = True
-    end
-    object qryJobsCustomer_Name: TStringField
-      FieldName = 'Customer_Name'
-      Size = 60
-    end
-    object qryJobsDate_Start: TDateTimeField
-      FieldName = 'Date_Start'
-    end
-    object qryJobsCash_Lines: TIntegerField
-      FieldName = 'Cash_Lines'
-    end
-    object qryJobsProduction_Status: TStringField
-      FieldName = 'Production_Status'
+      Origin = 'Description_Reference'
       Size = 30
     end
-    object qryJobsAccount_Code: TStringField
-      FieldName = 'Account_Code'
-    end
-    object qryJobsNCA_Live_Lines: TIntegerField
-      FieldName = 'NCA_Live_Lines'
-    end
-    object qryJobsNCA_Signed_Off: TIntegerField
-      FieldName = 'NCA_Signed_Off'
-    end
-    object qryJobsPO_Lines: TIntegerField
-      FieldName = 'PO_Lines'
-    end
-    object qryJobsProduction_Complete: TStringField
-      FieldName = 'Production_Complete'
+    object qryJobsOn_Hold: TWideStringField
+      FieldName = 'On_Hold'
+      Origin = 'On_Hold'
       Size = 1
     end
-    object qryJobsQuote: TFloatField
-      FieldName = 'Quote'
-    end
-    object qryJobsFile_Copies_Received_Date: TDateTimeField
-      FieldName = 'File_Copies_Received_Date'
-    end
-    object qryJobsFile_Copies_Received_By_Name: TStringField
-      FieldName = 'File_Copies_Received_By_Name'
-    end
-    object qryJobsSub_Rep_Name: TStringField
-      FieldName = 'Sub_Rep_Name'
-      Size = 50
-    end
-    object qryJobsInvoice_This_Week: TStringField
-      FieldName = 'Invoice_This_Week'
-      Size = 1
-    end
-    object qryJobsEnd_User_Name: TStringField
-      FieldName = 'End_User_Name'
-      Size = 50
-    end
-    object qryJobsPack_Format_Description: TStringField
-      FieldName = 'Pack_Format_Description'
-      Size = 50
-    end
-    object qryJobsEnclosing_Type: TStringField
-      FieldName = 'Enclosing_Type'
-      Size = 50
+    object qryJobsDate_Start: TSQLTimeStampField
+      FieldName = 'Date_Start'
+      Origin = 'Date_Start'
     end
   end
   object dtsJobs: TDataSource
     DataSet = qryJobs
-    Left = 104
-    Top = 40
+    Left = 130
+    Top = 50
   end
   object qryDummy: TFDQuery
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT DISTINCT TOP :Records'
       '       Job_Bag.Job_Bag,'
@@ -314,28 +279,24 @@ object dtmdlJobs: TdtmdlJobs
       '        ON End_User.Customer = Job_Bag.End_User_Customer'
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)')
-    Left = 248
-    Top = 40
+    Left = 310
+    Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
-        Name = 'Records'
-        ParamType = ptUnknown
+        Name = 'RECORDS'
+        ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftUnknown
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object qryJobReturns: TFDQuery
@@ -378,17 +339,17 @@ object dtmdlJobs: TdtmdlJobs
       '  Job_Bag_Return.Part,'
       '  Part.Part_Description'
       '')
-    Left = 32
-    Top = 104
+    Left = 40
+    Top = 130
   end
   object dtsJobReturns: TDataSource
     DataSet = qryJobReturns
-    Left = 104
-    Top = 104
+    Left = 130
+    Top = 130
   end
   object qryJBReturnLines: TFDQuery
-    ConnectionName = 'pb'
     MasterSource = dtsJobReturns
+    ConnectionName = 'pb'
     SQL.Strings = (
       'select Job_Bag_Return.Part,'
       '  Part.Part_description as Description,'
@@ -396,19 +357,17 @@ object dtmdlJobs: TdtmdlJobs
       'from job_bag_return, part'
       'where job_bag_return.job_bag = :Job_Bag and'
       '  job_bag_return.part = part.part')
-    Left = 32
-    Top = 176
+    Left = 40
+    Top = 220
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object dtsJBReturnLines: TDataSource
     DataSet = qryJBReturnLines
-    Left = 120
-    Top = 176
+    Left = 150
+    Top = 220
   end
   object qryJBPartQtys: TFDQuery
     ConnectionName = 'pb'
@@ -432,13 +391,11 @@ object dtmdlJobs: TdtmdlJobs
       ')'
       'GROUP BY Sales_Order_line.Part'
       '')
-    Left = 480
-    Top = 40
+    Left = 600
+    Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryJobsNCA: TFDQuery
@@ -512,29 +469,26 @@ object dtmdlJobs: TdtmdlJobs
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)'
       '')
-    Left = 32
-    Top = 240
+    Left = 40
+    Top = 300
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dtsJobsNCA: TDataSource
     DataSet = qryJobsNCA
-    Left = 120
-    Top = 240
+    Left = 150
+    Top = 300
   end
   object qryOldDummyNCA: TFDQuery
     ConnectionName = 'PB'
@@ -610,23 +564,17 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)'
       ''
       '')
-    Left = 208
-    Top = 240
+    Left = 260
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyNCA: TFDQuery
@@ -741,38 +689,26 @@ object dtmdlJobs: TdtmdlJobs
         'derLine.Customers_Desc LIKE :Description) or ('#39'%%'#39' LIKE :Descrip' +
         'tion))'
       '')
-    Left = 328
-    Top = 240
+    Left = 410
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyOlder: TFDQuery
@@ -859,34 +795,26 @@ object dtmdlJobs: TdtmdlJobs
       '      (Job_Bag.Rep = Rep.Rep) AND'
       '      (Job_Bag.Operator = Operator.Operator) and'
       '      (Job_Bag.Office_Contact = AM.Operator)')
-    Left = 392
-    Top = 40
+    Left = 490
+    Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsContractJobs: TDataSource
     DataSet = qryContractJobs
-    Left = 120
-    Top = 304
+    Left = 150
+    Top = 380
   end
   object qryContractJobs: TFDQuery
     ConnectionName = 'PB'
@@ -904,28 +832,20 @@ object dtmdlJobs: TdtmdlJobs
         '      (Job_Bag.Job_Bag NOT IN (SELECT Job_Bag FROM Contract_Job_' +
         'Bag WHERE Contract_Job_Bag.Contract = :Contract))'
       'ORDER BY Job_Bag.Job_Bag DESC')
-    Left = 40
-    Top = 304
+    Left = 50
+    Top = 380
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract'
-        ParamType = ptUnknown
       end>
   end
   object qryAddToContract: TFDQuery
@@ -933,18 +853,14 @@ object dtmdlJobs: TdtmdlJobs
     SQL.Strings = (
       'INSERT INTO Contract_Job_Bag(Contract, Job_Bag)'
       'VALUES (:Contract, :Job_Bag)')
-    Left = 40
-    Top = 408
+    Left = 50
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBagPOs: TFDQuery
@@ -958,18 +874,14 @@ object dtmdlJobs: TdtmdlJobs
       '                              FROM Contract_Purchase_Order'
       '                              WHERE Contract = :Contract))'
       'ORDER BY Purchase_Order')
-    Left = 40
-    Top = 360
+    Left = 50
+    Top = 450
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contract'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPOToContract: TFDQuery
@@ -977,18 +889,14 @@ object dtmdlJobs: TdtmdlJobs
     SQL.Strings = (
       'INSERT INTO Contract_Purchase_Order(Contract, Purchase_Order)'
       'VALUES (:Contract, :Purchase_Order)')
-    Left = 40
-    Top = 464
+    Left = 50
+    Top = 580
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Contract'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckContract: TFDQuery
@@ -997,13 +905,11 @@ object dtmdlJobs: TdtmdlJobs
       'SELECT Contract'
       'FROM Contract_Job_Bag'
       'WHERE Job_Bag = :Job_Bag')
-    Left = 232
-    Top = 104
+    Left = 290
+    Top = 130
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdInvThisWeek: TFDQuery
@@ -1014,28 +920,24 @@ object dtmdlJobs: TdtmdlJobs
       '    Invoice_This_Week_By = :Invoice_This_Week_By,'
       '    Invoice_This_Week_Date = :Invoice_This_Week_Date'
       'WHERE Job_Bag = :Job_Bag')
-    Left = 208
-    Top = 304
+    Left = 260
+    Top = 380
     ParamData = <
       item
-        DataType = ftString
         Name = 'Invoice_This_Week'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_This_Week_By'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftDateTime
-        Name = 'Invoice_This_Week_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Invoice_This_Week_Date'
+        DataType = ftDateTime
+      end
+      item
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryDummyOld: TFDQuery
@@ -1130,28 +1032,20 @@ object dtmdlJobs: TdtmdlJobs
       #9#9'ON Sub_Rep.Rep = Job_Bag.Sub_Rep'
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)')
-    Left = 312
-    Top = 40
+    Left = 390
+    Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
 end

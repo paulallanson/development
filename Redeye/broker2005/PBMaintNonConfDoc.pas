@@ -158,7 +158,9 @@ var
 
 implementation
 
-uses PBLUOps, PBLUNonConformType, PBLUNonConformDept, CCSCommon, DateSelV5, PBNarrativeDM,
+uses
+  System.UITypes,
+  PBLUOps, PBLUNonConformType, PBLUNonConformDept, CCSCommon, DateSelV5, PBNarrativeDM,
   pbDatabase, pbMainMenu, PBLUNonConformCat;
 
 {$R *.dfm}

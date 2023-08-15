@@ -1,9 +1,9 @@
 object STMaintCustStockFrm: TSTMaintCustStockFrm
   Left = 35
   Top = 11
-  Width = 796
-  Height = 568
   Caption = 'Maintain Customer Stock Records'
+  ClientHeight = 521
+  ClientWidth = 778
   Color = clBtnFace
   Constraints.MinHeight = 568
   Constraints.MinWidth = 796
@@ -12,21 +12,21 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 474
-    Width = 788
+    Top = 461
+    Width = 778
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 474
+    ExplicitWidth = 788
     DesignSize = (
-      788
+      778
       41)
     object btnClose: TBitBtn
       Left = 693
@@ -43,9 +43,10 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Left = 0
     Top = 0
     Width = 337
-    Height = 474
+    Height = 461
     Align = alLeft
     TabOrder = 1
+    ExplicitHeight = 474
     object Panel5: TPanel
       Left = 1
       Top = 1
@@ -156,10 +157,12 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
   object pnlRight: TPanel
     Left = 429
     Top = 0
-    Width = 359
-    Height = 474
+    Width = 349
+    Height = 461
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 359
+    ExplicitHeight = 474
     object Panel6: TPanel
       Left = 1
       Top = 1
@@ -237,7 +240,7 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       BevelOuter = bvNone
       TabOrder = 2
       DesignSize = (
-        357
+        347
         49)
       object Label5: TLabel
         Left = 5
@@ -271,17 +274,16 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Left = 337
     Top = 0
     Width = 92
-    Height = 474
+    Height = 461
     Align = alLeft
     TabOrder = 3
+    ExplicitHeight = 474
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
       Width = 75
       Height = 25
       Enabled = False
-      TabOrder = 0
-      OnClick = btnFromSingleClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -296,6 +298,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnFromSingleClick
     end
     object btnFromMulti: TBitBtn
       Left = 8
@@ -303,8 +307,6 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Width = 75
       Height = 25
       Caption = 'All'
-      TabOrder = 1
-      OnClick = btnFromMultiClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -320,6 +322,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         3333333333333333333333333333333333333333333333333333}
       Layout = blGlyphRight
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnFromMultiClick
     end
     object btnToSingle: TBitBtn
       Left = 8
@@ -327,8 +331,6 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Width = 75
       Height = 25
       Enabled = False
-      TabOrder = 2
-      OnClick = btnToSingleClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -343,6 +345,8 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnToSingleClick
     end
     object btnToMulti: TBitBtn
       Left = 8
@@ -350,8 +354,6 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
       Width = 75
       Height = 25
       Caption = 'All'
-      TabOrder = 3
-      OnClick = btnToMultiClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -366,14 +368,18 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnToMultiClick
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 515
-    Width = 788
+    Top = 502
+    Width = 778
     Height = 19
     Panels = <>
+    ExplicitTop = 515
+    ExplicitWidth = 788
   end
   object qryProductsFrom: TFDQuery
     ConnectionName = 'PB'
@@ -390,19 +396,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsProductsFrom: TDataSource
@@ -425,19 +425,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsProductsTo: TDataSource
@@ -455,19 +449,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdFormRef: TFDQuery
@@ -480,19 +468,13 @@ object STMaintCustStockFrm: TSTMaintCustStockFrm
     Top = 392
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Reference'
-        ParamType = ptUnknown
       end>
   end
   object tmrSearch: TTimer

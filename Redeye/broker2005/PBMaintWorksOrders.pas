@@ -257,7 +257,9 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, DateSelV5, PBLUCust, PBLUCConta,
+uses
+  System.UITypes,
+  pbMainMenu, CCSCommon, DateSelV5, PBLUCust, PBLUCConta,
   PBLUProductionType, PBLUPreProduction, PBNarrativeDM, pbDatabase,
   PBMaintWOrderEvents, PBMaintWOrderDelivs, PBMaintJobBagDets, PBLUCRep,
   PBLUAccountManager, PBMaintJobBag, PBImages, PBDBMemo, PBLUOps,

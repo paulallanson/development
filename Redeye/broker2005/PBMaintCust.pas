@@ -9,7 +9,8 @@ uses
   IdTCPClient, IdHTTP, Menus, ShellAPI, IniFiles, StrUtils, Spin, printers,
   ImgList, ToolWin, taoMapi, AxCtrls, Clipbrd, pbEnqsdm,
   pbOrdersdm, pbJobBagDM, pbJobsDm, pbStockDm, pbSalesInvoiceDM, stpickobject,
-  pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList;
+  pbQuotesDM, pbActivityDM, PBDBMemo, PBDelivNotes, System.ImageList,
+  FireDAC.Stan.Param;
 
 type
   TPBMaintCustFrm = class(TForm)
@@ -832,7 +833,9 @@ var
 
 implementation
 
-uses pbluCustBrSelect, PBImages, ComObj, ActiveX, PBLUVATCode, PBMaintGroups, CCSPrint, PBLUCust, PBLUBranch,
+uses
+  System.UITypes, System.Types,
+  pbluCustBrSelect, PBImages, ComObj, ActiveX, PBLUVATCode, PBMaintGroups, CCSPrint, PBLUCust, PBLUBranch,
   pbDatabase, pbMainMenu, PBAuditDM, CCSCommon, PBMaintDocument,
   PBLUPaymentTerms, PBLURevenueLoc, PBLUCConta, DateSelV5, pbluSICCode, PBWordOLE, PBExcelOLE, PBMaintEmail,
   PBLULevelOfImportance, PBLUCountry, PBEnquiryDataMod, PBenquiry,
@@ -7679,7 +7682,7 @@ var
 begin
   PBMaintBranchFrm := TPBMaintBranchFrm.Create(Self);
   try
-    PBMaintBranchFrm.sFuncMode := Mode;
+    PBMaintBranchFrm.sFuncMode := ShortString(Mode);
     PBMaintBranchfrm.sCustName := NameEdit.text;
 
     case rdgrpCostCentre.ItemIndex of
@@ -7727,7 +7730,7 @@ begin
 
   PBMaintCContaFrm := TPBMaintCContaFrm.Create(Self);
   try
-    PBMaintCContaFrm.sFuncMode := sTempFuncMode;
+    PBMaintCContaFrm.sFuncMode := ShortString(sTempFuncMode);
 
     PBMaintCContaFrm.iCust := iCustomer;
     PBMaintCContaFrm.iBranch := tmpBranch;

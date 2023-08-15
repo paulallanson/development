@@ -1,8 +1,9 @@
 object dtmdlEnqs: TdtmdlEnqs
-  Height = 488
-  Width = 544
+  Height = 610
+  Width = 680
+  PixelsPerInch = 120
   object qryEnqs: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'SELECT  TOP 100'
       '        Enquiry.Date_Point,'
@@ -54,130 +55,146 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Office_Contact.Operator = Enquiry.Office_Contact'
       'Where ((Enquiry.Customer = :Customer) or (0 = :Customer)) and'
       '      EnquiryLine.Form_Description LIKE :Description')
-    Left = 16
-    Top = 16
+    Left = 20
+    Top = 20
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object qryEnqsDate_Point: TDateTimeField
+    object qryEnqsDate_Point: TSQLTimeStampField
       FieldName = 'Date_Point'
+      Origin = 'Date_Point'
+      Required = True
     end
     object qryEnqsEnquiry_Status: TIntegerField
       FieldName = 'Enquiry_Status'
+      Origin = 'Enquiry_Status'
+      Required = True
     end
-    object qryEnqsStatus_Description: TStringField
+    object qryEnqsStatus_Description: TWideStringField
       FieldName = 'Status_Description'
-      FixedChar = True
-      Size = 80
+      Origin = 'Status_Description'
+      Required = True
+      Size = 40
     end
-    object qryEnqsDescription: TStringField
+    object qryEnqsDescription: TWideStringField
       FieldName = 'Description'
-      FixedChar = True
-      Size = 160
+      Origin = 'Description'
+      Required = True
+      Size = 80
     end
     object qryEnqsRep: TIntegerField
       FieldName = 'Rep'
+      Origin = 'Rep'
     end
-    object qryEnqsrep_Name: TStringField
+    object qryEnqsrep_Name: TWideStringField
       FieldName = 'rep_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'rep_Name'
+      Required = True
+      Size = 40
     end
     object qryEnqsOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryEnqsOperator_Name: TStringField
+    object qryEnqsOperator_Name: TWideStringField
       FieldName = 'Operator_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Operator_Name'
+      Required = True
+      Size = 40
     end
     object qryEnqsOffice_Contact: TIntegerField
       FieldName = 'Office_Contact'
+      Origin = 'Office_Contact'
     end
-    object qryEnqsOffice_Contact_Name: TStringField
+    object qryEnqsOffice_Contact_Name: TWideStringField
       FieldName = 'Office_Contact_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Office_Contact_Name'
+      Required = True
+      Size = 40
     end
     object qryEnqsCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
+      Required = True
     end
-    object qryEnqsCustomer_Name: TStringField
+    object qryEnqsCustomer_Name: TWideStringField
       FieldName = 'Customer_Name'
-      FixedChar = True
-      Size = 92
+      Origin = 'Customer_Name'
+      Required = True
+      Size = 100
     end
     object qryEnqsBranch_no: TIntegerField
       FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+      Required = True
     end
-    object qryEnqsBranch_Name: TStringField
+    object qryEnqsBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
-      FixedChar = True
-      Size = 100
+      Origin = 'Branch_Name'
+      Size = 50
     end
-    object qryEnqsAccount_Code: TStringField
+    object qryEnqsAccount_Code: TWideStringField
       FieldName = 'Account_Code'
-      FixedChar = True
+      Origin = 'Account_Code'
+      Size = 10
     end
     object qryEnqsEnquiry: TIntegerField
       FieldName = 'Enquiry'
+      Origin = 'Enquiry'
+      Required = True
     end
     object qryEnqsLine: TIntegerField
       FieldName = 'Line'
+      Origin = 'Line'
+      Required = True
     end
     object qryEnqsForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
+      Origin = 'Form_Reference'
     end
-    object qryEnqsForm_Reference_ID: TStringField
+    object qryEnqsForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
-      FixedChar = True
-      Size = 100
+      Origin = 'Form_Reference_ID'
+      Size = 50
     end
-    object qryEnqsForm_Reference_Descr: TStringField
+    object qryEnqsForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
-      FixedChar = True
-      Size = 100
+      Origin = 'Form_Reference_Descr'
+      Size = 50
     end
-    object qryEnqsStock_Reference: TStringField
+    object qryEnqsStock_Reference: TWideStringField
       FieldName = 'Stock_Reference'
-      FixedChar = True
-      Size = 50
+      Origin = 'Stock_Reference'
+      Size = 25
     end
-    object qryEnqsEnq_Inactive: TStringField
+    object qryEnqsEnq_Inactive: TWideStringField
       FieldName = 'Enq_Inactive'
-      FixedChar = True
-      Size = 2
+      Origin = 'Enq_Inactive'
+      Size = 1
     end
-    object qryEnqsProduct_Type_Description: TStringField
+    object qryEnqsProduct_Type_Description: TWideStringField
       FieldName = 'Product_Type_Description'
-      FixedChar = True
-      Size = 80
-    end
-    object qryEnqsStatus_Text: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Status_Text'
-      OnGetText = qryEnqsStatus_TextGetText
-      Size = 50
-      Calculated = True
+      Origin = 'Product_Type_Description'
+      Required = True
+      Size = 40
     end
   end
   object dtsEnqs: TDataSource
     DataSet = qryEnqs
-    Left = 80
-    Top = 16
+    Left = 100
+    Top = 20
   end
   object qryDummy: TFDQuery
     SQL.Strings = (
@@ -231,39 +248,31 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Office_Contact.Operator = Enquiry.Office_Contact'
       'Where ((Enquiry.Customer = :Customer) or (0 = :Customer)) and'
       '      EnquiryLine.Form_Description LIKE :Description')
-    Left = 136
-    Top = 16
+    Left = 170
+    Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Records'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryEnqsJB: TFDQuery
     ConnectionName = 'pb'
-    Left = 16
-    Top = 104
+    Left = 20
+    Top = 130
   end
   object dtsEnqsJB: TDataSource
     DataSet = qryEnqsJB
-    Left = 80
-    Top = 104
+    Left = 100
+    Top = 130
   end
   object qryEnqsNotConverted: TFDQuery
     SQL.Strings = (
@@ -315,23 +324,17 @@ object dtmdlEnqs: TdtmdlEnqs
       
         '((EnquiryLine.Enquiry_Status >= 45) AND (EnquiryLine.Enquiry_Sta' +
         'tus <= 80))')
-    Left = 136
-    Top = 104
+    Left = 170
+    Top = 130
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryPO: TFDQuery
@@ -341,18 +344,14 @@ object dtmdlEnqs: TdtmdlEnqs
       'FROM Purchase_OrderLine'
       'WHERE Purchase_OrderLine.Enquiry = :Enquiry AND'
       'Purchase_OrderLine.Line0 = :Line0')
-    Left = 16
-    Top = 176
+    Left = 20
+    Top = 220
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line0'
-        ParamType = ptUnknown
       end>
   end
   object qryReasons: TFDQuery
@@ -362,13 +361,13 @@ object dtmdlEnqs: TdtmdlEnqs
       '        Enq_InActive_Reason.Description'
       'FROM Enq_InActive_Reason'
       'ORDER BY Enq_InActive_Reason.Description')
-    Left = 32
-    Top = 248
+    Left = 40
+    Top = 310
   end
   object dtsReasons: TDataSource
     DataSet = qryReasons
-    Left = 88
-    Top = 248
+    Left = 110
+    Top = 310
   end
   object qryPriceUnit: TFDQuery
     ConnectionName = 'PB'
@@ -376,13 +375,13 @@ object dtmdlEnqs: TdtmdlEnqs
       'SELECT Price_unit, Description '
       'FROM Price_unit'
       'ORDER BY Description')
-    Left = 32
-    Top = 304
+    Left = 40
+    Top = 380
   end
   object dtsPriceUnit: TDataSource
     DataSet = qryPriceUnit
-    Left = 88
-    Top = 304
+    Left = 110
+    Top = 380
   end
   object qryGetEnquiryLine: TFDQuery
     ConnectionName = 'PB'
@@ -408,18 +407,16 @@ object dtmdlEnqs: TdtmdlEnqs
       'WHERE'
       '        EnquiryLine.Enquiry = :Enquiry AND'
       '        EnquiryLine.Line = :Line')
-    Left = 32
-    Top = 360
+    Left = 40
+    Top = 450
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryUpdEnquiryLine: TFDQuery
@@ -436,48 +433,33 @@ object dtmdlEnqs: TdtmdlEnqs
       '     Enq_inactive_Notes = :Enq_inactive_Notes'
       'WHERE Enquiry = :Enquiry AND'
       '      Line = :Line')
-    Left = 32
-    Top = 408
+    Left = 40
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_inactive_Winning_price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_inactive_Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_inactive_Winning_Company'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive_Reason'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Enq_inactive_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

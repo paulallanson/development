@@ -2,8 +2,8 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   Left = 291
   Top = 117
   Caption = 'End Users'
-  ClientHeight = 362
-  ClientWidth = 1143
+  ClientHeight = 344
+  ClientWidth = 1131
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   TextHeight = 13
   object stsbrdetails: TStatusBar
     Left = 0
-    Top = 343
-    Width = 1143
+    Top = 325
+    Width = 1131
     Height = 19
     Panels = <
       item
@@ -37,8 +37,8 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   end
   object Panel1: TPanel
     Left = 0
-    Top = 302
-    Width = 1143
+    Top = 284
+    Width = 1131
     Height = 41
     Align = alBottom
     TabOrder = 1
@@ -99,7 +99,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1143
+    Width = 1131
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -145,7 +145,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object Panel5: TPanel
-      Left = 892
+      Left = 886
       Top = 1
       Width = 250
       Height = 28
@@ -192,28 +192,28 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
     object PageScroller1: TPageScroller
       Left = 401
       Top = 1
-      Width = 491
+      Width = 479
       Height = 28
       Align = alClient
       Control = CoolBar2
       TabOrder = 2
+      ExplicitWidth = 485
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 491
+        Width = 485
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 497
+            Width = 483
           end>
         Visible = False
-        ExplicitWidth = 499
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 484
+          Width = 470
           Height = 25
           Align = alClient
           ButtonHeight = 19
@@ -241,7 +241,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1143
+    Width = 1131
     Height = 44
     Bands = <
       item
@@ -380,8 +380,8 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1143
-    Height = 228
+    Width = 1131
+    Height = 210
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions

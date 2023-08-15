@@ -5,11 +5,7 @@ object dmBroker: TdmBroker
   object PBLDatabase: TFDConnection
     ConnectionName = 'PB'
     Params.Strings = (
-      'Database=Redeye_SM'
-      'Server=M'#193'RCIO'
-      'OSAuthent=Yes'
-      'Encrypt=No'
-      'DriverID=MSSQL')
+      'ConnectionDef=RedEye')
     OnLogin = PBLDatabaseLogin
     AfterConnect = PBLDatabaseAfterConnect
     Left = 60

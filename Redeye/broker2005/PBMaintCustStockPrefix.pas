@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, pbCustomerDM, Grids, DBGrids;
+  Dialogs, StdCtrls, Buttons, pbCustomerDM, Grids, DBGrids, FireDAC.Stan.Param,
+  Data.DB;
 
 type
   TPBMaintCustStockPrefixFrm = class(TForm)

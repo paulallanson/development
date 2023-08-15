@@ -104,7 +104,7 @@ begin
     if not bLineUp then
     begin
       iLastBox :=
-        StrToInt(NoofBoxesSpinEdit.Text) ;
+        StrToIntDef(NoofBoxesSpinEdit.Text, 0);
       for icount := 1 to iLastBox do
         dmIntSel.AddWithKey(iSelCode, iCount, iCode, BranchDBLookupComboBox.KeyValue, iTempContact, '', '');
     end;
@@ -309,20 +309,13 @@ begin
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
 
   sBin := TempArray;
-  try
-    DefaultBin := strtoint(sBin);
-  except
-    DefaultBin := 15;
-  end;
+  DefaultBin := StrToIntDef(sBin, 15);
 
   GetPrivateProfileString('Centrereed Broker', 'Address Label Printer Paper', '', TempArray,
     sizeof(TempArray), frmPBMainMenu.AppIniFile);
+
   sPaper := TempArray;
-  try
-    DefaultPaper := strtoint(sPaper);
-  except
-    DefaultPaper := 9;
-  end;
+  DefaultPaper := StrToIntDef(sPaper, 9);
 
 (*  {Find the default printer in the list of printers }
   Printers.Printer.PrinterIndex := -1;

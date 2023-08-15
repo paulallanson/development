@@ -1,31 +1,31 @@
 object PBMaintLoginsFrm: TPBMaintLoginsFrm
   Left = 364
   Top = 119
-  Width = 709
-  Height = 561
   Caption = 'Maintain Currently Logged in Users'
+  ClientHeight = 514
+  ClientWidth = 691
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 467
-    Width = 701
+    Top = 454
+    Width = 691
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 467
+    ExplicitWidth = 701
     DesignSize = (
-      701
+      691
       41)
     object btnDelete: TButton
       Left = 8
@@ -59,8 +59,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 701
-    Height = 467
+    Width = 691
+    Height = 454
     Align = alClient
     DataSource = dtsWorkstation
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -110,8 +110,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 508
-    Width = 701
+    Top = 495
+    Width = 691
     Height = 19
     Panels = <
       item
@@ -120,6 +120,8 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 508
+    ExplicitWidth = 701
   end
   object qryWorkstation: TFDQuery
     ConnectionName = 'PB'
@@ -151,9 +153,7 @@ object PBMaintLoginsFrm: TPBMaintLoginsFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
 end

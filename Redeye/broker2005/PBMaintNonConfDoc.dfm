@@ -1,9 +1,9 @@
 object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   Left = 283
   Top = 53
-  Width = 830
-  Height = 729
   Caption = 'Maintain Non Conformance'
+  ClientHeight = 682
+  ClientWidth = 812
   Color = clBtnFace
   Constraints.MinHeight = 630
   Constraints.MinWidth = 790
@@ -13,31 +13,31 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 637
-    Width = 822
+    Top = 624
+    Width = 812
     Height = 39
     Align = alBottom
+    ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 637
+    ExplicitWidth = 822
     object Panel4: TPanel
-      ParentBackground = False
       Left = 488
       Top = 1
       Width = 333
       Height = 37
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         333
@@ -64,8 +64,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Anchors = [akRight, akBottom]
         Caption = 'OK'
         Enabled = False
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -84,6 +82,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 242
@@ -91,21 +91,23 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object pnlJobBag: TPanel
-    ParentBackground = False
     Left = 0
     Top = 97
-    Width = 822
+    Width = 812
     Height = 97
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 822
     DesignSize = (
-      822
+      812
       97)
     object labJobBagInfo: TLabel
       Left = 9
@@ -240,24 +242,25 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     end
   end
   object pnlNotes: TPanel
-    ParentBackground = False
     Left = 0
     Top = 266
-    Width = 822
-    Height = 290
+    Width = 812
+    Height = 277
     Align = alClient
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 822
+    ExplicitHeight = 290
     object pnlNCADetails: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 820
       Height = 85
       Align = alTop
       Caption = 'pnlNCADetails'
+      ParentBackground = False
       TabOrder = 0
       object Panel5: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -265,6 +268,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Non Conformance Details'
+        ParentBackground = False
         TabOrder = 0
       end
       object memDetails: TMemo
@@ -279,16 +283,15 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end
     end
     object pnlResponse: TPanel
-      ParentBackground = False
       Left = 1
       Top = 86
       Width = 820
       Height = 33
       Align = alClient
       Caption = 'pnlResponse'
+      ParentBackground = False
       TabOrder = 1
       object Panel6: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -296,6 +299,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Response Details'
+        ParentBackground = False
         TabOrder = 0
       end
       object memResponse: TMemo
@@ -309,16 +313,15 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       end
     end
     object pnlAction: TPanel
-      ParentBackground = False
       Left = 1
       Top = 119
       Width = 820
       Height = 85
       Align = alBottom
       Caption = 'pnlAction'
+      ParentBackground = False
       TabOrder = 2
       object pnlActionLabel: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -326,6 +329,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Corrective Action'
+        ParentBackground = False
         TabOrder = 0
       end
       object memAction: TRichEdit
@@ -334,20 +338,22 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Width = 818
         Height = 63
         Align = alClient
+        ParentFont = False
         TabOrder = 1
       end
     end
     object pnlPrevent: TPanel
-      ParentBackground = False
       Left = 1
-      Top = 204
-      Width = 820
+      Top = 191
+      Width = 810
       Height = 85
       Align = alBottom
       Caption = 'pnlPrevent'
+      ParentBackground = False
       TabOrder = 3
+      ExplicitTop = 204
+      ExplicitWidth = 820
       object Panel3: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 818
@@ -355,6 +361,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Preventative Action'
+        ParentBackground = False
         TabOrder = 0
       end
       object memPrevent: TRichEdit
@@ -363,20 +370,23 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         Width = 818
         Height = 63
         Align = alClient
+        ParentFont = False
         TabOrder = 1
       end
     end
   end
   object pnlQASignOff: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 556
-    Width = 822
+    Top = 543
+    Width = 812
     Height = 81
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 556
+    ExplicitWidth = 822
     DesignSize = (
-      822
+      812
       81)
     object Label14: TLabel
       Left = 641
@@ -435,7 +445,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       OnKeyPress = CheckKeyIsFloat
     end
     object rdgrpJobRePrinted: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 3
       Width = 145
@@ -445,10 +454,10 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 2
     end
     object rdgrpSamples: TRadioGroup
-      ParentBackground = False
       Left = 168
       Top = 3
       Width = 145
@@ -458,6 +467,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 3
     end
     object dblkpQAOperator: TDBLookupComboBox
@@ -491,8 +501,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Top = 4
       Width = 27
       Height = 25
-      TabOrder = 6
-      OnClick = btnClearClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -507,6 +515,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnClearClick
     end
     object edtQASignOff: TEdit
       Left = 424
@@ -521,8 +531,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Top = 36
       Width = 25
       Height = 25
-      TabOrder = 8
-      OnClick = btnDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -537,18 +545,21 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 8
+      OnClick = btnDateClick
     end
   end
   object pnlNCAHead: TPanel
-    ParentBackground = False
     Left = 0
     Top = 194
-    Width = 822
+    Width = 812
     Height = 72
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 822
     DesignSize = (
-      822
+      812
       72)
     object Label7: TLabel
       Left = 8
@@ -704,8 +715,6 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       Top = 10
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btnDateRaisedClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -720,6 +729,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnDateRaisedClick
     end
     object dblkpCategory: TDBLookupComboBox
       Left = 80
@@ -750,8 +761,8 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 676
-    Width = 822
+    Top = 663
+    Width = 812
     Height = 19
     Panels = <
       item
@@ -763,17 +774,20 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
       item
         Width = 50
       end>
+    ExplicitTop = 676
+    ExplicitWidth = 822
   end
   object pnlPO: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 822
+    Width = 812
     Height = 97
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 822
     DesignSize = (
-      822
+      812
       97)
     object Label15: TLabel
       Left = 9
@@ -920,9 +934,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 17
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryRaisingDept: TFDQuery
@@ -938,9 +950,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 81
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end>
   end
   object qrySourceDept: TFDQuery
@@ -956,9 +966,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end>
   end
   object qryQAOperator: TFDQuery
@@ -974,9 +982,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 204
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'QA_Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsNCType: TDataSource
@@ -1132,9 +1138,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Non_Conform'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJobBag: TFDQuery
@@ -1157,9 +1161,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLastNC: TFDQuery
@@ -1181,9 +1183,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 704
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Non_Conform_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -1217,119 +1217,87 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Raised_by_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'QA_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'QA_Sign_Off_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Non_Conform_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Response_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Corrective_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Preventative_Notes_Id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'Response_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Corrective_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Preventative_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_to_client'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Reprinted'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Samples_Available'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Non_Conform_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Non_Conform'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryDelete: TFDQuery
@@ -1342,9 +1310,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Non_Conform'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1407,124 +1373,88 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 704
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Non_Conform'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Raised_by_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'QA_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'QA_Sign_Off_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Non_Conform_Notes'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Response_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Corrective_Notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Preventative_notes_id'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftDateTime
         Name = 'Response_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftDateTime
         Name = 'Corrective_Date'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDateTime
+      end
+      item
         Name = 'Preventative_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Total_Cost_to_Client'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Job_Reprinted'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Samples_Available'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Job_Reprinted'
+      end
+      item
+        Name = 'Samples_Available'
+      end
+      item
         Name = 'Non_Conform_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetPO: TFDQuery
@@ -1550,9 +1480,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 153
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryCategory: TFDQuery
@@ -1568,9 +1496,7 @@ object PBMaintNonConfDocFrm: TPBMaintNonConfDocFrm
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Category'
-        ParamType = ptUnknown
       end>
   end
   object dtsCategory: TDataSource

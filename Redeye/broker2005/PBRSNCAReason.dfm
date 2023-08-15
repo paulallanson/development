@@ -11,14 +11,12 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     627
     349)
-  PixelsPerInch = 96
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 541
@@ -27,8 +25,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
-    TabOrder = 11
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -43,6 +39,8 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
@@ -51,8 +49,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Preview'
-    TabOrder = 10
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -67,13 +63,15 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = PreviewBitBtnClick
   end
   object pnlReasonSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 88
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 3
     Visible = False
     object lblCustBran: TLabel
@@ -113,16 +111,17 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 12
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 12
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 5
     Top = 219
     Width = 180
     Height = 89
     Caption = 'Date Range'
+    ParentBackground = False
     TabOrder = 6
     object Label1: TLabel
       Left = 8
@@ -151,8 +150,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       Top = 23
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btbtnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -167,6 +164,8 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnDateFromClick
     end
     object edtDateTo: TEdit
       Left = 48
@@ -181,8 +180,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       Top = 55
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btbtnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -197,10 +194,11 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btbtnDateToClick
     end
   end
   object rdgrpReason: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 80
     Width = 129
@@ -210,15 +208,16 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Items.Strings = (
       'All Reasons'
       'One Reason')
+    ParentBackground = False
     TabOrder = 2
     OnClick = rdgrpReasonClick
   end
   object pnlDeptSearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 157
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label3: TLabel
@@ -253,7 +252,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     end
   end
   object rdgrpDept: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 149
     Width = 129
@@ -263,11 +261,11 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Items.Strings = (
       'All Sources'
       'One Sources')
+    ParentBackground = False
     TabOrder = 4
     OnClick = rdgrpDeptClick
   end
   object TotByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 480
     Top = 8
     Width = 137
@@ -283,6 +281,7 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       'by Rep'
       'by Customer'
       'Do not total')
+    ParentBackground = False
     TabOrder = 7
     OnClick = TotByRadioGroupClick
   end
@@ -296,11 +295,11 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     TabOrder = 8
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 180
     Top = 132
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 13
     Visible = False
     object lblExporting: TLabel
@@ -336,8 +335,6 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 9
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -381,9 +378,10 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 9
+    OnClick = btnExcelClick
   end
   object rdgrpCategory: TRadioGroup
-    ParentBackground = False
     Left = 5
     Top = 8
     Width = 129
@@ -393,15 +391,16 @@ object PBRSNCAReasonFrm: TPBRSNCAReasonFrm
     Items.Strings = (
       'All Categories'
       'One Category')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rdgrpCategoryClick
   end
   object pnlCategorySearch: TPanel
-    ParentBackground = False
     Left = 139
     Top = 16
     Width = 329
     Height = 57
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object Label4: TLabel

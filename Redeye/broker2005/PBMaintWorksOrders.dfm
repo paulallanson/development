@@ -1,10 +1,9 @@
 object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   Left = 0
   Top = 2
-  AutoScroll = False
   Caption = 'Maintain Works Instruction'
-  ClientHeight = 546
-  ClientWidth = 795
+  ClientHeight = 537
+  ClientWidth = 789
   Color = clBtnFace
   Constraints.MinHeight = 573
   Constraints.MinWidth = 803
@@ -13,25 +12,24 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 795
+    Width = 789
     Height = 38
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 795
     DesignSize = (
-      795
+      789
       38)
     object Label1: TLabel
       Left = 6
@@ -48,20 +46,22 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Date Raised'
     end
     object Label3: TLabel
-      Left = 603
+      Left = 591
       Top = 12
       Width = 59
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Mailing Date'
+      ExplicitLeft = 603
     end
     object Label5: TLabel
-      Left = 396
+      Left = 384
       Top = 12
       Width = 48
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Start Date'
+      ExplicitLeft = 396
     end
     object edtOrderNumber: TEdit
       Left = 72
@@ -85,7 +85,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       OnExit = edtDateExit
     end
     object edtDateReq: TEdit
-      Left = 669
+      Left = 657
       Top = 8
       Width = 81
       Height = 21
@@ -93,15 +93,14 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       TabOrder = 2
       OnExit = edtDateReqExit
+      ExplicitLeft = 669
     end
     object btnDateRequired: TBitBtn
-      Left = 757
+      Left = 745
       Top = 6
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 3
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -116,9 +115,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateRequiredClick
+      ExplicitLeft = 757
     end
     object edtDateStart: TEdit
-      Left = 461
+      Left = 449
       Top = 8
       Width = 81
       Height = 21
@@ -126,15 +128,14 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       TabOrder = 4
       OnExit = edtDateStartExit
+      ExplicitLeft = 461
     end
     object btnDateStart: TBitBtn
-      Left = 549
+      Left = 537
       Top = 6
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 5
-      OnClick = btnDateStartClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -149,27 +150,32 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 5
+      OnClick = btnDateStartClick
+      ExplicitLeft = 549
     end
   end
   object pgProduction: TPageControl
     Left = 0
     Top = 219
-    Width = 795
-    Height = 271
+    Width = 789
+    Height = 262
     ActivePage = tbProcesses
     Align = alClient
     PopupMenu = pmnuProcess
     TabOrder = 3
+    ExplicitWidth = 795
+    ExplicitHeight = 271
     object tbDespatch: TTabSheet
       Caption = 'Despatch Details'
       ImageIndex = 4
       object Panel7: TPanel
-        ParentBackground = False
         Left = 701
         Top = 0
         Width = 86
         Height = 243
         Align = alRight
+        ParentBackground = False
         TabOrder = 0
         object btnAddDelivs: TBitBtn
           Left = 8
@@ -227,7 +233,6 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Return Address'
       ImageIndex = 3
       object rdgrpAddressType: TRadioGroup
-        ParentBackground = False
         Left = 24
         Top = 8
         Width = 105
@@ -238,16 +243,17 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           'Company'
           'Customer'
           'Ad hoc')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rdgrpAddressTypeClick
       end
       object AddrGrpBox: TGroupBox
-        ParentBackground = False
         Left = 160
         Top = 8
         Width = 393
         Height = 209
         Caption = 'Address Details'
+        ParentBackground = False
         TabOrder = 1
         object AddrTypeLabel: TLabel
           Left = 8
@@ -410,12 +416,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Events'
       ImageIndex = 7
       object Panel3: TPanel
-        ParentBackground = False
         Left = 0
         Top = 17
         Width = 305
         Height = 226
         Align = alLeft
+        ParentBackground = False
         TabOrder = 0
         object sgEvents: TStringGrid
           Left = 1
@@ -437,12 +443,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         end
       end
       object Panel8: TPanel
-        ParentBackground = False
         Left = 422
         Top = 17
         Width = 365
         Height = 226
         Align = alRight
+        ParentBackground = False
         TabOrder = 1
         object memEventNotes: TMemo
           Left = 1
@@ -456,21 +462,21 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         end
       end
       object Panel9: TPanel
-        ParentBackground = False
         Left = 0
         Top = 0
         Width = 787
         Height = 17
         Align = alTop
+        ParentBackground = False
         TabOrder = 2
       end
       object Panel18: TPanel
-        ParentBackground = False
         Left = 305
         Top = 17
         Width = 117
         Height = 226
         Align = alClient
+        ParentBackground = False
         TabOrder = 3
         object btnAddEvents: TBitBtn
           Left = 8
@@ -508,21 +514,21 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ImageIndex = 2
       OnEnter = tbProcessesEnter
       object pnlprocess: TPanel
-        ParentBackground = False
         Left = 401
         Top = 0
         Width = 386
         Height = 243
         Align = alRight
         BevelInner = bvLowered
+        ParentBackground = False
         TabOrder = 0
         object pnlprMachine: TPanel
-          ParentBackground = False
           Left = 2
           Top = 174
           Width = 382
           Height = 67
           Align = alBottom
+          ParentBackground = False
           TabOrder = 0
           object lblRunHours: TLabel
             Left = 238
@@ -595,13 +601,13 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprNotes: TPanel
-          ParentBackground = False
           Left = 2
           Top = 169
           Width = 382
           Height = 5
           Align = alClient
           Caption = 'pnlprNotes'
+          ParentBackground = False
           TabOrder = 1
           object memProcessNotes: TMemo
             Left = 1
@@ -614,12 +620,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprTop: TPanel
-          ParentBackground = False
           Left = 2
           Top = 2
           Width = 382
           Height = 151
           Align = alTop
+          ParentBackground = False
           TabOrder = 2
           DesignSize = (
             382
@@ -659,8 +665,6 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             Width = 25
             Height = 25
             Anchors = [akTop, akRight]
-            TabOrder = 1
-            OnClick = btnReceiptDateClick
             Glyph.Data = {
               76010000424D7601000000000000760000002800000020000000100000000100
               04000000000000010000130B0000130B00001000000000000000000000000000
@@ -675,6 +679,8 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
               F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
               333337FFFFFFFF77333330000000000333333777777777733333}
             NumGlyphs = 2
+            TabOrder = 1
+            OnClick = btnReceiptDateClick
           end
           object memQuantity: TMemo
             Left = 103
@@ -700,7 +706,6 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
             Value = 1
           end
           object rdgrpFormat: TRadioGroup
-            ParentBackground = False
             Left = 240
             Top = 72
             Width = 113
@@ -711,15 +716,16 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
               'N/A'
               'Simplex'
               'Duplex')
+            ParentBackground = False
             TabOrder = 4
           end
           object grpbxPaper: TGroupBox
-            ParentBackground = False
             Left = 8
             Top = 72
             Width = 225
             Height = 74
             Caption = 'Processing'
+            ParentBackground = False
             TabOrder = 5
             object lblCustomSize: TLabel
               Left = 16
@@ -756,12 +762,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
           end
         end
         object pnlprNotesHead: TPanel
-          ParentBackground = False
           Left = 2
           Top = 153
           Width = 382
           Height = 16
           Align = alTop
+          ParentBackground = False
           TabOrder = 3
           object lblProcessNotes: TLabel
             Left = 8
@@ -776,24 +782,27 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         Left = 0
         Top = 0
         Width = 395
-        Height = 243
+        Height = 234
         Align = alLeft
         BevelInner = bvNone
         BevelOuter = bvNone
         TabOrder = 1
+        ExplicitHeight = 243
       end
     end
   end
   object pnlFoot: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 490
-    Width = 795
+    Top = 481
+    Width = 789
     Height = 35
     Align = alBottom
+    ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 490
+    ExplicitWidth = 795
     DesignSize = (
-      795
+      789
       35)
     object Label4: TLabel
       Left = 8
@@ -803,14 +812,15 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Release No:'
     end
     object pnlOK: TPanel
-      ParentBackground = False
-      Left = 430
+      Left = 424
       Top = 1
       Width = 364
       Height = 33
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 430
       DesignSize = (
         364
         33)
@@ -838,9 +848,9 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         Caption = 'OK'
         Default = True
         Enabled = False
+        NumGlyphs = 2
         TabOrder = 0
         OnClick = btnOKClick
-        NumGlyphs = 2
       end
       object btnCancel: TBitBtn
         Left = 278
@@ -850,9 +860,9 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         Anchors = [akTop, akRight]
         Cancel = True
         Caption = 'Cancel'
+        NumGlyphs = 2
         TabOrder = 1
         OnClick = btnCancelClick
-        NumGlyphs = 2
       end
       object chkbxComplete: TCheckBox
         Left = 24
@@ -881,9 +891,9 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Anchors = [akLeft, akBottom]
       Caption = 'Job Bag'
       Default = True
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = btnJobBagClick
-      NumGlyphs = 2
     end
     object btnNotes: TBitBtn
       Left = 280
@@ -896,9 +906,6 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = btnNotesClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -913,12 +920,15 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnNotesClick
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 525
-    Width = 795
+    Top = 516
+    Width = 789
     Height = 21
     Panels = <
       item
@@ -927,17 +937,20 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       item
         Width = 50
       end>
+    ExplicitTop = 525
+    ExplicitWidth = 795
   end
   object pnlCustomer: TPanel
-    ParentBackground = False
     Left = 0
     Top = 38
-    Width = 795
+    Width = 789
     Height = 115
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 795
     DesignSize = (
-      795
+      789
       115)
     object Label8: TLabel
       Left = 6
@@ -954,12 +967,13 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Contact'
     end
     object Label13: TLabel
-      Left = 505
+      Left = 493
       Top = 66
       Width = 64
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Customer Ref'
+      ExplicitLeft = 505
     end
     object Label12: TLabel
       Left = 6
@@ -969,33 +983,36 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Rep'
     end
     object Label15: TLabel
-      Left = 505
+      Left = 493
       Top = 10
       Width = 85
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Manager'
+      ExplicitLeft = 505
     end
     object Label6: TLabel
-      Left = 566
+      Left = 554
       Top = 92
       Width = 78
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Previous WI No.'
+      ExplicitLeft = 566
     end
     object lblAccountTeam: TLabel
-      Left = 506
+      Left = 494
       Top = 38
       Width = 70
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Account Team'
+      ExplicitLeft = 506
     end
     object edtCustomer: TEdit
       Left = 72
       Top = 6
-      Width = 241
+      Width = 229
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
@@ -1003,9 +1020,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       MaxLength = 30
       ReadOnly = True
       TabOrder = 0
+      ExplicitWidth = 241
     end
     object btnCustomer: TBitBtn
-      Left = 320
+      Left = 308
       Top = 4
       Width = 25
       Height = 25
@@ -1019,9 +1037,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 1
       OnClick = btnCustomerClick
+      ExplicitLeft = 320
     end
     object btnContacts: TButton
-      Left = 320
+      Left = 308
       Top = 31
       Width = 25
       Height = 25
@@ -1035,18 +1054,20 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 3
       OnClick = btnContactsClick
+      ExplicitLeft = 320
     end
     object edtCustomerOrder: TEdit
-      Left = 608
+      Left = 596
       Top = 62
       Width = 142
       Height = 21
       Anchors = [akTop, akRight]
       TabOrder = 6
       OnChange = edtCustomerOrderChange
+      ExplicitLeft = 608
     end
     object edtPreviousWIN: TEdit
-      Left = 654
+      Left = 642
       Top = 88
       Width = 96
       Height = 21
@@ -1054,11 +1075,12 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       TabOrder = 7
       OnChange = edtPreviousWINChange
       OnKeyPress = CheckKeyIsNumber
+      ExplicitLeft = 654
     end
     object dblkpContact: TDBLookupComboBox
       Left = 72
       Top = 33
-      Width = 241
+      Width = 229
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       KeyField = 'Contact_no'
@@ -1066,9 +1088,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ListSource = dtmdlWOrders.dtsCustContacts
       TabOrder = 2
       OnClick = dblkpContactClick
+      ExplicitWidth = 241
     end
     object edtAccountTeam: TEdit
-      Left = 608
+      Left = 596
       Top = 34
       Width = 142
       Height = 21
@@ -1076,9 +1099,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 10
+      ExplicitLeft = 608
     end
     object Button1: TButton
-      Left = 320
+      Left = 308
       Top = 63
       Width = 25
       Height = 25
@@ -1092,9 +1116,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 5
       OnClick = Button1Click
+      ExplicitLeft = 320
     end
     object btnAccountManager: TBitBtn
-      Left = 758
+      Left = 746
       Top = 4
       Width = 25
       Height = 25
@@ -1108,9 +1133,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ParentFont = False
       TabOrder = 9
       OnClick = btnAccountManagerClick
+      ExplicitLeft = 758
     end
     object edtAccountManager: TEdit
-      Left = 608
+      Left = 596
       Top = 6
       Width = 142
       Height = 21
@@ -1118,27 +1144,30 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Color = clBtnFace
       ReadOnly = True
       TabOrder = 8
+      ExplicitLeft = 608
     end
     object edtRep: TEdit
       Left = 72
       Top = 65
-      Width = 241
+      Width = 229
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       ReadOnly = True
       TabOrder = 4
+      ExplicitWidth = 241
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 153
-    Width = 795
+    Width = 789
     Height = 66
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 795
     DesignSize = (
-      795
+      789
       66)
     object Label7: TLabel
       Left = 6
@@ -1148,7 +1177,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Job Title'
     end
     object lblProductionType: TLabel
-      Left = 470
+      Left = 458
       Top = 32
       Width = 54
       Height = 26
@@ -1156,26 +1185,29 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Production Type'
       Visible = False
       WordWrap = True
+      ExplicitLeft = 470
     end
     object Label20: TLabel
-      Left = 471
+      Left = 459
       Top = 9
       Width = 72
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Actual Quantity'
+      ExplicitLeft = 471
     end
     object memDescription: TMemo
       Left = 72
       Top = 5
-      Width = 385
+      Width = 373
       Height = 49
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = memDescriptionChange
+      ExplicitWidth = 385
     end
     object edtProductionType: TEdit
-      Left = 536
+      Left = 524
       Top = 36
       Width = 225
       Height = 21
@@ -1186,9 +1218,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       ReadOnly = True
       TabOrder = 1
       Visible = False
+      ExplicitLeft = 536
     end
     object btnProductionType: TBitBtn
-      Left = 768
+      Left = 756
       Top = 34
       Width = 25
       Height = 25
@@ -1203,9 +1236,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       TabOrder = 2
       Visible = False
       OnClick = btnProductionTypeClick
+      ExplicitLeft = 768
     end
     object memActualQty: TMemo
-      Left = 562
+      Left = 550
       Top = 5
       Width = 80
       Height = 21
@@ -1217,9 +1251,10 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       OnEnter = SaveValue
       OnExit = ValidateQty
       OnKeyPress = CheckKeyIsNumber
+      ExplicitLeft = 562
     end
     object chkbxPerso100: TCheckBox
-      Left = 669
+      Left = 657
       Top = 8
       Width = 98
       Height = 17
@@ -1227,6 +1262,7 @@ object frmPBMaintWorksOrders: TfrmPBMaintWorksOrders
       Caption = 'Is Perso 100%'
       TabOrder = 4
       OnClick = chkbxPerso100Click
+      ExplicitLeft = 669
     end
   end
   object FlashTimer: TTimer

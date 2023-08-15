@@ -45,7 +45,9 @@ var
 
 implementation
 
-uses PBRPCustCreditTerms, CCSemailHandler, pbMainMenu;
+uses
+  System.UITypes,
+  PBRPCustCreditTerms, CCSemailHandler, pbMainMenu;
 
 {$R *.dfm}
 
@@ -103,7 +105,6 @@ end;
 procedure TPBRSCustCreditTermsFrm.PrintReport(Preview: boolean);
 var
   PrinterSettings : TPrinterSettings;
-  icount: integer;
 begin
   {Setup and print the report}
   PBRPCustCreditTermsFrm := TPBRPCustCreditTermsFrm.Create(Self);
@@ -199,7 +200,6 @@ end;
 procedure TPBRSCustCreditTermsFrm.FormCreate(Sender: TObject);
 var
   IniFile : TIniFile;
-  sPrintLogo: string;
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try
@@ -216,7 +216,6 @@ end;
 procedure TPBRSCustCreditTermsFrm.FormDestroy(Sender: TObject);
 var
   IniFile : TIniFile;
-  sPrintLogo: string;
 begin
   IniFile := TIniFile.Create(TfrmPBMainMenu.AppIniFile);
   try

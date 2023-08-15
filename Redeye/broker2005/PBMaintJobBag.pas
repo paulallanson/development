@@ -758,7 +758,9 @@ type
 
 implementation
 
-uses PBPODataMod, PBAuditDM, PBMaintPOrd, PBLUCust, pbMainMenu, PBLUCConta, PBLUCRep, PBMaintJobBagRC,
+uses
+  System.UITypes,
+  PBPODataMod, PBAuditDM, PBMaintPOrd, PBLUCust, pbMainMenu, PBLUCConta, PBLUCRep, PBMaintJobBagRC,
   DateSelV5, pbLUCustOrdersJB, pbDatabase, STMntSOrd, CCSCommon, STpickobject,
   STPrtAllocSales, STRSPickNote, stPickingDM, STStockDM, STPickbyPart,
   PBMaintWorksOrders, PBMaintJobBagExtras, PBLUAccountManager, PBRSPOrdN,
