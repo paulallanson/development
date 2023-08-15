@@ -3,25 +3,23 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   Top = 165
   BorderStyle = bsDialog
   Caption = 'Document Logos'
-  ClientHeight = 260
-  ClientWidth = 408
+  ClientHeight = 251
+  ClientWidth = 402
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 408
-    Height = 176
+    Width = 402
+    Height = 167
     Align = alClient
     DataSource = srcDocumentLogo
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 241
-    Width = 408
+    Top = 232
+    Width = 402
     Height = 19
     Panels = <
       item
@@ -59,16 +57,20 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
       item
         Width = 50
       end>
+    ExplicitTop = 241
+    ExplicitWidth = 408
   end
   object Panel1: TPanel
     Left = 0
-    Top = 176
-    Width = 408
+    Top = 167
+    Width = 402
     Height = 65
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 176
+    ExplicitWidth = 408
     DesignSize = (
-      408
+      402
       65)
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -117,8 +119,8 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 4
       NumGlyphs = 2
+      TabOrder = 4
     end
     object btnExcel: TBitBtn
       Left = 248
@@ -150,9 +152,7 @@ object frmPBLUDocumentLogos: TfrmPBLUDocumentLogos
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

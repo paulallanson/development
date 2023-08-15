@@ -1,29 +1,23 @@
 object PBRPStkBalfrm: TPBRPStkBalfrm
   Left = 115
   Top = 113
-  Width = 1176
-  Height = 467
   Caption = 'Customer Stock Balance Report'
+  ClientHeight = 420
+  ClientWidth = 1158
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object QuickReport: TQuickRep
     Left = 16
     Top = 8
-    Width = 1123
-    Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    Width = 1403
+    Height = 992
+    ShowingPreview = False
     BeforePrint = QuickReportBeforePrint
     DataSet = qryReport
     Font.Charset = DEFAULT_CHARSET
@@ -43,6 +37,7 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -56,13 +51,17 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.PrintQuality = 0
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 0
     PrintIfEmpty = True
     ReportTitle = 'Customer Stock Balance Report'
     SnapToGrid = True
@@ -70,18 +69,19 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageTitle: TQRBand
-      Left = 38
-      Top = 38
-      Width = 1047
-      Height = 99
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 47
+      Width = 1309
+      Height = 124
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -91,462 +91,450 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        261.937500000000000000
-        2770.187500000000000000)
+        262.466666666666700000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRSysData1: TQRSysData
-        Left = 989
-        Top = 8
-        Width = 46
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1236
+        Top = 10
+        Width = 60
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2616.729166666667000000
+          44.450000000000000000
+          2616.200000000000000000
           21.166666666666670000
-          121.708333333333300000)
+          127.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel13: TQRLabel
-        Left = 925
-        Top = 8
-        Width = 59
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1156
+        Top = 10
+        Width = 74
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          2447.395833333333000000
+          44.450000000000000000
+          2446.866666666667000000
           21.166666666666670000
-          156.104166666666700000)
+          156.633333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Page No.:'
         Color = clWhite
-        Transparent = False
-        WordWrap = True
-        FontSize = 10
-      end
-      object qrlblTitle: TQRLabel
-        Left = 369
-        Top = 8
-        Width = 308
-        Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          60.854166666666680000
-          976.312500000000000000
-          21.166666666666670000
-          814.916666666666800000)
-        Alignment = taCenter
-        AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
-        Caption = 'Stock Balance Report - Run Date:'
-        Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Arial'
-        Font.Style = [fsBold]
-        ParentFont = False
-        Transparent = False
-        WordWrap = True
-        FontSize = 14
-      end
-      object FormRefQRLabel: TQRLabel
-        Left = 9
-        Top = 72
-        Width = 91
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
-        Size.Values = (
-          44.979166666666670000
-          23.812500000000000000
-          190.500000000000000000
-          240.770833333333300000)
-        Alignment = taLeftJustify
-        AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
-        Caption = 'Stock Reference'
-        Color = clWhite
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 10
+      end
+      object qrlblTitle: TQRLabel
+        Left = 468
+        Top = 10
+        Width = 373
+        Height = 29
+        Size.Values = (
+          61.383333333333330000
+          990.600000000000000000
+          21.166666666666670000
+          789.516666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taCenter
+        AlignToBand = True
+        Caption = 'Stock Balance Report - Run Date:'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -23
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
+        FontSize = 14
+      end
+      object FormRefQRLabel: TQRLabel
+        Left = 11
+        Top = 90
+        Width = 110
+        Height = 21
+        Size.Values = (
+          44.450000000000000000
+          23.283333333333330000
+          190.500000000000000000
+          232.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
+        Alignment = taLeftJustify
+        AlignToBand = False
+        Caption = 'Stock Reference'
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Transparent = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object DescQRLabel: TQRLabel
-        Left = 275
-        Top = 72
-        Width = 67
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 344
+        Top = 90
+        Width = 84
+        Height = 21
         Size.Values = (
           44.979166666666670000
           727.604166666666800000
           190.500000000000000000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Description '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object StkQRLabel: TQRLabel
-        Left = 704
-        Top = 72
-        Width = 44
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 882
+        Top = 90
+        Width = 53
+        Height = 21
         Size.Values = (
-          44.979166666666670000
-          1862.666666666667000000
+          44.450000000000000000
+          1866.900000000000000000
           190.500000000000000000
-          116.416666666666700000)
+          112.183333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'In Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRShape1: TQRShape
-        Left = 8
-        Top = 89
-        Width = 1029
-        Height = 10
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 10
+        Top = 111
+        Width = 1286
+        Height = 12
         Size.Values = (
           26.458333333333330000
           21.166666666666670000
           235.479166666666700000
           2722.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Shape = qrsHorLine
         VertAdjust = 0
       end
       object RepTypeQRLabel: TQRLabel
-        Left = 470
-        Top = 32
-        Width = 107
-        Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 591
+        Top = 40
+        Width = 126
+        Height = 29
         Size.Values = (
-          60.854166666666680000
-          1243.541666666667000000
-          84.666666666666680000
-          283.104166666666700000)
+          61.383333333333330000
+          1250.950000000000000000
+          84.666666666666670000
+          266.700000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Report Type'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -23
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object QRLabel1: TQRLabel
-        Left = 858
-        Top = 56
-        Width = 52
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1072
+        Top = 70
+        Width = 65
+        Height = 41
         Size.Values = (
           87.312500000000000000
           2270.125000000000000000
           148.166666666666700000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Reorder Level'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel3: TQRLabel
-        Left = 620
-        Top = 56
-        Width = 53
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 775
+        Top = 70
+        Width = 66
+        Height = 41
         Size.Values = (
           87.312500000000000000
           1640.416666666667000000
           148.166666666666700000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Last Delivery'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel5: TQRLabel
-        Left = 152
-        Top = 72
-        Width = 113
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 190
+        Top = 90
+        Width = 141
+        Height = 21
         Size.Values = (
           44.979166666666670000
           402.166666666666600000
           190.500000000000000000
           298.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Customer order ref'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel6: TQRLabel
-        Left = 544
-        Top = 72
-        Width = 67
-        Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 680
+        Top = 90
+        Width = 81
+        Height = 21
         Size.Values = (
-          44.979166666666670000
+          44.450000000000000000
           1439.333333333333000000
           190.500000000000000000
-          177.270833333333300000)
+          171.450000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Last PO No.'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel2: TQRLabel
-        Left = 769
-        Top = 56
-        Width = 65
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 961
+        Top = 70
+        Width = 81
+        Height = 41
         Size.Values = (
           87.312500000000000000
           2034.645833333333000000
           148.166666666666700000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'On Order for stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel4: TQRLabel
-        Left = 922
-        Top = 56
-        Width = 52
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1152
+        Top = 70
+        Width = 65
+        Height = 41
         Size.Values = (
           87.312500000000000000
           2439.458333333333000000
           148.166666666666700000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Last Order Qty'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object QRLabel7: TQRLabel
-        Left = 986
-        Top = 56
-        Width = 52
-        Height = 33
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1233
+        Top = 70
+        Width = 65
+        Height = 41
         Size.Values = (
           87.312500000000000000
           2608.791666666667000000
           148.166666666666700000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Paid Stock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
     object OrderDetail: TQRSubDetail
-      Left = 38
-      Top = 165
-      Width = 1047
-      Height = 22
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 206
+      Width = 1309
+      Height = 28
       AlignToBottom = False
       BeforePrint = OrderDetailBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -556,59 +544,60 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        58.208333333333340000
-        2770.187500000000000000)
+        59.266666666666670000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QuickReport
       DataSet = qryReport
       PrintBefore = False
       PrintIfEmpty = True
       object FormIDQRDBText: TQRDBText
-        Left = 18
-        Top = 3
-        Width = 140
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 23
+        Top = 4
+        Width = 175
+        Height = 20
         Size.Values = (
           42.333333333333300000
           47.625000000000000000
           7.937500000000000000
           370.416666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Stock_Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object FormDescQRDBText: TQRDBText
-        Left = 283
-        Top = 3
-        Width = 278
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 354
+        Top = 4
+        Width = 348
+        Height = 20
         Size.Values = (
           42.333333333333300000
           748.770833333333000000
           7.937500000000000000
           735.541666666667000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -618,202 +607,189 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
         DataField = 'Form_Reference_Descr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object lblFormsperBox: TQRLabel
-        Left = 576
-        Top = 3
-        Width = 64
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 720
+        Top = 4
+        Width = 80
+        Height = 20
         Size.Values = (
           42.333333333333300000
           1524.000000000000000000
           7.937500000000000000
           169.333333333333000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'lblFormsperBox'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object lblBoxCount: TQRLabel
-        Left = 648
-        Top = 3
-        Width = 67
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 815
+        Top = 4
+        Width = 79
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          1714.500000000000000000
-          7.937500000000000000
-          177.270833333333300000)
+          42.333333333333330000
+          1725.083333333333000000
+          8.466666666666667000
+          167.216666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblBoxCount'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object lblQtyinStock: TQRLabel
-        Left = 713
-        Top = 3
-        Width = 71
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 894
+        Top = 4
+        Width = 86
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          1886.479166666667000000
-          7.937500000000000000
-          187.854166666666700000)
+          42.333333333333330000
+          1892.300000000000000000
+          8.466666666666667000
+          182.033333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblQtyinStock'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object lblReorderLvl: TQRLabel
-        Left = 890
-        Top = 3
-        Width = 74
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1120
+        Top = 4
+        Width = 86
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          2354.791666666667000000
-          7.937500000000000000
-          195.791666666666700000)
+          42.333333333333330000
+          2370.666666666667000000
+          8.466666666666667000
+          182.033333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblReorderLvl'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
       object lblQtyonOrder: TQRLabel
-        Left = 793
-        Top = 3
-        Width = 76
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 994
+        Top = 4
+        Width = 92
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          2098.145833333333000000
-          7.937500000000000000
-          201.083333333333300000)
+          42.333333333333330000
+          2103.966666666667000000
+          8.466666666666667000
+          194.733333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblQtyonOrder'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 9
       end
     end
     object FooterQRBand: TQRBand
-      Left = 38
-      Top = 209
-      Width = 1047
-      Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 262
+      Width = 1309
+      Height = 30
       AlignToBottom = False
       BeforePrint = FooterQRBandBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
-        2770.187500000000000000)
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageFooter
     end
     object CustGroup: TQRGroup
-      Left = 38
-      Top = 137
-      Width = 1047
-      Height = 28
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 171
+      Width = 1309
+      Height = 35
       AlignToBottom = False
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -823,202 +799,204 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        74.083333333333340000
-        2770.187500000000000000)
+        74.083333333333330000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = OrderDetail
       ReprintOnNewPage = False
       object CustQRDBText: TQRDBText
-        Left = 69
-        Top = 7
-        Width = 98
-        Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 86
+        Top = 9
+        Width = 122
+        Height = 23
         Size.Values = (
-          47.625000000000000000
-          182.562500000000000000
-          18.520833333333330000
-          259.291666666666700000)
+          48.683333333333330000
+          182.033333333333300000
+          19.050000000000000000
+          258.233333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object CustnamQRLabel: TQRLabel
-        Left = 4
-        Top = 7
-        Width = 65
-        Height = 18
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 5
+        Top = 9
+        Width = 81
+        Height = 23
         Size.Values = (
-          47.625000000000000000
+          48.683333333333330000
           10.583333333333330000
-          18.520833333333330000
-          171.979166666666700000)
+          19.050000000000000000
+          171.450000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer: '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -17
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
     object QRSubDetail1: TQRSubDetail
-      Left = 38
-      Top = 187
-      Width = 1047
-      Height = 22
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
+      Left = 47
+      Top = 234
+      Width = 1309
+      Height = 28
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        58.208333333333340000
-        2770.187500000000000000)
+        59.266666666666670000
+        2770.716666666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = OrderDetail
       DataSet = qryOrders
       PrintBefore = False
       PrintIfEmpty = True
       object QRDBText9: TQRDBText
-        Left = 734
-        Top = 3
-        Width = 91
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 925
+        Top = 4
+        Width = 107
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          1942.041666666667000000
-          7.937500000000000000
-          240.770833333333300000)
+          40.216666666666670000
+          1957.916666666667000000
+          8.466666666666667000
+          226.483333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Quantity_on_order'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
-        Left = 661
-        Top = 3
-        Width = 88
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 828
+        Top = 4
+        Width = 108
+        Height = 20
         Size.Values = (
-          42.333333333333340000
-          1748.895833333334000000
-          7.937500000000000000
-          232.833333333333400000)
+          42.333333333333330000
+          1752.600000000000000000
+          8.466666666666667000
+          228.600000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Quantity_in_Stock'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
-        Left = 10
-        Top = 3
-        Width = 140
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 12
+        Top = 4
+        Width = 175
+        Height = 20
         Size.Values = (
           42.333333333333340000
           26.458333333333330000
           7.937500000000000000
           370.416666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Stock_Reference'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText3: TQRDBText
-        Left = 277
-        Top = 3
-        Width = 260
-        Height = 16
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 346
+        Top = 4
+        Width = 325
+        Height = 20
         Size.Values = (
           42.333333333333340000
           732.895833333333400000
           7.937500000000000000
           687.916666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1028,169 +1006,200 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
         DataField = 'Form_Reference_Descr'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -11
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText7: TQRDBText
-        Left = 832
-        Top = 3
-        Width = 72
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1048
+        Top = 4
+        Width = 82
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2201.333333333333000000
-          7.937500000000000000
-          190.500000000000000000)
+          40.216666666666670000
+          2218.266666666667000000
+          8.466666666666667000
+          173.566666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Reorder_Level'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblCustOrderNo: TQRLabel
-        Left = 152
-        Top = 3
-        Width = 113
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 190
+        Top = 4
+        Width = 141
+        Height = 19
         Size.Values = (
           39.687500000000000000
           402.166666666666600000
           7.937500000000000000
           298.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'lblCustOrderNo'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblPONumber: TQRLabel
-        Left = 544
-        Top = 3
-        Width = 62
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 680
+        Top = 4
+        Width = 78
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1439.333333333333000000
-          7.937500000000000000
-          164.041666666666700000)
+          8.466666666666667000
+          165.100000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblPONumber'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblDeliveryDate: TQRLabel
-        Left = 624
-        Top = 3
-        Width = 72
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 780
+        Top = 4
+        Width = 86
+        Height = 19
         Size.Values = (
-          39.687500000000000000
+          40.216666666666670000
           1651.000000000000000000
-          7.937500000000000000
-          190.500000000000000000)
+          8.466666666666667000
+          182.033333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblDeliveryDate'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblQuantity: TQRLabel
-        Left = 920
-        Top = 3
-        Width = 51
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1151
+        Top = 4
+        Width = 63
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2434.166666666667000000
-          7.937500000000000000
-          134.937500000000000000)
+          40.216666666666670000
+          2436.283333333333000000
+          8.466666666666667000
+          133.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblQuantity'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object lblPaidStock: TQRLabel
-        Left = 984
-        Top = 3
-        Width = 51
-        Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
+        Left = 1231
+        Top = 4
+        Width = 63
+        Height = 19
         Size.Values = (
-          39.687500000000000000
-          2603.500000000000000000
-          7.937500000000000000
-          134.937500000000000000)
+          40.216666666666670000
+          2605.616666666667000000
+          8.466666666666667000
+          133.350000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'lblQuantity'
         Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
   end
   object qryReport: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'SELECT Form_Reference.Form_Reference_ID,'
       '       Form_Reference.Form_Reference_Descr,'
@@ -1277,57 +1286,72 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
       '')
     Left = 32
     Top = 64
-    object qryReportForm_Reference_ID: TStringField
+    object qryReportForm_Reference_ID: TWideStringField
       FieldName = 'Form_Reference_ID'
-      FixedChar = True
-      Size = 100
+      Origin = 'Form_Reference_ID'
+      Required = True
+      Size = 50
     end
-    object qryReportForm_Reference_Descr: TStringField
+    object qryReportForm_Reference_Descr: TWideStringField
       FieldName = 'Form_Reference_Descr'
-      FixedChar = True
-      Size = 100
+      Origin = 'Form_Reference_Descr'
+      Size = 50
+    end
+    object qryReportStock_Reference: TWideStringField
+      FieldName = 'Stock_Reference'
+      Origin = 'Stock_Reference'
+      Size = 25
     end
     object qryReportReorder_Level: TIntegerField
       FieldName = 'Reorder_Level'
-    end
-    object qryReportQuantity_in_Stock: TFloatField
-      FieldName = 'Quantity_in_Stock'
-      DisplayFormat = '#,##0'
-    end
-    object qryReportCustomer: TIntegerField
-      FieldName = 'Customer'
-    end
-    object qryReportBranch_no: TIntegerField
-      FieldName = 'Branch_no'
-    end
-    object qryReportStocked_Item: TStringField
-      FieldName = 'Stocked_Item'
-      FixedChar = True
-      Size = 1
-    end
-    object qryReportCustomer_Name: TStringField
-      FieldName = 'Customer_Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Reorder_Level'
     end
     object qryReportForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
+      Origin = 'Form_Reference'
+      Required = True
+    end
+    object qryReportCustomer_Name: TWideStringField
+      FieldName = 'Customer_Name'
+      Origin = 'Customer_Name'
+      Required = True
+      Size = 100
+    end
+    object qryReportCustomer: TIntegerField
+      FieldName = 'Customer'
+      Origin = 'Customer'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryReportBranch_no: TIntegerField
+      FieldName = 'Branch_no'
+      Origin = 'Branch_no'
+      Required = True
+    end
+    object qryReportStocked_Item: TStringField
+      FieldName = 'Stocked_Item'
+      Origin = 'Stocked_Item'
+      Size = 1
     end
     object qryReportQuantity_on_order: TFloatField
       FieldName = 'Quantity_on_order'
-      OnGetText = qryOrdersQty_in_StockGetText
-      DisplayFormat = '#,##0'
-    end
-    object qryReportStock_Reference: TStringField
-      FieldName = 'Stock_Reference'
-      FixedChar = True
-      Size = 30
+      Origin = 'Quantity_on_order'
+      ReadOnly = True
     end
     object qryReportTotal_on_order: TFloatField
       FieldName = 'Total_on_order'
+      Origin = 'Total_on_order'
+      ReadOnly = True
+    end
+    object qryReportQuantity_in_stock: TFloatField
+      FieldName = 'Quantity_in_stock'
+      Origin = 'Quantity_in_stock'
+      ReadOnly = True
     end
     object qryReportPaid_Stock: TFloatField
       FieldName = 'Paid_Stock'
+      Origin = 'Paid_Stock'
+      ReadOnly = True
     end
   end
   object dtsReport: TDataSource
@@ -1336,8 +1360,9 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Top = 62
   end
   object qryOrders: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsReport
+    MasterFields = 'Form_Reference;Form_Reference'
+    ConnectionName = 'PB'
     SQL.Strings = (
       'SELECT top 1 Purchase_OrderLine.Cust_Order_No,'
       '        Purchase_OrderLine.Purchase_Order,'
@@ -1381,14 +1406,12 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Top = 62
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryOrdersCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
@@ -1460,9 +1483,7 @@ object PBRPStkBalfrm: TPBRPStkBalfrm
     Top = 62
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
 end

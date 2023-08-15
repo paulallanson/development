@@ -32,13 +32,12 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1162
+        Width = 1164
       end>
-    ExplicitWidth = 1164
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1149
+      Width = 1151
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -46,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1149
+        Width = 1151
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 63

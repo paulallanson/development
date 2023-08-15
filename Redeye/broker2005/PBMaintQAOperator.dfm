@@ -3,18 +3,16 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Maintain Quality Assurance details'
-  ClientHeight = 128
-  ClientWidth = 358
+  ClientHeight = 119
+  ClientWidth = 352
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 30
@@ -35,17 +33,19 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 270
     Top = 94
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object detsgrpbox: TGroupBox
     Left = 8
@@ -73,8 +73,6 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
       Top = 110
       Width = 25
       Height = 23
-      TabOrder = 2
-      TabStop = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -89,6 +87,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 2
+      TabStop = False
     end
     object edtEmployeeName: TEdit
       Left = 56
@@ -111,9 +111,7 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -129,19 +127,13 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'QA_Operator_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'QA_Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -156,8 +148,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -171,9 +163,7 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'QA_Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -186,8 +176,8 @@ object PBMaintQAOperatorFrm: TPBMaintQAOperatorFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

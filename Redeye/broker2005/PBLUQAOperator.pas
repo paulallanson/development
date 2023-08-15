@@ -59,7 +59,9 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBMaintQAOperator;
+uses
+  System.Types,
+  pbDatabase, pbMainMenu, PBMaintQAOperator;
 
 {$R *.DFM}
 

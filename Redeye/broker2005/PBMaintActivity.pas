@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Buttons, ExtCtrls, StdCtrls, ComCtrls, DBCtrls, pbActivityDM, DateUtils,
-  Grids, DBGrids, ShellAPI, PBDBMemo, DB, ImgList, ToolWin, IniFiles;
+  Grids, DBGrids, ShellAPI, PBDBMemo, DB, ImgList, ToolWin, IniFiles,
+  System.ImageList;
 
 type
   TPBMaintActivityFrm = class(TForm)
@@ -144,7 +145,9 @@ var
 
 implementation
 
-uses PBLUActivityType, PBLUBranch, PBLUCConta, pbMainMenu, PBLUCustomerEnqs, PBLUCustomerOrders,
+uses
+  System.UITypes,
+  PBLUActivityType, PBLUBranch, PBLUCConta, pbMainMenu, PBLUCustomerEnqs, PBLUCustomerOrders,
   pbLUCustomerJobs, PBLUCust, CCSCommon, pbDatabase;
 
 {$R *.dfm}

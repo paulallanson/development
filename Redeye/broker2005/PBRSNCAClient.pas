@@ -68,7 +68,9 @@ var
 
 implementation
 
-uses PBLURep, PBDatabase, CCSPrint, CCSCommon,
+uses
+  System.UITypes,
+  PBLURep, PBDatabase, CCSPrint, CCSCommon,
   pbMainMenu, PBLUCust, PBRPNCAClient, PBLUNonConformType;
 
 {$R *.DFM}

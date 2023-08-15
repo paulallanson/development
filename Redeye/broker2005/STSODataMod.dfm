@@ -1,8 +1,9 @@
 object STSalesOrdDM: TSTSalesOrdDM
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 661
-  Width = 1287
+  Height = 826
+  Width = 1609
+  PixelsPerInch = 120
   object GetSOLineSql: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -14,8 +15,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 496
-    Top = 128
+    Left = 620
+    Top = 160
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -31,8 +32,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'From Company'
       'Where Company = 1'
       ' ')
-    Left = 304
-    Top = 64
+    Left = 380
+    Top = 80
   end
   object UpdLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -41,8 +42,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Set Last_SO_Number = :Last_SO_Number'
       'Where Company = 1'
       ' ')
-    Left = 128
-    Top = 288
+    Left = 160
+    Top = 360
     ParamData = <
       item
         Name = 'Last_SO_Number'
@@ -90,8 +91,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 96
-    Top = 272
+    Left = 120
+    Top = 340
     ParamData = <
       item
         Name = 'Office_Contact'
@@ -191,21 +192,21 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'Select In_Use_By, Name from Company Where Company = 1'
       ' ')
-    Left = 32
-    Top = 240
+    Left = 40
+    Top = 300
   end
   object OperatorSQL: TFDQuery
     ConnectionName = 'pb'
     SQL.Strings = (
       'select * from operator')
-    Left = 128
-    Top = 184
+    Left = 160
+    Top = 230
   end
   object OperatorSRC: TDataSource
     AutoEdit = False
     DataSet = OperatorSQL
-    Left = 128
-    Top = 232
+    Left = 160
+    Top = 290
   end
   object DelSOLineSQL: TFDQuery
     ConnectionName = 'PB'
@@ -216,8 +217,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 304
-    Top = 8
+    Left = 380
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -268,8 +269,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 120
-    Top = 8
+    Left = 150
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -382,8 +383,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 224
-    Top = 288
+    Left = 280
+    Top = 360
     ParamData = <
       item
         Name = 'Part'
@@ -474,8 +475,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Select Sales_Order_Line_Status.Description'
       'From Sales_Order_Line_Status'
       'Where Sales_Order_Line_Status = :Sales_Order_Line_Status')
-    Left = 304
-    Top = 128
+    Left = 380
+    Top = 160
     ParamData = <
       item
         Name = 'Sales_Order_Line_Status'
@@ -492,8 +493,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         'tact_info.contact_info)'
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)')
-    Left = 32
-    Top = 72
+    Left = 40
+    Top = 90
     ParamData = <
       item
         Name = 'Customer'
@@ -531,8 +532,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 400
-    Top = 128
+    Left = 500
+    Top = 160
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -605,8 +606,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ''
       '')
-    Left = 16
-    Top = 8
+    Left = 20
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -727,8 +728,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 400
-    Top = 8
+    Left = 500
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -743,8 +744,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 480
-    Top = 8
+    Left = 600
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -757,8 +758,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Where'
       '(Sales_Order = :Sales_Order)'
       ' ')
-    Left = 224
-    Top = 8
+    Left = 280
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -774,8 +775,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Where Part = :Part'
       ' '
       ' ')
-    Left = 32
-    Top = 128
+    Left = 40
+    Top = 160
     ParamData = <
       item
         Name = 'Part'
@@ -786,8 +787,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'Select * from Part'
       'where part.part = :Part')
-    Left = 128
-    Top = 128
+    Left = 160
+    Top = 160
     ParamData = <
       item
         Name = 'Part'
@@ -797,8 +798,8 @@ object STSalesOrdDM: TSTSalesOrdDM
   object StoreSRC: TDataSource
     AutoEdit = False
     DataSet = StoreSQL
-    Left = 224
-    Top = 232
+    Left = 280
+    Top = 290
   end
   object StoreSQL: TFDQuery
     ConnectionName = 'PB'
@@ -806,8 +807,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Select Part_Store_Name, Part_Store'
       'from Part_Store'
       'Order by Part_Store_Name')
-    Left = 224
-    Top = 184
+    Left = 280
+    Top = 230
   end
   object GetCustCstCntrSQL: TFDQuery
     ConnectionName = 'PB'
@@ -817,8 +818,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where customer_CostCentre.Customer = :Customer'
       ''
       ' ')
-    Left = 128
-    Top = 64
+    Left = 160
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -837,8 +838,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '      (:OrderDate >= date_effective) and'
       '      ((:OrderDate <= date_ineffective) or'
       #9'date_ineffective is null)')
-    Left = 224
-    Top = 128
+    Left = 280
+    Top = 160
     ParamData = <
       item
         Name = 'customer'
@@ -870,8 +871,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '      ((:OrderDate <= date_ineffective) or'
       #9'date_ineffective is null)'
       ' ')
-    Left = 224
-    Top = 64
+    Left = 280
+    Top = 80
     ParamData = <
       item
         Name = 'customer'
@@ -894,8 +895,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Select Default_Warehouse'
       'from company'
       'where company = 1')
-    Left = 32
-    Top = 184
+    Left = 40
+    Top = 230
   end
   object UpdSOLineRepPercSQL: TFDQuery
     ConnectionName = 'PB'
@@ -914,8 +915,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 80
-    Top = 360
+    Left = 100
+    Top = 450
     ParamData = <
       item
         Name = 'Rep_Percentage'
@@ -944,8 +945,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 312
-    Top = 184
+    Left = 390
+    Top = 230
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -967,8 +968,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 312
-    Top = 240
+    Left = 390
+    Top = 300
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -984,8 +985,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Sales_OrderRep, Rep'
       'where (sales_order = :Sales_Order) and'
       '      (Sales_orderRep.Rep = Rep.Rep)')
-    Left = 392
-    Top = 64
+    Left = 490
+    Top = 80
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -998,8 +999,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select Customer'
       'from Customer_Branch'
       'where Account_Code = :Account_Code')
-    Left = 312
-    Top = 288
+    Left = 390
+    Top = 360
     ParamData = <
       item
         Name = 'Account_Code'
@@ -1007,16 +1008,16 @@ object STSalesOrdDM: TSTSalesOrdDM
   end
   object GetPartSRC: TDataSource
     DataSet = GetPartSQL
-    Left = 400
-    Top = 192
+    Left = 500
+    Top = 240
   end
   object GetPartSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select part'
       'from part')
-    Left = 456
-    Top = 192
+    Left = 570
+    Top = 240
   end
   object RepSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1024,17 +1025,20 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select * from Rep'
       'where ((inactive = '#39'N'#39') or (inactive is NULL) or Rep = :Rep)'
       'order by name')
-    Left = 400
-    Top = 288
+    Left = 500
+    Top = 360
     ParamData = <
       item
         Name = 'Rep'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object RepSRC: TDataSource
     DataSet = RepSQL
-    Left = 400
-    Top = 336
+    Left = 500
+    Top = 420
   end
   object GetCustRepsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1044,8 +1048,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Where (Customer = :Customer) and'
       '      (Branch_No = :Branch_No)'
       'Order By Is_Main_Rep Desc')
-    Left = 480
-    Top = 64
+    Left = 600
+    Top = 80
     ParamData = <
       item
         Name = 'Customer'
@@ -1060,8 +1064,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select *'
       'from Customer'
       'where Customer = :Customer')
-    Left = 128
-    Top = 344
+    Left = 160
+    Top = 430
     ParamData = <
       item
         Name = 'Customer'
@@ -1075,8 +1079,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Customer = :Customer and'
       'Branch_no = :Branch_no'
       ' ')
-    Left = 224
-    Top = 336
+    Left = 280
+    Top = 420
     ParamData = <
       item
         Name = 'Customer'
@@ -1090,8 +1094,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'delete from Sales_OrderRep'
       'where Sales_Order = :Sales_Order')
-    Left = 312
-    Top = 336
+    Left = 390
+    Top = 420
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1105,8 +1109,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Customer_Branch.Customer = :Customer and'
       'Branch_no = :Branch_no and'
       'Customer_Branch.Customer = Customer.Customer')
-    Left = 464
-    Top = 288
+    Left = 580
+    Top = 360
     ParamData = <
       item
         Name = 'Customer'
@@ -1126,8 +1130,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '      Replenish_Source.Replenish_ID = '#39'S'#39' and'
       '      Supplier = :Supplier;'
       ' ')
-    Left = 32
-    Top = 320
+    Left = 40
+    Top = 400
     ParamData = <
       item
         Name = 'Supplier'
@@ -1140,8 +1144,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'SELECT * '
       'FROM Company '
       'WHERE Company = :Company')
-    Left = 128
-    Top = 392
+    Left = 160
+    Top = 490
     ParamData = <
       item
         Name = 'Company'
@@ -1156,8 +1160,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'WHERE Customer = :Customer and'
       '  Branch_No = :Branch_No and '
       '  Contact_No = :Contact_No')
-    Left = 224
-    Top = 392
+    Left = 280
+    Top = 490
     ParamData = <
       item
         Name = 'Customer'
@@ -1175,8 +1179,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'UPDATE Sales_Order '
       'SET Sales_Order_Head_Status = :Status'
       'WHERE Sales_Order = :Sales_Order;')
-    Left = 312
-    Top = 392
+    Left = 390
+    Top = 490
     ParamData = <
       item
         Name = 'Status'
@@ -1193,8 +1197,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'WHERE ((Customer.Customer) = (:Customer) and'
       '  (Vat_code.Vat_code) = (Customer.Vat_code_Def))'
       ' ')
-    Left = 456
-    Top = 248
+    Left = 570
+    Top = 310
     ParamData = <
       item
         Name = 'Customer'
@@ -1209,8 +1213,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Where Company = 1'
       ' '
       ' ')
-    Left = 464
-    Top = 336
+    Left = 580
+    Top = 420
     ParamData = <
       item
         Name = 'Last_Invoice_No'
@@ -1218,8 +1222,8 @@ object STSalesOrdDM: TSTSalesOrdDM
   end
   object AddInvSQL: TFDQuery
     ConnectionName = 'PB'
-    Left = 72
-    Top = 8
+    Left = 90
+    Top = 10
   end
   object UpdInvHeadSQL: TFDQuery
     ConnectionName = 'pb'
@@ -1243,8 +1247,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 400
-    Top = 384
+    Left = 500
+    Top = 480
     ParamData = <
       item
         Name = 'Goods'
@@ -1351,8 +1355,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 488
-    Top = 384
+    Left = 610
+    Top = 480
     ParamData = <
       item
         Name = 'Number'
@@ -1415,8 +1419,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '10, :Date, Null From Sales_Invoice'
       ' '
       ' ')
-    Left = 32
-    Top = 448
+    Left = 40
+    Top = 560
     ParamData = <
       item
         Name = 'Operator'
@@ -1447,8 +1451,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Invoice_Date = :Date and Operator = :Operator and'
       'Customer = :Customer and Branch_No = :Branch_No'
       ' ')
-    Left = 128
-    Top = 448
+    Left = 160
+    Top = 560
     ParamData = <
       item
         Name = 'Date'
@@ -1486,8 +1490,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '  (Sales_Invoice_Line.Sales_order_Line_No = :SO_Line)'
       ''
       ' ')
-    Left = 216
-    Top = 448
+    Left = 270
+    Top = 560
     ParamData = <
       item
         Name = 'Quantity'
@@ -1528,8 +1532,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 312
-    Top = 448
+    Left = 390
+    Top = 560
     ParamData = <
       item
         Name = 'Number'
@@ -1547,8 +1551,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Order By Details'
       ' '
       ' ')
-    Left = 536
-    Top = 440
+    Left = 670
+    Top = 550
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1564,8 +1568,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 456
-    Top = 448
+    Left = 570
+    Top = 560
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -1589,8 +1593,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 544
-    Top = 384
+    Left = 680
+    Top = 480
     ParamData = <
       item
         Name = 'Sales_invoice'
@@ -1628,8 +1632,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ''
       ' '
       ' ')
-    Left = 272
-    Top = 280
+    Left = 340
+    Top = 350
     ParamData = <
       item
         Name = 'Details'
@@ -1657,8 +1661,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 288
-    Top = 208
+    Left = 360
+    Top = 260
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1669,8 +1673,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'select * from Supplier_order_type'
       'where Supplier = :Supplier')
-    Left = 32
-    Top = 384
+    Left = 40
+    Top = 480
     ParamData = <
       item
         Name = 'Supplier'
@@ -1678,20 +1682,20 @@ object STSalesOrdDM: TSTSalesOrdDM
   end
   object GetSuppOTypeSRC: TDataSource
     DataSet = GetSuppOTypeSQL
-    Left = 112
-    Top = 328
+    Left = 140
+    Top = 410
   end
   object RepSourceSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Replenish_Source')
-    Left = 248
-    Top = 336
+    Left = 310
+    Top = 420
   end
   object RepSourceSRC: TDataSource
     DataSet = RepSourceSQL
-    Left = 312
-    Top = 336
+    Left = 390
+    Top = 420
   end
   object GetSuppSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1699,8 +1703,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select Name, Discount'
       'from Supplier'
       'where Supplier = :Supplier')
-    Left = 32
-    Top = 8
+    Left = 40
+    Top = 10
     ParamData = <
       item
         Name = 'Supplier'
@@ -1713,8 +1717,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Supplier_Branch'
       'where Supplier = :Supplier and'
       'Branch_No = :Branch_no')
-    Left = 120
-    Top = 16
+    Left = 150
+    Top = 20
     ParamData = <
       item
         Name = 'Supplier'
@@ -1733,8 +1737,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 392
-    Top = 248
+    Left = 490
+    Top = 310
     ParamData = <
       item
         Name = 'Part'
@@ -1752,8 +1756,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 288
-    Top = 256
+    Left = 360
+    Top = 320
     ParamData = <
       item
         Name = 'Vat_code'
@@ -1768,8 +1772,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where SUpplier = :Supplier and'
       'Branch_No = :Branch_no and'
       'Part = :Part')
-    Left = 520
-    Top = 192
+    Left = 650
+    Top = 240
     ParamData = <
       item
         Name = 'Supplier'
@@ -1792,8 +1796,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 392
-    Top = 448
+    Left = 490
+    Top = 560
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -1817,8 +1821,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 544
-    Top = 312
+    Left = 680
+    Top = 390
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1855,8 +1859,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 536
-    Top = 256
+    Left = 670
+    Top = 320
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -1880,26 +1884,26 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 560
-    Top = 8
+    Left = 700
+    Top = 10
   end
   object dtsrcGeneral: TDataSource
     DataSet = qryListSOwithoutPO
-    Left = 560
-    Top = 56
+    Left = 700
+    Top = 70
   end
   object GetDiscTypeSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Discount_Type')
-    Left = 560
-    Top = 128
+    Left = 700
+    Top = 160
   end
   object GetDiscTypeSRC: TDataSource
     DataSet = GetDiscTypeSQL
-    Left = 560
-    Top = 192
+    Left = 700
+    Top = 240
   end
   object GetInvLineSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1913,8 +1917,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '(Sales_Invoice.Sales_Invoice = Sales_Invoice_Line.Sales_Invoice)'
       ' '
       ' ')
-    Left = 32
-    Top = 264
+    Left = 40
+    Top = 330
     ParamData = <
       item
         Name = 'OrderNo'
@@ -1944,8 +1948,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '       (Purchase_OrderLine.branch_no = :branch_no) and'
       '       (cust_order_no = :cust_order_no) and'
       '       (Goods_Required = :goods_required));')
-    Left = 24
-    Top = 496
+    Left = 30
+    Top = 620
     ParamData = <
       item
         Name = 'customer'
@@ -1980,8 +1984,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '         Purchase_OrderLine.Branch_no, '
       '         Purchase_OrderLine.Cust_Order_No, '
       '         Purchase_orderLine.Goods_Required;')
-    Left = 112
-    Top = 473
+    Left = 140
+    Top = 591
   end
   object qryGetFormRefDtls: TFDQuery
     ConnectionName = 'PB'
@@ -1989,8 +1993,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Select * '
       'from Form_Reference '
       'where form_reference = :form_reference;')
-    Left = 216
-    Top = 496
+    Left = 270
+    Top = 620
     ParamData = <
       item
         Name = 'form_reference'
@@ -2042,8 +2046,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         '(Purchase_orderline.form_reference = Form_reference.form_referen' +
         'ce)'
       ' ')
-    Left = 304
-    Top = 496
+    Left = 380
+    Top = 620
     object qryReportdescription: TStringField
       FieldName = 'description'
       FixedChar = True
@@ -2122,8 +2126,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select *'
       'from Price_unit'
       'where Price_unit = :Price_Unit')
-    Left = 392
-    Top = 496
+    Left = 490
+    Top = 620
     ParamData = <
       item
         Name = 'Price_Unit'
@@ -2134,8 +2138,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'Select Part From Part Where Part = :Part'
       ' ')
-    Left = 464
-    Top = 504
+    Left = 580
+    Top = 630
     ParamData = <
       item
         Name = 'Part'
@@ -2149,8 +2153,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '  Purch_Pack_Quantity = :Purch_Pack_Quantity'
       'where'
       '  Part = :Part')
-    Left = 528
-    Top = 496
+    Left = 660
+    Top = 620
     ParamData = <
       item
         Name = 'Part_Purchase_Price'
@@ -2189,8 +2193,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 584
-    Top = 496
+    Left = 730
+    Top = 620
     ParamData = <
       item
         Name = 'Part'
@@ -2242,8 +2246,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       
         'select * from Delivery_detail where purchase_order = :purchase_o' +
         'rder')
-    Left = 24
-    Top = 552
+    Left = 30
+    Top = 690
     ParamData = <
       item
         Name = 'purchase_order'
@@ -2256,8 +2260,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Purch_Ord_line_Add_chg '
       'where purchase_order = :purchase_order and'
       'line = :line')
-    Left = 112
-    Top = 488
+    Left = 140
+    Top = 610
     ParamData = <
       item
         Name = 'purchase_order'
@@ -2274,8 +2278,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Vat_Code = (Select Vat_Code_Def '
       '                               From Customer '
       '                               Where Customer = :Customer);')
-    Left = 192
-    Top = 440
+    Left = 240
+    Top = 550
     ParamData = <
       item
         Name = 'Customer'
@@ -2288,8 +2292,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'From Sales_Invoice_Line'
       'Where (Sales_Invoice = :Sales_Invoice)'
       ' ')
-    Left = 120
-    Top = 312
+    Left = 150
+    Top = 390
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -2306,8 +2310,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 112
-    Top = 316
+    Left = 140
+    Top = 395
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -2323,8 +2327,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Where'
       '(Sales_Invoice = :Sales_Invoice)'
       ' ')
-    Left = 80
-    Top = 316
+    Left = 100
+    Top = 395
     ParamData = <
       item
         Name = 'Sales_Invoice'
@@ -2344,8 +2348,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         '.Sales_Order_Line_No)'
       'where sales_invoice = :sales_Invoice'
       'order by sales_invoice, invoice_line_no')
-    Left = 112
-    Top = 320
+    Left = 140
+    Top = 400
     ParamData = <
       item
         Name = 'sales_Invoice'
@@ -2359,8 +2363,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where ad_Hoc_Address = :AdHoc'
       ' '
       ' ')
-    Left = 120
-    Top = 312
+    Left = 150
+    Top = 390
     ParamData = <
       item
         Name = 'AdHoc'
@@ -2401,8 +2405,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '          Part_Store_Levels.Minimum_Stock,'
       '          Part_Store_Levels.Maximum_Stock,'
       '          Part_Store_Levels.Reorder_Level')
-    Left = 600
-    Top = 256
+    Left = 750
+    Top = 320
     ParamData = <
       item
         Name = 'Part'
@@ -2418,8 +2422,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Sales_order_line_Serial_no'
       'where Sales_order = :Sales_order'
       'order by Sales_order_line_no asc')
-    Left = 640
-    Top = 384
+    Left = 800
+    Top = 480
     ParamData = <
       item
         Name = 'Sales_order'
@@ -2432,8 +2436,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Sales_order = :Sales_order and'
       'Sales_Order_Line_no = :Sales_order_Line_no'
       ' ')
-    Left = 648
-    Top = 8
+    Left = 810
+    Top = 10
     ParamData = <
       item
         Name = 'Sales_order'
@@ -2453,8 +2457,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       
         '(:Sales_order, :Sales_order_line_no, :Serial_item_no, :Serial_It' +
         'em_From, :Serial_Item_to, :Sets_Per_Pad)')
-    Left = 648
-    Top = 56
+    Left = 810
+    Top = 70
     ParamData = <
       item
         Name = 'Sales_order'
@@ -2486,8 +2490,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       
         '(:Store_Stock, :Serial_item_no, :Serial_item_from, :Serial_Item_' +
         'To, :Sales_Order, :Sales_order_line_no)')
-    Left = 648
-    Top = 104
+    Left = 810
+    Top = 130
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -2516,8 +2520,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'delete from Store_Stock_Serial_item'
       'where Store_Stock = :Store_Stock and'
       'Serial_item_no = :Serial_item_no')
-    Left = 640
-    Top = 168
+    Left = 800
+    Top = 210
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -2532,8 +2536,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select max(Serial_item_no) as Last_Serial_no'
       'from Store_stock_serial_item'
       'where Store_stock = :Store_Stock')
-    Left = 640
-    Top = 232
+    Left = 800
+    Top = 290
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -2557,8 +2561,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Store_Stock.Part = :Part and'
       '(Store_Stock.Store_Stock = Store_stock_serial_item.store_Stock)'
       'order by Serial_item_From')
-    Left = 648
-    Top = 304
+    Left = 810
+    Top = 380
     ParamData = <
       item
         Name = 'Part'
@@ -2568,21 +2572,21 @@ object STSalesOrdDM: TSTSalesOrdDM
     ConnectionName = 'PB'
     SQL.Strings = (
       'select * from Markup_Type')
-    Left = 608
-    Top = 440
+    Left = 760
+    Top = 550
   end
   object srcMarkup: TDataSource
     DataSet = MarkupSQL
-    Left = 648
-    Top = 440
+    Left = 810
+    Top = 550
   end
   object qryDelSOSerialNos: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       'delete from Sales_Order_line_serial_no '
       'where sales_order = :sales_order;')
-    Left = 448
-    Top = 104
+    Left = 560
+    Top = 130
     ParamData = <
       item
         Name = 'sales_order'
@@ -2593,8 +2597,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'delete from sales_order_sundry '
       'where sales_order = :sales_order;')
-    Left = 352
-    Top = 120
+    Left = 440
+    Top = 150
     ParamData = <
       item
         Name = 'sales_order'
@@ -2605,8 +2609,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'delete from sales_orderrep '
       'where sales_order = :sales_order;')
-    Left = 352
-    Top = 168
+    Left = 440
+    Top = 210
     ParamData = <
       item
         Name = 'sales_order'
@@ -2617,8 +2621,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'delete from narrative_line '
       'where narrative = :narrative;')
-    Left = 184
-    Top = 8
+    Left = 230
+    Top = 10
     ParamData = <
       item
         Name = 'narrative'
@@ -2630,8 +2634,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'update purch_ord '
       'set sales_order = null'
       'where sales_order = :sales_order')
-    Left = 352
-    Top = 8
+    Left = 440
+    Top = 10
     ParamData = <
       item
         Name = 'sales_order'
@@ -2644,8 +2648,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from sales_invoice_line'
       'where sales_order = :SONum and'
       ' sales_order_line_no = :line')
-    Left = 176
-    Top = 116
+    Left = 220
+    Top = 145
     ParamData = <
       item
         Name = 'SONum'
@@ -2669,8 +2673,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' sales_order_line.Sales_Order_line_no = :line '
       ' '
       ' ')
-    Left = 180
-    Top = 176
+    Left = 225
+    Top = 220
     ParamData = <
       item
         Name = 'SONum'
@@ -2684,8 +2688,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'select top 1 * from purch_ord  '
       'where sales_order = :SONum')
-    Left = 180
-    Top = 240
+    Left = 225
+    Top = 300
     ParamData = <
       item
         Name = 'SONum'
@@ -2698,8 +2702,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'set sales_order = null,'
       ' sales_order_line_no = null '
       'where sales_order = :sales_order')
-    Left = 80
-    Top = 72
+    Left = 100
+    Top = 90
     ParamData = <
       item
         Name = 'sales_order'
@@ -2712,8 +2716,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from contract_line'
       'where sales_order = :Sales_Order'
       'and Sales_order_Line_no = :Sales_order_Line_no')
-    Left = 440
-    Top = 60
+    Left = 550
+    Top = 75
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -2729,8 +2733,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from reps_branches'
       'where customer = :customer'
       'and branch_no = :branch_no')
-    Left = 664
-    Top = 504
+    Left = 830
+    Top = 630
     ParamData = <
       item
         Name = 'customer'
@@ -2748,8 +2752,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where sales_order = :sales_order '
       'and Sales_order_line_no = :Sales_order_line_no'
       ' ')
-    Left = 708
-    Top = 28
+    Left = 885
+    Top = 35
     ParamData = <
       item
         Name = 'Sales_order'
@@ -2796,8 +2800,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '    :Product_Type,'
       '    :Sequence_no)'
       '')
-    Left = 775
-    Top = 8
+    Left = 969
+    Top = 10
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2860,8 +2864,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select max(Job_Bag_Line) as Last_JB_Line_Number'
       'from Job_Bag_Line_Dets'
       'where Job_Bag = :Job_Bag')
-    Left = 800
-    Top = 80
+    Left = 1000
+    Top = 100
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -2874,8 +2878,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where sales_order = :sales_order and'
       '      sales_order_line_no = :sales_order_line_no and'
       '      Job_Bag = :Job_Bag')
-    Left = 808
-    Top = 144
+    Left = 1010
+    Top = 180
     ParamData = <
       item
         Name = 'sales_order'
@@ -2908,8 +2912,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         'sales_order_line_no = :sales_order_line_no   and Job_Bag = :Job_' +
         'Bag'
       '')
-    Left = 807
-    Top = 208
+    Left = 1009
+    Top = 260
     ParamData = <
       item
         Name = 'Job_Bag_Line_Type'
@@ -2966,8 +2970,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Job_Bag_line_Dets'
       'where sales_order = :sales_order and'
       'sales_order_line_no = :sales_order_line_no')
-    Left = 808
-    Top = 264
+    Left = 1010
+    Top = 330
     ParamData = <
       item
         Name = 'sales_order'
@@ -2982,8 +2986,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select *'
       'from Production_location'
       'where Production_location = :Production_Location')
-    Left = 808
-    Top = 320
+    Left = 1010
+    Top = 400
     ParamData = <
       item
         Name = 'Production_Location'
@@ -2996,8 +3000,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Account_Team_Member, Account_Team'
       'where Operator = :Operator and'
       '(Account_Team_Member.Account_Team = Account_Team.Account_Team)')
-    Left = 808
-    Top = 376
+    Left = 1010
+    Top = 470
     ParamData = <
       item
         Name = 'Operator'
@@ -3009,8 +3013,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select *'
       'from account_team'
       'where account_team = :account_team')
-    Left = 808
-    Top = 432
+    Left = 1010
+    Top = 540
     ParamData = <
       item
         Name = 'account_team'
@@ -3022,8 +3026,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'update Sales_Order'
       'set Sales_order_Head_status = :sales_order_head_Status'
       'where sales_order = :sales_order')
-    Left = 912
-    Top = 24
+    Left = 1140
+    Top = 30
     ParamData = <
       item
         Name = 'sales_order_head_Status'
@@ -3038,8 +3042,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select *'
       'from Part_Transfer'
       'where Sales_order = :sales_order')
-    Left = 912
-    Top = 80
+    Left = 1140
+    Top = 100
     ParamData = <
       item
         Name = 'sales_order'
@@ -3064,8 +3068,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Part_Store_allocation, Store_stock'
       'where Sales_order = :sales_order and'
       'part_store_Allocation.store_stock = store_stock.store_stock')
-    Left = 912
-    Top = 144
+    Left = 1140
+    Top = 180
     ParamData = <
       item
         Name = 'sales_order'
@@ -3078,8 +3082,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Sales_Order_Add_Charge '
       'where '
       '  sales_order = :sales_order ')
-    Left = 960
-    Top = 204
+    Left = 1200
+    Top = 255
     ParamData = <
       item
         Name = 'sales_order'
@@ -3119,8 +3123,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 912
-    Top = 268
+    Left = 1140
+    Top = 335
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3141,8 +3145,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Update Sales_Order'
       'Set Sales_Order_Head_Status = :Status'
       'where Sales_Order = :OrderNo')
-    Left = 928
-    Top = 360
+    Left = 1160
+    Top = 450
     ParamData = <
       item
         Name = 'Status'
@@ -3162,8 +3166,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Quantity_Wastage = :Quantity_Wastage'
       'Where Sales_Order = :Sales_order and '
       'Sales_Order_Line_no = :sales_order_line_no')
-    Left = 808
-    Top = 488
+    Left = 1010
+    Top = 610
     ParamData = <
       item
         Name = 'Quantity_Delivered'
@@ -3208,8 +3212,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Sales_Order = :Sales_Order AND'
       '      Sales_Order_Line_No = :Sales_Order_Line_No AND'
       'Part_Store_Allocation.Store_Stock = Store_Stock.Store_Stock')
-    Left = 912
-    Top = 416
+    Left = 1140
+    Top = 520
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3224,8 +3228,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Update Part_Store_Allocation'
       'Set Quantity_Overs = Quantity_Overs + :Quantity_Overs'
       'Where Part_Store_Allocation = :Part_Store_Allocation')
-    Left = 912
-    Top = 488
+    Left = 1140
+    Top = 610
     ParamData = <
       item
         Name = 'Quantity_Overs'
@@ -3245,8 +3249,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       
         'where sales_order = :sales_order and sales_order_Line_no = :Sale' +
         's_Order_line_no')
-    Left = 736
-    Top = 208
+    Left = 920
+    Top = 260
     ParamData = <
       item
         Name = 'Job_Bag_Line_Cost'
@@ -3273,8 +3277,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Update Job_bag'
       'Set Job_Bag_Status = :Job_Bag_Status'
       'where Job_Bag = :Job_Bag')
-    Left = 736
-    Top = 272
+    Left = 920
+    Top = 340
     ParamData = <
       item
         Name = 'Job_Bag_Status'
@@ -3290,8 +3294,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Sales_order, job_bag_line_dets'
       'where Sales_Order.Sales_order = :sales_order and'
       'sales_order.sales_order = Job_Bag_Line_Dets.sales_order')
-    Left = 728
-    Top = 352
+    Left = 910
+    Top = 440
     ParamData = <
       item
         Name = 'sales_order'
@@ -3336,8 +3340,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 728
-    Top = 412
+    Left = 910
+    Top = 515
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3349,8 +3353,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select * '
       'from Store_Stock'
       'where Store_Stock = :Store_Stock')
-    Left = 728
-    Top = 152
+    Left = 910
+    Top = 190
     ParamData = <
       item
         Name = 'Store_Stock'
@@ -3361,8 +3365,8 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'Delete from Part_Transfer'
       'where Part_Transfer = :Part_Transfer')
-    Left = 912
-    Top = 312
+    Left = 1140
+    Top = 390
     ParamData = <
       item
         Name = 'Part_Transfer'
@@ -3374,8 +3378,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Update Part_Transfer'
       'set Store_Quantity = :Store_Quantity'
       'where Part_Transfer = :Part_Transfer')
-    Left = 912
-    Top = 544
+    Left = 1140
+    Top = 680
     ParamData = <
       item
         Name = 'Store_Quantity'
@@ -3396,8 +3400,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Purch_Pack_Quantity = :Purch_Pack_Quantity'
       'Where Sales_Order = :Sales_order and '
       'Sales_Order_Line_no = :sales_order_line_no')
-    Left = 768
-    Top = 544
+    Left = 960
+    Top = 680
     ParamData = <
       item
         Name = 'Quantity_Delivered'
@@ -3431,8 +3435,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Job_Bag_Stock_Request'
       'where sales_order = :sales_order and'
       'sales_order_line_no = :sales_order_line_no')
-    Left = 856
-    Top = 264
+    Left = 1070
+    Top = 330
     ParamData = <
       item
         Name = 'sales_order'
@@ -3447,8 +3451,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'select max(Request_no) as Last_JB_Request_Number'
       'from Job_Bag_Stock_Request'
       'where Job_Bag = :Job_Bag')
-    Left = 728
-    Top = 80
+    Left = 910
+    Top = 100
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3467,8 +3471,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '    :Request_no,'
       '    :sales_order,'
       '    :sales_order_line_no)')
-    Left = 839
-    Top = 8
+    Left = 1049
+    Top = 10
     ParamData = <
       item
         Name = 'Job_Bag'
@@ -3490,8 +3494,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where sales_order = :sales_order and'
       '      sales_order_line_no = :sales_order_line_no and'
       '      Job_Bag = :Job_Bag')
-    Left = 880
-    Top = 200
+    Left = 1100
+    Top = 250
     ParamData = <
       item
         Name = 'sales_order'
@@ -3527,8 +3531,8 @@ object STSalesOrdDM: TSTSalesOrdDM
         ')'
       '        ) and'
       '        (Customer_Branch.Customer = Customer.Customer)')
-    Left = 992
-    Top = 16
+    Left = 1240
+    Top = 20
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3541,8 +3545,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'from Customer_CostCentre'
       'where Customer = :Customer and '
       'Cost_centre = :Cost_Centre')
-    Left = 120
-    Top = 544
+    Left = 150
+    Top = 680
     ParamData = <
       item
         Name = 'Customer'
@@ -3559,8 +3563,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'where Customer = :Customer and'
       'Branch_no = :Branch_no and '
       'Cost_centre = :Cost_Centre')
-    Left = 192
-    Top = 544
+    Left = 240
+    Top = 680
     ParamData = <
       item
         Name = 'Customer'
@@ -3587,8 +3591,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       '(CB.Customer = Customer_Branch.Customer) and '
       '(CB.Short_Code = :Short_Code)'
       ') ')
-    Left = 344
-    Top = 544
+    Left = 430
+    Top = 680
     ParamData = <
       item
         Name = 'Account_Code'
@@ -3610,8 +3614,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'Sales_Order.Branch_no = :Branch_No and'
       'Order_Type = '#39'S'#39
       'ORDER BY Sales_Order Desc')
-    Left = 464
-    Top = 552
+    Left = 580
+    Top = 690
     ParamData = <
       item
         Name = 'Customer'
@@ -3625,13 +3629,13 @@ object STSalesOrdDM: TSTSalesOrdDM
     SQL.Strings = (
       'select * from Vat_Code'
       'order by Vat_Rate')
-    Left = 584
-    Top = 560
+    Left = 730
+    Top = 700
   end
   object dtsVat: TDataSource
     DataSet = qryVat
-    Left = 640
-    Top = 560
+    Left = 800
+    Top = 700
   end
   object qryUpdateContactStatus: TFDQuery
     ConnectionName = 'PB'
@@ -3641,8 +3645,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       'WHERE Customer = :Customer AND'
       '      Branch_No = :Branch_no AND'
       '      Contact_No = :Contact_No')
-    Left = 992
-    Top = 80
+    Left = 1240
+    Top = 100
     ParamData = <
       item
         Name = 'Customer'
@@ -3674,8 +3678,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 1094
-    Top = 68
+    Left = 1368
+    Top = 85
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3731,8 +3735,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 1094
-    Top = 12
+    Left = 1368
+    Top = 15
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3772,8 +3776,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 1094
-    Top = 140
+    Left = 1368
+    Top = 175
     ParamData = <
       item
         Name = 'Sales_Order'
@@ -3789,8 +3793,8 @@ object STSalesOrdDM: TSTSalesOrdDM
       ' '
       ' '
       ' ')
-    Left = 1094
-    Top = 204
+    Left = 1368
+    Top = 255
     ParamData = <
       item
         Name = 'Sales_Order'

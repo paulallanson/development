@@ -58,6 +58,7 @@ begin
   with dbgJB do
     begin
       try
+        if Assigned(datasource.dataset) then
         if datasource.dataset.recordcount > 0 then
           SelectedRows.CurrentRowSelected := true ;
       except

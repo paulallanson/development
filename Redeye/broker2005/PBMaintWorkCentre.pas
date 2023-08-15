@@ -60,7 +60,9 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBLUWorkCentre, ActiveX;
+uses
+  System.UITypes,
+  pbDatabase, pbMainMenu, PBLUWorkCentre, ActiveX;
 
 {$R *.DFM}
 

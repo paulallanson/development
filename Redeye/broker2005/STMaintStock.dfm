@@ -1,9 +1,9 @@
 object STMaintStockFrm: TSTMaintStockFrm
   Left = 2
   Top = 5
-  Width = 796
-  Height = 568
   Caption = 'Maintain Stock Records'
+  ClientHeight = 521
+  ClientWidth = 778
   Color = clBtnFace
   Constraints.MinHeight = 568
   Constraints.MinWidth = 796
@@ -12,21 +12,21 @@ object STMaintStockFrm: TSTMaintStockFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 474
-    Width = 788
+    Top = 461
+    Width = 778
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 474
+    ExplicitWidth = 788
     DesignSize = (
-      788
+      778
       41)
     object btnClose: TBitBtn
       Left = 693
@@ -43,9 +43,10 @@ object STMaintStockFrm: TSTMaintStockFrm
     Left = 0
     Top = 0
     Width = 337
-    Height = 474
+    Height = 461
     Align = alLeft
     TabOrder = 1
+    ExplicitHeight = 474
     object Panel5: TPanel
       Left = 1
       Top = 1
@@ -147,10 +148,12 @@ object STMaintStockFrm: TSTMaintStockFrm
   object pnlRight: TPanel
     Left = 429
     Top = 0
-    Width = 359
-    Height = 474
+    Width = 349
+    Height = 461
     Align = alClient
     TabOrder = 2
+    ExplicitWidth = 359
+    ExplicitHeight = 474
     object Panel6: TPanel
       Left = 1
       Top = 1
@@ -253,17 +256,16 @@ object STMaintStockFrm: TSTMaintStockFrm
     Left = 337
     Top = 0
     Width = 92
-    Height = 474
+    Height = 461
     Align = alLeft
     TabOrder = 3
+    ExplicitHeight = 474
     object btnFromSingle: TBitBtn
       Left = 8
       Top = 120
       Width = 75
       Height = 25
       Enabled = False
-      TabOrder = 0
-      OnClick = btnFromSingleClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -278,6 +280,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnFromSingleClick
     end
     object btnFromMulti: TBitBtn
       Left = 8
@@ -286,8 +290,6 @@ object STMaintStockFrm: TSTMaintStockFrm
       Height = 25
       Caption = 'All'
       Enabled = False
-      TabOrder = 1
-      Visible = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -303,6 +305,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         3333333333333333333333333333333333333333333333333333}
       Layout = blGlyphRight
       NumGlyphs = 2
+      TabOrder = 1
+      Visible = False
     end
     object btnToSingle: TBitBtn
       Left = 8
@@ -310,8 +314,6 @@ object STMaintStockFrm: TSTMaintStockFrm
       Width = 75
       Height = 25
       Enabled = False
-      TabOrder = 2
-      OnClick = btnToSingleClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -326,6 +328,8 @@ object STMaintStockFrm: TSTMaintStockFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnToSingleClick
     end
     object btnToMulti: TBitBtn
       Left = 8
@@ -334,8 +338,6 @@ object STMaintStockFrm: TSTMaintStockFrm
       Height = 25
       Caption = 'All'
       Enabled = False
-      TabOrder = 3
-      Visible = False
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -350,14 +352,18 @@ object STMaintStockFrm: TSTMaintStockFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      Visible = False
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 515
-    Width = 788
+    Top = 502
+    Width = 778
     Height = 19
     Panels = <>
+    ExplicitTop = 515
+    ExplicitWidth = 788
   end
   object qryStockFrom: TFDQuery
     ConnectionName = 'PB'
@@ -370,9 +376,7 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object dtsStockFrom: TDataSource
@@ -391,9 +395,7 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object dtsStockTo: TDataSource
@@ -411,14 +413,10 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 328
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdMovements: TFDQuery
@@ -433,24 +431,16 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
   object qryGetMovements: TFDQuery
@@ -464,14 +454,10 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 440
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdMovementBal: TFDQuery
@@ -516,9 +502,7 @@ object STMaintStockFrm: TSTMaintStockFrm
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_movement'
-        ParamType = ptUnknown
       end>
   end
 end

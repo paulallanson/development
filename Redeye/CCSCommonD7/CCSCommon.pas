@@ -1583,102 +1583,105 @@ begin
     sectionName := formName;
 
   IniFile := TIniFile.Create(iniFileName);
-  userPrefExist := IniFile.ReadBool(sectionName, 'UserPrefs', false);
-  if (userPrefExist=true) then
-  begin
-    tempGrid := TDBGrid.Create(nil);
-    tempGrid.Visible := false;
-    try
-      //first read all the col settings from the ini file into a temporary grid
-      tempColInx := 0;
-      colOrder := 'Col'+IntToStr(tempColInx);
-      colName := IniFile.ReadString(sectionName, colOrder + 'Field', '');
-      while colName <> '' do
-      begin
-        with tempGrid.Columns.Add do
-        begin
-          fieldname := colName;
-          title.caption := IniFile.ReadString(sectionName, colOrder + 'Caption', '');
-          width := IniFile.ReadInteger(sectionName, colOrder + 'Width', 40);
-
-          colAlignment := IniFile.ReadString(sectionName, colOrder + 'Alignment', '');
-          if colAlignment = 'left' then
-            Alignment := taLeftJustify
-          else if colAlignment = 'right' then
-            Alignment := taRightJustify
-          else if colAlignment = 'center' then
-            Alignment := taCenter;
-        end;
-
-        inc(tempColInx);
+  try
+    userPrefExist := IniFile.ReadBool(sectionName, 'UserPrefs', false);
+    if (userPrefExist=true) then
+    begin
+      tempGrid := TDBGrid.Create(nil);
+      tempGrid.Visible := false;
+      try
+        //first read all the col settings from the ini file into a temporary grid
+        tempColInx := 0;
         colOrder := 'Col'+IntToStr(tempColInx);
         colName := IniFile.ReadString(sectionName, colOrder + 'Field', '');
-      end;
-      IniFile.Free;
+        while colName <> '' do
+        begin
+          with tempGrid.Columns.Add do
+          begin
+            fieldname := colName;
+            title.caption := IniFile.ReadString(sectionName, colOrder + 'Caption', '');
+            width := IniFile.ReadInteger(sectionName, colOrder + 'Width', 40);
 
-      //second remove fields from the temp grid that have been removed from the
-      //designed grid
-      for tempColInx := tempGrid.Columns.Count - 1 downto 0 do
-      begin
-        colMatched := false;
+            colAlignment := IniFile.ReadString(sectionName, colOrder + 'Alignment', '');
+            if colAlignment = 'left' then
+              Alignment := taLeftJustify
+            else if colAlignment = 'right' then
+              Alignment := taRightJustify
+            else if colAlignment = 'center' then
+              Alignment := taCenter;
+          end;
+
+          inc(tempColInx);
+          colOrder := 'Col'+IntToStr(tempColInx);
+          colName := IniFile.ReadString(sectionName, colOrder + 'Field', '');
+        end;
+
+        //second remove fields from the temp grid that have been removed from the
+        //designed grid
+        for tempColInx := tempGrid.Columns.Count - 1 downto 0 do
+        begin
+          colMatched := false;
+          for colInx := 0 to dbGrid.Columns.count - 1 do
+          begin
+            if (uppercase(tempGrid.Columns[tempColInx].FieldName)) =
+               (uppercase(dbGrid.Columns[colInx].FieldName)) then
+            begin
+              tempGrid.Columns[tempColInx].Alignment :=
+                dbGrid.Columns[colInx].Alignment;
+              tempGrid.Columns[tempColInx].Title.Alignment :=
+                dbGrid.Columns[colInx].Title.Alignment;
+              colMatched := true;
+              break;
+            end;
+          end;
+          if colMatched = false then
+          begin
+            tempGrid.Columns.Delete(tempColInx);
+          end;
+        end;
+
+        //third add new columns to tempgrid
         for colInx := 0 to dbGrid.Columns.count - 1 do
         begin
-          if (uppercase(tempGrid.Columns[tempColInx].FieldName)) =
-             (uppercase(dbGrid.Columns[colInx].FieldName)) then
+          colMatched := false;
+          for tempColInx := 0 to tempGrid.Columns.Count - 1 do
           begin
-            tempGrid.Columns[tempColInx].Alignment :=
-              dbGrid.Columns[colInx].Alignment;
-            tempGrid.Columns[tempColInx].Title.Alignment :=
-              dbGrid.Columns[colInx].Title.Alignment;
-            colMatched := true;
-            break;
+            if (uppercase(tempGrid.Columns[tempColInx].FieldName)) =
+               (uppercase(dbGrid.Columns[colInx].FieldName)) then
+            begin
+              colMatched := true;
+              break;
+            end;
+          end;
+          if colMatched = false then
+          begin
+            with tempGrid.Columns.add() do
+            begin
+              FieldName := dbGrid.Columns[colInx].FieldName;
+              title.caption := dbGrid.Columns[colInx].title.caption;
+              width := dbGrid.Columns[colInx].width;
+              alignment := dbGrid.Columns[colInx].alignment;
+            end;
           end;
         end;
-        if colMatched = false then
-        begin
-          tempGrid.Columns.Delete(tempColInx);
-        end;
-      end;
 
-      //third add new columns to tempgrid
-      for colInx := 0 to dbGrid.Columns.count - 1 do
-      begin
-        colMatched := false;
-        for tempColInx := 0 to tempGrid.Columns.Count - 1 do
+        //fourth reset grid cols equal to temp grid cols
+        for colInx := 0 to tempGrid.Columns.Count - 1 do
         begin
-          if (uppercase(tempGrid.Columns[tempColInx].FieldName)) =
-             (uppercase(dbGrid.Columns[colInx].FieldName)) then
-          begin
-            colMatched := true;
-            break;
-          end;
+          dbGrid.Columns[colInx].FieldName := tempGrid.Columns[colInx].FieldName;
+          dbGrid.Columns[colInx].title.caption :=
+            tempGrid.Columns[colInx].title.caption;
+          dbGrid.Columns[colInx].width := tempGrid.Columns[colInx].width;
+          dbGrid.Columns[colInx].Alignment := tempGrid.Columns[colInx].Alignment;
+          dbGrid.Columns[colInx].Title.Alignment :=
+            tempGrid.Columns[colInx].Title.Alignment;
         end;
-        if colMatched = false then
-        begin
-          with tempGrid.Columns.add() do
-          begin
-            FieldName := dbGrid.Columns[colInx].FieldName;
-            title.caption := dbGrid.Columns[colInx].title.caption;
-            width := dbGrid.Columns[colInx].width;
-            alignment := dbGrid.Columns[colInx].alignment;
-          end;
-        end;
+      finally
+        tempGrid.Free;
       end;
-
-      //fourth reset grid cols equal to temp grid cols
-      for colInx := 0 to tempGrid.Columns.Count - 1 do
-      begin
-        dbGrid.Columns[colInx].FieldName := tempGrid.Columns[colInx].FieldName;
-        dbGrid.Columns[colInx].title.caption :=
-          tempGrid.Columns[colInx].title.caption;
-        dbGrid.Columns[colInx].width := tempGrid.Columns[colInx].width;
-        dbGrid.Columns[colInx].Alignment := tempGrid.Columns[colInx].Alignment;
-        dbGrid.Columns[colInx].Title.Alignment :=
-          tempGrid.Columns[colInx].Title.Alignment;
-      end;
-    finally
-      tempGrid.Free;
     end;
+  finally
+    IniFile.Free;
   end;
 end;
 
@@ -1690,38 +1693,43 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create (iniFileName);
-  IniFile.EraseSection(sectionName);
-  IniFile.WriteBool(sectionName, 'UserPrefs', true);
-  for colInx := 0 to Pred(dbGrid.columns.count) do
-  begin
-    colOrder := 'Col' + IntToStr(colInx);
-    colName := dbGrid.columns[colInx].fieldname;
-    colCaption := dbGrid.columns[colInx].Title.caption;
-    colWidth :=  dbGrid.columns[colInx].width;
-      
-    if dbGrid.columns[colInx].Alignment = taLeftJustify then
-      colAlignment := 'left'
-    else if dbGrid.columns[colInx].Alignment = taRightJustify then
-      colAlignment := 'right'
-    else
-      colAlignment := 'center';
+  try
+    IniFile.EraseSection(sectionName);
+    IniFile.WriteBool(sectionName, 'UserPrefs', true);
+    for colInx := 0 to Pred(dbGrid.columns.count) do
+    begin
+      colOrder := 'Col' + IntToStr(colInx);
+      colName := dbGrid.columns[colInx].fieldname;
+      colCaption := dbGrid.columns[colInx].Title.caption;
+      colWidth :=  dbGrid.columns[colInx].width;
 
-    IniFile.WriteString(sectionName, colOrder + 'Field', colName);
-    IniFile.WriteString(sectionName, colOrder + 'Caption', colCaption);
-    IniFile.WriteInteger(sectionName, colOrder + 'Width', colWidth);
-    IniFile.WriteString(sectionName, colOrder + 'Alignment', colAlignment);
+      if dbGrid.columns[colInx].Alignment = taLeftJustify then
+        colAlignment := 'left'
+      else if dbGrid.columns[colInx].Alignment = taRightJustify then
+        colAlignment := 'right'
+      else
+        colAlignment := 'center';
+
+      IniFile.WriteString(sectionName, colOrder + 'Field', colName);
+      IniFile.WriteString(sectionName, colOrder + 'Caption', colCaption);
+      IniFile.WriteInteger(sectionName, colOrder + 'Width', colWidth);
+      IniFile.WriteString(sectionName, colOrder + 'Alignment', colAlignment);
+    end;
+  finally
+    IniFile.Free;
   end;
-
-  IniFile.Free;
 end;
 
 procedure DeleteColSettings(sectionName, iniFileName: string);
 var
   IniFile : TIniFile;
 begin
-  IniFile := TIniFile.Create (iniFileName);
-  IniFile.EraseSection(sectionName);
-  IniFile.Free;
+  IniFile := TIniFile.Create(iniFileName);
+  try
+    IniFile.EraseSection(sectionName);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 {get window's system directory}
@@ -1838,13 +1846,14 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create (iniFileName);
-
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Top', theForm.Top);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Left', theForm.Left);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Height', theForm.Height);
-  IniFile.WriteInteger('FormPositions', theForm.Name + 'Width', theForm.Width);
-
-  IniFile.Free;
+  try
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Top', theForm.Top);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Left', theForm.Left);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Height', theForm.Height);
+    IniFile.WriteInteger('FormPositions', theForm.Name + 'Width', theForm.Width);
+  finally
+    IniFile.Free;
+  end;
 end;
 
 procedure LoadFormLayout(iniFileName: string; theForm: TForm);
@@ -1852,20 +1861,22 @@ var
   IniFile : TIniFile;
 begin
   IniFile := TIniFile.Create(iniFileName);
-
-  if IniFile.ReadInteger('FormPositions', theForm.Name+'Top', -1) <> -1 then
-  begin
-    theForm.Position := poDesigned;
-    theForm.Top := IniFile.ReadInteger('FormPositions', theForm.Name+'Top', theForm.Top);
-    theForm.Left := IniFile.ReadInteger('FormPositions', theForm.Name+'Left', theForm.Left);
-    theForm.Height := IniFile.ReadInteger('FormPositions', theForm.Name+'Height', theForm.Height);
-    theForm.Width := IniFile.ReadInteger('FormPositions', theForm.Name+'Width', theForm.Width);
+  try
+    if IniFile.ReadInteger('FormPositions', theForm.Name+'Top', -1) <> -1 then
+    begin
+      theForm.Position := poDesigned;
+      theForm.Top := IniFile.ReadInteger('FormPositions', theForm.Name+'Top', theForm.Top);
+      theForm.Left := IniFile.ReadInteger('FormPositions', theForm.Name+'Left', theForm.Left);
+      theForm.Height := IniFile.ReadInteger('FormPositions', theForm.Name+'Height', theForm.Height);
+      theForm.Width := IniFile.ReadInteger('FormPositions', theForm.Name+'Width', theForm.Width);
+    end;
+  finally
+    IniFile.Free;
   end;
-  IniFile.Free;
 end;
 
 procedure GetPrinterValues(var Copies: Integer; var Bin: TQRBin; var Size:
-TQRPaperSize; var Duplex: Boolean);
+  TQRPaperSize; var Duplex: Boolean);
 var
    FDevice: PChar;
    FDriver: PChar;

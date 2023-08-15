@@ -180,7 +180,7 @@ object dtmdlJobs: TdtmdlJobs
   object qryDummy: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT DISTINCT TOP :Records'
+      'SELECT DISTINCT TOP (:Records)'
       '       Job_Bag.Job_Bag,'
       '       Job_Bag.Job_Bag_Descr,'
       '       Customer.Name as Customer_Name,'
@@ -279,12 +279,14 @@ object dtmdlJobs: TdtmdlJobs
       '        ON End_User.Customer = Job_Bag.End_User_Customer'
       'WHERE ((Job_Bag.Customer = :Customer) or (0 = :Customer)) AND'
       '      (Job_Bag.Job_Bag_Descr LIKE :Description)')
-    Left = 310
+    Left = 286
     Top = 50
     ParamData = <
       item
         Name = 'RECORDS'
+        DataType = ftInteger
         ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Customer'
@@ -713,7 +715,7 @@ object dtmdlJobs: TdtmdlJobs
   end
   object qryDummyOlder: TFDQuery
     SQL.Strings = (
-      'SELECT DISTINCT TOP :Records'
+      'SELECT DISTINCT TOP (:Records)'
       '       Job_Bag.Job_Bag,'
       '       Job_Bag.Job_Bag_Descr,'
       '       Customer.Name as Customer_Name,'
@@ -942,7 +944,7 @@ object dtmdlJobs: TdtmdlJobs
   end
   object qryDummyOld: TFDQuery
     SQL.Strings = (
-      'SELECT DISTINCT TOP :Records'
+      'SELECT DISTINCT TOP (:Records)'
       '       Job_Bag.Job_Bag,'
       '       Job_Bag.Job_Bag_Descr,'
       '       Customer.Name as Customer_Name,'

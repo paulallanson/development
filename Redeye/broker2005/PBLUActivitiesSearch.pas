@@ -56,7 +56,9 @@ var
 
 implementation
 
-uses CCSCommon, DateSelV5;
+uses
+  System.UITypes,
+  CCSCommon, DateSelV5;
 
 {$R *.dfm}
 

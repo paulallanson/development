@@ -81,7 +81,9 @@ var
 
 implementation
 
-uses PBDatabase, PBLUCust, PBPOObjects, CCSCommon, PBLUOps,
+uses
+  System.UITypes,
+  PBDatabase, PBLUCust, PBPOObjects, CCSCommon, PBLUOps,
   PBLUActivityType, PBRPActivityCust;
 
 {$R *.DFM}

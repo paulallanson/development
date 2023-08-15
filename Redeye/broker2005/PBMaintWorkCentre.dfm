@@ -1,27 +1,25 @@
-﻿object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
+object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
   Left = 225
   Top = 152
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre'
-  ClientHeight = 274
-  ClientWidth = 380
+  ClientHeight = 265
+  ClientWidth = 374
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
-    380
-    274)
-  PixelsPerInch = 96
+    374
+    265)
   TextHeight = 13
   object DelLabel: TLabel
     Left = 69
-    Top = 250
+    Top = 241
     Width = 125
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -32,6 +30,7 @@
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitTop = 250
   end
   object Label1: TLabel
     Left = 7
@@ -84,8 +83,8 @@
   object Label7: TLabel
     Left = 215
     Top = 141
-    Width = 74
-    Height = 28
+    Width = 63
+    Height = 26
     Caption = 'Click Charge per 1000'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
@@ -97,15 +96,12 @@
   end
   object OKBitBtn: TBitBtn
     Left = 205
-    Top = 242
+    Top = 233
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 7
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -170,19 +166,20 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = OKBitBtnClick
+    ExplicitTop = 242
   end
   object CancelBitBtn: TBitBtn
     Left = 285
-    Top = 242
+    Top = 233
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 8
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -247,7 +244,11 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 8
+    OnClick = CancelBitBtnClick
+    ExplicitTop = 242
   end
   object edtName: TEdit
     Left = 94
@@ -333,8 +334,8 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -358,8 +359,8 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -387,44 +388,28 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Short_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Hourly_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Feed_Method'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Estimating_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Click_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -437,9 +422,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -454,14 +437,10 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre'
-        ParamType = ptUnknown
       end>
   end
   object qryFeedMethod: TFDQuery

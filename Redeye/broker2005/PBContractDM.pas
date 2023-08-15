@@ -39,18 +39,15 @@ type
     qryGetdbKey: TFDQuery;
     qrySalesInvoices: TFDQuery;
     dtsSalesInvoices: TDataSource;
+    qryAllSalesInvoiceCharges: TFDQuery;
     qrySalesInvoicesSales_Invoice: TIntegerField;
-    qrySalesInvoicesSales_Invoice_No: TStringField;
-    qrySalesInvoicesInvoice_Date: TDateTimeField;
-    qrySalesInvoicesInvoice_Description: TStringField;
-    qrySalesInvoicesInvoice_or_Credit: TStringField;
+    qrySalesInvoicesSales_Invoice_No: TWideStringField;
+    qrySalesInvoicesInvoice_Date: TSQLTimeStampField;
+    qrySalesInvoicesInvoice_Description: TWideStringField;
+    qrySalesInvoicesInvoice_or_Credit: TWideStringField;
     qrySalesInvoicesGoods_Value: TFloatField;
     qrySalesInvoicesVat_Value: TFloatField;
     qrySalesInvoicesTotal_Value: TFloatField;
-    qryAllSalesInvoiceCharges: TFDQuery;
-    qrySalesInvoicesTotal_Goods: TFloatField;
-    qrySalesInvoicesTotal_Vat: TFloatField;
-    qrySalesInvoicesTotal_Invoice: TFloatField;
     procedure qrySalesInvoicesCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
@@ -96,7 +93,7 @@ type
     function UsingSearch: boolean;
   end;
 
-  TContract       = class
+  TContract = class
   private
     FBranch: integer;
     FOperator: integer;

@@ -134,8 +134,8 @@ object dtmdlCustomers: TdtmdlCustomers
   end
   object StatusDataSource: TDataSource
     DataSet = GetStatusSQL
-    Left = 410
-    Top = 220
+    Left = 434
+    Top = 196
   end
   object GetStatusSQL: TFDQuery
     ConnectionName = 'PB'
@@ -146,7 +146,7 @@ object dtmdlCustomers: TdtmdlCustomers
       ' '
       ' ')
     Left = 360
-    Top = 220
+    Top = 196
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -238,227 +238,266 @@ object dtmdlCustomers: TdtmdlCustomers
     Top = 270
     ParamData = <
       item
-        Name = 'Name'
-      end
-      item
-        Name = 'Acc_Active'
-      end
-      item
-        Name = 'Credit_Limit'
-      end
-      item
-        Name = 'Settlement_Days'
-      end
-      item
-        Name = 'Settlement_Discount'
-      end
-      item
-        Name = 'Credit_Status'
-      end
-      item
-        Name = 'Intrastat_Id'
-      end
-      item
-        Name = 'Country_Id'
-        DataType = ftInteger
-      end
-      item
-        Name = 'VAT_Reference'
-      end
-      item
-        Name = 'Available_Credit'
-      end
-      item
-        Name = 'Currency_Code_Def'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Customer_Type'
-      end
-      item
-        Name = 'VAT_Code_Def'
-        DataType = ftInteger
-      end
-      item
-        Name = 'Customer_Status'
-      end
-      item
-        Name = 'Online_Ordering'
-      end
-      item
-        Name = 'Email_Ord'
-      end
-      item
-        Name = 'Consumer_Code'
+        Name = 'NAME'
         DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end
       item
-        Name = 'invoice_upfront'
-      end
-      item
-        Name = 'Date_Created'
-        DataType = ftDateTime
-      end
-      item
-        Name = 'Product_Code_Prefix'
-        DataType = ftString
+        Name = 'ACC_ACTIVE'
         ParamType = ptInput
       end
       item
-        Name = 'Call_Off_Delivery_Note_Type'
-        DataType = ftString
+        Name = 'CREDIT_LIMIT'
+        ParamType = ptInput
       end
       item
-        Name = 'Contract_Code'
+        Name = 'SETTLEMENT_DAYS'
+        ParamType = ptInput
       end
       item
-        Name = 'Transfer_Site_URL'
+        Name = 'SETTLEMENT_DISCOUNT'
+        ParamType = ptInput
       end
       item
-        Name = 'Transfer_Protocol_Type'
-        DataType = ftString
+        Name = 'CREDIT_STATUS'
+        ParamType = ptInput
       end
       item
-        Name = 'Client_Account_Code'
+        Name = 'INTRASTAT_ID'
+        ParamType = ptInput
       end
       item
-        Name = 'Connection_Username'
+        Name = 'COUNTRY_ID'
+        ParamType = ptInput
       end
       item
-        Name = 'Connection_Password'
+        Name = 'VAT_REFERENCE'
+        ParamType = ptInput
       end
       item
-        Name = 'e_Invoicing_System'
-        DataType = ftString
+        Name = 'AVAILABLE_CREDIT'
+        ParamType = ptInput
       end
       item
-        Name = 'Electronic_Invoice_Required'
+        Name = 'CURRENCY_CODE_DEF'
+        ParamType = ptInput
       end
       item
-        Name = 'Use_Kingfield_Ordering'
+        Name = 'CUSTOMER_TYPE'
+        ParamType = ptInput
       end
       item
-        Name = 'Use_Print_Evolved'
+        Name = 'VAT_CODE_DEF'
+        ParamType = ptInput
       end
       item
-        Name = 'Cost_Centre_Level'
-        DataType = ftString
+        Name = 'CUSTOMER_STATUS'
+        ParamType = ptInput
       end
       item
-        Name = 'Use_Discount_Invoice'
+        Name = 'ONLINE_ORDERING'
+        ParamType = ptInput
       end
       item
-        Name = 'Payment_Terms'
-        DataType = ftInteger
+        Name = 'EMAIL_ORD'
+        ParamType = ptInput
       end
       item
-        Name = 'Create_Branch_Online'
+        Name = 'CONSUMER_CODE'
+        ParamType = ptInput
       end
       item
-        Name = 'Customer_Logo_File'
+        Name = 'INVOICE_UPFRONT'
+        ParamType = ptInput
       end
       item
-        Name = 'Product_Prefix_Not_Required'
+        Name = 'DATE_CREATED'
+        ParamType = ptInput
       end
       item
-        Name = 'Show_Available_Stock'
+        Name = 'PRODUCT_CODE_PREFIX'
+        ParamType = ptInput
       end
       item
-        Name = 'Analysis_Code_1'
+        Name = 'CALL_OFF_DELIVERY_NOTE_TYPE'
+        ParamType = ptInput
       end
       item
-        Name = 'Analysis_Code_2'
+        Name = 'CONTRACT_CODE'
+        ParamType = ptInput
       end
       item
-        Name = 'Analysis_Code_3'
+        Name = 'TRANSFER_SITE_URL'
+        ParamType = ptInput
       end
       item
-        Name = 'Analysis_Code_4'
+        Name = 'TRANSFER_PROTOCOL_TYPE'
+        ParamType = ptInput
       end
       item
-        Name = 'Pre_Pay_Balance'
+        Name = 'CLIENT_ACCOUNT_CODE'
+        ParamType = ptInput
       end
       item
-        Name = 'invoice_location'
-        DataType = ftInteger
+        Name = 'CONNECTION_USERNAME'
+        ParamType = ptInput
       end
       item
-        Name = 'Direct_Debit_Code'
+        Name = 'CONNECTION_PASSWORD'
+        ParamType = ptInput
       end
       item
-        Name = 'Created_By'
-        DataType = ftInteger
+        Name = 'E_INVOICING_SYSTEM'
+        ParamType = ptInput
       end
       item
-        Name = 'Credit_Score'
-        DataType = ftInteger
+        Name = 'ELECTRONIC_INVOICE_REQUIRED'
+        ParamType = ptInput
       end
       item
-        Name = 'Credit_Rating'
-        DataType = ftInteger
+        Name = 'USE_KINGFIELD_ORDERING'
+        ParamType = ptInput
       end
       item
-        Name = 'Last_Annual_Return_Date'
-        DataType = ftDateTime
+        Name = 'USE_PRINT_EVOLVED'
+        ParamType = ptInput
       end
       item
-        Name = 'Accounts_Lodged_Date'
-        DataType = ftDateTime
+        Name = 'COST_CENTRE_LEVEL'
+        ParamType = ptInput
       end
       item
-        Name = 'Latest_Filed_Accounts_Date'
-        DataType = ftDateTime
+        Name = 'USE_DISCOUNT_INVOICE'
+        ParamType = ptInput
       end
       item
-        Name = 'Accounts_Reference_Date'
-        DataType = ftString
+        Name = 'PAYMENT_TERMS'
+        ParamType = ptInput
       end
       item
-        Name = 'Issued_Capital'
-        DataType = ftFloat
+        Name = 'CREATE_BRANCH_ONLINE'
+        ParamType = ptInput
       end
       item
-        Name = 'Company_Type'
-        DataType = ftInteger
+        Name = 'CUSTOMER_LOGO_FILE'
+        ParamType = ptInput
       end
       item
-        Name = 'SIC_Code'
-        DataType = ftInteger
+        Name = 'PRODUCT_PREFIX_NOT_REQUIRED'
+        ParamType = ptInput
       end
       item
-        Name = 'Level_of_Importance'
-        DataType = ftInteger
+        Name = 'SHOW_AVAILABLE_STOCK'
+        ParamType = ptInput
       end
       item
-        Name = 'GDPR_Letter_Sent'
-        DataType = ftString
+        Name = 'ANALYSIS_CODE_1'
+        ParamType = ptInput
       end
       item
-        Name = 'GDPR_Letter_Signed'
-        DataType = ftString
+        Name = 'ANALYSIS_CODE_2'
+        ParamType = ptInput
       end
       item
-        Name = 'GDPR_Letter_Signed_Date'
-        DataType = ftDateTime
+        Name = 'ANALYSIS_CODE_3'
+        ParamType = ptInput
       end
       item
-        Name = 'GDPR_Letter_Signed_Operator'
-        DataType = ftInteger
+        Name = 'ANALYSIS_CODE_4'
+        ParamType = ptInput
       end
       item
-        Name = 'Customer_Is_Acquired'
+        Name = 'PRE_PAY_BALANCE'
+        ParamType = ptInput
       end
       item
-        Name = 'Override_Cost_Markup_Perc'
+        Name = 'INVOICE_LOCATION'
+        ParamType = ptInput
       end
       item
-        Name = 'Default_Quote_Cost_Markup_Perc'
+        Name = 'DIRECT_DEBIT_CODE'
+        ParamType = ptInput
       end
       item
-        Name = 'CTRLP_Master_Customer'
+        Name = 'CREATED_BY'
+        ParamType = ptInput
       end
       item
-        Name = 'Customer'
+        Name = 'CREDIT_SCORE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CREDIT_RATING'
+        ParamType = ptInput
+      end
+      item
+        Name = 'LAST_ANNUAL_RETURN_DATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ACCOUNTS_LODGED_DATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'LATEST_FILED_ACCOUNTS_DATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ACCOUNTS_REFERENCE_DATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ISSUED_CAPITAL'
+        ParamType = ptInput
+      end
+      item
+        Name = 'COMPANY_TYPE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'SIC_CODE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'LEVEL_OF_IMPORTANCE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'GDPR_LETTER_SENT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'GDPR_LETTER_SIGNED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'GDPR_LETTER_SIGNED_DATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'GDPR_LETTER_SIGNED_OPERATOR'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CUSTOMER_IS_ACQUIRED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'OVERRIDE_COST_MARKUP_PERC'
+        ParamType = ptInput
+      end
+      item
+        Name = 'DEFAULT_QUOTE_COST_MARKUP_PERC'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CTRLP_MASTER_CUSTOMER'
+        ParamType = ptInput
+      end
+      item
+        Name = 'CUSTOMER'
+        ParamType = ptInput
       end>
   end
   object GetCurrSQL: TFDQuery
@@ -467,8 +506,8 @@ object dtmdlCustomers: TdtmdlCustomers
       'Select Currency_Code, Currency_Code_Descr'
       'from Currency_Code'
       'Order By Currency_Code_Descr')
-    Left = 520
-    Top = 215
+    Left = 528
+    Top = 197
   end
   object GetTypesSQL: TFDQuery
     ConnectionName = 'PB'
@@ -1438,7 +1477,7 @@ object dtmdlCustomers: TdtmdlCustomers
   object dtsProspects: TDataSource
     DataSet = qryProspects
     Left = 120
-    Top = 60
+    Top = 84
   end
   object qryProspectBase: TFDQuery
     ConnectionName = 'PB'
@@ -1588,7 +1627,7 @@ object dtmdlCustomers: TdtmdlCustomers
         'tus < 100))'
       '')
     Left = 200
-    Top = 60
+    Top = 84
     ParamData = <
       item
         Name = 'Code_From'
@@ -1602,7 +1641,7 @@ object dtmdlCustomers: TdtmdlCustomers
   object qryProspects: TFDQuery
     ConnectionName = 'PB'
     Left = 30
-    Top = 60
+    Top = 84
   end
   object qryUpdMulti: TFDQuery
     ConnectionName = 'PB'
@@ -2568,12 +2607,12 @@ object dtmdlCustomers: TdtmdlCustomers
   object qryEndUsers: TFDQuery
     ConnectionName = 'PB'
     Left = 30
-    Top = 140
+    Top = 164
   end
   object dtsEndUsers: TDataSource
     DataSet = qryEndUsers
     Left = 120
-    Top = 140
+    Top = 164
   end
   object qryEndUserBase: TFDQuery
     ConnectionName = 'PB'
@@ -2721,7 +2760,7 @@ object dtmdlCustomers: TdtmdlCustomers
       '      ((Customer.Customer_Status = 200))'
       '')
     Left = 200
-    Top = 140
+    Top = 164
     ParamData = <
       item
         Name = 'Code_From'

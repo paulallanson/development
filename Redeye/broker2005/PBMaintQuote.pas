@@ -1743,12 +1743,7 @@ var
   QuoteLine : TQuoteLIne;
   PBMaintQuoteLinesFrm: TPBMaintQuoteLinesFrm;
 begin
-  try
-    inx := strtoint(sgLines.cells[0,sgLines.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 1);
   irow := inx;
 
   if aMode = qlAdd then
@@ -1833,12 +1828,7 @@ var
   QuoteSupply : TQuoteSupply;
   PBMaintQuoteSupplyFrm: TPBMaintQuoteSupplyFrm;
 begin
-  try
-    inx := strtoint(sgSupply.cells[0,sgSupply.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgSupply.cells[0,sgSupply.row], 1);
   irow := inx;
 
   if aMode = qlAdd then
@@ -2064,12 +2054,7 @@ var
   QuoteSupply: TQuoteSupply;
   inx: integer;
 begin
-  try
-    inx := strtoint(sgSupply.cells[0,sgSupply.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgSupply.cells[0,sgSupply.row], 1);
   inx := Quote.Supplies.IndexOf(inx);
   QuoteSupply := Quote.Supplies[inx];
 

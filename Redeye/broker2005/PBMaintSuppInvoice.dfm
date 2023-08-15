@@ -2,10 +2,9 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   Left = 3
   Top = 1
   Anchors = [akRight, akBottom]
-  AutoScroll = False
   Caption = 'Supplier Invoice details'
-  ClientHeight = 543
-  ClientWidth = 787
+  ClientHeight = 534
+  ClientWidth = 781
   Color = clBtnFace
   Constraints.MinHeight = 570
   Constraints.MinWidth = 795
@@ -14,21 +13,20 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 787
+    Width = 781
     Height = 161
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 787
     object Label6: TLabel
       Left = 8
       Top = 8
@@ -135,8 +133,6 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Top = 68
       Width = 25
       Height = 25
-      TabOrder = 6
-      OnClick = btnInvDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -151,6 +147,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnInvDateClick
     end
     object dblkpOperator: TDBLookupComboBox
       Left = 571
@@ -183,8 +181,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 524
-    Width = 787
+    Top = 515
+    Width = 781
     Height = 19
     Panels = <
       item
@@ -193,20 +191,24 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       item
         Width = 50
       end>
+    ExplicitTop = 524
+    ExplicitWidth = 787
   end
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 472
-    Width = 787
+    Top = 463
+    Width = 781
     Height = 52
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 472
+    ExplicitWidth = 787
     DesignSize = (
-      787
+      781
       52)
     object lblDeleteprompt: TLabel
-      Left = 456
+      Left = 444
       Top = 20
       Width = 117
       Height = 16
@@ -218,17 +220,16 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 456
     end
     object btnOK: TBitBtn
-      Left = 608
+      Left = 596
       Top = 16
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -247,23 +248,28 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
+      ExplicitLeft = 608
     end
     object BitBtn2: TBitBtn
-      Left = 696
+      Left = 684
       Top = 16
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
+      ExplicitLeft = 696
     end
     object pnlValues: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 432
       Height = 50
       Align = alLeft
+      ParentBackground = False
       TabOrder = 2
       object lblInvoiceValue: TLabel
         Left = 16
@@ -307,13 +313,15 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 349
-    Width = 787
+    Top = 340
+    Width = 781
     Height = 123
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 349
+    ExplicitWidth = 787
     object Label10: TLabel
       Left = 4
       Top = 8
@@ -342,13 +350,13 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
         101)
     end
     object pnlTotals: TPanel
-      ParentBackground = False
       Left = 601
       Top = 1
       Width = 185
       Height = 121
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       DesignSize = (
         185
@@ -425,8 +433,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
   object sgLines: TStringGrid
     Left = 0
     Top = 161
-    Width = 787
-    Height = 188
+    Width = 781
+    Height = 179
     Align = alClient
     ColCount = 10
     DefaultColWidth = 40
@@ -437,6 +445,8 @@ object PBMaintSuppInvoicefrm: TPBMaintSuppInvoicefrm
     OnDblClick = sgLinesDblClick
     OnDrawCell = sgLinesDrawCell
     OnSelectCell = sgLinesSelectCell
+    ExplicitWidth = 787
+    ExplicitHeight = 188
     ColWidths = (
       40
       83

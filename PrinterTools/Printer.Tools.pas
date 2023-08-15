@@ -124,7 +124,7 @@ begin
       {$ENDIF}
     end;
     pftJPEG : gtQRExportInterface1.Engine := gtJPEGEngine1;
-    else raise Exception.Create('Invalid file type.');
+    else raise Exception.Create('Invalid file type: ' + attachmentType + '.');
   end;
 
   IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := fileName;

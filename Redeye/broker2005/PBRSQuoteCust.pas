@@ -78,7 +78,9 @@ var
 
 implementation
 
-uses PBLURep, PBDatabase, PBLUCust, PBPOObjects, CCSCommon,
+uses
+  System.UITypes,
+  PBLURep, PBDatabase, PBLUCust, PBPOObjects, CCSCommon,
   PBRPQuoteCust, PBRPQuoteProduction;
 
 {$R *.DFM}

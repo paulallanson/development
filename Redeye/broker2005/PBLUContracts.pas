@@ -81,7 +81,9 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, CCSCommon, PBMaintContract, PBLUContractSearch;
+uses
+  System.UITypes, System.Types,
+  pbMainMenu, pbDatabase, CCSCommon, PBMaintContract, PBLUContractSearch;
 
 {$R *.dfm}
 

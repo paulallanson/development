@@ -3,21 +3,19 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   Top = 70
   BorderStyle = bsDialog
   Caption = 'Contract Search'
-  ClientHeight = 383
-  ClientWidth = 288
+  ClientHeight = 374
+  ClientWidth = 282
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    288
-    383)
-  PixelsPerInch = 96
+    282
+    374)
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -125,16 +123,17 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 310
+    Top = 301
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show inactive contracts'
     TabOrder = 13
+    ExplicitTop = 310
   end
   object SearchButton: TButton
     Left = 12
-    Top = 342
+    Top = 333
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -142,6 +141,7 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Default = True
     TabOrder = 14
     OnClick = SearchButtonClick
+    ExplicitTop = 342
   end
   object edtDescription: TEdit
     Left = 120
@@ -170,8 +170,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Top = 221
     Width = 25
     Height = 25
-    TabOrder = 9
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -186,6 +184,8 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = btnDateClick
   end
   object edtRep: TEdit
     Left = 120
@@ -210,23 +210,25 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
   end
   object ClearButton: TButton
     Left = 198
-    Top = 343
+    Top = 334
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 15
     OnClick = ClearButtonClick
+    ExplicitTop = 343
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
     Left = 12
-    Top = 287
+    Top = 278
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY live contracts'
     TabOrder = 12
+    ExplicitTop = 287
   end
   object edtDateReq: TEdit
     Left = 120
@@ -241,8 +243,6 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
     Top = 245
     Width = 25
     Height = 25
-    TabOrder = 11
-    OnClick = btnDateReqClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -257,6 +257,8 @@ object frmPBLUContractSearch: TfrmPBLUContractSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = btnDateReqClick
   end
   object edtSubRep: TEdit
     Left = 120

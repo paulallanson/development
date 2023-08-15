@@ -3,23 +3,21 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Non Conformance Count Report'
-  ClientHeight = 215
-  ClientWidth = 416
+  ClientHeight = 206
+  ClientWidth = 410
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   DesignSize = (
-    416
-    215)
-  PixelsPerInch = 96
+    410
+    206)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -36,7 +34,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Caption = 'No of Periods'
   end
   object rdgrpReportType: TRadioGroup
-    ParentBackground = False
     Left = 288
     Top = 11
     Width = 119
@@ -46,6 +43,7 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Items.Strings = (
       'Customer'
       'Reason Type')
+    ParentBackground = False
     TabOrder = 10
     OnClick = rdgrpReportTypeClick
   end
@@ -60,7 +58,6 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Visible = False
   end
   object rgSelection: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 88
     Width = 121
@@ -70,15 +67,16 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 0
     OnClick = rgSelectionClick
   end
   object pnlSelection: TPanel
-    ParentBackground = False
     Left = 140
     Top = 88
     Width = 267
     Height = 65
+    ParentBackground = False
     TabOrder = 1
     Visible = False
     object lblSelection: TLabel
@@ -113,26 +111,26 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     end
   end
   object CancelBitBtn: TBitBtn
-    Left = 335
-    Top = 175
+    Left = 323
+    Top = 166
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Caption = '&Close'
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = CancelBitBtnClick
-    NumGlyphs = 2
+    ExplicitLeft = 335
+    ExplicitTop = 175
   end
   object PreviewBitBtn: TBitBtn
     Left = 12
-    Top = 174
+    Top = 165
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Preview'
     Enabled = False
-    TabOrder = 3
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -147,17 +145,18 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = PreviewBitBtnClick
+    ExplicitTop = 174
   end
   object PrintBitBtn: TBitBtn
     Left = 97
-    Top = 174
+    Top = 165
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
     Enabled = False
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -172,6 +171,9 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
+    ExplicitTop = 174
   end
   object dblkpPeriod: TDBLookupComboBox
     Left = 112
@@ -195,14 +197,12 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
   end
   object btnExcel: TBitBtn
     Left = 178
-    Top = 175
+    Top = 166
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
     Enabled = False
-    TabOrder = 9
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -246,13 +246,16 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 9
+    OnClick = btnExcelClick
+    ExplicitTop = 175
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 75
     Top = 67
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
@@ -282,14 +285,10 @@ object PBRSNCAClientfrm: TPBRSNCAClientfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'First_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Period'
-        ParamType = ptUnknown
       end>
   end
   object qryPeriod: TFDQuery

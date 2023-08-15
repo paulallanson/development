@@ -2,8 +2,8 @@ object frmPBluNCA: TfrmPBluNCA
   Left = 29
   Top = 115
   Caption = 'Non Conformamce Advice'
-  ClientHeight = 370
-  ClientWidth = 679
+  ClientHeight = 361
+  ClientWidth = 673
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBluNCA: TfrmPBluNCA
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 679
+    Width = 673
     Height = 45
     Bands = <
       item
@@ -95,8 +95,8 @@ object frmPBluNCA: TfrmPBluNCA
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 679
-    Height = 235
+    Width = 673
+    Height = 226
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -215,8 +215,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object Panel1: TPanel
     Left = 0
-    Top = 310
-    Width = 679
+    Top = 301
+    Width = 673
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -289,8 +289,8 @@ object frmPBluNCA: TfrmPBluNCA
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 351
-    Width = 679
+    Top = 342
+    Width = 673
     Height = 19
     Panels = <
       item
@@ -308,7 +308,7 @@ object frmPBluNCA: TfrmPBluNCA
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 679
+    Width = 673
     Height = 30
     Align = alTop
     BevelInner = bvLowered

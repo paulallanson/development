@@ -1,31 +1,31 @@
 object PBWorkstationLockFrm: TPBWorkstationLockFrm
   Left = 293
   Top = 124
-  Width = 878
-  Height = 417
   Caption = 'Maintain Locked Records'
+  ClientHeight = 370
+  ClientWidth = 860
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 342
-    Width = 870
+    Top = 329
+    Width = 860
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 342
+    ExplicitWidth = 870
     DesignSize = (
-      870
+      860
       41)
     object btnUnlock: TButton
       Left = 8
@@ -46,7 +46,7 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
       OnClick = btnRefreshClick
     end
     object btnClose: TButton
-      Left = 782
+      Left = 772
       Top = 8
       Width = 75
       Height = 25
@@ -54,13 +54,14 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
       Caption = '&Close'
       TabOrder = 2
       OnClick = btnCloseClick
+      ExplicitLeft = 782
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 870
-    Height = 342
+    Width = 860
+    Height = 329
     Align = alClient
     DataSource = dtsWorkstationLock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -157,14 +158,10 @@ object PBWorkstationLockFrm: TPBWorkstationLockFrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Lock_no'
-        ParamType = ptUnknown
       end>
   end
 end

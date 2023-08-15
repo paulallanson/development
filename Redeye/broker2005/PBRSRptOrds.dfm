@@ -1,9 +1,9 @@
 object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Left = 15
   Top = 30
-  Width = 750
-  Height = 483
   Caption = 'Expected Reorder Report'
+  ClientHeight = 436
+  ClientWidth = 732
   Color = clBtnFace
   Constraints.MinHeight = 462
   Constraints.MinWidth = 735
@@ -12,22 +12,21 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 742
+    Width = 732
     Height = 113
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 742
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
@@ -57,7 +56,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Caption = 'days'
     end
     object AllOrOneRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 105
@@ -66,11 +64,11 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Items.Strings = (
         'All Reps '
         'One Reps ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = AllOrOneRadioGroupClick
     end
     object customerrg: TRadioGroup
-      ParentBackground = False
       Left = 368
       Top = 8
       Width = 121
@@ -79,6 +77,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Items.Strings = (
         'All Customers'
         'One Customer')
+      ParentBackground = False
       TabOrder = 1
       OnClick = customerrgClick
     end
@@ -87,7 +86,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Top = 80
       Width = 145
       Height = 21
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cmbbxOrderBy1Change
       Items.Strings = (
@@ -100,7 +98,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Top = 80
       Width = 145
       Height = 21
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cmbbxOrderBy1Change
       Items.Strings = (
@@ -127,11 +124,11 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnExit = edtDueDaysExit
     end
     object grpbxReps: TGroupBox
-      ParentBackground = False
       Left = 117
       Top = 8
       Width = 249
       Height = 65
+      ParentBackground = False
       TabOrder = 6
       Visible = False
       object lblRep: TLabel
@@ -168,11 +165,11 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       end
     end
     object grpbxCustomers: TGroupBox
-      ParentBackground = False
       Left = 493
       Top = 8
       Width = 240
       Height = 65
+      ParentBackground = False
       TabOrder = 7
       Visible = False
       object Customerlbl: TLabel
@@ -210,15 +207,17 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     end
   end
   object pnlButton: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 389
-    Width = 742
+    Top = 376
+    Width = 732
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 389
+    ExplicitWidth = 742
     DesignSize = (
-      742
+      732
       41)
     object CancelBitBtn: TBitBtn
       Left = 14
@@ -227,8 +226,9 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Cancel'
-      TabOrder = 0
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object btbtnRepeat: TBitBtn
       Left = 165
@@ -237,8 +237,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Height = 25
       Cancel = True
       Caption = '&Repeat'
-      TabOrder = 1
-      OnClick = btbtnRepeatClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -253,6 +251,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         0F055555557F55557F755555550FFFFF00555555557FFFFF7755555555000000
         0555555555777777755555555555555555555555555555555555}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnRepeatClick
     end
     object btbtnChange: TBitBtn
       Left = 245
@@ -261,8 +261,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Height = 25
       Cancel = True
       Caption = 'Change'
-      TabOrder = 2
-      OnClick = btbtnChangeClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -277,6 +275,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btbtnChangeClick
     end
     object PreviewBitBtn: TBitBtn
       Left = 560
@@ -285,8 +285,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Preview'
-      TabOrder = 3
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -301,6 +299,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 648
@@ -309,8 +309,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Print'
-      TabOrder = 4
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -325,13 +323,15 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = PrintBitBtnClick
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 742
-    Height = 276
+    Width = 732
+    Height = 263
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
@@ -452,8 +452,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 430
-    Width = 742
+    Top = 417
+    Width = 732
     Height = 19
     Panels = <
       item
@@ -462,6 +462,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 430
+    ExplicitWidth = 742
   end
   object qryLive: TFDQuery
     ConnectionName = 'PB'

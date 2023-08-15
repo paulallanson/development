@@ -88,7 +88,9 @@ var
 
 implementation
 
-uses pbMainMenu, pbDatabase, CCSCommon, PBMaintNonConfDoc, pbluNCASearch, PBRSNonConform, PBLUNCARpts;
+uses
+  System.UITypes, System.Types,
+  pbMainMenu, pbDatabase, CCSCommon, PBMaintNonConfDoc, pbluNCASearch, PBRSNonConform, PBLUNCARpts;
 
 
 {$R *.DFM}

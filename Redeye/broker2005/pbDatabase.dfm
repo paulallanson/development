@@ -8,6 +8,7 @@ object dmBroker: TdmBroker
       'ConnectionDef=RedEye')
     OnLogin = PBLDatabaseLogin
     AfterConnect = PBLDatabaseAfterConnect
+    BeforeConnect = PBLDatabaseBeforeConnect
     Left = 60
     Top = 20
   end

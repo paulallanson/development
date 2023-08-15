@@ -1,10 +1,10 @@
-﻿object PBLUOpsFrm: TPBLUOpsFrm
+object PBLUOpsFrm: TPBLUOpsFrm
   Left = 193
   Top = 167
   BorderStyle = bsDialog
   Caption = 'Look-Up An Operator'
-  ClientHeight = 355
-  ClientWidth = 435
+  ClientHeight = 346
+  ClientWidth = 429
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -15,23 +15,24 @@
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    435
-    355)
+    429
+    346)
   TextHeight = 13
   object CountLabel: TLabel
-    Left = 275
-    Top = 275
+    Left = 267
+    Top = 268
     Width = 54
     Height = 13
     Alignment = taRightJustify
     Anchors = []
     Caption = 'CountLabel'
     ExplicitLeft = 278
+    ExplicitTop = 275
   end
   object DetsDBGrid: TDBGrid
     Left = 8
     Top = 8
-    Width = 320
+    Width = 308
     Height = 260
     Anchors = [akLeft, akTop, akRight]
     DataSource = DetsSRC
@@ -61,8 +62,8 @@
       end>
   end
   object SelectBitBtn: TBitBtn
-    Left = 347
-    Top = 300
+    Left = 337
+    Top = 291
     Width = 75
     Height = 25
     Anchors = [akBottom]
@@ -139,8 +140,8 @@
     ExplicitTop = 299
   end
   object CloseBitBtn: TBitBtn
-    Left = 347
-    Top = 328
+    Left = 337
+    Top = 319
     Width = 75
     Height = 25
     Anchors = [akBottom]
@@ -151,13 +152,13 @@
     ExplicitTop = 327
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
-    Left = 337
+    Left = 325
     Top = 144
     Width = 90
     Height = 121
     Anchors = [akTop, akRight]
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 3
     ExplicitLeft = 333
     object AddBitBtn: TBitBtn
@@ -231,13 +232,13 @@
     end
   end
   object grpbxReport: TGroupBox
-    ParentBackground = False
-    Left = 337
+    Left = 325
     Top = 12
     Width = 90
     Height = 89
     Anchors = [akTop, akRight]
     Caption = 'Report'
+    ParentBackground = False
     TabOrder = 4
     ExplicitLeft = 333
     object btbtnPreview: TBitBtn
@@ -288,12 +289,12 @@
     end
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 288
     Width = 321
     Height = 65
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 5
     object NameEdit: TEdit
       Left = 8
@@ -372,14 +373,10 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator_Can_login'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckOpBtns: TFDQuery

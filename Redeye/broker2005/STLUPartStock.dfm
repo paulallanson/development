@@ -1,26 +1,24 @@
 object STLUPartStockFrm: TSTLUPartStockFrm
   Left = 132
   Top = 55
-  Width = 1174
-  Height = 548
   Caption = 'Lookup Product Stock Levels'
+  ClientHeight = 501
+  ClientWidth = 1156
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1166
+    Width = 1156
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -41,13 +39,13 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 456
-    Width = 1166
+    Top = 436
+    Width = 1156
     Height = 46
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      1166
+      1156
       46)
     object Label1: TLabel
       Left = 8
@@ -71,9 +69,10 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
-      Kind = bkClose
     end
     object btnSelect: TBitBtn
       Left = 988
@@ -84,8 +83,6 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       Caption = 'Select '
       Default = True
       Enabled = False
-      TabOrder = 2
-      OnClick = btnSelectClick
       Glyph.Data = {
         BE060000424DBE06000000000000360400002800000024000000120000000100
         0800000000008802000000000000000000000001000000000000000000000000
@@ -143,13 +140,15 @@ object STLUPartStockFrm: TSTLUPartStockFrm
         0303030303030303030303030303030303030303030303030303030303030303
         0303}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnSelectClick
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 41
-    Width = 1166
-    Height = 415
+    Width = 1156
+    Height = 395
     Align = alClient
     DataSource = dtsStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -227,8 +226,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 502
-    Width = 1166
+    Top = 482
+    Width = 1156
     Height = 19
     Panels = <
       item
@@ -244,7 +243,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Top = 128
   end
   object qryStock: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -351,95 +350,93 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
-        DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object StringField1: TStringField
+    object qryStockPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Origin = 'Part'
+      Required = True
+      Size = 25
     end
-    object IntegerField1: TIntegerField
+    object qryStockCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
     end
-    object StringField2: TStringField
+    object qryStockdescription: TWideStringField
       FieldName = 'description'
-      FixedChar = True
-      Size = 100
+      Origin = 'description'
+      Size = 150
     end
-    object IntegerField2: TIntegerField
-      FieldName = 'store_qty'
-      OnGetText = IntegerField2GetText
-    end
-    object IntegerField3: TIntegerField
-      FieldName = 'qty_alloc'
-      OnGetText = IntegerField2GetText
-    end
-    object IntegerField4: TIntegerField
-      FieldName = 'qty_free'
-      OnGetText = IntegerField2GetText
-    end
-    object IntegerField5: TIntegerField
-      FieldName = 'purch_ord_qty'
-      OnGetText = IntegerField2GetText
-    end
-    object FloatField1: TFloatField
-      FieldName = 'prod_ord_qty'
-      OnGetText = IntegerField2GetText
-    end
-    object IntegerField6: TIntegerField
-      FieldName = 'paid_for'
-      OnGetText = IntegerField2GetText
-    end
-    object IntegerField7: TIntegerField
-      FieldName = 'not_paid_for'
-      OnGetText = IntegerField2GetText
-    end
-    object StringField3: TStringField
+    object qryStockform_reference_id: TWideStringField
       FieldName = 'form_reference_id'
-      FixedChar = True
-      Size = 100
+      Origin = 'form_reference_id'
+      ReadOnly = True
+      Size = 50
     end
-    object IntegerField8: TIntegerField
+    object qryStockform_reference: TIntegerField
       FieldName = 'form_reference'
+      Origin = 'form_reference'
+      ReadOnly = True
     end
-    object qryStockProduct_Class_Description: TStringField
-      FieldName = 'Product_Class_Description'
-      Size = 30
+    object qryStockstore_qty: TIntegerField
+      FieldName = 'store_qty'
+      Origin = 'store_qty'
+      ReadOnly = True
     end
-    object qryStockNot_in_Use: TStringField
+    object qryStockqty_alloc: TIntegerField
+      FieldName = 'qty_alloc'
+      Origin = 'qty_alloc'
+      ReadOnly = True
+    end
+    object qryStockqty_free: TIntegerField
+      FieldName = 'qty_free'
+      Origin = 'qty_free'
+      ReadOnly = True
+    end
+    object qryStockpurch_ord_qty: TIntegerField
+      FieldName = 'purch_ord_qty'
+      Origin = 'purch_ord_qty'
+      ReadOnly = True
+    end
+    object qryStockprod_ord_qty: TFloatField
+      FieldName = 'prod_ord_qty'
+      Origin = 'prod_ord_qty'
+      ReadOnly = True
+    end
+    object qryStockpaid_for: TIntegerField
+      FieldName = 'paid_for'
+      Origin = 'paid_for'
+      ReadOnly = True
+    end
+    object qryStocknot_paid_for: TIntegerField
+      FieldName = 'not_paid_for'
+      Origin = 'not_paid_for'
+      ReadOnly = True
+    end
+    object qryStockNot_in_Use: TWideStringField
       FieldName = 'Not_in_Use'
+      Origin = 'Not_in_Use'
+      Required = True
       Size = 1
     end
-    object qryStockProduct_Class: TStringField
+    object qryStockProduct_Class: TWideStringField
       FieldName = 'Product_Class'
-      Size = 10
+      Origin = 'Product_Class'
+      Size = 5
     end
   end
   object tmrSearch: TTimer
@@ -449,7 +446,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Top = 136
   end
   object qryDummy: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select part.Part,'
       '        Part.Customer,'
@@ -570,76 +567,99 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
+        ParamType = ptInput
+        Value = Null
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
+        ParamType = ptInput
       end
       item
-        DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
-    object StringField4: TStringField
+    object qryDummyPart: TWideStringField
       FieldName = 'Part'
-      FixedChar = True
-      Size = 30
+      Origin = 'Part'
+      Required = True
+      Size = 25
     end
-    object IntegerField9: TIntegerField
+    object qryDummyCustomer: TIntegerField
       FieldName = 'Customer'
+      Origin = 'Customer'
     end
-    object StringField5: TStringField
+    object qryDummydescription: TWideStringField
       FieldName = 'description'
-      FixedChar = True
-      Size = 100
+      Origin = 'description'
+      Size = 150
     end
-    object IntegerField10: TIntegerField
-      FieldName = 'store_qty'
-    end
-    object IntegerField11: TIntegerField
-      FieldName = 'qty_alloc'
-    end
-    object IntegerField12: TIntegerField
-      FieldName = 'qty_free'
-    end
-    object IntegerField13: TIntegerField
-      FieldName = 'purch_ord_qty'
-    end
-    object FloatField2: TFloatField
-      FieldName = 'prod_ord_qty'
-    end
-    object IntegerField14: TIntegerField
-      FieldName = 'paid_for'
-    end
-    object IntegerField15: TIntegerField
-      FieldName = 'not_paid_for'
-    end
-    object StringField6: TStringField
+    object qryDummyform_reference_id: TWideStringField
       FieldName = 'form_reference_id'
-      FixedChar = True
-      Size = 100
+      Origin = 'form_reference_id'
+      ReadOnly = True
+      Size = 50
     end
-    object IntegerField16: TIntegerField
+    object qryDummyform_reference: TIntegerField
       FieldName = 'form_reference'
+      Origin = 'form_reference'
+      ReadOnly = True
+    end
+    object qryDummystore_qty: TIntegerField
+      FieldName = 'store_qty'
+      Origin = 'store_qty'
+      ReadOnly = True
+    end
+    object qryDummyqty_alloc: TIntegerField
+      FieldName = 'qty_alloc'
+      Origin = 'qty_alloc'
+      ReadOnly = True
+    end
+    object qryDummyqty_free: TIntegerField
+      FieldName = 'qty_free'
+      Origin = 'qty_free'
+      ReadOnly = True
+    end
+    object qryDummypurch_ord_qty: TIntegerField
+      FieldName = 'purch_ord_qty'
+      Origin = 'purch_ord_qty'
+      ReadOnly = True
+    end
+    object qryDummyprod_ord_qty: TFloatField
+      FieldName = 'prod_ord_qty'
+      Origin = 'prod_ord_qty'
+      ReadOnly = True
+    end
+    object qryDummypaid_for: TIntegerField
+      FieldName = 'paid_for'
+      Origin = 'paid_for'
+      ReadOnly = True
+    end
+    object qryDummynot_paid_for: TIntegerField
+      FieldName = 'not_paid_for'
+      Origin = 'not_paid_for'
+      ReadOnly = True
+    end
+    object qryDummyNot_in_Use: TWideStringField
+      FieldName = 'Not_in_Use'
+      Origin = 'Not_in_Use'
+      Required = True
+      Size = 1
+    end
+    object qryDummyProduct_Class: TWideStringField
+      FieldName = 'Product_Class'
+      Origin = 'Product_Class'
+      Size = 5
+    end
+    object qryDummyProduct_Class_Description: TStringField
+      FieldName = 'Product_Class_Description'
+      Origin = 'Product_Class_Description'
+      ReadOnly = True
+      Size = 15
     end
   end
   object qryStore: TFDQuery
@@ -651,9 +671,10 @@ object STLUPartStockFrm: TSTLUPartStockFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
 end

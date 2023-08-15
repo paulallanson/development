@@ -147,7 +147,9 @@ var
 
 implementation
 
-uses STRSPickNote, pbDatabase, stPickingDM, STStockDM, STPickbyPart,
+uses
+  System.UITypes,
+  STRSPickNote, pbDatabase, stPickingDM, STStockDM, STPickbyPart,
   PBRSProofN, PBLUProofHistN, pbMainMenu, PBMaintPOrd, pbPOObjects,
   STMntSOrd, stSOObjects, STRSSalesOrd, PBRSPOrdN, STPrtAllocSales,
   stpickobject, pbluOrdersSearch, pbluCustDeliv, ccscommon, pbLUOrderRpts,

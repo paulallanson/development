@@ -800,16 +800,20 @@ begin
                  end;
       		END;
 			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Goods') or
-          (Column.Title.Caption = 'Total') or
-          (Column.Title.Caption = 'VAT') then
-        try
-            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+      if Assigned(Column.Field) then
+      begin
+        if  (Column.Title.Caption = 'Goods') or
+            (Column.Title.Caption = 'Total') or
+            (Column.Title.Caption = 'VAT') then
+          try
+              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
+          except
+            sValue := ''
+          end
+        else
+          sValue := Column.field.asstring;
+      end else
+        sValue := '';
   		StrPCopy(Txt, sValue);
 
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,

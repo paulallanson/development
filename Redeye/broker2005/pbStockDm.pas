@@ -142,6 +142,7 @@ type
     qryCustStocknot_paid_for: TIntegerField;
     qryCustStockReorder_Level: TIntegerField;
     qryCustStockNot_in_Use: TWideStringField;
+    qryCustStockProduct_Class: TWideStringField;
     procedure qryCustStockstore_qtyGetText(Sender: TField;
       var Text: String; DisplayText: Boolean);
     procedure qryPartSalesquantity_orderedGetText(Sender: TField;

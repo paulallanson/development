@@ -64,7 +64,9 @@ var
 
 implementation
 
-uses PBLUProcessGroup, PBLUCust, CCSCommon, DateSelV5, PBRPProdAmends, CCSPrint, Printers,
+uses
+  System.UITypes,
+  PBLUProcessGroup, PBLUCust, CCSCommon, DateSelV5, PBRPProdAmends, CCSPrint, Printers,
   PBRPSalesByInv;
 
 {$R *.dfm}

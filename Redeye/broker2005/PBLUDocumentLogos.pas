@@ -47,7 +47,9 @@ var
 
 implementation
 
-uses PBMaintDocumentLogo, pbMainMenu;
+uses
+  System.UITypes, System.Types,
+  PBMaintDocumentLogo, pbMainMenu;
 
 {$R *.DFM}
 

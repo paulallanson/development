@@ -127,7 +127,9 @@ var
 
 implementation
 
-uses pbDatabase, PBRSProofN, PBLUProofHistN, pbMainMenu, PBMaintPOrd, pbPOObjects,
+uses
+  System.UITypes, System.Types,
+  pbDatabase, PBRSProofN, PBLUProofHistN, pbMainMenu, PBMaintPOrd, pbPOObjects,
   PBRSPOrdN, pbluOrdersSearch, pbluCustDeliv, ccscommon, pbLUOrderRpts,
   PBPOToEnq, PBMaintPOrdInactive, PBPOrdHist, PBLUPOLAddChgs;
 

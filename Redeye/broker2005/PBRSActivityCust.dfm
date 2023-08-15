@@ -3,32 +3,28 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Activity Report'
-  ClientHeight = 350
-  ClientWidth = 627
+  ClientHeight = 341
+  ClientWidth = 621
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    627
-    350)
-  PixelsPerInch = 96
+    621
+    341)
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 541
-    Top = 311
+    Top = 302
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Print'
-    TabOrder = 13
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -43,16 +39,17 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 13
+    OnClick = PrintBitBtnClick
+    ExplicitTop = 311
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
-    Top = 311
+    Top = 302
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Preview'
-    TabOrder = 12
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -67,6 +64,9 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 12
+    OnClick = PreviewBitBtnClick
+    ExplicitTop = 311
   end
   object pnlAssignedToSearch: TPanel
     Left = 139
@@ -108,21 +108,24 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   end
   object CancelBitBtn: TBitBtn
     Left = 8
-    Top = 311
+    Top = 302
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 10
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 10
+    ExplicitTop = 311
   end
   object GroupBox1: TGroupBox
     Left = 5
-    Top = 212
+    Top = 203
     Width = 180
     Height = 89
     Anchors = [akLeft, akBottom]
     Caption = 'Date Range'
     TabOrder = 6
+    ExplicitTop = 212
     object Label1: TLabel
       Left = 8
       Top = 28
@@ -150,8 +153,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       Top = 23
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btbtnDateFromClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -166,6 +167,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btbtnDateFromClick
     end
     object edtDateTo: TEdit
       Left = 48
@@ -180,8 +183,6 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       Top = 55
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btbtnDateToClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -196,6 +197,8 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btbtnDateToClick
     end
   end
   object rdgrpAssignedTo: TRadioGroup
@@ -322,13 +325,11 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
   end
   object btnExcel: TBitBtn
     Left = 362
-    Top = 311
+    Top = 302
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 11
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -372,6 +373,9 @@ object PBRSActivityCustFrm: TPBRSActivityCustFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 11
+    OnClick = btnExcelClick
+    ExplicitTop = 311
   end
   object chkbxShowOnlyLive: TCheckBox
     Left = 488

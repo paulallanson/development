@@ -687,7 +687,7 @@ var
   frm: TPBMaintSuppInvoiceLineFrm;
 begin
 //  inx := sgLines.row;
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   try
     frm := TPBMaintSuppInvoiceLineFrm.Create(Self);
     try

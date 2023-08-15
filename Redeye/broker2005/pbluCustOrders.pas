@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Grids, DBGrids, ComCtrls, ExtCtrls, ToolWin, Mask, DBCtrls,
-  ImgList, Db, Menus, stpickobject, IniFiles, Buttons, System.ImageList;
+  ImgList, Db, Menus, stpickobject, IniFiles, Buttons, System.ImageList,
+  FireDAC.Stan.Param;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}
@@ -174,7 +175,9 @@ var
 
 implementation
 
-uses pbOrdersdm, pbluOrdersSearch, pbDatabase, PBMaintPOrd, pbPOObjects,
+uses
+  System.UITypes, System.Types,
+  pbOrdersdm, pbluOrdersSearch, pbDatabase, PBMaintPOrd, pbPOObjects,
   PBRSPOrdN, PBLUCConta, STMntSOrd, stSOObjects, ccscommon,
   STPrtAllocSales, STRSPickNote, STStockDM, stPickingDM, STPickbyPart,
   STRSSalesOrd, PBLUProofHistN, PBRSProofN, pbMainMenu, pbluCustDeliv,

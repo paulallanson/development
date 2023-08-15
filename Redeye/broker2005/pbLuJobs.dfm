@@ -2,8 +2,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   Left = 33
   Top = 115
   Caption = 'Job Bags'
-  ClientHeight = 393
-  ClientWidth = 1204
+  ClientHeight = 384
+  ClientWidth = 1198
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,7 +23,7 @@ object frmPBLUJobs: TfrmPBLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1204
+    Width = 1198
     Height = 45
     Bands = <
       item
@@ -130,8 +130,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 1204
-    Height = 247
+    Width = 1198
+    Height = 238
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -301,14 +301,12 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 322
-    Width = 1204
+    Top = 313
+    Width = 1198
     Height = 52
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 323
-    ExplicitWidth = 1208
     object Label1: TLabel
       Left = 8
       Top = 26
@@ -325,7 +323,7 @@ object frmPBLUJobs: TfrmPBLUJobs
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 934
+      Left = 924
       Top = 1
       Width = 273
       Height = 50
@@ -414,8 +412,8 @@ object frmPBLUJobs: TfrmPBLUJobs
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 374
-    Width = 1204
+    Top = 365
+    Width = 1198
     Height = 19
     Panels = <
       item
@@ -433,7 +431,7 @@ object frmPBLUJobs: TfrmPBLUJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1204
+    Width = 1198
     Height = 30
     Align = alTop
     BevelInner = bvLowered

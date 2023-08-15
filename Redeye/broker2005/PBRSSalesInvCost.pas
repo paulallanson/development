@@ -61,7 +61,9 @@ var
 
 implementation
 
-uses PBDatabase, PBPOObjects, CCSCommon, PBLUCust, PBRPSalesInvCost;
+uses
+  System.UITypes,
+  PBDatabase, PBPOObjects, CCSCommon, PBLUCust, PBRPSalesInvCost;
 
 {$R *.DFM}
 

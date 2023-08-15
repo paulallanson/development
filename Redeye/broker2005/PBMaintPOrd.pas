@@ -755,7 +755,9 @@ var
 
 implementation
 
-uses PBPODataMod, PBAuditDM, PBLUSupp, PBLUSConta, PBMaintPOrdLine,
+uses
+  System.UITypes, System.Types,
+  PBPODataMod, PBAuditDM, PBLUSupp, PBLUSConta, PBMaintPOrdLine,
   PBMaintPOrdLineDeliv, PBMaintPOrdLineExtChg, pbMainMenu, DateSelV5,
   PBMaintIntNote,pbDatabase, PBLUProofHistN, PBPOAddDtls, PBMaintPOAddNotes,
   PBMaintPOrdLInactive, PBMaintPOrdLineCallOff, PBLUCust, PBLUCConta,
@@ -3323,7 +3325,7 @@ begin
 
       iCharge := ExtraCharge.AdditionalCharge;
       inx := SelectedLine.ExtraCharges.IndexFromChargeNo(iCharge);
-      if sTempFuncMode in [poChange, poDelete] then
+      if CharInSet(sTempFuncMode, [poChange, poDelete]) then
       begin
         SelectedLine.ExtraCharges[inx].Free;
         SelectedLine.ExtraCharges.Delete(inx);
@@ -8895,7 +8897,7 @@ begin
     if (vRow <> 0) and (vCol <> 0) then
       begin
         try
-          inx := strtoint(sgNCADetails.cells[0,vRow]);
+          inx := StrToIntDef(sgNCADetails.cells[0,vRow], 0);
           inx := SelectedLine.NonConformDocs.IndexOf(inx);
           NCL := SelectedLine.NonConformDocs[inx];
 

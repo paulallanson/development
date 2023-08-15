@@ -1206,7 +1206,7 @@ object dtmdlQuotes: TdtmdlQuotes
   object qryDummy: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT DISTINCT TOP :Records'
+      'SELECT DISTINCT TOP (:Records)'
       #9'      Quote.Quote,'
       #9'      Quote.Description,'
       #9'      Customer.Name as Cust_Name,'
@@ -1613,7 +1613,7 @@ object dtmdlQuotes: TdtmdlQuotes
   object qryDummyOld: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT DISTINCT TOP :Records'
+      'SELECT DISTINCT TOP (:Records)'
       #9'      Quote.Quote,'
       #9'      Quote.Description,'
       #9'      Customer.Name as Cust_Name,'

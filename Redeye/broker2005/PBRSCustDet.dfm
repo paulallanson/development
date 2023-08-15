@@ -1,9 +1,9 @@
 object PBRSCustDetFrm: TPBRSCustDetFrm
   Left = 182
   Top = 92
-  Width = 923
-  Height = 453
   Caption = 'Customer Details'
+  ClientHeight = 415
+  ClientWidth = 911
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,26 +12,26 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDisplay: TPanel
-    ParentBackground = False
     Left = 0
     Top = 121
-    Width = 915
-    Height = 286
+    Width = 911
+    Height = 275
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 905
+    ExplicitHeight = 266
     object dbgrdCustStatus: TDBGrid
       Left = 1
       Top = 1
-      Width = 913
-      Height = 243
+      Width = 909
+      Height = 232
       Align = alClient
       DataSource = dtsrcCurrentCustStatus
       TabOrder = 0
@@ -42,13 +42,15 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       TitleFont.Style = []
     end
     object pnlPrintControl: TPanel
-      ParentBackground = False
       Left = 1
-      Top = 244
-      Width = 913
+      Top = 233
+      Width = 909
       Height = 41
       Align = alBottom
+      ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 224
+      ExplicitWidth = 903
       object lblRecordCount: TLabel
         Left = 104
         Top = 16
@@ -56,14 +58,15 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Height = 13
       end
       object Panel1: TPanel
-        ParentBackground = False
-        Left = 648
+        Left = 644
         Top = 1
         Width = 264
         Height = 39
         Align = alRight
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 638
         DesignSize = (
           264
           39)
@@ -74,8 +77,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
           Height = 25
           Anchors = [akTop]
           Caption = 'Preview'
-          TabOrder = 0
-          OnClick = PreviewReportBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000130B0000130B00001000000000000000000000000000
@@ -90,6 +91,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
             333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
             333333773FF77333333333370007333333333333777333333333}
           NumGlyphs = 2
+          TabOrder = 0
+          OnClick = PreviewReportBitBtnClick
         end
         object PrintReportBitBtn: TBitBtn
           Left = 182
@@ -98,8 +101,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
           Height = 25
           Anchors = [akTop]
           Caption = 'Print'
-          TabOrder = 1
-          OnClick = PrintReportBitBtnClick
           Glyph.Data = {
             76010000424D7601000000000000760000002800000020000000100000000100
             04000000000000010000120B0000120B00001000000000000000000000000000
@@ -114,6 +115,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
             33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
             33333337FFFF7733333333300000033333333337777773333333}
           NumGlyphs = 2
+          TabOrder = 1
+          OnClick = PrintReportBitBtnClick
         end
         object btnExcel: TBitBtn
           Left = 5
@@ -122,8 +125,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
           Height = 25
           Anchors = [akTop]
           Caption = 'Excel'
-          TabOrder = 2
-          OnClick = btnExcelClick
           Glyph.Data = {
             36050000424D3605000000000000360400002800000010000000100000000100
             0800000000000001000000000000000000000001000000000000000000000000
@@ -167,6 +168,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
             00000000000000000000A4070707000707070707070700070707A40707070007
             07000700070700070707A4070707000707000000070700070707A40707070007
             07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+          TabOrder = 2
+          OnClick = btnExcelClick
         end
       end
       object CancelBitBtn: TBitBtn
@@ -174,19 +177,21 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 915
+    Width = 911
     Height = 121
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 905
     object Label3: TLabel
       Left = 8
       Top = 78
@@ -214,11 +219,11 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ParentFont = False
     end
     object pnlStatusSelect: TPanel
-      ParentBackground = False
       Left = 174
       Top = 12
       Width = 161
       Height = 57
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
@@ -239,7 +244,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Width = 137
         Height = 21
         Enabled = False
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
@@ -255,7 +259,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = cbSortChange
       Items.Strings = (
@@ -271,7 +274,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -282,11 +284,11 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         'Customer')
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 6
       Top = 12
       Width = 161
       Height = 57
+      ParentBackground = False
       TabOrder = 3
       object lblCustomerType: TLabel
         Left = 8
@@ -306,18 +308,17 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Top = 24
         Width = 145
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
       end
     end
     object Panel3: TPanel
-      ParentBackground = False
       Left = 518
       Top = 12
       Width = 161
       Height = 57
+      ParentBackground = False
       TabOrder = 4
       object Label7: TLabel
         Left = 8
@@ -337,14 +338,12 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Top = 24
         Width = 145
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
       end
     end
     object RadioGroup1: TRadioGroup
-      ParentBackground = False
       Left = 808
       Top = 8
       Width = 97
@@ -354,6 +353,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       Items.Strings = (
         'Summary'
         'Detail')
+      ParentBackground = False
       TabOrder = 5
       OnClick = RadioGroup1Click
     end
@@ -367,11 +367,11 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       OnClick = chkbxCustomersClick
     end
     object pnlLevelofImp: TPanel
-      ParentBackground = False
       Left = 345
       Top = 12
       Width = 161
       Height = 57
+      ParentBackground = False
       TabOrder = 7
       object Label2: TLabel
         Left = 8
@@ -391,7 +391,6 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         Top = 24
         Width = 137
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
@@ -399,11 +398,11 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 228
     Top = 148
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 2
     Visible = False
     object lblExporting: TLabel
@@ -434,8 +433,8 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 407
-    Width = 915
+    Top = 396
+    Width = 911
     Height = 19
     Panels = <
       item
@@ -444,17 +443,21 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       item
         Width = 50
       end>
+    ExplicitTop = 387
+    ExplicitWidth = 905
   end
   object qryCurrentCustStatus: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       
         'SELECT Customer_Branch.*, Customer_Status.*, Customer_Type.*, Re' +
         'p.Rep, Rep.Name,'
       
         'Customer.Name+'#39'/'#39'+Customer_Branch.name as Cust_name, Customer.Na' +
-        'me, Customer.Acc_Active, Customer.Analysis_Code_1, Customer.Anal' +
-        'ysis_Code_2'
+        'me, Customer.Acc_Active, '
+      
+        'Customer.Analysis_Code_1, Customer.Analysis_Code_2, Customer.Ana' +
+        'lysis_Code_3, Customer.Analysis_Code_4'
       'FROM Rep Right JOIN ((Customer_Type'
       'INNER JOIN (Customer_Status'
       'INNER JOIN (Customer'
@@ -487,133 +490,230 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ' '
       ' '
       ' ')
-    Left = 144
-    Top = 144
+    Left = 28
+    Top = 244
     object qryCurrentCustStatusCustomer: TIntegerField
-      DisplayWidth = 6
       FieldName = 'Customer'
-      Visible = False
+      Origin = 'Customer'
+      Required = True
     end
     object qryCurrentCustStatusBranch_no: TIntegerField
-      DisplayLabel = 'Branch'
-      DisplayWidth = 4
       FieldName = 'Branch_no'
-      Visible = False
+      Origin = 'Branch_no'
+      Required = True
     end
-    object qryCurrentCustStatusCust_name: TStringField
-      DisplayLabel = 'Name'
-      DisplayWidth = 30
-      FieldName = 'Cust_name'
-      FixedChar = True
-      Size = 162
-    end
-    object qryCurrentCustStatusAccount_Code: TStringField
-      DisplayLabel = 'Account'
-      DisplayWidth = 8
-      FieldName = 'Account_Code'
-      FixedChar = True
-    end
-    object qryCurrentCustStatusCustomer_Status_Descr: TStringField
-      DisplayLabel = 'Status'
-      DisplayWidth = 10
-      FieldName = 'Customer_Status_Descr'
-      FixedChar = True
-      Size = 24
-    end
-    object qryCurrentCustStatusDescription: TStringField
-      DisplayLabel = 'Type'
-      DisplayWidth = 10
-      FieldName = 'Description'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusName_1: TStringField
-      DisplayLabel = 'Rep'
-      DisplayWidth = 20
-      FieldName = 'Rep_Name'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusBuilding_No_name: TStringField
-      DisplayLabel = 'House'
-      DisplayWidth = 30
-      FieldName = 'Building_No_name'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusStreet: TStringField
-      DisplayWidth = 30
-      FieldName = 'Street'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusLocale: TStringField
-      DisplayWidth = 30
-      FieldName = 'Locale'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusTown: TStringField
-      DisplayWidth = 30
-      FieldName = 'Town'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusPostcode: TStringField
-      FieldName = 'Postcode'
-      FixedChar = True
-    end
-    object qryCurrentCustStatusPhone: TStringField
-      DisplayWidth = 15
-      FieldName = 'Phone'
-      FixedChar = True
-      Size = 40
-    end
-    object qryCurrentCustStatusFax_Number: TStringField
-      DisplayLabel = 'Fax'
-      DisplayWidth = 15
-      FieldName = 'Fax_Number'
-      FixedChar = True
-      Size = 40
-    end
-    object qryCurrentCustStatusEmail: TStringField
-      FieldName = 'Email'
-      FixedChar = True
-      Size = 80
-    end
-    object qryCurrentCustStatusAnalysis_Code_1: TStringField
-      FieldName = 'Analysis_Code_1'
-    end
-    object qryCurrentCustStatusAnalysis_Code_2: TStringField
-      FieldName = 'Analysis_Code_2'
-    end
-    object qryCurrentCustStatusAnalysis_Code_3: TStringField
-      FieldName = 'Analysis_Code_3'
-      Size = 30
-    end
-    object qryCurrentCustStatusAnalysis_Code_4: TStringField
-      FieldName = 'Analysis_Code_4'
-      Size = 30
-    end
-    object qryCurrentCustStatusImportance_Description: TStringField
-      DisplayLabel = 'Level of Importance'
-      FieldName = 'Importance_Description'
+    object qryCurrentCustStatusName: TWideStringField
+      FieldName = 'Name'
+      Origin = 'Name'
       Size = 50
     end
-    object qryCurrentCustStatusRep_Type: TStringField
-      DisplayLabel = 'Rep Type'
-      FieldName = 'Rep_Type'
+    object qryCurrentCustStatusBuilding_No_name: TWideStringField
+      FieldName = 'Building_No_name'
+      Origin = 'Building_No_name'
+      Size = 50
+    end
+    object qryCurrentCustStatusStreet: TWideStringField
+      FieldName = 'Street'
+      Origin = 'Street'
+      Size = 50
+    end
+    object qryCurrentCustStatusLocale: TWideStringField
+      FieldName = 'Locale'
+      Origin = 'Locale'
+      Size = 50
+    end
+    object qryCurrentCustStatusTown: TWideStringField
+      FieldName = 'Town'
+      Origin = 'Town'
+      Size = 50
+    end
+    object qryCurrentCustStatusPostcode: TWideStringField
+      FieldName = 'Postcode'
+      Origin = 'Postcode'
+      Required = True
       Size = 10
+    end
+    object qryCurrentCustStatusPhone: TWideStringField
+      FieldName = 'Phone'
+      Origin = 'Phone'
+      Required = True
+    end
+    object qryCurrentCustStatusFax_Number: TWideStringField
+      FieldName = 'Fax_Number'
+      Origin = 'Fax_Number'
+    end
+    object qryCurrentCustStatusEmail: TWideStringField
+      FieldName = 'Email'
+      Origin = 'Email'
+      Size = 40
+    end
+    object qryCurrentCustStatusCustomer0: TIntegerField
+      FieldName = 'Customer0'
+      Origin = 'Customer0'
+    end
+    object qryCurrentCustStatusBranch_no0: TIntegerField
+      FieldName = 'Branch_no0'
+      Origin = 'Branch_no0'
+    end
+    object qryCurrentCustStatusMainRep: TIntegerField
+      FieldName = 'MainRep'
+      Origin = 'MainRep'
+    end
+    object qryCurrentCustStatusNarrative: TIntegerField
+      FieldName = 'Narrative'
+      Origin = 'Narrative'
+    end
+    object qryCurrentCustStatusAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+      Origin = 'Account_Code'
+      Size = 10
+    end
+    object qryCurrentCustStatusInv_To_Customer: TIntegerField
+      FieldName = 'Inv_To_Customer'
+      Origin = 'Inv_To_Customer'
+    end
+    object qryCurrentCustStatusInv_To_Branch: TIntegerField
+      FieldName = 'Inv_To_Branch'
+      Origin = 'Inv_To_Branch'
+    end
+    object qryCurrentCustStatusAccount_Code_On_Ledger: TWideStringField
+      FieldName = 'Account_Code_On_Ledger'
+      Origin = 'Account_Code_On_Ledger'
+      Size = 1
+    end
+    object qryCurrentCustStatusDelivery_Narrative: TIntegerField
+      FieldName = 'Delivery_Narrative'
+      Origin = 'Delivery_Narrative'
+    end
+    object qryCurrentCustStatusLast_Statement_ref: TWideStringField
+      FieldName = 'Last_Statement_ref'
+      Origin = 'Last_Statement_ref'
+      Size = 15
+    end
+    object qryCurrentCustStatusUse_Branch_Name: TWideStringField
+      FieldName = 'Use_Branch_Name'
+      Origin = 'Use_Branch_Name'
+      Size = 1
+    end
+    object qryCurrentCustStatusShort_Code: TWideStringField
+      FieldName = 'Short_Code'
+      Origin = 'Short_Code'
+      Size = 10
+    end
+    object qryCurrentCustStatusHO_Department: TIntegerField
+      FieldName = 'HO_Department'
+      Origin = 'HO_Department'
+    end
+    object qryCurrentCustStatusUse_HO_Delivery_Notes: TWideStringField
+      FieldName = 'Use_HO_Delivery_Notes'
+      Origin = 'Use_HO_Delivery_Notes'
+      Size = 1
+    end
+    object qryCurrentCustStatusCounty: TWideStringField
+      FieldName = 'County'
+      Origin = 'County'
+      Size = 30
+    end
+    object qryCurrentCustStatusConsumer_Code: TWideStringField
+      FieldName = 'Consumer_Code'
+      Origin = 'Consumer_Code'
+    end
+    object qryCurrentCustStatusInactive: TWideStringField
+      FieldName = 'Inactive'
+      Origin = 'Inactive'
+      Size = 1
+    end
+    object qryCurrentCustStatusOnline_Ordering_Email: TWideStringField
+      FieldName = 'Online_Ordering_Email'
+      Origin = 'Online_Ordering_Email'
+      Size = 100
+    end
+    object qryCurrentCustStatusInv_To_Contact: TIntegerField
+      FieldName = 'Inv_To_Contact'
+      Origin = 'Inv_To_Contact'
+    end
+    object qryCurrentCustStatusCustomer_Status: TIntegerField
+      FieldName = 'Customer_Status'
+      Origin = 'Customer_Status'
+      Required = True
+    end
+    object qryCurrentCustStatusCustomer_Status_Descr: TWideStringField
+      FieldName = 'Customer_Status_Descr'
+      Origin = 'Customer_Status_Descr'
+      Required = True
+      Size = 12
+    end
+    object qryCurrentCustStatusCustomer_Type: TIntegerField
+      FieldName = 'Customer_Type'
+      Origin = 'Customer_Type'
+      Required = True
+    end
+    object qryCurrentCustStatusDescription: TWideStringField
+      FieldName = 'Description'
+      Origin = 'Description'
+      Size = 40
+    end
+    object qryCurrentCustStatusColor: TIntegerField
+      FieldName = 'Color'
+      Origin = 'Color'
+    end
+    object qryCurrentCustStatusFont_Color: TIntegerField
+      FieldName = 'Font_Color'
+      Origin = 'Font_Color'
+    end
+    object qryCurrentCustStatusRep: TIntegerField
+      FieldName = 'Rep'
+      Origin = 'Rep'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object qryCurrentCustStatusName_1: TWideStringField
+      FieldName = 'Name_1'
+      Origin = 'Name'
+      Size = 40
+    end
+    object qryCurrentCustStatusCust_name: TWideStringField
+      FieldName = 'Cust_name'
+      Origin = 'Cust_name'
+      ReadOnly = True
+      Size = 151
+    end
+    object qryCurrentCustStatusName_2: TWideStringField
+      FieldName = 'Name_2'
+      Origin = 'Name'
+      Required = True
+      Size = 100
+    end
+    object qryCurrentCustStatusAcc_Active: TWideStringField
+      FieldName = 'Acc_Active'
+      Origin = 'Acc_Active'
+      Size = 1
+    end
+    object qryCurrentCustStatusAnalysis_Code_1: TWideStringField
+      FieldName = 'Analysis_Code_1'
+      Origin = 'Analysis_Code_1'
+    end
+    object qryCurrentCustStatusAnalysis_Code_2: TWideStringField
+      FieldName = 'Analysis_Code_2'
+      Origin = 'Analysis_Code_2'
+    end
+    object qryCurrentCustStatusAnalysis_Code_3: TWideStringField
+      FieldName = 'Analysis_Code_3'
+      Origin = 'Analysis_Code_3'
+      Size = 50
+    end
+    object qryCurrentCustStatusAnalysis_Code_4: TWideStringField
+      FieldName = 'Analysis_Code_4'
+      Origin = 'Analysis_Code_4'
+      Size = 50
     end
   end
   object dtsrcCurrentCustStatus: TDataSource
     DataSet = qryCurrentCustStatus
-    Left = 144
-    Top = 192
+    Left = 188
+    Top = 244
   end
   object qryCustStatus: TFDQuery
-    AutoRefresh = True
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select Customer_Status, Customer_status.Customer_Status_descr'
       'from Customer_status'
@@ -622,42 +722,45 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
       ' '
       ' '
       ' ')
-    Left = 240
-    object qryCustStatusCustomer_Status_descr: TStringField
+    Left = 132
+    Top = 149
+    object qryCustStatusCustomer_Status_descr: TWideStringField
       FieldName = 'Customer_Status_descr'
-      FixedChar = True
-      Size = 24
+      Origin = 'Customer_Status_descr'
+      Required = True
+      Size = 12
     end
   end
   object QryCustType: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select * from Customer_Type'
       'order by Customer_Type'
       ' '
       ' ')
-    Left = 102
-    Top = 4
-    object QryCustTypeDescription: TStringField
+    Left = 32
+    Top = 149
+    object QryCustTypeDescription: TWideStringField
       FieldName = 'Description'
-      FixedChar = True
-      Size = 80
+      Origin = 'Description'
+      Size = 40
     end
   end
   object QryRep: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select Rep, Name'
       'from Rep'
       'Order by Rep.Name'
       ' '
       ' ')
-    Left = 470
-    Top = 52
-    object QryRepName: TStringField
+    Left = 564
+    Top = 161
+    object QryRepName: TWideStringField
       FieldName = 'Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Name'
+      Required = True
+      Size = 40
     end
   end
   object NewStdSQL: TFDQuery
@@ -736,22 +839,23 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         '        ON Level_of_Importance.Level_of_importance = Customer.Le' +
         'vel_of_Importance'
       'WHERE 1 = 1')
-    Left = 240
-    Top = 217
+    Left = 348
+    Top = 239
   end
   object qryLevelOfImp: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select * from Level_of_Importance'
       'order by Importance_Description'
       ' '
       ' ')
-    Left = 718
-    Top = 12
-    object StringField1: TStringField
+    Left = 658
+    Top = 161
+    object qryLevelOfImpImportance_Description: TWideStringField
       FieldName = 'Importance_Description'
-      FixedChar = True
-      Size = 80
+      Origin = 'Importance_Description'
+      Required = True
+      Size = 100
     end
   end
   object StdSQL: TFDQuery
@@ -794,7 +898,7 @@ object PBRSCustDetFrm: TPBRSCustDetFrm
         '        ON Level_of_Importance.Level_of_importance = Customer.Le' +
         'vel_of_Importance'
       'WHERE 1 = 1')
-    Left = 344
-    Top = 217
+    Left = 438
+    Top = 239
   end
 end

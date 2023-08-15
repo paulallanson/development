@@ -1027,7 +1027,7 @@ var
   inx: integer;
   SalesInvoiceLine: TSalesInvoiceLine;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   inx := SalesInvoice.Lines.IndexOf(inx);
   SalesInvoiceLine := SalesInvoice.Lines[inx];
   result := (SalesInvoiceLine.NotPrinted = 'Y');
@@ -1052,7 +1052,7 @@ var
   DeleteCharges: boolean;
 begin
 //  inx := sgLines.row;
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   try
     frm := TPBMaintSalesInvoiceLineFrm.Create(Self);
     try
@@ -1579,7 +1579,7 @@ var
   inx: integer;
   SalesInvoiceLine: TSalesInvoiceLine;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   inx := SalesInvoice.Lines.IndexOf(inx);
   SalesInvoiceLine := SalesInvoice.Lines[inx];
   if SalesInvoiceLine.TotalGoods <> 0 then

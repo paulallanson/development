@@ -60,7 +60,9 @@ var
 
 implementation
 
-uses STRPBarCode, STMntPrtBin, pbDatabase, PBIntSelDM;
+uses
+  System.UITypes,
+  STRPBarCode, STMntPrtBin, pbDatabase, PBIntSelDM;
 
 {$R *.dfm}
 

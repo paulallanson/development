@@ -1,10 +1,9 @@
 object PBMaintActivityFrm: TPBMaintActivityFrm
   Left = 236
   Top = 22
-  AutoScroll = False
   Caption = 'Activity'
-  ClientHeight = 573
-  ClientWidth = 892
+  ClientHeight = 564
+  ClientWidth = 886
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 900
@@ -13,26 +12,26 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 513
-    Width = 892
+    Top = 504
+    Width = 886
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 513
+    ExplicitWidth = 892
     DesignSize = (
-      892
+      886
       41)
     object lblDeletePrompt: TLabel
-      Left = 534
+      Left = 522
       Top = 14
       Width = 151
       Height = 13
@@ -44,9 +43,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 534
     end
     object btnOK: TBitBtn
-      Left = 710
+      Left = 698
       Top = 8
       Width = 75
       Height = 25
@@ -54,8 +54,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -121,17 +119,18 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
+      ExplicitLeft = 710
     end
     object btnCancel: TBitBtn
-      Left = 798
+      Left = 786
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -196,16 +195,21 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
+      ExplicitLeft = 798
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 892
-    Height = 513
+    Width = 886
+    Height = 504
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 892
+    ExplicitHeight = 513
     object pgActivities: TPageControl
       Left = 1
       Top = 161
@@ -217,8 +221,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       object tbCurrent: TTabSheet
         Caption = 'Current Activity'
         DesignSize = (
-          882
-          323)
+          876
+          314)
         object Label7: TLabel
           Left = 8
           Top = 10
@@ -241,44 +245,50 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Caption = 'Details'
         end
         object Label10: TLabel
-          Left = 621
-          Top = 254
+          Left = 609
+          Top = 245
           Width = 31
           Height = 13
           Anchors = [akRight, akBottom]
           Caption = 'Priority'
+          ExplicitLeft = 621
+          ExplicitTop = 254
         end
         object Label11: TLabel
           Left = 8
-          Top = 254
+          Top = 245
           Width = 30
           Height = 13
           Anchors = [akLeft, akBottom]
           Caption = 'Status'
+          ExplicitTop = 254
         end
         object memDetails: TMemo
           Left = 80
           Top = 73
-          Width = 785
-          Height = 161
+          Width = 773
+          Height = 152
           Anchors = [akLeft, akTop, akRight, akBottom]
           ScrollBars = ssVertical
           TabOrder = 0
           OnChange = memDetailsChange
+          ExplicitWidth = 785
+          ExplicitHeight = 161
         end
         object dblkpType: TDBLookupComboBox
           Left = 80
           Top = 6
-          Width = 249
+          Width = 237
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Activity_Type'
           ListField = 'Activity_Type_Description'
           TabOrder = 1
           OnClick = dblkpTypeClick
+          ExplicitWidth = 249
         end
         object btnActivityType: TButton
-          Left = 339
+          Left = 327
           Top = 5
           Width = 22
           Height = 22
@@ -292,20 +302,22 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ParentFont = False
           TabOrder = 2
           OnClick = btnActivityTypeClick
+          ExplicitLeft = 339
         end
         object edtSubject: TEdit
           Left = 80
           Top = 39
-          Width = 785
+          Width = 773
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
           Text = 'edtSubject'
           OnChange = edtSubjectChange
+          ExplicitWidth = 785
         end
         object dblkpPriority: TDBLookupComboBox
-          Left = 661
-          Top = 250
+          Left = 649
+          Top = 241
           Width = 167
           Height = 21
           Anchors = [akRight, akBottom]
@@ -313,10 +325,12 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ListField = 'Activity_Priority_Description'
           TabOrder = 4
           OnClick = dblkpPriorityClick
+          ExplicitLeft = 661
+          ExplicitTop = 250
         end
         object dblkpStatus: TDBLookupComboBox
           Left = 80
-          Top = 250
+          Top = 241
           Width = 225
           Height = 21
           Anchors = [akLeft, akBottom]
@@ -324,17 +338,20 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ListField = 'Activity_Status_Description'
           TabOrder = 5
           OnClick = dblkpStatusClick
+          ExplicitTop = 250
         end
         object pnlReminder: TPanel
           Left = 0
-          Top = 287
-          Width = 882
+          Top = 278
+          Width = 876
           Height = 36
           Align = alBottom
           BevelOuter = bvNone
           TabOrder = 6
+          ExplicitTop = 287
+          ExplicitWidth = 882
           DesignSize = (
-            882
+            876
             36)
           object Label3: TLabel
             Left = 207
@@ -344,12 +361,13 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Caption = 'Time'
           end
           object Label9: TLabel
-            Left = 533
+            Left = 521
             Top = 8
             Width = 62
             Height = 13
             Anchors = [akRight, akBottom]
             Caption = 'Assigned To:'
+            ExplicitLeft = 533
           end
           object Label2: TLabel
             Left = 8
@@ -372,7 +390,6 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Top = 4
             Width = 105
             Height = 21
-            ItemHeight = 13
             ItemIndex = 0
             TabOrder = 1
             Text = '00:00'
@@ -427,7 +444,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               '23:30')
           end
           object dblkpAssignedTo: TDBLookupComboBox
-            Left = 605
+            Left = 593
             Top = 4
             Width = 224
             Height = 21
@@ -436,9 +453,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             ListField = 'Name'
             TabOrder = 2
             OnClick = dblkpAssignedToClick
+            ExplicitLeft = 605
           end
           object Button4: TButton
-            Left = 844
+            Left = 832
             Top = 3
             Width = 22
             Height = 22
@@ -451,6 +469,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Font.Style = [fsBold]
             ParentFont = False
             TabOrder = 3
+            ExplicitLeft = 844
           end
         end
       end
@@ -507,8 +526,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object dbgDetails: TDBGrid
           Left = 0
           Top = 0
-          Width = 882
-          Height = 160
+          Width = 876
+          Height = 151
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           TabOrder = 1
@@ -642,13 +661,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     object pnlTop: TPanel
       Left = 1
       Top = 1
-      Width = 890
+      Width = 884
       Height = 160
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitWidth = 890
       DesignSize = (
-        890
+        884
         160)
       object Label1: TLabel
         Left = 8
@@ -679,23 +699,25 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Caption = 'Module'
       end
       object LabelPhone: TLabel
-        Left = 401
+        Left = 389
         Top = 78
         Width = 34
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Phone:'
+        ExplicitLeft = 401
       end
       object LabelFax: TLabel
-        Left = 619
+        Left = 607
         Top = 78
         Width = 34
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Mobile:'
+        ExplicitLeft = 619
       end
       object DBCPhoneText: TDBText
-        Left = 446
+        Left = 434
         Top = 78
         Width = 170
         Height = 13
@@ -707,9 +729,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 446
       end
       object DBCEmailText: TDBText
-        Left = 446
+        Left = 434
         Top = 102
         Width = 214
         Height = 13
@@ -721,9 +744,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 446
       end
       object DBCMobileText: TDBText
-        Left = 662
+        Left = 650
         Top = 78
         Width = 202
         Height = 13
@@ -735,31 +759,34 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
+        ExplicitLeft = 662
       end
       object edtCustomer: TEdit
         Left = 80
         Top = 12
-        Width = 457
+        Width = 445
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         Color = clWhite
         ReadOnly = True
         TabOrder = 0
         Text = 'edtCustomer'
+        ExplicitWidth = 457
       end
       object dblkpBranch: TDBLookupComboBox
         Left = 80
         Top = 42
-        Width = 457
+        Width = 445
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Branch_no'
         ListField = 'Name'
         TabOrder = 1
         OnClick = dblkpBranchClick
+        ExplicitWidth = 457
       end
       object btnBranch: TButton
-        Left = 547
+        Left = 535
         Top = 41
         Width = 22
         Height = 22
@@ -773,17 +800,19 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 2
         OnClick = btnBranchClick
+        ExplicitLeft = 547
       end
       object pnlModule: TPanel
         Left = 272
         Top = 120
-        Width = 621
+        Width = 609
         Height = 33
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         TabOrder = 3
+        ExplicitWidth = 621
         DesignSize = (
-          621
+          609
           33)
         object Label13: TLabel
           Left = 24
@@ -804,12 +833,13 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object edtDescription: TEdit
           Left = 202
           Top = 7
-          Width = 406
+          Width = 394
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
           TabOrder = 2
           Text = 'edtDescription'
+          ExplicitWidth = 406
         end
         object btnModuleLU: TButton
           Left = 172
@@ -828,7 +858,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         end
       end
       object Button1: TButton
-        Left = 339
+        Left = 327
         Top = 73
         Width = 22
         Height = 22
@@ -842,17 +872,19 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 4
         OnClick = Button1Click
+        ExplicitLeft = 339
       end
       object dblkpContact: TDBLookupComboBox
         Left = 80
         Top = 72
-        Width = 249
+        Width = 237
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Contact_no'
         ListField = 'Name'
         TabOrder = 5
         OnClick = dblkpContactClick
+        ExplicitWidth = 249
       end
       object dblkpModule: TDBLookupComboBox
         Left = 80
@@ -865,7 +897,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         OnClick = dblkpModuleClick
       end
       object btnCustomer: TButton
-        Left = 547
+        Left = 535
         Top = 11
         Width = 22
         Height = 22
@@ -879,9 +911,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ParentFont = False
         TabOrder = 7
         OnClick = btnCustomerClick
+        ExplicitLeft = 547
       end
       object Button2: TButton
-        Left = 389
+        Left = 377
         Top = 98
         Width = 50
         Height = 20
@@ -889,13 +922,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Caption = 'Email:'
         TabOrder = 8
         OnClick = Button2Click
+        ExplicitLeft = 389
       end
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 554
-    Width = 892
+    Top = 545
+    Width = 886
     Height = 19
     Panels = <
       item
@@ -904,141 +938,15 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       item
         Width = 250
       end>
+    ExplicitTop = 554
+    ExplicitWidth = 892
   end
   object imgIcons: TImageList
     Left = 32
     Top = 276
     Bitmap = {
       494C010105000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000003000000001002000000000000030
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1296,12 +1204,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000E4BF7800DBAD
       5F00E4BD7400000000000000000000000000424D3E000000000000003E000000
-      2800000040000000300000000100010000000000800100000000000000000000
-      000000000000000000000000FFFFFF0000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000080000000000000000000000000000000
+      2800000040000000200000000100010000000000000100000000000000000000
+      000000000000000000000000FFFFFF0080000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000008000000000000000
       C000000000000000F000000000000000FC00000000000000FC01000000000000

@@ -43,7 +43,9 @@ var
 
 implementation
 
-uses pbDatabase, ComObj, ActiveX, pbMainMenu, PBLUQAOperator, PBLUOps;
+uses
+  System.UITypes,
+  pbDatabase, ComObj, ActiveX, pbMainMenu, PBLUQAOperator, PBLUOps;
 
 {$R *.dfm}
 

@@ -1,10 +1,8 @@
 object PBAuditDataMod: TPBAuditDataMod
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Left = 233
-  Top = 106
-  Height = 480
-  Width = 696
+  Height = 600
+  Width = 870
+  PixelsPerInch = 120
   object AddAuditSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -21,43 +19,29 @@ object PBAuditDataMod: TPBAuditDataMod
       '        :Audit_Text'
       'From Audit_Trail'
       ' ')
-    Left = 64
-    Top = 296
+    Left = 80
+    Top = 370
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Text'
-        ParamType = ptUnknown
       end>
   end
   object Add1stAuditSQL: TFDQuery
@@ -67,21 +51,19 @@ object PBAuditDataMod: TPBAuditDataMod
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
       'Values'
       '(1, :Operator, GetDate(), 0)')
-    Left = 64
-    Top = 16
+    Left = 80
+    Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetAuditDescrSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
       '{See GetAuditDescr function} ;')
-    Left = 64
-    Top = 72
+    Left = 80
+    Top = 90
   end
   object GetAuditTypeSQL: TFDQuery
     ConnectionName = 'PB'
@@ -89,13 +71,11 @@ object PBAuditDataMod: TPBAuditDataMod
       'Select *'
       'from Audit_Type'
       'Where (Audit_Type = :Audit_Type)')
-    Left = 64
-    Top = 184
+    Left = 80
+    Top = 230
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Audit_Type'
-        ParamType = ptUnknown
       end>
   end
   object GetAuditFlagsSQL: TFDQuery
@@ -106,8 +86,8 @@ object PBAuditDataMod: TPBAuditDataMod
         'g_Errors'
       'From Company'
       'Where Company = 1 ')
-    Left = 64
-    Top = 128
+    Left = 80
+    Top = 160
   end
   object GetFldChgTypSQL: TFDQuery
     ConnectionName = 'PB'
@@ -128,18 +108,14 @@ object PBAuditDataMod: TPBAuditDataMod
       '      (AT2.Audit_Type >= 2000) and (AT2.Audit_Type < 3000)'
       ''
       ' ')
-    Left = 64
-    Top = 240
+    Left = 80
+    Top = 300
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Audit_Table_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_1_Field'
-        ParamType = ptUnknown
       end>
   end
   object Access_Add1stAuditSQL: TFDQuery
@@ -149,13 +125,11 @@ object PBAuditDataMod: TPBAuditDataMod
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
       'Values'
       '(1, :Operator, now(), 0)')
-    Left = 312
-    Top = 16
+    Left = 390
+    Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object Access_AddAuditSQL: TFDQuery
@@ -174,43 +148,29 @@ object PBAuditDataMod: TPBAuditDataMod
       '        :Audit_Text'
       'From Audit_Trail'
       ' ')
-    Left = 320
-    Top = 288
+    Left = 400
+    Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Code_4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Audit_Text'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -55,6 +55,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 614
         DesignSize = (
           481
           623)
@@ -67,6 +68,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Analysis  '
           ParentBackground = False
           TabOrder = 2
+          ExplicitHeight = 290
           DesignSize = (
             465
             299)
@@ -350,6 +352,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a Reseller Customer'
             TabOrder = 13
+            ExplicitTop = 238
           end
           object chkbxCTRLPCustomer: TCheckBox
             Left = 8
@@ -359,6 +362,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Anchors = [akLeft, akBottom]
             Caption = 'This is a CTRL-P Master Customer'
             TabOrder = 14
+            ExplicitTop = 262
           end
         end
         object grpbxDetails: TGroupBox
@@ -714,6 +718,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Caption = 'pnlHOContacts'
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 687
+        ExplicitHeight = 614
         object Panel26: TPanel
           Left = 1
           Top = 1
@@ -724,6 +730,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Head Office Contacts'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 685
         end
         object Panel27: TPanel
           Left = 683
@@ -734,6 +741,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 677
+          ExplicitHeight = 556
         end
         object CoolBar9: TCoolBar
           Left = 1
@@ -744,10 +753,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 691
+              Width = 687
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
+          ExplicitWidth = 685
           object ToolBar2: TToolBar
             Left = 11
             Top = 0
@@ -806,6 +816,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 3
+          ExplicitLeft = 501
+          ExplicitHeight = 556
           object Panel31: TPanel
             Left = 1
             Top = 1
@@ -836,6 +848,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Align = alRight
           ParentBackground = False
           TabOrder = 4
+          ExplicitLeft = 480
+          ExplicitHeight = 556
         end
         object Panel29: TPanel
           Left = 1
@@ -846,6 +860,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Panel29'
           ParentBackground = False
           TabOrder = 5
+          ExplicitWidth = 479
+          ExplicitHeight = 556
           object dbgHOContactDetails: TDBGrid
             Left = 1
             Top = 1
@@ -926,6 +942,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
+            ExplicitTop = 390
+            ExplicitWidth = 477
             object LabelName: TLabel
               Left = 4
               Top = 10
@@ -3890,14 +3908,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Expanded = False
             FieldName = 'Rep_Name'
             Title.Caption = 'Rep'
-            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'Operator_Name'
             Title.Caption = 'Operator'
-            Width = 64
             Visible = True
           end>
       end
@@ -5301,6 +5317,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 683
+    ExplicitWidth = 1176
     DesignSize = (
       1182
       41)
@@ -5568,6 +5586,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1176
     DesignSize = (
       1182
       41)

@@ -92,7 +92,9 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, CCSCommon, pbluQuotesSearch, PBMaintQuote,
+uses
+  System.UITypes,
+  pbDatabase, pbMainMenu, CCSCommon, pbluQuotesSearch, PBMaintQuote,
   PBRSQuote, PBMaintJobBag, pbLUQuoteRpts;
 
 {$R *.dfm}

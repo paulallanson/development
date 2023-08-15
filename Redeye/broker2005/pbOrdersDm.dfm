@@ -6,7 +6,7 @@ object dtmdlOrders: TdtmdlOrders
   object qryOrders: TFDQuery
     Connection = dmBroker.PBLDatabase
     SQL.Strings = (
-      'SELECT TOP :Records '
+      'SELECT TOP (:Records) '
       '  Purchase_OrderLine.Customer,'
       '  Customer.Name,'
       '  Purchase_OrderLine.Purchase_Order AS Sales_order,'
@@ -81,9 +81,7 @@ object dtmdlOrders: TdtmdlOrders
         'WHERE ((Purchase_orderline.Customer = :Customer) or (0 = :Custom' +
         'er)) and'
       '      Purchase_orderline.Customers_desc Like :Description'
-      ''
-      ' '
-      ' ')
+      '')
     Left = 20
     Top = 50
     ParamData = <
@@ -91,7 +89,7 @@ object dtmdlOrders: TdtmdlOrders
         Name = 'RECORDS'
         DataType = ftInteger
         ParamType = ptInput
-        Value = Null
+        Value = 1
       end
       item
         Name = 'Customer'
@@ -119,7 +117,6 @@ object dtmdlOrders: TdtmdlOrders
       FieldName = 'Sales_order'
       Origin = 'Sales_order'
       Required = True
-      OnGetText = qryOrdersSales_orderGetText
     end
     object qryOrdersLine: TIntegerField
       FieldName = 'Line'
@@ -192,7 +189,6 @@ object dtmdlOrders: TdtmdlOrders
     object qryOrdersStatus_Description: TWideStringField
       FieldName = 'Status_Description'
       Origin = 'Status_Description'
-      OnGetText = qryOrdersStatus_DescriptionGetText
       Size = 40
     end
     object qryOrdersBranch_Name: TWideStringField
@@ -290,7 +286,7 @@ object dtmdlOrders: TdtmdlOrders
   object qrySOrders: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select TOP :Records'
+      'select TOP (:Records)'
       #9'sales_order.customer,'
       '                Customer.Name,'
       #9'sales_order_line.sales_order,'
@@ -400,7 +396,7 @@ object dtmdlOrders: TdtmdlOrders
   object qryPOrders: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT TOP :Records'
+      'SELECT TOP (:Records)'
       '  Purchase_OrderLine.Customer,'
       '  Customer.Name,'
       '  Purchase_OrderLine.Purchase_Order AS Sales_order,'
@@ -804,12 +800,12 @@ object dtmdlOrders: TdtmdlOrders
     Top = 50
   end
   object qryCallOffs: TFDQuery
-    ConnectionName = 'PB'
+    Connection = dmBroker.PBLDatabase
     SQL.Strings = (
       'select '#9'sales_order.customer,'
-      '                Customer.Name,'
+      '        Customer.Name,'
       #9'sales_order_line.sales_order,'
-      '                sales_order_Line.sales_order_Line_no as Line,'
+      '        sales_order_Line.sales_order_Line_no as Line,'
       #9'sales_order.date_ordered as Order_date, '
       #9'sales_order.cust_order_no,'
       #9'Part_Description as Description,'
@@ -885,142 +881,211 @@ object dtmdlOrders: TdtmdlOrders
       item
         Name = 'Customer'
         DataType = ftInteger
-      end
-      item
-        Name = 'Customer'
-        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Description'
         DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
     object qryCallOffscustomer: TIntegerField
       FieldName = 'customer'
+      Origin = 'customer'
+      Required = True
     end
-    object qryCallOffsName: TStringField
+    object qryCallOffsName: TWideStringField
       FieldName = 'Name'
-      FixedChar = True
-      Size = 80
+      Origin = 'Name'
+      Required = True
+      Size = 100
     end
     object qryCallOffssales_order: TIntegerField
       FieldName = 'sales_order'
+      Origin = 'sales_order'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
     end
-    object qryCallOffsOrder_date: TDateTimeField
+    object qryCallOffsOrder_date: TSQLTimeStampField
       FieldName = 'Order_date'
+      Origin = 'Order_date'
+      Required = True
     end
-    object qryCallOffscust_order_no: TStringField
+    object qryCallOffscust_order_no: TWideStringField
       FieldName = 'cust_order_no'
-      FixedChar = True
-      Size = 80
+      Origin = 'cust_order_no'
+      Required = True
+      Size = 40
     end
-    object qryCallOffsGoods_Required: TDateTimeField
+    object qryCallOffsDescription: TStringField
+      FieldName = 'Description'
+      Origin = 'Description'
+      Size = 150
+    end
+    object qryCallOffsQuantity: TIntegerField
+      FieldName = 'Quantity'
+      Origin = 'Quantity'
+      Required = True
+    end
+    object qryCallOffsorder_price: TCurrencyField
+      FieldName = 'order_price'
+      Origin = 'order_price'
+      Required = True
+    end
+    object qryCallOffsorder_unit: TIntegerField
+      FieldName = 'order_unit'
+      Origin = 'order_unit'
+      Required = True
+    end
+    object qryCallOffsselling_price: TCurrencyField
+      FieldName = 'selling_price'
+      Origin = 'selling_price'
+      Required = True
+    end
+    object qryCallOffsselling_unit: TIntegerField
+      FieldName = 'selling_unit'
+      Origin = 'selling_unit'
+      Required = True
+    end
+    object qryCallOffsStock_Reference: TWideStringField
+      FieldName = 'Stock_Reference'
+      Origin = 'Stock_Reference'
+      Required = True
+      Size = 25
+    end
+    object qryCallOffsForm_Reference_id: TWideStringField
+      FieldName = 'Form_Reference_id'
+      Origin = 'Form_Reference_id'
+      ReadOnly = True
+      Size = 50
+    end
+    object qryCallOffsGoods_Required: TSQLTimeStampField
       FieldName = 'Goods_Required'
+      Origin = 'Goods_Required'
+      Required = True
     end
-    object qryCallOffsOrder_Type: TStringField
+    object qryCallOffsOrder_Type: TWideStringField
       FieldName = 'Order_Type'
-      FixedChar = True
-      Size = 2
+      Origin = 'Order_Type'
+      Required = True
+      Size = 1
     end
     object qryCallOffsOrder_status: TIntegerField
       FieldName = 'Order_status'
+      Origin = 'Order_status'
+      Required = True
     end
-    object qryCallOffsStatus_Description: TStringField
+    object qryCallOffsStatus_Description: TWideStringField
       FieldName = 'Status_Description'
-      FixedChar = True
-      Size = 100
+      Origin = 'Status_Description'
+      Required = True
+      Size = 50
     end
-    object qryCallOffsBranch_Name: TStringField
+    object qryCallOffsBranch_Name: TWideStringField
       FieldName = 'Branch_Name'
-      FixedChar = True
-      Size = 100
+      Origin = 'Branch_Name'
+      Size = 50
+    end
+    object qryCallOffsAccount_Code: TWideStringField
+      FieldName = 'Account_Code'
+      Origin = 'Account_Code'
+      Size = 10
     end
     object qryCallOffsOn_Hold: TStringField
       FieldName = 'On_Hold'
-      FixedChar = True
+      Origin = 'On_Hold'
+      ReadOnly = True
+      Required = True
       Size = 1
+    end
+    object qryCallOffsProof_Revision: TStringField
+      FieldName = 'Proof_Revision'
+      Origin = 'Proof_Revision'
+      ReadOnly = True
+      Required = True
+      Size = 8
     end
     object qryCallOffsSupplier: TIntegerField
       FieldName = 'Supplier'
+      Origin = 'Supplier'
     end
-    object qryCallOffsStatus_Text: TStringField
-      FieldKind = fkCalculated
-      FieldName = 'Status_Text'
-      OnGetText = qryCallOffsStatus_TextGetText
-      Size = 50
-      Calculated = True
+    object qryCallOffsSupplier_name: TWideStringField
+      FieldName = 'Supplier_name'
+      Origin = 'Supplier_name'
+      ReadOnly = True
+      Size = 100
+    end
+    object qryCallOffsjob_bag: TIntegerField
+      FieldName = 'job_bag'
+      Origin = 'job_bag'
+      ReadOnly = True
+    end
+    object qryCallOffsDescription_Reference: TStringField
+      FieldName = 'Description_Reference'
+      Origin = 'Description_Reference'
+      ReadOnly = True
+      Required = True
+      Size = 1
     end
     object qryCallOffsRep: TIntegerField
       FieldName = 'Rep'
+      Origin = 'Rep'
+      ReadOnly = True
+      Required = True
     end
     object qryCallOffsRep_Name: TStringField
       FieldName = 'Rep_Name'
-      FixedChar = True
+      Origin = 'Rep_Name'
+      ReadOnly = True
+      Required = True
       Size = 1
     end
     object qryCallOffsOperator: TIntegerField
       FieldName = 'Operator'
+      Origin = 'Operator'
+      ReadOnly = True
+      Required = True
     end
     object qryCallOffsOperator_Name: TStringField
       FieldName = 'Operator_Name'
-      FixedChar = True
+      Origin = 'Operator_Name'
+      ReadOnly = True
+      Required = True
       Size = 1
     end
-    object qryCallOffsPurch_Ord_No: TStringField
-      FieldName = 'Purch_Ord_No'
+    object qryCallOffsoriginal_order: TIntegerField
+      FieldName = 'original_order'
+      Origin = 'original_order'
+      ReadOnly = True
+      Required = True
     end
-    object qryCallOffsSales_Order_Head_Status: TIntegerField
-      FieldName = 'Sales_Order_Head_Status'
-    end
-    object qryCallOffsSales_Order_Type: TStringField
-      FieldName = 'Sales_Order_Type'
+    object qryCallOffsInactive: TStringField
+      FieldName = 'Inactive'
+      Origin = 'Inactive'
+      ReadOnly = True
+      Required = True
       Size = 1
     end
-    object qryCallOffsSales_Order_Type_Description: TStringField
-      FieldName = 'Sales_Order_Type_Description'
-      Size = 30
-    end
-    object qryCallOffsDelivery_Location: TStringField
-      FieldName = 'Delivery_Location'
-      Size = 60
-    end
-    object qryCallOffsAccount_Code: TStringField
-      FieldName = 'Account_Code'
-    end
-    object qryCallOffsinactive: TStringField
-      FieldName = 'inactive'
+    object qryCallOffsSupp_Inv_Recd: TStringField
+      FieldName = 'Supp_Inv_Recd'
+      Origin = 'Supp_Inv_Recd'
+      ReadOnly = True
+      Required = True
       Size = 1
     end
-    object qryCallOffsPart: TStringField
-      FieldName = 'Part'
-      Size = 25
+    object qryCallOffsNeeds_Authorising: TStringField
+      FieldName = 'Needs_Authorising'
+      Origin = 'Needs_Authorising'
+      ReadOnly = True
+      Required = True
+      Size = 1
     end
-    object qryCallOffsDescription: TStringField
-      FieldName = 'Description'
-      Size = 100
-    end
-    object qryCallOffsQuantity: TIntegerField
-      FieldName = 'Quantity'
-    end
-    object qryCallOffsOrder_Price: TFloatField
-      FieldName = 'Order_Price'
-      DisplayFormat = '#,###,##0.000'
-    end
-    object qryCallOffsOrder_unit: TIntegerField
-      FieldName = 'Order_unit'
-    end
-    object qryCallOffsSelling_Price: TFloatField
-      FieldName = 'Selling_Price'
-      DisplayFormat = '#,###,##0.000'
-    end
-    object qryCallOffsSelling_Unit: TIntegerField
-      FieldName = 'Selling_Unit'
-    end
-    object qryCallOffsJob_Bag_no: TIntegerField
-      FieldName = 'Job_Bag_no'
-    end
-    object qryCallOffsOffice_Contact_Name: TStringField
-      FieldName = 'Office_Contact_Name'
-      Size = 50
+    object qryCallOffsAuthorised_By: TIntegerField
+      FieldName = 'Authorised_By'
+      Origin = 'Authorised_By'
+      ReadOnly = True
+      Required = True
     end
   end
   object qryCust: TFDQuery
@@ -1038,13 +1103,13 @@ object dtmdlOrders: TdtmdlOrders
   object qrySOHeaders: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select '#9'TOP :Records'
+      'select '#9'TOP (:Records)'
       '  sales_order.customer,'
       '  Customer.Name,'
-      #9'sales_order.sales_order,'
-      #9'sales_order.date_ordered as Order_date,'
-      #9'sales_order.cust_order_no,'
-      #9'sales_order.Date_Required as Goods_Required,'
+      '  sales_order.sales_order,'
+      '  sales_order.date_ordered as Order_date,'
+      '  sales_order.cust_order_no,'
+      '  sales_order.Date_Required as Goods_Required,'
       '  Replenish_Source.Replenish_id as Order_Type,'
       '  Sales_order.Sales_order_Head_Status,'
       '  Sales_order.inactive,'
@@ -1138,14 +1203,15 @@ object dtmdlOrders: TdtmdlOrders
     ParamData = <
       item
         Name = 'Records'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Customer'
         DataType = ftInteger
-      end
-      item
-        Name = 'Customer'
-        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object qrySelectedSO: TFDQuery
@@ -1246,11 +1312,11 @@ object dtmdlOrders: TdtmdlOrders
   object qrySOLines: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'select '#9'TOP :Records'
+      'select '#9'TOP (:Records)'
       '  sales_order.customer,'
       '  Customer.Name,'
       #9'sales_order_line.sales_order,'
-      '                sales_order_Line.sales_order_Line_no as Line,'
+      '        sales_order_Line.sales_order_Line_no as Line,'
       #9'sales_order.date_ordered as Order_date, '
       #9'sales_order.cust_order_no,'
       #9'Part_Description as Description,'
@@ -1357,15 +1423,21 @@ object dtmdlOrders: TdtmdlOrders
     ParamData = <
       item
         Name = 'Records'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Customer'
-      end
-      item
-        Name = 'Customer'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end
       item
         Name = 'Description'
+        DataType = ftString
+        ParamType = ptInput
+        Value = Null
       end>
   end
 end

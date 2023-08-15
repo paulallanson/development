@@ -3,17 +3,15 @@ object frmPBExpiryDate: TfrmPBExpiryDate
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Expiry Date Confirmation'
-  ClientHeight = 151
-  ClientWidth = 275
+  ClientHeight = 142
+  ClientWidth = 269
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -79,9 +77,7 @@ object frmPBExpiryDate: TfrmPBExpiryDate
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Company_CheckSum'
-        ParamType = ptUnknown
       end>
   end
 end

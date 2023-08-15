@@ -35,7 +35,9 @@ var
 
 implementation
 
-uses pbDatabase;
+uses
+  System.UITypes,
+  pbDatabase;
 
 {$R *.dfm}
 

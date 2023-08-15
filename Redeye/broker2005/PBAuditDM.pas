@@ -204,20 +204,20 @@ end;
 
 function TPBAuditDataMod.FieldChanges(sTempTable: String; DSFrom: TDataSet; SQLTo: TFDQuery): ByteBool;
 Var
-iCount, iTmpCde1, iTmpCde2, iTmpCde3, iTmpCde4: Integer ;
-TempField: TField ;
-TempParam: TFDParam;
-TempFieldType: TFieldType;
-sTempFrom, sTempTo: String;
+  iCount, iTmpCde1, iTmpCde2, iTmpCde3, iTmpCde4: Integer ;
+  TempField: TField ;
+  TempParam: TFDParam;
+  TempFieldType: TFieldType;
+  sTempFrom, sTempTo: String;
 begin
-{Detect field changes in 2 datasets} ;
-{Returns TRUE if a field has changed} ;
-Result := False ;
-{If FILE UPDATE and FIELD CHANGES are disabled, don't bother to do anything else} ;
-If (not bAuditLogFields) and (not bAuditLogUpd) then
-        exit ;
-{Loop through the PARAMETERS in the output TFDQuery} ;
-For iCount := 0 to SQLTo.ParamCount -1 do
+  {Detect field changes in 2 datasets} ;
+  {Returns TRUE if a field has changed} ;
+  Result := False ;
+  {If FILE UPDATE and FIELD CHANGES are disabled, don't bother to do anything else} ;
+  If (not bAuditLogFields) and (not bAuditLogUpd) then
+          exit ;
+  {Loop through the PARAMETERS in the output TFDQuery} ;
+  For iCount := 0 to SQLTo.ParamCount -1 do
         begin
         TempParam := SQLTo.Params[iCount] ;
         {Try to find the same field name in the INPUT dataset} ;

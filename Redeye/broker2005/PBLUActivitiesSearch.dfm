@@ -3,20 +3,18 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   Top = 99
   BorderStyle = bsDialog
   Caption = 'Activity Search'
-  ClientHeight = 406
-  ClientWidth = 291
+  ClientHeight = 397
+  ClientWidth = 285
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   DesignSize = (
-    291
-    406)
-  PixelsPerInch = 96
+    285
+    397)
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -60,11 +58,12 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object Label1: TLabel
     Left = 11
-    Top = 309
+    Top = 300
     Width = 65
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Created since'
+    ExplicitTop = 309
   end
   object Label4: TLabel
     Left = 11
@@ -110,11 +109,12 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object lblDueDate: TLabel
     Left = 11
-    Top = 279
+    Top = 270
     Width = 46
     Height = 13
     Anchors = [akLeft, akBottom]
     Caption = 'Due Date'
+    ExplicitTop = 279
   end
   object Label3: TLabel
     Left = 11
@@ -147,16 +147,17 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   object chkbxShowOnlyLive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 333
+    Top = 324
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
     Caption = 'Show only live activities'
     TabOrder = 14
+    ExplicitTop = 333
   end
   object SearchButton: TButton
     Left = 12
-    Top = 365
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -164,24 +165,24 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Default = True
     TabOrder = 15
     OnClick = SearchButtonClick
+    ExplicitTop = 365
   end
   object edtDate: TEdit
     Left = 120
-    Top = 305
+    Top = 296
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 12
     OnExit = edtDateExit
+    ExplicitTop = 305
   end
   object btnDate: TBitBtn
     Left = 216
-    Top = 303
+    Top = 294
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 13
-    OnClick = btnDateClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -196,6 +197,9 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 13
+    OnClick = btnDateClick
+    ExplicitTop = 303
   end
   object edtType: TEdit
     Left = 120
@@ -213,13 +217,14 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object ClearButton: TButton
     Left = 196
-    Top = 366
+    Top = 357
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Clear Search'
     TabOrder = 16
     OnClick = ClearButtonClick
+    ExplicitTop = 366
   end
   object edtContact: TEdit
     Left = 120
@@ -251,21 +256,20 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
   end
   object edtDueDate: TEdit
     Left = 120
-    Top = 275
+    Top = 266
     Width = 89
     Height = 21
     Anchors = [akLeft, akBottom]
     TabOrder = 10
     OnExit = edtDueDateExit
+    ExplicitTop = 275
   end
   object BitBtn1: TBitBtn
     Left = 216
-    Top = 273
+    Top = 264
     Width = 25
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 11
-    OnClick = BitBtn1Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -280,6 +284,9 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = BitBtn1Click
+    ExplicitTop = 273
   end
   object edtDescription: TEdit
     Left = 120

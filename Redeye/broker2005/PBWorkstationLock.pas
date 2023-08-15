@@ -37,7 +37,9 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, pbDatabase;
+uses
+  System.UITypes,
+  pbMainMenu, CCSCommon, pbDatabase;
 
 {$R *.dfm}
 

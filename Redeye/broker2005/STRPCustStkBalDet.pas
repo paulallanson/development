@@ -45,12 +45,6 @@ type
     qryOrders: TFDQuery;
     qryGetOnOrd: TFDQuery;
     QRLblQtyOnOrd: TQRLabel;
-    qryOrdersCust_Order_No: TStringField;
-    qryOrdersPurchase_Order: TFloatField;
-    qryOrdersQty_in_Stock: TFloatField;
-    qryOrdersQuantity: TFloatField;
-    qryOrdersForms_per_Box: TStringField;
-    qryOrdersLast_Delivery: TDateTimeField;
     dtsReport: TDataSource;
     qryGetLastSO: TFDQuery;
     QRLabel1: TQRLabel;
@@ -65,6 +59,12 @@ type
     qryReportNot_In_Use: TStringField;
     qryReportProduct_Class: TStringField;
     qryReportFree_Stock: TIntegerField;
+    qryOrdersCust_Order_No: TStringField;
+    qryOrdersPurchase_Order: TFloatField;
+    qryOrdersQty_in_Stock: TFloatField;
+    qryOrdersQuantity: TFloatField;
+    qryOrdersForms_per_Box: TStringField;
+    qryOrdersLast_Delivery: TSQLTimeStampField;
     function Getdetails(Sender: TObject): integer;
     procedure QuickReportBeforePrint(Sender: TCustomQuickRep;
       var PrintReport: Boolean);

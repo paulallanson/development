@@ -113,7 +113,9 @@ var
 
 implementation
 
-uses PBMaintPrdTyp, PBMaintOpsDet, PBDBMemo, pbMainMenu, PBDatabase, PBRPOperator;
+uses
+  System.Types,
+  PBMaintPrdTyp, PBMaintOpsDet, PBDBMemo, pbMainMenu, PBDatabase, PBRPOperator;
 
 {$R *.DFM}
 

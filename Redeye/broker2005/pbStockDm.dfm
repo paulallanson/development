@@ -75,7 +75,8 @@ object dtmdlStock: TdtmdlStock
         '                      (store_stock.invoice_upfront is null))) as' +
         ' not_paid_for,'
       '       Part_Store_Levels.Reorder_Level,'
-      '       Not_in_Use'
+      '       Not_in_Use,'
+      '       Product_Class'
       
         'from (part left join part_store_levels on (part.part = part_stor' +
         'e_levels.part)) left join'
@@ -88,7 +89,8 @@ object dtmdlStock: TdtmdlStock
       '      Part.Sell_Pack_Quantity,'
       '      store_stock.part,'
       '      Part_Store_Levels.Reorder_Level,'
-      '      Part.Not_in_Use'
+      '      Part.Not_in_Use,'
+      '      Product_Class'
       'HAVING ((Part.Customer = :Customer) or (:Customer = 0)) and'
       '      ('
       '      (Part.Part Like :Description) or'
@@ -199,6 +201,11 @@ object dtmdlStock: TdtmdlStock
       Origin = 'Not_in_Use'
       Required = True
       Size = 1
+    end
+    object qryCustStockProduct_Class: TWideStringField
+      FieldName = 'Product_Class'
+      Origin = 'Product_Class'
+      Size = 5
     end
   end
   object dtsStock: TDataSource

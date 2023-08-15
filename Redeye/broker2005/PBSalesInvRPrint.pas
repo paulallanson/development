@@ -625,7 +625,7 @@ begin
               PBRPSalesInvFrm.InvHeadSRC.dataset := InvRPrintSQL;
 
               sAttachmentType := PBEmailListFrm.EmailListGrid.Cells[5, irow];
-              Printtoattachment(PBRPSalesInvFrm, EmailArray[irow,1]);
+              Printtoattachment(PBRPSalesInvFrm, sAttachmentType);
 
               if PBRPSalesInvFrm.bCustomerisReseller then
                 ExportInvoice(PBRPSalesInvFrm, EmailArray[irow,1])

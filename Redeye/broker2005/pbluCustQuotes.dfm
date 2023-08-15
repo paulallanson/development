@@ -148,8 +148,6 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 349
-    ExplicitWidth = 808
     DesignSize = (
       800
       41)
@@ -214,7 +212,6 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 3
-    ExplicitWidth = 808
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -256,17 +253,16 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 397
+            Width = 385
           end>
-        ExplicitWidth = 399
+        ExplicitWidth = 397
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 384
+          Width = 376
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 47
+          ButtonWidth = 62
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
@@ -279,49 +275,49 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
           Wrapable = False
           object btnCustomers: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Caption = 'Calls'
             ImageIndex = 0
             OnClick = btnCustomersClick
           end
           object btnQuote: TToolButton
             Left = 62
-            Top = 2
+            Top = 0
             Caption = 'Quote'
             Enabled = False
             ImageIndex = 6
           end
           object btnEnquiries: TToolButton
             Left = 124
-            Top = 2
+            Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
             Left = 186
-            Top = 2
+            Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = btnProductionClick
           end
           object btnJobs: TToolButton
             Left = 248
-            Top = 2
+            Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
             Left = 310
-            Top = 2
+            Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
             Left = 372
-            Top = 2
+            Top = 0
             Caption = 'Sales'
             ImageIndex = 5
             OnClick = btnSalesInvoicingClick

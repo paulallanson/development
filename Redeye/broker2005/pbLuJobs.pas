@@ -103,7 +103,9 @@ var
 
 implementation
 
-uses CCSCommon, PBMaintJobBagDets, pbLUJobRpts, pbluJobsSearch, pbDatabase,
+uses
+  System.UITypes,
+  CCSCommon, PBMaintJobBagDets, pbLUJobRpts, pbluJobsSearch, pbDatabase,
   pbMainMenu, PBRSJBDraft, PBMaintJobBag, PBRSJobBag,
   PBMaintJobBagInactive, PBMaintJobBagNonConform;
 

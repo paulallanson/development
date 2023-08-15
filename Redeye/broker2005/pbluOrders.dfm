@@ -32,13 +32,12 @@ object frmpbLUOrders: TfrmpbLUOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 937
+        Width = 933
       end>
-    ExplicitWidth = 939
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 924
+      Width = 920
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -46,7 +45,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 924
+        Width = 920
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56

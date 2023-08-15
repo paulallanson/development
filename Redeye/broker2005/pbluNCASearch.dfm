@@ -3,8 +3,8 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Non Conformance Search'
-  ClientHeight = 337
-  ClientWidth = 288
+  ClientHeight = 328
+  ClientWidth = 282
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   Position = poScreenCenter
   OnShow = FormShow
   DesignSize = (
-    288
-    337)
+    282
+    328)
   TextHeight = 13
   object Label9: TLabel
     Left = 11
@@ -116,7 +116,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object chkbxShowInactive: TCheckBox
     Tag = 12
     Left = 12
-    Top = 271
+    Top = 262
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]
@@ -126,7 +126,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   end
   object SearchButton: TButton
     Left = 12
-    Top = 303
+    Top = 294
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -196,7 +196,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   end
   object ClearButton: TButton
     Left = 198
-    Top = 304
+    Top = 295
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -208,7 +208,7 @@ object frmpbluNCASearch: TfrmpbluNCASearch
   object chkbxShowLiveNCA: TCheckBox
     Tag = 12
     Left = 12
-    Top = 248
+    Top = 239
     Width = 185
     Height = 17
     Anchors = [akLeft, akBottom]

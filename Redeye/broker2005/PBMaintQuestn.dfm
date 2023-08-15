@@ -1,21 +1,19 @@
-﻿object PBMaintQuestnFrm: TPBMaintQuestnFrm
+object PBMaintQuestnFrm: TPBMaintQuestnFrm
   Left = 194
   Top = 110
   BorderStyle = bsDialog
   Caption = 'Maintain Product Type Questions'
-  ClientHeight = 203
-  ClientWidth = 420
+  ClientHeight = 194
+  ClientWidth = 414
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 104
@@ -141,9 +139,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -208,7 +203,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 328
@@ -217,9 +215,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -284,7 +279,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -297,8 +295,8 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -316,8 +314,8 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -337,29 +335,21 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Prompt_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Question_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -372,9 +362,7 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -418,9 +406,7 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryDelQList: TFDQuery
@@ -432,9 +418,7 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryAddQList: TFDQuery
@@ -451,19 +435,13 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question_List_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question_List_Descr'
-        ParamType = ptUnknown
       end>
   end
   object qryLastQList: TFDQuery
@@ -477,9 +455,7 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
 end

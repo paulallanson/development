@@ -3,18 +3,16 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
   Top = 180
   BorderStyle = bsDialog
   Caption = 'Maintain Work Centre Operator'
-  ClientHeight = 279
-  ClientWidth = 358
+  ClientHeight = 270
+  ClientWidth = 352
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 30
@@ -35,17 +33,19 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 270
     Top = 248
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object detsgrpbox: TGroupBox
     Left = 8
@@ -153,9 +153,6 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
       Top = 110
       Width = 25
       Height = 23
-      TabOrder = 6
-      TabStop = False
-      OnClick = btnProcessClearClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -170,6 +167,9 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 6
+      TabStop = False
+      OnClick = btnProcessClearClick
     end
     object edtEmployeeName: TEdit
       Left = 96
@@ -214,9 +214,7 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'GUID'
-        ParamType = ptUnknown
       end>
   end
   object qryProcessGroup: TFDQuery
@@ -252,49 +250,34 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Employee_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Process_Group'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Process'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Hourly_Rate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator_Count'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -309,8 +292,8 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -324,9 +307,7 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Work_Centre_Operator'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -339,14 +320,14 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
   object qryProcess: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = dtsProcessGroup
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select *'
       'from Process'
@@ -356,9 +337,7 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object dtsProcess: TDataSource
@@ -376,9 +355,7 @@ object PBMaintWCOperatorFrm: TPBMaintWCOperatorFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end>
   end
 end

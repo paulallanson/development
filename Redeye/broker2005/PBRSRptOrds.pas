@@ -105,7 +105,9 @@ var
 
 implementation
 
-uses PBLUCust, PBLURep, pbDatabase, PBMaintPOrd, PBPOObjects, PBRPRptOrds,
+uses
+  System.UITypes,
+  PBLUCust, PBLURep, pbDatabase, PBMaintPOrd, PBPOObjects, PBRPRptOrds,
   pbOrdersDm, pbMainMenu;
 
 {$R *.DFM}

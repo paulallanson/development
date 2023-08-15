@@ -3,20 +3,18 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Print Barcode Labels'
-  ClientHeight = 191
-  ClientWidth = 439
+  ClientHeight = 182
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label7: TLabel
     Left = 16
@@ -65,9 +63,10 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 7
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 256
@@ -81,9 +80,6 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -98,6 +94,9 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 350
@@ -111,9 +110,6 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -128,6 +124,9 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object grpbxReprint: TGroupBox
     Left = 200
@@ -311,19 +310,13 @@ object STRSBarCodeFrm: TSTRSBarCodeFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Bin_To'
-        ParamType = ptUnknown
       end>
   end
 end

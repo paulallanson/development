@@ -8,7 +8,7 @@ uses
   DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects, Menus,
   PBWOrdersDM, ShellAPI, IniFiles, pbSalesInvoiceDM, ActiveX,
   OleCtrls, SHDocVw, pbSupplierInvoiceDM, ImgList, Clipbrd, ToolWin,
-  FileCtrl, DateUtils, System.ImageList;
+  FileCtrl, DateUtils, System.ImageList, FireDAC.Stan.Param;
 
 type
   TPBMaintJobBagFrm = class(TForm)
@@ -759,7 +759,7 @@ type
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, System.Types,
   PBPODataMod, PBAuditDM, PBMaintPOrd, PBLUCust, pbMainMenu, PBLUCConta, PBLUCRep, PBMaintJobBagRC,
   DateSelV5, pbLUCustOrdersJB, pbDatabase, STMntSOrd, CCSCommon, STpickobject,
   STPrtAllocSales, STRSPickNote, stPickingDM, STStockDM, STPickbyPart,
@@ -1542,12 +1542,7 @@ var
   JobBagLine : TJobBagLIne;
   PBMaintJobBagRCFrm: TPBMaintJobBagRCFrm;
 begin
-  try
-    inx := strtoint(sgLines.cells[0,sgLines.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 1);
   irow := inx;
 
   if aMode = jblAdd then
@@ -1641,12 +1636,7 @@ var
   JobBagDelivery: TJobBagDelivery;
   PBMaintJobBagDeliveryFrm: TPBMaintJobBagDeliveryFrm;
 begin
-  try
-    inx := strtoint(sgDeliveries.cells[0,sgDeliveries.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgDeliveries.cells[0,sgDeliveries.row], 1);
   irow := inx;
   
   try
@@ -1660,14 +1650,18 @@ begin
         end
       else
       begin
-        inx := JobBag.Deliveries.IndexOf(inx);
-        JobBagDelivery := JobBag.Deliveries[inx];
+        if JobBag.Deliveries.Count > 0 then
+        begin
+          inx := JobBag.Deliveries.IndexOf(inx);
+          JobBagDelivery := JobBag.Deliveries[inx];
+        end;
       end;
 
       PBMaintJobBagDeliveryFrm.JobBagDelivery := JobBagDelivery;
       PBMaintJobBagDeliveryFrm.Mode := aMode;
       PBMaintJobBagDeliveryFrm.ShowModal;
       if ((aMode = jbDelivAdd)) and (PBMaintJobBagDeliveryFrm.ModalResult <> mrOK) then
+      if Assigned(JobBagDelivery) then
         JobBagDelivery.Free;
       if (PBMaintJobBagDeliveryFrm.ModalResult = mrOK) then
         begin
@@ -1698,7 +1692,7 @@ var
   JobBagLine : TJobBagLIne;
   PBMaintJobBagExtrasFrm: TPBMaintJobBagExtrasFrm;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 //  dbgLines.DataSource.Dataset.Close;
 
 //  inx := sgLines.row;
@@ -1789,12 +1783,7 @@ var
   JobBagLine, JobBagLineCopy : TJobBagLine;
   PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm;
 begin
-  try
-    inx := strtoint(sgLines.cells[0,sgLines.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 1);
   irow := inx;
 //  inx := sgLines.row;
   try
@@ -1961,12 +1950,7 @@ begin
    bCanChangeInvoicedOrders := dmBroker.OperatorCanChangeInvoicedOrders(frmPBMainMenu.iOperator);
 
   {Call NEW Purchase Order Maintenance}
-  try
-    inx := strtoint(sgLines.cells[0,sgLines.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   irow := inx;
 //  inx := sgLines.row;
 
@@ -2238,68 +2222,70 @@ var
   inx: integer;
   JobBagLine: TJobBagLine;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  if JobBag.Lines.Count > 0 then
+  begin
+    inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
+    inx := jobbag.Lines.IndexOfSequence(inx);
+    JobBagLine := JobBag.Lines[inx];
 
-  inx := jobbag.Lines.IndexOfSequence(inx);
-  JobBagLine := JobBag.Lines[inx];
-
-  if JobBagLine.JBLineType = 'P' then
-    begin
-      if bComeFromOrder then exit;
-      dtmdlJBOrders := TdtmdlOrders.create(self);
-      try
-        SelectCode(JobBagLine.PurchaseOrder);
-        if btempCanUpd then
-          CallMaintScreen(jblChange)
-        else
-        if bTempView or bTempNotes or (Mode = jbView) then
-          CallMaintScreen(jblView)
-        else
-          begin
-            messagedlg('You do not have access to the Purchase Ordering module.', mtError, [mbOk], 0);
-            exit;
-          end;
-      finally
-        dtmdlJBOrders.free;
-      end;
-    end
-  else
-  if JobBagLine.JBLineType = 'S' then
-    begin
-      if bComeFromOrder then exit;
-      dtmdlJBOrders := TdtmdlOrders.create(self);
-      try
-        SelectSalesOrder(JobBagLine.SONumber);
+    if JobBagLine.JBLineType = 'P' then
+      begin
+        if bComeFromOrder then exit;
+        dtmdlJBOrders := TdtmdlOrders.create(self);
+        try
+          SelectCode(JobBagLine.PurchaseOrder);
+          if btempCanUpd then
+            CallMaintScreen(jblChange)
+          else
+          if bTempView or bTempNotes or (Mode = jbView) then
+            CallMaintScreen(jblView)
+          else
+            begin
+              messagedlg('You do not have access to the Purchase Ordering module.', mtError, [mbOk], 0);
+              exit;
+            end;
+        finally
+          dtmdlJBOrders.free;
+        end;
+      end
+    else
+    if JobBagLine.JBLineType = 'S' then
+      begin
+        if bComeFromOrder then exit;
+        dtmdlJBOrders := TdtmdlOrders.create(self);
+        try
+          SelectSalesOrder(JobBagLine.SONumber);
+          if trim(btnChange.caption) = '&View' then
+            CallMaintStockScreen('S')
+          else
+            CallMaintStockScreen('C');
+        finally
+          dtmdlJBOrders.free;
+        end;
+      end
+    else
+    if JobBagLine.JBLineType = 'W' then
+      begin
+        if bComeFromOrder then exit;
+        dtmdlJBWOrders := TdtmdlWOrders.create(self);
+        try
+          SelectWorksOrder(JobBagLine.WONumber);
+          CallMaintWOrderScreen(jbChange);
+        finally
+          dtmdlJBWOrders.free;
+        end;
+      end
+    else
+    if JobBagLine.JBLineType = 'A' then
+      begin
         if trim(btnChange.caption) = '&View' then
-          CallMaintStockScreen('S')
+          CallMaintLines(jblView)
         else
-          CallMaintStockScreen('C');
-      finally
-        dtmdlJBOrders.free;
-      end;
-    end
-  else
-  if JobBagLine.JBLineType = 'W' then
-    begin
-      if bComeFromOrder then exit;
-      dtmdlJBWOrders := TdtmdlWOrders.create(self);
-      try
-        SelectWorksOrder(JobBagLine.WONumber);
-        CallMaintWOrderScreen(jbChange);
-      finally
-        dtmdlJBWOrders.free;
-      end;
-    end
-  else
-  if JobBagLine.JBLineType = 'A' then
-    begin
-      if trim(btnChange.caption) = '&View' then
-        CallMaintLines(jblView)
-      else
-        CallMaintLines(jblChange);
-    end
-  else
-    CallMaintForm(jblChange)
+          CallMaintLines(jblChange);
+      end
+    else
+      CallMaintForm(jblChange)
+  end;
 end;
 
 procedure TPBMaintJobBagFrm.btnDeleteClick(Sender: TObject);
@@ -3322,12 +3308,7 @@ begin
       exit;
   end;
 
-  try
-    inx := strtoint(sgLines.cells[0,sgLines.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 1);
   irow := inx;
 
   STMntSordFrm := TSTMntSordFrm.Create(Self);
@@ -3491,22 +3472,21 @@ var
   inx, ilines: integer;
   i, irow: integer;
 begin
-  try
-    inx := strtoint(sgRequests.cells[0,sgRequests.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 1);
 
   if sTempFuncMode <> 'A' then
     begin
-      inx := JobBag.Requests.IndexOf(inx);
-      JobBagRequest := JobBag.Requests[inx];
+      if JobBag.Requests.Count > 0 then
+      begin
+        inx := JobBag.Requests.IndexOf(inx);
+        JobBagRequest := JobBag.Requests[inx];
 
-      dtmdlJBOrders := TdtmdlOrders.create(self);
-      try
-        SelectSalesOrder(JobBagRequest.SalesOrder);
-      finally
-        dtmdlJBOrders.Free;
+        dtmdlJBOrders := TdtmdlOrders.create(self);
+        try
+          SelectSalesOrder(JobBagRequest.SalesOrder);
+        finally
+          dtmdlJBOrders.Free;
+        end;
       end;
 
       if (FSOStatus > 30) and (sTempFuncMode = 'C') then
@@ -3676,7 +3656,7 @@ var
   inx: integer;
   JobBagLine: TJobBagLine;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   inx := jobbag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];
@@ -3708,7 +3688,7 @@ var
   JobBagLine: TJobBagLine;
   i: integer;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
 //  inx := sgLines.row;
   inx := jobbag.Lines.IndexOfSequence(inx);
@@ -3754,7 +3734,7 @@ var
   JobBagRequest: TJobBagRequest;
   i: integer;
 begin
-  inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
 
 //  inx := sgLines.row;
   inx := jobbag.Requests.IndexOf(inx);
@@ -3816,7 +3796,7 @@ var
   JobBagLine: TJobBagLine;
   NewPicking: boolean;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   inx := jobbag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];
@@ -3925,7 +3905,7 @@ var
   JobBagLine: TJobBagLine;
   NewPicking: boolean;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   inx := jobbag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];
@@ -4008,7 +3988,7 @@ var
   inx, ilines: integer;
   aWOrder: TWOrder;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   if (aMode = jbAdd) or (aMode = jbCopy) then
     begin
@@ -4183,8 +4163,7 @@ var
 begin
   bAuthorised := true;
 
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
-
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   inx := jobbag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];
 
@@ -4676,7 +4655,6 @@ end;
 
 procedure TPBMaintJobBagFrm.CreateNewSchedule;
 var
-  inx: integer;
   JobBagSched: TJobBagSched;
 begin
   JobbagSched := TJobbagSched.create(JobBag);
@@ -4785,7 +4763,7 @@ var
   Txt: array[0..255] of Char;
   inx: integer;
   JobBagLine: TJobBagLine;
-  iSelected, icol: integer;
+  iSelected: integer;
 begin
   iSelected := sgLines.row;
   {Prevent the blue cell being displayed}
@@ -4795,26 +4773,30 @@ begin
       begin
 //        Canvas.Brush.Color := clwhite;
         try
-          inx := strtoint(sgLines.cells[0,vRow]);
+          inx := StrToIntDef(sgLines.cells[0,vRow], 0);
           inx := jobbag.Lines.IndexOfSequence(inx);
-          JobBagLine := JobBag.Lines[inx];
 
-          if JobBagLine.NeedsAuthorising then
-            Canvas.Font.Color := clLime
-          else
-          if JobBagLine.ClearedFundsReq and not JobBagLine.ClearedFundsRec then
-            Canvas.Font.Color := clRed
-          else
-          if JobBagLine.JBLineInactive then
-            begin
-              Canvas.Font.Color := clSilver;
-              Canvas.Font.Style := [fsStrikeOut]
-            end
-          else
-          if vrow = iSelected then
-            Canvas.Font.Color := color
-          else
-            Canvas.Font.Color := Font.Color;
+          if JobBag.Lines.Count > 0  then
+          begin
+            JobBagLine := JobBag.Lines[inx];
+
+            if JobBagLine.NeedsAuthorising then
+              Canvas.Font.Color := clLime
+            else
+            if JobBagLine.ClearedFundsReq and not JobBagLine.ClearedFundsRec then
+              Canvas.Font.Color := clRed
+            else
+            if JobBagLine.JBLineInactive then
+              begin
+                Canvas.Font.Color := clSilver;
+                Canvas.Font.Style := [fsStrikeOut]
+              end
+            else
+            if vrow = iSelected then
+              Canvas.Font.Color := color
+            else
+              Canvas.Font.Color := Font.Color;
+          end;
         except
           Canvas.Font.Color := Font.Color;
         end;
@@ -5135,11 +5117,11 @@ begin
   if (dmBroker.iAccCtrlMenu = 2) or (dmBroker.iAccCtrlMenu = 3) then exit;
 
   try
-    inx := strtoint(sglines.cells[0,sgLines.row]);
+    inx := StrToIntDef(sglines.cells[0,sgLines.row], 0);
 
     if (inx > 0) and (inx <= JobBag.Lines.count) then
       begin
-        inx := strtoint(sgLines.cells[0,inx]);
+        inx := StrToIntDef(sgLines.cells[0,inx], 0);
         inx := JobBag.Lines.IndexOfSequence(inx);
         JobBagLine := JobBag.Lines[inx];
 
@@ -5169,7 +5151,7 @@ var
   selcode: integer;
   customername: string;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
 //  inx := sgLines.row;
 
@@ -5201,7 +5183,7 @@ var
   inx : integer;
   JobBagLine : TJobBagLIne;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
 //  inx := sgLines.row;
   try
@@ -5259,7 +5241,7 @@ var
   SONumber: integer;
   bTempOK: boolean;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
 //  inx := sgLines.Row;
 
@@ -5597,7 +5579,7 @@ var
   inx: integer;
   JobBagLine: TJobBagLine;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   inx := JobBag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];
@@ -5895,7 +5877,7 @@ var
   SONumber: integer;
   bTempOK: boolean;
 begin
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
 //  inx := sgLines.Row;
 
@@ -6307,16 +6289,20 @@ begin
                  end;
       		END;
 			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Goods') or
-          (Column.Title.Caption = 'Total') or
-          (Column.Title.Caption = 'Vat') then
-        try
-            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+      if Assigned(Column.Field) then
+      begin
+        if  (Column.Title.Caption = 'Goods') or
+            (Column.Title.Caption = 'Total') or
+            (Column.Title.Caption = 'Vat') then
+          try
+              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
+          except
+            sValue := ''
+          end
+        else
+          sValue := Column.field.asstring;
+      end else
+        sValue := '';
   		StrPCopy(Txt, sValue);
 
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
@@ -6797,7 +6783,7 @@ var
   JobBagRequest: TJobBagRequest;
 begin
   try
-    inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+    inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
   except
     mnuRequestChange.enabled := false;
     mnuRequestPrint.Enabled := false;
@@ -6809,18 +6795,21 @@ begin
     exit;
   end;
 
-  inx := jobbag.Requests.IndexOf(inx);
-  JobBagRequest := JobBag.Requests[inx];
+  if JobBag.Requests.Count > 0 then
+  begin
+    inx := jobbag.Requests.IndexOf(inx);
+    JobBagRequest := JobBag.Requests[inx];
 
-  dtmdlJBOrders := TdtmdlOrders.create(self);
-  try
-    SelectSalesOrder(JobBagRequest.SalesOrder);
-    mnuRequestAllocate.enabled := (FSOStatus >= 10) and (FSOStatus < 50);
-    mnuRequestDeAllocate.enabled := (FSOStatus >= 50) and (FSOStatus < 100);
-    mnuRequestConfirm.enabled := (FSOStatus >= 100) and (FSOStatus < 150) and (FSOStatus <> 120);
-    mnuRequestEditSOPrices.enabled := (FSOStatus >= 140);
-  finally
-    dtmdlJBOrders.free;
+    dtmdlJBOrders := TdtmdlOrders.create(self);
+    try
+      SelectSalesOrder(JobBagRequest.SalesOrder);
+      mnuRequestAllocate.enabled := (FSOStatus >= 10) and (FSOStatus < 50);
+      mnuRequestDeAllocate.enabled := (FSOStatus >= 50) and (FSOStatus < 100);
+      mnuRequestConfirm.enabled := (FSOStatus >= 100) and (FSOStatus < 150) and (FSOStatus <> 120);
+      mnuRequestEditSOPrices.enabled := (FSOStatus >= 140);
+    finally
+      dtmdlJBOrders.free;
+    end;
   end;
 end;
 
@@ -6834,12 +6823,7 @@ var
   inx, irow: integer;
   JobBagRequest: TJobBagRequest;
 begin
-  try
-    inx := strtoint(sgRequests.cells[0,sgRequests.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 1);
   inx := JobBag.Requests.IndexOf(inx);
   JobBagRequest := JobBag.Requests[inx];
 
@@ -6868,7 +6852,7 @@ var
   selcode: integer;
   customername: string;
 begin
-  inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
 
   inx := JobBag.Requests.IndexOf(inx);
   JobBagRequest := JobBag.Requests[inx];
@@ -6896,7 +6880,7 @@ var
   SONumber: integer;
   bTempOK: boolean;
 begin
-  inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
 
   inx := JobBag.Requests.IndexOf(inx);
   JobBagRequest := JobBag.Requests[inx];
@@ -6969,7 +6953,7 @@ var
   JobBagRequest: TJobBagRequest;
   NewPicking: boolean;
 begin
-  inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
 
   inx := jobbag.Requests.IndexOf(inx);
   JobBagRequest := JobBag.Requests[inx];
@@ -7093,7 +7077,7 @@ var
   JobBagRequest: TJobBagRequest;
   NewPicking: boolean;
 begin
-  inx := strtoint(sgRequests.cells[0,sgRequests.row]);
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 0);
 
   inx := jobbag.Requests.IndexOf(inx);
   JobBagRequest := JobBag.Requests[inx];
@@ -7176,11 +7160,7 @@ var
   JobBagRequest: TJobBagRequest;
   JobBagLine: TJobBagLine;
 begin
-  try
-    inx := strtoint(sgRequests.cells[0,sgRequests.row]);
-  except
-    inx := 1;
-  end;
+  inx := StrToIntDef(sgRequests.cells[0,sgRequests.row], 1);
 
   {locate the job request}
   inx := JobBag.Requests.IndexOf(inx);
@@ -7397,13 +7377,9 @@ var
   inx, irow: integer;
   JobBagSupply: TJobBagSupply;
 begin
-  try
-    inx := strtoint(sgSupply.cells[0,sgSupply.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgSupply.cells[0,sgSupply.row], 0);
   irow := inx;
+
   inx := JobBag.Supplies.IndexOf(inx);
   JobBagSupply := JobBag.Supplies[inx];
 
@@ -7851,8 +7827,11 @@ begin
     if (vRow <> 0) and (vCol <> 0) then
       begin
         try
-          inx := strtoint(sgNCADetails.cells[0,vRow]);
+          inx := StrToIntDef(sgNCADetails.cells[0,vRow], 0);
           inx := jobbag.NonConformDocs.IndexOf(inx);
+
+          if JobBag.NonConformDocs.Count > 0 then
+          begin
           JBNCL := JobBag.NonConformDocs[inx];
 
           if JBNCL.Inactive = 'Y' then
@@ -7865,6 +7844,8 @@ begin
             Canvas.Font.Color := color
           else
             Canvas.Font.Color := Font.Color;
+          end;
+
         except
           Canvas.Font.Color := Font.Color;
         end;
@@ -8026,16 +8007,21 @@ begin
                  end;
       		END;
 			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Goods') or
-          (Column.Title.Caption = 'Total') or
-          (Column.Title.Caption = 'Vat') then
-        try
-            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+      if Assigned(Column.Field) then
+      begin
+        if  (Column.Title.Caption = 'Goods') or
+            (Column.Title.Caption = 'Total') or
+            (Column.Title.Caption = 'Vat') then
+          try
+              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
+          except
+            sValue := ''
+          end
+        else
+          sValue := Column.field.asstring;
+      end else
+        sValue := '';
+
   		StrPCopy(Txt, sValue);
 
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
@@ -8201,12 +8187,7 @@ var
   inx, irow: integer;
   JobBagDelivery: TJobBagDelivery;
 begin
-  try
-    inx := strtoint(sgDeliveries.cells[0,sgDeliveries.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgDeliveries.cells[0,sgDeliveries.row], 1);
   irow := inx;
 
   inx := JobBag.Deliveries.IndexOf(inx);
@@ -8246,12 +8227,7 @@ var
   inx, irow: integer;
   JobBagDelivery: TJobBagDelivery;
 begin
-  try
-    inx := strtoint(sgDeliveries.cells[0,sgDeliveries.row]);
-  except
-    inx := 1;
-  end;
-
+  inx := StrToIntDef(sgDeliveries.cells[0,sgDeliveries.row], 1);
   irow := inx;
 
   inx := JobBag.Deliveries.IndexOf(inx);
@@ -8738,7 +8714,7 @@ end;
 
 procedure TPBMaintJobBagFrm.btnEmailClick(Sender: TObject);
 var
-  sTo, sSubject, sBody, sFilePath: string;
+  sTo, sSubject, sBody: string;
 begin
   PBMaintEmailFrm := TPBMaintEmailFrm.create(self);
   try
@@ -9164,7 +9140,7 @@ var
 begin
   bAuthorised := true;
 
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
 
   inx := jobbag.Lines.IndexOfSequence(inx);
   JobBagLine := JobBag.Lines[inx];

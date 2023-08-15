@@ -33,7 +33,9 @@ var
 
 implementation
 
-uses PBDatabase, pbMainMenu,
+uses
+  System.UITypes,
+  PBDatabase, pbMainMenu,
   FireDAC.Comp.Client;
 
 {$R *.DFM}

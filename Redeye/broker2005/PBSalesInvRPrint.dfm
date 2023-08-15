@@ -1,4 +1,4 @@
-﻿object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
+object PBSalesInvRPrintFrm: TPBSalesInvRPrintFrm
   Left = 687
   Top = 241
   ActiveControl = PrintBtn
@@ -22,12 +22,12 @@
     313)
   TextHeight = 13
   object selectionGrp: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 457
     Height = 137
     Caption = 'Invoice Number Selection'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -72,6 +72,7 @@
     NumGlyphs = 2
     TabOrder = 0
     OnClick = PrintBtnClick
+    ExplicitTop = 247
   end
   object PreviewBtn: TBitBtn
     Left = 210
@@ -96,6 +97,7 @@
     NumGlyphs = 2
     TabOrder = 1
     OnClick = PreviewBtnClick
+    ExplicitTop = 247
   end
   object CloseBitBtn: TBitBtn
     Left = 16
@@ -106,6 +108,7 @@
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
+    ExplicitTop = 247
   end
   object SelectLst: TListBox
     Left = 336
@@ -140,6 +143,7 @@
     NumGlyphs = 2
     TabOrder = 5
     OnClick = EmailBitBtnClick
+    ExplicitTop = 247
   end
   object chkbxPrintLogo: TCheckBox
     Left = 16
@@ -176,7 +180,7 @@
     Visible = False
   end
   object btbtnExcel: TBitBtn
-    Left = 393
+    Left = 387
     Top = 256
     Width = 75
     Height = 25
@@ -227,6 +231,7 @@
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 10
     OnClick = BitBtn1Click
+    ExplicitLeft = 381
   end
   object AddIntSelQuery: TFDQuery
     ConnectionName = 'PB'
@@ -248,19 +253,13 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'text100'
-        ParamType = ptUnknown
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -276,14 +275,10 @@
     Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -296,9 +291,7 @@
     Top = 52
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -369,9 +362,8 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object GetInvCustSQL: TFDQuery
@@ -456,9 +448,7 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryInvEmail: TFDQuery
@@ -523,24 +513,17 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryInvPrint: TFDQuery
@@ -602,9 +585,8 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryCreditPrint: TFDQuery
@@ -665,9 +647,8 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryCreditEmail: TFDQuery
@@ -731,24 +712,17 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inv_To_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object GetCreditCustSQL: TFDQuery
@@ -831,9 +805,7 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCustomers: TFDQuery
@@ -909,9 +881,7 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object InvLineSQL: TFDQuery
@@ -969,14 +939,10 @@
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Zero_Values'
-        ParamType = ptUnknown
       end>
   end
   object InvLineCSVSQL: TFDQuery
@@ -1048,14 +1014,10 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Zero_Values'
-        ParamType = ptUnknown
       end>
   end
   object qryPO: TFDQuery
@@ -1072,9 +1034,7 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryJBLine: TFDQuery
@@ -1110,14 +1070,10 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryPOLine: TFDQuery
@@ -1144,14 +1100,10 @@
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object InvCSVSQL: TFDQuery
@@ -1228,14 +1180,10 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Show_Zero_Values'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
 end

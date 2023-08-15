@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Grids, DBGrids, ImgList, ComCtrls, StdCtrls, ExtCtrls, ToolWin, Db, Menus,
-  IniFiles, Buttons, pbJobBagDM, pbQuotesDM, System.ImageList;
+  IniFiles, Buttons, pbJobBagDM, pbQuotesDM, System.ImageList, FireDAC.Stan.Param;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}
@@ -122,7 +122,9 @@ var
 
 implementation
 
-uses CCSCommon, pbluCustomers, pbMainMenu, pbluQuotesSearch, pbDatabase,
+uses
+  System.UITypes,
+  CCSCommon, pbluCustomers, pbMainMenu, pbluQuotesSearch, pbDatabase,
   PBRSQuote, PBMaintQuote, PBMaintJobBag;
 
 {$R *.DFM}

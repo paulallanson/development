@@ -67,7 +67,9 @@ var
 
 implementation
 
-uses STPrtMnt, CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  STPrtMnt, CCSCommon, pbMainMenu;
 
 {$R *.dfm}
 

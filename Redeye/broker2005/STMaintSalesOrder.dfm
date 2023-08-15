@@ -1,26 +1,24 @@
 object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
   Left = 194
   Top = 81
-  Width = 786
-  Height = 481
   Caption = 'Complete Sales Order'
+  ClientHeight = 434
+  ClientWidth = 768
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 392
-    Width = 778
+    Top = 379
+    Width = 768
     Height = 36
     Align = alBottom
     Font.Charset = ANSI_CHARSET
@@ -30,8 +28,10 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = 392
+    ExplicitWidth = 778
     DesignSize = (
-      778
+      768
       36)
     object btnConfirm: TBitBtn
       Left = 599
@@ -41,8 +41,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Anchors = [akRight, akBottom]
       Caption = 'Confirm'
       Default = True
-      TabOrder = 0
-      OnClick = btnConfirmClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -108,6 +106,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnConfirmClick
     end
     object CancelBitBtn: TBitBtn
       Left = 687
@@ -117,8 +117,6 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -184,6 +182,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
     object chkbxDoNotInvc: TCheckBox
       Left = 8
@@ -197,21 +197,24 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 428
-    Width = 778
+    Top = 415
+    Width = 768
     Height = 19
     Panels = <>
+    ExplicitTop = 428
+    ExplicitWidth = 778
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 778
+    Width = 768
     Height = 65
     Align = alTop
     Enabled = False
     TabOrder = 2
+    ExplicitWidth = 778
     DesignSize = (
-      778
+      768
       65)
     object Label5: TLabel
       Left = 8
@@ -310,7 +313,7 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
   object pnlHead: TPanel
     Left = 0
     Top = 65
-    Width = 778
+    Width = 768
     Height = 120
     Align = alTop
     Enabled = False
@@ -321,8 +324,9 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    ExplicitWidth = 778
     DesignSize = (
-      778
+      768
       120)
     object Label3: TLabel
       Left = 8
@@ -432,8 +436,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
   object sgLines: TStringGrid
     Left = 0
     Top = 185
-    Width = 778
-    Height = 207
+    Width = 768
+    Height = 194
     Align = alClient
     ColCount = 10
     DefaultRowHeight = 20
@@ -447,6 +451,8 @@ object frmSTMaintSalesOrder: TfrmSTMaintSalesOrder
     ParentFont = False
     TabOrder = 4
     OnDblClick = sgLinesDblClick
+    ExplicitWidth = 778
+    ExplicitHeight = 207
     ColWidths = (
       38
       159

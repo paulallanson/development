@@ -32,24 +32,6 @@ type
     RepComboBox: TComboBox;
     QryCustType: TFDQuery;
     QryRep: TFDQuery;
-    QryCustTypeDescription: TStringField;
-    qryCustStatusCustomer_Status_descr: TStringField;
-    QryRepName: TStringField;
-    qryCurrentCustStatusCustomer: TIntegerField;
-    qryCurrentCustStatusBranch_no: TIntegerField;
-    qryCurrentCustStatusBuilding_No_name: TStringField;
-    qryCurrentCustStatusStreet: TStringField;
-    qryCurrentCustStatusLocale: TStringField;
-    qryCurrentCustStatusTown: TStringField;
-    qryCurrentCustStatusPostcode: TStringField;
-    qryCurrentCustStatusPhone: TStringField;
-    qryCurrentCustStatusFax_Number: TStringField;
-    qryCurrentCustStatusEmail: TStringField;
-    qryCurrentCustStatusAccount_Code: TStringField;
-    qryCurrentCustStatusCust_name: TStringField;
-    qryCurrentCustStatusCustomer_Status_Descr: TStringField;
-    qryCurrentCustStatusDescription: TStringField;
-    qryCurrentCustStatusName_1: TStringField;
     RadioGroup1: TRadioGroup;
     NewStdSQL: TFDQuery;
     chkbxCustomers: TCheckBox;
@@ -60,10 +42,6 @@ type
     PrintReportBitBtn: TBitBtn;
     btnExcel: TBitBtn;
     CancelBitBtn: TBitBtn;
-    qryCurrentCustStatusAnalysis_Code_1: TStringField;
-    qryCurrentCustStatusAnalysis_Code_2: TStringField;
-    qryCurrentCustStatusAnalysis_Code_3: TStringField;
-    qryCurrentCustStatusAnalysis_Code_4: TStringField;
     pnlExportPrgrss: TPanel;
     lblExporting: TLabel;
     prgbrExport: TProgressBar;
@@ -73,11 +51,57 @@ type
     pnlLevelofImp: TPanel;
     Label2: TLabel;
     cmbbxLevelOfImp: TComboBox;
-    qryCurrentCustStatusImportance_Description: TStringField;
     qryLevelOfImp: TFDQuery;
-    StringField1: TStringField;
     StdSQL: TFDQuery;
-    qryCurrentCustStatusRep_Type: TStringField;
+    qryCustStatusCustomer_Status_descr: TWideStringField;
+    QryCustTypeDescription: TWideStringField;
+    QryRepName: TWideStringField;
+    qryLevelOfImpImportance_Description: TWideStringField;
+    qryCurrentCustStatusCustomer: TIntegerField;
+    qryCurrentCustStatusBranch_no: TIntegerField;
+    qryCurrentCustStatusName: TWideStringField;
+    qryCurrentCustStatusBuilding_No_name: TWideStringField;
+    qryCurrentCustStatusStreet: TWideStringField;
+    qryCurrentCustStatusLocale: TWideStringField;
+    qryCurrentCustStatusTown: TWideStringField;
+    qryCurrentCustStatusPostcode: TWideStringField;
+    qryCurrentCustStatusPhone: TWideStringField;
+    qryCurrentCustStatusFax_Number: TWideStringField;
+    qryCurrentCustStatusEmail: TWideStringField;
+    qryCurrentCustStatusCustomer0: TIntegerField;
+    qryCurrentCustStatusBranch_no0: TIntegerField;
+    qryCurrentCustStatusMainRep: TIntegerField;
+    qryCurrentCustStatusNarrative: TIntegerField;
+    qryCurrentCustStatusAccount_Code: TWideStringField;
+    qryCurrentCustStatusInv_To_Customer: TIntegerField;
+    qryCurrentCustStatusInv_To_Branch: TIntegerField;
+    qryCurrentCustStatusAccount_Code_On_Ledger: TWideStringField;
+    qryCurrentCustStatusDelivery_Narrative: TIntegerField;
+    qryCurrentCustStatusLast_Statement_ref: TWideStringField;
+    qryCurrentCustStatusUse_Branch_Name: TWideStringField;
+    qryCurrentCustStatusShort_Code: TWideStringField;
+    qryCurrentCustStatusHO_Department: TIntegerField;
+    qryCurrentCustStatusUse_HO_Delivery_Notes: TWideStringField;
+    qryCurrentCustStatusCounty: TWideStringField;
+    qryCurrentCustStatusConsumer_Code: TWideStringField;
+    qryCurrentCustStatusInactive: TWideStringField;
+    qryCurrentCustStatusOnline_Ordering_Email: TWideStringField;
+    qryCurrentCustStatusInv_To_Contact: TIntegerField;
+    qryCurrentCustStatusCustomer_Status: TIntegerField;
+    qryCurrentCustStatusCustomer_Status_Descr: TWideStringField;
+    qryCurrentCustStatusCustomer_Type: TIntegerField;
+    qryCurrentCustStatusDescription: TWideStringField;
+    qryCurrentCustStatusColor: TIntegerField;
+    qryCurrentCustStatusFont_Color: TIntegerField;
+    qryCurrentCustStatusRep: TIntegerField;
+    qryCurrentCustStatusName_1: TWideStringField;
+    qryCurrentCustStatusCust_name: TWideStringField;
+    qryCurrentCustStatusName_2: TWideStringField;
+    qryCurrentCustStatusAcc_Active: TWideStringField;
+    qryCurrentCustStatusAnalysis_Code_1: TWideStringField;
+    qryCurrentCustStatusAnalysis_Code_2: TWideStringField;
+    qryCurrentCustStatusAnalysis_Code_3: TWideStringField;
+    qryCurrentCustStatusAnalysis_Code_4: TWideStringField;
     procedure FormCreate(Sender: TObject);
     procedure cmbbxCustStatusChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -107,7 +131,9 @@ var
 
 implementation
 
-uses  PBRPCustDet, pbMainMenu, pbDatabase;
+uses
+  System.UITypes,
+  PBRPCustDet, pbMainMenu, pbDatabase;
 
 {$R *.DFM}
 

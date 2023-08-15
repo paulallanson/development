@@ -674,7 +674,7 @@ var
   frm: TfrmSTMaintSalesOrderLine;
 begin
 //  inx := sgLines.row;
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   try
     frm := TfrmSTMaintSalesOrderLine.Create(Self);
     try
@@ -700,7 +700,7 @@ var
   frm: TfrmSTMaintSalesOrderLineValues;
 begin
 //  inx := sgLines.row;
-  inx := strtoint(sgLines.cells[0,sgLines.row]);
+  inx := StrToIntDef(sgLines.cells[0,sgLines.row], 0);
   try
     frm := TfrmSTMaintSalesOrderLineValues.Create(Self);
     try
