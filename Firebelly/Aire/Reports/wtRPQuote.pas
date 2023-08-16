@@ -612,7 +612,7 @@ begin
   TPrinterTools.New.PrintToFileQuote(qrpDetails, Result, QuoteNo, attachmentType);
 end;
 
-(* GDK ToDo: Remove after tests
+(* fGDK ToDo: Remove after tests
 function TfrmwtRPQuote.PrintToFile(QuoteNo: integer; attachmentType: string): TStringList;
 var
   fileName, fileLocation: string;

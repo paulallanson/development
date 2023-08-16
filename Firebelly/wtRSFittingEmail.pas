@@ -616,7 +616,7 @@ begin
           sBodyText := 'Please find attached your template documents.' + #13#10#13#10;
 
           sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-          Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+          Printtoattachment(frmwtRPTemplate, sAttachmentType);
 
           if self.chkbxPrint.checked then
             begin
@@ -824,7 +824,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+              Printtoattachment(frmwtRPTemplate, sAttachmentType);
 
               if iOrderCount = 1 then
                 begin
@@ -971,7 +971,7 @@ begin
               frmwtRPTemplate.GetDetails;
 
               sAttachmentType := frmWTEmailList.EmailListGrid.Cells[5, irow];
-              Printtoattachment(frmwtRPTemplate, EmailArray[irow,1]);
+              Printtoattachment(frmwtRPTemplate, sAttachmentType);
 
               sTo := Trim(frmWTEmailList.EmailListGrid.Cells[3, irow]);
 //              sSubject := 'Template Documents: ' + EmailArray[irow,1];
