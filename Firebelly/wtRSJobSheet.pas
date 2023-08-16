@@ -73,8 +73,6 @@ type
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
     procedure SetSOrderNumber(const Value: string);
-    // ToDo GDK: remove after testings
-    // procedure PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
     { Private declarations }
   public
     sJobNumber: string;

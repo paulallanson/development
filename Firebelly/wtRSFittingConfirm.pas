@@ -69,8 +69,6 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    // GDK ToDo: remover after testings
-    // procedure PrintToAttachment(frmWTRRSOrder: TfrmWTRPSOrder; tempCode: string);
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
     function GetSOColourFile(iOrder: integer): string;

@@ -154,7 +154,6 @@ type
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
     property bAddressOnly: boolean read FbAddressOnly write SetbAddressOnly;
-    { logoPatha added bY gdk}
     property logoPath: string read FlogoPath write SetlogoPath;
   end;
 

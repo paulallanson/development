@@ -24,14 +24,6 @@ type
     fileName: string;
     function populateRecipientList(customer, branch: integer): boolean;
     procedure PrintToAttachment(report: TQuickRep; attachmentType: string);
-    (* GDK ToDo: remove after tests
-    procedure PrintToHTM(report: TQuickRep);
-    procedure PrintToPDF(report: TQuickRep);
-    procedure PrintToBMP(report: TQuickRep);
-    procedure PrintToRTF(report: TQuickRep);
-    procedure PrintToGIF(report: TQuickRep);
-    procedure PrintToJPG(report: TQuickRep);
-    *)
     function GetRecipientList(sQueryString: string): boolean;
   public
     body: String;

@@ -59,7 +59,6 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     OnClick = DateSpeedButtonClick
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 79
     Width = 105
@@ -74,6 +73,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     OnClick = AllOrOneRadioGroupClick
@@ -169,7 +169,6 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     OnKeyUp = DateEditKeyUp
   end
   object SuppGrpBox: TGroupBox
-    ParentBackground = False
     Left = 128
     Top = 79
     Width = 329
@@ -179,6 +178,7 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     Visible = False
@@ -248,7 +248,6 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     OnClick = EmailBitBtnClick
   end
   object rgRep: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 10
     Width = 105
@@ -258,15 +257,16 @@ object PBRSODueEnqFrm: TPBRSODueEnqFrm
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 7
     OnClick = rgRepClick
   end
   object pnlRepSearch: TPanel
-    ParentBackground = False
     Left = 128
     Top = 16
     Width = 329
     Height = 60
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblCustBran: TLabel

@@ -136,7 +136,6 @@ type
     bPrintLogo: boolean;
     bPrintAcceptance: boolean;
     bEndUser: boolean;
-    { PrintType was added by GDK }
     PrintType: string;
     function Getdetails: integer;
   end;

@@ -136,7 +136,6 @@ type
     sNumberFrom, sNumberTo, sPrefix: string[10];
     bLineup: boolean;
     PrinterSettings : TPrinterSettings;
-    { logoPath added by GDK }
     property logoPath: string read FlogoPath write SetlogoPath;
   end;
 

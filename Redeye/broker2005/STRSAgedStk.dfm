@@ -733,49 +733,31 @@ object STRSAgedStkFrm: TSTRSAgedStkFrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'theDate'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'noOfDays'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PartFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PartTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

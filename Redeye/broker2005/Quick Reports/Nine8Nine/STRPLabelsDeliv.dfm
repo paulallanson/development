@@ -17,8 +17,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
   object STLabelsQuickReport: TQuickRep
     Left = 40
     Top = 0
-    Width = 723
-    Height = 723
+    Width = 578
+    Height = 578
     ShowingPreview = False
     BeforePrint = STLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,18 +76,18 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 24
-      Top = 24
-      Width = 676
-      Height = 418
+      Left = 19
+      Top = 19
+      Width = 540
+      Height = 334
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        884.766666666666700000
-        1430.866666666667000000)
+        883.708333333333300000
+        1428.750000000000000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = STLabelsQuickReport
@@ -95,10 +95,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
       PrintBefore = False
       PrintIfEmpty = True
       object AddressMemo: TQRMemo
-        Left = 176
-        Top = 140
-        Width = 475
-        Height = 171
+        Left = 141
+        Top = 112
+        Width = 380
+        Height = 137
         Enabled = False
         Size.Values = (
           362.479166666667000000
@@ -114,7 +114,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -18
+        Font.Height = -15
         Font.Name = 'Arial'
         Font.Style = []
         Lines.Strings = (
@@ -130,10 +130,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 11
       end
       object QRDBCustOrderRef: TQRDBText
-        Left = 176
-        Top = 320
-        Width = 166
-        Height = 24
+        Left = 141
+        Top = 256
+        Width = 133
+        Height = 19
         Size.Values = (
           50.270833333333300000
           373.062500000000000000
@@ -150,7 +150,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         DataField = 'Cust_Order_no'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -163,14 +163,14 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblCustomer: TQRLabel
-        Left = 176
-        Top = 138
-        Width = 105
-        Height = 24
+        Left = 141
+        Top = 110
+        Width = 84
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          372.533333333333300000
-          292.100000000000000000
+          50.270833333333330000
+          373.062500000000000000
+          291.041666666666700000
           222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
@@ -181,7 +181,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -192,15 +192,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 20
-        Top = 138
-        Width = 109
-        Height = 25
+        Left = 16
+        Top = 110
+        Width = 88
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          292.100000000000000000
-          230.716666666666700000)
+          291.041666666666700000
+          232.833333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -210,7 +210,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -221,10 +221,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object BoxQRLbl: TQRLabel
-        Left = 176
-        Top = 360
-        Width = 191
-        Height = 24
+        Left = 141
+        Top = 288
+        Width = 153
+        Height = 19
         Size.Values = (
           50.270833333333300000
           373.062500000000000000
@@ -240,7 +240,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -251,15 +251,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblCustOrderRef: TQRLabel
-        Left = 20
-        Top = 319
-        Width = 91
-        Height = 25
+        Left = 16
+        Top = 255
+        Width = 73
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          675.216666666666700000
-          192.616666666666700000)
+          674.687500000000000000
+          193.145833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -269,7 +269,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -280,15 +280,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblDate: TQRLabel
-        Left = 379
-        Top = 359
-        Width = 51
-        Height = 25
+        Left = 303
+        Top = 287
+        Width = 42
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          802.216666666666700000
-          759.883333333333300000
-          107.950000000000000000)
+          801.687500000000000000
+          759.354166666666700000
+          111.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -298,7 +298,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -309,10 +309,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblDeliveryNo: TQRLabel
-        Left = 516
-        Top = 319
-        Width = 153
-        Height = 25
+        Left = 413
+        Top = 255
+        Width = 122
+        Height = 20
         Size.Values = (
           52.916666666666700000
           1092.729166666670000000
@@ -328,7 +328,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -339,15 +339,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblBoxNo: TQRLabel
-        Left = 19
-        Top = 360
-        Width = 77
-        Height = 25
+        Left = 15
+        Top = 288
+        Width = 64
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          40.216666666666670000
+          39.687500000000000000
           762.000000000000000000
-          162.983333333333300000)
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -357,7 +357,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -368,15 +368,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object QRLabel5: TQRLabel
-        Left = 379
-        Top = 319
-        Width = 127
-        Height = 25
+        Left = 303
+        Top = 255
+        Width = 103
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          802.216666666666700000
-          675.216666666666700000
-          268.816666666666700000)
+          801.687500000000000000
+          674.687500000000000000
+          272.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -386,7 +386,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -397,15 +397,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object qrlblDelivery: TQRLabel
-        Left = 20
-        Top = 248
-        Width = 90
-        Height = 25
+        Left = 16
+        Top = 198
+        Width = 74
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          524.933333333333300000
-          190.500000000000000000)
+          523.875000000000000000
+          195.791666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -415,7 +415,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -426,15 +426,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object lblDeliveryTo: TQRLabel
-        Left = 176
-        Top = 248
-        Width = 113
-        Height = 24
+        Left = 141
+        Top = 198
+        Width = 90
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          372.533333333333300000
-          524.933333333333300000
-          239.183333333333300000)
+          50.270833333333330000
+          373.062500000000000000
+          523.875000000000000000
+          238.125000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -444,7 +444,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -455,15 +455,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object QRLabel3: TQRLabel
-        Left = 20
-        Top = 198
-        Width = 139
-        Height = 25
+        Left = 16
+        Top = 158
+        Width = 113
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          419.100000000000000000
-          294.216666666666700000)
+          418.041666666666700000
+          298.979166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -473,7 +473,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -484,15 +484,15 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object QRDBText1: TQRDBText
-        Left = 176
-        Top = 199
-        Width = 131
-        Height = 24
+        Left = 141
+        Top = 159
+        Width = 106
+        Height = 19
         Size.Values = (
-          50.800000000000000000
-          372.533333333333300000
-          421.216666666666700000
-          277.283333333333300000)
+          50.270833333333330000
+          373.062500000000000000
+          420.687500000000000000
+          280.458333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -503,7 +503,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         DataField = 'Contact_Name'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -516,10 +516,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         FontSize = 12
       end
       object DeliveryDateLbl: TQRLabel
-        Left = 454
-        Top = 360
-        Width = 188
-        Height = 24
+        Left = 363
+        Top = 288
+        Width = 150
+        Height = 19
         Size.Values = (
           50.270833333333300000
           960.437500000000000000
@@ -535,7 +535,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -574,9 +574,8 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     Top = 48
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SODelivSRC: TDataSource
@@ -605,9 +604,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object CustomerSQL: TFDQuery
@@ -631,14 +628,10 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object SODelivSQL: TFDQuery
@@ -662,9 +655,7 @@ object STRPLabelsDelivFrm: TSTRPLabelsDelivFrm
     Top = 51
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
 end

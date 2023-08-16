@@ -81,9 +81,6 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    // ToDo GDK: remove after testing
-    // procedure PrintToAttachment(frmWTRRJobFitting: TfrmwtRPJobFitting; tempCode: string);
-    // procedure PrintRemedialToAttachment(frmWTRPJobRemedialSheet: TfrmWTRPJobRemedialSheet; tempCode, tmpOrder: string);
     procedure GetOrderDocuments(tmpOrder: integer; tmpFolder: string);
     procedure GetSiteDocuments(tempOrder: integer);
     function GetKitchenPlan(tmpOrder: integer): string;

@@ -533,44 +533,34 @@ object STRSStkBalRepfrm: TSTRSStkBalRepfrm
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'PartFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PartTo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Not_in_Use'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'Not_In_use'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

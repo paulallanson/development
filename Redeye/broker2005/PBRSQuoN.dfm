@@ -21,13 +21,13 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 115
     Width = 447
     Height = 172
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     ExplicitTop = 128
     ExplicitWidth = 459
@@ -117,7 +117,6 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       OnClick = PrintBitBtnClick
     end
     object TypeRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 245
       Top = 42
       Width = 164
@@ -131,6 +130,7 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       Items.Strings = (
         'One letter per line'
         'One letter for all lines')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 4
       OnClick = TypeRadioGroupClick
@@ -159,11 +159,11 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
       OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 64
       Width = 217
       Height = 41
+      ParentBackground = False
       TabOrder = 6
       object EstNumLabel: TLabel
         Left = 4
@@ -217,22 +217,22 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     end
   end
   object pnlReminder: TPanel
-    ParentBackground = False
     Left = 0
     Top = 71
     Width = 447
     Height = 44
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 459
     ExplicitHeight = 57
     object GroupBox2: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 0
       Width = 272
       Height = 45
+      ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8
@@ -253,21 +253,21 @@ object PBRSQuoNFrm: TPBRSQuoNFrm
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 447
     Height = 71
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     ExplicitWidth = 459
     object gbLayouts: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = -1
       Width = 272
       Height = 68
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8

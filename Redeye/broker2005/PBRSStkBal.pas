@@ -81,6 +81,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   PBLUCust, PBDatabase, CCSPrint, Printers, PBEmailList, PBFaxList,
   PBSendFax, pbMainMenu, Printer.Tools;
 
@@ -560,141 +561,6 @@ begin
   var fileName := 'StkBal';
   TPrinterTools.New.PrintToAttachment(PBRPStkBalfrm.QuickReport, FEmailAttachment, fileName, sAttachmentType);
 end;
-
-(* GDK ToDo: remove after tests
-procedure TPBRSStkBalFrm.PrintToAttachment(PBRPStkBalfrm: TPBRPStkBalfrm);
-var
-  i: integer;
-  sLocation, sFileName: string;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
-begin
-  FEmailAttachment.clear;
-
-  sLocation := GetWinTempDir;
-
-//  if FEmailLocation = '' then
-//    sLocation := 'C:\Windows\temp\'
-//  else
-//    sLocation := FEmailLocation;
-
-  sFileName := 'StkBal';
-
-  AFilters := TgtQRFilters.Create(self);
-
-  if sAttachmentType = 'RTF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.rtf');
-      RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
-        PBRPStkBalFrm.QuickReport.ExportToFilter(RTFFilter);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        RTFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'HTML' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.htm');
-      HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
-        PBRPStkBalFrm.QuickReport.ExportToFilter(HTMLFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        HTMLFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'PDF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.pdf');
-      PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
-        PBRPStkBalFrm.QuickReport.ExportToFilter(PDFFilter);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        PDFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'GIF' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.gif');
-      GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
-        PBRPStkBalFrm.QuickReport.ExportToFilter(GIFFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        GIFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'JPEG' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.jpg');
-      JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
-        PBRPStkBalFrm.QuickReport.ExportToFilter(JPEGFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        JPEGFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'BMP' then
-    begin
-      FEmailAttachment.add(sLocation + sFilename + '.bmp');
-      BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[0]);
-      try
-        PBRPStkBalFrm.QuickReport.Prepare;
- //       ExportToRTF(PBRPStkBalRepFrm.QuickReport, sLocation + sFilename + '.bmp');
-      PBRPStkBalFrm.QuickReport.ExportToFilter(BMPFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        PBRPStkBalFrm.QuickReport.QRPrinter.Free;
-        PBRPStkBalFrm.QuickReport.QRPrinter := nil;
-        BMPFilter.Free;
-      end;
-    end;
-
-  AFilters.free;
-end;
-*)
 
 function TPBRSStkBalFrm.BuildContactDetails: string;
 { Local function }

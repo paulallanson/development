@@ -125,7 +125,6 @@ type
     bPreview: boolean;
     PrinterSettings: TPrinterSettings;
     function Getdetails: integer;
-    { ShowBreakDown, EndUserVersion added by GDK }
     property ShowBreakDown: Boolean read FShowBreakDown write SetShowBreakDown;
     property EndUserVersion: Boolean read FEndUserVersion write SetEndUserVersion;
   end;

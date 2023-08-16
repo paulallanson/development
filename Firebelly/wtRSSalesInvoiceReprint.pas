@@ -63,8 +63,6 @@ type
   private
     FEmailAttachment : TstringList;
     sAttachmentType: string;
-    // GDK ToDo: Remove after testings
-    // procedure PrintToAttachment(frmWTRPSalesInvoice: TfrmWTRPSalesInvoice; tempCode: string);
   end;
 
 var

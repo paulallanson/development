@@ -71,6 +71,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   pbDatabase, PBFaxList, PBSendFax, CCSemailHandler,
   pbMainMenu, PBEmailList, Printer.Tools;
 
@@ -331,8 +332,7 @@ begin
   BuildSelection;
   if SelectLst.Items.Count > 100 then
     begin
-      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror,
-      [mbOk], 0);
+      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror, [mbOk], 0);
       SelectLst.Clear;
       memSelection.Clear;
       memSelection.SetFocus;
@@ -710,164 +710,5 @@ begin
     fileName := 'QUOTE' + tempcode;
   TPrinterTools.New.PrintToAttachment(frmPBRQuote.qrpDetails, FEmailAttachment, fileName, tempCode);
 end;
-
-(* GDK ToDo: remove after tests
-procedure TfrmPBRSQuote.PrintToAttachment(frmPBRQuote: TfrmPBRPQuote; tempCode: string; EndUser: boolean);
-var
-  i: integer;
-  sLocation, sFileName: string;
-  zLocation, zFileName: array[0..255] of char;
-  AFilters: TgtQRFilters;
-  RTFFilter: TgtQRRTFFilter;
-  HTMLFilter: TgtQRHTMLFilter;
-  PDFFilter: TgtQRPDFFilter;
-  BMPFilter: TgtQRBMPFilter;
-  GIFFilter: TgtQRGIFFilter;
-  JPEGFilter: TgtQRJPEGFilter;
-begin
-  sLocation := GetWinTempDir;
-
-  {Code used to generate a unique filename}
-  strPCopy(zLocation, sLocation);
-
-  GetTempFileName(zLocation, '', 0, zFileName);
-
-  sFileName := zFileName;
-  sFileName := trim(stringReplace(sFileName,'.TMP','',[rfIgnoreCase]));
-
-  sFileName := trim(stringReplace(sFileName,sLocation,'',[rfIgnoreCase]));
-
-  {Format is 'Si' + Enquiry Number + Random Number}
-  if EndUser then
-    sFileName := 'RSP' + tempcode + '-' + sFilename
-  else
-    sFileName := 'QUOTE' + tempcode + '-' + sFilename;
-
-  AFilters := TgtQRFilters.Create(self);
-
-  if sAttachmentType = 'RTF' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.rtf');
-        RTFFilter := TgtQRRTFFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(RTFFilter);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        RTFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'HTML' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.htm');
-        HTMLFilter := TgtQRHTMLFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(HTMLFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        HTMLFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'PDF' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.pdf');
-        PDFFilter := TgtQRPDFFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(PDFFilter);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        PDFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'GIF' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.gif');
-        GIFFilter := TgtQRGIFFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(GIFFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        GIFFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'JPEG' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.jpg');
-        JPEGFilter := TgtQRJPEGFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(JPEGFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        JPEGFilter.Free;
-      end;
-    end
-  else
-  if sAttachmentType = 'BMP' then
-    begin
-      try
-        frmPBRPQuote.qrpDetails.Prepare;
-
-//        sFileName := 'SI'+frmPBRPQuote.InvoiceNumberlbl.caption;
-        FEmailAttachment.add(sLocation + sFilename + '.bmp');
-        BMPFilter := TgtQRBMPFilter.Create(FEmailAttachment[pred(FEmailAttachment.Count)]);
-
-        frmPBRPQuote.qrpDetails.ExportToFilter(BMPFilter);
-
-        {Assign all the Filenames to the Attachment list}
-        FEMailAttachment.clear;
-        for i := 0 to pred(AFilters.RepFileCount) do
-          FEMailAttachment.add(sLocation + AFilters.RepFileNames[i]);
-      finally
-        frmPBRPQuote.qrpDetails.QRPrinter.Free;
-        frmPBRPQuote.qrpDetails.QRPrinter := nil;
-        BMPFilter.Free;
-      end;
-    end;
-  AFilters.free;
-end;
-*)
 
 end.

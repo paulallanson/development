@@ -106,7 +106,6 @@ type
     bPrintLogo: boolean;
     bAccountsCopy: boolean;
     RemedialNo: integer;
-    { bRemedialTemplate, RemedialOrder was added by GDK }
     bRemedialTemplate: boolean;
     RemedialOrder: integer;
     function Getdetails: integer;

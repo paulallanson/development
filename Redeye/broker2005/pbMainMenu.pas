@@ -520,14 +520,6 @@ begin
   LocalDrive := copy(GetWinSysDir,1,2);
 	LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myRedeye_INIFILE);
-
-  (* GDK ToDo: remove after tests
-  if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+myRedeye_INIFILE)
-  else
-    StrPCopy(AppIniFile,myRedeye_INIFILE);
-  *)
-
 {$IFDEF FORMPRO} {Setup the directories}
 	ServDir := '\\FPSERVER1\MIS\Centrereed\Broker' ;
   CopyifNewer('BrokerLoad05.exe', 'Broker Load Program');

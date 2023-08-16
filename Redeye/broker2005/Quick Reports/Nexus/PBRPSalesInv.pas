@@ -179,7 +179,6 @@ type
     bLineUp : Boolean;
     SelCode: Integer;
     PrinterSettings: TPrinterSettings;
-    { ShowZeroValues, bCustomerisReseller added by GDK }
     ShowZeroValues: string;
     bCustomerisReseller: Boolean;
     procedure GetInvoiceData;

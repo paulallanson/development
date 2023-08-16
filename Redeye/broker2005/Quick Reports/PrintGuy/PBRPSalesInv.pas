@@ -166,7 +166,6 @@ type
     SelCode: Integer;
     ShowZeroValues: string;
     PrinterSettings: TPrinterSettings;
-    { bCustomerisReseller added by GDK }
     property bCustomerisReseller: Boolean read FbCustomerisReseller write SetbCustomerisReseller;
     procedure GetInvoiceData;
     function GetPOLineDesc(tempCode: real; tempLine: integer): string;

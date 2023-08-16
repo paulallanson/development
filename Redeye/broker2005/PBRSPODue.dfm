@@ -1,4 +1,4 @@
-﻿object PBRSPODueFrm: TPBRSPODueFrm
+object PBRSPODueFrm: TPBRSPODueFrm
   Left = 420
   Top = 112
   BorderIcons = [biSystemMenu]
@@ -121,7 +121,6 @@
     Visible = False
   end
   object AllOrOneRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 121
@@ -130,6 +129,7 @@
     Items.Strings = (
       'All Suppliers'
       'One Supplier')
+    ParentBackground = False
     TabOrder = 0
     OnClick = AllOrOneRadioGroupClick
   end
@@ -219,7 +219,6 @@
     OnChange = DaysSpinEditChange
   end
   object customerrg: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 80
     Width = 121
@@ -228,6 +227,7 @@
     Items.Strings = (
       'All Customers'
       'One Customer')
+    ParentBackground = False
     TabOrder = 7
     OnClick = customerrgClick
   end
@@ -329,11 +329,11 @@
     ExplicitLeft = 100
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 82
     Top = 68
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 13
     Visible = False
     object lblExporting: TLabel
@@ -353,7 +353,6 @@
     end
   end
   object Operatorrg: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 152
     Width = 121
@@ -362,6 +361,7 @@
     Items.Strings = (
       'All Account Mgrs'
       'One Account Mgr')
+    ParentBackground = False
     TabOrder = 14
     OnClick = OperatorrgClick
   end
@@ -478,64 +478,48 @@
     Top = 210
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
+        Name = 'CustBranch'
         DataType = ftInteger
+      end
+      item
         Name = 'CustBranch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end>
   end
   object oldGetPOsSQL: TFDQuery
@@ -614,39 +598,32 @@
     Top = 210
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'CustBranch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

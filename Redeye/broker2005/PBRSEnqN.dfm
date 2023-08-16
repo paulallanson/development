@@ -22,13 +22,13 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
   OnShow = FormShow
   TextHeight = 13
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 109
     Width = 417
     Height = 97
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     ExplicitTop = 122
     ExplicitWidth = 429
@@ -132,11 +132,11 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
       OnClick = EmailBitBtnClick
     end
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = -3
       Width = 225
       Height = 41
+      ParentBackground = False
       TabOrder = 4
       object EstNumLabel: TLabel
         Left = 8
@@ -183,21 +183,21 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     end
   end
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 417
     Height = 81
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 429
     object gbLayouts: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 4
       Width = 265
       Height = 72
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
@@ -234,22 +234,22 @@ object PBRSEnqNFrm: TPBRSEnqNFrm
     end
   end
   object pnlReminder: TPanel
-    ParentBackground = False
     Left = 0
     Top = 81
     Width = 417
     Height = 28
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     ExplicitWidth = 429
     ExplicitHeight = 41
     object GroupBox2: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = -5
       Width = 266
       Height = 40
+      ParentBackground = False
       TabOrder = 0
       object Label3: TLabel
         Left = 8

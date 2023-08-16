@@ -427,13 +427,6 @@ begin
 	LocalDir := ExtractFilePath(Application.ExeName);
   StrPCopy(AppIniFile, LocalDir + myWorktops_INIFILE);
 
-  (* GDK ToDo: remove after tests
-  if pos('Application Data',LocalDir) > 0 then
-    StrPCopy(AppIniFile,LocalDir+myWorktops_INIFILE)
-  else
-    StrPCopy(AppIniFile,myWorktops_INIFILE);
-  *)
-
 {$IFDEF DEMO}
 //  dtmdlWorktops.dtbsWorktops.ConnectionDefName := 'WorktopDemo';
 {$ELSE}
@@ -1045,9 +1038,6 @@ begin
         begin
           Factivated := true;
 {$ENDIF}
-
-          // GDK ToDo: if LocalDir and DataBase are empty to search for the image, the except instruction will raise in the function and
-          // the code ahead will not run. Except instruction should not simulate a if condition!
           frmAllImages.LoadReportLogo(Self);
 
           with dtmdlWorktops.qryDeleteWorkStations do

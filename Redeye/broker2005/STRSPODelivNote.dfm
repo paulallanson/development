@@ -1,4 +1,4 @@
-﻿object STRSPODelivNoteFrm: TSTRSPODelivNoteFrm
+object STRSPODelivNoteFrm: TSTRSPODelivNoteFrm
   Left = 207
   Top = 132
   ActiveControl = PrintBtn
@@ -23,12 +23,12 @@
     260)
   TextHeight = 13
   object selectionGrp: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 361
     Height = 137
     Caption = 'Purchase Order Selection'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 8
@@ -142,7 +142,6 @@
     OnClick = EmailBitBtnClick
   end
   object rdgrpLogo: TRadioGroup
-    ParentBackground = False
     Left = 11
     Top = 152
     Width = 214
@@ -152,6 +151,7 @@
     Items.Strings = (
       'Company logo'
       'Customer logo')
+    ParentBackground = False
     TabOrder = 6
   end
   object chkbxPrintlogo: TCheckBox
@@ -183,19 +183,13 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'text100'
-        ParamType = ptUnknown
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -211,14 +205,10 @@
     Top = 20
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -231,9 +221,7 @@
     Top = 52
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -276,9 +264,8 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

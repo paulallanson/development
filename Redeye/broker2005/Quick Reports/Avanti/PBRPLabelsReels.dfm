@@ -17,8 +17,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
   object PBLabelsQuickReport: TQuickRep
     Left = 8
     Top = 0
-    Width = 699
-    Height = 496
+    Width = 559
+    Height = 397
     ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
@@ -76,18 +76,18 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRBand1: TQRSubDetail
-      Left = 9
-      Top = 24
-      Width = 666
-      Height = 421
+      Left = 8
+      Top = 19
+      Width = 533
+      Height = 337
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        891.116666666666700000
-        1409.700000000000000000)
+        891.645833333333300000
+        1410.229166666667000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = PBLabelsQuickReport
@@ -95,10 +95,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
       PrintBefore = False
       PrintIfEmpty = True
       object NumberedLbl: TQRLabel
-        Left = 20
-        Top = 310
-        Width = 111
-        Height = 25
+        Left = 16
+        Top = 248
+        Width = 89
+        Height = 20
         Enabled = False
         Size.Values = (
           52.916666666666670000
@@ -115,7 +115,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -126,10 +126,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object FromLbl: TQRLabel
-        Left = 130
-        Top = 310
-        Width = 265
-        Height = 25
+        Left = 104
+        Top = 248
+        Width = 212
+        Height = 20
         Enabled = False
         Size.Values = (
           52.916666666666670000
@@ -146,7 +146,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -157,10 +157,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object Memodescription: TQRMemo
-        Left = 130
-        Top = 153
-        Width = 531
-        Height = 46
+        Left = 104
+        Top = 122
+        Width = 425
+        Height = 37
         Size.Values = (
           97.895833333333330000
           275.166666666666700000
@@ -176,7 +176,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         Lines.Strings = (
@@ -189,10 +189,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object PONumberLbl: TQRLabel
-        Left = 469
-        Top = 243
-        Width = 192
-        Height = 25
+        Left = 375
+        Top = 194
+        Width = 154
+        Height = 20
         Size.Values = (
           52.916666666666670000
           992.187500000000000000
@@ -208,7 +208,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -219,10 +219,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object BoxQuantityLbl: TQRLabel
-        Left = 130
-        Top = 243
-        Width = 72
-        Height = 25
+        Left = 104
+        Top = 194
+        Width = 58
+        Height = 20
         Size.Values = (
           52.916666666666670000
           275.166666666666700000
@@ -238,7 +238,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -249,15 +249,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object FormRefLbl: TQRLabel
-        Left = 130
-        Top = 206
-        Width = 101
-        Height = 25
+        Left = 104
+        Top = 165
+        Width = 81
+        Height = 20
         Size.Values = (
           52.916666666666670000
           275.166666666666700000
-          436.033333333333300000
-          213.783333333333300000)
+          436.562500000000000000
+          214.312500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -267,7 +267,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -278,15 +278,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel1: TQRLabel
-        Left = 21
-        Top = 206
-        Width = 82
-        Height = 25
+        Left = 17
+        Top = 165
+        Width = 66
+        Height = 20
         Size.Values = (
           52.916666666666670000
-          44.450000000000000000
-          436.033333333333300000
-          173.566666666666700000)
+          44.979166666666670000
+          436.562500000000000000
+          174.625000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -296,7 +296,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -307,10 +307,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRDBCustOrderRef: TQRDBText
-        Left = 130
-        Top = 279
-        Width = 185
-        Height = 25
+        Left = 104
+        Top = 223
+        Width = 148
+        Height = 20
         Size.Values = (
           52.916666666666670000
           275.166666666666700000
@@ -327,7 +327,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         DataField = 'Cust_Order_no'
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -340,15 +340,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object lblCustomer: TQRLabel
-        Left = 130
-        Top = 117
-        Width = 103
-        Height = 25
+        Left = 104
+        Top = 94
+        Width = 79
+        Height = 20
         Size.Values = (
           52.916666666666670000
           275.166666666666700000
-          247.650000000000000000
-          218.016666666666700000)
+          248.708333333333300000
+          209.020833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -358,7 +358,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -369,15 +369,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel2: TQRLabel
-        Left = 20
-        Top = 117
-        Width = 88
-        Height = 25
+        Left = 16
+        Top = 94
+        Width = 70
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          247.650000000000000000
-          186.266666666666700000)
+          248.708333333333300000
+          185.208333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -387,7 +387,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -398,15 +398,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel3: TQRLabel
-        Left = 20
-        Top = 243
-        Width = 73
-        Height = 25
+        Left = 16
+        Top = 194
+        Width = 59
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          514.350000000000000000
-          154.516666666666700000)
+          513.291666666666700000
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -416,7 +416,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -427,15 +427,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel4: TQRLabel
-        Left = 20
-        Top = 279
-        Width = 85
-        Height = 25
+        Left = 16
+        Top = 223
+        Width = 67
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          590.550000000000000000
-          179.916666666666700000)
+          590.020833333333300000
+          177.270833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -445,7 +445,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -456,15 +456,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel5: TQRLabel
-        Left = 360
-        Top = 243
-        Width = 102
-        Height = 25
+        Left = 288
+        Top = 194
+        Width = 83
+        Height = 20
         Size.Values = (
           52.916666666666670000
           762.000000000000000000
-          514.350000000000000000
-          215.900000000000000000)
+          513.291666666666700000
+          219.604166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -474,7 +474,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -485,15 +485,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel6: TQRLabel
-        Left = 360
-        Top = 279
-        Width = 92
-        Height = 25
+        Left = 288
+        Top = 223
+        Width = 74
+        Height = 20
         Size.Values = (
           52.916666666666670000
           762.000000000000000000
-          590.550000000000000000
-          194.733333333333300000)
+          590.020833333333300000
+          195.791666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -503,7 +503,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -514,15 +514,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object QRLabel7: TQRLabel
-        Left = 20
-        Top = 153
-        Width = 103
-        Height = 25
+        Left = 16
+        Top = 122
+        Width = 83
+        Height = 20
         Size.Values = (
           52.916666666666670000
           42.333333333333330000
-          323.850000000000000000
-          218.016666666666700000)
+          322.791666666666700000
+          219.604166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -532,7 +532,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = [fsBold]
         ParentFont = False
@@ -543,10 +543,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object ReportImage: TQRImage
-        Left = 190
+        Left = 152
         Top = 1
-        Width = 301
-        Height = 106
+        Width = 241
+        Height = 85
         Enabled = False
         Size.Values = (
           224.895833333333300000
@@ -559,15 +559,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Stretch = True
       end
       object gtQRLabel2: TQRLabel
-        Left = 130
-        Top = 350
-        Width = 31
-        Height = 25
+        Left = 104
+        Top = 280
+        Width = 25
+        Height = 20
         Size.Values = (
           52.916666666666670000
           275.166666666666700000
           740.833333333333300000
-          65.616666666666670000)
+          66.145833333333330000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -577,7 +577,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clRed
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -588,15 +588,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object qrlblTelephone: TQRLabel
-        Left = 170
-        Top = 350
-        Width = 129
-        Height = 25
+        Left = 136
+        Top = 280
+        Width = 98
+        Height = 20
         Size.Values = (
           52.916666666666670000
           359.833333333333300000
           740.833333333333300000
-          273.050000000000000000)
+          259.291666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -606,7 +606,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -617,15 +617,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object gtQRLabel3: TQRLabel
-        Left = 380
-        Top = 350
-        Width = 34
-        Height = 25
+        Left = 304
+        Top = 280
+        Width = 27
+        Height = 20
         Size.Values = (
           52.916666666666670000
           804.333333333333300000
           740.833333333333300000
-          71.966666666666670000)
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -635,7 +635,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clRed
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -646,15 +646,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object qrlblFax: TQRLabel
-        Left = 420
-        Top = 350
-        Width = 68
-        Height = 25
+        Left = 336
+        Top = 280
+        Width = 52
+        Height = 20
         Size.Values = (
           52.916666666666670000
           889.000000000000000000
           740.833333333333300000
-          143.933333333333300000)
+          137.583333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -664,7 +664,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -675,15 +675,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object qrlblWebsite: TQRLabel
-        Left = 270
-        Top = 380
-        Width = 109
-        Height = 25
+        Left = 216
+        Top = 304
+        Width = 84
+        Height = 20
         Size.Values = (
           52.916666666666670000
           571.500000000000000000
           804.333333333333300000
-          230.716666666666700000)
+          222.250000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -693,7 +693,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -704,15 +704,15 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         FontSize = 12
       end
       object gtQRLabel1: TQRLabel
-        Left = 190
-        Top = 380
-        Width = 75
-        Height = 25
+        Left = 152
+        Top = 304
+        Width = 59
+        Height = 20
         Size.Values = (
           52.916666666666670000
           402.166666666666700000
           804.333333333333300000
-          158.750000000000000000)
+          156.104166666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -722,7 +722,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clRed
-        Font.Height = -20
+        Font.Height = -16
         Font.Name = 'Calibri'
         Font.Style = []
         ParentFont = False
@@ -734,10 +734,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
       end
     end
     object DeliveryDateLbl: TQRLabel
-      Left = 479
-      Top = 303
-      Width = 192
-      Height = 25
+      Left = 383
+      Top = 242
+      Width = 154
+      Height = 20
       Size.Values = (
         52.916666666666670000
         1013.354166666667000000
@@ -753,7 +753,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
       Color = clWhite
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -20
+      Font.Height = -16
       Font.Name = 'Calibri'
       Font.Style = []
       ParentFont = False
@@ -805,9 +805,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PODelivSRC: TDataSource
@@ -835,14 +834,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -860,9 +855,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -880,9 +873,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -903,14 +894,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource

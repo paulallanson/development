@@ -55,9 +55,6 @@ type
     function IncrementNo(StartStr: String): String;
     procedure ClearEmailArray(Sender: TObject);
     procedure BuildEmailDetails;
-    // ToDo GDK: remove after testing
-    // procedure PrintToAttachment(frmWTRPSODeliveryNote: TfrmWTRPSODeliveryNote; tempCode: string);
-    // procedure PrintQuoteToAttachment(frmwtRPQuote: TfrmwtRPQuote; tempCode, tmpOrder: string);
     procedure SetDefaultDocumentFolder(const Value: string);
   private
     bCancelledPrint: boolean;

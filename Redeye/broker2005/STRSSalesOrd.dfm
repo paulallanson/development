@@ -213,9 +213,8 @@ object STRSSalesOrdfrm: TSTRSSalesOrdfrm
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

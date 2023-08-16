@@ -105,7 +105,6 @@ type
     bPreview: boolean;
     bPrintLogo: boolean;
     bAccountsCopy: boolean;
-    { RemedialNo and bRemedialTemplate was included by GDK }
     RemedialNo: integer;
     RemedialOrder: integer;
     bRemedialTemplate: Boolean;

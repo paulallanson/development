@@ -155,7 +155,6 @@ type
     bLineUp : Boolean;
     SelCode: Integer;
     PrinterSettings: TPrinterSettings;
-    { ShowZeroValues, bCustomerisReseller added by GDK }
     property ShowZeroValues: string read FShowZeroValues write SetShowZeroValues;
     property bCustomerisReseller: Boolean read FbCustomerisReseller write SetbCustomerisReseller;
     procedure GetInvoiceData;

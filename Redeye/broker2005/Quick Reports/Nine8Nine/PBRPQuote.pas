@@ -192,7 +192,6 @@ type
     PrinterSettings: TPrinterSettings;
     function Getdetails: integer;
     property ShowBreakdown: boolean read FShowBreakdown write SetShowBreakdown;
-    { EndUserVersion added by GDK }
     property EndUserVersion: Boolean read FEndUserVersion write SetEndUserVersion;
   end;
 
