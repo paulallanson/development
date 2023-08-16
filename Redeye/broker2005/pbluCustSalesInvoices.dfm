@@ -29,7 +29,6 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 812
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -71,13 +70,12 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 401
+            Width = 393
           end>
-        ExplicitWidth = 403
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 388
+          Width = 380
           Height = 25
           Align = alClient
           ButtonHeight = 19
@@ -94,49 +92,49 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
           Wrapable = False
           object btnCustomers: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Caption = 'Calls'
             ImageIndex = 0
             OnClick = btnCustomersClick
           end
           object btnQuotes: TToolButton
             Left = 62
-            Top = 2
+            Top = 0
             Caption = 'Quotes'
             ImageIndex = 6
             OnClick = btnQuotesClick
           end
           object btnEnquiries: TToolButton
             Left = 124
-            Top = 2
+            Top = 0
             Caption = 'Enquiry'
             ImageIndex = 2
             OnClick = btnEnquiriesClick
           end
           object btnProduction: TToolButton
             Left = 186
-            Top = 2
+            Top = 0
             Caption = 'Orders'
             ImageIndex = 8
             OnClick = btnProductionClick
           end
           object btnJobs: TToolButton
             Left = 248
-            Top = 2
+            Top = 0
             Caption = 'Jobs'
             ImageIndex = 3
             OnClick = btnJobsClick
           end
           object btnStock: TToolButton
             Left = 310
-            Top = 2
+            Top = 0
             Caption = 'Stock'
             ImageIndex = 4
             OnClick = btnStockClick
           end
           object btnSalesInvoicing: TToolButton
             Left = 372
-            Top = 2
+            Top = 0
             Caption = 'Sales'
             Enabled = False
             ImageIndex = 5
@@ -155,13 +153,12 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 810
+        Width = 802
       end>
-    ExplicitWidth = 812
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 797
+      Width = 789
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -169,7 +166,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 797
+        Width = 789
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 51

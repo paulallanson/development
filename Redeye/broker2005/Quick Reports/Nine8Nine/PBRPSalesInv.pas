@@ -339,7 +339,7 @@ begin
     sVat := formatfloat('#00.00',InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat);
     GoodsValueLbl.Caption := FloatToStrF(InvHeadSRC.Dataset.fieldbyname('Goods_Value').asfloat, ffCurrency, 15, 2);
     VatValueLbl.Caption := FloatToStrF(InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat, ffCurrency, 15, 2);
-    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods) + StrToFloatDef(sVat), 0, FormatSettings), ffCurrency, 15, 2);
+    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods, 0, FormatSettings) + StrToFloatDef(sVat, 0, FormatSettings)), ffCurrency, 15, 2);
   end
   else
   begin
@@ -347,7 +347,7 @@ begin
     sVat := formatfloat('#00.00',InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat);
     GoodsValueLbl.Caption := FloatToStrF((InvHeadSRC.Dataset.fieldbyname('Goods_Value').asfloat*-1), ffCurrency, 15, 2);
     VatValueLbl.Caption := FloatToStrF((InvHeadSRC.Dataset.fieldbyname('Vat_Value').asfloat*-1), ffCurrency, 15, 2);
-    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods) + StrToFloatDef(sVat), 0, FormatSettings)*-1, ffCurrency, 15, 2);
+    TotalValueLbl.Caption := FloatToStrF((StrToFloatDef(sGoods, 0, FormatSettings) + StrToFloatDef(sVat, 0, FormatSettings))*-1, ffCurrency, 15, 2);
   end
 end;
 

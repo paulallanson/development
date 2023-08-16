@@ -21,12 +21,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
   OnDestroy = FormDestroy
   TextHeight = 13
   object pnlBottom: TPanel
-    ParentBackground = False
     Left = 0
     Top = 272
     Width = 476
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     ExplicitTop = 281
     ExplicitWidth = 488
@@ -136,16 +136,15 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 476
     Height = 81
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
     ExplicitWidth = 488
     object gbLayouts: TGroupBox
-      ParentBackground = False
       Left = 1
       Top = 6
       Width = 256
@@ -155,6 +154,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object Label3: TLabel
@@ -192,12 +192,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 81
     Width = 476
     Height = 97
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
     ExplicitWidth = 488
     ExplicitHeight = 106
@@ -221,11 +221,11 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       OnClick = cbPrintLogoClick
     end
     object SelOneGrpBox: TGroupBox
-      ParentBackground = False
       Left = 10
       Top = 2
       Width = 209
       Height = 41
+      ParentBackground = False
       TabOrder = 1
       object EstNumLabel: TLabel
         Left = 8
@@ -260,7 +260,6 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       end
     end
     object TypeRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 256
       Top = 2
       Width = 217
@@ -275,6 +274,7 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Items.Strings = (
         'Purchase Order'
         'Acknowledgement')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
       OnClick = TypeRadioGroupClick
@@ -312,12 +312,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
     end
   end
   object pnlLabels: TPanel
-    ParentBackground = False
     Left = 0
     Top = 178
     Width = 476
     Height = 94
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
     ExplicitTop = 187
     ExplicitWidth = 488
@@ -329,12 +329,12 @@ object PBRSPOrdNFrm: TPBRSPOrdNFrm
       Caption = 'Label Logo'
     end
     object grpbxLabels: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 4
       Width = 177
       Height = 82
       Caption = 'Label Address'
+      ParentBackground = False
       TabOrder = 0
       object chkAddressOnly: TCheckBox
         Left = 8

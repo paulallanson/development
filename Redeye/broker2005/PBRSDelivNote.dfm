@@ -3,8 +3,8 @@ object PBRSDelivNoteFrm: TPBRSDelivNoteFrm
   Top = 127
   BorderStyle = bsDialog
   Caption = 'Print Delivery Note'
-  ClientHeight = 194
-  ClientWidth = 399
+  ClientHeight = 192
+  ClientWidth = 391
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText

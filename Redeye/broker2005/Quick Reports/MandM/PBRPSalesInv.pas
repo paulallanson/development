@@ -482,7 +482,9 @@ begin
 
     if (rListPrice <> 0) and bApplyDiscount then
       begin
-        rdisc := ((StrToFloatDef(ListPricelbl.Caption, 0, FormatSettings)-StrToFloatDef(Goodslbl.Caption), 0, FormatSettings)/StrToFloatDef(ListPricelbl.Caption), 0, FormatSettings)*100;
+        rdisc := ((StrToFloatDef(ListPricelbl.Caption, 0, FormatSettings) -
+                   StrToFloatDef(Goodslbl.Caption, 0, FormatSettings)) /
+                   StrToFloatDef(ListPricelbl.Caption, 0, FormatSettings)) * 100;
         rdisc := ((rListPrice-rUnitPrice)/rListPrice)*100;
       end
     else

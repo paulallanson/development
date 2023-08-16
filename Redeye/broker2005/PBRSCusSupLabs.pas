@@ -76,7 +76,9 @@ var
 
 implementation
 
-uses PBIntSelDM, PBRPLabels, CCSPrint, Printers, DateSelV5, PBRPCusSupLabs,
+uses
+  System.UITypes,
+  PBIntSelDM, PBRPLabels, CCSPrint, Printers, DateSelV5, PBRPCusSupLabs,
   pbMainMenu;
 
 {$R *.DFM}

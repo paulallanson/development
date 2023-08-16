@@ -123,6 +123,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   PBFaxList, PBDBPOrdLtr, LetterDM, PBSendFax, PBEmailList, printers,
   pbMainMenu, PDLetter, CCSPrint, PBRPDeliv, PBRPLabels, pbDatabase,
   PBRPLabelsReels, Printer.Tools;

@@ -1,19 +1,17 @@
-﻿object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
+object PBMaintJobBagSundriesfrm: TPBMaintJobBagSundriesfrm
   Left = 177
   Top = 129
-  Width = 437
-  Height = 314
   Caption = 'Job Bag Revenue / Cost'
+  ClientHeight = 275
+  ClientWidth = 421
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 53
@@ -194,8 +192,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -261,14 +257,17 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 349
     Top = 248
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object GetVATSQL: TFDQuery
     ConnectionName = 'PB'

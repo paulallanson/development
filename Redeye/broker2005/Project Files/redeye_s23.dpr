@@ -457,6 +457,9 @@ uses
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Redeye Print Management';
   Application.CreateForm(TdmBroker, dmBroker);

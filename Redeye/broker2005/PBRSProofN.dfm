@@ -109,11 +109,11 @@ object PBRSProofNFrm: TPBRSProofNFrm
     TabOrder = 2
   end
   object SelOneGrpBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 0
     Width = 265
     Height = 41
+    ParentBackground = False
     TabOrder = 3
     object EstNumLabel: TLabel
       Left = 8

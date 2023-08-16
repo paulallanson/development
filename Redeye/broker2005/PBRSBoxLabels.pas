@@ -142,7 +142,9 @@ var
 
 implementation
 
-uses PBIntSelDM, PBRPLabels, CCSPrint, DateSelV5, PBRPLabelsReels,
+uses
+  System.UITypes,
+  PBIntSelDM, PBRPLabels, CCSPrint, DateSelV5, PBRPLabelsReels,
   pbMainMenu;
 
 {$R *.DFM}
@@ -319,8 +321,8 @@ begin
         except
           PBRPLabelsFrm.iSets := 1;
         end;
-        PBRPLabelsFrm.sNumberFrom := FromEdit.Text;
-        PBRPLabelsFrm.sPrefix := PrefixEdit.Text;
+        PBRPLabelsFrm.sNumberFrom := ShortString(FromEdit.Text);
+        PBRPLabelsFrm.sPrefix := ShortString(PrefixEdit.Text);
         PBRPLabelsFrm.DeliveryDatelbl.caption := DeliveryDateEdit.text;
         PBRPLabelsFrm.bAddressOnly := chkAddressOnly.checked;
         PBRPLabelsFrm.bStocked := Stocked;
@@ -424,8 +426,8 @@ begin
         except
           PBRPLabelsReelsFrm.iSets := 1;
         end;
-        PBRPLabelsReelsFrm.sNumberFrom := FromEdit.Text;
-        PBRPLabelsReelsFrm.sPrefix := PrefixEdit.Text;
+        PBRPLabelsReelsFrm.sNumberFrom := ShortString(FromEdit.Text);
+        PBRPLabelsReelsFrm.sPrefix := ShortString(PrefixEdit.Text);
         PBRPLabelsReelsFrm.DeliveryDatelbl.caption := DeliveryDateEdit.text;
         PBRPLabelsReelsFrm.bAddressOnly := chkAddressOnly.checked;
         PBRPLabelsReelsFrm.bStocked := Stocked;
@@ -491,7 +493,7 @@ end;
 procedure TPBRSBoxLabelsfrm.GetDefaultPrinter;
 var
 //  IniFile : TIniFile;
-  icount: integer;
+//  icount: integer;
   TempArray: array[0..255] of Char;
   sBin, sPaper: string;
 begin

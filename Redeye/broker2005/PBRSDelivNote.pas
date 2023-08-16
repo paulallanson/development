@@ -98,7 +98,9 @@ var
 
 implementation
 
-uses PBRPDeliv, PBLUDeliveriesDM, printers, dateselv5, pbMainMenu;
+uses
+  System.UITypes,
+  PBRPDeliv, PBLUDeliveriesDM, printers, dateselv5, pbMainMenu;
 
 {$R *.DFM}
 

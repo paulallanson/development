@@ -1,4 +1,4 @@
-﻿object STPordRSlFrm: TSTPordRSlFrm
+object STPordRSlFrm: TSTPordRSlFrm
   Left = 243
   Top = 172
   Caption = 'Print Purchase Orders'
@@ -91,7 +91,6 @@
     TabOrder = 1
   end
   object SelectRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 16
     Width = 145
@@ -102,6 +101,7 @@
       'One Order'
       'Selected Orders'
       'All Unprinted Orders  ')
+    ParentBackground = False
     TabOrder = 0
     OnClick = SelectRadioGroupClick
   end
@@ -135,7 +135,6 @@
     OnClick = FaxBitBtnClick
   end
   object SelectionGroup: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 128
     Width = 393
@@ -146,6 +145,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     object Label1: TLabel
@@ -244,9 +244,7 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Workstation'
-        ParamType = ptUnknown
       end>
   end
   object AddRepSelQuery: TFDQuery
@@ -268,34 +266,22 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object DelWorkSQL: TFDQuery
@@ -308,9 +294,7 @@
     Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object AddWorkSQL: TFDQuery
@@ -327,14 +311,10 @@
     Top = 132
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetPORngSQL: TFDQuery
@@ -364,24 +344,18 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'From_PONum'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
         Name = 'To_PONum'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'sStatusFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sStatusTo'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOs: TFDQuery
@@ -425,9 +399,8 @@
     Top = 64
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

@@ -30,7 +30,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 755
+        Width = 759
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -43,7 +43,7 @@ object frmPBLUPurchaseOrders: TfrmPBLUPurchaseOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 734
+        Width = 746
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 59

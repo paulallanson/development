@@ -55,7 +55,9 @@ var
 
 implementation
 
-uses CCSPrint, PBRPProof, pbMainMenu, CCSemailHandler, pbDatabase;
+uses
+  System.UITypes,
+  CCSPrint, PBRPProof, pbMainMenu, CCSemailHandler, pbDatabase;
 
 {$R *.DFM}
 

@@ -117,7 +117,9 @@ var
 
 implementation
 
-uses wtMaintCustomer, WTSrchCustContacts, WTCustomerSearch, wtDataModule,
+uses
+  System.UITypes, System.Types,
+  wtMaintCustomer, WTSrchCustContacts, WTCustomerSearch, wtDataModule,
   WTLUCustomerRpts, wtMaintCustomerConts, WTLUCustWTGroups,
   WTLUCustEdgeCutOutGroup, WTLUCustomerSite, wtMain;
 
@@ -174,9 +176,10 @@ end;
 procedure TfrmWTLUCustomer.btnAddClick(Sender: TObject);
 var
   OldCursor : TCursor;
-  icustomer, iContact: Integer;
+  iCustomer: Integer;
 begin
 //  CallMaintScreen('A');
+  OldCursor := Screen.Cursor;
 
   {Add a new customer}
   try
@@ -206,7 +209,6 @@ begin
           frmWTMaintCustomerConts := TfrmWTMaintCustomerConts.create(Application);
           frmwtSrchCustContacts.Customer := iCustomer;
           try
-            iContact := 0;
             frmWTMaintCustomerConts.FunctionMode := 'A';
             frmWTMaintCustomerConts.Customer := iCustomer;
             frmWTMaintCustomerConts.showmodal;
@@ -507,7 +509,6 @@ procedure TfrmWTLUCustomer.dbgDetailsDrawColumnCell(Sender: TObject;
   State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
-  icount: integer;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('Not_Active').AsString = 'Y') then
     begin
@@ -528,8 +529,8 @@ begin
   if  (Column.Title.Caption <> 'Total Cost') then
   	begin
       if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
+    	  StrPCopy(txt, Column.field.text) else
+    	  StrPCopy(Txt, '');
       SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -538,9 +539,9 @@ begin
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
+  		if Assigned(Column.Field) then
+	      StrPCopy(Txt, Column.field.text) else
+	      StrPCopy(Txt, '');
   		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
     			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);

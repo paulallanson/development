@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ExtCtrls, Menus, ImgList, ComCtrls, StdCtrls, Grids, DBGrids, ToolWin, pbSalesInvoiceDM,
-  Db, Inifiles, pbJobBagDM, Buttons, System.ImageList;
+  Data.Db, Inifiles, pbJobBagDM, Buttons, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmPBLUSalesInvoices = class(TForm)
@@ -136,8 +136,10 @@ var
 
 implementation
 
-uses CCSCommon, PBLUSalesInvoicePO, PBLUSalesInvoiceJB, PBLUSalesInvoiceSO,
-      PBMaintSalesInvoice, CCSPrint, Printers, PBRPSalesInv, PBSalesInvPrint,
+uses
+  System.UITypes, System.Types,
+  CCSCommon, PBLUSalesInvoicePO, PBLUSalesInvoiceJB, PBLUSalesInvoiceSO,
+  PBMaintSalesInvoice, CCSPrint, Printers, PBRPSalesInv, PBSalesInvPrint,
   pbLUSalesInvRpts, PBSalesInvRPrint, pbDatabase, pbMainMenu,
   PBRSOSSInvPayments, pbMaintSalesInvPay, PBMaintJobBag, PBExportEInvoice,
   PBRSEInvoice, PBRSCustInvoice, pbluSalesInvoiceSearch, PBLUSalesInvStmts, PBLUSalesInvoiceDD;

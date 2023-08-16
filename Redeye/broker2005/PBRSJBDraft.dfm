@@ -11,18 +11,16 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object OrderGroupBox: TGroupBox
-    ParentBackground = False
     Left = 7
     Top = 8
     Width = 370
     Height = 73
     Caption = 'Details for Job Bag:'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 8
@@ -64,9 +62,10 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 1
-    Kind = bkCancel
   end
   object Previewbitbtn: TBitBtn
     Left = 126
@@ -79,9 +78,6 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 2
-    OnClick = PreviewbitbtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -96,6 +92,9 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 2
+    OnClick = PreviewbitbtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 215
@@ -109,9 +108,6 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -126,6 +122,9 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = PrintBitBtnClick
   end
   object chkbxShowZeroValues: TCheckBox
     Left = 8
@@ -141,8 +140,6 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
     Width = 75
     Height = 25
     Caption = '&Email'
-    TabOrder = 5
-    OnClick = EmailBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -157,6 +154,8 @@ object PBRSJBDraftFrm: TPBRSJBDraftFrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = EmailBitBtnClick
   end
   object chkbxFinance: TCheckBox
     Left = 8

@@ -714,6 +714,9 @@ uses
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Broker Print Management Information System';
   Application.CreateForm(TdmBroker, dmBroker);

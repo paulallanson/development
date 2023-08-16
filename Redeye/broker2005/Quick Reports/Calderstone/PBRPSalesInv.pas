@@ -281,7 +281,7 @@ begin
   GoodsValueLbl.Caption := formatfloat('?0.00', iGoods);
   VatValueLbl.Caption := formatfloat('?0.00', ivat);
 
-  itotal := StrToFloatDef(sGoods) + StrToFloatDef(sVat, 0, FormatSettings);
+  itotal := StrToFloatDef(sGoods, 0, FormatSettings) + StrToFloatDef(sVat, 0, FormatSettings);
   TotalValueLbl.Caption := formatfloat('?0.00', iTotal);
 
 end;

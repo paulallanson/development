@@ -118,7 +118,9 @@ var
 
 implementation
 
-uses PBIntSelDM, STRPLabels, CCSPrint, printers, dateselv5, pbMainMenu;
+uses
+  System.UITypes, System.Types,
+  PBIntSelDM, STRPLabels, CCSPrint, printers, dateselv5, pbMainMenu;
 
 {$R *.DFM}
 

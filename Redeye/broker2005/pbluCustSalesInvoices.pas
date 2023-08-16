@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   ComCtrls, StdCtrls, Grids, DBGrids, ExtCtrls, ImgList, ToolWin, pbSalesInvoiceDM,
-  Db, System.ImageList;
+  Data.Db, System.ImageList, FireDAC.Stan.Param;
 
 const
   {Message values for communication between this child and its parent frmLuCustomers}
@@ -108,9 +108,10 @@ var
 
 implementation
 
-uses PBRPSalesInv, CCSCommon, CCSPrint, Printers, PBMaintSalesInvoice, PBSalesInvPrint,
+uses
+  System.UITypes, System.Types,
+  PBRPSalesInv, CCSCommon, CCSPrint, Printers, PBMaintSalesInvoice, PBSalesInvPrint,
   pbLUSalesInvRpts, PBSalesInvRPrint, pbluCustomers, pbMainMenu, pbDatabase;
-
 
 {$R *.DFM}
 

@@ -2895,7 +2895,14 @@ begin
     begin
       (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
     end;
-  if Assigned(Column.Field) then 
+
+  if(gdFocused in State) or (gdSelected in State) then
+    begin
+      (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+      (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+    end;
+
+  if Assigned(Column.Field) then
 	  StrPCopy(txt, Column.field.text) else
 	  StrPCopy(Txt, '');
   SetTextAlign((Sender as TDBGrid).Canvas.Handle,

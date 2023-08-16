@@ -426,6 +426,9 @@ uses
 {$R *.RES}
 
 begin
+  {$IFDEF DEBUG}
+  ReportMemoryLeaksOnShutdown := True;
+  {$ENDIF}
   Application.Initialize;
   Application.Title := 'Redeye Management Information';
   Application.CreateForm(TdmBroker, dmBroker);

@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, Grids, DB, DBGrids, PBJobBagDM, ExtCtrls, ComCtrls,
   DBCtrls, PBPOObjects, pbOrdersDM, Variants, printers, stSOObjects, Menus,
-  PBWOrdersDM;
+  PBWOrdersDM, FireDAC.Stan.Param;
 
 type
   TPBMaintJobBagDetsFrm = class(TForm)
@@ -208,8 +208,10 @@ type
 
 implementation
 
-uses PBPODataMod, PBMaintPOrd, PBLUCust, pbMainMenu, PBLUCConta, PBLUCRep, PBMaintJobBagRC,
-      DateSelV5, pbLUCustOrdersJB, pbDatabase, STMntSOrd, CCSCommon, STpickobject,
+uses
+  System.UITypes,
+  PBPODataMod, PBMaintPOrd, PBLUCust, pbMainMenu, PBLUCConta, PBLUCRep, PBMaintJobBagRC,
+  DateSelV5, pbLUCustOrdersJB, pbDatabase, STMntSOrd, CCSCommon, STpickobject,
   STPrtAllocSales, STRSPickNote, stPickingDM, STStockDM, STPickbyPart,
   PBMaintWorksOrders, PBMaintJobBagExtras, PBLUAccountManager, PBRSPOrdN,
   PBImages, PBDBMemo, PBMaintJobBagLineDetails, STRSSalesOrd,

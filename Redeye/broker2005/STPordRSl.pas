@@ -84,6 +84,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   printers, STStockDM, PBFaxToOne, PBFaxList, PBSendFax, ccsprint,
   pbMainMenu, PBEmailList, CCSCommon, pbDatabase, Printer.Tools;
 

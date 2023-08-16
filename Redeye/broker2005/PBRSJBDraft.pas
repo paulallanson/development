@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, STSOObjects, IniFiles, CCSPrint;
+  StdCtrls, Buttons, STSOObjects, IniFiles, CCSPrint, FireDAC.Stan.Param;
 
 type
   TPBRSJBDraftFrm = class(TForm)
@@ -45,7 +45,9 @@ var
 
 implementation
 
-uses STRPSord, pbDatabase, PBRPJBDraft, CCSemailHandler, pbMainMenu;
+uses
+  System.UITypes,
+  STRPSord, pbDatabase, PBRPJBDraft, CCSemailHandler, pbMainMenu;
 
 {$R *.DFM}
 
@@ -79,35 +81,32 @@ begin
   {Setup and print the report}
   GetSelection;
   PBRPJBDraftFrm := TPBRPJBDraftFrm.Create(Self);
+  PrinterSettings := TPrinterSettings.Create;
   try
-    PrinterSettings := TPrinterSettings.Create;
-    try
-      PBRPJBDraftFrm.FinanceVers := chkbxFinance.checked;
-      if chkbxShowZeroValues.checked then
-        PBRPJBDraftFrm.ShowZeroValues := 'Y'
-      else
-        PBRPJBDraftFrm.ShowZeroValues := 'N';
+    PBRPJBDraftFrm.FinanceVers := chkbxFinance.checked;
+    if chkbxShowZeroValues.checked then
+      PBRPJBDraftFrm.ShowZeroValues := 'Y'
+    else
+      PBRPJBDraftFrm.ShowZeroValues := 'N';
 
-      PBRPJBDraftFrm.iIntSelCode := fIntSelCode ;
+    PBRPJBDraftFrm.iIntSelCode := fIntSelCode ;
 //      PBRPJBDraftFrm.PrintLogo := ChkBxLogo.Checked;
-      PBRPJBDraftFrm.Preview := Preview;
-      if PBRPJBDraftFrm.GetDetails(Self) = 0 then
-        begin
-          MessageDlg('There is nothing to print', mtError, [mbAbort], 0);
-        end
-      else
-        begin
-          if preview then
-            PBRPJBDraftFrm.qrpDetails.Preview
-          else
-            if setupPrinter(PrinterSettings) then
-              PBRPJBDraftFrm.qrpDetails.Print;
-        end;
-    finally
-      dmBroker.DelIntSelCode(fIntselCode, True);
-      PBRPJBDraftFrm.Free;
-    end;
+    PBRPJBDraftFrm.Preview := Preview;
+    if PBRPJBDraftFrm.GetDetails(Self) = 0 then
+      begin
+        MessageDlg('There is nothing to print', mtError, [mbAbort], 0);
+      end
+    else
+      begin
+        if preview then
+          PBRPJBDraftFrm.qrpDetails.Preview
+        else
+          if setupPrinter(PrinterSettings) then
+            PBRPJBDraftFrm.qrpDetails.Print;
+      end;
   finally
+    dmBroker.DelIntSelCode(fIntselCode, True);
+    PBRPJBDraftFrm.Free;
     PrinterSettings.Free;
   end;
 end;

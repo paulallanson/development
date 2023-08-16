@@ -148,7 +148,7 @@ var
 implementation
 
 uses
-  System.UITypes,
+  System.UITypes, System.Types,
   STRSPickNote, pbDatabase, stPickingDM, STStockDM, STPickbyPart,
   PBRSProofN, PBLUProofHistN, pbMainMenu, PBMaintPOrd, pbPOObjects,
   STMntSOrd, stSOObjects, STRSSalesOrd, PBRSPOrdN, STPrtAllocSales,

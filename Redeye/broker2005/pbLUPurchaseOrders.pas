@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, ImgList, StdCtrls, ComCtrls, Grids, DBGrids, ToolWin, Db, Menus, STPOObjects, STSOObjects, Buttons, System.ImageList;
+  ExtCtrls, ImgList, StdCtrls, ComCtrls, Grids, DBGrids, ToolWin, Db, Menus,
+  STPOObjects, STSOObjects, Buttons, System.ImageList, FireDAC.Stan.Param;
 
 type
   TfrmPBLUPurchaseOrders = class(TForm)
@@ -97,7 +98,9 @@ var
 
 implementation
 
-uses pbPOrdersDM, ccsCommon, STMntPOrd, STPordRSl, STPrtTran,
+uses
+  System.UITypes,
+  pbPOrdersDM, ccsCommon, STMntPOrd, STPordRSl, STPrtTran,
   STPODirectConf, pbDatabase, pbMainMenu, pbLUPurchaseOrderRpts,
   STPODataMod, STSODataMod, STEDIPOrd, PBSendPOViaFTP, STRSPOAck,
   stPickingDM, STRSPODelivNote;

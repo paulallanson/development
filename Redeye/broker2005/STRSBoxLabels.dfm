@@ -11,14 +11,12 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object LineDetsStringGrid: TStringGrid
     Left = 0
@@ -59,12 +57,12 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end>
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
     Top = 370
     Width = 757
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     object CancelBitBtn: TBitBtn
       Left = 656
@@ -77,9 +75,10 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      Kind = bkCancel
     end
     object PreviewBitBtn: TBitBtn
       Left = 288
@@ -93,9 +92,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = PreviewBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -110,6 +106,9 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = PreviewBitBtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 392
@@ -124,9 +123,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -141,23 +137,26 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = PrintBitBtnClick
     end
   end
   object pnlHeader: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 757
     Height = 121
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object POGroupBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 393
       Height = 49
       Caption = 'Delivery details for order '
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 16
@@ -175,11 +174,11 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
     end
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 66
       Width = 393
       Height = 45
+      ParentBackground = False
       TabOrder = 1
       object Label9: TLabel
         Left = 16
@@ -203,8 +202,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         Top = 14
         Width = 25
         Height = 25
-        TabOrder = 1
-        OnClick = BitBtn2Click
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -219,6 +216,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
           F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
           333337FFFFFFFF77333330000000000333333777777777733333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = BitBtn2Click
       end
       object chkAddressOnly: TCheckBox
         Left = 272
@@ -230,11 +229,11 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
       end
     end
     object GroupBox5: TGroupBox
-      ParentBackground = False
       Left = 408
       Top = 66
       Width = 329
       Height = 45
+      ParentBackground = False
       TabOrder = 2
       object Label12: TLabel
         Left = 16
@@ -259,10 +258,6 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
         Width = 23
         Height = 23
         Hint = 'Clear'
-        ParentShowHint = False
-        ShowHint = True
-        TabOrder = 1
-        OnClick = FormRefClrBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -277,6 +272,10 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
           BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
           50BB555555555555575F555555555555550B5555555555555575}
         NumGlyphs = 2
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnClick = FormRefClrBitBtnClick
       end
     end
   end
@@ -314,9 +313,8 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Top = 176
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'sonumber'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryGetSerialNumbers: TFDQuery
@@ -330,14 +328,10 @@ object STRSBoxLabelsfrm: TSTRSBoxLabelsfrm
     Top = 235
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryLogos: TFDQuery
