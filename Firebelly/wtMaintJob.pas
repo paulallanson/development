@@ -8,7 +8,7 @@ uses
   CRControls, AllCommon, DB, Spin, wtSalesOrderDM,
   ImgList, ShellAPI, QrCtrls, Menus, ToolWin, Inifiles,
   taoMapi, Activex, AxCtrls, Clipbrd, ComObj,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
 
 type
   TfrmWTMaintJob = class(TForm)
@@ -218,6 +218,8 @@ type
     memNotes: TMemo;
     stvDocuments: TShellTreeView;
     slvDocuments: TShellListView;
+    dfDocuments: TPJDropFiles;
+    PJExtFileFilter1: TPJExtFileFilter;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -313,6 +315,7 @@ type
     procedure stvDocumentsDragOver(Sender, Source: TObject; X, Y: Integer;
       State: TDragState; var Accept: Boolean);
     procedure tbDocumentsShow(Sender: TObject);
+    procedure dfDocumentsDropFiles(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -392,7 +395,8 @@ uses
   wtCommon, WTSrchCustomer, wtMain, wtNotesDM, wtDataModule,
   WTSrchCustContacts, wtMaintJElement, wtMaintJUpstand, wtMaintJEdge, wtMaintJExtra,
   wtMaintJCutOut, wtMaintJEvents, DateSelV5, wtLUMatType, wtMaintJElementM, WTMaintJRemedial,
-  wtLUFitters, WTLUDesigner, wtLUReason, WTMaintEmail, WTWordOLE, WTExcelOLE;
+  wtLUFitters, WTLUDesigner, wtLUReason, WTMaintEmail, WTWordOLE, WTExcelOLE,
+  DragAndDrop.Tools;
 
 {$R *.DFM}
 
@@ -1402,6 +1406,13 @@ procedure TfrmWTMaintJob.dblkpMaterialClick(Sender: TObject);
 begin
   Job.Material := dblkpMaterial.KeyValue;
   EnableAddButtons;
+end;
+
+procedure TfrmWTMaintJob.dfDocumentsDropFiles(Sender: TObject);
+begin
+  for var i := 0 to Pred(dfDocuments.Count) do
+    TDragAndDropTools.New.MakeACopy(dfDocuments.Files[i], Self.slvDocuments.RootFolder.PathName);
+  Self.slvDocuments.Refresh;
 end;
 
 procedure TfrmWTMaintJob.EnableAddButtons;

@@ -8,7 +8,7 @@ uses
   ExtCtrls, Menus, CRControls, Spin, ImgList, ShellAPI, WTQuotesDM,
   ToolWin, IniFiles, DBGrids, DateUtils, WTPurchasesDM, wtSalesInvoiceDM, WTJobsDM, DB,
   Activex, AxCtrls, Clipbrd, ComObj, QrPrntr,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
 
 type
   TfrmWTMaintSalesOrder = class(TForm)
@@ -256,6 +256,8 @@ type
     edtSiteName: TEdit;
     btnClearCustomerBranch: TSpeedButton;
     btnGenerateDocs: TButton;
+    dfDocuments: TPJDropFiles;
+    PJExtFileFilter1: TPJExtFileFilter;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CheckOK(Sender: TObject);
@@ -372,6 +374,7 @@ type
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
     procedure btnGenerateDocsClick(Sender: TObject);
+    procedure dfDocumentsDropFiles(Sender: TObject);
   private
     Descending: Boolean;
     SortedColumn: Integer;
@@ -468,7 +471,7 @@ var
 implementation
 
 uses
-  System.UITypes, System.Types,
+  System.UITypes, System.Types, DragAndDrop.Tools,
   taoMAPI, wtMain, allCommon, AllImages, WTMaintSalesOrderLine, WTMaintSalesOrderJobLine, WTSrchCustomer,
   WTSrchCustContacts, wtNotesDM, wtDBMemo, WTLUSalesOrderQuotes, WTMaintSOEvents, wtLUReps, DateSelV5,
   wtRSQuote, wtDataModule, WtMaintQuote, WTMaintEmail, WTWordOLE,
@@ -2565,16 +2568,10 @@ begin
 
   dtmdlSalesOrder.dtsRep.DataSet.active := false;
   dtmdlSalesOrder.dtsRep.DataSet.active := true;
-
 end;
 
 procedure TfrmWTMaintSalesOrder.FormDestroy(Sender: TObject);
 begin
-  try
-//    dtmdlAllJobs.free;
-  except
-  end;
-
   AllCommon.SaveFormLayout(TfrmWTMain.AppIniFile, self);
 end;
 
@@ -2899,11 +2896,13 @@ begin
             sfullFile := DocOpenDialog.Files.Strings[icount];
             iLength := length(sFullFile);
 
+            i := -1;
             while i <> 0 do
               begin
                 ipos := pos('\',sFullFile);
 
-                sFullFile := stringreplace(sFullFile, '\', '!', []);
+                if ipos > 0 then
+                  sFullFile := stringreplace(sFullFile, '\', '!', []);
 
                 i := pos('\',sFullFile);
               end;
@@ -3248,12 +3247,16 @@ var
   inx: integer;
 begin
   inx := sgEvents.row;
-  try
+  memEventNotes.Lines.Clear;
+
+  if Assigned(SOrder.Events) then
+  begin
     inx := SOrder.Events.IndexOf(inx);
-    SOEvent := SOrder.Events[inx];
-    memEventNotes.Text := SOEvent.Narrative.DataInfo;
-  except
-    memEventNotes.Lines.Clear;
+    if inx >= 0 then
+    begin
+      SOEvent := SOrder.Events[inx];
+      memEventNotes.Text := SOEvent.Narrative.DataInfo;
+    end;
   end;
 end;
 
@@ -3771,6 +3774,14 @@ begin
 { Trancate the body text and remove line-ends }
   ABody := StringReplace(Copy(ABody, 0, 64), #13, ' ', [rfReplaceAll]);
   ABody := StringReplace(ABody, #10, ' ', [rfReplaceAll]) + ' ...';
+end;
+
+procedure TfrmWTMaintSalesOrder.dfDocumentsDropFiles(
+  Sender: TObject);
+begin
+  for var i := 0 to Pred(dfDocuments.Count) do
+    TDragAndDropTools.New.MakeACopy(dfDocuments.Files[i], Self.slvDocuments.RootFolder.PathName);
+  Self.slvDocuments.Refresh;
 end;
 
 function TfrmWTMaintSalesOrder.ParseDocumentFrom(tmpFrom: string): string;
@@ -4308,7 +4319,6 @@ procedure TfrmWTMaintSalesOrder.stvDocumentsMouseMove(Sender: TObject;
 begin
   if Shift = [ssLeft] then
     (Sender as TShellListView).BeginDrag(false, 5);
-
 end;
 
 procedure TfrmWTMaintSalesOrder.stvDocumentsDragOver(Sender,

@@ -8,7 +8,7 @@ uses
   CRControls, AllCommon, DB, Spin, DateSelV5, ToolWin,
   ImgList, ShellAPI, Menus, Inifiles, DBGrids,
   Activex, AxCtrls, Clipbrd, ComObj, taoMAPI,
-  ShellCtrls, System.ImageList, FireDAC.Stan.Param;
+  ShellCtrls, System.ImageList, FireDAC.Stan.Param, PJDropFiles;
 
 type
   TfrmWTMaintQuote = class(TForm)
@@ -332,6 +332,8 @@ type
     Label59: TLabel;
     dblkpRevenueCentre: TDBLookupComboBox;
     SpeedButton1: TSpeedButton;
+    dfDocuments: TPJDropFiles;
+    PJExtFileFilter1: TPJExtFileFilter;
     procedure CheckOK(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -451,6 +453,7 @@ type
     procedure tbDocumentsShow(Sender: TObject);
     procedure dblkpRevenueCentreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure dfDocumentsDropFiles(Sender: TObject);
   private
     FRetailCustomer: bytebool;
     FUseMarkup: bytebool;
@@ -551,7 +554,7 @@ uses
   wtMaintQExtra, wtNotesDM, wtDataModule, wtMaintQUpstand, WTMaintQEvents,
   WTSrchCustContacts, wtLUMatType, WTMaintQElementM, WTMaintQUpstandM,
   wtLUSalesLead, WTLUDesigner, WTMaintQSlab, WTMaintEmail, WTWordOLE, WTExcelOLE,
-  WTMaintContApp, wtLUReason, wtLUSpecialInstruction;
+  WTMaintContApp, wtLUReason, wtLUSpecialInstruction, DragAndDrop.Tools;
 
 {$R *.DFM}
 
@@ -4272,6 +4275,13 @@ begin
   Quote.VatRate := dblkpVatRate.listSource.DataSet.fieldbyname('Vat_Rate').asfloat;
   edtVatValue.Text := formatfloat('0.00',Quote.TotalVat);
   edtGrossPrice.Text := formatfloat('0.00',(Quote.TotalGross+Quote.TotalVat));
+end;
+
+procedure TfrmWTMaintQuote.dfDocumentsDropFiles(Sender: TObject);
+begin
+  for var i := 0 to Pred(dfDocuments.Count) do
+    TDragAndDropTools.New.MakeACopy(dfDocuments.Files[i], Self.slvDocuments.RootFolder.PathName);
+  Self.slvDocuments.Refresh;
 end;
 
 procedure TfrmWTMaintQuote.btnExpiryDateClick(Sender: TObject);

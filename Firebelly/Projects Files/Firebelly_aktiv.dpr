@@ -224,7 +224,9 @@ uses
   WTRPSalesInvoicePayments in '..\WTRPSalesInvoicePayments.pas' {frmWTRPSalesInvoicePayments},
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
-  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas';
+  Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',
+  DragAndDrop.Interfaces in '..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas',
+  DragAndDrop.Tools in '..\..\Drag and Drop Tools\DragAndDrop.Tools.pas';
 
 {$R *.RES}
 

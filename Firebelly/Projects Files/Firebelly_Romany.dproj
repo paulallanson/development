@@ -592,6 +592,8 @@
             <Form>frmwtRPSOrder</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas"/>
+        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Tools.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

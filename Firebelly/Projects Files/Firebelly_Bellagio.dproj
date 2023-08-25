@@ -851,6 +851,8 @@
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
+        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Interfaces.pas"/>
+        <DCCReference Include="..\..\Drag and Drop Tools\DragAndDrop.Tools.pas"/>
         <None Include="FirebellyScheduler.dll">
             <ContainerId>File</ContainerId>
         </None>
