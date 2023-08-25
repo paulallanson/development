@@ -2200,8 +2200,6 @@
         <DCCReference Include="..\STLUCourierSpeed.pas">
             <Form>STLUCourierSpeedFrm</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CCSCommonD7\Outlook12_TLB.pas"/>
-        <DCCReference Include="..\..\CCSCommonD7\Office12_TLB.pas"/>
         <DCCReference Include="..\PBRSEnqSuppComp.pas">
             <Form>PBRSEnqSuppCompFrm</Form>
         </DCCReference>
@@ -2264,7 +2262,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="4">
-                <DeployFile LocalName="redeye_MandM.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\redeye_MandM.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>redeye_MandM.exe</RemoteName>
                         <Overwrite>true</Overwrite>

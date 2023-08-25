@@ -567,8 +567,6 @@
         <DCCReference Include="..\wtMaintCutOutDetails.pas">
             <Form>frmWTMaintCutOutDetails</Form>
         </DCCReference>
-        <DCCReference Include="..\Outlook12_TLB.pas"/>
-        <DCCReference Include="..\Office12_TLB.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>

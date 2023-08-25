@@ -174,8 +174,6 @@ uses
   WTRSRetailAddress in '..\WTRSRetailAddress.pas' {frmWTRSRetailAddress},
   WTRPCustContDet in '..\WTRPCustContDet.pas' {frmWTRPCustContDet},
   wtRSTemplateSheet in '..\wtRSTemplateSheet.pas' {frmWTRSTemplateSheet},
-  Office12_TLB in '..\Office12_TLB.pas',
-  Outlook12_TLB in '..\Outlook12_TLB.pas',
   wtRPQuote in '..\Roann\Reports\wtRPQuote.pas' {frmwtRPQuote},
   WtRPJobSheet in '..\Roann\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
   wtRPSalesInvoice in '..\Roann\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},

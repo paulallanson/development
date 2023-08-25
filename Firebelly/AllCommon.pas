@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj,
   Controls, Messages, Registry, Outlook_TLB, COMobj, ActiveX, Math,
-  DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook12_TLB,
+  DBGrids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder,
   wtDataModule;
 
 type

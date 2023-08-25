@@ -446,8 +446,6 @@ uses
   PBRSJobBag in '..\PBRSJobBag.pas' {frmPBRSJobBag},
   STRPSord in '..\Quick Reports\Solutions23\STRPSord.pas' {STRPSordFrm},
   SFJobBagLogDM in '..\..\SFDC\SFJobBagLogDM.pas' {dtmdlJobBagLog: TDataModule},
-  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
-  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
   STRPPickingNote in '..\Quick Reports\Solutions23\STRPPickingNote.pas' {STRPPickingNoteFrm},
   PBRPCusSupLabs in '..\Quick Reports\Solutions23\PBRPCusSupLabs.pas' {PBRPCusSupLabsFrm},
   Printer.Enums in '..\..\..\PrinterTools\Printer.Enums.pas',

@@ -1,8 +1,9 @@
 object emailHandler: TemailHandler
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Height = 304
-  Width = 730
+  Height = 380
+  Width = 913
+  PixelsPerInch = 120
   object qrySelCustomerContacts: TFDQuery
     ConnectionName = 'Wt'
     SQL.Strings = (
@@ -16,8 +17,8 @@ object emailHandler: TemailHandler
       'where customer = :customer and '
       ' branch_no = :branch;'
       ' ')
-    Left = 72
-    Top = 16
+    Left = 90
+    Top = 20
     ParamData = <
       item
         Name = 'customer'
@@ -28,7 +29,7 @@ object emailHandler: TemailHandler
   end
   object qryEmailList: TFDQuery
     ConnectionName = 'Wt'
-    Left = 192
-    Top = 16
+    Left = 240
+    Top = 20
   end
 end

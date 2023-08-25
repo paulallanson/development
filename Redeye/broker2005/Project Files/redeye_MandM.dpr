@@ -694,8 +694,6 @@ uses
   STMaintCourierSort in '..\STMaintCourierSort.pas' {STMaintCourierSortFrm},
   STMaintCourierSpeed in '..\STMaintCourierSpeed.pas' {STMaintCourierSpeedFrm},
   STLUCourierSpeed in '..\STLUCourierSpeed.pas' {STLUCourierSpeedFrm},
-  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
-  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
   PBRSEnqSuppComp in '..\PBRSEnqSuppComp.pas' {PBRSEnqSuppCompFrm},
   PBRPEnqSupplierComp in '..\PBRPEnqSupplierComp.pas' {PBRPEnqSupplierCompFrm},
   STRSSalesHistory in '..\STRSSalesHistory.pas' {STRSSalesHistoryFrm},

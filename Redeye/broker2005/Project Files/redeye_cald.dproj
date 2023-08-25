@@ -1315,8 +1315,6 @@
         <DCCReference Include="..\PBRSQuo.pas">
             <Form>PBRSQuoFrm</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CCSCommonD7\Outlook12_TLB.pas"/>
-        <DCCReference Include="..\..\CCSCommonD7\Office12_TLB.pas"/>
         <DCCReference Include="..\PBOrderImport.pas">
             <Form>PBOrderImportFrm</Form>
         </DCCReference>

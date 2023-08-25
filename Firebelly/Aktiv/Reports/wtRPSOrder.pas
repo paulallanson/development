@@ -382,7 +382,7 @@ begin
   qrlblNett.caption := formatfloat('#,##0.00',rNettTotal);
   qrlblVat.Caption := formatfloat('#,##0.00',rVATTotal);
 
-  rGrossTotal := StrToFloatDef(sNett, 0, FormatSettings) + StrToFloatDef(sVat);
+  rGrossTotal := StrToFloatDef(sNett, 0, FormatSettings) + StrToFloatDef(sVat, 0);
   qrlblGross.Caption := formatfloat('#,##0.00',rGrossTotal);
 
   rdeposit := qryReport.FieldByName('Deposit_Terms').Asfloat;

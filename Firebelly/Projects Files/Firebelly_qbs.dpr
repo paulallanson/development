@@ -154,8 +154,6 @@ uses
   WTLUEdgeDetails in '..\WTLUEdgeDetails.pas' {frmWTLUEdgeDetails},
   wtLUCutOutDetails in '..\wtLUCutOutDetails.pas' {frmWTLUCutOutDetails},
   wtMaintCutOutDetails in '..\wtMaintCutOutDetails.pas' {frmWTMaintCutOutDetails},
-  Outlook12_TLB in '..\Outlook12_TLB.pas',
-  Office12_TLB in '..\Office12_TLB.pas',
   Printer.Enums in '..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\PrinterTools\Printer.Interfaces.pas',
   Printer.Tools in '..\..\PrinterTools\Printer.Tools.pas',

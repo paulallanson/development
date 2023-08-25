@@ -176,8 +176,6 @@ uses
   WTRSCustContDet in '..\WTRSCustContDet.pas' {frmWTRSCustContDet},
   WTRPCustContDet in '..\WTRPCustContDet.pas' {frmWTRPCustContDet},
   wtRSTemplateSheet in '..\wtRSTemplateSheet.pas' {frmWTRSTemplateSheet},
-  Office12_TLB in '..\Office12_TLB.pas',
-  Outlook12_TLB in '..\Outlook12_TLB.pas',
   wtRPQuote in '..\Grantech\Reports\wtRPQuote.pas' {frmwtRPQuote},
   WtRPJobSheet in '..\Grantech\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
   wtRPSalesInvoice in '..\Grantech\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},

@@ -4,8 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  QuickRpt, Outlook2010, ActiveX, COMobj, QrExport, Db, Variants, QrCtrls,
-  Outlook12_TLB, Printer.Enums,
+  QuickRpt, ActiveX, COMobj, QrExport, Db, Variants, QrCtrls,
+  Outlook_TLB, Printer.Enums,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error,
   FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async,
   FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;

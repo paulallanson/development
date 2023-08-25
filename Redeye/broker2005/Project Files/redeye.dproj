@@ -1367,8 +1367,6 @@
         <DCCReference Include="..\STRPPODelivNote.pas">
             <Form>STRPPODelivNoteFrm</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CCSCommonD7\Outlook12_TLB.pas"/>
-        <DCCReference Include="..\..\CCSCommonD7\Office12_TLB.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\..\PrinterTools\Printer.Tools.pas"/>

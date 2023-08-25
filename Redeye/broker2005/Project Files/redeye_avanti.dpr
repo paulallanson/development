@@ -416,8 +416,6 @@ uses
   PBMaintPOrdNonConfDoc in '..\PBMaintPOrdNonConfDoc.pas' {PBMaintPOrdNonConfDocFrm},
   STRSPODelivNote in '..\STRSPODelivNote.pas' {STRSPODelivNoteFrm},
   STRPPODelivNote in '..\STRPPODelivNote.pas' {STRPPODelivNoteFrm},
-  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
-  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
   PBAbout in '..\PBAbout.pas' {PBAboutFrm},
   Printer.Enums in '..\..\..\PrinterTools\Printer.Enums.pas',
   Printer.Interfaces in '..\..\..\PrinterTools\Printer.Interfaces.pas',

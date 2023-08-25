@@ -181,8 +181,6 @@ uses
   WTRSCustContDet in '..\WTRSCustContDet.pas' {frmWTRSCustContDet},
   WTRPCustContDet in '..\WTRPCustContDet.pas' {frmWTRPCustContDet},
   wtRSTemplateSheet in '..\wtRSTemplateSheet.pas' {frmWTRSTemplateSheet},
-  Office12_TLB in '..\Office12_TLB.pas',
-  Outlook12_TLB in '..\Outlook12_TLB.pas',
   wtRPQuote in '..\MegaMarble\Reports\wtRPQuote.pas' {frmwtRPQuote},
   WtRPJobSheet in '..\MegaMarble\Reports\WtRPJobSheet.pas' {frmwtRPJobSheet},
   wtRPSalesInvoice in '..\MegaMarble\Reports\wtRPSalesInvoice.pas' {frmWTRPSalesInvoice},

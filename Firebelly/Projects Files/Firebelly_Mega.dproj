@@ -644,8 +644,6 @@
         <DCCReference Include="..\wtRSTemplateSheet.pas">
             <Form>frmWTRSTemplateSheet</Form>
         </DCCReference>
-        <DCCReference Include="..\Office12_TLB.pas"/>
-        <DCCReference Include="..\Outlook12_TLB.pas"/>
         <DCCReference Include="..\MegaMarble\Reports\wtRPQuote.pas">
             <Form>frmwtRPQuote</Form>
         </DCCReference>

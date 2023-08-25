@@ -400,8 +400,6 @@ uses
   PBRPJBDraft in '..\Quick Reports\Calderstone\PBRPJBDraft.pas' {PBRPJBDraftFrm},
   PBRSJBDraft in '..\PBRSJBDraft.pas' {PBRSJBDraftFrm},
   PBRSQuo in '..\PBRSQuo.pas' {PBRSQuoFrm},
-  Outlook12_TLB in '..\..\CCSCommonD7\Outlook12_TLB.pas',
-  Office12_TLB in '..\..\CCSCommonD7\Office12_TLB.pas',
   PBOrderImport in '..\PBOrderImport.pas' {PBOrderImportFrm},
   PBMaintContactMulti in '..\PBMaintContactMulti.pas' {PBMaintContactMultiFrm},
   PBLULevelOfImportance in '..\PBLULevelOfImportance.pas' {PBLULevelofImportanceFrm},
