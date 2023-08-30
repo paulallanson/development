@@ -232,17 +232,17 @@ uses
 
 function TdtmdlCustomers.GetHeaderCount: integer;
 begin
-
+  Result := 0;
 end;
 
 procedure TdtmdlCustomers.refreshData;
 begin
-
+  //
 end;
 
 function TdtmdlCustomers.GetContactCount: integer;
 begin
-
+  Result := 0;
 end;
 
 end.
