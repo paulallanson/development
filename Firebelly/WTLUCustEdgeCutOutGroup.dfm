@@ -11,10 +11,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
@@ -80,8 +78,8 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -123,9 +121,9 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       Anchors = [akLeft, akBottom]
       Caption = 'Edges'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnEdgesClick
-      NumGlyphs = 2
     end
     object btnCutOuts: TBitBtn
       Left = 9
@@ -135,9 +133,9 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
       Anchors = [akLeft, akBottom]
       Caption = 'Cut Outs'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCutOutsClick
-      NumGlyphs = 2
     end
   end
   object pnlHeader: TPanel
@@ -222,14 +220,10 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetGroups: TDataSource
@@ -246,9 +240,7 @@ object frmWTLUCustEdgeCutOutGroup: TfrmWTLUCustEdgeCutOutGroup
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end>
   end
 end

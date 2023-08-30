@@ -2,8 +2,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   Left = 186
   Top = 121
   Caption = 'Templating Details'
-  ClientHeight = 396
-  ClientWidth = 1278
+  ClientHeight = 387
+  ClientWidth = 1272
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,15 +23,16 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1278
+    Width = 1272
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1272
+        Width = 1276
       end>
+    ExplicitWidth = 1278
     object Panel3: TPanel
       Left = 11
       Top = 0
@@ -42,7 +43,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Color = clSilver
       TabOrder = 0
       DesignSize = (
-        1263
+        1257
         28)
       object Label2: TLabel
         Left = 0
@@ -58,7 +59,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1010
+        Left = 1004
         Top = 7
         Width = 69
         Height = 13
@@ -88,7 +89,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1090
+        Left = 1084
         Top = 3
         Width = 145
         Height = 21
@@ -96,13 +97,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
+        ExplicitLeft = 1090
       end
     end
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 377
-    Width = 1278
+    Top = 368
+    Width = 1272
     Height = 19
     Panels = <
       item
@@ -114,20 +116,20 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       item
         Width = 50
       end>
-    ExplicitTop = 386
-    ExplicitWidth = 1290
+    ExplicitTop = 377
+    ExplicitWidth = 1278
   end
   object Panel1: TPanel
     Left = 0
-    Top = 336
-    Width = 1278
+    Top = 327
+    Width = 1272
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 335
-    ExplicitWidth = 1274
+    ExplicitTop = 336
+    ExplicitWidth = 1278
     DesignSize = (
-      1278
+      1272
       41)
     object Label1: TLabel
       Left = 8
@@ -137,7 +139,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Search'
     end
     object Label3: TLabel
-      Left = 1035
+      Left = 1023
       Top = 15
       Width = 55
       Height = 13
@@ -154,7 +156,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = 'Template Date:'
     end
     object btnClose: TButton
-      Left = 1195
+      Left = 1183
       Top = 9
       Width = 75
       Height = 25
@@ -162,7 +164,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 1207
+      ExplicitLeft = 1195
     end
     object edtSearch: TEdit
       Left = 56
@@ -173,14 +175,14 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 1096
+      Left = 1084
       Top = 11
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 1108
+      ExplicitLeft = 1096
     end
     object cmbActionDate: TComboBox
       Left = 608
@@ -273,23 +275,23 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1278
+    Width = 1272
     Height = 45
     Bands = <
       item
         Control = btnDocuments
         ImageIndex = -1
         MinHeight = 41
-        Width = 1286
+        Width = 1276
       end>
-    ExplicitWidth = 1290
+    ExplicitWidth = 1278
     object btnDocuments: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1273
+      Width = 1263
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'btnDocuments'
       Images = imgLstHot
       ShowCaptions = True
@@ -306,7 +308,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnChangeClick
       end
       object btnTemplate: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Hint = 'print a template check list'
         Caption = 'Template'
@@ -315,7 +317,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnTemplateClick
       end
       object btnReturned: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Hint = 'Confirm Paperwork Returned'
         Caption = 'Returned'
@@ -324,7 +326,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnReturnedClick
       end
       object btnConvert: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Hint = 'convert a sales order quotation to a job'
         Caption = 'Convert'
@@ -335,7 +337,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         OnClick = btnConvertClick
       end
       object ToolButton1: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -343,7 +345,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 256
+        Left = 232
         Top = 0
         Hint = 'sales order reports'
         Caption = 'Reports'
@@ -357,8 +359,8 @@ object frmWTLUTemplating: TfrmWTLUTemplating
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1278
-    Height = 259
+    Width = 1272
+    Height = 250
     Align = alClient
     DataSource = dtmdlSalesOrder.dtsAllSales
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -475,7 +477,7 @@ object frmWTLUTemplating: TfrmWTLUTemplating
       end
       item
         Expanded = False
-        FieldName = 'Is_Retail_Customer'
+        FieldName = 'is_retail_customer'
         Title.Caption = 'Retail'
         Width = 50
         Visible = True

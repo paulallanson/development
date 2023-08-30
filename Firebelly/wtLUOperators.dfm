@@ -11,10 +11,8 @@ object frmWTLUOperators: TfrmWTLUOperators
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -66,15 +64,19 @@ object frmWTLUOperators: TfrmWTLUOperators
       item
         Width = 50
       end>
+    ExplicitTop = 322
+    ExplicitWidth = 412
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 256
     Width = 418
     Height = 75
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 247
+    ExplicitWidth = 412
     DesignSize = (
       418
       75)
@@ -127,9 +129,9 @@ object frmWTLUOperators: TfrmWTLUOperators
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 4
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -163,9 +165,7 @@ object frmWTLUOperators: TfrmWTLUOperators
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator_Can_Login'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

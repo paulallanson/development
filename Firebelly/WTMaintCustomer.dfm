@@ -2,8 +2,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   Left = 322
   Top = 35
   Caption = 'Customer details'
-  ClientHeight = 560
-  ClientWidth = 838
+  ClientHeight = 551
+  ClientWidth = 832
   Color = clBtnFace
   Constraints.MinHeight = 459
   Constraints.MinWidth = 850
@@ -21,19 +21,17 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 499
-    Width = 838
+    Top = 490
+    Width = 832
     Height = 42
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 498
-    ExplicitWidth = 834
     DesignSize = (
-      838
+      832
       42)
     object lblDelete: TLabel
-      Left = 429
+      Left = 411
       Top = 15
       Width = 163
       Height = 13
@@ -48,7 +46,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       ExplicitLeft = 488
     end
     object btnOK: TBitBtn
-      Left = 608
+      Left = 590
       Top = 9
       Width = 75
       Height = 25
@@ -59,10 +57,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnOKClick
-      ExplicitLeft = 604
     end
     object BitBtn2: TBitBtn
-      Left = 694
+      Left = 676
       Top = 9
       Width = 75
       Height = 25
@@ -72,7 +69,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn2Click
-      ExplicitLeft = 690
     end
     object chkbxInactive: TCheckBox
       Left = 13
@@ -115,13 +111,11 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   object pgDetails: TPageControl
     Left = 0
     Top = 0
-    Width = 838
-    Height = 499
+    Width = 832
+    Height = 490
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 834
-    ExplicitHeight = 498
     object tsGeneral: TTabSheet
       Caption = 'General'
       object pnlDetails: TPanel
@@ -132,11 +126,9 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Align = alClient
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 826
-        ExplicitHeight = 470
         DesignSize = (
-          830
-          471)
+          824
+          462)
         object Label1: TLabel
           Left = 8
           Top = 12
@@ -725,7 +717,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Tag = 200
           Left = 383
           Top = 213
-          Width = 383
+          Width = 365
           Height = 111
           TabStop = False
           Anchors = [akLeft, akTop, akRight]
@@ -778,6 +770,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Align = alLeft
         ParentBackground = False
         TabOrder = 0
+        ExplicitHeight = 462
         object Label31: TLabel
           Left = 24
           Top = 67
@@ -961,6 +954,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
         Caption = 'Panel13'
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 552
+        ExplicitHeight = 462
         object Panel15: TPanel
           Left = 1
           Top = 1
@@ -970,6 +965,7 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Caption = 'Material Types'
           ParentBackground = False
           TabOrder = 0
+          ExplicitWidth = 550
         end
         object pnlMaterialTypeFunctions: TPanel
           Left = 465
@@ -979,6 +975,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alRight
           ParentBackground = False
           TabOrder = 1
+          ExplicitLeft = 459
+          ExplicitHeight = 378
           object btnMTAdd: TBitBtn
             Left = 10
             Top = 8
@@ -1046,6 +1044,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
           Align = alBottom
           ParentBackground = False
           TabOrder = 3
+          ExplicitTop = 420
+          ExplicitWidth = 550
           object chkbxShowInactiveMaterialTypes: TCheckBox
             Left = 8
             Top = 8
@@ -2118,8 +2118,8 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 541
-    Width = 838
+    Top = 532
+    Width = 832
     Height = 19
     Panels = <
       item
@@ -2128,8 +2128,6 @@ object frmWtMaintCustomer: TfrmWtMaintCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 540
-    ExplicitWidth = 834
   end
   object dtsOneCustomer: TDataSource
     DataSet = qryOneCustomer

@@ -4119,21 +4119,26 @@ procedure TfrmWTMaintSalesOrder.dbgSalesInvoicesDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
   sValue: string;
 begin
   if(dbgSalesInvoices.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if (dbgSalesInvoices.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'C') then
+  begin
     (Sender as TDBGrid).Canvas.font.Color := clRed;
+    (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+  end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).Canvas.Brush.Color := clNavy;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Total') and
@@ -4141,46 +4146,32 @@ begin
       (Column.Title.Caption <> 'Vat') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
     		WITH Sender AS TDBGrid DO
       		BEGIN
-           	if  (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
+           	if (Column.Title.Caption <> 'Goods') and
+               (Column.Title.Caption <> 'Total') and
                (Column.Title.Caption <> 'Vat') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
+             	 begin
+                 Canvas.Brush.Color := Color;
+                 Canvas.Font.Color  := Font.Color;
+                 Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,Column.field.asstring);
+                 (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+               end;
       		END;
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Goods') or
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
-        try
-            sValue := formatfloat('?#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
-  		StrPCopy(Txt, sValue);
+        begin
+          sValue := formatfloat('?#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings));
+          Column.Field.Text := sValue;
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+       Column.Alignment := taRightJustify;
      end;
 end;
 

@@ -56,8 +56,8 @@ object frmWTLUMatType: TfrmWTLUMatType
       item
         Width = 50
       end>
-    ExplicitTop = 394
-    ExplicitWidth = 682
+    ExplicitTop = 386
+    ExplicitWidth = 680
   end
   object Panel1: TPanel
     Left = 0
@@ -67,8 +67,8 @@ object frmWTLUMatType: TfrmWTLUMatType
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 307
-    ExplicitWidth = 682
+    ExplicitTop = 299
+    ExplicitWidth = 680
     DesignSize = (
       686
       87)
@@ -167,14 +167,10 @@ object frmWTLUMatType: TfrmWTLUMatType
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

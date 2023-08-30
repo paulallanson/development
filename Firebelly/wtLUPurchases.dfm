@@ -2,8 +2,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   Left = 137
   Top = 109
   Caption = 'Purchase details'
-  ClientHeight = 356
-  ClientWidth = 975
+  ClientHeight = 347
+  ClientWidth = 969
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 337
-    Width = 975
+    Top = 328
+    Width = 969
     Height = 19
     Panels = <
       item
@@ -35,19 +35,17 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       item
         Width = 50
       end>
-    ExplicitTop = 341
-    ExplicitWidth = 991
   end
   object Panel1: TPanel
     Left = 0
-    Top = 296
-    Width = 975
+    Top = 287
+    Width = 969
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      975
+      969
       41)
     object Label1: TLabel
       Left = 8
@@ -57,7 +55,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Caption = 'Supplier Search'
     end
     object Label3: TLabel
-      Left = 708
+      Left = 702
       Top = 13
       Width = 74
       Height = 13
@@ -67,7 +65,7 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       ExplicitLeft = 740
     end
     object Button1: TButton
-      Left = 884
+      Left = 878
       Top = 7
       Width = 75
       Height = 25
@@ -75,7 +73,6 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = 916
     end
     object edtSearch: TEdit
       Left = 104
@@ -86,14 +83,13 @@ object frmwtLUPurchases: TfrmwtLUPurchases
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 788
+      Left = 782
       Top = 9
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 820
     end
     object btnSearch: TBitBtn
       Left = 288
@@ -108,20 +104,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 975
+    Width = 969
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 989
+        Width = 963
       end>
-    ExplicitWidth = 991
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 976
+      Width = 954
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -220,8 +215,8 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 975
-    Height = 219
+    Width = 969
+    Height = 210
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 3
@@ -306,20 +301,19 @@ object frmwtLUPurchases: TfrmwtLUPurchases
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 975
+    Width = 969
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 989
+        Width = 963
       end>
-    ExplicitWidth = 991
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 976
+      Width = 954
       Height = 28
       Align = alLeft
       BevelOuter = bvNone

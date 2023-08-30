@@ -3,8 +3,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   Top = 133
   BorderStyle = bsDialog
   Caption = 'Maintain Revenue Centre'
-  ClientHeight = 407
-  ClientWidth = 700
+  ClientHeight = 398
+  ClientWidth = 694
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 700
-    Height = 301
+    Width = 694
+    Height = 292
     Align = alClient
     DataSource = srcRevenueCentre
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -47,8 +47,8 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 388
-    Width = 700
+    Top = 379
+    Width = 694
     Height = 19
     Panels = <
       item
@@ -57,21 +57,17 @@ object frmWTLURevenueCentre: TfrmWTLURevenueCentre
       item
         Width = 50
       end>
-    ExplicitTop = 397
-    ExplicitWidth = 706
   end
   object Panel1: TPanel
     Left = 0
-    Top = 301
-    Width = 700
+    Top = 292
+    Width = 694
     Height = 87
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 310
-    ExplicitWidth = 706
     DesignSize = (
-      700
+      694
       87)
     object Label4: TLabel
       Left = 8

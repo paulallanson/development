@@ -86,8 +86,6 @@ object frmwtLUPayments: TfrmwtLUPayments
       item
         Width = 50
       end>
-    ExplicitTop = 514
-    ExplicitWidth = 791
   end
   object Panel1: TPanel
     Left = 0
@@ -97,8 +95,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 471
-    ExplicitWidth = 791
     DesignSize = (
       785
       43)
@@ -142,7 +138,6 @@ object frmwtLUPayments: TfrmwtLUPayments
       NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      ExplicitLeft = 687
     end
     object btnExcel: TBitBtn
       Left = 254
@@ -162,8 +157,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 79
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 392
-    ExplicitWidth = 791
     DesignSize = (
       785
       79)
@@ -288,7 +281,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 4
-    ExplicitWidth = 791
     object lblSalesOrder: TLabel
       Left = 674
       Top = 14
@@ -416,8 +408,6 @@ object frmwtLUPayments: TfrmwtLUPayments
     Height = 33
     Align = alBottom
     TabOrder = 6
-    ExplicitTop = 263
-    ExplicitWidth = 791
     object lblCreditNotes: TLabel
       Left = 8
       Top = 13

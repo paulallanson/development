@@ -48,8 +48,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 320
-    ExplicitHeight = 343
+    ExplicitLeft = 306
+    ExplicitHeight = 326
     DesignSize = (
       98
       335)
@@ -92,6 +92,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
+      ExplicitTop = 288
     end
   end
   object pnlBottom: TPanel
@@ -103,8 +104,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 343
-    ExplicitWidth = 418
+    ExplicitTop = 326
+    ExplicitWidth = 404
     DesignSize = (
       410
       89)
@@ -136,7 +137,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       OnChange = edtSearchChange
     end
     object btnSelect: TBitBtn
-      Left = 335
+      Left = 329
       Top = 16
       Width = 75
       Height = 25
@@ -145,9 +146,10 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       ModalResult = 1
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 323
     end
     object BitBtn2: TBitBtn
-      Left = 335
+      Left = 329
       Top = 54
       Width = 75
       Height = 25
@@ -155,6 +157,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       Caption = 'Canc&el'
       TabOrder = 3
       OnClick = BitBtn2Click
+      ExplicitLeft = 323
     end
   end
   object stbrDetails: TStatusBar
@@ -169,8 +172,8 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
       item
         Width = 50
       end>
-    ExplicitTop = 432
-    ExplicitWidth = 418
+    ExplicitTop = 415
+    ExplicitWidth = 404
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'
@@ -196,14 +199,11 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Not_Active'
-        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource
@@ -228,9 +228,7 @@ object frmWTSrchCustomer: TfrmWTSrchCustomer
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

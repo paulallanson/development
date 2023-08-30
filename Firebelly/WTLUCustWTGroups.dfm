@@ -1,26 +1,24 @@
 object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
   Left = 381
   Top = 170
-  Width = 757
-  Height = 412
   Caption = 'Maintain Customer Worktop Groups'
+  ClientHeight = 365
+  ClientWidth = 739
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 33
-    Width = 661
-    Height = 255
+    Width = 651
+    Height = 239
     Align = alClient
     DataSource = srcCustWTGroup
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -49,8 +47,8 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 362
-    Width = 749
+    Top = 346
+    Width = 739
     Height = 19
     Panels = <
       item
@@ -62,14 +60,14 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
   end
   object Panel1: TPanel
     Left = 0
-    Top = 288
-    Width = 749
+    Top = 272
+    Width = 739
     Height = 74
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
     DesignSize = (
-      749
+      739
       74)
     object Label4: TLabel
       Left = 8
@@ -118,9 +116,9 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 6
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -164,7 +162,7 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 749
+    Width = 739
     Height = 33
     Align = alTop
     BevelOuter = bvNone
@@ -185,10 +183,10 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     end
   end
   object Panel2: TPanel
-    Left = 661
+    Left = 651
     Top = 33
     Width = 88
-    Height = 255
+    Height = 239
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 4
@@ -199,9 +197,9 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
       Height = 25
       Caption = 'Colours'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnColoursClick
-      NumGlyphs = 2
     end
     object btnPrices: TBitBtn
       Left = 9
@@ -210,9 +208,9 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
       Height = 25
       Caption = 'Prices'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btnPricesClick
-      NumGlyphs = 2
     end
   end
   object srcCustWTGroup: TDataSource
@@ -238,19 +236,13 @@ object frmWTLUCustWTGroups: TfrmWTLUCustWTGroups
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Group_Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

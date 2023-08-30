@@ -2,8 +2,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   Left = 206
   Top = 114
   Caption = 'Maintain Purchase Order Receipts'
-  ClientHeight = 437
-  ClientWidth = 838
+  ClientHeight = 428
+  ClientWidth = 832
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 418
-    Width = 838
+    Top = 409
+    Width = 832
     Height = 19
     Panels = <
       item
@@ -29,23 +29,19 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       item
         Width = 50
       end>
-    ExplicitTop = 422
-    ExplicitWidth = 854
   end
   object Panel2: TPanel
     Left = 0
-    Top = 377
-    Width = 838
+    Top = 368
+    Width = 832
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 381
-    ExplicitWidth = 854
     DesignSize = (
-      838
+      832
       41)
     object btbtnClose: TBitBtn
-      Left = 744
+      Left = 732
       Top = 8
       Width = 75
       Height = 25
@@ -53,10 +49,9 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 0
-      ExplicitLeft = 776
     end
     object btnOK: TBitBtn
-      Left = 656
+      Left = 644
       Top = 8
       Width = 75
       Height = 25
@@ -84,17 +79,15 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnOKClick
-      ExplicitLeft = 688
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 838
+    Width = 832
     Height = 145
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 854
     object Label3: TLabel
       Left = 16
       Top = 52
@@ -199,8 +192,8 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
   object dbgLines: TStringGrid
     Left = 0
     Top = 145
-    Width = 838
-    Height = 232
+    Width = 832
+    Height = 223
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
@@ -210,8 +203,6 @@ object frmWTMaintPurchaseOrderReceipts: TfrmWTMaintPurchaseOrderReceipts
     OnDrawCell = dbgLinesDrawCell
     OnKeyPress = dbgLinesKeyPress
     OnSelectCell = dbgLinesSelectCell
-    ExplicitWidth = 854
-    ExplicitHeight = 236
     ColWidths = (
       47
       314

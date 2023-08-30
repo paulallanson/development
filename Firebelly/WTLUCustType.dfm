@@ -11,10 +11,8 @@ object frmWTLUCustType: TfrmWTLUCustType
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -42,14 +40,16 @@ object frmWTLUCustType: TfrmWTLUCustType
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 241
     Width = 476
     Height = 67
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 232
+    ExplicitWidth = 470
     DesignSize = (
       476
       67)
@@ -91,8 +91,8 @@ object frmWTLUCustType: TfrmWTLUCustType
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 3
       NumGlyphs = 2
+      TabOrder = 3
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -126,6 +126,8 @@ object frmWTLUCustType: TfrmWTLUCustType
       item
         Width = 50
       end>
+    ExplicitTop = 299
+    ExplicitWidth = 470
   end
   object dtsCustTypes: TDataSource
     DataSet = qryCustTypes
@@ -146,9 +148,7 @@ object frmWTLUCustType: TfrmWTLUCustType
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

@@ -293,12 +293,11 @@ end;
 procedure TfrmWTSrchSupplier.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('InActive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 end;
 

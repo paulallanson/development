@@ -11,12 +11,10 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -122,9 +120,9 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
       Anchors = [akLeft, akBottom]
       Caption = '&Close'
       ModalResult = 2
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -148,9 +146,9 @@ object frmwtLUSlabSizes: TfrmwtLUSlabSizes
   end
   object tblSlabSize: TFDTable
     OnNewRecord = tblSlabSizeNewRecord
-    ConnectionName = 'wt'
     Filtered = True
     IndexFieldNames = 'Slab_Size'
+    ConnectionName = 'wt'
     TableName = 'Slab_Size'
     Left = 152
     Top = 64

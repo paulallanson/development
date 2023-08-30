@@ -29,7 +29,6 @@ object frmWTLUProspectAction: TfrmWTLUProspectAction
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item

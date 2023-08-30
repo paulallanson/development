@@ -2,8 +2,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   Left = 64
   Top = 111
   Caption = 'Quote details'
-  ClientHeight = 561
-  ClientWidth = 1351
+  ClientHeight = 525
+  ClientWidth = 1327
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 542
-    Width = 1351
+    Top = 506
+    Width = 1327
     Height = 19
     Panels = <
       item
@@ -35,19 +35,15 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       item
         Width = 50
       end>
-    ExplicitTop = 552
-    ExplicitWidth = 1367
   end
   object Panel1: TPanel
     Left = 0
-    Top = 501
-    Width = 1351
+    Top = 465
+    Width = 1327
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 502
-    ExplicitWidth = 1355
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -64,7 +60,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1064
+      Left = 1036
       Top = 1
       Width = 290
       Height = 39
@@ -127,23 +123,22 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 1351
+    Width = 1327
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1363
+        Width = 1321
       end>
-    ExplicitWidth = 1367
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1350
+      Width = 1312
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imgLstHot
       ShowCaptions = True
@@ -157,7 +152,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Hint = 'Change a Quote'
         Caption = 'Chang&e'
@@ -166,7 +161,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Hint = 'Copy a Quote'
         Caption = 'C&opy'
@@ -175,7 +170,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = '&Requote'
         Enabled = False
@@ -183,7 +178,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Hint = 'Delete Quote'
         Caption = '   &Delete   '
@@ -192,7 +187,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 310
+        Left = 280
         Top = 0
         Hint = 'Print Quote'
         Caption = '&Print'
@@ -201,7 +196,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton6: TToolButton
-        Left = 372
+        Left = 336
         Top = 0
         Width = 8
         Caption = 'ToolButton6'
@@ -209,7 +204,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object btnTemplate: TToolButton
-        Left = 380
+        Left = 344
         Top = 0
         Caption = 'Template'
         Enabled = False
@@ -217,7 +212,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnTemplateClick
       end
       object btnConvert: TToolButton
-        Left = 442
+        Left = 400
         Top = 0
         Hint = 'Sales Order Confirmation'
         Caption = 'Con&firm'
@@ -228,7 +223,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnConvertClick
       end
       object btnJob: TToolButton
-        Left = 504
+        Left = 456
         Top = 0
         Hint = 'Create job from quote'
         Caption = 'Job'
@@ -237,7 +232,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         OnClick = btnJobClick
       end
       object ToolButton2: TToolButton
-        Left = 566
+        Left = 512
         Top = 0
         Width = 8
         Caption = 'ToolButton2'
@@ -245,7 +240,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         Style = tbsSeparator
       end
       object ToolButton1: TToolButton
-        Left = 574
+        Left = 520
         Top = 0
         Caption = 'Reports'
         ImageIndex = 7
@@ -256,8 +251,8 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 1351
-    Height = 424
+    Width = 1327
+    Height = 388
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 3
@@ -396,20 +391,19 @@ object frmwtLUQuotes: TfrmwtLUQuotes
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 1351
+    Width = 1327
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1353
+        Width = 1321
       end>
-    ExplicitWidth = 1355
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1340
+      Width = 1312
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -417,7 +411,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        1336
+        1312
         28)
       object Label2: TLabel
         Left = 0
@@ -448,7 +442,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 1076
+        Left = 1026
         Top = 7
         Width = 69
         Height = 13
@@ -463,7 +457,7 @@ object frmwtLUQuotes: TfrmwtLUQuotes
         ExplicitLeft = 1112
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1156
+        Left = 1106
         Top = 3
         Width = 145
         Height = 21

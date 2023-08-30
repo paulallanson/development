@@ -35,14 +35,14 @@ type
     procedure tmrSearchTimer(Sender: TObject);
     procedure edtSearchChange(Sender: TObject);
     procedure dblkpProductionLocationClick(Sender: TObject);
-    procedure dbgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure dbgLinesSelectCell(Sender: TObject; Col, Row: Integer;
       var CanSelect: Boolean);
     procedure dbgLinesKeyPress(Sender: TObject; var Key: Char);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnOKClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure dbgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     Warehouse: integer;
     BinLocation: string;
@@ -254,44 +254,50 @@ begin
 *)
 end;
 
-procedure TfrmWTMaintPurchaseOrderReceipts.dbgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TfrmWTMaintPurchaseOrderReceipts.dbgLinesSelectCell(Sender: TObject; Col,
+  Row: Integer; var CanSelect: Boolean);
+begin
+	if (Col = 5) then
+    dbgLines.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+  else
+    dbgLines.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
+end;
+
+procedure TfrmWTMaintPurchaseOrderReceipts.dbgLinesDrawCell(
+  Sender: TObject; ACol, ARow: Integer; Rect: TRect;
+  State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
+  S: string;
+  SavedAlign: Cardinal;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
   end;
 
   {If Heading Display Left justified in the cells}
   with dbgLines do
   begin
-    if vCol < 3 then
+    if ACol < 3 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      S := Cells[ACol, ARow]; // cell contents
+      SavedAlign := SetTextAlign(Canvas.Handle, TA_LEFT);
+      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign(Canvas.Handle, SavedAlign);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      S := Cells[ACol, ARow]; // cell contents
+      SavedAlign := SetTextAlign(Canvas.Handle, TA_RIGHT);
+      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign(Canvas.Handle, SavedAlign);
     end;
   end;
 
@@ -310,7 +316,7 @@ begin
                 point(rect.left+1,rect.top+1)]);
     end;
 *)
-    if (vRow = 0) then
+    if (ARow = 0) then
     begin
       //default drawing has been switched off in the grid so we have
       //to draw the highlight and shadow on 3d boxes
@@ -324,15 +330,6 @@ begin
                 point(rect.left,rect.bottom-1)]);
     end;
   end;
-end;
-
-procedure TfrmWTMaintPurchaseOrderReceipts.dbgLinesSelectCell(Sender: TObject; Col,
-  Row: Integer; var CanSelect: Boolean);
-begin
-	if (Col = 5) then
-    dbgLines.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
-  else
-    dbgLines.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
 procedure TfrmWTMaintPurchaseOrderReceipts.dbgLinesKeyPress(Sender: TObject;

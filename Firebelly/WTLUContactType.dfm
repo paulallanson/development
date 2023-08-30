@@ -29,7 +29,6 @@ object frmWTLUContactType: TfrmWTLUContactType
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
-    OnDrawColumnCell = dbgDetailsDrawColumnCell
     OnDblClick = dbgDetailsDblClick
     Columns = <
       item
@@ -52,8 +51,6 @@ object frmWTLUContactType: TfrmWTLUContactType
       item
         Width = 50
       end>
-    ExplicitTop = 318
-    ExplicitWidth = 480
   end
   object Panel1: TPanel
     Left = 0
@@ -63,8 +60,6 @@ object frmWTLUContactType: TfrmWTLUContactType
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 268
-    ExplicitWidth = 480
     DesignSize = (
       476
       50)

@@ -1,9 +1,9 @@
 object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   Left = 192
   Top = 114
-  Width = 751
-  Height = 420
   Caption = 'Maintain Customer Edge Details'
+  ClientHeight = 373
+  ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -12,17 +12,15 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 743
-    Height = 228
+    Width = 733
+    Height = 212
     Align = alClient
     DataSource = dtsCustEdge
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -74,14 +72,14 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 301
-    Width = 743
+    Top = 285
+    Width = 733
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      743
+      733
       69)
     object Label4: TLabel
       Left = 16
@@ -147,8 +145,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
       Anchors = [akTop, akRight]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
     end
     object btnExcel: TBitBtn
       Left = 573
@@ -164,8 +162,8 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 370
-    Width = 743
+    Top = 354
+    Width = 733
     Height = 19
     Panels = <
       item
@@ -178,13 +176,13 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 743
+    Width = 733
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
     DesignSize = (
-      743
+      733
       73)
     object Label1: TLabel
       Left = 16
@@ -314,29 +312,21 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Edge_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Edge_Type'
+        DataType = ftInteger
+      end
+      item
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
     object qryCustEdgeEdge_Type: TIntegerField
       FieldName = 'Edge_Type'
@@ -422,9 +412,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCustEdge: TFDQuery
@@ -438,24 +426,16 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Profile'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object tmrRefresh: TTimer
@@ -491,9 +471,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object lkpCustEdgeGroup: TFDQuery
@@ -507,9 +485,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsCustEdgeGroup: TDataSource
@@ -526,9 +502,7 @@ object frmWTLUCustEdgeDetails: TfrmWTLUCustEdgeDetails
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Group_Id'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -1,26 +1,24 @@
 object frmWTSrchSupplier: TfrmWTSrchSupplier
   Left = 474
   Top = 152
-  Width = 426
-  Height = 412
   Caption = 'Search for supplier'
+  ClientHeight = 365
+  ClientWidth = 408
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 320
-    Height = 273
+    Width = 310
+    Height = 257
     Align = alClient
     DataSource = dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -42,16 +40,16 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       end>
   end
   object pnlFunctions: TPanel
-    Left = 320
+    Left = 310
     Top = 0
     Width = 98
-    Height = 273
+    Height = 257
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
       98
-      273)
+      257)
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -94,14 +92,14 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 273
-    Width = 418
+    Top = 257
+    Width = 408
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
     DesignSize = (
-      418
+      408
       89)
     object Label1: TLabel
       Left = 8
@@ -154,8 +152,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 362
-    Width = 418
+    Top = 346
+    Width = 408
     Height = 19
     Panels = <
       item
@@ -179,14 +177,11 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Name'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'InActive'
-        ParamType = ptUnknown
       end>
   end
   object dtsDetails: TDataSource

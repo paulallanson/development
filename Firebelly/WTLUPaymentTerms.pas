@@ -29,8 +29,6 @@ type
     procedure FormActivate(Sender: TObject);
     procedure dbgDetailsDblClick(Sender: TObject);
     procedure srcPaymentTermsDataChange(Sender: TObject; Field: TField);
-    procedure dbgDetailsDrawColumnCell(Sender: TObject; const Rect: TRect;
-      DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure btnExcelClick(Sender: TObject);
   private
     procedure CallMaintScreen(FuncMode: string);
@@ -129,22 +127,6 @@ begin
   btnEdit.enabled := (srcPaymentTerms.DataSet.RecordCount > 0);
   btnDelete.enabled := (srcPaymentTerms.DataSet.RecordCount > 0);
   btnExcel.enabled := (srcPaymentTerms.DataSet.RecordCount > 0);
-end;
-
-procedure TfrmWTLUPaymentTerms.dbgDetailsDrawColumnCell(Sender: TObject;
-  const Rect: TRect; DataCol: Integer; Column: TColumn;
-  State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TfrmWTLUPaymentTerms.btnExcelClick(Sender: TObject);

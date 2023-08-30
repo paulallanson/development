@@ -898,12 +898,12 @@ procedure TfrmWTMaintSupplier.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
   sValue: string;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Unit Cost (sq m)')  and
@@ -911,44 +911,19 @@ begin
       (Column.Title.Caption <> 'Date Changed') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
-        try
-            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+        begin
+          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
+          Column.Field.Text := sValue;
+        end;
 
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      Column.Alignment := taRightJustify;
      end;
-(*      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-*)
 end;
 
 procedure TfrmWTMaintSupplier.chkbxShowInactiveClick(Sender: TObject);
@@ -1034,12 +1009,12 @@ procedure TfrmWTMaintSupplier.dbgProductDetailsDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
   sValue: string;
 begin
   if(dbgProductDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Unit Cost')  and
@@ -1047,34 +1022,19 @@ begin
       (Column.Title.Caption <> 'Date Changed') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost') then
-        try
-            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+        begin
+          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
+          Column.Field.Text := sValue;
+        end;
 
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+      Column.Alignment := taRightJustify;
+    end;
 end;
 
 procedure TfrmWTMaintSupplier.edtSearchChange(Sender: TObject);
@@ -1270,12 +1230,12 @@ procedure TfrmWTMaintSupplier.dbgWorktopDetailsDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
   sValue: string;
 begin
   if(dbgWorktopDetails.datasource.dataset.fieldByName('inActive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Unit Cost (sq m)')  and
@@ -1283,34 +1243,19 @@ begin
       (Column.Title.Caption <> 'Date Changed') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
+        Column.Alignment := taLeftJustify;
+    end
   else
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
-        try
-            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
+        begin
+          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
+          Column.Field.Text := sValue;
+        end;
 
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+      Column.Alignment := taRightJustify;
+    end;
 end;
 
 procedure TfrmWTMaintSupplier.dbgWorktopDetailsDblClick(Sender: TObject);

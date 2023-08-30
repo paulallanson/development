@@ -37,7 +37,6 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    ExplicitTop = 351
   end
   object BitBtn2: TBitBtn
     Left = 452
@@ -50,7 +49,6 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     ModalResult = 2
     NumGlyphs = 2
     TabOrder = 3
-    ExplicitTop = 351
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -60,7 +58,6 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Anchors = [akLeft, akBottom]
     Caption = 'Inactive'
     TabOrder = 1
-    ExplicitTop = 356
   end
   object chkbxShowOnline: TCheckBox
     Left = 8
@@ -70,7 +67,6 @@ object frmWtMaintMaterialType: TfrmWtMaintMaterialType
     Anchors = [akLeft, akBottom]
     Caption = 'Show Material Composition Online'
     TabOrder = 0
-    ExplicitTop = 329
   end
   object PageControl1: TPageControl
     Left = 8

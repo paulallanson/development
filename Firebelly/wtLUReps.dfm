@@ -57,8 +57,8 @@ object frmWTLUReps: TfrmWTLUReps
       item
         Width = 50
       end>
-    ExplicitTop = 332
-    ExplicitWidth = 418
+    ExplicitTop = 322
+    ExplicitWidth = 408
   end
   object Panel1: TPanel
     Left = 0
@@ -69,8 +69,8 @@ object frmWTLUReps: TfrmWTLUReps
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 256
-    ExplicitWidth = 418
+    ExplicitTop = 246
+    ExplicitWidth = 408
     DesignSize = (
       414
       76)
@@ -159,9 +159,7 @@ object frmWTLUReps: TfrmWTLUReps
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

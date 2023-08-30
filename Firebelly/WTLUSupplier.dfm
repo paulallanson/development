@@ -2,8 +2,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   Left = 192
   Top = 114
   Caption = 'Suppliers details'
-  ClientHeight = 396
-  ClientWidth = 909
+  ClientHeight = 387
+  ClientWidth = 903
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,30 +22,29 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 909
+    Width = 903
     Height = 30
     Align = alTop
     BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 913
     object CoolBar2: TCoolBar
       Left = 1
       Top = 1
-      Width = 911
+      Width = 901
       Height = 75
       Bands = <
         item
           Control = Panel3
           ImageIndex = -1
           MinHeight = 28
-          Width = 909
+          Width = 895
         end>
       object Panel3: TPanel
         Left = 11
         Top = 0
-        Width = 896
+        Width = 886
         Height = 28
         Align = alLeft
         BevelOuter = bvNone
@@ -70,20 +69,19 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 909
+    Width = 903
     Height = 43
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 911
+        Width = 897
       end>
-    ExplicitWidth = 913
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 898
+      Width = 888
       Height = 40
       ButtonHeight = 36
       ButtonWidth = 56
@@ -145,8 +143,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 909
-    Height = 263
+    Width = 903
+    Height = 254
     Align = alClient
     DataSource = dtsSuppliers
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -223,8 +221,8 @@ object frmWTLUSupplier: TfrmWTLUSupplier
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 377
-    Width = 909
+    Top = 368
+    Width = 903
     Height = 19
     Panels = <
       item
@@ -233,18 +231,14 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       item
         Width = 50
       end>
-    ExplicitTop = 378
-    ExplicitWidth = 913
   end
   object Panel2: TPanel
     Left = 0
-    Top = 336
-    Width = 909
+    Top = 327
+    Width = 903
     Height = 41
     Align = alBottom
     TabOrder = 4
-    ExplicitTop = 337
-    ExplicitWidth = 913
     object Label1: TLabel
       Left = 8
       Top = 12
@@ -279,7 +273,7 @@ object frmWTLUSupplier: TfrmWTLUSupplier
       OnClick = btnSearchClick
     end
     object Panel4: TPanel
-      Left = 727
+      Left = 717
       Top = 1
       Width = 185
       Height = 39

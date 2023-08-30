@@ -2,8 +2,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   Left = 86
   Top = 116
   Caption = 'Job details'
-  ClientHeight = 357
-  ClientWidth = 884
+  ClientHeight = 339
+  ClientWidth = 872
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   TextHeight = 13
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 338
-    Width = 884
+    Top = 320
+    Width = 872
     Height = 19
     Panels = <
       item
@@ -35,21 +35,17 @@ object frmwtLUJobs: TfrmwtLUJobs
       item
         Width = 50
       end>
-    ExplicitTop = 341
-    ExplicitWidth = 896
   end
   object Panel1: TPanel
     Left = 0
-    Top = 297
-    Width = 884
+    Top = 279
+    Width = 872
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 299
-    ExplicitWidth = 892
     DesignSize = (
-      884
+      872
       41)
     object Label1: TLabel
       Left = 8
@@ -59,7 +55,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = 'Customer Search'
     end
     object Label3: TLabel
-      Left = 650
+      Left = 632
       Top = 12
       Width = 57
       Height = 13
@@ -69,7 +65,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ExplicitLeft = 670
     end
     object Button1: TButton
-      Left = 801
+      Left = 783
       Top = 6
       Width = 75
       Height = 25
@@ -77,7 +73,6 @@ object frmwtLUJobs: TfrmwtLUJobs
       Caption = '&Close'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = 817
     end
     object edtSearch: TEdit
       Left = 104
@@ -88,14 +83,13 @@ object frmwtLUJobs: TfrmwtLUJobs
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 713
+      Left = 695
       Top = 8
       Width = 73
       Height = 21
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 733
     end
     object btnSearch: TBitBtn
       Left = 280
@@ -110,20 +104,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 32
-    Width = 884
+    Width = 872
     Height = 45
     Bands = <
       item
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 894
+        Width = 866
       end>
-    ExplicitWidth = 896
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 881
+      Width = 857
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -230,8 +223,8 @@ object frmwtLUJobs: TfrmwtLUJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 77
-    Width = 884
-    Height = 220
+    Width = 872
+    Height = 202
     Align = alClient
     DataSource = dtmdlJob.dtsAllJobs
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -376,20 +369,19 @@ object frmwtLUJobs: TfrmwtLUJobs
   object CoolBar2: TCoolBar
     Left = 0
     Top = 0
-    Width = 884
+    Width = 872
     Height = 32
     Bands = <
       item
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 894
+        Width = 866
       end>
-    ExplicitWidth = 896
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 881
+      Width = 857
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -397,7 +389,7 @@ object frmwtLUJobs: TfrmwtLUJobs
       ParentBackground = False
       TabOrder = 0
       DesignSize = (
-        869
+        857
         28)
       object Label2: TLabel
         Left = 0
@@ -428,7 +420,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 626
+        Left = 584
         Top = 7
         Width = 69
         Height = 13
@@ -443,7 +435,7 @@ object frmwtLUJobs: TfrmwtLUJobs
         ExplicitLeft = 656
       end
       object cmbCustomerFilter: TComboBox
-        Left = 706
+        Left = 664
         Top = 3
         Width = 145
         Height = 21

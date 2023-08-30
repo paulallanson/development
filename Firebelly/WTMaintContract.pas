@@ -728,10 +728,11 @@ end;
 procedure TfrmWTMaintContract.sgDetailsDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array [0..255] of Char;
   irow, iCol: integer;
   bShowDocuments: boolean;
   ContractOption: TContractOption;
+  S: string;
+  SavedAlign: Cardinal;
 begin
   bShowDocuments := (iLine <> ARow) and (Mode <> cqCopy);
 
@@ -744,8 +745,7 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[ACol, ARow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
   end;
 
@@ -754,22 +754,18 @@ begin
   begin
     if (ACol = 0) or (ACol = 1) then
     begin
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      S := Cells[ACol, ARow]; // cell contents
+      SavedAlign := SetTextAlign(Canvas.Handle, TA_LEFT);
+      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign(Canvas.Handle, SavedAlign);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      S := Cells[ACol, ARow]; // cell contents
+      SavedAlign := SetTextAlign(Canvas.Handle, TA_RIGHT);
+      Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign(Canvas.Handle, SavedAlign);
     end;
   end;
 

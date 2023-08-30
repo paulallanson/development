@@ -3,8 +3,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   Top = 123
   BorderStyle = bsDialog
   Caption = 'Worktops'
-  ClientHeight = 412
-  ClientWidth = 783
+  ClientHeight = 403
+  ClientWidth = 777
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 783
-    Height = 263
+    Width = 777
+    Height = 254
     Align = alClient
     DataSource = srcLUWorktops
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -86,8 +86,8 @@ object frmWtLUWorktops: TfrmWtLUWorktops
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 393
-    Width = 783
+    Top = 384
+    Width = 777
     Height = 19
     Panels = <
       item
@@ -96,21 +96,17 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       item
         Width = 50
       end>
-    ExplicitTop = 392
-    ExplicitWidth = 779
   end
   object Panel1: TPanel
     Left = 0
-    Top = 328
-    Width = 783
+    Top = 319
+    Width = 777
     Height = 65
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 327
-    ExplicitWidth = 779
     DesignSize = (
-      783
+      777
       65)
     object Label4: TLabel
       Left = 16
@@ -120,7 +116,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Caption = 'Search'
     end
     object BitBtn1: TBitBtn
-      Left = 353
+      Left = 341
       Top = 10
       Width = 75
       Height = 25
@@ -128,10 +124,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Caption = '&Add'
       TabOrder = 0
       OnClick = BitBtn1Click
-      ExplicitLeft = 349
+      ExplicitLeft = 347
     end
     object btnEdit: TBitBtn
-      Left = 439
+      Left = 427
       Top = 10
       Width = 75
       Height = 25
@@ -140,10 +136,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 1
       OnClick = btnEditClick
-      ExplicitLeft = 435
+      ExplicitLeft = 433
     end
     object btnDelete: TBitBtn
-      Left = 526
+      Left = 514
       Top = 10
       Width = 75
       Height = 25
@@ -152,10 +148,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
-      ExplicitLeft = 522
+      ExplicitLeft = 520
     end
     object BitBtn4: TBitBtn
-      Left = 699
+      Left = 687
       Top = 10
       Width = 75
       Height = 25
@@ -164,10 +160,10 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitLeft = 695
+      ExplicitLeft = 693
     end
     object btnThickness: TBitBtn
-      Left = 267
+      Left = 255
       Top = 10
       Width = 75
       Height = 25
@@ -176,7 +172,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 4
       OnClick = btnThicknessClick
-      ExplicitLeft = 263
+      ExplicitLeft = 261
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -196,7 +192,7 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 612
+      Left = 600
       Top = 10
       Width = 75
       Height = 25
@@ -205,18 +201,17 @@ object frmWtLUWorktops: TfrmWtLUWorktops
       Enabled = False
       TabOrder = 7
       OnClick = btnExcelClick
-      ExplicitLeft = 608
+      ExplicitLeft = 606
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 783
+    Width = 777
     Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 779
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -322,24 +317,16 @@ object frmWtLUWorktops: TfrmWtLUWorktops
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object srcLUWorktops: TDataSource

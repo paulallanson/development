@@ -11,10 +11,8 @@ object frmWtLUThickness: TfrmWtLUThickness
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -58,16 +56,20 @@ object frmWtLUThickness: TfrmWtLUThickness
       item
         Width = 50
       end>
+    ExplicitTop = 340
+    ExplicitWidth = 686
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 280
     Width = 692
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 271
+    ExplicitWidth = 686
     DesignSize = (
       692
       69)
@@ -167,14 +169,10 @@ object frmWtLUThickness: TfrmWtLUThickness
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery

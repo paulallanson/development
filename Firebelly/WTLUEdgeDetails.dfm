@@ -119,7 +119,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = 'Search'
     end
     object BitBtn4: TBitBtn
-      Left = 665
+      Left = 659
       Top = 9
       Width = 75
       Height = 25
@@ -128,10 +128,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       ModalResult = 2
       NumGlyphs = 2
       TabOrder = 0
-      ExplicitLeft = 659
+      ExplicitLeft = 653
     end
     object btnDelete: TBitBtn
-      Left = 489
+      Left = 483
       Top = 9
       Width = 75
       Height = 25
@@ -140,10 +140,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 1
       OnClick = btnDeleteClick
-      ExplicitLeft = 483
+      ExplicitLeft = 477
     end
     object btnEdit: TBitBtn
-      Left = 401
+      Left = 395
       Top = 9
       Width = 75
       Height = 25
@@ -152,10 +152,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 2
       OnClick = btnEditClick
-      ExplicitLeft = 395
+      ExplicitLeft = 389
     end
     object BitBtn1: TBitBtn
-      Left = 313
+      Left = 307
       Top = 9
       Width = 75
       Height = 25
@@ -163,7 +163,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = '&Add'
       TabOrder = 3
       OnClick = BitBtn1Click
-      ExplicitLeft = 307
+      ExplicitLeft = 301
     end
     object chkbxShowInactive: TCheckBox
       Left = 16
@@ -183,7 +183,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnChange = edtNameChange
     end
     object btnExcel: TBitBtn
-      Left = 577
+      Left = 571
       Top = 9
       Width = 75
       Height = 25
@@ -192,7 +192,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 6
       OnClick = btnExcelClick
-      ExplicitLeft = 571
+      ExplicitLeft = 565
     end
   end
   object Panel1: TPanel
@@ -223,12 +223,13 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Caption = 'Edge type'
     end
     object Label3: TLabel
-      Left = 490
+      Left = 484
       Top = 16
       Width = 113
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Copy Edge Details from '
+      ExplicitLeft = 490
     end
     object SpeedButton2: TSpeedButton
       Left = 165
@@ -309,7 +310,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       OnClick = dblkpEdgeTypeClick
     end
     object dblkpCopyMaterial: TDBLookupComboBox
-      Left = 490
+      Left = 484
       Top = 32
       Width = 145
       Height = 21
@@ -319,10 +320,10 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       ListSource = srclkpMatType
       TabOrder = 2
       OnClick = dblkpCopyMaterialClick
-      ExplicitLeft = 484
+      ExplicitLeft = 478
     end
     object btnGo: TButton
-      Left = 666
+      Left = 660
       Top = 30
       Width = 75
       Height = 25
@@ -331,7 +332,7 @@ object frmWTLUEdgeDetails: TfrmWTLUEdgeDetails
       Enabled = False
       TabOrder = 3
       OnClick = btnGoClick
-      ExplicitLeft = 660
+      ExplicitLeft = 654
     end
   end
   object qryDelEdgeThick: TFDQuery

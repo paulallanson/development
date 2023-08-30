@@ -96,10 +96,6 @@ type
     procedure sgLinesDblClick(Sender: TObject);
     procedure mnChangeChgClick(Sender: TObject);
     procedure mnAddChgClick(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
-    procedure sgChargesDrawCell(Sender: TObject; vCol, vRow: Integer;
-      Rect: TRect; State: TGridDrawState);
     procedure btnNotesClick(Sender: TObject);
     procedure CheckNotes(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
@@ -124,6 +120,8 @@ type
     procedure SpeedButton2Click(Sender: TObject);
     procedure btnCustomerBranchClick(Sender: TObject);
     procedure btnClearCustomerBranchClick(Sender: TObject);
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
+      Rect: TRect; State: TGridDrawState);
   private
     bNotesFlash: ByteBool;
     bIntNotesFlash: ByteBool;
@@ -743,6 +741,34 @@ begin
     mnChangeLineClick(self);
 end;
 
+procedure TfrmWTMaintSalesInvoice.sgLinesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
+var
+  S: string;
+  SavedAlign: Cardinal;
+begin
+  if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 11) then
+  	begin
+      if (ARow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
+        (Sender as TStringGrid).Canvas.font.Color := clRed;
+      S := (Sender as TStringGrid).Cells[ACol, ARow];
+      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_LEFT);
+      (Sender as TStringGrid).Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
+     end
+  else
+  	begin
+			{Display the Columns Right justified in the cells}
+      if (ARow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[ARow-1].NotPrinted = 'Y') then
+        (Sender as TStringGrid).Canvas.font.Color := clRed;
+
+      S := (Sender as TStringGrid).Cells[ACol, ARow];
+      SavedAlign := SetTextAlign((Sender as TStringGrid).Canvas.Handle, TA_RIGHT);
+      (Sender as TStringGrid).Canvas.TextRect(Rect, Rect.Left + (Rect.Right - Rect.Left) div 2, Rect.Top + 2, S);
+      SetTextAlign((Sender as TStringGrid).Canvas.Handle, SavedAlign);
+    end;
+end;
+
 procedure TfrmWTMaintSalesInvoice.mnChangeChgClick(Sender: TObject);
 begin
   CallMaintChgsScreen(sicChange);
@@ -755,63 +781,6 @@ end;
 procedure TfrmWTMaintSalesInvoice.mnAddChgClick(Sender: TObject);
 begin
   CallMaintChgsScreen(sicAdd);
-end;
-
-procedure TfrmWTMaintSalesInvoice.sgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) or (vCol = 11) then
-  	begin
-      if (vrow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[vRow-1].NotPrinted = 'Y') then
-        (Sender as TStringGrid).Canvas.font.Color := clRed;
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-      if (vrow > 0) and (SalesInvoice.Lines.count > 0) and (SalesInvoice.Lines[vRow-1].NotPrinted = 'Y') then
-        (Sender as TStringGrid).Canvas.font.Color := clRed;
-
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
-end;
-
-procedure TfrmWTMaintSalesInvoice.sgChargesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-begin
-  if (vCol = 0) or (vCol = 1)then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end
-  else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
 end;
 
 procedure TfrmWTMaintSalesInvoice.btnNotesClick(Sender: TObject);

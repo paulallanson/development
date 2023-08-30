@@ -1541,6 +1541,8 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
         PopupMenu = pmnLines
         TabOrder = 0
         OnDblClick = dbgLinesDblClick
+        ExplicitWidth = 1144
+        ExplicitHeight = 139
         ColWidths = (
           40
           89
@@ -1721,7 +1723,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
           TabOrder = 1
           OnDragDrop = stvDocumentsDragDrop
           OnDragOver = stvDocumentsDragOver
-          ExplicitHeight = 81
         end
         object dfDocuments: TPJDropFiles
           Left = 185
@@ -2654,7 +2655,6 @@ object frmWTMaintSalesOrder: TfrmWTMaintSalesOrder
             Expanded = False
             FieldName = 'Quote_status_description'
             Title.Caption = 'Status'
-            Width = 64
             Visible = True
           end>
       end

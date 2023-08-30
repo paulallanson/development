@@ -31,13 +31,12 @@ object frmWTLUFitting: TfrmWTLUFitting
         Control = Panel3
         ImageIndex = -1
         MinHeight = 28
-        Width = 1254
+        Width = 1260
       end>
-    ExplicitWidth = 1260
     object Panel3: TPanel
       Left = 11
       Top = 0
-      Width = 1245
+      Width = 1251
       Height = 28
       Align = alLeft
       BevelOuter = bvNone
@@ -60,7 +59,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 950
+        Left = 956
         Top = 7
         Width = 69
         Height = 13
@@ -90,7 +89,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         ParentFont = False
       end
       object cmbCustomerFilter: TComboBox
-        Left = 1030
+        Left = 1036
         Top = 3
         Width = 145
         Height = 21
@@ -98,7 +97,6 @@ object frmWTLUFitting: TfrmWTLUFitting
         Anchors = [akTop, akRight]
         TabOrder = 0
         OnChange = cmbCustomerFilterChange
-        ExplicitLeft = 1024
       end
     end
   end
@@ -125,8 +123,6 @@ object frmWTLUFitting: TfrmWTLUFitting
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 309
-    ExplicitWidth = 1260
     DesignSize = (
       1266
       41)
@@ -163,7 +159,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       Caption = '&Close'
       TabOrder = 0
       OnClick = btnCloseClick
-      ExplicitLeft = 1169
     end
     object edtSearch: TEdit
       Left = 56
@@ -181,7 +176,6 @@ object frmWTLUFitting: TfrmWTLUFitting
       Anchors = [akRight, akBottom]
       TabOrder = 2
       OnKeyPress = edtNumberKeyPress
-      ExplicitLeft = 1070
     end
     object BitBtn2: TBitBtn
       Left = 240
@@ -281,7 +275,7 @@ object frmWTLUFitting: TfrmWTLUFitting
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1264
+        Width = 1260
       end>
     object ToolBar1: TToolBar
       Left = 11

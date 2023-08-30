@@ -57,8 +57,6 @@ object frmWTLUDesigner: TfrmWTLUDesigner
       item
         Width = 50
       end>
-    ExplicitTop = 397
-    ExplicitWidth = 706
   end
   object Panel1: TPanel
     Left = 0
@@ -68,8 +66,6 @@ object frmWTLUDesigner: TfrmWTLUDesigner
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 310
-    ExplicitWidth = 706
     DesignSize = (
       702
       87)
@@ -174,14 +170,10 @@ object frmWTLUDesigner: TfrmWTLUDesigner
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
