@@ -971,10 +971,10 @@ begin
   with Printer do begin
     if UseFax then begin
     { find one of our printers }
-     DefPrn := Printer.Printers[];
+     DefPrn := Printer.Printers[Printer.PrinterIndex];
      Last := Printer.Printers.Count - 1;
      for N := 0 to Last do begin
-        := N;
+       Printer.PrinterIndex := N;
        Printer.GetPrinter(Device, Name, Port, Devmode);
        Printer.SetPrinter(Device, Name, Port, Devmode);
        if Device = 'APF Fax Printer' then begin
@@ -997,7 +997,7 @@ begin
     end else begin
       { revert back to the original }
       N := Printer.Printers.IndexOf(DefPrn);
-       := N;
+      Printer.PrinterIndex := N;
       Printer.GetPrinter(Device, Name, Port, DevMode);
       { concatenate the strings }
       StrCat(Device, ',');
