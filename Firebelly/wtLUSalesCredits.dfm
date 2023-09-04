@@ -30,13 +30,12 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 920
+        Width = 914
       end>
-    ExplicitWidth = 922
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 907
+      Width = 901
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -44,7 +43,7 @@ object frmWTLUSalesCredits: TfrmWTLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 907
+        Width = 901
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56

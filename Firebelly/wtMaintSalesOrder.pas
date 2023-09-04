@@ -4167,8 +4167,7 @@ begin
           (Column.Title.Caption = 'Total') or
           (Column.Title.Caption = 'Vat') then
         begin
-          sValue := formatfloat('?#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings));
-          Column.Field.Text := sValue;
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
         end;
 
        Column.Alignment := taRightJustify;

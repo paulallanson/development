@@ -917,10 +917,7 @@ begin
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
-        begin
-          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
-          Column.Field.Text := sValue;
-        end;
+        TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
 
       Column.Alignment := taRightJustify;
      end;
@@ -1028,10 +1025,7 @@ begin
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost') then
-        begin
-          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
-          Column.Field.Text := sValue;
-        end;
+        TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
 
       Column.Alignment := taRightJustify;
     end;
@@ -1249,10 +1243,7 @@ begin
     begin
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Unit Cost (sq m)') then
-        begin
-          sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.asstring, 0, FormatSettings));
-          Column.Field.Text := sValue;
-        end;
+        TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
 
       Column.Alignment := taRightJustify;
     end;

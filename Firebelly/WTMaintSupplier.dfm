@@ -127,7 +127,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
     Top = 49
     Width = 1004
     Height = 406
-    ActivePage = tsProducts
+    ActivePage = tsDetails
     Align = alClient
     TabOrder = 1
     object tsDetails: TTabSheet
@@ -349,8 +349,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Height = 316
         Align = alRight
         TabOrder = 0
-        ExplicitLeft = 911
-        ExplicitHeight = 324
         object btnChange: TBitBtn
           Left = 10
           Top = 40
@@ -540,7 +538,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Alignment = taRightJustify
           BevelOuter = bvNone
           TabOrder = 4
-          ExplicitLeft = 900
         end
         object edtColour: TEdit
           Left = 200
@@ -637,7 +634,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Caption = 'S&weep'
           TabOrder = 9
           OnClick = btnSweepClick
-          ExplicitLeft = 920
         end
         object chkbxShowInactive: TCheckBox
           Left = 9
@@ -703,7 +699,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           Alignment = taRightJustify
           BevelOuter = bvNone
           TabOrder = 3
-          ExplicitLeft = 900
         end
         object edtColour1: TEdit
           Left = 200
@@ -748,8 +743,6 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
         Height = 316
         Align = alRight
         TabOrder = 1
-        ExplicitLeft = 911
-        ExplicitHeight = 324
         object btnChangeWorktop: TBitBtn
           Left = 10
           Top = 40
@@ -994,7 +987,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Panel12: TPanel
         Left = 0
         Top = 0
-        Width = 1004
+        Width = 996
         Height = 17
         Align = alTop
         BevelOuter = bvNone
@@ -1010,16 +1003,16 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
       object Panel11: TPanel
         Left = 0
         Top = 17
-        Width = 1004
-        Height = 369
+        Width = 996
+        Height = 361
         Align = alClient
         Caption = 'Panel11'
         TabOrder = 1
         object lstvwDocuments: TListView
           Left = 1
           Top = 1
-          Width = 973
-          Height = 367
+          Width = 965
+          Height = 359
           Align = alClient
           Columns = <
             item
@@ -1044,10 +1037,10 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           OnDblClick = lstvwDocumentsDblClick
         end
         object ToolBar1: TToolBar
-          Left = 974
+          Left = 966
           Top = 1
           Width = 29
-          Height = 367
+          Height = 359
           Align = alRight
           ButtonHeight = 30
           ButtonWidth = 30
@@ -1059,7 +1052,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           TabOrder = 1
           object btnExcel: TToolButton
             Left = 0
-            Top = 2
+            Top = 0
             Hint = 'Excel'
             Caption = 'btnExcel'
             ImageIndex = 0
@@ -1070,7 +1063,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end
           object btnWord: TToolButton
             Left = 0
-            Top = 32
+            Top = 30
             Hint = 'Word'
             Caption = 'btnWord'
             ImageIndex = 1
@@ -1081,7 +1074,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end
           object btnEmail: TToolButton
             Left = 0
-            Top = 62
+            Top = 60
             Hint = 'Email'
             Caption = 'btnEmail'
             ImageIndex = 2
@@ -1092,7 +1085,7 @@ object frmWTMaintSupplier: TfrmWTMaintSupplier
           end
           object btnAttach: TToolButton
             Left = 0
-            Top = 92
+            Top = 90
             Hint = 'Attach Documents'
             Caption = 'btnAttach'
             ImageIndex = 3

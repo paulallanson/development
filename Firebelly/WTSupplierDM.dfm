@@ -1,21 +1,19 @@
 object dtmdlSuppliers: TdtmdlSuppliers
-  OldCreateOrder = False
-  Left = 271
-  Top = 107
-  Height = 632
-  Width = 706
+  Height = 790
+  Width = 883
+  PixelsPerInch = 120
   object qryMaterialType: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT Material_Type.*'
       'FROM Material_Type'
       'ORDER BY Description')
-    Left = 32
-    Top = 40
+    Left = 40
+    Top = 50
   end
   object qryGetMaterialGroups: TFDQuery
-    ConnectionName = 'WT'
     MasterSource = dtsMaterialType
+    ConnectionName = 'WT'
     SQL.Strings = (
       'SELECT  Worktop_Group.Worktop_Group,'
       '        Worktop_Group.Worktop_Group_Description,'
@@ -31,24 +29,22 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '      ((Worktop_Group.inactive = '#39'N'#39') OR (Worktop_Group.inactive' +
         ' = '#39#39') OR (Worktop_Group.inactive is NULL))'
       'ORDER BY Worktop_Group.Worktop_Group_Description')
-    Left = 32
-    Top = 96
+    Left = 40
+    Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end>
   end
   object dtsMaterialType: TDataSource
     DataSet = qryMaterialType
-    Left = 136
-    Top = 40
+    Left = 170
+    Top = 50
   end
   object dtsGetMaterialGroup: TDataSource
     DataSet = qryGetMaterialGroups
-    Left = 136
-    Top = 96
+    Left = 170
+    Top = 120
   end
   object qryWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -94,44 +90,32 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Worktop_Group.Worktop_Group_Description, Worktop.Descri' +
         'ption')
-    Left = 384
-    Top = 40
+    Left = 480
+    Top = 50
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktops: TDataSource
     DataSet = qryWorktops
-    Left = 464
-    Top = 40
+    Left = 580
+    Top = 50
   end
   object qryGetWTThickness: TFDQuery
     ConnectionName = 'WT'
@@ -139,13 +123,11 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'SELECT *'
       'FROM Worktop_Thickness'
       'WHERE Worktop_Thickness.Worktop = :Worktop')
-    Left = 32
-    Top = 160
+    Left = 40
+    Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSupplierWT: TFDQuery
@@ -153,18 +135,14 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop (Supplier, Worktop, inactive)'
       'VALUES (:Supplier, :Worktop, '#39'N'#39')')
-    Left = 32
-    Top = 216
+    Left = 40
+    Top = 270
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSupplierWTThickness: TFDQuery
@@ -172,28 +150,20 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'INSERT INTO Supplier_Worktop_Thickness'
       'VALUES (:Supplier, :Worktop, :Thickness, :Price_Pointer)')
-    Left = 48
-    Top = 280
+    Left = 60
+    Top = 350
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryWorktopPrices: TFDQuery
@@ -271,19 +241,17 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Material_Type.Description, Worktop_Group.Worktop_Group_' +
         'Description, Worktop.Description, Thickness.Thickness_mm')
-    Left = 40
-    Top = 336
+    Left = 50
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsWorktopPrices: TDataSource
     DataSet = qryWorktopPrices
-    Left = 104
-    Top = 336
+    Left = 130
+    Top = 420
   end
   object qryDummyPrices: TFDQuery
     ConnectionName = 'WT'
@@ -372,13 +340,11 @@ object dtmdlSuppliers: TdtmdlSuppliers
         'ickness.Supplier)'
       'WHERE Supplier_Worktop_Thickness.Supplier = :Supplier'
       '')
-    Left = 200
-    Top = 336
+    Left = 250
+    Top = 420
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryChkSupplierWT: TFDQuery
@@ -387,18 +353,14 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'SELECT Supplier'
       'FROM Supplier_Worktop'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 128
-    Top = 216
+    Left = 160
+    Top = 270
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryChkSupplierWTThickness: TFDQuery
@@ -420,23 +382,17 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'WHERE Supplier = :Supplier AND Worktop = :Worktop AND Thickness ' +
         '= :Thickness')
-    Left = 128
-    Top = 280
+    Left = 160
+    Top = 350
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object qrySupplierWTInactive: TFDQuery
@@ -445,23 +401,17 @@ object dtmdlSuppliers: TdtmdlSuppliers
       'UPDATE Supplier_Worktop'
       'SET Inactive = :Inactive'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 384
-    Top = 96
+    Left = 480
+    Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qrySupplierWTDelete: TFDQuery
@@ -469,18 +419,14 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 512
-    Top = 152
+    Left = 640
+    Top = 190
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qrySupplierWTThickDelete: TFDQuery
@@ -488,18 +434,14 @@ object dtmdlSuppliers: TdtmdlSuppliers
     SQL.Strings = (
       'DELETE FROM Supplier_Worktop_Thickness'
       'WHERE Supplier = :Supplier AND Worktop = :Worktop')
-    Left = 512
-    Top = 96
+    Left = 640
+    Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop'
-        ParamType = ptUnknown
       end>
   end
   object qryChkSupplierProd: TFDQuery
@@ -521,18 +463,14 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'WHERE Supplier = :Supplier AND Supplier_Product_Code = :Supplier' +
         '_Product_Code')
-    Left = 320
-    Top = 216
+    Left = 400
+    Top = 270
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryAddSupplierProd: TFDQuery
@@ -558,43 +496,29 @@ object dtmdlSuppliers: TdtmdlSuppliers
       ':Inactive,'
       ':Price_Pointer'
       ')')
-    Left = 320
-    Top = 272
+    Left = 400
+    Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSupplierProd: TFDQuery
@@ -607,42 +531,30 @@ object dtmdlSuppliers: TdtmdlSuppliers
       '    Sell_Pack_Quantity = :Sell_Pack_Quantity,'
       '    inactive = :inactive'
       'WHERE Supplier_Product = :Supplier_Product')
-    Left = 320
-    Top = 328
+    Left = 400
+    Top = 410
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product'
-        ParamType = ptUnknown
       end>
   end
   object qryProductPrices: TFDQuery
-    ConnectionName = 'WT'
+    Connection = dtmdlWorktops.dtbsWorktops
     SQL.Strings = (
       'SELECT'
       '    Supplier_Product.Supplier_Product,'
@@ -656,28 +568,28 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       '      order by Prices.effective_date desc) AS Effective_Date,'
       '    (select top 1 Date_Changed'
       '      from Prices'
       
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       '      order by Prices.effective_date desc) AS Date_Changed,'
       '    (select top 1 Unit_price'
       '      from Prices'
       
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       '      order by Prices.effective_date desc) AS Unit_Price,'
       '    (select top 1 Unit_cost'
       '      from Prices'
       
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       '      order by Prices.effective_date desc) AS Unit_Cost,'
       '    (select top 1 Price_Unit_Description'
       '      from Prices, Price_unit'
@@ -685,7 +597,7 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
       '            Prices.Price_unit = Price_Unit.Price_Unit and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       
         '      order by Prices.effective_date desc) AS Price_Unit_Descrip' +
         'tion,'
@@ -695,24 +607,25 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '      where Prices.Price_pointer = Supplier_Product.price_pointe' +
         'r and'
       '            Prices.Operator = Operator.Operator and'
-      '            Prices.effective_date <= now()'
+      '            Prices.effective_date <= Now()'
       '      order by Prices.effective_date desc) AS Operator_Name'
       'FROM Supplier_Product'
       'WHERE 1=1 AND Supplier_Product.Supplier = :Supplier'
       'ORDER BY Supplier_Product.Supplier_Product_Code')
-    Left = 40
-    Top = 408
+    Left = 50
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
       end>
   end
   object dtsProductPrices: TDataSource
     DataSet = qryProductPrices
-    Left = 104
-    Top = 408
+    Left = 130
+    Top = 510
   end
   object qryDummyProductPrices: TFDQuery
     ConnectionName = 'WT'
@@ -772,13 +685,11 @@ object dtmdlSuppliers: TdtmdlSuppliers
       '      order by Prices.effective_date desc) AS Operator_Name'
       'FROM Supplier_Product'
       'WHERE Supplier_Product.Supplier = :Supplier')
-    Left = 200
-    Top = 408
+    Left = 250
+    Top = 510
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplierProd: TFDQuery
@@ -833,32 +744,28 @@ object dtmdlSuppliers: TdtmdlSuppliers
         'tion'
       'FROM Supplier_Product'
       'WHERE Supplier_Product = :Supplier_Product')
-    Left = 320
-    Top = 392
+    Left = 400
+    Top = 490
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
     ConnectionName = 'WT'
-    Left = 320
-    Top = 464
+    Left = 400
+    Top = 580
   end
   object qryDeletePrices: TFDQuery
     ConnectionName = 'WT'
     SQL.Strings = (
       'DELETE FROM Prices'
       'WHERE Price_Pointer = :Price_Pointer')
-    Left = 320
-    Top = 520
+    Left = 400
+    Top = 650
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qrySupplierWorktops: TFDQuery
@@ -891,19 +798,17 @@ object dtmdlSuppliers: TdtmdlSuppliers
       
         'ORDER BY Material_Type.Description, Worktop_Group.Worktop_Group_' +
         'Description, Worktop.Description')
-    Left = 40
-    Top = 480
+    Left = 50
+    Top = 600
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsSupplierWorktops: TDataSource
     DataSet = qrySupplierWorktops
-    Left = 104
-    Top = 480
+    Left = 130
+    Top = 600
   end
   object qryDummySupplierWorktops: TFDQuery
     ConnectionName = 'WT'
@@ -932,13 +837,11 @@ object dtmdlSuppliers: TdtmdlSuppliers
         '        INNER JOIN Supplier_Worktop ON Worktop.Worktop = Supplie' +
         'r_Worktop.Worktop'
       'WHERE Supplier_Worktop.Supplier = :Supplier')
-    Left = 200
-    Top = 480
+    Left = 250
+    Top = 600
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
 end
