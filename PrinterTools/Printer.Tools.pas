@@ -3,27 +3,21 @@ unit Printer.Tools;
 interface
 
 uses
-  System.SysUtils, System.Classes, gtJPEGEng, gtGIFEng, gtRTFEng,
-  gtCstGfxEng, gtBMPEng, gtCstPDFEng, gtExPDFEng, gtPDFEng, gtCstDocEng,
-  gtCstPlnEng, gtCstHTMLEng, gtExHTMLEng, gtHTMLEng, gtClasses3,
-  gtXportIntf, gtQRXportIntf, QuickRpt,
+  System.SysUtils, System.Classes, QuickRpt, qrpdffilt, QRWebFilt, QRXLSXFilt, QRExport,
   Printer.Interfaces, Printer.Enums;
 
 type
   TPrinterTools = class(TInterfacedObject, IPrinterToAttachment)
   private
     { Private declarations }
-    gtQRExportInterface1: TgtQRExportInterface;
-    gtHTMLEngine1: TgtHTMLEngine;
-    gtPDFEngine1: TgtPDFEngine;
-    gtBMPEngine1: TgtBMPEngine;
-    gtRTFEngine1: TgtRTFEngine;
-    gtGIFEngine1: TgtGIFEngine;
-    gtJPEGEngine1: TgtJPEGEngine;
     function GetLocation: string;
     procedure SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
     procedure PrintToFile(const Report: TQuickRep; var fileName: string; const attachmentType: string; FEmailAttachment: TStringList);
     procedure FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
+    procedure PrintToHTML(const Report: TQuickRep; const fileName: string);
+    procedure PrintToPDF(const Report: TQuickRep; const fileName: string);
+    procedure PrintToRTF(const Report: TQuickRep; const fileName: string);
+    procedure PrintToXLS(const Report: TQuickRep; const fileName: string);
   public
     { Public declarations }
     constructor Create;
@@ -52,13 +46,6 @@ uses
 
 constructor TPrinterTools.Create;
 begin
-  gtQRExportInterface1 := TgtQRExportInterface.Create(nil);
-  gtHTMLEngine1 := TgtHTMLEngine.Create(nil);
-  gtPDFEngine1 := TgtPDFEngine.Create(nil);
-  gtBMPEngine1 := TgtBMPEngine.Create(nil);
-  gtRTFEngine1 := TgtRTFEngine.Create(nil);
-  gtGIFEngine1 := TgtGIFEngine.Create(nil);
-  gtJPEGEngine1 := TgtJPEGEngine.Create(nil);
 end;
 
 class function TPrinterTools.New: IPrinterToAttachment;
@@ -68,14 +55,6 @@ end;
 
 destructor TPrinterTools.Destroy;
 begin
-  if Assigned(gtQRExportInterface1) then gtQRExportInterface1.Free;
-  if Assigned(gtHTMLEngine1) then gtHTMLEngine1.Free;
-  if Assigned(gtPDFEngine1) then gtPDFEngine1.Free;
-  if Assigned(gtBMPEngine1) then gtBMPEngine1.Free;
-  if Assigned(gtRTFEngine1) then gtRTFEngine1.Free;
-  if Assigned(gtGIFEngine1) then gtGIFEngine1.Free;
-  if Assigned(gtJPEGEngine1) then gtJPEGEngine1.Free;
-
   inherited Destroy;
 end;
 
@@ -109,35 +88,15 @@ begin
   SetFileType(attachmentType.ToUpper, fileType);
 
   case fileType of
-    pftHTML : gtQRExportInterface1.Engine := gtHTMLEngine1;
-    pftPDF : gtQRExportInterface1.Engine := gtPDFEngine1;
-    pftBMP : gtQRExportInterface1.Engine := gtBMPEngine1;
-    pftRTF : gtQRExportInterface1.Engine := gtRTFEngine1;
-    pftGIF :
-    begin
-      gtQRExportInterface1.Engine := gtGIFEngine1;
-      {$IFDEF DEBUG}
-      raise Exception.Create('GIF image is not supported.' + #13#10 +
-                             'Check the conditions of Create and EndPage methods of the gtGIFEng.pas unit.');
-      {$ELSE}
-      raise Exception.Create('GIF image is not supported.');
-      {$ENDIF}
-    end;
-    pftJPEG : gtQRExportInterface1.Engine := gtJPEGEngine1;
+    pftHTML : PrintToHTML(Report, fileName);
+    pftPDF  : PrintToPDF(Report, fileName);
+    pftRTF  : PrintToRTF()(Report, fileName);
+    pftXLS  : PrintToXLS()(Report, fileName);
     else raise Exception.Create('Invalid file type: ' + attachmentType + '.');
   end;
 
-  IgtDocumentEngine(gtQRExportInterface1.Engine).FileName := fileName;
-  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.UseImagesAsResources := True;
-  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ProcessAfterEachPage := True;
-  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.OpenAfterCreate := False;
-  IgtDocumentEngine(gtQRExportInterface1.Engine).Preferences.ShowSetupDialog := False;
-
-  gtQRExportInterface1.Engine.FileExtension := attachmentType;
-  gtQRExportInterface1.RenderDocument(Report, False);
-
   if Assigned(FEmailAttachment) then
-    FindAndAttachAllFiles(fileName, gtQRExportInterface1.Engine.FileExtension, FEmailAttachment);
+    FindAndAttachAllFiles(fileName, attachmentType.ToUpper, FEmailAttachment);
 end;
 
 procedure TPrinterTools.FindAndAttachAllFiles(const fileName, Extension: string; const FEmailAttachment: TStringList);
@@ -196,20 +155,64 @@ begin
   ListFiles.Add(targetFileName);
 end;
 
+procedure TPrinterTools.PrintToHTML(const Report: TQuickRep; const fileName: string);
+var
+  HTML: TQRGHTMLDocumentFilter;
+begin
+  HTML := TQRGHTMLDocumentFilter.Create(fileName + '.HTML');
+  try
+    Report.ExportToFilter(HTML);
+  finally
+    HTML.Free;
+  end;
+end;
+
+procedure TPrinterTools.PrintToPDF(const Report: TQuickRep; const fileName: string);
+var
+  PDF: TQRPDFDocumentFilter;
+begin
+  PDF := TQRPDFDocumentFilter.Create(fileName + '.PDF');
+  try
+    Report.ExportToFilter(PDF);
+  finally
+    PDF.Free;
+  end;
+end;
+
+procedure TPrinterTools.PrintToRTF(const Report: TQuickRep; const fileName: string);
+var
+  RTF: TQRRTFExportFilter;
+begin
+  RTF := TQRRTFExportFilter.Create(fileName + '.RTF');
+  try
+    Report.ExportToFilter(RTF);
+  finally
+    RTF.Free;
+  end;
+end;
+
+procedure TPrinterTools.PrintToXLS(const Report: TQuickRep; const fileName: string);
+var
+  XLS: TQRXLSFilter;
+begin
+  XLS := TQRXLSFilter.Create(fileName + '.XLS');
+  try
+    Report.ExportToFilter(XLS);
+  finally
+    XLS.Free;
+  end;
+end;
+
 procedure TPrinterTools.SetFileType(const attachmentType: string; var fileType: TPrinterFileType);
 begin
-  if attachmentType = 'BMP' then
-    fileType := pftBMP else
-  if attachmentType = 'GIF' then
-    fileType := pftGIF else
   if attachmentType = 'HTML' then
     fileType := pftHTML else
-  if (attachmentType = 'JPG') or (attachmentType = 'JPEG') then
-    fileType := pftJPEG else
   if attachmentType = 'PDF' then
     fileType := pftPDF else
   if attachmentType = 'RTF' then
     fileType := pftRTF else
+  if attachmentType = 'XLS' then
+    fileType := pftXLS else
     fileType := pftNone;
 end;
 
