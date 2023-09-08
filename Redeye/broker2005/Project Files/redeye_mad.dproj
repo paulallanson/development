@@ -57,7 +57,7 @@
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=</VerInfo_Keys>
         <DCC_Define>REDEYE;$(DCC_Define)</DCC_Define>
-        <DCC_UnitSearchPath>..\;..\..\CCSCommonD7;..\..\..\Components\Turbo Async Pro\source;..\..\..\Components\Zorn Barcode;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\;..\..\CCSCommonD7;..\..\..\Components\Turbo Async Pro\source;..\..\..\Components\Zorn Barcode;..\..\..\Components\CRPackage;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
     </PropertyGroup>
