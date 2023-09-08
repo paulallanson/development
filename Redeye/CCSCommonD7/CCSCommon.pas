@@ -4,7 +4,7 @@ interface
 
 uses
   Classes, SysUtils, Windows, ShellAPI, ShlObj,
-  Controls, Messages, Registry, Outlook2010, COMobj, ActiveX, Math, strUtils,
+  Controls, Messages, Registry, COMobj, ActiveX, Math, strUtils,
   DBGrids, Grids, IniFiles, Forms, Variants, qrprntr, Printers, DB, shFolder, Outlook_TLB;
 
 {Quick Reports Printer settings}
