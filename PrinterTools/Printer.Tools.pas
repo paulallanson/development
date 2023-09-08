@@ -90,8 +90,8 @@ begin
   case fileType of
     pftHTML : PrintToHTML(Report, fileName);
     pftPDF  : PrintToPDF(Report, fileName);
-    pftRTF  : PrintToRTF()(Report, fileName);
-    pftXLS  : PrintToXLS()(Report, fileName);
+    pftRTF  : PrintToRTF(Report, fileName);
+    pftXLS  : PrintToXLS(Report, fileName);
     else raise Exception.Create('Invalid file type: ' + attachmentType + '.');
   end;
 
