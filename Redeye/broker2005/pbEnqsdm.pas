@@ -101,13 +101,20 @@ end;
 procedure TdtmdlEnqs.RefreshData;
 var
   sTemp: string;
-function qDate(const aDate : TDateTime) : string;
-  begin
-    if dmBroker.IsSQL then
-      Result := '''' + FormatDateTime('mm-dd-yyyy', aDate) + ''''
-    else
-      Result := '#' + FormatDateTime('mm/dd/yyyy', aDate) + '#';
-  end;
+
+  function qDate(const aDate : TDateTime) : string;
+    begin
+      // MSSQL SmallDateTime type has a range from 01/01/1900 to 06/06/2079
+      var AuxDate := EncodeDate(1900, 1, 1);
+      if aDate >= AuxDate then
+        AuxDate := aDate;
+
+      if dmBroker.IsSQL then
+        Result := '''' + FormatDateTime('mm-dd-yyyy', AuxDate) + ''''
+      else
+        Result := '#' + FormatDateTime('mm/dd/yyyy', AuxDate) + '#';
+    end;
+
 { Local function }
 begin
   qryEnqs.close;

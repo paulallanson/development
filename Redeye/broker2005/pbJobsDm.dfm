@@ -26,7 +26,9 @@ object dtmdlJobs: TdtmdlJobs
       '       AM.Name as Account_Manager,'
       '       Job_Bag.Description_Reference,'
       '       Job_Bag.On_Hold,'
-      '       Job_Bag.Date_Start'
+      '       Job_Bag.Date_Start,'
+      '       0 as NCA_Live_Lines,'
+      '       0 as NCA_Signed_Off '
       
         'FROM Customer_Branch, Job_Bag, Customer, Job_Bag_Status, Rep, Op' +
         'erator, Operator AM'
@@ -170,6 +172,18 @@ object dtmdlJobs: TdtmdlJobs
     object qryJobsDate_Start: TSQLTimeStampField
       FieldName = 'Date_Start'
       Origin = 'Date_Start'
+    end
+    object qryJobsNCA_Live_Lines: TIntegerField
+      FieldName = 'NCA_Live_Lines'
+      Origin = 'NCA_Live_Lines'
+      ReadOnly = True
+      Required = True
+    end
+    object qryJobsNCA_Signed_Off: TIntegerField
+      FieldName = 'NCA_Signed_Off'
+      Origin = 'NCA_Signed_Off'
+      ReadOnly = True
+      Required = True
     end
   end
   object dtsJobs: TDataSource

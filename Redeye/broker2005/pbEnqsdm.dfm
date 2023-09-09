@@ -199,7 +199,7 @@ object dtmdlEnqs: TdtmdlEnqs
   object qryDummy: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
-      'SELECT  TOP (:Records)'
+      'SELECT TOP (:Records)'
       '        Enquiry.Date_Point,'
       '        EnquiryLine.Enquiry_Status,'
       '        Enquiry_Status.Description as Status_Description,'
@@ -253,7 +253,7 @@ object dtmdlEnqs: TdtmdlEnqs
     Top = 20
     ParamData = <
       item
-        Name = 'Records'
+        Name = 'RECORDS'
         DataType = ftInteger
         ParamType = ptInput
         Value = Null

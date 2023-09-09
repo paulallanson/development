@@ -55,6 +55,8 @@ type
     qryJobsDescription_Reference: TWideStringField;
     qryJobsOn_Hold: TWideStringField;
     qryJobsDate_Start: TSQLTimeStampField;
+    qryJobsNCA_Live_Lines: TIntegerField;
+    qryJobsNCA_Signed_Off: TIntegerField;
     procedure qryJobsStatus_TextGetText(Sender: TField; var Text: String;
       DisplayText: Boolean);
   private
