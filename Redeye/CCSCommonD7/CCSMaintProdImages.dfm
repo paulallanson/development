@@ -3,19 +3,17 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
   Top = 111
   BorderStyle = bsDialog
   Caption = 'Maintain Product E-Commerce Info'
-  ClientHeight = 185
-  ClientWidth = 547
+  ClientHeight = 176
+  ClientWidth = 541
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblProdCode: TLabel
     Left = 5
@@ -53,17 +51,19 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 152
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btbtnOKClick
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 278
     Top = 152
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object btbtnEraseImage2: TBitBtn
     Left = 464
@@ -71,8 +71,6 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Width = 75
     Height = 25
     Caption = 'Clear'
-    TabOrder = 4
-    OnClick = btbtnEraseImage2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -87,6 +85,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = btbtnEraseImage2Click
   end
   object memFullImagePath: TMemo
     Left = 88
@@ -105,8 +105,6 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Width = 75
     Height = 25
     Caption = 'View'
-    TabOrder = 6
-    OnClick = btnViewClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -121,6 +119,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = btnViewClick
   end
   object OpenPictureDialog1: TOpenPictureDialog
     Filter = 
@@ -141,13 +141,13 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ecommerce_info'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'Stock_Reference'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -164,13 +164,13 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Stock_Reference'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Ecommerce_info'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -183,8 +183,8 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'stock_reference'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -214,29 +214,19 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'full_image'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'format'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'product_image_path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Changed'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ecommerce_info'
-        ParamType = ptUnknown
       end>
   end
   object qryDelEcommInfo: TFDQuery
@@ -248,9 +238,7 @@ object CCSMaintProdImagesFrm: TCCSMaintProdImagesFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ecomm_info'
-        ParamType = ptUnknown
       end>
   end
 end

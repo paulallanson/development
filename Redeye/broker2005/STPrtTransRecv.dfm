@@ -3,18 +3,16 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
   Top = 197
   BorderStyle = bsDialog
   Caption = 'Received Stock Details'
-  ClientHeight = 192
-  ClientWidth = 311
+  ClientHeight = 183
+  ClientWidth = 305
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object BinLabel: TLabel
     Left = 8
@@ -59,8 +57,6 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -79,14 +75,17 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 160
     Top = 160
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object FRCheckBox: TCheckBox
     Left = 8
@@ -159,14 +158,10 @@ object STPrtTransRecvFrm: TSTPrtTransRecvFrm
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end>
   end
 end

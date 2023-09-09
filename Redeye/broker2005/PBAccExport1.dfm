@@ -3,19 +3,17 @@ object PBAccExport1Frm: TPBAccExport1Frm
   Top = 122
   BorderStyle = bsSingle
   Caption = 'Import and Export Wizard'
-  ClientHeight = 393
-  ClientWidth = 346
+  ClientHeight = 384
+  ClientWidth = 340
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16

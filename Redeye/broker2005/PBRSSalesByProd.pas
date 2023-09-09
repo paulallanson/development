@@ -110,7 +110,9 @@ var
 
 implementation
 
-uses PBDatabase, PBLUCust, PBRPSalesbyProd;
+uses
+  System.UITypes,
+  PBDatabase, PBLUCust, PBRPSalesbyProd;
 
 {$R *.DFM}
 

@@ -110,7 +110,9 @@ var
 
 implementation
 
-uses DateSelV5, PBenquiry, pbNarrativeDM;
+uses
+  System.UITypes,
+  DateSelV5, PBenquiry, pbNarrativeDM;
 
 {$R *.DFM}
 

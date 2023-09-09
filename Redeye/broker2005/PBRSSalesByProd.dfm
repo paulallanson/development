@@ -1,10 +1,9 @@
 object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   Left = 24
   Top = 192
-  AutoScroll = False
   Caption = 'Invoiced Sales by Product'
-  ClientHeight = 500
-  ClientWidth = 786
+  ClientHeight = 491
+  ClientWidth = 780
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 794
@@ -13,16 +12,14 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsDetails: TStatusBar
     Left = 0
-    Top = 481
-    Width = 786
+    Top = 472
+    Width = 780
     Height = 19
     Panels = <
       item
@@ -31,27 +28,29 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       item
         Width = 50
       end>
+    ExplicitTop = 481
+    ExplicitWidth = 786
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 440
-    Width = 786
+    Top = 431
+    Width = 780
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 440
+    ExplicitWidth = 786
     DesignSize = (
-      786
+      780
       41)
     object PrintReportBitBtn: TBitBtn
-      Left = 612
+      Left = 600
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Print'
-      TabOrder = 0
-      OnClick = PrintReportBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -66,16 +65,17 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = PrintReportBitBtnClick
+      ExplicitLeft = 612
     end
     object PreviewReportBitBtn: TBitBtn
-      Left = 524
+      Left = 512
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Preview'
-      TabOrder = 1
-      OnClick = PreviewReportBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -90,15 +90,20 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = PreviewReportBitBtnClick
+      ExplicitLeft = 524
     end
     object CancelBitBtn: TBitBtn
-      Left = 700
+      Left = 688
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
+      ExplicitLeft = 700
     end
     object btbtnExcel: TBitBtn
       Left = 424
@@ -106,8 +111,6 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Width = 75
       Height = 25
       Caption = 'Excel'
-      TabOrder = 3
-      OnClick = btbtnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -151,29 +154,33 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 3
+      OnClick = btbtnExcelClick
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 786
+    Width = 780
     Height = 121
     Align = alTop
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 786
     DesignSize = (
-      786
+      780
       121)
     object Label1: TLabel
-      Left = 646
+      Left = 634
       Top = 10
       Width = 90
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'From Invoice Date:'
+      ExplicitLeft = 646
     end
     object DateFromButton: TSpeedButton
-      Left = 749
+      Left = 737
       Top = 24
       Width = 25
       Height = 25
@@ -193,17 +200,19 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
       OnClick = DateFromButtonClick
+      ExplicitLeft = 749
     end
     object Label2: TLabel
-      Left = 646
+      Left = 634
       Top = 58
       Width = 80
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'To Invoice Date:'
+      ExplicitLeft = 646
     end
     object DateToButton: TSpeedButton
-      Left = 749
+      Left = 737
       Top = 72
       Width = 25
       Height = 25
@@ -223,9 +232,9 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
       OnClick = DateToButtonClick
+      ExplicitLeft = 749
     end
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 113
@@ -235,6 +244,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
@@ -248,16 +258,17 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       OnClick = chkbxCustomerClick
     end
     object pnlCustSearch: TPanel
-      ParentBackground = False
       Left = 128
       Top = 11
-      Width = 328
+      Width = 316
       Height = 78
       Anchors = [akLeft, akTop, akRight]
+      ParentBackground = False
       TabOrder = 2
       Visible = False
+      ExplicitWidth = 328
       DesignSize = (
-        328
+        316
         78)
       object lblCustBran: TLabel
         Left = 8
@@ -269,13 +280,14 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       object edtCustomer: TEdit
         Left = 8
         Top = 18
-        Width = 276
+        Width = 264
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 0
+        ExplicitWidth = 276
       end
       object btnCustomer: TButton
-        Left = 291
+        Left = 279
         Top = 18
         Width = 25
         Height = 25
@@ -289,11 +301,12 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         ParentFont = False
         TabOrder = 1
         OnClick = btnCustomerClick
+        ExplicitLeft = 291
       end
       object chkbxBranches: TCheckBox
         Left = 8
         Top = 48
-        Width = 306
+        Width = 294
         Height = 17
         Anchors = [akLeft, akTop, akRight]
         Caption = 'Report on all branches'
@@ -301,10 +314,11 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
         State = cbChecked
         TabOrder = 2
         OnClick = chkbxBranchesClick
+        ExplicitWidth = 306
       end
     end
     object DateFromEdit: TEdit
-      Left = 645
+      Left = 633
       Top = 26
       Width = 98
       Height = 21
@@ -312,9 +326,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       MaxLength = 10
       TabOrder = 3
       OnExit = DateFromEditExit
+      ExplicitLeft = 645
     end
     object DateToEdit: TEdit
-      Left = 645
+      Left = 633
       Top = 74
       Width = 98
       Height = 21
@@ -322,27 +337,30 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       MaxLength = 10
       TabOrder = 4
       OnExit = DateToEditExit
+      ExplicitLeft = 645
     end
     object chkbxTotalbyBranch: TCheckBox
-      Left = 465
+      Left = 453
       Top = 96
       Width = 161
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Total by Customer Branch'
       TabOrder = 5
+      ExplicitLeft = 465
     end
     object chkbxTotalbyProduct: TCheckBox
-      Left = 465
+      Left = 453
       Top = 72
       Width = 161
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Total by Product'
       TabOrder = 6
+      ExplicitLeft = 465
     end
     object ChkBxShwVl: TCheckBox
-      Left = 465
+      Left = 453
       Top = 8
       Width = 161
       Height = 17
@@ -350,9 +368,10 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Caption = 'Exclude Goods Value'
       TabOrder = 7
       OnClick = ChkBxShwVlClick
+      ExplicitLeft = 465
     end
     object ChkBxExcCsts: TCheckBox
-      Left = 465
+      Left = 453
       Top = 32
       Width = 170
       Height = 17
@@ -360,6 +379,7 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
       Caption = 'Exclude Cost /Profit Values'
       TabOrder = 8
       OnClick = ChkBxShwVlClick
+      ExplicitLeft = 465
     end
     object chkbxShowFormRefs: TCheckBox
       Left = 224
@@ -373,8 +393,8 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 786
-    Height = 319
+    Width = 780
+    Height = 310
     Align = alClient
     DataSource = dtsSalesByProd
     TabOrder = 3
@@ -447,11 +467,11 @@ object PBRSSalesByProdFrm: TPBRSSalesByProdFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 252
     Top = 184
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel

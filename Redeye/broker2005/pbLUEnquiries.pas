@@ -107,7 +107,9 @@ var
 
 implementation
 
-uses CCSCommon, pbluEnqsSearch, pbDatabase, PBenquiry, PBEnquiryDataMod,
+uses
+  System.UITypes,
+  CCSCommon, pbluEnqsSearch, pbDatabase, PBenquiry, PBEnquiryDataMod,
   PBRSEnqN, PBEnqJobPrice, PBRSQuoN, PBAutoPO, PBEnqSupResp,
   pbLUEnquiryRpts, pbMainMenu, PBEnqInActLine, PBEnqCancelLine;
 

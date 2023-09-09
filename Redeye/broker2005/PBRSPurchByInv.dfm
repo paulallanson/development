@@ -2,7 +2,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   Left = 30
   Top = 58
   Caption = 'Purchases By Invoice Number'
-  ClientHeight = 424
+  ClientHeight = 415
   ClientWidth = 727
   Color = clBtnFace
   Constraints.MinHeight = 400
@@ -19,10 +19,11 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
     Left = 0
     Top = 145
     Width = 727
-    Height = 238
+    Height = 229
     Align = alClient
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 238
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
@@ -340,12 +341,13 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 383
+    Top = 374
     Width = 727
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 383
     DesignSize = (
       727
       41)
@@ -419,7 +421,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 325
+      Left = 319
       Top = 8
       Width = 75
       Height = 25
@@ -430,7 +432,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       ExplicitLeft = 331
     end
     object btbtnExcel: TBitBtn
-      Left = 421
+      Left = 415
       Top = 8
       Width = 75
       Height = 25

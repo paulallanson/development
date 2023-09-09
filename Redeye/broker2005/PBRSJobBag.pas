@@ -58,7 +58,9 @@ var
 
 implementation
 
-uses pbDatabase, PBFaxList, PBSendFax, CCSemailHandler, PBRPJobBag,
+uses
+  System.UITypes,
+  pbDatabase, PBFaxList, PBSendFax, CCSemailHandler, PBRPJobBag,
   PBRPJobBagSched;
 
 {$R *.dfm}

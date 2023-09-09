@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Qrctrls, QuickRpt, ExtCtrls, Db, STLUSordDM,
-  printers, QrExport;
+  printers, QrExport, FireDAC.Stan.Param;
 
 type
   TSTRPSalesByCustFrm = class(TForm)

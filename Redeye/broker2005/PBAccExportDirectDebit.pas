@@ -78,6 +78,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   DateSelV5, CCSCommon, pbMainMenu, pbDatabase;
 
 {$R *.DFM}

@@ -63,7 +63,9 @@ var
 
 implementation
 
-uses STPODataMod;
+uses
+  System.UITypes,
+  STPODataMod;
 
 {$R *.DFM}
 

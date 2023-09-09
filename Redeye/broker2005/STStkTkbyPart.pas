@@ -42,7 +42,7 @@ type
     procedure ConfirmBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CountGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  aCol, aRow: Integer; var CanSelect: Boolean);
     procedure FormDestroy(Sender: TObject);
     procedure UpdateTransfers;
     procedure FormatGrid;
@@ -87,8 +87,9 @@ var
 
 implementation
 
-uses STStkTakeDM, STStkTkItem, StPacks, pbMainMenu;
-
+uses
+  System.UITypes, System.Types,
+  STStkTakeDM, STStkTkItem, StPacks, pbMainMenu;
 
 {$R *.DFM}
 
@@ -301,12 +302,11 @@ begin
 end;
 
 procedure TSTStkTkbyPartFrm.CountGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  aCol, aRow: Integer; var CanSelect: Boolean);
 begin
-  EnableButtons(Row);
-  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
-
+  EnableButtons(aRow);
+  if FSelectedLineIndex = aRow - 1 then Exit;
+  FSelectedLineIndex := aRow - 1;
 end;
 
 procedure TSTStkTkbyPartFrm.FormDestroy(Sender: TObject);

@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   Buttons, StdCtrls, ComCtrls, ExtCtrls, Grids, DBGrids, DBCtrls, DateUtils,
-  Spin;
+  Spin, FireDAC.Stan.Param;
 
 type
   TPBLaserImportFrm = class(TForm)

@@ -1,9 +1,9 @@
 object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Left = 4
   Top = 76
-  Width = 790
-  Height = 466
   Caption = 'Enter Stock Count Details '
+  ClientHeight = 419
+  ClientWidth = 772
   Color = clBtnFace
   Constraints.MinHeight = 466
   Constraints.MinWidth = 790
@@ -13,22 +13,21 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 782
+    Width = 772
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 782
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -70,16 +69,18 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     end
   end
   object Panel2: TPanel
-    Left = 696
+    Left = 686
     Top = 41
     Width = 86
-    Height = 372
+    Height = 359
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitLeft = 696
+    ExplicitHeight = 372
     DesignSize = (
       86
-      372)
+      359)
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 8
@@ -92,9 +93,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -109,6 +107,9 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object Changebtn: TBitBtn
       Left = 6
@@ -122,9 +123,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = ChangebtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -139,6 +137,9 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = ChangebtnClick
     end
     object DeleteBitBtn: TBitBtn
       Left = 6
@@ -152,10 +153,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      Visible = False
-      OnClick = DeleteBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -170,6 +167,10 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+      OnClick = DeleteBitBtnClick
     end
     object ConfirmBtn: TBitBtn
       Left = 6
@@ -183,9 +184,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 3
-      OnClick = ConfirmBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -204,6 +202,9 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 3
+      OnClick = ConfirmBtnClick
     end
     object BitBtn2: TBitBtn
       Left = 6
@@ -217,15 +218,16 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 4
-      Kind = bkCancel
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 413
-    Width = 782
+    Top = 400
+    Width = 772
     Height = 19
     Panels = <
       item
@@ -234,16 +236,20 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       item
         Width = 50
       end>
+    ExplicitTop = 413
+    ExplicitWidth = 782
   end
   object Panel3: TPanel
     Left = 0
     Top = 41
-    Width = 696
-    Height = 372
+    Width = 686
+    Height = 359
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel3'
     TabOrder = 3
+    ExplicitWidth = 696
+    ExplicitHeight = 372
     object Panel4: TPanel
       Left = 0
       Top = 331
@@ -351,14 +357,10 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     Top = 217
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take_Qty'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdStockTakeStatus: TFDQuery
@@ -371,9 +373,7 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     Top = 217
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Stock_Take'
-        ParamType = ptUnknown
       end>
   end
 end

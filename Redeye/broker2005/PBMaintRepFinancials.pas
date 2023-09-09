@@ -122,7 +122,9 @@ var
 
 implementation
 
-uses  CCSCommon, pbDatabase, PBLURep, pbMainMenu;
+uses
+  System.Types,
+  CCSCommon, pbDatabase, PBLURep, pbMainMenu;
 
 {$R *.DFM}
 

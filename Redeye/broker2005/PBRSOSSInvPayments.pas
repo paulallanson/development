@@ -77,7 +77,9 @@ var
 
 implementation
 
-uses PBLUCust, PBDatabase, pbMaintSalesInvPay, CCSCommon, DateSelV5,
+uses
+  System.UITypes,
+  PBLUCust, PBDatabase, pbMaintSalesInvPay, CCSCommon, DateSelV5,
   PBRPOSSInvPayments, pbMainMenu;
 
 {$R *.DFM}

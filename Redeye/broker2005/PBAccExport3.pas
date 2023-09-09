@@ -273,7 +273,9 @@ var
 
 implementation
 
-uses PBAccExport1, PBAccExport4, PBAccExport2, PBAccExportDM, CCSCommon,
+uses
+  System.UITypes,
+  PBAccExport1, PBAccExport4, PBAccExport2, PBAccExportDM, CCSCommon,
   PBAccImportDM, pbMainMenu;
 
 var

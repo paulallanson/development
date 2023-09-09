@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Spin, STSOObjects, DBCtrls, ExtCtrls;
+  StdCtrls, Buttons, Spin, STSOObjects, DBCtrls, ExtCtrls, FireDAC.Stan.Param;
 
 type
   TSTMaintSOrdLineFrm = class(TForm)
@@ -182,7 +182,9 @@ var
 
 implementation
 
-uses STSODataMod, STPacks, STMaintSOrdSerialNos, CCSCommon, STLUPartStock,
+uses
+  System.UITypes,
+  STSODataMod, STPacks, STMaintSOrdSerialNos, CCSCommon, STLUPartStock,
   STPrtMnt;
 
 {$R *.DFM}

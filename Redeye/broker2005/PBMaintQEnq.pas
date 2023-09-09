@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Grids, StdCtrls, Buttons, DBCtrls, PBEnquiryDataMod, CCSCommon, Menus;
+  Grids, StdCtrls, Buttons, DBCtrls, PBEnquiryDataMod, CCSCommon, Menus,
+  FireDAC.Stan.Param;
 
 type
   TPBMaintQEnqFrm = class(TForm)

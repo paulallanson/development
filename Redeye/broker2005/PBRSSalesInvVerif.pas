@@ -67,7 +67,9 @@ var
 
 implementation
 
-uses pbDatabase, PBLUCust, pbMainMenu, PBRPSalesInvVerif,
+uses
+  System.UITypes,
+  pbDatabase, PBLUCust, pbMainMenu, PBRPSalesInvVerif,
   PBLUAccountManager, PBLUOps;
 
 {$R *.DFM}

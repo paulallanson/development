@@ -72,7 +72,9 @@ var
 
 implementation
 
-uses PBStockDM, PBMntPrtBin, ccscommon, pbStockMoveDm;
+uses
+  System.UITypes,
+  PBStockDM, PBMntPrtBin, ccscommon, pbStockMoveDm;
 
 {$R *.DFM}
 

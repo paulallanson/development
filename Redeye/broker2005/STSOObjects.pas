@@ -652,12 +652,13 @@ function PostoNegMoney(const Money: variant): double;
 
 
 var
-  SalesOrder                  :TSalesOrder;
+  SalesOrder: TSalesOrder;
 
-  implementation
+implementation
 
 uses
-Dialogs, SysUtils, STSODataMod;
+  System.UITypes,
+  Dialogs, SysUtils, STSODataMod;
 
 function PBIntStr(const vIn: variant): variant;
 begin

@@ -54,7 +54,9 @@ var
 
 implementation
 
-uses STImpSalesOrdersDM, pbMainMenu, STRSImportAudit,PBLUSupp;
+uses
+  System.UITypes,
+  STImpSalesOrdersDM, pbMainMenu, STRSImportAudit,PBLUSupp;
 
 {$R *.DFM}
 

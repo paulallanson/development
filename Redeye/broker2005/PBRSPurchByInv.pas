@@ -112,7 +112,9 @@ var
 
 implementation
 
-uses PBLUSupp, PBDatabase, PBRPPurchByInv, PBRPPurchByInvDets;
+uses
+  System.UITypes,
+  PBLUSupp, PBDatabase, PBRPPurchByInv, PBRPPurchByInvDets;
 
 {$R *.DFM}
 

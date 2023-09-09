@@ -3,23 +3,21 @@ object StMovSlfrm: TStMovSlfrm
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Stock Movements selection screen'
-  ClientHeight = 299
-  ClientWidth = 525
+  ClientHeight = 290
+  ClientWidth = 519
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignSize = (
-    525
-    299)
-  PixelsPerInch = 96
+    519
+    290)
   TextHeight = 13
   object OleContainer1: TOleContainer
     Left = 316
@@ -32,11 +30,11 @@ object StMovSlfrm: TStMovSlfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 64
     Top = 120
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 7
     Visible = False
     object lblExporting: TLabel
@@ -138,7 +136,6 @@ object StMovSlfrm: TStMovSlfrm
       OnClick = PartFromBitBtnClick
     end
     object SeqByRadioGroup: TRadioGroup
-      ParentBackground = False
       Left = 368
       Top = 8
       Width = 113
@@ -153,6 +150,7 @@ object StMovSlfrm: TStMovSlfrm
       Items.Strings = (
         'Warehouse'
         'Part')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 2
     end
@@ -230,9 +228,6 @@ object StMovSlfrm: TStMovSlfrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 7
-      OnClick = BitBtn1Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -247,6 +242,9 @@ object StMovSlfrm: TStMovSlfrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 7
+      OnClick = BitBtn1Click
     end
     object BitBtn4: TBitBtn
       Left = 312
@@ -258,9 +256,6 @@ object StMovSlfrm: TStMovSlfrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 8
-      OnClick = BitBtn4Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -275,6 +270,9 @@ object StMovSlfrm: TStMovSlfrm
         B0557777FF577777F7F500000E055550805577777F7555575755500000555555
         05555777775555557F5555000555555505555577755555557555}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 8
+      OnClick = BitBtn4Click
     end
   end
   object PrintBitBtn: TBitBtn
@@ -289,9 +287,6 @@ object StMovSlfrm: TStMovSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -306,6 +301,9 @@ object StMovSlfrm: TStMovSlfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+    OnClick = PrintBitBtnClick
   end
   object BitBtn2: TBitBtn
     Left = 352
@@ -333,12 +331,12 @@ object StMovSlfrm: TStMovSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object DtRangeGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 168
     Width = 273
@@ -349,6 +347,7 @@ object StMovSlfrm: TStMovSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
     object Label3: TLabel
@@ -401,9 +400,6 @@ object StMovSlfrm: TStMovSlfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = DatefromBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -418,6 +414,9 @@ object StMovSlfrm: TStMovSlfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = DatefromBitBtnClick
     end
     object DateToBitBtn: TBitBtn
       Left = 216
@@ -429,9 +428,6 @@ object StMovSlfrm: TStMovSlfrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 2
-      OnClick = DateToBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -446,6 +442,9 @@ object StMovSlfrm: TStMovSlfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = DateToBitBtnClick
     end
     object DateToEdit: TEdit
       Left = 96
@@ -464,7 +463,6 @@ object StMovSlfrm: TStMovSlfrm
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 312
     Top = 168
     Width = 201
@@ -474,6 +472,7 @@ object StMovSlfrm: TStMovSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     object ChkBxExcProd: TCheckBox
@@ -500,15 +499,13 @@ object StMovSlfrm: TStMovSlfrm
     end
   end
   object btnExcel: TBitBtn
-    Left = 266
+    Left = 254
     Top = 264
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
     Enabled = False
-    TabOrder = 6
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -552,5 +549,8 @@ object StMovSlfrm: TStMovSlfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 6
+    OnClick = btnExcelClick
+    ExplicitLeft = 266
   end
 end

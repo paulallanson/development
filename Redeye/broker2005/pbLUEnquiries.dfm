@@ -2,8 +2,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   Left = 59
   Top = 161
   Caption = 'Enquiries'
-  ClientHeight = 359
-  ClientWidth = 883
+  ClientHeight = 350
+  ClientWidth = 877
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 340
-    Width = 883
+    Top = 331
+    Width = 877
     Height = 19
     Panels = <
       item
@@ -40,8 +40,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   end
   object Panel1: TPanel
     Left = 0
-    Top = 299
-    Width = 883
+    Top = 290
+    Width = 877
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -115,8 +115,8 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 883
-    Height = 224
+    Width = 877
+    Height = 215
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -221,7 +221,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 883
+    Width = 877
     Height = 45
     Bands = <
       item
@@ -230,6 +230,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         MinHeight = 41
         Width = 881
       end>
+    ExplicitWidth = 883
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -375,7 +376,7 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 883
+    Width = 877
     Height = 30
     Align = alTop
     BevelInner = bvLowered

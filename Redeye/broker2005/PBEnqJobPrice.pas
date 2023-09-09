@@ -186,7 +186,9 @@ var
 
 implementation
 
-uses PBEnqJobDtls, PBEnqSuppDataMod, PBEnqSupTmp, PBEnqAddChg, pbDatabase, CCSPrint,
+uses
+  System.Types,
+  PBEnqJobDtls, PBEnqSuppDataMod, PBEnqSupTmp, PBEnqAddChg, pbDatabase, CCSPrint,
   pbMainMenu;
 
 var

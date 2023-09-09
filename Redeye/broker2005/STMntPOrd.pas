@@ -255,7 +255,9 @@ var
 
 implementation
 
-uses STStockDM, STPODataMod, DateSelV5, PBLUSupp, ccsCommon, pbMainMenu,
+uses
+  System.UITypes,
+  STStockDM, STPODataMod, DateSelV5, PBLUSupp, ccsCommon, pbMainMenu,
   pbDatabase, STMntPOrdAdd, STMntPOrdQty, STMaintPOExtChg, PBDBMemo,
   PBImages, PBMaintSuppInvoice;
 

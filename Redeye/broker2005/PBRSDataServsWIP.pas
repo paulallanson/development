@@ -69,7 +69,9 @@ var
 
 implementation
 
-uses PBLUCust, PBLUAccountManager, CCSCommon, DateSelV5, PBRPDataServsWIP, CCSPrint,
+uses
+  System.UITypes,
+  PBLUCust, PBLUAccountManager, CCSCommon, DateSelV5, PBRPDataServsWIP, CCSPrint,
   PBRPJobBagApprovalDue, PBRPClientServsWIP;
 
 {$R *.dfm}

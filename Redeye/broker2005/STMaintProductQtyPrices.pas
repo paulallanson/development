@@ -68,7 +68,9 @@ var
 
 implementation
 
-uses pbMainMenu, ccscommon;
+uses
+  System.Types,
+  pbMainMenu, ccscommon;
 
 {$R *.dfm}
 

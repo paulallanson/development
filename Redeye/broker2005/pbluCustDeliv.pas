@@ -50,7 +50,9 @@ var
 
 implementation
 
-uses pbluDeliveriesDm, PBRSDelivNote, PBRSBoxLabels, PBMaintDeliv,
+uses
+  System.UITypes,
+  pbluDeliveriesDm, PBRSDelivNote, PBRSBoxLabels, PBMaintDeliv,
   STRSBoxLabels, STRSDelivNote, STRSBoxLabelsDeliv, STMaintSOrdDel,
   pbDatabase, pbMainMenu;
 

@@ -244,7 +244,9 @@ var
 
 implementation
 
-uses STStockDM, STPrtMnt, DateSelV5, STPrtTransQty, STPrtTransRecv,
+uses
+  System.UITypes,
+  STStockDM, STPrtMnt, DateSelV5, STPrtTransQty, STPrtTransRecv,
   STPrtTransSN, STLUStStkNumbers, pbDatabase, ccscommon, pbMainMenu;
 
 {$R *.DFM}

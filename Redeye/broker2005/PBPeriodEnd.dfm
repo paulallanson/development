@@ -3,20 +3,18 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
   Top = 104
   BorderStyle = bsDialog
   Caption = 'Period End'
-  ClientHeight = 221
-  ClientWidth = 305
+  ClientHeight = 212
+  ClientWidth = 299
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
     Left = 8
@@ -79,8 +77,6 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
       Top = 87
       Width = 25
       Height = 23
-      TabOrder = 3
-      OnClick = btnNextDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -95,6 +91,8 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnNextDateClick
     end
     object edtCurrEndDate: TEdit
       Left = 152
@@ -109,8 +107,6 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
       Top = 56
       Width = 25
       Height = 23
-      TabOrder = 1
-      OnClick = btnCurrDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -125,6 +121,8 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnCurrDateClick
     end
     object prgrsbrPeriodEnd: TProgressBar
       Left = 8
@@ -141,8 +139,6 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -161,13 +157,16 @@ object PBPeriodEndfrm: TPBPeriodEndfrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
     Left = 160
     Top = 192
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
 end

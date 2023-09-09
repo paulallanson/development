@@ -1,4 +1,5 @@
 inherited dbQuoSumLtr: TdbQuoSumLtr
+  PixelsPerInch = 120
   inherited GetRngEnqsSQL: TFDQuery
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'

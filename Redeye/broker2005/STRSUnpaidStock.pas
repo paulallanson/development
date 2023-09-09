@@ -56,7 +56,9 @@ var
 
 implementation
 
-uses pbLURep, pbLUCust, STRPUnpaidStock, DateSelV5;
+uses
+  System.UITypes,
+  pbLURep, pbLUCust, STRPUnpaidStock, DateSelV5;
 
 {$R *.DFM}
 

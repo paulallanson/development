@@ -2,8 +2,8 @@ object STPrtTranFrm: TSTPrtTranFrm
   Left = 16
   Top = 126
   Caption = 'Product Transfers'
-  ClientHeight = 379
-  ClientWidth = 734
+  ClientHeight = 371
+  ClientWidth = 732
   Color = clBtnFace
   Constraints.MinHeight = 418
   Constraints.MinWidth = 750
@@ -31,12 +31,11 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 734
+    Width = 732
     Height = 89
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 732
     object Label3: TLabel
       Left = 16
       Top = 62
@@ -203,16 +202,14 @@ object STPrtTranFrm: TSTPrtTranFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 338
-    Width = 734
+    Top = 330
+    Width = 732
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 330
-    ExplicitWidth = 732
     DesignSize = (
-      734
+      732
       41)
     object ToPart2Label: TLabel
       Left = 20
@@ -229,7 +226,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       AutoSize = False
     end
     object OKBitBtn: TBitBtn
-      Left = 492
+      Left = 484
       Top = 8
       Width = 75
       Height = 25
@@ -259,7 +256,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitLeft = 494
     end
     object CancelBitBtn: TBitBtn
-      Left = 572
+      Left = 564
       Top = 8
       Width = 75
       Height = 25
@@ -289,7 +286,7 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitLeft = 574
     end
     object CloseBitBtn: TBitBtn
-      Left = 652
+      Left = 644
       Top = 8
       Width = 75
       Height = 25
@@ -304,13 +301,11 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlCentre: TPanel
     Left = 0
     Top = 89
-    Width = 734
-    Height = 249
+    Width = 732
+    Height = 241
     Align = alClient
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 732
-    ExplicitHeight = 241
     object pnlCentreLeft: TPanel
       Left = 1
       Top = 1
@@ -323,12 +318,12 @@ object STPrtTranFrm: TSTPrtTranFrm
       ExplicitHeight = 239
       DesignSize = (
         370
-        247)
+        239)
       object FromGroupBox: TGroupBox
         Left = 8
         Top = 8
         Width = 358
-        Height = 255
+        Height = 246
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move From'
         ParentBackground = False
@@ -336,7 +331,7 @@ object STPrtTranFrm: TSTPrtTranFrm
         ExplicitHeight = 247
         DesignSize = (
           358
-          255)
+          246)
         object FromStoreLabel: TLabel
           Left = 8
           Top = 28
@@ -366,7 +361,7 @@ object STPrtTranFrm: TSTPrtTranFrm
           Left = 8
           Top = 74
           Width = 338
-          Height = 163
+          Height = 154
           Anchors = [akLeft, akTop, akRight, akBottom]
           AutoExpand = True
           DragMode = dmAutomatic
@@ -387,22 +382,20 @@ object STPrtTranFrm: TSTPrtTranFrm
     object pnlCentreRight: TPanel
       Left = 371
       Top = 1
-      Width = 362
-      Height = 247
+      Width = 360
+      Height = 239
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 360
-      ExplicitHeight = 239
       DesignSize = (
-        362
-        247)
+        360
+        239)
       object ToGroupBox: TGroupBox
         Left = 4
         Top = 8
-        Width = 360
-        Height = 255
+        Width = 352
+        Height = 246
         Anchors = [akLeft, akTop, akRight, akBottom]
         Caption = 'Move To'
         ParentBackground = False
@@ -410,8 +403,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         ExplicitWidth = 362
         ExplicitHeight = 247
         DesignSize = (
-          360
-          255)
+          352
+          246)
         object ToStoreLabel: TLabel
           Left = 8
           Top = 28
@@ -440,8 +433,8 @@ object STPrtTranFrm: TSTPrtTranFrm
         object ToTreeView: TTreeView
           Left = 8
           Top = 74
-          Width = 341
-          Height = 163
+          Width = 333
+          Height = 154
           Anchors = [akLeft, akTop, akRight, akBottom]
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText

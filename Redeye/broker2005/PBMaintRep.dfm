@@ -1,21 +1,19 @@
-﻿object PBMaintRepFrm: TPBMaintRepFrm
+object PBMaintRepFrm: TPBMaintRepFrm
   Left = 420
   Top = 64
   BorderStyle = bsDialog
   Caption = 'Maintain Reps'
-  ClientHeight = 523
-  ClientWidth = 432
+  ClientHeight = 514
+  ClientWidth = 426
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 110
@@ -37,9 +35,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -104,7 +99,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 342
@@ -113,9 +111,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -180,7 +175,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
     Left = 8
@@ -358,9 +356,6 @@
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 17
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -375,6 +370,9 @@
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 17
+      OnClick = NotesBitBtnClick
     end
     object NameEdit: TEdit
       Left = 101
@@ -513,8 +511,6 @@
       Width = 75
       Height = 26
       Caption = 'Nominal'
-      TabOrder = 18
-      OnClick = NominalBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -529,6 +525,8 @@
         0FF0333337FFFFFF7F37333330CCCCCC0F033333377777777F73333330FFFFFF
         0033333337FFFFFF773333333000000003333333377777777333}
       NumGlyphs = 2
+      TabOrder = 18
+      OnClick = NominalBitBtnClick
     end
     object spnCommission: TSpinEdit
       Left = 101
@@ -573,9 +571,6 @@
       Top = 287
       Width = 25
       Height = 24
-      TabOrder = 20
-      TabStop = False
-      OnClick = GroupClearBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -590,6 +585,9 @@
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 20
+      TabStop = False
+      OnClick = GroupClearBitBtnClick
     end
     object chkbxActive: TCheckBox
       Left = 11
@@ -600,12 +598,12 @@
       TabOrder = 21
     end
     object pnlSubReps: TPanel
-      ParentBackground = False
       Left = 2
       Top = 256
       Width = 404
       Height = 26
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 12
       object Label13: TLabel
         Left = 9
@@ -671,8 +669,8 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -695,8 +693,8 @@
     Top = 120
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -734,114 +732,74 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Building_No_Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Street'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Locale'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Town'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fax_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'PostCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Email'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Mobile_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Company_Name'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sales_Area'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Rep_Suffix_or_Prefix'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Position'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Product_Nominal_Def'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Additional_Dtls_Nominal_Def'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Commission_Rate'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Email'
+      end
+      item
+        Name = 'Mobile_No'
+      end
+      item
+        Name = 'Company_Name'
+      end
+      item
+        Name = 'Sales_Area'
+      end
+      item
+        Name = 'Rep_Suffix_or_Prefix'
+      end
+      item
+        Name = 'Position'
+      end
+      item
+        Name = 'Product_Nominal_Def'
+        DataType = ftString
+      end
+      item
+        Name = 'Additional_Dtls_Nominal_Def'
+        DataType = ftString
+      end
+      item
+        Name = 'Commission_Rate'
+      end
+      item
         Name = 'Rep_Team'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Is_Sub_Rep'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -854,9 +812,7 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object FlashTimer: TTimer
@@ -874,9 +830,8 @@
     Top = 156
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object RepNomSRC: TDataSource
@@ -896,8 +851,8 @@
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -913,14 +868,11 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryRepTeam: TFDQuery
@@ -946,9 +898,7 @@
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryAddRepTeamMember: TFDQuery
@@ -968,14 +918,10 @@
     Top = 416
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

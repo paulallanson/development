@@ -255,7 +255,9 @@ var
 
 implementation
 
-uses PBEnqSuppDataMod, PBEnqSupTmp, DateSelV5, PBLUEnqAddChg, PBEnqRespQty,
+uses
+  System.UITypes,
+  PBEnqSuppDataMod, PBEnqSupTmp, DateSelV5, PBLUEnqAddChg, PBEnqRespQty,
   pbDatabase, pbMainMenu;
 
 var

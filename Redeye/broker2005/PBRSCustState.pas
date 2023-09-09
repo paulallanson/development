@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, Buttons, ExtCtrls, DB, PBPOObjects, Spin, QuickRpt,
-  OleCtnrs, ComCtrls, CCSCommon;
+  OleCtnrs, ComCtrls, CCSCommon, FireDAC.Stan.Param;
 
 type
   TPBRSCustStateFrm = class(TForm)
@@ -75,7 +75,9 @@ var
 
 implementation
 
-uses PBRPCustState, PBLUCust, DateSelV5, CCSPrint, PBLUSInvDM, PBDatabase,
+uses
+  System.UITypes,
+  PBRPCustState, PBLUCust, DateSelV5, CCSPrint, PBLUSInvDM, PBDatabase,
   CCSemailHandler;
 
 {$R *.DFM}

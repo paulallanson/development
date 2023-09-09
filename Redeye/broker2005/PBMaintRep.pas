@@ -178,7 +178,9 @@ var
 
 implementation
 
-uses PBDBMemo, PBLURep, PBImages, ComObj, ActiveX, PBLURepNom, PBDatabase,
+uses
+  System.UITypes,
+  PBDBMemo, PBLURep, PBImages, ComObj, ActiveX, PBLURepNom, PBDatabase,
   pbMainMenu, PBLURepTeam;
 
 {$R *.DFM}

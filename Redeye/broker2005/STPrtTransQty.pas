@@ -82,7 +82,9 @@ var
 
 implementation
 
-uses STLUBinPrt, CCSCommon, pbMainMenu, pbdatabase, STRSPickingNote;
+uses
+  System.UITypes,
+  STLUBinPrt, CCSCommon, pbMainMenu, pbdatabase, STRSPickingNote;
 
 {$R *.DFM}
 

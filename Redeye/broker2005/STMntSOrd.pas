@@ -124,9 +124,9 @@ type
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
     procedure LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+  aCol, aRow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; aCol,
+  aRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure btnCostCentreClick(Sender: TObject);
@@ -258,7 +258,9 @@ var
 
 implementation
 
-uses STSODataMod, DateSelV5, STMaintSOrdLineServ, STMaintSOrdLine, PBDBMemo, PBLUCust,
+uses
+  System.UITypes,
+  STSODataMod, DateSelV5, STMaintSOrdLineServ, STMaintSOrdLine, PBDBMemo, PBLUCust,
   pbMainMenu, PBLUCustCstCntr, STMaintSinvExtChg, STMaintSOrdSerialNos, PBLUCConta,
   PBImages, PBLUAdHoc, PBLUSupp, STMntSOrdSpecIn, PBLUProductionLoc,
   PBLUAccountManager, pbDatabase, PBLUBranchCstCntr, STStockDM, STMaintSOrdLinePrices;
@@ -1514,28 +1516,28 @@ begin
 end;
 
 procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+  aCol, aRow: Integer; var CanSelect: Boolean);
 var
   tempInx: integer;
   tempPartCode: string;
 begin
   //need to find the selected line index based on the part code
-  tempPartCode := self.LineDetsStringGrid.Cells[1, Row];
+  tempPartCode := self.LineDetsStringGrid.Cells[1, aRow];
   tempInx := SalesOrder.OrderLines.IndexFromPartCode(tempPartCode);
   if tempInx <> -1 then
     FSelectedLineIndex := tempInx;
 end;
 
-procedure TSTMntSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TSTMntSOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; aCol,
+  aRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
-  if (vCol = 0) or (vCol = 1) or (vCol = 2) then
+  if (aCol = 0) or (aCol = 1) or (aCol = 2) then
   	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
+  		StrPCopy(Txt, (Sender as TStringGrid).Cells[aCol, aRow]);
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
@@ -1545,7 +1547,7 @@ begin
   else
   	begin
 			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
+  		StrPCopy(Txt, (Sender as TStringGrid).Cells[aCol, aRow]);
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);

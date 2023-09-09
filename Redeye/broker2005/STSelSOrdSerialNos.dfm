@@ -3,18 +3,16 @@ object STSelSOrdSerialNosFrm: TSTSelSOrdSerialNosFrm
   Top = 168
   BorderStyle = bsDialog
   Caption = 'Confirm Serial number selection'
-  ClientHeight = 161
-  ClientWidth = 335
+  ClientHeight = 152
+  ClientWidth = 329
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 15
   object btnOK: TBitBtn
     Left = 82
@@ -24,8 +22,6 @@ object STSelSOrdSerialNosFrm: TSTSelSOrdSerialNosFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 0
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -44,14 +40,17 @@ object STSelSOrdSerialNosFrm: TSTSelSOrdSerialNosFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = btnOKClick
   end
   object BitBtn2: TBitBtn
     Left = 178
     Top = 132
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object GroupBox1: TGroupBox
     Left = 8
@@ -70,7 +69,7 @@ object STSelSOrdSerialNosFrm: TSTSelSOrdSerialNosFrm
     object Label2: TLabel
       Left = 16
       Top = 60
-      Width = 17
+      Width = 16
       Height = 15
       Caption = 'To:'
     end

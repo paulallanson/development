@@ -3,8 +3,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   Top = 60
   BorderStyle = bsDialog
   Caption = 'Operator Details'
-  ClientHeight = 569
-  ClientWidth = 531
+  ClientHeight = 560
+  ClientWidth = 525
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -15,8 +15,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
   OnActivate = FormActivate
   OnClose = FormClose
   DesignSize = (
-    531
-    569)
+    525
+    560)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -33,8 +33,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Caption = 'Name'
   end
   object DelLabel: TLabel
-    Left = 197
-    Top = 538
+    Left = 185
+    Top = 529
     Width = 146
     Height = 13
     Anchors = [akRight, akBottom]
@@ -45,6 +45,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitLeft = 197
+    ExplicitTop = 538
   end
   object Label4: TLabel
     Left = 8
@@ -136,8 +138,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     OnChange = LoginEditChange
   end
   object OKBitBtn: TBitBtn
-    Left = 357
-    Top = 532
+    Left = 345
+    Top = 523
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
@@ -210,16 +212,20 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 12
     OnClick = OKBitBtnClick
+    ExplicitLeft = 357
+    ExplicitTop = 532
   end
   object CancelBitBtn: TBitBtn
-    Left = 445
-    Top = 532
+    Left = 433
+    Top = 523
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 13
+    ExplicitLeft = 445
+    ExplicitTop = 532
   end
   object RepComboBox: TDBLookupComboBox
     Left = 94
@@ -669,8 +675,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     OnChange = NameEditChange
   end
   object ChgPassBitBtn: TBitBtn
-    Left = 8
-    Top = 531
+    Left = -4
+    Top = 522
     Width = 137
     Height = 25
     Anchors = [akRight, akBottom]
@@ -691,6 +697,8 @@ object PBMaintOpsDetFrm: TPBMaintOpsDetFrm
     NumGlyphs = 2
     TabOrder = 11
     OnClick = ChgPassBitBtnClick
+    ExplicitLeft = 8
+    ExplicitTop = 531
   end
   object PhoneEdit: TEdit
     Left = 94

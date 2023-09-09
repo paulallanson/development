@@ -72,7 +72,9 @@ var
 
 implementation
 
-uses PBDatabase, pbMainMenu, PBMaintFinanceYear, PBMaintFYRepBudgets,
+uses
+  System.UITypes,
+  PBDatabase, pbMainMenu, PBMaintFinanceYear, PBMaintFYRepBudgets,
   PBMaintRepCatBudgets, PBMaintCustBudgets;
 
 {$R *.DFM}

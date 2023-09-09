@@ -57,7 +57,10 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  CCSDataBroker, Db, CCSPrint, PDLetter, PBDBQuoLtr;
+  CCSDataBroker, Db, CCSPrint, PDLetter, PBDBQuoLtr, FireDAC.Stan.Param,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TdbQuoSumLtr = class(TdbQuoLtr)

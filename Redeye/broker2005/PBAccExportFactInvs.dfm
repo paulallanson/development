@@ -3,8 +3,8 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   Top = 124
   BorderStyle = bsSingle
   Caption = 'Export Factoring Invoices'
-  ClientHeight = 205
-  ClientWidth = 515
+  ClientHeight = 196
+  ClientWidth = 509
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,11 +16,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   TextHeight = 13
   object pnlButtons: TPanel
     Left = 0
-    Top = 164
-    Width = 515
+    Top = 155
+    Width = 509
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 164
+    ExplicitWidth = 515
     object btnExport: TButton
       Left = 320
       Top = 8
@@ -43,11 +45,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   object pnlRight: TPanel
     Left = 0
     Top = 0
-    Width = 515
-    Height = 119
+    Width = 509
+    Height = 110
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 515
+    ExplicitHeight = 119
     object pnlNumberRange: TPanel
       Left = 274
       Top = 0
@@ -181,9 +185,10 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Left = 0
       Top = 0
       Width = 137
-      Height = 119
+      Height = 110
       Align = alLeft
       TabOrder = 2
+      ExplicitHeight = 119
       object rdgrpInvOrCred: TRadioGroup
         Left = 8
         Top = 8
@@ -202,9 +207,10 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
       Left = 137
       Top = 0
       Width = 137
-      Height = 119
+      Height = 110
       Align = alLeft
       TabOrder = 3
+      ExplicitHeight = 119
       object rdgrpExportBy: TRadioGroup
         Left = 8
         Top = 8
@@ -222,11 +228,13 @@ object PBAccExportFactInvsFrm: TPBAccExportFactInvsFrm
   end
   object pnlExpFile: TPanel
     Left = 0
-    Top = 119
-    Width = 515
+    Top = 110
+    Width = 509
     Height = 45
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 119
+    ExplicitWidth = 515
     object lblExpTo: TLabel
       Left = 72
       Top = 16

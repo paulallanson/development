@@ -76,7 +76,9 @@ var
 
 implementation
 
-uses DateSelV5, STPrtMnt, STStockDM, StMovRep;
+uses
+  System.UITypes,
+  DateSelV5, STPrtMnt, STStockDM, StMovRep;
 
 {$R *.DFM}
 

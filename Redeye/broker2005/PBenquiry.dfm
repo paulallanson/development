@@ -2,8 +2,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
   Left = 286
   Top = 53
   Caption = 'Enter Enquiry details'
-  ClientHeight = 585
-  ClientWidth = 819
+  ClientHeight = 576
+  ClientWidth = 813
   Color = clBtnFace
   Constraints.MinHeight = 613
   Constraints.MinWidth = 800
@@ -19,8 +19,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    819
-    585)
+    813
+    576)
   TextHeight = 13
   object Label8: TLabel
     Left = 8
@@ -40,7 +40,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
   end
   object EnquiryMessageLbl: TLabel
     Left = 2
-    Top = 529
+    Top = 520
     Width = 92
     Height = 13
     Anchors = [akLeft, akBottom]
@@ -73,8 +73,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 566
-    Width = 819
+    Top = 557
+    Width = 813
     Height = 19
     Panels = <
       item
@@ -83,20 +83,24 @@ object PBEnquiryFrm: TPBEnquiryFrm
       item
         Width = 300
       end>
+    ExplicitTop = 566
+    ExplicitWidth = 819
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 529
-    Width = 819
+    Top = 520
+    Width = 813
     Height = 37
     Align = alBottom
     ParentBackground = False
     TabOrder = 4
+    ExplicitTop = 529
+    ExplicitWidth = 819
     DesignSize = (
-      819
+      813
       37)
     object OKBitBtn: TBitBtn
-      Left = 625
+      Left = 613
       Top = 6
       Width = 75
       Height = 25
@@ -164,7 +168,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 629
     end
     object CancelBitBtn: TBitBtn
-      Left = 721
+      Left = 709
       Top = 6
       Width = 75
       Height = 25
@@ -234,32 +238,33 @@ object PBEnquiryFrm: TPBEnquiryFrm
   end
   object pnlLineDetails: TPanel
     Left = 0
-    Top = 272
-    Width = 819
+    Top = 263
+    Width = 813
     Height = 257
     Align = alBottom
     Caption = 'pnlLineDetails'
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 272
+    ExplicitWidth = 819
     object EnquiryLinePage: TPageControl
       Tag = 180
       Left = 1
       Top = 1
-      Width = 821
+      Width = 817
       Height = 255
       ActivePage = TabSheet6
       Align = alClient
       TabOrder = 0
-      ExplicitWidth = 817
       object PartTabSheet: TTabSheet
         Caption = 'Part Details'
         DesignSize = (
-          809
+          803
           227)
         object Bevel3: TBevel
           Left = 2
           Top = 5
-          Width = 712
+          Width = 700
           Height = 188
           Anchors = [akLeft, akTop, akRight]
           Shape = bsFrame
@@ -565,12 +570,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
       object TabSheet2: TTabSheet
         Caption = 'Additional Notes'
         DesignSize = (
-          809
+          803
           227)
         object Bevel4: TBevel
           Left = 2
           Top = 5
-          Width = 790
+          Width = 778
           Height = 220
           Anchors = [akLeft, akTop, akRight, akBottom]
           Shape = bsFrame
@@ -665,12 +670,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
       object CapabilityTabSheet: TTabSheet
         Caption = 'Capabilities'
         DesignSize = (
-          809
+          803
           227)
         object Bevel6: TBevel
           Left = 2
           Top = 5
-          Width = 795
+          Width = 783
           Height = 219
           Anchors = [akLeft, akTop, akRight, akBottom]
           Shape = bsFrame
@@ -768,12 +773,12 @@ object PBEnquiryFrm: TPBEnquiryFrm
       object TabSheet6: TTabSheet
         Caption = 'Assign Suppliers'
         DesignSize = (
-          809
+          803
           227)
         object Bevel9: TBevel
           Left = 2
           Top = 5
-          Width = 794
+          Width = 782
           Height = 219
           Anchors = [akLeft, akTop, akRight, akBottom]
           Shape = bsFrame
@@ -782,7 +787,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
         object SupplierGrid: TStringGrid
           Left = 16
           Top = 24
-          Width = 681
+          Width = 669
           Height = 185
           Anchors = [akLeft, akTop, akRight, akBottom]
           ColCount = 3
@@ -800,7 +805,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
             165)
         end
         object SuppSelectBtn: TBitBtn
-          Left = 708
+          Left = 696
           Top = 24
           Width = 75
           Height = 25
@@ -838,7 +843,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           ExplicitLeft = 712
         end
         object ContactSelBitBtn: TBitBtn
-          Left = 708
+          Left = 696
           Top = 56
           Width = 75
           Height = 25
@@ -922,7 +927,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           ParentBackground = False
           TabOrder = 0
           DesignSize = (
-            809
+            803
             227)
           object lblDocs: TLabel
             Left = 12
@@ -934,7 +939,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
           object strgrdDocs: TStringGrid
             Left = 12
             Top = 26
-            Width = 810
+            Width = 800
             Height = 155
             Anchors = [akLeft, akTop, akRight]
             ColCount = 2
@@ -991,7 +996,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0400000006090200
-              00000000C000000000000046000000000000000000000000509D415BCBCED901
+              00000000C00000000000004600000000000000000000000020E0997B49E3D901
               03000000400200000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1167,7 +1172,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               0000000000000000000000004F0062006A0065006300740050006F006F006C00
               0000000000000000000000000000000000000000000000000000000000000000
               000000000000000000000000160001010200000006000000FFFFFFFF00000000
-              00000000000000000000000000000000509D415BCBCED901509D415BCBCED901
+              0000000000000000000000000000000020E0997B49E3D90120E0997B49E3D901
               00000000000000000000000002004F006C006500500072006500730030003000
               3000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000018000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1644,7 +1649,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
               FFFFFFFFFFFFFFFFFFFFFFFF52006F006F007400200045006E00740072007900
               0000000000000000000000000000000000000000000000000000000000000000
               00000000000000000000000016000500FFFFFFFFFFFFFFFF0200000020080200
-              00000000C000000000000046000000000000000000000000509D415BCBCED901
+              00000000C00000000000004600000000000000000000000020E0997B49E3D901
               03000000400D00000000000001004F006C006500000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000A000201FFFFFFFFFFFFFFFFFFFFFFFF00000000
@@ -1977,12 +1982,14 @@ object PBEnquiryFrm: TPBEnquiryFrm
   object pnlLines: TPanel
     Left = 0
     Top = 170
-    Width = 819
-    Height = 102
+    Width = 813
+    Height = 93
     Align = alClient
     Caption = 'pnlLines'
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 819
+    ExplicitHeight = 102
     object Panel1: TPanel
       Left = 728
       Top = 1
@@ -1995,7 +2002,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitHeight = 100
       DesignSize = (
         94
-        100)
+        91)
       object AddLineBitBtn: TBitBtn
         Left = 11
         Top = 7
@@ -2083,8 +2090,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object EnquiryLineGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 723
-      Height = 100
+      Width = 717
+      Height = 91
       Align = alClient
       DefaultColWidth = 40
       DefaultRowHeight = 20
@@ -2093,6 +2100,8 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
       OnClick = EnquiryLineGridClick
       OnDblClick = EnquiryLineGridDblClick
+      ExplicitWidth = 723
+      ExplicitHeight = 100
       ColWidths = (
         40
         213
@@ -2104,13 +2113,14 @@ object PBEnquiryFrm: TPBEnquiryFrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 819
+    Width = 813
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 819
     DesignSize = (
-      819
+      813
       41)
     object Label7: TLabel
       Left = 184
@@ -2141,7 +2151,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       OnClick = EnqDateBtnClick
     end
     object Label9: TLabel
-      Left = 554
+      Left = 542
       Top = 15
       Width = 68
       Height = 13
@@ -2150,7 +2160,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 568
     end
     object Label3: TLabel
-      Left = 353
+      Left = 341
       Top = 15
       Width = 69
       Height = 13
@@ -2159,7 +2169,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 367
     end
     object DateBtn: TSpeedButton
-      Left = 518
+      Left = 506
       Top = 9
       Width = 25
       Height = 25
@@ -2198,7 +2208,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       OnExit = EnqDateEditExit
     end
     object OfficeComboBox: TComboBox
-      Left = 634
+      Left = 622
       Top = 11
       Width = 161
       Height = 21
@@ -2207,7 +2217,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       TabOrder = 1
     end
     object ReqByDateEdit: TEdit
-      Left = 432
+      Left = 420
       Top = 11
       Width = 81
       Height = 21
@@ -2229,13 +2239,14 @@ object PBEnquiryFrm: TPBEnquiryFrm
   object pnlCustomer: TPanel
     Left = 0
     Top = 41
-    Width = 819
+    Width = 813
     Height = 129
     Align = alTop
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 819
     DesignSize = (
-      819
+      813
       129)
     object lblCustomerLabel: TLabel
       Left = 106
@@ -2252,7 +2263,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       Caption = 'Contact'
     end
     object Label4: TLabel
-      Left = 554
+      Left = 542
       Top = 15
       Width = 20
       Height = 13
@@ -2277,7 +2288,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object CustomerEdit: TEdit
       Left = 166
       Top = 8
-      Width = 267
+      Width = 255
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
@@ -2287,7 +2298,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitWidth = 271
     end
     object CustRepCombo: TComboBox
-      Left = 586
+      Left = 574
       Top = 11
       Width = 177
       Height = 21
@@ -2300,7 +2311,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object ContactCombo: TComboBox
       Left = 166
       Top = 64
-      Width = 267
+      Width = 255
       Height = 21
       Style = csDropDownList
       Anchors = [akLeft, akTop, akRight]
@@ -2311,7 +2322,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object BranchEdit: TEdit
       Left = 166
       Top = 36
-      Width = 267
+      Width = 255
       Height = 21
       TabStop = False
       Anchors = [akLeft, akTop, akRight]
@@ -2323,7 +2334,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
     object DescriptionEdit: TEdit
       Left = 166
       Top = 96
-      Width = 597
+      Width = 585
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       MaxLength = 80
@@ -2332,7 +2343,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitWidth = 601
     end
     object CustomerSpeedButton: TButton
-      Left = 442
+      Left = 430
       Top = 7
       Width = 25
       Height = 25
@@ -2349,7 +2360,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 446
     end
     object BranchSpeedButton: TButton
-      Left = 442
+      Left = 430
       Top = 36
       Width = 25
       Height = 25
@@ -2366,7 +2377,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 446
     end
     object ContactSpeedButton: TButton
-      Left = 442
+      Left = 430
       Top = 64
       Width = 25
       Height = 25
@@ -2383,7 +2394,7 @@ object PBEnquiryFrm: TPBEnquiryFrm
       ExplicitLeft = 446
     end
     object RepSpeedButton: TButton
-      Left = 774
+      Left = 762
       Top = 10
       Width = 25
       Height = 25

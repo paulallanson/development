@@ -3,8 +3,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
   Top = 117
   BorderStyle = bsSingle
   Caption = 'Slow Moving Stock Report'
-  ClientHeight = 381
-  ClientWidth = 428
+  ClientHeight = 372
+  ClientWidth = 422
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
   OnDestroy = FormDestroy
   OnShow = FormShow
   DesignSize = (
-    428
-    381)
+    422
+    372)
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -384,7 +384,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
     OnClick = EmailBitBtnClick
   end
   object btbtnExcel: TBitBtn
-    Left = 7
+    Left = -5
     Top = 313
     Width = 75
     Height = 25
@@ -435,6 +435,7 @@ object STRSSlwMvngStkRepfrm: TSTRSSlwMvngStkRepfrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 13
     OnClick = btbtnExcelClick
+    ExplicitLeft = 7
   end
   object OleContainer1: TOleContainer
     Left = 316

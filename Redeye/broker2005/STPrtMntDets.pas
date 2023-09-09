@@ -253,7 +253,9 @@ var
 
 implementation
 
-uses StMntPrtSupp, CCSCommon, pbLUVatCode, STLUPrtGrp, PBLUPriceUnit,
+uses
+  System.UITypes,
+  StMntPrtSupp, CCSCommon, pbLUVatCode, STLUPrtGrp, PBLUPriceUnit,
   PBLUCust;
 
 {$R *.DFM}

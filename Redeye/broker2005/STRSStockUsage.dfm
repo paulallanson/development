@@ -3,22 +3,20 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
   Top = 146
   BorderStyle = bsDialog
   Caption = 'Product Usage Report'
-  ClientHeight = 362
-  ClientWidth = 467
+  ClientHeight = 353
+  ClientWidth = 461
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
-    467
-    362)
-  PixelsPerInch = 96
+    461
+    353)
   TextHeight = 13
   object OleContainer1: TOleContainer
     Left = 359
@@ -99,9 +97,6 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 2
-      OnClick = BitBtn4Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -116,6 +111,9 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BitBtn4Click
     end
   end
   object Panel1: TPanel
@@ -145,9 +143,10 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 1
-    Kind = bkCancel
   end
   object btnPreview: TBitBtn
     Left = 299
@@ -156,8 +155,6 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Height = 25
     Caption = 'Pre&view'
     Enabled = False
-    TabOrder = 2
-    OnClick = btnPreviewClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -172,6 +169,8 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = btnPreviewClick
   end
   object btnPrint: TBitBtn
     Left = 382
@@ -180,8 +179,6 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     Height = 25
     Caption = '&Print'
     Enabled = False
-    TabOrder = 3
-    OnClick = btnPrintClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -196,6 +193,8 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnPrintClick
   end
   object GroupBox2: TGroupBox
     Left = 8
@@ -293,15 +292,13 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
     TabOrder = 6
   end
   object btnExcel: TBitBtn
-    Left = 215
+    Left = 203
     Top = 334
     Width = 75
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
     Enabled = False
-    TabOrder = 7
-    OnClick = btnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -345,6 +342,9 @@ object STRSStockUsageFrm: TSTRSStockUsageFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 7
+    OnClick = btnExcelClick
+    ExplicitLeft = 215
   end
   object GroupBox1: TGroupBox
     Left = 8

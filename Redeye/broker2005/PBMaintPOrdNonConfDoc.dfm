@@ -1,9 +1,9 @@
 object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   Left = 315
   Top = 122
-  Width = 805
-  Height = 600
   Caption = 'Maintain Non Conformance'
+  ClientHeight = 553
+  ClientWidth = 787
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 790
@@ -12,30 +12,30 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 504
-    Width = 797
+    Top = 491
+    Width = 787
     Height = 43
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 504
+    ExplicitWidth = 797
     object Panel4: TPanel
-      ParentBackground = False
       Left = 305
       Top = 1
       Width = 491
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         491
@@ -62,8 +62,6 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Caption = 'OK'
         Default = True
         Enabled = False
-        TabOrder = 0
-        OnClick = btnOKClick
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -82,6 +80,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
           333A333333333333333338330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnOKClick
       end
       object btnCancel: TBitBtn
         Left = 400
@@ -89,37 +89,41 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 547
-    Width = 797
+    Top = 534
+    Width = 787
     Height = 19
     Panels = <>
+    ExplicitTop = 547
+    ExplicitWidth = 797
   end
   object pnlNotes: TPanel
-    ParentBackground = False
     Left = 0
     Top = 72
-    Width = 797
-    Height = 351
+    Width = 787
+    Height = 338
     Align = alClient
+    ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 797
+    ExplicitHeight = 351
     object pnlNCAdetails: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 795
       Height = 100
       Align = alTop
       Caption = 'pnlNCAdetails'
+      ParentBackground = False
       TabOrder = 0
       object Panel5: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -127,6 +131,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Non Conformance Details'
+        ParentBackground = False
         TabOrder = 0
       end
       object memDetails: TMemo
@@ -141,16 +146,15 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlResponse: TPanel
-      ParentBackground = False
       Left = 1
       Top = 101
       Width = 795
       Height = 49
       Align = alClient
       Caption = 'pnlResponse'
+      ParentBackground = False
       TabOrder = 1
       object Panel7: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -158,6 +162,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Response Details'
+        ParentBackground = False
         TabOrder = 0
       end
       object memResponse: TMemo
@@ -172,16 +177,15 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlAction: TPanel
-      ParentBackground = False
       Left = 1
       Top = 150
       Width = 795
       Height = 100
       Align = alBottom
       Caption = 'pnlAction'
+      ParentBackground = False
       TabOrder = 2
       object Panel6: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -189,6 +193,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Corrective Action'
+        ParentBackground = False
         TabOrder = 0
       end
       object memAction: TMemo
@@ -203,16 +208,15 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       end
     end
     object pnlPrevent: TPanel
-      ParentBackground = False
       Left = 1
       Top = 250
       Width = 795
       Height = 100
       Align = alBottom
       Caption = 'pnlPrevent'
+      ParentBackground = False
       TabOrder = 3
       object Panel9: TPanel
-        ParentBackground = False
         Left = 1
         Top = 1
         Width = 793
@@ -220,6 +224,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'Preventative Action'
+        ParentBackground = False
         TabOrder = 0
       end
       object memPrevent: TMemo
@@ -235,15 +240,17 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 423
-    Width = 797
+    Top = 410
+    Width = 787
     Height = 81
     Align = alBottom
+    ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 423
+    ExplicitWidth = 797
     DesignSize = (
-      797
+      787
       81)
     object Label12: TLabel
       Left = 320
@@ -327,8 +334,6 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Top = 42
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = btnDateClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -343,6 +348,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDateClick
     end
     object memCosttoClient: TMemo
       Left = 713
@@ -362,8 +369,6 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Top = 10
       Width = 27
       Height = 25
-      TabOrder = 6
-      OnClick = btnClearClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -378,9 +383,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 6
+      OnClick = btnClearClick
     end
     object rdgrpJobRePrinted: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 3
       Width = 145
@@ -390,10 +396,10 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 7
     end
     object rdgrpSamples: TRadioGroup
-      ParentBackground = False
       Left = 168
       Top = 3
       Width = 145
@@ -403,19 +409,21 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         'Yes'
         'No'
         'N/A')
+      ParentBackground = False
       TabOrder = 8
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 797
+    Width = 787
     Height = 72
     Align = alTop
+    ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 797
     DesignSize = (
-      797
+      787
       72)
     object Label7: TLabel
       Left = 167
@@ -578,8 +586,6 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
       Top = 9
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDateRaisedClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -594,6 +600,8 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateRaisedClick
     end
     object edtNCANumber: TEdit
       Left = 80
@@ -643,9 +651,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Top = 17
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryRaisingDept: TFDQuery
@@ -661,9 +667,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Top = 89
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end>
   end
   object qrySourceDept: TFDQuery
@@ -679,9 +683,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Dept'
-        ParamType = ptUnknown
       end>
   end
   object qryQAOperator: TFDQuery
@@ -697,9 +699,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Top = 236
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'QA_Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsNCType: TDataSource
@@ -735,9 +735,7 @@ object PBMaintPOrdNonConfDocFrm: TPBMaintPOrdNonConfDocFrm
     Top = 297
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Non_Conform_Category'
-        ParamType = ptUnknown
       end>
   end
   object dtsCategory: TDataSource

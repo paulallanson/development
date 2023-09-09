@@ -1,21 +1,18 @@
 object STPickItemFrm: TSTPickItemFrm
   Left = 176
   Top = 129
-  AutoScroll = False
   Caption = 'Change Picking Details'
-  ClientHeight = 280
-  ClientWidth = 458
+  ClientHeight = 271
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -70,8 +67,6 @@ object STPickItemFrm: TSTPickItemFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 1
-    OnClick = OKBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -90,14 +85,17 @@ object STPickItemFrm: TSTPickItemFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBtnClick
   end
   object CancelBtn: TBitBtn
     Left = 236
     Top = 224
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object PartEdit: TEdit
     Left = 96
@@ -119,12 +117,12 @@ object STPickItemFrm: TSTPickItemFrm
     TabOrder = 5
   end
   object AllocGroupBox: TGroupBox
-    ParentBackground = False
     Left = 16
     Top = 96
     Width = 201
     Height = 113
     Caption = 'Allocated'
+    ParentBackground = False
     TabOrder = 6
     object ABinLbl: TLabel
       Left = 48
@@ -181,12 +179,12 @@ object STPickItemFrm: TSTPickItemFrm
     end
   end
   object PickGroupBox: TGroupBox
-    ParentBackground = False
     Left = 232
     Top = 96
     Width = 217
     Height = 113
     Caption = 'Picked'
+    ParentBackground = False
     TabOrder = 0
     object PBinLbl: TLabel
       Left = 48

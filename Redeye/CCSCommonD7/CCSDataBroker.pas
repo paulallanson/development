@@ -175,8 +175,10 @@ type
   end;
 
 implementation
+
 {$IFDEF DEBUG}
 uses
+  System.UITypes,
   CCSDebug;
 {$ENDIF}
 

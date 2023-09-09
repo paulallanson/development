@@ -182,7 +182,9 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUCust, PBLUProd, CCSMaintProdImages;
+uses
+  System.UITypes,
+  ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUCust, PBLUProd, CCSMaintProdImages;
 
 {$R *.DFM}
 

@@ -46,7 +46,9 @@ var
 
 implementation
 
-uses STLUStStkNumbers;
+uses
+  System.UITypes,
+  STLUStStkNumbers;
 
 {$R *.DFM}
 

@@ -1,10 +1,9 @@
-﻿object STMntSOrdFrm: TSTMntSOrdFrm
+object STMntSOrdFrm: TSTMntSOrdFrm
   Left = 208
   Top = 56
-  AutoScroll = False
   Caption = 'Maintain Sales Orders'
-  ClientHeight = 543
-  ClientWidth = 800
+  ClientHeight = 534
+  ClientWidth = 794
   Color = clBtnFace
   Constraints.MinHeight = 570
   Constraints.MinWidth = 800
@@ -14,7 +13,6 @@
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
@@ -22,13 +20,11 @@
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlTop: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 800
+    Width = 794
     Height = 61
     Align = alTop
     Font.Charset = ANSI_CHARSET
@@ -36,10 +32,12 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 800
     DesignSize = (
-      800
+      794
       61)
     object Label5: TLabel
       Left = 8
@@ -49,12 +47,13 @@
       Caption = 'Order No.'
     end
     object Label8: TLabel
-      Left = 368
+      Left = 356
       Top = 12
       Width = 69
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Required Date'
+      ExplicitLeft = 368
     end
     object OrdNoLabel: TLabel
       Left = 80
@@ -94,12 +93,13 @@
       Visible = False
     end
     object Label20: TLabel
-      Left = 576
+      Left = 564
       Top = 12
       Width = 41
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Operator'
+      ExplicitLeft = 576
     end
     object DateEdit: TEdit
       Left = 240
@@ -115,8 +115,6 @@
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = DateBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -131,9 +129,11 @@
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = DateBitBtnClick
     end
     object DtReqEdit: TEdit
-      Left = 448
+      Left = 436
       Top = 8
       Width = 81
       Height = 21
@@ -141,15 +141,14 @@
       MaxLength = 30
       TabOrder = 2
       OnExit = DtReqEditExit
+      ExplicitLeft = 448
     end
     object DtReqBitBtn: TBitBtn
-      Left = 536
+      Left = 524
       Top = 6
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 3
-      OnClick = DtReqBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -164,6 +163,9 @@
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = DtReqBitBtnClick
+      ExplicitLeft = 536
     end
     object cmbbxOrderType: TComboBox
       Left = 80
@@ -171,7 +173,6 @@
       Width = 137
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 5
       OnChange = cmbbxOrderTypeChange
       Items.Strings = (
@@ -181,7 +182,7 @@
         'Destroy Notification')
     end
     object OfficeComboBox: TDBLookupComboBox
-      Left = 632
+      Left = 620
       Top = 8
       Width = 153
       Height = 21
@@ -190,22 +191,23 @@
       ListField = 'Name'
       ListSource = STSalesOrdDM.OperatorSRC
       TabOrder = 4
+      ExplicitLeft = 632
     end
     object chkbxCashSale: TCheckBox
-      Left = 632
+      Left = 620
       Top = 36
       Width = 121
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Cash Sale'
       TabOrder = 6
+      ExplicitLeft = 632
     end
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 491
-    Width = 800
+    Top = 482
+    Width = 794
     Height = 33
     Align = alBottom
     BevelOuter = bvNone
@@ -214,10 +216,13 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
+    ExplicitTop = 491
+    ExplicitWidth = 800
     DesignSize = (
-      800
+      794
       33)
     object lblFAO: TLabel
       Left = 200
@@ -227,15 +232,13 @@
       Caption = 'FAO'
     end
     object OKBitBtn: TBitBtn
-      Left = 621
+      Left = 609
       Top = 5
       Width = 76
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Save'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -301,17 +304,18 @@
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
+      ExplicitLeft = 621
     end
     object CancelBitBtn: TBitBtn
-      Left = 709
+      Left = 697
       Top = 5
       Width = 76
       Height = 25
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -377,6 +381,9 @@
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
+      ExplicitLeft = 709
     end
     object NotesBitBtn: TBitBtn
       Left = 8
@@ -384,8 +391,6 @@
       Width = 75
       Height = 25
       Caption = 'Notes'
-      TabOrder = 2
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -400,6 +405,8 @@
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = NotesBitBtnClick
     end
     object btnDelivery: TBitBtn
       Left = 104
@@ -407,8 +414,6 @@
       Width = 75
       Height = 25
       Caption = 'Delivery'
-      TabOrder = 3
-      OnClick = btnDeliveryClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -423,6 +428,8 @@
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDeliveryClick
     end
     object edtFAO: TEdit
       Left = 232
@@ -435,10 +442,9 @@
     end
   end
   object pnlAddCharges: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 379
-    Width = 800
+    Top = 370
+    Width = 794
     Height = 112
     Align = alBottom
     Font.Charset = ANSI_CHARSET
@@ -446,18 +452,22 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
+    ExplicitTop = 379
+    ExplicitWidth = 800
     DesignSize = (
-      800
+      794
       112)
     object Label10: TLabel
-      Left = 560
+      Left = 548
       Top = 20
       Width = 83
       Height = 13
       Anchors = [akTop, akRight]
       Caption = 'Total Order Value'
+      ExplicitLeft = 560
     end
     object Label16: TLabel
       Left = 3
@@ -467,7 +477,7 @@
       Caption = 'Additional Charges'
     end
     object memoTotal: TMemo
-      Left = 683
+      Left = 671
       Top = 16
       Width = 97
       Height = 23
@@ -502,7 +512,7 @@
         96)
     end
     object chkbxDoNotInvc: TCheckBox
-      Left = 560
+      Left = 548
       Top = 68
       Width = 97
       Height = 17
@@ -510,9 +520,10 @@
       Caption = 'Do Not Invoice'
       TabOrder = 2
       OnClick = chkbxDoNotInvcClick
+      ExplicitLeft = 560
     end
     object chkbxAuthorise: TCheckBox
-      Left = 560
+      Left = 548
       Top = 47
       Width = 121
       Height = 17
@@ -520,33 +531,37 @@
       Caption = 'Authorise Call Off'
       TabOrder = 3
       Visible = False
+      ExplicitLeft = 560
     end
     object chkbxInactive: TCheckBox
-      Left = 560
+      Left = 548
       Top = 89
       Width = 225
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Order is inactive and has been cancelled'
       TabOrder = 4
+      ExplicitLeft = 560
     end
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 0
     Top = 61
-    Width = 800
-    Height = 318
+    Width = 794
+    Height = 309
     Align = alClient
     Caption = 'pnlDetails'
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 800
+    ExplicitHeight = 318
     object pnlLines: TPanel
-      ParentBackground = False
       Left = 1
       Top = 145
       Width = 798
       Height = 172
       Align = alClient
+      ParentBackground = False
       TabOrder = 0
       object LineDetsStringGrid: TStringGrid
         Left = 1
@@ -582,7 +597,6 @@
       end
     end
     object pnlHead: TPanel
-      ParentBackground = False
       Left = 1
       Top = 1
       Width = 798
@@ -594,10 +608,11 @@
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 1
       DesignSize = (
-        798
+        792
         144)
       object Label3: TLabel
         Left = 8
@@ -614,12 +629,13 @@
         Caption = 'Contact'
       end
       object Label11: TLabel
-        Left = 398
+        Left = 386
         Top = 37
         Width = 78
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Delivery address'
+        ExplicitLeft = 398
       end
       object Label13: TLabel
         Left = 8
@@ -636,29 +652,32 @@
         Caption = 'Rep'
       end
       object Label1: TLabel
-        Left = 398
+        Left = 386
         Top = 67
         Width = 74
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Replenish Type'
+        ExplicitLeft = 398
       end
       object Label17: TLabel
-        Left = 398
+        Left = 386
         Top = 8
         Width = 45
         Height = 13
         Anchors = [akTop, akRight]
         Caption = 'Deliver to'
+        ExplicitLeft = 398
       end
       object pnlWarehouse: TPanel
-        ParentBackground = False
-        Left = 384
+        Left = 372
         Top = 88
         Width = 401
         Height = 49
         Anchors = [akTop, akRight]
+        ParentBackground = False
         TabOrder = 12
+        ExplicitLeft = 384
         DesignSize = (
           401
           49)
@@ -686,7 +705,7 @@
       object CustNameEdit: TEdit
         Left = 78
         Top = 6
-        Width = 257
+        Width = 245
         Height = 21
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
@@ -695,9 +714,10 @@
         TabOrder = 0
         OnChange = CustNameEditChange
         OnExit = CustNameEditExit
+        ExplicitWidth = 257
       end
       object CustBitBtn: TBitBtn
-        Left = 344
+        Left = 332
         Top = 4
         Width = 25
         Height = 25
@@ -712,11 +732,12 @@
         TabOrder = 1
         TabStop = False
         OnClick = CustBitBtnClick
+        ExplicitLeft = 344
       end
       object ContactEdit: TEdit
         Left = 78
         Top = 34
-        Width = 257
+        Width = 245
         Height = 21
         TabStop = False
         Anchors = [akLeft, akTop, akRight]
@@ -724,9 +745,10 @@
         MaxLength = 40
         ReadOnly = True
         TabOrder = 2
+        ExplicitWidth = 257
       end
       object SelContactBtn: TButton
-        Left = 344
+        Left = 332
         Top = 32
         Width = 25
         Height = 25
@@ -740,20 +762,22 @@
         ParentFont = False
         TabOrder = 3
         OnClick = SelContactBtnClick
+        ExplicitLeft = 344
       end
       object OrdEdit: TEdit
         Left = 78
         Top = 90
-        Width = 227
+        Width = 215
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 5
         OnChange = OrdEditChange
+        ExplicitWidth = 227
       end
       object dbLkpCmbRep: TDBLookupComboBox
         Left = 78
         Top = 116
-        Width = 227
+        Width = 215
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Rep'
@@ -761,9 +785,10 @@
         ListSource = STSalesOrdDM.RepSRC
         TabOrder = 6
         OnClick = dbLkpCmbRepClick
+        ExplicitWidth = 227
       end
       object DeliveryBitBtn: TBitBtn
-        Left = 752
+        Left = 740
         Top = 31
         Width = 25
         Height = 25
@@ -777,9 +802,10 @@
         ParentFont = False
         TabOrder = 9
         OnClick = DeliveryBitBtnClick
+        ExplicitLeft = 752
       end
       object DeliveryEdit: TEdit
-        Left = 486
+        Left = 474
         Top = 33
         Width = 257
         Height = 21
@@ -790,9 +816,10 @@
         ReadOnly = True
         TabOrder = 8
         OnChange = CustNameEditChange
+        ExplicitLeft = 486
       end
       object dblkpReplType: TDBLookupComboBox
-        Left = 486
+        Left = 474
         Top = 63
         Width = 222
         Height = 21
@@ -802,16 +829,18 @@
         ListSource = STSalesOrdDM.RepSourceSRC
         TabOrder = 10
         OnClick = dblkpReplTypeClick
+        ExplicitLeft = 486
       end
       object pnlDeliveryType: TPanel
-        ParentBackground = False
-        Left = 486
+        Left = 474
         Top = 2
         Width = 307
         Height = 25
         Anchors = [akTop, akRight]
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 7
+        ExplicitLeft = 486
         DesignSize = (
           307
           25)
@@ -850,13 +879,14 @@
         end
       end
       object pnlSupplier: TPanel
-        ParentBackground = False
-        Left = 392
+        Left = 380
         Top = 88
         Width = 401
         Height = 57
         Anchors = [akTop, akRight]
+        ParentBackground = False
         TabOrder = 11
+        ExplicitLeft = 392
         object Label4: TLabel
           Left = 14
           Top = 8
@@ -907,12 +937,12 @@
         end
       end
       object pnlCostCentre: TPanel
-        ParentBackground = False
         Left = 0
         Top = 59
         Width = 329
         Height = 29
         BevelOuter = bvNone
+        ParentBackground = False
         TabOrder = 4
         Visible = False
         DesignSize = (
@@ -954,8 +984,8 @@
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 524
-    Width = 800
+    Top = 515
+    Width = 794
     Height = 19
     Panels = <
       item
@@ -964,6 +994,8 @@
       item
         Width = 50
       end>
+    ExplicitTop = 524
+    ExplicitWidth = 800
   end
   object FlashTimer: TTimer
     Enabled = False
@@ -1123,34 +1155,28 @@
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
 end

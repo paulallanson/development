@@ -82,7 +82,9 @@ var
 
 implementation
 
-uses DateSelV5, PBLUCust, CCSCommon, PBLUPrdTyp, STPrtMnt, STRPSalesHistory, CCSPrint,
+uses
+  System.UITypes,
+  DateSelV5, PBLUCust, CCSCommon, PBLUPrdTyp, STPrtMnt, STRPSalesHistory, CCSPrint,
   STRPSalesHistoryLoc;
 
 {$R *.DFM}

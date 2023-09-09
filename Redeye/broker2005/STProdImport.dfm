@@ -4,8 +4,8 @@ object STProdImportFrm: TSTProdImportFrm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Product File Import'
-  ClientHeight = 394
-  ClientWidth = 386
+  ClientHeight = 385
+  ClientWidth = 380
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,22 +18,24 @@ object STProdImportFrm: TSTProdImportFrm
   object mmErrorRecords: TMemo
     Left = 0
     Top = 253
-    Width = 386
+    Width = 380
     Height = 100
     Align = alTop
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 0
+    ExplicitWidth = 386
   end
   object pnlImportFile: TPanel
     Left = 0
     Top = 65
-    Width = 386
+    Width = 380
     Height = 56
     Align = alTop
     Enabled = False
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 386
     object lblStep2: TLabel
       Left = 8
       Top = 8
@@ -61,11 +63,12 @@ object STProdImportFrm: TSTProdImportFrm
   object pnlProgress: TPanel
     Left = 0
     Top = 177
-    Width = 386
+    Width = 380
     Height = 76
     Align = alTop
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 386
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -107,11 +110,12 @@ object STProdImportFrm: TSTProdImportFrm
   object pnlSupplier: TPanel
     Left = 0
     Top = 0
-    Width = 386
+    Width = 380
     Height = 65
     Align = alTop
     ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 386
     object lblStep1: TLabel
       Left = 8
       Top = 8
@@ -145,11 +149,12 @@ object STProdImportFrm: TSTProdImportFrm
   object pnlImport: TPanel
     Left = 0
     Top = 121
-    Width = 386
+    Width = 380
     Height = 56
     Align = alTop
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 386
     object lblStep4: TLabel
       Left = 8
       Top = 8
@@ -181,11 +186,12 @@ object STProdImportFrm: TSTProdImportFrm
   object pnlCancel: TPanel
     Left = 0
     Top = 353
-    Width = 386
+    Width = 380
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 5
+    ExplicitWidth = 386
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8

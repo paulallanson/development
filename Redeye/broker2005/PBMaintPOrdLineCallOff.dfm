@@ -1,20 +1,17 @@
 object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
   Left = 286
   Top = 50
-  AutoScroll = False
   Caption = 'Maintain Call Off Orders'
-  ClientHeight = 579
-  ClientWidth = 746
+  ClientHeight = 570
+  ClientWidth = 740
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 160
@@ -58,7 +55,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Caption = 'Delivery Date'
     end
     object AddrTypeRadGrp: TRadioGroup
-      ParentBackground = False
       Left = 216
       Top = 13
       Width = 105
@@ -69,16 +65,17 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         'Supplier'
         'Rep'
         'Customer')
+      ParentBackground = False
       TabOrder = 0
       OnClick = AddrTypeRadGrpClick
     end
     object AddrGrpBox: TGroupBox
-      ParentBackground = False
       Left = 336
       Top = 13
       Width = 385
       Height = 208
       Caption = 'Address Details'
+      ParentBackground = False
       TabOrder = 1
       object AddrTypeLabel: TLabel
         Left = 8
@@ -237,12 +234,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       end
     end
     object QtysGrpBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 13
       Width = 193
       Height = 135
       Caption = 'Quantities'
+      ParentBackground = False
       TabOrder = 2
       object Label13: TLabel
         Left = 8
@@ -355,7 +352,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       OnExit = DatePointEditExit
     end
     object DelInstructPanel: TPanel
-      ParentBackground = False
       Left = 2
       Top = 224
       Width = 723
@@ -366,6 +362,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      ParentBackground = False
       ParentFont = False
       TabOrder = 4
       object Label18: TLabel
@@ -383,12 +380,12 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         TabOrder = 0
       end
       object GroupBox3: TGroupBox
-        ParentBackground = False
         Left = 2
         Top = 2
         Width = 329
         Height = 65
         Caption = 'Prices'
+        ParentBackground = False
         TabOrder = 1
         object Label15: TLabel
           Left = 8
@@ -509,8 +506,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Top = 154
       Width = 25
       Height = 25
-      TabOrder = 7
-      OnClick = DatePointBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -525,10 +520,11 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 7
+      OnClick = DatePointBtnClick
     end
   end
   object GroupBox2: TGroupBox
-    ParentBackground = False
     Left = 2
     Top = 1
     Width = 727
@@ -539,6 +535,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     DesignSize = (
@@ -607,8 +604,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Top = 12
       Width = 25
       Height = 25
-      TabOrder = 5
-      OnClick = OrderDateBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -623,6 +618,8 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 5
+      OnClick = OrderDateBtnClick
     end
     object ContactEdit: TEdit
       Left = 74
@@ -653,7 +650,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     end
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 2
     Top = 72
     Width = 727
@@ -664,6 +660,7 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object Label6: TLabel
@@ -785,8 +782,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       Top = 35
       Width = 25
       Height = 25
-      TabOrder = 5
-      OnClick = FormRefClrBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -801,6 +796,8 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
         BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
         50BB555555555555575F555555555555550B5555555555555575}
       NumGlyphs = 2
+      TabOrder = 5
+      OnClick = FormRefClrBitBtnClick
     end
     object FormDescEdit: TEdit
       Left = 436
@@ -867,8 +864,6 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -887,13 +882,16 @@ object PBMaintPOrdLineCallOffFrm: TPBMaintPOrdLineCallOffFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object BitBtn7: TBitBtn
     Left = 375
     Top = 540
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
 end

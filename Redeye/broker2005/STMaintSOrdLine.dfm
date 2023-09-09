@@ -3,33 +3,33 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
   Top = 109
   BorderStyle = bsDialog
   Caption = 'Maintain Sales Order Line'
-  ClientHeight = 385
-  ClientWidth = 725
+  ClientHeight = 367
+  ClientWidth = 713
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 334
-    Width = 725
+    Top = 316
+    Width = 713
     Height = 51
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
     TabStop = True
+    ExplicitTop = 334
+    ExplicitWidth = 725
     DesignSize = (
-      725
+      713
       51)
     object DelLabel: TLabel
-      Left = 401
+      Left = 377
       Top = 28
       Width = 145
       Height = 15
@@ -41,9 +41,10 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 401
     end
     object OKBtn: TBitBtn
-      Left = 561
+      Left = 537
       Top = 18
       Width = 75
       Height = 25
@@ -56,9 +57,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = OKBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -77,9 +75,13 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = OKBtnClick
+      ExplicitLeft = 561
     end
     object CancelBtn: TBitBtn
-      Left = 641
+      Left = 617
       Top = 18
       Width = 75
       Height = 25
@@ -89,19 +91,22 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      Kind = bkCancel
+      ExplicitLeft = 641
     end
   end
   object pnlproduct: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 725
+    Width = 713
     Height = 73
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 725
     object Label1: TLabel
       Left = 5
       Top = 23
@@ -187,22 +192,24 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     end
   end
   object pnlSales: TPanel
-    ParentBackground = False
-    Left = 214
+    Left = 202
     Top = 73
     Width = 511
-    Height = 261
+    Height = 243
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     TabStop = True
+    ExplicitLeft = 214
+    ExplicitHeight = 261
     object GroupBox2: TGroupBox
-      ParentBackground = False
       Left = 0
       Top = 4
       Width = 201
       Height = 165
       Caption = 'Costs'
+      ParentBackground = False
       TabOrder = 0
       object Label2: TLabel
         Left = 8
@@ -306,12 +313,12 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       end
     end
     object GroupBox3: TGroupBox
-      ParentBackground = False
       Left = 206
       Top = 4
       Width = 299
       Height = 245
       Caption = 'Sales Details'
+      ParentBackground = False
       TabOrder = 1
       object Label7: TLabel
         Left = 10
@@ -527,12 +534,12 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       end
     end
     object GroupBox4: TGroupBox
-      ParentBackground = False
       Left = 0
       Top = 201
       Width = 201
       Height = 50
       Caption = 'All Stock locations'
+      ParentBackground = False
       TabOrder = 2
       object Label15: TLabel
         Left = 8
@@ -562,21 +569,23 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     end
   end
   object pnlcosts: TPanel
-    ParentBackground = False
     Left = 0
     Top = 73
-    Width = 214
-    Height = 261
+    Width = 202
+    Height = 243
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 3
+    ExplicitWidth = 214
+    ExplicitHeight = 261
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 4
       Width = 201
       Height = 247
       Caption = 'Stock Levels'
+      ParentBackground = False
       TabOrder = 0
       object Label10: TLabel
         Left = 8

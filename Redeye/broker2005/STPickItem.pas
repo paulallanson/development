@@ -129,7 +129,9 @@ var
 
 implementation
 
-uses stPickingDM, STLUPartBinLot;
+uses
+  System.UITypes,
+  stPickingDM, STLUPartBinLot;
 
 {$R *.DFM}
 

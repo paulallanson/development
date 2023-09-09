@@ -119,7 +119,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, DBCtrls, Spin, ExtCtrls, PBPOObjects;
+  StdCtrls, Buttons, DB, DBCtrls, Spin, ExtCtrls, PBPOObjects, FireDAC.Stan.Param;
 
 type
   TPBAutoPODetsFrm = class(TForm)
@@ -255,6 +255,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   PBAutoPO, PBLUSConta, PBAutoPODataMod, DateSelV5, PBLUAdHoc, pbDatabase,
   pbMainMenu, PBLUCust;
 

@@ -3,8 +3,8 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Maintain Form Reference'
-  ClientHeight = 222
-  ClientWidth = 468
+  ClientHeight = 213
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -201,12 +201,14 @@ object PBMaintFormReferencefrm: TPBMaintFormReferencefrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 191
-    Width = 468
+    Top = 182
+    Width = 462
     Height = 31
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 191
+    ExplicitWidth = 468
     object DelLabel: TLabel
       Left = 128
       Top = 6

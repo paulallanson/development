@@ -169,7 +169,9 @@ var
 
 implementation
 
-uses PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod, DateSelV5,
+uses
+  System.UITypes,
+  PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod, DateSelV5,
   PBLUFormRef, PBMaintPOrd, PBLUCConta, PBLUSConta;
 
 {$R *.DFM}

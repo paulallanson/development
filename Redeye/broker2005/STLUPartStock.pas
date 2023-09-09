@@ -91,7 +91,9 @@ var
 
 implementation
 
-uses CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  CCSCommon, pbMainMenu;
 
 {$R *.dfm}
 

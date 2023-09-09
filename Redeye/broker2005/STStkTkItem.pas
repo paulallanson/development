@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Mask, DBCtrls, Grids;
+  StdCtrls, Buttons, Mask, DBCtrls, Grids, FireDAC.Stan.Param;
 
 type
   TSTStkTkItemFrm = class(TForm)
@@ -134,7 +134,9 @@ var
 
 implementation
 
-uses STStkTakeDM, STStockDM, STPrtMnt, StPacks;
+uses
+  System.UITypes,
+  STStkTakeDM, STStockDM, STPrtMnt, StPacks;
 
 
 {$R *.DFM}

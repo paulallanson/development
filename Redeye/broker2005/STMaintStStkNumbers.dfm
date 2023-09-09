@@ -3,20 +3,18 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
   Top = 130
   BorderStyle = bsDialog
   Caption = 'Enter number range'
-  ClientHeight = 165
-  ClientWidth = 371
+  ClientHeight = 156
+  ClientWidth = 365
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 32
@@ -40,8 +38,6 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 1
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -60,23 +56,26 @@ object STMaintStStkNumbersfrm: TSTMaintStStkNumbersfrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnOKClick
   end
   object btnCancel: TBitBtn
     Left = 272
     Top = 128
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object pnlDetails: TPanel
-    ParentBackground = False
     Left = 5
     Top = 0
     Width = 361
     Height = 121
     BevelOuter = bvNone
     Caption = 'pnlDetails'
+    ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
       Left = 32

@@ -70,7 +70,9 @@ var
 
 implementation
 
-uses PBLUCustDisc, STPrtMnt, STLUPrtGrp, DateSelV5;
+uses
+  System.UITypes,
+  PBLUCustDisc, STPrtMnt, STLUPrtGrp, DateSelV5;
 
 {$R *.DFM}
 

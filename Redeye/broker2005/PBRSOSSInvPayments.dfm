@@ -1,9 +1,9 @@
 object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   Left = 46
   Top = 40
-  Width = 710
-  Height = 450
   Caption = 'Sales Invoice Outstanding Payments'
+  ClientHeight = 403
+  ClientWidth = 692
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 710
@@ -12,19 +12,18 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 702
+    Width = 692
     Height = 121
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 702
     object Label3: TLabel
       Left = 8
       Top = 72
@@ -188,7 +187,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       OnChange = cbSort1Change
       Items.Strings = (
@@ -203,7 +201,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 5
       OnChange = cbSort1Change
       Items.Strings = (
@@ -224,11 +221,13 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 360
-    Width = 702
+    Top = 347
+    Width = 692
     Height = 37
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 360
+    ExplicitWidth = 702
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -247,8 +246,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = btnPreviewClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -263,6 +260,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnPreviewClick
       end
       object btnPrint: TBitBtn
         Left = 94
@@ -271,8 +270,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Height = 25
         Anchors = [akLeft, akBottom]
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = btnPrintClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -287,16 +284,19 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnPrintClick
       end
     end
     object Panel4: TPanel
-      Left = 416
+      Left = 406
       Top = 1
       Width = 285
       Height = 35
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 416
       DesignSize = (
         285
         35)
@@ -307,8 +307,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Paid'
-        TabOrder = 0
-        OnClick = btnPaidClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -323,6 +321,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
           05555555555555777FF5555555555557905555555555555777FF555555555555
           5990555555555555577755555555555555555555555555555555}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnPaidClick
       end
       object btnClose: TBitBtn
         Left = 205
@@ -330,16 +330,17 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
         Width = 75
         Height = 25
         Anchors = [akRight, akBottom]
-        TabOrder = 1
         Kind = bkClose
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 702
-    Height = 239
+    Width = 692
+    Height = 226
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -418,8 +419,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 397
-    Width = 702
+    Top = 384
+    Width = 692
     Height = 19
     Panels = <
       item
@@ -431,6 +432,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       item
         Width = 50
       end>
+    ExplicitTop = 397
+    ExplicitWidth = 702
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

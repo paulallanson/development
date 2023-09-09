@@ -150,7 +150,9 @@ var
 
 implementation
 
-uses pbMainMenu, ComObj, ActiveX, PBDatabase, PBMaintOpsDetPass,
+uses
+  System.UITypes,
+  pbMainMenu, ComObj, ActiveX, PBDatabase, PBMaintOpsDetPass,
   PBLURevenueLoc;
 
 {$R *.DFM}

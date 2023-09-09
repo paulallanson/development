@@ -127,7 +127,9 @@ var
 
 implementation
 
-uses PBRPSalesByPrdCatDet, PBRPSalesByPrdCat, PBDatabase, PBMaintGroups,
+uses
+  System.UITypes,
+  PBRPSalesByPrdCatDet, PBRPSalesByPrdCat, PBDatabase, PBMaintGroups,
   PBLUCust;
 
 {$R *.DFM}

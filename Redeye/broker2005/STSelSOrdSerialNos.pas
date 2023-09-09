@@ -49,6 +49,9 @@ var
 
 implementation
 
+uses
+  System.UITypes;
+
 {$R *.DFM}
 
 procedure TSTSelSOrdSerialNosFrm.FormActivate(Sender: TObject);

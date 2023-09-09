@@ -130,7 +130,9 @@ var
 
 implementation
 
-uses pbDatabase, PBLUCust, PBLURep, PBRPSalesByInv, PBRPSalesByInvDet,
+uses
+  System.UITypes,
+  pbDatabase, PBLUCust, PBLURep, PBRPSalesByInv, PBRPSalesByInvDet,
   pbMainMenu;
 
 {$R *.DFM}

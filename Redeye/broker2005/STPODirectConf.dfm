@@ -1,44 +1,41 @@
 object STPODirectConfFrm: TSTPODirectConfFrm
   Left = 28
   Top = 50
-  AutoScroll = False
   Caption = 'Confirm Direct Order Deliveries'
-  ClientHeight = 446
-  ClientWidth = 730
+  ClientHeight = 437
+  ClientWidth = 724
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFunctions: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 405
-    Width = 730
+    Top = 396
+    Width = 724
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 405
+    ExplicitWidth = 730
     DesignSize = (
-      730
+      724
       41)
     object btnOK: TBitBtn
-      Left = 556
+      Left = 544
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -57,27 +54,30 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
+      ExplicitLeft = 556
     end
     object btnCancel: TBitBtn
-      Left = 644
+      Left = 632
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCancelClick
-      Kind = bkCancel
+      ExplicitLeft = 644
     end
     object BitBtnAdd: TBitBtn
-      Left = 460
+      Left = 448
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Add '
       Default = True
-      TabOrder = 2
-      OnClick = BitBtnAddClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -96,16 +96,20 @@ object STPODirectConfFrm: TSTPODirectConfFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = BitBtnAddClick
+      ExplicitLeft = 460
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 730
+    Width = 724
     Height = 89
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 730
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -194,8 +198,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
   object grdDetails: TStringGrid
     Left = 0
     Top = 89
-    Width = 730
-    Height = 316
+    Width = 724
+    Height = 307
     Align = alClient
     ColCount = 8
     DefaultColWidth = 40
@@ -206,6 +210,8 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     OnDrawCell = grdDetailsDrawCell
     OnKeyPress = CheckKeyIsNumber
     OnSelectCell = grdDetailsSelectCell
+    ExplicitWidth = 730
+    ExplicitHeight = 316
     ColWidths = (
       40
       124
@@ -236,9 +242,7 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryGetHead: TFDQuery
@@ -278,9 +282,7 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOStatusSQL: TFDQuery
@@ -297,14 +299,10 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 124
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object CheckPOStatusSQL: TFDQuery
@@ -348,34 +346,22 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 204
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object UpdPOLineSQL: TFDQuery
@@ -400,39 +386,25 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Sent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fully_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryInsPOLine: TFDQuery
@@ -475,84 +447,56 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Ordered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDate
         Name = 'Date_Deliv_Expected'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDate
+      end
+      item
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GRN_No'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Sent'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Replacement_For_Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end>
   end
 end

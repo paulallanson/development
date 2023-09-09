@@ -1,38 +1,37 @@
 object frmpbluOrderdeliv: TfrmpbluOrderdeliv
   Left = 46
   Top = 114
-  AutoScroll = False
   Caption = 'Delivery details for order'
-  ClientHeight = 253
-  ClientWidth = 688
+  ClientHeight = 244
+  ClientWidth = 682
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 212
-    Width = 688
+    Top = 203
+    Width = 682
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
+    ExplicitTop = 212
+    ExplicitWidth = 688
     DesignSize = (
-      688
+      682
       41)
     object btnDeliveryNotes: TButton
-      Left = 358
+      Left = 346
       Top = 8
       Width = 75
       Height = 25
@@ -40,9 +39,10 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Notes'
       TabOrder = 1
       OnClick = btnDeliveryNotesClick
+      ExplicitLeft = 358
     end
     object btnLabels: TButton
-      Left = 438
+      Left = 426
       Top = 8
       Width = 75
       Height = 25
@@ -50,9 +50,10 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Prod Labels'
       TabOrder = 2
       OnClick = btnLabelsClick
+      ExplicitLeft = 438
     end
     object btnChange: TButton
-      Left = 278
+      Left = 266
       Top = 8
       Width = 75
       Height = 25
@@ -60,9 +61,10 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = 'C&onfirm'
       TabOrder = 0
       OnClick = btnChangeClick
+      ExplicitLeft = 278
     end
     object btnClose: TButton
-      Left = 606
+      Left = 594
       Top = 8
       Width = 75
       Height = 25
@@ -70,9 +72,10 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Close'
       TabOrder = 4
       OnClick = btnCloseClick
+      ExplicitLeft = 606
     end
     object btnBoxLabels: TButton
-      Left = 518
+      Left = 506
       Top = 8
       Width = 75
       Height = 25
@@ -80,6 +83,7 @@ object frmpbluOrderdeliv: TfrmpbluOrderdeliv
       Caption = '&Box Labels'
       TabOrder = 3
       OnClick = btnBoxLabelsClick
+      ExplicitLeft = 518
     end
   end
   object dbgDetails: TDBGrid

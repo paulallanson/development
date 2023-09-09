@@ -104,7 +104,9 @@ var
 
 implementation
 
-uses PBDatabase, PBRPCustTurn, PBLURep, CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  PBDatabase, PBRPCustTurn, PBLURep, CCSCommon, pbMainMenu;
 
 {$R *.DFM}
 const

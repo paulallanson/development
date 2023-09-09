@@ -52,7 +52,9 @@ var
 
 implementation
 
-uses STLUBinPrt, CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  STLUBinPrt, CCSCommon, pbMainMenu;
 
 {$R *.DFM}
 

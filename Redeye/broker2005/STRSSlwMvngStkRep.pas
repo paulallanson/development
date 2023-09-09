@@ -102,6 +102,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   STPrtMnt, DateSelV5, STFaxList, STEmailList, PBLURep, PBLUCust, printers,
   CCSPrint, PBSendFax, ccscommon, pbMainMenu, pbDatabase, Printer.Tools;
 

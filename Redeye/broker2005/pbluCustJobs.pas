@@ -123,7 +123,9 @@ var
 
 implementation
 
-uses pbJobsDm, pbMaintJobBagDets, CCSCommon, PBMaintJobBag,
+uses
+  System.UITypes,
+  pbJobsDm, pbMaintJobBagDets, CCSCommon, PBMaintJobBag,
   pbluCustomers, pbluJobsSearch, pbMainMenu, pbDatabase, PBRSJBDraft,
   PBMaintJobBagInactive, PBRSJobBag, pbLUJobRpts;
 

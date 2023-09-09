@@ -3,28 +3,27 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   Top = 122
   BorderStyle = bsDialog
   Caption = 'Import Direct Supplied Order'
-  ClientHeight = 368
-  ClientWidth = 370
+  ClientHeight = 359
+  ClientWidth = 364
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlSupplier: TPanel
     Left = 0
     Top = 65
-    Width = 370
+    Width = 364
     Height = 64
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 370
     object lblStep1: TLabel
       Left = 8
       Top = 8
@@ -58,11 +57,13 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel1: TPanel
     Left = 0
     Top = 129
-    Width = 370
-    Height = 191
+    Width = 364
+    Height = 182
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 1
+    ExplicitWidth = 370
+    ExplicitHeight = 191
     object Label2: TLabel
       Left = 8
       Top = 8
@@ -118,10 +119,11 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 370
+    Width = 364
     Height = 65
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 370
     object Label1: TLabel
       Left = 8
       Top = 4
@@ -147,11 +149,13 @@ object STImpDirectOrdersFrm: TSTImpDirectOrdersFrm
   end
   object Panel3: TPanel
     Left = 0
-    Top = 320
-    Width = 370
+    Top = 311
+    Width = 364
     Height = 48
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 320
+    ExplicitWidth = 370
     object btnClose: TBitBtn
       Left = 272
       Top = 15

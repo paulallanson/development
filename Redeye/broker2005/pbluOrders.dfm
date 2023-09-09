@@ -2,8 +2,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   Left = 11
   Top = 154
   Caption = 'Purchase Print'
-  ClientHeight = 426
-  ClientWidth = 935
+  ClientHeight = 417
+  ClientWidth = 929
   Color = clBtnFace
   Constraints.MinHeight = 360
   Constraints.MinWidth = 745
@@ -25,7 +25,7 @@ object frmpbLUOrders: TfrmpbLUOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 935
+    Width = 929
     Height = 44
     Bands = <
       item
@@ -34,6 +34,7 @@ object frmpbLUOrders: TfrmpbLUOrders
         MinHeight = 40
         Width = 933
       end>
+    ExplicitWidth = 935
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -204,8 +205,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 935
-    Height = 292
+    Width = 929
+    Height = 283
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -377,8 +378,8 @@ object frmpbLUOrders: TfrmpbLUOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 407
-    Width = 935
+    Top = 398
+    Width = 929
     Height = 19
     Panels = <
       item
@@ -391,17 +392,21 @@ object frmpbLUOrders: TfrmpbLUOrders
         Alignment = taRightJustify
         Width = 50
       end>
+    ExplicitTop = 407
+    ExplicitWidth = 935
   end
   object Panel1: TPanel
     Left = 0
-    Top = 366
-    Width = 935
+    Top = 357
+    Width = 929
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 366
+    ExplicitWidth = 935
     DesignSize = (
-      935
+      929
       41)
     object Label1: TLabel
       Left = 8
@@ -411,7 +416,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       Caption = 'Customer Search'
     end
     object Label2: TLabel
-      Left = 668
+      Left = 656
       Top = 16
       Width = 64
       Height = 13
@@ -420,7 +425,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       ExplicitLeft = 680
     end
     object btnClose: TButton
-      Left = 844
+      Left = 832
       Top = 10
       Width = 75
       Height = 25
@@ -439,7 +444,7 @@ object frmpbLUOrders: TfrmpbLUOrders
       OnChange = edtSearchChange
     end
     object edtNumber: TEdit
-      Left = 738
+      Left = 726
       Top = 12
       Width = 90
       Height = 21
@@ -471,7 +476,7 @@ object frmpbLUOrders: TfrmpbLUOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 935
+    Width = 929
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -479,6 +484,7 @@ object frmpbLUOrders: TfrmpbLUOrders
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 935
     object Label3: TLabel
       Left = 8
       Top = 3

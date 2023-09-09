@@ -85,7 +85,9 @@ var
 
 implementation
 
-uses PBAccExport2, PBAccExport3, PBAccExport4, PBAccExportDM, PBAccImportDM, PBAccExportFactInvs,
+uses
+  System.UITypes,
+  PBAccExport2, PBAccExport3, PBAccExport4, PBAccExportDM, PBAccImportDM, PBAccExportFactInvs,
   PBFileImport, PBAccExportDirectDebit, PBOrderImport;
 
 var

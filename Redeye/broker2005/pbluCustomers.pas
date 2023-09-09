@@ -173,6 +173,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   pbCustomerdm, PBMaintCust, pbLuBranches, pbluContacts, ccsCommon,
   PBMaintCConta, PBMaintCRep, pbMainMenu, PBLUReps, pbLUCustomerRpts,
   pbDatabase, PBLUCustCstCntr, PBLUCustDisc, PBRSCusSupLabs,

@@ -3,18 +3,16 @@ object PBDelivStockFrm: TPBDelivStockFrm
   Top = 106
   BorderStyle = bsDialog
   Caption = 'Stock Location Selection'
-  ClientHeight = 337
-  ClientWidth = 327
+  ClientHeight = 328
+  ClientWidth = 321
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDesktopCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 28
@@ -24,7 +22,6 @@ object PBDelivStockFrm: TPBDelivStockFrm
     Caption = 'Pack Size'
   end
   object CountGroupBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 313
@@ -34,6 +31,7 @@ object PBDelivStockFrm: TPBDelivStockFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object PBinLbl: TLabel
@@ -157,14 +155,16 @@ object PBDelivStockFrm: TPBDelivStockFrm
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 302
-    Width = 327
+    Top = 293
+    Width = 321
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 302
+    ExplicitWidth = 327
     object OKBtn: TBitBtn
       Left = 71
       Top = 3
@@ -177,9 +177,6 @@ object PBDelivStockFrm: TPBDelivStockFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = OKBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -198,6 +195,9 @@ object PBDelivStockFrm: TPBDelivStockFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = OKBtnClick
     end
     object CancelBtn: TBitBtn
       Left = 159
@@ -209,19 +209,20 @@ object PBDelivStockFrm: TPBDelivStockFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
       OnClick = CancelBtnClick
-      Kind = bkCancel
     end
   end
   object grpbxNumbered: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 194
     Width = 313
     Height = 103
     Caption = 'Numbered'
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 46

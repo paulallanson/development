@@ -68,7 +68,9 @@ var
 
 implementation
 
-uses STpickingDM, STSOObjects, STSODataMod, STMaintSOrdLine;
+uses
+  System.UITypes,
+  STpickingDM, STSOObjects, STSODataMod, STMaintSOrdLine;
 
 {$R *.DFM}
 

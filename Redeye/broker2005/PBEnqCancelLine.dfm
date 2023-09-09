@@ -3,29 +3,28 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
   Top = 112
   BorderStyle = bsDialog
   Caption = 'Decline Enquiry Line'
-  ClientHeight = 403
-  ClientWidth = 660
+  ClientHeight = 394
+  ClientWidth = 654
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 660
+    Width = 654
     Height = 97
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 660
     object lblEnquiryNo: TLabel
       Left = 24
       Top = 16
@@ -50,37 +49,43 @@ object PBEnqCancelLineFrm: TPBEnqCancelLineFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 345
-    Width = 660
+    Top = 336
+    Width = 654
     Height = 58
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 345
+    ExplicitWidth = 660
     object btnOK: TBitBtn
       Left = 248
       Top = 17
       Width = 75
       Height = 25
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 336
       Top = 17
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 97
-    Width = 660
-    Height = 248
+    Width = 654
+    Height = 239
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 660
+    ExplicitHeight = 248
     object Label1: TLabel
       Left = 24
       Top = 21

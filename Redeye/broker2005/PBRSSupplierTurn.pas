@@ -76,7 +76,9 @@ var
 
 implementation
 
-uses PBDatabase, PBRPSupplierTurn, CCSCommon;
+uses
+  System.UITypes,
+  PBDatabase, PBRPSupplierTurn, CCSCommon;
 
 {$R *.DFM}
 const

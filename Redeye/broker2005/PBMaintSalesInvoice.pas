@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, PBSalesInvoiceDM,
-  StdCtrls, Buttons, ExtCtrls, ComCtrls, Grids, DBCtrls, PBPOObjects, Menus, CCSCommon;
+  StdCtrls, Buttons, ExtCtrls, ComCtrls, Grids, DBCtrls, PBPOObjects, Menus, CCSCommon,
+  FireDAC.Stan.Param;
 
 type
   TPBMaintSalesInvoicefrm = class(TForm)
@@ -203,8 +204,10 @@ var
 
 implementation
 
-uses PBLUCust, PBImages, PBAuditDM, pbMainMenu, DateSelV5, PBMaintSalesInvoiceLine, PBMaintInvChgs,
-      PBDBMemo, PBLUSalesInvoiceCustJB, PBLUSalesInvoiceJBL, pbDatabase,
+uses
+  System.UITypes, System.Types,
+  PBLUCust, PBImages, PBAuditDM, pbMainMenu, DateSelV5, PBMaintSalesInvoiceLine, PBMaintInvChgs,
+  PBDBMemo, PBLUSalesInvoiceCustJB, PBLUSalesInvoiceJBL, pbDatabase,
   PBLUCreditReason, PBMaintSalesInvoiceDetail, PBLURep;
 
 {$R *.DFM}
@@ -743,10 +746,8 @@ end;
 procedure TPBMaintSalesInvoicefrm.btnOKClick(Sender: TObject);
 var
   i: integer;
-  iProductType: integer;
   sTypeLabel: string;
 begin
-  iProductType := 0;
   if SalesInvoice.InvoiceOrCredit = 'I' then
     sTypeLabel := 'Invoice'
   else

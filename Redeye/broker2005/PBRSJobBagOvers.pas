@@ -57,7 +57,9 @@ var
 
 implementation
 
-uses PBLUCust, CCSCommon, DateSelV5, PBRPJobBagOvers;
+uses
+  System.UITypes,
+  PBLUCust, CCSCommon, DateSelV5, PBRPJobBagOvers;
 
 {$R *.dfm}
 

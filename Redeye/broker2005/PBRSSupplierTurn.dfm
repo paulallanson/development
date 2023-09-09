@@ -3,20 +3,18 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
   Top = 149
   BorderStyle = bsDialog
   Caption = 'Supplier Purchase Cost Selection'
-  ClientHeight = 213
-  ClientWidth = 371
+  ClientHeight = 204
+  ClientWidth = 365
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 8
@@ -127,9 +125,6 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -144,6 +139,9 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object TotByRadioGroup: TRadioGroup
     Left = 248
@@ -163,7 +161,6 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 145
     Height = 21
     Style = csDropDownList
-    ItemHeight = 13
     TabOrder = 3
     Visible = False
     Items.Strings = (
@@ -178,8 +175,6 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 75
     Height = 25
     Caption = 'Preview'
-    TabOrder = 4
-    OnClick = PreviewReportBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -194,14 +189,17 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PreviewReportBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 6
     Top = 176
     Width = 75
     Height = 25
-    TabOrder = 5
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object spnRecords: TSpinEdit
     Tag = 108
@@ -262,8 +260,6 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Width = 75
     Height = 25
     Caption = 'Excel'
-    TabOrder = 11
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -307,6 +303,8 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 11
+    OnClick = btbtnExcelClick
   end
   object qryPurchByInv: TFDQuery
     ConnectionName = 'PB'
@@ -347,29 +345,19 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end>
   end
   object AddIntSelQuery: TFDQuery
@@ -398,34 +386,23 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end>
   end
   object GetSalesQuery: TFDQuery
@@ -460,9 +437,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditLines: TFDQuery
@@ -492,9 +467,7 @@ object PBRSSupplierTurnFrm: TPBRSSupplierTurnFrm
     Top = 62
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end>
   end
 end

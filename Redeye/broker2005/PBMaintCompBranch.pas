@@ -65,7 +65,9 @@ var
 
 implementation
 
-uses PBLUCompBranch, PBDBMemo, PBImages, PBDelivNotes, ComObj, ActiveX,
+uses
+  System.UITypes,
+  PBLUCompBranch, PBDBMemo, PBImages, PBDelivNotes, ComObj, ActiveX,
   PBDatabase, pbMainMenu, CCSPrint;
 
 {$R *.DFM}

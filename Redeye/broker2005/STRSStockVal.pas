@@ -71,7 +71,9 @@ var
 
 implementation
 
-uses PBLUCust, STPrtMnt, CCSCommon, DateSelV5, STRPStockVal,
+uses
+  System.UITypes,
+  PBLUCust, STPrtMnt, CCSCommon, DateSelV5, STRPStockVal,
   CCSProgressBar, STLUPrtStor;
 
 {$R *.DFM}

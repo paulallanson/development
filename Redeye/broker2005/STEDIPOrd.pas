@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls, IniFiles, Grids, Buttons, Printers;
+  StdCtrls, ExtCtrls, IniFiles, Grids, Buttons, Printers, FireDAC.Stan.Param;
 
 type
   TSTEDIPOrdFrm = class(TForm)
@@ -53,7 +53,9 @@ var
 
 implementation
 
-uses STSODataMod, STPOObjects, STPODataMod, PBLUSupp, STSOObjects, STPartSuppDM,
+uses
+  System.Types,
+  STSODataMod, STPOObjects, STPODataMod, PBLUSupp, STSOObjects, STPartSuppDM,
   pbMainMenu;
 
 var

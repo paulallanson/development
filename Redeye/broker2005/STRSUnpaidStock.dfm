@@ -1,19 +1,17 @@
 object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
   Left = 178
   Top = 122
-  Width = 423
-  Height = 314
   Caption = 'Unpaid Stock Report Selection'
+  ClientHeight = 267
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object AllOrOneRadioGroup: TRadioGroup
     Left = 8
@@ -231,9 +229,10 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 5
-    Kind = bkCancel
   end
   object PreviewBitBtn: TBitBtn
     Left = 136
@@ -241,8 +240,6 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 6
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -257,6 +254,8 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 222
@@ -264,8 +263,6 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 7
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -280,5 +277,7 @@ object STRSUnpaidStockFrm: TSTRSUnpaidStockFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = PrintBitBtnClick
   end
 end

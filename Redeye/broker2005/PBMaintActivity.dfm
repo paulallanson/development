@@ -2,8 +2,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   Left = 236
   Top = 22
   Caption = 'Activity'
-  ClientHeight = 564
-  ClientWidth = 886
+  ClientHeight = 555
+  ClientWidth = 882
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 900
@@ -19,8 +19,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 504
-    Width = 886
+    Top = 495
+    Width = 882
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -28,10 +28,10 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     ExplicitTop = 513
     ExplicitWidth = 892
     DesignSize = (
-      886
+      882
       41)
     object lblDeletePrompt: TLabel
-      Left = 522
+      Left = 512
       Top = 14
       Width = 151
       Height = 13
@@ -46,7 +46,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       ExplicitLeft = 534
     end
     object btnOK: TBitBtn
-      Left = 698
+      Left = 688
       Top = 8
       Width = 75
       Height = 25
@@ -124,7 +124,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       ExplicitLeft = 710
     end
     object btnCancel: TBitBtn
-      Left = 786
+      Left = 776
       Top = 8
       Width = 75
       Height = 25
@@ -204,8 +204,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 886
-    Height = 504
+    Width = 882
+    Height = 495
     Align = alClient
     TabOrder = 0
     ExplicitWidth = 892
@@ -213,16 +213,18 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     object pgActivities: TPageControl
       Left = 1
       Top = 161
-      Width = 890
-      Height = 351
+      Width = 886
+      Height = 342
       ActivePage = tbCurrent
       Align = alClient
       TabOrder = 0
+      ExplicitWidth = 890
+      ExplicitHeight = 351
       object tbCurrent: TTabSheet
         Caption = 'Current Activity'
         DesignSize = (
-          876
-          314)
+          872
+          305)
         object Label7: TLabel
           Left = 8
           Top = 10
@@ -245,8 +247,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           Caption = 'Details'
         end
         object Label10: TLabel
-          Left = 609
-          Top = 245
+          Left = 599
+          Top = 236
           Width = 31
           Height = 13
           Anchors = [akRight, akBottom]
@@ -256,7 +258,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         end
         object Label11: TLabel
           Left = 8
-          Top = 245
+          Top = 236
           Width = 30
           Height = 13
           Anchors = [akLeft, akBottom]
@@ -266,8 +268,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object memDetails: TMemo
           Left = 80
           Top = 73
-          Width = 773
-          Height = 152
+          Width = 763
+          Height = 143
           Anchors = [akLeft, akTop, akRight, akBottom]
           ScrollBars = ssVertical
           TabOrder = 0
@@ -278,7 +280,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object dblkpType: TDBLookupComboBox
           Left = 80
           Top = 6
-          Width = 237
+          Width = 227
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           KeyField = 'Activity_Type'
@@ -288,7 +290,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ExplicitWidth = 249
         end
         object btnActivityType: TButton
-          Left = 327
+          Left = 317
           Top = 5
           Width = 22
           Height = 22
@@ -307,7 +309,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object edtSubject: TEdit
           Left = 80
           Top = 39
-          Width = 773
+          Width = 763
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 3
@@ -316,8 +318,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ExplicitWidth = 785
         end
         object dblkpPriority: TDBLookupComboBox
-          Left = 649
-          Top = 241
+          Left = 639
+          Top = 232
           Width = 167
           Height = 21
           Anchors = [akRight, akBottom]
@@ -330,7 +332,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         end
         object dblkpStatus: TDBLookupComboBox
           Left = 80
-          Top = 241
+          Top = 232
           Width = 225
           Height = 21
           Anchors = [akLeft, akBottom]
@@ -342,8 +344,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         end
         object pnlReminder: TPanel
           Left = 0
-          Top = 278
-          Width = 876
+          Top = 269
+          Width = 872
           Height = 36
           Align = alBottom
           BevelOuter = bvNone
@@ -351,7 +353,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           ExplicitTop = 287
           ExplicitWidth = 882
           DesignSize = (
-            876
+            872
             36)
           object Label3: TLabel
             Left = 207
@@ -361,7 +363,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             Caption = 'Time'
           end
           object Label9: TLabel
-            Left = 521
+            Left = 511
             Top = 8
             Width = 62
             Height = 13
@@ -444,7 +446,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
               '23:30')
           end
           object dblkpAssignedTo: TDBLookupComboBox
-            Left = 593
+            Left = 583
             Top = 4
             Width = 224
             Height = 21
@@ -456,7 +458,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
             ExplicitLeft = 605
           end
           object Button4: TButton
-            Left = 832
+            Left = 822
             Top = 3
             Width = 22
             Height = 22
@@ -478,18 +480,21 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ImageIndex = 1
         object Panel3: TPanel
           Left = 0
-          Top = 160
-          Width = 882
+          Top = 151
+          Width = 878
           Height = 163
           Align = alBottom
           TabOrder = 0
+          ExplicitTop = 160
+          ExplicitWidth = 882
           object Panel17: TPanel
             Left = 1
             Top = 1
-            Width = 880
+            Width = 876
             Height = 24
             Align = alTop
             TabOrder = 0
+            ExplicitWidth = 880
             object Label61: TLabel
               Left = 4
               Top = 4
@@ -507,7 +512,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
           object memNarrative: TMemo
             Left = 1
             Top = 25
-            Width = 880
+            Width = 876
             Height = 137
             Align = alClient
             Color = clBtnFace
@@ -526,8 +531,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object dbgDetails: TDBGrid
           Left = 0
           Top = 0
-          Width = 876
-          Height = 151
+          Width = 872
+          Height = 142
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
           TabOrder = 1
@@ -661,14 +666,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
     object pnlTop: TPanel
       Left = 1
       Top = 1
-      Width = 884
+      Width = 880
       Height = 160
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
       ExplicitWidth = 890
       DesignSize = (
-        884
+        880
         160)
       object Label1: TLabel
         Left = 8
@@ -699,7 +704,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         Caption = 'Module'
       end
       object LabelPhone: TLabel
-        Left = 389
+        Left = 379
         Top = 78
         Width = 34
         Height = 13
@@ -708,7 +713,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitLeft = 401
       end
       object LabelFax: TLabel
-        Left = 607
+        Left = 597
         Top = 78
         Width = 34
         Height = 13
@@ -717,7 +722,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitLeft = 619
       end
       object DBCPhoneText: TDBText
-        Left = 434
+        Left = 424
         Top = 78
         Width = 170
         Height = 13
@@ -732,7 +737,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitLeft = 446
       end
       object DBCEmailText: TDBText
-        Left = 434
+        Left = 424
         Top = 102
         Width = 214
         Height = 13
@@ -747,7 +752,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitLeft = 446
       end
       object DBCMobileText: TDBText
-        Left = 650
+        Left = 640
         Top = 78
         Width = 202
         Height = 13
@@ -764,7 +769,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       object edtCustomer: TEdit
         Left = 80
         Top = 12
-        Width = 445
+        Width = 435
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         Color = clWhite
@@ -776,7 +781,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       object dblkpBranch: TDBLookupComboBox
         Left = 80
         Top = 42
-        Width = 445
+        Width = 435
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Branch_no'
@@ -786,7 +791,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitWidth = 457
       end
       object btnBranch: TButton
-        Left = 535
+        Left = 525
         Top = 41
         Width = 22
         Height = 22
@@ -805,14 +810,14 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       object pnlModule: TPanel
         Left = 272
         Top = 120
-        Width = 609
+        Width = 599
         Height = 33
         Anchors = [akLeft, akTop, akRight]
         BevelOuter = bvNone
         TabOrder = 3
         ExplicitWidth = 621
         DesignSize = (
-          609
+          599
           33)
         object Label13: TLabel
           Left = 24
@@ -833,7 +838,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         object edtDescription: TEdit
           Left = 202
           Top = 7
-          Width = 394
+          Width = 384
           Height = 21
           Anchors = [akLeft, akTop, akRight]
           ReadOnly = True
@@ -858,7 +863,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         end
       end
       object Button1: TButton
-        Left = 327
+        Left = 317
         Top = 73
         Width = 22
         Height = 22
@@ -877,7 +882,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
       object dblkpContact: TDBLookupComboBox
         Left = 80
         Top = 72
-        Width = 237
+        Width = 227
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         KeyField = 'Contact_no'
@@ -897,7 +902,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         OnClick = dblkpModuleClick
       end
       object btnCustomer: TButton
-        Left = 535
+        Left = 525
         Top = 11
         Width = 22
         Height = 22
@@ -914,7 +919,7 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
         ExplicitLeft = 547
       end
       object Button2: TButton
-        Left = 377
+        Left = 367
         Top = 98
         Width = 50
         Height = 20
@@ -928,8 +933,8 @@ object PBMaintActivityFrm: TPBMaintActivityFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 545
-    Width = 886
+    Top = 536
+    Width = 882
     Height = 19
     Panels = <
       item

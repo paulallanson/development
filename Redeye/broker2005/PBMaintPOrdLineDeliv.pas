@@ -148,6 +148,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod,
   DateSelV5, PBLUCConta, PBMaintPOrd, PBLUSConta, pbLUCompBranch;
 

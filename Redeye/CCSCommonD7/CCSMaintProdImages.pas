@@ -63,6 +63,7 @@ var
 implementation
 
 uses
+  System.UITypes,
   Registry, CCSImageViewer, pbDatabase, pbMainMenu;
 
 {$R *.DFM}

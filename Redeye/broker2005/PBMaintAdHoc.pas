@@ -68,7 +68,9 @@ var
 
 implementation
 
-uses PBLUAdHoc, PBImages, ComObj, ActiveX,
+uses
+  System.UITypes,
+  PBLUAdHoc, PBImages, ComObj, ActiveX,
   PBDatabase, pbMainMenu, CCSPrint;
 
 {$R *.DFM}

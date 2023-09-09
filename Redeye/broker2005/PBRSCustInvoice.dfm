@@ -3,22 +3,20 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
   Top = 142
   BorderStyle = bsDialog
   Caption = 'Raise Customer Invoice'
-  ClientHeight = 190
-  ClientWidth = 443
+  ClientHeight = 181
+  ClientWidth = 437
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = edtDateFromExit
   DesignSize = (
-    443
-    190)
-  PixelsPerInch = 96
+    437
+    181)
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -54,7 +52,6 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     OnClick = ContTypeMaintBitBtnClick
   end
   object RadioGroup1: TRadioGroup
-    ParentBackground = False
     Left = 24
     Top = 56
     Width = 185
@@ -65,15 +62,16 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
       'Sales Orders'
       'Buy Print Orders'
       'Job Bags')
+    ParentBackground = False
     TabOrder = 2
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 224
     Top = 56
     Width = 209
     Height = 89
     Caption = 'Delivery Date'
+    ParentBackground = False
     TabOrder = 3
     object btnDateFrom: TSpeedButton
       Left = 167
@@ -152,15 +150,13 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
   end
   object btnOK: TBitBtn
     Left = 144
-    Top = 157
+    Top = 148
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 4
-    OnClick = btnOKClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -226,17 +222,18 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = btnOKClick
+    ExplicitTop = 157
   end
   object btnCancel: TBitBtn
     Left = 232
-    Top = 157
+    Top = 148
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 5
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -301,7 +298,10 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 5
+    ExplicitTop = 157
   end
   object qryGetSalesOrders: TFDQuery
     ConnectionName = 'PB'
@@ -354,19 +354,13 @@ object PBRSCustInvoiceFrm: TPBRSCustInvoiceFrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_To'
-        ParamType = ptUnknown
       end>
   end
 end

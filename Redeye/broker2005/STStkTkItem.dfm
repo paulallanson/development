@@ -1,21 +1,19 @@
 object STStkTkItemFrm: TSTStkTkItemFrm
   Left = 176
   Top = 129
-  Width = 465
-  Height = 293
   Caption = 'Change Stock Count Details'
+  ClientHeight = 246
+  ClientWidth = 447
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -55,9 +53,6 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = OKBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -76,6 +71,9 @@ object STStkTkItemFrm: TSTStkTkItemFrm
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = OKBtnClick
   end
   object CancelBtn: TBitBtn
     Left = 236
@@ -87,9 +85,10 @@ object STStkTkItemFrm: TSTStkTkItemFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object PartEdit: TEdit
     Left = 96

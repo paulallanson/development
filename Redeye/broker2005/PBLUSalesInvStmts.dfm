@@ -2,8 +2,8 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   Left = 16
   Top = 15
   Caption = 'Customer Sales Invoice Statements'
-  ClientHeight = 477
-  ClientWidth = 818
+  ClientHeight = 468
+  ClientWidth = 812
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -17,15 +17,15 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
-    Top = 374
-    Width = 818
+    Top = 365
+    Width = 812
     Height = 84
     Align = alBottom
     TabOrder = 0
     ExplicitTop = 379
     ExplicitWidth = 826
     DesignSize = (
-      818
+      812
       84)
     object Label1: TLabel
       Left = 8
@@ -73,13 +73,14 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
       OnClick = btnCustomerClick
     end
     object grpInvDate: TGroupBox
-      Left = 583
+      Left = 571
       Top = 5
       Width = 233
       Height = 73
       Anchors = [akRight, akBottom]
       Enabled = False
       TabOrder = 2
+      ExplicitLeft = 583
       DesignSize = (
         233
         73)
@@ -214,8 +215,8 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   object Panel3: TPanel
     Left = 0
     Top = 45
-    Width = 818
-    Height = 329
+    Width = 812
+    Height = 320
     Align = alClient
     TabOrder = 1
     ExplicitWidth = 826
@@ -295,8 +296,8 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   end
   object SIStatusBar: TStatusBar
     Left = 0
-    Top = 458
-    Width = 818
+    Top = 449
+    Width = 812
     Height = 19
     Panels = <
       item
@@ -311,7 +312,7 @@ object PBLUSalesInvStmtsFrm: TPBLUSalesInvStmtsFrm
   object CoolBar1: TCoolBar
     Left = 0
     Top = 0
-    Width = 818
+    Width = 812
     Height = 45
     Bands = <
       item

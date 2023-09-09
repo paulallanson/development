@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, ExtCtrls, Grids, DBGrids, OleCtnrs, ComCtrls, Data.DB;
+  StdCtrls, Buttons, ExtCtrls, Grids, DBGrids, OleCtnrs, ComCtrls, Data.DB,
+  FireDAC.Stan.Param;
 
 type
   TSTRSSalesByCustFrm = class(TForm)

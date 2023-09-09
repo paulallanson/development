@@ -193,7 +193,9 @@ var
 
 implementation
 
-uses CCSCommon, STMaintProduct, STLUProductLvls, STLUStkMvmnts, STLUStkLoc,
+uses
+  System.UITypes,
+  CCSCommon, STMaintProduct, STLUProductLvls, STLUStkMvmnts, STLUStkLoc,
   STLUStkSales, STLUStkPurchases, STPrtTran, STLUStkProduction, STRSLabels,
   STLUStkNmbr, pbLUStockRpts, pbDatabase, pbMainMenu, STStkEnq, StStkTkSel,
   StMntPrtSupp, STProdImport, STProdImportCust, STProdImportAllCust,

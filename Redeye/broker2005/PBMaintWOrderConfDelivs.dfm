@@ -3,27 +3,26 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   Top = 114
   BorderStyle = bsDialog
   Caption = 'Confirm Works Instruction Deliveries'
-  ClientHeight = 529
-  ClientWidth = 621
+  ClientHeight = 520
+  ClientWidth = 615
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlDetails: TPanel
     Left = 0
     Top = 0
-    Width = 621
+    Width = 615
     Height = 193
     Align = alTop
     Enabled = False
     TabOrder = 0
+    ExplicitWidth = 621
     object Label1: TLabel
       Left = 8
       Top = 45
@@ -138,8 +137,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Top = 10
       Width = 25
       Height = 25
-      TabOrder = 2
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -154,6 +151,8 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnDateRequiredClick
     end
     object memQuantity: TMemo
       Left = 104
@@ -218,7 +217,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Top = 68
       Width = 25
       Height = 25
-      TabOrder = 7
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -233,6 +231,7 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 7
     end
     object dblkpSort: TDBLookupComboBox
       Left = 104
@@ -257,11 +256,13 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   end
   object Panel2: TPanel
     Left = 0
-    Top = 489
-    Width = 621
+    Top = 480
+    Width = 615
     Height = 40
     Align = alBottom
     TabOrder = 3
+    ExplicitTop = 489
+    ExplicitWidth = 621
     object lblDelete: TLabel
       Left = 112
       Top = 12
@@ -283,9 +284,9 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Caption = 'OK'
       Default = True
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 335
@@ -295,18 +296,19 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel1: TPanel
     Left = 0
     Top = 193
-    Width = 621
+    Width = 615
     Height = 87
     Align = alTop
     Enabled = False
     TabOrder = 1
+    ExplicitWidth = 621
     object rdgrpAccountType: TRadioGroup
       Left = 8
       Top = 10
@@ -363,11 +365,13 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   object pnlAddress: TPanel
     Left = 0
     Top = 280
-    Width = 621
-    Height = 174
+    Width = 615
+    Height = 165
     Align = alClient
     Enabled = False
     TabOrder = 2
+    ExplicitWidth = 621
+    ExplicitHeight = 174
     object Label6: TLabel
       Left = 8
       Top = 36
@@ -451,11 +455,13 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
   end
   object Panel3: TPanel
     Left = 0
-    Top = 454
-    Width = 621
+    Top = 445
+    Width = 615
     Height = 35
     Align = alBottom
     TabOrder = 4
+    ExplicitTop = 454
+    ExplicitWidth = 621
     object Label13: TLabel
       Left = 384
       Top = 10
@@ -477,8 +483,6 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
       Top = 4
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = btnDateRequiredClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -493,6 +497,8 @@ object frmPBMaintWOrderConfDelivs: TfrmPBMaintWOrderConfDelivs
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnDateRequiredClick
     end
     object chkbxDespatched: TCheckBox
       Left = 8

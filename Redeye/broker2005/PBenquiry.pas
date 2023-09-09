@@ -380,7 +380,9 @@ var
 
 implementation
 
-uses PBEnqLineDtls, PBenqline, PBLUCust, PBEnqAddDtls, pbDatabase,
+uses
+  System.UITypes,
+  PBEnqLineDtls, PBenqline, PBLUCust, PBEnqAddDtls, pbDatabase,
   PBEnqDataMod, PBPODataMod, PBPOToEnq, DateSelV5, pbMainMenu, PBNarrativeDM,
   PBLUBranch, PBEnqSelSup, PBLUCConta, PBLUCRep, PBMaintPaper, PBLUSConta, PBPartDescDg,
   PBWordOLE, PBExcelOLE, TaoMapi, AxCtrls, ComObj;

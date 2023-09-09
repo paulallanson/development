@@ -1,10 +1,9 @@
-﻿object STMntPOrdFrm: TSTMntPOrdFrm
+object STMntPOrdFrm: TSTMntPOrdFrm
   Left = 150
   Top = 90
-  AutoScroll = False
   Caption = 'Maintain Purchase Orders'
-  ClientHeight = 538
-  ClientWidth = 802
+  ClientHeight = 529
+  ClientWidth = 796
   Color = clBtnFace
   Constraints.MinHeight = 565
   Constraints.MinWidth = 810
@@ -13,12 +12,10 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object TotLabel: TLabel
     Left = 664
@@ -273,11 +270,11 @@
       OnChange = SuppNameEditChange
     end
     object StoreFromGroupBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 76
       Width = 321
       Height = 41
+      ParentBackground = False
       TabOrder = 6
       object Label4: TLabel
         Left = 8
@@ -307,11 +304,11 @@
       OnChange = DescrEditChange
     end
     object pnlStoreDetails: TPanel
-      ParentBackground = False
       Left = 392
       Top = 16
       Width = 377
       Height = 41
+      ParentBackground = False
       TabOrder = 8
       object Label3: TLabel
         Left = 12
@@ -333,11 +330,11 @@
       end
     end
     object pnlSalesDetails: TPanel
-      ParentBackground = False
       Left = 368
       Top = 192
       Width = 377
       Height = 41
+      ParentBackground = False
       TabOrder = 9
       Visible = False
       object Label6: TLabel
@@ -356,11 +353,11 @@
       end
     end
     object SuppGroupBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 76
       Width = 353
       Height = 41
+      ParentBackground = False
       TabOrder = 5
       object Label1: TLabel
         Left = 8
@@ -447,13 +444,15 @@
       91)
   end
   object pnlFooter: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 486
-    Width = 802
+    Top = 477
+    Width = 796
     Height = 33
     Align = alBottom
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 486
+    ExplicitWidth = 802
     object DelLabel: TLabel
       Left = 486
       Top = 10
@@ -473,8 +472,6 @@
       Width = 75
       Height = 25
       Caption = 'Notes'
-      TabOrder = 0
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -489,6 +486,8 @@
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = NotesBitBtnClick
     end
     object OKBitBtn: TBitBtn
       Left = 622
@@ -497,9 +496,6 @@
       Height = 25
       Caption = 'OK'
       Default = True
-      ModalResult = 1
-      TabOrder = 1
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -564,7 +560,10 @@
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 1
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 710
@@ -573,9 +572,6 @@
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 2
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -640,13 +636,16 @@
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = CancelBitBtnClick
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 519
-    Width = 802
+    Top = 510
+    Width = 796
     Height = 19
     Panels = <
       item
@@ -658,6 +657,8 @@
       item
         Width = 50
       end>
+    ExplicitTop = 519
+    ExplicitWidth = 802
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'
@@ -685,59 +686,44 @@
     Top = 200
     ParamData = <
       item
-        DataType = ftString
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Part_Store'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Part_Store_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord_Descr'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Supp_Order_type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Purch_Ord_Date'
+      end
+      item
+        Name = 'Part_Store'
+      end
+      item
+        Name = 'Part_Store_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Purch_Ord_Descr'
+      end
+      item
+        Name = 'Supp_Order_type'
+        DataType = ftString
+      end
+      item
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Requested_By'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Date_Required'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftString
+      end
+      item
+        Name = 'Date_Required'
+      end
+      item
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object AddSQL: TFDQuery
@@ -773,79 +759,58 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord_Date'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Purch_Ord_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Purch_Ord_Rec_Ref'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Part_Store'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Part_Store_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Purch_Ord_Descr'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Supp_Order_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Purch_Ord_Status'
+      end
+      item
+        Name = 'Purch_Ord_Date'
+      end
+      item
+        Name = 'Purch_Ord_No'
+        DataType = ftString
+      end
+      item
+        Name = 'Purch_Ord_Rec_Ref'
+        DataType = ftString
+      end
+      item
+        Name = 'Part_Store'
+        DataType = ftString
+      end
+      item
+        Name = 'Part_Store_From'
+        DataType = ftString
+      end
+      item
+        Name = 'Purch_Ord_Descr'
+      end
+      item
+        Name = 'Supp_Order_Type'
+        DataType = ftString
+      end
+      item
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Requested_By'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Required'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -862,9 +827,7 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -909,9 +872,7 @@
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object GetStoresSQL: TFDQuery
@@ -948,19 +909,13 @@
     Top = 308
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Text100'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end>
   end
   object UpdCompRefSQL: TFDQuery
@@ -975,14 +930,10 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Purch_Ord_Rec_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Purch_Ord_No'
-        ParamType = ptUnknown
       end>
   end
   object GetLastLineSQL: TFDQuery
@@ -998,9 +949,7 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object AddLineSQL: TFDQuery
@@ -1039,79 +988,51 @@
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Ordered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDate
         Name = 'Date_Deliv_Expected'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDate
+      end
+      item
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Is_Sample'
-        ParamType = ptUnknown
       end>
   end
   object UpdLineSQL: TFDQuery
@@ -1147,74 +1068,48 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Ordered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDate
         Name = 'Date_Deliv_Expected'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftDate
+      end
+      item
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Discount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Notes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_Is_Sample'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object DelLineSQL: TFDQuery
@@ -1228,14 +1123,10 @@
     Top = 268
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object DelLinesSQL: TFDQuery
@@ -1249,9 +1140,7 @@
     Top = 244
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object GetStoresFromSQL: TFDQuery
@@ -1330,24 +1219,16 @@
     Top = 236
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetReqdSOSQL: TFDQuery
@@ -1414,19 +1295,13 @@
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_From'
-        ParamType = ptUnknown
       end>
   end
   object GetPFJJobSQL: TFDQuery
@@ -1442,9 +1317,7 @@
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object GetAllocsSQL: TFDQuery
@@ -1462,19 +1335,13 @@
     Top = 252
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object AddPFJSQL: TFDQuery
@@ -1499,19 +1366,13 @@
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object DelPFJSQL: TFDQuery
@@ -1536,19 +1397,13 @@
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdPFJStatusOSQL: TFDQuery
@@ -1571,9 +1426,7 @@
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object UpdPFJStatusRSQL: TFDQuery
@@ -1597,9 +1450,7 @@
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Parts_For_Job'
-        ParamType = ptUnknown
       end>
   end
   object GetDiscRateSQL: TFDQuery
@@ -1615,14 +1466,10 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object ppmnPOLines: TPopupMenu
@@ -1710,103 +1557,77 @@
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Sales_Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sell_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Ordered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Contract'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Contract_Line_no'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sales_order_Line_Status'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Quantity_Invoiced'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Line_Complete'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftUnknown
-        Name = 'vat_code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Discount_Type'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftCurrency
-        Name = 'Discount_value'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Replacement_For_Line'
         ParamType = ptInput
       end
       item
+        Name = 'Sales_order_Line_Status'
+      end
+      item
+        Name = 'Quantity_Invoiced'
+      end
+      item
+        Name = 'Line_Complete'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'vat_code'
+      end
+      item
+        Name = 'Discount_Type'
+        DataType = ftString
+        ParamType = ptInput
+      end
+      item
+        Name = 'Discount_value'
         DataType = ftCurrency
+        ParamType = ptInput
+      end
+      item
+        Name = 'Replacement_For_Line'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Original_Sell_Price'
+        DataType = ftCurrency
         ParamType = ptInput
       end>
   end
@@ -1821,9 +1642,7 @@
     Top = 236
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object qrySelPart: TFDQuery
@@ -1834,9 +1653,7 @@
     Top = 276
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part'
-        ParamType = ptUnknown
       end>
   end
   object qrySelSO: TFDQuery
@@ -1847,9 +1664,7 @@
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object FlashTimer: TTimer
@@ -1868,9 +1683,7 @@
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'narrative'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPO: TFDQuery
@@ -1909,9 +1722,7 @@
     Top = 432
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryGetOperator: TFDQuery
@@ -1924,9 +1735,7 @@
     Top = 340
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSInvoice: TFDQuery
@@ -1969,9 +1778,7 @@
     Top = 376
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetSInvoice: TDataSource
@@ -1995,9 +1802,7 @@
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchUpStatus: TFDQuery
@@ -2010,14 +1815,10 @@
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOStatus: TFDQuery
@@ -2030,9 +1831,7 @@
     Top = 283
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSOStatus: TFDQuery
@@ -2045,9 +1844,7 @@
     Top = 339
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object UpdSOlineSQL: TFDQuery
@@ -2063,24 +1860,16 @@
     Top = 480
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

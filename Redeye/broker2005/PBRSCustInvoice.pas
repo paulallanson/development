@@ -59,7 +59,9 @@ var
 
 implementation
 
-uses PBLUCust, DateSelV5, CCSCommon, pbMainMenu;
+uses
+  System.UITypes,
+  PBLUCust, DateSelV5, CCSCommon, pbMainMenu;
 
 {$R *.dfm}
 

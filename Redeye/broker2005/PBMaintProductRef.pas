@@ -175,7 +175,9 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu;
+uses
+  System.UITypes,
+  ComObj, ActiveX, PBDatabase, pbMainMenu;
 
 var
   sPrefix: string;

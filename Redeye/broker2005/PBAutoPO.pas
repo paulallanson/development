@@ -134,7 +134,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, DB, PBPOObjects;
+  StdCtrls, Buttons, DB, PBPOObjects, FireDAC.Stan.Param;
 
 type
   TPBAutoPOFrm = class(TForm)

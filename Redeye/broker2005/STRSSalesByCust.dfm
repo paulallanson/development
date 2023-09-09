@@ -2,8 +2,8 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   Left = 73
   Top = 127
   Caption = 'Sales By Customer Report '
-  ClientHeight = 462
-  ClientWidth = 697
+  ClientHeight = 453
+  ClientWidth = 691
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 650
@@ -20,8 +20,8 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 245
-    Width = 697
-    Height = 177
+    Width = 691
+    Height = 168
     Align = alClient
     DataSource = DmLookupSOrd.dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -106,19 +106,17 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   end
   object pnlCustProd: TPanel
     Left = 0
-    Top = 422
-    Width = 697
+    Top = 413
+    Width = 691
     Height = 40
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 413
-    ExplicitWidth = 691
     DesignSize = (
-      697
+      691
       40)
     object CancelBitBtn: TBitBtn
-      Left = 613
+      Left = 601
       Top = 8
       Width = 72
       Height = 25
@@ -136,7 +134,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 607
     end
     object PreviewBitBtn: TBitBtn
-      Left = 439
+      Left = 427
       Top = 8
       Width = 76
       Height = 25
@@ -167,7 +165,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 433
     end
     object PrintBitBtn: TBitBtn
-      Left = 530
+      Left = 518
       Top = 8
       Width = 72
       Height = 25
@@ -256,7 +254,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       OnClick = btbtnEmailClick
     end
     object btnExcel: TBitBtn
-      Left = 347
+      Left = 335
       Top = 8
       Width = 75
       Height = 25
@@ -313,17 +311,16 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 697
+    Width = 691
     Height = 245
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 691
     DesignSize = (
-      697
+      691
       245)
     object Label2: TLabel
-      Left = 509
+      Left = 497
       Top = 26
       Width = 52
       Height = 13
@@ -332,7 +329,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 513
     end
     object Label1: TLabel
-      Left = 509
+      Left = 497
       Top = 58
       Width = 42
       Height = 13
@@ -341,7 +338,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 513
     end
     object DateFromEdit: TEdit
-      Left = 573
+      Left = 561
       Top = 22
       Width = 81
       Height = 21
@@ -352,7 +349,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 567
     end
     object DateFromBitBtn: TBitBtn
-      Left = 661
+      Left = 649
       Top = 20
       Width = 25
       Height = 25
@@ -484,7 +481,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       end
     end
     object DateToEdit: TEdit
-      Left = 573
+      Left = 561
       Top = 54
       Width = 81
       Height = 21
@@ -495,7 +492,7 @@ object STRSSalesByCustFrm: TSTRSSalesByCustFrm
       ExplicitLeft = 567
     end
     object DateTobtbtn: TBitBtn
-      Left = 661
+      Left = 649
       Top = 52
       Width = 25
       Height = 25
