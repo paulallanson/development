@@ -1,7 +1,6 @@
 object frmPBLUReps: TfrmPBLUReps
   Left = 165
   Top = 133
-  AutoScroll = False
   Caption = 'Reps'
   ClientHeight = 345
   ClientWidth = 534
@@ -11,13 +10,11 @@ object frmPBLUReps: TfrmPBLUReps
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
@@ -81,13 +78,13 @@ object frmPBLUReps: TfrmPBLUReps
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 287
     Width = 534
     Height = 39
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
     DesignSize = (
       534
@@ -162,9 +159,7 @@ object frmPBLUReps: TfrmPBLUReps
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsReps: TDataSource

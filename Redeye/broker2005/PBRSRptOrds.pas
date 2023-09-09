@@ -446,8 +446,8 @@ begin
   if ((self.dbgDetails.DataSource.DataSet.FieldByName('expLife').asFloat - trunc(Now()))* -1) > 0 then
   begin
     self.dbgDetails.Canvas.Font.Color := clRed;
+    (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
   end;
-  self.dbgDetails.DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure TPBRSRptOrdsFrm.edtDueDaysExit(Sender: TObject);

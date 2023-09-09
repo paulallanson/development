@@ -1,33 +1,32 @@
-﻿object STLUCourierSortFrm: TSTLUCourierSortFrm
+object STLUCourierSortFrm: TSTLUCourierSortFrm
   Left = 215
   Top = 128
   BorderStyle = bsDialog
   Caption = 'Look up a Courier Sort Type'
-  ClientHeight = 349
-  ClientWidth = 434
+  ClientHeight = 340
+  ClientWidth = 428
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    434
-    349)
-  PixelsPerInch = 96
+    428
+    340)
   TextHeight = 13
   object CountLabel: TLabel
     Left = 272
-    Top = 259
+    Top = 250
     Width = 54
     Height = 13
     Alignment = taRightJustify
     Anchors = [akLeft, akBottom]
     Caption = 'CountLabel'
+    ExplicitTop = 259
   end
   object lblCourier: TLabel
     Left = 8
@@ -63,12 +62,13 @@
   end
   object SearchGrpBox: TGroupBox
     Left = 8
-    Top = 275
+    Top = 266
     Width = 321
     Height = 65
     Anchors = [akLeft, akBottom]
     Caption = 'Type here to narrow the search'
     TabOrder = 1
+    ExplicitTop = 275
     object NameEdit: TEdit
       Left = 8
       Top = 16
@@ -91,14 +91,12 @@
   end
   object SelectBitBtn: TBitBtn
     Left = 344
-    Top = 279
+    Top = 270
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Select'
     Default = True
-    TabOrder = 2
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -164,15 +162,20 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = SelectBitBtnClick
+    ExplicitTop = 279
   end
   object CloseBitBtn: TBitBtn
     Left = 344
-    Top = 307
+    Top = 298
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
+    ExplicitTop = 307
   end
   object FuncGrpBox: TGroupBox
     Left = 336
@@ -187,8 +190,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -203,6 +204,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -210,8 +213,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -226,6 +227,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -233,8 +236,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -249,6 +250,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object DetsSRC: TDataSource
@@ -272,19 +275,13 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

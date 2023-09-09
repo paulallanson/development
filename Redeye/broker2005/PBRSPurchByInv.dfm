@@ -2,8 +2,8 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   Left = 30
   Top = 58
   Caption = 'Purchases By Invoice Number'
-  ClientHeight = 433
-  ClientWidth = 733
+  ClientHeight = 424
+  ClientWidth = 727
   Color = clBtnFace
   Constraints.MinHeight = 400
   Constraints.MinWidth = 745
@@ -18,13 +18,11 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 145
-    Width = 733
-    Height = 247
+    Width = 727
+    Height = 238
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 727
-    ExplicitHeight = 238
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
@@ -104,12 +102,11 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 733
+    Width = 727
     Height = 145
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 727
     object Label3: TLabel
       Left = 8
       Top = 95
@@ -343,16 +340,14 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 392
-    Width = 733
+    Top = 383
+    Width = 727
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 383
-    ExplicitWidth = 727
     DesignSize = (
-      733
+      727
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -368,7 +363,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 500
+      Left = 494
       Top = 1
       Width = 232
       Height = 39
@@ -376,7 +371,6 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 494
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -425,7 +419,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 337
+      Left = 325
       Top = 8
       Width = 75
       Height = 25
@@ -436,7 +430,7 @@ object PBRSPurchByInvFrm: TPBRSPurchByInvFrm
       ExplicitLeft = 331
     end
     object btbtnExcel: TBitBtn
-      Left = 433
+      Left = 421
       Top = 8
       Width = 75
       Height = 25

@@ -2,8 +2,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   Left = 474
   Top = 152
   Caption = 'Search for supplier'
-  ClientHeight = 365
-  ClientWidth = 408
+  ClientHeight = 356
+  ClientWidth = 402
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 310
-    Height = 257
+    Width = 304
+    Height = 248
     Align = alClient
     DataSource = dtsDetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -40,16 +40,18 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       end>
   end
   object pnlFunctions: TPanel
-    Left = 310
+    Left = 304
     Top = 0
     Width = 98
-    Height = 257
+    Height = 248
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitLeft = 310
+    ExplicitHeight = 257
     DesignSize = (
       98
-      257)
+      248)
     object btnAdd: TBitBtn
       Left = 15
       Top = 8
@@ -80,7 +82,7 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
     end
     object btnSweep: TBitBtn
       Left = 15
-      Top = 251
+      Top = 242
       Width = 75
       Height = 25
       Anchors = [akLeft, akBottom]
@@ -88,18 +90,21 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       Enabled = False
       TabOrder = 3
       OnClick = btnSweepClick
+      ExplicitTop = 251
     end
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 257
-    Width = 408
+    Top = 248
+    Width = 402
     Height = 89
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
+    ExplicitTop = 257
+    ExplicitWidth = 408
     DesignSize = (
-      408
+      402
       89)
     object Label1: TLabel
       Left = 8
@@ -152,8 +157,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 346
-    Width = 408
+    Top = 337
+    Width = 402
     Height = 19
     Panels = <
       item
@@ -162,6 +167,8 @@ object frmWTSrchSupplier: TfrmWTSrchSupplier
       item
         Width = 50
       end>
+    ExplicitTop = 346
+    ExplicitWidth = 408
   end
   object qryDetails: TFDQuery
     ConnectionName = 'wt'

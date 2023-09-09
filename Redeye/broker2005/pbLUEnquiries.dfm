@@ -228,20 +228,19 @@ object frmPBLuEnquiries: TfrmPBLuEnquiries
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 885
+        Width = 881
       end>
-    ExplicitWidth = 887
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 872
+      Width = 868
       Height = 41
       Control = Toolbar1
       TabOrder = 0
       object Toolbar1: TToolBar
         Left = 0
         Top = 0
-        Width = 872
+        Width = 868
         Height = 41
         ButtonHeight = 36
         ButtonWidth = 59

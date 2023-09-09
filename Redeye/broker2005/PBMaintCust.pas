@@ -6261,28 +6261,28 @@ end;
 procedure TPBMaintCustFrm.dbgInvoiceDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-VAR
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
-  TempRect := Rect;
   if (dbgInvoiceDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'I') and
     (dbgInvoiceDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if (dbgInvoiceDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'C') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Invoice No') and
@@ -6291,28 +6291,21 @@ begin
       (Column.Title.Caption <> 'VAT') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
     end
     else
   	begin
       WITH Sender AS TDBGrid DO
         BEGIN
-          if  (Column.Title.Caption <> 'Invoice No.') and
-            (Column.Title.Caption <> 'Goods') and
-            (Column.Title.Caption <> 'Total') and
+          if (Column.Title.Caption <> 'Invoice No.') and
+             (Column.Title.Caption <> 'Goods') and
+             (Column.Title.Caption <> 'Total') and
              (Column.Title.Caption <> 'VAT') then
               begin
-            Canvas.Brush.Color := Color;
-            Canvas.Font.Color  := Font.Color;
-            Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-              Column.field.asstring);
-               end;
+                Canvas.Brush.Color := Color;
+                Canvas.Font.Color  := Font.Color;
+                Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+              end;
         END;
 			{Display the Columns Right justified in the cells}
       if Assigned(Column.Field) then
@@ -6320,24 +6313,13 @@ begin
         if  (Column.Title.Caption = 'Goods') or
             (Column.Title.Caption = 'Total') or
             (Column.Title.Caption = 'VAT') then
-          try
-            sValue := formatfloat('£#,###,##0.00', StrToFloatDef(Column.field.AsString, 0, FormatSettings))
-          except
-            sValue := ''
-          end
-        else
-          sValue := Column.field.asstring;
-      end else
-        Svalue := '';
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
+        Column.Alignment := taRightJustify;
+      end;
+   end;
 end;
 
 procedure TPBMaintCustFrm.edtInvoiceNumberKeyPress(Sender: TObject;
@@ -6639,25 +6621,25 @@ end;
 procedure TPBMaintCustFrm.dbgStockDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-VAR
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
-  TempRect := Rect;
   if (dbgStockDetails.datasource.dataset.fieldbyname('Not_in_Use').asstring = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgStockDetails.datasource.dataset.fieldbyname('Store_Qty').asinteger < dbgStockDetails.datasource.dataset.fieldbyname('Reorder_Level').asinteger) then
-    (Sender as TDBGrid).Canvas.font.color := cllime;
+    begin
+      (Sender as TDBGrid).Canvas.font.color := cllime;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'In Stock') and
@@ -6675,25 +6657,13 @@ begin
       (Column.Title.Caption <> 'Future Stock') and
       (Column.Title.Caption <> 'On Purchase') then
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
      end;
 end;
 
@@ -6705,38 +6675,38 @@ end;
 procedure TPBMaintCustFrm.dbgJobDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgJobDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if (dbgJobDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) then
-    (Sender as TDBGrid).Canvas.Brush.color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.Brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgJobDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
-    (Sender as TDBGrid).Canvas.Brush.color := cllime
+    begin
+      (Sender as TDBGrid).Canvas.Brush.color := cllime;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgJobDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') or (dbgJobDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'P') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TPBMaintCustFrm.tbJobsExit(Sender: TObject);
@@ -7009,39 +6979,57 @@ end;
 procedure TPBMaintCustFrm.dbgOrderDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(dbgOrderDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgOrderDetails.datasource.dataset.fieldByName('Needs_Authorising').AsString = 'Y') then
     begin
       if (dbgOrderDetails.datasource.dataset.fieldByName('Order_Status').AsInteger = 5) then
-        (Sender as TDBGrid).Canvas.Brush.color := cllime
+        begin
+          (Sender as TDBGrid).Canvas.Brush.color := cllime;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end
       else
-        (Sender as TDBGrid).Canvas.font.Color := clLime
+        begin
+          (Sender as TDBGrid).Canvas.font.Color := clLime;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end;
     end
   else
   if (dbgOrderDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgOrderDetails.datasource.dataset.fieldByName('Authorised_By').AsInteger <> 0) then
-    (Sender as TDBGrid).Canvas.font.style := [fsBold]
+    begin
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsBold];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgOrderDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) then
-    (Sender as TDBGrid).Canvas.Brush.color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.Brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgOrderDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
-    (Sender as TDBGrid).Canvas.Brush.color := cllime;
+    begin
+      (Sender as TDBGrid).Canvas.Brush.color := cllime;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Order') and
@@ -7052,26 +7040,14 @@ begin
       (Column.Title.Caption <> 'Sell Price') and
       (Column.Title.Caption <> 'Quantity') then
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+  		if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
+    end;
 end;
 
 procedure TPBMaintCustFrm.chkbxShowUnauthorisedClick(Sender: TObject);
@@ -7158,13 +7134,12 @@ end;
 procedure TPBMaintCustFrm.dbgEnquiryDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgEnquiryDetails.datasource.dataset.fieldByName('Enq_Inactive').AsString = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clRed;
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -7172,16 +7147,8 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TPBMaintCustFrm.SetQuoteButtons(Sender: TObject; Field: TField);
@@ -7600,12 +7567,11 @@ end;
 procedure TPBMaintCustFrm.dbgBranchDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgBranchDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -7613,16 +7579,8 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TPBMaintCustFrm.tbBranchesExit(Sender: TObject);
@@ -7815,12 +7773,11 @@ end;
 procedure TPBMaintCustFrm.dbgContactDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if ((Sender as TDBGrid).datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -7828,16 +7785,8 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TPBMaintCustFrm.btnContactMoveClick(Sender: TObject);
@@ -8146,19 +8095,19 @@ end;
 procedure TPBMaintCustFrm.dbgActivityDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgActivityDetails.datasource.dataset.fieldByName('Activity_Priority').AsInteger = 3) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clWhite;
       (Sender as TDBGrid).Canvas.Brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgActivityDetails.datasource.dataset.fieldByName('Activity_Priority').AsInteger = 1) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clWhite;
       (Sender as TDBGrid).Canvas.Brush.color := clGreen;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -8166,41 +8115,21 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
 end;
 
 procedure TPBMaintCustFrm.dbgQuoteDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
 end;
 
 procedure TPBMaintCustFrm.BitBtn11Click(Sender: TObject);
@@ -8303,24 +8232,24 @@ end;
 procedure TPBMaintCustFrm.dbgCategoryDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgCategoryDetails.datasource.dataset.fieldByName('Category_Used').Asstring = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := clYellow;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
 
   if (dbgCategoryDetails.datasource.dataset.fieldByName('We_Supply_This_Category').Asstring = 'Y') then
     begin
       (Sender as TDBGrid).Canvas.font.color := clWhite;
       (Sender as TDBGrid).Canvas.Brush.color := clGreen;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -8328,16 +8257,8 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TPBMaintCustFrm.Button1Click(Sender: TObject);

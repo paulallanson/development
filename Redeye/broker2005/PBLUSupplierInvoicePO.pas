@@ -497,42 +497,37 @@ end;
 procedure TPBLUSupplierInvoicePOFrm.dbgdetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if (dbgDetails.datasource.dataset.fieldByName('Needs_Authorising').AsString = 'Y') then
-    (Sender as TDBGrid).Canvas.font.Color := clLime
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clLime;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Authorised_By').AsInteger <> 0) then
-    (Sender as TDBGrid).Canvas.font.style := [fsBold];
+    begin
+      (Sender as TDBGrid).Canvas.font.style := [fsBold];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
-  if  (Column.Title.Caption <> 'Order') and
-      (Column.Title.Caption <> 'Order Price') and
-      (Column.Title.Caption <> 'Order Unit') and
-      (Column.Title.Caption <> 'Quantity') then
+  if (Column.Title.Caption <> 'Order') and
+     (Column.Title.Caption <> 'Order Price') and
+     (Column.Title.Caption <> 'Order Unit') and
+     (Column.Title.Caption <> 'Quantity') then
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
      end;
 end;
 

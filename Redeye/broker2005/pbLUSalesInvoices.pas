@@ -758,18 +758,14 @@ end;
 procedure TfrmPBLUSalesInvoices.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-VAR
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
 	{The following is code extracted from the Delphi Info Base}
 	{If Heading Display Left justified in the cells}
-  TempRect := Rect;
   if (dbgDetails.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'I') and
     (dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Invoice No') and
@@ -778,52 +774,35 @@ begin
       (Column.Title.Caption <> 'VAT') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
-    		WITH Sender AS TDBGrid DO
-      		BEGIN
-           	if  (Column.Title.Caption <> 'Invoice No.') and
-              (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
-               (Column.Title.Caption <> 'VAT') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
-      		END;
+      WITH Sender AS TDBGrid DO
+        BEGIN
+          if (Column.Title.Caption <> 'Invoice No.') and
+             (Column.Title.Caption <> 'Goods') and
+             (Column.Title.Caption <> 'Total') and
+             (Column.Title.Caption <> 'VAT') then
+              begin
+                Canvas.Brush.Color := Color;
+                Canvas.Font.Color  := Font.Color;
+                Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+              end;
+        END;
 			{Display the Columns Right justified in the cells}
       if Assigned(Column.Field) then
       begin
         if  (Column.Title.Caption = 'Goods') or
             (Column.Title.Caption = 'Total') or
             (Column.Title.Caption = 'VAT') then
-          try
-              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-          except
-            sValue := ''
-          end
-        else
-          sValue := Column.field.asstring;
-      end else
-        sValue := '';
-  		StrPCopy(Txt, sValue);
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+        Column.Alignment := taRightJustify;
+      end;
+    end;
 end;
 
 procedure TfrmPBLUSalesInvoices.FormActivate(Sender: TObject);

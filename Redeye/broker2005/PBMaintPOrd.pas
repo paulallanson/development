@@ -8904,7 +8904,7 @@ begin
           if NCL.Inactive = 'Y' then
             begin
               Canvas.Font.Color := clSilver;
-              Canvas.Font.Style := [fsStrikeOut]
+              Canvas.Font.Style := Font.Style + [fsStrikeOut]
             end
           else
           if vrow = iSelected then

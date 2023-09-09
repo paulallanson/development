@@ -4789,7 +4789,7 @@ begin
             if JobBagLine.JBLineInactive then
               begin
                 Canvas.Font.Color := clSilver;
-                Canvas.Font.Style := [fsStrikeOut]
+                Canvas.Font.Style := Font.Style + [fsStrikeOut]
               end
             else
             if vrow = iSelected then
@@ -6253,40 +6253,32 @@ end;
 procedure TPBMaintJobBagFrm.dbgSalesInvoicesDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
   if (dbgSalesInvoices.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'C') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if  (Column.Title.Caption <> 'Total') and
       (Column.Title.Caption <> 'Goods') and
       (Column.Title.Caption <> 'Vat') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
     		WITH Sender AS TDBGrid DO
       		BEGIN
-           	if  (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
+           	if (Column.Title.Caption <> 'Goods') and
+               (Column.Title.Caption <> 'Total') and
                (Column.Title.Caption <> 'Vat') then
               	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
+                  Canvas.Brush.Color := Color;
+                  Canvas.Font.Color  := Font.Color;
+                  Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+                end;
       		END;
 			{Display the Columns Right justified in the cells}
       if Assigned(Column.Field) then
@@ -6294,23 +6286,13 @@ begin
         if  (Column.Title.Caption = 'Goods') or
             (Column.Title.Caption = 'Total') or
             (Column.Title.Caption = 'Vat') then
-          try
-              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-          except
-            sValue := ''
-          end
-        else
-          sValue := Column.field.asstring;
-      end else
-        sValue := '';
-  		StrPCopy(Txt, sValue);
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+        Column.Alignment := taRightJustify;
+      end;
+    end;
 end;
 
 procedure TPBMaintJobBagFrm.dbgSalesInvoicesDblClick(Sender: TObject);
@@ -7837,7 +7819,7 @@ begin
           if JBNCL.Inactive = 'Y' then
             begin
               Canvas.Font.Color := clSilver;
-              Canvas.Font.Style := [fsStrikeOut]
+              Canvas.Font.Style := Font.Style + [fsStrikeOut]
             end
           else
           if vrow = iSelected then
@@ -7971,40 +7953,32 @@ end;
 procedure TPBMaintJobBagFrm.dbgPurchaseInvoicesDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
   if (dbgPurchaseInvoices.datasource.dataset.fieldbyname('Invoice_or_credit').asstring = 'C') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if  (Column.Title.Caption <> 'Total') and
       (Column.Title.Caption <> 'Goods') and
       (Column.Title.Caption <> 'Vat') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
     		WITH Sender AS TDBGrid DO
       		BEGIN
-           	if  (Column.Title.Caption <> 'Goods') and
-              (Column.Title.Caption <> 'Total') and
+           	if (Column.Title.Caption <> 'Goods') and
+               (Column.Title.Caption <> 'Total') and
                (Column.Title.Caption <> 'Vat') then
               	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
+                  Canvas.Brush.Color := Color;
+                  Canvas.Font.Color  := Font.Color;
+                  Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+                end;
       		END;
 			{Display the Columns Right justified in the cells}
       if Assigned(Column.Field) then
@@ -8012,24 +7986,13 @@ begin
         if  (Column.Title.Caption = 'Goods') or
             (Column.Title.Caption = 'Total') or
             (Column.Title.Caption = 'Vat') then
-          try
-              sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-          except
-            sValue := ''
-          end
-        else
-          sValue := Column.field.asstring;
-      end else
-        sValue := '';
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		StrPCopy(Txt, sValue);
-
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+        Column.Alignment := taRightJustify;
+      end;
+    end;
 end;
 
 procedure TPBMaintJobBagFrm.dbgPurchaseInvoicesDblClick(Sender: TObject);

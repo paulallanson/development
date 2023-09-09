@@ -152,45 +152,32 @@ end;
 procedure TPBRSAccManPerformanceFrm.dbgDetailsDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clWhite;
       (Sender as TDBGrid).Canvas.Font.Color := clBlack;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger <> 0 then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger;
       (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Importance_Font_Color').asinteger;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-    
+
   if  (pos('Year',Column.Title.Caption) <> 0) or
       (pos('GP',Column.Title.Caption) <> 0) then
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
      end;
-
 end;
 
 procedure TPBRSAccManPerformanceFrm.rgAccManClick(Sender: TObject);

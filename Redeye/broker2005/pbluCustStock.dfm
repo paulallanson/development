@@ -43,7 +43,7 @@ object frmpbluCustStock: TfrmpbluCustStock
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 804
+        Width = 808
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -55,9 +55,9 @@ object frmpbluCustStock: TfrmpbluCustStock
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 783
+        Width = 795
         Height = 41
-        ButtonHeight = 44
+        ButtonHeight = 29
         ButtonWidth = 62
         Caption = 'ToolBar1'
         Images = imglstMaint
@@ -391,21 +391,22 @@ object frmpbluCustStock: TfrmpbluCustStock
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 389
+        Width = 401
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 383
+            Width = 399
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 374
+          Width = 386
           Height = 25
           Align = alClient
-          ButtonWidth = 62
+          ButtonHeight = 19
+          ButtonWidth = 47
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone

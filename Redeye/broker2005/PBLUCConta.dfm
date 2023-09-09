@@ -1,10 +1,10 @@
-﻿object PBLUCContaFrm: TPBLUCContaFrm
+object PBLUCContaFrm: TPBLUCContaFrm
   Left = 198
   Top = 162
   BorderStyle = bsDialog
   Caption = 'Look-Up Customer/Branch Contacts'
-  ClientHeight = 400
-  ClientWidth = 459
+  ClientHeight = 391
+  ClientWidth = 453
   Color = clBtnFace
   Constraints.MinHeight = 408
   Constraints.MinWidth = 430
@@ -13,14 +13,12 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
-    459
-    400)
-  PixelsPerInch = 96
+    453
+    391)
   TextHeight = 13
   object CustLabel: TLabel
     Left = 85
@@ -30,13 +28,15 @@
     Caption = 'CustLabel'
   end
   object CountLabel: TLabel
-    Left = 299
-    Top = 245
+    Left = 287
+    Top = 236
     Width = 54
     Height = 13
     Alignment = taRightJustify
     Anchors = [akRight, akBottom]
     Caption = 'CountLabel'
+    ExplicitLeft = 299
+    ExplicitTop = 245
   end
   object BranchLabel: TLabel
     Left = 85
@@ -62,8 +62,8 @@
   object DetsDBGrid: TDBGrid
     Left = 13
     Top = 40
-    Width = 339
-    Height = 196
+    Width = 327
+    Height = 187
     Anchors = [akLeft, akTop, akRight, akBottom]
     DataSource = DetsSRC
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -86,25 +86,28 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
-    Top = 261
-    Width = 348
+    Top = 252
+    Width = 336
     Height = 65
     Anchors = [akLeft, akRight, akBottom]
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 261
+    ExplicitWidth = 348
     DesignSize = (
-      348
+      336
       65)
     object NameEdit: TEdit
       Left = 8
       Top = 16
-      Width = 332
+      Width = 320
       Height = 21
       Anchors = [akLeft, akRight, akBottom]
       TabOrder = 0
       OnChange = NameEditChange
+      ExplicitWidth = 332
     end
     object chkbxActiveOnly: TCheckBox
       Left = 8
@@ -119,42 +122,47 @@
     end
   end
   object SelectBitBtn: TBitBtn
-    Left = 370
-    Top = 332
+    Left = 358
+    Top = 323
     Width = 75
     Height = 26
     Anchors = [akRight, akBottom]
     Caption = 'Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
+    ExplicitLeft = 370
+    ExplicitTop = 332
   end
   object CloseBitBtn: TBitBtn
-    Left = 370
-    Top = 365
+    Left = 358
+    Top = 356
     Width = 75
     Height = 25
     Anchors = [akRight, akBottom]
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
+    ExplicitLeft = 370
+    ExplicitTop = 365
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
-    Left = 364
+    Left = 352
     Top = 112
     Width = 87
     Height = 105
     Anchors = [akTop, akRight]
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
+    ExplicitLeft = 364
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 16
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -169,6 +177,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -176,8 +186,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -192,6 +200,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -199,8 +209,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -215,19 +223,23 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object DispPanel: TPanel
-    ParentBackground = False
     Left = 8
-    Top = 331
-    Width = 349
+    Top = 322
+    Width = 337
     Height = 59
     Anchors = [akLeft, akRight, akBottom]
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 5
+    ExplicitTop = 331
+    ExplicitWidth = 349
     object DBContactText: TDBText
       Left = 67
       Top = 3
@@ -293,22 +305,21 @@
     end
   end
   object GoToGrpBox: TGroupBox
-    ParentBackground = False
-    Left = 359
+    Left = 347
     Top = 8
     Width = 97
     Height = 49
     Anchors = [akTop, akRight]
     Caption = 'Go To'
+    ParentBackground = False
     TabOrder = 6
+    ExplicitLeft = 359
     object EventsBitBtn: TBitBtn
       Left = 7
       Top = 16
       Width = 83
       Height = 25
       Caption = '&Events'
-      TabOrder = 0
-      OnClick = EventsBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -323,6 +334,8 @@
         3333333337FFFF7F333333333000000333333333377777733333333333077033
         33333333337FF7F3333333333300003333333333337777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = EventsBitBtnClick
     end
   end
   object DetsSRC: TDataSource
@@ -352,24 +365,19 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Code_From'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Customer'
+        DataType = ftString
+      end
+      item
+        Name = 'Branch_No'
+        DataType = ftInteger
+      end
+      item
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

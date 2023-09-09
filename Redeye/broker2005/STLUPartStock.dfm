@@ -2,8 +2,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   Left = 132
   Top = 55
   Caption = 'Lookup Product Stock Levels'
-  ClientHeight = 501
-  ClientWidth = 1156
+  ClientHeight = 492
+  ClientWidth = 1150
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,10 +18,11 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1156
+    Width = 1150
     Height = 41
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 1156
     object Label2: TLabel
       Left = 8
       Top = 16
@@ -39,13 +40,15 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 436
-    Width = 1156
+    Top = 427
+    Width = 1150
     Height = 46
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 436
+    ExplicitWidth = 1156
     DesignSize = (
-      1156
+      1150
       46)
     object Label1: TLabel
       Left = 8
@@ -64,7 +67,7 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 1078
+      Left = 1066
       Top = 12
       Width = 75
       Height = 25
@@ -73,9 +76,10 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
+      ExplicitLeft = 1078
     end
     object btnSelect: TBitBtn
-      Left = 988
+      Left = 976
       Top = 12
       Width = 75
       Height = 25
@@ -142,13 +146,14 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = btnSelectClick
+      ExplicitLeft = 988
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 41
-    Width = 1156
-    Height = 395
+    Width = 1150
+    Height = 386
     Align = alClient
     DataSource = dtsStock
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -226,8 +231,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 482
-    Width = 1156
+    Top = 473
+    Width = 1150
     Height = 19
     Panels = <
       item
@@ -236,6 +241,8 @@ object STLUPartStockFrm: TSTLUPartStockFrm
       item
         Width = 50
       end>
+    ExplicitTop = 482
+    ExplicitWidth = 1156
   end
   object dtsStock: TDataSource
     DataSet = qryStock

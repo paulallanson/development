@@ -316,58 +316,42 @@ end;
 procedure TPBLUSalesInvoicePOfrm.dbgPODrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
   if dbgPO.datasource.dataset.fieldbyname('Invoice_upfront').asstring = 'Y' then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
   if  (Column.Title.Caption <> 'Number') and
       (Column.Title.Caption <> 'Qty on Order') and
       (Column.Title.Caption <> 'Qty to Invoice') and
       (Column.Title.Caption <> 'Sell Price') then
   	begin
       if Assigned(Column.Field) then
-	      StrPCopy(Txt, Column.Field.AsString) else
-        StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
-    		WITH Sender AS TDBGrid DO
-      		BEGIN
-           	if  (Column.Title.Caption <> 'Number') and
-              (Column.Title.Caption <> 'Qty on Order') and
-              (Column.Title.Caption <> 'Qty to Invoice') and
-               (Column.Title.Caption <> 'Sell Price') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,
-          			Column.field.asstring);
-                 end;
-      		END;
-			{Display the Columns Right justified in the cells}
-      if  (Column.Title.Caption = 'Sell Price') then
-        try
-            sValue := formatfloat('£#,###,##0.00',StrToFloatDef(Column.field.asstring, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := Column.field.asstring;
-  		StrPCopy(Txt, sValue);
+      WITH Sender AS TDBGrid DO
+        BEGIN
+          if (Column.Title.Caption <> 'Number') and
+             (Column.Title.Caption <> 'Qty on Order') and
+             (Column.Title.Caption <> 'Qty to Invoice') and
+             (Column.Title.Caption <> 'Sell Price') then
+              begin
+                Canvas.Brush.Color := Color;
+                Canvas.Font.Color  := Font.Color;
+                Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2, Column.field.asstring);
+               end;
+        END;
+ 			{Display the Columns Right justified in the cells}
+      if (Column.Title.Caption = 'Sell Price') then
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-     end;
+      Column.Alignment := taRightJustify;
+    end;
 end;
 
 procedure TPBLUSalesInvoicePOfrm.btnSweepClick(Sender: TObject);

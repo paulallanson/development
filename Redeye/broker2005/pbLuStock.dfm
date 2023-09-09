@@ -2,8 +2,8 @@ object frmPBLUStock: TfrmPBLUStock
   Left = 29
   Top = 110
   Caption = 'Stock'
-  ClientHeight = 400
-  ClientWidth = 1226
+  ClientHeight = 366
+  ClientWidth = 1220
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,20 +24,20 @@ object frmPBLUStock: TfrmPBLUStock
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 1226
+    Width = 1220
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1228
+        Width = 1224
       end>
-    ExplicitWidth = 1230
+    ExplicitWidth = 1226
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 1215
+      Width = 1211
       Height = 41
       Align = alClient
       Control = ToolBar1
@@ -45,7 +45,7 @@ object frmPBLUStock: TfrmPBLUStock
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1215
+        Width = 1211
         Height = 41
         ButtonHeight = 29
         ButtonWidth = 62
@@ -247,8 +247,8 @@ object frmPBLUStock: TfrmPBLUStock
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 1226
-    Height = 264
+    Width = 1220
+    Height = 230
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnFunctions
@@ -380,8 +380,8 @@ object frmPBLUStock: TfrmPBLUStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 338
-    Width = 1226
+    Top = 304
+    Width = 1220
     Height = 43
     Align = alBottom
     ParentBackground = False
@@ -389,7 +389,7 @@ object frmPBLUStock: TfrmPBLUStock
     ExplicitTop = 359
     ExplicitWidth = 1230
     DesignSize = (
-      1226
+      1220
       43)
     object Label1: TLabel
       Left = 8
@@ -410,7 +410,7 @@ object frmPBLUStock: TfrmPBLUStock
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 1040
+      Left = 1034
       Top = 1
       Width = 185
       Height = 41
@@ -470,8 +470,8 @@ object frmPBLUStock: TfrmPBLUStock
   end
   object stsBrDetails: TStatusBar
     Left = 0
-    Top = 381
-    Width = 1226
+    Top = 347
+    Width = 1220
     Height = 19
     Panels = <
       item
@@ -486,7 +486,7 @@ object frmPBLUStock: TfrmPBLUStock
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 1226
+    Width = 1220
     Height = 30
     Align = alTop
     BevelInner = bvLowered

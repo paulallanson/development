@@ -145,7 +145,7 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       end
     end
     object Panel5: TPanel
-      Left = 886
+      Left = 880
       Top = 1
       Width = 250
       Height = 28
@@ -197,23 +197,22 @@ object frmPBLUEndUsers: TfrmPBLUEndUsers
       Align = alClient
       Control = CoolBar2
       TabOrder = 2
-      ExplicitWidth = 485
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 485
+        Width = 479
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 483
+            Width = 477
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 470
+          Width = 464
           Height = 25
           Align = alClient
           ButtonHeight = 19

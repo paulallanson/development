@@ -2,8 +2,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   Left = 0
   Top = 0
   Caption = 'Customer job details'
-  ClientHeight = 551
-  ClientWidth = 806
+  ClientHeight = 542
+  ClientWidth = 800
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,8 +22,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 532
-    Width = 806
+    Top = 523
+    Width = 800
     Height = 19
     Panels = <
       item
@@ -40,8 +40,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   end
   object Panel1: TPanel
     Left = 0
-    Top = 491
-    Width = 806
+    Top = 482
+    Width = 800
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -115,7 +115,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 806
+    Width = 800
     Height = 45
     Bands = <
       item
@@ -211,8 +211,8 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object dbgDetails: TDBGrid
     Left = 0
     Top = 75
-    Width = 806
-    Height = 416
+    Width = 800
+    Height = 407
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = pmnFunctions
@@ -309,14 +309,14 @@ object frmpbluCustJobs: TfrmpbluCustJobs
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 806
+    Width = 800
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 810
+    ExplicitWidth = 806
     object Panel4: TPanel
       Left = 0
       Top = 0
@@ -345,7 +345,7 @@ object frmpbluCustJobs: TfrmpbluCustJobs
     object PageScroller2: TPageScroller
       Left = 409
       Top = 0
-      Width = 401
+      Width = 397
       Height = 30
       Align = alClient
       Control = CoolBar2
@@ -353,18 +353,18 @@ object frmpbluCustJobs: TfrmpbluCustJobs
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 401
+        Width = 397
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 399
+            Width = 395
           end>
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 386
+          Width = 382
           Height = 25
           Align = alClient
           ButtonHeight = 19

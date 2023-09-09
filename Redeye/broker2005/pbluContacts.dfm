@@ -1,28 +1,25 @@
 object frmpbluContacts: TfrmpbluContacts
   Left = 108
   Top = 150
-  AutoScroll = False
   Caption = 'Contact Details'
-  ClientHeight = 362
-  ClientWidth = 717
+  ClientHeight = 344
+  ClientWidth = 705
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 617
-    Height = 287
+    Width = 605
+    Height = 269
     Align = alClient
     DataSource = dtsContacts
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -78,8 +75,8 @@ object frmpbluContacts: TfrmpbluContacts
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 343
-    Width = 717
+    Top = 325
+    Width = 705
     Height = 19
     Panels = <
       item
@@ -88,18 +85,22 @@ object frmpbluContacts: TfrmpbluContacts
       item
         Width = 50
       end>
+    ExplicitTop = 343
+    ExplicitWidth = 717
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 287
-    Width = 717
+    Top = 269
+    Width = 705
     Height = 56
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
+    ExplicitTop = 287
+    ExplicitWidth = 717
     DesignSize = (
-      717
+      705
       56)
     object Label1: TLabel
       Left = 8
@@ -109,7 +110,7 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Search'
     end
     object btnClose: TButton
-      Left = 635
+      Left = 611
       Top = 17
       Width = 75
       Height = 25
@@ -117,6 +118,7 @@ object frmpbluContacts: TfrmpbluContacts
       Caption = 'Clos&e'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 635
     end
     object chkbxShowInactive: TCheckBox
       Left = 8
@@ -146,16 +148,18 @@ object frmpbluContacts: TfrmpbluContacts
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
-    Left = 617
+    Left = 605
     Top = 0
     Width = 100
-    Height = 287
+    Height = 269
     Align = alRight
+    ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = 617
+    ExplicitHeight = 287
     DesignSize = (
       100
-      287)
+      269)
     object btnAdd: TButton
       Left = 17
       Top = 17
@@ -254,19 +258,14 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 80
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object qrySContacts: TFDQuery
@@ -303,19 +302,13 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer
@@ -362,64 +355,40 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSContactDetails: TFDQuery
@@ -444,34 +413,22 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySetCContactInactive: TFDQuery
@@ -487,19 +444,13 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qrySetSContactInactive: TFDQuery
@@ -515,19 +466,13 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qryAddContact: TFDQuery
@@ -607,39 +552,25 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'OldCustomer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'OldBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'OldContact'
-        ParamType = ptUnknown
       end>
   end
   object qrySetCContactActive: TFDQuery
@@ -655,19 +586,13 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckName: TFDQuery
@@ -682,19 +607,13 @@ object frmpbluContacts: TfrmpbluContacts
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -307,63 +307,45 @@ end;
 procedure TPBLUStkHistoryfrm.detsDBGridDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue, sTemp: string;
 begin
-  sTemp := (Sender as TDBGRid).fields[datacol].text;
-
-  TempRect := Rect;
   if detsDBGrid.datasource.dataset.fieldbyname('Inactive').asstring = 'Y' then
-    (Sender as TDBGrid).Canvas.font.Color := clRed;
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if  (Column.Title.Caption <> 'Order No') and
       (Column.Title.Caption <> 'Qty to Deliver') and
       (Column.Title.Caption <> 'Move In') and
       (Column.Title.Caption <> 'Move Out')then
   	begin
-  		StrPCopy(txt, sTemp);
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
      end
   else
   	begin
-    		WITH Sender AS TDBGrid DO
-      		BEGIN
-           	if  (Column.Title.Caption <> 'Order No') and
-                (Column.Title.Caption <> 'Qty to Deliver') and
-                (Column.Title.Caption <> 'Move In') and
-                (Column.Title.Caption <> 'Move Out') then
-              	begin
-        			Canvas.Brush.Color := Color;
-        			Canvas.Font.Color  := Font.Color;
-        			Canvas.TextRect(Rect, Rect.Left+2, Rect.Top+2,sTemp);
-                 end;
-      		END;
+      WITH Sender AS TDBGrid DO
+        BEGIN
+          if (Column.Title.Caption <> 'Order No') and
+             (Column.Title.Caption <> 'Qty to Deliver') and
+             (Column.Title.Caption <> 'Move In') and
+             (Column.Title.Caption <> 'Move Out') then
+              begin
+                Canvas.Brush.Color := Color;
+                Canvas.Font.Color  := Font.Color;
+                (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+              end;
+        END;
 			{Display the Columns Right justified in the cells}
       if  (Column.Title.Caption = 'Qty to Deliver') or
           (Column.Title.Caption = 'Move In') or
           (Column.Title.Caption = 'Move Out') then
-        try
-          sValue := formatfloat('######0;(######0)',StrToFloatDef(sTemp, 0, FormatSettings))
-        except
-          sValue := ''
-        end
-      else
-        sValue := sTemp;
-  		StrPCopy(Txt, sValue);
+        begin
+          TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
+        end;
 
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      Column.Alignment := taRightJustify;
      end;
-
 end;
 
 end.

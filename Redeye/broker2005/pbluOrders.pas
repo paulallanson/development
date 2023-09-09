@@ -1038,37 +1038,53 @@ end;
 procedure TfrmpbLUOrders.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('Inactive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Needs_Authorising').AsString = 'Y') then
     begin
       if (dbgDetails.datasource.dataset.fieldByName('Order_Status').AsInteger = 5) then
+        begin
 //        (Sender as TDBGrid).Canvas.Brush.color := cllime
-          (Sender as TDBGrid).Canvas.Brush.color := $00428C49
+          (Sender as TDBGrid).Canvas.Brush.color := $00428C49;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end
       else
-        (Sender as TDBGrid).Canvas.font.Color := $00428C49;
-      (Sender as TDBGrid).Canvas.Font.Style := [fsBold];
+        begin
+          (Sender as TDBGrid).Canvas.font.Color := $00428C49;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end;
+
+      (Sender as TDBGrid).Canvas.Font.Style := Font.Style + [fsBold];
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('On_Hold').AsString = 'Y') then
-    (Sender as TDBGrid).Canvas.font.Color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Authorised_By').AsInteger <> 0) then
-    (Sender as TDBGrid).Canvas.font.style := [fsBold]
+    begin
+      (Sender as TDBGrid).Canvas.font.style := [fsBold];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Live_Lines').Asinteger > 0) then
-    (Sender as TDBGrid).Canvas.Brush.color := clRed
+    begin
+      (Sender as TDBGrid).Canvas.Brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end
   else
   if (dbgDetails.datasource.dataset.fieldByName('NCA_Signed_Off').Asinteger > 0) then
     begin
       (Sender as TDBGrid).Canvas.font.color := clblue;
       (Sender as TDBGrid).Canvas.Brush.color := clyellow;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if(gdFocused in State) or (gdSelected in State) then
@@ -1076,6 +1092,7 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if  (Column.Title.Caption <> 'Order') and
@@ -1086,27 +1103,14 @@ begin
       (Column.Title.Caption <> 'Sell Price') and
       (Column.Title.Caption <> 'Quantity') then
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
      end;
-
 end;
 
 procedure TfrmpbLUOrders.chkbxShowUnauthorisedClick(Sender: TObject);

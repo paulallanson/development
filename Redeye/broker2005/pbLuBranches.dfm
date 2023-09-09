@@ -1,11 +1,10 @@
 object frmpbluBranches: TfrmpbluBranches
   Left = 77
   Top = 81
-  AutoScroll = False
   BorderIcons = [biSystemMenu]
   Caption = 'Branch details'
-  ClientHeight = 291
-  ClientWidth = 622
+  ClientHeight = 282
+  ClientWidth = 616
   Color = clBtnFace
   Constraints.MinHeight = 230
   Constraints.MinWidth = 630
@@ -14,19 +13,17 @@ object frmpbluBranches: TfrmpbluBranches
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 622
-    Height = 223
+    Width = 616
+    Height = 214
     Align = alClient
     DataSource = dtsBranch
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -80,16 +77,18 @@ object frmpbluBranches: TfrmpbluBranches
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 223
-    Width = 622
+    Top = 214
+    Width = 616
     Height = 49
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 223
+    ExplicitWidth = 622
     DesignSize = (
-      622
+      616
       49)
     object Label1: TLabel
       Left = 8
@@ -99,7 +98,7 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = 'Search'
     end
     object btnAdd: TButton
-      Left = 277
+      Left = 265
       Top = 8
       Width = 75
       Height = 25
@@ -107,9 +106,10 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = '&Add'
       TabOrder = 0
       OnClick = btnAddClick
+      ExplicitLeft = 277
     end
     object btnChange: TButton
-      Left = 365
+      Left = 353
       Top = 8
       Width = 75
       Height = 25
@@ -118,9 +118,10 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 1
       OnClick = btnChangeClick
+      ExplicitLeft = 365
     end
     object btnDelete: TButton
-      Left = 453
+      Left = 441
       Top = 8
       Width = 75
       Height = 25
@@ -129,9 +130,10 @@ object frmpbluBranches: TfrmpbluBranches
       Enabled = False
       TabOrder = 2
       OnClick = btnDeleteClick
+      ExplicitLeft = 453
     end
     object btnClose: TButton
-      Left = 539
+      Left = 527
       Top = 8
       Width = 75
       Height = 25
@@ -139,6 +141,7 @@ object frmpbluBranches: TfrmpbluBranches
       Caption = 'Clos&e'
       TabOrder = 3
       OnClick = btnCloseClick
+      ExplicitLeft = 539
     end
     object edtName: TEdit
       Left = 56
@@ -162,8 +165,8 @@ object frmpbluBranches: TfrmpbluBranches
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 272
-    Width = 622
+    Top = 263
+    Width = 616
     Height = 19
     Panels = <
       item
@@ -172,6 +175,8 @@ object frmpbluBranches: TfrmpbluBranches
       item
         Width = 50
       end>
+    ExplicitTop = 272
+    ExplicitWidth = 622
   end
   object dtsBranch: TDataSource
     DataSet = qrySBranch
@@ -194,19 +199,14 @@ object frmpbluBranches: TfrmpbluBranches
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryCBranch: TFDQuery
@@ -228,29 +228,21 @@ object frmpbluBranches: TfrmpbluBranches
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object SearchTimer: TTimer

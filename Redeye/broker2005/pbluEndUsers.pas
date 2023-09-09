@@ -681,25 +681,33 @@ end;
 procedure TfrmPBLUEndUsers.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if cmbColourCoding.itemindex = 0 then
     begin
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 10) then
-        (Sender as TDBGrid).Canvas.Brush.color := clGreen
+        begin
+          (Sender as TDBGrid).Canvas.Brush.color := clGreen;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 20) then
         begin
           (Sender as TDBGrid).Canvas.font.color := clblue;
           (Sender as TDBGrid).Canvas.Brush.color := clyellow;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
         end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 30) then
-        (Sender as TDBGrid).Canvas.Brush.color := $000080FF
+        begin
+          (Sender as TDBGrid).Canvas.Brush.color := $000080FF;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+        end
       else
       if (dbgDetails.datasource.dataset.fieldByName('Credit_Rating').AsInteger = 40) then
+      begin
         (Sender as TDBGrid).Canvas.Brush.color := clRed;
+        (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+      end;
     end
   else
   if cmbColourCoding.itemindex = 1 then
@@ -708,6 +716,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Customer_Type_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Customer_Type_Font_Color').asinteger;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
         end
     end
   else
@@ -717,6 +726,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Importance_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Importance_Font_Color').asinteger;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
         end;
     end
   else
@@ -726,6 +736,7 @@ begin
         begin
           (Sender as TDBGrid).Canvas.Brush.color := dbgDetails.datasource.dataset.fieldByName('Invoice_location_Color').asinteger;
           (Sender as TDBGrid).Canvas.Font.color := dbgDetails.datasource.dataset.fieldByName('Invoice_location_Font_Color').asinteger;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
         end;
     end;
 
@@ -734,21 +745,14 @@ begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 
   if dbgDetails.datasource.dataset.fieldByName('Customer_Status').asinteger = 90 then
     begin
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 end;
 
 procedure TfrmPBLUEndUsers.dbgDetailsTitleClick(Column: TColumn);

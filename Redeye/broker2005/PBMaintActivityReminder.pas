@@ -240,12 +240,11 @@ end;
 procedure TPBMaintActivityReminderFrm.dbgDetailsDrawColumnCell(
   Sender: TObject; const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('Activity_Status').asinteger = 30) then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Due_Date_Time').Asdatetime = date) and
@@ -253,28 +252,23 @@ begin
       begin
           (Sender as TDBGrid).Canvas.font.color := clWhite;
           (Sender as TDBGrid).Canvas.Brush.color := clGreen;
+          (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
       end
   else
   if (dbgDetails.datasource.dataset.fieldByName('Due_Date_Time').Asdatetime < now) and
       (dbgDetails.datasource.dataset.fieldByName('Activity_Status').asinteger < 30) then
-      (Sender as TDBGrid).Canvas.Font.Color := clRed ;
+    begin
+      (Sender as TDBGrid).Canvas.Font.Color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if(gdFocused in State) or (gdSelected in State) then
     begin
       (Sender as TDBGrid).Canvas.Brush.color := clHighlight;
       (Sender as TDBGrid).Canvas.Font.Style := (Sender as TDBGrid).Canvas.Font.Style + [fsBold];
       (Sender as TDBGrid).Canvas.Font.Color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
-
-  if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
 end;
 
 procedure TPBMaintActivityReminderFrm.Button2Click(Sender: TObject);

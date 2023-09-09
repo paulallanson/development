@@ -1,21 +1,19 @@
-﻿object STLUCourierFrm: TSTLUCourierFrm
+object STLUCourierFrm: TSTLUCourierFrm
   Left = 249
   Top = 145
   BorderStyle = bsDialog
   Caption = 'Look-Up A Courier'
-  ClientHeight = 356
-  ClientWidth = 439
+  ClientHeight = 347
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CountLabel: TLabel
     Left = 267
@@ -57,8 +55,6 @@
     Height = 25
     Caption = 'Select'
     Default = True
-    TabOrder = 1
-    OnClick = SelectBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -124,6 +120,8 @@
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = SelectBitBtnClick
   end
   object FuncGrpBox: TGroupBox
     Left = 339
@@ -138,8 +136,6 @@
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -154,6 +150,8 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -161,8 +159,6 @@
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -177,6 +173,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -184,8 +182,6 @@
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -200,6 +196,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object btnServices: TBitBtn
@@ -208,8 +206,6 @@
     Width = 75
     Height = 25
     Caption = 'Services'
-    TabOrder = 3
-    OnClick = btnServicesClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -224,6 +220,8 @@
       07557777777F55557F5555000005555707555577777FF5557F55553000075557
       0755557F7777FFF5755555335000005555555577577777555555}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnServicesClick
   end
   object SearchGrpBox: TGroupBox
     Left = 8
@@ -258,8 +256,9 @@
     Width = 75
     Height = 25
     Caption = 'Ca&ncel'
-    TabOrder = 5
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 5
   end
   object BitBtn2: TBitBtn
     Left = 344
@@ -267,8 +266,6 @@
     Width = 75
     Height = 25
     Caption = 'Sort'
-    TabOrder = 6
-    OnClick = BitBtn2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -283,6 +280,8 @@
       99FF7777F337777F77F333993330F99F99FF3F77FF37F773773F993CC330FFF9
       9F9977F77F37F3377F77993CC330FFF99F997737733733377377}
     NumGlyphs = 2
+    TabOrder = 6
+    OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
     Left = 344
@@ -290,8 +289,6 @@
     Width = 75
     Height = 25
     Caption = 'Speed'
-    TabOrder = 7
-    OnClick = BitBtn3Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -306,6 +303,8 @@
       000337777FF7FF77773333703070007030733373777777737333333333330333
       333333333337FF33333333333330003333333333337773333333}
     NumGlyphs = 2
+    TabOrder = 7
+    OnClick = BitBtn3Click
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -326,14 +325,10 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

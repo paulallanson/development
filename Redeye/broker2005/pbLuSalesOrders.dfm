@@ -2,8 +2,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   Left = 81
   Top = 105
   Caption = 'Sales Orders'
-  ClientHeight = 340
-  ClientWidth = 926
+  ClientHeight = 306
+  ClientWidth = 920
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -24,20 +24,20 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 926
+    Width = 920
     Height = 44
     Bands = <
       item
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 928
+        Width = 924
       end>
-    ExplicitWidth = 930
+    ExplicitWidth = 926
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
-      Width = 915
+      Width = 911
       Height = 40
       Align = alClient
       Control = ToolBar1
@@ -45,7 +45,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 915
+        Width = 911
         Height = 40
         ButtonHeight = 29
         ButtonWidth = 62
@@ -187,8 +187,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object Panel1: TPanel
     Left = 0
-    Top = 280
-    Width = 926
+    Top = 246
+    Width = 920
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -281,8 +281,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 321
-    Width = 926
+    Top = 287
+    Width = 920
     Height = 19
     Panels = <
       item
@@ -297,7 +297,7 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 926
+    Width = 920
     Height = 30
     Align = alTop
     BevelInner = bvLowered
@@ -338,8 +338,8 @@ object frmPBLUSalesOrders: TfrmPBLUSalesOrders
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 926
-    Height = 206
+    Width = 920
+    Height = 172
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     PopupMenu = pmnfunctions

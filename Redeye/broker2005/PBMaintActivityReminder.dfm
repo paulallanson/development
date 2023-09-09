@@ -1,9 +1,9 @@
 object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   Left = 286
   Top = 104
-  Width = 770
-  Height = 460
   Caption = 'Activity Reminder'
+  ClientHeight = 413
+  ClientWidth = 752
   Color = clBtnFace
   Constraints.MinHeight = 460
   Constraints.MinWidth = 770
@@ -12,20 +12,19 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 762
+    Width = 752
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 762
     object dbtxtSubject: TDBText
       Left = 72
       Top = 8
@@ -156,8 +155,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 762
-    Height = 295
+    Width = 752
+    Height = 275
     Align = alClient
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
     TabOrder = 1
@@ -221,13 +220,15 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 360
-    Width = 762
+    Top = 340
+    Width = 752
     Height = 54
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 360
+    ExplicitWidth = 762
     DesignSize = (
-      762
+      752
       54)
     object btnComplete: TButton
       Left = 110
@@ -279,8 +280,8 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 414
-    Width = 762
+    Top = 394
+    Width = 752
     Height = 19
     Panels = <
       item
@@ -289,5 +290,7 @@ object PBMaintActivityReminderFrm: TPBMaintActivityReminderFrm
       item
         Width = 50
       end>
+    ExplicitTop = 414
+    ExplicitWidth = 762
   end
 end

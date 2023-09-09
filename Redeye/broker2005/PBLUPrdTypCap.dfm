@@ -1,4 +1,4 @@
-﻿object PBLUPrdTypCapFrm: TPBLUPrdTypCapFrm
+object PBLUPrdTypCapFrm: TPBLUPrdTypCapFrm
   Left = 348
   Top = 135
   Caption = 'Look-Up A Product Type Capability'
@@ -62,12 +62,12 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 240
     Width = 321
     Height = 73
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -174,12 +174,12 @@
     TabOrder = 3
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 336
     Top = 128
     Width = 87
     Height = 105
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 4
     object AddBitBtn: TBitBtn
       Left = 6
@@ -280,19 +280,13 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

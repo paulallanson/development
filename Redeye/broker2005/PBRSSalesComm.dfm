@@ -2,8 +2,8 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   Left = 7
   Top = 29
   Caption = 'Reps Commission report'
-  ClientHeight = 480
-  ClientWidth = 780
+  ClientHeight = 471
+  ClientWidth = 774
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -19,13 +19,11 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 145
-    Width = 780
-    Height = 294
+    Width = 774
+    Height = 285
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 774
-    ExplicitHeight = 285
     object dbgrdSalesInvoice: TDBGrid
       Left = 1
       Top = 1
@@ -121,12 +119,11 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 780
+    Width = 774
     Height = 145
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 774
     object Label3: TLabel
       Left = 8
       Top = 84
@@ -327,16 +324,14 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 439
-    Width = 780
+    Top = 430
+    Width = 774
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 430
-    ExplicitWidth = 774
     DesignSize = (
-      780
+      774
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -352,7 +347,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 547
+      Left = 541
       Top = 1
       Width = 232
       Height = 39
@@ -360,7 +355,6 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 541
       DesignSize = (
         232
         39)
@@ -422,7 +416,7 @@ object PBRSSalesCommFrm: TPBRSSalesCommFrm
       TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 491
+      Left = 479
       Top = 8
       Width = 75
       Height = 25

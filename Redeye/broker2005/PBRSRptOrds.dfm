@@ -2,8 +2,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   Left = 15
   Top = 30
   Caption = 'Expected Reorder Report'
-  ClientHeight = 436
-  ClientWidth = 732
+  ClientHeight = 427
+  ClientWidth = 726
   Color = clBtnFace
   Constraints.MinHeight = 462
   Constraints.MinWidth = 735
@@ -21,7 +21,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 732
+    Width = 726
     Height = 113
     Align = alTop
     ParentBackground = False
@@ -208,8 +208,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object pnlButton: TPanel
     Left = 0
-    Top = 376
-    Width = 732
+    Top = 367
+    Width = 726
     Height = 41
     Align = alBottom
     ParentBackground = False
@@ -217,7 +217,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     ExplicitTop = 389
     ExplicitWidth = 742
     DesignSize = (
-      732
+      726
       41)
     object CancelBitBtn: TBitBtn
       Left = 14
@@ -279,7 +279,7 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       OnClick = btbtnChangeClick
     end
     object PreviewBitBtn: TBitBtn
-      Left = 560
+      Left = 548
       Top = 8
       Width = 75
       Height = 25
@@ -301,9 +301,10 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
+      ExplicitLeft = 560
     end
     object PrintBitBtn: TBitBtn
-      Left = 648
+      Left = 636
       Top = 8
       Width = 75
       Height = 25
@@ -325,13 +326,14 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
+      ExplicitLeft = 648
     end
   end
   object dbgDetails: TDBGrid
     Left = 0
     Top = 113
-    Width = 732
-    Height = 263
+    Width = 726
+    Height = 254
     Align = alClient
     DataSource = dtsrcLive
     DefaultDrawing = False
@@ -452,8 +454,8 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 417
-    Width = 732
+    Top = 408
+    Width = 726
     Height = 19
     Panels = <
       item

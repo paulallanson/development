@@ -686,19 +686,18 @@ end;
 procedure TfrmpbluCustStock.dbgDetailsDrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn;
   State: TGridDrawState);
-VAR
-  TempRect: TRect;
-  Txt: array [0..255] of Char;
-  sValue: string;
 begin
-  TempRect := Rect;
   if (dbgDetails.datasource.dataset.fieldbyname('Not_in_Use').asstring = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   else
   if (dbgDetails.datasource.dataset.fieldbyname('Store_Qty').asinteger < dbgDetails.datasource.dataset.fieldbyname('Reorder_Level').asinteger) then
-    (Sender as TDBGrid).Canvas.font.color := cllime;
+    begin
+      (Sender as TDBGrid).Canvas.font.color := cllime;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
 
   if  (Column.Title.Caption <> 'In Stock') and
       (Column.Title.Caption <> 'Allocated') and
@@ -715,25 +714,13 @@ begin
       (Column.Title.Caption <> 'Future Stock') and
       (Column.Title.Caption <> 'On Purchase') then
   	begin
-      if Assigned(Column.Field) then 
-	  StrPCopy(txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-      SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-      ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if Assigned(Column.Field) then
+        Column.Alignment := taLeftJustify;
     end
   else
   	begin
-  		if Assigned(Column.Field) then 
-	  StrPCopy(Txt, Column.field.text) else
-	  StrPCopy(Txt, '');
-  		SetTextAlign((Sender as TDBGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TDBGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TDBGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		if Assigned(Column.Field) then
+        Column.Alignment := taRightJustify;
      end;
 end;
 

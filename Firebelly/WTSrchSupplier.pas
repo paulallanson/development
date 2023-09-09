@@ -296,7 +296,7 @@ procedure TfrmWTSrchSupplier.dbgDetailsDrawColumnCell(Sender: TObject;
 begin
   if(dbgDetails.datasource.dataset.fieldByName('InActive').AsString = 'Y') then
     begin
-      (Sender as TDBGrid).Canvas.font.style := [fsStrikeout];
+      (Sender as TDBGrid).Canvas.font.style := Font.Style + [fsStrikeout];
       (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
 end;

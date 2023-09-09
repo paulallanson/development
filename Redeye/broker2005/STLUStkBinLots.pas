@@ -131,13 +131,14 @@ begin
   begin
     dbgrdBinLots.Canvas.Font.Color := clwhite;
     dbgrdBinLots.canvas.brush.Color := clNavy;
+    (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
   end
   else
   begin
     dbgrdBinLots.Canvas.Font.Color := clblack;
     dbgrdBinLots.canvas.brush.Color := clwhite;
+    (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
   end;
-  dbgrdBinLots.DefaultDrawColumnCell(rect, datacol, column, state);
 end;
 
 procedure TSTLUStkBinLotsFrm.FormShow(Sender: TObject);

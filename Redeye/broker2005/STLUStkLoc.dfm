@@ -2,8 +2,8 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   Left = 148
   Top = 213
   Caption = 'Stock Locations'
-  ClientHeight = 283
-  ClientWidth = 652
+  ClientHeight = 274
+  ClientWidth = 646
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -18,13 +18,11 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   object pnlGrid: TPanel
     Left = 0
     Top = 0
-    Width = 652
-    Height = 223
+    Width = 646
+    Height = 214
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 646
-    ExplicitHeight = 214
     object dbgrdLocations: TDBGrid
       Left = 1
       Top = 33
@@ -164,16 +162,14 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 223
-    Width = 652
+    Top = 214
+    Width = 646
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 214
-    ExplicitWidth = 646
     DesignSize = (
-      652
+      646
       41)
     object Label1: TLabel
       Left = 12
@@ -191,7 +187,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       ParentFont = False
     end
     object pnlButton: TPanel
-      Left = 547
+      Left = 541
       Top = 1
       Width = 104
       Height = 39
@@ -199,7 +195,6 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 541
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -211,7 +206,7 @@ object STLUStkLocFrm: TSTLUStkLocFrm
       end
     end
     object btnExcel: TBitBtn
-      Left = 450
+      Left = 438
       Top = 8
       Width = 75
       Height = 25
@@ -268,12 +263,10 @@ object STLUStkLocFrm: TSTLUStkLocFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 264
-    Width = 652
+    Top = 255
+    Width = 646
     Height = 19
     Panels = <>
-    ExplicitTop = 255
-    ExplicitWidth = 646
   end
   object pmnStock: TPopupMenu
     Left = 368

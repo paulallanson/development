@@ -121,11 +121,13 @@ begin
     begin
       dbgrdLocations.Canvas.Font.Color := clWhite;
       dbgrdLocations.Canvas.brush.color := clRed;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
     else
     begin
       dbgrdLocations.Canvas.Font.Color := clRed;
       dbgrdLocations.Canvas.brush.color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
   end
   else
@@ -134,14 +136,15 @@ begin
     begin
       dbgrdLocations.Canvas.Font.Color := clWhite;
       dbgrdLocations.Canvas.brush.color := clNavy;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end
     else
     begin
       dbgrdLocations.Canvas.Font.Color := clblack;
       dbgrdLocations.Canvas.brush.color := clWhite;
+      (Sender as TDBGrid).DefaultDrawDataCell(Rect, Column.Field, State);
     end;
   end;
-  dbgrdLocations.DefaultDrawColumnCell(rect, datacol, column, state);
 end;
 
 procedure TSTLUStkLocFrm.FormShow(Sender: TObject);

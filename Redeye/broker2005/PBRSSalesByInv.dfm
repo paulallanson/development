@@ -2,8 +2,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   Left = 20
   Top = 57
   Caption = 'Sales By Invoice Number'
-  ClientHeight = 490
-  ClientWidth = 889
+  ClientHeight = 481
+  ClientWidth = 883
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 790
@@ -19,13 +19,11 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 225
-    Width = 889
-    Height = 205
+    Width = 883
+    Height = 196
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 883
-    ExplicitHeight = 196
     object OleContainer1: TOleContainer
       Left = 416
       Top = 200
@@ -143,12 +141,11 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 889
+    Width = 883
     Height = 225
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 883
     object Label3: TLabel
       Left = 8
       Top = 183
@@ -483,19 +480,17 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 430
-    Width = 889
+    Top = 421
+    Width = 883
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 421
-    ExplicitWidth = 883
     DesignSize = (
-      889
+      883
       41)
     object Panel1: TPanel
-      Left = 656
+      Left = 650
       Top = 1
       Width = 232
       Height = 39
@@ -503,7 +498,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 650
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -562,7 +556,7 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       TabOrder = 1
     end
     object btbtnExcel: TBitBtn
-      Left = 589
+      Left = 577
       Top = 8
       Width = 75
       Height = 25
@@ -642,8 +636,8 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
   end
   object stbrDetails: TStatusBar
     Left = 0
-    Top = 471
-    Width = 889
+    Top = 462
+    Width = 883
     Height = 19
     Panels = <
       item
@@ -655,8 +649,6 @@ object PBRSSalesByInvFrm: TPBRSSalesByInvFrm
       item
         Width = 50
       end>
-    ExplicitTop = 462
-    ExplicitWidth = 883
   end
   object qrySalesByInv: TFDQuery
     OnCalcFields = qrySalesByInvCalcFields

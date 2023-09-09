@@ -3,8 +3,8 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   Top = 151
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Stock Numbered Lots'
-  ClientHeight = 245
-  ClientWidth = 544
+  ClientHeight = 236
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -19,13 +19,11 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
   object pnlGrid: TPanel
     Left = 0
     Top = 0
-    Width = 544
-    Height = 185
+    Width = 538
+    Height = 176
     Align = alClient
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 538
-    ExplicitHeight = 176
     object dbgrdBinLots: TDBGrid
       Left = 1
       Top = 41
@@ -114,7 +112,7 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       TabOrder = 1
       ExplicitWidth = 536
       DesignSize = (
-        542
+        536
         40)
       object lblPartCode: TLabel
         Left = 72
@@ -145,20 +143,21 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
         Caption = 'lblStoreName'
       end
       object lblQuantities: TLabel
-        Left = 476
+        Left = 470
         Top = 8
         Width = 57
         Height = 13
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = 'lblQuantities'
+        ExplicitLeft = 476
       end
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 226
-    Width = 544
+    Top = 217
+    Width = 538
     Height = 19
     Panels = <
       item
@@ -170,19 +169,15 @@ object STLUStkBinLotsFrm: TSTLUStkBinLotsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 217
-    ExplicitWidth = 538
   end
   object Panel1: TPanel
     Left = 0
-    Top = 185
-    Width = 544
+    Top = 176
+    Width = 538
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 176
-    ExplicitWidth = 538
     object Panel3: TPanel
       Left = 440
       Top = 1

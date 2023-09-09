@@ -210,7 +210,7 @@ begin
           TNumericField(Column.Field).DisplayFormat := '£#,###,##0.00';
         end;
 
-      Column.Alignment := taLeftJustify;
+      Column.Alignment := taRightJustify;
     end;
 end;
 

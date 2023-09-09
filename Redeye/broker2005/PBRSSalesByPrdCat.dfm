@@ -2,8 +2,8 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   Left = 3
   Top = 40
   Caption = 'Sales By Product Category'
-  ClientHeight = 522
-  ClientWidth = 778
+  ClientHeight = 513
+  ClientWidth = 772
   Color = clBtnFace
   Constraints.MinHeight = 560
   Constraints.MinWidth = 790
@@ -19,13 +19,11 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   object pnlDisplay: TPanel
     Left = 0
     Top = 185
-    Width = 778
-    Height = 296
+    Width = 772
+    Height = 287
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 772
-    ExplicitHeight = 287
     object dbgDetails: TDBGrid
       Left = 1
       Top = 1
@@ -124,12 +122,11 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   object pnlControls: TPanel
     Left = 0
     Top = 0
-    Width = 778
+    Width = 772
     Height = 185
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 772
     object Label3: TLabel
       Left = 8
       Top = 145
@@ -418,16 +415,14 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
   end
   object pnlPrintControl: TPanel
     Left = 0
-    Top = 481
-    Width = 778
+    Top = 472
+    Width = 772
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 472
-    ExplicitWidth = 772
     DesignSize = (
-      778
+      772
       41)
     object lblRecordCount: TLabel
       Left = 104
@@ -443,7 +438,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      Left = 545
+      Left = 539
       Top = 1
       Width = 232
       Height = 39
@@ -451,7 +446,6 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 539
       object PreviewReportBitBtn: TBitBtn
         Left = 30
         Top = 8
@@ -500,7 +494,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       end
     end
     object CancelBitBtn: TBitBtn
-      Left = 382
+      Left = 370
       Top = 8
       Width = 75
       Height = 25
@@ -511,7 +505,7 @@ object PBRSSalesByPrdCatFrm: TPBRSSalesByPrdCatFrm
       ExplicitLeft = 376
     end
     object btbtnExcel: TBitBtn
-      Left = 478
+      Left = 466
       Top = 8
       Width = 75
       Height = 25

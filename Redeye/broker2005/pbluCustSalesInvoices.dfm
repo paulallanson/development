@@ -2,8 +2,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   Left = 0
   Top = 0
   Caption = 'Sales Invoices/Credits'
-  ClientHeight = 541
-  ClientWidth = 804
+  ClientHeight = 532
+  ClientWidth = 798
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -23,12 +23,13 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 804
+    Width = 798
     Height = 30
     Align = alTop
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
+    ExplicitWidth = 804
     object Panel2: TPanel
       Left = 0
       Top = 0
@@ -146,7 +147,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object CoolBar1: TCoolBar
     Left = 0
     Top = 30
-    Width = 804
+    Width = 798
     Height = 44
     Bands = <
       item
@@ -155,6 +156,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
         MinHeight = 40
         Width = 802
       end>
+    ExplicitWidth = 804
     object PageScroller1: TPageScroller
       Left = 11
       Top = 0
@@ -239,8 +241,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   object dbgDetails: TDBGrid
     Left = 0
     Top = 74
-    Width = 804
-    Height = 410
+    Width = 798
+    Height = 401
     Align = alClient
     DataSource = dmSalesInvoice.dsSCHeaderGrid
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -312,13 +314,11 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   end
   object Panel1: TPanel
     Left = 0
-    Top = 484
-    Width = 804
+    Top = 475
+    Width = 798
     Height = 38
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 489
-    ExplicitWidth = 812
     object Label1: TLabel
       Left = 8
       Top = 13
@@ -335,7 +335,7 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel4: TPanel
-      Left = 528
+      Left = 514
       Top = 1
       Width = 283
       Height = 36
@@ -382,8 +382,8 @@ object frmpbLUCustSalesInvoices: TfrmpbLUCustSalesInvoices
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 522
-    Width = 804
+    Top = 513
+    Width = 798
     Height = 19
     Panels = <
       item

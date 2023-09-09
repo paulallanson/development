@@ -1,34 +1,33 @@
 object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   Left = 209
   Top = 64
-  AutoScroll = False
   Caption = 'Account Manager Performance Report'
-  ClientHeight = 453
-  ClientWidth = 920
+  ClientHeight = 444
+  ClientWidth = 914
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFooter: TPanel
     Left = 0
-    Top = 393
-    Width = 920
+    Top = 384
+    Width = 914
     Height = 41
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 393
+    ExplicitWidth = 920
     DesignSize = (
-      920
+      914
       41)
     object btnClose: TButton
-      Left = 832
+      Left = 820
       Top = 8
       Width = 75
       Height = 25
@@ -36,17 +35,16 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
       Caption = 'Close'
       TabOrder = 0
       OnClick = btnCloseClick
+      ExplicitLeft = 832
     end
     object btnExcel: TBitBtn
-      Left = 728
+      Left = 716
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -90,15 +88,19 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 1
+      OnClick = btnExcelClick
+      ExplicitLeft = 728
     end
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 920
+    Width = 914
     Height = 81
     Align = alTop
     TabOrder = 1
+    ExplicitWidth = 920
     object rgAccMan: TRadioGroup
       Left = 8
       Top = 8
@@ -154,8 +156,8 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 81
-    Width = 920
-    Height = 312
+    Width = 914
+    Height = 303
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
@@ -274,10 +276,12 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 434
-    Width = 920
+    Top = 425
+    Width = 914
     Height = 19
     Panels = <>
+    ExplicitTop = 434
+    ExplicitWidth = 920
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'
@@ -381,54 +385,44 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'period0_Start'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Period0_End'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'period1_Start'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Period1_End'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'period2_Start'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Period2_End'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'period3_Start'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Period3_End'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'period4_Start'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Period4_End'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsReport: TDataSource
@@ -542,54 +536,34 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'period0_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period0_End'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period1_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period1_End'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period2_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period2_End'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period3_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period3_End'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period4_Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Period4_End'
-        ParamType = ptUnknown
       end>
   end
   object qryFY: TFDQuery
@@ -606,9 +580,7 @@ object PBRSAccManPerformanceFrm: TPBRSAccManPerformanceFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Current_Year'
-        ParamType = ptUnknown
       end>
   end
 end

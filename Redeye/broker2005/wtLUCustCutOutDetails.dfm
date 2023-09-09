@@ -1,9 +1,9 @@
 object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   Left = 192
   Top = 114
-  Width = 751
-  Height = 420
   Caption = 'Maintain Customer Cut Out Details'
+  ClientHeight = 373
+  ClientWidth = 733
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 751
@@ -12,18 +12,16 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClick = FormClick
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 73
-    Width = 743
-    Height = 232
+    Width = 733
+    Height = 212
     Align = alClient
     DataSource = srclkpCOutThickness
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -81,14 +79,16 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   end
   object Panel1: TPanel
     Left = 0
-    Top = 305
-    Width = 743
+    Top = 285
+    Width = 733
     Height = 69
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 305
+    ExplicitWidth = 743
     DesignSize = (
-      743
+      733
       69)
     object Label4: TLabel
       Left = 16
@@ -154,8 +154,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       Anchors = [akTop, akRight]
       Caption = '&Close'
       ModalResult = 2
-      TabOrder = 5
       NumGlyphs = 2
+      TabOrder = 5
     end
     object btnExcel: TBitBtn
       Left = 573
@@ -171,8 +171,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 374
-    Width = 743
+    Top = 354
+    Width = 733
     Height = 19
     Panels = <
       item
@@ -181,17 +181,20 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
       item
         Width = 50
       end>
+    ExplicitTop = 374
+    ExplicitWidth = 743
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 743
+    Width = 733
     Height = 73
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 743
     DesignSize = (
-      743
+      733
       73)
     object Label1: TLabel
       Left = 16
@@ -320,8 +323,8 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
   object tblCOutThickness: TFDTable
     BeforePost = tblCOutThicknessBeforePost
     OnNewRecord = tblCOutThicknessNewRecord
-    ConnectionName = 'WT'
     IndexFieldNames = 'Cutout'
+    ConnectionName = 'WT'
     TableName = 'Cutout_thickness'
     Left = 296
     Top = 224
@@ -400,34 +403,26 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Material_Type'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Edge_Type'
         DataType = ftInteger
-        Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Edge_Type'
+        DataType = ftInteger
+      end
+      item
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
     object lkpCOutThicknessCutout: TIntegerField
       FieldName = 'Cutout'
@@ -495,9 +490,7 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'price_pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCutOutThickness: TFDQuery
@@ -538,14 +531,10 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAddCutOutThickness: TFDQuery
@@ -559,24 +548,16 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'CutOut'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Material_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Pointer'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteCutOutThickness: TFDQuery
@@ -589,14 +570,10 @@ object frmWTLUCustCutOutDetails: TfrmWTLUCustCutOutDetails
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object tmrRefresh: TTimer

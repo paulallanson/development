@@ -1220,7 +1220,7 @@ begin
     if (vrow > 0) and (SalesInvoice.Lines[vRow-1].Inactive = 'Y') then
         begin
           (Sender as TStringGrid).Canvas.font.color := clGray;
-          (Sender as TStringGrid).Canvas.font.style := [fsstrikeout];
+          (Sender as TStringGrid).Canvas.font.style := Font.Style + [fsstrikeout];
         end;
     if (vCol = 0) or (vCol = 1) or (vCol = 2) or (vCol = 12) then
   	begin
