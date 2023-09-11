@@ -3916,7 +3916,7 @@ end;
 
 procedure TPBMaintCustFrm.btnEmailClick(Sender: TObject);
 var
-  sTo, sSubject, sBody, sFilePath: string;
+  sTo, sSubject: string;
 begin
   PBMaintEmailFrm := TPBMaintEmailFrm.create(self);
   try
@@ -4796,12 +4796,13 @@ end;
 
 function TPBMaintCustFrm.CheckEnquiryInput: boolean;
 begin
-  result := true;
+  Result := False;
+  if Trim(edtEnqNumber.text) = '' then Exit;
+
   if not dbgEnquiryDetails.datasource.DataSet.locate('Enquiry', Variant(edtEnqNumber.text),[lopartialKey]) then
-    begin
       messagedlg('Enquiry '+ edtEnqNumber.text + ' not found within this list', mterror,[mbOk], 0);
-      Result := false;
-    end;
+
+  Result := True;
 end;
 
 procedure TPBMaintCustFrm.btnEnqRepliesClick(Sender: TObject);
@@ -7323,12 +7324,13 @@ end;
 
 function TPBMaintCustFrm.CheckQuoteInput: boolean;
 begin
-  result := true;
+  Result := False;
+  if Trim(edtQuoteNumber.text) = '' then Exit;
+
   if not dbgQuoteDetails.datasource.DataSet.locate('Quote', Variant(edtQuoteNumber.text),[lopartialKey]) then
-    begin
-      messagedlg('Quote '+ edtQuoteNumber.text + ' not found within this list', mterror,[mbOk], 0);
-      Result := false;
-    end;
+    messagedlg('Quote '+ edtQuoteNumber.text + ' not found within this list', mterror,[mbOk], 0);
+
+  Result := True;
 end;
 
 procedure TPBMaintCustFrm.btnQuoteConvertClick(Sender: TObject);

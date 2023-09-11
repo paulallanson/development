@@ -373,15 +373,10 @@ type
     procedure LineAddBitBtnClick(Sender: TObject);
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
-    procedure LineDetsStringGridDrawCell(Sender: TObject; ACol,
-      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure ShowDelivGrid(Sender: TObject);
     procedure DelivAddBitBtnClick(Sender: TObject);
     procedure DelivChgBitBtnClick(Sender: TObject);
     procedure DelivDelBitBtnClick(Sender: TObject);
-    procedure LineDetsStringGridDblClick(Sender: TObject);
     procedure DelivDetsStringGridDblClick(Sender: TObject);
     procedure DelivDetsStringGridDrawCell(Sender: TObject; ACol,
       ARow: Integer; Rect: TRect; State: TGridDrawState);
@@ -2408,48 +2403,6 @@ begin
   end;
 end;
 
-procedure TPBMaintPOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  ACol, ARow: Integer; var CanSelect: Boolean);
-begin
-(*  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
-  SelectionChanged;
-*)end;
-
-procedure TPBMaintPOrdFrm.LineDetsStringGridDrawCell(Sender: TObject; ACol,
-  ARow: Integer; Rect: TRect; State: TGridDrawState);
-//var
-//  Txt: array[0..255] of Char;
-begin
-(*  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (Col < 1) or (Col > 2) then
-  begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    if ((Col > 2) and (Row > 0) and (LineDetsStringGrid.Cells[3, Row] <>
-      LineDetsStringGrid.Cells[4, Row])) then
-    begin
-      LineDetsStringGrid.Canvas.Font.Color := clRed;
-      bDelivsBalance := False;
-    end;
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
-*)
-end;
-
 procedure TPBMaintPOrdFrm.SetLineDetails;
 var
   OrderLine: TOrderLine;
@@ -3125,16 +3078,6 @@ begin
 
 end;
 
-procedure TPBMaintPOrdFrm.LineDetsStringGridDblClick(Sender: TObject);
-begin
-(*  if LineChgBitBtn.Enabled then
-    if FFuncMode <> poView then
-      LineChgBitBtnClick(Self)
-    else
-      SelectBitBtnClick(Self);
-*)
-end;
-
 procedure TPBMaintPOrdFrm.DelivDetsStringGridDblClick(Sender: TObject);
 begin
   if DelivChgBitBtn.Enabled then
@@ -3146,30 +3089,38 @@ end;
 
 procedure TPBMaintPOrdFrm.DelivDetsStringGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {The following is code extracted from the Delphi Info Base}
   {Display the Columns Right justified in the cells}
-  if (ACol = 1) then
+  with (Sender as TStringGrid) do
   begin
-    StrPCopy(Txt, DelivDetsStringGrid.Cells[ACol, ARow]);
-    SetTextAlign(DelivDetsStringGrid.Canvas.Handle,
-      GetTextAlign(DelivDetsStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(DelivDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, DelivDetsStringGrid.Cells[ACol, ARow]);
-    SetTextAlign(DelivDetsStringGrid.Canvas.Handle,
-      GetTextAlign(DelivDetsStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(DelivDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
+    if (ACol = 1) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := DelivDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end;
+  end;
 end;
 
 procedure TPBMaintPOrdFrm.UpdatePOExtChg;
@@ -3366,8 +3317,6 @@ end;
 
 procedure TPBMaintPOrdFrm.ExtChgDetsStringGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {The following is code extracted from the Delphi Info Base}
   {Display the Columns Right justified in the cells}
@@ -3378,29 +3327,36 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[Col, Row]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[Col, Row]);
+    end;
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 1) or (ACol = 2) then
+    begin
+        if gdFixed in State then
+        Canvas.Brush.Color := ExtChgDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+  end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := ExtChgDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
   end;
-  if (ACol = 1) or (ACol = 2) then
-  begin
-    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[ACol, ARow]);
-    SetTextAlign(ExtChgDetsStringGrid.Canvas.Handle,
-      GetTextAlign(ExtChgDetsStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(ExtChgDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, ExtChgDetsStringGrid.Cells[ACol, ARow]);
-    SetTextAlign(ExtChgDetsStringGrid.Canvas.Handle,
-      GetTextAlign(ExtChgDetsStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(ExtChgDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
-
 end;
 
 procedure TPBMaintPOrdFrm.ShowCallOffGrid(Sender: TObject);
@@ -5358,35 +5314,46 @@ end;
 procedure TPBMaintPOrdFrm.sgCallOffDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   CallOffOrder: TCallOffOrder;
 begin
-  if (ARow <> 0) and (trim(sgCallOff.Cells[ACol, 1]) <> '') then
+  with (Sender as TStringGrid) do
+  begin
+    if (ARow <> 0) and (trim(sgCallOff.Cells[ACol, 1]) <> '') then
+      begin
+        FSelectedCallOffIndex := ARow-1;
+        CallOffOrder := SelectedCallOffOrder.Clone;
+        if CallOffOrder.Inactive = 'Y' then
+          sgCallOff.Canvas.font.Color := clRed;
+      end;
+    {The following is code extracted from the Delphi Info Base}
+    {Display the Columns Right justified in the cells}
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 3) then
     begin
-      FSelectedCallOffIndex := ARow-1;
-      CallOffOrder := SelectedCallOffOrder.Clone;
-      if CallOffOrder.Inactive = 'Y' then
-        sgCallOff.Canvas.font.Color := clRed;
+      if gdFixed in State then
+        Canvas.Brush.Color := sgCallOff.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := sgCallOff.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
-  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (ACol = 3) then
-  begin
-    StrPCopy(Txt, sgCallOff.Cells[ACol, ARow]);
-    SetTextAlign(sgCallOff.Canvas.Handle,
-      GetTextAlign(sgCallOff.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(sgCallOff.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, sgCallOff.Cells[ACol, ARow]);
-    SetTextAlign(sgCallOff.Canvas.Handle,
-      GetTextAlign(sgCallOff.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(sgCallOff.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
   end;
 end;
 
@@ -6455,8 +6422,7 @@ begin
   begin
     Canvas.Brush.Color := Color;
     Canvas.Font.Color := Font.Color;
-    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2,
-      Cells[Col, Row]);
+    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[Col, Row]);
   end;
 
   ColourComboBox.width := sgPartDetails.colwidths[2];
@@ -7996,7 +7962,6 @@ end;
 procedure TPBMaintPOrdFrm.InvsGridsDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   strGrid: TStringGrid;
   lrow, lcol: Longint;
 begin
@@ -8038,31 +8003,36 @@ begin
       Brush.Color := clWhite;
       Font.Color := clBlack;
     end;
-  end;
 
-  if (lCol = 3) or (lCol = 4) or (lCol = 5) or (lCol = 6) or (lCol = 7)  or (lCol = 8) then
-  begin
-    //right align
-    StrPCopy(Txt, strGrid.Cells[ACol, ARow]);
-    SetTextAlign(strGrid.Canvas.Handle,
-      GetTextAlign(strGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(strGrid.Canvas.Handle, Rect.Right - 4, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    //left align
-    StrPCopy(Txt, strGrid.Cells[ACol, ARow]);
-    SetTextAlign(strGrid.Canvas.Handle,
-      GetTextAlign(strGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(strGrid.Canvas.Handle, Rect.Left + 4, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-  with strGrid, Canvas do
-  begin
+    if (lCol = 3) or (lCol = 4) or (lCol = 5) or (lCol = 6) or (lCol = 7)  or (lCol = 8) then
+    begin
+      //right align
+      if gdFixed in State then
+        Canvas.Brush.Color := strgrdSalesInvs.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      //left align
+      if gdFixed in State then
+        Canvas.Brush.Color := strgrdSalesInvs.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end;
+
     if (lCol = 0) or (lRow = 0) then
     begin
       //default drawing has been switched off in the grid so we have

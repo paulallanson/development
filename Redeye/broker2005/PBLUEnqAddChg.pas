@@ -148,33 +148,38 @@ end;
 
 procedure TPBLUEnqAddChgFrm.AddChargesGridDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {If Heading Display Left justified in the cells}
   with AddChargesGrid do
   begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
     if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := AddChargesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := AddChargesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
-
 end;
 
 procedure TPBLUEnqAddChgFrm.AddChargesGridSelectCell(Sender: TObject; ACol,

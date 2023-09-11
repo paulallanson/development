@@ -481,13 +481,13 @@ type
     procedure Print1Click(Sender: TObject);
     procedure btnNotesClick(Sender: TObject);
     procedure FlashTimerTimer(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgLinesDblClick(Sender: TObject);
     procedure btnChangeWorksClick(Sender: TObject);
     procedure btnAddWorksClick(Sender: TObject);
     procedure btnDeleteWorksClick(Sender: TObject);
-    procedure sgWorksDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgWorksDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgWorksDblClick(Sender: TObject);
     procedure sgLinesContextPopup(Sender: TObject; MousePos: TPoint;
@@ -534,7 +534,7 @@ type
     procedure chkbxArtDueInDateClick(Sender: TObject);
     procedure btnAddRequestClick(Sender: TObject);
     procedure btnChangeRequestClick(Sender: TObject);
-    procedure sgRequestsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgRequestsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgRequestsDblClick(Sender: TObject);
     procedure pmnRequestsPopup(Sender: TObject);
@@ -549,7 +549,7 @@ type
     procedure btnChargeRequestClick(Sender: TObject);
     procedure pmnWorksPopup(Sender: TObject);
     procedure mnuCopyClick(Sender: TObject);
-    procedure sgSupplyDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgSupplyDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure btnConvertSupplyClick(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
@@ -562,13 +562,13 @@ type
     procedure btnDeleteNCAClick(Sender: TObject);
     procedure sgNCADetailsDblClick(Sender: TObject);
     procedure btnPrintNCAClick(Sender: TObject);
-    procedure sgNCADetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgNCADetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure tsAnalysisShow(Sender: TObject);
     procedure sgNCADetailsClick(Sender: TObject);
     procedure memTotalSIChange(Sender: TObject);
     procedure memTotalPIChange(Sender: TObject);
-    procedure sgAnalysisDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgAnalysisDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure dbgPurchaseInvoicesDrawColumnCell(Sender: TObject;
       const Rect: TRect; DataCol: Integer; Column: TColumn;
@@ -579,7 +579,7 @@ type
     procedure chkbxProductionCompleteClick(Sender: TObject);
     procedure edtdateCompleteExit(Sender: TObject);
     procedure btnDateCompleteClick(Sender: TObject);
-    procedure sgDeliveriesDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgDeliveriesDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure btnAddDeliveryClick(Sender: TObject);
     procedure btnChangeDeliveryClick(Sender: TObject);
@@ -4757,10 +4757,9 @@ begin
   sgDeliveries.cells[3,0] := 'Quantity';
 end;
 
-procedure TPBMaintJobBagFrm.sgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintJobBagFrm.sgLinesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   inx: integer;
   JobBagLine: TJobBagLine;
   iSelected: integer;
@@ -4769,11 +4768,11 @@ begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
       begin
 //        Canvas.Brush.Color := clwhite;
         try
-          inx := StrToIntDef(sgLines.cells[0,vRow], 0);
+          inx := StrToIntDef(sgLines.cells[0, ARow], 0);
           inx := jobbag.Lines.IndexOfSequence(inx);
 
           if JobBag.Lines.Count > 0  then
@@ -4792,7 +4791,7 @@ begin
                 Canvas.Font.Style := Font.Style + [fsStrikeOut]
               end
             else
-            if vrow = iSelected then
+            if ARow = iSelected then
               Canvas.Font.Color := color
             else
               Canvas.Font.Color := Font.Color;
@@ -4818,31 +4817,38 @@ begin
           end
         else
 *)
-        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[vCol, vRow]);
+        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
       end;
-  end;
 
-  if jobbag.Lines.Count > 0 then
-  begin
-    if (vCol = 0) or (vCol = 2) or (vCol = 7) or (vCol = 8) or (vCol = 9) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    if jobbag.Lines.Count > 0 then
+    begin
+      const Gap = 4;
+      var Text := Cells[ACol, ARow];
+      var WidthOfText := Canvas.TextWidth(Text);
+      var WidthOfCell := ColWidths[ACol];
+      var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if (ACol = 0) or (ACol = 2) or (ACol = 7) or (ACol = 8) or (ACol = 9) then
+      begin
+        if gdFixed in State then
+          Canvas.Brush.Color := sgLines.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+      end
+      else
+      begin
+        {Display the Columns Right justified in the cells}
+        if gdFixed in State then
+          Canvas.Brush.Color := sgLines.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+      end;
     end;
   end;
 end;
@@ -5070,31 +5076,38 @@ begin
     end;
 end;
 
-procedure TPBMaintJobBagFrm.sgWorksDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
+procedure TPBMaintJobBagFrm.sgWorksDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
+  with (Sender as TStringGrid) do
   if jobbag.Works.Count > 0 then
   begin
-    if (vCol >= 0) or (vCol >= 4) then
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol >= 0) or (ACol >= 4) then
   	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := sgWorks.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
   	begin
 			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := sgWorks.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
 end;
@@ -6722,34 +6735,41 @@ begin
   CallMaintStockRequest('C');
 end;
 
-procedure TPBMaintJobBagFrm.sgRequestsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintJobBagFrm.sgRequestsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
+  with (Sender as TStringGrid) do
   if jobbag.Lines.Count > 0 then
   begin
-    if (vCol = 5) or (vCol = 6) or (vCol = 7) then
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 5) or (ACol = 6) or (ACol = 7) then
   	begin
 			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+
+      if gdFixed in State then
+        Canvas.Brush.Color := sgRequests.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end
     else
   	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := sgRequests.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
   end;
-
 end;
 
 procedure TPBMaintJobBagFrm.sgRequestsDblClick(Sender: TObject);
@@ -7322,35 +7342,42 @@ begin
     end;
 end;
 
-procedure TPBMaintJobBagFrm.sgSupplyDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintJobBagFrm.sgSupplyDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  if JobBag.Supplies.Count > 0 then
+  with (Sender as TStringGrid) do
   begin
-    if (vCol = 0) or (vCol = 1) or (vCol = 2) or (vCol = 3) or (vCol = 7) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    if JobBag.Supplies.Count > 0 then
+    begin
+      if (ACol = 0) or (ACol = 1) or (ACol = 2) or (ACol = 3) or (ACol = 7) then
+      begin
+        if gdFixed in State then
+          Canvas.Brush.Color := sgSupply.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+      end
+      else
+      begin
+        {Display the Columns Right justified in the cells}
+        if gdFixed in State then
+          Canvas.Brush.Color := sgSupply.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+      end;
     end;
   end;
-
 end;
 
 procedure TPBMaintJobBagFrm.btnConvertSupplyClick(Sender: TObject);
@@ -7794,10 +7821,9 @@ begin
   end;
 end;
 
-procedure TPBMaintJobBagFrm.sgNCADetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintJobBagFrm.sgNCADetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   inx: integer;
   JBNCL: TJobBagNonConform;
   iSelected, icol: integer;
@@ -7806,10 +7832,10 @@ begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
       begin
         try
-          inx := StrToIntDef(sgNCADetails.cells[0,vRow], 0);
+          inx := StrToIntDef(sgNCADetails.cells[0, ARow], 0);
           inx := jobbag.NonConformDocs.IndexOf(inx);
 
           if JobBag.NonConformDocs.Count > 0 then
@@ -7822,7 +7848,7 @@ begin
               Canvas.Font.Style := Font.Style + [fsStrikeOut]
             end
           else
-          if vrow = iSelected then
+          if ARow = iSelected then
             Canvas.Font.Color := color
           else
             Canvas.Font.Color := Font.Color;
@@ -7831,32 +7857,39 @@ begin
         except
           Canvas.Font.Color := Font.Color;
         end;
-        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[vCol, vRow]);
+        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
+      end;
+
+    if jobbag.NonConformDocs.Count > 0 then
+    begin
+      const Gap = 4;
+      var Text := Cells[ACol, ARow];
+      var WidthOfText := Canvas.TextWidth(Text);
+      var WidthOfCell := ColWidths[ACol];
+      var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+      if (ACol < 9) then
+      begin
+        if gdFixed in State then
+        Canvas.Brush.Color := sgNCADetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+      end
+      else
+      begin
+        {Display the Columns Right justified in the cells}
+      if gdFixed in State then
+        Canvas.Brush.Color := sgNCADetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
       end;
   end;
-
-  if jobbag.NonConformDocs.Count > 0 then
-  begin
-    if (vCol < 9) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-    end;
   end;
 end;
 
@@ -7900,54 +7933,46 @@ begin
   checkOK(self);
 end;
 
-procedure TPBMaintJobBagFrm.sgAnalysisDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array [0..255] of Char;
+procedure TPBMaintJobBagFrm.sgAnalysisDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
-  end;
 
-  if (vCol = 0) or (vCol = 1) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 0) or (ACol = 1) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := sgAnalysis.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := sgAnalysis.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
-
-(*  if Sender = ActiveControl then
-    Exit;
-  if not (gdSelected in State) then
-    Exit;
-  with Sender as TStringGrid do
-  begin
-    Canvas.Brush.Color := Color;
-    Canvas.Font.Color := Font.Color;
-    Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2,
-      Cells[Col, Row]);
   end;
-*)
 end;
 
 procedure TPBMaintJobBagFrm.dbgPurchaseInvoicesDrawColumnCell(
@@ -8097,31 +8122,39 @@ begin
   end;
 end;
 
-procedure TPBMaintJobBagFrm.sgDeliveriesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintJobBagFrm.sgDeliveriesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  if (vCol = 3) then
+  with (Sender as TStringGrid) do
+  begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol = 3) then
   	begin
 			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := sgDeliveries.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end
     else
   	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+        if gdFixed in State then
+        Canvas.Brush.Color := sgDeliveries.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
-
+  end;
 end;
 
 procedure TPBMaintJobBagFrm.btnAddDeliveryClick(Sender: TObject);

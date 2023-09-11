@@ -3,8 +3,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
   Top = 0
   HorzScrollBar.Visible = False
   Caption = 'Maintain Customers'
-  ClientHeight = 752
-  ClientWidth = 1182
+  ClientHeight = 743
+  ClientWidth = 1176
   Color = clBtnFace
   Constraints.MinHeight = 723
   Constraints.MinWidth = 970
@@ -24,13 +24,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
   object pgCustomer: TPageControl
     Left = 0
     Top = 41
-    Width = 1182
-    Height = 651
+    Width = 1176
+    Height = 642
     ActivePage = tbDetails
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 1176
-    ExplicitHeight = 642
     object tbDetails: TTabSheet
       Caption = 'Details'
       object lblCreatedOn: TLabel
@@ -58,20 +56,19 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ExplicitHeight = 614
         DesignSize = (
           481
-          623)
+          614)
         object grpbxAnalysis: TGroupBox
           Left = 8
           Top = 314
           Width = 465
-          Height = 299
+          Height = 290
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Analysis  '
           ParentBackground = False
           TabOrder = 2
-          ExplicitHeight = 290
           DesignSize = (
             465
-            299)
+            290)
           object Label1: TLabel
             Left = 9
             Top = 20
@@ -346,23 +343,21 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
           object chkbxAcquiredCompany: TCheckBox
             Left = 8
-            Top = 247
+            Top = 238
             Width = 177
             Height = 17
             Anchors = [akLeft, akBottom]
             Caption = 'This is a Reseller Customer'
             TabOrder = 13
-            ExplicitTop = 238
           end
           object chkbxCTRLPCustomer: TCheckBox
             Left = 8
-            Top = 271
+            Top = 262
             Width = 249
             Height = 17
             Anchors = [akLeft, akBottom]
             Caption = 'This is a CTRL-P Master Customer'
             TabOrder = 14
-            ExplicitTop = 262
           end
         end
         object grpbxDetails: TGroupBox
@@ -712,14 +707,12 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object pnlHOContacts: TPanel
         Left = 481
         Top = 0
-        Width = 693
-        Height = 623
+        Width = 687
+        Height = 614
         Align = alClient
         Caption = 'pnlHOContacts'
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 687
-        ExplicitHeight = 614
         object Panel26: TPanel
           Left = 1
           Top = 1
@@ -753,7 +746,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             item
               Control = ToolBar2
               ImageIndex = -1
-              Width = 687
+              Width = 691
             end>
           EdgeInner = esLowered
           EdgeOuter = esNone
@@ -841,27 +834,23 @@ object PBMaintCustFrm: TPBMaintCustFrm
           end
         end
         object Panel28: TPanel
-          Left = 486
+          Left = 480
           Top = 57
           Width = 21
-          Height = 565
+          Height = 556
           Align = alRight
           ParentBackground = False
           TabOrder = 4
-          ExplicitLeft = 480
-          ExplicitHeight = 556
         end
         object Panel29: TPanel
           Left = 1
           Top = 57
-          Width = 485
-          Height = 565
+          Width = 479
+          Height = 556
           Align = alClient
           Caption = 'Panel29'
           ParentBackground = False
           TabOrder = 5
-          ExplicitWidth = 479
-          ExplicitHeight = 556
           object dbgHOContactDetails: TDBGrid
             Left = 1
             Top = 1
@@ -1061,20 +1050,21 @@ object PBMaintCustFrm: TPBMaintCustFrm
         TabOrder = 0
         DesignSize = (
           673
-          623)
+          614)
         object grpbxInvoicing: TGroupBox
           Left = 8
           Top = 2
           Width = 662
-          Height = 530
+          Height = 521
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Invoice To'
           Color = clBtnFace
           ParentColor = False
           TabOrder = 0
+          ExplicitHeight = 530
           DesignSize = (
             662
-            530)
+            521)
           object Label35: TLabel
             Tag = 200
             Left = 8
@@ -1548,7 +1538,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 8
           Top = 478
           Width = 662
-          Height = 135
+          Height = 126
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'GDPR '
           Font.Charset = ANSI_CHARSET
@@ -1560,6 +1550,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentFont = False
           TabOrder = 1
           Visible = False
+          ExplicitHeight = 135
           object lblGDPRSignedOperatorName: TLabel
             Left = 308
             Top = 50
@@ -1626,25 +1617,29 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object pnlCreditDetails: TPanel
         Left = 673
         Top = 0
-        Width = 501
-        Height = 623
+        Width = 495
+        Height = 614
         Align = alClient
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 501
+        ExplicitHeight = 623
         DesignSize = (
-          501
-          623)
+          495
+          614)
         object grpbxCredit: TGroupBox
           Left = 6
           Top = 2
-          Width = 455
-          Height = 589
+          Width = 443
+          Height = 580
           Anchors = [akLeft, akTop, akRight, akBottom]
           Caption = 'Credit Details'
           TabOrder = 0
+          ExplicitWidth = 455
+          ExplicitHeight = 589
           DesignSize = (
-            455
-            589)
+            443
+            580)
           object Label5: TLabel
             Tag = 100
             Left = 7
@@ -1747,7 +1742,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 223
-            Width = 456
+            Width = 444
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -1757,7 +1752,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             Tag = 100
             Left = 0
             Top = 358
-            Width = 456
+            Width = 444
             Height = 7
             Anchors = [akLeft, akTop, akRight]
             Shape = bsTopLine
@@ -2106,13 +2101,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object chkbxConverttoCustomer: TCheckBox
           Left = 8
-          Top = 596
+          Top = 587
           Width = 177
           Height = 17
           Anchors = [akLeft, akBottom]
           Caption = 'Convert Prospect to Customer'
           TabOrder = 1
           Visible = False
+          ExplicitTop = 596
         end
       end
     end
@@ -2200,10 +2196,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Left = 0
         Top = 0
         Width = 441
-        Height = 623
+        Height = 614
         Align = alLeft
         Caption = 'Ecommerce'
         TabOrder = 1
+        ExplicitHeight = 623
         object GroupBox1: TGroupBox
           Left = 16
           Top = 101
@@ -2900,7 +2897,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           TabOrder = 3
           DesignSize = (
             93
-            284)
+            275)
           object btnContactAdd: TBitBtn
             Left = 9
             Top = 8
@@ -3175,7 +3172,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentBackground = False
         TabOrder = 3
         DesignSize = (
-          1174
+          1168
           41)
         object Label55: TLabel
           Left = 8
@@ -3185,7 +3182,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label56: TLabel
-          Left = 976
+          Left = 970
           Top = 16
           Width = 69
           Height = 13
@@ -3202,13 +3199,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtQuoteSearchChange
         end
         object edtQuoteNumber: TEdit
-          Left = 1056
+          Left = 1050
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtQuoteNumberKeyPress
+          ExplicitLeft = 1056
         end
         object BitBtn11: TBitBtn
           Left = 296
@@ -3481,7 +3479,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentBackground = False
         TabOrder = 3
         DesignSize = (
-          1174
+          1168
           41)
         object Label46: TLabel
           Left = 8
@@ -3491,7 +3489,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label47: TLabel
-          Left = 976
+          Left = 970
           Top = 16
           Width = 75
           Height = 13
@@ -3508,13 +3506,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtEnqSearchChange
         end
         object edtEnqNumber: TEdit
-          Left = 1056
+          Left = 1050
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtEnqNumberKeyPress
+          ExplicitLeft = 1056
         end
         object btnSearch: TBitBtn
           Left = 296
@@ -3554,7 +3553,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
         ParentBackground = False
         TabOrder = 1
         DesignSize = (
-          1174
+          1168
           41)
         object Label48: TLabel
           Left = 8
@@ -3564,7 +3563,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Caption = 'Description Search'
         end
         object Label49: TLabel
-          Left = 964
+          Left = 952
           Top = 16
           Width = 64
           Height = 13
@@ -3581,13 +3580,14 @@ object PBMaintCustFrm: TPBMaintCustFrm
           OnChange = edtOrderSearchChange
         end
         object edtOrderNumber: TEdit
-          Left = 1042
+          Left = 1030
           Top = 12
           Width = 90
           Height = 21
           Anchors = [akRight, akBottom]
           TabOrder = 1
           OnKeyPress = edtOrderNumberKeyPress
+          ExplicitLeft = 1042
         end
         object chkbxShowUnauthorised: TCheckBox
           Left = 376
@@ -3611,7 +3611,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 1174
+        Width = 1168
         Height = 44
         Bands = <
           item
@@ -3620,6 +3620,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             MinHeight = 41
             Width = 1172
           end>
+        ExplicitWidth = 1174
         object PageScroller1: TPageScroller
           Left = 11
           Top = 0
@@ -3775,8 +3776,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
       object dbgOrderDetails: TDBGrid
         Left = 0
         Top = 44
-        Width = 1174
-        Height = 519
+        Width = 1168
+        Height = 510
         Align = alClient
         DataSource = dtmdlOrders.dtsOrders
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -4437,7 +4438,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           ParentBackground = False
           TabOrder = 2
           DesignSize = (
-            1172
+            1166
             41)
           object Label52: TLabel
             Left = 8
@@ -4458,7 +4459,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
             OnChange = edtStockSearchChange
           end
           object Panel9: TPanel
-            Left = 986
+            Left = 980
             Top = 1
             Width = 185
             Height = 39
@@ -4466,7 +4467,6 @@ object PBMaintCustFrm: TPBMaintCustFrm
             BevelOuter = bvNone
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 980
           end
           object chkbxShowNotinUse: TCheckBox
             Left = 360
@@ -4879,22 +4879,25 @@ object PBMaintCustFrm: TPBMaintCustFrm
         object Panel19: TPanel
           Left = 822
           Top = 25
-          Width = 351
-          Height = 276
+          Width = 345
+          Height = 267
           Align = alClient
           ParentBackground = False
           TabOrder = 2
+          ExplicitWidth = 351
+          ExplicitHeight = 276
         end
       end
       object pnlActivityList: TPanel
         Left = 0
         Top = 0
-        Width = 1174
+        Width = 1168
         Height = 321
         Align = alTop
         Caption = 'pnlActivityList'
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 1174
         object CoolBar7: TCoolBar
           Left = 1
           Top = 1
@@ -5099,12 +5102,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
         end
         object Panel25: TPanel
           Left = 1
-          Top = 381
+          Top = 372
           Width = 583
           Height = 24
           Align = alBottom
           ParentBackground = False
           TabOrder = 1
+          ExplicitTop = 381
           object Label64: TLabel
             Left = 8
             Top = 8
@@ -5123,7 +5127,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 1
           Top = 1
           Width = 479
-          Height = 380
+          Height = 371
           Align = alClient
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
           TabOrder = 2
@@ -5147,10 +5151,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
           Left = 480
           Top = 1
           Width = 104
-          Height = 380
+          Height = 371
           Align = alRight
           ParentBackground = False
           TabOrder = 3
+          ExplicitHeight = 380
           object Button1: TButton
             Left = 16
             Top = 16
@@ -5217,10 +5222,11 @@ object PBMaintCustFrm: TPBMaintCustFrm
         Left = 585
         Top = 25
         Width = 192
-        Height = 598
+        Height = 589
         Align = alLeft
         ParentBackground = False
         TabOrder = 2
+        ExplicitHeight = 598
         object Label62: TLabel
           Left = 8
           Top = 22
@@ -5298,8 +5304,8 @@ object PBMaintCustFrm: TPBMaintCustFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 733
-    Width = 1182
+    Top = 724
+    Width = 1176
     Height = 19
     Panels = <
       item
@@ -5308,24 +5314,20 @@ object PBMaintCustFrm: TPBMaintCustFrm
       item
         Width = 250
       end>
-    ExplicitTop = 724
-    ExplicitWidth = 1176
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 692
-    Width = 1182
+    Top = 683
+    Width = 1176
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 683
-    ExplicitWidth = 1176
     DesignSize = (
-      1182
+      1176
       41)
     object DelLabel: TLabel
-      Left = 831
+      Left = 819
       Top = 16
       Width = 125
       Height = 13
@@ -5340,7 +5342,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ExplicitLeft = 867
     end
     object OKBitBtn: TBitBtn
-      Left = 977
+      Left = 965
       Top = 10
       Width = 75
       Height = 25
@@ -5417,7 +5419,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
       ExplicitLeft = 971
     end
     object CancelBitBtn: TBitBtn
-      Left = 1057
+      Left = 1045
       Top = 10
       Width = 75
       Height = 25
@@ -5583,14 +5585,13 @@ object PBMaintCustFrm: TPBMaintCustFrm
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 1182
+    Width = 1176
     Height = 41
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1176
     DesignSize = (
-      1182
+      1176
       41)
     object Label19: TLabel
       Left = 7
@@ -5608,7 +5609,7 @@ object PBMaintCustFrm: TPBMaintCustFrm
     object NameEdit: TEdit
       Left = 108
       Top = 8
-      Width = 561
+      Width = 549
       Height = 21
       Anchors = [akLeft, akTop, akRight]
       Color = clWhite

@@ -1,9 +1,9 @@
 object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   Left = 256
   Top = 114
-  Width = 870
-  Height = 480
   Caption = 'Maintain Fulfillment Stock Usage'
+  ClientHeight = 433
+  ClientWidth = 852
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,19 +11,17 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 427
-    Width = 862
+    Top = 414
+    Width = 852
     Height = 19
     Panels = <
       item
@@ -32,16 +30,20 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       item
         Width = 50
       end>
+    ExplicitTop = 422
+    ExplicitWidth = 854
   end
   object Panel2: TPanel
     Left = 0
-    Top = 386
-    Width = 862
+    Top = 373
+    Width = 852
     Height = 41
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 381
+    ExplicitWidth = 854
     DesignSize = (
-      862
+      852
       41)
     object Label2: TLabel
       Left = 16
@@ -60,16 +62,18 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       OnChange = edtSearchChange
     end
     object btbtnClose: TBitBtn
-      Left = 776
+      Left = 774
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
+      ExplicitLeft = 776
     end
     object btnOK: TBitBtn
-      Left = 688
+      Left = 686
       Top = 8
       Width = 75
       Height = 25
@@ -77,8 +81,6 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 2
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -97,15 +99,19 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnOKClick
+      ExplicitLeft = 688
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 852
     Height = 41
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 854
     object Label1: TLabel
       Left = 16
       Top = 12
@@ -142,16 +148,16 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       Top = 8
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 1
     end
   end
   object sgdetails: TStringGrid
     Left = 0
     Top = 41
-    Width = 760
-    Height = 345
+    Width = 750
+    Height = 332
     Align = alClient
     DefaultRowHeight = 20
     FixedCols = 0
@@ -161,6 +167,8 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     OnDrawCell = sgdetailsDrawCell
     OnKeyPress = sgdetailsKeyPress
     OnSelectCell = sgdetailsSelectCell
+    ExplicitWidth = 752
+    ExplicitHeight = 340
     ColWidths = (
       178
       201
@@ -169,15 +177,17 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
       81)
   end
   object Panel1: TPanel
-    Left = 760
+    Left = 750
     Top = 41
     Width = 102
-    Height = 345
+    Height = 332
     Align = alRight
     TabOrder = 4
+    ExplicitLeft = 752
+    ExplicitHeight = 340
     DesignSize = (
       102
-      345)
+      332)
     object btnChange: TBitBtn
       Left = 16
       Top = 48
@@ -209,14 +219,12 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     end
     object btnExcel: TBitBtn
       Left = 16
-      Top = 304
+      Top = 296
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 3
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -260,6 +268,9 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 3
+      OnClick = btnExcelClick
+      ExplicitTop = 304
     end
   end
   object tmrSearch: TTimer
@@ -281,19 +292,13 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Store_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStoreStock: TFDQuery
@@ -312,34 +317,22 @@ object STMaintStockUsageFrm: TSTMaintStockUsageFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -39,10 +39,10 @@ type
     DeleteButton: TBitBtn;
     addchargesSQL: TFDQuery;
     procedure FormShow(Sender: TObject);
-    procedure AddChargesGridDrawCell(Sender: TObject; vCol, vRow: Longint;
+    procedure AddChargesGridDrawCell(Sender: TObject; vCol, vRow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure AddChargesGridKeyPress(Sender: TObject; var Key: Char);
-    procedure AddChargesGridSelectCell(Sender: TObject; Col, Row: Longint;
+    procedure AddChargesGridSelectCell(Sender: TObject; Col, Row: Integer;
       var CanSelect: Boolean);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
@@ -121,9 +121,7 @@ begin
 end;
 
 procedure TPBEnqAddChgFrm.AddChargesGridDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+  vRow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -132,35 +130,41 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[vCol, vRow]);
     end;
   end;
 
   {If Heading Display Left justified in the cells}
   with AddChargesGrid do
   begin
+    const Gap = 4;
+    var Text := Cells[vCol, vRow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[vCol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
     if vCol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := AddChargesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := AddChargesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
-
 end;
 
 procedure TPBEnqAddChgFrm.AddChargesGridKeyPress(Sender: TObject;
@@ -188,7 +192,7 @@ begin
 end;
 
 procedure TPBEnqAddChgFrm.AddChargesGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
+  Row: Integer; var CanSelect: Boolean);
 var
   ifloat: Real;
 begin

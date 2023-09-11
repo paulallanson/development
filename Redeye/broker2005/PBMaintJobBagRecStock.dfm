@@ -1,25 +1,23 @@
 object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
   Left = 246
   Top = 129
-  Width = 823
-  Height = 480
   Caption = 'Reconcile Job Bag Stock'
+  ClientHeight = 433
+  ClientWidth = 805
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 815
+    Width = 805
     Height = 89
     Align = alTop
     BevelOuter = bvNone
@@ -68,10 +66,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     end
   end
   object Panel3: TPanel
-    Left = 720
+    Left = 710
     Top = 89
     Width = 95
-    Height = 316
+    Height = 303
     Align = alRight
     TabOrder = 1
     object btnReconcile: TButton
@@ -85,16 +83,16 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
   end
   object Panel1: TPanel
     Left = 0
-    Top = 405
-    Width = 815
+    Top = 392
+    Width = 805
     Height = 41
     Align = alBottom
     TabOrder = 2
     DesignSize = (
-      815
+      805
       41)
     object Panel2: TPanel
-      Left = 541
+      Left = 531
       Top = 1
       Width = 273
       Height = 39
@@ -103,7 +101,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       TabOrder = 0
     end
     object btnOK: TBitBtn
-      Left = 326
+      Left = 316
       Top = 6
       Width = 75
       Height = 25
@@ -111,8 +109,6 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 1
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -131,22 +127,25 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnOKClick
     end
     object btnCancel: TBitBtn
-      Left = 414
+      Left = 404
       Top = 6
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 2
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 2
     end
   end
   object sgLines: TStringGrid
     Left = 0
     Top = 89
-    Width = 720
-    Height = 316
+    Width = 710
+    Height = 303
     Align = alClient
     ColCount = 7
     DefaultColWidth = 40
@@ -195,9 +194,7 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBSalesOrders: TFDQuery
@@ -225,14 +222,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBReturns: TFDQuery
@@ -246,14 +239,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSO: TFDQuery
@@ -269,19 +258,13 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdJBReturn: TFDQuery
@@ -294,14 +277,10 @@ object frmPBMaintJobBagRecStock: TfrmPBMaintJobBagRecStock
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Return'
-        ParamType = ptUnknown
       end>
   end
 end

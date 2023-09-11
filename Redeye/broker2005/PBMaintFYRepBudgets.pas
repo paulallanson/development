@@ -31,7 +31,7 @@ type
     procedure CancelBitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure dblkpRepsClick(Sender: TObject);
-    procedure grdDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure grdDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure grdDetailsExit(Sender: TObject);
     procedure grdDetailsKeyPress(Sender: TObject; var Key: Char);
@@ -58,6 +58,9 @@ var
 implementation
 
 {$R *.DFM}
+
+uses
+  System.UITypes;
 
 procedure TPBMaintFYRepBudgetsFrm.FormActivate(Sender: TObject);
 var
@@ -185,43 +188,48 @@ begin
     end;
 end;
 
-procedure TPBMaintFYRepBudgetsFrm.grdDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintFYRepBudgetsFrm.grdDetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with Sender as TStringGrid do
   begin
-    if vCol = 0 then
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := grdDetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := grdDetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
 

@@ -3,8 +3,8 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   Top = 64
   BorderStyle = bsDialog
   Caption = 'Maintain Rep Budgets'
-  ClientHeight = 507
-  ClientWidth = 677
+  ClientHeight = 498
+  ClientWidth = 671
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -21,10 +21,11 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 677
+    Width = 671
     Height = 70
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 677
     object Label3: TLabel
       Left = 16
       Top = 7
@@ -118,11 +119,13 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 467
-    Width = 677
+    Top = 458
+    Width = 671
     Height = 40
     Align = alBottom
     TabOrder = 1
+    ExplicitTop = 467
+    ExplicitWidth = 677
     object OKBitBtn: TBitBtn
       Left = 254
       Top = 7
@@ -148,10 +151,11 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 677
+    Width = 671
     Height = 85
     Align = alTop
     TabOrder = 2
+    ExplicitWidth = 677
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
@@ -242,11 +246,13 @@ object PBMaintRepBudgetsFrm: TPBMaintRepBudgetsFrm
   object PageControl1: TPageControl
     Left = 0
     Top = 155
-    Width = 677
-    Height = 312
-    ActivePage = tbshtBudgets
+    Width = 671
+    Height = 303
+    ActivePage = tbshtCommission
     Align = alClient
     TabOrder = 3
+    ExplicitWidth = 677
+    ExplicitHeight = 312
     object tbshtCommission: TTabSheet
       Caption = 'Commission'
       object grdCategory: TStringGrid

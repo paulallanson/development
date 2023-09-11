@@ -1,20 +1,18 @@
-﻿object PBEnqInActLineFrm: TPBEnqInActLineFrm
+object PBEnqInActLineFrm: TPBEnqInActLineFrm
   Left = 163
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Inactive Enquiries'
-  ClientHeight = 271
-  ClientWidth = 467
+  ClientHeight = 262
+  ClientWidth = 461
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 0
@@ -85,17 +83,19 @@
     Top = 240
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object OKBitBtn: TBitBtn
     Left = 312
     Top = 240
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = OKBitBtnClick
-    Kind = bkOK
   end
   object ReasMntBitBtn: TBitBtn
     Left = 360
@@ -144,24 +144,19 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_Inactive_Reason'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDate
         Name = 'Enq_Inactive_Date'
-        ParamType = ptUnknown
+        DataType = ftDate
       end
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object UpdActiveHeadSQL: TFDQuery
@@ -174,14 +169,10 @@
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enq_InActive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object GetDetsSQL: TFDQuery
@@ -199,14 +190,10 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enq_Inactive'
-        ParamType = ptUnknown
       end>
   end
   object GDetsSQL: TFDQuery
@@ -222,9 +209,8 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object GDetsSQLEnquiry: TIntegerField
       FieldName = 'Enquiry'
@@ -259,14 +245,12 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

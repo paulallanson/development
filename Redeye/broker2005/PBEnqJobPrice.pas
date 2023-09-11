@@ -187,7 +187,7 @@ var
 implementation
 
 uses
-  System.Types,
+  System.UITypes, System.Types,
   PBEnqJobDtls, PBEnqSuppDataMod, PBEnqSupTmp, PBEnqAddChg, pbDatabase, CCSPrint,
   pbMainMenu;
 
@@ -947,7 +947,6 @@ end;
 procedure TPBEnqJobPriceFrm.SupplierPricesGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   lrow, lcol: Longint;
 begin
   lRow := ARow;
@@ -991,24 +990,32 @@ begin
   {If Heading Display Left justified in the cells}
   with SupplierPricesGrid do
   begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[aCol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
     if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := SupplierPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 3, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := SupplierPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
 
@@ -1079,8 +1086,6 @@ end;
 
 procedure TPBEnqJobPriceFrm.SelectedPricesGridDrawCell(Sender: TObject;
   ACol, ARow: Longint; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -1099,24 +1104,32 @@ begin
   {If Heading Display Left justified in the cells}
   with SelectedPricesGrid do
   begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
     if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := SelectedPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := SelectedPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
 end;
@@ -2355,8 +2368,6 @@ end;
 
 procedure TPBEnqJobPriceFrm.SupplierROPricesGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -2365,27 +2376,28 @@ begin
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[ACol, ARow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
   end;
   {If Heading Display Left justified in the cells}
   with SupplierROPricesGrid do
   begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := SupplierROPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
   end;
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedROPricesGridDrawCell(Sender: TObject;
   ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
@@ -2397,23 +2409,25 @@ begin
         Canvas.font.Color := clRed
       else
         Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[ACol, ARow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
   end;
 
   {If Heading Display Left justified in the cells}
   with SelectedROPricesGrid do
   begin
-      {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[ACol, ARow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
 
+      {Display the Columns Right justified in the cells}
+      if gdFixed in State then
+        Canvas.Brush.Color := SelectedROPricesGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+  end;
 end;
 
 procedure TPBEnqJobPriceFrm.SelectedROPricesGridExit(Sender: TObject);

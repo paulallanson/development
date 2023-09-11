@@ -1,10 +1,9 @@
-﻿object PBEnqAddChgFrm: TPBEnqAddChgFrm
+object PBEnqAddChgFrm: TPBEnqAddChgFrm
   Left = 138
   Top = 117
-  AutoScroll = False
   Caption = 'Supplier'#39's Additional Charges'
-  ClientHeight = 180
-  ClientWidth = 525
+  ClientHeight = 171
+  ClientWidth = 519
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -12,10 +11,8 @@
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object AddChargesGrid: TStringGrid
     Left = 8
@@ -43,26 +40,25 @@
     Top = 136
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = BitBtn1Click
-    Kind = bkOK
   end
   object BitBtn2: TBitBtn
     Left = 240
     Top = 136
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object DeleteButton: TBitBtn
     Left = 488
     Top = 32
     Width = 22
     Height = 22
-    TabOrder = 3
-    Visible = False
-    OnClick = DeleteButtonClick
     Glyph.Data = {
       BE060000424DBE06000000000000360400002800000024000000120000000100
       0800000000008802000000000000000000000001000000000000000000000000
@@ -120,6 +116,9 @@
       0303030303030303030303030303030303030303030303030303030303030303
       0303}
     NumGlyphs = 2
+    TabOrder = 3
+    Visible = False
+    OnClick = DeleteButtonClick
   end
   object UpdateSQL: TFDQuery
     ConnectionName = 'pb'
@@ -137,34 +136,22 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'charges'
-        ParamType = ptUnknown
       end>
   end
   object DeleteSQL: TFDQuery
@@ -179,24 +166,20 @@
     Top = 96
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Enquiry'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object InsertSQL: TFDQuery
@@ -224,44 +207,28 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'charges'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price'
-        ParamType = ptUnknown
       end>
   end
   object addchargesSQL: TFDQuery
@@ -278,24 +245,16 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
 end

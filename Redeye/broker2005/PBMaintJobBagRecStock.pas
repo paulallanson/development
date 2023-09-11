@@ -32,7 +32,7 @@ type
     qryUpdJBReturn: TFDQuery;
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure sgLinesDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgLinesDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgLinesSelectCell(Sender: TObject; ACol, ARow: Integer;
       var CanSelect: Boolean);
@@ -161,44 +161,48 @@ begin
   FCustomer := Value;
 end;
 
-procedure TfrmPBMaintJobBagRecStock.sgLinesDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TfrmPBMaintJobBagRecStock.sgLinesDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
       begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
       end;
-  end;
 
-  if qryJBStock.RecordCount > 0 then
-  begin
-    if (vCol <= 2) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    if qryJBStock.RecordCount > 0 then
+    begin
+      const Gap = 4;
+      var Text := Cells[ACol, ARow];
+      var WidthOfText := Canvas.TextWidth(Text);
+      var WidthOfCell := ColWidths[ACol];
+      var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if (vCol <= 2) then
+      begin
+        if gdFixed in State then
+          Canvas.Brush.Color := sgLines.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+      end
+      else
+      begin
+        {Display the Columns Right justified in the cells}
+        if gdFixed in State then
+          Canvas.Brush.Color := sgLines.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+      end;
     end;
   end;
 end;

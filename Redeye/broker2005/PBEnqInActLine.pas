@@ -73,14 +73,14 @@ type
     UpdInActiveSQL: TFDQuery;
     ReasMntBitBtn: TBitBtn;
     procedure FormActivate(Sender: TObject);
-    procedure EnqLinesStringGridSelectCell(Sender: TObject; Col,
-      Row: Longint; var CanSelect: Boolean);
+    procedure EnqLinesStringGridSelectCell(Sender: TObject; ACol,
+      ARow: Integer; var CanSelect: Boolean);
     procedure CheckOK(Sender: TObject);
     procedure OKBitBtnClick(Sender: TObject);
-    procedure EnqLinesStringGridDrawCell(Sender: TObject; Col,
-      Row: Longint; Rect: TRect; State: TGridDrawState);
     procedure ReasonsDBLUCBClick(Sender: TObject);
     procedure ReasMntBitBtnClick(Sender: TObject);
+    procedure EnqLinesStringGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
   private
     { Private declarations }
     iRowCount, iSelRow: Integer;
@@ -170,10 +170,46 @@ begin
   PBEnqInActLineFrm.Caption := 'Make Enquiry Active';
 end;
 
-procedure TPBEnqInActLineFrm.EnqLinesStringGridSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+procedure TPBEnqInActLineFrm.EnqLinesStringGridDrawCell(Sender: TObject;
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  iSelRow := Row;
+  {The following is code extracted from the Delphi Info Base}
+  {Display the Columns Right justified in the cells}
+  with (Sender as TStringGrid) do
+  begin
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    if (ACol < 1) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := EnqLinesStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := EnqLinesStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end;
+  end;
+end;
+
+procedure TPBEnqInActLineFrm.EnqLinesStringGridSelectCell(Sender: TObject;
+  ACol, ARow: Integer; var CanSelect: Boolean);
+begin
+  iSelRow := ARow;
   if EnqLinesStringGrid.Cells[3, iSelRow] = sMark then
     EnqLinesStringGrid.Cells[3, iSelRow] := ''
   else
@@ -254,33 +290,6 @@ begin
         ExecSQL;
       end;
     end
-  end;
-end;
-
-procedure TPBEnqInActLineFrm.EnqLinesStringGridDrawCell(Sender: TObject;
-  Col, Row: Longint; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
-begin
-  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (Col < 1) then
-  begin
-    StrPCopy(Txt, EnqLinesStringGrid.Cells[Col, Row]);
-    SetTextAlign(EnqLinesStringGrid.Canvas.Handle,
-      GetTextAlign(EnqLinesStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(EnqLinesStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, EnqLinesStringGrid.Cells[Col, Row]);
-    SetTextAlign(EnqLinesStringGrid.Canvas.Handle,
-      GetTextAlign(EnqLinesStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(EnqLinesStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
   end;
 end;
 
