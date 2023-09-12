@@ -13,8 +13,8 @@ type
     pnlButtons: TPanel;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
-    procedure LineDetsStringGridDrawCell(Sender: TObject; Col,
-        Row: Longint; Rect: TRect; State: TGridDrawState);
+    procedure LineDetsStringGridDrawCell(Sender: TObject; ACol,
+      ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure LineDetsStringGridDblClick(Sender: TObject);
   private
     { Private declarations }
@@ -29,35 +29,46 @@ implementation
 
 {$R *.DFM}
 
-procedure TPBMaintPOrdLViewFrm.LineDetsStringGridDrawCell(Sender: TObject; Col,
-  Row: Longint; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintPOrdLViewFrm.LineDetsStringGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (Col < 1) or (Col > 2) then
+  with (Sender as TStringGrid) do
   begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    if ((Col > 2) and (Row > 0) and (LineDetsStringGrid.Cells[3, Row] <>
-      LineDetsStringGrid.Cells[4, Row])) then
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    {The following is code extracted from the Delphi Info Base}
+    {Display the Columns Right justified in the cells}
+    if (ACol < 1) or (ACol > 2) then
     begin
-      LineDetsStringGrid.Canvas.Font.Color := clRed;
+      if gdFixed in State then
+        Canvas.Brush.Color := LineDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+
+      if ((Col > 2) and (Row > 0) and (LineDetsStringGrid.Cells[3, Row] <>
+        LineDetsStringGrid.Cells[4, Row])) then
+      begin
+        LineDetsStringGrid.Canvas.Font.Color := clRed;
+      end;
+
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := LineDetsStringGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end;
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, LineDetsStringGrid.Cells[Col, Row]);
-    SetTextAlign(LineDetsStringGrid.Canvas.Handle,
-      GetTextAlign(LineDetsStringGrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(LineDetsStringGrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
   end;
 end;
 

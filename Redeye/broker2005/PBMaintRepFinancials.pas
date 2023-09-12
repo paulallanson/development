@@ -68,7 +68,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure CancelBitBtnClick(Sender: TObject);
     procedure dblkpRepsClick(Sender: TObject);
-    procedure grdDetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure grdDetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure grdDetailsExit(Sender: TObject);
     procedure grdDetailsKeyPress(Sender: TObject; var Key: Char);
@@ -77,7 +77,7 @@ type
       var CanSelect: Boolean);
     procedure OKBitBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure grdPeriodsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure grdPeriodsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure grdDetailsTopLeftChanged(Sender: TObject);
     procedure SaveValue(Sender: TObject);
@@ -123,7 +123,7 @@ var
 implementation
 
 uses
-  System.Types,
+  System.UITypes,
   CCSCommon, pbDatabase, PBLURep, pbMainMenu;
 
 {$R *.DFM}
@@ -650,47 +650,49 @@ begin
     end;
 end;
 
-procedure TPBMaintRepFinancialsFrm.grdDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TPBMaintRepFinancialsFrm.grdDetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  cmbxcommissionBasis.width := (Sender as TStringGrid).colwidths[vcol];
+  cmbxcommissionBasis.width := (Sender as TStringGrid).colwidths[ACol];
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
     begin
       Canvas.Brush.Color := Color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,  Cells[ACol, ARow]);
     end;
-  end;
-  {If Heading Display Left justified in the cells}
-  with Sender as TStringGrid do
-  begin
-    if vCol = 0 then
+
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    {If Heading Display Left justified in the cells}
+    if ACol = 0 then
     begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := grdDetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
     end
     else
     begin
       {Display the Columns Right justified in the cells}
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-      ExtTextOut(Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if gdFixed in State then
+        Canvas.Brush.Color := grdDetails.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
     end;
   end;
-
 end;
 
 procedure TPBMaintRepFinancialsFrm.grdDetailsExit(Sender: TObject);
@@ -948,33 +950,27 @@ begin
 end;
 
 procedure TPBMaintRepFinancialsFrm.grdPeriodsDrawCell(Sender: TObject;
-  vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+  ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vcol > 100) then
+    if (ACol > 100) then
     begin
       Canvas.Brush.Color := color;
       Canvas.Font.Color := Font.Color;
-      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2,
-        Cells[vCol, vRow]);
+      Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
     end;
-  end;
-  {If Heading Display Left justified in the cells}
-  with Sender as TStringGrid do
-  begin
-      StrPCopy(Txt, Cells[vCol, vRow]);
-      SetTextAlign(Canvas.Handle,
-        GetTextAlign(Canvas.Handle)
-        and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-      ExtTextOut(Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-        ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end;
 
-
+    const Gap = 4;
+    if gdFixed in State then
+      Canvas.Brush.Color := grdDetails.FixedColor else
+      if gdSelected in State then
+        Canvas.Brush.Color := $00FFF0E1 else
+        Canvas.Brush.Color := clWindow;
+    Canvas.FillRect(Rect);
+    Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+  end;
 end;
 
 procedure TPBMaintRepFinancialsFrm.grdDetailsTopLeftChanged(

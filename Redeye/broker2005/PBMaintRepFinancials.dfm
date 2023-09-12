@@ -2,8 +2,8 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Left = 300
   Top = 93
   Caption = 'Maintain Rep Commissions and Budgets'
-  ClientHeight = 516
-  ClientWidth = 645
+  ClientHeight = 507
+  ClientWidth = 640
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 658
@@ -21,22 +21,18 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 497
-    Width = 645
+    Top = 488
+    Width = 640
     Height = 19
     Panels = <>
-    ExplicitTop = 502
-    ExplicitWidth = 653
   end
   object Panel1: TPanel
     Left = 0
-    Top = 456
-    Width = 645
+    Top = 447
+    Width = 640
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 461
-    ExplicitWidth = 653
     object OKBitBtn: TBitBtn
       Left = 243
       Top = 8
@@ -62,11 +58,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 645
+    Width = 640
     Height = 83
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 653
     object grpbxBonus: TGroupBox
       Left = 440
       Top = 41
@@ -163,20 +158,18 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pgBudgets: TPageControl
     Left = 0
     Top = 153
-    Width = 645
-    Height = 303
+    Width = 640
+    Height = 294
     ActivePage = tbshtCategory
     Align = alClient
     TabOrder = 3
-    ExplicitWidth = 653
-    ExplicitHeight = 308
     object tbshtCategory: TTabSheet
       Caption = 'Category Commission Rates'
       object grdCategory: TStringGrid
         Left = 0
         Top = 0
         Width = 633
-        Height = 275
+        Height = 266
         Align = alLeft
         DefaultColWidth = 200
         DefaultRowHeight = 19
@@ -188,7 +181,6 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
         OnExit = grdCategoryExit
         OnKeyPress = grdDetailsKeyPress
         OnSelectCell = grdCategorySelectCell
-        ExplicitHeight = 280
         ColWidths = (
           200
           94
@@ -313,11 +305,10 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 645
+    Width = 640
     Height = 70
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 653
     object Label2: TLabel
       Left = 16
       Top = 7

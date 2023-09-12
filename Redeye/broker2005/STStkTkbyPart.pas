@@ -54,7 +54,7 @@ type
     procedure ReNumberLines(iRowNo: integer);
     procedure EnableButtons(iRow: integer);
     procedure DeleteCountLine(aline: TcountLine);
-    procedure CountGridDrawCell(Sender: TObject; Col, Row: Integer;
+    procedure CountGridDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure btnBrowseClick(Sender: TObject);
     procedure edtFileChange(Sender: TObject);
@@ -624,30 +624,39 @@ with aLine do
       end;
 end;
 
-procedure TSTStkTkbyPartFrm.CountGridDrawCell(Sender: TObject; Col,
-  Row: Integer; Rect: TRect; State: TGridDrawState);
-var
-  Txt: array[0..255] of Char;
+procedure TSTStkTkbyPartFrm.CountGridDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
-  {The following is code extracted from the Delphi Info Base}
-  {Display the Columns Right justified in the cells}
-  if (Col = 5) or (Col = 6) or (Col = 4) then
+  with (Sender as TStringGrid) do
   begin
-    StrPCopy(Txt, countgrid.Cells[Col, Row]);
-    SetTextAlign(countgrid.Canvas.Handle,
-      GetTextAlign(countgrid.Canvas.Handle)
-      and not (TA_LEFT or TA_CENTER) or TA_RIGHT);
-    ExtTextOut(countgrid.Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
-  end
-  else
-  begin
-    StrPCopy(Txt, countgrid.Cells[Col, Row]);
-    SetTextAlign(countgrid.Canvas.Handle,
-      GetTextAlign(countgrid.Canvas.Handle)
-      and not (TA_RIGHT or TA_CENTER) or TA_LEFT);
-    ExtTextOut(countgrid.Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-      ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    const Gap = 4;
+    var Text := Cells[ACol, ARow];
+    var WidthOfText := Canvas.TextWidth(Text);
+    var WidthOfCell := ColWidths[ACol];
+    var LeftOffset := WidthOfCell - WidthOfText - Gap;
+
+    {The following is code extracted from the Delphi Info Base}
+    {Display the Columns Right justified in the cells}
+    if (ACol = 5) or (ACol = 6) or (ACol = 4) then
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := CountGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+    end
+    else
+    begin
+      if gdFixed in State then
+        Canvas.Brush.Color := CountGrid.FixedColor else
+        if gdSelected in State then
+          Canvas.Brush.Color := $00FFF0E1 else
+          Canvas.Brush.Color := clWindow;
+      Canvas.FillRect(Rect);
+      Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+    end;
   end;
 end;
 

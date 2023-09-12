@@ -22,8 +22,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Width = 774
     Height = 19
     Panels = <>
-    ExplicitTop = 485
-    ExplicitWidth = 782
   end
   object Panel1: TPanel
     Left = 0
@@ -32,8 +30,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 444
-    ExplicitWidth = 782
     object OKBitBtn: TBitBtn
       Left = 312
       Top = 8
@@ -81,7 +77,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Height = 73
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 782
     object Label1: TLabel
       Left = 16
       Top = 14
@@ -133,8 +128,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     OnKeyPress = grdDetailsKeyPress
     OnSelectCell = grdDetailsSelectCell
     OnTopLeftChanged = grdDetailsTopLeftChanged
-    ExplicitWidth = 782
-    ExplicitHeight = 349
     ColWidths = (
       211
       70
@@ -176,7 +169,6 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
     Align = alTop
     Caption = 'Panel5'
     TabOrder = 4
-    ExplicitWidth = 782
     object Label3: TLabel
       Left = 6
       Top = 3
@@ -185,7 +177,7 @@ object PBMaintRepCatBudgetsFrm: TPBMaintRepCatBudgetsFrm
       Caption = 'Category'
     end
     object ScrollBox1: TScrollBox
-      Left = 212
+      Left = 204
       Top = 1
       Width = 569
       Height = 20

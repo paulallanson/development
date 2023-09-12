@@ -27,7 +27,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 782
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -76,8 +75,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 696
-    ExplicitHeight = 372
     DesignSize = (
       86
       359)
@@ -236,8 +233,6 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
       item
         Width = 50
       end>
-    ExplicitTop = 413
-    ExplicitWidth = 782
   end
   object Panel3: TPanel
     Left = 0
@@ -248,12 +243,10 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     BevelOuter = bvNone
     Caption = 'Panel3'
     TabOrder = 3
-    ExplicitWidth = 696
-    ExplicitHeight = 372
     object Panel4: TPanel
       Left = 0
-      Top = 331
-      Width = 696
+      Top = 318
+      Width = 686
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
@@ -297,8 +290,8 @@ object STStkTkbyPartFrm: TSTStkTkbyPartFrm
     object CountGrid: TStringGrid
       Left = 0
       Top = 0
-      Width = 696
-      Height = 331
+      Width = 686
+      Height = 318
       Align = alClient
       ColCount = 7
       DefaultColWidth = 60

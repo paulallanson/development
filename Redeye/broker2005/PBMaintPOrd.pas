@@ -563,7 +563,7 @@ type
     procedure btnDeleteNCAClick(Sender: TObject);
     procedure btnPrintNCAClick(Sender: TObject);
     procedure sgNCADetailsDblClick(Sender: TObject);
-    procedure sgNCADetailsDrawCell(Sender: TObject; vCol, vRow: Integer;
+    procedure sgNCADetailsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
     procedure sgVersionsDrawCell(Sender: TObject; ACol, ARow: Integer;
       Rect: TRect; State: TGridDrawState);
@@ -8852,10 +8852,9 @@ begin
   btnChangeNCAClick(self);
 end;
 
-procedure TPBMaintPOrdFrm.sgNCADetailsDrawCell(Sender: TObject; vCol,
-  vRow: Integer; Rect: TRect; State: TGridDrawState);
+procedure TPBMaintPOrdFrm.sgNCADetailsDrawCell(Sender: TObject; ACol,
+  ARow: Integer; Rect: TRect; State: TGridDrawState);
 var
-  Txt: array[0..255] of Char;
   inx: integer;
   NCL: TNonConform;
   iSelected, icol: integer;
@@ -8864,10 +8863,10 @@ begin
   {Prevent the blue cell being displayed}
   with Sender as TStringGrid do
   begin
-    if (vRow <> 0) and (vCol <> 0) then
+    if (ARow <> 0) and (ACol <> 0) then
       begin
         try
-          inx := StrToIntDef(sgNCADetails.cells[0,vRow], 0);
+          inx := StrToIntDef(sgNCADetails.cells[0, ARow], 0);
           inx := SelectedLine.NonConformDocs.IndexOf(inx);
           NCL := SelectedLine.NonConformDocs[inx];
 
@@ -8877,38 +8876,45 @@ begin
               Canvas.Font.Style := Font.Style + [fsStrikeOut]
             end
           else
-          if vrow = iSelected then
+          if Arow = iSelected then
             Canvas.Font.Color := color
           else
             Canvas.Font.Color := Font.Color;
         except
           Canvas.Font.Color := Font.Color;
         end;
-        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[vCol, vRow]);
+        Canvas.TextRect(Rect, Rect.Right - 2, Rect.Top + 2, Cells[ACol, ARow]);
       end;
-  end;
 
-  if selectedLine.NonConformDocs.Count > 0 then
-  begin
-    if (vCol < 9) then
-  	begin
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+    if selectedLine.NonConformDocs.Count > 0 then
+    begin
+      const Gap = 4;
+      var Text := Cells[ACol, ARow];
+      var WidthOfText := Canvas.TextWidth(Text);
+      var WidthOfCell := ColWidths[ACol];
+      var LeftOffset := WidthOfCell - WidthOfText - Gap;
 
-    end
-    else
-  	begin
-			{Display the Columns Right justified in the cells}
-  		StrPCopy(Txt, (Sender as TStringGrid).Cells[vCol, vRow]);
-  		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
-    			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
-      			and not(TA_LEFT OR TA_CENTER) or TA_RIGHT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Right - 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+      if (ACol < 9) then
+      begin
+        if gdFixed in State then
+          Canvas.Brush.Color := sgNCADetails.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + Gap, Rect.Top, Text);
+      end
+      else
+      begin
+        {Display the Columns Right justified in the cells}
+        if gdFixed in State then
+          Canvas.Brush.Color := sgNCADetails.FixedColor else
+          if gdSelected in State then
+            Canvas.Brush.Color := $00FFF0E1 else
+            Canvas.Brush.Color := clWindow;
+        Canvas.FillRect(Rect);
+        Canvas.TextRect(Rect, Rect.Left + LeftOffset, Rect.Top, Text);
+      end;
     end;
   end;
 end;
