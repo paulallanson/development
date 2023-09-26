@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses WTMaintCustEdgeCutOutGroup, wtMain, WtLUCustCutOutDetails,
+uses UITypes, WTMaintCustEdgeCutOutGroup, wtMain, WtLUCustCutOutDetails,
   wtLUCustEdgeDetails;
 
 {$R *.dfm}

@@ -100,7 +100,7 @@ var
 
 implementation
 
-uses wtDataModule, wtMain, wtMaintCustCustOut, wtMaintCustEdge;
+uses UITypes, wtDataModule, wtMain, wtMaintCustCustOut, wtMaintCustEdge;
 
 {$R *.dfm}
 

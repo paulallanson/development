@@ -72,7 +72,7 @@ var
 
 implementation
 
-uses WTLUCustWTGroups, WTSrchSupplier, DateSelV5, AllCommon, ComObj, ActiveX;
+uses UITypes, WTLUCustWTGroups, WTSrchSupplier, DateSelV5, AllCommon, ComObj, ActiveX;
 
 {$R *.dfm}
 
@@ -258,7 +258,7 @@ procedure TfrmWTMaintCustWTGroup.SaveToDB;
 var
   iPathLength, iFileLength: integer;
 begin
-  if FunctionMode[1] in ['A', 'C', 'P'] then
+  if CharInSet(FunctionMode[1], ['A', 'C', 'P']) then
   begin
     if FunctionMode = 'A' then
     begin

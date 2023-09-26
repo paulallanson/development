@@ -117,7 +117,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   wtDataModule, AllEmailHandler, wtEmailList, wtMain, Printer.Tools;
 
 const
@@ -1152,8 +1152,7 @@ begin
 
   if SelectLst.Items.Count > 100 then
     begin
-      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror,
-      [mbOk], 0);
+      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror, [mbOk], 0);
       SelectLst.Clear;
       memSelection.Clear;
       memSelection.SetFocus;

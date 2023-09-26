@@ -130,7 +130,7 @@ var
 
 implementation
 
-uses PBMainMenu, PBLUSupp, DateSelV5, PBMaintSuppInvoiceLine, PBMaintSuppInvoiceChgs,
+uses UITypes, PBMainMenu, PBLUSupp, DateSelV5, PBMaintSuppInvoiceLine, PBMaintSuppInvoiceChgs,
       PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB, PBLUSupplierInvoicePurch, PBDatabase;
 
 {$R *.DFM}
@@ -582,8 +582,7 @@ begin
       begin
         if (trim(Supplierinvoice.Lines[i].Nominal) = '') then
           begin
-            messagedlg('The Invoice cannot be saved, line '+inttostr(Supplierinvoice.Lines[i].SILine)+' has an invalid nominal code',mterror,
-                    [mbAbort], 0);
+            messagedlg('The Invoice cannot be saved, line '+inttostr(Supplierinvoice.Lines[i].SILine)+' has an invalid nominal code',mterror, [mbAbort], 0);
             exit;
           end;
       end;

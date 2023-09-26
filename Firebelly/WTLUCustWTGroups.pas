@@ -70,7 +70,7 @@ var
 
 implementation
 
-uses WTMaintCustWTGroup, wtMain, WTMaintCustWTGroupColours,
+uses UITypes, WTMaintCustWTGroup, wtMain, WTMaintCustWTGroupColours,
   WTLUCustWTGroupPrices;
 
 {$R *.dfm}
@@ -138,10 +138,7 @@ begin
             execsql;
           end;
         refresh;
-      except
-        messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Group_Description').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(dbgDetails.DataSource.dataset.fieldbyname('Group_Description').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 end;

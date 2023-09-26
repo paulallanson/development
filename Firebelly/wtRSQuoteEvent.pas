@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses allCommon, DateSelV5, WTRPQuoteEvent;
+uses UITypes, allCommon, DateSelV5, WTRPQuoteEvent;
 
 {$R *.dfm}
 

@@ -78,7 +78,7 @@ var
 
 implementation
 
-uses WTMaintCustomer, WTDBMemo, WTMaintSupplier;
+uses UITypes, WTMaintCustomer, WTDBMemo, WTMaintSupplier;
 
 {$R *.dfm}
 

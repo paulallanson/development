@@ -72,7 +72,7 @@ var
 
 implementation
 
-uses wtDataModule, wtMain, WtLUWTGroupPrices, wtLUWTGroup;
+uses UITypes, wtDataModule, wtMain, WtLUWTGroupPrices, wtLUWTGroup;
 
 {$R *.dfm}
 

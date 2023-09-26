@@ -100,7 +100,7 @@ var
 
 implementation
 
-uses pbDatabase, CCSCommon, PBPeriodEndDM, DateSelV5, PBRP4CastMonthInvs;
+uses UITypes, pbDatabase, CCSCommon, PBPeriodEndDM, DateSelV5, PBRP4CastMonthInvs;
 
 {$R *.dfm}
 

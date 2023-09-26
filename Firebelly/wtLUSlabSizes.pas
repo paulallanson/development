@@ -55,7 +55,7 @@ var
 
 implementation
 
-uses wtMaintSlabSize, wtMain;
+uses UITypes, wtMaintSlabSize, wtMain;
 
 {$R *.dfm}
 
@@ -103,10 +103,7 @@ begin
     begin
       try
         tblSlabSize.Delete;
-      except
-        messagedlg(tblSlabSize.fieldbyname('Description').asstring
-                    + ' has related data, therefore cannot be deleted', mtInformation,
-        [mbOk], 0);
+      except messagedlg(tblSlabSize.fieldbyname('Description').asstring + ' has related data, therefore cannot be deleted', mtInformation, [mbOk], 0);
       end;
     end;
 

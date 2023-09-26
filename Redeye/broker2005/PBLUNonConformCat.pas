@@ -57,7 +57,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBMaintNonConformCat;
+uses UITypes, pbDatabase, pbMainMenu, PBMaintNonConformCat;
 
 {$R *.DFM}
 

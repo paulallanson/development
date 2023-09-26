@@ -51,7 +51,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, wtNotesDM;
+uses UITypes, ComObj, ActiveX, wtNotesDM;
 
 {$R *.DFM}
 

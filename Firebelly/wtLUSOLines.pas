@@ -68,6 +68,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.dfm}
 
 { TfrmWTLUSOLines }

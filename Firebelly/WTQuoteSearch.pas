@@ -53,6 +53,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.dfm}
 
 procedure TfrmWTQuoteSearch.btnSearchClick(Sender: TObject);
