@@ -61,6 +61,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 procedure TfrmpbluCustOrdersJB.FormCreate(Sender: TObject);

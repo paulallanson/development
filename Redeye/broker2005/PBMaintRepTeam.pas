@@ -44,7 +44,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUAccountTeam, PBLURepTeam;
+uses UITypes, ComObj, ActiveX, PBDatabase, pbMainMenu, PBLUAccountTeam, PBLURepTeam;
 
 {$R *.DFM}
 

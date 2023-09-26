@@ -100,7 +100,7 @@ var
 
 implementation
 
-uses STPrtMntDetsMulti, STPrtMntDets, pbDatabase, StMntPrtSupp, STProdImport, STLUSuppPrt,
+uses UITypes, STPrtMntDetsMulti, STPrtMntDets, pbDatabase, StMntPrtSupp, STProdImport, STLUSuppPrt,
       STMaintPrtEComm, CCSCommon, pbMainMenu;
 
 {$R *.DFM}

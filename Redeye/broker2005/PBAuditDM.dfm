@@ -1,8 +1,7 @@
 object PBAuditDataMod: TPBAuditDataMod
   OnCreate = DataModuleCreate
-  Height = 600
-  Width = 870
-  PixelsPerInch = 120
+  Height = 480
+  Width = 696
   object AddAuditSQL: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -19,8 +18,8 @@ object PBAuditDataMod: TPBAuditDataMod
       '        :Audit_Text'
       'From Audit_Trail'
       ' ')
-    Left = 80
-    Top = 370
+    Left = 64
+    Top = 296
     ParamData = <
       item
         Name = 'Operator'
@@ -51,8 +50,8 @@ object PBAuditDataMod: TPBAuditDataMod
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
       'Values'
       '(1, :Operator, GetDate(), 0)')
-    Left = 80
-    Top = 20
+    Left = 64
+    Top = 16
     ParamData = <
       item
         Name = 'Operator'
@@ -62,8 +61,8 @@ object PBAuditDataMod: TPBAuditDataMod
     ConnectionName = 'PB'
     SQL.Strings = (
       '{See GetAuditDescr function} ;')
-    Left = 80
-    Top = 90
+    Left = 64
+    Top = 72
   end
   object GetAuditTypeSQL: TFDQuery
     ConnectionName = 'PB'
@@ -71,8 +70,8 @@ object PBAuditDataMod: TPBAuditDataMod
       'Select *'
       'from Audit_Type'
       'Where (Audit_Type = :Audit_Type)')
-    Left = 80
-    Top = 230
+    Left = 64
+    Top = 184
     ParamData = <
       item
         Name = 'Audit_Type'
@@ -86,8 +85,8 @@ object PBAuditDataMod: TPBAuditDataMod
         'g_Errors'
       'From Company'
       'Where Company = 1 ')
-    Left = 80
-    Top = 160
+    Left = 64
+    Top = 128
   end
   object GetFldChgTypSQL: TFDQuery
     ConnectionName = 'PB'
@@ -108,8 +107,8 @@ object PBAuditDataMod: TPBAuditDataMod
       '      (AT2.Audit_Type >= 2000) and (AT2.Audit_Type < 3000)'
       ''
       ' ')
-    Left = 80
-    Top = 300
+    Left = 64
+    Top = 240
     ParamData = <
       item
         Name = 'Audit_Table_Name'
@@ -125,8 +124,8 @@ object PBAuditDataMod: TPBAuditDataMod
       '(Audit_Trail, Operator, Date_Time_Entered, Audit_Type)'
       'Values'
       '(1, :Operator, now(), 0)')
-    Left = 390
-    Top = 20
+    Left = 312
+    Top = 16
     ParamData = <
       item
         Name = 'Operator'
@@ -148,8 +147,8 @@ object PBAuditDataMod: TPBAuditDataMod
       '        :Audit_Text'
       'From Audit_Trail'
       ' ')
-    Left = 400
-    Top = 360
+    Left = 320
+    Top = 288
     ParamData = <
       item
         Name = 'Operator'

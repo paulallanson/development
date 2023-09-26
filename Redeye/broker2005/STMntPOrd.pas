@@ -240,7 +240,7 @@ type
     procedure UpdateSalesOrderStatus(tmpCode: integer);
   public
     { Public declarations }
-    sFuncMode: String[1] ;
+    sFuncMode: Char ;
     sFuncDescr, headStatus: String ;
     iCode, iSupplCode, iSupplBranch, iTransType: Integer ;
     bStore_Ord: ByteBool ;

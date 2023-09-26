@@ -134,7 +134,7 @@ var
 
 implementation
 
-uses PBMaintRep, PBDBMemo, pbMainMenu, PBDatabase, PBMaintRepFinancials,
+uses UITypes, PBMaintRep, PBDBMemo, pbMainMenu, PBDatabase, PBMaintRepFinancials,
   PBMaintRepBudgets;
 
 {$R *.DFM}

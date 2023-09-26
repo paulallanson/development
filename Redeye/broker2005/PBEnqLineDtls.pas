@@ -196,7 +196,7 @@ var
 
 implementation
 
-uses PBenquiry, PBenqline, PBLUPrdTyp, PBLUCustFormRef, PBLUArtwrkTyp,
+uses UITypes, PBenquiry, PBenqline, PBLUPrdTyp, PBLUCustFormRef, PBLUArtwrkTyp,
   PBLUStandSize, PBDatabase, pbMainMenu;
 
 var
@@ -390,8 +390,7 @@ begin
   {Check that all sizes have been entered}
   if (DepthEdit.Text = '') or (WidthEdit.Text = '') then
   begin
-    MessageDlg('Depth and Width must be entered', mtError,
-      [mbOk], 0);
+    MessageDlg('Depth and Width must be entered', mtError, [mbOk], 0);
     DepthEdit.SetFocus;
     Exit;
   end;

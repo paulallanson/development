@@ -65,7 +65,7 @@ var
 
 implementation
 
-uses STStockDM, STSOObjects;
+uses UITypes, STStockDM, STSOObjects;
 
 {$R *.DFM}
 
@@ -112,8 +112,7 @@ begin
   iQtyFreeToPick := 0;
   if dbgDetails.SelectedRows.count = 0 then
     begin
-      messagedlg('No bin have been selected, select the bin or bins you want to use to allocate the stock.',mtInformation,
-                [mbOk], 0);
+      messagedlg('No bin have been selected, select the bin or bins you want to use to allocate the stock.',mtInformation, [mbOk], 0);
       exit;
     end;
 

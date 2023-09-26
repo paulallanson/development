@@ -150,7 +150,7 @@ var
 
 implementation
 
-uses PBMaintSConta, pbMainMenu, PBDatabase;
+uses UITypes, PBMaintSConta, pbMainMenu, PBDatabase;
 
 {$R *.DFM}
 

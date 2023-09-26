@@ -34,7 +34,7 @@ var
 
 implementation
 
-uses STRPSOReturns;
+uses UITypes, STRPSOReturns;
 
 {$R *.dfm}
 

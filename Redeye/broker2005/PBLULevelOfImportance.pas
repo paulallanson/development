@@ -62,7 +62,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBDatabase, PBMaintLevelOfImportance;
+uses UITypes, pbMainMenu, PBDatabase, PBMaintLevelOfImportance;
 
 {$R *.DFM}
 

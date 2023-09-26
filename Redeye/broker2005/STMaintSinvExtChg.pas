@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses STSODataMod, PBLUAddCharges;
+uses UITypes, STSODataMod, PBLUAddCharges;
 
 {$R *.DFM}
 
@@ -118,7 +118,7 @@ begin
     end;
   SOrdLabel.Caption := sDescName;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [soDelete, soView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [soDelete, soView]);
   DelLabel.Visible := (FFuncMode = soDelete);
   OKBitBtn.Visible := (FFuncMode <> soView);
   CheckOK(Self);
@@ -142,7 +142,7 @@ end;
 
 procedure TSTMaintSInvExtChgFrm.OKBitBtnClick(Sender: TObject);
 begin
-  if FFuncMode in [soAdd, soChange] then
+  if CharInSet(FFuncMode, [soAdd, soChange]) then
   begin
     with ExtraCharge do
     begin

@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses DateSelV5, PBLUReasCode, pbMainMenu;
+uses UITypes, DateSelV5, PBLUReasCode, pbMainMenu;
 
 {$R *.DFM}
 

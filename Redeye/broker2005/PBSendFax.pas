@@ -118,7 +118,7 @@ var
 
 implementation
 
-uses pbMainMenu, PBLogin;
+uses UITypes, pbMainMenu, PBLogin;
 
 {$R *.DFM}
 
@@ -217,8 +217,7 @@ begin
      DeleteFile(zJunk1);
      if not movefile(zJunk, zJunk1) then
         begin
-        MessageDlg('Can''t move document into fax que - FAX NOT SENT !!!', mtError,
-                           [mbOK], 0);
+        MessageDlg('Can''t move document into fax que - FAX NOT SENT !!!', mtError, [mbOK], 0);
         Exit;
         end;
      AddFaxSQL.Close;

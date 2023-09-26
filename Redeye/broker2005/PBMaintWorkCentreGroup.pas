@@ -46,7 +46,7 @@ var
 
 implementation
 
-uses pbDatabase, pbMainMenu, PBLUWorkCentreGroup, ActiveX;
+uses UITypes, pbDatabase, pbMainMenu, PBLUWorkCentreGroup, ActiveX;
 
 {$R *.DFM}
 

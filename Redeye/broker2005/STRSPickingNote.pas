@@ -119,7 +119,7 @@ var
 
 implementation
 
-uses STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
+uses UITypes, STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
   pbMainMenu, stPickingDM, STStockDM;
 
 {$R *.dfm}
@@ -403,8 +403,7 @@ begin
             if (strtoint(sgDetails.cells[5,icount]) > (strtoint(sgDetails.cells[3,icount]) - strtoint(sgDetails.cells[4,icount]))) then
               begin
                 iQtytoPick := strtoint(sgDetails.cells[3,icount]) - strtoint(sgDetails.cells[4,icount]);
-                MessageDlg('You cannot request to pick more than is available to pick, which is ' + inttostr(iQtytoPick)
-                        + ' for item ' + inttostr(icount) + ', product code ' + sgDetails.cells[0,icount], mtError, [mbOk], 0);
+                MessageDlg('You cannot request to pick more than is available to pick, which is ' + inttostr(iQtytoPick) + ' for item ' + inttostr(icount) + ', product code ' + sgDetails.cells[0,icount], mtError, [mbOk], 0);
                 bOK := false;
                 exit;
               end;

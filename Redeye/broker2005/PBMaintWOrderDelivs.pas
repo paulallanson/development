@@ -100,7 +100,7 @@ var
 
 implementation
 
-uses CCSCommon, STLUCourier, DateSelV5, PBLUPackageSize;
+uses UITypes, FireDAC.Stan.Param, CCSCommon, STLUCourier, DateSelV5, PBLUPackageSize;
 
 {$R *.dfm}
 

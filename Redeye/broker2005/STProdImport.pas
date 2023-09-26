@@ -69,7 +69,7 @@ var
 
 implementation
 
-uses STPartSuppDM, PBLUSupp, CCSCommon, pbDatabase;
+uses UITypes, STPartSuppDM, PBLUSupp, CCSCommon, pbDatabase;
 
 var
   STPartSDM: TSTPartSDM;

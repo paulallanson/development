@@ -153,7 +153,7 @@ var
 
 implementation
 
-uses PBMaintProcessCost, PBMaintProcessCostCat, PBMaintProcessCostSub,
+uses UITypes, PBMaintProcessCost, PBMaintProcessCostCat, PBMaintProcessCostSub,
   PBLUCust;
 
 {$R *.dfm}

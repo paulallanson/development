@@ -127,7 +127,7 @@ var
 
 implementation
 
-uses PBMaintPrdTyp, PBMaintPrdTypCap, pbMainMenu, PBDatabase;
+uses UITypes, PBMaintPrdTyp, PBMaintPrdTypCap, pbMainMenu, PBDatabase;
 
 {$R *.DFM}
 

@@ -33,6 +33,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 procedure TPBMaintOpsDetPassFrm.OldPassEditChange(Sender: TObject);

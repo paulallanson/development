@@ -30,13 +30,12 @@ object frmpbMainMenu: TfrmpbMainMenu
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 1480
+        Width = 1470
       end>
-    ExplicitWidth = 1478
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 1467
+      Width = 1461
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -251,8 +250,6 @@ object frmpbMainMenu: TfrmpbMainMenu
       item
         Width = 150
       end>
-    ExplicitTop = 701
-    ExplicitWidth = 1478
   end
   object mnMain: TMainMenu
     Left = 256

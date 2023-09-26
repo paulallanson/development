@@ -304,7 +304,7 @@ var
   EnqArrayCount: integer;
 implementation
 
-uses
+uses UITypes, 
   PBFaxList, LetterDM, PBEmailList, PBSendFax, PBDBEnqLtr, pbMainMenu, printers,
   CCSPrint, PDLetter, pbDatabase, Printer.Tools;
 
@@ -1023,8 +1023,7 @@ begin
   buildselection;
    if SelectLst.Items.Count > 100 then
     begin
-      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror,
-      [mbOk], 0);
+      MessageDlg(' This selection will result in more than 100 documents being produced. Please redefine the range', mterror, [mbOk], 0);
       SelectLst.Clear;
       SelectionMemo.Clear;
       SelectionMemo.SetFocus;

@@ -2712,7 +2712,7 @@ begin
     if sTempFuncMode = soAdd then
       SalesOrder.ExtraCharges.Add(ExtraCharge);
     inx := SalesOrder.ExtraCharges.IndexFromChargeNo(iCharge);
-    if sTempFuncMode in [soChange, soDelete] then
+    if CharInSet(sTempFuncMode, [soChange, soDelete]) then
     begin
       SalesOrder.ExtraCharges[inx].Free;
      SalesOrder.ExtraCharges.Delete(inx);

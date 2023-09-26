@@ -65,7 +65,7 @@ var
 
 implementation
 
-uses STStockDM, STPrtAllocStStock;
+uses UITypes, STStockDM, STPrtAllocStStock;
 
 {$R *.DFM}
 
