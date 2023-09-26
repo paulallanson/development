@@ -11,13 +11,11 @@ object frmWtMaintFinish: TfrmWtMaintFinish
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     867
     359)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -57,9 +55,9 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 440
@@ -70,8 +68,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 8
     NumGlyphs = 2
+    TabOrder = 8
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -1218,39 +1216,25 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Long_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Show_Online'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Image_Path'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Worktop_Finish'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -1266,8 +1250,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Top = 256
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -1281,8 +1265,8 @@ object frmWtMaintFinish: TfrmWtMaintFinish
     Top = 256
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

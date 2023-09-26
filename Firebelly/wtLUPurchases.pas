@@ -81,7 +81,7 @@ var
 implementation
 
 uses
-  WtMaintPurchaseOrder, WTRSPOrder, AllCommon, WTPOrderSearch,
+  UITypes, WtMaintPurchaseOrder, WTRSPOrder, AllCommon, WTPOrderSearch,
   WTLUPOrderRpts, WTMaintPurchaseOrderReceipts, wtMain;
 
 {$R *.DFM}
@@ -234,6 +234,7 @@ var
   bOK: boolean;
 //  sWarning: string;
 begin
+  bOK := False;
   if aMode = popAdd then
     Key := 0
   else
@@ -585,6 +586,8 @@ var
   bOK: boolean;
 //  sWarning: string;
 begin
+  bOK := False;
+
   Key := dtmdlAllPurchases.CurrentPOrder;
 
   if (dbgdetails.DataSource.DataSet.FieldByName('purchase_order_status').asinteger >= 40) AND

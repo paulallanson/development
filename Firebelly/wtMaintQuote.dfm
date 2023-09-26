@@ -739,7 +739,6 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         Enabled = False
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 459
         DesignSize = (
           465
           153)
@@ -2163,7 +2162,7 @@ object frmWTMaintQuote: TfrmWTMaintQuote
         BorderStyle = bsNone
         TabOrder = 1
         DesignSize = (
-          1082
+          1086
           239)
         object Label45: TLabel
           Left = 16

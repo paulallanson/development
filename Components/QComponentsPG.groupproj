@@ -6,6 +6,12 @@
         <Projects Include="dd-dropfiles-5.0.5\PJDropFile.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="CRPackage\CRPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CRPackage\MSAddIn.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +29,32 @@
     <Target Name="PJDropFile:Make">
         <MSBuild Projects="dd-dropfiles-5.0.5\PJDropFile.dproj" Targets="Make"/>
     </Target>
+    <Target Name="CRPackage">
+        <MSBuild Projects="CRPackage\CRPackage.dproj"/>
+    </Target>
+    <Target Name="CRPackage:Clean">
+        <MSBuild Projects="CRPackage\CRPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CRPackage:Make">
+        <MSBuild Projects="CRPackage\CRPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MSAddIn">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj"/>
+    </Target>
+    <Target Name="MSAddIn:Clean">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MSAddIn:Make">
+        <MSBuild Projects="CRPackage\MSAddIn.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PJDropFile"/>
+        <CallTarget Targets="PJDropFile;CRPackage;MSAddIn"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PJDropFile:Clean"/>
+        <CallTarget Targets="PJDropFile:Clean;CRPackage:Clean;MSAddIn:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PJDropFile:Make"/>
+        <CallTarget Targets="PJDropFile:Make;CRPackage:Make;MSAddIn:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
