@@ -241,6 +241,7 @@ object PBMaintCContaEventsFrm: TPBMaintCContaEventsFrm
       Top = 56
       Width = 81
       Height = 21
+      Date = 45197.000000000000000000
       Time = 0.434360891202231900
       ShowCheckbox = True
       Kind = dtkTime

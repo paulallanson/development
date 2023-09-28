@@ -79,10 +79,10 @@ uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
   StdCtrls, ExtCtrls, oomisc, printers, ShellAPI, DB, Inifiles,
   AdFaxCtl,syncobjs,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, 
-  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, 
-  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, 
-  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.VCLUI.Wait;
 
 type
   TPBSendFaxFrm = class(TForm)
@@ -97,7 +97,7 @@ type
     procedure WaitForFaxFinishTimerTimer(Sender: TObject);
     procedure WriteLogLine(TempText: string);
     function WinExecAndWait32(Filename: string; Visibility: Integer): Integer;
-    procedure FaxDatabaseLogin(Database: TFDConnection; LoginParams: TStrings);
+    procedure FaxDatabaseLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
     procedure WaitForFaxFinish(Sender: TObject);
     procedure SendFax(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -397,23 +397,22 @@ begin
   end;
 end;
 
-procedure TPBSendFaxFrm.FaxDatabaseLogin(Database: TFDConnection;
-  LoginParams: TStrings);
+procedure TPBSendFaxFrm.FaxDatabaseLogin(AConnection: TFDCustomConnection; AParams: TFDConnectionDefParams);
 begin
   {Get user and password from login screen};
-  LoginParams.Values['USER NAME'] := 'faxes';
-  LoginParams.Values['PASSWORD'] := 'rabbit';
+  AParams.UserName := 'faxes';
+  AParams.Password := 'rabbit';
 end;
 
 procedure TPBSendFaxFrm.WaitForFaxFinish(Sender: TObject);
 begin
 {Wait for the FaxFinishEvent to trigger - happens in the ApdFaxDriverInterfaceDocEnd procedure} ;
 {Wait for 1 second} ;
-While (FaxFinishedEvent.WaitFor(1000) <> wrSignaled) do
-        begin
-        {If the event does not trigger, try to take a message from the message que and wait again} ;
-        Application.HandleMessage ;
-        end;
+  while (FaxFinishedEvent.WaitFor(1000) <> wrSignaled) do
+  begin
+    {If the event does not trigger, try to take a message from the message que and wait again} ;
+    Application.HandleMessage;
+  end;
 end;
 
 procedure TPBSendFaxFrm.FormDestroy(Sender: TObject);
