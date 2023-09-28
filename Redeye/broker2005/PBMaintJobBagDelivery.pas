@@ -96,7 +96,7 @@ var
 
 implementation
 
-uses UITypes, CCSCommon, DateSelV5, PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust,
+uses FireDAC.Stan.Param, UITypes, CCSCommon, DateSelV5, PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust,
   pbLUCompBranch, pbDatabase, PBLUCConta, STLUCourier;
 
 {$R *.dfm}

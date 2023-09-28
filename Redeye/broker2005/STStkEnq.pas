@@ -91,7 +91,7 @@ var
 
 implementation
 
-uses pbMainMenu, CCSCommon, STPrtEnqMov, STStoreStockObj;
+uses UITypes, pbMainMenu, CCSCommon, STPrtEnqMov, STStoreStockObj;
 
 {$R *.DFM}
 

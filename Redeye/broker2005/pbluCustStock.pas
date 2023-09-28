@@ -143,7 +143,7 @@ var
 
 implementation
 
-uses pbStockDm, STLUStkMvmnts, STLUStkLoc, STLUStkSales, STLUStkProduction,
+uses UITypes, FireDAC.Stan.Param, pbStockDm, STLUStkMvmnts, STLUStkLoc, STLUStkSales, STLUStkProduction,
   STLUStkPurchases, STMaintProduct, STLUProductLvls, STPrtTran, CCSCommon, STLUStkNmbr,
   STRSLabels, pbluCustomers, pbDatabase, pbMainMenu, STStkEnq;
 
@@ -739,4 +739,3 @@ begin
 end;
 
 end.
-

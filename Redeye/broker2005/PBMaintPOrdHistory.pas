@@ -26,7 +26,7 @@ var
 
 implementation
 
-uses PBPODataMod;
+uses FireDAC.Stan.Param, PBPODataMod;
 
 {$R *.dfm}
 

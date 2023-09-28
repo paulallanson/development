@@ -71,7 +71,7 @@ var
 
 implementation
 
-uses PBLUCategory, PBImages, PBNarrativeDM, ComObj, ActiveX,
+uses UITypes, PBLUCategory, PBImages, PBNarrativeDM, ComObj, ActiveX,
   PBDatabase, pbMainMenu;
 
 {$R *.DFM}

@@ -124,7 +124,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   PBLUAdHoc, PBLUSupp, PBLURep, PBLUCust, PBPODataMod, PBLUAddCharges;
 
 {$R *.DFM}
@@ -162,7 +162,7 @@ begin
     end;
   POrdLabel.Caption := sDescName;
   {Enable or disable the buttons}
-  DetsGrpBox.Enabled := not (FFuncMode in [poDelete, poView]);
+  DetsGrpBox.Enabled := not CharInSet(FFuncMode, [poDelete, poView]);
   DelLabel.Visible := (FFuncMode = poDelete);
   OKBitBtn.Visible := (FFuncMode <> poView);
   CheckOK(Self);
@@ -183,7 +183,7 @@ end;
 
 procedure TPBMaintPOrdLineExtChgFrm.OKBitBtnClick(Sender: TObject);
 begin
-  if FFuncMode in [poChange, poAdd] then
+  if CharInSet(FFuncMode, [poChange, poAdd]) then
   begin
     with ExtraCharge do
     begin

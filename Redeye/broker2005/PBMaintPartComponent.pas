@@ -69,7 +69,7 @@ end;
 
 procedure TPBMaintPartComponentFrm.OKBitBtnClick(Sender: TObject);
 begin
-  if sFuncMode[1] in ['A'] then
+  if CharInSet(sFuncMode[1], ['A']) then
     begin
       if iElementNo = 0 then
         begin
@@ -93,7 +93,7 @@ begin
         end;
     end
   else
-  if sFuncMode[1] in ['C'] then
+  if CharInSet(sFuncMode[1], ['C']) then
     begin
       with qryUpd do
         begin

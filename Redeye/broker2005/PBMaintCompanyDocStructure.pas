@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses PBMaintCompanyDocName;
+uses UITypes, PBMaintCompanyDocName;
 
 {$R *.dfm}
 

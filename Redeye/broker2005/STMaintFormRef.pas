@@ -169,7 +169,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDatabase;
+uses UITypes, ComObj, ActiveX, PBDatabase;
 
 {$R *.DFM}
 

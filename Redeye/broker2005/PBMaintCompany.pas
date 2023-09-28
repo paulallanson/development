@@ -383,7 +383,7 @@ var
 
 implementation
 
-uses PBDelivNotes, pbDatabase, PBLUSupp, PBImages, pbMainMenu, CCSCommon, PBNarrativeDM, PBDBMemo,
+uses UITypes, PBDelivNotes, pbDatabase, PBLUSupp, PBImages, pbMainMenu, CCSCommon, PBNarrativeDM, PBDBMemo,
   PBParamsHelp, PBLUActivityType, PBMaintCompanyDocStructure, PBLUProcess,
   PBLUProcessGroup;
 

@@ -52,6 +52,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.dfm}
 
 procedure TPBMaintContactOnlineFrm.EnableOK(Sender: TObject);

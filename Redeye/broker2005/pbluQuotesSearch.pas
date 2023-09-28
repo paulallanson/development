@@ -53,7 +53,7 @@ var
 
 implementation
 
-uses DateSelV5, CCSCommon;
+uses UITypes, DateSelV5, CCSCommon;
 
 {$R *.DFM}
 

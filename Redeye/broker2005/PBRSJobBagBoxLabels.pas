@@ -129,7 +129,7 @@ var
 
 implementation
 
-uses PBIntSelDM, PBRPLabels, CCSPrint, DateSelV5, PBRPLabelsReels,
+uses UITypes, PBIntSelDM, PBRPLabels, CCSPrint, DateSelV5, PBRPLabelsReels,
   pbMainMenu, PBRPJobBagLabels, PBRPJobBagLabelsReels;
 
 {$R *.DFM}

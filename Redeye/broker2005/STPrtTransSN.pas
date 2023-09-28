@@ -27,6 +27,8 @@ var
 
 implementation
 
+uses UITypes;
+
 {$R *.DFM}
 
 procedure TSTPrtTransSNFrm.FormActivate(Sender: TObject);

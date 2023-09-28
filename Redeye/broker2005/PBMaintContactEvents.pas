@@ -220,7 +220,7 @@ var
 
 implementation
 
-uses ComObj, ActiveX, PBDBMemo, pbMainMenu, PBDatabase,
+uses UITypes, ComObj, ActiveX, PBDBMemo, pbMainMenu, PBDatabase,
   pbluContacts, pbLuBranches;
 
 {$R *.DFM}

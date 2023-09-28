@@ -130,7 +130,7 @@ var
 
 implementation
 
-uses pbEnqsdm, pbluEnqsSearch, pbDatabase, PBenquiry, PBEnquiryDataMod, PBRSEnqN,
+uses FireDAC.Stan.Param, UITypes, pbEnqsdm, pbluEnqsSearch, pbDatabase, PBenquiry, PBEnquiryDataMod, PBRSEnqN,
       PBEnqSupResp, PBEnqJobPrice, PBRSQuoN, PBAutoPO, CCSCommon,
   pbluCustomers, pbMainMenu, PBRSEnq, PBEnqInActLine, PBRSQuo;
 

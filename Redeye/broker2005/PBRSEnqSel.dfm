@@ -1,4 +1,4 @@
-﻿object PBRSEnqSelFrm: TPBRSEnqSelFrm
+object PBRSEnqSelFrm: TPBRSEnqSelFrm
   Left = 216
   Top = 150
   BorderIcons = [biSystemMenu]
@@ -12,12 +12,10 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object PrintBitBtn: TBitBtn
     Left = 408
@@ -30,9 +28,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -47,6 +42,9 @@
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 320
@@ -59,9 +57,6 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 1
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -76,6 +71,9 @@
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 1
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 16
@@ -88,12 +86,12 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object rgRep: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 10
     Width = 145
@@ -103,15 +101,16 @@
     Items.Strings = (
       'All Reps'
       'One Rep')
+    ParentBackground = False
     TabOrder = 3
     OnClick = rgRepClick
   end
   object pnlRepSearch: TPanel
-    ParentBackground = False
     Left = 168
     Top = 15
     Width = 313
     Height = 60
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblCustBran: TLabel
@@ -146,11 +145,11 @@
     end
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 16
     Top = 155
     Width = 265
     Height = 73
+    ParentBackground = False
     TabOrder = 5
     object Label1: TLabel
       Left = 8
@@ -236,7 +235,6 @@
     TabOrder = 6
   end
   object rgOperator: TRadioGroup
-    ParentBackground = False
     Left = 16
     Top = 82
     Width = 145
@@ -246,15 +244,16 @@
     Items.Strings = (
       'All Office Contact'
       'One Office Contact')
+    ParentBackground = False
     TabOrder = 7
     OnClick = rgOperatorClick
   end
   object pnlOperator: TPanel
-    ParentBackground = False
     Left = 168
     Top = 87
     Width = 313
     Height = 60
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object Label3: TLabel
@@ -289,7 +288,6 @@
     end
   end
   object rdgrpSortBy: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 150
     Width = 113
@@ -299,6 +297,7 @@
     Items.Strings = (
       'Rep'
       'Office Contact')
+    ParentBackground = False
     TabOrder = 9
   end
   object ExcelBitBtn: TBitBtn
@@ -307,8 +306,6 @@
     Width = 75
     Height = 25
     Caption = 'Excel'
-    TabOrder = 10
-    OnClick = ExcelBitBtnClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -352,13 +349,15 @@
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 10
+    OnClick = ExcelBitBtnClick
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 125
     Top = 123
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel
@@ -397,9 +396,7 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
 end

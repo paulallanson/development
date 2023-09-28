@@ -59,6 +59,7 @@ var
 
 implementation
 
+uses UITypes;
 {$R *.DFM}
 
 procedure TPBLUCustomerJobsFrm.FormCreate(Sender: TObject);
