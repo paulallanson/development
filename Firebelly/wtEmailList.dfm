@@ -22,8 +22,6 @@ object frmWTEmailList: TfrmWTEmailList
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitWidth = 685
-    ExplicitHeight = 217
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -39,8 +37,6 @@ object frmWTEmailList: TfrmWTEmailList
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
-      ExplicitWidth = 683
-      ExplicitHeight = 215
       ColWidths = (
         64
         186
@@ -82,8 +78,6 @@ object frmWTEmailList: TfrmWTEmailList
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 217
-    ExplicitWidth = 685
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8

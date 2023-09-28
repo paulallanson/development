@@ -451,8 +451,6 @@ object STMntPOrdFrm: TSTMntPOrdFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 486
-    ExplicitWidth = 802
     object DelLabel: TLabel
       Left = 486
       Top = 10
@@ -657,8 +655,6 @@ object STMntPOrdFrm: TSTMntPOrdFrm
       item
         Width = 50
       end>
-    ExplicitTop = 519
-    ExplicitWidth = 802
   end
   object UpdSQL: TFDQuery
     ConnectionName = 'PB'

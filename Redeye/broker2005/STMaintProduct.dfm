@@ -23,15 +23,13 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     ActivePage = tsGeneral
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 535
-    ExplicitHeight = 561
     object tsGeneral: TTabSheet
       Caption = 'General'
       object grpbxDetails: TGroupBox
         Left = 0
         Top = 0
-        Width = 527
-        Height = 533
+        Width = 523
+        Height = 532
         Align = alClient
         TabOrder = 0
         DesignSize = (
@@ -715,7 +713,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
           BevelOuter = bvNone
           ParentBackground = False
           TabOrder = 15
-          ExplicitTop = 264
           object lblFSCClaim: TLabel
             Left = 8
             Top = 6
@@ -913,8 +910,6 @@ object frmSTMaintProduct: TfrmSTMaintProduct
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 561
-    ExplicitWidth = 535
     object lblDelete: TLabel
       Left = 190
       Top = 16

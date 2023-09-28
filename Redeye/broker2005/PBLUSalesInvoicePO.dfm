@@ -91,7 +91,6 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Anchors = [akRight, akBottom]
       Caption = 'Selected Purchase Order'
       TabOrder = 2
-      ExplicitLeft = 480
       object edtPONumber: TEdit
         Left = 8
         Top = 16
@@ -109,7 +108,6 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       Anchors = [akRight, akBottom]
       Caption = 'Function'
       TabOrder = 3
-      ExplicitLeft = 656
       object btnSelect: TBitBtn
         Left = 16
         Top = 20
@@ -205,13 +203,11 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
     Align = alClient
     Caption = 'Panel2'
     TabOrder = 1
-    ExplicitWidth = 777
-    ExplicitHeight = 335
     object dbgPO: TDBGrid
       Left = 1
       Top = 1
-      Width = 781
-      Height = 342
+      Width = 777
+      Height = 341
       Align = alClient
       DataSource = dmSalesInvoice.dsPOLine
       Font.Charset = ANSI_CHARSET
@@ -318,8 +314,6 @@ object PBLUSalesInvoicePOfrm: TPBLUSalesInvoicePOfrm
       item
         Width = 50
       end>
-    ExplicitTop = 452
-    ExplicitWidth = 777
   end
   object SearchTimer: TTimer
     Enabled = False

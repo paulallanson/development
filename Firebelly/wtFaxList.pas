@@ -40,8 +40,7 @@ type
     Panel3: TPanel;
     FaxListGrid: TStringGrid;
     procedure FormCreate(Sender: TObject);
-    procedure FaxListGridSelectCell(Sender: TObject; Col, Row: Longint;
-      var CanSelect: Boolean);
+    procedure FaxListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FaxListGridKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
@@ -61,10 +60,9 @@ begin
 	FaxListgrid.cells[2,0] := 'Fax Number';
 end;
 
-procedure TfrmWTFaxList.FaxListGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
+procedure TfrmWTFaxList.FaxListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-	if Col = 2 then
+	if ACol = 2 then
    FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
   else
    FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]

@@ -1,7 +1,6 @@
-﻿object STEmailListFrm: TSTEmailListFrm
+object STEmailListFrm: TSTEmailListFrm
   Left = 29
   Top = 150
-  AutoScroll = False
   Caption = 'STEmailListFrm'
   ClientHeight = 271
   ClientWidth = 749
@@ -11,20 +10,18 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 749
     Height = 230
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
     object EmailListGrid: TStringGrid
       Left = 1
@@ -61,28 +58,30 @@
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 230
     Width = 749
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object BitBtn1: TBitBtn
       Left = 445
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 0
       Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
     end
     object BitBtn2: TBitBtn
       Left = 525
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object ExFilterSQL: TFDQuery

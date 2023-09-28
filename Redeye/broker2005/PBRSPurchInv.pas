@@ -146,7 +146,7 @@ var
 
 implementation
 
-uses PBLUSupp, PBRPPurchInv, PBDatabase;
+uses UITypes, PBLUSupp, PBRPPurchInv, PBDatabase;
 
 {$R *.DFM}
 

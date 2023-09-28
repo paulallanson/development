@@ -201,8 +201,7 @@ type
     procedure strgrdQuoteRunOnExit(Sender: TObject);
     procedure strgrdQuoteRunOnKeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
-    procedure strgrdQuoteRunOnSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
+    procedure strgrdQuoteRunOnSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure strgrdSupplierPricesDblClick(Sender: TObject);
     procedure EnterSupplierPrices1Click(Sender: TObject);
     procedure strgrdSupplierPricesKeyPress(Sender: TObject; var Key: Char);
@@ -2854,8 +2853,7 @@ begin
   Enquiry.DetailsModified := true;
 end;
 
-procedure TPBMaintEnquiryFrm.strgrdQuoteRunOnSelectCell(Sender: TObject;
-  ACol, ARow: Integer; var CanSelect: Boolean);
+procedure TPBMaintEnquiryFrm.strgrdQuoteRunOnSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 var
   irow: integer;
 begin

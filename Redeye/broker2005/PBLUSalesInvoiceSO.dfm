@@ -85,8 +85,6 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       item
         Width = 50
       end>
-    ExplicitTop = 416
-    ExplicitWidth = 715
   end
   object Panel1: TPanel
     Left = 0
@@ -96,8 +94,6 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 320
-    ExplicitWidth = 715
     DesignSize = (
       709
       96)
@@ -142,7 +138,6 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Anchors = [akTop, akRight]
       Caption = 'Selected Sales Order'
       TabOrder = 1
-      ExplicitLeft = 432
       object edtSONumber: TEdit
         Left = 8
         Top = 16
@@ -160,7 +155,6 @@ object PBLUSalesInvoiceSOfrm: TPBLUSalesInvoiceSOfrm
       Anchors = [akTop, akRight]
       Caption = 'Function'
       TabOrder = 2
-      ExplicitLeft = 600
       object btnSelect: TBitBtn
         Left = 16
         Top = 20

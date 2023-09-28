@@ -22,8 +22,6 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 353
-    ExplicitWidth = 342
     object OKBitBtn: TBitBtn
       Left = 91
       Top = 8
@@ -280,8 +278,6 @@ object STPrtTransQtyFrm: TSTPrtTransQtyFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 315
-    ExplicitWidth = 342
     object grpbxJobNumber: TGroupBox
       Left = 8
       Top = -2

@@ -21,7 +21,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 41
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 753
     DesignSize = (
       745
       41)
@@ -123,7 +122,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 64
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 753
     object Label6: TLabel
       Left = 8
       Top = 12
@@ -223,8 +221,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Width = 745
     Height = 20
     Panels = <>
-    ExplicitTop = 536
-    ExplicitWidth = 753
   end
   object pnlOkCancelBtns: TPanel
     Left = 0
@@ -233,8 +229,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 495
-    ExplicitWidth = 753
     DesignSize = (
       745
       41)
@@ -285,8 +279,6 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 4
-    ExplicitWidth = 753
-    ExplicitHeight = 390
     object TabSheet1: TTabSheet
       Caption = 'General'
       object Label9: TLabel
@@ -1059,7 +1051,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
             Left = 8
             Top = 24
             Width = 137
-            Height = 89
+            Height = 77
             Anchors = [akLeft, akTop, akRight, akBottom]
             ItemHeight = 15
             TabOrder = 2
@@ -1186,7 +1178,7 @@ object PBMaintEnquiryFrm: TPBMaintEnquiryFrm
           737
           41)
         object btnAddSuppCustNotes: TBitBtn
-          Left = 630
+          Left = 622
           Top = 7
           Width = 70
           Height = 25

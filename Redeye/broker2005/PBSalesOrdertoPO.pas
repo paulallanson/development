@@ -32,7 +32,7 @@ var
 
 implementation
 
-uses STSOObjects, STPOObjects, STSODataMod, STPODataMod;
+uses UITypes, STSOObjects, STPOObjects, STSODataMod, STPODataMod;
 
 {$R *.dfm}
 

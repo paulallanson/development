@@ -59,7 +59,7 @@ var
 
 implementation
 
-uses CCSCommon, PBDatabase, PBPartTransfer, STRPStockLocations, pbMainMenu,
+uses UITypes, CCSCommon, PBDatabase, PBPartTransfer, STRPStockLocations, pbMainMenu,
   STLUStkLoc;
 
 {$R *.dfm}

@@ -1,7 +1,4 @@
 object dtmdlDeliveries: TdtmdlDeliveries
-  OldCreateOrder = False
-  Left = 39
-  Top = 60
   Height = 505
   Width = 720
   object AdhocSQL: TFDQuery
@@ -19,9 +16,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -39,9 +34,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -62,14 +55,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object CompSQL: TFDQuery
@@ -103,14 +92,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryPODetails: TFDQuery
@@ -218,14 +203,12 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 96
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'Purchase_order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end>
     object qryPODetailsPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
@@ -466,65 +449,52 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 152
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Sales_order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qrySODetailsSales_Order: TIntegerField
       FieldName = 'Sales_Order'
-
     end
     object qrySODetailsSales_order_delivery_no: TIntegerField
       FieldName = 'Sales_order_delivery_no'
-
     end
     object qrySODetailsDelivery_Date: TDateTimeField
       FieldName = 'Delivery_Date'
-
     end
     object qrySODetailsDespatch_note_No: TStringField
       FieldName = 'Despatch_note_No'
-
       FixedChar = True
       Size = 40
     end
     object qrySODetailsCust_Order_No: TStringField
       FieldName = 'Cust_Order_No'
-
       FixedChar = True
       Size = 80
     end
     object qrySODetailsDelivery_Customer: TIntegerField
       FieldName = 'Delivery_Customer'
-
     end
     object qrySODetailsDelivery_Branch: TIntegerField
       FieldName = 'Delivery_Branch'
-
     end
     object qrySODetailsAd_hoc_Address: TIntegerField
       FieldName = 'Ad_hoc_Address'
-
     end
     object qrySODetailsReplenish_ID: TStringField
       FieldName = 'Replenish_ID'
-
       FixedChar = True
       Size = 2
     end
     object qrySODetailsReplenish_Source_Descr: TStringField
       FieldName = 'Replenish_Source_Descr'
-
       FixedChar = True
       Size = 40
     end
     object qrySODetailsSupplier: TIntegerField
       FieldName = 'Supplier'
-
     end
     object qrySODetailsBranch_no0: TIntegerField
       FieldName = 'Branch_no0'
-
     end
     object qrySODetailsDeliveryName: TStringField
       FieldKind = fkCalculated
@@ -607,29 +577,19 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end>
   end
   object qryUpDelivPrinted: TFDQuery
@@ -646,19 +606,13 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckDeliv: TFDQuery
@@ -671,14 +625,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOLine: TFDQuery
@@ -694,14 +644,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOLine: TFDQuery
@@ -717,24 +663,16 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Ready_to_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOLines: TFDQuery
@@ -747,9 +685,7 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOHead: TFDQuery
@@ -762,14 +698,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Head_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpDelivery: TFDQuery
@@ -810,134 +742,93 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 200
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Ad_Hoc_Address'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_To_Deliver'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Delivered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Point'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No0'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'No_Of_boxes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Deliver_Via_Company'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_To_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Stock_Location_Desc'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_reqd_by_Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'FAO'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Company_Branch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_Weight_Kilos'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Courier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Service_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Package_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_No'
-        ParamType = ptUnknown
       end>
   end
   object qryAddDelivLocs: TFDQuery
@@ -963,34 +854,22 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object qryUpDelivLocs: TFDQuery
@@ -1007,34 +886,22 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_no'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPickLocs: TFDQuery
@@ -1049,19 +916,13 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Calloff_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Calloff_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Calloff_Delivery'
-        ParamType = ptUnknown
       end>
   end
   object qryUpDelivLocsAlloc: TFDQuery
@@ -1077,29 +938,19 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_no'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPickDtls: TFDQuery
@@ -1129,49 +980,31 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Calloff_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Calloff_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Calloff_Delivery'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_Picked'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNextPickNo: TFDQuery
@@ -1188,24 +1021,16 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Location_no'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOLineFormRef: TFDQuery
@@ -1219,19 +1044,14 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 336
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetStock: TFDQuery
@@ -1252,14 +1072,10 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetCallOff: TFDQuery
@@ -1292,19 +1108,13 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Original_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOStock: TFDQuery
@@ -1318,19 +1128,13 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_in_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object dtsSODetails: TDataSource
@@ -1349,19 +1153,13 @@ object dtmdlDeliveries: TdtmdlDeliveries
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

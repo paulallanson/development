@@ -44,8 +44,7 @@ type
     Panel3: TPanel;
     FaxListGrid: TStringGrid;
     procedure FormCreate(Sender: TObject);
-    procedure FaxListGridSelectCell(Sender: TObject; Col, Row: Longint;
-      var CanSelect: Boolean);
+    procedure FaxListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FaxListGridKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
@@ -65,17 +64,15 @@ begin
 	FaxListgrid.cells[2,0] := 'Fax Number';
 end;
 
-procedure TSTFaxListFrm.FaxListGridSelectCell(Sender: TObject; Col,
-  Row: Longint; var CanSelect: Boolean);
+procedure TSTFaxListFrm.FaxListGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-	if Col = 2 then
-   FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
+	if ACol = 2 then
+    FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing,goEditing]
   else
-   FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
+    FaxListGrid.Options := [goFixedVertLine,goFixedHorzLine,goVertLine,goHorzLine,goColSizing]
 end;
 
-procedure TSTFaxListFrm.FaxListGridKeyPress(Sender: TObject;
-  var Key: Char);
+procedure TSTFaxListFrm.FaxListGridKeyPress(Sender: TObject; var Key: Char);
 begin
 	case Ord(key) of
   	$30..$39:;

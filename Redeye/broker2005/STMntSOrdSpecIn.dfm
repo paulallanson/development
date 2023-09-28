@@ -1,7 +1,6 @@
 object STMntSOrdSpecInFrm: TSTMntSOrdSpecInFrm
   Left = 297
   Top = 143
-  AutoScroll = False
   Caption = 'Delivery Instructions'
   ClientHeight = 277
   ClientWidth = 312
@@ -11,9 +10,7 @@ object STMntSOrdSpecInFrm: TSTMntSOrdSpecInFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object DispMemo: TMemo
     Left = 8
@@ -30,8 +27,6 @@ object STMntSOrdSpecInFrm: TSTMntSOrdSpecInFrm
     Height = 25
     Caption = 'Clear'
     Default = True
-    TabOrder = 1
-    OnClick = ClearBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -46,23 +41,27 @@ object STMntSOrdSpecInFrm: TSTMntSOrdSpecInFrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = ClearBitBtnClick
   end
   object OkBitBtn: TBitBtn
     Left = 144
     Top = 240
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = OkBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 224
     Top = 240
     Width = 75
     Height = 25
+    Kind = bkClose
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = CloseBitBtnClick
-    Kind = bkClose
   end
 end

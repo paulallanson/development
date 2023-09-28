@@ -32,7 +32,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1164
+        Width = 1160
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -45,7 +45,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1151
+        Width = 1139
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 63
@@ -364,8 +364,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
-    ExplicitTop = 304
-    ExplicitWidth = 1164
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -382,7 +380,7 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 880
+      Left = 882
       Top = 1
       Width = 283
       Height = 54
@@ -521,8 +519,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
       item
         Width = 50
       end>
-    ExplicitTop = 360
-    ExplicitWidth = 1164
   end
   object Panel3: TPanel
     Left = 0
@@ -535,7 +531,6 @@ object frmPBLUSalesInvoices: TfrmPBLUSalesInvoices
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1164
     object Label4: TLabel
       Left = 8
       Top = 3

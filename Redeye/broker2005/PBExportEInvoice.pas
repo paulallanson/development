@@ -83,7 +83,7 @@ var
 
 implementation
 
-uses PBLUCust, pbMainMenu;
+uses UITypes, PBLUCust, pbMainMenu;
 
 {$R *.dfm}
 

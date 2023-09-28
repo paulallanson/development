@@ -157,8 +157,7 @@ type
     procedure UpDown1Changing(Sender: TObject; var AllowChange: Boolean);
     procedure UpDown2Changing(Sender: TObject; var AllowChange: Boolean);
     procedure QtyGridKeyPress(Sender: TObject; var Key: Char);
-    procedure QtyGridDrawCell(Sender: TObject; Col, Row: Longint;
-      Rect: TRect; State: TGridDrawState);
+    procedure QtyGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
     procedure NCR_OTCComboDropDown(Sender: TObject);
     procedure NCR_OTCComboClick(Sender: TObject);
     procedure WidthEditKeyPress(Sender: TObject; var Key: Char);
@@ -529,8 +528,7 @@ begin
   end;
 end;
 
-procedure TPBEnqLineDtlsFrm.QtyGridDrawCell(Sender: TObject; Col,
-  Row: Longint; Rect: TRect; State: TGridDrawState);
+procedure TPBEnqLineDtlsFrm.QtyGridDrawCell(Sender: TObject; ACol, ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
   {Code extracted from the Delphi Info base No 609}
   if Sender = ActiveControl then Exit;
@@ -540,7 +538,7 @@ begin
     Canvas.Brush.Color := Color;
     Canvas.Font.Color := Font.Color;
     Canvas.TextRect(Rect, Rect.Left + 2, Rect.Top + 2,
-      Cells[Col, Row]);
+      Cells[ACol, ARow]);
   end;
 end;
 

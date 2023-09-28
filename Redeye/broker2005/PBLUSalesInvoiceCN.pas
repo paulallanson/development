@@ -133,7 +133,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   PBMaintSalesInvoice, pbDatabase, pbMainMenu;
 
 {$R *.DFM}

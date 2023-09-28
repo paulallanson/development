@@ -225,6 +225,8 @@ function FormatMoney(const Money: variant): string;
 
 implementation
 
+uses UITypes;
+
 const
   xmlTab1 = #9;
   xmlTab2 = #9 + #9;

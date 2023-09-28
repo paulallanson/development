@@ -1,9 +1,9 @@
 object STMaintSOrdFrm: TSTMaintSOrdFrm
   Left = -2
   Top = 4
-  Width = 808
-  Height = 581
   Caption = 'Maintain Sales Orders'
+  ClientHeight = 541
+  ClientWidth = 792
   Color = clBtnFace
   Constraints.MinHeight = 580
   Constraints.MinWidth = 808
@@ -13,7 +13,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
   Font.Name = 'Arial'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   WindowState = wsMaximized
   OnActivate = FormActivate
@@ -21,12 +20,11 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
-  PixelsPerInch = 96
   TextHeight = 15
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 800
+    Width = 792
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -79,8 +77,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 1
-      OnClick = DateBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -95,6 +91,8 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = DateBitBtnClick
     end
     object DtReqEdit: TEdit
       Left = 448
@@ -110,8 +108,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       Top = 6
       Width = 25
       Height = 25
-      TabOrder = 3
-      OnClick = DtReqBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -126,6 +122,8 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = DtReqBitBtnClick
     end
     object OfficeComboBox: TDBLookupComboBox
       Left = 632
@@ -140,21 +138,22 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 521
-    Width = 800
+    Top = 508
+    Width = 792
     Height = 33
     Align = alBottom
     TabOrder = 1
+    DesignSize = (
+      792
+      33)
     object OKBitBtn: TBitBtn
-      Left = 621
+      Left = 1293
       Top = 5
       Width = 76
       Height = 25
       Anchors = [akTop, akRight]
       Caption = 'Save'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -220,17 +219,17 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
-      Left = 709
+      Left = 1381
       Top = 5
       Width = 76
       Height = 25
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Cancel'
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -296,6 +295,8 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
     object NotesBitBtn: TBitBtn
       Left = 8
@@ -303,8 +304,6 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       Width = 75
       Height = 25
       Caption = 'Notes'
-      TabOrder = 2
-      OnClick = NotesBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -319,22 +318,28 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         8033373F777777733733330F8700078803333373FF77733F733333300FFF8800
         3333333773FFFF77333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = NotesBitBtnClick
     end
   end
   object pnlAddCharges: TPanel
     Left = 0
-    Top = 409
-    Width = 800
+    Top = 396
+    Width = 792
     Height = 112
     Align = alBottom
     TabOrder = 2
+    DesignSize = (
+      792
+      112)
     object Label10: TLabel
-      Left = 584
+      Left = 1256
       Top = 24
-      Width = 95
+      Width = 93
       Height = 15
       Anchors = [akTop, akRight]
       Caption = 'Total Order Value'
+      ExplicitLeft = 584
     end
     object Label16: TLabel
       Left = 3
@@ -344,7 +349,7 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       Caption = 'Additional Charges'
     end
     object memoTotal: TMemo
-      Left = 688
+      Left = 1360
       Top = 16
       Width = 97
       Height = 23
@@ -382,23 +387,23 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
   object pnlDetails: TPanel
     Left = 0
     Top = 41
-    Width = 800
-    Height = 368
+    Width = 792
+    Height = 355
     Align = alClient
     Caption = 'pnlDetails'
     TabOrder = 3
     object pnlLines: TPanel
       Left = 1
       Top = 145
-      Width = 798
-      Height = 222
+      Width = 790
+      Height = 209
       Align = alClient
       TabOrder = 0
       object LineDetsStringGrid: TStringGrid
         Left = 1
         Top = 1
-        Width = 796
-        Height = 220
+        Width = 788
+        Height = 207
         Align = alClient
         ColCount = 8
         DefaultRowHeight = 20
@@ -424,11 +429,14 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
     object pnlHead: TPanel
       Left = 1
       Top = 1
-      Width = 798
+      Width = 790
       Height = 144
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      DesignSize = (
+        790
+        144)
       object Label3: TLabel
         Left = 8
         Top = 14
@@ -474,14 +482,14 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
       object Label1: TLabel
         Left = 390
         Top = 71
-        Width = 86
+        Width = 85
         Height = 15
         Caption = 'Replenish Type'
       end
       object Label17: TLabel
         Left = 400
         Top = 8
-        Width = 75
+        Width = 74
         Height = 15
         Caption = 'Address Type'
       end
@@ -580,7 +588,7 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         OnClick = dbLkpCmbRepClick
       end
       object DeliveryBitBtn: TBitBtn
-        Left = 752
+        Left = 1424
         Top = 28
         Width = 25
         Height = 25
@@ -624,6 +632,9 @@ object STMaintSOrdFrm: TSTMaintSOrdFrm
         Width = 401
         Height = 49
         TabOrder = 11
+        DesignSize = (
+          401
+          49)
         object Label14: TLabel
           Left = 2
           Top = 15

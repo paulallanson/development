@@ -123,10 +123,9 @@ type
     procedure LineChgBitBtnClick(Sender: TObject);
     procedure LineDelBitBtnClick(Sender: TObject);
     procedure SetupDetails(Sender: TObject);
-    procedure LineDetsStringGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure LineDetsStringGridDrawCell(Sender: TObject; aCol,
-  aRow: Integer; Rect: TRect; State: TGridDrawState);
+      aRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure SelContactBtnClick(Sender: TObject);
     procedure SelectBitBtnClick(Sender: TObject);
     procedure btnCostCentreClick(Sender: TObject);
@@ -152,8 +151,7 @@ type
     procedure ChrgAddBitBtnClick(Sender: TObject);
     procedure ChrgChgBitBtnClick(Sender: TObject);
     procedure ChrgDelBitBtnClick(Sender: TObject);
-    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
+    procedure ExtChgDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure ExtChgMenuPopup(Sender: TObject);
     procedure RdBtnToCustClick(Sender: TObject);
     procedure RDBtnToAdHocClick(Sender: TObject);
@@ -1515,8 +1513,7 @@ begin
   CheckOK(Self);
 end;
 
-procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject;
-  aCol, aRow: Integer; var CanSelect: Boolean);
+procedure TSTMntSOrdFrm.LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 var
   tempInx: integer;
   tempPartCode: string;
@@ -2851,10 +2848,9 @@ begin
   end;
 end;
 
-procedure TSTMntSOrdFrm.ExtChgDetsStringGridSelectCell(Sender: TObject;
-  ACol, ARow: Integer; var CanSelect: Boolean);
+procedure TSTMntSOrdFrm.ExtChgDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-if FSelectedChargeIndex = ARow - 1 then Exit;
+  if FSelectedChargeIndex = ARow - 1 then Exit;
   FSelectedChargeIndex := ARow - 1;
 end;
 

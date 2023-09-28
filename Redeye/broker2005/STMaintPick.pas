@@ -37,8 +37,7 @@ type
     procedure sgDetailsDblClick(Sender: TObject);
     procedure ConfirmBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure sgDetailsSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+    procedure sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormDestroy(Sender: TObject);
     procedure UpdateTransfers;
     procedure UpdateProduction;
@@ -53,8 +52,7 @@ type
     procedure EnableButtons(iRow: integer);
     procedure SplitAllocation(aLine: TPickLine; iQtyPicked: integer);
     procedure BitBtn2Click(Sender: TObject);
-    procedure sgDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+    procedure sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
     procedure FormActivate(Sender: TObject);
     procedure cmbPickingNoteClick(Sender: TObject);
     procedure CancelBtnClick(Sender: TObject);
@@ -352,13 +350,11 @@ begin
     Result := PickingList.PickLines[FSelectedLineIndex];
 end;
 
-procedure TSTMaintPickFrm.sgDetailsSelectCell(Sender: TObject;
-  Col, Row: Longint; var CanSelect: Boolean);
+procedure TSTMaintPickFrm.sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-  EnableButtons(Row);
-  if FSelectedLineIndex = Row - 1 then Exit;
-  FSelectedLineIndex := Row - 1;
-
+  EnableButtons(ARow);
+  if FSelectedLineIndex = ARow - 1 then Exit;
+  FSelectedLineIndex := ARow - 1;
 end;
 
 procedure TSTMaintPickFrm.FormDestroy(Sender: TObject);
@@ -1015,8 +1011,7 @@ begin
   close;
 end;
 
-procedure TSTMaintPickFrm.sgDetailsDrawCell(Sender: TObject; vCol,
-  vRow: Longint; Rect: TRect; State: TGridDrawState);
+procedure TSTMaintPickFrm.sgDetailsDrawCell(Sender: TObject; vCol, vRow: Integer; Rect: TRect; State: TGridDrawState);
 var
   Txt: array [0..255] of Char;
 begin

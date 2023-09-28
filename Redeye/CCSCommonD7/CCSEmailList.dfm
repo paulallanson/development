@@ -15,21 +15,19 @@ object CCSEmailListFrm: TCCSEmailListFrm
   OnShow = FormShow
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 745
     Height = 229
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 749
-    ExplicitHeight = 230
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
-      Width = 747
-      Height = 228
+      Width = 743
+      Height = 227
       Align = alClient
       ColCount = 4
       DefaultRowHeight = 20
@@ -60,15 +58,13 @@ object CCSEmailListFrm: TCCSEmailListFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 229
     Width = 745
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 230
-    ExplicitWidth = 749
     object BitBtn1: TBitBtn
       Left = 445
       Top = 8

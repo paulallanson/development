@@ -108,7 +108,7 @@ var
 
 implementation
 
-uses PBLUCust, PBLUStandSize, PBLUPrdTyp, PBPartTransfer, PBDatabase;
+uses UITypes, PBLUCust, PBLUStandSize, PBLUPrdTyp, PBPartTransfer, PBDatabase;
 
 {$R *.dfm}
 

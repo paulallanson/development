@@ -79,7 +79,7 @@ var
 
 implementation
 
-uses CCSCommon, PBMaintSuppInvoice, PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB,
+uses UITypes, CCSCommon, PBMaintSuppInvoice, PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB,
       PBLUSupplierInvoicePurch, PBMaintSuppInvoicePass, pbMainMenu,
   PBLUSupplierInvoiceCN, pbDatabase, pbLUPurchaseInvoiceRpts;
 

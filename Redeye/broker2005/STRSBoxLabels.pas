@@ -53,8 +53,7 @@ type
     procedure PrintBitBtnClick(Sender: TObject);
     procedure LineDetsStringGridDrawCell(Sender: TObject; vcol,
       vrow: Integer; Rect: TRect; State: TGridDrawState);
-    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol,
-      ARow: Integer; var CanSelect: Boolean);
+    procedure LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure FormActivate(Sender: TObject);
     procedure FormRefClrBitBtnClick(Sender: TObject);
   private
@@ -694,13 +693,12 @@ begin
 
 end;
 
-procedure TSTRSBoxLabelsfrm.LineDetsStringGridSelectCell(Sender: TObject;
-  ACol, ARow: Integer; var CanSelect: Boolean);
+procedure TSTRSBoxLabelsfrm.LineDetsStringGridSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
-If Acol < 5 then
-  canselect := false
-else
-  canselect := True;
+  if Acol < 5 then
+    canselect := False
+  else
+    canselect := True;
 end;
 
 procedure TSTRSBoxLabelsfrm.SetDefaultBin(const Value: integer);

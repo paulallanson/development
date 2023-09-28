@@ -1,7 +1,6 @@
 object CCSImageViewerFrm: TCCSImageViewerFrm
   Left = 42
   Top = 83
-  AutoScroll = False
   Caption = 'Image Viewer'
   ClientHeight = 226
   ClientWidth = 333
@@ -11,9 +10,7 @@ object CCSImageViewerFrm: TCCSImageViewerFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0

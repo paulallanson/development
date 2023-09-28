@@ -23,8 +23,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 405
-    ExplicitWidth = 730
     DesignSize = (
       724
       41)
@@ -56,7 +54,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      ExplicitLeft = 556
     end
     object btnCancel: TBitBtn
       Left = 632
@@ -68,7 +65,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = btnCancelClick
-      ExplicitLeft = 644
     end
     object BitBtnAdd: TBitBtn
       Left = 448
@@ -98,7 +94,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = BitBtnAddClick
-      ExplicitLeft = 460
     end
   end
   object Panel1: TPanel
@@ -109,7 +104,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 730
     object Label1: TLabel
       Left = 16
       Top = 16
@@ -210,8 +204,6 @@ object STPODirectConfFrm: TSTPODirectConfFrm
     OnDrawCell = grdDetailsDrawCell
     OnKeyPress = CheckKeyIsNumber
     OnSelectCell = grdDetailsSelectCell
-    ExplicitWidth = 730
-    ExplicitHeight = 316
     ColWidths = (
       40
       124

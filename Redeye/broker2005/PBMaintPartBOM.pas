@@ -40,6 +40,8 @@ var
 
 implementation
 
+uses UITypes;
+
 {$R *.dfm}
 
 procedure TPBMaintPartBOMfrm.FormActivate(Sender: TObject);

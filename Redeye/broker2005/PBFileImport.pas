@@ -99,7 +99,7 @@ var
 
 implementation
 
-uses PBAccImportDM, CCSCommon;
+uses UITypes, PBAccImportDM, CCSCommon;
 
 {$R *.dfm}
 

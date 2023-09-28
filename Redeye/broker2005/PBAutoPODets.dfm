@@ -4,8 +4,8 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'Create Purchase Order From Enquiry'
-  ClientHeight = 552
-  ClientWidth = 628
+  ClientHeight = 543
+  ClientWidth = 624
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clBlack
@@ -19,11 +19,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlCustomer: TPanel
     Left = 0
     Top = 0
-    Width = 628
+    Width = 624
     Height = 40
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 644
     object EnqLabel: TLabel
       Left = 8
       Top = 4
@@ -73,11 +72,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlOrderQty: TPanel
     Left = 0
     Top = 40
-    Width = 628
+    Width = 624
     Height = 40
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 644
     object Label4: TLabel
       Left = 8
       Top = 13
@@ -106,11 +104,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlFunctions: TPanel
     Left = 0
     Top = 505
-    Width = 628
+    Width = 624
     Height = 38
     Align = alTop
     TabOrder = 2
-    ExplicitWidth = 644
     object OKBitBtn: TBitBtn
       Left = 443
       Top = 6
@@ -134,11 +131,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlRunOnQty: TPanel
     Left = 0
     Top = 80
-    Width = 628
+    Width = 624
     Height = 40
     Align = alTop
     TabOrder = 3
-    ExplicitWidth = 644
     object Label3: TLabel
       Left = 8
       Top = 12
@@ -193,11 +189,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlOrder: TPanel
     Left = 0
     Top = 233
-    Width = 628
+    Width = 624
     Height = 136
     Align = alTop
     TabOrder = 4
-    ExplicitWidth = 644
     object Label1: TLabel
       Left = 8
       Top = 52
@@ -450,11 +445,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlDelivery: TPanel
     Left = 0
     Top = 369
-    Width = 628
+    Width = 624
     Height = 136
     Align = alTop
     TabOrder = 5
-    ExplicitWidth = 644
     object AddrTypeRadGrp: TRadioGroup
       Left = 7
       Top = 6
@@ -536,11 +530,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlSupplier: TPanel
     Left = 0
     Top = 120
-    Width = 628
+    Width = 624
     Height = 57
     Align = alTop
     TabOrder = 6
-    ExplicitWidth = 644
     object SuppLabel: TLabel
       Left = 8
       Top = 6
@@ -598,11 +591,10 @@ object PBAutoPODetsFrm: TPBAutoPODetsFrm
   object pnlPrices: TPanel
     Left = 0
     Top = 177
-    Width = 628
+    Width = 624
     Height = 56
     Align = alTop
     TabOrder = 7
-    ExplicitWidth = 644
     object Label6: TLabel
       Left = 8
       Top = 13

@@ -56,7 +56,7 @@ var
 
 implementation
 
-Uses CCSCommon, pbMainMenu;
+uses UITypes, CCSCommon, pbMainMenu;
 
 {$R *.DFM}
 

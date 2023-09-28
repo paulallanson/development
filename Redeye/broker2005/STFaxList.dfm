@@ -1,7 +1,6 @@
 object STFaxListFrm: TSTFaxListFrm
   Left = 41
   Top = 111
-  AutoScroll = False
   Caption = 'STFaxListFrm'
   ClientHeight = 310
   ClientWidth = 681
@@ -11,9 +10,7 @@ object STFaxListFrm: TSTFaxListFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -36,16 +33,18 @@ object STFaxListFrm: TSTFaxListFrm
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 0
         Kind = bkOK
+        NumGlyphs = 2
+        TabOrder = 0
       end
       object BitBtn2: TBitBtn
         Left = 94
         Top = 8
         Width = 75
         Height = 25
-        TabOrder = 1
         Kind = bkCancel
+        NumGlyphs = 2
+        TabOrder = 1
       end
     end
   end

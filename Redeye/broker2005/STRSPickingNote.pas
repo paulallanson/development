@@ -50,8 +50,7 @@ type
     procedure cmbPickingNoteClick(Sender: TObject);
     procedure edtPickingDateExit(Sender: TObject);
     procedure btnDateClick(Sender: TObject);
-    procedure sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer;
-      var CanSelect: Boolean);
+    procedure sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
     procedure sgDetailsKeyPress(Sender: TObject; var Key: Char);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -749,8 +748,7 @@ begin
   printBitBtn.enabled := previewBitBtn.enabled;
 end;
 
-procedure TSTRSPickingNoteFrm.sgDetailsSelectCell(Sender: TObject; ACol,
-  ARow: Integer; var CanSelect: Boolean);
+procedure TSTRSPickingNoteFrm.sgDetailsSelectCell(Sender: TObject; ACol, ARow: Integer; var CanSelect: Boolean);
 begin
   if Confirmed then
     begin

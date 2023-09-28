@@ -1,26 +1,24 @@
 object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   Left = 222
   Top = 126
-  Width = 668
-  Height = 454
   Caption = 'Print Picking Notes'
+  ClientHeight = 415
+  ClientWidth = 652
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 660
+    Width = 652
     Height = 57
     Align = alTop
     TabOrder = 0
@@ -69,13 +67,13 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 369
-    Width = 660
+    Top = 364
+    Width = 652
     Height = 51
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      660
+      652
       51)
     object lblPickingConfirmed: TLabel
       Left = 8
@@ -113,9 +111,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      OnClick = PreviewbitbtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -130,6 +125,9 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 0
+      OnClick = PreviewbitbtnClick
     end
     object PrintBitBtn: TBitBtn
       Left = 483
@@ -144,9 +142,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -161,6 +156,9 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 1
+      OnClick = PrintBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 572
@@ -174,16 +172,17 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
+      Kind = bkCancel
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 2
       OnClick = CancelBitBtnClick
-      Kind = bkCancel
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 57
-    Width = 660
+    Width = 652
     Height = 56
     Align = alTop
     TabOrder = 2
@@ -228,7 +227,6 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
       Width = 169
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       ItemIndex = 0
       TabOrder = 0
       Text = '<New Picking Note>'
@@ -256,8 +254,8 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
   object sgDetails: TStringGrid
     Left = 0
     Top = 113
-    Width = 660
-    Height = 256
+    Width = 652
+    Height = 251
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20
@@ -340,9 +338,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 161
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsSOAlloc: TDataSource
@@ -359,9 +355,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPick: TFDQuery
@@ -408,89 +402,56 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Line_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity_To_Pick'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Picking_List_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Picked'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Allocation'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Pick_Note_Confirmed'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sets_Per_Pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNext: TFDQuery
@@ -513,9 +474,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object qrySOPicking: TFDQuery
@@ -561,9 +520,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 217
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_Picking'
-        ParamType = ptUnknown
       end>
   end
   object qryProdLocation: TFDQuery
@@ -581,9 +538,7 @@ object STRSPickingNoteFrm: TSTRSPickingNoteFrm
     Top = 273
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
 end

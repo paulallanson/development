@@ -76,7 +76,7 @@ var
 
 implementation
 
-uses STStkTkRep, STStockDM, STPrtMnt, STMntPrtBin, PBDatabase, PBLUCust,CCSCommon;
+uses UITypes, STStkTkRep, STStockDM, STPrtMnt, STMntPrtBin, PBDatabase, PBLUCust,CCSCommon;
 
 {$R *.DFM}
 

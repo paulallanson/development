@@ -11,10 +11,8 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 168
@@ -36,9 +34,6 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -103,7 +98,10 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 390
@@ -112,8 +110,6 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 1
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -178,7 +174,9 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 1
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -247,19 +245,13 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_No'
-        ParamType = ptUnknown
       end>
   end
   object qryDel: TFDQuery
@@ -272,14 +264,10 @@ object PBMaintPartBOMfrm: TPBMaintPartBOMfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_No'
-        ParamType = ptUnknown
       end>
   end
 end

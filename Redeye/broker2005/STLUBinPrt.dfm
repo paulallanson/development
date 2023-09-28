@@ -484,14 +484,10 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object GetBinsHadPartSQL: TFDQuery
@@ -518,24 +514,16 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object GetBinsEmptySQL: TFDQuery
@@ -565,9 +553,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object GetAllBinsSQL: TFDQuery
@@ -591,9 +577,7 @@ object STLUBinPrtFrm: TSTLUBinPrtFrm
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
 end

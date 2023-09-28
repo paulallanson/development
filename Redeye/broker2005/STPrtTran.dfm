@@ -2,8 +2,8 @@ object STPrtTranFrm: TSTPrtTranFrm
   Left = 16
   Top = 126
   Caption = 'Product Transfers'
-  ClientHeight = 371
-  ClientWidth = 732
+  ClientHeight = 379
+  ClientWidth = 734
   Color = clBtnFace
   Constraints.MinHeight = 418
   Constraints.MinWidth = 750
@@ -31,7 +31,7 @@ object STPrtTranFrm: TSTPrtTranFrm
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 732
+    Width = 734
     Height = 89
     Align = alTop
     ParentBackground = False
@@ -202,14 +202,14 @@ object STPrtTranFrm: TSTPrtTranFrm
   end
   object pnlBottom: TPanel
     Left = 0
-    Top = 330
-    Width = 732
+    Top = 338
+    Width = 734
     Height = 41
     Align = alBottom
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      732
+      734
       41)
     object ToPart2Label: TLabel
       Left = 20
@@ -253,7 +253,6 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = OKBitBtnClick
-      ExplicitLeft = 494
     end
     object CancelBitBtn: TBitBtn
       Left = 564
@@ -283,7 +282,6 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 574
     end
     object CloseBitBtn: TBitBtn
       Left = 644
@@ -295,14 +293,13 @@ object STPrtTranFrm: TSTPrtTranFrm
       NumGlyphs = 2
       TabOrder = 2
       OnClick = OKBitBtnClick
-      ExplicitLeft = 654
     end
   end
   object pnlCentre: TPanel
     Left = 0
     Top = 89
-    Width = 732
-    Height = 241
+    Width = 734
+    Height = 249
     Align = alClient
     ParentBackground = False
     TabOrder = 3
@@ -310,15 +307,14 @@ object STPrtTranFrm: TSTPrtTranFrm
       Left = 1
       Top = 1
       Width = 370
-      Height = 248
+      Height = 247
       Align = alLeft
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 239
       DesignSize = (
         370
-        239)
+        247)
       object FromGroupBox: TGroupBox
         Left = 8
         Top = 8
@@ -328,7 +324,6 @@ object STPrtTranFrm: TSTPrtTranFrm
         Caption = 'Move From'
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 247
         DesignSize = (
           358
           246)
@@ -382,15 +377,15 @@ object STPrtTranFrm: TSTPrtTranFrm
     object pnlCentreRight: TPanel
       Left = 371
       Top = 1
-      Width = 360
-      Height = 239
+      Width = 362
+      Height = 247
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
       DesignSize = (
-        360
-        239)
+        362
+        247)
       object ToGroupBox: TGroupBox
         Left = 4
         Top = 8
@@ -400,8 +395,6 @@ object STPrtTranFrm: TSTPrtTranFrm
         Caption = 'Move To'
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 362
-        ExplicitHeight = 247
         DesignSize = (
           352
           246)

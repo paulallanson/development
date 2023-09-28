@@ -21,8 +21,6 @@ object frmWTFaxList: TfrmWTFaxList
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = 167
-    ExplicitWidth = 462
     object Panel2: TPanel
       Left = 286
       Top = 0
@@ -31,7 +29,6 @@ object frmWTFaxList: TfrmWTFaxList
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 282
       object BitBtn1: TBitBtn
         Left = 6
         Top = 8
@@ -60,8 +57,6 @@ object frmWTFaxList: TfrmWTFaxList
     Align = alClient
     Caption = 'Panel3'
     TabOrder = 1
-    ExplicitWidth = 462
-    ExplicitHeight = 167
     object FaxListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -76,8 +71,6 @@ object frmWTFaxList: TfrmWTFaxList
       TabOrder = 0
       OnKeyPress = FaxListGridKeyPress
       OnSelectCell = FaxListGridSelectCell
-      ExplicitWidth = 460
-      ExplicitHeight = 165
       ColWidths = (
         64
         226

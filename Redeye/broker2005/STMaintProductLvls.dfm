@@ -11,11 +11,9 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 8
@@ -106,7 +104,6 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       OnKeyPress = MinMemoKeyPress
     end
     object rdgrpReplenishType: TRadioGroup
-      ParentBackground = False
       Left = 32
       Top = 128
       Width = 121
@@ -115,6 +112,7 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       Items.Strings = (
         'Purchase'
         'Store')
+      ParentBackground = False
       TabOrder = 3
       TabStop = True
     end
@@ -149,8 +147,6 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 3
-    OnClick = btnOKClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -169,14 +165,17 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
       333A333333333333333338330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = btnOKClick
   end
   object CancelBitBtn: TBitBtn
     Left = 248
     Top = 312
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object edtProductCode: TEdit
     Left = 64
@@ -221,14 +220,10 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPartLevel: TFDQuery
@@ -254,39 +249,26 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Top = 60
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Minimum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_Level'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Or_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryAddPartLevel: TFDQuery
@@ -306,39 +288,26 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Top = 180
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Minimum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Maximum_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Or_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Replenish_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Reorder_Level'
-        ParamType = ptUnknown
       end>
   end
   object qryDelPartLevel: TFDQuery
@@ -355,14 +324,10 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Top = 116
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryStoreType: TFDQuery
@@ -377,9 +342,7 @@ object frmSTMaintProductLvls: TfrmSTMaintProductLvls
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object dtsStoreType: TDataSource
