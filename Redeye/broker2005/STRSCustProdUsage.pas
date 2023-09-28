@@ -69,7 +69,7 @@ var
 
 implementation
 
-uses PBLUCust, STPrtMnt, STRPCustProdUsage, CCSCommon, DateSelV5;
+uses UITypes, PBLUCust, STPrtMnt, STRPCustProdUsage, CCSCommon, DateSelV5;
 
 {$R *.DFM}
 

@@ -1,4 +1,4 @@
-﻿object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
+object PBMaintSpecInsFrm: TPBMaintSpecInsFrm
   Left = 253
   Top = 128
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -49,17 +47,19 @@
     Top = 288
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object OkBitBtn: TBitBtn
     Left = 149
     Top = 288
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = OkBitBtnClick
-    Kind = bkOK
   end
   object ClearBitBtn: TBitBtn
     Left = 8
@@ -68,8 +68,6 @@
     Height = 25
     Caption = 'Clear'
     Default = True
-    TabOrder = 4
-    OnClick = ClearBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -84,6 +82,8 @@
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = ClearBitBtnClick
   end
   object NarrativeEdit: TEdit
     Left = 8
@@ -103,8 +103,8 @@
     Top = 88
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -124,13 +124,13 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -147,19 +147,16 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftString
-        Name = 'Description'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Description'
+        DataType = ftString
+      end
+      item
         Name = 'Special_Instruction'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object DelSQL: TFDQuery
@@ -172,9 +169,8 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Special_Instruction'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryZero: TFDQuery
@@ -187,8 +183,8 @@
     Top = 32
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end

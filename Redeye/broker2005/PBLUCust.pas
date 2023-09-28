@@ -88,7 +88,7 @@ var
 
 implementation
 
-uses pbDatabase, PBMaintCust, PBLUBranch, pbMainMenu, PBDBMemo,
+uses UITypes, pbDatabase, PBMaintCust, PBLUBranch, pbMainMenu, PBDBMemo,
   PBMaintCConta, PBMaintCRep, PBMaintCustStockPrefix;
 
 {$R *.DFM}

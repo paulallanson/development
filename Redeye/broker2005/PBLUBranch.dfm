@@ -1,4 +1,4 @@
-﻿object PBLUBranchFrm: TPBLUBranchFrm
+object PBLUBranchFrm: TPBLUBranchFrm
   Left = 179
   Top = 124
   BorderStyle = bsDialog
@@ -11,14 +11,12 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
     451
     433)
-  PixelsPerInch = 96
   TextHeight = 13
   object CustLabel: TLabel
     Left = 8
@@ -36,11 +34,11 @@
     Caption = 'CountLabel'
   end
   object pnlImport: TPanel
-    ParentBackground = False
     Left = 24
     Top = 112
     Width = 377
     Height = 97
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblImport: TLabel
@@ -92,12 +90,12 @@
       end>
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 242
     Width = 313
     Height = 63
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 1
     object NameEdit: TEdit
       Left = 8
@@ -126,9 +124,10 @@
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Select'
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = SelectBitBtnClick
-    Kind = bkOK
   end
   object CloseBitBtn: TBitBtn
     Left = 343
@@ -137,8 +136,9 @@
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'C&lose'
-    TabOrder = 3
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object ThisChkBox: TCheckBox
     Left = 16
@@ -150,12 +150,12 @@
     OnClick = ThisChkBoxClick
   end
   object FuncGrpBox: TGroupBox
-    ParentBackground = False
     Left = 336
     Top = 120
     Width = 89
     Height = 109
     Caption = 'Function'
+    ParentBackground = False
     TabOrder = 5
     object DelBitBtn: TBitBtn
       Left = 6
@@ -163,8 +163,6 @@
       Width = 75
       Height = 25
       Caption = '&Delete'
-      TabOrder = 0
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -179,6 +177,8 @@
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = DelBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -186,8 +186,6 @@
       Width = 75
       Height = 25
       Caption = '&Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -202,6 +200,8 @@
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object AddBitBtn: TBitBtn
       Left = 6
@@ -209,8 +209,6 @@
       Width = 75
       Height = 25
       Caption = '&Add'
-      TabOrder = 2
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -225,15 +223,17 @@
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = AddBitBtnClick
     end
   end
   object GoToGrpBox: TGroupBox
-    ParentBackground = False
     Left = 336
     Top = 8
     Width = 89
     Height = 103
     Caption = 'Go To'
+    ParentBackground = False
     TabOrder = 6
     object ContactsBitBtn: TBitBtn
       Left = 6
@@ -241,8 +241,6 @@
       Width = 75
       Height = 25
       Caption = 'Contacts'
-      TabOrder = 0
-      OnClick = ContactsBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -257,6 +255,8 @@
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = ContactsBitBtnClick
     end
     object CRepsBitBtn: TBitBtn
       Left = 6
@@ -264,8 +264,6 @@
       Width = 75
       Height = 25
       Caption = 'Reps'
-      TabOrder = 1
-      OnClick = CRepsBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -280,6 +278,8 @@
         EE33337F333377F3337F33EEEEEE00EEEE33337F33337733337F33EEEEEEEEEE
         EE33337FFFFFFFFFFF7F33EEEEEEEEEEEE333377777777777773}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CRepsBitBtnClick
     end
     object FormRefBitBtn: TBitBtn
       Left = 6
@@ -287,8 +287,6 @@
       Width = 75
       Height = 25
       Caption = 'Stock'
-      TabOrder = 2
-      OnClick = FormRefBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -303,10 +301,11 @@
         F00577F7F7F7F7F7F77F0070707070700005777777777777777F707070707070
         55055757575757575F7555050505050500555575757575757755}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = FormRefBitBtnClick
     end
   end
   object DispPanel: TPanel
-    ParentBackground = False
     Left = 9
     Top = 340
     Width = 313
@@ -315,6 +314,7 @@
     BevelOuter = bvLowered
     BevelWidth = 2
     BorderStyle = bsSingle
+    ParentBackground = False
     TabOrder = 7
     object DBBranchText: TDBText
       Left = 83
@@ -407,8 +407,6 @@
     Width = 75
     Height = 25
     Caption = '&Import'
-    TabOrder = 9
-    OnClick = btbtnImportClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -423,6 +421,8 @@
       3333777777777777333333399033333333333337773333333333333903333333
       3333333773333333333333303333333333333337333333333333}
     NumGlyphs = 2
+    TabOrder = 9
+    OnClick = btbtnImportClick
   end
   object DetsSRC: TDataSource
     DataSet = GetDetsSQL
@@ -468,29 +468,23 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SearchTimer: TTimer
@@ -523,58 +517,38 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'custNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'branchNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'postCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'phone'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'HOInd'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -599,53 +573,35 @@
     Top = 80
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'name'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'addr4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'postCode'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'HOInd'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'custNo'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'branchNo'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -659,14 +615,10 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'code'
-        ParamType = ptUnknown
       end>
   end
   object qryNextBranch: TFDQuery
@@ -679,9 +631,7 @@
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'customer'
-        ParamType = ptUnknown
       end>
   end
 end

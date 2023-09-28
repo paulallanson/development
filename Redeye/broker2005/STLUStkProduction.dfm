@@ -22,8 +22,6 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
     Align = alClient
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 683
-    ExplicitHeight = 269
     object dbgrdPurchases: TDBGrid
       Left = 1
       Top = 33
@@ -154,7 +152,6 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 681
       object lblPartDesc: TLabel
         Left = 176
         Top = 8
@@ -186,8 +183,6 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 269
-    ExplicitWidth = 683
     DesignSize = (
       689
       41)
@@ -200,7 +195,6 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 578
       object btbtnClose: TBitBtn
         Left = 16
         Top = 8
@@ -264,7 +258,6 @@ object STLUStkProductionFrm: TSTLUStkProductionFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 1
       OnClick = btnExcelClick
-      ExplicitLeft = 444
     end
   end
 end

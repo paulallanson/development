@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses STLUPrtGrp, STPrtMnt, STRPProductList, CCSPrint, CCSCommon;
+uses UITypes, STLUPrtGrp, STPrtMnt, STRPProductList, CCSPrint, CCSCommon;
 
 {$R *.dfm}
 

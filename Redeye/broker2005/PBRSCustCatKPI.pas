@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses PBLUCust, PBLUCategory, CCSCommon, DateSelV5, PBRPCustCatKPI, CCSPrint;
+uses UITypes, PBLUCust, PBLUCategory, CCSCommon, DateSelV5, PBRPCustCatKPI, CCSPrint;
 
 {$R *.dfm}
 

@@ -87,7 +87,7 @@ var
 
 implementation
 
-uses STPartSuppDM, STStockDM, STMntPrtBin, PBLUCust, CCSCommon;
+uses UITypes, STPartSuppDM, STStockDM, STMntPrtBin, PBLUCust, CCSCommon;
 
 var
   STPartSDM: TSTPartSDM;

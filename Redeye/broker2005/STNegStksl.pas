@@ -27,7 +27,7 @@ var
 
 implementation
 
-uses STNegStkRep;
+uses UITypes, STNegStkRep;
 
 
 {$R *.DFM}

@@ -136,8 +136,6 @@ object PBLUOpsFrm: TPBLUOpsFrm
     NumGlyphs = 2
     TabOrder = 1
     OnClick = SelectBitBtnClick
-    ExplicitLeft = 343
-    ExplicitTop = 299
   end
   object CloseBitBtn: TBitBtn
     Left = 337
@@ -148,8 +146,6 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Kind = bkClose
     NumGlyphs = 2
     TabOrder = 2
-    ExplicitLeft = 343
-    ExplicitTop = 327
   end
   object FuncGrpBox: TGroupBox
     Left = 325
@@ -160,7 +156,6 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Caption = 'Function'
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 333
     object AddBitBtn: TBitBtn
       Left = 6
       Top = 16
@@ -240,7 +235,6 @@ object PBLUOpsFrm: TPBLUOpsFrm
     Caption = 'Report'
     ParentBackground = False
     TabOrder = 4
-    ExplicitLeft = 333
     object btbtnPreview: TBitBtn
       Left = 8
       Top = 20

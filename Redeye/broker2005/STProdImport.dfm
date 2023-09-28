@@ -24,7 +24,6 @@ object STProdImportFrm: TSTProdImportFrm
     Enabled = False
     ScrollBars = ssBoth
     TabOrder = 0
-    ExplicitWidth = 386
   end
   object pnlImportFile: TPanel
     Left = 0
@@ -35,7 +34,6 @@ object STProdImportFrm: TSTProdImportFrm
     Enabled = False
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 386
     object lblStep2: TLabel
       Left = 8
       Top = 8
@@ -68,7 +66,6 @@ object STProdImportFrm: TSTProdImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 386
     object Label1: TLabel
       Left = 8
       Top = 8
@@ -115,7 +112,6 @@ object STProdImportFrm: TSTProdImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 386
     object lblStep1: TLabel
       Left = 8
       Top = 8
@@ -154,7 +150,6 @@ object STProdImportFrm: TSTProdImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 386
     object lblStep4: TLabel
       Left = 8
       Top = 8
@@ -191,7 +186,6 @@ object STProdImportFrm: TSTProdImportFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 5
-    ExplicitWidth = 386
     object Cancel2BitBtn: TBitBtn
       Left = 288
       Top = 8

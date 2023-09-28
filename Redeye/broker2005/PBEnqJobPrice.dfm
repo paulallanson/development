@@ -3,7 +3,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   Top = 67
   Caption = 'Job Pricing'
   ClientHeight = 570
-  ClientWidth = 732
+  ClientWidth = 734
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 750
@@ -126,14 +126,14 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   object Panel1: TPanel
     Left = 0
     Top = 535
-    Width = 732
+    Width = 734
     Height = 35
     Align = alBottom
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 2
     DesignSize = (
-      732
+      734
       35)
     object SaveBitBtn: TBitBtn
       Left = 525
@@ -201,7 +201,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       NumGlyphs = 2
       TabOrder = 0
       OnClick = SaveBitBtnClick
-      ExplicitLeft = 531
     end
     object CancelBitBtn: TBitBtn
       Left = 613
@@ -270,7 +269,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       NumGlyphs = 2
       TabOrder = 1
       OnClick = CancelBitBtnClick
-      ExplicitLeft = 619
     end
     object PrintBitBtn: TBitBtn
       Left = 435
@@ -281,13 +279,12 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       Caption = 'Print'
       TabOrder = 2
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 441
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 406
-    Width = 732
+    Width = 734
     Height = 129
     Align = alBottom
     BevelOuter = bvNone
@@ -296,21 +293,19 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
     object Panel9: TPanel
       Left = 0
       Top = 0
-      Width = 738
+      Width = 734
       Height = 129
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 732
       object GroupBox2: TGroupBox
         Left = 0
         Top = 0
-        Width = 619
+        Width = 615
         Height = 129
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 613
         object PUnitCombo: TComboBox
           Left = 260
           Top = 80
@@ -327,7 +322,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
         object Panel10: TPanel
           Left = 2
           Top = 15
-          Width = 609
+          Width = 611
           Height = 112
           Align = alClient
           ParentBackground = False
@@ -335,7 +330,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
           object SelectedPricesGrid: TStringGrid
             Left = 1
             Top = 1
-            Width = 613
+            Width = 609
             Height = 110
             Align = alClient
             ColCount = 2
@@ -353,7 +348,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
             OnMouseUp = SelectedPricesGridMouseUp
             OnSelectCell = SelectedPricesGridSelectCell
             OnTopLeftChanged = SelectedPricesGridTopLeftChanged
-            ExplicitWidth = 607
             ColWidths = (
               195
               84)
@@ -367,7 +361,7 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
         end
       end
       object Panel8: TPanel
-        Left = 613
+        Left = 615
         Top = 0
         Width = 119
         Height = 129
@@ -416,14 +410,14 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 732
+    Width = 734
     Height = 123
     Align = alTop
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 4
     DesignSize = (
-      732
+      734
       123)
     object GroupBox4: TGroupBox
       Left = 8
@@ -433,7 +427,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
       Anchors = [akLeft, akTop, akRight]
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 691
       DesignSize = (
         685
         122)
@@ -508,7 +501,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
         TabOrder = 2
         OnClick = EnquiryLineGridClick
-        ExplicitWidth = 477
         ColWidths = (
           40
           285)
@@ -542,46 +534,42 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
   object Panel4: TPanel
     Left = 0
     Top = 123
-    Width = 732
+    Width = 734
     Height = 283
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 5
     object Panel5: TPanel
-      Left = 619
+      Left = 615
       Top = 0
       Width = 119
-      Height = 292
+      Height = 283
       Align = alRight
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 613
-      ExplicitHeight = 283
       object grpBxSupplierRunOn: TGroupBox
         Left = 0
         Top = 0
         Width = 119
-        Height = 292
+        Height = 283
         Align = alClient
         Caption = 'Run On Quantity'
         TabOrder = 0
-        ExplicitHeight = 283
         object Panel11: TPanel
           Left = 2
           Top = 15
           Width = 115
-          Height = 275
+          Height = 266
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitHeight = 266
           object SupplierROPricesGrid: TStringGrid
             Left = 1
             Top = 1
             Width = 113
-            Height = 273
+            Height = 264
             Align = alClient
             ColCount = 1
             DefaultColWidth = 80
@@ -590,7 +578,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
             RowCount = 2
             TabOrder = 0
             OnDrawCell = SupplierROPricesGridDrawCell
-            ExplicitHeight = 264
           end
         end
       end
@@ -598,39 +585,33 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
     object Panel6: TPanel
       Left = 0
       Top = 0
-      Width = 619
-      Height = 292
+      Width = 615
+      Height = 283
       Align = alClient
       BevelOuter = bvNone
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 613
-      ExplicitHeight = 283
       object GroupBox3: TGroupBox
         Left = 0
         Top = 0
-        Width = 619
-        Height = 292
+        Width = 615
+        Height = 283
         Align = alClient
         Caption = 'Supplier Price Responses'
         TabOrder = 0
-        ExplicitWidth = 613
-        ExplicitHeight = 283
         object Panel7: TPanel
           Left = 2
           Top = 15
-          Width = 615
-          Height = 275
+          Width = 611
+          Height = 266
           Align = alClient
           ParentBackground = False
           TabOrder = 0
-          ExplicitWidth = 609
-          ExplicitHeight = 266
           object SupplierPricesGrid: TStringGrid
             Left = 1
             Top = 1
-            Width = 613
-            Height = 273
+            Width = 609
+            Height = 264
             Align = alClient
             ColCount = 2
             DefaultColWidth = 195
@@ -650,8 +631,6 @@ object PBEnqJobPriceFrm: TPBEnqJobPriceFrm
             OnMouseUp = SupplierPricesGridMouseUp
             OnSelectCell = SupplierPricesGridSelectCell
             OnTopLeftChanged = SupplierPricesGridTopLeftChanged
-            ExplicitWidth = 607
-            ExplicitHeight = 264
             ColWidths = (
               195
               84)

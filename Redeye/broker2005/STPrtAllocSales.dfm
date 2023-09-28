@@ -1,9 +1,9 @@
 object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   Left = 15
   Top = 33
-  Width = 755
-  Height = 524
   Caption = 'Allocate Stock To Store Orders'
+  ClientHeight = 485
+  ClientWidth = 739
   Color = clBtnFace
   Constraints.MinHeight = 524
   Constraints.MinWidth = 713
@@ -12,18 +12,16 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsDBGrid: TDBGrid
     Left = 0
     Top = 41
-    Width = 747
-    Height = 389
+    Width = 739
+    Height = 384
     Align = alClient
     DataSource = DetsDataSource
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]
@@ -92,15 +90,15 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       end>
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 430
-    Width = 747
+    Top = 425
+    Width = 739
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      747
+      739
       41)
     object lblAllocateSeq: TLabel
       Left = 8
@@ -117,8 +115,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -137,6 +133,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 660
@@ -144,8 +142,9 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object AllBitBtn: TBitBtn
       Left = 480
@@ -155,10 +154,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Hint = 'Select All'
       Anchors = [akRight, akBottom]
       Caption = 'Select'
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 2
-      OnClick = AllBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -173,6 +168,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
         05557F7F7F77777775550F0F0000000555557F7F7777777555550F0000000555
         55557F7777777555555500000005555555557777777555555555}
       NumGlyphs = 2
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      OnClick = AllBitBtnClick
     end
     object cmbAllocateSeq: TComboBox
       Left = 112
@@ -180,7 +179,6 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       Width = 169
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       Items.Strings = (
         'oldest stock first'
@@ -190,8 +188,8 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
   end
   object stsDetails: TStatusBar
     Left = 0
-    Top = 471
-    Width = 747
+    Top = 466
+    Width = 739
     Height = 19
     Panels = <
       item
@@ -202,12 +200,12 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 747
+    Width = 739
     Height = 41
     Align = alTop
+    ParentBackground = False
     TabOrder = 3
     object lblSalesOrderNo: TLabel
       Left = 16
@@ -286,34 +284,28 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Top = 256
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sales_Order'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object UpdSOHeadSQL: TFDQuery
@@ -330,14 +322,10 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Top = 310
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end>
   end
   object GetPartStoreSQL: TFDQuery
@@ -350,9 +338,7 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end>
   end
   object pmnuAllocate: TPopupMenu
@@ -408,29 +394,19 @@ object STPrtAllocSalesFrm: TSTPrtAllocSalesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end

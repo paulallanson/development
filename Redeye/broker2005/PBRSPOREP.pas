@@ -188,7 +188,7 @@ var
 
 implementation
 
-uses PBLUSupp, PBLUCust, ccsprint, PBRPPORep, PBRDPORep, DateSelV5;
+uses UITypes, PBLUSupp, PBLUCust, ccsprint, PBRPPORep, PBRDPORep, DateSelV5;
 
 {$R *.DFM}
 

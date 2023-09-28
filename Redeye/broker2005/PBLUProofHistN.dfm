@@ -1,7 +1,6 @@
-﻿object PBLUProofHistNFrm: TPBLUProofHistNFrm
+object PBLUProofHistNFrm: TPBLUProofHistNFrm
   Left = 93
   Top = 66
-  AutoScroll = False
   Caption = 'Maintain Proof History'
   ClientHeight = 324
   ClientWidth = 625
@@ -13,20 +12,18 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 517
     Top = 73
     Width = 108
     Height = 251
     Align = alRight
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
       108
@@ -40,13 +37,13 @@
       Caption = 'CountLabel'
     end
     object FuncGrpBox: TGroupBox
-      ParentBackground = False
       Left = 8
       Top = 88
       Width = 89
       Height = 105
       Anchors = [akRight, akBottom]
       Caption = 'Function'
+      ParentBackground = False
       TabOrder = 0
       object AddBitBtn: TBitBtn
         Left = 6
@@ -54,8 +51,6 @@
         Width = 75
         Height = 25
         Caption = 'Add'
-        TabOrder = 0
-        OnClick = AddBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -70,6 +65,8 @@
           B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
           3BB33773333773333773B333333B3333333B7333333733333337}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = AddBitBtnClick
       end
       object ChgBitBtn: TBitBtn
         Left = 6
@@ -77,8 +74,6 @@
         Width = 75
         Height = 25
         Caption = 'Change'
-        TabOrder = 1
-        OnClick = ChgBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -93,6 +88,8 @@
           0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
           00333377737FFFFF773333303300000003333337337777777333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = ChgBitBtnClick
       end
       object DelBitBtn: TBitBtn
         Left = 6
@@ -100,8 +97,6 @@
         Width = 75
         Height = 25
         Caption = 'Delete'
-        TabOrder = 2
-        OnClick = DelBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -116,6 +111,8 @@
           0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
           3333333337FFF7F3333333333000003333333333377777333333}
         NumGlyphs = 2
+        TabOrder = 2
+        OnClick = DelBitBtnClick
       end
     end
     object CloseBitBtn: TBitBtn
@@ -125,8 +122,6 @@
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Close'
-      TabOrder = 1
-      OnClick = CloseBitBtnClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -145,24 +140,26 @@
         333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
         0000}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CloseBitBtnClick
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 625
     Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object GroupBox1: TGroupBox
-      ParentBackground = False
       Left = 0
       Top = 4
       Width = 625
       Height = 69
       Align = alBottom
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 10
@@ -206,13 +203,13 @@
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 73
     Width = 517
     Height = 251
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
     object DetsDBGrid: TDBGrid
       Left = 1
@@ -278,14 +275,10 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object NullSRC: TDataSource
@@ -313,14 +306,10 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
 end

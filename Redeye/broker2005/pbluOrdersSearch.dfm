@@ -187,7 +187,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show cancelled Orders'
     TabOrder = 16
-    ExplicitTop = 393
   end
   object SearchButton: TButton
     Left = 12
@@ -199,7 +198,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Default = True
     TabOrder = 17
     OnClick = SearchButtonClick
-    ExplicitTop = 425
   end
   object edtDate: TEdit
     Left = 120
@@ -209,7 +207,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     TabOrder = 13
     OnExit = edtDateExit
-    ExplicitTop = 338
   end
   object btnDate: TBitBtn
     Left = 216
@@ -233,7 +230,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     NumGlyphs = 2
     TabOrder = 14
     OnClick = btnDateClick
-    ExplicitTop = 336
   end
   object edtDescription: TEdit
     Left = 120
@@ -279,7 +275,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Caption = 'Clear Search'
     TabOrder = 18
     OnClick = ClearButtonClick
-    ExplicitTop = 425
   end
   object chkbxShowWIP: TCheckBox
     Tag = 12
@@ -290,7 +285,6 @@ object frmpbluOrdersSearch: TfrmpbluOrdersSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show ONLY Work in Progress'
     TabOrder = 15
-    ExplicitTop = 369
   end
   object edtRep: TEdit
     Left = 120

@@ -79,7 +79,7 @@ var
 
 implementation
 
-uses STLUSordDM, DateSelV5, PBLUCust, STLUPrtByCustOrder, STRPSalesByCust, CCSemailHandler, PBSendFax,
+uses UITypes, STLUSordDM, DateSelV5, PBLUCust, STLUPrtByCustOrder, STRPSalesByCust, CCSemailHandler, PBSendFax,
       PBLURep, CCSCommon;
 
 {$R *.DFM}

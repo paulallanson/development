@@ -1,7 +1,6 @@
 object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
   Left = 351
   Top = 82
-  AutoScroll = False
   Caption = 'Purchase Order Notes'
   ClientHeight = 449
   ClientWidth = 346
@@ -12,14 +11,11 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 346
@@ -31,6 +27,7 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     DesignSize = (
@@ -82,8 +79,8 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       Top = 56
       Width = 97
       Height = 21
-      Date = 0.434360891202232000
-      Time = 0.434360891202232000
+      Date = 45197.000000000000000000
+      Time = 0.434360891202231900
       Kind = dtkTime
       TabOrder = 2
     end
@@ -98,13 +95,13 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
     end
   end
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 401
     Width = 346
     Height = 48
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object DelLabel: TLabel
       Left = 16
@@ -127,8 +124,6 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 0
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -193,7 +188,9 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 0
     end
     object OKBitBtn: TBitBtn
       Left = 168
@@ -202,8 +199,6 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
       Height = 25
       Caption = 'OK'
       Default = True
-      ModalResult = 1
-      TabOrder = 1
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -268,7 +263,9 @@ object PBMaintIntNoteFrm: TPBMaintIntNoteFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object qrySelOperators: TFDQuery

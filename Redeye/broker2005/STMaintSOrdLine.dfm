@@ -23,8 +23,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     ParentBackground = False
     TabOrder = 2
     TabStop = True
-    ExplicitTop = 334
-    ExplicitWidth = 725
     DesignSize = (
       713
       51)
@@ -78,7 +76,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       ParentFont = False
       TabOrder = 0
       OnClick = OKBtnClick
-      ExplicitLeft = 561
     end
     object CancelBtn: TBitBtn
       Left = 617
@@ -95,7 +92,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 641
     end
   end
   object pnlproduct: TPanel
@@ -106,7 +102,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 725
     object Label1: TLabel
       Left = 5
       Top = 23
@@ -201,8 +196,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     ParentBackground = False
     TabOrder = 1
     TabStop = True
-    ExplicitLeft = 214
-    ExplicitHeight = 261
     object GroupBox2: TGroupBox
       Left = 0
       Top = 4
@@ -577,8 +570,6 @@ object STMaintSOrdLineFrm: TSTMaintSOrdLineFrm
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 214
-    ExplicitHeight = 261
     object GroupBox1: TGroupBox
       Left = 8
       Top = 4

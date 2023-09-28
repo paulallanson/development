@@ -1,5 +1,54 @@
 inherited dbQuoSumLtr: TdbQuoSumLtr
-  PixelsPerInch = 120
+  Height = 398
+  Width = 511
+  inherited qryLayout: TFDQuery
+    Left = 70
+    Top = 6
+  end
+  inherited qryCompany: TFDQuery
+    Left = 13
+    Top = 6
+  end
+  inherited qryFormRef: TFDQuery
+    Left = 122
+    Top = 6
+  end
+  inherited qryFSCClaim: TFDQuery
+    Left = 173
+    Top = 6
+  end
+  inherited GetNotesSQL: TFDQuery
+    Left = 141
+    Top = 17
+  end
+  inherited UpdEnqStatusSQL: TFDQuery
+    Left = 45
+    Top = 149
+  end
+  inherited GetPricesSQL: TFDQuery
+    Left = 141
+    Top = 110
+  end
+  inherited QuestionsSRC: TDataSource
+    Left = 45
+    Top = 58
+  end
+  inherited EnquiriesSRC: TDataSource
+    Left = 141
+    Top = 201
+  end
+  inherited UpdStatusSQL: TFDQuery
+    Left = 45
+    Top = 192
+  end
+  inherited GetQtysSQL: TFDQuery
+    Left = 218
+    Top = 13
+  end
+  inherited GetAddDetailsSQL: TFDQuery
+    Left = 218
+    Top = 65
+  end
   inherited GetRngEnqsSQL: TFDQuery
     SQL.Strings = (
       'SELECT distinct Customer.Name, Customer_Branch.Building_No_Name,'
@@ -78,6 +127,12 @@ inherited dbQuoSumLtr: TdbQuoSumLtr
       ' '
       ' '
       ' ')
+    Left = 141
+    Top = 154
+  end
+  inherited PartsSRC: TDataSource
+    Left = 217
+    Top = 161
   end
   inherited GetQuestionsSQL: TFDQuery
     SQL.Strings = (
@@ -92,6 +147,20 @@ inherited dbQuoSumLtr: TdbQuoSumLtr
         '       (Enquiry_Questions.Question = Product_TypeQuestion.Questi' +
         'on)'
       'ORDER BY Sequence_Reference')
+    Left = 45
+    Top = 103
+  end
+  inherited PricesSRC: TDataSource
+    Left = 141
+    Top = 66
+  end
+  inherited GetPartsSQL: TFDQuery
+    Left = 218
+    Top = 199
+  end
+  inherited AddDetailsSRC: TDataSource
+    Left = 218
+    Top = 103
   end
   inherited GetEnquiriesSQL: TFDQuery
     SQL.Strings = (
@@ -167,5 +236,19 @@ inherited dbQuoSumLtr: TdbQuoSumLtr
       ' '
       ' '
       ' ')
+    Left = 45
+    Top = 238
+  end
+  inherited GetExtrasSQL: TFDQuery
+    Left = 141
+    Top = 244
+  end
+  inherited ExtrasSRC: TDataSource
+    Left = 218
+    Top = 238
+  end
+  inherited GetOptChgsSQL: TFDQuery
+    Left = 282
+    Top = 13
   end
 end

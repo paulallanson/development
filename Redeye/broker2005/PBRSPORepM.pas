@@ -170,7 +170,7 @@ var
 
 implementation
 
-uses PBLUSupp, PBRPPORepM, PBRDPORep, DateSelV5, CCSPrint, PBLUCust;
+uses UITypes, PBLUSupp, PBRPPORepM, PBRDPORep, DateSelV5, CCSPrint, PBLUCust;
 
 {$R *.DFM}
 

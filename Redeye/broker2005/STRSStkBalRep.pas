@@ -95,7 +95,7 @@ var
 
 implementation
 
-uses
+uses UITypes, 
   STPrtMnt, STRPStkBalRep2, PBLURep, PBLUCust, printers, ccsprint,
   STFaxList, PBSendFax, STEmailList, CCSCommon, pbMainMenu, pbDatabase,
   Printer.Tools;

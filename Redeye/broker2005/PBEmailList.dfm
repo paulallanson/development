@@ -15,16 +15,14 @@ object PBEmailListFrm: TPBEmailListFrm
   OnShow = FormShow
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 697
     Height = 230
     Align = alClient
     Caption = 'Panel1'
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 693
-    ExplicitHeight = 229
     object EmailListGrid: TStringGrid
       Left = 1
       Top = 1
@@ -40,8 +38,6 @@ object PBEmailListFrm: TPBEmailListFrm
       OnClick = EmailListGridClick
       OnDrawCell = EmailListGridDrawCell
       OnSelectCell = EmailListGridSelectCell
-      ExplicitWidth = 691
-      ExplicitHeight = 227
       ColWidths = (
         64
         186
@@ -77,15 +73,13 @@ object PBEmailListFrm: TPBEmailListFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 230
     Width = 697
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 229
-    ExplicitWidth = 693
     object BitBtn1: TBitBtn
       Left = 517
       Top = 8

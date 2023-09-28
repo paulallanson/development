@@ -11,19 +11,17 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 624
     Height = 65
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     object label3: TLabel
       Left = 8
@@ -69,12 +67,12 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 393
     Width = 624
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     object btnOK: TBitBtn
       Left = 230
@@ -82,27 +80,29 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
       Width = 75
       Height = 25
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 318
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 65
     Width = 355
     Height = 328
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 8
@@ -126,8 +126,6 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
       Height = 25
       Caption = '&Add'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnAddClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -142,6 +140,8 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnAddClick
     end
     object btnChange: TBitBtn
       Left = 259
@@ -150,8 +150,6 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
       Height = 25
       Caption = '&Change'
       Enabled = False
-      TabOrder = 2
-      OnClick = btnChangeClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -166,6 +164,8 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
         3333333373FF7333333333333000333333333333377733333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnChangeClick
     end
     object btnDelete: TBitBtn
       Left = 259
@@ -174,8 +174,6 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
       Height = 25
       Caption = '&Delete'
       Enabled = False
-      TabOrder = 3
-      OnClick = btnDeleteClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -190,16 +188,18 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 3
+      OnClick = btnDeleteClick
     end
   end
   object Panel4: TPanel
-    ParentBackground = False
     Left = 355
     Top = 65
     Width = 269
     Height = 328
     Align = alRight
     Caption = 'Panel4'
+    ParentBackground = False
     TabOrder = 3
     object Label1: TLabel
       Left = 6
@@ -241,9 +241,7 @@ object STMaintSOrdSerialNosFrm: TSTMaintSOrdSerialNosFrm
     Top = 384
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object srcSerialNos: TDataSource

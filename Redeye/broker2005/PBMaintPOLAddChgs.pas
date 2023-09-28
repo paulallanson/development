@@ -48,7 +48,7 @@ var
 
 implementation
 
-uses PBLUPOLAddChgs;
+uses UITypes, PBLUPOLAddChgs;
 
 {$R *.DFM}
 

@@ -1,4 +1,4 @@
-﻿object PBEnqSelSupFrm: TPBEnqSelSupFrm
+object PBEnqSelSupFrm: TPBEnqSelSupFrm
   Left = 121
   Top = 10
   BorderStyle = bsDialog
@@ -11,12 +11,10 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 8
@@ -99,8 +97,6 @@
     Width = 83
     Height = 25
     Caption = 'Select'
-    TabOrder = 0
-    OnClick = AddBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -115,6 +111,8 @@
       33333333337F7F33333333333309033333333333337F7F333333333333090333
       33333333337F7F33333333333300033333333333337773333333}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = AddBitBtnClick
   end
   object RemBitBtn: TBitBtn
     Left = 414
@@ -122,8 +120,6 @@
     Width = 83
     Height = 25
     Caption = 'De-select'
-    TabOrder = 1
-    OnClick = RemBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -138,6 +134,8 @@
       33333333337F7F33333333333309033333333333337373333333333333303333
       333333333337F333333333333330333333333333333733333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = RemBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 414
@@ -146,8 +144,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -212,7 +208,9 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object OKBitBtn: TBitBtn
     Left = 414
@@ -221,9 +219,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 3
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -288,7 +283,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = OKBitBtnClick
   end
   object CapableChkBox: TCheckBox
     Left = 8
@@ -360,12 +358,12 @@
     OnClick = SelSuppBitBtnClick
   end
   object SearchGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 453
     Width = 321
     Height = 49
     Caption = 'Type here to narrow the search'
+    ParentBackground = False
     TabOrder = 9
     object SearchEdit: TEdit
       Left = 8
@@ -382,8 +380,6 @@
     Width = 83
     Height = 25
     Caption = 'Select All'
-    TabOrder = 10
-    OnClick = AddAllBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -398,6 +394,8 @@
       33333333337F7F33333333333309033333333333337F7F333333333333090333
       33333333337F7F33333333333300033333333333337773333333}
     NumGlyphs = 2
+    TabOrder = 10
+    OnClick = AddAllBitBtnClick
   end
   object RemAllBitBtn: TBitBtn
     Left = 414
@@ -405,8 +403,6 @@
     Width = 83
     Height = 25
     Caption = 'De-select All'
-    TabOrder = 11
-    OnClick = RemAllBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -421,6 +417,8 @@
       33333333337F7F33333333333309033333333333337373333333333333303333
       333333333337F333333333333330333333333333333733333333}
     NumGlyphs = 2
+    TabOrder = 11
+    OnClick = RemAllBitBtnClick
   end
   object chkbxShowInactive: TCheckBox
     Left = 8
@@ -485,29 +483,19 @@
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Other_Branches'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Name_From'
-        ParamType = ptUnknown
       end>
   end
   object GetSuppsSelSQL: TFDQuery
@@ -524,14 +512,10 @@
     Top = 152
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object DelSuppsSQL: TFDQuery
@@ -545,14 +529,10 @@
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpdSuppsNSQL: TFDQuery
@@ -566,14 +546,10 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object GetSuppSQL: TFDQuery
@@ -589,24 +565,16 @@
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object AddSuppSQL: TFDQuery
@@ -623,24 +591,16 @@
     Top = 304
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object UpdSuppYSQL: TFDQuery
@@ -656,24 +616,16 @@
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetSuppNameSQL: TFDQuery
@@ -690,14 +642,10 @@
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object CheckCapSQL: TFDQuery
@@ -714,24 +662,16 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Capability'
-        ParamType = ptUnknown
       end>
   end
   object GetLastIntSelSQL: TFDQuery
@@ -752,29 +692,24 @@
     Top = 304
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel4'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SuppsSRC: TDataSource
@@ -792,14 +727,11 @@
     Top = 128
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end>
   end
   object SelSupSRC: TDataSource
@@ -826,9 +758,7 @@
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end>
   end
   object DelIntSelSQL: TFDQuery
@@ -844,29 +774,20 @@
     Top = 320
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end>
   end
   object Timer1: TTimer
@@ -889,29 +810,24 @@
     Top = 344
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel1'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel2'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel3'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Sel4'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SelPopUpMenu: TPopupMenu

@@ -11,10 +11,8 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -35,8 +33,8 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
     Top = 24
     Width = 81
     Height = 21
-    Date = 37565.539912500000000000
-    Time = 37565.539912500000000000
+    Date = 37565.000000000000000000
+    Time = 0.539912499996717100
     Kind = dtkTime
     TabOrder = 0
   end
@@ -45,16 +43,18 @@ object PBMaintContAppfrm: TPBMaintContAppfrm
     Top = 72
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object BitBtn2: TBitBtn
     Left = 136
     Top = 72
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object DateTimePicker: TDateTimePicker
     Left = 16

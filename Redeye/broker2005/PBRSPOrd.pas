@@ -313,7 +313,7 @@ var
   EnqArrayCount: integer;
 implementation
 
-uses
+uses UITypes, 
   PBSendFax, PBFaxList,
   PBDBPOrdLtr, CCSPrint, LetterDM, PDLetter, Printers,
   PBEmailList, pbMainMenu, pbDatabase, Printer.Tools;

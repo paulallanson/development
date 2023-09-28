@@ -1,4 +1,4 @@
-﻿object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
+object PBMaintPrdTypQuFrm: TPBMaintPrdTypQuFrm
   Left = 194
   Top = 110
   BorderStyle = bsSingle
@@ -11,14 +11,12 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnDeactivate = FormDeactivate
   DesignSize = (
     415
     257)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 104
@@ -35,7 +33,6 @@
     ParentFont = False
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 393
@@ -46,6 +43,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -172,9 +170,6 @@
     Anchors = [akRight, akBottom]
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -239,7 +234,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 320
@@ -249,9 +247,6 @@
     Anchors = [akRight, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -316,7 +311,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object GetLastSQL: TFDQuery
     ConnectionName = 'PB'
@@ -328,8 +326,8 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end>
   end
@@ -348,18 +346,18 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -380,39 +378,27 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Question_Text'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sequence_Reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'Prompt_Type'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Question_Category'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -426,14 +412,10 @@
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -450,18 +432,18 @@
     Top = 112
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftInteger
         Name = 'Product_Type'
+        DataType = ftInteger
         ParamType = ptInput
       end>
   end
@@ -499,14 +481,10 @@
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryDelQList: TFDQuery
@@ -519,14 +497,10 @@
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
   object qryAddQList: TFDQuery
@@ -545,24 +519,16 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question_List_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question_List_Descr'
-        ParamType = ptUnknown
       end>
   end
   object Query1: TFDQuery
@@ -581,14 +547,10 @@
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Question'
-        ParamType = ptUnknown
       end>
   end
 end

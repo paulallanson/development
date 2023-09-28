@@ -1,4 +1,4 @@
-﻿object STPrtMntFrm: TSTPrtMntFrm
+object STPrtMntFrm: TSTPrtMntFrm
   Left = 207
   Top = 147
   Caption = 'Maintain Products'
@@ -20,15 +20,14 @@
   OnKeyPress = FormKeyPress
   TextHeight = 13
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 710
     Height = 45
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 704
     object CoolBar1: TCoolBar
       Left = 0
       Top = 0
@@ -47,7 +46,6 @@
           MinHeight = 41
           Width = 704
         end>
-      ExplicitWidth = 704
       object ToolBar1: TToolBar
         Left = 11
         Top = 0
@@ -180,15 +178,13 @@
     end
   end
   object Panel2: TPanel
-    ParentBackground = False
     Left = 0
     Top = 397
     Width = 710
     Height = 88
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 388
-    ExplicitWidth = 704
     DesignSize = (
       710
       88)
@@ -215,7 +211,6 @@
       Caption = 'Show All Products'
       TabOrder = 0
       OnClick = ShowAllCheckBoxClick
-      ExplicitLeft = 577
     end
     object CodeEdit: TEdit
       Left = 88
@@ -239,7 +234,6 @@
         item
           Width = 50
         end>
-      ExplicitWidth = 702
     end
     object EdtDesc: TEdit
       Left = 88
@@ -253,16 +247,14 @@
     end
   end
   object Panel3: TPanel
-    ParentBackground = False
     Left = 0
     Top = 45
     Width = 710
     Height = 352
     Align = alClient
     Caption = 'Panel3'
+    ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 704
-    ExplicitHeight = 343
     object PartsDBGrid: TDBGrid
       Left = 1
       Top = 1
@@ -310,9 +302,7 @@
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object UpdMultiSQL: TFDQuery
@@ -330,9 +320,7 @@
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object AddSuppsQuery: TFDQuery
@@ -352,14 +340,10 @@
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_1st'
-        ParamType = ptUnknown
       end>
   end
   object HotImageList1: TImageList
@@ -1475,19 +1459,13 @@
     Top = 229
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch'
-        ParamType = ptUnknown
       end>
   end
   object qryPartsOnSOs: TFDQuery
@@ -1510,14 +1488,10 @@
     Top = 253
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'cust'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'dateFrom'
-        ParamType = ptUnknown
       end>
   end
 end

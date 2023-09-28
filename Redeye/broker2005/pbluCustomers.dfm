@@ -33,8 +33,6 @@ object frmpbluCustomers: TfrmpbluCustomers
       item
         Width = 50
       end>
-    ExplicitTop = 354
-    ExplicitWidth = 1136
   end
   object CoolBar1: TCoolBar
     Left = 0
@@ -46,7 +44,7 @@ object frmpbluCustomers: TfrmpbluCustomers
         Control = Toolbar1
         ImageIndex = -1
         MinHeight = 43
-        Width = 1132
+        Width = 1120
       end>
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -54,11 +52,10 @@ object frmpbluCustomers: TfrmpbluCustomers
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
-    ExplicitWidth = 1136
     object Toolbar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1119
+      Width = 1111
       Height = 43
       Align = alClient
       ButtonHeight = 36
@@ -390,8 +387,6 @@ object frmpbluCustomers: TfrmpbluCustomers
     Align = alBottom
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 313
-    ExplicitWidth = 1136
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -408,7 +403,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 950
+      Left = 940
       Top = 1
       Width = 185
       Height = 39
@@ -466,7 +461,6 @@ object frmpbluCustomers: TfrmpbluCustomers
     Color = clSilver
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 1136
     object Label1: TLabel
       Left = 8
       Top = 3
@@ -506,7 +500,7 @@ object frmpbluCustomers: TfrmpbluCustomers
       end
     end
     object Panel5: TPanel
-      Left = 881
+      Left = 875
       Top = 1
       Width = 250
       Height = 28
@@ -516,7 +510,6 @@ object frmpbluCustomers: TfrmpbluCustomers
       Caption = 'Panel5'
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 885
       DesignSize = (
         250
         28)
@@ -560,28 +553,26 @@ object frmpbluCustomers: TfrmpbluCustomers
       Align = alClient
       Control = clbrDashboard
       TabOrder = 2
-      ExplicitWidth = 480
       object clbrDashboard: TCoolBar
         Left = 0
         Top = 0
-        Width = 480
+        Width = 462
         Height = 28
         Align = alClient
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 478
+            Width = 456
           end>
         Visible = False
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 465
+          Width = 447
           Height = 25
           Align = alClient
-          ButtonHeight = 19
-          ButtonWidth = 47
+          ButtonWidth = 62
           Caption = 'ToolBar2'
           Color = clBtnFace
           EdgeInner = esNone
