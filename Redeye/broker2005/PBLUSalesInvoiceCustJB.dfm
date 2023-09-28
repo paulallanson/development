@@ -1,24 +1,22 @@
 object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
   Left = 291
   Top = 114
-  Width = 642
-  Height = 388
   Caption = 'Customer Job Bags'
+  ClientHeight = 349
+  ClientWidth = 626
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 634
+    Width = 626
     Height = 49
     Align = alTop
     TabOrder = 0
@@ -32,41 +30,43 @@ object PBLUSalesInvoiceCustJBfrm: TPBLUSalesInvoiceCustJBfrm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 310
-    Width = 634
+    Top = 305
+    Width = 626
     Height = 44
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      634
+      626
       44)
     object btnSelect: TBitBtn
-      Left = 456
+      Left = 448
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'Select'
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnSelectClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
-      Left = 544
+      Left = 536
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object dbgJB: TDBGrid
     Left = 0
     Top = 49
-    Width = 634
-    Height = 261
+    Width = 626
+    Height = 256
     Align = alClient
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack

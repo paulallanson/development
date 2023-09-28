@@ -12,13 +12,11 @@ object PBRSPORepFrm: TPBRSPORepFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     433
     457)
-  PixelsPerInch = 96
   TextHeight = 13
   object SupplierLabel: TLabel
     Left = 160
@@ -153,8 +151,6 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Print'
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -169,6 +165,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 264
@@ -177,8 +175,6 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Pre&view'
-    TabOrder = 2
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -193,6 +189,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 16
@@ -201,8 +199,9 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Cancel'
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object SuppEdit: TEdit
     Left = 160
@@ -355,8 +354,6 @@ object PBRSPORepFrm: TPBRSPORepFrm
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = 'Excel'
-    TabOrder = 16
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -400,6 +397,8 @@ object PBRSPORepFrm: TPBRSPORepFrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 16
+    OnClick = btbtnExcelClick
   end
   object rdgrpInclude: TRadioGroup
     Left = 240

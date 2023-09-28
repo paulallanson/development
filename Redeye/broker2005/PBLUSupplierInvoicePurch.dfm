@@ -1,7 +1,6 @@
 object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
   Left = 7
   Top = 29
-  AutoScroll = False
   Caption = 'Purchase Order selection'
   ClientHeight = 502
   ClientWidth = 774
@@ -12,12 +11,10 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stBrDetails: TStatusBar
     Left = 0
@@ -94,8 +91,6 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
           Height = 25
           Caption = 'Select '
           Enabled = False
-          TabOrder = 0
-          OnClick = btnSelectClick
           Glyph.Data = {
             BE060000424DBE06000000000000360400002800000024000000120000000100
             0800000000008802000000000000000000000001000000000000000000000000
@@ -153,6 +148,8 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
             0303030303030303030303030303030303030303030303030303030303030303
             0303}
           NumGlyphs = 2
+          TabOrder = 0
+          OnClick = btnSelectClick
         end
         object BitBtn2: TBitBtn
           Left = 14
@@ -160,8 +157,9 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
           Width = 75
           Height = 25
           Caption = 'Close'
-          TabOrder = 1
           Kind = bkClose
+          NumGlyphs = 2
+          TabOrder = 1
         end
       end
       object GroupBox1: TGroupBox
@@ -188,10 +186,10 @@ object PBLUSupplierInvoicePurchFrm: TPBLUSupplierInvoicePurchFrm
       Height = 25
       Caption = 'S&weep'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 2
       Visible = False
       OnClick = btnSweepClick
-      NumGlyphs = 2
     end
   end
   object Panel4: TPanel

@@ -11,10 +11,8 @@ object PBAboutFrm: TPBAboutFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
@@ -926,8 +924,9 @@ object PBAboutFrm: TPBAboutFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkClose
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 0
-    Kind = bkClose
   end
 end

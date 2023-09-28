@@ -11,19 +11,17 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlCust: TPanel
-    ParentBackground = False
     Left = 288
     Top = 0
     Width = 273
     Height = 193
+    ParentBackground = False
     TabOrder = 3
     object Label3: TLabel
       Left = 16
@@ -57,14 +55,13 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     end
   end
   object pnlRep: TPanel
-    ParentBackground = False
     Left = 284
     Top = 0
     Width = 276
     Height = 193
+    ParentBackground = False
     TabOrder = 2
     object rdgrpReps: TRadioGroup
-      ParentBackground = False
       Left = 8
       Top = 8
       Width = 129
@@ -74,15 +71,16 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Items.Strings = (
         'All Reps'
         'One Rep')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpRepsClick
     end
     object pnlRepSearch: TPanel
-      ParentBackground = False
       Left = 8
       Top = 80
       Width = 257
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -118,12 +116,12 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     end
   end
   object pnlButtons: TPanel
-    ParentBackground = False
     Left = 0
     Top = 193
     Width = 560
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 0
     object btnPreview: TBitBtn
       Left = 110
@@ -132,8 +130,6 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Height = 27
       Caption = 'Preview'
       Enabled = False
-      TabOrder = 0
-      OnClick = btnPreviewClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -148,6 +144,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
         333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
         333333773FF77333333333370007333333333333777333333333}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnPreviewClick
     end
     object btnPrint: TBitBtn
       Left = 193
@@ -156,8 +154,6 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Height = 27
       Caption = 'Print'
       Enabled = False
-      TabOrder = 1
-      OnClick = btnPrintClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -172,22 +168,25 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
         33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = btnPrintClick
     end
     object btnClose: TBitBtn
       Left = 12
       Top = 8
       Width = 75
       Height = 27
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
     end
   end
   object pnlReportSelect: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
     Width = 288
     Height = 193
+    ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
       Left = 16
@@ -204,7 +203,6 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Caption = 'Period'
     end
     object rdgrpReportType: TRadioGroup
-      ParentBackground = False
       Left = 16
       Top = 8
       Width = 225
@@ -216,6 +214,7 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
         'Sales Profit Detailed'
         'Reps Annual Profit Analysis'
         'Customer Annual Profit Analysis')
+      ParentBackground = False
       TabOrder = 0
       OnClick = rdgrpReportTypeClick
     end
@@ -224,7 +223,6 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
       Top = 120
       Width = 97
       Height = 21
-      ItemHeight = 13
       TabOrder = 1
       Text = 'cmbYear'
       OnChange = EnableOK
@@ -258,9 +256,8 @@ object PBRSSalesProfitfrm: TPBRSSalesProfitfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Period_Year'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsPeriods: TDataSource

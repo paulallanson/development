@@ -11,10 +11,8 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblDelete: TLabel
     Left = 72
@@ -99,9 +97,6 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -166,7 +161,10 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 310
@@ -175,8 +173,6 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -241,7 +237,9 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object qryInsJobType: TFDQuery
     ConnectionName = 'PB'
@@ -266,29 +264,19 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'job_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Type_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'One_Delivery_only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Deliver_to_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Can_Convert_Enquiry'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdJobType: TFDQuery
@@ -306,29 +294,19 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Type_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'One_Delivery_only'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Can_Deliver_to_Stock'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep_Can_Convert_Enquiry'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'job_type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelJobType: TFDQuery
@@ -341,9 +319,7 @@ object PBMaintJobTypeFrm: TPBMaintJobTypeFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'job_type'
-        ParamType = ptUnknown
       end>
   end
   object qrySelNextJobType: TFDQuery

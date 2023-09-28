@@ -3,7 +3,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   Top = 93
   Caption = 'Maintain Rep Commissions and Budgets'
   ClientHeight = 507
-  ClientWidth = 640
+  ClientWidth = 642
   Color = clBtnFace
   Constraints.MinHeight = 536
   Constraints.MinWidth = 658
@@ -22,14 +22,14 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object StatusBar1: TStatusBar
     Left = 0
     Top = 488
-    Width = 640
+    Width = 642
     Height = 19
     Panels = <>
   end
   object Panel1: TPanel
     Left = 0
     Top = 447
-    Width = 640
+    Width = 642
     Height = 41
     Align = alBottom
     TabOrder = 1
@@ -58,7 +58,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pnlBonus: TPanel
     Left = 0
     Top = 70
-    Width = 640
+    Width = 642
     Height = 83
     Align = alTop
     TabOrder = 2
@@ -158,7 +158,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object pgBudgets: TPageControl
     Left = 0
     Top = 153
-    Width = 640
+    Width = 642
     Height = 294
     ActivePage = tbshtCategory
     Align = alClient
@@ -305,7 +305,7 @@ object PBMaintRepFinancialsFrm: TPBMaintRepFinancialsFrm
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 640
+    Width = 642
     Height = 70
     Align = alTop
     TabOrder = 4

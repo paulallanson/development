@@ -1,18 +1,16 @@
 object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
   Left = 506
   Top = 138
-  Width = 416
-  Height = 185
   Caption = 'Sales Invoice Statistical Report'
+  ClientHeight = 146
+  ClientWidth = 400
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -57,8 +55,6 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     Width = 75
     Height = 25
     Caption = 'Print'
-    TabOrder = 2
-    OnClick = PrintReportBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -73,6 +69,8 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = PrintReportBitBtnClick
   end
   object PreviewReportBitBtn: TBitBtn
     Left = 214
@@ -80,8 +78,6 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
     Width = 75
     Height = 25
     Caption = 'Preview'
-    TabOrder = 3
-    OnClick = PreviewReportBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -96,14 +92,17 @@ object PBRSSalesInvStatsFrm: TPBRSSalesInvStatsFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 3
+    OnClick = PreviewReportBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 16
     Top = 111
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object spnPeriods: TSpinEdit
     Left = 112

@@ -11,11 +11,9 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -82,8 +80,6 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Height = 25
     Caption = '&Add'
     Enabled = False
-    TabOrder = 1
-    OnClick = btnAddClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -98,6 +94,8 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = btnAddClick
   end
   object btnRemove: TBitBtn
     Left = 191
@@ -106,8 +104,6 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Height = 25
     Caption = '&Remove'
     Enabled = False
-    TabOrder = 2
-    OnClick = btnRemoveClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -122,6 +118,8 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
       3333333333773333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = btnRemoveClick
   end
   object lstbxNonMembers: TListBox
     Left = 288
@@ -146,17 +144,19 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 241
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object lstbxMembersCodes: TListBox
@@ -209,19 +209,13 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 216
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Is_Main_Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -247,9 +241,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -261,9 +253,7 @@ object PBMaintCustAccMgrFrm: TPBMaintCustAccMgrFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyOps: TFDQuery

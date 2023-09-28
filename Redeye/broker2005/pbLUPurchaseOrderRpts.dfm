@@ -1,33 +1,31 @@
 object frmPBLUPurchaseOrderRpts: TfrmPBLUPurchaseOrderRpts
   Left = 201
   Top = 107
-  Width = 421
-  Height = 310
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Purchase Order Reports'
+  ClientHeight = 271
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 413
-    Height = 235
+    Width = 405
+    Height = 230
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 413
-      Height = 235
+      Width = 405
+      Height = 230
       Align = alClient
       Columns = <
         item
@@ -42,27 +40,30 @@ object frmPBLUPurchaseOrderRpts: TfrmPBLUPurchaseOrderRpts
           Caption = 'Item No'
           Width = 0
         end>
-      Items.Data = {
-        540000000200000000000000FFFFFFFFFFFFFFFF010000000000000014507563
-        68617365206F72646572207265706F72740B53545253504F524446524D000000
-        00FFFFFFFFFFFFFFFF000000000000000000FFFF}
+      Items.ItemData = {
+        05790000000200000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
+        0014500075006300680061007300650020006F00720064006500720020007200
+        650070006F00720074000B530054005200530050004F0052004400460052004D
+        000000000000000000FFFFFFFFFFFFFFFF00000000FFFFFFFF0000000000FFFF}
       ReadOnly = True
       RowSelect = True
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 413
+      ExplicitHeight = 235
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 235
-    Width = 413
+    Top = 230
+    Width = 405
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      413
+      405
       41)
     object btnRun: TButton
       Left = 16

@@ -1,23 +1,21 @@
 object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
   Left = 319
   Top = 131
-  Width = 353
-  Height = 377
   Caption = 'Event details'
+  ClientHeight = 338
+  ClientWidth = 337
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 297
-    Width = 345
+    Top = 292
+    Width = 337
     Height = 46
     Align = alBottom
     TabOrder = 0
@@ -43,9 +41,9 @@ object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
       Default = True
       Enabled = False
       ModalResult = 1
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      NumGlyphs = 2
     end
     object BitBtn2: TBitBtn
       Left = 248
@@ -55,14 +53,14 @@ object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
       Cancel = True
       Caption = 'Cancel'
       ModalResult = 2
-      TabOrder = 1
       NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 345
+    Width = 337
     Height = 73
     Align = alTop
     TabOrder = 1
@@ -102,8 +100,8 @@ object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
       Top = 40
       Width = 90
       Height = 21
-      Date = 38114.892242361110000000
-      Time = 38114.892242361110000000
+      Date = 38114.000000000000000000
+      Time = 0.892242361107491900
       TabOrder = 1
     end
     object dtpckTime: TDateTimePicker
@@ -111,8 +109,8 @@ object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
       Top = 40
       Width = 82
       Height = 21
-      Date = 38114.892714699080000000
-      Time = 38114.892714699080000000
+      Date = 38114.000000000000000000
+      Time = 0.892714699082716800
       Kind = dtkTime
       TabOrder = 2
       Visible = False
@@ -121,16 +119,16 @@ object frmPBMaintWOrderEvents: TfrmPBMaintWOrderEvents
   object pnldetails: TPanel
     Left = 0
     Top = 73
-    Width = 345
-    Height = 224
+    Width = 337
+    Height = 219
     Align = alClient
     Caption = 'pnldetails'
     TabOrder = 2
     object memDetails: TMemo
       Left = 1
       Top = 1
-      Width = 343
-      Height = 222
+      Width = 335
+      Height = 217
       Align = alClient
       TabOrder = 0
       OnChange = EnableOK

@@ -48,13 +48,12 @@ object frmPBLUProspects: TfrmPBLUProspects
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1223
+        Width = 1213
       end>
-    ExplicitWidth = 1227
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 1210
+      Width = 1204
       Height = 40
       Align = alLeft
       ButtonHeight = 36
@@ -351,8 +350,6 @@ object frmPBLUProspects: TfrmPBLUProspects
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 308
-    ExplicitWidth = 1227
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -378,7 +375,7 @@ object frmPBLUProspects: TfrmPBLUProspects
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 1041
+      Left = 1033
       Top = 1
       Width = 185
       Height = 39
@@ -417,8 +414,6 @@ object frmPBLUProspects: TfrmPBLUProspects
       item
         Width = 50
       end>
-    ExplicitTop = 349
-    ExplicitWidth = 1227
   end
   object Panel3: TPanel
     Left = 0
@@ -430,7 +425,6 @@ object frmPBLUProspects: TfrmPBLUProspects
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 4
-    ExplicitWidth = 1227
     object Label1: TLabel
       Left = 8
       Top = 3
@@ -477,7 +471,6 @@ object frmPBLUProspects: TfrmPBLUProspects
       BevelInner = bvLowered
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 976
       DesignSize = (
         250
         28)
@@ -524,20 +517,19 @@ object frmPBLUProspects: TfrmPBLUProspects
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 567
+        Width = 555
         Height = 28
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 561
+            Width = 549
           end>
         Visible = False
-        ExplicitWidth = 573
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 552
+          Width = 540
           Height = 25
           Align = alClient
           ButtonWidth = 64

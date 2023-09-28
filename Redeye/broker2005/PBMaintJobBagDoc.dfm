@@ -11,10 +11,8 @@ object PBMaintJobBagDocFrm: TPBMaintJobBagDocFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 12
@@ -86,17 +84,19 @@ object PBMaintJobBagDocFrm: TPBMaintJobBagDocFrm
     Top = 84
     Width = 75
     Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 3
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 416
     Top = 84
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object DocOpenDialog: TOpenDialog
     Left = 280

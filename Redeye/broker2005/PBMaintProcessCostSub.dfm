@@ -1,24 +1,22 @@
 object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
   Left = 360
   Top = 122
-  Width = 550
-  Height = 255
   Caption = 'Maintain Process Sub Category Costs'
+  ClientHeight = 216
+  ClientWidth = 534
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 542
+    Width = 534
     Height = 41
     Align = alTop
     TabOrder = 0
@@ -39,8 +37,8 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 180
-    Width = 542
+    Top = 175
+    Width = 534
     Height = 41
     Align = alBottom
     TabOrder = 2
@@ -64,9 +62,6 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
       Height = 25
       Caption = 'OK'
       Default = True
-      ModalResult = 1
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -131,7 +126,10 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 1
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 309
@@ -140,9 +138,6 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
-      OnClick = CancelBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -207,14 +202,17 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = CancelBitBtnClick
     end
   end
   object pnlDetails: TPanel
     Left = 0
     Top = 41
-    Width = 542
-    Height = 139
+    Width = 534
+    Height = 134
     Align = alClient
     TabOrder = 1
     object Label1: TLabel
@@ -332,29 +330,19 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Category'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -379,49 +367,33 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -444,49 +416,31 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Cost_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Unit_Sell'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Category'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -504,29 +458,19 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Category'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -546,34 +490,23 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Short_Desc'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryDelete: TFDQuery
@@ -590,29 +523,19 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sub_Category'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -628,29 +551,21 @@ object PBMaintProcessCostSubFrm: TPBMaintProcessCostSubFrm
     Top = 128
     ParamData = <
       item
-        DataType = ftString
         Name = 'GUID'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Cost_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category_Number'
-        ParamType = ptUnknown
       end>
   end
 end

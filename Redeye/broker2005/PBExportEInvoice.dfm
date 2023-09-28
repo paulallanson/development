@@ -22,7 +22,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Height = 81
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 862
     object Label1: TLabel
       Left = 8
       Top = 20
@@ -106,8 +105,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Width = 854
     Height = 19
     Panels = <>
-    ExplicitTop = 425
-    ExplicitWidth = 862
   end
   object Panel3: TPanel
     Left = 760
@@ -116,8 +113,6 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Height = 339
     Align = alRight
     TabOrder = 2
-    ExplicitLeft = 768
-    ExplicitHeight = 344
     DesignSize = (
       94
       339)
@@ -252,12 +247,10 @@ object PBExportEInvoiceFrm: TPBExportEInvoiceFrm
     Align = alClient
     Caption = 'Panel4'
     TabOrder = 3
-    ExplicitWidth = 768
-    ExplicitHeight = 344
     object Panel5: TPanel
       Left = 1
-      Top = 183
-      Width = 766
+      Top = 178
+      Width = 758
       Height = 160
       Align = alBottom
       BevelOuter = bvNone

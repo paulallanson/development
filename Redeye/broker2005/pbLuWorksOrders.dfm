@@ -31,7 +31,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 880
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -71,13 +70,12 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 878
+        Width = 870
       end>
-    ExplicitWidth = 880
     object ToolBar1: TToolBar
       Left = 11
       Top = 0
-      Width = 865
+      Width = 861
       Height = 41
       ButtonHeight = 36
       ButtonWidth = 56
@@ -273,8 +271,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 272
-    ExplicitWidth = 880
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -291,7 +287,7 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 594
+      Left = 590
       Top = 1
       Width = 285
       Height = 39
@@ -362,8 +358,6 @@ object frmPBLUWorksOrders: TfrmPBLUWorksOrders
       item
         Width = 50
       end>
-    ExplicitTop = 313
-    ExplicitWidth = 880
   end
   object tmrSearch: TTimer
     Enabled = False

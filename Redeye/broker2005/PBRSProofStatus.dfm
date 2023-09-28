@@ -1,9 +1,9 @@
 object PBRSProofStatusFrm: TPBRSProofStatusFrm
   Left = 28
   Top = 18
-  Width = 728
-  Height = 535
   Caption = 'Proof Status'
+  ClientHeight = 496
+  ClientWidth = 712
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,25 +12,23 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
   Font.Height = -12
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 15
   object pnlDisplay: TPanel
-    ParentBackground = False
     Left = 0
     Top = 169
-    Width = 720
-    Height = 298
+    Width = 712
+    Height = 286
     Align = alClient
+    ParentBackground = False
     TabOrder = 0
     object dbgrdProofStatus: TDBGrid
       Left = 1
       Top = 1
-      Width = 718
-      Height = 296
+      Width = 710
+      Height = 284
       Align = alClient
       DataSource = dtsrcCurrentProofStatus
       Font.Charset = ANSI_CHARSET
@@ -48,13 +46,16 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
   end
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 720
+    Width = 712
     Height = 169
     Align = alTop
+    ParentBackground = False
     TabOrder = 1
+    DesignSize = (
+      712
+      169)
     object Label3: TLabel
       Left = 8
       Top = 126
@@ -95,7 +96,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       ParentFont = False
     end
     object rgCustomer: TRadioGroup
-      ParentBackground = False
       Left = 6
       Top = 65
       Width = 113
@@ -110,16 +110,17 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Items.Strings = (
         'All Customers'
         'One Customer ')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 0
       OnClick = rgCustomerClick
     end
     object pnlCustSearch: TPanel
-      ParentBackground = False
       Left = 126
       Top = 66
       Width = 329
       Height = 57
+      ParentBackground = False
       TabOrder = 1
       Visible = False
       object lblCustBran: TLabel
@@ -160,12 +161,12 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       end
     end
     object pnlStatusSelect: TPanel
-      ParentBackground = False
       Left = 542
       Top = 4
       Width = 161
       Height = 57
       Anchors = [akTop, akRight]
+      ParentBackground = False
       TabOrder = 2
       object Label1: TLabel
         Left = 8
@@ -185,7 +186,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Top = 24
         Width = 145
         Height = 23
-        ItemHeight = 15
         TabOrder = 0
         Text = 'In Studio'
         OnChange = cmbbxProofStatusChange
@@ -197,7 +197,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Width = 145
       Height = 23
       Style = csDropDownList
-      ItemHeight = 15
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -215,7 +214,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Width = 145
       Height = 23
       Style = csDropDownList
-      ItemHeight = 15
       TabOrder = 4
       OnChange = cbSortChange
       Items.Strings = (
@@ -233,7 +231,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Width = 145
       Height = 23
       Style = csDropDownList
-      ItemHeight = 15
       TabOrder = 5
       OnChange = cbSortChange
       Items.Strings = (
@@ -246,7 +243,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         'Supplier')
     end
     object rgSupplier: TRadioGroup
-      ParentBackground = False
       Left = 6
       Top = 4
       Width = 113
@@ -261,16 +257,17 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Items.Strings = (
         'All Suppliers'
         'One Supplier ')
+      ParentBackground = False
       ParentFont = False
       TabOrder = 6
       OnClick = rgSupplierClick
     end
     object pnlSuppSearch: TPanel
-      ParentBackground = False
       Left = 126
       Top = 4
       Width = 329
       Height = 57
+      ParentBackground = False
       TabOrder = 7
       Visible = False
       object Label2: TLabel
@@ -312,10 +309,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 467
-    Width = 720
+    Top = 455
+    Width = 712
     Height = 41
     Align = alBottom
     Font.Charset = ANSI_CHARSET
@@ -323,6 +319,7 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 2
     object lblRecordCount: TLabel
@@ -339,13 +336,13 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Caption = 'Record Count:'
     end
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 487
+      Left = 479
       Top = 1
       Width = 232
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object PreviewReportBitBtn: TBitBtn
         Left = 30
@@ -353,8 +350,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Width = 75
         Height = 25
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = PreviewReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -369,6 +364,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewReportBitBtnClick
       end
       object PrintReportBitBtn: TBitBtn
         Left = 126
@@ -376,8 +373,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
         Width = 75
         Height = 25
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = PrintReportBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -392,6 +387,8 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintReportBitBtnClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -399,8 +396,9 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object qryCurrentProofStatus: TFDQuery
@@ -551,7 +549,6 @@ object PBRSProofStatusFrm: TPBRSProofStatusFrm
     Top = 168
   end
   object qryProofStatus: TFDQuery
-    AutoRefresh = True
     ConnectionName = 'PB'
     SQL.Strings = (
       'select proof_status.description from proof_status')

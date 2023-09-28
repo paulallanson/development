@@ -1,33 +1,31 @@
 object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
   Left = 201
   Top = 107
-  Width = 421
-  Height = 310
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Purchase Invoice Reports'
+  ClientHeight = 271
+  ClientWidth = 405
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 413
-    Height = 235
+    Width = 405
+    Height = 230
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
     object lstvwReports: TListView
       Left = 0
       Top = 0
-      Width = 413
-      Height = 235
+      Width = 405
+      Height = 230
       Align = alClient
       Columns = <
         item
@@ -42,31 +40,37 @@ object frmPBLUPurchaseInvoiceRpts: TfrmPBLUPurchaseInvoiceRpts
           Caption = 'Item No'
           Width = 0
         end>
-      Items.Data = {
-        D30000000400000000000000FFFFFFFFFFFFFFFF010000000000000010507572
-        636861736520446179626F6F6B0F504252535055524348494E5646524D000000
-        00FFFFFFFFFFFFFFFF010000000000000013507572636861736520627920496E
-        766F696365115042525350555243484259494E5646524D00000000FFFFFFFFFF
-        FFFFFF010000000000000018537570706C696572205475726E6F766572205265
-        706F72741350425253535550504C4945525455524E46524D00000000FFFFFFFF
-        FFFFFFFF000000000000000000FFFFFFFFFFFF}
+      Items.ItemData = {
+        05590100000400000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF000000
+        001050007500720063006800610073006500200044006100790062006F006F00
+        6B000F50004200520053005000550052004300480049004E005600460052004D
+        000000000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF00000000135000
+        7500720063006800610073006500200062007900200049006E0076006F006900
+        63006500115000420052005300500055005200430048004200590049004E0056
+        00460052004D000000000000000000FFFFFFFFFFFFFFFF01000000FFFFFFFF00
+        0000001853007500700070006C0069006500720020005400750072006E006F00
+        76006500720020005200650070006F0072007400135000420052005300530055
+        00500050004C004900450052005400550052004E00460052004D000000000000
+        000000FFFFFFFFFFFFFFFF00000000FFFFFFFF0000000000FFFFFFFFFFFF}
       ReadOnly = True
       RowSelect = True
       TabOrder = 0
       ViewStyle = vsReport
       OnDblClick = lstvwReportsDblClick
+      ExplicitWidth = 413
+      ExplicitHeight = 235
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 235
-    Width = 413
+    Top = 230
+    Width = 405
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      413
+      405
       41)
     object btnRun: TButton
       Left = 16

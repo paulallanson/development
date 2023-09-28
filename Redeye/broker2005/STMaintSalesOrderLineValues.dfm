@@ -11,10 +11,8 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
@@ -165,8 +163,6 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -185,6 +181,8 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 476
@@ -192,8 +190,9 @@ object frmSTMaintSalesOrderLineValues: TfrmSTMaintSalesOrderLineValues
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel2: TPanel

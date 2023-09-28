@@ -170,7 +170,6 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     NumGlyphs = 2
     TabOrder = 7
     OnClick = OKBitBtnClick
-    ExplicitTop = 242
   end
   object CancelBitBtn: TBitBtn
     Left = 285
@@ -248,7 +247,6 @@ object PBMaintWorkCentreFrm: TPBMaintWorkCentreFrm
     NumGlyphs = 2
     TabOrder = 8
     OnClick = CancelBitBtnClick
-    ExplicitTop = 242
   end
   object edtName: TEdit
     Left = 94

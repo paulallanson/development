@@ -159,8 +159,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Height = 36
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 350
-    ExplicitWidth = 862
     DesignSize = (
       854
       36)
@@ -252,8 +250,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
     Height = 41
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 386
-    ExplicitWidth = 862
     object lblSearch: TLabel
       Left = 16
       Top = 16
@@ -279,7 +275,7 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       OnClick = btnSearchClick
     end
     object Panel2: TPanel
-      Left = 584
+      Left = 576
       Top = 1
       Width = 277
       Height = 39
@@ -365,8 +361,6 @@ object PBLUJobLogFrm: TPBLUJobLogFrm
       item
         Width = 200
       end>
-    ExplicitTop = 427
-    ExplicitWidth = 862
   end
   object tmrSearch: TTimer
     OnTimer = tmrSearchTimer

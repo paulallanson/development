@@ -12,10 +12,8 @@ object frmPBSendtoExcel: TfrmPBSendtoExcel
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object OleContainer1: TOleContainer
     Left = 101

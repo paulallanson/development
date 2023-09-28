@@ -1,19 +1,17 @@
 object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
   Left = 266
   Top = 114
-  Width = 456
-  Height = 203
   Caption = 'Maintain line details'
+  ClientHeight = 164
+  ClientWidth = 440
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -29,8 +27,6 @@ object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
     Height = 25
     Caption = 'OK'
     Default = True
-    TabOrder = 0
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -96,14 +92,17 @@ object PBMaintJobBagLineDetailsFrm: TPBMaintJobBagLineDetailsFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 0
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 357
     Top = 128
     Width = 75
     Height = 25
-    TabOrder = 1
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
   object memDescription: TMemo
     Left = 72

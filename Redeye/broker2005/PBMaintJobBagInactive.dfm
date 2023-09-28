@@ -11,10 +11,8 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
@@ -29,17 +27,19 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
       Width = 75
       Height = 25
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object BitBtn3: TBitBtn
       Left = 290
       Top = 14
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel1: TPanel
@@ -142,10 +142,10 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 1
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object chkbxReactivate: TCheckBox
       Left = 16
@@ -186,9 +186,7 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJobBag: TFDQuery
@@ -204,29 +202,23 @@ object PBMaintJobBagInactiveFrm: TPBMaintJobBagInactiveFrm
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Inactive_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_Reason'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Inactive_Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Inactive_Operator'
+        DataType = ftInteger
+      end
+      item
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
 end

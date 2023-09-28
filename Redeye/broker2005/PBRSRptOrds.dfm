@@ -26,7 +26,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 742
     object lblOrderBy1: TLabel
       Left = 8
       Top = 84
@@ -214,8 +213,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 389
-    ExplicitWidth = 742
     DesignSize = (
       726
       41)
@@ -301,7 +298,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 3
       OnClick = PreviewBitBtnClick
-      ExplicitLeft = 560
     end
     object PrintBitBtn: TBitBtn
       Left = 636
@@ -326,7 +322,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       NumGlyphs = 2
       TabOrder = 4
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 648
     end
   end
   object dbgDetails: TDBGrid
@@ -464,8 +459,6 @@ object PBRSRptOrdsFrm: TPBRSRptOrdsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 430
-    ExplicitWidth = 742
   end
   object qryLive: TFDQuery
     ConnectionName = 'PB'

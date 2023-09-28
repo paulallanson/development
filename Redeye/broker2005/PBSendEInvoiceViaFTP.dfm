@@ -11,10 +11,8 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
@@ -86,7 +84,6 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
     Hint = 'Transaction Log'
     Style = lbOwnerDrawFixed
     Align = alClient
-    ItemHeight = 16
     TabOrder = 1
   end
   object Panel2: TPanel
@@ -141,8 +138,6 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
       Height = 25
       Caption = 'Send'
       Default = True
-      TabOrder = 0
-      OnClick = btnSendClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -208,6 +203,8 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnSendClick
     end
     object btnCancel: TBitBtn
       Left = 311
@@ -216,8 +213,6 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
       Height = 25
       Cancel = True
       Caption = 'Cancel'
-      ModalResult = 2
-      TabOrder = 1
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -282,17 +277,20 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
         7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
+      ModalResult = 2
       NumGlyphs = 2
+      TabOrder = 1
     end
     object btnClose: TBitBtn
       Left = 519
       Top = 12
       Width = 75
       Height = 25
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 2
       Visible = False
       OnClick = btnCloseClick
-      Kind = bkClose
     end
   end
   object lstbxFiles: TListBox
@@ -306,8 +304,10 @@ object PBSendEInvoiceViaFTPFrm: TPBSendEInvoiceViaFTPFrm
   end
   object FTP: TIdFTP
     OnStatus = FTPStatus
-    AutoLogin = True
-    TransferType = ftASCII
+    ConnectTimeout = 0
+    NATKeepAlive.UseKeepAlive = False
+    NATKeepAlive.IdleTimeMS = 0
+    NATKeepAlive.IntervalMS = 0
     ProxySettings.ProxyType = fpcmNone
     ProxySettings.Port = 0
     Left = 32

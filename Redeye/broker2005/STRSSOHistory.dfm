@@ -167,8 +167,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     Align = alBottom
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 401
-    ExplicitWidth = 725
     DesignSize = (
       731
       40)
@@ -188,7 +186,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 11
     end
     object PreviewBitBtn: TBitBtn
       Left = 417
@@ -219,7 +216,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 1
       OnClick = PreviewBitBtnClick
-      ExplicitLeft = 411
     end
     object PrintBitBtn: TBitBtn
       Left = 505
@@ -250,7 +246,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 2
       OnClick = PrintBitBtnClick
-      ExplicitLeft = 499
     end
     object btbtnCustCopy: TBitBtn
       Left = 589
@@ -281,7 +276,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
       ParentFont = False
       TabOrder = 3
       OnClick = btbtnCustCopyClick
-      ExplicitLeft = 583
     end
     object btnExcel: TBitBtn
       Left = 329
@@ -335,7 +329,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
       TabOrder = 4
       OnClick = btnExcelClick
-      ExplicitLeft = 323
     end
   end
   object Panel1: TPanel
@@ -346,7 +339,6 @@ object STRSSOHistoryFrm: TSTRSSOHistoryFrm
     Align = alTop
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 725
     object Label3: TLabel
       Left = 8
       Top = 18

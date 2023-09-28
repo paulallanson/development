@@ -1,31 +1,29 @@
 object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
   Left = 261
   Top = 114
-  Width = 765
-  Height = 492
   Caption = 'Orders due for delivery to stock'
+  ClientHeight = 453
+  ClientWidth = 749
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControl: TPanel
     Left = 0
-    Top = 417
-    Width = 757
+    Top = 412
+    Width = 749
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
     DesignSize = (
-      757
+      749
       41)
     object pnlRightControl: TPanel
-      Left = 426
+      Left = 418
       Top = 0
       Width = 331
       Height = 41
@@ -38,7 +36,6 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         Width = 75
         Height = 25
         Caption = 'Pre&view'
-        TabOrder = 0
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -53,6 +50,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
       end
       object PrintBitBtn: TBitBtn
         Left = 232
@@ -60,7 +58,6 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         Width = 75
         Height = 25
         Caption = '&Print'
-        TabOrder = 1
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -75,6 +72,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
           33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
       end
     end
     object CancelBitBtn: TBitBtn
@@ -84,14 +82,15 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Cancel'
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlSelections: TPanel
     Left = 0
     Top = 0
-    Width = 757
+    Width = 749
     Height = 177
     Align = alTop
     BevelOuter = bvNone
@@ -283,7 +282,6 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 4
       Items.Strings = (
         'Customer'
@@ -298,7 +296,6 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 5
       Items.Strings = (
         'Customer'
@@ -313,7 +310,6 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 6
       Items.Strings = (
         'Customer'
@@ -323,7 +319,7 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
         'Delivery Date')
     end
     object pnlDates: TPanel
-      Left = 579
+      Left = 571
       Top = 0
       Width = 178
       Height = 177
@@ -390,8 +386,8 @@ object PBRSPOStockDueFrm: TPBRSPOStockDueFrm
   object DBGrid: TDBGrid
     Left = 0
     Top = 177
-    Width = 757
-    Height = 240
+    Width = 749
+    Height = 235
     Align = alClient
     ReadOnly = True
     TabOrder = 2

@@ -178,6 +178,8 @@ unit GIFImage;
 
 interface
 
+{$WARN SYMBOL_DEPRECATED OFF}
+
 /// /////////////////////////////////////////////////////////////////////////////
 //
 // Conditional Compiler Symbols
@@ -216,7 +218,7 @@ interface
   (but too fast) animation timing.
   Since our paint routines are much faster and
   more precise timed than Mozilla's, the standard
-uses Types, nd Mozilla values causes animations to loop
+  uses nd Mozilla values causes animations to loop
   faster than they would in Mozilla.
   If the symbol is _not_ defined, an alternative
   set of tweaked timing values will be used.
@@ -438,7 +440,7 @@ uses Types, nd Mozilla values causes animations to loop
 // External dependecies
 //
 /// /////////////////////////////////////////////////////////////////////////////
-  uses sysutils, Windows, Graphics, Classes;
+  uses AnsiStrings, Types, sysutils, Windows, Graphics, Classes;
 
 /// /////////////////////////////////////////////////////////////////////////////
 //
@@ -1716,9 +1718,12 @@ var
     if (Value = 0) then begin
       ErrorCode := GetLastError;
       if (ErrorCode <> 0) then
+      begin
         // marmota and (FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, nil,
         // marmota       ErrorCode, LOCALE_USER_DEFAULT, Buf, sizeof(Buf), nil) <> 0) then
-        raise EOutOfResources.Create(Buf)at ReturnAddr
+        var Buffer := string(Buf);
+        raise EOutOfResources.Create(Buffer)at ReturnAddr
+      end
       else
         raise EOutOfResources.Create(SOutOfResources)at ReturnAddr;
     end;
@@ -9419,7 +9424,7 @@ procedure TGIFApplicationExtension.SetAuthentication(const Value: AnsiString);
 begin
   if (length(Value) < SizeOf(TGIFAuthenticationCode)) then
     FillChar(FIdent.Authentication, SizeOf(TGIFAuthenticationCode), 32);
-  StrLCopy(@(FIdent.Authentication[0]), PAnsiChar(Value), SizeOf(TGIFAuthenticationCode));
+  AnsiStrings.StrLCopy(@(FIdent.Authentication[0]), PAnsiChar(Value), SizeOf(TGIFAuthenticationCode));
 end;
 
 function TGIFApplicationExtension.GetIdentifier: AnsiString;
@@ -9431,7 +9436,7 @@ procedure TGIFApplicationExtension.SetIdentifier(const Value: AnsiString);
 begin
   if (length(Value) < SizeOf(TGIFIdentifierCode)) then
     FillChar(FIdent.Identifier, SizeOf(TGIFIdentifierCode), 32);
-  StrLCopy(@(FIdent.Identifier[0]), PAnsiChar(Value), SizeOf(TGIFIdentifierCode));
+  AnsiStrings.StrLCopy(@(FIdent.Identifier[0]), PAnsiChar(Value), SizeOf(TGIFIdentifierCode));
 end;
 
 procedure TGIFApplicationExtension.SaveToStream(Stream: TStream);

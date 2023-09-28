@@ -11,12 +11,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -92,8 +90,9 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 176
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object PreviewBitBtn: TBitBtn
     Left = 68
@@ -102,8 +101,6 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Height = 25
     Caption = 'Preview'
     Enabled = False
-    TabOrder = 4
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -118,6 +115,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = PreviewBitBtnClick
   end
   object PrintBitBtn: TBitBtn
     Left = 161
@@ -126,8 +125,6 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Height = 25
     Caption = 'Print'
     Enabled = False
-    TabOrder = 5
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -142,6 +139,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = PrintBitBtnClick
   end
   object pnlProgress: TPanel
     Left = 0
@@ -242,34 +241,24 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftFloat
         Name = 'Sel1'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sel2'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sel3'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Sel4'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
+        Name = 'Sel2'
+      end
+      item
+        Name = 'Sel3'
+      end
+      item
+        Name = 'Sel4'
+      end
+      item
         Name = 'Sel5'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end>
   end
   object qryAddPOCosts: TFDQuery
@@ -290,9 +279,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 14
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object AddCostsQuery: TFDQuery
@@ -313,9 +300,8 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 14
     ParamData = <
       item
-        DataType = ftFloat
         Name = 'PurchOrder'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end>
   end
   object qryPeriod: TFDQuery
@@ -329,14 +315,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end>
   end
   object SQLUpdIntSel: TFDQuery
@@ -373,34 +355,22 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sel5'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel4'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Int_Sel_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sel3'
-        ParamType = ptUnknown
       end>
   end
   object qryGetFYPeriods: TFDQuery
@@ -414,9 +384,7 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 88
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object GetCostsQuery: TFDQuery
@@ -455,14 +423,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryCreditLines: TFDQuery
@@ -493,14 +457,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 78
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Invoice_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProdCosts: TFDQuery
@@ -518,14 +478,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 70
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBCrCosts: TFDQuery
@@ -540,14 +496,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOCrCosts: TFDQuery
@@ -571,14 +523,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOCrCosts: TFDQuery
@@ -612,14 +560,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Order_line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBCosts: TFDQuery
@@ -671,14 +615,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOCosts: TFDQuery
@@ -710,14 +650,10 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 32
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSOCosts: TFDQuery
@@ -750,19 +686,13 @@ object PBRSRepsPerformfrm: TPBRSRepsPerformfrm
     Top = 104
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line_No'
-        ParamType = ptUnknown
       end>
   end
 end

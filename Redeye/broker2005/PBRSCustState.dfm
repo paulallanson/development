@@ -83,7 +83,6 @@ object PBRSCustStateFrm: TPBRSCustStateFrm
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitWidth = 430
     object Label3: TLabel
       Left = 8
       Top = 19

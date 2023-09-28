@@ -1,7 +1,4 @@
 object dtmdlPOrders: TdtmdlPOrders
-  OldCreateOrder = False
-  Left = 99
-  Top = 106
   Height = 451
   Width = 676
   object qryPOHeaderGrid: TFDQuery
@@ -53,14 +50,10 @@ object dtmdlPOrders: TdtmdlPOrders
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object dtsPOHeaderGrid: TDataSource
@@ -103,29 +96,19 @@ object dtmdlPOrders: TdtmdlPOrders
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Deliv_Actual'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'GRN_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Fully_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_No'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOLines: TFDQuery
@@ -152,9 +135,7 @@ object dtmdlPOrders: TdtmdlPOrders
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckPOStatus: TFDQuery
@@ -198,34 +179,22 @@ object dtmdlPOrders: TdtmdlPOrders
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdPOStatus: TFDQuery
@@ -242,14 +211,10 @@ object dtmdlPOrders: TdtmdlPOrders
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
 end

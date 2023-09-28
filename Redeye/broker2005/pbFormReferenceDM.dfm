@@ -1,7 +1,4 @@
 object dtmdlForms: TdtmdlForms
-  OldCreateOrder = False
-  Left = 187
-  Top = 143
   Height = 429
   Width = 459
   object qryForms: TFDQuery
@@ -28,14 +25,12 @@ object dtmdlForms: TdtmdlForms
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dtsForms: TDataSource
@@ -72,19 +67,13 @@ object dtmdlForms: TdtmdlForms
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -137,29 +126,19 @@ object dtmdlForms: TdtmdlForms
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryLocations: TFDQuery
@@ -215,9 +194,8 @@ object dtmdlForms: TdtmdlForms
     Top = 200
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryLocationsForm_Reference: TIntegerField
       FieldName = 'Form_Reference'
@@ -305,9 +283,7 @@ object dtmdlForms: TdtmdlForms
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryBranch: TFDQuery
@@ -321,14 +297,10 @@ object dtmdlForms: TdtmdlForms
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetTotalStock: TFDQuery
@@ -342,9 +314,7 @@ object dtmdlForms: TdtmdlForms
     Top = 256
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Form_Reference'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -362,9 +332,7 @@ object dtmdlForms: TdtmdlForms
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -382,9 +350,7 @@ object dtmdlForms: TdtmdlForms
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -405,14 +371,10 @@ object dtmdlForms: TdtmdlForms
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object CompSQL: TFDQuery
@@ -446,14 +408,10 @@ object dtmdlForms: TdtmdlForms
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryHistory: TFDQuery
@@ -555,9 +513,8 @@ object dtmdlForms: TdtmdlForms
     Top = 200
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Form_Reference'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object qryHistoryPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'

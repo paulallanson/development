@@ -1,7 +1,6 @@
 object PBAccExport4Frm: TPBAccExport4Frm
   Left = 297
   Top = 173
-  AutoScroll = False
   Caption = 'Export & Import Wizard'
   ClientHeight = 293
   ClientWidth = 346
@@ -11,10 +10,8 @@ object PBAccExport4Frm: TPBAccExport4Frm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object BitBtn1: TBitBtn
     Left = 256

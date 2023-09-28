@@ -30,16 +30,15 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 804
+        Width = 794
       end>
-    ExplicitWidth = 808
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 791
+      Width = 785
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imglstButtons
       ShowCaptions = True
@@ -52,7 +51,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -60,7 +59,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Caption = '&Copy'
         Enabled = False
@@ -68,7 +67,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnCopyClick
       end
       object btnReQuote: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = 'Re-Quote'
         Enabled = False
@@ -76,7 +75,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnReQuoteClick
       end
       object btnDelete: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -84,7 +83,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 310
+        Left = 280
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -92,7 +91,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnPrintClick
       end
       object ToolButton1: TToolButton
-        Left = 372
+        Left = 336
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -100,7 +99,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 380
+        Left = 344
         Top = 0
         Caption = 'Con&vert'
         Enabled = False
@@ -108,7 +107,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         OnClick = btnConvertClick
       end
       object ToolButton3: TToolButton
-        Left = 442
+        Left = 400
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -116,7 +115,7 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 450
+        Left = 408
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -138,8 +137,6 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       item
         Width = 50
       end>
-    ExplicitTop = 390
-    ExplicitWidth = 808
   end
   object Panel1: TPanel
     Left = 0
@@ -247,19 +244,18 @@ object frmpbluCustQuotes: TfrmpbluCustQuotes
       object CoolBar2: TCoolBar
         Left = 0
         Top = 0
-        Width = 391
+        Width = 379
         Height = 30
         Bands = <
           item
             Control = ToolBar2
             ImageIndex = -1
-            Width = 385
+            Width = 373
           end>
-        ExplicitWidth = 397
         object ToolBar2: TToolBar
           Left = 11
           Top = 0
-          Width = 376
+          Width = 364
           Height = 25
           Align = alClient
           ButtonWidth = 62

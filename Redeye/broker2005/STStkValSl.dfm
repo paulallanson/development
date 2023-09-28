@@ -11,11 +11,9 @@ object STStkValSlfrm: TSTStkValSlfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object OleContainer1: TOleContainer
     Left = 316
@@ -28,11 +26,11 @@ object STStkValSlfrm: TSTStkValSlfrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 64
     Top = 46
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 8
     Visible = False
     object lblExporting: TLabel
@@ -62,9 +60,6 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 4
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -79,6 +74,9 @@ object STStkValSlfrm: TSTStkValSlfrm
       33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = PrintBitBtnClick
   end
   object BitBtn2: TBitBtn
     Left = 181
@@ -91,9 +89,6 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 3
-    OnClick = BitBtn2Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -108,6 +103,9 @@ object STStkValSlfrm: TSTStkValSlfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 3
+    OnClick = BitBtn2Click
   end
   object BitBtn3: TBitBtn
     Left = 8
@@ -120,12 +118,12 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 2
-    Kind = bkCancel
   end
   object SeqByRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 96
     Width = 89
@@ -140,11 +138,11 @@ object STStkValSlfrm: TSTStkValSlfrm
     Items.Strings = (
       'Store'
       'Product')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end
   object CostRadioGroup: TRadioGroup
-    ParentBackground = False
     Left = 368
     Top = 8
     Width = 89
@@ -159,11 +157,11 @@ object STStkValSlfrm: TSTStkValSlfrm
     Items.Strings = (
       'Actual Cost'
       'Current Cost')
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
   end
   object grpbxRange: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 353
@@ -174,6 +172,7 @@ object STStkValSlfrm: TSTStkValSlfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 5
     object Label1: TLabel
@@ -258,8 +257,6 @@ object STStkValSlfrm: TSTStkValSlfrm
     Width = 75
     Height = 25
     Caption = 'Excel'
-    TabOrder = 7
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -303,5 +300,7 @@ object STStkValSlfrm: TSTStkValSlfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 7
+    OnClick = btbtnExcelClick
   end
 end

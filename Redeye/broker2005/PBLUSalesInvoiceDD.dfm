@@ -26,8 +26,6 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
       item
         Width = 250
       end>
-    ExplicitTop = 430
-    ExplicitWidth = 920
   end
   object Panel1: TPanel
     Left = 0
@@ -36,7 +34,6 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Height = 113
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 920
     object GroupBox2: TGroupBox
       Left = 16
       Top = 8
@@ -216,8 +213,6 @@ object PBLUSalesInvoiceDDFrm: TPBLUSalesInvoiceDDFrm
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 389
-    ExplicitWidth = 920
     object lblExpTo: TLabel
       Left = 8
       Top = 16

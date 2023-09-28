@@ -1,7 +1,4 @@
 object dtmdlActivity: TdtmdlActivity
-  OldCreateOrder = False
-  Left = 475
-  Top = 143
   Height = 524
   Width = 686
   object qryZero: TFDQuery
@@ -36,89 +33,59 @@ object dtmdlActivity: TdtmdlActivity
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Subject'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Start_Date_Time'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Due_Date_Time'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Priority'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Activity_Module'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Entity_Reference'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Entity_Reference_Description'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Customer'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Branch_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Entity_Reference'
+      end
+      item
+        Name = 'Entity_Reference_Description'
+      end
+      item
+        Name = 'Customer'
+      end
+      item
+        Name = 'Branch_no'
+      end
+      item
         Name = 'Contact_no'
+        DataType = ftInteger
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Assigned_to'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Reminder'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Activity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end>
   end
   object qryGetActivity: TFDQuery
@@ -193,9 +160,7 @@ object dtmdlActivity: TdtmdlActivity
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end>
   end
   object AddSQL: TFDQuery
@@ -228,49 +193,31 @@ object dtmdlActivity: TdtmdlActivity
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Subject'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Start_Date_Time'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Due_Date_Time'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity_Priority'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -285,9 +232,7 @@ object dtmdlActivity: TdtmdlActivity
     Top = 136
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Event_GUID'
-        ParamType = ptUnknown
       end>
   end
   object qryActivityGrid: TFDQuery
@@ -352,9 +297,7 @@ object dtmdlActivity: TdtmdlActivity
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object dtsActivityGrid: TDataSource
@@ -389,14 +332,12 @@ object dtmdlActivity: TdtmdlActivity
     Top = 72
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Inactive'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object qryContacts: TFDQuery
@@ -442,14 +383,10 @@ object dtmdlActivity: TdtmdlActivity
     Top = 128
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object dtsCustomerBranches: TDataSource
@@ -475,9 +412,7 @@ object dtmdlActivity: TdtmdlActivity
     Top = 192
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object dtsAssignedTo: TDataSource
@@ -610,29 +545,19 @@ object dtmdlActivity: TdtmdlActivity
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Assigned_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Assigned_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryActivityReminder: TFDQuery
@@ -701,24 +626,16 @@ object dtmdlActivity: TdtmdlActivity
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end>
   end
   object dtsActivityReminder: TDataSource
@@ -802,19 +719,13 @@ object dtmdlActivity: TdtmdlActivity
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Activity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Activity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Activity'
-        ParamType = ptUnknown
       end>
   end
   object dtsGetLinkedActivities: TDataSource
@@ -846,19 +757,13 @@ object dtmdlActivity: TdtmdlActivity
     Top = 312
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_no'
-        ParamType = ptUnknown
       end>
   end
 end

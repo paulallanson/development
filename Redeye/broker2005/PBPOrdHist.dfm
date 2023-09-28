@@ -1,26 +1,24 @@
 object PBPOrdHistFrm: TPBPOrdHistFrm
   Left = 40
   Top = 184
-  Width = 667
-  Height = 291
   Caption = 'Order History'
+  ClientHeight = 252
+  ClientWidth = 651
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
   OnResize = FormResize
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object strgrdOrdHist: TStringGrid
     Left = 0
     Top = 0
-    Width = 659
-    Height = 238
+    Width = 651
+    Height = 233
     Align = alClient
     ColCount = 14
     DefaultRowHeight = 20
@@ -31,8 +29,8 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 238
-    Width = 659
+    Top = 233
+    Width = 651
     Height = 19
     Panels = <>
   end
@@ -91,14 +89,10 @@ object PBPOrdHistFrm: TPBPOrdHistFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'line'
-        ParamType = ptUnknown
       end>
   end
 end

@@ -153,7 +153,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Anchors = [akLeft, akBottom]
     Caption = 'Show only live activities'
     TabOrder = 14
-    ExplicitTop = 333
   end
   object SearchButton: TButton
     Left = 12
@@ -165,7 +164,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Default = True
     TabOrder = 15
     OnClick = SearchButtonClick
-    ExplicitTop = 365
   end
   object edtDate: TEdit
     Left = 120
@@ -175,7 +173,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Anchors = [akLeft, akBottom]
     TabOrder = 12
     OnExit = edtDateExit
-    ExplicitTop = 305
   end
   object btnDate: TBitBtn
     Left = 216
@@ -199,7 +196,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 13
     OnClick = btnDateClick
-    ExplicitTop = 303
   end
   object edtType: TEdit
     Left = 120
@@ -224,7 +220,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Caption = 'Clear Search'
     TabOrder = 16
     OnClick = ClearButtonClick
-    ExplicitTop = 366
   end
   object edtContact: TEdit
     Left = 120
@@ -262,7 +257,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     Anchors = [akLeft, akBottom]
     TabOrder = 10
     OnExit = edtDueDateExit
-    ExplicitTop = 275
   end
   object BitBtn1: TBitBtn
     Left = 216
@@ -286,7 +280,6 @@ object frmPBLUActivitiesSearch: TfrmPBLUActivitiesSearch
     NumGlyphs = 2
     TabOrder = 11
     OnClick = BitBtn1Click
-    ExplicitTop = 273
   end
   object edtDescription: TEdit
     Left = 120

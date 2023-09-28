@@ -1,7 +1,4 @@
 object dmSupplierInvoice: TdmSupplierInvoice
-  OldCreateOrder = False
-  Left = 304
-  Top = 161
   Height = 526
   Width = 795
   object qrySIHeaderGrid: TFDQuery
@@ -58,85 +55,62 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Match_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Match_Status'
-        ParamType = ptUnknown
       end>
     object qrySIHeaderGridSupplier_Invoice: TIntegerField
       FieldName = 'Supplier_Invoice'
-
     end
     object qrySIHeaderGridSupplier: TIntegerField
       FieldName = 'Supplier'
-
     end
     object qrySIHeaderGridBranch_no: TIntegerField
       FieldName = 'Branch_no'
-
     end
     object qrySIHeaderGridVat_Value: TFloatField
       FieldName = 'Vat_Value'
-
       currency = True
     end
     object qrySIHeaderGridGoods_Value: TFloatField
       FieldName = 'Goods_Value'
-
       currency = True
     end
     object qrySIHeaderGridInvoice_Date: TDateTimeField
       FieldName = 'Invoice_Date'
-
     end
     object qrySIHeaderGridSupplier_Invoice_no: TStringField
       FieldName = 'Supplier_Invoice_no'
-
     end
     object qrySIHeaderGridSupp_Invoice_Status: TIntegerField
       FieldName = 'Supp_Invoice_Status'
-
     end
     object qrySIHeaderGridCurrency_Code: TIntegerField
       FieldName = 'Currency_Code'
-
     end
     object qrySIHeaderGridSupp_Inv_Alt_Ref: TStringField
       FieldName = 'Supp_Inv_Alt_Ref'
-
     end
     object qrySIHeaderGridSupplier_Name: TStringField
       FieldName = 'Supplier_Name'
-
       Size = 40
     end
     object qrySIHeaderGridBranch_Name: TStringField
       FieldName = 'Branch_Name'
-
       Size = 40
     end
     object qrySIHeaderGridStatus_Desc: TStringField
       FieldName = 'Status_Desc'
-
       Size = 40
     end
     object qrySIHeaderGridPONum: TStringField
@@ -201,9 +175,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qrySIHeader: TFDQuery
@@ -234,9 +206,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryOperator: TFDQuery
@@ -268,14 +238,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 248
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchOrd: TFDQuery
@@ -288,9 +254,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 240
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPOAllLines: TFDQuery
@@ -402,14 +366,11 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Include_Value'
-        ParamType = ptUnknown
       end>
     object qryPOAllLinesPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
@@ -542,14 +503,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPO: TFDQuery
@@ -581,14 +538,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchOrdL: TFDQuery
@@ -610,14 +563,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJB: TFDQuery
@@ -634,14 +583,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qrySIAllLines: TFDQuery
@@ -690,9 +635,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qrySIAddHeader: TFDQuery
@@ -736,84 +679,54 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Supplier_Invoice_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Supp_Inv_Alt_Ref'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Goods_Value_Diff'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'VAT_Value_Diff'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Orig_Supplier_invoice_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier_Invoice_no'
+      end
+      item
+        Name = 'Supp_Inv_Alt_Ref'
+      end
+      item
+        Name = 'Goods_Value_Diff'
+      end
+      item
+        Name = 'VAT_Value_Diff'
+      end
+      item
+        Name = 'Invoice_or_Credit'
+      end
+      item
+        Name = 'Orig_Supplier_invoice_no'
+      end
+      item
+        Name = 'Operator'
+        DataType = ftInteger
+      end
+      item
         Name = 'Date_Created'
-        ParamType = ptUnknown
       end>
   end
   object qrySIUpHeader: TFDQuery
@@ -839,79 +752,51 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Goods_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAT_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Currency_Code'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Supplier_Invoice_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Supp_inv_Alt_ref'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Goods_Value_Diff'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Vat_Value_Diff'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Orig_supplier_invoice_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
+        Name = 'Supplier_Invoice_no'
+      end
+      item
+        Name = 'Supp_inv_Alt_ref'
+      end
+      item
+        Name = 'Goods_Value_Diff'
+      end
+      item
+        Name = 'Vat_Value_Diff'
+      end
+      item
+        Name = 'Invoice_or_Credit'
+      end
+      item
+        Name = 'Orig_supplier_invoice_no'
+      end
+      item
+        Name = 'Operator'
+        DataType = ftInteger
+      end
+      item
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -952,44 +837,28 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 184
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Additional_Charge'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Details'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Amount'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'VAt_Code'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qrySIAddLine: TFDQuery
@@ -1042,104 +911,79 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Purchase_order'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Credit_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftFloat
         Name = 'Goods_Value'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftInteger
-        Name = 'VAT_Code'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftFloat
+      end
+      item
+        Name = 'VAT_Code'
+        DataType = ftInteger
+      end
+      item
         Name = 'VAT_Value'
-        ParamType = ptUnknown
+        DataType = ftFloat
       end
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Price_unit'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Nominal'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Purch_Ord_Line_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Delivery_Note_No'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftDateTime
         Name = 'Delivery_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Original_Invoice_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetVat: TFDQuery
@@ -1152,9 +996,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 296
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'VAT_Code'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPriceUnit: TFDQuery
@@ -1167,9 +1009,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryPOLine: TFDQuery
@@ -1217,14 +1057,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetInvStatus: TFDQuery
@@ -1237,9 +1073,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_invoice_Status'
-        ParamType = ptUnknown
       end>
   end
   object qryPOLineChgs: TFDQuery
@@ -1282,14 +1116,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryJBAllLines: TFDQuery
@@ -1326,9 +1156,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
   object dsJBLine: TDataSource
@@ -1370,14 +1198,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckPIN: TFDQuery
@@ -1392,14 +1216,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_Inv_Alt_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryPOUpLine: TFDQuery
@@ -1415,19 +1235,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 222
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Supp_Inv_Pend'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryJBUpLine: TFDQuery
@@ -1441,19 +1255,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_inv_recd'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qrySIUpStatus: TFDQuery
@@ -1466,14 +1274,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qrySIUpLineStatus: TFDQuery
@@ -1487,19 +1291,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryPOUpLineStatus: TFDQuery
@@ -1515,24 +1313,16 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 170
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Supp_Inv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Qty_Supp_Inv'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qrySIGetAllStatus: TFDQuery
@@ -1546,14 +1336,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_or_Credit'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchAll: TFDQuery
@@ -1588,9 +1374,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Code_From'
-        ParamType = ptUnknown
       end>
   end
   object dsPurchOrd: TDataSource
@@ -1619,9 +1403,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchLines: TFDQuery
@@ -1655,9 +1437,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchChgs: TFDQuery
@@ -1678,9 +1458,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchUpLine: TFDQuery
@@ -1694,19 +1472,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Qty_Invoiced'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchChkStatus: TFDQuery
@@ -1724,9 +1496,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 344
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPurchUpStatus: TFDQuery
@@ -1739,14 +1509,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 400
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end>
   end
   object qryPCHeaderGrid: TFDQuery
@@ -1796,108 +1562,85 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftInteger
         Name = 'Supp_Invoice_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Match_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Match_Status'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
     object IntegerField1: TIntegerField
       FieldName = 'Supplier_Invoice'
-
     end
     object IntegerField2: TIntegerField
       FieldName = 'Supplier'
-
     end
     object IntegerField3: TIntegerField
       FieldName = 'Branch_no'
-
     end
     object FloatField1: TFloatField
       FieldName = 'Vat_Value'
-
       currency = True
     end
     object FloatField2: TFloatField
       FieldName = 'Goods_Value'
-
       currency = True
     end
     object DateTimeField1: TDateTimeField
       FieldName = 'Invoice_Date'
-
     end
     object StringField1: TStringField
       FieldName = 'Supplier_Invoice_no'
-
     end
     object IntegerField4: TIntegerField
       FieldName = 'Supp_Invoice_Status'
-
     end
     object IntegerField5: TIntegerField
       FieldName = 'Currency_Code'
-
     end
     object StringField2: TStringField
       FieldName = 'Supp_Inv_Alt_Ref'
-
     end
     object StringField3: TStringField
       FieldName = 'Supplier_Name'
-
       Size = 40
     end
     object StringField4: TStringField
       FieldName = 'Branch_Name'
-
       Size = 40
     end
     object StringField5: TStringField
       FieldName = 'Status_Desc'
-
       Size = 40
     end
     object qryPCHeaderGridInvoice_or_Credit: TStringField
       FieldName = 'Invoice_or_Credit'
-
       FixedChar = True
       Size = 2
     end
     object qryPCHeaderGridGoods_Value_Diff: TCurrencyField
       FieldName = 'Goods_Value_Diff'
-
     end
     object qryPCHeaderGridVAT_Value_Diff: TCurrencyField
       FieldName = 'VAT_Value_Diff'
-
     end
     object qryPCHeaderGridGoods_Credit: TCurrencyField
       FieldName = 'Goods_Credit'
-
     end
     object qryPCHeaderGridVAT_Credit: TCurrencyField
       FieldName = 'VAT_Credit'
-
     end
     object qryPCHeaderGridOrig_Supplier_Invoice_no: TStringField
       FieldName = 'Orig_Supplier_Invoice_no'
@@ -1968,19 +1711,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryJBLinePInvs: TFDQuery
@@ -2021,19 +1758,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 280
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryProdType: TFDQuery
@@ -2046,9 +1777,8 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 296
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Product_Type'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object qryPOsSalesInvd: TFDQuery
@@ -2153,14 +1883,12 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 168
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Include_Value'
-        ParamType = ptUnknown
       end>
     object qryPOsSalesInvdPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
@@ -2285,9 +2013,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 96
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'SInv'
-        ParamType = ptUnknown
       end>
   end
   object qrySIPurchOrdLines: TFDQuery
@@ -2302,9 +2028,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 196
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOInvs: TFDQuery
@@ -2351,14 +2075,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetJBInvs: TFDQuery
@@ -2394,14 +2114,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 64
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag_Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPurchLineInvs: TFDQuery
@@ -2439,14 +2155,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Purch_Ord_Line_no'
-        ParamType = ptUnknown
       end>
   end
   object qryPOsDeliv: TFDQuery
@@ -2551,14 +2263,12 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 224
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
+        DataType = ftString
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
         Name = 'Include_Value'
-        ParamType = ptUnknown
       end>
     object qryPOsDelivPurchase_Order: TFloatField
       FieldName = 'Purchase_Order'
@@ -2674,9 +2384,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end>
   end
   object qryCheckSInvoice: TFDQuery
@@ -2694,19 +2402,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 408
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier_Invoice_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object qryPassSInvoice: TFDQuery
@@ -2721,19 +2423,13 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'supplier_invoice_no'
-        ParamType = ptUnknown
       end>
   end
   object qryUpPOPIStatus: TFDQuery
@@ -2752,14 +2448,10 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 176
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSupplier: TFDQuery
@@ -2771,9 +2463,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end>
   end
   object qryGetPOInvoice: TFDQuery
@@ -2794,9 +2484,7 @@ object dmSupplierInvoice: TdmSupplierInvoice
     Top = 288
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end>
   end
 end

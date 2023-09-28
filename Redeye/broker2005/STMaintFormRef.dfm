@@ -124,8 +124,6 @@ object frmSTMaintFormRef: TfrmSTMaintFormRef
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 135
-    ExplicitWidth = 468
     object DelLabel: TLabel
       Left = 128
       Top = 11

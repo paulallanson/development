@@ -1,4 +1,4 @@
-﻿object frmPBMaintContactEvents: TfrmPBMaintContactEvents
+object frmPBMaintContactEvents: TfrmPBMaintContactEvents
   Left = 246
   Top = 49
   BorderIcons = [biSystemMenu, biMinimize]
@@ -12,13 +12,11 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 16
@@ -40,9 +38,6 @@
     Height = 25
     Caption = 'OK'
     Default = True
-    ModalResult = 1
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -107,7 +102,10 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 1
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 248
@@ -116,9 +114,6 @@
     Height = 25
     Cancel = True
     Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 2
-    OnClick = CancelBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -183,10 +178,12 @@
       7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F00
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
+    ModalResult = 2
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = CancelBitBtnClick
   end
   object DetsGrpBox: TGroupBox
-    ParentBackground = False
     Left = 9
     Top = 8
     Width = 312
@@ -196,6 +193,7 @@
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
     object Label1: TLabel
@@ -259,7 +257,6 @@
       Top = 96
       Width = 81
       Height = 21
-      Date = 0.434360891202231900
       Time = 0.434360891202231900
       ShowCheckbox = True
       Kind = dtkTime
@@ -349,39 +346,33 @@
     Top = 272
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
-        Name = 'Contact_No'
-        ParamType = ptUnknown
+        Name = 'Branch_No'
+        DataType = ftInteger
+        ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Contact_No'
+      end
+      item
         Name = 'Event_GUID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptInput
-      end
-      item
         DataType = ftInteger
-        Name = 'Branch_No'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        Name = 'Branch_No'
+        DataType = ftInteger
+        ParamType = ptInput
+      end
+      item
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object UpdSQL: TFDQuery
@@ -405,39 +396,26 @@
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Date_Time_Entered'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Narrative'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Operator'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Cont_Event_No'
-        ParamType = ptUnknown
       end>
   end
   object DelSQL: TFDQuery
@@ -454,24 +432,16 @@
     Top = 264
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer_Cont_Event_No'
-        ParamType = ptUnknown
       end>
   end
   object qryContacts: TFDQuery
@@ -486,14 +456,12 @@
     Top = 148
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_no'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsContacts: TDataSource
@@ -523,34 +491,22 @@
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Event_GUID'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end>
   end
   object GetLastSQL: TFDQuery
@@ -565,9 +521,7 @@
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Event_GUID'
-        ParamType = ptUnknown
       end>
   end
   object qryBranch: TFDQuery
@@ -581,9 +535,8 @@
     Top = 104
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object dtsBranch: TDataSource

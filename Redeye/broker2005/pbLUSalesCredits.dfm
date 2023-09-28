@@ -30,7 +30,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
         Control = PageScroller1
         ImageIndex = -1
         MinHeight = 40
-        Width = 1146
+        Width = 1142
       end>
     object PageScroller1: TPageScroller
       Left = 11
@@ -43,7 +43,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       object ToolBar1: TToolBar
         Left = 0
         Top = 0
-        Width = 1133
+        Width = 1121
         Height = 40
         ButtonHeight = 36
         ButtonWidth = 56
@@ -378,8 +378,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     Height = 56
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 320
-    ExplicitWidth = 1160
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -396,7 +394,7 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 864
+      Left = 852
       Top = 1
       Width = 295
       Height = 54
@@ -495,8 +493,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
       item
         Width = 50
       end>
-    ExplicitTop = 376
-    ExplicitWidth = 1160
   end
   object Panel3: TPanel
     Left = 0
@@ -508,7 +504,6 @@ object frmPBLUSalesCredits: TfrmPBLUSalesCredits
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 4
-    ExplicitWidth = 1160
     object Label4: TLabel
       Left = 8
       Top = 3

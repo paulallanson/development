@@ -1,7 +1,4 @@
 object dtmdlEvents: TdtmdlEvents
-  OldCreateOrder = False
-  Left = 192
-  Top = 107
   Height = 375
   Width = 544
   object qryEvents: TFDQuery
@@ -48,14 +45,12 @@ object dtmdlEvents: TdtmdlEvents
     Top = 40
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftString
         Name = 'Description'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
   end
   object dtsEvents: TDataSource
@@ -107,14 +102,10 @@ object dtmdlEvents: TdtmdlEvents
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
 end

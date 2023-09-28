@@ -1,30 +1,24 @@
 object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
   Left = 9
   Top = 104
-  Width = 1207
-  Height = 614
   Caption = 'Product Category Performance Report'
+  ClientHeight = 575
+  ClientWidth = 1191
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object quickreport: TQuickRep
     Left = 8
     Top = 8
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = quickreportBeforePrint
     DataSet = qryCategories
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +38,7 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -57,13 +52,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Reps Product Category report'
     SnapToGrid = True
@@ -71,45 +69,45 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRBand
       Left = 19
       Top = 38
       Width = 1085
       Height = 115
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        304.270833333333400000
+        304.270833333333300000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
         Left = 398
         Top = 8
         Width = 288
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
+          60.854166666666670000
           1053.041666666667000000
           21.166666666666670000
           762.000000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Product Category Sales Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -119,7 +117,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
@@ -127,24 +127,22 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 32
         Width = 72
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1338.791666666667000000
-          84.666666666666680000
+          84.666666666666670000
           190.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period From'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText2: TQRDBText
@@ -152,20 +150,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 64
         Width = 125
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           42.333333333333340000
           169.333333333333300000
           330.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryCategories
         DataField = 'Category_Description'
@@ -176,7 +170,11 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblMonth1: TQRLabel
@@ -184,20 +182,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           354.541666666666700000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -207,7 +201,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel5: TQRLabel
@@ -215,20 +211,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           304.270833333333400000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -238,7 +230,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel6: TQRLabel
@@ -246,20 +240,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           418.041666666666700000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -269,7 +259,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel30: TQRLabel
@@ -277,20 +269,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 88
         Width = 38
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2733.145833333333000000
           232.833333333333400000
           100.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total YTD'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -300,7 +288,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel31: TQRLabel
@@ -308,20 +298,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 36
         Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           31.750000000000000000
           2677.583333333333000000
           264.583333333333400000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -331,7 +317,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel32: TQRLabel
@@ -339,20 +327,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 22
         Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           31.750000000000000000
           2804.583333333333000000
           264.583333333333400000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -362,7 +346,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth2: TQRLabel
@@ -370,20 +356,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           552.979166666666700000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -393,7 +375,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel13: TQRLabel
@@ -401,20 +385,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           502.708333333333400000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -424,7 +404,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel14: TQRLabel
@@ -432,20 +414,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           616.479166666666800000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -455,7 +433,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth3: TQRLabel
@@ -463,20 +443,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           751.416666666666800000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -486,7 +462,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel16: TQRLabel
@@ -494,20 +472,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           701.145833333333400000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -517,7 +491,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel17: TQRLabel
@@ -525,20 +501,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           814.916666666666800000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -548,7 +520,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth4: TQRLabel
@@ -556,20 +530,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           949.854166666666800000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -579,7 +549,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel19: TQRLabel
@@ -587,20 +559,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           899.583333333333400000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -610,7 +578,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel20: TQRLabel
@@ -618,20 +588,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1013.354166666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -641,7 +607,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth5: TQRLabel
@@ -649,20 +617,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1148.291666666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -672,7 +636,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel22: TQRLabel
@@ -680,20 +646,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1098.020833333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -703,7 +665,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel23: TQRLabel
@@ -711,20 +675,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1211.791666666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -734,7 +694,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth6: TQRLabel
@@ -742,20 +704,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1346.729166666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -765,7 +723,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel25: TQRLabel
@@ -773,20 +733,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1296.458333333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -796,7 +752,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel26: TQRLabel
@@ -804,20 +762,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1410.229166666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -827,7 +781,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth7: TQRLabel
@@ -835,20 +791,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1545.166666666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -858,7 +810,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel28: TQRLabel
@@ -866,20 +820,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1494.895833333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -889,7 +839,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel29: TQRLabel
@@ -897,20 +849,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1608.666666666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -920,7 +868,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth8: TQRLabel
@@ -928,20 +878,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1743.604166666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -951,7 +897,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel34: TQRLabel
@@ -959,20 +907,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1693.333333333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -982,7 +926,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel35: TQRLabel
@@ -990,20 +936,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1807.104166666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1013,7 +955,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth9: TQRLabel
@@ -1021,20 +965,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1942.041666666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1044,7 +984,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel39: TQRLabel
@@ -1052,20 +994,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1891.770833333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1075,7 +1013,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel40: TQRLabel
@@ -1083,20 +1023,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2005.541666666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1106,7 +1042,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth10: TQRLabel
@@ -1114,20 +1052,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2140.479166666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1137,7 +1071,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel42: TQRLabel
@@ -1145,20 +1081,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2090.208333333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1168,7 +1100,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel43: TQRLabel
@@ -1176,20 +1110,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2203.979166666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1199,7 +1129,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth11: TQRLabel
@@ -1207,20 +1139,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2338.916666666667000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1230,7 +1158,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel45: TQRLabel
@@ -1238,20 +1168,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2288.645833333333000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1261,7 +1187,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel46: TQRLabel
@@ -1269,20 +1197,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2402.416666666667000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1292,7 +1216,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblMonth12: TQRLabel
@@ -1300,20 +1226,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 87
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2534.708333333333000000
           230.187500000000000000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sept - 04'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1323,7 +1245,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel50: TQRLabel
@@ -1331,20 +1255,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 31
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2484.437500000000000000
           264.583333333333400000
           82.020833333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Turnover'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1354,7 +1274,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRLabel51: TQRLabel
@@ -1362,20 +1284,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 100
         Width = 19
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2598.208333333333000000
           264.583333333333400000
           50.270833333333330000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Profit'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1385,7 +1303,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object QRSysData1: TQRSysData
@@ -1393,19 +1313,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2709.333333333333000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
@@ -1414,7 +1331,10 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -1422,19 +1342,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 28
         Width = 69
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2674.937500000000000000
           74.083333333333340000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -1445,6 +1362,8 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1453,19 +1372,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 157
       Width = 1085
       Height = 4
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrgRepsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         10.583333333333330000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryCategories.Category_Description'
       FooterBand = qrbGrpRepFooter
       Master = QRSubDetail1
@@ -1476,19 +1392,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 161
       Width = 1085
       Height = 32
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        84.666666666666680000
+        84.666666666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = quickreport
       DataSet = qrySortBy
       PrintBefore = False
@@ -1498,25 +1411,25 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 8
         Width = 76
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1439.333333333333000000
           21.166666666666670000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qrySortBy
         DataField = 'Sortby_Code'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRDBText6: TQRDBText
@@ -1524,25 +1437,25 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 8
         Width = 53
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1164.166666666667000000
           21.166666666666670000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryCategories
         DataField = 'Category'
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object QRLabel1: TQRLabel
@@ -1550,24 +1463,22 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 8
         Width = 122
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           42.333333333333340000
           21.166666666666670000
           322.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sort by Header Band'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1576,20 +1487,17 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 153
       Width = 1085
       Height = 4
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = True
       LinkBand = QRSubDetail1
       Size.Values = (
         10.583333333333330000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbDetail
     end
     object qrsubPeriods: TQRSubDetail
@@ -1597,19 +1505,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 193
       Width = 1085
       Height = 24
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrsubPeriodsBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         63.500000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QRSubDetail1
       DataSet = qryReport
       FooterBand = qrbGrpCatFooter
@@ -1620,24 +1525,22 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 0
         Width = 115
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           127.000000000000000000
           0.000000000000000000
           304.270833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period sales details'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -1646,15 +1549,10 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 217
       Width = 1085
       Height = 17
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbGrpCatFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGrpCatFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1666,22 +1564,22 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Size.Values = (
         44.979166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText7: TQRDBText
         Left = 8
         Top = 0
         Width = 97
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           21.166666666666670000
           0.000000000000000000
           256.645833333333400000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
@@ -1696,7 +1594,11 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO1: TQRLabel
@@ -1704,20 +1606,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           309.562500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1727,7 +1625,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf1: TQRLabel
@@ -1735,20 +1635,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           399.520833333333400000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1758,7 +1654,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO2: TQRLabel
@@ -1766,20 +1664,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           508.000000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1789,7 +1683,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf2: TQRLabel
@@ -1797,20 +1693,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           597.958333333333400000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1820,7 +1712,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO3: TQRLabel
@@ -1828,20 +1722,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           706.437500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1851,7 +1741,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf3: TQRLabel
@@ -1859,20 +1751,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           796.395833333333400000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1882,7 +1770,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO4: TQRLabel
@@ -1890,20 +1780,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           902.229166666666800000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1913,7 +1799,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf4: TQRLabel
@@ -1921,20 +1809,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           992.187500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1944,7 +1828,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO5: TQRLabel
@@ -1952,20 +1838,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1103.312500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1975,7 +1857,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf5: TQRLabel
@@ -1983,20 +1867,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1193.270833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2006,7 +1886,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO6: TQRLabel
@@ -2014,20 +1896,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1301.750000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2037,7 +1915,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf6: TQRLabel
@@ -2045,20 +1925,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1391.708333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2068,7 +1944,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf7: TQRLabel
@@ -2076,20 +1954,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1587.500000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2099,7 +1973,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO7: TQRLabel
@@ -2107,20 +1983,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1497.541666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2130,7 +2002,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO8: TQRLabel
@@ -2138,20 +2012,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1698.625000000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2161,7 +2031,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf8: TQRLabel
@@ -2169,20 +2041,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1788.583333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2192,7 +2060,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO9: TQRLabel
@@ -2200,20 +2070,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1899.708333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2223,7 +2089,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf9: TQRLabel
@@ -2231,20 +2099,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1989.666666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2254,7 +2118,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO10: TQRLabel
@@ -2262,20 +2128,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2098.145833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2285,7 +2147,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf10: TQRLabel
@@ -2293,20 +2157,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2188.104166666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2316,7 +2176,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO11: TQRLabel
@@ -2324,20 +2186,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2293.937500000000000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2347,7 +2205,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf11: TQRLabel
@@ -2355,20 +2215,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2383.895833333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2378,7 +2234,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTO12: TQRLabel
@@ -2386,20 +2244,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2487.083333333333000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2409,7 +2263,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActProf12: TQRLabel
@@ -2417,20 +2273,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2577.041666666667000000
           2.645833333333333000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2440,7 +2292,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCatActTOTotal: TQRLabel
@@ -2448,20 +2302,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2677.583333333333000000
           2.645833333333333000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2471,7 +2321,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblCatActProfTotal: TQRLabel
@@ -2479,20 +2331,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 1
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2778.125000000000000000
           2.645833333333333000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2502,7 +2350,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -2511,16 +2361,12 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 234
       Width = 1085
       Height = 31
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AfterPrint = qrbGrpRepFooterAfterPrint
       AlignToBottom = False
       BeforePrint = qrbGrpRepFooterBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -8
@@ -2530,28 +2376,26 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        82.020833333333340000
+        82.020833333333330000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel11: TQRLabel
         Left = 8
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           21.166666666666670000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Totals'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2561,7 +2405,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO1: TQRLabel
@@ -2569,20 +2415,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           309.562500000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2592,7 +2434,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf1: TQRLabel
@@ -2600,20 +2444,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           399.520833333333400000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2623,7 +2463,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO2: TQRLabel
@@ -2631,20 +2473,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           508.000000000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2654,7 +2492,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf2: TQRLabel
@@ -2662,20 +2502,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           597.958333333333400000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2685,7 +2521,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO3: TQRLabel
@@ -2693,20 +2531,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           706.437500000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2716,7 +2550,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf3: TQRLabel
@@ -2724,20 +2560,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           796.395833333333400000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2747,7 +2579,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO4: TQRLabel
@@ -2755,20 +2589,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           902.229166666666800000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2778,7 +2608,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf4: TQRLabel
@@ -2786,20 +2618,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           992.187500000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2809,7 +2637,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO5: TQRLabel
@@ -2817,20 +2647,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1103.312500000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2840,7 +2666,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf5: TQRLabel
@@ -2848,20 +2676,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1193.270833333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2871,7 +2695,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO6: TQRLabel
@@ -2879,20 +2705,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1301.750000000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2902,7 +2724,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf6: TQRLabel
@@ -2910,20 +2734,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1391.708333333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2933,7 +2753,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO7: TQRLabel
@@ -2941,20 +2763,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1497.541666666667000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2964,7 +2782,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf7: TQRLabel
@@ -2972,20 +2792,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1587.500000000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2995,7 +2811,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO8: TQRLabel
@@ -3003,20 +2821,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1698.625000000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3026,7 +2840,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf8: TQRLabel
@@ -3034,20 +2850,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1788.583333333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3057,7 +2869,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO9: TQRLabel
@@ -3065,20 +2879,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1899.708333333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3088,7 +2898,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf9: TQRLabel
@@ -3096,20 +2908,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1989.666666666667000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3119,7 +2927,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO10: TQRLabel
@@ -3127,20 +2937,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2098.145833333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3150,7 +2956,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf10: TQRLabel
@@ -3158,20 +2966,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2188.104166666667000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3181,7 +2985,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO11: TQRLabel
@@ -3189,20 +2995,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2293.937500000000000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3212,7 +3014,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf11: TQRLabel
@@ -3220,20 +3024,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2383.895833333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3243,7 +3043,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTO12: TQRLabel
@@ -3251,20 +3053,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2487.083333333333000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3274,7 +3072,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProf12: TQRLabel
@@ -3282,20 +3082,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2577.041666666667000000
           13.229166666666670000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3305,7 +3101,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActTOTotal: TQRLabel
@@ -3313,20 +3111,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2677.583333333333000000
           13.229166666666670000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3336,7 +3130,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblRepActProfTotal: TQRLabel
@@ -3344,20 +3140,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 5
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2778.125000000000000000
           13.229166666666670000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3367,7 +3159,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -3376,41 +3170,36 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
       Top = 265
       Width = 1085
       Height = 40
-      Frame.Color = clBlack
       Frame.DrawTop = True
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       Frame.Width = 2
       AfterPrint = QRBand3AfterPrint
       AlignToBottom = False
       BeforePrint = QRBand3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         105.833333333333300000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbSummary
       object QRLabel7: TQRLabel
         Left = 0
         Top = 14
         Width = 55
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           0.000000000000000000
           37.041666666666670000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Company Totals'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3420,7 +3209,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO1: TQRLabel
@@ -3428,20 +3219,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           309.562500000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3451,7 +3238,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf1: TQRLabel
@@ -3459,20 +3248,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           399.520833333333400000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3482,7 +3267,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO2: TQRLabel
@@ -3490,20 +3277,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           508.000000000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3513,7 +3296,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf2: TQRLabel
@@ -3521,20 +3306,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           597.958333333333400000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3544,7 +3325,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO3: TQRLabel
@@ -3552,20 +3335,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           706.437500000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3575,7 +3354,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf3: TQRLabel
@@ -3583,20 +3364,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           796.395833333333400000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3606,7 +3383,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO4: TQRLabel
@@ -3614,20 +3393,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           902.229166666666800000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3637,7 +3412,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf4: TQRLabel
@@ -3645,20 +3422,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           992.187500000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3668,7 +3441,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO5: TQRLabel
@@ -3676,20 +3451,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1103.312500000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3699,7 +3470,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf5: TQRLabel
@@ -3707,20 +3480,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1193.270833333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3730,7 +3499,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO6: TQRLabel
@@ -3738,20 +3509,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1301.750000000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3761,7 +3528,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf6: TQRLabel
@@ -3769,20 +3538,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1391.708333333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3792,7 +3557,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO7: TQRLabel
@@ -3800,20 +3567,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1497.541666666667000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3823,7 +3586,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf7: TQRLabel
@@ -3831,20 +3596,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1587.500000000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3854,7 +3615,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO8: TQRLabel
@@ -3862,20 +3625,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1698.625000000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3885,7 +3644,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf8: TQRLabel
@@ -3893,20 +3654,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1788.583333333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3916,7 +3673,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO9: TQRLabel
@@ -3924,20 +3683,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1899.708333333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3947,7 +3702,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf9: TQRLabel
@@ -3955,20 +3712,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           1989.666666666667000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -3978,7 +3731,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO10: TQRLabel
@@ -3986,20 +3741,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2098.145833333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4009,7 +3760,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf10: TQRLabel
@@ -4017,20 +3770,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2188.104166666667000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4040,7 +3789,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO11: TQRLabel
@@ -4048,20 +3799,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2293.937500000000000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4071,7 +3818,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf11: TQRLabel
@@ -4079,20 +3828,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2383.895833333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4102,7 +3847,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO12: TQRLabel
@@ -4110,20 +3857,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2487.083333333333000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4133,7 +3876,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf12: TQRLabel
@@ -4141,20 +3886,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 27
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2577.041666666667000000
           34.395833333333340000
           71.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4164,7 +3905,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalTO: TQRLabel
@@ -4172,20 +3915,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2677.583333333333000000
           34.395833333333340000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4195,7 +3934,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
       object qrlblActTotalProf: TQRLabel
@@ -4203,20 +3944,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Top = 13
         Width = 33
         Height = 11
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           29.104166666666670000
           2778.125000000000000000
           34.395833333333340000
           87.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '9,999,999'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -4226,7 +3963,9 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 6
       end
     end
@@ -4250,24 +3989,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 14
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qrySortBy: TFDQuery
@@ -4300,14 +4031,10 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start_Period'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish_Period'
-        ParamType = ptUnknown
       end>
   end
   object qryDummy: TFDQuery
@@ -4345,24 +4072,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 374
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sortby'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesProfit: TFDQuery
@@ -4393,24 +4112,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 38
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Invoice_Location'
-        ParamType = ptUnknown
       end>
   end
   object qrytmpConsolidate: TFDQuery
@@ -4426,14 +4137,10 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end>
   end
   object qrytmpCategories: TFDQuery
@@ -4454,24 +4161,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyConsolidate: TFDQuery
@@ -4508,19 +4207,13 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 438
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sortby'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyCustomer: TFDQuery
@@ -4538,24 +4231,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyCategory: TFDQuery
@@ -4595,24 +4280,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qrySalesProfitCust: TFDQuery
@@ -4637,24 +4314,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 150
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyCust: TFDQuery
@@ -4687,24 +4356,16 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 374
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Category'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sortby'
-        ParamType = ptUnknown
       end>
   end
   object qryDummyConsolidateCust: TFDQuery
@@ -4734,19 +4395,13 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 438
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Start'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Finish'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sortby'
-        ParamType = ptUnknown
       end>
   end
   object qryCustRep: TFDQuery
@@ -4761,9 +4416,7 @@ object PBRPPEndCatPerformfrm: TPBRPPEndCatPerformfrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
 end

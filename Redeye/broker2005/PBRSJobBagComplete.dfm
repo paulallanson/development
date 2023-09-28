@@ -234,7 +234,6 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 6
-    ExplicitTop = 287
   end
   object btnExcel: TBitBtn
     Left = 341
@@ -288,7 +287,6 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 7
     OnClick = btnExcelClick
-    ExplicitTop = 287
   end
   object PreviewBitBtn: TBitBtn
     Left = 432
@@ -313,7 +311,6 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     NumGlyphs = 2
     TabOrder = 8
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 287
   end
   object PrintBitBtn: TBitBtn
     Left = 520
@@ -338,7 +335,6 @@ object PBRSJobBagCompleteFrm: TPBRSJobBagCompleteFrm
     NumGlyphs = 2
     TabOrder = 9
     OnClick = PrintBitBtnClick
-    ExplicitTop = 287
   end
   object rdgrpTotals: TRadioGroup
     Left = 462

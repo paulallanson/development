@@ -366,7 +366,6 @@ object PBRSCreditNoteReasonFrm: TPBRSCreditNoteReasonFrm
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 12
     OnClick = btnExcelClick
-    ExplicitLeft = 328
   end
   object rdgrpReportType: TRadioGroup
     Left = 480

@@ -11,14 +11,12 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   DesignSize = (
     495
     445)
-  PixelsPerInch = 96
   TextHeight = 13
   object DelLabel: TLabel
     Left = 117
@@ -43,8 +41,6 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Caption = 'OK'
     Default = True
     Enabled = False
-    TabOrder = 1
-    OnClick = OKBitBtnClick
     Glyph.Data = {
       CE070000424DCE07000000000000360000002800000024000000120000000100
       1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -110,6 +106,8 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
       007F7F007F7F007F7F007F7F007F7F007F7F}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = OKBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 405
@@ -117,8 +115,9 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Width = 75
     Height = 25
     Anchors = [akLeft, akBottom]
-    TabOrder = 2
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object grpbxDetails: TGroupBox
     Left = 8
@@ -266,9 +265,15 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
       Top = 80
       Width = 337
       Height = 97
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
       Lines.Strings = (
         'edtDescription')
       MaxLength = 255
+      ParentFont = False
       TabOrder = 3
       OnChange = CheckOK
     end
@@ -422,9 +427,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Price_Unit'
-        ParamType = ptUnknown
       end>
   end
   object qryGetProductType: TFDQuery
@@ -436,9 +439,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 168
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Product_Type'
-        ParamType = ptUnknown
       end>
   end
   object qryWOProcess: TFDQuery
@@ -461,9 +462,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 48
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Works_Order'
-        ParamType = ptUnknown
       end>
   end
   object dtsWOProcess: TDataSource
@@ -489,9 +488,7 @@ object PBMaintJobBagLinesFrm: TPBMaintJobBagLinesFrm
     Top = 112
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
 end

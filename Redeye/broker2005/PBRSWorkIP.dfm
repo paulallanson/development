@@ -1,9 +1,9 @@
 object PBRSWorkIPfrm: TPBRSWorkIPfrm
   Left = 283
   Top = 87
-  Width = 850
-  Height = 500
   Caption = 'Work In Progress Report'
+  ClientHeight = 461
+  ClientWidth = 834
   Color = clBtnFace
   Constraints.MinHeight = 500
   Constraints.MinWidth = 850
@@ -12,32 +12,30 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 409
-    Width = 842
+    Top = 401
+    Width = 834
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      842
+      834
       41)
     object pnlRightControl: TPanel
-      ParentBackground = False
-      Left = 511
+      Left = 503
       Top = 0
       Width = 331
       Height = 41
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         331
@@ -48,8 +46,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Width = 75
         Height = 25
         Caption = 'Pre&view'
-        TabOrder = 0
-        OnClick = PreviewBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -64,6 +60,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = PreviewBitBtnClick
       end
       object PrintBitBtn: TBitBtn
         Left = 232
@@ -71,8 +69,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Width = 75
         Height = 25
         Caption = '&Print'
-        TabOrder = 1
-        OnClick = PrintBitBtnClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -87,6 +83,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = PrintBitBtnClick
       end
       object btnExcel: TBitBtn
         Left = 56
@@ -95,8 +93,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Height = 25
         Anchors = [akTop, akRight]
         Caption = 'Excel'
-        TabOrder = 2
-        OnClick = btnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -140,6 +136,8 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 2
+        OnClick = btnExcelClick
       end
     end
     object CancelBitBtn: TBitBtn
@@ -149,27 +147,28 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       Height = 25
       Anchors = [akLeft, akBottom]
       Caption = '&Cancel'
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlSelections: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 842
+    Width = 834
     Height = 201
     Align = alTop
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 1
     object pnlDates: TPanel
-      ParentBackground = False
-      Left = 664
+      Left = 656
       Top = 0
       Width = 178
       Height = 201
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       object chkbxPageBreak: TCheckBox
         Left = 17
@@ -181,7 +180,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         TabOrder = 0
       end
       object TotByRadioGroup: TRadioGroup
-        ParentBackground = False
         Left = 17
         Top = 4
         Width = 136
@@ -194,6 +192,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
           'By Rep'
           'By Account Manager'
           'Do not total')
+        ParentBackground = False
         TabOrder = 1
         OnClick = TotByRadioGroupClick
       end
@@ -216,13 +215,13 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 467
+      Left = 459
       Top = 0
       Width = 197
       Height = 201
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 1
       object Label1: TLabel
         Left = 19
@@ -348,13 +347,13 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 0
       Top = 0
-      Width = 467
+      Width = 459
       Height = 201
       Align = alClient
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 2
       object Label3: TLabel
         Left = 8
@@ -378,7 +377,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Caption = 'and finally sort by'
       end
       object rgSupplier: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 1
         Width = 100
@@ -388,11 +386,11 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Items.Strings = (
           'All Suppliers'
           'One Supplier')
+        ParentBackground = False
         TabOrder = 0
         OnClick = rgSupplierClick
       end
       object rgCustomer: TRadioGroup
-        ParentBackground = False
         Left = 8
         Top = 63
         Width = 100
@@ -402,15 +400,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Items.Strings = (
           'All Customers'
           'One Customer')
+        ParentBackground = False
         TabOrder = 1
         OnClick = rgCustomerClick
       end
       object SupplierPanel: TPanel
-        ParentBackground = False
         Left = 113
         Top = 6
         Width = 336
         Height = 49
+        ParentBackground = False
         TabOrder = 2
         object lblSupplier: TLabel
           Left = 8
@@ -444,11 +443,11 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         end
       end
       object CustomerPanel: TPanel
-        ParentBackground = False
         Left = 115
         Top = 68
         Width = 334
         Height = 57
+        ParentBackground = False
         TabOrder = 3
         object lblCustomer: TLabel
           Left = 8
@@ -497,7 +496,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Width = 145
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 4
         OnChange = cbSortChange
         Items.Strings = (
@@ -514,7 +512,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Width = 145
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 5
         OnChange = cbSortChange
         Items.Strings = (
@@ -531,7 +528,6 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
         Width = 145
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
         TabOrder = 6
         OnChange = cbSortChange
         Items.Strings = (
@@ -546,16 +542,16 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 450
-    Width = 842
+    Top = 442
+    Width = 834
     Height = 19
     Panels = <>
   end
   object DBGrid: TDBGrid
     Left = 0
     Top = 201
-    Width = 842
-    Height = 208
+    Width = 834
+    Height = 200
     Align = alClient
     DataSource = dsReport
     ReadOnly = True
@@ -625,11 +621,11 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
       end>
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 250
     Top = 212
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 4
     Visible = False
     object lblExporting: TLabel
@@ -836,9 +832,7 @@ object PBRSWorkIPfrm: TPBRSWorkIPfrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sel_rep'
-        ParamType = ptUnknown
       end>
   end
 end

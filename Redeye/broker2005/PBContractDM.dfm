@@ -1,7 +1,6 @@
 object dtmdlContract: TdtmdlContract
-  Height = 683
-  Width = 1225
-  PixelsPerInch = 120
+  Height = 546
+  Width = 980
   object qryGetContract: TFDQuery
     ConnectionName = 'PB'
     SQL.Strings = (
@@ -99,8 +98,8 @@ object dtmdlContract: TdtmdlContract
       '          ON Sub_Rep.Rep = Contract.Sub_Rep)'
       '          ON Contract_Status.id = Contract.Contract_Status'
       'WHERE Contract.Contract = :Contract')
-    Left = 40
-    Top = 180
+    Left = 32
+    Top = 144
     ParamData = <
       item
         Name = 'Contract'
@@ -108,8 +107,8 @@ object dtmdlContract: TdtmdlContract
   end
   object qryZero: TFDQuery
     ConnectionName = 'PB'
-    Left = 360
-    Top = 20
+    Left = 288
+    Top = 16
   end
   object AddSQL: TFDQuery
     ConnectionName = 'PB'
@@ -137,8 +136,8 @@ object dtmdlContract: TdtmdlContract
       '        :Operator,'
       '        :Narrative'
       'FROM Activity')
-    Left = 360
-    Top = 90
+    Left = 288
+    Top = 72
     ParamData = <
       item
         Name = 'Activity_Type'
@@ -176,8 +175,8 @@ object dtmdlContract: TdtmdlContract
       'Where Activity_Subject = :Event_GUID'
       ' '
       ' ')
-    Left = 360
-    Top = 170
+    Left = 288
+    Top = 136
     ParamData = <
       item
         Name = 'Event_GUID'
@@ -222,8 +221,8 @@ object dtmdlContract: TdtmdlContract
       '  Expiry_Date = :Expiry_Date,'
       '  Contract_Status   = :Contract_Status'
       'WHERE Contract = :Contract')
-    Left = 40
-    Top = 300
+    Left = 32
+    Top = 240
     ParamData = <
       item
         Name = 'Customer'
@@ -333,13 +332,13 @@ object dtmdlContract: TdtmdlContract
     ConnectionName = 'PB'
     SQL.Strings = (
       '')
-    Left = 40
-    Top = 20
+    Left = 32
+    Top = 16
   end
   object dtsContractGrid: TDataSource
     DataSet = qryContractGrid
-    Left = 140
-    Top = 20
+    Left = 112
+    Top = 16
   end
   object qryContractBase: TFDQuery
     ConnectionName = 'PB'
@@ -437,8 +436,8 @@ object dtmdlContract: TdtmdlContract
       'WHERE ((Contract.Customer = :Customer) OR (:Customer = 0))'
       ''
       '')
-    Left = 240
-    Top = 20
+    Left = 192
+    Top = 16
     ParamData = <
       item
         Name = 'Customer'
@@ -486,8 +485,8 @@ object dtmdlContract: TdtmdlContract
         '      ((Customer_Contact.Inactive = '#39'N'#39') or (Customer_Contact.In' +
         'active is NULL))'
       'ORDER BY Name')
-    Left = 645
-    Top = 180
+    Left = 516
+    Top = 144
     ParamData = <
       item
         Name = 'Customer'
@@ -498,8 +497,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsContacts: TDataSource
     DataSet = qryContacts
-    Left = 735
-    Top = 180
+    Left = 588
+    Top = 144
   end
   object qryPeriodType: TFDQuery
     ConnectionName = 'PB'
@@ -507,13 +506,13 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Period_Type'
       'ORDER BY ID')
-    Left = 650
-    Top = 250
+    Left = 520
+    Top = 200
   end
   object dtsPeriodType: TDataSource
     DataSet = qryPeriodType
-    Left = 740
-    Top = 250
+    Left = 592
+    Top = 200
   end
   object qryPaymentTerms: TFDQuery
     ConnectionName = 'PB'
@@ -521,13 +520,13 @@ object dtmdlContract: TdtmdlContract
       'SELECT *'
       'FROM Payment_Terms'
       'ORDER BY Payment_Terms_Description')
-    Left = 650
-    Top = 320
+    Left = 520
+    Top = 256
   end
   object dtsPaymentTerms: TDataSource
     DataSet = qryPaymentTerms
-    Left = 740
-    Top = 320
+    Left = 592
+    Top = 256
   end
   object qryAddContract: TFDQuery
     ConnectionName = 'PB'
@@ -601,8 +600,8 @@ object dtmdlContract: TdtmdlContract
       ':Original_Contract,'
       ':Contract_Status'
       ')')
-    Left = 40
-    Top = 240
+    Left = 32
+    Top = 192
     ParamData = <
       item
         Name = 'Customer'
@@ -716,8 +715,8 @@ object dtmdlContract: TdtmdlContract
       'SELECT max(Contract_Number) as Last_Version'
       'FROM Contract'
       'WHERE Original_Contract = :Original_Contract')
-    Left = 730
-    Top = 20
+    Left = 584
+    Top = 16
     ParamData = <
       item
         Name = 'Original_Contract'
@@ -728,8 +727,8 @@ object dtmdlContract: TdtmdlContract
     SQL.Strings = (
       'select Last_Contract_Number'
       'from Company')
-    Left = 590
-    Top = 20
+    Left = 472
+    Top = 16
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'PB'
@@ -737,8 +736,8 @@ object dtmdlContract: TdtmdlContract
       'update Company'
       'set Last_Contract_Number = :Last_Contract_Number'
       'where Company = 1')
-    Left = 460
-    Top = 20
+    Left = 368
+    Top = 16
     ParamData = <
       item
         Name = 'Last_Contract_Number'
@@ -796,8 +795,8 @@ object dtmdlContract: TdtmdlContract
       'WHERE Contract_Job_Bag.Contract = :Contract'
       'ORDER BY Contract_Job_Bag.Job_Bag DESC'
       '')
-    Left = 360
-    Top = 240
+    Left = 288
+    Top = 192
     ParamData = <
       item
         Name = 'Contract'
@@ -805,8 +804,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsJobBags: TDataSource
     DataSet = qryJobBags
-    Left = 440
-    Top = 240
+    Left = 352
+    Top = 192
   end
   object qryDeleteJobBag: TFDQuery
     ConnectionName = 'PB'
@@ -814,8 +813,8 @@ object dtmdlContract: TdtmdlContract
       'DELETE FROM Contract_Job_Bag'
       'WHERE Contract = :Contract AND'
       '      Job_Bag = :Job_Bag')
-    Left = 360
-    Top = 300
+    Left = 288
+    Top = 240
     ParamData = <
       item
         Name = 'Contract'
@@ -915,8 +914,8 @@ object dtmdlContract: TdtmdlContract
       'WHERE Contract_Purchase_Order.Contract = :Contract'
       'ORDER BY Contract_Purchase_Order.Purchase_Order DESC'
       '')
-    Left = 360
-    Top = 390
+    Left = 288
+    Top = 312
     ParamData = <
       item
         Name = 'Contract'
@@ -924,8 +923,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsPurchaseOrders: TDataSource
     DataSet = qryPurchaseOrders
-    Left = 440
-    Top = 390
+    Left = 352
+    Top = 312
   end
   object qryDeletePO: TFDQuery
     ConnectionName = 'PB'
@@ -933,8 +932,8 @@ object dtmdlContract: TdtmdlContract
       'DELETE FROM Contract_Purchase_Order'
       'WHERE Contract = :Contract AND'
       '      Purchase_Order = :Purchase_Order')
-    Left = 360
-    Top = 450
+    Left = 288
+    Top = 360
     ParamData = <
       item
         Name = 'Contract'
@@ -951,8 +950,8 @@ object dtmdlContract: TdtmdlContract
       'Where Contract_Number = :Contract_Number'
       ' '
       ' ')
-    Left = 360
-    Top = 520
+    Left = 288
+    Top = 416
     ParamData = <
       item
         Name = 'Contract_Number'
@@ -1017,8 +1016,8 @@ object dtmdlContract: TdtmdlContract
       #9'Sales_Invoice.Invoice_Description,'
       '  Sales_Invoice.Invoice_or_Credit'
       'ORDER BY Sales_Invoice.Sales_Invoice_No DESC')
-    Left = 650
-    Top = 400
+    Left = 520
+    Top = 320
     ParamData = <
       item
         Name = 'Contract'
@@ -1068,8 +1067,8 @@ object dtmdlContract: TdtmdlContract
   end
   object dtsSalesInvoices: TDataSource
     DataSet = qrySalesInvoices
-    Left = 740
-    Top = 400
+    Left = 592
+    Top = 320
   end
   object qryAllSalesInvoiceCharges: TFDQuery
     ConnectionName = 'PB'
@@ -1088,8 +1087,8 @@ object dtmdlContract: TdtmdlContract
       '        ON Vat_Code.Vat_Code = Sales_Invoice_Add_charge.Vat_Code'
       'WHERE Sales_Invoice.Sales_Invoice = :Sales_Invoice'
       'GROUP BY Sales_Invoice.Sales_Invoice')
-    Left = 850
-    Top = 400
+    Left = 680
+    Top = 320
     ParamData = <
       item
         Name = 'Sales_Invoice'

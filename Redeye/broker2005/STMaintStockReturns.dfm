@@ -1,9 +1,9 @@
 object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   Left = 256
   Top = 114
-  Width = 870
-  Height = 480
   Caption = 'Maintain Fulfillment Stock Returns'
+  ClientHeight = 441
+  ClientWidth = 854
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,19 +11,17 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   KeyPreview = True
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 427
-    Width = 862
+    Top = 422
+    Width = 854
     Height = 19
     Panels = <
       item
@@ -35,13 +33,13 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 386
-    Width = 862
+    Top = 381
+    Width = 854
     Height = 41
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      862
+      854
       41)
     object Label2: TLabel
       Left = 16
@@ -65,8 +63,9 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
     object btnOK: TBitBtn
       Left = 688
@@ -77,8 +76,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 2
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -97,6 +94,8 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnOKClick
     end
     object PrintBitBtn: TBitBtn
       Left = 566
@@ -111,11 +110,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = True
-      TabOrder = 3
-      OnClick = PrintBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -130,6 +124,11 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
         33333337FFFF7733333333300000033333333337777773333333}
       NumGlyphs = 2
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      OnClick = PrintBitBtnClick
     end
     object btnExcel: TBitBtn
       Left = 472
@@ -139,8 +138,6 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Anchors = [akRight, akBottom]
       Caption = 'Excel'
       Enabled = False
-      TabOrder = 4
-      OnClick = btnExcelClick
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
         0800000000000001000000000000000000000001000000000000000000000000
@@ -184,12 +181,14 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
         00000000000000000000A4070707000707070707070700070707A40707070007
         07000700070700070707A4070707000707000000070700070707A40707070007
         07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+      TabOrder = 4
+      OnClick = btnExcelClick
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 862
+    Width = 854
     Height = 41
     Align = alTop
     TabOrder = 2
@@ -229,16 +228,16 @@ object STMaintStockReturnsFrm: TSTMaintStockReturnsFrm
       Top = 8
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 1
     end
   end
   object sgdetails: TStringGrid
     Left = 0
     Top = 41
-    Width = 862
-    Height = 345
+    Width = 854
+    Height = 340
     Align = alClient
     ColCount = 6
     DefaultRowHeight = 20

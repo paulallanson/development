@@ -30,7 +30,6 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     BevelOuter = bvNone
     Color = clSilver
     TabOrder = 0
-    ExplicitWidth = 862
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -70,16 +69,15 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Control = ToolBar1
         ImageIndex = -1
         MinHeight = 41
-        Width = 858
+        Width = 848
       end>
-    ExplicitWidth = 862
     object ToolBar1: TToolBar
-      Left = 9
+      Left = 11
       Top = 0
-      Width = 845
+      Width = 839
       Height = 41
       ButtonHeight = 36
-      ButtonWidth = 62
+      ButtonWidth = 56
       Caption = 'ToolBar1'
       Images = imglstButtons
       ShowCaptions = True
@@ -92,7 +90,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnAddClick
       end
       object btnChange: TToolButton
-        Left = 62
+        Left = 56
         Top = 0
         Caption = '  &Change  '
         Enabled = False
@@ -100,7 +98,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnChangeClick
       end
       object btnCopy: TToolButton
-        Left = 124
+        Left = 112
         Top = 0
         Caption = 'C&opy'
         Enabled = False
@@ -108,7 +106,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnCopyClick
       end
       object btnRequote: TToolButton
-        Left = 186
+        Left = 168
         Top = 0
         Caption = 'Re-&Quote'
         Enabled = False
@@ -116,7 +114,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnRequoteClick
       end
       object btnDelete: TToolButton
-        Left = 248
+        Left = 224
         Top = 0
         Caption = '&Delete'
         Enabled = False
@@ -124,7 +122,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnDeleteClick
       end
       object btnPrint: TToolButton
-        Left = 310
+        Left = 280
         Top = 0
         Caption = '&Print'
         Enabled = False
@@ -132,7 +130,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnPrintClick
       end
       object ToolButton1: TToolButton
-        Left = 372
+        Left = 336
         Top = 0
         Width = 8
         Caption = 'ToolButton1'
@@ -140,7 +138,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnConvert: TToolButton
-        Left = 380
+        Left = 344
         Top = 0
         Caption = 'Con&vert'
         Enabled = False
@@ -148,7 +146,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         OnClick = btnConvertClick
       end
       object ToolButton3: TToolButton
-        Left = 442
+        Left = 400
         Top = 0
         Width = 8
         Caption = 'ToolButton3'
@@ -156,7 +154,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
         Style = tbsSeparator
       end
       object btnReports: TToolButton
-        Left = 450
+        Left = 408
         Top = 0
         Caption = 'Reports'
         ImageIndex = 4
@@ -298,8 +296,6 @@ object frmPBLUQuotes: TfrmPBLUQuotes
     Height = 41
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 389
-    ExplicitWidth = 862
     object Label1: TLabel
       Left = 8
       Top = 14
@@ -316,7 +312,7 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       OnChange = edtSearchChange
     end
     object Panel2: TPanel
-      Left = 588
+      Left = 580
       Top = 1
       Width = 273
       Height = 39
@@ -378,8 +374,6 @@ object frmPBLUQuotes: TfrmPBLUQuotes
       item
         Width = 50
       end>
-    ExplicitTop = 430
-    ExplicitWidth = 862
   end
   object imglstButtons: TImageList
     Left = 240

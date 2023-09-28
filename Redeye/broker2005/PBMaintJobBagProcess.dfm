@@ -11,10 +11,8 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlFoot: TPanel
     Left = 0
@@ -44,8 +42,6 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       Caption = 'OK'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = OKBitBtnClick
       Glyph.Data = {
         CE070000424DCE07000000000000360000002800000024000000120000000100
         1800000000009807000000000000000000000000000000000000007F7F007F7F
@@ -111,14 +107,17 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
         7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
         007F7F007F7F007F7F007F7F007F7F007F7F}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = OKBitBtnClick
     end
     object CancelBitBtn: TBitBtn
       Left = 419
       Top = 15
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlProcess: TPanel
@@ -271,7 +270,6 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
       Width = 145
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 0
       OnClick = CheckOK
       Items.Strings = (
@@ -348,14 +346,10 @@ object PBMaintJobBagProcessFrm: TPBMaintJobBagProcessFrm
     Top = 193
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Paper_Size'
-        ParamType = ptUnknown
       end>
   end
   object dtsWCGroups: TDataSource

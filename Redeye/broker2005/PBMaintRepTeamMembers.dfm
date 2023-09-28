@@ -11,10 +11,8 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 328
@@ -35,17 +33,19 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Top = 8
       Width = 75
       Height = 25
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object btnCancel: TBitBtn
       Left = 241
       Top = 8
       Width = 75
       Height = 25
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel1: TPanel
@@ -162,8 +162,6 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Height = 25
       Caption = '&Add'
       Enabled = False
-      TabOrder = 4
-      OnClick = btnAddRepClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -178,6 +176,8 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
         3333333333333333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 4
+      OnClick = btnAddRepClick
     end
     object btnRemoveRep: TBitBtn
       Left = 191
@@ -186,8 +186,6 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
       Height = 25
       Caption = '&Remove'
       Enabled = False
-      TabOrder = 5
-      OnClick = btnRemoveRepClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -202,6 +200,8 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
         3333333333773333333333333333333333333333333333333333333333333333
         3333333333333333333333333333333333333333333333333333}
       NumGlyphs = 2
+      TabOrder = 5
+      OnClick = btnRemoveRepClick
     end
   end
   object qryReps: TFDQuery
@@ -215,9 +215,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep_Team'
-        ParamType = ptUnknown
       end>
   end
   object qryDeleteReps: TFDQuery
@@ -229,9 +227,7 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep_Team'
-        ParamType = ptUnknown
       end>
   end
   object qryAddReps: TFDQuery
@@ -250,14 +246,10 @@ object frmPBMaintRepTeamMembers: TfrmPBMaintRepTeamMembers
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep_Team'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object qryNonReps: TFDQuery

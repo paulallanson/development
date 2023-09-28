@@ -15,8 +15,8 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
   object clReport: TQuickRep
     Left = 8
     Top = 8
-    Width = 992
-    Height = 1403
+    Width = 794
+    Height = 1123
     ShowingPreview = False
     BeforePrint = clReportBeforePrint
     DataSet = STPartSDM.PartSuppSQL
@@ -75,28 +75,28 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
     PreviewLeft = 0
     PreviewTop = 0
     object QRSubDetail1: TQRSubDetail
-      Left = 47
-      Top = 181
-      Width = 898
-      Height = 23
+      Left = 38
+      Top = 145
+      Width = 718
+      Height = 18
       AlignToBottom = False
       BeforePrint = QRSubDetail1BeforePrint
       TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
-        48.683333333333330000
-        1900.766666666667000000)
+        47.625000000000000000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       Master = clReport
       PrintBefore = False
       PrintIfEmpty = True
       object PartLbl: TQRLabel
-        Left = 20
+        Left = 16
         Top = 0
-        Width = 149
-        Height = 21
+        Width = 119
+        Height = 17
         Size.Values = (
           44.979166666666700000
           42.333333333333300000
@@ -112,7 +112,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -123,10 +123,10 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object PartDescLbl: TQRLabel
-        Left = 180
+        Left = 144
         Top = 0
-        Width = 311
-        Height = 21
+        Width = 249
+        Height = 17
         Size.Values = (
           44.979166666666700000
           381.000000000000000000
@@ -142,7 +142,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -153,15 +153,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object PackSizeLbl: TQRLabel
-        Left = 530
+        Left = 423
         Top = 0
-        Width = 91
-        Height = 21
+        Width = 74
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1121.833333333333000000
+          44.979166666666670000
+          1119.187500000000000000
           0.000000000000000000
-          192.616666666666700000)
+          195.791666666666700000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -171,7 +171,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -182,10 +182,10 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object SuppNameQRLabel: TQRLabel
-        Left = 640
+        Left = 512
         Top = 0
-        Width = 249
-        Height = 21
+        Width = 199
+        Height = 17
         Size.Values = (
           44.979166666666700000
           1354.666666666670000000
@@ -201,7 +201,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -213,10 +213,10 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
       end
     end
     object QRBand3: TQRBand
-      Left = 47
-      Top = 47
-      Width = 898
-      Height = 134
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 107
       Frame.DrawBottom = True
       AlignToBottom = False
       TransparentBand = False
@@ -229,21 +229,21 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
       ForceNewPage = False
       ParentFont = False
       Size.Values = (
-        283.633333333333300000
-        1900.766666666667000000)
+        283.104166666666700000
+        1899.708333333333000000)
       PreCaluculateBandHeight = False
       KeepOnOnePage = False
       BandType = rbPageHeader
       object QRLabel2: TQRLabel
-        Left = 20
-        Top = 108
-        Width = 34
-        Height = 21
+        Left = 16
+        Top = 86
+        Width = 27
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           42.333333333333330000
-          228.600000000000000000
-          71.966666666666670000)
+          227.541666666666700000
+          71.437500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -253,7 +253,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -264,15 +264,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object Description: TQRLabel
-        Left = 180
-        Top = 108
-        Width = 91
-        Height = 21
+        Left = 144
+        Top = 86
+        Width = 72
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           381.000000000000000000
-          228.600000000000000000
-          192.616666666666700000)
+          227.541666666666700000
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -282,7 +282,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -293,15 +293,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object QRLabel3: TQRLabel
-        Left = 539
-        Top = 108
-        Width = 77
-        Height = 21
+        Left = 431
+        Top = 86
+        Width = 64
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1140.883333333333000000
-          228.600000000000000000
-          162.983333333333300000)
+          44.979166666666670000
+          1140.354166666667000000
+          227.541666666666700000
+          169.333333333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -311,7 +311,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -322,15 +322,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object SupplierLbl: TQRLabel
-        Left = 640
-        Top = 108
-        Width = 66
-        Height = 21
+        Left = 512
+        Top = 86
+        Width = 55
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           1354.666666666667000000
-          228.600000000000000000
-          139.700000000000000000)
+          227.541666666666700000
+          145.520833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -340,7 +340,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
@@ -351,15 +351,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object qrlblTitle: TQRLabel
-        Left = 190
-        Top = 10
-        Width = 448
-        Height = 33
+        Left = 160
+        Top = 8
+        Width = 342
+        Height = 26
         Size.Values = (
-          69.850000000000000000
-          402.166666666666700000
+          68.791666666666670000
+          423.333333333333300000
           21.166666666666670000
-          948.266666666666700000)
+          904.875000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -369,7 +369,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -27
+        Font.Height = -21
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -380,15 +380,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 16
       end
       object SelectionLbl: TQRLabel
-        Left = 365
-        Top = 40
-        Width = 89
-        Height = 21
+        Left = 292
+        Top = 32
+        Width = 72
+        Height = 17
         Size.Values = (
-          44.450000000000000000
+          44.979166666666670000
           772.583333333333300000
           84.666666666666670000
-          188.383333333333300000)
+          190.500000000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -398,7 +398,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -409,15 +409,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object PartRangeLbl: TQRLabel
-        Left = 361
-        Top = 63
-        Width = 99
-        Height = 21
+        Left = 289
+        Top = 50
+        Width = 79
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          764.116666666666700000
-          133.350000000000000000
-          209.550000000000000000)
+          44.979166666666670000
+          764.645833333333300000
+          132.291666666666700000
+          209.020833333333300000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -427,7 +427,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -17
+        Font.Height = -13
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
@@ -438,15 +438,15 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         FontSize = 10
       end
       object QRSysData1: TQRSysData
-        Left = 809
-        Top = 10
-        Width = 84
-        Height = 21
+        Left = 645
+        Top = 8
+        Width = 69
+        Height = 17
         Size.Values = (
-          44.450000000000000000
-          1712.383333333333000000
+          44.979166666666670000
+          1706.562500000000000000
           21.166666666666670000
-          177.800000000000000000)
+          182.562500000000000000)
         XLColumn = 0
         XLNumFormat = nfGeneral
         ActiveInPreview = False
@@ -456,7 +456,7 @@ object STPartSuppRepFrm: TSTPartSuppRepFrm
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -11
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False

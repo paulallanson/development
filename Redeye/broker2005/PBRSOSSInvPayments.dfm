@@ -2,8 +2,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   Left = 46
   Top = 40
   Caption = 'Sales Invoice Outstanding Payments'
-  ClientHeight = 403
-  ClientWidth = 692
+  ClientHeight = 411
+  ClientWidth = 694
   Color = clBtnFace
   Constraints.MinHeight = 450
   Constraints.MinWidth = 710
@@ -19,11 +19,10 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 692
+    Width = 694
     Height = 121
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 702
     object Label3: TLabel
       Left = 8
       Top = 72
@@ -221,13 +220,11 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object Panel2: TPanel
     Left = 0
-    Top = 347
-    Width = 692
+    Top = 355
+    Width = 694
     Height = 37
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 360
-    ExplicitWidth = 702
     object Panel3: TPanel
       Left = 1
       Top = 1
@@ -289,14 +286,13 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       end
     end
     object Panel4: TPanel
-      Left = 406
+      Left = 408
       Top = 1
       Width = 285
       Height = 35
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 416
       DesignSize = (
         285
         35)
@@ -339,8 +335,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   object dbgDetails: TDBGrid
     Left = 0
     Top = 121
-    Width = 692
-    Height = 226
+    Width = 694
+    Height = 234
     Align = alClient
     DataSource = dtsReport
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -419,8 +415,8 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 384
-    Width = 692
+    Top = 392
+    Width = 694
     Height = 19
     Panels = <
       item
@@ -432,8 +428,6 @@ object PBRSOSSInvPaymentsFrm: TPBRSOSSInvPaymentsFrm
       item
         Width = 50
       end>
-    ExplicitTop = 397
-    ExplicitWidth = 702
   end
   object qryReport: TFDQuery
     ConnectionName = 'PB'

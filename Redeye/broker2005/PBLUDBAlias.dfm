@@ -11,18 +11,17 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object CloseBitBtn: TBitBtn
     Left = 246
     Top = 232
     Width = 75
     Height = 25
-    TabOrder = 0
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 0
   end
   object FuncGrpBox: TGroupBox
     Left = 240
@@ -37,8 +36,6 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
       Width = 75
       Height = 25
       Caption = 'Add'
-      TabOrder = 0
-      OnClick = AddBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -53,6 +50,8 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
         B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
         3BB33773333773333773B333333B3333333B7333333733333337}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = AddBitBtnClick
     end
     object ChgBitBtn: TBitBtn
       Left = 6
@@ -60,8 +59,6 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
       Width = 75
       Height = 25
       Caption = 'Change'
-      TabOrder = 1
-      OnClick = ChgBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -76,6 +73,8 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
         0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
         00333377737FFFFF773333303300000003333337337777777333}
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = ChgBitBtnClick
     end
     object DelBitBtn: TBitBtn
       Left = 6
@@ -83,8 +82,6 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
       Width = 75
       Height = 25
       Caption = 'Delete'
-      TabOrder = 2
-      OnClick = DelBitBtnClick
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000120B0000120B00001000000000000000000000000000
@@ -99,6 +96,8 @@ object PBLUDBAliasFrm: TPBLUDBAliasFrm
         0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
         3333333337FFF7F3333333333000003333333333377777333333}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = DelBitBtnClick
     end
   end
   object lstbxAliasList: TListBox

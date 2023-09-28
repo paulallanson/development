@@ -180,8 +180,6 @@ object PBMaintProductRefFrm: TPBMaintProductRefFrm
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 191
-    ExplicitWidth = 514
     object DelLabel: TLabel
       Left = 128
       Top = 11

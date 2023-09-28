@@ -1,29 +1,23 @@
 object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
   Left = 15
   Top = 0
-  Width = 1265
-  Height = 734
   Caption = 'Weekly Production Report'
+  ClientHeight = 695
+  ClientWidth = 1249
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 16
     Top = 24
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = qrpDetailsBeforePrint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -42,6 +36,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -55,32 +50,36 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object qrbndPageHeader: TQRBand
       Left = 38
       Top = 38
       Width = 1047
       Height = 60
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndPageHeaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -92,26 +91,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         158.750000000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object qrlblTitle: TQRLabel
         Left = 402
         Top = 8
         Width = 242
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
+          60.854166666666670000
           1063.625000000000000000
           21.166666666666670000
           640.291666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Weekly Production Report'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -121,7 +118,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
@@ -129,20 +128,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 32
         Width = 141
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1198.562500000000000000
-          84.666666666666680000
+          84.666666666666670000
           373.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Report Criteria - Dated From: '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -152,7 +147,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData1: TQRSysData
@@ -160,19 +157,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 29
         Width = 69
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2574.395833333333000000
           76.729166666666670000
           182.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsPageNumber
         Font.Charset = DEFAULT_CHARSET
@@ -183,6 +177,8 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         ParentFont = False
         Text = 'Page: '
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRSysData2: TQRSysData
@@ -190,19 +186,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 8
         Width = 56
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           2608.791666666667000000
           21.166666666666670000
           148.166666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
         Color = clWhite
         Data = qrsDateTime
         Font.Charset = DEFAULT_CHARSET
@@ -211,7 +204,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblSheetNo: TQRLabel
@@ -219,20 +215,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 8
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           21.166666666666670000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Sheet No'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -242,7 +234,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel5: TQRLabel
@@ -250,20 +244,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 40
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           203.729166666666700000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -273,7 +263,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel6: TQRLabel
@@ -281,20 +273,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 47
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           203.729166666666700000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -304,7 +292,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel18: TQRLabel
@@ -312,20 +302,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 28
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           952.500000000000000000
           203.729166666666700000
           74.083333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Basic'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -335,7 +321,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel19: TQRLabel
@@ -343,20 +331,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 18
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1079.500000000000000000
           203.729166666666700000
           47.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'O/T'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -366,7 +350,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel20: TQRLabel
@@ -374,20 +360,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 24
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1166.812500000000000000
           203.729166666666700000
           63.500000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -397,7 +379,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel21: TQRLabel
@@ -405,20 +389,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 28
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1333.500000000000000000
           203.729166666666700000
           74.083333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Basic'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -428,7 +408,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel22: TQRLabel
@@ -436,20 +418,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 18
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1460.500000000000000000
           203.729166666666700000
           47.625000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'O/T'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -459,7 +437,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel23: TQRLabel
@@ -467,20 +447,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 29
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1566.333333333333000000
           203.729166666666700000
           76.729166666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Spent'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -490,7 +466,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel24: TQRLabel
@@ -498,20 +476,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 36
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1778.000000000000000000
           203.729166666666700000
           95.250000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Charge'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -521,7 +495,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel25: TQRLabel
@@ -529,20 +505,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 35
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1926.166666666667000000
           203.729166666666700000
           92.604166666666680000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Inoiced'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -552,7 +524,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel26: TQRLabel
@@ -560,20 +534,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 77
         Width = 65
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2074.333333333333000000
           203.729166666666700000
           171.979166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Over (Under)'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -583,7 +553,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel27: TQRLabel
@@ -591,20 +563,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 63
         Width = 51
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1037.166666666667000000
           166.687500000000000000
           134.937500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'This Week'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -614,7 +582,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel28: TQRLabel
@@ -622,20 +592,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 63
         Width = 38
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1423.458333333333000000
           166.687500000000000000
           100.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'To Date'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -645,7 +611,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel29: TQRLabel
@@ -653,20 +621,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 63
         Width = 67
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1926.166666666667000000
           166.687500000000000000
           177.270833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'From Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -676,7 +640,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -685,14 +651,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 98
       Width = 1047
       Height = 40
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -704,26 +666,25 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         105.833333333333300000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrbndPageHeader
+      PrintOrder = cboAfterParent
       object QRLabel12: TQRLabel
         Left = 10
         Top = 20
         Width = 40
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           52.916666666666670000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -733,7 +694,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel13: TQRLabel
@@ -741,20 +704,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 20
         Width = 47
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           52.916666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -764,7 +723,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -773,15 +734,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 138
       Width = 1047
       Height = 40
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage2BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -793,26 +750,25 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         105.833333333333300000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrbndHeaderPage1
+      PrintOrder = cboAfterParent
       object QRLabel1: TQRLabel
         Left = 10
         Top = 20
         Width = 40
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           52.916666666666670000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -822,7 +778,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel2: TQRLabel
@@ -830,20 +788,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 20
         Width = 47
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           52.916666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -853,7 +807,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -862,15 +818,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 178
       Width = 1047
       Height = 40
-      Frame.Color = clBlack
-      Frame.DrawTop = False
       Frame.DrawBottom = True
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndHeaderPage3BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -882,26 +834,25 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         105.833333333333300000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = qrbndHeaderPage2
+      PrintOrder = cboAfterParent
       object QRLabel3: TQRLabel
         Left = 10
         Top = 20
         Width = 40
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           52.916666666666670000
           105.833333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Job Bag'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -911,7 +862,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel4: TQRLabel
@@ -919,20 +872,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 20
         Width = 47
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           52.916666666666670000
           124.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -942,7 +891,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -951,19 +902,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 218
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = qrSubDetailPage1
       ReprintOnNewPage = False
@@ -973,15 +921,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 233
       Width = 1047
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbndJobsPage1AfterPrint
       AlignToBottom = False
       BeforePrint = qrbndJobsPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -993,26 +936,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         55.562500000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText1: TQRDBText
         Left = 10
         Top = 2
         Width = 68
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           5.291666666666667000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Activity_Code'
@@ -1023,7 +964,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText2: TQRDBText
@@ -1031,20 +976,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 80
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           5.291666666666667000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1055,7 +996,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1064,19 +1009,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 228
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrSubDetailPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       FooterBand = qrbndTotalsPage1
@@ -1088,14 +1030,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 254
       Width = 1047
       Height = 65
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1107,26 +1045,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         171.979166666666700000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel7: TQRLabel
         Left = 10
         Top = 45
         Width = 77
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           119.062500000000000000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'TOTAL HOURS'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1136,7 +1072,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel8: TQRLabel
@@ -1144,20 +1082,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 25
         Width = 52
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           66.145833333333340000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Overtime'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1167,7 +1101,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel9: TQRLabel
@@ -1175,20 +1111,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 5
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           13.229166666666670000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Grand Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1198,7 +1130,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1207,19 +1141,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 319
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpHeaderPage2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerPage2: TQRGroup
@@ -1227,19 +1158,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 324
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = qrSubDetailPage2
       ReprintOnNewPage = False
@@ -1249,19 +1177,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 334
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrSubDetailPage2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       FooterBand = qrbndTotalsPage2
@@ -1274,16 +1199,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 339
       Width = 1047
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrbndJobsPage2AfterPrint
       AlignToBottom = False
       BeforePrint = qrbndJobsPage2BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1295,26 +1215,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         55.562500000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText3: TQRDBText
         Left = 10
         Top = 2
         Width = 68
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           5.291666666666667000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Activity_Code'
@@ -1325,7 +1243,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText4: TQRDBText
@@ -1333,20 +1255,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 80
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           5.291666666666667000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1357,7 +1275,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1366,15 +1288,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 360
       Width = 1047
       Height = 65
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage2BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1386,26 +1304,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         171.979166666666700000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel10: TQRLabel
         Left = 10
         Top = 5
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           13.229166666666670000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Grand Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1415,7 +1331,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel11: TQRLabel
@@ -1423,20 +1341,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 25
         Width = 52
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           66.145833333333340000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Overtime'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1446,7 +1360,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel14: TQRLabel
@@ -1454,20 +1370,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 45
         Width = 77
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           119.062500000000000000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'TOTAL HOURS'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1477,7 +1389,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1486,19 +1400,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 425
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpHeaderPage3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerPage3: TQRGroup
@@ -1506,19 +1417,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 430
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = qrSubDetailPage3
       ReprintOnNewPage = False
@@ -1528,19 +1436,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 440
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrSubDetailPage3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       FooterBand = qrbndTotalsPage3
@@ -1553,16 +1458,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 445
       Width = 1047
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrBndJobsPage3AfterPrint
       AlignToBottom = False
       BeforePrint = qrBndJobsPage3BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1574,26 +1474,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         55.562500000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText5: TQRDBText
         Left = 10
         Top = 2
         Width = 68
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           5.291666666666667000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Activity_Code'
@@ -1604,7 +1502,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText6: TQRDBText
@@ -1612,20 +1514,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 80
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           5.291666666666667000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1636,7 +1534,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1645,15 +1547,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 466
       Width = 1047
       Height = 65
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndTotalsPage3BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1665,26 +1563,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         171.979166666666700000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel15: TQRLabel
         Left = 10
         Top = 5
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           13.229166666666670000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Grand Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1694,7 +1590,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel16: TQRLabel
@@ -1702,20 +1600,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 25
         Width = 52
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           66.145833333333340000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Overtime'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1725,7 +1619,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel17: TQRLabel
@@ -1733,20 +1629,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 45
         Width = 77
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           119.062500000000000000
           203.729166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'TOTAL HOURS'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1756,7 +1648,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -1765,19 +1659,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 531
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrgrpHeaderFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object qrGrpCustomerFinal: TQRGroup
@@ -1785,19 +1676,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 536
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Customer_Name'
       Master = qrSubDetailFinal
       ReprintOnNewPage = False
@@ -1807,19 +1695,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 546
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrSubDetailFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = qrpDetails
       DataSet = qryReport
       FooterBand = qrbndTotalsFinal
@@ -1832,15 +1717,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 551
       Width = 1047
       Height = 21
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = qrBndJobsFinalAfterPrint
       AlignToBottom = False
       BeforePrint = qrBndJobsFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1852,26 +1732,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         55.562500000000000000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText7: TQRDBText
         Left = 10
         Top = 2
         Width = 68
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           5.291666666666667000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Activity_Code'
@@ -1882,7 +1760,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRDBText8: TQRDBText
@@ -1890,20 +1772,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 80
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           232.833333333333400000
           5.291666666666667000
           211.666666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = qryReport
         DataField = 'Customer_Name'
@@ -1914,7 +1792,11 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblBasicTW: TQRLabel
@@ -1922,20 +1804,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           949.854166666666700000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1945,7 +1823,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOvertimeTW: TQRLabel
@@ -1953,20 +1833,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1068.916666666667000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -1976,7 +1852,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalTW: TQRLabel
@@ -1984,20 +1862,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1177.395833333333000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2007,7 +1881,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblTotalTD: TQRLabel
@@ -2015,20 +1891,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1587.500000000000000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2038,7 +1910,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblChargeable: TQRLabel
@@ -2046,20 +1920,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1817.687500000000000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2069,7 +1939,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblInvoiced: TQRLabel
@@ -2077,20 +1949,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1979.083333333333000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2100,7 +1968,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblDifference: TQRLabel
@@ -2108,20 +1978,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2151.062500000000000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2131,7 +1997,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblOvertimeTD: TQRLabel
@@ -2139,20 +2007,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1481.666666666667000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2162,7 +2026,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblBasicTD: TQRLabel
@@ -2170,20 +2036,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 2
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1359.958333333333000000
           5.291666666666667000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2193,7 +2055,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -2202,14 +2066,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 572
       Width = 1047
       Height = 26
-      Frame.Color = clBlack
       Frame.DrawTop = True
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrbndTotalsFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -2221,26 +2081,24 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Size.Values = (
         68.791666666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object qrlblReportBasicTW: TQRLabel
         Left = 359
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           949.854166666666700000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2250,7 +2108,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportOvertimeTW: TQRLabel
@@ -2258,20 +2118,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1068.916666666667000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2281,7 +2137,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotalTW: TQRLabel
@@ -2289,20 +2147,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1177.395833333333000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2312,7 +2166,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportBasicTD: TQRLabel
@@ -2320,20 +2176,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1359.958333333333000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2343,7 +2195,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportOvertimeTD: TQRLabel
@@ -2351,20 +2205,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1479.020833333333000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2374,7 +2224,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotalTD: TQRLabel
@@ -2382,20 +2234,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1587.500000000000000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2405,7 +2253,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotalChargeable: TQRLabel
@@ -2413,20 +2263,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1817.687500000000000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2436,7 +2282,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotalInvoiced: TQRLabel
@@ -2444,20 +2292,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           1979.083333333333000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2467,7 +2311,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object qrlblReportTotalDifference: TQRLabel
@@ -2475,20 +2321,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 22
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           2151.062500000000000000
           15.875000000000000000
           58.208333333333340000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = '0.00'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2498,7 +2340,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLabel40: TQRLabel
@@ -2506,20 +2350,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Top = 6
         Width = 64
         Height = 15
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           39.687500000000000000
           26.458333333333330000
           15.875000000000000000
           169.333333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Grand Total'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -2529,7 +2369,9 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -2538,19 +2380,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 223
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
       FooterBand = qrbndJobsPage1
       Master = qrSubDetailPage1
@@ -2561,19 +2400,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 541
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerFinalBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
       FooterBand = qrBndJobsFinal
       Master = qrSubDetailFinal
@@ -2584,19 +2420,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 329
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
       FooterBand = qrbndJobsPage2
       Master = qrSubDetailPage2
@@ -2607,19 +2440,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
       Top = 435
       Width = 1047
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = qrGrpCustomerPage3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2770.187500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'qryReport.Activity_Code'
       FooterBand = qrBndJobsPage3
       Master = qrSubDetailPage3
@@ -2643,14 +2473,10 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryOldDummy: TFDQuery
@@ -2764,19 +2590,13 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Top = 84
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryWCOperators: TFDQuery
@@ -2801,24 +2621,16 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Top = 29
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateFrom'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'DateTo'
-        ParamType = ptUnknown
       end>
   end
   object qrygetJobBagCharges: TFDQuery
@@ -2847,19 +2659,13 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Top = 86
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Process_Group'
-        ParamType = ptUnknown
       end>
   end
   object qryOldGetJobBagCharges: TFDQuery
@@ -2902,9 +2708,7 @@ object PBRPProdWeeklyFrm: TPBRPProdWeeklyFrm
     Top = 30
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
 end

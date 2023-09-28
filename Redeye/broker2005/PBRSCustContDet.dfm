@@ -1,9 +1,9 @@
 object PBRSCustContDetFrm: TPBRSCustContDetFrm
   Left = 42
   Top = 88
-  Width = 992
-  Height = 532
   Caption = 'Customer Contact Details'
+  ClientHeight = 493
+  ClientWidth = 976
   Color = clBtnFace
   Constraints.MinHeight = 300
   Constraints.MinWidth = 640
@@ -12,22 +12,20 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object pnlControls: TPanel
-    ParentBackground = False
     Left = 0
     Top = 0
-    Width = 984
+    Width = 976
     Height = 117
     Align = alTop
+    ParentBackground = False
     TabOrder = 0
     DesignSize = (
-      984
+      976
       117)
     object Label3: TLabel
       Left = 8
@@ -90,11 +88,11 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       ParentFont = False
     end
     object pnlStatusSelect: TPanel
-      ParentBackground = False
       Left = 2
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 0
       object Label1: TLabel
         Left = 8
@@ -114,7 +112,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
@@ -126,7 +123,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 1
       OnChange = cbSortChange
       Items.Strings = (
@@ -141,7 +137,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 2
       OnChange = cbSortChange
       Items.Strings = (
@@ -156,7 +151,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 3
       OnChange = cbSortChange
       Items.Strings = (
@@ -166,11 +160,11 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         'Customer Type')
     end
     object Panel2: TPanel
-      ParentBackground = False
       Left = 149
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 4
       object Label2: TLabel
         Left = 8
@@ -190,18 +184,17 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxContStatusChange
       end
     end
     object Panel3: TPanel
-      ParentBackground = False
       Left = 296
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 5
       object Label7: TLabel
         Left = 8
@@ -221,14 +214,12 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
       end
     end
     object RadioGroup1: TRadioGroup
-      ParentBackground = False
       Left = 869
       Top = 12
       Width = 108
@@ -241,6 +232,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         'Show Rep'
         'Show Address'
         'Rep && Address')
+      ParentBackground = False
       TabOrder = 6
       OnClick = RadioGroup1Click
     end
@@ -286,11 +278,11 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       TabOrder = 10
     end
     object Panel4: TPanel
-      ParentBackground = False
       Left = 443
       Top = 8
       Width = 147
       Height = 57
+      ParentBackground = False
       TabOrder = 11
       object lblCustomerType: TLabel
         Left = 8
@@ -310,7 +302,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Top = 24
         Width = 133
         Height = 21
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = RepComboBoxChange
@@ -322,7 +313,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Width = 135
       Height = 21
       Style = csDropDownList
-      ItemHeight = 13
       TabOrder = 12
       OnChange = cbSortChange
       Items.Strings = (
@@ -332,11 +322,11 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         'Customer Type')
     end
     object Panel5: TPanel
-      ParentBackground = False
       Left = 590
       Top = 8
       Width = 115
       Height = 57
+      ParentBackground = False
       TabOrder = 13
       object Label6: TLabel
         Left = 8
@@ -357,7 +347,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Width = 97
         Height = 21
         Enabled = False
-        ItemHeight = 13
         TabOrder = 0
         Text = 'Show All'
         OnChange = cmbbxCustStatusChange
@@ -369,24 +358,24 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     end
   end
   object pnlPrintControl: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 445
-    Width = 984
+    Top = 433
+    Width = 976
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      984
+      976
       41)
     object Panel1: TPanel
-      ParentBackground = False
-      Left = 681
+      Left = 673
       Top = 1
       Width = 302
       Height = 39
       Align = alRight
       BevelOuter = bvNone
+      ParentBackground = False
       TabOrder = 0
       DesignSize = (
         302
@@ -398,8 +387,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Preview'
-        TabOrder = 0
-        OnClick = btnPreviewClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000130B0000130B00001000000000000000000000000000
@@ -414,6 +401,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
           333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
           333333773FF77333333333370007333333333333777333333333}
         NumGlyphs = 2
+        TabOrder = 0
+        OnClick = btnPreviewClick
       end
       object btnPrint: TBitBtn
         Left = 214
@@ -422,8 +411,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Height = 25
         Anchors = [akRight, akBottom]
         Caption = 'Print'
-        TabOrder = 1
-        OnClick = btnPrintClick
         Glyph.Data = {
           76010000424D7601000000000000760000002800000020000000100000000100
           04000000000000010000120B0000120B00001000000000000000000000000000
@@ -438,6 +425,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
           33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
           33333337FFFF7733333333300000033333333337777773333333}
         NumGlyphs = 2
+        TabOrder = 1
+        OnClick = btnPrintClick
       end
       object btnExcel: TBitBtn
         Left = 37
@@ -446,8 +435,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
         Height = 25
         Anchors = [akTop, akRight]
         Caption = 'Excel'
-        TabOrder = 2
-        OnClick = btnExcelClick
         Glyph.Data = {
           36050000424D3605000000000000360400002800000010000000100000000100
           0800000000000001000000000000000000000001000000000000000000000000
@@ -491,6 +478,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
           00000000000000000000A4070707000707070707070700070707A40707070007
           07000700070700070707A4070707000707000000070700070707A40707070007
           07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+        TabOrder = 2
+        OnClick = btnExcelClick
       end
     end
     object btnCancel: TBitBtn
@@ -499,14 +488,15 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
       Width = 75
       Height = 25
       Anchors = [akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 486
-    Width = 984
+    Top = 474
+    Width = 976
     Height = 19
     Panels = <
       item
@@ -522,8 +512,8 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
   object dbgrdContStatus: TDBGrid
     Left = 0
     Top = 117
-    Width = 984
-    Height = 328
+    Width = 976
+    Height = 316
     Align = alClient
     DataSource = dtsrcCurrentContStatus
     TabOrder = 3
@@ -633,11 +623,11 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Visible = False
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 268
     Top = 252
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object lblExporting: TLabel
@@ -788,19 +778,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Year1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year3'
-        ParamType = ptUnknown
       end>
     object qryCurrentContStatusContact_Name: TStringField
       FieldName = 'Contact_Name'
@@ -943,7 +927,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 248
   end
   object qryContStatus: TFDQuery
-    AutoRefresh = True
     ConnectionName = 'PB'
     SQL.Strings = (
       'select Contact_Status, Contact_status.Contact_Status_descr'
@@ -970,7 +953,6 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 12
     object QryContTypeDescription: TStringField
       FieldName = 'Description'
-
       FixedChar = True
       Size = 80
     end
@@ -1124,19 +1106,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Year1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year3'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery
@@ -1157,9 +1133,7 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 232
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Financial_Year'
-        ParamType = ptUnknown
       end>
   end
   object qryCustType: TFDQuery
@@ -1277,19 +1251,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 320
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Year1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year3'
-        ParamType = ptUnknown
       end>
   end
   object oldqryCurrentContStatus: TFDQuery
@@ -1401,19 +1369,13 @@ object PBRSCustContDetFrm: TPBRSCustContDetFrm
     Top = 160
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Year1'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year2'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Year3'
-        ParamType = ptUnknown
       end>
     object StringField1: TStringField
       FieldName = 'Contact_Name'

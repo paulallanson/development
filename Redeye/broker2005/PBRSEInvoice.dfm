@@ -11,12 +11,10 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
@@ -44,8 +42,6 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Caption = 'Send'
       Default = True
       Enabled = False
-      TabOrder = 0
-      OnClick = btnOKClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -64,6 +60,8 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = btnOKClick
     end
     object BitBtn2: TBitBtn
       Left = 11
@@ -71,8 +69,9 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object Panel4: TPanel
@@ -174,7 +173,6 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
         Hint = 'Transaction Log'
         Style = lbOwnerDrawFixed
         Align = alClient
-        ItemHeight = 16
         TabOrder = 1
       end
     end
@@ -351,7 +349,10 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     end
   end
   object FTP: TIdFTP
-    AutoLogin = True
+    ConnectTimeout = 0
+    NATKeepAlive.UseKeepAlive = False
+    NATKeepAlive.IdleTimeMS = 0
+    NATKeepAlive.IntervalMS = 0
     ProxySettings.ProxyType = fpcmNone
     ProxySettings.Host = 'webscan'
     ProxySettings.UserName = 'MAILMARKETING\BrokerFTP'
@@ -378,9 +379,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Top = 144
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSIStatus: TFDQuery
@@ -394,14 +393,10 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice_Status'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdCustomer: TFDQuery
@@ -414,14 +409,10 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Top = 272
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_File_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdSInvoice: TFDQuery
@@ -435,19 +426,13 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Top = 208
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_Filename'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Electronic_Invoice_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryGetInvoice: TFDQuery
@@ -491,9 +476,7 @@ object PBRSEInvoiceFrm: TPBRSEInvoiceFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
 end

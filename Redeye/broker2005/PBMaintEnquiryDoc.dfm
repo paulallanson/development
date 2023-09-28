@@ -11,10 +11,8 @@ object PBMaintEnquiryDocFrm: TPBMaintEnquiryDocFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 12
@@ -72,16 +70,18 @@ object PBMaintEnquiryDocFrm: TPBMaintEnquiryDocFrm
     Top = 84
     Width = 75
     Height = 25
-    TabOrder = 3
     Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object btbtnCancel: TBitBtn
     Left = 416
     Top = 84
     Width = 75
     Height = 25
-    TabOrder = 4
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 4
   end
   object DocOpenDialog: TOpenDialog
     Left = 288

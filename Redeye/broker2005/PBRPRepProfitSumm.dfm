@@ -1,30 +1,23 @@
 object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
   Left = 0
   Top = 0
-  Width = 1215
-  Height = 580
-  VertScrollBar.Position = 32
   Caption = 'Rep Sales Profit Report'
+  ClientHeight = 541
+  ClientWidth = 1199
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 13
   object QckRpRpsPrft: TQuickRep
     Left = 24
-    Top = -24
+    Top = 8
     Width = 1123
     Height = 794
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = QckRpRpsPrftBeforePrint
     DataSet = SQLRepPrft
     Font.Charset = DEFAULT_CHARSET
@@ -44,6 +37,7 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = A4
+    Page.Continuous = False
     Page.Values = (
       100.000000000000000000
       2100.000000000000000000
@@ -57,56 +51,59 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object PageHeader: TQRBand
       Left = 19
       Top = 38
       Width = 1085
       Height = 59
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = PageHeaderBeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         156.104166666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbPageHeader
       object QRSysData1: TQRSysData
         Left = 484
         Top = 8
         Width = 117
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           1280.583333333333000000
           21.166666666666670000
           309.562500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
         Color = clWhite
         Data = qrsReportTitle
         Font.Charset = DEFAULT_CHARSET
@@ -115,7 +112,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Name = 'Arial'
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
+        Text = ''
         Transparent = False
+        ExportAs = exptText
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object PageNumQrl: TQRLabel
@@ -123,24 +123,22 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Top = 32
         Width = 75
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
-          84.666666666666680000
+          84.666666666666670000
           198.437500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'PageNumQrl'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object WhichSideQRL: TQRLabel
@@ -148,24 +146,22 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Top = 8
         Width = 52
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           21.166666666666670000
           21.166666666666670000
           137.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'LeftRight'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
       object qrlblTitle: TQRLabel
@@ -173,20 +169,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Top = 8
         Width = 369
         Height = 23
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
-          60.854166666666680000
-          947.208333333333400000
+          60.854166666666670000
+          947.208333333333300000
           21.166666666666670000
           976.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Reps Annual Profit Analysis - Run Date: '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -196,7 +188,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrlblDateRange: TQRLabel
@@ -204,24 +198,22 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Top = 32
         Width = 46
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           1373.187500000000000000
-          84.666666666666680000
+          84.666666666666670000
           121.708333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = True
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Begin:  '
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -230,14 +222,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 97
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = PageHeaderLeftBeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -249,30 +236,31 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = PageHeader
+      PrintOrder = cboAfterParent
       object QRLabel1: TQRLabel
         Left = 2
         Top = 0
         Width = 41
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
           0.000000000000000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -281,15 +269,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 197
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = PageHeaderRightBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -301,30 +284,31 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = PageHeaderMiddle
+      PrintOrder = cboAfterParent
       object QRLabel11: TQRLabel
         Left = 2
         Top = 0
         Width = 41
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
           0.000000000000000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period'
         Color = clWhite
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -333,19 +317,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 252
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetailpg1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QckRpRpsPrft
       DataSet = SQLRepPrft
       FooterBand = QRFootPg1
@@ -357,15 +338,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 287
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRFootPg1AfterPrint
       AlignToBottom = False
       BeforePrint = QRFootPg1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -377,26 +353,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel2: TQRLabel
         Left = 2
         Top = 13
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
-          34.395833333333340000
+          34.395833333333330000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Totals:- '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -406,7 +380,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -415,19 +391,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 337
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGrpHeadPg2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object QRSubDetailpg2: TQRSubDetail
@@ -435,19 +408,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 347
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetailpg2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QckRpRpsPrft
       DataSet = SQLRepPrft
       FooterBand = QRFootPg2
@@ -460,19 +430,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 247
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGrpPg1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
       FooterBand = QRDtlpg1
       Master = QRSubDetailpg1
@@ -483,14 +450,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 257
       Width = 1085
       Height = 30
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRDtlpg1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -502,26 +464,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         79.375000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText1: TQRDBText
         Left = 0
         Top = 0
         Width = 76
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           0.000000000000000000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = SQLRepPrft
         DataField = 'period_description'
@@ -532,7 +492,11 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 7
       end
     end
@@ -541,19 +505,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 342
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGrpPg2BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
       FooterBand = QRDtlpg2
       Master = QRSubDetailpg2
@@ -564,15 +525,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 352
       Width = 1085
       Height = 30
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRDtlpg2BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -584,26 +540,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         79.375000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText4: TQRDBText
         Left = 0
         Top = 0
         Width = 76
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           0.000000000000000000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = SQLRepPrft
         DataField = 'period_description'
@@ -614,7 +568,11 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 7
       end
     end
@@ -623,16 +581,11 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 382
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AfterPrint = QRFootPg2AfterPrint
       AlignToBottom = False
       BeforePrint = QRFootPg2BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -644,26 +597,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel3: TQRLabel
         Left = 2
         Top = 13
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
-          34.395833333333340000
+          34.395833333333330000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Totals:- '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -673,7 +624,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
     end
@@ -682,15 +635,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 147
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = PageHeaderMiddleBeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -702,26 +650,25 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       ParentBand = PageHeaderLeft
+      PrintOrder = cboAfterParent
       object QRLabel4: TQRLabel
         Left = 2
         Top = 0
         Width = 41
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
           0.000000000000000000
           108.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Period'
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -731,7 +678,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = [fsBold, fsItalic]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 10
       end
     end
@@ -740,19 +689,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 432
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGrpHeadPg3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupHeader
     end
     object QRGrpPg3: TQRGroup
@@ -760,19 +706,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 437
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRGrpPg3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Expression = 'sqlrepprft.period'
       FooterBand = QRDtlPg3
       Master = QRSubDetailpg3
@@ -783,19 +726,16 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 442
       Width = 1085
       Height = 5
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRSubDetailpg3BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         13.229166666666670000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = QckRpRpsPrft
       DataSet = SQLRepPrft
       FooterBand = QRFootpg3
@@ -808,15 +748,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 447
       Width = 1085
       Height = 30
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRDtlPg3BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -828,26 +763,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         79.375000000000000000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRDBText2: TQRDBText
         Left = 0
         Top = 0
         Width = 76
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           0.000000000000000000
           0.000000000000000000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Color = clWhite
         DataSet = SQLRepPrft
         DataField = 'period_description'
@@ -858,7 +791,11 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 7
       end
     end
@@ -867,15 +804,10 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Top = 477
       Width = 1085
       Height = 50
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRFootpg3BeforePrint
-      Color = clWhite
       Enabled = False
+      TransparentBand = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -9
@@ -887,26 +819,24 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
       Size.Values = (
         132.291666666666700000
         2870.729166666667000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       BandType = rbGroupFooter
       object QRLabel5: TQRLabel
         Left = 2
         Top = 13
         Width = 45
         Height = 17
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           44.979166666666670000
           5.291666666666667000
-          34.395833333333340000
+          34.395833333333330000
           119.062500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Totals:- '
         Color = clWhite
         Font.Charset = DEFAULT_CHARSET
@@ -916,7 +846,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 8
       end
       object QRLblTotSell: TQRLabel
@@ -924,20 +856,17 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         Top = 3
         Width = 248
         Height = 12
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           31.750000000000000000
           410.104166666666800000
           7.937500000000000000
           656.166666666666800000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taRightJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 
           '----------------------------------------------------------------' +
           '------------------'
@@ -950,6 +879,9 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
         ParentFont = False
         Transparent = False
         WordWrap = False
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 7
       end
     end
@@ -959,8 +891,8 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     Top = 78
   end
   object SQLRepPrft: TFDQuery
-    ConnectionName = 'PB'
     MasterSource = DataSRCRepPrft
+    ConnectionName = 'PB'
     SQL.Strings = (
       'select '#9'sales_profit.rep,'
       #9'rep.name as rep_name,'
@@ -993,24 +925,18 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     Top = 78
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'period_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period_to'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object SQLRep: TFDQuery
@@ -1031,24 +957,18 @@ object PBRPRepProfitSummFrm: TPBRPRepProfitSummFrm
     Top = 70
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'period_from'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'period_to'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Rep'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
 end

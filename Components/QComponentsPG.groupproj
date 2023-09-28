@@ -12,6 +12,9 @@
         <Projects Include="CRPackage\MSAddIn.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Zorn Barcode\BarComp.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="MSAddIn:Make">
         <MSBuild Projects="CRPackage\MSAddIn.dproj" Targets="Make"/>
     </Target>
+    <Target Name="BarComp">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj"/>
+    </Target>
+    <Target Name="BarComp:Clean">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BarComp:Make">
+        <MSBuild Projects="Zorn Barcode\BarComp.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="PJDropFile;CRPackage;MSAddIn"/>
+        <CallTarget Targets="PJDropFile;CRPackage;MSAddIn;BarComp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="PJDropFile:Clean;CRPackage:Clean;MSAddIn:Clean"/>
+        <CallTarget Targets="PJDropFile:Clean;CRPackage:Clean;MSAddIn:Clean;BarComp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="PJDropFile:Make;CRPackage:Make;MSAddIn:Make"/>
+        <CallTarget Targets="PJDropFile:Make;CRPackage:Make;MSAddIn:Make;BarComp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

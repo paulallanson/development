@@ -11,11 +11,9 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
   Font.Height = -13
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 16
   object Panel1: TPanel
     Left = 0
@@ -120,8 +118,9 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
       Top = 184
       Width = 75
       Height = 25
-      TabOrder = 3
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 3
     end
   end
   object Panel3: TPanel
@@ -208,19 +207,14 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Top = 161
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftInteger
         Name = 'Line'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Period'
-        ParamType = ptUnknown
       end>
   end
   object DetsSRC: TDataSource
@@ -264,14 +258,10 @@ object PBLUPOLAddChgsfrm: TPBLUPOLAddChgsfrm
     Top = 161
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryPeriod: TFDQuery

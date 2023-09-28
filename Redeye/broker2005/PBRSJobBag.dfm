@@ -21,8 +21,6 @@ object frmPBRSJobBag: TfrmPBRSJobBag
     Height = 207
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 418
-    ExplicitHeight = 216
     object CancelBitBtn: TBitBtn
       Left = 9
       Top = 183

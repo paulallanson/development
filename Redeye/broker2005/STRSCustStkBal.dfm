@@ -11,10 +11,11 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
+  DesignSize = (
+    415
+    330)
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -24,12 +25,12 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Caption = 'Customer'
   end
   object GroupBox1: TGroupBox
-    ParentBackground = False
     Left = 8
     Top = 120
     Width = 353
     Height = 89
     Caption = 'Product range'
+    ParentBackground = False
     TabOrder = 2
     object Label2: TLabel
       Left = 24
@@ -95,11 +96,11 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     end
   end
   object pnlExportPrgrss: TPanel
-    ParentBackground = False
     Left = 68
     Top = 140
     Width = 289
     Height = 61
+    ParentBackground = False
     TabOrder = 11
     Visible = False
     object lblExporting: TLabel
@@ -114,8 +115,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       Top = 32
       Width = 257
       Height = 16
-      Min = 0
-      Max = 100
       Step = 1
       TabOrder = 0
     end
@@ -153,9 +152,10 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
+    Kind = bkCancel
+    NumGlyphs = 2
     ParentFont = False
     TabOrder = 3
-    Kind = bkCancel
   end
   object btnPreview: TBitBtn
     Left = 91
@@ -163,8 +163,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 4
-    OnClick = btnPreviewClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -179,6 +177,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 4
+    OnClick = btnPreviewClick
   end
   object btnPrint: TBitBtn
     Left = 174
@@ -186,8 +186,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 5
-    OnClick = btnPrintClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -202,6 +200,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 5
+    OnClick = btnPrintClick
   end
   object btnFax: TBitBtn
     Left = 257
@@ -209,8 +209,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Width = 75
     Height = 25
     Caption = '&Fax'
-    TabOrder = 6
-    Visible = False
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -225,6 +223,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       33337F7737F7333333330FFFF003333333337FFFF77333333333000000333333
       3333777777333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    TabOrder = 6
+    Visible = False
   end
   object btnEmail: TBitBtn
     Left = 340
@@ -237,9 +237,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = []
-    ParentFont = False
-    TabOrder = 7
-    Visible = False
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -254,13 +251,16 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       3333333333333333333333333333333333333333333333333333333333333333
       3333333333333333333333333333333333333333333333333333}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 7
+    Visible = False
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 8
     Top = 216
     Width = 353
     Height = 49
+    ParentBackground = False
     TabOrder = 8
     object ChkBxExcProd: TCheckBox
       Left = 17
@@ -293,9 +293,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 9
-    OnClick = BitBtn4Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -310,6 +307,9 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 9
+    OnClick = BitBtn4Click
   end
   object btbtnExcel: TBitBtn
     Left = 7
@@ -318,8 +318,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Height = 25
     Anchors = [akTop, akRight]
     Caption = 'Excel'
-    TabOrder = 10
-    OnClick = btbtnExcelClick
     Glyph.Data = {
       36050000424D3605000000000000360400002800000010000000100000000100
       0800000000000001000000000000000000000001000000000000000000000000
@@ -363,6 +361,8 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
       00000000000000000000A4070707000707070707070700070707A40707070007
       07000700070700070707A4070707000707000000070700070707A40707070007
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
+    TabOrder = 10
+    OnClick = btbtnExcelClick
   end
   object OleContainer1: TOleContainer
     Left = 368
@@ -375,7 +375,6 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Visible = False
   end
   object RdGrpRptTyp: TRadioGroup
-    ParentBackground = False
     Left = 8
     Top = 8
     Width = 353
@@ -385,6 +384,7 @@ object STRSCustStkBalfrm: TSTRSCustStkBalfrm
     Items.Strings = (
       'Stock Balance - Valued'
       'Stock Balance - Non Valued')
+    ParentBackground = False
     TabOrder = 13
   end
 end

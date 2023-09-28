@@ -11,10 +11,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -113,18 +111,20 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Width = 75
     Height = 25
     Enabled = False
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 10
     OnClick = btnOKClick
-    Kind = bkOK
   end
   object btnCancel: TBitBtn
     Left = 250
     Top = 320
     Width = 75
     Height = 25
+    Kind = bkCancel
+    NumGlyphs = 2
     TabOrder = 11
     OnClick = btnCancelClick
-    Kind = bkCancel
   end
   object dblkpCourier: TDBLookupComboBox
     Left = 112
@@ -150,8 +150,6 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Top = 34
     Width = 25
     Height = 25
-    TabOrder = 1
-    OnClick = BitBtn1Click
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -166,6 +164,8 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
       333337FFFFFFFF77333330000000000333333777777777733333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = BitBtn1Click
   end
   object edtConsignment: TEdit
     Left = 112
@@ -246,9 +246,6 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 4
-    OnClick = btnClearClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000120B0000120B00001000000000000000000000000000
@@ -263,6 +260,9 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
       BBB35555F55555575F555550555555550BBB55575555555575F5555555555555
       50BB555555555555575F555555555555550B5555555555555575}
     NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnClearClick
   end
   object qryCourier: TFDQuery
     ConnectionName = 'PB'
@@ -287,9 +287,7 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Top = 107
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'courier'
-        ParamType = ptUnknown
       end>
   end
   object dtsCourierService: TDataSource
@@ -308,14 +306,10 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Top = 155
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Sales_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_order_Delivery_no'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSODelivery: TFDQuery
@@ -335,49 +329,31 @@ object STMaintSOrdDelfrm: TSTMaintSOrdDelfrm
     Top = 200
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Delivery_date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_weight_Kilos'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'No_of_Boxes'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Delivery_instructions'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Consignment_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Courier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Service_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sales_order_delivery_no'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery

@@ -1,28 +1,26 @@
 object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
   Left = 57
   Top = 101
-  Width = 825
-  Height = 400
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Production Orders'
+  ClientHeight = 361
+  ClientWidth = 809
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 817
-    Height = 306
+    Width = 809
+    Height = 301
     Align = alClient
     DataSource = dtmdlOrders.dtsOrders
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -139,15 +137,15 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
       end>
   end
   object Panel1: TPanel
-    ParentBackground = False
     Left = 0
-    Top = 306
-    Width = 817
+    Top = 301
+    Width = 809
     Height = 41
     Align = alBottom
+    ParentBackground = False
     TabOrder = 1
     DesignSize = (
-      817
+      809
       41)
     object Label1: TLabel
       Left = 8
@@ -213,8 +211,8 @@ object frmpbluCustOrdersJB: TfrmpbluCustOrdersJB
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 347
-    Width = 817
+    Top = 342
+    Width = 809
     Height = 19
     Panels = <
       item

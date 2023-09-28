@@ -1,4 +1,4 @@
-﻿object PBLUProcessWCGroupfrm: TPBLUProcessWCGroupfrm
+object PBLUProcessWCGroupfrm: TPBLUProcessWCGroupfrm
   Left = 339
   Top = 141
   BorderStyle = bsDialog
@@ -11,10 +11,8 @@
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object CountLabel: TLabel
     Left = 267
@@ -83,8 +81,9 @@
     Top = 272
     Width = 75
     Height = 25
-    TabOrder = 2
     Kind = bkClose
+    NumGlyphs = 2
+    TabOrder = 2
   end
   object FuncGrpBox: TGroupBox
     Left = 336
@@ -144,14 +143,11 @@
     Top = 24
     ParamData = <
       item
-        DataType = ftString
         Name = 'Code_From'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftUnknown
         Name = 'Process'
-        ParamType = ptUnknown
       end>
   end
   object SearchTimer: TTimer

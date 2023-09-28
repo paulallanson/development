@@ -1599,64 +1599,46 @@ object PBRPPODueFrm: TPBRPPODueFrm
     Top = 90
     ParamData = <
       item
-        DataType = ftDateTime
         Name = 'ODue_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Supplier'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftInteger
         Name = 'Branch_No'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
-        DataType = ftUnknown
-        Name = 'Contact_no'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
+        Name = 'Contact_no'
+      end
+      item
         Name = 'Supplier'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
-        Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
+        Name = 'Customer'
         DataType = ftInteger
+      end
+      item
         Name = 'Customer'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Account_Manager'
-        ParamType = ptUnknown
       end>
   end
   object oldGetPOsSQL: TFDQuery
@@ -1749,44 +1731,28 @@ object PBRPPODueFrm: TPBRPPODueFrm
     Top = 82
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'ODue_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'CustBranch'
-        ParamType = ptUnknown
       end>
   end
   object GetNarrSQL: TFDQuery
@@ -1801,9 +1767,7 @@ object PBRPPODueFrm: TPBRPPODueFrm
     Top = 98
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Narrative'
-        ParamType = ptUnknown
       end>
   end
 end

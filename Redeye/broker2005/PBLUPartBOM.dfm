@@ -1,47 +1,45 @@
 object PBLUPartBOMFrm: TPBLUPartBOMFrm
   Left = 327
   Top = 111
-  Width = 593
-  Height = 419
   Caption = 'Bill of materials'
+  ClientHeight = 380
+  ClientWidth = 577
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 344
-    Width = 585
+    Top = 339
+    Width = 577
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
     DesignSize = (
-      585
+      577
       41)
     object CloseBitBtn: TBitBtn
-      Left = 494
+      Left = 486
       Top = 8
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = '&Close'
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = CloseBitBtnClick
-      NumGlyphs = 2
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 585
+    Width = 577
     Height = 65
     Align = alTop
     BevelOuter = bvNone
@@ -63,14 +61,14 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     object lblDescription: TLabel
       Left = 72
       Top = 40
-      Width = 473
+      Width = 63
       Height = 13
       Caption = 'lblDescription'
     end
     object lblProduct: TLabel
       Left = 72
       Top = 16
-      Width = 353
+      Width = 47
       Height = 13
       Caption = 'lblProduct'
     end
@@ -78,8 +76,8 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
   object dbgdetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 480
-    Height = 279
+    Width = 472
+    Height = 274
     Align = alClient
     DataSource = dtsdetails
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -113,10 +111,10 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
       end>
   end
   object Panel3: TPanel
-    Left = 480
+    Left = 472
     Top = 65
     Width = 105
-    Height = 279
+    Height = 274
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 3
@@ -126,9 +124,9 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
       Width = 75
       Height = 25
       Caption = 'Add'
+      NumGlyphs = 2
       TabOrder = 0
       OnClick = AddBitBtnClick
-      NumGlyphs = 2
     end
     object ChgBitBtn: TBitBtn
       Left = 14
@@ -137,9 +135,9 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
       Height = 25
       Caption = 'Change'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = ChgBitBtnClick
-      NumGlyphs = 2
     end
     object DelBitBtn: TBitBtn
       Left = 14
@@ -148,9 +146,9 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
       Height = 25
       Caption = 'Delete'
       Enabled = False
+      NumGlyphs = 2
       TabOrder = 2
       OnClick = DelBitBtnClick
-      NumGlyphs = 2
     end
   end
   object dtsdetails: TDataSource
@@ -170,9 +168,7 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -192,24 +188,16 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Element_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Composite_Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Quantity'
-        ParamType = ptUnknown
       end>
   end
   object qryGetNext: TFDQuery
@@ -222,9 +210,7 @@ object PBLUPartBOMFrm: TPBLUPartBOMFrm
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end>
   end
 end
