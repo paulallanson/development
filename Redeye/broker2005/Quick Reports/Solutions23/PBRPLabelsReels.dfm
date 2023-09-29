@@ -5,7 +5,6 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
   Height = 630
   HorzScrollBar.Range = 1200
   VertScrollBar.Range = 2000
-  AutoScroll = False
   Caption = 'Reels'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,20 +12,14 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = 8
     Top = 0
     Width = 495
     Height = 495
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -45,6 +38,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = Custom
+    Page.Continuous = False
     Page.Values = (
       250.000000000000000000
       1310.000000000000000000
@@ -58,37 +52,43 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     SnapToGrid = True
     Units = MM
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRSubDetail
       Left = 15
       Top = 15
       Width = 465
       Height = 334
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       ForceNewColumn = False
       ForceNewPage = False
       Size.Values = (
         883.708333333333300000
         1230.312500000000000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = PBLabelsQuickReport
       DataSet = PODelivSQL
       PrintBefore = False
@@ -98,20 +98,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 232
         Width = 371
         Height = 22
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           58.208333333333330000
           235.479166666666700000
           613.833333333333300000
           981.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -123,7 +120,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
           'Line2')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 11
       end
       object PONumberLbl: TQRLabel
@@ -131,20 +129,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 255
         Width = 57
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           928.687500000000000000
           674.687500000000000000
           150.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'XXXXXXX'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -154,7 +148,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object BoxQuantityLbl: TQRLabel
@@ -162,20 +158,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 255
         Width = 148
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           235.479166666666700000
           674.687500000000000000
           391.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'BoxQuantityLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -185,7 +178,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object FormRefLbl: TQRLabel
@@ -194,20 +189,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Width = 81
         Height = 19
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           235.479166666666700000
           558.270833333333300000
           214.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'XXXXXXXXXX'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -217,7 +208,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel1: TQRLabel
@@ -226,20 +219,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Width = 55
         Height = 19
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           558.270833333333300000
           145.520833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Part No.:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -249,7 +238,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRDBCustOrderRef: TQRDBText
@@ -257,20 +248,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 276
         Width = 148
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           235.479166666666700000
           730.250000000000000000
           391.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         DataSet = PODelivSQL
         DataField = 'Cust_Order_no'
@@ -281,7 +269,11 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        FullJustify = False
+        MaxBreakChars = 0
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel2: TQRLabel
@@ -289,20 +281,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 101
         Width = 68
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           267.229166666666700000
           179.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Deliver To:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -312,7 +300,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel3: TQRLabel
@@ -320,20 +310,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 255
         Width = 53
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           674.687500000000000000
           140.229166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Box Qty:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -343,7 +329,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel4: TQRLabel
@@ -351,20 +339,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 276
         Width = 86
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           730.250000000000000000
           227.541666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Customer PO:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -374,7 +358,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel5: TQRLabel
@@ -382,20 +368,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 255
         Width = 78
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           677.333333333333300000
           674.687500000000000000
           206.375000000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery No:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -405,7 +387,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel6: TQRLabel
@@ -413,20 +397,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 276
         Width = 89
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           677.333333333333300000
           730.250000000000000000
           235.479166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Delivery Date:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -436,7 +416,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object QRLabel7: TQRLabel
@@ -444,20 +426,16 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 232
         Width = 76
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           2.645833333333333000
           613.833333333333300000
           201.083333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'Description:'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -467,7 +445,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object DeliveryDateLbl: TQRLabel
@@ -475,20 +455,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 276
         Width = 105
         Height = 19
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           50.270833333333330000
           931.333333333333300000
           730.250000000000000000
           277.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'DeliveryDateLbl'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -498,7 +475,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object qrmCompany: TQRMemo
@@ -506,20 +485,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 303
         Width = 441
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           21.166666666666670000
           801.687500000000000000
           1166.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -528,7 +504,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 8
       end
       object AddressMemo: TQRMemo
@@ -536,20 +513,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 119
         Width = 321
         Height = 90
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           238.125000000000000000
           235.479166666666700000
           314.854166666666700000
           849.312500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -564,7 +538,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
           'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 10
       end
       object DeliveryName: TQRLabel
@@ -572,20 +547,17 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 100
         Width = 371
         Height = 20
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           235.479166666666700000
           264.583333333333300000
           981.604166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'Industrial Fastener Supplies Ltd'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -595,7 +567,9 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 11
       end
       object ReportImage: TQRImage
@@ -603,16 +577,14 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
         Top = 1
         Width = 255
         Height = 70
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           185.208333333333300000
           2.645833333333333000
           2.645833333333333000
           674.687500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
     end
@@ -659,9 +631,8 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PODelivSRC: TDataSource
@@ -689,14 +660,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AdhocSQL: TFDQuery
@@ -714,9 +681,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Ad_hoc_Address'
-        ParamType = ptUnknown
       end>
   end
   object RepSQL: TFDQuery
@@ -734,9 +699,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Rep'
-        ParamType = ptUnknown
       end>
   end
   object SupplierSQL: TFDQuery
@@ -757,14 +720,10 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 360
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource
@@ -799,9 +758,7 @@ object PBRPLabelsReelsFrm: TPBRPLabelsReelsFrm
     Top = 310
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'FSC_Material_Claim'
-        ParamType = ptUnknown
       end>
   end
 end

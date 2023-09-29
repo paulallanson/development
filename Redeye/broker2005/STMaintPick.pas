@@ -104,7 +104,7 @@ var
 
 implementation
 
-uses UITypes, stPickItem, ststockdm, STPickingDM, pbDatabase;
+uses Types, UITypes, stPickItem, ststockdm, STPickingDM, pbDatabase;
 
 {$R *.DFM}
 

@@ -12,9 +12,7 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object SupplierLabel: TLabel
     Left = 176
@@ -50,8 +48,6 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Width = 75
     Height = 25
     Caption = '&Print'
-    TabOrder = 1
-    OnClick = PrintBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -66,6 +62,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
       33333337F3FF7F3733333330F08F0F0333333337F7737F7333333330FFFF0033
       33333337FFFF7733333333300000033333333337777773333333}
     NumGlyphs = 2
+    TabOrder = 1
+    OnClick = PrintBitBtnClick
   end
   object PreviewBitBtn: TBitBtn
     Left = 248
@@ -73,8 +71,6 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Width = 75
     Height = 25
     Caption = 'Pre&view'
-    TabOrder = 2
-    OnClick = PreviewBitBtnClick
     Glyph.Data = {
       76010000424D7601000000000000760000002800000020000000100000000100
       04000000000000010000130B0000130B00001000000000000000000000000000
@@ -89,6 +85,8 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
       333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
       333333773FF77333333333370007333333333333777333333333}
     NumGlyphs = 2
+    TabOrder = 2
+    OnClick = PreviewBitBtnClick
   end
   object CancelBitBtn: TBitBtn
     Left = 160
@@ -96,8 +94,9 @@ object PBRSSupCapFrm: TPBRSSupCapFrm
     Width = 75
     Height = 25
     Caption = '&Cancel'
-    TabOrder = 3
     Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 3
   end
   object SuppEdit: TEdit
     Left = 176

@@ -6,7 +6,6 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
   HorzScrollBar.Range = 1200
   VertScrollBar.Position = 5
   VertScrollBar.Range = 2000
-  AutoScroll = False
   Caption = 'Customer/Supplier Labels'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,20 +13,14 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
   Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
-  OldCreateOrder = True
   Scaled = False
-  PixelsPerInch = 96
   TextHeight = 14
   object PBLabelsQuickReport: TQuickRep
     Left = -8
     Top = -5
     Width = 495
     Height = 495
-    Frame.Color = clBlack
-    Frame.DrawTop = False
-    Frame.DrawBottom = False
-    Frame.DrawLeft = False
-    Frame.DrawRight = False
+    ShowingPreview = False
     BeforePrint = PBLabelsQuickReportBeforePrint
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -46,6 +39,7 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Page.Columns = 1
     Page.Orientation = poLandscape
     Page.PaperSize = Custom
+    Page.Continuous = False
     Page.Values = (
       250.000000000000000000
       1310.000000000000000000
@@ -59,13 +53,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     PrinterSettings.Duplex = False
     PrinterSettings.FirstPage = 0
     PrinterSettings.LastPage = 0
-    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseStandardprinter = False
     PrinterSettings.UseCustomBinCode = False
     PrinterSettings.CustomBinCode = 0
+    PrinterSettings.ExtendedDuplex = 0
     PrinterSettings.UseCustomPaperCode = False
     PrinterSettings.CustomPaperCode = 0
     PrinterSettings.PrintMetaFile = False
+    PrinterSettings.MemoryLimit = 1000000
+    PrinterSettings.Collate = 0
+    PrinterSettings.ColorOption = 2
     PrintIfEmpty = True
     ReportTitle = 'Customer/Supplier Labels'
     SnapToGrid = True
@@ -73,19 +70,20 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Zoom = 100
     PrevFormStyle = fsNormal
     PreviewInitialState = wsMaximized
+    PreviewWidth = 500
+    PreviewHeight = 500
+    PrevInitialZoom = qrZoomToFit
+    PreviewDefaultSaveType = stPDF
+    PreviewLeft = 0
+    PreviewTop = 0
     object QRBand1: TQRSubDetail
       Left = 19
       Top = 19
       Width = 457
       Height = 329
-      Frame.Color = clBlack
-      Frame.DrawTop = False
-      Frame.DrawBottom = False
-      Frame.DrawLeft = False
-      Frame.DrawRight = False
       AlignToBottom = False
       BeforePrint = QRBand1BeforePrint
-      Color = clWhite
+      TransparentBand = False
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -97,6 +95,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
       Size.Values = (
         870.479166666666700000
         1209.145833333333000000)
+      PreCaluculateBandHeight = False
+      KeepOnOnePage = False
       Master = PBLabelsQuickReport
       DataSet = GetDetsSQL
       PrintBefore = False
@@ -106,20 +106,17 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Top = 155
         Width = 308
         Height = 134
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           354.541666666666700000
           251.354166666666700000
           410.104166666666700000
           814.916666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clBlack
@@ -134,7 +131,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
           'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 14
       end
       object lblCustomer: TQRLabel
@@ -142,20 +140,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Top = 134
         Width = 91
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           251.354166666666700000
           354.541666666666700000
           240.770833333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'XXXXXXXXX'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -165,7 +159,9 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object DeliveryDateLbl: TQRLabel
@@ -174,20 +170,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Width = 95
         Height = 20
         Enabled = False
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           52.916666666666670000
           563.562500000000000000
           354.541666666666700000
           251.354166666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
-        AutoSize = True
-        AutoStretch = False
         Caption = 'NEVER PRINTS'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -197,7 +189,9 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 12
       end
       object FAOQRLabel: TQRLabel
@@ -205,20 +199,17 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Top = 114
         Width = 314
         Height = 24
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           63.500000000000000000
           251.354166666666700000
           301.625000000000000000
           830.791666666666700000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taLeftJustify
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Caption = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'
         Color = clWhite
         Font.Charset = ANSI_CHARSET
@@ -228,7 +219,9 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Font.Style = [fsBold]
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        ExportAs = exptText
+        WrapStyle = BreakOnSpaces
+        VerticalAlignment = tlTop
         FontSize = 14
       end
       object qrmCompany: TQRMemo
@@ -236,20 +229,17 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Top = 296
         Width = 441
         Height = 30
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           79.375000000000000000
           21.166666666666670000
           783.166666666666700000
           1166.812500000000000000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Alignment = taCenter
         AlignToBand = False
         AutoSize = False
-        AutoStretch = False
         Color = clWhite
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -258,7 +248,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Font.Style = []
         ParentFont = False
         Transparent = False
-        WordWrap = True
+        FullJustify = False
+        MaxBreakChars = 0
         FontSize = 8
       end
       object imgReport: TQRImage
@@ -266,16 +257,14 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
         Top = 0
         Width = 100
         Height = 100
-        Frame.Color = clBlack
-        Frame.DrawTop = False
-        Frame.DrawBottom = False
-        Frame.DrawLeft = False
-        Frame.DrawRight = False
         Size.Values = (
           264.583333333333300000
           465.666666666666700000
           0.000000000000000000
           264.583333333333300000)
+        XLColumn = 0
+        XLNumFormat = nfGeneral
+        ActiveInPreview = False
         Stretch = True
       end
     end
@@ -295,9 +284,8 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Top = 312
     ParamData = <
       item
-        DataType = ftInteger
         Name = 'Int_sel_code'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end>
   end
   object PODelivSRC: TDataSource
@@ -336,24 +324,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
   object AddressSRC: TDataSource
@@ -410,24 +390,16 @@ object PBRPCusSupLabsFrm: TPBRPCusSupLabsFrm
     Top = 352
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Branch_no'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Contact_No'
-        ParamType = ptUnknown
       end>
   end
 end

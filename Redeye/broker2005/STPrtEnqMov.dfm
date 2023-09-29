@@ -1,21 +1,22 @@
 object STPrtEnqMovFrm: TSTPrtEnqMovFrm
   Left = 5
   Top = 84
-  Width = 795
-  Height = 407
   Caption = 'Product Movements Enquiry'
+  ClientHeight = 368
+  ClientWidth = 779
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
+  DesignSize = (
+    779
+    368)
   TextHeight = 13
   object PartLabel: TLabel
     Left = 8
@@ -252,8 +253,6 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
     Anchors = [akRight, akBottom]
     Cancel = True
     Caption = 'Cancel'
-    TabOrder = 8
-    OnClick = CloseBitBtnClick
     Glyph.Data = {
       DE010000424DDE01000000000000760000002800000024000000120000000100
       0400000000006801000000000000000000001000000000000000000000000000
@@ -272,6 +271,8 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
       3333333333333333333888330000333333333333333333333333333333333333
       0000}
     NumGlyphs = 2
+    TabOrder = 8
+    OnClick = CloseBitBtnClick
   end
   object GetDetsSQL: TFDQuery
     ConnectionName = 'PB'
@@ -314,39 +315,32 @@ object STPrtEnqMovFrm: TSTPrtEnqMovFrm
     Top = 56
     ParamData = <
       item
-        DataType = ftString
         Name = 'Part'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Bin'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end
       item
-        DataType = ftString
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
+        DataType = ftString
       end>
     object GetDetsSQLDate_Received: TDateTimeField
       FieldName = 'Date_Received'

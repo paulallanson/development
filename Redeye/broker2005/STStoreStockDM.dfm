@@ -1,7 +1,4 @@
 object DMStoreStock: TDMStoreStock
-  OldCreateOrder = False
-  Left = 216
-  Top = 144
   Height = 480
   Width = 696
   object qrySelStoreStock: TFDQuery
@@ -13,9 +10,7 @@ object DMStoreStock: TDMStoreStock
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'store_stock'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdStoreStock: TFDQuery
@@ -39,69 +34,43 @@ object DMStoreStock: TDMStoreStock
     Top = 56
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Quantity_Allocated'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Cost'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Date_Received'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store_Lot'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Store'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Part_Bin'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Stock_Pack_Quantity'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Store_Stock_Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'invoice_upfront'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'sets_per_pad'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'store_stock'
-        ParamType = ptUnknown
       end>
   end
   object qrySelPartStore: TFDQuery
@@ -113,9 +82,7 @@ object DMStoreStock: TDMStoreStock
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'part_store'
-        ParamType = ptUnknown
       end>
   end
 end

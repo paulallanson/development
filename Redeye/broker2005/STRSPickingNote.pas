@@ -118,7 +118,7 @@ var
 
 implementation
 
-uses UITypes, STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
+uses Types, UITypes, STRPPickingNote, CCSPrint, printers, PBDatabase, CCSCommon, DateSelV5,
   pbMainMenu, stPickingDM, STStockDM;
 
 {$R *.dfm}
@@ -283,8 +283,7 @@ begin
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
 
     end
   else

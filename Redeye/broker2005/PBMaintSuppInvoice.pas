@@ -130,7 +130,7 @@ var
 
 implementation
 
-uses UITypes, PBMainMenu, PBLUSupp, DateSelV5, PBMaintSuppInvoiceLine, PBMaintSuppInvoiceChgs,
+uses Types, UITypes, PBMainMenu, PBLUSupp, DateSelV5, PBMaintSuppInvoiceLine, PBMaintSuppInvoiceChgs,
       PBLUSupplierInvoicePO, PBLUSupplierInvoiceJB, PBLUSupplierInvoicePurch, PBDatabase;
 
 {$R *.DFM}

@@ -101,8 +101,6 @@ object PBRSPOrdFrm: TPBRSPOrdFrm
     Height = 201
     Align = alBottom
     TabOrder = 3
-    ExplicitTop = 146
-    ExplicitWidth = 428
     object CancelBitBtn: TBitBtn
       Left = 8
       Top = 164

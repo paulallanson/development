@@ -11,9 +11,7 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
     Left = 0
@@ -84,9 +82,6 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 2
-      OnClick = BitBtn1Click
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -101,6 +96,9 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      ParentFont = False
+      TabOrder = 2
+      OnClick = BitBtn1Click
     end
     object btnOK: TBitBtn
       Left = 202
@@ -109,9 +107,10 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
       Height = 25
       Anchors = [akLeft, akTop, akBottom]
       Enabled = False
+      Kind = bkOK
+      NumGlyphs = 2
       TabOrder = 3
       OnClick = btnOKClick
-      Kind = bkOK
     end
     object BitBtn3: TBitBtn
       Left = 290
@@ -119,8 +118,9 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
       Width = 75
       Height = 25
       Anchors = [akLeft, akTop, akBottom]
-      TabOrder = 4
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 4
     end
     object BitBtn4: TBitBtn
       Left = 312
@@ -133,10 +133,10 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
       Font.Height = -13
       Font.Name = 'Arial'
       Font.Style = [fsBold]
+      NumGlyphs = 2
       ParentFont = False
       TabOrder = 5
       OnClick = BitBtn4Click
-      NumGlyphs = 2
     end
     object reActiveChk: TCheckBox
       Left = 8
@@ -226,14 +226,10 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryReason: TFDQuery
@@ -262,34 +258,25 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Top = 16
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftDateTime
         Name = 'Inactive_Date'
-        ParamType = ptUnknown
+        DataType = ftDateTime
       end
       item
-        DataType = ftInteger
         Name = 'Inactive_reason'
-        ParamType = ptUnknown
-      end
-      item
         DataType = ftInteger
+      end
+      item
         Name = 'Inactive_Operator'
-        ParamType = ptUnknown
+        DataType = ftInteger
       end
       item
-        DataType = ftUnknown
         Name = 'Purchase_Order'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Line'
-        ParamType = ptUnknown
       end>
   end
   object qryCountJBLines: TFDQuery
@@ -302,9 +289,7 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
   object qryUpJBInactive: TFDQuery
@@ -317,14 +302,10 @@ object PBMaintPOrdInactiveFrm: TPBMaintPOrdInactiveFrm
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Job_Bag'
-        ParamType = ptUnknown
       end>
   end
 end

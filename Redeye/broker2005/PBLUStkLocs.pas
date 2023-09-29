@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, pbFormReferenceDM;
+  StdCtrls, Buttons, Grids, DBGrids, ExtCtrls, pbFormReferenceDM, Data.DB;
 
 type
   TPBLUStkLocsFrm = class(TForm)

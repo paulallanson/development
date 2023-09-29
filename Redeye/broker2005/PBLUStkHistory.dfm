@@ -25,13 +25,11 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Align = alClient
     Caption = 'Panel1'
     TabOrder = 0
-    ExplicitWidth = 743
-    ExplicitHeight = 300
     object detsDBGrid: TDBGrid
       Left = 1
       Top = 1
-      Width = 741
-      Height = 298
+      Width = 733
+      Height = 293
       Align = alClient
       DataSource = dtmdlForms.dtsHistory
       Font.Charset = ANSI_CHARSET
@@ -189,7 +187,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Style = []
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 743
     DesignSize = (
       735
       89)
@@ -269,7 +266,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       ReadOnly = True
       TabOrder = 3
       WantReturns = False
-      ExplicitLeft = 624
     end
     object memoStock: TMemo
       Left = 616
@@ -281,7 +277,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       ReadOnly = True
       TabOrder = 4
       WantReturns = False
-      ExplicitLeft = 624
     end
   end
   object Panel3: TPanel
@@ -298,8 +293,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 389
-    ExplicitWidth = 743
     DesignSize = (
       735
       41)
@@ -318,7 +311,6 @@ object PBLUStkHistoryfrm: TPBLUStkHistoryfrm
       NumGlyphs = 2
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 640
     end
     object RepeatBitBtn: TBitBtn
       Left = 16

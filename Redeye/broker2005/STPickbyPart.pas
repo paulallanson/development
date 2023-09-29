@@ -84,7 +84,7 @@ var
 
 implementation
 
-uses UITypes, stPickItem, ststockdm, STPickingDM;
+uses Types, UITypes, stPickItem, ststockdm, STPickingDM;
 
 {$R *.DFM}
 
@@ -847,8 +847,7 @@ begin
   		SetTextAlign((Sender as TStringGrid).Canvas.Handle,
     			GetTextAlign((Sender as TStringGrid).Canvas.Handle)
       			and not(TA_RIGHT OR TA_CENTER) or TA_LEFT);
-  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2,
-    			ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
+  		ExtTextOut((Sender as TStringGrid).Canvas.Handle, Rect.Left + 2, Rect.Top + 2, ETO_CLIPPED or ETO_OPAQUE, @Rect, Txt, StrLen(Txt), nil);
      end
   else
   	begin
