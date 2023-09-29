@@ -11,11 +11,9 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Label4: TLabel
     Left = 32
@@ -130,9 +128,9 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
     Caption = 'OK'
     Default = True
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 7
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 147
@@ -142,8 +140,8 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 8
     NumGlyphs = 2
+    TabOrder = 8
   end
   object qryUpCompany: TFDQuery
     ConnectionName = 'WT'
@@ -162,39 +160,25 @@ object frmWTMaintLastNumbers: TfrmWTMaintLastNumbers
     Top = 224
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Quote_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Contract_Quote_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Job_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Sales_Order_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Purchase_Order_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Invoice_Number'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Last_Credit_Note_Number'
-        ParamType = ptUnknown
       end>
   end
   object qryCompany: TFDQuery

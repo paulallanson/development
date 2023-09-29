@@ -1,7 +1,6 @@
 object frmWTRPContract: TfrmWTRPContract
   Left = 312
   Top = 5
-  VertScrollBar.Position = 16
   Caption = 'Contract Quote Report'
   ClientHeight = 842
   ClientWidth = 1256
@@ -16,7 +15,7 @@ object frmWTRPContract: TfrmWTRPContract
   TextHeight = 13
   object qrpDetails: TQuickRep
     Left = 56
-    Top = 80
+    Top = 96
     Width = 1123
     Height = 794
     ShowingPreview = False
@@ -1668,7 +1667,7 @@ object frmWTRPContract: TfrmWTRPContract
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'
@@ -2149,7 +2148,7 @@ object frmWTRPContract: TfrmWTRPContract
         Alignment = taLeftJustify
         AutoStretch = False
         Color = clWindow
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Arial'

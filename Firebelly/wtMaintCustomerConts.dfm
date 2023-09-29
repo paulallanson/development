@@ -379,7 +379,7 @@ object frmwtMaintCustomerConts: TfrmwtMaintCustomerConts
       'Where'
       '(Category = :Category) '
       '')
-    Left = 368
+    Left = 367
     Top = 264
     ParamData = <
       item

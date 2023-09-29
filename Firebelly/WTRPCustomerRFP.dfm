@@ -1478,9 +1478,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Top = 336
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Int_Sel'
-        ParamType = ptUnknown
       end>
   end
   object qryUpSalesInv: TFDQuery
@@ -1497,34 +1495,22 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Top = 30
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Application_reference'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Application_Date'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Application_Date_From'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Application_Date_To'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Application_Labour_Value'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Sales_Invoice'
-        ParamType = ptUnknown
       end>
   end
   object qryUpCustomerBranch: TFDQuery
@@ -1537,14 +1523,10 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Top = 33
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Last_Application_Ref'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Customer'
-        ParamType = ptUnknown
       end>
   end
   object qryGetSO: TFDQuery
@@ -1557,9 +1539,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Top = 261
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'sales_order'
-        ParamType = ptUnknown
       end>
   end
   object GetNarrSQL: TFDQuery
@@ -1573,9 +1553,7 @@ object frmWTRPCustomerRFP: TfrmWTRPCustomerRFP
     Top = 181
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Notes_Code'
-        ParamType = ptUnknown
       end>
   end
 end

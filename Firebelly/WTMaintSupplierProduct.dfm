@@ -218,14 +218,10 @@ object frmWTMaintSupplierProduct: TfrmWTMaintSupplierProduct
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Supplier'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Supplier_Product_Code'
-        ParamType = ptUnknown
       end>
   end
 end

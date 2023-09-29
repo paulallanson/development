@@ -1,28 +1,26 @@
 object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   Left = 261
   Top = 97
-  Width = 898
-  Height = 488
   Caption = 'Purchase Order Receipt'
+  ClientHeight = 449
+  ClientWidth = 882
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 420
-    Width = 890
+    Top = 408
+    Width = 882
     Height = 41
     Align = alBottom
     TabOrder = 0
     DesignSize = (
-      890
+      882
       41)
     object btnOK: TBitBtn
       Left = 714
@@ -33,7 +31,6 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
       Caption = 'Confirm'
       Default = True
       Enabled = False
-      TabOrder = 0
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -52,6 +49,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 0
     end
     object BitBtn2: TBitBtn
       Left = 802
@@ -59,19 +57,20 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
-      TabOrder = 1
       Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
     end
   end
   object pnlHeader: TPanel
     Left = 0
     Top = 0
-    Width = 890
+    Width = 882
     Height = 81
     Align = alTop
     TabOrder = 1
     DesignSize = (
-      890
+      882
       81)
     object Label1: TLabel
       Left = 8
@@ -138,7 +137,6 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
       Width = 25
       Height = 25
       Anchors = [akTop, akRight]
-      TabOrder = 3
       Glyph.Data = {
         76010000424D7601000000000000760000002800000020000000100000000100
         04000000000000010000130B0000130B00001000000000000000000000000000
@@ -153,6 +151,7 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
         F03337FFFFFFFF7F373330999999990F033337777777777F733330FFFFFFFF00
         333337FFFFFFFF77333330000000000333333777777777733333}
       NumGlyphs = 2
+      TabOrder = 3
     end
     object Edit3: TEdit
       Left = 96
@@ -175,10 +174,10 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
     end
   end
   object pnlFunctions: TPanel
-    Left = 792
+    Left = 784
     Top = 81
     Width = 98
-    Height = 339
+    Height = 327
     Align = alRight
     TabOrder = 2
     object btnAdd: TBitBtn
@@ -202,8 +201,8 @@ object frmWTMaintPurchaseOrderGRN: TfrmWTMaintPurchaseOrderGRN
   object DBGrid1: TDBGrid
     Left = 0
     Top = 81
-    Width = 792
-    Height = 339
+    Width = 784
+    Height = 327
     Align = alClient
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET

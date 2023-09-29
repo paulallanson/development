@@ -50,7 +50,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Caption = '&Print'
     TabOrder = 0
     OnClick = btnPrintClick
-    ExplicitTop = 298
   end
   object Button4: TButton
     Left = 416
@@ -62,7 +61,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     ModalResult = 2
     TabOrder = 1
     OnClick = Button4Click
-    ExplicitTop = 298
   end
   object rdgrpCustomer: TRadioGroup
     Left = 8
@@ -212,7 +210,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Caption = 'P&review'
     TabOrder = 5
     OnClick = btnPreviewClick
-    ExplicitTop = 298
   end
   object btnExcel: TButton
     Left = 184
@@ -223,7 +220,6 @@ object frmWTRSSOAntOrdering: TfrmWTRSSOAntOrdering
     Caption = '&Excel'
     TabOrder = 6
     OnClick = btnExcelClick
-    ExplicitTop = 298
   end
   object OleContainer1: TOleContainer
     Left = 180

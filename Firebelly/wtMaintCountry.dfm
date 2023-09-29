@@ -1,19 +1,17 @@
 object frmWTMaintCountry: TfrmWTMaintCountry
   Left = 506
   Top = 162
-  Width = 366
-  Height = 134
   Caption = 'Country'
+  ClientHeight = 95
+  ClientWidth = 350
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -37,9 +35,9 @@ object frmWTMaintCountry: TfrmWTMaintCountry
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 1
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 264
@@ -49,8 +47,8 @@ object frmWTMaintCountry: TfrmWTMaintCountry
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 2
     NumGlyphs = 2
+    TabOrder = 2
   end
   object edtDescription: TEdit
     Left = 54
@@ -73,14 +71,10 @@ object frmWTMaintCountry: TfrmWTMaintCountry
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Country'
-        ParamType = ptUnknown
       end>
   end
   object qryAdd: TFDQuery
@@ -99,9 +93,7 @@ object frmWTMaintCountry: TfrmWTMaintCountry
     Top = 40
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Description'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

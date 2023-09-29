@@ -11,10 +11,8 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object lblPriceChange: TLabel
     Left = 16
@@ -64,8 +62,8 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
     Top = 150
     Width = 103
     Height = 21
-    Date = 37563.834117939810000000
-    Time = 37563.834117939810000000
+    Date = 37563.000000000000000000
+    Time = 0.834117939812131200
     TabOrder = 2
   end
   object edtTime: TMaskEdit
@@ -86,9 +84,9 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
     Caption = 'OK'
     Default = True
     Enabled = False
+    NumGlyphs = 2
     TabOrder = 4
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 200
@@ -98,8 +96,8 @@ object frmWTMaintSupplierWorktopCost: TfrmWTMaintSupplierWorktopCost
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
+    NumGlyphs = 2
     TabOrder = 5
     OnClick = BitBtn2Click
-    NumGlyphs = 2
   end
 end

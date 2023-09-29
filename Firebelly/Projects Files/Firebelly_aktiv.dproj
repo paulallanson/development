@@ -3,7 +3,7 @@
         <ProjectGuid>{9161C5B0-4D92-4372-96A4-B39D7502050A}</ProjectGuid>
         <MainSource>Firebelly_aktiv.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
@@ -239,9 +239,6 @@
         <DCCReference Include="..\wtMaintQElement.pas">
             <Form>frmWTMaintQElement</Form>
         </DCCReference>
-        <DCCReference Include="..\wtLUPurchases.pas">
-            <Form>frmwtLUPurchases</Form>
-        </DCCReference>
         <DCCReference Include="..\wtLUSales.pas">
             <Form>frmwtLUSales</Form>
         </DCCReference>
@@ -258,10 +255,6 @@
         </DCCReference>
         <DCCReference Include="..\wtMaintSalesOrder.pas">
             <Form>frmWTMaintSalesOrder</Form>
-        </DCCReference>
-        <DCCReference Include="..\wtPurchasesDM.pas">
-            <Form>dtmdlPurchase</Form>
-            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\wtMaintPurchOrders.pas">
             <Form>frmWTMaintPurchOrders</Form>
@@ -774,6 +767,14 @@
         <DCCReference Include="..\WTRPSalesInvoicePayments.pas">
             <Form>frmWTRPSalesInvoicePayments</Form>
         </DCCReference>
+        <DCCReference Include="..\wtPurchasesDM.pas">
+            <Form>dtmdlPurchaseOrder</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\WTPricesDM.pas">
+            <Form>dtmdlPrices</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <DCCReference Include="..\..\PrinterTools\Printer.Enums.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Interfaces.pas"/>
         <DCCReference Include="..\..\PrinterTools\Printer.Tools.pas"/>
@@ -816,6 +817,12 @@
             </Platforms>
             <Deployment Version="4">
                 <DeployFile LocalName="..\Aktiv\Win32\Debug\Firebelly_aktiv.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Firebelly_aktiv.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\Aktiv\Win32\Release\Firebelly_aktiv.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Firebelly_aktiv.exe</RemoteName>
                         <Overwrite>true</Overwrite>

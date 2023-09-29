@@ -3,7 +3,7 @@
         <ProjectGuid>{81B4D9D2-F90D-4845-9F21-24A8B0E6A44E}</ProjectGuid>
         <MainSource>Firebelly_Elite.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>

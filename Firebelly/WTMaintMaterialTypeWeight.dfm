@@ -1,19 +1,17 @@
 object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
   Left = 378
   Top = 186
-  Width = 341
-  Height = 195
   Caption = 'Maintain Material Thickness Weights'
+  ClientHeight = 156
+  ClientWidth = 325
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -38,9 +36,9 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 0
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 176
@@ -50,8 +48,8 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 1
     NumGlyphs = 2
+    TabOrder = 1
   end
   object dblkpThickness: TDBLookupComboBox
     Left = 112
@@ -90,14 +88,10 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_Type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end>
   end
   object dtsThickness: TDataSource
@@ -124,19 +118,13 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Top = 72
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Worktop_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Thickness'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Weight_kg'
-        ParamType = ptUnknown
       end>
   end
   object qryUpdate: TFDQuery
@@ -149,14 +137,10 @@ object frmWTMaintMaterialTypeWeight: TfrmWTMaintMaterialTypeWeight
     Top = 120
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Weight_kg'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'ID'
-        ParamType = ptUnknown
       end>
   end
 end

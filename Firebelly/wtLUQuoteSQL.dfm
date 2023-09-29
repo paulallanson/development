@@ -1,9 +1,9 @@
 object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   Left = 254
   Top = 117
-  Width = 1305
-  Height = 675
   Caption = 'Quotes'
+  ClientHeight = 636
+  ClientWidth = 1289
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,18 +11,16 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poDefault
   Visible = True
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 603
-    Width = 1297
+    Top = 595
+    Width = 1289
     Height = 41
     Align = alBottom
     TabOrder = 0
@@ -41,7 +39,7 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
       TabOrder = 0
     end
     object Panel2: TPanel
-      Left = 1006
+      Left = 998
       Top = 1
       Width = 290
       Height = 39
@@ -99,8 +97,8 @@ object frmWTLUQuoteSQL: TfrmWTLUQuoteSQL
   object dbgDetails: TDBGrid
     Left = 0
     Top = 0
-    Width = 1297
-    Height = 603
+    Width = 1289
+    Height = 595
     Align = alClient
     DataSource = dtmdlQuote.dtsAllQuotes
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]

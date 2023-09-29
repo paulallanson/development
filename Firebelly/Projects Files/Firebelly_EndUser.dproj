@@ -3,7 +3,7 @@
         <ProjectGuid>{025A63CF-1353-486C-80D7-5E2A9A709898}</ProjectGuid>
         <MainSource>Firebelly_EndUser.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Config Condition="'$(Config)'==''">Release</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
@@ -243,7 +243,7 @@
         <DCCReference Include="..\wtMaintCustomerConts.pas">
             <Form>frmwtMaintCustomerConts</Form>
         </DCCReference>
-        <DCCReference Include="..\wtSrchCustContacts.pas">
+        <DCCReference Include="..\WTSrchCustContacts.pas">
             <Form>frmWTSrchCustContacts</Form>
         </DCCReference>
         <DCCReference Include="..\wtMaintQElement.pas">

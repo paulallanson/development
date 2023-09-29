@@ -37,6 +37,8 @@ uses
   wtMaintCutOuts in '..\wtMaintCutOuts.pas' {frmWTMaintCutOuts},
   wtMaintEdgeDetails in '..\wtMaintEdgeDetails.pas' {frmWTMaintEdgeDetails},
   wtMaintCutOutDtls in '..\wtMaintCutOutDtls.pas' {frmWTMaintCutOutDetails},
+  wtLUEdgeDtls in '..\wtLUEdgeDtls.pas' {frmWtLUEdgeDtls},
+  wtLUCutOutDtls in '..\wtLUCutOutDtls.pas' {frmWtLUCutOutDtls},
   wtLUCustType in '..\wtLUCustType.pas' {frmWTLUCustType},
   wtMaintCustTypes in '..\wtMaintCustTypes.pas' {frmWTMaintCustTypes},
   wtLUVat in '..\wtLUVat.pas' {frmwtLUVat},
@@ -48,7 +50,7 @@ uses
   wtMaintQEdge in '..\wtMaintQEdge.pas' {frmWTMaintQEdge},
   wtMaintQExtra in '..\wtMaintQExtra.pas' {frmWTMaintQExtra},
   wtMaintCustomerConts in '..\wtMaintCustomerConts.pas' {frmwtMaintCustomerConts},
-  WTSrchCustContacts in '..\WTSrchCustContacts.pas' {frmWTSrchCustContacts},
+  wtSrchCustContacts in '..\wtSrchCustContacts.pas' {frmWTSrchCustContacts},
   wtMaintQElement in '..\wtMaintQElement.pas' {frmWTMaintQElement},
   wtLUPurchases in '..\wtLUPurchases.pas' {frmwtLUPurchases},
   wtLUSales in '..\wtLUSales.pas' {frmwtLUSales},
@@ -60,8 +62,6 @@ uses
   wtMaintPurchOrders in '..\wtMaintPurchOrders.pas' {frmWTMaintPurchOrders},
   wtSalesInvoiceDM in '..\wtSalesInvoiceDM.pas' {dtmdlSalesInvoice: TDataModule},
   wtMaintSalesInvoice in '..\wtMaintSalesInvoice.pas' {frmWTMaintSalesInvoice},
-  wtRSQuote in '..\wtRSQuote.pas' {frmWTRSQuote},
-  wtRPQuote in '..\Lanzet\Reports\wtRPQuote.pas' {frmwtRPQuote},
   wtLUWTGroup in '..\wtLUWTGroup.pas' {frmWTLUWTGroup},
   WTMaintWTGroup in '..\WTMaintWTGroup.pas' {frmWTMaintWTGroup},
   wtMaintAddChgs in '..\wtMaintAddChgs.pas' {frmwtMaintAddChgs},
@@ -175,6 +175,7 @@ begin
   frmWTSplash.Show;
   frmWTSplash.Refresh;
   Application.Title := 'Worktop Manufacturing';
+  Application.MainFormOnTaskBar := True;
   Application.CreateForm(TdtmdlWorktops, dtmdlWorktops);
   Application.CreateForm(TfrmWTMain, frmWTMain);
   Application.CreateForm(TfrmWTSendFax, frmWTSendFax);

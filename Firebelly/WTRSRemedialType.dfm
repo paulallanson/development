@@ -41,7 +41,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     NumGlyphs = 2
     TabOrder = 11
     OnClick = PrintBitBtnClick
-    ExplicitTop = 316
   end
   object PreviewBitBtn: TBitBtn
     Left = 452
@@ -66,7 +65,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     NumGlyphs = 2
     TabOrder = 10
     OnClick = PreviewBitBtnClick
-    ExplicitTop = 316
   end
   object pnlReasonSearch: TPanel
     Left = 139
@@ -107,7 +105,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
     Kind = bkCancel
     NumGlyphs = 2
     TabOrder = 12
-    ExplicitTop = 316
   end
   object GroupBox1: TGroupBox
     Left = 5
@@ -357,7 +354,6 @@ object frmWTRSRemedialType: TfrmWTRSRemedialType
       07000700070700070707A4A4A4A400A4A4A400A4A4A400A4A4A4}
     TabOrder = 9
     OnClick = btnExcelClick
-    ExplicitTop = 316
   end
   object rdgrpCategory: TRadioGroup
     Left = 5

@@ -995,7 +995,7 @@ object frmWTLUPrices: TfrmWTLUPrices
     Enabled = False
     Interval = 250
     OnTimer = tmrSearchTimer
-    Left = 352
+    Left = 351
     Top = 112
   end
 end

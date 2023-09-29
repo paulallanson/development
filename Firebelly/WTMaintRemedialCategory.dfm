@@ -11,13 +11,11 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   DesignSize = (
     443
     115)
-  PixelsPerInch = 96
   TextHeight = 13
   object label1: TLabel
     Left = 8
@@ -36,9 +34,9 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
     Default = True
     Enabled = False
     ModalResult = 1
+    NumGlyphs = 2
     TabOrder = 2
     OnClick = btnOKClick
-    NumGlyphs = 2
   end
   object BitBtn2: TBitBtn
     Left = 232
@@ -49,8 +47,8 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
     Cancel = True
     Caption = 'Cancel'
     ModalResult = 2
-    TabOrder = 3
     NumGlyphs = 2
+    TabOrder = 3
   end
   object chkbxInactive: TCheckBox
     Left = 8
@@ -82,19 +80,13 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Remedial_Category_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Remedial_Category'
-        ParamType = ptUnknown
       end>
   end
   object qryZero: TFDQuery
@@ -120,14 +112,10 @@ object frmWTMaintRemedialCategory: TfrmWTMaintRemedialCategory
     Top = 24
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Remedial_Category_Descr'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'inactive'
-        ParamType = ptUnknown
       end>
   end
   object qryGetLast: TFDQuery

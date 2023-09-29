@@ -1,24 +1,22 @@
 object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   Left = 218
   Top = 90
-  Width = 928
-  Height = 480
   Caption = 'Select Sales Order Line'
+  ClientHeight = 441
+  ClientWidth = 912
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnActivate = FormActivate
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 920
+    Width = 912
     Height = 65
     Align = alTop
     TabOrder = 0
@@ -50,21 +48,21 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
       Top = 16
       Width = 97
       Height = 21
-      Date = 39470.402405902780000000
-      Time = 39470.402405902780000000
+      Date = 39470.000000000000000000
+      Time = 0.402405902779719300
       TabOrder = 1
       OnChange = dtFittingChange
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 384
-    Width = 920
+    Top = 372
+    Width = 912
     Height = 50
     Align = alBottom
     TabOrder = 1
     DesignSize = (
-      920
+      912
       50)
     object Label2: TLabel
       Left = 16
@@ -87,9 +85,10 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 1
       OnClick = btbtnCloseClick
-      Kind = bkCancel
     end
     object btnSelect: TBitBtn
       Left = 746
@@ -100,8 +99,6 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
       Caption = 'Select'
       Default = True
       Enabled = False
-      TabOrder = 2
-      OnClick = btnSelectClick
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -120,6 +117,8 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      TabOrder = 2
+      OnClick = btnSelectClick
     end
     object btnSweep: TBitBtn
       Left = 296
@@ -134,8 +133,8 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   end
   object stsbrDetails: TStatusBar
     Left = 0
-    Top = 434
-    Width = 920
+    Top = 422
+    Width = 912
     Height = 19
     Panels = <
       item
@@ -148,8 +147,8 @@ object frmWTLUPOrderSalesOrderLine: TfrmWTLUPOrderSalesOrderLine
   object dbgDetails: TDBGrid
     Left = 0
     Top = 65
-    Width = 920
-    Height = 319
+    Width = 912
+    Height = 307
     Align = alClient
     DataSource = dtmdlPurchaseOrder.dtsGetSOLines
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect]

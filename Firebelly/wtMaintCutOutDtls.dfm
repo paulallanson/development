@@ -1,7 +1,5 @@
 inherited frmWTMaintCutOutDtls: TfrmWTMaintCutOutDtls
   Caption = 'Cut out details'
-  OldCreateOrder = True
-  PixelsPerInch = 96
   TextHeight = 13
   inherited dblkpDescription: TDBLookupComboBox
     DataField = 'cutout'
@@ -23,14 +21,10 @@ inherited frmWTMaintCutOutDtls: TfrmWTMaintCutOutDtls
     Top = 8
     ParamData = <
       item
-        DataType = ftUnknown
         Name = 'Material_type'
-        ParamType = ptUnknown
       end
       item
-        DataType = ftUnknown
         Name = 'Edge_Type'
-        ParamType = ptUnknown
       end>
   end
   object srclkpCutOuts: TDataSource
